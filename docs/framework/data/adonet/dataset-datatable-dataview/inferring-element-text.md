@@ -2,12 +2,12 @@
 title: Inferir texto de elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784542"
 ---
 # <a name="inferring-element-text"></a>Inferir texto de elemento
 Si un elemento contiene texto y no tiene ningún elemento secundario que se infiera como tabla (como elementos con atributos o elementos repetidos), se agregará una nueva columna con el nombre **TableName_Text** a la tabla que se infiere para el elemento. El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna. La propiedad **ColumnMapping** de la nueva columna se establecerá en **MappingType. SimpleContent**.  
@@ -57,4 +57,4 @@ Si un elemento contiene texto y no tiene ningún elemento secundario que se infi
 - [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2112600dfcef65b1c85445b03806ce8e9cab6a27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940253"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782056"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procedimiento para controlar la cantidad de datos relacionados que se recupera
 Utilice el método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para especificar qué datos relacionados con el destino principal deben recuperarse al mismo tiempo. Por ejemplo, si sabe que va a necesitar información sobre los pedidos de los clientes, puede utilizar <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para asegurarse de que la información de los pedidos se va a recuperar al mismo tiempo que la información de los clientes. Con este enfoque, sólo se requiere un viaje a la base de datos para ambos conjuntos de información.  
@@ -26,4 +26,4 @@ Utilice el método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para espe
   
 ## <a name="see-also"></a>Vea también
 
-- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Consulta de la base de datos](querying-the-database.md)

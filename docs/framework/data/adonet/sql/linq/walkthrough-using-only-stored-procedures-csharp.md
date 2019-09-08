@@ -2,19 +2,19 @@
 title: 'Tutorial: Usar solo procedimientos almacenados (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 69419dd5bb49c2e47315d0079df3a7b575ad9afd
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: f980402c976db9ee327a7b726e36a0a4d9d6d73f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971776"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792112"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Tutorial: Usar solo procedimientos almacenados (C#)
 
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos ejecutando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.
 
 > [!NOTE]
-> También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).
+> También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](customizing-insert-update-and-delete-operations.md).
 
 Para los fines de este tutorial, usará dos métodos que se han asignado a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de C#. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.
 
@@ -32,7 +32,7 @@ En este tutorial se requiere lo siguiente:
 
 - Base de datos de ejemplo Northwind.
 
-     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest7.
+     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest7.
 
 - Un archivo de código de C# generado a partir de la base de datos Northwind.
 
@@ -40,7 +40,7 @@ En este tutorial se requiere lo siguiente:
 
      **sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions /pluralize**
 
-     Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).
+     Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md).
 
 ## <a name="overview"></a>Información general
 
@@ -139,7 +139,7 @@ En esta tarea preparará una interfaz para que los usuarios puedan ejecutar proc
 
 6. Del mismo modo para **Label2**, cambie la propiedad **Text** de **Label2** a **Enter CustomerID:** .
 
-7. Del mismo modo, cambie la propiedad **Text** de **button1** a **Order**details.
+7. Del mismo modo, cambie la propiedad **Text** de **button1** a **Order Details**.
 
 8. Cambie la propiedad **Text** de **BUTTON2** a **Order History**.
 
@@ -147,7 +147,7 @@ En esta tarea preparará una interfaz para que los usuarios puedan ejecutar proc
 
 ### <a name="to-handle-button-clicks"></a>Para administrar los clics de botón
 
-1. Haga doble clic en **Order** details en **Form1** para abrir el controlador de eventos de button1 en el editor de código.
+1. Haga doble clic en **Order Details** en **Form1** para abrir el controlador de eventos de button1 en el editor de código.
 
 2. Escriba el código siguiente en el controlador `button1`:
 
@@ -169,7 +169,7 @@ Ha llegado el momento de probar la aplicación. Observe que su contacto con el a
 
      Aparece Form1.
 
-2. En el cuadro **Enter OrderID** , escriba `10249`y, a continuación, haga clic en **Order**details.
+2. En el cuadro **Enter OrderID** , escriba `10249`y, a continuación, haga clic en **Order Details**.
 
      Un cuadro de mensaje muestra los productos incluidos en el pedido 10249.
 
@@ -181,13 +181,13 @@ Ha llegado el momento de probar la aplicación. Observe que su contacto con el a
 
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.
 
-4. En el cuadro **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order**details.
+4. En el cuadro **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order Details**.
 
      Aparece un cuadro de mensaje con el texto "No results".
 
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.
 
-5. En el menú Depurar, haga clic en **detener**depuración.
+5. En el menú **depurar** , haga clic en **detener depuración**.
 
      La sesión de depuración se cierra.
 
@@ -199,5 +199,5 @@ Puede mejorar este proyecto realizando algunos cambios. Por ejemplo, podría enu
 
 ## <a name="see-also"></a>Vea también
 
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Aprendizaje con tutoriales](learning-by-walkthroughs.md)
+- [Procedimientos almacenados](stored-procedures.md)

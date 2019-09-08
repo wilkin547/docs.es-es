@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963182"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794414"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperación de datos mediante DataReader
 Para recuperar datos mediante un **DataReader**, cree una instancia del objeto de **comando** y, a continuación, cree un **DataReader** mediante una llamada a **Command. ExecuteReader** para recuperar las filas de un origen de datos. **DataReader** proporciona un flujo de datos no almacenado en búfer que permite que la lógica de procedimientos procese eficazmente los resultados de un origen de datos de forma secuencial. **DataReader** es una buena elección cuando se recuperan grandes cantidades de datos porque los datos no se almacenan en la memoria caché.
@@ -40,7 +40,7 @@ Use el método **DataReader. Read** para obtener una fila de los resultados de l
  Mientras un **DataReader** está abierto, la **conexión** está en uso exclusivamente por parte de **DataReader**. No se puede ejecutar ningún comando para la **conexión**, incluida la creación de otro **DataReader**, hasta que se cierre el **DataReader** original.  
   
 > [!NOTE]
-> No llame a **Close** o **Dispose** en una **conexión**, **DataReader**o cualquier otro objeto administrado en el método Finalize de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no posee recursos no administrados, no incluya un método Finalize en la definición de clase. Para obtener más información, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
+> No llame a **Close** o **Dispose** en una **conexión**, **DataReader**o cualquier otro objeto administrado en el método **Finalize** de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no posee recursos no administrados, no incluya un método **Finalize** en la definición de clase. Para obtener más información, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Recuperar varios conjuntos de resultados mediante NextResult  
  Si **DataReader** devuelve varios conjuntos de resultados, llame al método **NextResult** para recorrer en iteración los conjuntos de resultados secuencialmente. En el siguiente ejemplo se muestra el <xref:System.Data.SqlClient.SqlDataReader> mientras procesa los resultados de las dos instrucciones SELECT mediante el método <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
@@ -57,7 +57,7 @@ Use el método **DataReader. Read** para obtener una fila de los resultados de l
 ## <a name="working-with-ole-db-chapters"></a>Trabajar con capítulos de OLE DB  
  Los conjuntos<xref:System.Data.OleDb.OleDbDataReader>de filas jerárquicos, o capítulos (OLE DB Type **DBTYPE_HCHAPTER**, adChapter Type de ADO), se pueden recuperar mediante. Cuando una consulta que incluye un capítulo se devuelve como un **DataReader**, el capítulo se devuelve como una columna en ese **DataReader** y se expone como un objeto **DataReader** .  
   
- El **conjunto** de ADO.net también se puede usar para representar conjuntos de filas jerárquicos mediante el uso de relaciones de elementos primarios y secundarios entre las tablas. Para obtener más información, vea conjuntos de datos [, tablas de datos y vistas](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)de datos.  
+ El **conjunto** de ADO.net también se puede usar para representar conjuntos de filas jerárquicos mediante el uso de relaciones de elementos primarios y secundarios entre las tablas. Para obtener más información, vea conjuntos de datos [, tablas de datos y vistas](./dataset-datatable-dataview/index.md)de datos.  
   
  En el ejemplo de código siguiente se utiliza el proveedor MSDataShape para generar un capítulo con la columna de pedidos realizados por cada uno de los clientes de una lista.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Para evitar una **excepción OverflowException**, se recomienda que también se controle cualquier conversión del tipo Number de Oracle a un tipo de .NET Framework válido antes de almacenar <xref:System.Data.DataRow>el valor en. Puede utilizar el <xref:System.Data.Common.DataAdapter.FillError> evento para determinar si se ha producido una **excepción OverflowException** . Para obtener más información sobre <xref:System.Data.Common.DataAdapter.FillError> el evento, vea [controlar eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Para evitar una **excepción OverflowException**, se recomienda que también se controle cualquier conversión del tipo Number de Oracle a un tipo de .NET Framework válido antes de almacenar <xref:System.Data.DataRow>el valor en. Puede utilizar el <xref:System.Data.Common.DataAdapter.FillError> evento para determinar si se ha producido una **excepción OverflowException** . Para obtener más información sobre <xref:System.Data.Common.DataAdapter.FillError> el evento, vea [controlar eventos DataAdapter](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
+- [Comandos y parámetros](commands-and-parameters.md)
+- [Recuperación de información del esquema de la base de datos](retrieving-database-schema-information.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

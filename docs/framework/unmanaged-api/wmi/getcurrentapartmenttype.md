@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037966"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798618"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType función)
 Recupera el tipo de contenedor en el que se está ejecutando el llamador.   
@@ -51,7 +51,7 @@ enuncia Un puntero a un valor de enumeración [APTTYPE](/windows/win32/api/objid
 
 ## <a name="return-value"></a>Valor devuelto
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `S_OK` | 0 | La función se completó correctamente. |
 | `E_FAIL` | 0x80000008 | El autor de la llamada no se está ejecutando en un contenedor. |
@@ -61,7 +61,7 @@ enuncia Un puntero a un valor de enumeración [APTTYPE](/windows/win32/api/objid
 Esta función contiene una llamada al método [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   

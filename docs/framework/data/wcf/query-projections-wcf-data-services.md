@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779820"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
 
@@ -102,7 +102,7 @@ A continuación se describen los comportamientos al proyectar los resultados en 
 
 Se aplican las siguientes consideraciones adicionales cuando se define una proyección de consultas.
 
-- Cuando defina las fuentes personalizadas para el formato Atom, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, vea personalización de [fuentes](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Cuando defina las fuentes personalizadas para el formato Atom, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, vea [Personalización de fuentes](feed-customization-wcf-data-services.md).
 
 - Cuando se realicen inserciones en un tipo proyectado que no contenga todas las propiedades de la entidad en el modelo de datos del servicio de datos, las propiedades no incluidas en la proyección en el cliente se establecen en sus valores predeterminados.
 
@@ -112,10 +112,10 @@ Se aplican las siguientes consideraciones adicionales cuando se define una proye
 
 - Cuando una proyección incluya una propiedad de navegación, los objetos relacionados se cargan implícitamente sin tener que llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. No se admite el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> para su uso en una consulta proyectada.
 
-- Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecute una consulta con proyección en una versión previa de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que no admita la opción de consulta `$select`, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, vea [control de versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecute una consulta con proyección en una versión previa de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que no admita la opción de consulta `$select`, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).
 
-Para obtener más información, consulte [Cómo Resultados](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)de la consulta de proyecto.
+Para obtener más información, consulte [Cómo Resultados](how-to-project-query-results-wcf-data-services.md)de la consulta de proyecto.
 
 ## <a name="see-also"></a>Vea también
 
-- [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)

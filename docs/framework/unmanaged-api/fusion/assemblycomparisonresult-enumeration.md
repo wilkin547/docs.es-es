@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778509"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796270"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult (Enumeración)
-Indica la equivalencia de dos identidades de ensamblado, según lo determinado por la [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) función.  
+Indica la equivalencia de dos identidades de ensamblado, según lo determinado por la función [CompareAssemblyIdentity (](compareassemblyidentity-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,29 +49,29 @@ typedef enum _tagAssemblyComparisonResult {
   
 |Nombre de miembro|DESCRIPCIÓN|  
 |-----------------|-----------------|  
-|`ACR_EquivalentFullMatch`|Indica que el ensamblado de todos los campos en la coincidencia de comparación.|  
-|`ACR_EquivalentFXUnified`|Indica que los ensamblados se consideran equivalentes basándose en la unificación de versión (CLR) en tiempo de ejecución de lenguaje común de los números de versión de ensamblado en la versión 2.0 de .NET Framework.|  
-|`ACR_EquivalentPartialFXUnified`|Indica a una coincidencia parcial de los ensamblados en función de la unificación de CLR de números de versión de ensamblado de .NET Framework 2.0.|  
-|`ACR_EquivalentPartialMatch`|Indica a una coincidencia parcial de los ensamblados.|  
-|`ACR_EquivalentPartialUnified`|Indica a una coincidencia parcial de los ensamblados basada en la unificación heredada de números de versión.|  
-|`ACR_EquivalentPartialWeakNamed`|Indica a una coincidencia parcial de ensamblados con nombres simples.|  
-|`ACR_EquivalentUnified`|Indica que los ensamblados se consideran equivalentes basándose en la unificación de CLR de los números de versión de las versiones heredadas de .NET Framework.|  
-|`ACR_EquivalentWeakNamed`|Indica a una coincidencia entre dos ensamblados con nombres simples cuyos números de versión se han omitido.|  
-|`ACR_NonEquivalent`|Indica que se produjo ninguna coincidencia entre los dos ensamblados.|  
-|`ACR_NonEquivalentPartialVersion`|Indica que los dos ensamblados coinciden, aunque sus números de versión sólo coinciden parcialmente.|  
-|`ACR_NonEquivalentVersion`|Indica que los dos ensamblados coinciden, aunque sus números de versión que no coinciden.|  
-|`ACR_Unknown`|Indica que se desconoce la razón de no equivalencia.|  
+|`ACR_EquivalentFullMatch`|Indica que todos los campos de ensamblado de la comparación coinciden.|  
+|`ACR_EquivalentFXUnified`|Indica que los ensamblados se consideran equivalentes según la unificación de la versión de Common Language Runtime (CLR) de los números de versión de ensamblado en la .NET Framework versión 2,0.|  
+|`ACR_EquivalentPartialFXUnified`|Indica una coincidencia parcial de los ensamblados en función de la unificación CLR de los números de versión de ensamblado en el .NET Framework 2,0.|  
+|`ACR_EquivalentPartialMatch`|Indica una coincidencia parcial de los ensamblados.|  
+|`ACR_EquivalentPartialUnified`|Indica una coincidencia parcial de los ensamblados basándose en la unificación heredada de números de versión.|  
+|`ACR_EquivalentPartialWeakNamed`|Indica una coincidencia parcial de ensamblados simplemente con nombre.|  
+|`ACR_EquivalentUnified`|Indica que los ensamblados se consideran equivalentes en función de la unificación de CLR de los números de versión de las versiones heredadas del .NET Framework.|  
+|`ACR_EquivalentWeakNamed`|Indica una coincidencia entre dos ensamblados simplemente con nombre cuyos números de versión se omitieron.|  
+|`ACR_NonEquivalent`|Indica que no se ha producido ninguna coincidencia entre los dos ensamblados.|  
+|`ACR_NonEquivalentPartialVersion`|Indica que los dos ensamblados coinciden, excepto en el caso de sus números de versión, que solo coinciden parcialmente.|  
+|`ACR_NonEquivalentVersion`|Indica que los dos ensamblados coinciden, excepto los números de versión, que no coinciden.|  
+|`ACR_Unknown`|Indica que no se conoce el motivo de la no equivalencia.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [CompareAssemblyIdentity (Función)](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
-- [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [CompareAssemblyIdentity (Función)](compareassemblyidentity-function.md)
+- [Enumeraciones de fusión](fusion-enumerations.md)

@@ -2,12 +2,12 @@
 title: Asignar relaciones implícitas entre elementos de esquema anidados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203480"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784441"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Asignar relaciones implícitas entre elementos de esquema anidados
 Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos complejos anidados dentro de otros. En este caso, el proceso de asignación aplica la asignación predeterminada y crea lo siguiente en el <xref:System.Data.DataSet>:  
@@ -84,7 +84,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
     RelatedColumns: Order_Id   
     ```  
   
-- Una relación entre las tablas **Order** y **OrderDetail** . La propiedad Nested de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
+- Una relación entre las tablas **Order** y **OrderDetail** . La propiedad **Nested** de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
   
     ```  
     ParentTable: Order  
@@ -101,4 +101,4 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
 
 - [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

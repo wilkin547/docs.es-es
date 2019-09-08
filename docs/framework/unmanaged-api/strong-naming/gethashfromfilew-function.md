@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77b164cdec0dd224042e4de3265d14a4991d60ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771895"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799189"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW (Función)
 Genera un hash a partir del contenido del archivo especificado por una cadena Unicode.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: GetHashFromFileW (](../hosting/iclrstrongname-gethashfromfilew-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,34 +42,34 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] Nombre del archivo al hash de Unicode.  
+ de Nombre Unicode del archivo al que se va a aplicar un algoritmo hash.  
   
  `piHashAlg`  
- [in, out] El algoritmo que se utilizará al generar el código hash. Los algoritmos válidos son los definidos por CryptoAPI de Win32. Si `piHashAlg` se establece en 0, el algoritmo predeterminado CALG_SHA-1 se utiliza.  
+ [in, out] Algoritmo que se va a utilizar al generar el hash. Los algoritmos válidos son los definidos por la CryptoAPI de Win32. Si `piHashAlg` se establece en 0, se usa el algoritmo predeterminado CALG_SHA-1.  
   
  `pbHash`  
- [out] Una matriz de bytes que contiene el código hash generado.  
+ enuncia Matriz de bytes que contiene el hash generado.  
   
  `cchHash`  
- [in] El tamaño máximo del búfer señalado por `pbHash`.  
+ de Tamaño máximo del búfer al que `pbHash`apunta.  
   
  `pchHash`  
- [out] El tamaño, en bytes, de `pbHash`.  
+ enuncia Tamaño, en bytes, de `pbHash`.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función es el mismo que [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), salvo que la especificación del nombre de archivo es Unicode en lugar de ANSI.  
+ Esta función es igual que [gethashfromfile (](gethashfromfile-function.md), salvo que la especificación de nombre de archivo es Unicode en lugar de ANSI.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [GetHashFromFileW (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [GetHashFromFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFileW (método)](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [GetHashFromFile (método)](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

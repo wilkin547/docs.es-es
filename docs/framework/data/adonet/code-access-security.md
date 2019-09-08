@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948261"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786871"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -47,15 +47,15 @@ ms.locfileid: "69948261"
   
  CLR usa permisos para implementar su mecanismo a fin de aplicar restricciones en el código administrado. Los permisos de seguridad basada en roles proporcionan un mecanismo para descubrir si un usuario (o el agente que actúa en su nombre) tiene una identidad concreta o es miembro de una función especificada. Para obtener más información, vea [permisos de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, consulte [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, consulte [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Ensamblados  
- Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre la creación e implementación de ensamblados, vea [programar con ensamblados](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
+ Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre la creación e implementación de ensamblados, vea [programar con ensamblados](../../app-domains/programming-with-assemblies.md).  
   
 ### <a name="strong-naming-assemblies"></a>Ensamblados con nombre seguro  
  Un nombre seguro, o firma digital, consta de la identidad del ensamblado, que incluye su nombre de texto sencillo, el número de versión, la información de referencia cultural (si se proporciona), así como una clave pública y una firma digital. La firma digital se genera a partir de un archivo de ensamblado que usa la clave privada correspondiente. El archivo de ensamblado contiene el manifiesto del ensamblado, que contiene los nombres y códigos hash de todos los archivos que forman el ensamblado.  
   
- La asignación de un nombre seguro al ensamblado proporciona a una aplicación o a un componente una identidad única que puede usar otro software para referirse a ella de manera explícita. La asignación de nombres seguros protege a los ensamblados de la suplantación por parte de un ensamblado que contenga código malintencionado. También garantiza la coherencia entre las diferentes versiones de un componente. Debe usar nombres seguros en los ensamblados que se van a implementar en la caché global de ensamblados (GAC). Para obtener más información, vea [Crear y utilizar ensamblados con nombre seguro](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ La asignación de un nombre seguro al ensamblado proporciona a una aplicación o a un componente una identidad única que puede usar otro software para referirse a ella de manera explícita. La asignación de nombres seguros protege a los ensamblados de la suplantación por parte de un ensamblado que contenga código malintencionado. También garantiza la coherencia entre las diferentes versiones de un componente. Debe usar nombres seguros en los ensamblados que se van a implementar en la caché global de ensamblados (GAC). Para obtener más información, vea [Crear y utilizar ensamblados con nombre seguro](../../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Confianza parcial en ADO.NET 2.0  
  En ADO.NET 2.0, se pueden ejecutar los proveedores de datos .NET Framework para SQL Server, OLE DB, ODBC y para Oracle en entornos de confianza parcial. En versiones anteriores de .NET Framework, solo se admitía el uso de <xref:System.Data.SqlClient> en aplicaciones que no fuesen de plena confianza.  
@@ -78,7 +78,7 @@ ms.locfileid: "69948261"
 |`Unrestricted`|Indica si se declaran permisos protegidos para el origen. Se hereda de <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Sintaxis de ConnectionString  
- En el siguiente ejemplo se muestra cómo se utiliza el elemento `connectionStrings` de un archivo de configuración para permitir únicamente el uso de una determinada cadena de conexión. Vea [cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md) para obtener más información sobre cómo almacenar y recuperar cadenas de conexión de archivos de configuración.  
+ En el siguiente ejemplo se muestra cómo se utiliza el elemento `connectionStrings` de un archivo de configuración para permitir únicamente el uso de una determinada cadena de conexión. Vea [cadenas de conexión](connection-strings.md) para obtener más información sobre cómo almacenar y recuperar cadenas de conexión de archivos de configuración.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "69948261"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Habilitar confianza parcial con un conjunto de permisos personalizados  
- Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene <xref:System.Security.Policy.Zone> un `LocalIntranet`de, un administrador del sistema puede copiar el conjunto `LocalIntranet`de permisos para, cambiarle el nombre a "CustomLocalIntranet <xref:System.Data.SqlClient> ", agregar los permisos, importar el conjunto de permisos CustomLocalIntranet mediante [Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)y `LocalIntranet_Zone` establece el conjunto de permisos de en CustomLocalIntranet.  
+ Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene <xref:System.Security.Policy.Zone> un `LocalIntranet`de, un administrador del sistema puede copiar el conjunto `LocalIntranet`de permisos para, cambiarle el nombre a "CustomLocalIntranet <xref:System.Data.SqlClient> ", agregar los permisos, importar el conjunto de permisos CustomLocalIntranet mediante [Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../tools/caspol-exe-code-access-security-policy-tool.md)y `LocalIntranet_Zone` establece el conjunto de permisos de en CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permisos de ejemplo  
  A continuación se muestra un ejemplo de un conjunto de permisos para el proveedor de datos .NET Framework para SQL Server en un escenario que no es de plena confianza. Para obtener información sobre cómo crear conjuntos de permisos personalizados, vea [configurar conjuntos de permisos mediante Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidad de código no administrado  
- El código que se ejecuta fuera de CLR se denomina código no administrado. Por lo tanto, los mecanismos de seguridad como CAS no se pueden aplicar en código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Windows son ejemplos de código no administrado. Cuando se ejecuta código no administrado se aplican consideraciones de seguridad especiales, de forma que no se ponga en peligro la seguridad global de la aplicación. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
+ El código que se ejecuta fuera de CLR se denomina código no administrado. Por lo tanto, los mecanismos de seguridad como CAS no se pueden aplicar en código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Windows son ejemplos de código no administrado. Cuando se ejecuta código no administrado se aplican consideraciones de seguridad especiales, de forma que no se ponga en peligro la seguridad global de la aplicación. Para más información, consulte [Interoperating with Unmanaged Code](../../interop/index.md) (Interoperar con código no administrado)  
   
- .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte interoperabilidad [com avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte [interoperabilidad com avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad en código nativo y .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Seguridad basada en roles](../../../standard/security/role-based-security.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](ado-net-overview.md)

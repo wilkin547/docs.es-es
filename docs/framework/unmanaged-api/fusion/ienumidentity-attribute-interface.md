@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697347"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796457"
 ---
-# <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE (Interfaz)
+# <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE (Interfaz)
 Actúa como un enumerador para los atributos del objeto de código en el ámbito actual.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Obtiene un puntero de interfaz a una nueva `IEnumIDENTITY_ATTRIBUTE` que contiene los mismos miembros que esto `IEnumIDENTITY_ATTRIBUTE`.|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Escribe los datos contenidos en los elementos de este `IEnumIDENTITY_ATTRIBUTE` al búfer de datos especificado.|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|Obtiene el número especificado de atributos, empezando en la posición actual.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|Obtiene un puntero de interfaz a un `IEnumIDENTITY_ATTRIBUTE` nuevo que contiene los mismos miembros que `IEnumIDENTITY_ATTRIBUTE`este.|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Escribe los datos contenidos en los elementos de este `IEnumIDENTITY_ATTRIBUTE` en el búfer de datos especificado.|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|Obtiene el número especificado de atributos, comenzando en la posición actual.|  
 |`IEnumIDENTITY_ATTRIBUTE::Reset`|Mueve el puntero de instrucción al principio de este `IEnumIDENTITY_ATTRIBUTE`.|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|Mueve el puntero de instrucción al día por el número especificado de elementos, empezando por la posición actual.|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|Mueve el puntero de instrucción hacia delante el número especificado de elementos, comenzando en la posición actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation.h  
+ **Encabezado**: Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Interfaces de Fusion](fusion-interfaces.md)

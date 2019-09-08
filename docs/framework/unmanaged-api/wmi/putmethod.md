@@ -1,5 +1,5 @@
 ---
-title: Función PutMethod (referencia de API no administrada)
+title: Función PutMethod (referencia de la API no administrada)
 description: La función PutMethod crea un método.
 ms.date: 11/06/2017
 api_name:
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2b41cbbade9da5c2095309b9039b8ce2758f6f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758688"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798361"
 ---
-# <a name="putmethod-function"></a>Función PutMethod
+# <a name="putmethod-function"></a>PutMethod función)
 Crea un método.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,57 +44,57 @@ HRESULT PutMethod (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`  
-[in] El nombre del método que se va a crear. 
+de Nombre del método que se va a crear. 
 
 `lFlags`  
 [in] Reservado. Este parámetro debe ser 0.
 
 `pSignatureIn`  
-[in] Un puntero a una copia de la [clase del sistema __Parameters](/windows/desktop/WmiSdk/--parameters) que contiene el `in` parámetros del método. Este parámetro se omite si establece en `null`.  
+de Un puntero a una copia de la [clase del sistema __Parameters](/windows/desktop/WmiSdk/--parameters) que contiene `in` los parámetros del método. Se omite este parámetro si se establece `null`en.  
 
 `pSignatureOut`  
-[in]  Un puntero a una copia de la [clase del sistema __Parameters](/windows/desktop/WmiSdk/--parameters) que contiene el `out` parámetros del método. Este parámetro se omite si establece en `null`.
+de  Un puntero a una copia de la [clase del sistema __Parameters](/windows/desktop/WmiSdk/--parameters) que contiene `out` los parámetros del método. Se omite este parámetro si se establece `null`en.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |
-| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | El `[in, out]` parámetro del método especificado en ambos el *pInSignature* y *pOutSignature* objetos tienen distintos calificadores.
-| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Falta la especificación de un parámetro de método la **ID** calificador. |
-| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | La serie de identificador que se asigna a los parámetros de método no es consecutiva o no empiezan en 0. |
-| `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | El valor devuelto para un método tiene un **ID** calificador. |
-| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Se intentó reutilizar un nombre de método existente de una clase principal y las firmas no coincidían. |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta. |
+| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | El `[in, out]` parámetro de método especificado en los objetos *pInSignature* y *pOutSignature* tiene calificadores diferentes.
+| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Falta la especificación del calificador de **identificador** en un parámetro de método. |
+| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | La serie de IDENTIFICADOres que se asigna a los parámetros de método no es consecutiva o no comienza en 0. |
+| `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | El valor devuelto para un método tiene un calificador de **identificador** . |
+| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Se intentó reutilizar un nombre de método existente de una clase primaria y las firmas no coincidían. |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente. |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) método.
+Esta función contiene una llamada al método [IWbemClassObject::P utmethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) .
 
-Esta llamada al método solo se admite si `ptr` es una definición de clase CIM. Manipulación de método no está disponible en [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punteros que señalan a las instancias CIM.
+Esta llamada al método solo se admite `ptr` si es una definición de clase CIM. La manipulación de métodos no está disponible en los punteros [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que señalan a las instancias CIM.
 
-Los usuarios no pueden crear métodos con nombres que empiezan o terminan con un carácter de subrayado. Esto está reservado para las propiedades y clases del sistema.
+Los usuarios no pueden crear métodos con nombres que comiencen o terminen con un carácter de subrayado. Está reservado para las propiedades y clases del sistema.
 
-Para un método, el `in` y `out` se describen los parámetros como propiedades en [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) objetos.
+Para un método, los `in` parámetros `out` y se describen como propiedades en objetos [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Un `[in/out]` parámetros pueden definirse mediante la adición de la misma propiedad a ambos objetos al que apunta el `pInSignature` y `pOutSignature` parámetros. En este caso, las propiedades comparten el mismo **ID** valor del calificador.
+Un `[in/out]` parámetro se puede definir agregando la misma propiedad a ambos objetos a los que apuntan `pOutSignature` los `pInSignature` parámetros y. En este caso, las propiedades comparten el mismo valor de calificador de **identificador** .
 
-Cada propiedad en un [__Parameters](/windows/desktop/WmiSdk/--parameters) distinto de la clase de objeto `ReturnValue` debe tener un **ID** calificador, un valor numérico de base cero que identifica el orden en que aparecen los parámetros. No hay dos parámetros pueden tener el mismo **ID** valor y no **ID** se puede omitir el valor. Si se produce alguna de estas condiciones, el `PutMethod` función devuelve `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`.
+Cada propiedad de un objeto de clase [__Parameters](/windows/desktop/WmiSdk/--parameters) que `ReturnValue` no sea debe tener un calificador de **identificador** , un valor numérico basado en cero que identifique el orden en el que aparecen los parámetros. Dos parámetros no pueden tener el mismo valor de **identificador** y no se puede omitir ningún valor de **identificador** . Si se produce alguna de las `PutMethod` condiciones, `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`la función devuelve.
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo, vea el [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) método.
+Para obtener un ejemplo, vea el método [IWbemClassObject::P utmethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -102,4 +102,4 @@ Para obtener un ejemplo, vea el [IWbemClassObject::PutMethod](/windows/desktop/a
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

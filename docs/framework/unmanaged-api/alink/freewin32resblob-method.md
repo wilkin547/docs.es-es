@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75aec187452e2f9f442a5d4856fe6777c03f34c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741986"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777246"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob (Método)
-Libera el objeto binario de recursos Win32 y recursos asociados.  
+Libera el BLOB de recursos de Win32 y los recursos asociados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,16 +36,16 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>Parámetros  
  `ppResBlob`  
- El objeto binario de recursos para publicarse. Este método asigna el puntero de blob a NULL.  
+ El BLOB de recursos que se va a liberar. Este método asigna el puntero de BLOB a NULL.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

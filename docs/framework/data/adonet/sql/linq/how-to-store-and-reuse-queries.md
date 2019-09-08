@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: f8400b214bc9ba3a28eeec05f6171953b42bc6f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c023f7610576c017c91fdb919322acdf9003767a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938745"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781643"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Procedimiento para almacenar y reutilizar consultas
-Cuando una aplicación ejecuta muchas veces consultas que tienen una estructura similar, a menudo se mejora el rendimiento si se compila la consulta una vez y se ejecuta varias veces con parámetros diferentes. Por ejemplo, una aplicación podría tener que recuperar todos los clientes que están en una ciudad determinada, que es especificada por el usuario en un formulario en tiempo de ejecución. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite el uso de *consultas* compiladas para este propósito.  
+Cuando una aplicación ejecuta muchas veces consultas que tienen una estructura similar, a menudo se mejora el rendimiento si se compila la consulta una vez y se ejecuta varias veces con parámetros diferentes. Por ejemplo, una aplicación podría tener que recuperar todos los clientes que están en una ciudad determinada, que es especificada por el usuario en un formulario en tiempo de ejecución. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite el uso de *consultas compiladas* para este propósito.  
   
 > [!NOTE]
 > Este patrón de utilización representa el uso más común de las consultas compiladas, pero también son posibles otros enfoques. Por ejemplo, las consultas compiladas se pueden almacenar como miembros estáticos en una clase parcial que extiende el código generado por el diseñador.  
@@ -36,5 +36,5 @@ Cuando una aplicación ejecuta muchas veces consultas que tienen una estructura 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.Linq.CompiledQuery>
-- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Conceptos sobre consultas](query-concepts.md)
+- [Consulta de la base de datos](querying-the-database.md)

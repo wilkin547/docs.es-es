@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205015"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785385"
 ---
 # <a name="datatable-edits"></a>Ediciones de DataTable
-Cuando se cambian los valores de las columnas en una <xref:System.Data.DataRow>, los cambios se sitúan inmediatamente en el estado actual de la fila. <xref:System.Data.DataRow.AcceptChanges%2A>Acontinuación , <xref:System.Data.DataRow.RejectChanges%2A> se establece en Modified y se aceptan o se rechazan los cambios mediante los métodos o de **DataRow**. <xref:System.Data.DataRowState> **DataRow** también proporciona tres métodos que se pueden usar para suspender el estado de la fila mientras se edita. Estos métodos son <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> y <xref:System.Data.DataRow.CancelEdit%2A>.  
+Cuando se cambian los valores de las columnas en una <xref:System.Data.DataRow>, los cambios se sitúan inmediatamente en el estado actual de la fila. <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A> <xref:System.Data.DataRowState> A continuación, se establece en Modified y se aceptan o se rechazan los cambios mediante los métodos o de DataRow. **DataRow** también proporciona tres métodos que se pueden usar para suspender el estado de la fila mientras se edita. Estos métodos son <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> y <xref:System.Data.DataRow.CancelEdit%2A>.  
   
  Cuando se modifican directamente los valores de columna en una **DataRow** , el **DataRow** administra los valores de columna mediante las versiones de fila **actual**, **predeterminada**y **original** . Además de estas versiones de fila, los métodos **BeginEdit**, **EndEdit**y **CancelEdit** utilizan una cuarta versión de fila: **Propuesta**. Para obtener más información sobre las versiones de fila, vea [Estados de fila y versiones de fila](row-states-and-row-versions.md).  
   
@@ -21,7 +21,7 @@ Cuando se cambian los valores de las columnas en una <xref:System.Data.DataRow>,
   
  Durante la operación de edición, puede aplicar la lógica de validación a columnas individuales mediante la evaluación del **ProposedValue** en el evento **ColumnChanged** de la **DataTable**. El evento **ColumnChanged** contiene **DataColumnChangeEventArgs** que mantienen una referencia a la columna que está cambiando y al **ProposedValue**. Después de evaluar el valor propuesto, se puede modificar o cancelar la edición. Una vez finalizada la edición, la fila sale del estado **propuesto** .  
   
- Puede confirmar las ediciones llamando a **EndEdit**o puede cancelarlas llamando a **CancelEdit**. Tenga en cuenta que mientras **EndEdit** confirma las modificaciones, el **conjunto** de cambios no acepta realmente los cambios hasta que se llama a **AcceptChanges** . Tenga en cuenta también que si llama a **AcceptChanges** antes de finalizar la edición con **EndEdit** o **CancelEdit**, se finaliza la edición y se aceptan los valores de fila propuestos para las versiones de fila **actuales** y **originales** . Del mismo modo, si se llama a **RejectChanges** , se finaliza la edición y se descartan las versiones de fila **actuales** y **propuestas** . Llamar a **EndEdit** o **CancelEdit** después de llamar a **AcceptChanges** o **RejectChanges** no tiene ningún efecto porque la edición ya ha finalizado.  
+ Puede confirmar las ediciones llamando a **EndEdit**o puede cancelarlas llamando a **CancelEdit**. Tenga en cuenta que mientras **EndEdit** confirma las modificaciones, el **conjunto** de cambios no acepta realmente los cambios hasta que se llama a **AcceptChanges** . Tenga en cuenta también que si llama a **AcceptChanges** antes de finalizar la edición con **EndEdit** o **CancelEdit**, se finaliza la edición y se aceptan los valores de fila **propuestos** para las versiones de fila **actuales** y **originales** . Del mismo modo, si se llama a **RejectChanges** , se finaliza la edición y se descartan las versiones de fila **actuales** y **propuestas** . Llamar a **EndEdit** o **CancelEdit** después de llamar a **AcceptChanges** o **RejectChanges** no tiene ningún efecto porque la edición ya ha finalizado.  
   
  En el ejemplo siguiente se muestra cómo usar **BeginEdit** con **EndEdit** y **CancelEdit**. En el ejemplo también se comprueba **ProposedValue** del evento **ColumnChanged** y se decide si se va a cancelar la edición.  
   
@@ -93,4 +93,4 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRowVersion>
 - [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Control de eventos de DataTable](handling-datatable-events.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

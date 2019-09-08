@@ -2,12 +2,12 @@
 title: Firmar procedimientos almacenados en SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: a30b5e28263c9f36e80c4e6b848033d5095b830b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8dc62527be7273d3ce3222d4d261b81bc40b1e19
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043930"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791814"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firmar procedimientos almacenados en SQL Server
 
@@ -59,11 +59,11 @@ Para obtener más información, vea los siguientes recursos.
 
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Administración de permisos con procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Escritura de código SQL dinámico y seguro en SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Personalización de permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Modificación de datos con procedimientos almacenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Administración de permisos con procedimientos almacenados en SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Escritura de código SQL dinámico y seguro en SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Personalización de permisos con suplantación en SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Modificación de datos con procedimientos almacenados](../modifying-data-with-stored-procedures.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

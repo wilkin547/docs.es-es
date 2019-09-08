@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 851abcae9c3edea5c971bd2bc4523c3cec757cc9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770981"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796808"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>IAssemblyCache::CreateAssemblyScavenger (Método)
-Reservado para uso interno por la tecnología fusion.  
+Reservado para uso interno por parte de la tecnología de fusión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +37,15 @@ HRESULT CreateAssemblyScavenger (
   
 ## <a name="parameters"></a>Parámetros  
  `ppUnkReserved`  
- [out] El valor devuelto `IUnknown` puntero.  
+ enuncia Puntero devuelto `IUnknown` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache (interfaz)](iassemblycache-interface.md)

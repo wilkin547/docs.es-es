@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1abb7efe0f30ff14d51f9486d6d5b04d2faa053
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48cdd550e5d8c7c75a603d74456e99a066d5c599
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773754"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798965"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration (Función)
 Genera una firma de nombres seguros para el ensamblado especificado.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameSignatureGeneration (](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,52 +42,52 @@ BOOLEAN StrongNameSignatureGeneration (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
+ de La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
   
  `wszKeyContainer`  
- [in] Nombre del contenedor de claves que contiene el par de claves pública y privada.  
+ de Nombre del contenedor de claves que contiene el par de claves pública y privada.  
   
- Si `pbKeyBlob` es null, `wszKeyContainer` debe especificar un contenedor válido en el proveedor de servicios criptográficos (CSP). En este caso, el par de claves almacenadas en el contenedor se usa para firmar el archivo.  
+ Si `pbKeyBlob` es null, `wszKeyContainer` debe especificar un contenedor válido dentro del proveedor de servicios criptográficos (CSP). En este caso, el par de claves almacenado en el contenedor se usa para firmar el archivo.  
   
- Si `pbKeyBlob` no es null, se supone que el par de claves que se debe incluir en la clave objeto binario grande (BLOB).  
+ Si `pbKeyBlob` no es null, se supone que el par de claves está incluido en el objeto binario grande (BLOB) de clave.  
   
- Las claves deben ser de 1024 bits Rivest-Shamir-Adleman (RSA) las claves de firma. Se admite ningún otro tipo de claves en este momento.  
+ Las claves deben ser claves de firma de Rivest-Shamir-Adleman (RSA) de 1024 bits. En este momento no se admite ningún otro tipo de clave.  
   
  `pbKeyBlob`  
- [in] Un puntero a la par de claves pública y privada. Este par está en el formato creado por Win32 `CryptExportKey` función. Si `pbKeyBlob` es null, el contenedor de claves especificado por `wszKeyContainer` se supone que contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor `wszKeyContainer` de claves especificado por contiene el par de claves.  
   
  `cbKeyBlob`  
- [in] El tamaño, en bytes, de `pbKeyBlob`.  
+ de Tamaño, en bytes, de `pbKeyBlob`.  
   
  `ppbSignatureBlob`  
- [out] Un puntero a la ubicación a la que common language runtime devuelve la firma. Si `ppbSignatureBlob` es null, el tiempo de ejecución almacena la firma en el archivo especificado por `wszFilePath`.  
+ enuncia Puntero a la ubicación en la que el Common Language Runtime devuelve la firma. Si `ppbSignatureBlob` es null, el Runtime almacena la firma en el archivo especificado por `wszFilePath`.  
   
- Si `ppbSignatureBlob` es no nulo, common language runtime asigna espacio en el que se va a devolver la firma. El llamador debe liberar este espacio mediante el [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) función.  
+ Si `ppbSignatureBlob` no es null, el Common Language Runtime asigna espacio en el que se va a devolver la firma. El autor de la llamada debe liberar este espacio mediante la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbSignatureBlob`  
- [out] El tamaño, en bytes, de la firma devuelta.  
+ enuncia Tamaño, en bytes, de la firma devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true`Cuando se complete correctamente; en caso `false`contrario,.  
   
 ## <a name="remarks"></a>Comentarios  
- Especifique null para `wszFilePath` para calcular el tamaño de la firma sin necesidad de crear la firma.  
+ Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
- La firma se puede almacenar directamente en el archivo o la devuelve al llamador.  
+ La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
   
- Si el `StrongNameSignatureGeneration` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si la `StrongNameSignatureGeneration` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [StrongNameSignatureGeneration (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [StrongNameSignatureGenerationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureGeneration (método)](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [StrongNameSignatureGenerationEx (método)](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

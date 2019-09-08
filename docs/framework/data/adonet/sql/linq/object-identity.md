@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: dff5642b2490cd3935dba3b3d04cd62082249c32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 053c861bae951f044d30d048951aa072b3d85a42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915727"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792938"
 ---
 # <a name="object-identity"></a>Identidad de objetos
 Los objetos en tiempo de ejecución tienen identidades únicas. Dos variables que hacen referencia al mismo objeto en realidad hacen referencia a la misma instancia del objeto. Por este motivo, los cambios que se realizan a través de una variable están visibles inmediatamente a través de la otra.  
@@ -21,7 +21,7 @@ Los objetos en tiempo de ejecución tienen identidades únicas. Dos variables qu
   
  En el caso de los objetos, se espera algo muy diferente. Se espera que, si se solicita la misma información a <xref:System.Data.Linq.DataContext> varias veces, de hecho se obtendrá la misma instancia de objeto. Este comportamiento es el esperado porque los objetos tienen un significado especial para una aplicación y se espera que se comporten como objetos. Se han diseñado como jerarquías o gráficos. Lo que se espera es que se recuperarán como tales y no que se recibirán múltiples instancias replicadas sólo porque se solicitó lo mismo más de una vez.  
   
- En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> administra la identidad de objeto. Siempre que se recupera una nueva fila de la base de datos, la fila se registra en una tabla de identidad según su clave principal y se crea un nuevo objeto. Siempre que se recupera esa misma fila, la instancia de objeto original se devuelve a la aplicación. De esta manera, <xref:System.Data.Linq.DataContext> convierte el concepto de identidad desde el punto de vista de la base de datos (es decir, claves principales) en el concepto de identidad desde el punto de vista del lenguaje (es decir, instancias). La aplicación solo ve el objeto en el estado en que se recuperó por primera vez. Los nuevos datos, si son diferentes, se descartan. Para obtener más información, vea [recuperar objetos de la memoria caché de identidades](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> administra la identidad de objeto. Siempre que se recupera una nueva fila de la base de datos, la fila se registra en una tabla de identidad según su clave principal y se crea un nuevo objeto. Siempre que se recupera esa misma fila, la instancia de objeto original se devuelve a la aplicación. De esta manera, <xref:System.Data.Linq.DataContext> convierte el concepto de identidad desde el punto de vista de la base de datos (es decir, claves principales) en el concepto de identidad desde el punto de vista del lenguaje (es decir, instancias). La aplicación solo ve el objeto en el estado en que se recuperó por primera vez. Los nuevos datos, si son diferentes, se descartan. Para obtener más información, vea [recuperar objetos de la memoria caché de identidades](retrieving-objects-from-the-identity-cache.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]utiliza este enfoque para administrar la integridad de los objetos locales con el fin de admitir las actualizaciones optimistas. Dado que los únicos cambios que se producen después de crear el objeto son los realizados por la aplicación, la intención de la aplicación está clara. Si en ese período de tiempo un tercero ha realizado cambios, se identifican en el momento en que se llama a `SubmitChanges()`.  
   
@@ -44,4 +44,4 @@ Los objetos en tiempo de ejecución tienen identidades únicas. Dos variables qu
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Información general](background-information.md)

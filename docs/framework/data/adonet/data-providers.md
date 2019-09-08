@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949812"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785642"
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
 Un proveedor de datos de .NET Framework se utiliza para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. .NET Framework proveedores de datos son ligeros, creando una capa mínima entre el origen de datos y el código, lo que aumenta el rendimiento sin sacrificar la funcionalidad.  
@@ -54,12 +54,12 @@ Un proveedor de datos de .NET Framework se utiliza para conectarse a una base de
 > [!NOTE]
 > El proveedor de datos .NET Framework para ODBC tiene una arquitectura similar a la del proveedor de datos .NET Framework para OLE DB; por ejemplo, llama a un componente de servicio ODBC.  
   
- ![Proveedores de datos](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Proveedores de datos](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Comparación del proveedor de datos .NET Framework para SQL Server y el proveedor de datos .NET Framework para OLE DB  
   
  El proveedor de datos de .NET Framework para las clases de SQL Server <xref:System.Data.SqlClient> se encuentra en el espacio de nombres.  
   
- El proveedor de datos de .NET Framework para SQL Server admite transacciones locales y distribuidas. Para las transacciones distribuidas, el proveedor de datos de .NET Framework para SQL Server, de forma predeterminada, se da de alta automáticamente en una transacción y obtiene los detalles <xref:System.Transactions>de la transacción de los servicios de componentes de Windows o. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ El proveedor de datos de .NET Framework para SQL Server admite transacciones locales y distribuidas. Para las transacciones distribuidas, el proveedor de datos de .NET Framework para SQL Server, de forma predeterminada, se da de alta automáticamente en una transacción y obtiene los detalles <xref:System.Transactions>de la transacción de los servicios de componentes de Windows o. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  En el siguiente ejemplo de código se muestra cómo puede incluir el espacio de nombres `System.Data.SqlClient` en sus aplicaciones.  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>Proveedor de datos .NET Framework para OLE DB  
- El proveedor de datos de .NET Framework para OLE DB (OleDb) utiliza OLE DB nativa a través de la interoperabilidad COM para habilitar el acceso a los datos. El proveedor de datos de .NET Framework para OLE DB admite transacciones locales y distribuidas. Para las transacciones distribuidas, el proveedor de datos de .NET Framework para OLE DB, de forma predeterminada, se da de alta automáticamente en una transacción y obtiene los detalles de la transacción de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ El proveedor de datos de .NET Framework para OLE DB (OleDb) utiliza OLE DB nativa a través de la interoperabilidad COM para habilitar el acceso a los datos. El proveedor de datos de .NET Framework para OLE DB admite transacciones locales y distribuidas. Para las transacciones distribuidas, el proveedor de datos de .NET Framework para OLE DB, de forma predeterminada, se da de alta automáticamente en una transacción y obtiene los detalles de la transacción de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  En la tabla siguiente se muestran los proveedores probados con ADO.NET.  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>Proveedor de datos .NET Framework para ODBC  
- El proveedor de datos de .NET Framework para ODBC (ODBC) utiliza el administrador de controladores ODBC (DM) nativo para habilitar el acceso a los datos. El proveedor de datos de ODBC admite tanto transacciones locales como transacciones distribuidas. En el caso de las transacciones distribuidas, el proveedor de datos OBDC se inscribe de forma predeterminada y automática en una transacción y obtiene los detalles a través de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ El proveedor de datos de .NET Framework para ODBC (ODBC) utiliza el administrador de controladores ODBC (DM) nativo para habilitar el acceso a los datos. El proveedor de datos de ODBC admite tanto transacciones locales como transacciones distribuidas. En el caso de las transacciones distribuidas, el proveedor de datos OBDC se inscribe de forma predeterminada y automática en una transacción y obtiene los detalles a través de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  En la tabla siguiente se muestran los controladores ODBC probados con ADO.NET.  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > El proveedor de datos de .NET Framework para ODBC requiere MDAC 2,6 o una versión posterior, y se recomienda MDAC 2,8 SP1. Puede descargar MDAC 2.8 SP1 del [Centro para programadores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?linkid=4173).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Proveedor de datos .NET Framework para Oracle  
- El proveedor de datos de .NET Framework para Oracle (OracleClient) permite el acceso a los datos de los orígenes de datos de Oracle a través del software de conectividad de cliente de Oracle. El proveedor de datos es compatible con la versión 8.1.7 o posterior del software de cliente de Oracle. El proveedor de datos admite tanto transacciones locales como transacciones distribuidas. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ El proveedor de datos de .NET Framework para Oracle (OracleClient) permite el acceso a los datos de los orígenes de datos de Oracle a través del software de conectividad de cliente de Oracle. El proveedor de datos es compatible con la versión 8.1.7 o posterior del software de cliente de Oracle. El proveedor de datos admite tanto transacciones locales como transacciones distribuidas. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  El proveedor de datos de .NET Framework para Oracle requiere el software de cliente de Oracle (versión 8.1.7 o una versión posterior) en el sistema para poder conectarse a un origen de datos de Oracle.  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)

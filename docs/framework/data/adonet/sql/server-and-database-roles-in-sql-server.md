@@ -2,12 +2,12 @@
 title: Roles de servidor y base de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961116"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791784"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Roles de servidor y base de datos en SQL Server
 Todas las versiones de SQL Server usan la seguridad basada en roles, que permite asignar permisos a un rol, o grupo de usuarios, en lugar de asignarlos a usuarios individuales. Los roles fijos de servidor y base de datos cuentan con un conjunto fijo de permisos asignados.  
@@ -42,7 +42,7 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
  `dbo`, o propietario de base de datos, es una cuenta de usuario con permisos implícitos para realizar todas las actividades en la base de datos. Los miembros del rol fijo del servidor `sysadmin` se asignan automáticamente a `dbo`.  
   
 > [!NOTE]
-> `dbo`también es el nombre de un esquema, como se describe en [propiedad y separación de esquema de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`también es el nombre de un esquema, como se describe en [propiedad y separación de esquema de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md).  
   
  La cuenta de usuario `dbo` se confunde a menudo con el rol fijo de base de datos `db_owner`. El ámbito de `db_owner` es una base de datos y el ámbito de `sysadmin` es el servidor completo. La pertenencia al rol `db_owner` no proporciona privilegios de usuario `dbo`.  
   
@@ -63,9 +63,9 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Autorización y permisos en SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Autenticación en SQL Server](authentication-in-sql-server.md)
+- [Propiedad y separación de esquemas de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Autorización y permisos en SQL Server](authorization-and-permissions-in-sql-server.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923271"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797271"
 ---
 # <a name="client-channel-level-programming"></a>Programación a nivel de canal de cliente
-En este tema se describe cómo escribir una aplicación de cliente de Windows Communication Foundation (WCF) sin utilizar el <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> clase y su modelo de objetos asociado.  
+En este tema se describe cómo escribir una aplicación cliente de Windows Communication Foundation (WCF) sin <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> utilizar la clase y su modelo de objetos asociado.  
   
 ## <a name="sending-messages"></a>Envío de mensajes  
  Para estar listo para enviar mensajes y recibir y procesar las respuestas, se han de realizar los pasos siguientes:  
@@ -29,7 +29,7 @@ En este tema se describe cómo escribir una aplicación de cliente de Windows Co
 5. Cerrar todos los objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Crear un enlace  
- Similar al caso de recepción (consulte [a nivel de canal de servicio de programación](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), envío de mensajes se inicia mediante la creación de un enlace. Este ejemplo crea un nuevo <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> y agrega un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> a su colección Elements.  
+ Similar al caso de recepción (consulte [programación de nivel de canal de servicio](service-channel-level-programming.md)), el envío de mensajes comienza creando un enlace. Este ejemplo crea un nuevo <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> y agrega un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> a su colección Elements.  
   
 #### <a name="building-a-channelfactory"></a>Creación de un ChannelFactory  
  En lugar de crear un <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, en esta ocasión creamos un <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> llamando a <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> en el enlace donde está el parámetro de tipo <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Aunque el lado que espera mensajes entrantes usa los agentes de escuchas de canales, el lado que inicia la comunicación para crear un canal emplea los generadores de canales. Al igual que los agentes de escuchas de canales, los generadores de canales se han de abrir primero antes de que puedan utilizarse.  

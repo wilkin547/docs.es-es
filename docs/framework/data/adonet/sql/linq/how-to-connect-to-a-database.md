@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: ebf630c08714a2e5162ba072f88b7fbdef7ca0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48ff4af2c881104d5699910e20ef86eea0466d2a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964058"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793863"
 ---
 # <a name="how-to-connect-to-a-database"></a>Procedimiento para conectar a una base de datos
 <xref:System.Data.Linq.DataContext> es la canalización principal mediante la cual se conecta a una base de datos, recupera los objetos de ella y le vuelve a enviar los cambios. Puede usar el <xref:System.Data.Linq.DataContext> mismo modo que usaría un ADO.net. <xref:System.Data.SqlClient.SqlConnection> De hecho, <xref:System.Data.Linq.DataContext> se inicializa con la conexión o cadena de conexión que proporcione. Para obtener más información, vea [métodos DataContext (Object](/visualstudio/data-tools/datacontext-methods-o-r-designer)Relational Designer).  
@@ -18,7 +18,7 @@ ms.locfileid: "69964058"
  El propósito de <xref:System.Data.Linq.DataContext> es convertir sus solicitudes de objetos en consultas SQL que se van a ejecutar en la base de datos y, a continuación, ensamblar los objetos a partir de los resultados. <xref:System.Data.Linq.DataContext> habilita [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] al implementar el mismo patrón de operador que los operadores de consulta estándar, como `Where` y `Select`.  
   
 > [!IMPORTANT]
-> Es fundamental mantener una conexión segura. Para obtener más información, consulte [seguridad en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+> Es fundamental mantener una conexión segura. Para obtener más información, consulte [seguridad en LINQ to SQL](security-in-linq-to-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, se utiliza <xref:System.Data.Linq.DataContext> para establecer una conexión con la base de datos de ejemplo Northwind y recuperar las filas de clientes cuya ciudad es Londres (London).  
@@ -41,4 +41,4 @@ ms.locfileid: "69964058"
   
 ## <a name="see-also"></a>Vea también
 
-- [Comunicación con la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [Comunicación con la base de datos](communicating-with-the-database.md)

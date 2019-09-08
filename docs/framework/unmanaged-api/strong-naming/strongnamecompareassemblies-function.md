@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778726"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799152"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies (Función)
 Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameCompareAssemblies (](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>Parámetros  
  `wszAssembly1`  
- [in] La ruta de acceso al primer ensamblado.  
+ de Ruta de acceso al primer ensamblado.  
   
  `wszAssembly2`  
- [in] La ruta de acceso al segundo ensamblado.  
+ de Ruta de acceso al segundo ensamblado.  
   
  `pdwResult`  
- [out] Uno de los siguientes valores:  
+ enuncia Uno de los siguientes valores:  
   
-- `SN_CMP_DIFFERENT` (0): Especifica que los ensamblados contienen datos diferentes.  
+- `SN_CMP_DIFFERENT`(0): especifica que los ensamblados contienen datos diferentes.  
   
-- `SN_CMP_IDENTICAL` (1): Especifica que los ensamblados son exactamente las mismas, incluidos sus firmas y la suma de comprobación.  
+- `SN_CMP_IDENTICAL`(1): especifica que los ensamblados son exactamente iguales, incluidas sus firmas y suma de comprobación.  
   
-- `SN_CMP_SIGONLY` (2): Especifica que los ensamblados se diferencian únicamente por la firma y la suma de comprobación.  
+- `SN_CMP_SIGONLY`(2): especifica que los ensamblados solo se diferencian en la firma y la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true`Cuando se complete correctamente; en caso `false`contrario,.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Comentarios  
- La firma de nombre seguro de un ensamblado consta del nombre de texto, versión, referencia cultural y token de clave pública del ensamblado.  
+ La firma de nombre seguro de un ensamblado consta del nombre de texto, la versión, la referencia cultural y el token de clave pública del ensamblado.  
   
- Si el `StrongNameCompareAssemblies` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si la `StrongNameCompareAssemblies` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="see-also"></a>Vea también
 
-- [StrongNameCompareAssemblies (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameCompareAssemblies (método)](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

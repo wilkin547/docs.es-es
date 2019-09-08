@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 64ba7a8e6bd6361e14d1f16576e377575b088bbe
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e48359041f92e7b534513aa461a293a822bede19
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205139"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786486"
 ---
 # <a name="creating-a-datatable"></a>Crear un objeto DataTable
 Un objeto <xref:System.Data.DataTable>, que representa una tabla de datos relacionales en la memoria, se puede crear y usar de manera independiente o lo pueden usar otros objetos de .NET Framework, normalmente como miembro de un objeto <xref:System.Data.DataSet>.  
   
  Puede crear un objeto **DataTable** mediante el constructor de **DataTable** adecuado. Puede agregarlo al **conjunto** de objetos mediante el método **Add** para agregarlo a la colección de **tablas** del objeto **DataTable** .  
   
- También puede crear objetos **DataTable** dentro de un **conjunto de DataSet** mediante los métodos **Fill** o **FillSchema** del objeto **DataAdapter** o desde un esquema XML predefinido o deducido mediante el **ReadXml**, **ReadXmlSchema** o métodos **InferXmlSchema** del conjunto de **DataSet**. Tenga en cuenta que después de haber agregado un **DataTable** como miembro de la colección tables de un **DataSet**, no puede agregarlo a la colección de tablas de ningún otro **conjunto**de tipos.  
+ También puede crear objetos **DataTable** dentro de un **conjunto de DataSet** mediante los métodos **Fill** o **FillSchema** del objeto **DataAdapter** o desde un esquema XML predefinido o deducido mediante el **ReadXml**, **ReadXmlSchema** o métodos **InferXmlSchema** del conjunto de **DataSet**. Tenga en cuenta que después de haber agregado un **DataTable** como miembro de la colección **tables** de un **DataSet**, no puede agregarlo a la colección de tablas de ningún otro **conjunto**de tipos.  
   
  La primera vez que se crea un **objeto DataTable**, no tiene un esquema (es decir, una estructura). Para definir el esquema de la tabla, debe crear y agregar <xref:System.Data.DataColumn> objetos a la colección **Columns** de la tabla. También puede definir una columna de clave principal para la tabla y crear y agregar objetos de **restricción** a la colección **Constraints** de la tabla. Después de haber definido el esquema para un **DataTable**, puede Agregar filas de datos a la tabla agregando objetos **DataRow** a la colección **Rows** de la tabla.  
   
@@ -36,7 +36,7 @@ Dim workTable as DataTable = New DataTable("Customers")
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- En el ejemplo siguiente se crea una instancia de un **objeto DataTable** agregándolo a la colección tables de un **DataSet**.  
+ En el ejemplo siguiente se crea una instancia de un **objeto DataTable** agregándolo a la colección **tables** de un **DataSet**.  
   
 ```vb  
 Dim customers As DataSet = New DataSet  
@@ -57,4 +57,4 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 - [Rellenar un conjunto de datos desde un objeto DataAdapter](../populating-a-dataset-from-a-dataadapter.md)
 - [Carga de un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
 - [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

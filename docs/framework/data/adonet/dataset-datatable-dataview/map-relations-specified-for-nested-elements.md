@@ -2,12 +2,12 @@
 title: Asignar relaciones especificadas para elementos anidados
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204636"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786086"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Asignar relaciones especificadas para elementos anidados
 Un esquema puede incluir una anotación **msdata: Relationship** para especificar explícitamente la asignación entre dos elementos cualesquiera del esquema. Los dos elementos especificados en **msdata: Relationship** se pueden anidar en el esquema, pero no tienen que ser. El proceso de asignación usa **msdata: Relationship** en el esquema para generar la relación de clave principal y clave externa entre las dos columnas.  
@@ -61,7 +61,7 @@ Un esquema puede incluir una anotación **msdata: Relationship** para especifica
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- Una relación entre las tablas **Order** y **OrderDetail** . La propiedad Nested de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
+- Una relación entre las tablas **Order** y **OrderDetail** . La propiedad **Nested** de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
   
     ```  
     ParentTable: Order  
@@ -78,4 +78,4 @@ Un esquema puede incluir una anotación **msdata: Relationship** para especifica
 
 - [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

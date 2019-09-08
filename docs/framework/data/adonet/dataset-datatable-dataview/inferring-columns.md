@@ -2,12 +2,12 @@
 title: Inferir columnas
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 651d132fd76ba9015d4730a5e519bc679608e275
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2718cbcf29799f99c8648b129fdb6079a6f6d344
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203592"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786181"
 ---
 # <a name="inferring-columns"></a>Inferir columnas
 Una vez que ADO.NET determina a partir de un documento XML los elementos que se van a inferir como tablas para un <xref:System.Data.DataSet>, se deducen las columnas para dichas tablas. ADO.NET 2,0 presentó un nuevo motor de inferencia de esquemas que deduce un tipo de datos fuertemente tipado para cada elemento **simpleType** . En versiones anteriores, el tipo de datos de un elemento **simpleType** deducido siempre era **xsd: String**.  
@@ -25,7 +25,7 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
  Omite cualquier esquema alineado y lee los datos del esquema del <xref:System.Data.DataSet> existente.  
   
 ## <a name="attributes"></a>Atributos  
- Como se define en inferencia de [tablas](inferring-tables.md), un elemento con atributos se deduce como una tabla. Los atributos de dicho elemento se deducirán como columnas de la tabla. La propiedad **ColumnMapping** de las columnas se establecerá en **MappingType. Attribute**para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se vuelve a escribir en XML. Los valores de los atributos se almacenan en una fila de la tabla. Por ejemplo, tomemos el siguiente código XML:  
+ Como se define en [inferencia de tablas](inferring-tables.md), un elemento con atributos se deduce como una tabla. Los atributos de dicho elemento se deducirán como columnas de la tabla. La propiedad **ColumnMapping** de las columnas se establecerá en **MappingType. Attribute**para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se vuelve a escribir en XML. Los valores de los atributos se almacenan en una fila de la tabla. Por ejemplo, tomemos el siguiente código XML:  
   
 ```xml  
 <DocumentElement>  
@@ -72,4 +72,4 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
 - [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

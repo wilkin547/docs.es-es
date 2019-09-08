@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3f3055b11f0e682ae5a9578289e30dc2716343fe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205055"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785402"
 ---
 # <a name="datatable-constraints"></a>Restricciones de DataTable
 Se pueden utilizar restricciones para exigir restricciones sobre los datos de un objeto <xref:System.Data.DataTable> con el fin de mantener la integridad de los datos. Una restricción es una regla automática que se aplica a una columna, o a varias columnas relacionadas, que determina cómo proceder cuando se modifica de alguna manera el valor de una fila. Las restricciones se aplican cuando la `System.Data.DataSet.EnforceConstraints` propiedad <xref:System.Data.DataSet> de es **true**. Para ver un ejemplo de código que muestre cómo establecer la propiedad `EnforceConstraints`, vea el tema de referencia <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -31,7 +31,7 @@ Se pueden utilizar restricciones para exigir restricciones sobre los datos de un
   
  Una **ForeignKeyConstraint** puede restringir y propagar los cambios en las columnas relacionadas. En función de las propiedades establecidas para la **ForeignKeyConstraint** de una columna, si la propiedad **EnforceConstraints** del **DataSet** es **true**, realizar determinadas operaciones en la fila primaria producirá una excepción. Por ejemplo, si la propiedad **DeleteRule** de **ForeignKeyConstraint** es **None**, no se puede eliminar una fila primaria si tiene filas secundarias.  
   
- Puede crear una restricción de clave externa entre columnas individuales o entre una matriz de columnas mediante el constructor **ForeignKeyConstraint** . Pase el objeto **ForeignKeyConstraint** resultante al método **Add** de la propiedad Constraints de la tabla, que es una **ConstraintCollection**. También puede pasar argumentos de constructor a varias sobrecargas del método **Add** de una **ConstraintCollection** para crear una **ForeignKeyConstraint**.  
+ Puede crear una restricción de clave externa entre columnas individuales o entre una matriz de columnas mediante el constructor **ForeignKeyConstraint** . Pase el objeto **ForeignKeyConstraint** resultante al método **Add** de la propiedad **Constraints** de la tabla, que es una **ConstraintCollection**. También puede pasar argumentos de constructor a varias sobrecargas del método **Add** de una **ConstraintCollection** para crear una **ForeignKeyConstraint**.  
   
  Al crear una **ForeignKeyConstraint**, puede pasar los valores **DeleteRule** y **UpdateRule** al constructor como argumentos, o bien puede establecerlos como propiedades como en el ejemplo siguiente (donde el valor **DeleteRule** se establece **en Ninguno**).  
   
@@ -70,7 +70,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
 ## <a name="uniqueconstraint"></a>UniqueConstraint  
- El objeto **UniqueConstraint** , que se puede asignar a una sola columna o a una matriz de columnas de un **objeto DataTable**, garantiza que todos los datos de la columna o columnas especificadas sean únicos por fila. Puede crear una restricción UNIQUE para una columna o matriz de columnas mediante el constructor **UniqueConstraint** . Pase el objeto **UniqueConstraint** resultante al método **Add** de la propiedad Constraints de la tabla, que es una **ConstraintCollection**. También puede pasar argumentos de constructor a varias sobrecargas del método **Add** de una **ConstraintCollection** para crear una **UniqueConstraint**. Al crear una **UniqueConstraint** para una o varias columnas, puede especificar opcionalmente si la columna o columnas son una clave principal.  
+ El objeto **UniqueConstraint** , que se puede asignar a una sola columna o a una matriz de columnas de un **objeto DataTable**, garantiza que todos los datos de la columna o columnas especificadas sean únicos por fila. Puede crear una restricción UNIQUE para una columna o matriz de columnas mediante el constructor **UniqueConstraint** . Pase el objeto **UniqueConstraint** resultante al método **Add** de la propiedad **Constraints** de la tabla, que es una **ConstraintCollection**. También puede pasar argumentos de constructor a varias sobrecargas del método **Add** de una **ConstraintCollection** para crear una **UniqueConstraint**. Al crear una **UniqueConstraint** para una o varias columnas, puede especificar opcionalmente si la columna o columnas son una clave principal.  
   
  También puede crear una restricción UNIQUE para una columna estableciendo la propiedad **Unique** de la columna en **true**. Como alternativa, si se establece la propiedad **Unique** de una sola columna en **false** , se quita cualquier restricción única que pueda existir. Si se define una o varias columnas como clave principal de una tabla se creará automáticamente una restricción única para la columna o columnas especificadas. Si quita una columna de la propiedad **PrimaryKey** de una **DataTable**, se quita la **UniqueConstraint** .  
   
@@ -100,4 +100,4 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.UniqueConstraint>
 - [Definición del esquema de DataTable](datatable-schema-definition.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

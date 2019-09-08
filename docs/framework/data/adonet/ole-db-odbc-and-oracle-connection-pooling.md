@@ -2,12 +2,12 @@
 title: Agrupación de conexiones de OLE DB, ODBC y Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929253"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794696"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Agrupación de conexiones de OLE DB, ODBC y Oracle
 La agrupación de conexiones puede mejorar de forma considerable el rendimiento y la escalabilidad de la aplicación. En esta sección se describe la agrupación de conexiones en los proveedores de datos .NET Framework para OLE DB, ODBC y Oracle.  
@@ -26,7 +26,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="connection-pooling-for-odbc"></a>Agrupación de conexiones para ODBC  
  La agrupación de conexiones para el proveedor de datos .NET Framework para ODBC se administra a través del Administrador de controladores ODBC que se utiliza en la conexión, y que no está influido por dicho proveedor.  
   
- Para habilitar o deshabilitar la agrupación de conexiones, abra el **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del panel de control. La pestaña agrupación de **conexiones** permite especificar parámetros de agrupación de conexiones para cada controlador ODBC instalado. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
+ Para habilitar o deshabilitar la agrupación de conexiones, abra el **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del panel de control. La pestaña **agrupación de conexiones** permite especificar parámetros de agrupación de conexiones para cada controlador ODBC instalado. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Agrupación de conexiones para OracleClient  
  El proveedor de datos .NET Framework para Oracle ofrece agrupación automática de conexiones para la aplicación cliente de ADO.NET. También puede suministrar varios modificadores de cadena de conexión para controlar el comportamiento de agrupación de conexiones (vea "Control de la agrupación de conexiones con palabras clave de cadena de conexión", más adelante en este tema).  
@@ -70,6 +70,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
 ## <a name="see-also"></a>Vea también
 
-- [Agrupación de conexiones](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [Contadores de rendimiento](../../../../docs/framework/data/adonet/performance-counters.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Agrupación de conexiones](connection-pooling.md)
+- [Contadores de rendimiento](performance-counters.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203777"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786338"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 Esta sección ofrece información general sobre cómo se crea el esquema relacional de un `DataSet` a partir del documento de esquema del lenguaje de definición de esquema XML (XSD). En general, para cada `complexType` elemento secundario de un elemento de esquema, se genera una tabla `DataSet`en. La estructura de la tabla está determinada por la definición del tipo complejo. Las tablas se crean en `DataSet` para los elementos de nivel superior del esquema. Sin embargo, solo se crea una tabla para un elemento de `complexType` nivel superior cuando `complexType` el elemento está anidado dentro `complexType` de otro `complexType` elemento, en cuyo caso el elemento anidado se asigna `DataTable` a un `DataSet`dentro de.  
@@ -50,7 +50,7 @@ Customers (CustomerID , CompanyName, Phone)
  El tipo de datos de cada columna de la tabla se deriva del tipo de esquema XML del correspondiente elemento o atributo especificado.  
   
 > [!NOTE]
-> Si el elemento `customers` es de un tipo de datos de esquema XML simple como Integer, no se genera ninguna tabla. Solo se crean tablas para elementos de nivel superior que sean de tipos complejos.  
+> Si el elemento `customers` es de un tipo de datos de esquema XML simple como **Integer**, no se genera ninguna tabla. Solo se crean tablas para elementos de nivel superior que sean de tipos complejos.  
   
  En el siguiente esquema XML, el elemento **Schema** tiene dos elementos secundarios, `InStateCustomers` y `OutOfStateCustomers`.  
   
@@ -98,4 +98,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

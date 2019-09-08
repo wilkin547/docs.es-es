@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 9bff69e28aa17da87da7e94d4e110c0375f043ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203703"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786308"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generar conjuntos de datos fuertemente tipados
 Dado un esquema XML que cumple con el estándar del lenguaje de definición de esquemas XML (XSD), puede generar un fuertemente <xref:System.Data.DataSet> tipado mediante la herramienta xsd. exe proporcionada con el kit de desarrollo de software (SDK) de Windows.  
@@ -100,4 +100,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 - <xref:System.Data.DataSet>
 - [Objetos DataSet con tipo](typed-datasets.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

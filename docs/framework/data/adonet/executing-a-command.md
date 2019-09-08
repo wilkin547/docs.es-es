@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: c3ed424aff3cd485a78d26a7f27bc5b1eac66448
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f749ea37e1655f006e4de26e7cb279b778fe4faf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879416"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795110"
 ---
 # <a name="executing-a-command"></a>Ejecutar un comando
 Cada proveedor de datos .NET Framework incluido en .NET Framework dispone de su propio objeto command que hereda de <xref:System.Data.Common.DbCommand>. El proveedor de datos .NET Framework para OLE DB incluye un objeto <xref:System.Data.OleDb.OleDbCommand>, el proveedor de datos .NET Framework para SQL Server incluye un objeto <xref:System.Data.SqlClient.SqlCommand>, el proveedor de datos .NET Framework para ODBC incluye un objeto <xref:System.Data.Odbc.OdbcCommand> y el proveedor de datos .NET Framework para Oracle incluye un objeto <xref:System.Data.OracleClient.OracleCommand>. Cada uno de estos objetos expone métodos para ejecutar comandos que se basan en el tipo de comando y el valor devuelto deseado, tal como se describe en la tabla siguiente.  
   
-|Comando|Valor devuelto|  
+|Get-Help|Valor devuelto|  
 |-------------|------------------|  
 |`ExecuteReader`|Devuelve un objeto `DataReader`.|  
 |`ExecuteScalar`|Devuelve un solo valor escalar.|  
@@ -24,7 +24,7 @@ Cada proveedor de datos .NET Framework incluido en .NET Framework dispone de su 
   
  Cada objeto command fuertemente tipado admite también una enumeración <xref:System.Data.CommandType> que especifica cómo se interpreta una cadena de comando, tal como se describe en la tabla siguiente.  
   
-|CommandType|Descripción|  
+|CommandType|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |`Text`|Comando de SQL que define las instrucciones que se van a ejecutar en el origen de datos.|  
 |`StoredProcedure`|Nombre del procedimiento almacenado. Puede usar la propiedad `Parameters` de un comando para tener acceso a los parámetros de entrada y de salida y a los valores devueltos, independientemente del método `Execute` al que se llame. Al usar `ExecuteReader`, no es posible el acceso a los valores devueltos y los parámetros de salida hasta que se cierra `DataReader`.|  
@@ -37,10 +37,10 @@ Cada proveedor de datos .NET Framework incluido en .NET Framework dispone de su 
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  
   
 ### <a name="troubleshooting-commands"></a>Solución de problemas de comandos  
- El proveedor de datos .NET Framework para SQL Server agrega contadores de rendimiento que permiten detectar problemas intermitentes relacionados con errores en la ejecución de comandos. Para obtener más información, consulte [los contadores de rendimiento](../../../../docs/framework/data/adonet/performance-counters.md).  
+ El proveedor de datos .NET Framework para SQL Server agrega contadores de rendimiento que permiten detectar problemas intermitentes relacionados con errores en la ejecución de comandos. Para obtener más información, vea [contadores de rendimiento](performance-counters.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Comandos y parámetros](commands-and-parameters.md)
+- [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
 - [Información general sobre ADO.NET](ado-net-overview.md)

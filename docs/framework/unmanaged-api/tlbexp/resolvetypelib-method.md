@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f274befe78e45be3e53335572fd9c1e0b401fd3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040173"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798798"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib (Método)
 Resuelve el nombre simple de una biblioteca de tipos devolviendo su ruta de acceso completa.  
@@ -61,12 +61,12 @@ HRESULT ResolveTypeLib(
  enuncia Un puntero a un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) que contiene la ruta de acceso completa de la biblioteca de tipos `bstrSimpleName` con el nombre en el parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- La `ResolveTypeLib` [función LoadTypeLibWithResolver (](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) llama al método durante el procesamiento de [Tlbexp. exe (exportador de la biblioteca de tipos)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) .  
+ La `ResolveTypeLib` [función LoadTypeLibWithResolver (](loadtypelibwithresolver-function.md) llama al método durante el procesamiento de [Tlbexp. exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) .  
   
  Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) que contenga la ruta de acceso completa de la biblioteca `bstrSimpleName` de tipos denominada en el parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: TlbRef. idl, TlbRef. h  
   
@@ -76,5 +76,5 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones del asistente Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Funciones del asistente Tlbexp](index.md)
 - [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741471"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787211"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile (Método)
-Permite especificar o restablecer el archivo de manifiesto que el vinculador usa cuando crea el ensamblado.  
+Permite especificar o restablecer el archivo de manifiesto que el vinculador utiliza al crear el ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parámetros  
  `pszFile`  
   
- El nombre del archivo de manifiesto cuyo contenido se coloca en el blob de recursos de Win32.  
+ Nombre del archivo de manifiesto cuyo contenido se coloca en el BLOB de recursos de Win32.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- Se llama antes de solicitar la Win32ResBlob. El valor de la `pszFile` parámetro es el nombre del archivo de manifiesto cuyo contenido se lee y se colocan en los recursos de Win32 con el identificador de RT_MANIFEST. Cuando se llama mediante un parámetro es null, se borra cualquier manifiesto leída previamente. Esto permite restablecer el estado del vinculador para que el de tiempo de inicialización.  
+ Llame a este método antes de solicitar el Win32ResBlob. El valor del `pszFile` parámetro es el nombre del archivo de manifiesto cuyo contenido se lee y se coloca en los recursos de Win32 con el ID. de recurso. Cuando se llama con un parámetro de NULL, se borra cualquier manifiesto leído previamente. Esto permite restablecer el estado del enlazador con respecto al tiempo de inicialización.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere aLink.h  
+ Requiere aLink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink3 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [IALink3 (interfaz)](ialink3-interface.md)
+- [API de ALink](index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

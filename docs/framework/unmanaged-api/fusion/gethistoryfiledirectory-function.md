@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778652"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796852"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory (Función)
-Recupera la ruta de acceso del directorio de historial de la aplicación.  
+Recupera la ruta de acceso del directorio del historial de la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>Parámetros  
  `wzDir`  
- [out] Un búfer para almacenar la ruta de acceso al directorio de historial de la aplicación.  
+ enuncia Un búfer que contiene la ruta de acceso al directorio del historial de la aplicación.  
   
  `pdwSize`  
- [in, out] La longitud del búfer.  
+ [in, out] Longitud del búfer.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error COM estándar, tal como se define en el archivo WinError.h, además de los valores siguientes.  
+ Este método devuelve los códigos de error COM estándar, tal y como se define en el archivo WinError. h, además de los valores siguientes.  
   
 |Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`wzDir` o `pdwSize` es null, o la versión de cadena no es correcta.|  
+|E_INVALIDARG|`wzDir`o `pdwSize` es null, o la cadena de versión es incorrecta.|  
   
 ## <a name="remarks"></a>Comentarios  
- Se completa correctamente, el `pdwSize` argumento está establecido en la longitud de la cadena de ruta de acceso.  
+ Si se completa correctamente, `pdwSize` el argumento se establece en la longitud de la cadena de ruta de acceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
- **Biblioteca:** El archivo Fusion.dll y Mscorwks.dll. Use el archivo Fusion.dll en lugar de Mscorwks.dll para asegurarse de que tener como destino la versión correcta de .NET Framework.  
+ **Biblioteca** Fusion. dll y mscorwks. dll. Use Fusion. dll en lugar de mscorwks. dll para asegurarse de que tiene como destino la versión correcta del .NET Framework.  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [CreateHistoryReader (Función)](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache (Función)](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [CreateHistoryReader (Función)](createhistoryreader-function.md)
+- [NukeDownloadedCache (Función)](nukedownloadedcache-function.md)
+- [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

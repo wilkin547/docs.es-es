@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778414"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795368"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader (Función)
-Crea un lector de historial para el archivo especificado.  
+Crea un lector del historial para el archivo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>Parámetros  
  `wzFilePath`  
- [in] La ruta de acceso de archivo.  
+ de Ruta de acceso del archivo.  
   
  `ppHistoryReader`  
- [out] Se completa correctamente, contiene un puntero al lector de historial.  
+ enuncia Cuando se completa correctamente, contiene un puntero al lector del historial.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error COM estándar definidos en WinError.h, además de los valores descritos en la tabla siguiente.  
+ Este método devuelve los códigos de error COM estándar, tal y como se define en WinError. h, además de los valores descritos en la tabla siguiente.  
   
 |Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|Indica que el método se completó correctamente.|  
-|E_INVALIDARG|Indica que `wzFilePath` o `ppHistoryReader` se establecen en una referencia nula.|  
+|E_INVALIDARG|Indica que `wzFilePath` o `ppHistoryReader` están establecidos en una referencia nula.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Biblioteca:** Fusion.dll  
+ **Biblioteca** Fusion. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

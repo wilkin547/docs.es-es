@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 1a2c32d133799ee5338c18d0f51bced49cb3dc4b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d0250e573dc24bfcad97a2f2606cb2e6c8e520da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963177"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782759"
 ---
 # <a name="schema-restrictions"></a>Restricciones de esquema
 El segundo parámetro opcional del método **GetSchema** son las restricciones que se utilizan para limitar la cantidad de información de esquema devuelta y se pasa al método **GetSchema** como una matriz de cadenas. La posición en la matriz determina los valores que puede pasar, y es equivalente al número de restricciones.  
@@ -137,7 +137,7 @@ class Program
   
 |Nombre de la restricción|Nombre de parámetro|Valor predeterminado de la restricción|Número de restricciones|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_Name|@Name|Nombre|1|  
+|User_Name|@Name|name|1|  
   
 ### <a name="databases"></a>Bases de datos  
   
@@ -263,4 +263,4 @@ class Program
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](ado-net-overview.md)

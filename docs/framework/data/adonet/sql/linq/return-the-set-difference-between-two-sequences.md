@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
-ms.openlocfilehash: 5bb7d797ad2adc4374f7a10c11d66be69feeb7a1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 92513ed33e2afb785edbdd462ba7bc14923aa6b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380048"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781147"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>Devolver la diferencia de conjuntos entre dos secuencias
 Utilice el operador <xref:System.Linq.Queryable.Except%2A> para devolver la diferencia de conjuntos entre dos secuencias.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza <xref:System.Linq.Queryable.Except%2A> para devolver una secuencia de todos los países o regiones donde `Customers` activa, pero no `Employees` live.  
+ En este ejemplo <xref:System.Linq.Queryable.Except%2A> se usa para devolver una secuencia de todos los países o `Customers` regiones en los que se `Employees` encuentran activos, pero en los que no hay activo.  
   
  [!code-csharp[DLinqQueryExamples#41](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#41)]
  [!code-vb[DLinqQueryExamples#41](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#41)]  
@@ -25,5 +25,5 @@ Utilice el operador <xref:System.Linq.Queryable.Except%2A> para devolver la dife
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Traslación del operador de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Ejemplos de consultas](query-examples.md)
+- [Traslación del operador de consulta estándar](standard-query-operator-translation.md)

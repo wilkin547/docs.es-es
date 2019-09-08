@@ -2,12 +2,12 @@
 title: Asignación externa
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950326"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793987"
 ---
 # <a name="external-mapping"></a>Asignación externa
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite la *asignación externa*, un proceso por el que se utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y el modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
@@ -23,7 +23,7 @@ ms.locfileid: "69950326"
   
 - El archivo de asignación debe ser un archivo XML.  
   
-- El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, vea [Cómo: Validar archivos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)DBML y de asignación externa.  
+- El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, consulte [Cómo Validar archivos](how-to-validate-dbml-and-external-mapping-files.md)DBML y de asignación externa.  
   
 - La asignación externa invalida la asignación basada en atributos. En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases. Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "69950326"
 ## <a name="xml-schema-definition-file"></a>Archivo de definición de esquema XML  
  La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.  
   
- Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML. Para obtener más información, vea [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML. Para obtener más información, vea [generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, [consulte Cómo: Validar archivos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)DBML y de asignación externa.  
+> Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, [consulte Cómo: Validar archivos](how-to-validate-dbml-and-external-mapping-files.md)DBML y de asignación externa.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -143,6 +143,6 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>Vea también
 
-- [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md)
+- [Referencia](reference.md)
+- [Cómo: Generar el modelo de objetos como un archivo externo](how-to-generate-the-object-model-as-an-external-file.md)

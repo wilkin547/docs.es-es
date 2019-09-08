@@ -2,12 +2,12 @@
 title: Autorización y permisos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918098"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782588"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorización y permisos en SQL Server
 Al crear objetos de base de datos, se deben conceder permisos de forma explícita para que los usuarios tengan acceso a ellos. Cada objeto susceptible de protegerse tiene permisos que se pueden otorgar a una entidad de seguridad mediante instrucciones de permiso.  
@@ -60,9 +60,9 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Autenticación en SQL Server](authentication-in-sql-server.md)
+- [Roles de servidor y base de datos en SQL Server](server-and-database-roles-in-sql-server.md)
+- [Propiedad y separación de esquemas de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

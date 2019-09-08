@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 26eafb9a6ea1a0b416d205e94b0e420b0f4059d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9808856543e20b8904be812b15b32154eab56e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941075"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782109"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>Procedimiento para llamar a funciones alineadas definidas por el usuario
 Aunque se puede llamar a funciones alineadas definidas por el usuario, las funciones que se incluyen en una consulta cuya ejecución está diferida no se ejecutan hasta que se ejecute la consulta. Para obtener más información, vea [Introduction to LINQ queries (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].  
@@ -40,4 +40,4 @@ FROM [Customers] AS [t0]
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones definidas por el usuario](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [Funciones definidas por el usuario](user-defined-functions.md)

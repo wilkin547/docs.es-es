@@ -2,12 +2,12 @@
 title: 'Tutorial: Realizar consultas en varias relaciones (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946942"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780989"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Tutorial: Realizar consultas en varias relaciones (C#)
 En este tutorial se muestra el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uso de *asociaciones* para representar relaciones de clave externa en la base de datos.  
@@ -17,7 +17,7 @@ En este tutorial se muestra el [!INCLUDE[vbtecdlinq](../../../../../../includes/
  Este tutorial se escribió con la configuración de desarrollo de Visual C#.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Debe haber completado [el tutorial: Modelo de objetos simple y consultaC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest5.  
+ Debe haber completado [el tutorial: Modelo de objetos simple y consultaC#(](walkthrough-simple-object-model-and-query-csharp.md)). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest5.  
   
 ## <a name="overview"></a>Información general  
  Este tutorial conlleva tres tareas principales:  
@@ -86,8 +86,8 @@ En este tutorial se muestra el [!INCLUDE[vbtecdlinq](../../../../../../includes/
 4. Presione Entrar en la ventana de la consola para detener la depuración.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- El siguiente tutorial ([Tutorial: La manipulación de datosC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))) muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
+ El siguiente tutorial ([Tutorial: La manipulación de datosC#(](walkthrough-manipulating-data-csharp.md))) muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Aprendizaje con tutoriales](learning-by-walkthroughs.md)

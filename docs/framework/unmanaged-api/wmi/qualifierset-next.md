@@ -1,6 +1,6 @@
 ---
-title: Función QualifierSet_Next (referencia de API no administrada)
-description: La función QualifierSet_Next recupera el siguiente calificador en una enumeración.
+title: Función QualifierSet_Next (referencia de la API no administrada)
+description: La función QualifierSet_Next recupera el calificador siguiente en una enumeración.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ac5cc8633881749bdc167e1b3925a83f7adf3b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760302"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798286"
 ---
-# <a name="qualifiersetnext-function"></a>QualifierSet_Next function
+# <a name="qualifierset_next-function"></a>QualifierSet_Next función)
 Recupera el siguiente calificador en una enumeración que se inició con una llamada a la función [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,45 +44,45 @@ HRESULT QualifierSet_Next (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`   
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`   
-[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.
+de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `lFlags`   
 [in] Reservado. Este parámetro debe ser 0.
 
 `pstrName`   
-[out] El nombre del calificador. Si `null`, este parámetro se omite; en caso contrario, `pstrName` no debe apuntar a una `BSTR` o se produce una pérdida de memoria. Si no es null, la función siempre asigna un nuevo `BSTR` cuando devuelve `WBEM_S_NO_ERROR`.
+enuncia Nombre del calificador. Si `null`es, este parámetro se omite; de `pstrName` lo contrario, no debe apuntar a un válido `BSTR` o se produce una fuga de memoria. Si no es null, la función siempre asigna un nuevo `BSTR` cuando devuelve. `WBEM_S_NO_ERROR`
 
 `pVal`   
-[out] Cuando se realiza correctamente, el valor del calificador. Si se produce un error en la función, el `VARIANT` apunta `pVal` no se modifica. Si este parámetro es `null`, se omite el parámetro.
+enuncia Cuando se realiza correctamente, el valor del calificador. Si se produce un error en `VARIANT` la función, `pVal` el señalado por no se modifica. Si este parámetro es `null`, se omite el parámetro.
 
 `plFlavor`   
-[out] Un puntero a un valor largo que recibe el tipo de calificador. Si no se desea obtener información de tipo, este parámetro puede ser `null`. 
+enuncia Un puntero a un LONG que recibe el tipo de calificador. Si no se desea información de tipo, este parámetro puede `null`ser. 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | El llamador no llamó a [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | No hay más calificadores se mantienen en la enumeración. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | El autor de la llamada no llama a [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para iniciar una nueva enumeración. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | No quedan más calificadores en la enumeración. |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) método.
+Esta función contiene una llamada al método [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) .
 
-Se llama a la `QualifierSet_Next` función varias veces para enumerar todos los calificadores hasta que el valor devuelto de función `WBEM_S_NO_MORE_DATA`. Para finalizar la enumeración al principio, llame a la [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) función.
+Llame a la `QualifierSet_Next` función varias veces para enumerar todos los calificadores hasta que la `WBEM_S_NO_MORE_DATA`función devuelva. Para finalizar la enumeración pronto, llame a la función [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .
 
-El orden de los calificadores que ha devuelto durante la enumeración es indefinido.
+El orden de los calificadores devueltos durante la enumeración es indefinido.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -90,4 +90,4 @@ El orden de los calificadores que ha devuelto durante la enumeración es indefin
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

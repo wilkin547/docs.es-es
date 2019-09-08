@@ -2,12 +2,12 @@
 title: Crear roles de aplicación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961164"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794276"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Crear roles de aplicación en SQL Server
 Los roles de aplicación proporcionan un método para asignar permisos a una aplicación sin necesidad de utilizar un rol o o un usuario de base de datos. Los usuarios se pueden conectar a la base de datos, activar el rol de aplicación y asumir los permisos concedidos a la aplicación. Los permisos concedidos al rol de aplicación se mantienen mientras dura la conexión.  
@@ -47,9 +47,9 @@ Los roles de aplicación proporcionan un método para asignar permisos a una apl
   
  Puede tener en cuenta las alternativas siguientes.  
   
-- Usar el cambio de contexto con la instrucción EXECUTE AS y sus cláusulas NO REVERT y WITH COOKIE. Puede crear una cuenta de usuario en una base de datos que no esté asignada a un inicio de sesión. Posteriormente asignará permisos a esta cuenta. El uso de EXECUTE AS con un usuario sin inicio de sesión resulta más seguro, ya que se basa en los permisos y no en una contraseña. Para obtener más información, consulte [Personalización de permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usar el cambio de contexto con la instrucción EXECUTE AS y sus cláusulas NO REVERT y WITH COOKIE. Puede crear una cuenta de usuario en una base de datos que no esté asignada a un inicio de sesión. Posteriormente asignará permisos a esta cuenta. El uso de EXECUTE AS con un usuario sin inicio de sesión resulta más seguro, ya que se basa en los permisos y no en una contraseña. Para obtener más información, consulte [Personalización de permisos con suplantación en SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Firmar procedimientos almacenados con certificados y conceder únicamente permiso para ejecutar los procedimientos. Para obtener más información, vea [firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firmar procedimientos almacenados con certificados y conceder únicamente permiso para ejecutar los procedimientos. Para obtener más información, vea [firmar procedimientos almacenados en SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
@@ -60,7 +60,7 @@ Los roles de aplicación proporcionan un método para asignar permisos a una apl
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

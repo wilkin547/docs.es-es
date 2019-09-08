@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27ad89f1910bc7bb08a23c9fdb0d50828fb8b5e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8a22e958740b69ba0e09bf062bf4d86075c3ff1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777014"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags (Método)
-Establece las marcas que no son específicos del ensamblado.  
+Establece marcas que no son específicas del ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,16 +36,16 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>Parámetros  
  `afFlags`  
- ALink marcas.  
+ Marcas de ALink.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

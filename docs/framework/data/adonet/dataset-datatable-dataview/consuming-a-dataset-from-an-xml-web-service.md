@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f28179b43cb0af2d75e9e5b13783bc7287c8886
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203950"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784771"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Utilizar un conjunto de datos desde un servicio Web XML
 La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en parte para facilitar el transporte de datos a través de Internet. El **conjunto** de datos es "serializable", ya que se puede especificar como entrada o salida de los servicios Web XML sin necesidad de codificación adicional necesaria para transmitir por secuencias el contenido del **conjunto** de datos desde un servicio Web XML a un cliente y viceversa. El **DataSet** se convierte implícitamente en una secuencia XML mediante el formato DiffGram, se envía a través de la red y, a continuación, se reconstruye a partir de la secuencia XML como un conjunto de un **conjunto** de información en el extremo receptor. Esto proporciona un método muy sencillo y flexible para transmitir y devolver datos relacionales mediante servicios Web XML. Para obtener más información sobre el formato DiffGram, vea [DiffGrams](diffgrams.md).  
@@ -163,7 +163,7 @@ La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en
   
      Los clientes del servicio Web XML necesitan un proxy SOAP para utilizar los métodos expuestos. Visual Studio puede generar el proxy. Al establecer una referencia Web a un servicio Web existente desde Visual Studio, el comportamiento descrito en este paso se produce de forma transparente. Si desea crear la clase de proxy personalmente, continúe con la explicación. Sin embargo, el uso de Visual Studio para crear la clase de proxy para la aplicación cliente es suficiente en la mayoría de los casos.  
   
-     Es posible crear un proxy con la herramienta Lenguaje de descripción de servicios Web. Por ejemplo, si el servicio Web XML se expone en la dirección `http://myserver/data/DataSetSample.asmx`URL, emita un comando como el siguiente para crear un Visual Basic proxy .net con un espacio de nombres de webdata **. DSSample** y almacenarlo en el archivo Sample. VB.  
+     Es posible crear un proxy con la herramienta Lenguaje de descripción de servicios Web. Por ejemplo, si el servicio Web XML se expone en la dirección `http://myserver/data/DataSetSample.asmx`URL, emita un comando como el siguiente para crear un Visual Basic proxy .net con un espacio de nombres de **webdata. DSSample** y almacenarlo en el archivo Sample. VB.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -268,4 +268,4 @@ La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en
 - [Actualizar orígenes de datos con objetos DataAdapter](../updating-data-sources-with-dataadapters.md)
 - [Parámetros de DataAdapter](../dataadapter-parameters.md)
 - [Herramienta lenguaje de descripción de servicios web (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

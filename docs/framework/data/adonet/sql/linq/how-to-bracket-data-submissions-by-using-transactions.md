@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
-ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a4c5ba7c4938b48fe489e43ff4a3ff806bd8916
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037874"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793806"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>Procedimiento para poner entre corchetes envíos de datos mediante el uso de transacciones
-Puede utilizar <xref:System.Transactions.TransactionScope> para catalogar sus envíos a la base de datos. Para obtener más información, consulte [compatibilidad con transacciones](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).  
+Puede utilizar <xref:System.Transactions.TransactionScope> para catalogar sus envíos a la base de datos. Para obtener más información, consulte [compatibilidad con transacciones](transaction-support.md).  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente incluye el envío de base de datos en <xref:System.Transactions.TransactionScope>.  
@@ -23,6 +23,6 @@ Puede utilizar <xref:System.Transactions.TransactionScope> para catalogar sus en
   
 ## <a name="see-also"></a>Vea también
 
-- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [Compatibilidad con transacciones](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+- [Descargar bases de datos de ejemplo](downloading-sample-databases.md)
+- [Realización y envío de cambios de datos](making-and-submitting-data-changes.md)
+- [Compatibilidad con transacciones](transaction-support.md)

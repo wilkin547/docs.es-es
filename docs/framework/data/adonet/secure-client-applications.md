@@ -2,12 +2,12 @@
 title: Aplicaciones cliente seguras
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963156"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794386"
 ---
 # <a name="secure-client-applications"></a>Aplicaciones cliente seguras
 Por lo general las aplicaciones constan de varios elementos que deben estar protegidos ante las vulnerabilidades que pueden provocar pérdidas de datos o poner en peligro el sistema de cualquier otro modo. La creación de interfaces de usuario seguras puede impedir un gran número de problemas ya que bloquea a los atacantes antes de que puedan tener acceso a los datos o a los recursos del sistema.  
@@ -24,7 +24,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
  [Validación de la entrada del usuario en ASP.NET Web Pages](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Información general sobre la validación de datos introducidos por el usuario con controles de validación de ASP.NET.  
   
- [Datos proporcionados por el usuario en Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Datos proporcionados por el usuario en Windows Forms](../../winforms/user-input-in-windows-forms.md)  
  Proporciona vínculos e información para validar entrada de mouse y teclado en aplicaciones de Windows Forms.  
   
  [Expresiones regulares de .NET Framework](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 ## <a name="windows-applications"></a>Aplicaciones para Windows  
  En versiones anteriores, las aplicaciones Windows normalmente se ejecutaban con todos los permisos. .NET Framework proporciona la infraestructura para restringir la ejecución del código en una aplicación Windows mediante la seguridad de acceso del código (CAS). Sin embargo, CAS no es suficiente por sí solo para proteger la aplicación.  
   
- [Windows Forms Security](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows Forms Security](../../winforms/windows-forms-security.md)  
  Describe cómo proteger las aplicaciones de Windows Forms y proporciona vínculos a temas relacionados.  
   
- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Describe cómo interactuar con aplicaciones no administradas en una aplicación de Windows Forms.  
   
  [Implementación de ClickOnce para Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -63,12 +63,12 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 |--------------|-----------------|  
 |[Configuración de aplicaciones remotas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Describe cómo configurar aplicaciones de comunicación remota para evitar problemas habituales.|  
 |[Seguridad en comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Describe la autenticación y el cifrado, así como temas adicionales de seguridad relacionados con la comunicación remota.|  
-|[Consideraciones sobre seguridad y comunicación remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Describe problemas de seguridad con objetos protegidos y con el cruce entre dominios de aplicación.|  
+|[Consideraciones sobre seguridad y comunicación remota](../../misc/security-and-remoting-considerations.md)|Describe problemas de seguridad con objetos protegidos y con el cruce entre dominios de aplicación.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Recomendaciones para las estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Proteger aplicaciones](/visualstudio/ide/securing-applications)
-- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger la información de conexión](protecting-connection-information.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

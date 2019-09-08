@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026115adc01e7dcdac3012255f0378cff6348f89
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f984d44d0a8acb85562a58653dfd2882053a0ce
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780699"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799280"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile (Función)
 Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: gethashfromassemblyfile (](../hosting/iclrstrongname-gethashfromassemblyfile-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +42,31 @@ HRESULT GetHashFromAssemblyFile (
   
 ## <a name="parameters"></a>Parámetros  
  `szFilePath`  
- [in] La ruta de acceso al archivo que se aplica un algoritmo hash.  
+ de Ruta de acceso al archivo al que se va a aplicar un algoritmo hash.  
   
  `piHashAlg`  
- [in, out] Una constante que especifica el algoritmo hash. Usar cero para el algoritmo hash predeterminado.  
+ [in, out] Constante que especifica el algoritmo hash. Use cero para el algoritmo hash predeterminado.  
   
  `pbHash`  
- [out] El búfer hash devuelto.  
+ enuncia Búfer hash devuelto.  
   
  `cchHash`  
- [in] El tamaño máximo solicitado de `pbHash`.  
+ de Tamaño máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] La ha devuelto el tamaño, en bytes, de `pbHash`.  
+ enuncia El tamaño devuelto, en bytes, `pbHash`de.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [GetHashFromAssemblyFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [GetHashFromAssemblyFileW (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromAssemblyFile (método)](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [GetHashFromAssemblyFileW (método)](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

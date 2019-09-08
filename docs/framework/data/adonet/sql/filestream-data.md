@@ -2,12 +2,12 @@
 title: Datos FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490066"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794098"
 ---
 # <a name="filestream-data"></a>Datos FILESTREAM
 
@@ -20,11 +20,11 @@ La especificación del atributo FILESTREAM en una columna varbinary(max) provoca
 
 ## <a name="sqlclient-support-for-filestream"></a>Compatibilidad de SqlClient con FILESTREAM
 
-El proveedor de datos de .NET Framework para SQL Server, <xref:System.Data.SqlClient>, admite la lectura y escritura de datos de FILESTREAM mediante el <xref:System.Data.SqlTypes.SqlFileStream> clase definida en el <xref:System.Data.SqlTypes> espacio de nombres. `SqlFileStream` hereda de la clase <xref:System.IO.Stream>, que proporciona métodos para leer y escribir en flujos de datos. La lectura de una secuencia transfiere los datos desde la secuencia a una estructura de datos como, por ejemplo, una matriz de bytes. La escritura transfiere los datos desde la estructura de datos hasta una secuencia.
+El proveedor de datos de .NET Framework para <xref:System.Data.SqlClient>SQL Server,, admite la lectura y escritura en datos <xref:System.Data.SqlTypes.SqlFileStream> de FileStream mediante la <xref:System.Data.SqlTypes> clase definida en el espacio de nombres. `SqlFileStream` hereda de la clase <xref:System.IO.Stream>, que proporciona métodos para leer y escribir en flujos de datos. La lectura de una secuencia transfiere los datos desde la secuencia a una estructura de datos como, por ejemplo, una matriz de bytes. La escritura transfiere los datos desde la estructura de datos hasta una secuencia.
 
 ### <a name="creating-the-sql-server-table"></a>Crear la tabla de SQL Server
 
-Las instrucciones siguientes de Transact-SQL crean una tabla denominada employees e insertan una fila de datos. Una vez que ha habilitado el almacenamiento de FILESTREAM, puede usar esta tabla junto con los ejemplos de código que figuran a continuación. Los vínculos a recursos en los libros en pantalla de SQL Server se encuentran al final de este tema.
+Las instrucciones siguientes de Transact-SQL crean una tabla denominada employees e insertan una fila de datos. Una vez que ha habilitado el almacenamiento de FILESTREAM, puede usar esta tabla junto con los ejemplos de código que figuran a continuación. Los vínculos a los recursos de Libros en pantalla de SQL Server se encuentran al final de este tema.
 
 ```sql
 CREATE TABLE employees
@@ -40,7 +40,7 @@ Values(1, 0x00, default)
 GO
 ```
 
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Ejemplo: Leer, sobrescribir e insertar datos de FILESTREAM
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Ejemplo: Leer, sobrescribir e insertar datos FILESTREAM
 
 En el ejemplo siguiente se muestra cómo se leen datos de un FILESTREAM. El código obtiene la ruta de acceso lógica del archivo, y establece `FileAccess` en `Read` y `FileOptions` en `SequentialScan`. El código lee después los bytes del SqlFileStream en el búfer. Después los bytes se escriben en la ventana de la consola.
 
@@ -171,22 +171,22 @@ namespace FileStreamTest
 }
 ```
 
-Para obtener otro ejemplo, vea [cómo almacenar y recuperar datos binarios en una columna de secuencia de archivo](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).
+Para ver otro ejemplo, vea [Cómo almacenar y capturar datos binarios en una columna de secuencia de archivos](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).
 
 ## <a name="resources-in-sql-server-books-online"></a>Recursos en los Libros en pantalla de SQL Server
 
-La documentación completa de FILESTREAM se encuentra en las secciones siguientes en los libros en pantalla de SQL Server.
+La documentación completa de FILESTREAM se encuentra en las secciones siguientes de Libros en pantalla de SQL Server.
 
-|Tema|Descripción|
+|Tema|DESCRIPCIÓN|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Describe cuándo se usa el almacenamiento de FILESTREAM y cómo éste integra el Motor de base de datos de SQL Server con un sistema de archivos NTFS.|
-|[Crear aplicaciones cliente para datos FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Describe las funciones de API de Windows para trabajar con datos FILESTREAM.|
-|[FILESTREAM y otras características de SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Proporciona consideraciones, instrucciones y limitaciones para usar datos de un FILESTREAM con otras características de SQL Server.|
+|[Crear aplicaciones cliente para datos FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Describe las funciones de la API de Windows para trabajar con datos FILESTREAM.|
+|[Características de FILESTREAM y otras SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Proporciona consideraciones, instrucciones y limitaciones para usar datos de un FILESTREAM con otras características de SQL Server.|
 
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Seguridad de acceso del código y ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Información general sobre ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Tipos de datos de SQL Server y ADO.NET](sql-server-data-types.md)
+- [Recuperar y modificar datos en ADO.NET](../retrieving-and-modifying-data.md)
+- [Seguridad de acceso del código y ADO.NET](../code-access-security.md)
+- [Datos binarios y datos de valores grandes de SQL Server](sql-server-binary-and-large-value-data.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

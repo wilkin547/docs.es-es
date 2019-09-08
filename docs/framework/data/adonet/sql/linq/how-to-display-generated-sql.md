@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033779"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793760"
 ---
 # <a name="how-to-display-generated-sql"></a>Procedimiento para mostrar el código SQL generado
 Puede ver el código de SQL generado para las consultas y cambiar su procesamiento por medio de la propiedad <xref:System.Data.Linq.DataContext.Log%2A>. Este enfoque puede ser útil para entender la funcionalidad de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y para depurar problemas concretos.  
@@ -18,7 +18,7 @@ Puede ver el código de SQL generado para las consultas y cambiar su procesamien
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza la propiedad <xref:System.Data.Linq.DataContext.Log%2A> para mostrar el código de SQL en la ventana de la consola antes de que se ejecute el código.  Puede utilizar esta propiedad con los comandos de consulta, inserción, actualización y eliminación.  
   
- Las líneas de la ventana de consola son lo que ve cuando se ejecuta en Visual Basic o C# código que sigue.  
+ Las líneas de la ventana de la consola son lo que se ve al ejecutar la C# Visual Basic o el código siguiente.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +44,4 @@ SEVES
   
 ## <a name="see-also"></a>Vea también
 
-- [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Capacidad de depuración](debugging-support.md)

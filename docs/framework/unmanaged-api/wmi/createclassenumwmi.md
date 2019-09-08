@@ -1,6 +1,6 @@
 ---
-title: Función CreateClassEnumWmi (referencia de API no administrada)
-description: La función CreateClassEnumWmi devuelve un enumerador para todas las clases que cumplen los criterios especificados.
+title: Función CreateClassEnumWmi (referencia de la API no administrada)
+description: La función CreateClassEnumWmi devuelve un enumerador para todas las clases que satisfacen los criterios especificados.
 ms.date: 11/06/2017
 api_name:
 - CreateClassEnumWmi
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3777319f818b7652157147f458b81d9935805b1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637001"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798731"
 ---
-# <a name="createclassenumwmi-function"></a>Función CreateClassEnumWmi
+# <a name="createclassenumwmi-function"></a>CreateClassEnumWmi función)
 Devuelve un enumerador para todas las clases que cumplan los criterios de selección especificados.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -48,70 +48,70 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parámetros
 
 `strSuperclass`\
-[in] Si no `null` o en blanco, especifica el nombre de una clase primaria; el enumerador devuelve solo las subclases de esta clase. Si es `null` o en blanco y `lFlags` es WBEM_FLAG_SHALLOW, se devuelve solo clases de nivel superior (las clases con ninguna clase de elemento primario). Si es `null` o en blanco y `lFlags` es `WBEM_FLAG_DEEP`, devuelve todas las clases del espacio de nombres.
+de Si no `null` es o está en blanco, especifica el nombre de una clase primaria; el enumerador devuelve solo las subclases de esta clase. Si es o `null` está en blanco `lFlags` y es WBEM_FLAG_SHALLOW, solo devuelve clases de nivel superior (clases sin clase primaria). Si es o `null` está en blanco `lFlags` y `WBEM_FLAG_DEEP`es, devuelve todas las clases del espacio de nombres.
 
 `lFlags`\
-[in] Una combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+de Combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si el conjunto, la función recupera los calificadores almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no la función de conjunto, recupera solo los calificadores que se almacena en el espacio de nombres inmediato. |
-| `WBEM_FLAG_DEEP` | 0 | La enumeración incluye todas las subclases de la jerarquía, pero no en esta clase. |
-| `WBEM_FLAG_SHALLOW` | 1 | La enumeración incluye únicamente las instancias de esta clase puras y excluye todas las instancias de subclases que proporcionan las propiedades que no se encuentran en esta clase. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca provoca una llamada semisincrónica. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de sólo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten las llamadas a [clon](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI mantiene punteros a objetos en la enumeración hasta que se publican. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, la función recupera los calificadores modificados almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no se establece, la función solo recupera los calificadores almacenados en el espacio de nombres inmediato. |
+| `WBEM_FLAG_DEEP` | 0 | La enumeración incluye todas las subclases de la jerarquía, pero no esta clase. |
+| `WBEM_FLAG_SHALLOW` | 1 | La enumeración solo incluye instancias puras de esta clase y excluye todas las instancias de subclases que suministran propiedades que no se encuentran en esta clase. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca produce una llamada semisincrónica. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de solo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten que las llamadas se [clonen](clone.md). |
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserva los punteros a objetos en la enumeración hasta que se liberan. |
 
-Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_ONLY` para mejorar el rendimiento.
+Las marcas recomendadas `WBEM_FLAG_RETURN_IMMEDIATELY` son `WBEM_FLAG_FORWARD_ONLY` y para obtener el mejor rendimiento.
 
 `pCtx`\
-[in] Normalmente, este valor es `null`. En caso contrario, es un puntero a un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instancia que se puede usar el proveedor que proporciona las clases solicitadas.
+de Normalmente, este valor es `null`. De lo contrario, es un puntero a una instancia de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que puede ser utilizada por el proveedor que proporciona las clases solicitadas.
 
 `ppEnum`\
-[out] Recibe el puntero en el enumerador.
+enuncia Recibe el puntero al enumerador.
 
 `authLevel`\
-[in] El nivel de autorización.
+de Nivel de autorización.
 
 `impLevel`\
-[in] El nivel de suplantación.
+de Nivel de suplantación.
 
 `pCurrentNamespace`\
-[in] Un puntero a un [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto que representa el espacio de nombres actual.
+de Un puntero a un objeto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) que representa el espacio de nombres actual.
 
 `strUser`\
-[in] El nombre de usuario. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
+de El nombre de usuario. Vea la función [ConnectServerWmi](connectserverwmi.md) para obtener más información.
 
 `strPassword`\
-[in] La contraseña. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
+de La contraseña. Vea la función [ConnectServerWmi](connectserverwmi.md) para obtener más información.
 
 `strAuthority`\
-[in] El nombre de dominio del usuario. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
+de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connectserverwmi.md) para obtener más información.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que puede devolver la función. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que la función puede devolver. |
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` no existe. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI era probablemente detenido y volver a iniciar. Llame a [ConnectServerWmi](connectserverwmi.md) nuevo. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de procedimiento remoto (RPC) de la llamada entre el proceso actual y WMI. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Es posible que WMI se haya detenido y reiniciado. Vuelva a llamar a [ConnectServerWmi](connectserverwmi.md) . |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de llamada a procedimiento remoto (RPC) entre el proceso actual y WMI. |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemServices:: CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum) método.
+Esta función contiene una llamada al método [IWbemServices:: CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum) .
 
-Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la [GetErrorInfo](geterrorinfo.md) función.
+Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la función [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
 **Encabezado**: WMINet_Utils.idl
 
@@ -119,4 +119,4 @@ Si se produce un error en la llamada de función, puede obtener información de 
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

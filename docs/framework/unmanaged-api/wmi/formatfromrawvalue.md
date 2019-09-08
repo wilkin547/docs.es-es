@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037893"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798637"
 ---
 # <a name="formatfromrawvalue-function"></a>Función FormatFromRawValue
 Convierte un valor de datos de rendimiento sin procesar al formato especificado, o bien dos valores de datos de rendimiento sin procesar si la conversión de formato es de duración definida. 
@@ -44,7 +44,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parámetros
 
 `dwCounterType`\
-de El tipo de contador. Para obtener una lista de tipos de contadores, vea tipos de contadores de [rendimiento de WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`puede ser cualquier tipo de `PERF_LARGE_RAW_FRACTION` contador excepto y. `PERF_LARGE_RAW_BASE` 
+de El tipo de contador. Para obtener una lista de tipos de contadores, vea [tipos de contadores de rendimiento de WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`puede ser cualquier tipo de `PERF_LARGE_RAW_FRACTION` contador excepto y. `PERF_LARGE_RAW_BASE` 
 
 `dwFormat`\
 de Formato al que se van a convertir los datos de rendimiento sin procesar. Puede ser uno de los siguientes valores:
@@ -57,7 +57,7 @@ de Formato al que se van a convertir los datos de rendimiento sin procesar. Pued
 
 Uno de los valores anteriores puede ser ORed con una de las siguientes marcas de escalado:
 
-|Constante  |Valor  |DESCRIPCIÓN |
+|Constante  |Value  |DESCRIPCIÓN |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | No aplique los factores de escala del contador. |
 | `PDH_FMT_1000` | 0x00002000 | Multiplique el valor final por 1.000. | 
@@ -89,7 +89,7 @@ Esta función contiene una llamada a la función [FormatFromRawValue](https://do
 
 ## <a name="requirements"></a>Requisitos
 
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
  **Biblioteca** PerfCounter.dll
 

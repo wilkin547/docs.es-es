@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751526"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796472"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity (Interfaz)
-Actúa como el enumerador para una colección de `IDefinitionIdentity` objetos.  
+Actúa como enumerador para una colección de `IDefinitionIdentity` objetos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,19 +55,19 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Obtiene un puntero de interfaz a una nueva `IEnumDefinitionIdentity` objeto que contiene los mismos miembros que esto `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Clone`|Obtiene un puntero de interfaz a un `IEnumDefinitionIdentity` nuevo objeto que contiene los mismos miembros que `IEnumDefinitionIdentity`este.|  
 |`IEnumDefinitionIdentity::Next`|Obtiene el número especificado de `IDefinitionIdentity` objetos, empezando en la posición actual.|  
 |`IEnumDefinitionIdentity::Reset`|Mueve el puntero de instrucción al principio de este `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Skip`|Mueve el puntero de instrucción al día por el número especificado de elementos, empezando por la posición actual.|  
+|`IEnumDefinitionIdentity::Skip`|Mueve el puntero de instrucción hacia delante el número especificado de elementos, comenzando en la posición actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation.h  
+ **Encabezado**: Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [Interfaces de Fusion](fusion-interfaces.md)
+- [IDefinitionIdentity (interfaz)](idefinitionidentity-interface.md)

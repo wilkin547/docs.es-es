@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: b7a2588b9e5082915dff4d371adff2ad3d232d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebef8cb373da4021fd68fd7ce38de8cb06eb81ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032544"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782173"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Buscar el valor máximo de una secuencia numérica
 Utilice el operador <xref:System.Linq.Enumerable.Max%2A> para buscar el valor máximo de una secuencia de valores numéricos.  
@@ -73,5 +73,5 @@ Utilice el operador <xref:System.Linq.Enumerable.Max%2A> para buscar el valor m�
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultas de agregado](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Consultas de agregado](aggregate-queries.md)
+- [Descargar bases de datos de ejemplo](downloading-sample-databases.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: f68db5a5a0092fc4cf37746f2a4dc81e40ee4a9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6559392527bb02afe9cea61e704f1f371c6d5470
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938675"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781656"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>Procedimiento para desactivar la carga diferida
-Puede desactivar la carga aplazada al establecer <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> en `false`. Para obtener más información, vea [carga aplazada frente a carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+Puede desactivar la carga aplazada al establecer <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> en `false`. Para obtener más información, vea [carga aplazada frente a carga inmediata](deferred-versus-immediate-loading.md).  
   
 > [!NOTE]
-> La carga aplazada se desactiva al desactivar el seguimiento de los objetos. Para obtener más información, consulte [Cómo Recupera información como de solo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)lectura.  
+> La carga aplazada se desactiva al desactivar el seguimiento de los objetos. Para obtener más información, vea [Cómo: Recupera información como de solo](how-to-retrieve-information-as-read-only.md)lectura.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo desactivar la carga aplazada al establecer <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> en `false`.  
@@ -26,5 +26,5 @@ Puede desactivar la carga aplazada al establecer <xref:System.Data.Linq.DataCont
   
 ## <a name="see-also"></a>Vea también
 
-- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Conceptos sobre consultas](query-concepts.md)
+- [Consulta de la base de datos](querying-the-database.md)

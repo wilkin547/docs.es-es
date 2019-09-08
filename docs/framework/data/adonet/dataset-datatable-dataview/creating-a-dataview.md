@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 391c071f19149e9690c9121b1094aef5bfa605cd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3e1c31dac458594eee70ddd99469aca7cf63b848
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203847"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785477"
 ---
 # <a name="creating-a-dataview"></a>Crear un objeto DataView
 Hay dos formas de crear una <xref:System.Data.DataView>. Puede usar el constructor **DataView** o puede crear una referencia a la <xref:System.Data.DataTable.DefaultView%2A> propiedad de. <xref:System.Data.DataTable> El constructor de **DataView** puede estar vacío o puede tomar un **DataTable** como un solo argumento, o un **DataTable** junto con criterios de filtro, criterios de ordenación y un filtro de estado de fila. Para obtener más información sobre los argumentos adicionales disponibles para su uso con **DataView**, vea [ordenar y filtrar datos](sorting-and-filtering-data.md).  
@@ -52,4 +52,4 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
 - [Objetos DataView](dataviews.md)
 - [Ordenación y filtrado de datos](sorting-and-filtering-data.md)
 - [Objetos DataTable](datatables.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

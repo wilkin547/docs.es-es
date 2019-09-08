@@ -2,17 +2,17 @@
 title: Definición del esquema de DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d18af8001fd24f3b21c3e7fd13f9dabb2587b322
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204994"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786391"
 ---
 # <a name="datatable-schema-definition"></a>Definición del esquema de DataTable
 El esquema, o estructura, de una tabla se representa con columnas y restricciones. El esquema de una <xref:System.Data.DataTable> se define mediante objetos <xref:System.Data.DataColumn>, <xref:System.Data.ForeignKeyConstraint> y <xref:System.Data.UniqueConstraint>. Las columnas de una tabla se pueden asignar a columnas de un origen de datos, pueden contener valores calculados de expresiones, aumentar sus valores automáticamente o contener valores de clave principal.  
   
- Las referencias a los nombres de columnas, relaciones y restricciones de una tabla hacen distinción entre mayúsculas y minúsculas. En una tabla puede haber dos o más columnas, relaciones y restricciones con el mismo nombre, pero con distinción entre mayúsculas y minúsculas. Por ejemplo, puede tener **col1** y **col1**. En este caso, una referencia al nombre de una de las columnas tiene que coincidir exactamente con las mayúsculas y minúsculas del nombre de la columna, de lo contrario se inicia una excepción. Por ejemplo, si la tabla MyTable contiene las columnas **col1** y **col1**, haría referencia a **col1** por nombre como **MyTable. Columns ["col1"]** y **col1** como **MyTable. Columns ["col1"]** . Al intentar hacer referencia a cualquiera de las columnas como **MyTable. Columns ["col1"]** se generaría una excepción.  
+ Las referencias a los nombres de columnas, relaciones y restricciones de una tabla hacen distinción entre mayúsculas y minúsculas. En una tabla puede haber dos o más columnas, relaciones y restricciones con el mismo nombre, pero con distinción entre mayúsculas y minúsculas. Por ejemplo, puede tener **col1** y **col1**. En este caso, una referencia al nombre de una de las columnas tiene que coincidir exactamente con las mayúsculas y minúsculas del nombre de la columna, de lo contrario se inicia una excepción. Por ejemplo, si **la tabla MyTable contiene las** columnas **col1** y **col1**, haría referencia a **col1** por nombre como **MyTable. Columns ["col1"]** y **col1** como **MyTable. Columns ["col1"]** . Al intentar hacer referencia a cualquiera de las columnas como **MyTable. Columns ["col1"]** se generaría una excepción.  
   
  La regla de distinción entre mayúsculas y minúsculas no se aplica si sólo hay una columna, relación o restricción con un nombre concreto. Es decir, si no hay ningún otro objeto de columna, relación o restricción en la tabla que coincida con el nombre de ese objeto de columna, relación o restricción concreto, se puede hacer referencia al nombre del objeto utilizando cualquier mayúscula o minúscula y no se generará una excepción. Por ejemplo, si la tabla solo tiene **col1**, puede hacer referencia a ella mediante **My. Columns ["COL1"]** .  
   
@@ -38,4 +38,4 @@ El esquema, o estructura, de una tabla se representa con columnas y restriccione
 ## <a name="see-also"></a>Vea también
 
 - [Objetos DataTable](datatables.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002a644ff5d48b25351228dcd74330707491d6c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032609"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782094"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Cómo: Formular combinaciones y consultas entre productos
 En los ejemplos siguientes se muestra cómo combinar los resultados procedentes de varias tablas.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la navegación de clave externa en el `From` cláusula en Visual Basic (`from` cláusula en C#) para seleccionar todos los pedidos de clientes en Londres.  
+ En el ejemplo siguiente se utiliza la navegación de `From` clave externa en la`from` cláusula de C#Visual Basic (cláusula de) para seleccionar todos los pedidos de los clientes de Londres.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la navegación de clave externa en el `Where` cláusula en Visual Basic (`where` cláusula en C#) para filtrar de existencias `Products` cuyo `Supplier` se encuentra en Estados Unidos.  
+ En el ejemplo siguiente se utiliza la navegación de `Where` clave externa en la`where` cláusula de C#Visual Basic (cláusula en) para filtrar los `Products` valores `Supplier` de fuera de existencias, cuyo valor está en el Estados Unidos.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la navegación de clave externa en el `From` cláusula en Visual Basic (`from` cláusula en C#) para filtrar los empleados de Seattle y mostrar sus territorios.  
+ En el ejemplo siguiente se utiliza la navegación de `From` clave externa en la`from` cláusula de C#Visual Basic (cláusula de) para filtrar los empleados de Seattle y mostrar sus territorios.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la navegación de clave externa en el `Select` cláusula en Visual Basic (`select` cláusula en C#) para filtrar los pares de empleados que un empleado subordinado al otro y donde ambos empleados pertenecen a la misma `City`.  
+ En el ejemplo siguiente se utiliza la navegación de `Select` clave externa en la`select` cláusula de C#Visual Basic (cláusula de) para filtrar los pares de empleados en los que un empleado informa al otro y donde `City`ambos empleados son de la misma.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo de Visual Basic busca todos los clientes y pedidos, garantiza que los pedidos estén asociados a los clientes y garantiza que para cada cliente de esa lista, se proporciona un nombre de contacto.  
+ En el siguiente Visual Basic ejemplo se buscan todos los clientes y pedidos, se asegura de que los pedidos coinciden con los clientes y se garantiza que, para cada cliente de esa lista, se proporciona un nombre de contacto.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -81,4 +81,4 @@ En los ejemplos siguientes se muestra cómo combinar los resultados procedentes 
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Ejemplos de consultas](query-examples.md)

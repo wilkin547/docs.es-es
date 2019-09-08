@@ -1,5 +1,5 @@
 ---
-title: Función QualifierSet_BeginEnumeration (referencia de API no administrada)
+title: Función QualifierSet_BeginEnumeration (referencia de la API no administrada)
 description: La función QualifierSet_BeginEnumeration restablece un enumerador de los calificadores de un objeto.
 ms.date: 11/06/2017
 api_name:
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f3987705486727a591dce1670cd369d909a0d4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636232"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798344"
 ---
-# <a name="qualifiersetbeginenumeration-function"></a>Función QualifierSet_BeginEnumeration
+# <a name="qualifierset_beginenumeration-function"></a>QualifierSet_BeginEnumeration función)
 
 Restablece un enumerador de los calificadores de un objeto al principio de la enumeración.
 
@@ -42,42 +42,42 @@ HRESULT QualifierSet_BeginEnumeration (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`\
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`\
-[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.
+de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `lFlags`\
-[in] Una combinación bit a bit de los marcadores o los valores descritos en la [comentarios](#remarks) sección que especifica los calificadores que se va a incluir en la enumeración.
+de Combinación bit a bit de las marcas o valores descritos en la sección [comentarios](#remarks) que especifica los calificadores que se van a incluir en la enumeración.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | El parámetro `lFlags` no es válido. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Una segunda llamada a `QualifierSet_BeginEnumeration` se realizó sin una llamada intermedia a [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Se realizó una segunda `QualifierSet_BeginEnumeration` llamada a sin una llamada intermedia a. [`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md) |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para iniciar una nueva enumeración. |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemQualifierSet::BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) método.
+Esta función contiene una llamada al método [IWbemQualifierSet:: BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) .
 
-Para enumerar todos los calificadores en un objeto, este método debe llamarse antes de la primera llamada a [QualifierSet_Next](qualifierset-next.md). El orden en el que se enumeran los calificadores se garantiza que todos los idiomas para una enumeración especificada.
+Para enumerar todos los calificadores de un objeto, se debe llamar a este método antes de la primera llamada a [QualifierSet_Next](qualifierset-next.md). Se garantiza que el orden en el que se enumeran los calificadores es invariable para una enumeración determinada.
 
-Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código.
+Las marcas que se pueden pasar como `lEnumFlags` argumento se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código.
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |  | 0 | Devuelve los nombres de todos los calificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devolver solo los nombres de los calificadores específicos que el objeto o propiedad actual. <br/> Para una propiedad: Devolver solo los calificadores específicos de la propiedad (incluidas las invalidaciones) y no los calificadores propagados desde la definición de clase. <br/> Para una instancia: Devolver solo los nombres de calificador específicos de la instancia. <br/> Para una clase: Devolver solo los calificadores específica a la clase que se deriva.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Si la devolución propagan los nombres de los calificadores de otro objeto. <br/> Para una propiedad: Si la devolución solo los calificadores se propagan a esta propiedad desde la definición de clase y no los de la propiedad propiamente dicha. <br/> Para una instancia: Si la devolución solo esos calificadores se propagan desde la definición de clase. <br/> Para una clase: Si la devolución solo esos nombres calificador heredados de las clases principales. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devuelve solo los nombres de calificadores específicos de la propiedad o el objeto actual. <br/> Para una propiedad: Solo se devuelven los calificadores específicos de la propiedad (incluidas las invalidaciones), y no los calificadores propagados a partir de la definición de clase. <br/> Para una instancia de: Devuelve solo los nombres de calificador específicos de la instancia. <br/> Para una clase: Solo devuelve calificadores específicos de la clase que se va a derivar.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Devuelve solo los nombres de los calificadores propagados desde otro objeto. <br/> Para una propiedad: Devuelve solo los calificadores propagados a esta propiedad desde la definición de clase, y no los de la propia propiedad. <br/> Para una instancia de: Devuelve solo los calificadores propagados desde la definición de clase. <br/> Para una clase: Solo se devuelven los nombres de calificador heredados de las clases primarias. |
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
 **Encabezado**: WMINet_Utils.idl
 
@@ -85,4 +85,4 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

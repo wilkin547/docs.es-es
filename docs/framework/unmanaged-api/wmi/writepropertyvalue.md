@@ -1,5 +1,5 @@
 ---
-title: Función WritePropertyValue (referencia de API no administrada)
+title: Función WritePropertyValue (referencia de la API no administrada)
 description: La función WritePropertyValue escribe bytes en una propiedad.
 ms.date: 11/06/2017
 api_name:
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783065"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798172"
 ---
-# <a name="writepropertyvalue-function"></a>Función WritePropertyValue
+# <a name="writepropertyvalue-function"></a>WritePropertyValue función)
 Escribe un número específico de bytes en una propiedad identificada por un controlador de propiedad.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -43,40 +43,40 @@ HRESULT WritePropertyValue (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instancia.
+de Puntero a una instancia de [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) .
 
 `lHandle`  
-[in] Un entero que contiene el identificador que identifica esta propiedad. El identificador se puede recuperar mediante una llamada a la [GetPropertyHandle](getpropertyhandle.md) función.   
+de Entero que contiene el identificador que identifica esta propiedad. El identificador se puede recuperar llamando a la función [GetPropertyHandle](getpropertyhandle.md) .   
 
 `lNumBytes`  
-[in] El número de bytes que se va a escribir en la propiedad. Consulte la [comentarios](#remarks) sección para obtener más información.
+de Número de bytes que se escriben en la propiedad. Vea la sección [comentarios](#remarks) para obtener más información.
 
 `pHandle`   
-[out] Un puntero a la matriz de bytes que contiene los datos.
+enuncia Puntero a la matriz de bytes que contiene los datos.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
-|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Se ha producido un error de coincidencia de tipo. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Error de coincidencia de tipos. |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) método.
+Esta función contiene una llamada al método [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Use esta función para establecer la cadena y todos los otros que no sean de`DWORD` o que no sean-`QWORD` datos.
+Utilice esta función para establecer la cadena y el resto de`DWORD` los`QWORD` datos no o no.
 
-Para los valores de propiedad, `lNumBytes` debe ser el tamaño de datos correcto del tipo de propiedad especificado. Para los valores de propiedad de cadena, `lNumBytes` debe ser la longitud de la cadena especificada en bytes y la cadena debe tener una longitud en bytes incluso y seguir con un carácter de terminación null.
+En el caso de los valores `lNumBytes` de propiedad que no son de cadena, debe ser el tamaño de datos correcto del tipo de propiedad especificado. En el caso de los `lNumBytes` valores de propiedad de cadena, debe ser la longitud de la cadena especificada en bytes y la propia cadena debe tener una longitud uniforme en bytes y seguirse con un carácter de terminación null.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -84,4 +84,4 @@ Para los valores de propiedad, `lNumBytes` debe ser el tamaño de datos correcto
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

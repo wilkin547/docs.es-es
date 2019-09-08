@@ -2,12 +2,12 @@
 title: Limitaciones de inferencia
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 4e0f63776162b60c9333ba47be58ea78a9b6805d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 10347abc5b01edb4ec6fbf97221d44f4bfb88f54
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204836"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784582"
 ---
 # <a name="inference-limitations"></a>Limitaciones de inferencia
 El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de XML puede dar como resultado esquemas diferentes, dependiendo de los elementos XML contenidos en cada documento. Por ejemplo, considere los siguientes documentos XML.  
@@ -52,7 +52,7 @@ El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de
   
  Podría parecer que estos dos documentos XML producirían el mismo esquema, pero el proceso de inferencia genera resultados muy diferentes basándose en los elementos contenidos en cada documento.  
   
- Para evitar las discrepancias que pueden producirse al generar el esquema a partir de un documento XML, se recomienda especificar explícitamente un esquema mediante el lenguaje de definición de esquemas XML (XSD) o el reducido de datos XML (XDR) al cargar un **DataSet** desde XML. Para obtener más información sobre cómo especificar explícitamente un esquema de **conjunto** de datos con un esquema XML, vea derivar una [estructura relacional de conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ Para evitar las discrepancias que pueden producirse al generar el esquema a partir de un documento XML, se recomienda especificar explícitamente un esquema mediante el lenguaje de definición de esquemas XML (XSD) o el reducido de datos XML (XDR) al cargar un **DataSet** desde XML. Para obtener más información sobre cómo especificar explícitamente un esquema de **conjunto** de datos con un esquema XML, vea [derivar una estructura relacional de conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -61,4 +61,4 @@ El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de
 - [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

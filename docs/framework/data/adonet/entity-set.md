@@ -2,23 +2,23 @@
 title: conjunto de entidades
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 4473b74a4142bb49076068b50dc8b6f9c2c0d54a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b74d6bf373925ac90a998e2c4425c053e533f82a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959232"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783994"
 ---
 # <a name="entity-set"></a>conjunto de entidades
-Un *conjunto de entidades* es un contenedor lógico para las instancias de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) y las instancias de cualquier tipo derivado de ese tipo de entidad. (Para obtener información sobre los tipos derivados [, vea Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)). La relación entre un tipo de entidad y un conjunto de entidades es análoga a la relación entre una fila y una tabla en una base de datos relacional: Al igual que una fila, un tipo de entidad describe la estructura de datos y, como una tabla, un conjunto de entidades contiene instancias de una estructura determinada. Un conjunto de entidades no es una construcción de modelado de datos, ya que no describe la estructura de los datos. En su lugar, un conjunto de entidades proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias del tipo de entidad y se puedan asignar a un almacén de datos.  
+Un *conjunto de entidades* es un contenedor lógico para las instancias de un [tipo de entidad](entity-type.md) y las instancias de cualquier tipo derivado de ese tipo de entidad. (Para obtener información sobre los tipos derivados [, vea Entity Data Model: Herencia](entity-data-model-inheritance.md)). La relación entre un tipo de entidad y un conjunto de entidades es análoga a la relación entre una fila y una tabla en una base de datos relacional: Al igual que una fila, un tipo de entidad describe la estructura de datos y, como una tabla, un conjunto de entidades contiene instancias de una estructura determinada. Un conjunto de entidades no es una construcción de modelado de datos, ya que no describe la estructura de los datos. En su lugar, un conjunto de entidades proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias del tipo de entidad y se puedan asignar a un almacén de datos.  
   
- Un conjunto de entidades se define dentro de un [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md), que es una agrupación lógica de conjuntos de entidades y [conjuntos de asociaciones](../../../../docs/framework/data/adonet/association-set.md).  
+ Un conjunto de entidades se define dentro de un [contenedor de entidades](entity-container.md), que es una agrupación lógica de conjuntos de entidades y [conjuntos de asociaciones](association-set.md).  
   
  Para que una instancia de tipo de entidad exista en un conjunto de entidades, deben cumplirse las condiciones siguientes:  
   
 - El tipo de la instancia puede ser el mismo que el tipo de entidad en el que se basa el conjunto de entidades, o un subtipo del tipo de entidad.  
   
-- La [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) para la instancia es única en el conjunto de entidades.  
+- La [clave de entidad](entity-key.md) para la instancia es única en el conjunto de entidades.  
   
 - La instancia no existe en ningún otro conjunto de entidades.  
   
@@ -36,7 +36,7 @@ Un *conjunto de entidades* es un contenedor lógico para las instancias de un [t
   
  ![Captura de pantalla que muestra un ejemplo de conjuntos.](./media/entity-set/sets-example-association.gif)  
   
- El [Entity Framework ADO.net](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define un contenedor de entidades con un conjunto de entidades para cada tipo de entidad del modelo conceptual mostrado anteriormente. Tenga en cuenta que el nombre y el tipo de entidad de cada conjunto de entidades se definen mediante atributos XML.  
+ El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](./ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define un contenedor de entidades con un conjunto de entidades para cada tipo de entidad del modelo conceptual mostrado anteriormente. Tenga en cuenta que el nombre y el tipo de entidad de cada conjunto de entidades se definen mediante atributos XML.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
@@ -46,5 +46,5 @@ Un *conjunto de entidades* es un contenedor lógico para las instancias de un [t
   
 ## <a name="see-also"></a>Vea también
 
-- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

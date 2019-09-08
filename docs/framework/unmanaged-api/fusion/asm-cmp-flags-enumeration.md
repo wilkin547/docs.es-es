@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a56785d84a07122080efda22d41ec43721474789
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778567"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795263"
 ---
-# <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS (Enumeración)
-Indica la versión, compilación, referencia cultural, firma etc., de dos ensamblados que se va a comparar el [IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) método.  
+# <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS (Enumeración)
+Indica la versión, la compilación, la referencia cultural, la firma, etc., de dos ensamblados que se van a comparar con el método [IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,15 +68,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyName (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [Enumeraciones de fusión](fusion-enumerations.md)

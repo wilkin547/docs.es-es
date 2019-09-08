@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044283"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798164"
 ---
 # <a name="configuring-message-logging"></a>Configuración del registro de mensajes
 
@@ -47,7 +47,7 @@ En el siguiente ejemplo, se muestra cómo habilitar el registro y especificar op
 </system.serviceModel>
 ```
 
-Para obtener más información acerca de la configuración del registro de mensajes, vea [configuración recomendada para el seguimiento y el registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).
+Para obtener más información acerca de la configuración del registro de mensajes, vea [configuración recomendada para el seguimiento y el registro de mensajes](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
 Puede utilizar `add` para especificar el nombre y tipo del agente de escucha que desea utilizar. En la configuración de ejemplo, el agente de escucha se denomina "mensajes" y agrega el agente de escucha de seguimiento de .NET Framework estándar (`System.Diagnostics.XmlWriterTraceListener`) como el tipo que se va a utilizar. Si utiliza `System.Diagnostics.XmlWriterTraceListener`, debe especificar la ubicación y el nombre del archivo de resultados en el archivo de configuración. Esto se hace estableciendo `initializeData` en el nombre del archivo de registro. De lo contrario, el sistema produce una excepción. También puede implementar un agente de escucha personalizado que emita registros en un archivo predeterminado.
 
@@ -62,7 +62,7 @@ El atributo `switchValue` de `source` solo es válido para seguimientos. Si espe
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. Para obtener más información acerca de la herramienta editor de configuración, vea [herramienta editor de configuración (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obtener más información acerca de WMI, consulte [uso de instrumental de administración de Windows para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. Para obtener más información acerca de la herramienta editor de configuración, vea [herramienta editor de configuración (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Para obtener más información acerca de WMI, consulte [uso de instrumental de administración de Windows para diagnósticos](./wmi/index.md).
 
 ## <a name="logging-levels-and-options"></a>Registro de niveles y opciones
 
@@ -101,7 +101,7 @@ Además de los niveles del registro, el usuario puede especificar las opciones s
 
 Si ningún agente de escucha de seguimiento se define en el archivo de configuración, no se generará ninguna salida de registro sin tener en cuenta el nivel de registro especificado.
 
-Las opciones de registro de mensajes, como los atributos descritos en esta sección, se pueden cambiar en el tiempo de ejecución mediante el Instrumental de administración de Windows (WMI). Esto puede hacerse mediante el acceso a la instancia de [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , que expone estas propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`y `LogMalformedMessages`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilita en efecto el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI. Para obtener más información, consulte [uso de instrumental de administración de Windows para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Las opciones de registro de mensajes, como los atributos descritos en esta sección, se pueden cambiar en el tiempo de ejecución mediante el Instrumental de administración de Windows (WMI). Esto puede hacerse mediante el acceso a la instancia de [AppDomainInfo](./wmi/appdomaininfo.md) , que expone estas propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`y `LogMalformedMessages`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilita en efecto el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI. Para obtener más información, consulte [uso de instrumental de administración de Windows para diagnósticos](./wmi/index.md).
 
 El campo `source` de un registro de mensajes especifica en qué contexto se registra el mensaje: al enviar o recibir un mensaje de solicitud, para una solicitud-respuesta o una solicitud unidireccional, en el modelo de servicio o capa de transporte, o en el caso de un mensaje con formato incorrecto.
 
@@ -174,6 +174,6 @@ Debería tener en cuenta que el atributo `type` debería estar establecido en un
 
 ## <a name="see-also"></a>Vea también
 
-- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Configuración recomendada para el seguimiento y el registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [Registro de mensajes](message-logging.md)
+- [Configuración recomendada para el seguimiento y el registro de mensajes](./tracing/recommended-settings-for-tracing-and-message-logging.md)

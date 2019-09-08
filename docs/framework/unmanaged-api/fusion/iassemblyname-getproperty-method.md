@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796593"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty (Método)
-Obtiene un puntero a la propiedad al que hace referencia el identificador de propiedad especificado.  
+Obtiene un puntero a la propiedad a la que hace referencia el identificador de propiedad especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +39,21 @@ HRESULT GetProperty (
   
 ## <a name="parameters"></a>Parámetros  
  `PropertyId`  
- [in] El identificador único para la propiedad solicitada.  
+ de Identificador único de la propiedad solicitada.  
   
  `pvProperty`  
- [out] Los datos de la propiedad devuelta.  
+ enuncia Datos de propiedad devueltos.  
   
  `pcbProperty`  
- [in, out] El tamaño, en bytes, de `pvProperty`.  
+ [in, out] Tamaño, en bytes, de `pvProperty`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyName (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName (interfaz)](iassemblyname-interface.md)

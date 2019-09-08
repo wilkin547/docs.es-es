@@ -2,12 +2,12 @@
 title: Escribir código SQL dinámico y seguro en SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 9b0c903c04c82c9a0f61197642645c5ba93ba099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c02455ba8798df1de1d52f6b4db3426d41b95daf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645910"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791422"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escribir código SQL dinámico y seguro en SQL Server
 La inyección de SQL es el proceso por el cual un usuario malintencionado escribe instrucciones de Transact-SQL en lugar de entradas válidas. Si la entrada se pasa directamente al servidor sin haber sido validada y si la aplicación ejecuta el código inyectado por error, el ataque podría dañar o destruir datos.  
@@ -35,7 +35,7 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
   
 - En entornos de varios niveles, se deben validar todos los datos antes de su admisión en la zona de confianza.  
   
-- No se aceptan las siguientes cadenas en campos desde el que se pueden construir los nombres de archivo: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL y PRN.  
+- No acepte las siguientes cadenas en campos a partir de los cuales se pueden construir nombres de archivo: AUX, CLOCK $, COM1 a través de COM8, con, CONFIG $, LPT1 a LPT8, NUL y PRN.  
   
 - Utilice objetos <xref:System.Data.SqlClient.SqlParameter> con comandos y procedimientos almacenados para proporcionar comprobación de tipos y validación de longitud.  
   
@@ -46,9 +46,9 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
   
  SQL Server tiene métodos para conceder a los usuarios acceso a datos mediante procedimientos almacenados y funciones definidas por el usuario que ejecutan SQL dinámico.  
   
-- Usar la suplantación con la cláusula EXECUTE AS de Transact-SQL, como se describe en [Personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usar la suplantación con la cláusula EXECUTE AS de Transact-SQL, como se describe en [Personalizar permisos con suplantación en SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Firmar procedimientos almacenados con certificados, como se describe en [Firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firmar procedimientos almacenados con certificados, como se describe en [Firmar procedimientos almacenados en SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  La cláusula EXECUTE AS reemplaza los permisos del llamador por los del usuario especificado en la cláusula EXECUTE AS. Los procedimientos almacenados anidados o los desencadenadores se ejecutan en el contexto de seguridad del usuario proxy. Esto puede interrumpir las aplicaciones que dependen de seguridad por filas o requieren auditoría. Algunas funciones que devuelven la identidad del usuario devuelven el usuario especificado en la cláusula EXECUTE AS, no el llamador original. El contexto de ejecución se revierte al llamador original sólo después de la ejecución o cuando se ha emitido una instrucción REVERT.  
@@ -62,16 +62,16 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Procedimientos almacenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Inyección de código SQL](/sql/relational-databases/security/sql-injection) en los libros en pantalla de SQL Server|Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Administración de permisos con procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Firma de procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Personalización de permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Administración de permisos con procedimientos almacenados en SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Firma de procedimientos almacenados en SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Personalización de permisos con suplantación en SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

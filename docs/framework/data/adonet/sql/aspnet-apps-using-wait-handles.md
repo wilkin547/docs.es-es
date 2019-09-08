@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d97ed04de25d4db0fbf17e26a1d169d356a72c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877765"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794390"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Aplicaciones ASP.NET que usan identificadores de espera
 Los modelos de devolución de llamada y sondeo para el control de operaciones asincrónicas resultan de utilidad cuando la aplicación procesa una sola operación asincrónica cada vez. Los modelos Wait ofrecen una manera más flexible de procesar varias operaciones asincrónicas. Existen dos modelos Wait, cuyo nombre se debe a los métodos <xref:System.Threading.WaitHandle> usados para implementarlos: el modelo Wait (Any) y el modelo Wait (All).  
@@ -581,5 +581,5 @@ void Button1_Click(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Vea también
 
-- [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operaciones asincrónicas](asynchronous-operations.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

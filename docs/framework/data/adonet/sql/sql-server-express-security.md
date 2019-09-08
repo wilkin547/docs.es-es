@@ -2,12 +2,12 @@
 title: Seguridad de SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55f1d141e50ed7afd851d7330cfaf2e3b6380f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876790"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791691"
 ---
 # <a name="sql-server-express-security"></a>Seguridad de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) se basa en Microsoft SQL Server y es compatible con la mayoría de las características del motor de base de datos. Está diseñado de manera que las características que no sean esenciales y la conectividad de red están desactivadas de manera predeterminada. Con ello se reduce la superficie expuesta a los ataques de usuarios malintencionados.  
@@ -32,11 +32,11 @@ Microsoft SQL Server Express Edition (SQL Server Express) se basa en Microsoft S
 |||  
 |-|-|  
 |[Libros en pantalla de Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentación completa sobre SQL Server Express 2005 Express Edition.|  
-|[Las instancias de usuario para que no sean administradores](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) en los libros en pantalla de SQL Server|Describe cómo crear e implementar instancias de usuario.|  
-|[Instancias de usuario de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Describe las capacidades de instancia de usuario en una aplicación de ADO.NET. Proporciona información sobre cómo habilitar una instancia de usuario, cómo conectar a una instancia de usuario utilizando <xref:System.Data.SqlClient.SqlConnection>, ciclo de vida y casos de instancia de usuario.|  
+|[Instancias de usuario para usuarios que no son administradores](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) en libros en pantalla de SQL Server|Describe cómo crear e implementar instancias de usuario.|  
+|[Instancias de usuario de SQL Server Express](sql-server-express-user-instances.md)|Describe las capacidades de instancia de usuario en una aplicación de ADO.NET. Proporciona información sobre cómo habilitar una instancia de usuario, cómo conectar a una instancia de usuario utilizando <xref:System.Data.SqlClient.SqlConnection>, ciclo de vida y casos de instancia de usuario.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Instancias de usuario de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Seguridad de SQL Server](sql-server-security.md)
+- [Instancias de usuario de SQL Server Express](sql-server-express-user-instances.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

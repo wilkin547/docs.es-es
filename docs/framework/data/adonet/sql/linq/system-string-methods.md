@@ -2,12 +2,12 @@
 title: System.String (Métodos)
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613759"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792494"
 ---
 # <a name="systemstring-methods"></a>System.String (Métodos)
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.String> siguientes.  
@@ -15,7 +15,7 @@ ms.locfileid: "64613759"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Métodos System.String no admitidos en general  
  Métodos <xref:System.String> no admitidos en general:  
   
-- Sobrecargas que reconocen la referencia cultural (métodos que toman un `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Sobrecargas que tienen en cuenta las referencias culturales ( `CultureInfo`métodos que toman  /   /  `StringComparison` `IFormatProvider`).  
   
 - Métodos que utilizan o generan una matriz `char`.  
   
@@ -57,4 +57,4 @@ ms.locfileid: "64613759"
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Tipos de datos y funciones](data-types-and-functions.md)

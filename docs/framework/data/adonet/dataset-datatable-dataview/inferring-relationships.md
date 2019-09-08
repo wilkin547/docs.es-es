@@ -2,12 +2,12 @@
 title: Inferir relaciones
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c9c13453e4a830fcda337e8163649ba6491a995
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785363"
 ---
 # <a name="inferring-relationships"></a>Inferir relaciones
 Si un elemento que se deduce como una tabla tiene un elemento secundario que también se deduce como una tabla, se creará una <xref:System.Data.DataRelation> entre las dos tablas. Se agregará una nueva columna con el nombre **ParentTableName_Id** a la tabla creada para el elemento primario y a la tabla creada para el elemento secundario. La propiedad **ColumnMapping** de esta columna de identidad se establecerá en **MappingType. Hidden**. La columna será una clave principal de incremento automático para la tabla primaria y se utilizará para la **DataRelation** entre las dos tablas. El tipo de datos de la columna de identidad agregada será **System. Int32**, a diferencia del tipo de datos de todas las demás columnas inferidos, que es **System. String**. También <xref:System.Data.ForeignKeyConstraint> se creará una con la**cascada** de **DeleteRule** = utilizando la nueva columna en las tablas primaria y secundaria.  
@@ -77,4 +77,4 @@ Si un elemento que se deduce como una tabla tiene un elemento secundario que tam
 - [Anidado de objetos DataRelation](nesting-datarelations.md)
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: ebf5c61010a6f658d846ed435ea3a7d18d0d3832
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46c92301b717e285c4c18241f84d0069069c7bdc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783528"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modificar datos con procedimientos almacenados
 Los procedimientos almacenados pueden aceptar datos como parámetros de entrada y pueden devolver datos como parámetros de salida, conjuntos de resultados o valores de retorno. En el ejemplo siguiente se muestra cómo ADO.NET envía y recibe parámetros de entrada, parámetros de salida y valores de retorno. El ejemplo inserta un nuevo registro en una tabla cuya columna de clave principal es una columna de identidad en una base de datos de SQL Server.  
@@ -41,7 +41,7 @@ RETURN @@ROWCOUNT
   
 ## <a name="see-also"></a>Vea también
 
-- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Ejecución de un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)
+- [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
+- [Ejecución de un comando](executing-a-command.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

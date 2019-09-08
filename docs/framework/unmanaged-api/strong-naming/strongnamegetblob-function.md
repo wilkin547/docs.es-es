@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12daac766a09c297bfa129f69342ebad20977e7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780137"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799101"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob (Función)
 Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: strongnamegetblob (](../hosting/iclrstrongname-strongnamegetblob-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,31 +40,31 @@ BOOLEAN StrongNameGetBlob (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] Una ruta de acceso válida para el archivo ejecutable que se va a cargar.  
+ de Ruta de acceso válida al archivo ejecutable que se va a cargar.  
   
  `pbBlob`  
- [in] Búfer en el que se va a cargar el archivo ejecutable.  
+ de Búfer en el que se va a cargar el archivo ejecutable.  
   
  `pcbBlob`  
- [in, out] El solicita el tamaño máximo, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
+ [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Después de la devolución, el tamaño real, en bytes `pbBlob`, de.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true`Cuando se complete correctamente; en caso `false`contrario,.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el `StrongNameGetBlob` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si la `StrongNameGetBlob` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [StrongNameGetBlob (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [StrongNameGetBlobFromImage (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameGetBlob (método)](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [StrongNameGetBlobFromImage (método)](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

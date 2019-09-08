@@ -2,15 +2,15 @@
 title: Objetos DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204962"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784692"
 ---
 # <a name="datatables"></a>Objetos DataTable
-Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas, relaciones y restricciones. En ADO.net, <xref:System.Data.DataTable> los objetos se utilizan para representar las tablas de un **conjunto de DataSet**. Un **objeto DataTable** representa una tabla de datos relacionales en memoria; los datos son locales para. Aplicación basada en NET en la que reside, pero se puede rellenar a partir de un origen de datos, como Microsoft SQL Server usar un objeto **DataAdapter** para obtener más información, vea rellenar [un DataSet desde un DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
+Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas, relaciones y restricciones. En ADO.net, <xref:System.Data.DataTable> los objetos se utilizan para representar las tablas de un **conjunto de DataSet**. Un **objeto DataTable** representa una tabla de datos relacionales en memoria; los datos son locales para. Aplicación basada en NET en la que reside, pero se puede rellenar a partir de un origen de datos, como Microsoft SQL Server usar un objeto **DataAdapter** para obtener más información, vea [rellenar un DataSet desde un DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
   
  La clase **DataTable** es un miembro del espacio de nombres **System. Data** dentro de la biblioteca de clases de .NET Framework. Puede crear y usar un **objeto DataTable** de forma independiente o como miembro de un **conjunto**de los objetos, y los <xref:System.Data.DataView>objetos **DataTable** también se pueden usar junto con otros objetos .NET Framework, incluido. Se tiene acceso a la colección de tablas de un **DataSet** a través de la propiedad **tables** del objeto **DataSet** .  
   
@@ -57,4 +57,4 @@ Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas,
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

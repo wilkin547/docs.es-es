@@ -2,12 +2,12 @@
 title: Cadenas de conexión de ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363749"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784908"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadenas de conexión de ADO.NET
 
@@ -57,23 +57,23 @@ Todas las cadenas de conexión comparten la misma sintaxis básica que se ha des
 
 Los errores tipográficos pueden producir errores. Por ejemplo, `Integrated Security=true` es válido, pero `IntegratedSecurity=true` produce un error.
 
-Las cadenas de conexión construidas manualmente en tiempo de ejecución desde la entrada de usuario no validada son vulnerables a ataques de inyección de cadenas y ponen en peligro la seguridad en el origen de datos. Para solucionar estos problemas, *ADO.NET* 2,0 presentó [generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md) para cada proveedor de datos *.NET Framework* . Estos generadores de cadenas de conexión exponen parámetros como propiedades fuertemente tipadas y permiten validar la cadena de conexión antes de enviarla al origen de datos.
+Las cadenas de conexión construidas manualmente en tiempo de ejecución desde la entrada de usuario no validada son vulnerables a ataques de inyección de cadenas y ponen en peligro la seguridad en el origen de datos. Para solucionar estos problemas, *ADO.NET* 2,0 presentó [generadores de cadenas de conexión](connection-string-builders.md) para cada proveedor de datos *.NET Framework* . Estos generadores de cadenas de conexión exponen parámetros como propiedades fuertemente tipadas y permiten validar la cadena de conexión antes de enviarla al origen de datos.
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Generadores de cadenas de conexión](connection-string-builders.md)\
 Muestra cómo usar las clases `ConnectionStringBuilder` para construir cadenas de conexión válidas en tiempo de ejecución.
 
-[Cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Cadenas de conexión y archivos de configuración](connection-strings-and-configuration-files.md)\
 Muestra cómo almacenar y recuperar cadenas de conexión en archivos de configuración.
 
-[Sintaxis de cadena de conexión](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Sintaxis de cadena de conexión](connection-string-syntax.md)\
 Describe cómo configurar cadenas de conexión específicas de proveedor para `SqlClient`, `OracleClient`, `OleDb` y `Odbc`.
 
-[Protección de la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Protección de la información de conexión](protecting-connection-information.md)\
 Muestra técnicas de protección de la información utilizada para conectarse a un origen de datos.
 
 ## <a name="see-also"></a>Vea también
 
 - [Conexión a un origen de datos](/cpp/data/odbc/connecting-to-a-data-source)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](ado-net-overview.md)

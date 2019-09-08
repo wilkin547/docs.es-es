@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
-ms.openlocfilehash: f631c5df13c5633c22ef1d7179a0b7d135797b3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efaec84a6a6c6be5cca20d1e6a9c7c18a48169ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967601"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795764"
 ---
 # <a name="extending-bindings"></a>Extensión de enlaces
 Los enlaces especifican el transporte, codificación y protocolo requeridos para conectar a un punto de conexión. Las extensiones de enlace y los enlaces personalizados implementan la funcionalidad de la comunicación personalizada exigida para admitir las características de la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|[Enlaces y elementos de enlace](../../../../docs/framework/wcf/extending/bindings-and-binding-elements.md)|Describe enlaces, elementos de enlace y cómo se utilizan y se extienden.|  
-|[Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)|Describe cómo utilizar la clase <xref:System.ServiceModel.Channels.CustomBinding> para crear enlaces personalizados mediante los elementos de enlace definidos por el sistema y por otros fabricantes.|  
-|[Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)|Describe cómo crear los enlaces y elementos de enlace que pueden utilizar otros.|  
+|[Enlaces y elementos de enlace](bindings-and-binding-elements.md)|Describe enlaces, elementos de enlace y cómo se utilizan y se extienden.|  
+|[Enlaces personalizados](custom-bindings.md)|Describe cómo utilizar la clase <xref:System.ServiceModel.Channels.CustomBinding> para crear enlaces personalizados mediante los elementos de enlace definidos por el sistema y por otros fabricantes.|  
+|[Creación de enlaces definidos por el usuario](creating-user-defined-bindings.md)|Describe cómo crear los enlaces y elementos de enlace que pueden utilizar otros.|  
   
 ## <a name="reference"></a>Referencia  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Creación de un BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
+ [Creación de un BindingElement](creating-a-bindingelement.md)  
   
- [Compatibilidad con metadatos y configuración](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+ [Compatibilidad con metadatos y configuración](configuration-and-metadata-support.md)

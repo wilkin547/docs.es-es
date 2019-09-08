@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77f25e1c52f10a1724bf81a3fa533739e15085c4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c8b26651a1f4050145b6d43e03f9d4cc3d68202
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204716"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785282"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Cargar un conjunto de datos desde XML
 Es posible crear el contenido de un <xref:System.Data.DataSet> de ADO.NET a partir de una secuencia o de un documento XML. Además, con .NET Framework se dispone de una gran flexibilidad sobre qué información se carga desde XML y cómo se crea el esquema o la estructura relacional del <xref:System.Data.DataSet>.  
@@ -22,9 +22,9 @@ Es posible crear el contenido de un <xref:System.Data.DataSet> de ADO.NET a part
 |Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**Auto**|Este es el valor predeterminado. Examina el código XML y elige la opción más apropiada, en el orden siguiente:<br /><br /> -Si el XML es un DiffGram, se utiliza **DiffGram** .<br />-Si <xref:System.Data.DataSet> contiene un esquema o el XML contiene un esquema insertado, se utiliza **ReadSchema** .<br />-Si <xref:System.Data.DataSet> no contiene un esquema y el XML no contiene un esquema insertado, se utiliza **InferSchema** .<br /><br /> Si conoce el formato del XML que se está leyendo, para obtener el mejor rendimiento se recomienda establecer un **XmlReadMode**explícito, en lugar de aceptar el valor predeterminado **auto** .|  
-|**ReadSchema**|Lee cualquier esquema alineado y carga los datos y el esquema.<br /><br /> Si el <xref:System.Data.DataSet> ya contiene un esquema, se agregan nuevas tablas del esquema alineado al esquema existente en el <xref:System.Data.DataSet>. Si ya existe alguna tabla del esquema alineado en el <xref:System.Data.DataSet>, se iniciará una excepción. No podrá modificar el esquema de una tabla existente con **XmlReadMode. ReadSchema**.<br /><br /> Si el <xref:System.Data.DataSet> no contiene un esquema y no hay ningún esquema alineado, no se leerá ningún dato.<br /><br /> Es posible definir el esquema alineado mediante el esquema del lenguaje de definición de esquemas XML (XSD). Para obtener más información sobre cómo escribir esquemas insertados como esquemas XML, vea derivar una [estructura relacional de conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
+|**ReadSchema**|Lee cualquier esquema alineado y carga los datos y el esquema.<br /><br /> Si el <xref:System.Data.DataSet> ya contiene un esquema, se agregan nuevas tablas del esquema alineado al esquema existente en el <xref:System.Data.DataSet>. Si ya existe alguna tabla del esquema alineado en el <xref:System.Data.DataSet>, se iniciará una excepción. No podrá modificar el esquema de una tabla existente con **XmlReadMode. ReadSchema**.<br /><br /> Si el <xref:System.Data.DataSet> no contiene un esquema y no hay ningún esquema alineado, no se leerá ningún dato.<br /><br /> Es posible definir el esquema alineado mediante el esquema del lenguaje de definición de esquemas XML (XSD). Para obtener más información sobre cómo escribir esquemas insertados como esquemas XML, vea [derivar una estructura relacional de conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Pasa por alto cualquier esquema alineado y carga los datos en el esquema del <xref:System.Data.DataSet> existente. Se descartan todos los datos que no coincidan con el esquema existente. Si no existe ningún esquema en el <xref:System.Data.DataSet>, no se cargará ningún dato.<br /><br /> Si los datos son un DiffGram, **IgnoreSchema** tiene la misma funcionalidad que **DiffGram** *.*|  
-|**InferSchema**|Pasa por alto cualquier esquema alineado, deduce el esquema por la estructura de los datos XML y, a continuación, carga los datos.<br /><br /> Si el <xref:System.Data.DataSet> ya contiene un esquema, se extiende el esquema actual mediante la adición de columnas a las tablas existentes. Si no existen tablas, no se agregarán tablas adicionales. Se iniciará una excepción si ya existe una tabla inferida con un espacio de nombres diferente o si alguna columna inferida entra en conflicto con columnas existentes.<br /><br /> Para obtener más información sobre cómo **ReadXmlSchema** deduce un esquema a partir de un documento XML, vea inferir la [estructura relacional de DataSet desde XML](inferring-dataset-relational-structure-from-xml.md).|  
+|**InferSchema**|Pasa por alto cualquier esquema alineado, deduce el esquema por la estructura de los datos XML y, a continuación, carga los datos.<br /><br /> Si el <xref:System.Data.DataSet> ya contiene un esquema, se extiende el esquema actual mediante la adición de columnas a las tablas existentes. Si no existen tablas, no se agregarán tablas adicionales. Se iniciará una excepción si ya existe una tabla inferida con un espacio de nombres diferente o si alguna columna inferida entra en conflicto con columnas existentes.<br /><br /> Para obtener más información sobre cómo **ReadXmlSchema** deduce un esquema a partir de un documento XML, vea [inferir la estructura relacional de DataSet desde XML](inferring-dataset-relational-structure-from-xml.md).|  
 |**DiffGram**|Lee un DiffGram y agrega los datos al esquema actual. **DiffGram** combina las nuevas filas con las filas existentes donde coinciden los valores de identificador único. Vea "Combinar datos desde XML" al final de este tema. Para obtener más información acerca de los DiffGrams, vea [DiffGrams](diffgrams.md).|  
 |**Fragment**|Sigue leyendo varios fragmentos de XML hasta llegar al final de la secuencia. Los fragmentos que coinciden con el esquema del <xref:System.Data.DataSet> se anexan a las tablas apropiadas. Los fragmentos que no coinciden con el esquema del <xref:System.Data.DataSet> se descartan.|  
   
@@ -124,4 +124,4 @@ foreach (DataTable dataTable in dataSet.Tables)
 - [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
 - [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

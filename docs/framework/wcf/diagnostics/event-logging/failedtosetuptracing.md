@@ -2,26 +2,26 @@
 title: FailedToSetupTracing
 ms.date: 03/30/2017
 ms.assetid: dd61db93-4687-4832-8dc9-99e38fa83671
-ms.openlocfilehash: 8448ba2055783d57ef1413d2dca0d84b646ba869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 357b3d16b55f2855ca5a58945d391ee6e8d83cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942199"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797911"
 ---
 # <a name="failedtosetuptracing"></a>FailedToSetupTracing
 Id.: 100  
   
- Gravedad: Error  
+ Gravedad Error  
   
- Categoría: Traza  
+ Categoría Traza  
   
-## <a name="description"></a>Descripción  
+## <a name="description"></a>DESCRIPCIÓN  
  Se ha producido un error en un intento de configuración de seguimiento. Seguimiento deshabilitado.  
   
  El evento enumera la excepción, el nombre del proceso y el id. del mismo.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referencia general de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos](index.md)
+- [Referencia general de eventos](events-general-reference.md)

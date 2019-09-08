@@ -1,5 +1,5 @@
 ---
-title: Función SetSecurity (referencia de API no administrada)
+title: Función SetSecurity (referencia de la API no administrada)
 description: La función SetSecurity recupera el token de suplantación del subproceso actual.
 ms.date: 11/06/2017
 api_name:
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783119"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798239"
 ---
-# <a name="setsecurity-function"></a>Función SetSecurity
+# <a name="setsecurity-function"></a>SetSecurity función)
 
 Recupera el token de suplantación asociado al subproceso actual. 
 
@@ -41,20 +41,20 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parámetros
 
 `pNeedToReset`\
-[out] Cuando la función devuelve, contiene un puntero a un `boolean` que indica si se debe restablecer el token mediante una llamada a la [ResetSecurity](resetsecurity.md) función.
+enuncia Cuando la función devuelve un, contiene un puntero a `boolean` un que indica si se debe restablecer el token mediante una llamada a la función [ResetSecurity](resetsecurity.md) .
 
 `token`\
-[out] La función devuelve, contiene un puntero al identificador del token de suplantación asociado al subproceso actual. Su valor puede ser `null` si no hay ningún testigo asociado con el subproceso actual. 
+enuncia Cuando la función devuelve un objeto, contiene un puntero al identificador del token de suplantación asociado al subproceso actual. Su valor puede ser `null` si no hay ningún token asociado al subproceso actual. 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza correctamente, el valor devuelto es `S_OK` (0).
+Si la función se ejecuta correctamente, el valor devuelto es `S_OK` (0).
 
-Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la [GetErrorInfo](geterrorinfo.md) función.
+Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la función [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
  **Encabezado**: WMINet_Utils.idl
 
@@ -62,4 +62,4 @@ Si se produce un error en la función, el valor devuelto es un código de error 
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

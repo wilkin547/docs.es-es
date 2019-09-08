@@ -2,41 +2,41 @@
 title: Procedimiento para administrar conflictos de cambios
 ms.date: 03/30/2017
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
-ms.openlocfilehash: 7858dc304d281dfb99755d83eec19b421f63d2ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49ccb08a375b612e62a8911e98f8ec08058802db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903388"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781839"
 ---
 # <a name="how-to-manage-change-conflicts"></a>Procedimiento para administrar conflictos de cambios
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Proporciona una colección de API que le ayudarán a descubrir, evaluar y resolver los conflictos de simultaneidad.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]proporciona una colección de API que le ayudarán a detectar, evaluar y resolver conflictos de simultaneidad.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Detectar y resolver envíos con conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
+ [Procedimientos: Detectar y resolver envíos en conflicto](how-to-detect-and-resolve-conflicting-submissions.md)  
  Describe cómo detectar y resolver los conflictos de simultaneidad.  
   
- [Cómo: Especificar que las excepciones de simultaneidad cuando se inician](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
+ [Cómo: Especificar Cuándo se inician las excepciones de simultaneidad](how-to-specify-when-concurrency-exceptions-are-thrown.md)  
  Describe cómo especificar cuándo debe ser informado de los conflictos de simultaneidad.  
   
- [Cómo: Especificar que los miembros se comprueban los conflictos de simultaneidad](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
+ [Procedimientos: Especificar los miembros para los que se van a probar los conflictos de simultaneidad](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
  Describe cómo atribuir miembros para especificar si se debe comprobar la existencia de conflictos de simultaneidad entre ellos.  
   
- [Cómo: Recuperar información de conflicto de entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
+ [Cómo: Recuperar información de conflictos de entidades](how-to-retrieve-entity-conflict-information.md)  
  Describe cómo recopilar información sobre los conflictos entre entidades.  
   
- [Cómo: Recuperar información de conflictos de miembros](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
+ [Procedimientos: Recuperar información de conflictos de miembros](how-to-retrieve-member-conflict-information.md)  
  Describe cómo recopilar información sobre los conflictos entre miembros.  
   
- [Cómo: Resolver conflictos de simultaneidad conservando valores de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
+ [Cómo: Resolver conflictos conservando los valores de la base de datos](how-to-resolve-conflicts-by-retaining-database-values.md)  
  Describe cómo sobrescribir los valores actuales con valores de la base de datos.  
   
- [Cómo: Resolver conflictos de simultaneidad sobrescribiendo valores de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
+ [Procedimientos: Resolver conflictos sobrescribiendo los valores de la base de datos](how-to-resolve-conflicts-by-overwriting-database-values.md)  
  Describe cómo mantener los valores actuales sobrescribiendo los valores de la base de datos.  
   
- [Cómo: Resolver conflictos de combinación con los valores de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
+ [Cómo: Resolver conflictos mediante la combinación con valores de base de datos](how-to-resolve-conflicts-by-merging-with-database-values.md)  
  Describe cómo resolver un conflicto combinando los valores actuales y los de la base de datos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Simultaneidad optimista: información general](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [Simultaneidad optimista: Introducción](optimistic-concurrency-overview.md)  
  Explica las condiciones que se aplican a la simultaneidad optimista en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

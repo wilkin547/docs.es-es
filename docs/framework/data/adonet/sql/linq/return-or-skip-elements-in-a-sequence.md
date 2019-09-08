@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963857"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792759"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Devolver u omitir elementos de una secuencia
 Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un número determinado de elementos de una secuencia y omitir el resto.  
@@ -18,7 +18,7 @@ Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un númer
  Utilice el operador <xref:System.Linq.Queryable.Skip%2A> para omitir un número determinado de elementos de una secuencia y devolver el resto.  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada sobre cómo omitir y tomar excepciones en SQL Server 2000 "en [solución de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada sobre cómo omitir y tomar excepciones en SQL Server 2000 "en [solución de problemas](troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traduce <xref:System.Linq.Queryable.Skip%2A> mediante una subconsulta con la cláusula SQL `NOT EXISTS` . Esta conversión tiene las limitaciones siguientes:  
   
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Traslación del operador de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Ejemplos de consultas](query-examples.md)
+- [Traslación del operador de consulta estándar](standard-query-operator-translation.md)

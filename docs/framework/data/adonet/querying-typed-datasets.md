@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651745"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782966"
 ---
-# <a name="query-typed-datasets"></a>Consultar objetos DataSet con tipo
+# <a name="query-typed-datasets"></a>Consultar conjuntos de DataSet con tipo
 
-Si el esquema de la <xref:System.Data.DataSet> se conoce en tiempo de diseño de la aplicación, se recomienda que use un tipo <xref:System.Data.DataSet> al usar LINQ to DataSet. Un tipo <xref:System.Data.DataSet> es una clase que deriva de un <xref:System.Data.DataSet>. Como tal, hereda todos los métodos, eventos y propiedades de un <xref:System.Data.DataSet>. Además, un tipo <xref:System.Data.DataSet> proporciona propiedades, eventos y métodos fuertemente tipados. Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección. Esto hace que las consultas sean más sencillas y más legibles. Para obtener más información, consulte [DataSets con tipo](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).
+Si el esquema de se <xref:System.Data.DataSet> conoce en tiempo de diseño de la aplicación, se recomienda usar un <xref:System.Data.DataSet> tipo cuando se use LINQ to DataSet. Un con tipo <xref:System.Data.DataSet> es una clase que se deriva <xref:System.Data.DataSet>de. Como tal, hereda todos los métodos, eventos y propiedades de un <xref:System.Data.DataSet>. Además, un con tipo <xref:System.Data.DataSet> proporciona métodos, eventos y propiedades fuertemente tipados. Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección. Esto hace que las consultas sean más sencillas y más legibles. Para obtener más información, vea conjuntos de datos [con tipo](./dataset-datatable-dataview/typed-datasets.md).
 
-LINQ to DataSet también admite consultas a través de un tipo <xref:System.Data.DataSet>. Con un tipo <xref:System.Data.DataSet>, no es necesario usar el tipo genérico <xref:System.Data.DataRowExtensions.Field%2A> método o <xref:System.Data.DataRowExtensions.SetField%2A> método para acceder a los datos de columna. Los nombres de propiedad están disponibles en tiempo de compilación porque la información de tipo se incluye en el <xref:System.Data.DataSet>. LINQ to DataSet proporciona acceso a los valores de columna del tipo correcto, por lo que se detectan errores de coincidencia de tipo cuando se compila el código en lugar de en tiempo de ejecución.
+LINQ to DataSet también admite la consulta en un tipo <xref:System.Data.DataSet>. Con un tipo <xref:System.Data.DataSet>, no es necesario utilizar el método o <xref:System.Data.DataRowExtensions.SetField%2A> método genérico <xref:System.Data.DataRowExtensions.Field%2A> para tener acceso a los datos de la columna. Los nombres de propiedad están disponibles en tiempo de compilación porque la información de tipo <xref:System.Data.DataSet>se incluye en. LINQ to DataSet proporciona acceso a los valores de columna como tipo correcto, de modo que los errores de coincidencia de tipos se detectan cuando se compila el código en lugar de en tiempo de ejecución.
 
-Antes de poder empezar a consultar con tipo <xref:System.Data.DataSet>, debe generar la clase mediante el **Diseñador de DataSet** en Visual Studio. Para obtener más información, consulte [crear y configurar conjuntos de datos](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+Antes de poder empezar a consultar un tipo <xref:System.Data.DataSet>, debe generar la clase mediante el diseñador de **DataSet** en Visual Studio. Para obtener más información, vea [crear y configurar conjuntos](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)de datos.
 
 ## <a name="example"></a>Ejemplo
 
@@ -60,6 +60,6 @@ Next
 
 ## <a name="see-also"></a>Vea también
 
-- [Consulta de conjuntos de datos](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Consultas entre tablas](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [Consultas de tabla única](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+- [Consulta de conjuntos de datos](querying-datasets-linq-to-dataset.md)
+- [Consultas entre tablas](cross-table-queries-linq-to-dataset.md)
+- [Consultas de tabla única](single-table-queries-linq-to-dataset.md)

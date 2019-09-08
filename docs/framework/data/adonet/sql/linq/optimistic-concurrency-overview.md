@@ -2,12 +2,12 @@
 title: 'Simultaneidad optimista: Información general'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938627"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792929"
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidad optimista: Información general
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite el control de simultaneidad optimista. En la tabla siguiente se describen los términos que se aplican [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] a la simultaneidad optimista en la documentación de:  
@@ -44,26 +44,26 @@ ms.locfileid: "69938627"
 |User1|Alfred||Marketing|  
 |User2||Mary|Servicio|  
   
- Puede resolver conflictos como estos de maneras diferentes. Para obtener más información, consulte [Cómo Administrar conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)de cambios.  
+ Puede resolver conflictos como estos de maneras diferentes. Para obtener más información, vea [Cómo: Administrar conflictos](how-to-manage-change-conflicts.md)de cambios.  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>Lista de comprobación para detectar y resolver conflictos  
  Puede detectar y resolver los conflictos en cualquier nivel de detalle. Por una parte, puede resolver todos los conflictos de una de tres maneras (vea <xref:System.Data.Linq.RefreshMode>) sin consideraciones adicionales. En el otro extremo, puede designar una acción concreta para cada tipo de conflicto en cada miembro en conflicto.  
   
 - Especifique o revise las opciones de <xref:System.Data.Linq.Mapping.UpdateCheck> en su modelo de objetos.  
   
-     Para obtener más información, consulte [Cómo Especifique los miembros que se van a probar para](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)detectar conflictos de simultaneidad.  
+     Para obtener más información, vea [Cómo: Especifique los miembros que se van a probar para](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)detectar conflictos de simultaneidad.  
   
 - En el bloque la try/catch de la llamada a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, especifique en qué punto desea que se inicien excepciones.  
   
-     Para obtener más información, consulte [Cómo Especifique cuándo se inician](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)las excepciones de simultaneidad.  
+     Para obtener más información, consulte [Cómo Especifique cuándo se inician](how-to-specify-when-concurrency-exceptions-are-thrown.md)las excepciones de simultaneidad.  
   
 - Determine cuántos detalles del conflicto desea recuperar e incluya el código correspondiente en el bloque try/catch.  
   
-     Para obtener más información, vea [Cómo: Recuperar información](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) de conflictos de [entidades y cómo: Recuperar información](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)de conflictos de miembros.  
+     Para obtener más información, consulte [Cómo Recuperar información](how-to-retrieve-entity-conflict-information.md) de conflictos de [entidades y cómo: Recuperar información](how-to-retrieve-member-conflict-information.md)de conflictos de miembros.  
   
 - Incluya en el `try` /códigocómodesea resolverlosdistintosconflictosquedetecta`catch` .  
   
-     Para obtener más información, vea [Cómo: Resolver conflictos conservando los valores](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)de la base de datos, [cómo: Solucione los conflictos sobrescribiendo los](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)valores de [la base de datos y cómo: Resuelva los conflictos combinando con los](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)valores de la base de datos.  
+     Para obtener más información, vea [Cómo: Resolver conflictos conservando los valores](how-to-resolve-conflicts-by-retaining-database-values.md)de la base de datos, [cómo: Solucione los conflictos sobrescribiendo los](how-to-resolve-conflicts-by-overwriting-database-values.md)valores de [la base de datos y cómo: Resuelva los conflictos combinando con los](how-to-resolve-conflicts-by-merging-with-database-values.md)valores de la base de datos.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Tipos LINQ to SQL que admiten la detección y resolución de conflictos  
  Entre las clases y características que admiten la resolución de conflictos de simultaneidad optimista en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], se incluyen:  
@@ -90,4 +90,4 @@ ms.locfileid: "69938627"
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Cómo: Administrar conflictos de cambios](how-to-manage-change-conflicts.md)

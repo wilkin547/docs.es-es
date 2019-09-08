@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffeb04ddcec290f899556bf0d8078acfb06707ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c855d6f85c3cbfa6d81a1fbce3ef5b83abb3f583
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778608"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795408"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache (Función)
-Obtiene un puntero a una nueva [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instancia que representa la caché global de ensamblados.  
+Obtiene un puntero a una nueva instancia de [IAssemblyCache](iassemblycache-interface.md) que representa la caché global de ensamblados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +39,22 @@ HRESULT CreateAssemblyCache (
   
 ## <a name="parameters"></a>Parámetros  
  `ppAsmCache`  
- [out] El valor devuelto `IAssemblyCache` puntero.  
+ enuncia Puntero devuelto `IAssemblyCache` .  
   
  `dwReserved`  
- [in] Reservado para extensibilidad futura. `dwReserved` debe ser 0 (cero).  
+ [in] Reservado para extensibilidad futura. `dwReserved`debe ser 0 (cero).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Caché global de ensamblados](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache (interfaz)](iassemblycache-interface.md)
+- [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)
+- [Caché global de ensamblados](../../app-domains/gac.md)

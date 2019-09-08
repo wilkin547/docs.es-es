@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 24d0d44f5964708164f89b0d9fa6c4c1aac7da0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204509"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784332"
 ---
 # <a name="row-states-and-row-versions"></a>Estados y versiones de filas
 ADO.NET administra las filas de las tablas mediante estados de fila y versiones de fila. Un estado de fila indica el estado de una fila; las versiones de fila mantienen los valores almacenados en una fila en cuanto se modifica, incluyendo los valores actuales, originales y predeterminados. Por ejemplo, después de realizar una modificación en una columna de una fila, ésta adquiere el estado de fila `Modified` y dos versiones de fila:`Current`, que contiene los valores actuales de fila, y `Original`, que contiene los valores de fila antes de la modificación de la columna.  
@@ -99,4 +99,4 @@ foreach (DataRow delRow in delRows)
 - [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
 - [Objetos DataAdapter y DataReader](../dataadapters-and-datareaders.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

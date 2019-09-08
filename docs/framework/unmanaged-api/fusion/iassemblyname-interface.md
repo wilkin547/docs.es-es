@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aee9b986c1e26c1b2e34dac7151a00172451bbad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697932"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796551"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName (Interfaz)
 Proporciona métodos para describir y trabajar con la identidad única de un ensamblado.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[Clone (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Crea una copia superficial de este `IAssemblyName` objeto.|  
-|[Finalize (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Esto permite `IAssemblyName` objeto para liberar recursos y realizar otras operaciones de limpieza antes de llama a su destructor.|  
-|[GetDisplayName (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Obtiene el nombre legible del ensamblado que hace referencia esta `IAssemblyName` objeto.|  
-|[GetName (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Obtiene el nombre sencillo y sin cifrar del ensamblado que hace referencia esta `IAssemblyName` objeto.|  
-|[GetProperty (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Obtiene un puntero a la propiedad al que hace referencia especificado `PropertyId`.|  
-|[GetVersion (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Obtiene la información de versión del ensamblado que hace referencia esta `IAssemblyName` objeto.|  
-|[IsEqual (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Determina si un `IAssemblyName` es igual a este objeto `IAssemblyName`, en función de las marcas de comparación especificado.|  
-|[SetProperty (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Establece el valor de la propiedad al que hace referencia especificado `PropertyId`.|  
+|[Clone (método)](iassemblyname-clone-method.md)|Crea una copia superficial de este `IAssemblyName` objeto.|  
+|[Finalize (método)](iassemblyname-finalize-method.md)|Permite a `IAssemblyName` este objeto liberar recursos y realizar otras operaciones de limpieza antes de que se llame a su destructor.|  
+|[GetDisplayName (método)](iassemblyname-getdisplayname-method.md)|Obtiene el nombre legible del ensamblado al que hace referencia este `IAssemblyName` objeto.|  
+|[GetName (método)](iassemblyname-getname-method.md)|Obtiene el nombre simple y sin cifrar del ensamblado al que hace `IAssemblyName` referencia este objeto.|  
+|[GetProperty (método)](iassemblyname-getproperty-method.md)|Obtiene un puntero a la propiedad a la que hace referencia `PropertyId`el especificado.|  
+|[GetVersion (método)](iassemblyname-getversion-method.md)|Obtiene la información de versión para el ensamblado al que `IAssemblyName` hace referencia este objeto.|  
+|[IsEqual (método)](iassemblyname-isequal-method.md)|Determina si un objeto `IAssemblyName` especificado es igual a este `IAssemblyName`, en función de las marcas de comparación especificadas.|  
+|[SetProperty (método)](iassemblyname-setproperty-method.md)|Establece el valor de la propiedad a la que hace referencia `PropertyId`el especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IAssemblyEnum (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Interfaces de Fusion](fusion-interfaces.md)
+- [IAssemblyEnum (interfaz)](iassemblyenum-interface.md)

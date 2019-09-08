@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f86e9100489ddf35d8ef5f98e386306a7dbfd4ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204365"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784181"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Escribir información del esquema de un conjunto de datos como XSD
 Puede escribir el esquema de un <xref:System.Data.DataSet> como un esquema de lenguaje de definición de esquemas XML (XSD), de forma que pueda transportarlo, con o sin datos relacionados, a un documento XML. El esquema XML se puede escribir en un archivo, una secuencia, <xref:System.Xml.XmlWriter>un o una cadena; resulta útil para generar un conjunto de un **DataSet**fuertemente tipado. Para obtener más información sobre los objetos de **conjunto** de datos fuertemente tipados, vea [conjuntos de datos con tipo](typed-datasets.md).  
@@ -55,4 +55,4 @@ string schemaString = dataSet.GetXmlSchema();
 - [Escritura de contenido de un conjunto de datos como datos XML](writing-dataset-contents-as-xml-data.md)
 - [Objetos DataSet con tipo](typed-datasets.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

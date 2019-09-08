@@ -2,12 +2,12 @@
 title: Manipular datos en un objeto DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203494"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786151"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipular datos en un objeto DataTable
 Después de crear una <xref:System.Data.DataTable> en un <xref:System.Data.DataSet>, se pueden realizar las mismas actividades que al utilizar una tabla de una base de datos. Se puede agregar, ver, modificar y eliminar datos en la tabla, supervisar los errores y eventos y consultar los datos de la tabla. Al modificar los datos de un **objeto DataTable**, también puede comprobar si los cambios son precisos y determinar si aceptar o rechazar los cambios mediante programación.  
@@ -41,4 +41,4 @@ Después de crear una <xref:System.Data.DataTable> en un <xref:System.Data.DataS
 
 - [Objetos DataTable](datatables.md)
 - [Control de eventos de DataTable](handling-datatable-events.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

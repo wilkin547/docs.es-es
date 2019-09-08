@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204414"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784268"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizar un objeto DataSet con un objeto XmlDataDocument
 En esta sección se muestra un paso del procesamiento de una orden de compra, donde se utiliza un <xref:System.Data.DataSet> fuertemente tipado sincronizado con un <xref:System.Xml.XmlDataDocument>. En los ejemplos siguientes se crea un **conjunto** de resultados con un esquema minimizado que solo coincide con una parte del documento XML de origen. En los ejemplos se usa un **XmlDataDocument** para conservar la fidelidad del documento XML de origen, lo que permite utilizar el **conjunto** de documentos para exponer un subconjunto del documento XML.  
@@ -234,4 +234,4 @@ public class Sample
 ## <a name="see-also"></a>Vea también
 
 - [Sincronización de DataSet y XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

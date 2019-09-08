@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204058"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784856"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Agregar columnas a un objeto DataTable
-Un <xref:System.Data.DataTable> objeto contiene una colección <xref:System.Data.DataColumn> de objetos a los que hace referencia la propiedad Columns de la tabla. Esta colección de columnas, junto con las restricciones que haya, define el esquema, o estructura, de la tabla.  
+Un <xref:System.Data.DataTable> objeto contiene una colección <xref:System.Data.DataColumn> de objetos a los que hace referencia la propiedad **Columns** de la tabla. Esta colección de columnas, junto con las restricciones que haya, define el esquema, o estructura, de la tabla.  
   
  Puede crear objetos **DataColumn** dentro de una tabla mediante el constructor **DataColumn** o llamando al método **Add** de la propiedad **Columns** <xref:System.Data.DataColumnCollection>de la tabla, que es. El método **Add** acepta argumentos **columnName**, **DataType**y **Expression** opcionales y crea una nueva **DataColumn** como miembro de la colección. También acepta un objeto **DataColumn** existente y lo agrega a la colección y devuelve una referencia a la **DataColumn** agregada si se solicita. Dado que los objetos **DataTable** no son específicos de ningún origen de datos, se usan .NET Framework tipos al especificar el tipo de datos de un objeto **DataColumn**.  
   
@@ -58,4 +58,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataTable>
 - [Definición del esquema de DataTable](datatable-schema-definition.md)
 - [Objetos DataTable](datatables.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

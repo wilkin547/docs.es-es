@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: 1fd85fdead2e971f439841dc67d461fcf7b2e08b
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3a3089073cdc5afb4ee51caca9114b401c740b45
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504383"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795009"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>Procedimiento para enlazar un objeto DataView a un control DataGridView de formularios Windows Forms
 El control <xref:System.Windows.Forms.DataGridView> proporciona una forma eficaz y flexible de mostrar datos en formato de tabla. El control <xref:System.Windows.Forms.DataGridView> admite el modelo de enlace de datos de Windows Forms estándar, por lo que se enlazará a <xref:System.Data.DataView> y a otros orígenes de datos. Sin embargo, en la mayoría de las situaciones se enlazará a un componente <xref:System.Windows.Forms.BindingSource> que administrará los detalles de la interacción con el origen de datos.  
   
- Para obtener más información sobre la <xref:System.Windows.Forms.DataGridView> control, vea [información general del Control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+ Para obtener más información sobre <xref:System.Windows.Forms.DataGridView> el control, vea [información general sobre el control DataGridView](../../winforms/controls/datagridview-control-overview-windows-forms.md).  
   
 ### <a name="to-connect-a-datagridview-control-to-a-dataview"></a>Para conectar un control DataGridView a DataView  
   
@@ -24,11 +24,11 @@ El control <xref:System.Windows.Forms.DataGridView> proporciona una forma eficaz
      [!code-csharp[DP DataViewWinForms Sample#LDVSample1GetData](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/CS/Form1.cs#ldvsample1getdata)]
      [!code-vb[DP DataViewWinForms Sample#LDVSample1GetData](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/VB/Form1.vb#ldvsample1getdata)]  
   
-2. En el controlador de eventos <xref:System.Windows.Forms.Form.Load> del formulario, enlace el control <xref:System.Windows.Forms.DataGridView> al componente <xref:System.Windows.Forms.BindingSource> y llame al método `GetData` para recuperar los datos de la base de datos. El <xref:System.Data.DataView> se crea desde LINQ a consultas de conjunto de datos sobre el contacto <xref:System.Data.DataTable> y, a continuación, se enlaza a la <xref:System.Windows.Forms.BindingSource> componente.  
+2. En el controlador de eventos <xref:System.Windows.Forms.Form.Load> del formulario, enlace el control <xref:System.Windows.Forms.DataGridView> al componente <xref:System.Windows.Forms.BindingSource> y llame al método `GetData` para recuperar los datos de la base de datos. Se crea a partir de una consulta de LINQ to DataSet sobre <xref:System.Data.DataTable> el contacto y, a continuación <xref:System.Windows.Forms.BindingSource> , se enlaza al componente. <xref:System.Data.DataView>  
   
      [!code-csharp[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/CS/Form1.cs#ldvsample1formload)]
      [!code-vb[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/VB/Form1.vb#ldvsample1formload)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Enlace de datos y LINQ to DataSet](data-binding-and-linq-to-dataset.md)

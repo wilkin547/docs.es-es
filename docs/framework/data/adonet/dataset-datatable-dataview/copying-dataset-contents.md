@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205176"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786513"
 ---
 # <a name="copying-dataset-contents"></a>Copiar el contenido de DataSet
 Puede crear una copia de <xref:System.Data.DataSet> para que pueda trabajar con datos sin que afecte a los datos originales o trabajar con un subconjunto de los datos de un **conjunto**de datos. Al copiar un **conjunto de DataSet**, puede:  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Para crear una copia de un **conjunto** de datos que incluya el esquema y sololos datos que representan filas agregadas, modificadas <xref:System.Data.DataSet.GetChanges%2A> o **eliminadas** , use el método del **conjunto**de datos. También puede usar **GetChanges** para devolver solo las filas con un estado de fila especificado pasando un valor de **DataRowState** al llamar a **GetChanges**. En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
+ Para crear una copia de un **conjunto** de datos que incluya el esquema y solo los datos que representan filas **agregadas**, **modificadas**o **eliminadas** , use el <xref:System.Data.DataSet.GetChanges%2A> método del **conjunto**de datos. También puede usar **GetChanges** para devolver solo las filas con un estado de fila especificado pasando un valor de **DataRowState** al llamar a **GetChanges**. En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -99,4 +99,4 @@ foreach (DataRow copyRow in copyRows)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

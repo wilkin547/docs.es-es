@@ -1,6 +1,6 @@
 ---
-title: GetObjectText (función) (referencia de API no administrada)
-description: GetObjectText (función), devuelve una representación textual de un objeto en la sintaxis MOF.
+title: Función GetObjectText (referencia de la API no administrada)
+description: La función GetObjectText devuelve una representación textual de un objeto en la sintaxis MOF.
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4438b000a8ecf95949350d3665267276a1d959ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746497"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798509"
 ---
 # <a name="getobjecttext-function"></a>Función GetObjectText
 Devuelve una representación textual del objeto en la sintaxis de Managed Object Format (MOF).
@@ -42,43 +42,43 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
-[in] Normalmente 0. Si `WBEM_FLAG_NO_FLAVORS` (o 0 x 1) se especifica, se incluyen sin información de propagación o flavor calificadores.
+de Normalmente 0. Si `WBEM_FLAG_NO_FLAVORS` se especifica (o 0x1), los calificadores se incluyen sin información de propagación o de tipo.
 
 `pstrObjectText`   
-[out] Un puntero a un `null` en la entrada. Devuelve un recién asignado `BSTR` que contiene una representación de la sintaxis MOF del objeto.  
+enuncia Puntero a una `null` entrada. En la devolución, una recién `BSTR` asignada que contiene una representación de la sintaxis MOF del objeto.  
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
+|`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) método.
+Esta función contiene una llamada al método [IWbemClassObject:: GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) .
 
-Devuelve el texto MOF contiene toda la información sobre el objeto, sino únicamente la información suficiente para que el compilador MOF poder volver a crear el objeto original. Por ejemplo, no propagados calificadores o propiedades de la clase primaria se incluyen.
+El texto MOF devuelto no contiene toda la información sobre el objeto, sino solo información suficiente para que el compilador MOF pueda volver a crear el objeto original. Por ejemplo, no se incluye ningún calificador propagado ni propiedades de clase primaria.
 
-El siguiente algoritmo se utiliza para reconstruir el texto de los parámetros de un método:
+El algoritmo siguiente se usa para reconstruir el texto de los parámetros de un método:
 
-1. Se cambia la secuencia de parámetros en el orden de sus valores de identificador.
-1. Los parámetros que se especifican como `[in]` y `[out]` se combinan en un único parámetro.
+1. Los parámetros se reordenan en el orden de sus valores de identificador.
+1. Los parámetros que se especifican `[out]` como `[in]` y se combinan en un único parámetro.
  
-`pstrObjectText` debe ser un puntero a un `null` cuando se llama a la función; no debe apuntar a una cadena que es válida antes de la llamada de método, porque no se cancelará el puntero.
+`pstrObjectText`debe ser un puntero a `null` cuando se llama a la función; no debe apuntar a una cadena que sea válida antes de la llamada al método, ya que el puntero no se desasignará.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -86,4 +86,4 @@ El siguiente algoritmo se utiliza para reconstruir el texto de los parámetros d
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

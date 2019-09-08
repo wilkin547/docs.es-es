@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25733e459423500352595d6be0eee26ef75ca7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522ed80f161f114af25e1fa7ad041c8238073d6f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789693"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796370"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId (Interfaz)
-Representa una referencia al identificador único para la aplicación en el ámbito actual.  
+Representa una referencia al identificador único de la aplicación en el ámbito actual.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|`IReferenceAppId::get_CodeBase`|Obtiene un puntero a una representación de cadena del identificador del código de la aplicación que hace referencia esta `IReferenceAppId`.|  
-|`IReferenceAppId::put_CodeBase`|Establece el identificador de código de la aplicación que hace referencia esta `IReferenceAppId`.|  
-|`IReferenceAppId::EnumAppPath`|Obtiene un puntero de interfaz a un `IEnumReferenceIdentity` instancia que contiene el `IReferenceIdentity` instancias que representan los miembros de este `IReferenceAppId`.|  
-|`IReferenceAppId::get_SubscriptionId`|Obtiene un puntero a una representación de cadena del identificador del token para una suscripción a este `IReferenceAppId`.|  
-|`IReferenceAppId::put_SubscriptionId`|Establece el identificador de token para una suscripción a este `IReferenceAppId` al valor de cadena especificado.|  
+|`IReferenceAppId::get_CodeBase`|Obtiene un puntero a una representación de cadena del identificador de código para la aplicación a la que hace `IReferenceAppId`referencia este.|  
+|`IReferenceAppId::put_CodeBase`|Establece el identificador de código de la aplicación a la que hace `IReferenceAppId`referencia este.|  
+|`IReferenceAppId::EnumAppPath`|Obtiene un puntero de interfaz a `IEnumReferenceIdentity` una instancia de `IReferenceIdentity` que contiene las instancias de que `IReferenceAppId`representan a los miembros de este objeto.|  
+|`IReferenceAppId::get_SubscriptionId`|Obtiene un puntero a una representación de cadena del identificador de token de una suscripción a este `IReferenceAppId`.|  
+|`IReferenceAppId::put_SubscriptionId`|Establece el identificador de token de una suscripción en `IReferenceAppId` el valor de cadena especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation.h  
+ **Encabezado**: Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumReferenceIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
-- [IReferenceIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Interfaces de Fusion](fusion-interfaces.md)
+- [IEnumReferenceIdentity (interfaz)](ienumreferenceidentity-interface.md)
+- [IReferenceIdentity (interfaz)](ireferenceidentity-interface.md)

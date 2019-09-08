@@ -2,17 +2,17 @@
 title: Tipos de datos de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 642fe0d541aca01d6ffb2d9279c4d0fa91eadb63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876803"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780854"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server y ADO.NET
 SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo que puede dar lugar a posibles pérdidas de datos. Para conservar la integridad de los datos, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
   
- Para obtener más información y una tabla que describe las asignaciones de tipos de datos entre SQL Server y los tipos de datos de .NET Framework, vea [asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
+ Para obtener más información y una tabla que describa las asignaciones de tipos de datos entre SQL Server y .NET Framework tipos de datos, vea [SQL Server asignaciones de tipos de datos](../sql-server-data-type-mappings.md).  
   
  SQL Server 2008 incorpora tipos de datos nuevos diseñados para satisfacer las necesidades empresariales para trabajar con datos de fecha y hora, estructurados, semiestructurados y sin estructurar. Estos tipos se describen en la documentación de los Libros en pantalla de SQL Server 2008.  
   
@@ -20,25 +20,25 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
   
  **Libros en pantalla de SQL Server**  
   
-1. [Tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Tipos de datos (Motor de base de datos)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [SqlTypes y DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+ [SqlTypes y DataSet](sqltypes-and-the-dataset.md)  
  Describe la compatibilidad de tipos con `SqlTypes` en el `DataSet`.  
   
- [Control de valores Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [Control de valores Null](handling-null-values.md)  
  Muestra cómo trabajar con valores NULL y la lógica de tres valores.  
   
- [Comparación de valores GUID y uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [Comparación de valores GUID y uniqueidentifier](comparing-guid-and-uniqueidentifier-values.md)  
  Muestra cómo trabajar con los valores GUID y uniqueidentifier en SQL Server y .NET Framework.  
   
- [Datos de fecha y hora](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
+ [Datos de fecha y hora](date-and-time-data.md)  
  Describe cómo usar los nuevos tipos de datos de fecha y hora incorporados en SQL Server 2008.  
   
- [UDT grandes](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [UDT grandes](large-udts.md)  
  Muestra cómo recuperar datos de tipos de definidos por el usuario de valores grandes incorporados en SQL Server 2008.  
   
- [Datos XML en SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [Datos XML en SQL Server](xml-data-in-sql-server.md)  
  Describe cómo trabajar con datos XML recuperados de SQL Server.  
   
 ## <a name="reference"></a>Referencia  
@@ -56,8 +56,8 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
   
 ## <a name="see-also"></a>Vea también
 
-- [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Parámetros con valores de tabla](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
-- [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Asignaciones de tipos de datos de SQL Server](../sql-server-data-type-mappings.md)
+- [Configuración de parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)
+- [Parámetros con valores de tabla](table-valued-parameters.md)
+- [Datos binarios y datos de valores grandes de SQL Server](sql-server-binary-and-large-value-data.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

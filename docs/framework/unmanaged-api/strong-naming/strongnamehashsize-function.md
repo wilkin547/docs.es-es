@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8093a702069e4ecd4dad761ad0a431abe81d6141
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53384a5aa7f8d11f868057f892f7b60aac2e9f02
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780419"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799030"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize (Función)
 Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: strongnamehashsize (](../hosting/iclrstrongname-strongnamehashsize-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,27 +39,27 @@ BOOLEAN StrongNameHashSize (
   
 ## <a name="parameters"></a>Parámetros  
  `ulHashAlg`  
- [in] El algoritmo hash utilizado para calcular el tamaño del búfer.  
+ de Algoritmo hash que se usa para calcular el tamaño del búfer.  
   
  `pcbSize`  
- [out] El tamaño del búfer devuelto, en bytes.  
+ enuncia Tamaño de búfer devuelto, en bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true`Cuando se complete correctamente; en caso `false`contrario,.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el `StrongNameHashSize` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si la `StrongNameHashSize` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [StrongNameHashSize (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameHashSize (método)](../hosting/iclrstrongname-strongnamehashsize-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

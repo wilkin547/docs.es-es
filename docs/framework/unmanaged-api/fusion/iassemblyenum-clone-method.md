@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d288f4ccf91567224546df1a3309a411590a5a12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 141e6e303933c46a85adf08339856f8964b21f4e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779028"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796695"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone (Método)
-Crea una copia superficial de este [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) objeto.  
+Crea una copia superficial de este objeto [IAssemblyEnum](iassemblyenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +37,15 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parámetros  
  `ppEnum`  
- [out] Un puntero a la copia.  
+ enuncia Puntero a la copia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyEnum (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyEnum (interfaz)](iassemblyenum-interface.md)

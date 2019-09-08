@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir relaciones de entidades (WCF Data Services)
+title: Procedimiento Definir relaciones de entidad (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: 3bd2293f02e77ab2db5c3ba245596021e08b04c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63714f97e691b2ba0177a36a599b62ca7681dcf6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875906"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790648"
 ---
-# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Procedimiento Definir relaciones de entidades (WCF Data Services)
-Al agregar una nueva entidad en [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente. Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Para obtener más información, consulte [actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Procedimiento Definir relaciones de entidad (WCF Data Services)
+Al agregar una nueva entidad en [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente. Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea una instancia de objeto nueva y, a continuación, se llama al método <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext> para crear el elemento en el contexto junto con el vínculo al pedido relacionado. Se envía un mensaje POST de HTTP al servicio de datos cuando se llama al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -33,5 +33,5 @@ Al agregar una nueva entidad en [!INCLUDE[ssAstoria](../../../../includes/ssasto
   
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Cómo: Agregar, modificar y eliminar entidades](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)
+- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
+- [Cómo: Agregar, modificar y eliminar entidades](how-to-add-modify-and-delete-entities-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: Administrar permisos con procedimientos almacenados en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623425"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780955"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Administrar permisos con procedimientos almacenados en SQL Server
 Un modo de establecer varias líneas de defensa en torno a su base de datos consiste en implementar el acceso a todos los datos usando procedimientos almacenados o roles definidos por el usuario. Debe revocar o denegar todos los permisos a los objetos subyacentes, como tablas, y conceder permisos a los procedimientos almacenados. Esto crea un perímetro de seguridad en torno a sus datos y objetos de base de datos.  
@@ -45,24 +45,24 @@ Un modo de establecer varias líneas de defensa en torno a su base de datos cons
   
 - Implemente el control de errores y registre los errores.  
   
-- Cree procedimientos almacenados parametrizados que validen todos los datos introducidos por los usuarios. Trate todos los datos introducidos por los usuarios como si no fueran de confianza.   
+- Cree procedimientos almacenados parametrizados que validen todos los datos introducidos por los usuarios. Trate todos los datos introducidos por los usuarios como si no fueran de confianza.  
   
 - Evite el SQL dinámico a menos que sea absolutamente necesario. Utilice la función Transact-SQL QUOTENAME() para delimitar un valor de cadena y evite usar el delimitador en la cadena de entrada.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Procedimientos almacenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Inyección de código SQL](https://go.microsoft.com/fwlink/?LinkId=98234) en los libros en pantalla de SQL Server|Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Escritura de código SQL dinámico y seguro en SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Firma de procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Personalización de permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Modificación de datos con procedimientos almacenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Escritura de código SQL dinámico y seguro en SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Firma de procedimientos almacenados en SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Personalización de permisos con suplantación en SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Modificación de datos con procedimientos almacenados](../modifying-data-with-stored-procedures.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

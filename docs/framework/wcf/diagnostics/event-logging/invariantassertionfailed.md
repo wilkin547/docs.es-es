@@ -2,24 +2,24 @@
 title: InvariantAssertionFailed
 ms.date: 03/30/2017
 ms.assetid: 96c8a97a-3c04-4c35-9302-a6648ccfe5b6
-ms.openlocfilehash: fca9e79227673372cd4e760567e5b9808b669e1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b171b27fd9cf564389347c4411f15c5c413a7236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969941"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797781"
 ---
 # <a name="invariantassertionfailed"></a>InvariantAssertionFailed
 Id.: 106  
   
- Gravedad: Error  
+ Gravedad Error  
   
- Categoría: Traza  
+ Categoría Traza  
   
-## <a name="description"></a>Descripción  
+## <a name="description"></a>DESCRIPCIÓN  
  Este evento indica que una aserción invariable es falsa. El evento enumera el mensaje, el nombre del proceso y el identificador del proceso.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referencia general de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos](index.md)
+- [Referencia general de eventos](events-general-reference.md)

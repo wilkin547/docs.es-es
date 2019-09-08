@@ -1,6 +1,6 @@
 ---
-title: Función CompareTo (referencia de API no administrada)
-description: La función CompareTo compara un objeto a otro objeto WMI.
+title: Función CompareTo (referencia de la API no administrada)
+description: La función CompareTo compara un objeto con otro objeto WMI.
 ms.date: 11/06/2017
 api_name:
 - CompareTo
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3566b9b8a3b4183f936c82c39c38dc5daa3aeae1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636690"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798776"
 ---
 # <a name="compareto-function"></a>Función CompareTo
 
@@ -43,54 +43,54 @@ HRESULT CompareTo (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`\
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`\
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `flags`\
-[in] Una combinación bit a bit de los marcadores que especifican las características de objeto deben tener en cuenta para la comparación. Consulte la [comentarios](#remarks) sección para obtener más información.
+de Combinación bit a bit de las marcas que especifican las características del objeto que se deben tener en cuenta para la comparación. Vea la sección [comentarios](#remarks) para obtener más información.
 
 `pCompareTo`\
-[in] El objeto para la comparación. `pCompareTo` debe ser válido [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia; no puede ser `null`.
+de Objeto para la comparación. `pCompareTo`debe ser una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) válida; no puede ser `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Una segunda llamada a `BeginEnumeration` se realizó sin una llamada intermedia a [ `EndEnumeration` ](endenumeration.md). |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Se realizó una segunda `BeginEnumeration` llamada a sin una llamada intermedia a. [`EndEnumeration`](endenumeration.md) |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Los objetos son diferentes. |
-| `WBEM_S_SAME` | 0 | Los objetos son iguales según las marcas de comparación. |
+| `WBEM_S_SAME` | 0 | Los objetos son los mismos en función de las marcas de comparación. |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) método.
+Esta función contiene una llamada al método [IWbemClassObject:: CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) .
 
-Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código. Puede especificar las características individuales implicadas en la comparación mediante la especificación de una combinación bit a bit de los siguientes indicadores:
+Las marcas que se pueden pasar como `lEnumFlags` argumento se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código. Puede especificar las características individuales implicadas en la comparación especificando una combinación bit a bit de las marcas siguientes:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Omitir el origen (el servidor y el espacio de nombres que proceden). |
-| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Omitir todos los calificadores (incluidos **clave** y **dinámica**) |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Pasar por alto los valores predeterminados de propiedades. Esta marca solo se aplica a la comparación de las clases. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Omitir los tipos de calificador. Esta marca todavía tiene calificadores en cuenta, pero omite las distinciones de modos tales como las reglas de propagación y reemplazar las restricciones. |
-| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Omitir mayúsculas y minúsculas al comparar los valores de cadena. Esto se aplica tanto a las cadenas y valores del calificador. La comparación de los nombres de propiedades y calificadores siempre distingue mayúsculas de minúsculas, independientemente de si se establece esta marca. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Se supone que los objetos que se comparan son instancias de la misma clase. Por lo tanto, esta marca compara solo información relacionada con la instancia. Utilice este marcas para optimizar el rendimiento. Si los objetos no son de la misma clase, los resultados son indefinidos. |
+| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Omita el origen (el servidor y el espacio de nombres del que proceden). |
+| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Omitir todos los calificadores (incluidos **clave** y **dinámico**) |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Omitir los valores predeterminados de las propiedades. Esta marca solo se aplica a la comparación de clases. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Omitir tipos de calificador. Esta marca todavía toma los calificadores en cuenta, pero omite las distinciones de sabor, como las reglas de propagación y las restricciones de invalidación. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Omitir mayúsculas y minúsculas en la comparación de valores de cadena. Esto se aplica a las cadenas y los valores de calificador. La comparación de nombres de propiedad y calificador siempre distingue entre mayúsculas y minúsculas, independientemente de si esta marca está establecida. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Supongamos que los objetos que se comparan son instancias de la misma clase. Por consiguiente, esta marca solo compara la información relacionada con la instancia. Use estas marcas para optimizar el rendimiento. Si los objetos no son de la misma clase, los resultados son indefinidos. |
 
-O bien, puede especificar una única marca compuesta como sigue:
+O bien, puede especificar una única marca compuesta como se indica a continuación:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
-|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Tenga en cuenta todas las características en la comparación. |
+|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Tenga en cuenta todas las características de la comparación. |
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
 **Encabezado**: WMINet_Utils.idl
 
@@ -98,4 +98,4 @@ O bien, puede especificar una única marca compuesta como sigue:
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

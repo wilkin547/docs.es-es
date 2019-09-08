@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938692"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793096"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedimiento para usar procedimientos almacenados asignados en varias formas de resultados
 Cuando un procedimiento almacenado puede devolver varias formas de resultados, el tipo de valor devuelto no puede estar fuertemente tipado para una forma de proyección única. Aunque [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede generar todos los tipos de proyección posibles, no puede conocer el orden en que se devolverán.  
   
- Compare este escenario con los procedimientos almacenados que generan varias formas de resultados secuencialmente. Para obtener más información, vea [Cómo: Use procedimientos almacenados asignados para las formas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)de resultados secuenciales.  
+ Compare este escenario con los procedimientos almacenados que generan varias formas de resultados secuencialmente. Para obtener más información, consulte [Cómo Use procedimientos almacenados asignados para las formas](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)de resultados secuenciales.  
   
  El atributo <xref:System.Data.Linq.Mapping.ResultTypeAttribute> se aplica a los procedimientos almacenados que devuelven varios tipos de resultados para especificar el conjunto de tipos que el procedimiento puede devolver.  
   
@@ -45,4 +45,4 @@ else if(@shape = 2)
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Procedimientos almacenados](stored-procedures.md)

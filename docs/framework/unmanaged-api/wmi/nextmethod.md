@@ -1,6 +1,6 @@
 ---
-title: Función NextMethod (referencia de API no administrada)
-description: La función NextMethod recupera el siguiente método en una enumeración.
+title: Función NextMethod (referencia de la API no administrada)
+description: La función NextMethod recupera el método siguiente en una enumeración.
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee743a4499824bea723043d5a2c7d57d7cbd7106
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746475"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798423"
 ---
-# <a name="nextmethod-function"></a>Función NextMethod
-Recupera el siguiente método en una enumeración que comienza con una llamada a [BeginMethodEnumeration](beginmethodenumeration.md).  
+# <a name="nextmethod-function"></a>NextMethod función)
+Recupera el método siguiente en una enumeración que comienza con una llamada a [BeginMethodEnumeration](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,45 +44,45 @@ HRESULT NextMethod (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
 [in] Reservado. Este parámetro debe ser 0.
 
 `pName`  
-[out] Un puntero que señala a `null` antes de la llamada. Cuando se devuelve la función, la dirección de un nuevo `BSTR` que contiene el nombre del método. 
+enuncia Puntero que apunta a `null` antes de la llamada. Cuando la función devuelve, la dirección de un nuevo `BSTR` que contiene el nombre del método. 
 
 `ppSignatureIn`  
-[out] Un puntero que recibe un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contiene el `in` parámetros del método. 
+enuncia Puntero que recibe un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contiene los `in` parámetros del método. 
 
 `ppSignatureOut`  
-[out] Un puntero que recibe un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contiene el `out` parámetros del método. 
+enuncia Puntero que recibe un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contiene los `out` parámetros del método. 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Se ha producido ninguna llamada a la [ `BeginEnumeration` ](beginenumeration.md) función. |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | No hay ninguna propiedad más en la enumeración. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | No había ninguna llamada a la [`BeginEnumeration`](beginenumeration.md) función. |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | No hay más propiedades en la enumeración. |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) método.
+Esta función contiene una llamada al método [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) .
 
-El llamador inicia la secuencia de enumeración al llamar a la [BeginMethodEnumeration](beginmethodenumeration.md) función y, a continuación, llama a la función [NextMethod] hasta que la función devuelve `WBEM_S_NO_MORE_DATA`. Si lo desea, el llamador finaliza la secuencia mediante una llamada a [EndMethodEnumeration](endmethodenumeration.md). El llamador puede finalizar la enumeración al principio mediante una llamada a [EndMethodEnumeration](endmethodenumeration.md) en cualquier momento.
+El autor de la llamada comienza la secuencia de enumeración mediante una llamada a la función [BeginMethodEnumeration](beginmethodenumeration.md) y, a continuación, llama a `WBEM_S_NO_MORE_DATA`la función [NextMethod] hasta que la función devuelve. Opcionalmente, el autor de la llamada finaliza la secuencia llamando a [EndMethodEnumeration](endmethodenumeration.md). El autor de la llamada puede finalizar la enumeración pronto llamando a [EndMethodEnumeration](endmethodenumeration.md) en cualquier momento.
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo de C++, vea el [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) método.
+Para obtener C++ un ejemplo, vea el método [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -90,4 +90,4 @@ Para obtener un ejemplo de C++, vea el [IWbemClassObject::NextMethod](/windows/d
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

@@ -2,12 +2,12 @@
 title: System.TimeSpan (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781044"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan (Métodos)
 La compatibilidad de miembros con <xref:System.TimeSpan?displayProperty=nameWithType> depende en gran medida de las versiones de .NET Framework y Microsoft SQL Server que use.  
@@ -34,11 +34,11 @@ La compatibilidad de miembros con <xref:System.TimeSpan?displayProperty=nameWith
 > La capacidad para asignar <xref:System.TimeSpan?displayProperty=nameWithType> a una columna `TIME` de SQL con LINQ to SQL requiere .NET Framework 3.5 Service Pack 1 y posteriores. El tipo de datos `TIME` de SQL está disponible solo en Microsoft SQL Server 2008 y posteriores.  
   
 ### <a name="addition-and-subtraction"></a>Suma y resta  
- Aunque el tipo <xref:System.TimeSpan?displayProperty=nameWithType> de CLR admite la suma y resta, el tipo `TIME` de SQL no. Debido a esto, las consultas de LINQ to SQL generarán errores si intentan realizar operaciones de suma o resta cuando se asignan al tipo `TIME` de SQL. Puede encontrar otras consideraciones para trabajar con tipos de fecha y hora SQL en [la asignación de tipos SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Aunque el tipo <xref:System.TimeSpan?displayProperty=nameWithType> de CLR admite la suma y resta, el tipo `TIME` de SQL no. Debido a esto, las consultas de LINQ to SQL generarán errores si intentan realizar operaciones de suma o resta cuando se asignan al tipo `TIME` de SQL. Puede encontrar otras consideraciones para trabajar con tipos de fecha y hora SQL en [la asignación de tipos SQL-CLR](sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Asignación de tipos entre CLR y SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Conceptos sobre consultas](query-concepts.md)
+- [Creación del modelo de objetos](creating-the-object-model.md)
+- [Asignación de tipos entre CLR y SQL](sql-clr-type-mapping.md)
+- [Tipos de datos y funciones](data-types-and-functions.md)

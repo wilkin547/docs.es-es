@@ -2,12 +2,12 @@
 title: Procedimiento para validar archivos DBML y de asignación externa
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 212d65dfe998b825dd40e564756083ed685dff6f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041141"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793042"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedimiento para validar archivos DBML y de asignación externa
 
@@ -31,9 +31,9 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
 
 5. Observe cuál es la definición de esquema adecuada para lo que desea.
 
-    - DbmlSchema.xsd es la definición de esquema para validar un archivo .dbml. Para obtener más información, vea [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - DbmlSchema.xsd es la definición de esquema para validar un archivo .dbml. Para obtener más información, vea [generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - LinqToSqlMapping.xsd es la definición de esquema para validar un archivo XML de asignación externa. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - LinqToSqlMapping.xsd es la definición de esquema para validar un archivo XML de asignación externa. Para obtener más información, consulte [asignación externa](external-mapping.md).
 
 6. En la columna **usar** de la fila definición de esquema deseada, haga clic para abrir el cuadro desplegable y, a continuación, haga clic en **usar este esquema**.
 
@@ -53,9 +53,9 @@ Si, por alguna razón, el archivo. xsd correspondiente no aparece en el cuadro d
 
 1. Busque el tema de Ayuda que contiene la definición de esquema tal como se ha descrito anteriormente en este tema.
 
-    - Para los archivos. dbml, vea [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - Para los archivos. dbml, vea [generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - Para los archivos de asignación externa, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - Para los archivos de asignación externa, consulte [asignación externa](external-mapping.md).
 
 2. Haga clic en **Copiar código** para copiar el archivo de código en el portapapeles.
 
@@ -65,7 +65,7 @@ Si, por alguna razón, el archivo. xsd correspondiente no aparece en el cuadro d
 
 5. En el menú **archivo** del Bloc de notas, haga clic en **Guardar como**.
 
-6. En el cuadro **codificación** , seleccione Unicode.
+6. En el cuadro **codificación** , seleccione **Unicode**.
 
     > [!IMPORTANT]
     > Esta selección garantiza que el marcador de orden de bytes Unicode-16 (`FFFE`) se antepone al archivo de texto.
@@ -74,4 +74,4 @@ Si, por alguna razón, el archivo. xsd correspondiente no aparece en el cuadro d
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Referencia](reference.md)

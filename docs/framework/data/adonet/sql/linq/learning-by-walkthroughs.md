@@ -2,12 +2,12 @@
 title: Aprender con tutoriales
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929210"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781315"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
 La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación de proporciona varios tutoriales. En este tema se resuelven algunos de los problemas generales que plantean los tutoriales y se proporcionan vínculos a varios tutoriales de iniciación a través de los cuales conocerá [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,22 +22,22 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 |Objetivo|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Crear una clase de entidad y ejecutar una consulta simple.|[Tutorial: Modelo de objetos simple y consulta (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Tutorial: Modelo de objetos simple y consultaC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Agregar una segunda clase y ejecutar una consulta más compleja.<br /><br /> (Requiere haber completado el tutorial anterior).|[Tutorial: Realizar consultas en varias relaciones (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Tutorial: Realizar consultas en varias relacionesC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Agregar, cambiar y eliminar elementos en la base de datos.|[Tutorial: Manipular datos (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Tutorial: Manipular datos (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Utilizar procedimientos almacenados.|[Tutorial: Usar solo procedimientos almacenados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Tutorial: Usar solo procedimientos almacenados (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Crear una clase de entidad y ejecutar una consulta simple.|[Tutorial: Modelo de objetos simple y consulta (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Tutorial: Modelo de objetos simple y consultaC#()](walkthrough-simple-object-model-and-query-csharp.md)|  
+|Agregar una segunda clase y ejecutar una consulta más compleja.<br /><br /> (Requiere haber completado el tutorial anterior).|[Tutorial: Realizar consultas en varias relaciones (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Tutorial: Realizar consultas en varias relacionesC#()](walkthrough-querying-across-relationships-csharp.md)|  
+|Agregar, cambiar y eliminar elementos en la base de datos.|[Tutorial: Manipular datos (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[Tutorial: Manipular datos (C#)](walkthrough-manipulating-data-csharp.md)|  
+|Utilizar procedimientos almacenados.|[Tutorial: Usar solo procedimientos almacenados (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[Tutorial: Usar solo procedimientos almacenados (C#)](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>General  
  La información siguiente corresponde a estos tutoriales en general:  
   
 - Entorno: En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cada tutorial se usa Visual Studio como entorno de desarrollo integrado (IDE).  
   
-- Motores SQL: Estos tutoriales se escriben para implementarse mediante SQL Server Express. Si no tiene SQL Server Express, puede descargarlo gratuitamente. Para obtener más información, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Motores SQL: Estos tutoriales se escriben para implementarse mediante SQL Server Express. Si no tiene SQL Server Express, puede descargarlo gratuitamente. Para obtener más información, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md).  
   
     > [!NOTE]
-    > Los tutoriales de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizan un nombre de archivo como cadena de conexión. La simple especificación de un nombre de archivo es una ventaja que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ofrece para los usuarios de SQL Server Express. Siempre preste atención a los problemas de seguridad. Para obtener más información, consulte [seguridad en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > Los tutoriales de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizan un nombre de archivo como cadena de conexión. La simple especificación de un nombre de archivo es una ventaja que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ofrece para los usuarios de SQL Server Express. Siempre preste atención a los problemas de seguridad. Para obtener más información, consulte [seguridad en LINQ to SQL](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]los tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]los tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md).  
   
 - Los cuadros de diálogo y los comandos de menú que se ven en los tutoriales pueden diferir de los descritos en la ayuda, en función de la configuración activa o la edición de Visual Studio. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -72,7 +72,7 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 1. En el panel izquierdo del **Administrador de configuración de SQL Server**, expanda **SQL Server configuración de red 2005**y, a continuación, haga clic en **protocolos para SQLEXPRESS**.  
   
-2. En el panel derecho, asegúrese de que el protocolo **canalizaciones con nombre** está habilitado. Si no lo está, haga clic con el botón secundario en canalizaciones de **nombre** y, a continuación, haga clic en **Habilitar**.  
+2. En el panel derecho, asegúrese de que el protocolo **canalizaciones con nombre** está habilitado. Si no lo está, haga clic con el botón secundario en **canalizaciones de nombre** y, a continuación, haga clic en **Habilitar**.  
   
      Tendrá que detener y reiniciar el servicio. Siga los pasos de la sección siguiente.  
   
@@ -89,4 +89,4 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Introducción](getting-started.md)

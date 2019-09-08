@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962757"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783799"
 ---
 # <a name="handling-dataadapter-events"></a>Controlar eventos de DataAdapter
 <xref:System.Data.Common.DataAdapter> de ADO.NET expone tres eventos que se pueden utilizar para responder a los cambios efectuados en los datos en el origen. En la siguiente tabla se muestran los eventos de `DataAdapter`.  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>Vea también
 
-- [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Controlar eventos de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [Control de eventos de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
+- [Controlar eventos de DataSet](./dataset-datatable-dataview/handling-dataset-events.md)
+- [Control de eventos de DataTable](./dataset-datatable-dataview/handling-datatable-events.md)
 - [Eventos](../../../standard/events/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](ado-net-overview.md)

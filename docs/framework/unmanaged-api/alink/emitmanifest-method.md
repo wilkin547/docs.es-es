@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91dc4cb7d64d49d1e95c0c8eb79a29736559d842
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742087"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777342"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest (Método)
-Emite el manifiesto final. Llame a este método después de importar todos los demás archivos y establecer todas las opciones. No llame a este método para módulos no enlazados.  
+Emite el manifiesto final. Llame a este método después de importar todos los demás archivos y establecer todas las opciones. No llame a este método para módulos sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +39,22 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado.  
+ IDENTIFICADOR del ensamblado.  
   
  `pdwReserveSize`  
- Recibe el tamaño que se reserva en el archivo de ensamblado, recuperarse [StrongNameSignatureSize (función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
+ Recibe el tamaño que se va a reservar en el archivo de ensamblado, recuperado de la [función strongnamesignaturesize (](../strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
  Opcionalmente, recibe el token del manifiesto del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

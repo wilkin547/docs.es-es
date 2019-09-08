@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742145"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777459"
 ---
 # <a name="embedresource-method"></a>EmbedResource (Método)
-Declara un recurso incrustado. Este método realmente no incrustar el recurso.  
+Declara un recurso incrustado. Este método no inserta realmente el recurso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +41,28 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado.  
+ IDENTIFICADOR del ensamblado.  
   
  `FileToken`  
- Archivo de token o identificador de ensamblado del archivo que contiene el recurso.  
+ Token de archivo o ID. de ensamblado del archivo que contiene el recurso.  
   
  `pszResourceName`  
  Nombre del recurso.  
   
  `dwOffset`  
- Desplazamiento del recurso desde la RVA.  
+ Desplazamiento del recurso desde RVA.  
   
  `dwFlags`  
- Indicadores de accesibilidad como `mrPublic` y `mrPrivate`. Estas marcas se pueden pasar a [DefineExportedType (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Marcas de `mrPublic` accesibilidad como y `mrPrivate`. Estas marcas se pueden pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

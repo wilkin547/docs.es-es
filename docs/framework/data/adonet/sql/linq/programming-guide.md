@@ -2,46 +2,46 @@
 title: Guía de programación
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: c63fbedc1cf7484943614c50e7dd7554a2ddea0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c33c7749599de0450a9f969e5802485d154a61e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742941"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781255"
 ---
 # <a name="programming-guide"></a>Guía de programación
-Esta sección contiene información sobre cómo crear y utilizar un modelo de objetos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Si utiliza Visual Studio, también puede usar Object Relational Designer para realizar muchas de estas mismas tareas.  
+Esta sección contiene información sobre cómo crear y utilizar un modelo de objetos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Si usa Visual Studio, también puede usar la Object Relational Designer para realizar muchas de estas mismas tareas.  
   
- También puede buscar Microsoft Docs sobre problemas concretos y participar en el [foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos. Por último, el [LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205) notas detalles [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#.  
+ También puede buscar en Microsoft Docs para ver si hay problemas específicos y puede participar en el [Foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), donde puede discutir con mayor detalle temas más complejos con expertos. Por último, la tecnología de detalles [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de las notas del producto de los [datos relacionales LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205) , junto con Visual Basic y C# ejemplos de código.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [Creación del modelo de objetos](creating-the-object-model.md)  
  Describe cómo generar un modelo de objetos.  
   
- [Comunicación con la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)  
+ [Comunicación con la base de datos](communicating-with-the-database.md)  
  Describe cómo utilizar un objeto <xref:System.Data.Linq.DataContext> como canal de comunicación con la base de datos.  
   
- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
+ [Consulta de la base de datos](querying-the-database.md)  
  Describe cómo ejecutar consultas en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona muchos ejemplos.  
   
- [Realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
+ [Realización y envío de cambios de datos](making-and-submitting-data-changes.md)  
  Describe cómo cambiar los datos de la base de datos.  
   
- [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
+ [Capacidad de depuración](debugging-support.md)  
  Describe la compatibilidad disponible para depurar proyectos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Información general](background-information.md)  
  Incluye elementos adicionales, como la resolución de conflictos de simultaneidad, la creación de bases de datos, etc., para usuarios más avanzados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](index.md)  
  Proporciona vínculos a temas donde se explica la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y se muestran sus características.  
   
- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [Procedimientos almacenados](stored-procedures.md)  
  Incluye vínculos a temas que muestran cómo utilizar los procedimientos almacenados.  
   
  [Introducción a LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- Se proporcionan recursos para ayudarle a empezar a obtener información acerca de LINQ a SQL mediante C#.
+ Proporciona recursos para ayudarle a empezar a obtener información sobre C#LINQ to SQL mediante.
 
  [Introducción a LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- Se proporcionan recursos para ayudarle a empezar a obtener información acerca de LINQ to SQL con Visual Basic.
+ Proporciona recursos para ayudarle a empezar a obtener información sobre LINQ to SQL mediante Visual Basic.

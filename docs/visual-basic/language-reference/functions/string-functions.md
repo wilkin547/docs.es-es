@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930859"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799324"
 ---
 # <a name="string-functions-visual-basic"></a>Funciones de cadena (Visual Basic)
-En la tabla siguiente se enumeran las funciones que Visual Basic proporciona para buscar y manipular cadenas.  
+
+En la tabla siguiente se enumeran las funciones que Visual Basic <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> proporciona en la clase para buscar y manipular cadenas. Se pueden considerar como Visual Basic funciones intrínsecas; es decir, no tiene que llamarlos como miembros explícitos de una clase, como se muestra en los ejemplos. Los métodos adicionales y, en algunos casos, métodos complementarios, están <xref:System.String?displayProperty=nameWithType> disponibles en la clase. 
   
 |Método .NET Framework|DESCRIPCIÓN|  
 |---------------------------|-----------------|  
@@ -48,33 +49,38 @@ En la tabla siguiente se enumeran las funciones que Visual Basic proporciona par
   
  Puede usar la instrucción [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) para establecer si las cadenas se comparan mediante un criterio de ordenación de texto sin distinción entre mayúsculas y minúsculas determinado por la configuración regional del sistema (`Text`) o por las representaciones binarias internas de los caracteres (`Binary`). El método de comparación de texto predeterminado es `Binary`.  
   
-## <a name="example"></a>Ejemplo  
- En este ejemplo se `UCase` utiliza la función para devolver una versión en mayúsculas de una cadena.  
+## <a name="example-ucase"></a>Ejemplo: UCase
+
+En este ejemplo se `UCase` utiliza la función para devolver una versión en mayúsculas de una cadena.  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>Ejemplo: LTrim
+
+En este ejemplo se `LTrim` usa la función para quitar los espacios `RTrim` iniciales y la función para quitar los espacios finales de una variable de cadena. Usa la `Trim` función para quitar ambos tipos de espacios.  
   
-## <a name="example"></a>Ejemplo  
- En este ejemplo se `LTrim` usa la función para quitar los espacios `RTrim` iniciales y la función para quitar los espacios finales de una variable de cadena. Usa la `Trim` función para quitar ambos tipos de espacios.  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>Ejemplo: Envergadura
+
+En este ejemplo se `Mid` utiliza la función para devolver un número especificado de caracteres de una cadena.  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>Ejemplo: Len
+
+En este ejemplo `Len` se usa para devolver el número de caracteres de una cadena.  
   
-## <a name="example"></a>Ejemplo  
- En este ejemplo se `Mid` utiliza la función para devolver un número especificado de caracteres de una cadena.  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>Ejemplo: InStr
+
+En este ejemplo se `InStr` utiliza la función para devolver la posición de la primera aparición de una cadena dentro de otra.  
   
-## <a name="example"></a>Ejemplo  
- En este ejemplo `Len` se usa para devolver el número de caracteres de una cadena.  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>Ejemplo  
- En este ejemplo se `InStr` utiliza la función para devolver la posición de la primera aparición de una cadena dentro de otra.  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>Ejemplo  
- En este ejemplo se muestran varios usos `Format` de la función para dar formato `String` a los valores mediante formatos y formatos definidos por el usuario. En el caso del separador de fecha`/`(), el separador de hora (`:`) y los `tt`indicadores de AM/PM (`t` y), la salida con formato real que muestra el sistema depende de la configuración regional que use el código. Cuando se muestran las horas y las fechas en el entorno de desarrollo, se usan el formato de hora corta y el formato de fecha corta de la configuración regional del código.  
+## <a name="example-format"></a>Ejemplo: Formato
+
+En este ejemplo se muestran varios usos `Format` de la función para dar formato `String` a los valores mediante formatos y formatos definidos por el usuario. En el caso del separador de fecha`/`(), el separador de hora (`:`) y los `tt`indicadores de AM/PM (`t` y), la salida con formato real que muestra el sistema depende de la configuración regional que use el código. Cuando se muestran las horas y las fechas en el entorno de desarrollo, se usan el formato de hora corta y el formato de fecha corta de la configuración regional del código.  
   
 > [!NOTE]
 > En el caso de las configuraciones regionales que utilizan un reloj de 24 horas, los indicadores`t` de `tt`AM/PM (y) no muestran nada.  
@@ -86,3 +92,4 @@ En la tabla siguiente se enumeran las funciones que Visual Basic proporciona par
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Resumen de manipulación de cadenas](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [Métodos de clase System. String]<xref:System.String#methods?displayProperty=nameWithType>

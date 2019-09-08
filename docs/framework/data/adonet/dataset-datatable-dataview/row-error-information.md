@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: af000d104a3b0821e69f11c1bce1392f04fe8f5e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5ede6e2cd52ad55f8c35a42d137044dd1ceea400
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203238"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785958"
 ---
 # <a name="row-error-information"></a>Información de error de fila
 Para evitar responder a errores de fila durante la edición de valores en una <xref:System.Data.DataTable>, puede agregar la información de error a la fila para utilizarla más adelante. Para ello, el objeto <xref:System.Data.DataRow> proporciona una propiedad <xref:System.Data.DataRow.RowError%2A> en cada fila. Al agregar datos a la propiedad **RowError** de una **DataRow** , <xref:System.Data.DataRow.HasErrors%2A> se establece la propiedad de **DataRow** en **true**. Si **DataRow** es parte de un **DataTable**y **DataRow. hasErrors** es **true**, la propiedad **DataTable. hasErrors** también es **true**. Esto se aplica también al **conjunto** de referencia al que pertenece la **DataTable** . Al probar errores, puede comprobar la propiedad **hasErrors** para determinar si se ha agregado información de error a alguna fila. Si **hasErrors** es **true**, puede usar el <xref:System.Data.DataTable.GetErrors%2A> método de la **DataTable** para devolver y examinar únicamente las filas con errores, tal y como se muestra en el ejemplo siguiente.  
@@ -83,4 +83,4 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

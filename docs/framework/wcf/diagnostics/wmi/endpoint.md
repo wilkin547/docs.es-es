@@ -1,16 +1,16 @@
 ---
-title: punto de conexión
+title: Punto de conexión
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963610"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795899"
 ---
-# <a name="endpoint"></a>punto de conexión
-punto de conexión  
+# <a name="endpoint"></a>Punto de conexión
+Punto de conexión  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,11 +35,11 @@ class Endpoint
 ## <a name="methods"></a>Métodos  
  La clase Endpoint define el método siguiente.  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Recupera el nombre de instancia del contador de rendimiento de la operación|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|Recupera el nombre de instancia del contador de rendimiento de la operación|  
   
-## <a name="properties"></a>Propiedades  
+## <a name="properties"></a>Properties (Propiedades)  
  La clase Endpoint posee las siguientes propiedades:  
   
 ### <a name="address"></a>Dirección  
@@ -77,8 +77,8 @@ class Endpoint
   
  Colección de comportamientos implementada por este punto de conexión.  
   
-### <a name="binding"></a>Enlaces  
- Tipo de datos: Enlaces  
+### <a name="binding"></a>Enlace  
+ Tipo de datos: Enlace  
   
  Tipo de acceso: De sólo lectura  
   
@@ -105,7 +105,7 @@ class Endpoint
   
  El URI en el que el extremo realiza escuchas.  
   
-### <a name="name"></a>Name  
+### <a name="name"></a>NOMBRE  
  Tipo de datos: cadena  
   
  Tipo de acceso: De sólo lectura  

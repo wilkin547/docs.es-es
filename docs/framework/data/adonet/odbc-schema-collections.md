@@ -2,12 +2,12 @@
 title: Colecciones de esquemas de ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772052"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794721"
 ---
 # <a name="odbc-schema-collections"></a>Colecciones de esquemas de ODBC
 
@@ -35,128 +35,128 @@ El controlador ODBC de Microsoft SQL Server admite las siguientes colecciones de
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_CAT|String|
-|TABLE_SCHEM|String|
-|TABLE_NAME|String|
-|TABLE_TYPE|String|
-|REMARKS|String|
+|TABLE_CAT|string|
+|TABLE_SCHEM|string|
+|TABLE_NAME|string|
+|TABLE_TYPE|string|
+|REMARKS|string|
 
 ### <a name="indexes"></a>Índices
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_CAT|String|
-|TABLE_SCHEM|String|
-|TABLE_NAME|String|
+|TABLE_CAT|string|
+|TABLE_SCHEM|string|
+|TABLE_NAME|string|
 |NON_UNIQUE|Int16|
-|INDEX_QUALIFIER|String|
-|INDEX_NAME|String|
+|INDEX_QUALIFIER|string|
+|INDEX_NAME|string|
 |TYPE|Int16|
 |ORDINAL_POSITION|Int16|
-|COLUMN_NAME|String|
-|ASC_OR_DESC|String|
+|COLUMN_NAME|string|
+|ASC_OR_DESC|string|
 |CARDINALITY|Int32|
 |PAGES|Int32|
-|FILTER_CONDITION|String|
-|SS_TYPE_SCHEMA|String|
+|FILTER_CONDITION|string|
+|SS_TYPE_SCHEMA|string|
 |SS_DATA_TYPE|Byte|
 
 ### <a name="columns"></a>Columnas
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_CAT|String|
-|TABLE_SCHEM|String|
-|TABLE_NAME|String|
-|COLUMN_NAME|String|
+|TABLE_CAT|string|
+|TABLE_SCHEM|string|
+|TABLE_NAME|string|
+|COLUMN_NAME|string|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |COLUMN_SIZE|Int32|
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
-|COLUMN_DEF|String|
+|REMARKS|string|
+|COLUMN_DEF|string|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
 |CHAR_OCTET_LENGTH|Int32|
 |ORDINAL_POSITION|Int32|
-|IS_NULLABLE|String|
-|SS_TYPE_CATALOG|String|
-|SS_TYPE_SCHEMA|String|
+|IS_NULLABLE|string|
+|SS_TYPE_CATALOG|string|
+|SS_TYPE_SCHEMA|string|
 |SS_DATA_TYPE|Byte|
 
 ### <a name="procedures"></a>Procedimientos
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_CAT|String|
-|PROCEDURE_SCHEM|String|
-|PROCEDURE_NAME|String|
+|PROCEDURE_CAT|string|
+|PROCEDURE_SCHEM|string|
+|PROCEDURE_NAME|string|
 |NUM_INPUT_PARAMS|Int32|
 |NUM_OUTPUT_PARAMS|Int32|
 |NUM_RESULT_SETS|Int32|
-|REMARKS|String|
+|REMARKS|string|
 |PROCEDURE_TYPE|Int16|
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_CAT|String|
-|PROCEDURE_SCHEM|String|
-|PROCEDURE_NAME|String|
-|COLUMN_NAME|String|
+|PROCEDURE_CAT|string|
+|PROCEDURE_SCHEM|string|
+|PROCEDURE_NAME|string|
+|COLUMN_NAME|string|
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |COLUMN_SIZE|Int32|
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
-|COLUMN_DEF|String|
+|REMARKS|string|
+|COLUMN_DEF|string|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
 |CHAR_OCTET_LENGTH|Int32|
 |ORDINAL_POSITION|Int32|
-|IS_NULLABLE|String|
-|SS_TYPE_CATALOG|String|
-|SS_TYPE_SCHEMA|String|
+|IS_NULLABLE|string|
+|SS_TYPE_CATALOG|string|
+|SS_TYPE_SCHEMA|string|
 |SS_DATA_TYPE|Byte|
 
 ### <a name="procedureparameters"></a>ProcedureParameters
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_CAT|String|
-|PROCEDURE_SCHEM|String|
-|PROCEDURE_NAME|String|
-|COLUMN_NAME|String|
+|PROCEDURE_CAT|string|
+|PROCEDURE_SCHEM|string|
+|PROCEDURE_NAME|string|
+|COLUMN_NAME|string|
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |COLUMN_SIZE|Int32|
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
-|COLUMN_DEF|String|
+|REMARKS|string|
+|COLUMN_DEF|string|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
 |CHAR_OCTET_LENGTH|Int32|
 |ORDINAL_POSITION|Int32|
-|IS_NULLABLE|String|
-|SS_TYPE_CATALOG|String|
-|SS_TYPE_SCHEMA|String|
+|IS_NULLABLE|string|
+|SS_TYPE_CATALOG|string|
+|SS_TYPE_SCHEMA|string|
 |SS_DATA_TYPE|Byte|
 
 ## <a name="microsoft-oracle-odbc-driver"></a>Controlador ODBC para Oracle de Microsoft
 
-El controlador ODBC de Oracle de Microsoft SQL Server admite las siguientes colecciones de esquemas específicas además de las colecciones de esquemas comunes:
+El controlador ODBC de Oracle Microsoft SQL Server admite las siguientes colecciones de esquemas específicas además de las colecciones de esquemas comunes:
 
 - Tablas
 
@@ -176,60 +176,60 @@ El controlador ODBC de Oracle de Microsoft SQL Server admite las siguientes cole
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_QUALIFIER|String|
-|TABLE_OWNER|String|
-|TABLE_NAME|String|
-|TABLE_TYPE|String|
-|REMARKS|String|
+|TABLE_QUALIFIER|string|
+|TABLE_OWNER|string|
+|TABLE_NAME|string|
+|TABLE_TYPE|string|
+|REMARKS|string|
 
 ### <a name="columns"></a>Columnas
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_QUALIFIER|String|
-|TABLE_OWNER|String|
-|TABLE_NAME|String|
-|COLUMN_NAME|String|
+|TABLE_QUALIFIER|string|
+|TABLE_OWNER|string|
+|TABLE_NAME|string|
+|COLUMN_NAME|string|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |PRECISION|Int32|
 |LENGTH|Int32|
 |SCALE|Int16|
 |RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
+|REMARKS|string|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedures"></a>Procedimientos
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_QUALIFIER|String|
-|PROCEDURE_OWNER|String|
-|PROCEDURE_NAME|String|
+|PROCEDURE_QUALIFIER|string|
+|PROCEDURE_OWNER|string|
+|PROCEDURE_NAME|string|
 |NUM_INPUT_PARAMS|Int16|
 |NUM_OUTPUT_PARAMS|Int16|
 |NUM_RESULT_SETS|Int16|
-|REMARKS|String|
+|REMARKS|string|
 |PROCEDURE_TYPE|Int16|
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_QUALIFIER|String|
-|PROCEDURE_OWNER|String|
-|PROCEDURE_NAME|String|
-|COLUMN_NAME|String|
+|PROCEDURE_QUALIFIER|string|
+|PROCEDURE_OWNER|string|
+|PROCEDURE_NAME|string|
+|COLUMN_NAME|string|
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |PRECISION|Int32|
 |LENGTH|Int32|
 |SCALE|Int16|
 |RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
+|REMARKS|string|
 |OVERLOAD|Int32|
 |ORDINAL_POSITION|Int32|
 
@@ -255,60 +255,60 @@ El controlador ODBC de Microsoft para Jet admite, además de las colecciones de 
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_QUALIFIER|String|
-|TABLE_OWNER|String|
-|TABLE_NAME|String|
-|TABLE_TYPE|String|
-|REMARKS|String|
+|TABLE_QUALIFIER|string|
+|TABLE_OWNER|string|
+|TABLE_NAME|string|
+|TABLE_TYPE|string|
+|REMARKS|string|
 
 ### <a name="columns"></a>Columnas
 
 |ColumName|DataType|
 |----------------|--------------|
-|TABLE_QUALIFIER|String|
-|TABLE_OWNER|String|
-|TABLE_NAME|String|
-|COLUMN_NAME|String|
+|TABLE_QUALIFIER|string|
+|TABLE_OWNER|string|
+|TABLE_NAME|string|
+|COLUMN_NAME|string|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |PRECISION|Int32|
 |LENGTH|Int32|
 |SCALE|Int16|
 |RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
+|REMARKS|string|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedures"></a>Procedimientos
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_QUALIFIER|String|
-|PROCEDURE_OWNER|String|
-|PROCEDURE_NAME|String|
+|PROCEDURE_QUALIFIER|string|
+|PROCEDURE_OWNER|string|
+|PROCEDURE_NAME|string|
 |NUM_INPUT_PARAMS|Int16|
 |NUM_OUTPUT_PARAMS|Int16|
 |NUM_RESULT_SETS|Int16|
-|REMARKS|String|
+|REMARKS|string|
 |PROCEDURE_TYPE|Int16|
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_QUALIFIER|String|
-|PROCEDURE_OWNER|String|
-|PROCEDURE_NAME|String|
-|COLUMN_NAME|String|
+|PROCEDURE_QUALIFIER|string|
+|PROCEDURE_OWNER|string|
+|PROCEDURE_NAME|string|
+|COLUMN_NAME|string|
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |PRECISION|Int32|
 |LENGTH|Int32|
 |SCALE|Int16|
 |RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
+|REMARKS|string|
 |OVERLOAD|Int32|
 |ORDINAL_POSITION|Int32|
 
@@ -316,26 +316,26 @@ El controlador ODBC de Microsoft para Jet admite, además de las colecciones de 
 
 |ColumName|DataType|
 |----------------|--------------|
-|PROCEDURE_CAT|String|
-|PROCEDURE_SCHEM|String|
-|PROCEDURE_NAME|String|
-|COLUMN_NAME|String|
+|PROCEDURE_CAT|string|
+|PROCEDURE_SCHEM|string|
+|PROCEDURE_NAME|string|
+|COLUMN_NAME|string|
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
-|TYPE_NAME|String|
+|TYPE_NAME|string|
 |COLUMN_SIZE|Int32|
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
 |NULLABLE|Int16|
-|REMARKS|String|
-|COLUMN_DEF|String|
+|REMARKS|string|
+|COLUMN_DEF|string|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
 |CHAR_OCTET_LENGTH|Int32|
 |ORDINAL_POSITION|Int32|
-|IS_NULLABLE|String|
+|IS_NULLABLE|string|
 
 ## <a name="see-also"></a>Vea también
 
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](ado-net-overview.md)

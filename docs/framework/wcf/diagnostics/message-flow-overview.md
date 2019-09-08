@@ -2,12 +2,12 @@
 title: Información general del flujo de mensajes
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963051"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795969"
 ---
 # <a name="message-flow-overview"></a>Información general del flujo de mensajes
 En un sistema distribuido que contiene servicios interconectados es necesario determinar las relaciones causales entre los servicios. Es importante conocer los distintos componentes que formaron parte de un flujo de solicitud para admitir escenarios críticos, como los de supervisión de estado, solución de problemas y análisis de la causa raíz. Para habilitar la correlación de seguimientos entre varios servicios, en .NET Framework 4 agregamos compatibilidad a través de las siguientes características:
@@ -18,15 +18,15 @@ En un sistema distribuido que contiene servicios interconectados es necesario de
 
 - Seguimiento de ETW para WF: Esta característica usa los registros de seguimiento generados por los servicios de WF para proporcionar visibilidad sobre el estado actual y el progreso del flujo de trabajo.
 
- Los errores que figuran en un registro de seguimiento se pueden utilizar para encontrar defectos en el código o mensajes con formato incorrecto. La propiedad ActivityId del nodo Correlation en el encabezado del mensaje del evento se puede utilizar para determinar la actividad con errores. Para habilitar el seguimiento del flujo de mensajes por ID. de actividad, vea [configurar el seguimiento del flujo de mensajes](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). En este tema se muestra cómo habilitar el seguimiento del flujo de mensajes en el proyecto creado en el tutorial de introducción.
+ Los errores que figuran en un registro de seguimiento se pueden utilizar para encontrar defectos en el código o mensajes con formato incorrecto. La propiedad ActivityId del nodo Correlation en el encabezado del mensaje del evento se puede utilizar para determinar la actividad con errores. Para habilitar el seguimiento del flujo de mensajes por ID. de actividad, vea [configurar el seguimiento del flujo de mensajes](./etw/configuring-message-flow-tracing.md). En este tema se muestra cómo habilitar el seguimiento del flujo de mensajes en el proyecto creado en el tutorial de introducción.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Para habilitar el seguimiento del flujo de mensajes en el tutorial de introducción
 
 1. Para abrir Visor de eventos, haga clic en **Inicio**, **Ejecutar**y escriba `eventvwr.exe`.
 
-2. Si no ha habilitado el seguimiento analítico, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **servidor de aplicaciones-aplicaciones**. Seleccione **Ver**, **Mostrar registros analíticos y de**depuración. Haga clic con el botón secundario en **analítico** y seleccione **Habilitar registro**. Deje el Visor de eventos abierto para que se puedan ver los seguimientos.
+2. Si no ha habilitado el seguimiento analítico, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **servidor de aplicaciones-aplicaciones**. Seleccione **Ver**, **Mostrar registros analíticos y de depuración**. Haga clic con el botón secundario en **analítico** y seleccione **Habilitar registro**. Deje el Visor de eventos abierto para que se puedan ver los seguimientos.
 
-3. Abra el ejemplo creado en el [tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md) en Visual Studio 2012. Tenga en cuenta que debe ejecutar Visual Studio 2012 como administrador para que se pueda crear el servicio. Si tiene instalados los ejemplos de WCF, puede abrir el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.
+3. Abra el ejemplo creado en el [tutorial de introducción](../getting-started-tutorial.md) en Visual Studio 2012. Tenga en cuenta que debe ejecutar Visual Studio 2012 como administrador para que se pueda crear el servicio. Si tiene instalados los ejemplos de WCF, puede abrir el [Introducción](../samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.
 
 4. Haga clic con el botón derecho en el proyecto de **servicio** y seleccione **Agregar**, **nuevo elemento**. Seleccione **archivo de configuración** de la aplicación y haga clic en **Aceptar**.
 
@@ -40,7 +40,7 @@ En un sistema distribuido que contiene servicios interconectados es necesario de
     </system.serviceModel>
     ```
 
-6. Ejecute la aplicación de servidor sin depurar presionando CTRL+F5. Ejecute el proyecto de cliente haciendo clic con el botón derecho en el proyecto de **cliente** y seleccionando depurar, **Iniciar nueva instancia**.
+6. Ejecute la aplicación de servidor sin depurar presionando CTRL+F5. Ejecute el proyecto de cliente haciendo clic con el botón derecho en el proyecto de **cliente** y seleccionando **depurar**, **Iniciar nueva instancia**.
 
 7. Para realizar el seguimiento de los eventos del cliente al servidor, agregue lo siguiente al archivo de configuración de la aplicación en el proyecto Cliente.
 

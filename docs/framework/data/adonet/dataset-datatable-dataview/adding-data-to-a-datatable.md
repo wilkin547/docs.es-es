@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205479"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786598"
 ---
 # <a name="adding-data-to-a-datatable"></a>Agregar datos a un objeto DataTable
 Después de crear una <xref:System.Data.DataTable> y definir su estructura usando columnas y restricciones, se le pueden agregar nuevas filas de datos. Para agregar una nueva fila, declare una nueva variable como tipo <xref:System.Data.DataRow>. Cuando se llama al <xref:System.Data.DataTable.NewRow%2A> método, se devuelve un nuevo objeto DataRow. A continuación, **DataTable** crea el objeto **DataRow** basándose en la estructura de la tabla, tal y <xref:System.Data.DataColumnCollection>como se define en.  
@@ -59,7 +59,7 @@ workTable.Rows.Add(new Object[] {1, "Smith"});
   
  Al pasar una matriz de valores, con tipo **Object**, al método **Add** , se crea una nueva fila dentro de la tabla y se establecen sus valores de columna en los valores de la matriz de objetos. Tenga en cuenta que los valores de la matriz se hacen coincidir en secuencia con las columnas, basándose en el orden en que aparecen en la tabla.  
   
- En el ejemplo siguiente se agregan 10 filas a la tabla Customers recién creada.  
+ En el ejemplo siguiente se agregan 10 filas a la tabla **Customers** recién creada.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -92,4 +92,4 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
 - [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)
