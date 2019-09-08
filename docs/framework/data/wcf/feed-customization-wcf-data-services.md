@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: baa97bb32f8af4e034a78b44f9776be42c204b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918733"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790854"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalización de fuentes (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]utiliza para [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] exponer los datos como una fuente. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]admite los formatos Atom y notación de objetos JavaScript (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] proporciona un método estándar para serializar los datos, como entidades y relaciones, en un formato XML que se puede incluir en el cuerpo del mensaje http. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define una asignación de propiedad de entidad predeterminada entre los datos contenidos en entidades y elementos Atom. Para obtener más información, [consulte OData: Formato](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -28,7 +28,7 @@ ms.locfileid: "69918733"
  Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede definir una asignación de entidad-propiedad alternativa para una carga Atom aplicando manualmente los atributos a los tipos de entidad del modelo de datos. El proveedor del origen de datos del servicio de datos determina cómo debería aplicar estos atributos.  
   
 > [!IMPORTANT]
-> Cuando defina las fuentes personalizadas, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, consulte [proyecciones de consultas](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
+> Cuando defina las fuentes personalizadas, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, consulte [proyecciones de consultas](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personalizar fuentes con el proveedor de Entity Framework  
  El modelo de datos usado con el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] se representa como XML en el archivo .edmx. En este caso, los atributos que definen las fuentes personalizadas se agregan a los elementos `EntityType` y `Property`, que representan tipos de entidad y propiedades en el modelo de datos. Estos atributos de personalización de fuentes no se [definen en \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)de archivo de definición de esquemas conceptuales, que [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] es el formato que el proveedor utiliza para definir el modelo de datos. Por consiguiente, debe declarar los atributos de personalización de fuentes en un espacio de nombres de esquema concreto, que se define como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. El fragmento XML siguiente muestra los atributos de personalización de la fuente aplicados a los elementos `Property` del tipo de entidad `Products` que definen las propiedades `ProductName`, `ReorderLevel` y `UnitsInStock`.  
@@ -39,7 +39,7 @@ ms.locfileid: "69918733"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- Para obtener más información, consulte [Cómo Personalice las fuentes con el proveedor](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)de Entity Framework.  
+ Para obtener más información, vea [Cómo: Personalice las fuentes con el proveedor](how-to-customize-feeds-with-ef-provider-wcf-data-services.md)de Entity Framework.  
   
 > [!NOTE]
 > Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo XML que contiene el modelo de datos. Para obtener más información sobre el archivo. edmx generado por las herramientas de Entity Data Model, vea [información general sobre el archivo. edmx (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
@@ -63,7 +63,7 @@ ms.locfileid: "69918733"
  Para personalizar fuentes para un modelo de datos que se implementó usando el proveedor de reflexión, agregue una o varias instancias del atributo <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> a las clases que representan los tipos de entidad del modelo de datos. Las propiedades de la clase <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> corresponden a los atributos de personalización de fuentes que se describen en la sección anterior. A continuación se muestra un ejemplo de la declaración del tipo `Order`, con asignación de la fuente personalizada definida para ambas propiedades.  
   
 > [!NOTE]
-> El modelo de datos para este ejemplo se define en el [tema How to: Cree un servicio de datos mediante el proveedor](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)de reflexión.  
+> El modelo de datos para este ejemplo se define en el [tema How to: Cree un servicio de datos mediante el proveedor](create-a-data-service-using-rp-wcf-data-services.md)de reflexión.  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,13 +72,13 @@ ms.locfileid: "69918733"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Para obtener más información, vea [Cómo: Personalizar fuentes con el proveedor](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)de reflexión.  
+ Para obtener más información, consulte [Cómo Personalizar fuentes con el proveedor](how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)de reflexión.  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Personalizar fuentes con un proveedor de servicios de datos personalizado  
- La personalización de fuentes para un modelo de datos definido utilizando un proveedor de servicios de datos personalizado se define para un tipo de recurso llamando al método <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> en el objeto <xref:System.Data.Services.Providers.ResourceType> que representa un tipo de entidad en el modelo de datos. Para obtener más información, vea [proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
+ La personalización de fuentes para un modelo de datos definido utilizando un proveedor de servicios de datos personalizado se define para un tipo de recurso llamando al método <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> en el objeto <xref:System.Data.Services.Providers.ResourceType> que representa un tipo de entidad en el modelo de datos. Para obtener más información, vea [proveedores de servicios de datos personalizados](custom-data-service-providers-wcf-data-services.md).  
   
 ## <a name="consuming-custom-feeds"></a>Usar fuentes personalizadas  
- Cuando la aplicación usa directamente una [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente, debe ser capaz de procesar los elementos y atributos personalizados en la fuente devuelta. Cuando se han implementado fuentes personalizadas en un modelo de datos, sea cual sea el proveedor del servicio de datos, el punto de conexión `$metadata` devuelve la información de la fuente personalizada como atributos de fuente personalizados en el CSDL devuelto por el servicio de datos. Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** o la herramienta [herramienta datasvcutil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) para generar las clases del servicio de datos del cliente, los atributos de fuente personalizados se utilizan para garantizar que las solicitudes y respuestas al servicio de datos se controlan correctamente.  
+ Cuando la aplicación usa directamente una [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente, debe ser capaz de procesar los elementos y atributos personalizados en la fuente devuelta. Cuando se han implementado fuentes personalizadas en un modelo de datos, sea cual sea el proveedor del servicio de datos, el punto de conexión `$metadata` devuelve la información de la fuente personalizada como atributos de fuente personalizados en el CSDL devuelto por el servicio de datos. Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** o la herramienta [herramienta datasvcutil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) para generar las clases del servicio de datos del cliente, los atributos de fuente personalizados se utilizan para garantizar que las solicitudes y respuestas al servicio de datos se controlan correctamente.  
   
 ## <a name="feed-customization-considerations"></a>Consideraciones sobre personalización de fuentes  
  Debe considerar lo siguiente cuando defina asignaciones de fuentes personalizadas.  
@@ -90,9 +90,9 @@ ms.locfileid: "69918733"
   
 - La personalización de fuente requiere que tanto el cliente como el servicio de datos admitan la versión 2.0 del protocolo de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] y versiones posteriores.  
   
- Para obtener más información, vea [control de versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
+ Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proveedor de reflexión](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
-- [Proveedor de Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Proveedor de reflexión](reflection-provider-wcf-data-services.md)
+- [Proveedor de Entity Framework](entity-framework-provider-wcf-data-services.md)

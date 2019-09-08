@@ -1,6 +1,6 @@
 ---
-title: Función InheritsFrom (referencia de API no administrada)
-description: La función InheritsFrom determina si una instancia o clase se deriva de una clase primaria determinada.
+title: Función InheritsFrom (referencia de la API no administrada)
+description: La función InheritsFrom determina si una clase o instancia deriva de una clase primaria concreta.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746512"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798452"
 ---
-# <a name="inheritsfrom-function"></a>Función InheritsFrom
+# <a name="inheritsfrom-function"></a>InheritsFrom función)
 Determina si la clase o instancia actual deriva de una clase principal especificada.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,30 +41,30 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszAncestor`  
-[in] El nombre de la clase. `wszAncestor` debe apuntar a una `LPCWSTR`.
+de Nombre de la clase. `wszAncestor`debe apuntar a un `LPCWSTR`válido.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | El objeto actual se hereda de `wszAncestor`.  |
+| `WBEM_S_NO_ERROR` | 0 | El objeto actual hereda de `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | El objeto actual no hereda de `wszAncestor`. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | El valor de `wszAncestor` es `null`. |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) método.
+Esta función contiene una llamada al método [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -72,4 +72,4 @@ Esta función contiene una llamada a la [IWbemClassObject::InheritsFrom](/window
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

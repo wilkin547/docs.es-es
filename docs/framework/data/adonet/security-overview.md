@@ -1,13 +1,13 @@
 ---
-title: Seguridad Overview2
+title: Overview2 de seguridad
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4960959dfe6f485a96d29a5da43c2b8c6c98fe3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4aac564e55b24b2499f861938082a32f30247f91
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794337"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  
@@ -18,7 +18,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
  La implementación de la seguridad a última hora puede producir nuevos errores, ya que el software falla debido a las nuevas restricciones o hay que volver a escribirlo para albergar funcionalidad no planificada inicialmente. Cada línea de código revisado incluye la posibilidad de insertar un error nuevo. En ese sentido, debe tener en cuenta la seguridad al principio del proceso de programación de manera que se desarrolle junto con la programación de nuevas características.  
   
 ### <a name="threat-modeling"></a>Modelo de amenazas  
- No se puede proteger un sistema de ataques a menos que comprenda todos los posibles ataques a los que está expuesto. El proceso de evaluación de amenazas de seguridad, llamado *modelado de amenazas*, es necesario determinar la probabilidad y las ramificaciones de las infracciones de seguridad en la aplicación de ADO.NET.  
+ No se puede proteger un sistema de ataques a menos que comprenda todos los posibles ataques a los que está expuesto. El proceso de evaluación de las amenazas de seguridad, denominados *modelado de amenazas*, es necesario para determinar la probabilidad y las consecuencias de las infracciones de seguridad en la aplicación ADO.net.  
   
  El modelo de amenazas está compuesto de tres pasos principales: comprender la visión del adversario, caracterizar la seguridad del sistema y determinar las amenazas.  
   
@@ -26,9 +26,9 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|El [Threat Modeling](https://go.microsoft.com/fwlink/?LinkId=98353) sitio en el Centro para desarrolladores de seguridad de MSDN|Los recursos de esta página le ayudarán a entender el proceso de modelo de amenazas y a desarrollar modelos de amenazas que puede usar para proteger sus propias aplicaciones|  
+|El sitio de [modelado de amenazas](https://go.microsoft.com/fwlink/?LinkId=98353) del centro para desarrolladores de seguridad de MSDN|Los recursos de esta página le ayudarán a entender el proceso de modelo de amenazas y a desarrollar modelos de amenazas que puede usar para proteger sus propias aplicaciones|  
   
 ## <a name="the-principle-of-least-privilege"></a>Principio de los privilegios mínimos  
  Cuando diseñe, compile e implemente la aplicación, debe asumir que ésta será objeto de ataques. Estos ataques suelen proceder de código malintencionado que se activa con los permisos del usuario que ejecuta el código. Otros pueden provenir de código no dañino, cuyas vulnerabilidades aprovecha un atacante. Cuando se planifica la seguridad, siempre hay que asumir que se puede producir la peor situación posible.  
@@ -39,7 +39,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
  Para obtener más información sobre cómo proteger las aplicaciones, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Proteger aplicaciones](/visualstudio/ide/securing-applications)|Contiene vínculos a temas generales de la seguridad. Asimismo, incluye vínculos a temas sobre la protección de las aplicaciones distribuidas, aplicaciones web, aplicaciones móviles y de escritorio.|  
   
@@ -64,10 +64,10 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Seguridad de acceso del código y ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|  
-|[Seguridad de acceso del código](../../../../docs/framework/misc/code-access-security.md)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
+|[Seguridad de acceso del código y ADO.NET](code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|  
+|[Seguridad de acceso del código](../../misc/code-access-security.md)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
   
 ## <a name="database-security"></a>Seguridad de la base de datos  
  El principio de privilegios mínimos también se aplica al origen de los datos. A continuación se citan algunas instrucciones generales para la seguridad de base de datos:  
@@ -86,24 +86,24 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|  
-|[Recomendaciones de estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
+|[Seguridad de SQL Server](./sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|  
+|[Recomendaciones para las estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
   
 ## <a name="security-policy-and-administration"></a>Directiva de seguridad y administración  
  La administración inadecuada de la directiva de seguridad de acceso del código (CAS) puede crear puntos débiles en la seguridad. Cuando se utiliza una aplicación, deben seguirse las técnicas de supervisión de seguridad y deben evaluarse los riesgos a medida que surgen nuevas amenazas.  
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
-|[Recomendaciones de directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
+|[Prácticas recomendadas de la Directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad en .NET](../../../standard/security/index.md)
-- [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Seguridad de SQL Server](./sql/sql-server-security.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

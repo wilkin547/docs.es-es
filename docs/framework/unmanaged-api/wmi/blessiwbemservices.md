@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServices (función) (referencia de API no administrada)
-description: BlessIWbemServices (función) indica si las credenciales de usuario permiten el acceso a una clase IWbemServices.
+title: Función BlessIWbemServices (referencia de la API no administrada)
+description: La función BlessIWbemServices indica si las credenciales de usuario permiten el acceso a una clase IWbemServices.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636506"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799048"
 ---
 # <a name="blessiwbemservices-function"></a>Función BlessIWbemServices
-Indica si las credenciales de usuario permiten el acceso a la especificada [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) clase.   
+Indica si las credenciales de usuario permiten el acceso a la clase [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) especificada.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,38 +44,38 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parámetros
 
 `pIWbemServices`\
-[in] Un puntero a la [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) para el que se requieren permisos de objeto.
+de Puntero al objeto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) para el que se requieren permisos.
 
 `strUser`\
-[in] El nombre de usuario.
+de El nombre de usuario.
 
 `strPassword`\
-[in] La contraseña asociada con `strUser`.
+de La contraseña asociada `strUser`a.
 
 `strAuthority`\
-[in] El nombre de dominio del usuario. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
+de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connectserverwmi.md) para obtener más información.
 
 `impLevel`\
-[in] El nivel de suplantación.
+de Nivel de suplantación.
 
 `authnLevel`\
-[in] El nivel de autorización.
+de Nivel de autorización.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WinError.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WinError. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Uno o más argumentos no son válidos. |
+| `E_INVALIDARG` | 0x80070057 | Uno o varios argumentos no son válidos. |
 | `E_POINTER` | 0x80004003 | El valor de `pIWbemServices` es `null`. | 
 | `E_FAIL` | 0x80000008 | Se ha producido un error no especificado. |
-| `E_OUTOFMEMORY` | 0x80000002 | No hay memoria suficiente está disponible para realizar la operación. | 
-| `S_OK` | 0 | La llamada de función fue correcta. | 
+| `E_OUTOFMEMORY` | 0x80000002 | No hay suficiente memoria disponible para realizar la operación. | 
+| `S_OK` | 0 | La llamada de función se realizó correctamente. | 
 
 ## <a name="requirements"></a>Requisitos  
 
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -83,4 +83,4 @@ Los siguientes valores devueltos por esta función se definen en el *WinError.h*
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

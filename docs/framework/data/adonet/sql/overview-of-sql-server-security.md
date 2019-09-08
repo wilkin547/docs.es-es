@@ -2,17 +2,17 @@
 title: Información general sobre la seguridad de SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 52e6f69c006353fcafcbf8f567675a7c14830f76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582813"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780941"
 ---
 # <a name="overview-of-sql-server-security"></a>Información general sobre la seguridad de SQL Server
 Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad. SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas. En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades. No obstante, la seguridad no es una característica integrada más. Cada aplicación tiene requisitos de seguridad propios. Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  
   
- Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor. Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene un conjunto de objetos susceptibles de ser protegidos. Cada elemento protegible de SQL Server tiene asociados *permisos* que se pueden conceder a un *principal*, que es un individuo, grupo o proceso concedido acceso a SQL Server. El marco de seguridad de SQL Server administra el acceso a entidades protegidas mediante *autenticación* y *autorización*.  
+ Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor. Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene un conjunto de objetos susceptibles de ser protegidos. Cada SQL Server protegible tiene *permisos* asociados que se pueden conceder a una *entidad*de seguridad, que es una persona, grupo o proceso al que se concede acceso a SQL Server. El marco de seguridad de SQL Server administra el acceso a las entidades protegibles a través de la *autenticación* y la *autorización*.  
   
 - La autenticación es el proceso de inicio de sesión en SQL Server por el que una entidad de seguridad solicita el acceso mediante el envío de credenciales que el servidor evalúa. La autenticación establece la identidad del usuario o proceso que se autentica.  
   
@@ -21,27 +21,27 @@ Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es 
  Los temas de esta sección abordan los conceptos básicos de seguridad de SQL Server y proporcionan vínculos a la documentación completa de la versión de los Libros en pantalla de SQL Server que corresponda.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [Autenticación en SQL Server](authentication-in-sql-server.md)  
  Describe los inicios de sesión y autenticación en SQL Server y proporciona vínculos a recursos adicionales.  
   
- [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [Roles de servidor y base de datos en SQL Server](server-and-database-roles-in-sql-server.md)  
  Describe funciones fijas de bases de datos y servidores, funciones de base de datos personalizadas y cuentas integradas, y proporciona vínculos a recursos adicionales.  
   
- [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [Propiedad y separación de esquemas de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md)  
  Describe la propiedad de los objetos y separación entre usuario y esquema, y proporciona vínculos a recursos adicionales.  
   
- [Autorización y permisos en SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [Autorización y permisos en SQL Server](authorization-and-permissions-in-sql-server.md)  
  Describe la concesión de permisos a través del principio de los privilegios mínimos y proporciona vínculos a recursos adicionales.  
   
- [Cifrado de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
+ [Cifrado de datos en SQL Server](data-encryption-in-sql-server.md)  
  Describe las opciones de cifrado de datos en SQL Server y proporciona vínculos a recursos adicionales.  
   
- [Seguridad de integración de CLR en SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
+ [Seguridad de integración de CLR en SQL Server](clr-integration-security-in-sql-server.md)  
  Proporciona vínculos a recursos de seguridad de la integración CLR.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
+- [Seguridad de SQL Server](sql-server-security.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

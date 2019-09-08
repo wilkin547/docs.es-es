@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742041"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777276"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType (Método)
-Especifica los tipos anidados como exportable. El [ExportType (método)](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) también puede exportar anidada tipos, pero este método es más rápido.  
+Especifica los tipos anidados como exportables. El [método ExportType](exporttype-method.md) también puede exportar tipos anidados, pero este método es más rápido.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,34 +43,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador del ensamblado para exportar.  
+ IDENTIFICADOR del ensamblado del que se va a exportar.  
   
  `FileToken`  
- Símbolo (token) de archivo o ensamblado del archivo que define el tipo que se realicen exportable.  
+ Token de archivo o ensamblado de archivo que define el tipo que se va a convertir.  
   
  `TypeToken`  
- Tipo de token del tipo que se realicen exportable.  
+ Token de tipo del tipo que se va a convertir.  
   
  `ParentType`  
  Token del tipo primario.  
   
  `pszTypename`  
- Nombre de tipo completo para exportar.  
+ Nombre completo del tipo que se va a exportar.  
   
  `dwFlags`  
- `ComType` marca como `tdPublic` o `tdNested`. Este valor puede pasarse a [DefineExportedType (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`marcas como `tdPublic` o `tdNested`. Este valor se puede pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
  Recibe el token para el tipo exportado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

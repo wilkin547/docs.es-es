@@ -2,12 +2,12 @@
 title: Restricciones y relaciones del esquema XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202990"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784191"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Restricciones y relaciones del esquema XML
 En un esquema del lenguaje de definición de esquemas XML (XSD), puede especificar las restricciones (Unique, Key y keyref) y las relaciones (mediante la anotación **msdata: Relationship** ). En este tema se explica cómo se interpretan las restricciones y relaciones especificadas en un esquema XML para generar el <xref:System.Data.DataSet>.  
@@ -189,4 +189,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ## <a name="see-also"></a>Vea también
 
 - [Derivación de una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

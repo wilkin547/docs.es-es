@@ -2,32 +2,32 @@
 title: clave de entidad
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db867b3a853bd29f1faf1be2faf77776e48be2d2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599642"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795130"
 ---
 # <a name="entity-key"></a>clave de entidad
-Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/property.md) o un conjunto de propiedades de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que se usan para determinar la identidad. Las propiedades que constituyen una entidad se eligen en tiempo de diseño. Los valores de las propiedades de clave de entidad deben identificar de forma exclusiva una instancia del tipo de entidad dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) en tiempo de ejecución. Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  
+Una *clave de entidad* es una [propiedad](property.md) o un conjunto de propiedades de un [tipo de entidad](entity-type.md) que se usan para determinar la identidad. Las propiedades que constituyen una entidad se eligen en tiempo de diseño. Los valores de las propiedades de clave de entidad deben identificar de forma única una instancia de tipo de entidad dentro de un [conjunto de entidades](entity-set.md) en tiempo de ejecución. Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  
   
  Los requisitos para que un conjunto de propiedades sea una clave de entidad son los siguientes:  
   
 - No puede haber dos claves de entidad idénticas en un conjunto de entidades. Es decir, para dos entidades cualesquiera dentro de un conjunto de entidades, los valores de todas las propiedades que constituyen una clave no pueden ser idénticos. Sin embargo, algunos (pero no todos) los valores que constituyen una clave de entidad pueden ser idénticos.  
   
-- Una clave de entidad debe constar de un conjunto de admitir valores NULL, inmutable, [propiedades de tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+- Una clave de entidad debe constar de un conjunto de [propiedades de tipo primitivo](entity-data-model-primitive-data-types.md)que no aceptan valores NULL e inmutables.  
   
 - Las propiedades que constituyen una clave de entidad para un tipo de entidad determinado no pueden cambiar. No se puede designar más de una clave de entidad posible para un tipo de entidad determinado; no se admiten las claves suplentes.  
   
-- Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz. Para obtener más información, consulte [Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+- Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz. Para obtener más información, [vea Entity Data Model: Herencia](entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`. Las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "(Key)". Tenga en cuenta que el tipo de entidad `Author` tiene una clave de entidad que consta de dos propiedades, `Name` y `Address`.  
   
  ![Modelo de ejemplo con tres tipos de entidad](./media/entity-key/example-model-three-entity-types.gif)  
   
- El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define el tipo de entidad `Book` mostrado en el diagrama anterior. Observe que la clave de entidad se define haciendo referencia a la propiedad `ISBN` del tipo de entidad.  
+ El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](./ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define el tipo de entidad `Book` mostrado en el diagrama anterior. Observe que la clave de entidad se define haciendo referencia a la propiedad `ISBN` del tipo de entidad.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
@@ -41,5 +41,5 @@ Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/p
   
 ## <a name="see-also"></a>Vea también
 
-- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

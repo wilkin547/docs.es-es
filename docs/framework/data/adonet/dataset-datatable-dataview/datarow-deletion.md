@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 46109ee1781b8b509df87b4203c51a55b9f596ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3f48339539f08bbc1c2c15035741375bd9ade553
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205106"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784726"
 ---
 # <a name="datarow-deletion"></a>Eliminación de DataRow
 Hay dos métodos que puede usar para eliminar un <xref:System.Data.DataRow> objeto de un <xref:System.Data.DataTable> objeto: <xref:System.Data.DataRowCollection> el método **Remove** del objeto y el <xref:System.Data.DataRow.Delete%2A> método del objeto **DataRow** . Mientras que <xref:System.Data.DataRowCollection.Remove%2A> el método elimina una **DataRow** de la **DataRowCollection**, el <xref:System.Data.DataRow.Delete%2A> método solo marca la fila para su eliminación. La eliminación real se produce cuando la aplicación llama al método **AcceptChanges** . Con <xref:System.Data.DataRow.Delete%2A>, se puede comprobar mediante programa qué filas están marcadas para eliminación antes de quitarlas realmente. Cuando una fila está marcada para eliminación, la propiedad <xref:System.Data.DataRow.RowState%2A> se establece en <xref:System.Data.DataRow.Delete%2A>.  
@@ -50,4 +50,4 @@ workRow.Delete();
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
 - [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

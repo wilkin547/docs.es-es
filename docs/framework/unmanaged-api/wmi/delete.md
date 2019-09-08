@@ -1,6 +1,6 @@
 ---
-title: Delete (función) (referencia de API no administrada)
-description: La función de eliminación elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM.
+title: Función Delete (referencia de la API no administrada)
+description: La función Delete elimina la propiedad especificada y todos sus calificadores de una definición de clase CIM.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636721"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798672"
 ---
 # <a name="delete-function"></a>Función Delete
 
-Elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM.
+Elimina la propiedad especificada y todos sus calificadores de una definición de clase CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,37 +42,37 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`\
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`\
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] El nombre de la propiedad que se va a eliminar. `wszName` debe ser un puntero a una `LPCWSTR`.
+de Nombre de la propiedad que se va a eliminar. `wszName`debe ser un puntero a un válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | No se puede eliminar la propiedad. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` no es válido. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | La propiedad especificada no existe. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay memoria suficiente para completar la operación. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria para completar la operación. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | La propiedad se hereda de una clase base. |
 | `WBEM_E_SYSTEM_PROPERTY` | | La propiedad es una propiedad del sistema. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La función eliminó un valor predeterminado de invalidación de la clase actual. El valor predeterminado para esta propiedad en la clase primaria se ha reactivado. |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La función eliminó un valor predeterminado de invalidación para la clase actual. Se ha reactivado el valor predeterminado de esta propiedad en la clase primaria. |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) método.
+Esta función contiene una llamada al método [IWbemClassObject::D iminar](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
 **Encabezado**: WMINet_Utils.idl
 
@@ -80,4 +80,4 @@ Esta función contiene una llamada a la [IWbemClassObject::Delete](/windows/desk
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938711"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793065"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedimiento para usar procedimientos almacenados que toman parámetros
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los parámetros de salida a parámetros de referencia y, para los tipos de valor, declara el parámetro como que acepta valores NULL.  
   
- Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de [filas, vea cómo: Devolver conjuntos de](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)filas.  
+ Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de [filas, vea cómo: Devolver conjuntos de](how-to-return-rowsets.md)filas.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza un parámetro de entrada único (el identificador de cliente) y se devuelve un parámetro de salida (las ventas totales para ese cliente).  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Procedimientos almacenados](stored-procedures.md)
+- [Descargar bases de datos de ejemplo](downloading-sample-databases.md)
 - [Utilizar tipos que aceptan valores NULL](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipos de valor que aceptan valores NULL](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

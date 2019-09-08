@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b52d3af38bd09ce5864c25d27e148dbd7f4639b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778482"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795445"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity (Función)
 Compara dos identidades de ensamblado para determinar si son equivalentes.  
@@ -42,49 +42,49 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="parameters"></a>Parámetros  
  `pwzAssemblyIdentity1`  
- [in] Identidad textual del primer ensamblado de la comparación.  
+ de Identidad textual del primer ensamblado de la comparación.  
   
  `fUnified1`  
- [in] Una marca booleana que indica la unificación especificada por el usuario para `pwzAssemblyIdentity1`.  
+ de Una marca booleana que indica la unificación especificada por el `pwzAssemblyIdentity1`usuario para.  
   
  `pwzAssemblyIdentity2`  
- [in] Identidad textual del segundo ensamblado en la comparación.  
+ de La identidad textual del segundo ensamblado de la comparación.  
   
  `fUnified2`  
- [in] Una marca booleana que indica la unificación especificada por el usuario para `pwzAssemblyIdentity2`.  
+ de Una marca booleana que indica la unificación especificada por el `pwzAssemblyIdentity2`usuario para.  
   
  `pfEquivalent`  
- [out] Una marca booleana que indica si los dos ensamblados son equivalentes.  
+ enuncia Una marca booleana que indica si los dos ensamblados son equivalentes.  
   
  `pResult`  
- [out] Un [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) enumeración que contiene información detallada sobre la comparación.  
+ enuncia Una enumeración [assemblycomparisonresult (](assemblycomparisonresult-enumeration.md) que contiene información detallada acerca de la comparación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `pfEquivalent` Devuelve un valor booleano que indica si los dos ensamblados son equivalentes. `pResult` Devuelve uno de los `AssemblyComparisonResult` valores para proporcionar una razón más detallada para el valor de `pfEquivalent`.  
+ `pfEquivalent`Devuelve un valor booleano que indica si los dos ensamblados son equivalentes. `pResult`devuelve uno de los `AssemblyComparisonResult` valores de, para proporcionar un motivo más detallado para el valor `pfEquivalent`de.  
   
 ## <a name="remarks"></a>Comentarios  
- `CompareAssemblyIdentity` comprueba si `pwzAssemblyIdentity1` y `pwzAssemblyIdentity2` son equivalentes. `pfEquivalent` se establece en `true` en una o varias de las condiciones siguientes:  
+ `CompareAssemblyIdentity`comprueba si `pwzAssemblyIdentity1` y `pwzAssemblyIdentity2` son equivalentes. `pfEquivalent`está establecido `true` en una o varias de las condiciones siguientes:  
   
-- Las identidades de dos ensamblado son equivalentes. Para los ensamblados con nombre seguro, la equivalencia requiere que el nombre del ensamblado, versión, token de clave pública y la referencia cultural para que sean idénticos. Para los ensamblados nombres simple, la equivalencia requiere a una coincidencia en el nombre de ensamblado y la referencia cultural.  
+- Las dos identidades de ensamblado son equivalentes. En el caso de los ensamblados con nombre seguro, la equivalencia requiere que el nombre de ensamblado, la versión, el token de clave pública y la referencia cultural sean idénticos. En el caso de los ensamblados con nombre, la equivalencia requiere una coincidencia en el nombre y la referencia cultural del ensamblado.  
   
-- Ambas identidades de ensamblado hacen referencia a ensamblados que se ejecutan en .NET Framework. Esta condición devuelve `true` incluso si no coinciden los números de versión del ensamblado.  
+- Ambas identidades de ensamblado hacen referencia a ensamblados que se ejecutan en el .NET Framework. Esta condición devuelve `true` aunque los números de versión de ensamblado no coincidan.  
   
-- Los dos ensamblados no son ensamblados administrados, pero `fUnified1` o `fUnified2` se estableció en `true`.  
+- Los dos ensamblados no son ensamblados administrados `fUnified2` , pero `fUnified1` o `true`se estableció en.  
   
- El `fUnified` marca indica que todos los números de versión hasta el número de versión del ensamblado con nombre seguro se consideran equivalentes al ensamblado con nombre seguro. Por ejemplo, si el valor de `pwzAssemblyIndentity1` es "MyAssembly, versión = 3.0.0.0, culture = neutral, publicKeyToken =..." y el valor de `fUnified1` es `true`, esto indica que deben ser todas las versiones de MyAssembly desde la versión 0.0.0.0 hasta la versión 3.0.0.0 se tratan como equivalentes. En tal caso, si `pwzAssemblyIndentity2` hace referencia al mismo ensamblado como `pwzAssemblyIndentity1`, excepto que presenta un menor número de versión `pfEquivalent` está establecido en `true`. Si `pwzAssemblyIdentity2` hace referencia a un mayor número de versión `pfEquivalent` está establecido en `true` solo si el valor de `fUnified2` es `true`.  
+ La `fUnified` marca indica que todos los números de versión hasta el número de versión del ensamblado con nombre seguro se consideran equivalentes al ensamblado con nombre seguro. Por ejemplo, si el valor de `pwzAssemblyIndentity1` es "myAssembly, version = 3.0.0.0, Culture = neutral, PublicKeyToken =...." y el valor de `fUnified1` es `true`, indica que todas las versiones de myAssembly de la versión 0.0.0.0 a 3.0.0.0 deben ser se trata como equivalente. En `pwzAssemblyIndentity2` tal caso, si hace referencia al mismo ensamblado que `pwzAssemblyIndentity1`, salvo que tiene un número de versión inferior, `pfEquivalent` se establece en. `true` Si `pwzAssemblyIdentity2` hace referencia a un número de versión `pfEquivalent` superior, se `true` establece en solo si el `fUnified2` valor `true`de es.  
   
- El `pResult` parámetro incluye información específica sobre por qué los dos ensamblados se consideran equivalentes o no equivalentes. Para obtener más información, consulte [AssemblyComparisonResult (enumeración)](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
+ El `pResult` parámetro incluye información específica sobre por qué los dos ensamblados se consideran equivalentes o no equivalentes. Para obtener más información, vea [enumeración assemblycomparisonresult (](assemblycomparisonresult-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [AssemblyComparisonResult (enumeración)](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+- [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)
+- [AssemblyComparisonResult (enumeración)](assemblycomparisonresult-enumeration.md)
