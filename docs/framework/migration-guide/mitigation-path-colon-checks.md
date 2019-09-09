@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e41a51dcdf243091d3962278f1a59a85a2722894
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: a74c25a9bf4dd8b9ab86bd280881fe1a7999e1d5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251128"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789983"
 ---
-# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="2b166-102">Mitigación: comprobaciones de dos puntos en las rutas de acceso</span><span class="sxs-lookup"><span data-stu-id="2b166-102">Mitigation: Path Colon Checks</span></span>
-<span data-ttu-id="2b166-103">A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, se han realizado una serie de cambios para admitir rutas de acceso que anteriormente no se admitían (en términos de longitud y formato).</span><span class="sxs-lookup"><span data-stu-id="2b166-103">Starting with apps that target the .NET Framework 4.6.2, a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="2b166-104">En concreto, las comprobaciones de la sintaxis de separador de la unidad correspondiente (dos puntos) se realizan de manera más correcta.</span><span class="sxs-lookup"><span data-stu-id="2b166-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
+# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="f4298-102">Mitigación: comprobaciones de dos puntos en las rutas de acceso</span><span class="sxs-lookup"><span data-stu-id="f4298-102">Mitigation: Path Colon Checks</span></span>
+<span data-ttu-id="f4298-103">A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, se han realizado una serie de cambios para admitir rutas de acceso que anteriormente no se admitían (en términos de longitud y formato).</span><span class="sxs-lookup"><span data-stu-id="f4298-103">Starting with apps that target the .NET Framework 4.6.2, a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="f4298-104">En concreto, las comprobaciones de la sintaxis de separador de la unidad correspondiente (dos puntos) se realizan de manera más correcta.</span><span class="sxs-lookup"><span data-stu-id="f4298-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="2b166-105">Impacto</span><span class="sxs-lookup"><span data-stu-id="2b166-105">Impact</span></span>  
- <span data-ttu-id="2b166-106">Estos cambios bloquean algunas rutas del identificador URI que los métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> y <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> admitían anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2b166-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods previously supported.</span></span>  
+## <a name="impact"></a><span data-ttu-id="f4298-105">Impacto</span><span class="sxs-lookup"><span data-stu-id="f4298-105">Impact</span></span>  
+ <span data-ttu-id="f4298-106">Estos cambios bloquean algunas rutas del identificador URI que los métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> y <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> admitían anteriormente.</span><span class="sxs-lookup"><span data-stu-id="f4298-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods previously supported.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="2b166-107">Mitigación</span><span class="sxs-lookup"><span data-stu-id="2b166-107">Mitigation</span></span>  
- <span data-ttu-id="2b166-108">Para solucionar el problema de una ruta de acceso anteriormente aceptable que ya no es compatible con los métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> y <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>, puede llevar a cabo el procedimiento siguiente:</span><span class="sxs-lookup"><span data-stu-id="2b166-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods, you can do the following:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="f4298-107">Mitigación</span><span class="sxs-lookup"><span data-stu-id="f4298-107">Mitigation</span></span>  
+ <span data-ttu-id="f4298-108">Para solucionar el problema de una ruta de acceso anteriormente aceptable que ya no es compatible con los métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> y <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>, puede llevar a cabo el procedimiento siguiente:</span><span class="sxs-lookup"><span data-stu-id="f4298-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods, you can do the following:</span></span>  
   
-- <span data-ttu-id="2b166-109">Quitar manualmente el esquema de una dirección URL.</span><span class="sxs-lookup"><span data-stu-id="2b166-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="2b166-110">Por ejemplo, quitar `file://` de una dirección URL.</span><span class="sxs-lookup"><span data-stu-id="2b166-110">For example, remove `file://` from a URL.</span></span>  
+- <span data-ttu-id="f4298-109">Quitar manualmente el esquema de una dirección URL.</span><span class="sxs-lookup"><span data-stu-id="f4298-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="f4298-110">Por ejemplo, quitar `file://` de una dirección URL.</span><span class="sxs-lookup"><span data-stu-id="f4298-110">For example, remove `file://` from a URL.</span></span>  
   
-- <span data-ttu-id="2b166-111">Pasar el identificador URI al constructor <xref:System.Uri> y recuperar el valor de la propiedad <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2b166-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> property.</span></span>  
+- <span data-ttu-id="f4298-111">Pasar el identificador URI al constructor <xref:System.Uri> y recuperar el valor de la propiedad <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4298-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> property.</span></span>  
   
-- <span data-ttu-id="2b166-112">Rechazar la nueva normalización de la ruta de acceso mediante el establecimiento del conmutador `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> en `true`.</span><span class="sxs-lookup"><span data-stu-id="2b166-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
+- <span data-ttu-id="f4298-112">Rechazar la nueva normalización de la ruta de acceso mediante el establecimiento del conmutador `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> en `true`.</span><span class="sxs-lookup"><span data-stu-id="f4298-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
   
     ```xml  
     <runtime>  
@@ -32,6 +32,6 @@ ms.locfileid: "66251128"
     </runtime>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b166-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b166-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4298-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="f4298-113">See also</span></span>
 
-- [<span data-ttu-id="2b166-114">Cambios de redestinación</span><span class="sxs-lookup"><span data-stu-id="2b166-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [<span data-ttu-id="f4298-114">Cambios de redestinación</span><span class="sxs-lookup"><span data-stu-id="f4298-114">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6-2.md)
