@@ -2,12 +2,12 @@
 title: Procedimiento para buscar elementos con un atributo específico (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: fc1bc285a066dcb1843dcb626b1b3b354f28da74
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1e71dd7f6619c051d0e3cdef2726daff82ba3d70
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486807"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253666"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos con un atributo específico (XPath-LINQ to XML) (C#)
 En ocasiones, deseará buscar todos los elementos que tengan un atributo en particular. Pero no le preocupa cuáles es el contenido del atributo. En vez de ello, desea realizar la selección en función de si existe o no el atributo.  
@@ -50,7 +50,7 @@ foreach (XElement el in list1)
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 Results are identical  
 <Child2 Select="true">2</Child2>  
 <Child4 Select="true">4</Child4>  

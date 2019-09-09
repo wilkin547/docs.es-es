@@ -2,12 +2,12 @@
 title: Procedimiento para dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592386"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253271"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Procedimiento para dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)
 En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.  
@@ -16,7 +16,7 @@ En este ejemplo se muestra una manera de combinar el contenido de dos archivos y
   
 1. Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ En este ejemplo se muestra una manera de combinar el contenido de dos archivos y
   
 2. Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

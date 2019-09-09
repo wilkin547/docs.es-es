@@ -2,12 +2,12 @@
 title: Programar con nodos (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 7229b03e1bbb4f7cd861cb946307867b87234a21
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487304"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253146"
 ---
 # <a name="programming-with-nodes-c"></a>Programar con nodos (C#)
 Los desarrolladores de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent == null);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 True  
 True  
 ```  
@@ -54,7 +54,7 @@ Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 1  
 1  
 2  
@@ -76,7 +76,7 @@ Console.WriteLine(">>{0}<<", textNode2);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 >><<  
 ```  
   
@@ -116,7 +116,7 @@ foreach (XAttribute att in root.Attributes())
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -144,7 +144,7 @@ Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Co
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 3  
 0  
 ```  
@@ -166,7 +166,7 @@ Console.WriteLine(doc.Nodes().Count());
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  

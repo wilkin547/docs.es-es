@@ -2,12 +2,12 @@
 title: Procedimiento para buscar la unión de dos rutas de acceso a ubicaciones (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: 9fc88a8784958294ba6077893a5d54110de335a0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ebb2ddc3a7ba5e08e99cecca01294e5ad3182e8b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593746"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253843"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Procedimiento para buscar la unión de dos rutas de acceso a ubicaciones (XPath-LINQ to XML) (C#)
 XPath permite buscar la unión de los resultados de dos rutas de ubicación XPath.  
@@ -50,7 +50,7 @@ foreach (XElement el in list1)
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 Results are identical  
 <Category>A</Category>  
 <Price>24.50</Price>  

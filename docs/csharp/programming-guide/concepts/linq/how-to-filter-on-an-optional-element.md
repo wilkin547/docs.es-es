@@ -2,12 +2,12 @@
 title: Procedimiento para filtrar por un elemento opcional (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593800"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253817"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Procedimiento para filtrar por un elemento opcional (C#)
 En ocasiones, deseará filtrar por un elemento dado a pesar de que no está seguro de si existe o no en el documento XML. La consulta debería ejecutarse de forma que si el elemento en particular no tiene ningún elemento secundario, no se produzca una excepción de referencia nula al filtrar por él. En el ejemplo siguiente, el elemento `Child5` no tiene ningún elemento secundario `Type`, pero aún así, la consulta se ejecuta correctamente.  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  Este código genera el siguiente resultado:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  Este código genera el siguiente resultado:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  

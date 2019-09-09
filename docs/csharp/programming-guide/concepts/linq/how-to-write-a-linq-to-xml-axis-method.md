@@ -2,12 +2,12 @@
 title: Procedimiento para escribir un método de eje de LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 71d9d0e9ba1f63d8badb1f10ab7ede1dbb30a19f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592181"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253219"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Procedimiento para escribir un método de eje de LINQ to XML (C#)
 Puede escribir sus propios métodos de ejes para recuperar recopilaciones de un árbol XML. Una de las mejores formas de hacerlo es escribir un método de extensión que devuelva una recopilación de elementos o atributos. Puede escribir su método de extensión para devolver subconjuntos específicos de elementos o atributos, basándose en los requisitos de su aplicación.  
@@ -280,7 +280,7 @@ class Program
   
  Este código genera el siguiente resultado:  
   
-```  
+```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -290,4 +290,3 @@ class Program
 /PurchaseOrders/PurchaseOrder[3]/@OrderDate  
 1999-10-22  
 ```  
-  

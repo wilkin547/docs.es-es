@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923884"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252994"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:  
@@ -28,19 +28,19 @@ Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes
   
  También puede convertir los argumentos de cadena en tipos numéricos mediante la clase <xref:System.Convert> o el método `Parse`. Por ejemplo, la siguiente instrucción convierte la `string` en un número `long` mediante el método <xref:System.Int64.Parse%2A>:  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  También se puede usar el tipo de C# `long`, que tiene como alias `Int64`:  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  También puede usar el método `ToInt64` de la clase `Convert` para hacer lo mismo:  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   

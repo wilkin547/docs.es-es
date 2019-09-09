@@ -2,12 +2,12 @@
 title: Diferencias entre realizar consultas de un XDocument Realizar consultas de un XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 9d1e3b54b9d384280cd58aa3ca063f76758fc6fe
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487277"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253138"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Diferencias entre realizar consultas de un XDocument Realizar consultas de un XElement (C#)
 Cuando carga un documento mediante <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, observará que es necesario escribir las consultas de forma ligeramente diferente a como lo haría en caso de cargar el documento mediante <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -37,7 +37,7 @@ foreach (XElement e in childList)
   
  Como cabe esperar, este ejemplo genera el siguiente resultado:  
   
-```  
+```output  
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -67,7 +67,7 @@ foreach (XElement e in childList)
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -101,7 +101,7 @@ foreach (XElement e in childList)
   
  Ahora, esta consulta genera el mismo resultado que la consulta del árbol cuya raíz comienza en <xref:System.Xml.Linq.XElement>. El ejemplo genera el siguiente resultado:  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  

@@ -2,12 +2,12 @@
 title: Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 1507d0f743070f15b8e64d5dcfb1b9499470b123
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 31cb7b936f58653e6223501f3b03cd9472b92453
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592687"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253460"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
 Un archivo de valores separados por comas (CSV) es un archivo de texto que se usa a menudo para almacenar datos de hoja de cálculo u otros datos tabulares que se representan mediante filas y columnas. Mediante el uso del método <xref:System.String.Split%2A> para separar los campos, es muy fácil consultar y manipular los archivos CSV con LINQ. De hecho, la misma técnica puede usarse para reordenar los elementos de cualquier línea estructurada de texto, no se limita a un archivo CSV.  
@@ -18,7 +18,7 @@ Un archivo de valores separados por comas (CSV) es un archivo de texto que se us
   
 1. Copie las líneas siguientes en un archivo de texto sin formato que se denomine spreadsheet1.csv. Guarde el archivo en la carpeta del proyecto.  
   
-    ```  
+    ```csv  
     Adams,Terry,120  
     Fakhouri,Fadi,116  
     Feng,Hanying,117  

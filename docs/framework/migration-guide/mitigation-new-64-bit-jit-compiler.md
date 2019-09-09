@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968521"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779354"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
 A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
@@ -52,7 +52,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
 ## <a name="mitigation-of-other-issues"></a>Mitigación de otros problemas  
  Si detecta cualquier otra diferencia en el comportamiento entre el código compilado con el compilador de 64 bits antiguo y el compilador de 64 bits nuevo, o entre las versiones de depuración y publicación de la aplicación que se compilan con el nuevo compilador JIT de 64 bits, puede realizar el siguiente procedimiento para compilar la aplicación con el compilador JIT de 64 bits anterior:  
   
-- Según la aplicación, se puede agregar el elemento [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.  
+- Según la aplicación, se puede agregar el elemento [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [Elemento \<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [Cambios en el runtime](runtime-changes-in-the-net-framework-4-6.md)
+- [Elemento \<useLegacyJIT>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

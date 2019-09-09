@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar el valor de un atributo (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: 54ea4b532669ed2c615fcde02011fdd1228705a3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 635aee3bd08618b94fb5c091f8eef212c067acef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592469"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253379"
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Procedimiento para recuperar el valor de un atributo (LINQ to XML) (C#)
 Este tema muestra cómo obtener el valor de los atributos. Existen dos formas principales: puede convertir un elemento <xref:System.Xml.Linq.XAttribute> al tipo deseado; el operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado. Como alternativa, puede usar la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A>. Sin embargo, la conversión suele ser el mejor método. Si convierte el atributo a un tipo que admite valores NULL, resulta más fácil escribir el código al recuperar el valor de un atributo que podría existir o no. Para obtener ejemplos de esta técnica, vea [Cómo: Recuperar el valor de un elemento (LINQ to XML) (C#)](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
@@ -26,7 +26,7 @@ Console.WriteLine(str);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 <Root Attr="abcde" />  
 abcde  
 ```  
@@ -45,7 +45,7 @@ Console.WriteLine(str);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 abcde  
 ```  
   

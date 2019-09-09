@@ -2,12 +2,12 @@
 title: Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 3aaf141a8ac5d8f3fc75d0a31b460fc84733a62e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d6975601855e736082662ffb0319b5c6563cedc6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484799"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253259"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)
 Se puede usar anotaciones para facilitar transformaciones de un árbol XML.  
@@ -122,7 +122,7 @@ Console.WriteLine(newData);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root>  
@@ -147,7 +147,7 @@ After Transform
   
 - El pseudocódigo para la función es bastante sencillo:  
   
-```  
+```text  
 The function takes an XElement as an argument and returns an XElement.   
 If an element has an XElement annotation, then  
     Return a new XElement  
@@ -393,7 +393,7 @@ class Program
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root Att1="123">  

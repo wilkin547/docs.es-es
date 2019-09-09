@@ -2,12 +2,12 @@
 title: Procedimiento para realizar transformaciones de streaming de texto en XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: d37ea5167576098d4ea343e49ae4ff6bac20d4ba
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1507c628731a11e06c73f253c1a0c0f9a85a2269
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485250"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253523"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procedimiento para realizar transformaciones de streaming de texto en XML (C#)
 Un enfoque del procesamiento de un archivo de texto es escribir un método de extensión que transmita el archivo de texto por secuencias de línea en línea mediante la construcción `yield return`. Después, puede escribir una consulta LINQ que procese el archivo de texto de forma aplazada y lenta. Si después usa <xref:System.Xml.Linq.XStreamingElement> para transmitir el resultado, puede crear una transformación del archivo de texto al XML usando una cantidad mínima de memoria, independientemente del tamaño del archivo de texto de origen.  
@@ -17,7 +17,7 @@ Un enfoque del procesamiento de un archivo de texto es escribir un método de ex
 ## <a name="example"></a>Ejemplo  
  El siguiente archivo de texto, People.txt, es el origen de este ejemplo.  
   
-```  
+```text  
 #This is a comment  
 1,Tai,Yee,Writer  
 2,Nikolay,Grachev,Programmer  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106486"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790114"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
@@ -76,6 +76,6 @@ Para comenzar, seleccione el tipo de cambio de compatibilidad a continuación:
 
 ## <a name="see-also"></a>Vea también
 
-- [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [Novedades](../../../docs/framework/whats-new/index.md)
-- [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Versiones y dependencias](versions-and-dependencies.md)
+- [Novedades](../whats-new/index.md)
+- [Lo obsoleto en la biblioteca de clases](../whats-new/whats-obsolete.md)

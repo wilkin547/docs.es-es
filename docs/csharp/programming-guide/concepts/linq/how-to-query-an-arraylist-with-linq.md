@@ -2,19 +2,19 @@
 title: Procedimiento para consultar un objeto ArrayList con LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: dca201a23b316cc16bc746ea920303814c8c7c87
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 51c42296b8acb6be1c9c4505f9af3d6fbaf248ce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592925"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253450"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Procedimiento para consultar un objeto ArrayList con LINQ (C#)
 Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de objetos `Student`, la [cláusula from](../../../language-reference/keywords/from-clause.md) debe tener un aspecto similar a este:  
   
-```  
+```csharp  
 var query = from Student s in arrList  
-...  
+//...
 ```  
   
  Al especificar el tipo de la variable de rango, se convierte cada elemento de la <xref:System.Collections.ArrayList> en un `Student`.  

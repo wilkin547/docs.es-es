@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ad11d4295be3a5bfd590d9cef1926f6676f2b1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043238"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789825"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigación: Servicios WCF y autenticación de certificados
 
@@ -17,7 +17,7 @@ ms.locfileid: "70043238"
 
 ## <a name="impact"></a>Impacto
 
-TLS 1.2 no admite la autenticación de certificado MD5. Como resultado, si un cliente utiliza un certificado SSL que utiliza MD5 para el algoritmo hash, el cliente WCF no se puede conectar al servicio WCF. Para más información, vea [Mitigación: Servicios WCF y autenticación de certificados](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).
+TLS 1.2 no admite la autenticación de certificado MD5. Como resultado, si un cliente utiliza un certificado SSL que utiliza MD5 para el algoritmo hash, el cliente WCF no se puede conectar al servicio WCF. Para más información, vea [Mitigación: Servicios WCF y autenticación de certificados](mitigation-wcf-services-and-certificate-authentication.md).
 
 ## <a name="mitigation"></a>Mitigación
 
@@ -58,4 +58,4 @@ Puede evitar este problema para que el cliente WCF pueda conectarse a un servido
 
 ## <a name="see-also"></a>Vea también
 
-- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Cambios en el runtime](runtime-changes-in-the-net-framework-4-6.md)

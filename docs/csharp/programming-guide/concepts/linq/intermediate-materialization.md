@@ -2,12 +2,12 @@
 title: Materialización intermedia (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592135"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253164"
 ---
 # <a name="intermediate-materialization-c"></a>Materialización intermedia (C#)
 Si no tiene cuidado, en algunas situaciones puede alterar drásticamente el perfil de memoria y rendimiento de su aplicación causando una materialización prematura de las recopilaciones de sus consultas. Algunos operadores de consulta estándar provocan la materialización de su recopilación de origen antes de producir un elemento único. Por ejemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> primero recorre en iteración toda la recopilación de origen, después ordena todos los elementos y finalmente produce el primer elemento. Esto significa que resulta caro obtener el primer elemento de una recopilación ordenada; cada elemento posterior no es caro. Esto tiene sentido: sería imposible que el operador de consulta hiciera lo contrario.  
@@ -66,7 +66,7 @@ class Program
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 ToUpper: source >ghi<  

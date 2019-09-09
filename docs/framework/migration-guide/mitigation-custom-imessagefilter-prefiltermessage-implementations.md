@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251144"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779434"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigación: personalizar implementaciones de IMessageFilter.PreFilterMessage
 
@@ -31,7 +31,7 @@ Para las aplicaciones de Windows Forms destinadas a las versiones anteriores de 
 
 ## <a name="mitigation"></a>Mitigación
 
-Si no quiere este cambio, las aplicaciones que tienen como destino .NET Framework 4.6.1 o una versión posterior pueden optar por no recibirlo agregando el siguiente ajuste de configuración a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
+Si no quiere este cambio, las aplicaciones que tienen como destino .NET Framework 4.6.1 o una versión posterior pueden optar por no recibirlo agregando el siguiente ajuste de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Si no quiere este cambio, las aplicaciones que tienen como destino .NET Framewor
 </runtime>
 ```
 
-Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework, pero que se ejecutan en .NET Framework 4.6.1 o una versión posterior, pueden optar por recibir en este comportamiento agregando el siguiente ajuste de configuración a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
+Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework, pero que se ejecutan en .NET Framework 4.6.1 o una versión posterior, pueden optar por recibir en este comportamiento agregando el siguiente ajuste de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:
 
 ```xml
 <runtime>
@@ -49,4 +49,4 @@ Además, las aplicaciones que tienen como destino versiones anteriores de .NET F
 
 ## <a name="see-also"></a>Vea también
 
-- [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Cambios de redestinación](retargeting-changes-in-the-net-framework-4-6-1.md)

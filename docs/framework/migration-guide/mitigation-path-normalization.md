@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251116"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779335"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigación: normalización de la ruta de acceso
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, la normalización de la ruta de acceso en .NET Framework ha cambiado.  
@@ -45,7 +45,7 @@ Para las aplicaciones que tienen como destino .NET Framework 4.6.2 o una versi�
 Las aplicaciones que tienen como destino .NET Framework 4.6.1 y versiones anteriores, pero que se ejecutan en .NET Framework 4.6.2 o posterior, no se ven afectadas por este cambio.  
   
 ## <a name="mitigation"></a>Mitigación  
- Las aplicaciones que tienen como destino .NET Framework 4.6.2 o una versión posterior pueden optar por no recibir este cambio y usar la normalización heredada agregando lo siguiente a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:  
+ Las aplicaciones que tienen como destino .NET Framework 4.6.2 o una versión posterior pueden optar por no recibir este cambio y usar la normalización heredada agregando lo siguiente a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:  
   
 ```xml  
 <runtime>  
@@ -53,7 +53,7 @@ Las aplicaciones que tienen como destino .NET Framework 4.6.1 y versiones ante
 </runtime>  
 ```  
   
-Las aplicaciones que tienen como destino .NET Framework 4.6.1 o versiones anteriores, pero que se ejecutan en .NET Framework 4.6.2 o versiones posteriores, pueden habilitar los cambios en la normalización de rutas de acceso agregando la línea siguiente a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:  
+Las aplicaciones que tienen como destino .NET Framework 4.6.1 o versiones anteriores, pero que se ejecutan en .NET Framework 4.6.2 o versiones posteriores, pueden habilitar los cambios en la normalización de rutas de acceso agregando la línea siguiente a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:  
   
 ```xml  
 <runtime>  
@@ -63,4 +63,4 @@ Las aplicaciones que tienen como destino .NET Framework 4.6.1 o versiones anter
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Cambios de redestinación](retargeting-changes-in-the-net-framework-4-6-2.md)

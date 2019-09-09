@@ -2,12 +2,12 @@
 title: Procedimiento para buscar un único descendiente con el método Descendants (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 726c89b8fdd3df774de2d7ac9a824f2b3769d404
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 29cac5a666f7e9a560c550ad20a5bb68d02ee1ea
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709963"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253799"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Procedimiento para buscar un único descendiente con el método Descendants (C#)
 Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -38,7 +38,7 @@ Console.WriteLine(grandChild3);
   
  Este código genera el siguiente resultado:  
   
-```  
+```output  
 GC3 Value  
 ```  
   
@@ -69,6 +69,6 @@ Console.WriteLine(grandChild3);
   
  Este código genera el siguiente resultado:  
   
-```  
+```output  
 GC3 Value  
 ```  

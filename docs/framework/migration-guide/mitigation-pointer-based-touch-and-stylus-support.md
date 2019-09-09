@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379890"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779241"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: compatibilidad del lápiz y la entrada táctil basados en el puntero
 
@@ -40,7 +40,7 @@ A continuación se muestran problemas conocidos actuales con la pila de lápiz o
 
       Esto puede hacer que la aplicación deje de responder hasta que se detecte la entrada del mouse. En su lugar, los desarrolladores deben iniciar Arrastrar y colocar en los eventos del mouse.
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Inclusión de la compatibilidad del lápiz o la entrada táctil basados en WM_POINTER
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Inclusión de la compatibilidad del lápiz o la entrada táctil basados en WM_POINTER
 
 Los desarrolladores que deseen habilitar esta pila pueden agregar lo siguiente al archivo app.config de la aplicación:
 
@@ -56,4 +56,4 @@ Si se quita esta entrada o se establece su valor en `false`, se desactiva esta p
 
 ## <a name="see-also"></a>Vea también
 
-- [Cambios de redestinación en .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Cambios de redestinación en .NET Framework 4.7](retargeting-changes-in-the-net-framework-4-7.md)

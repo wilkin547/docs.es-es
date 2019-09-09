@@ -2,12 +2,12 @@
 title: Recuperar los párrafos y sus estilos (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591197"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253070"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recuperar los párrafos y sus estilos (C#)
 En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de un documento WordprocessingML. También identifica el estilo de cada uno de los párrafos.  
@@ -111,7 +111,7 @@ foreach (var p in paragraphs)
   
  Este ejemplo genera el siguiente resultado cuando se aplica al documento descrito en [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
   
-```  
+```output  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  

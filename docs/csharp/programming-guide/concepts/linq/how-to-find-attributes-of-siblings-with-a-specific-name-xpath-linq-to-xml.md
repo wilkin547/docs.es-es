@@ -2,12 +2,12 @@
 title: Procedimiento para buscar atributos de elementos del mismo nivel con un nombre específico (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 78795f164490dddd6bdc8dae04961c028228ab0c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0d7842f190f7ce7869668929b69c2336d33c6183
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593519"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253737"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Procedimiento para buscar atributos de elementos del mismo nivel con un nombre específico (XPath-LINQ to XML) (C#)
 En este tema se muestra cómo buscar todos los atributos de los elementos secundarios del nodo de contexto. Sólo se devuelven los atributos con un nombre específico en la recopilación.  
@@ -49,7 +49,7 @@ foreach (XAttribute el in list1)
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 Results are identical  
 id="bk101"  
 id="bk102"  

@@ -2,12 +2,12 @@
 title: Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593159"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253552"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 
@@ -17,7 +17,7 @@ En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por 
   
 1. Copie las líneas siguientes en un archivo llamado *scores.csv* y guárdelo en la carpeta del proyecto. El archivo representa datos de una hoja de cálculo. La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por 
   
 2. Copie las líneas siguientes en un archivo llamado *names.csv* y guárdelo en la carpeta del proyecto. El archivo representa una hoja de cálculo que contiene el nombre, los apellidos y el identificador de los estudiantes.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

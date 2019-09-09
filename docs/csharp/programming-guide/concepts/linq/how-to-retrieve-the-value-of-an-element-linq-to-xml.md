@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar el valor de un elemento (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 821c387bf1e3a2d58686465e5562fde9457127bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592480"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253353"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Procedimiento para recuperar el valor de un elemento (LINQ to XML) (C#)
 Este tema muestra cómo obtener el valor de los elementos. Existen dos formas principales de hacerlo. Una forma consiste en convertir un elemento <xref:System.Xml.Linq.XElement> o un atributo <xref:System.Xml.Linq.XAttribute> al tipo deseado. El operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado y lo asigna a la variable. Como alternativa, se puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
@@ -25,7 +25,7 @@ Console.WriteLine("Value of e:" + (string)e);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -41,7 +41,7 @@ Console.WriteLine("Value of e:" + (int)e);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
@@ -61,7 +61,7 @@ Console.WriteLine("Value of e:" + e.Value);
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -131,7 +131,7 @@ Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString(
   
  Este código genera el siguiente resultado:  
   
-```  
+```output  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  

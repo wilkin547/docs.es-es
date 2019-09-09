@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e41a51dcdf243091d3962278f1a59a85a2722894
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: a74c25a9bf4dd8b9ab86bd280881fe1a7999e1d5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251128"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789983"
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigación: comprobaciones de dos puntos en las rutas de acceso
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, se han realizado una serie de cambios para admitir rutas de acceso que anteriormente no se admitían (en términos de longitud y formato). En concreto, las comprobaciones de la sintaxis de separador de la unidad correspondiente (dos puntos) se realizan de manera más correcta.  
@@ -34,4 +34,4 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, se h
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Cambios de redestinación](retargeting-changes-in-the-net-framework-4-6-2.md)

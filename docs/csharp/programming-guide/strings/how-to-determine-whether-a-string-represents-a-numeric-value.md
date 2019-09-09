@@ -7,17 +7,17 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921783"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252951"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Procedimiento Determinar si una cadena representa un valor numérico (Guía de programación de C#)
 Para determinar si una cadena es una representación válida de un tipo numérico especificado, use el método estático `TryParse` implementado por todos los tipos numéricos primitivos y también por tipos como <xref:System.DateTime> y <xref:System.Net.IPAddress>. En el ejemplo siguiente se muestra cómo determinar si "108" es un valor [int](../../language-reference/builtin-types/integral-numeric-types.md) válido.  
   
-```  
+```csharp  
 int i = 0;   
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  

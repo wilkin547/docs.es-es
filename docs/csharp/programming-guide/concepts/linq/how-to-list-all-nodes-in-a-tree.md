@@ -2,12 +2,12 @@
 title: Procedimiento para mostrar todos los nodos de un árbol (C#)
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486679"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253561"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Procedimiento para mostrar todos los nodos de un árbol (C#)
 A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar útil cuando se aprende exactamente cómo afecta al árbol un método o propiedad. Un enfoque para enumerar todos los nodos en formato de texto consiste en generar una expresión XPath que identifique de forma exacta y específica cualquier nodo del árbol.  
@@ -39,7 +39,7 @@ A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar úti
   
  A continuación se muestra la lista de nodos del árbol XML anterior, expresados como expresiones XPath:  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -317,7 +317,7 @@ class Program
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

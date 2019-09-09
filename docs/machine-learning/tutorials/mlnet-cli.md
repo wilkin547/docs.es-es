@@ -1,19 +1,19 @@
 ---
-title: Generación automática de un clasificador binario mediante la CLI de ML.NET
+title: Análisis de opiniones mediante la CLI de ML.NET
 description: Generar automáticamente un modelo de ML y el código de C# relacionado desde un conjunto de datos de ejemplo
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107278"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254158"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generación automática de un clasificador binario mediante la CLI
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Análisis de opiniones mediante la CLI de ML.NET
 
 Aprenda a usar la CLI de ML.NET para generar automáticamente un modelo de ML.NET y el código de C# subyacente. Usted proporciona el conjunto de datos y la tarea de aprendizaje automático que desea implementar, y la CLI utiliza el motor de AutoML para crear el código fuente de implementación y generación de modelos, así como el modelo binario.
 
