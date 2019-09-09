@@ -1,24 +1,24 @@
 ---
-title: Tipos de valor devueltos asincrónicos (Visual Basic)
+title: Tipos de valor devueltos Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022108"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988836"
 ---
-# <a name="async-return-types-visual-basic"></a>Tipos de valor devueltos asincrónicos (Visual Basic)
+# <a name="async-return-types-visual-basic"></a>Tipos de valor devueltos Async (Visual Basic)
 Los métodos asincrónicos tienen tres posibles tipos devueltos: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> y void. En Visual Basic, el tipo de valor devuelto void se escribe como un procedimiento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obtener más información sobre los métodos asincrónicos, vea [programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Cada tipo de valor devuelto se examina en una de las siguientes secciones, y puede encontrar un ejemplo completo que usa los tres tipos al final del tema.  
   
 > [!NOTE]
->  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior.  
+> Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior.  
   
 ## <a name="BKMK_TaskTReturnType"></a> Tipo de valor devuelto Task(T)  
- El <xref:System.Threading.Tasks.Task%601> devolver el tipo se utiliza para un método asincrónico que contiene un [devolver](../../../../visual-basic/language-reference/statements/return-statement.md) en que el operando tiene el tipo de instrucción `TResult`.  
+ El <xref:System.Threading.Tasks.Task%601> tipo de valor devuelto se usa para un método asincrónico que contiene una instrucción [Return](../../../../visual-basic/language-reference/statements/return-statement.md) en la `TResult`que el operando tiene el tipo.  
   
  En el ejemplo siguiente, el método asincrónico `TaskOfT_MethodAsync` contiene una instrucción return que devuelve un entero. Por tanto, la declaración del método debe tener un tipo de valor devuelto de `Task(Of Integer)`.  
   
@@ -45,7 +45,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Cuando se llama a `TaskOfT_MethodAsync` desde una expresión await, esta recupera el valor entero (el valor de `leisureHours`) que está almacenado en la tarea que `TaskOfT_MethodAsync` devuelve. Para obtener más información sobre expresiones await, vea [operador Await](../../../../visual-basic/language-reference/operators/await-operator.md).  
+ Cuando se llama a `TaskOfT_MethodAsync` desde una expresión await, esta recupera el valor entero (el valor de `leisureHours`) que está almacenado en la tarea que `TaskOfT_MethodAsync` devuelve. Para obtener más información sobre las expresiones Await, vea [Await (operador](../../../../visual-basic/language-reference/operators/await-operator.md)).  
   
  El código siguiente llama y espera al método `TaskOfT_MethodAsync`. El resultado se asigna a la variable `result1`.  
   
@@ -57,7 +57,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
  Comprenderá mejor cómo sucede esto separando la llamada a `TaskOfT_MethodAsync` de la aplicación de `Await`, como se muestra en el código siguiente. Una llamada al método `TaskOfT_MethodAsync` que no se espera inmediatamente devuelve `Task(Of Integer)`, como se podría esperar de la declaración del método. La tarea se asigna a la variable `integerTask` en el ejemplo. Dado que `integerTask` es <xref:System.Threading.Tasks.Task%601>, contiene una propiedad <xref:System.Threading.Tasks.Task%601.Result> de tipo `TResult`. En este caso, TResult representa un tipo entero. Cuando `Await` se aplica a `integerTask`, la expresión await se evalúa en el contenido de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> de `integerTask`. El valor se asigna a la variable `result2`.  
   
 > [!WARNING]
->  La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> es una propiedad de bloqueo. Si se intenta acceder a ella antes de que termine su tarea, se bloquea el subproceso que está activo actualmente hasta que finaliza la tarea y el valor está disponible. En la mayoría de los casos, se debe tener acceso al valor usando `Await` en lugar de tener acceso directamente a la propiedad.  
+> La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> es una propiedad de bloqueo. Si se intenta acceder a ella antes de que termine su tarea, se bloquea el subproceso que está activo actualmente hasta que finaliza la tarea y el valor está disponible. En la mayoría de los casos, se debe tener acceso al valor usando `Await` en lugar de tener acceso directamente a la propiedad.  
   
 ```vb  
 ' Call and await in separate statements.  
@@ -80,7 +80,7 @@ textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, inte
 ```  
   
 ## <a name="BKMK_TaskReturnType"></a> Tipo de valor devuelto Task  
- Los métodos asincrónicos que no contienen una instrucción return o que contienen una instrucción return que no devuelve un operando tienen normalmente un tipo de valor devuelto de <xref:System.Threading.Tasks.Task>. Estos métodos deben ser [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedimientos si se escribieron para ejecutarse de forma sincrónica. Si se usa un tipo de valor devuelto `Task` para un método asincrónico, un método de llamada puede usar un operador `Await` para suspender la finalización del llamador hasta que finalice el método asincrónico llamado.  
+ Los métodos asincrónicos que no contienen una instrucción return o que contienen una instrucción return que no devuelve un operando tienen normalmente un tipo de valor devuelto de <xref:System.Threading.Tasks.Task>. Estos métodos serían procedimientos [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) si se escribieron para ejecutarse de forma sincrónica. Si se usa un tipo de valor devuelto `Task` para un método asincrónico, un método de llamada puede usar un operador `Await` para suspender la finalización del llamador hasta que finalice el método asincrónico llamado.  
   
  En el ejemplo siguiente, el método asincrónico `Task_MethodAsync` no contiene una instrucción return. Por tanto, se especifica un tipo de valor devuelto de `Task` para el método, lo que permite aplicar await a `Task_MethodAsync`. La definición del tipo `Task` no incluye una propiedad `Result` para almacenar un valor devuelto.  
   
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- Se llama y se espera a `Task_MethodAsync` mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para un `Sub` sincrónica o método que devuelve void. La aplicación de un `Await` operador en este caso no genera un valor.  
+ Se llama y se espera a `Task_MethodAsync` mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para un `Sub` sincrónica o método que devuelve void. En este caso, `Await` la aplicación de un operador no genera un valor.  
   
  El código siguiente llama y espera al método `Task_MethodAsync`.  
   
@@ -107,7 +107,7 @@ End Function
 Await Task_MethodAsync()  
 ```  
   
- Al igual que en el anterior <xref:System.Threading.Tasks.Task%601> ejemplo, puede separar la llamada a `Task_MethodAsync` de la aplicación de un `Await` operador, como se muestra en el código siguiente. Pero recuerde que una `Task` no tiene una propiedad `Result` y que no se genera ningún valor cuando se aplica un operador await a una `Task`.  
+ Como en el ejemplo <xref:System.Threading.Tasks.Task%601> anterior, puede separar la llamada a `Task_MethodAsync` de la aplicación de un `Await` operador, como se muestra en el código siguiente. Pero recuerde que una `Task` no tiene una propiedad `Result` y que no se genera ningún valor cuando se aplica un operador await a una `Task`.  
   
  El código siguiente separa la llamada de `Task_MethodAsync` de la espera de la tarea que `Task_MethodAsync` devuelve.  
   
@@ -122,7 +122,7 @@ Await simpleTask
 ```  
   
 ## <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void  
- El uso principal de `Sub` procedimientos está en controladores de eventos, donde no hay ningún tipo de valor devuelto (conocido como un tipo de valor devuelto void en otros lenguajes). Un valor devuelto void también se puede usar para invalidar métodos que devuelven void o para los métodos que realizan actividades que se pueden clasificar como "desencadenar y omitir" (dispare y olvídese). Pero se debe devolver `Task` siempre que sea posible, ya que no se puede esperar a un método asincrónico que devuelve void. Cualquier llamador de este método debe poder continuar hasta completarse sin esperar a que finalice el método asincrónico llamado y el llamador debe ser independiente de los valores o las excepciones que genera el método asincrónico.  
+ El uso principal de `Sub` los procedimientos está en los controladores de eventos, donde no hay ningún tipo de valor devuelto (denominado tipo de valor devuelto void en otros lenguajes). Un valor devuelto void también se puede usar para invalidar métodos que devuelven void o para los métodos que realizan actividades que se pueden clasificar como "desencadenar y omitir" (dispare y olvídese). Pero se debe devolver `Task` siempre que sea posible, ya que no se puede esperar a un método asincrónico que devuelve void. Cualquier llamador de este método debe poder continuar hasta completarse sin esperar a que finalice el método asincrónico llamado y el llamador debe ser independiente de los valores o las excepciones que genera el método asincrónico.  
   
  El llamador de un método asincrónico que devuelve void no puede capturar las excepciones emitidas desde el método y dichas excepciones no controladas pueden provocar un error de la aplicación. Si se produce una excepción en un método asincrónico que devuelve <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>, la excepción se almacena en la tarea devuelta y se vuelve a emitir cuando se espera la tarea. Por tanto, asegúrese de que cualquier método asincrónico que puede producir una excepción tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> y que se esperan llamadas al método.  
   
@@ -156,7 +156,7 @@ End Sub
   
      Aparece el cuadro de diálogo **Nuevo proyecto** .  
   
-3. En el **instalado**, **plantillas** categoría, elija **Visual Basic**y, a continuación, elija **Windows**. Seleccione **Aplicación WPF** en la lista de tipos de proyecto.  
+3. En la categoría **instalado**, **plantillas** , elija **Visual Basic**y, a continuación, elija **Windows**. Seleccione **Aplicación WPF** en la lista de tipos de proyecto.  
   
 4. Escriba `AsyncReturnTypes` como el nombre del proyecto y, después, haga clic en el botón **Aceptar**.  
   
@@ -183,7 +183,7 @@ End Sub
   
      En la ventana **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un cuadro de texto y un botón.  
   
-7. En **el Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.vb y, a continuación, elija **ver código**.  
+7. En **Explorador de soluciones**, abra el menú contextual de MainWindow. Xaml. VB y, a continuación, elija **Ver código**.  
   
 8. Reemplace el código en el archivo MainWindow.xaml.vb por el código siguiente.  
   
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Tutorial: Acceso a la web mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [Visual Basic])
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await (operador)](../../../../visual-basic/language-reference/operators/await-operator.md)

@@ -80,16 +80,16 @@ EF Core 2.0 incluye la característica [Entidades poseídas](https://devblogs.mi
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **Martin Fowler. Value Object pattern** \ (Patrón de objeto de valor)
+- **Martin Fowler. Patrón de objeto de valor** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Value Object** \ (Objeto de valor)
+- **Objeto de valor** \
   <https://deviq.com/value-object/>
 
-- **Value Objects in Test-Driven Development** \ (Objetos de valor en el desarrollo controlado por pruebas)
+- **Objetos de valor en el desarrollo controlado por pruebas** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software) (Libro; incluye una descripción de los objetos de valor) \
+- **Eric Evans. Diseño orientado al dominio: abordar la complejidad en el corazón del software.** (Libro; incluye una descripción de los objetos de valor) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>El patrón de agregado
@@ -136,10 +136,10 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 - **Vaughn Vernon. Diseño eficaz de agregados - Parte I: modelado de un único agregado** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together** (Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta) (de <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery** (Diseño eficaz de agregados - Parte III: obtención de datos mediante la detección) (de <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Diseño eficaz de agregados - Parte III: obtención de datos mediante la detección** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. Patrones de diseño tácticos de diseño guiado por el dominio** \
