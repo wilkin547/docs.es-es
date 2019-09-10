@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad580ecace07d3d6fdf206ff660dc4bac4bceb09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614289"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854030"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA de releaseHandleFailed
 El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se activa para notificar a los desarrolladores cuando el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> devuelve `false`.  
@@ -25,7 +25,7 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
 ## <a name="symptoms"></a>Síntomas  
  Pérdidas de recursos o de memoria.  Si se produce un error en el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de la clase que deriva de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, es posible que el recurso encapsulado por la clase no se haya liberado o limpiado.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Los usuarios deben proporcionar la implementación del método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> si crean clases que deriven de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>. Por lo tanto, las circunstancias son específicas de cada recurso. Sin embargo, los requisitos son los siguientes:  
   
 - Los tipos <xref:System.Runtime.InteropServices.SafeHandle> y <xref:System.Runtime.InteropServices.CriticalHandle> representan contenedores que contienen recursos de procesos fundamentales. Si se produce una pérdida de memoria, con el tiempo, esto puede inutilizar el proceso.  
@@ -55,7 +55,7 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
 ## <a name="output"></a>Salida  
  Un mensaje que indica que un <xref:System.Runtime.InteropServices.SafeHandle> o un <xref:System.Runtime.InteropServices.CriticalHandle> no pudieron liberar correctamente el identificador. Por ejemplo:  
   
-```  
+```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
 failed to properly release the handle with value 0x0000BEEF. This   
 usually indicates that the handle was released incorrectly via   

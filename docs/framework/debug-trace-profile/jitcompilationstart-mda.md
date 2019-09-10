@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80473e01581a372c193c4b816a37166b73d57824
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754276"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854149"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA de jitCompilationStart
 El Asistente para la depuración administrada (MDA) `jitCompilationStart` se activa para informar del momento en el que el compilador Just-In-Time (JIT) empieza a compilar una función.  
@@ -22,7 +22,7 @@ El Asistente para la depuración administrada (MDA) `jitCompilationStart` se act
 ## <a name="symptoms"></a>Síntomas  
  El conjunto de trabajo aumenta de tamaño para un programa que ya está en formato de imagen nativo porque mscorjit.dll se carga en el proceso.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  No todos los ensamblados de los que depende el programa se han generado en formato nativo o los que sí se han generado no están registrados correctamente.  
   
 ## <a name="resolution"></a>Resolución  
@@ -34,12 +34,12 @@ El Asistente para la depuración administrada (MDA) `jitCompilationStart` se act
 ## <a name="output"></a>Salida  
  En el ejemplo de código siguiente se muestran los resultados del ejemplo. En este caso, el resultado muestra que en el ensamblado Test el método "m" de la clase "ns2.CO" se compiló con JIT.  
   
-```  
+```output
 method name="Test!ns2.C0::m"  
 ```  
   
 ## <a name="configuration"></a>Configuración  
- En el archivo de configuración siguiente se muestra una variedad de filtros que se pueden emplear para filtrar qué métodos se notifican cuando se compilan con JIT por primera vez. Puede especificar que se le facturen todos los métodos estableciendo el valor del atributo name a \*.  
+ En el archivo de configuración siguiente se muestra una variedad de filtros que se pueden emplear para filtrar qué métodos se notifican cuando se compilan con JIT por primera vez. Puede especificar que se notifiquen todos los métodos estableciendo el valor del atributo name en \*.  
   
 ```xml  
 <mdaConfig>  

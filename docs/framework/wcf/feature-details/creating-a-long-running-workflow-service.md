@@ -2,12 +2,12 @@
 title: Crear un servicio de flujo de trabajo de larga ejecución
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040412"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856208"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Crear un servicio de flujo de trabajo de larga ejecución
 
@@ -124,7 +124,7 @@ Debe tener instalado el siguiente software para usar este tutorial:
 
         1. Establezca la propiedad **Condition** en`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
-        2. Arrastre y coloque una actividad Assign en la sección **then** y otra en la sección **else** y establezca las propiedades de las actividades de **asignación** tal como se muestra en la siguiente ilustración.
+        2. Arrastre y coloque una actividad **assign** en la sección **then** y otra en la sección **else** y establezca las propiedades de las actividades de **asignación** tal como se muestra en la siguiente ilustración.
 
             ![Asignar el resultado de la llamada de servicio](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Asigne el resultado de la llamada de servicio.")
 
@@ -191,17 +191,17 @@ Debe tener instalado el siguiente software para usar este tutorial:
 
 5. Compile la solución y ejecute la aplicación `OrderClient`. El cliente mostrará un texto similar al siguiente:
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
 6. Para comprobar que el servicio de flujo de trabajo se ha guardado, inicie el SQL Server Management Studio; para ello, vaya al menú **Inicio** , seleccione **todos los programas**, **Microsoft SQL Server 2008** **SQL Server Management Studio**.
 
-    1. En el panel izquierdo, expanda **, bases de datos**, **SQLPersistenceStore**, **vistas** y haga clic con el botón secundario en **System. Activities. DurableInstancing.** instances y seleccione **seleccionar las primeras 1000 filas**. En el panel de **resultados** , compruebe que ve al menos una instancia en la lista. Puede que haya otras instancia de ejecuciones previas si se produjo una excepción durante la ejecución. Puede eliminar las filas existentes haciendo clic con el botón secundario en **System. Activities. DurableInstancing.** instances y seleccionando **editar las primeras 200 filas**, presionando el botón **Ejecutar** , seleccionando todas las filas en el panel de resultados y seleccionando **eliminar**.  Para comprobar que la instancia que se muestra en la base de datos es la instancia de la aplicación creada, compruebe que la vista de instancias esté vacía antes de ejecutar el cliente. Una vez que se ejecute el cliente, vuelva a ejecutar la consulta (Seleccionar las primeras 1000 filas) y compruebe que se haya agregado una nueva instancia.
+    1. En el panel izquierdo, expanda **, bases de datos**, **SQLPersistenceStore**, **vistas** y haga clic con el botón secundario en **System. Activities. DurableInstancing. instances** y seleccione **seleccionar las primeras 1000 filas**. En el panel de **resultados** , compruebe que ve al menos una instancia en la lista. Puede que haya otras instancia de ejecuciones previas si se produjo una excepción durante la ejecución. Puede eliminar las filas existentes haciendo clic con el botón secundario en **System. Activities. DurableInstancing. instances** y seleccionando **editar las primeras 200 filas**, presionando el botón **Ejecutar** , seleccionando todas las filas en el panel de resultados y seleccionando **eliminar**.  Para comprobar que la instancia que se muestra en la base de datos es la instancia de la aplicación creada, compruebe que la vista de instancias esté vacía antes de ejecutar el cliente. Una vez que se ejecute el cliente, vuelva a ejecutar la consulta (Seleccionar las primeras 1000 filas) y compruebe que se haya agregado una nueva instancia.
 
 7. Presione Entrar para enviar y agregar un mensaje de elemento al servicio de flujo de trabajo. El cliente mostrará un texto similar al siguiente:
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

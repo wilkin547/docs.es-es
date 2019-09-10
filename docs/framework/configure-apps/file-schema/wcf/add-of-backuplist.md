@@ -2,21 +2,22 @@
 title: <add> de <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: c590dbd671807b32e08ad5d871d376a0dc51e611
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80726cc22cb56013c85c7704c28579b1337666c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926876"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850544"
 ---
 # <a name="add-of-backuplist"></a>\<Agregar > de \<backupList >
 Representa un elemento de configuración que define un elemento de extremo de reserva.  
   
- \<system.serviceModel>  
-\<> de enrutamiento  
-\<> backupLists  
-\<> backupList  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enrutamiento**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> backupLists**](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> backupList**](backuplist.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
   
 ## <a name="syntax"></a>Sintaxis  
   

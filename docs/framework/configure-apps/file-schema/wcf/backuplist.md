@@ -2,20 +2,21 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: d5feab6cb374f98e683cf15f797de4f478e23131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 478211755b9131c03b72777ee95ff7223b9092c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919924"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850274"
 ---
 # <a name="backuplist"></a>\<> backupList
 Representa una sección de configuración para definir una lista de copia de seguridad que enumera un conjunto de extremos que le gustaría que usara el servicio de enrutamiento en caso de que no se pueda alcanzar el punto de conexión principal. Si el primer extremo en la lista está desconectado, el servicio de enrutamiento realizará automáticamente una conmutación por error al siguiente de la lista.  De este modo, dispone de una forma rápida de agregar confiabilidad a la aplicación sin tener que enseñar a la aplicación cliente cómo controlar modelos complejos o dónde implementar todos sus servicios.  
   
- \<system.serviceModel>  
-\<> de enrutamiento  
-\<> backupLists  
-\<> backupList  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enrutamiento**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> backupLists**](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> backupList**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +37,7 @@ Representa una sección de configuración para definir una lista de copia de seg
   
 |Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|name|Cadena que especifica el nombre usado para identificar esta lista de puntos de conexión.|  
+|Nombre|Cadena que especifica el nombre usado para identificar esta lista de puntos de conexión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   

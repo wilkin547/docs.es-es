@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926099"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850027"
 ---
 # <a name="comcontract"></a>\<comContract>
 Especifica un contrato de servicio de integración de COM+.  
   
- \<system.ServiceModel>  
-\<comContracts>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de compactos**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> compactos**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +52,7 @@ Especifica un contrato de servicio de integración de COM+.
 |Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |contrato|Una cadena que contiene el tipo de contrato.|  
-|name|Una cadena que contiene el nombre del contrato.|  
+|Nombre|Una cadena que contiene el nombre del contrato.|  
 |namespace|Una cadena que contiene el espacio de nombres del contrato.|  
 |requiresSession|Un valor booleano que especifica si el contrato sólo se puede utilizar en enlaces con canal. Cuando se inicializa el servicio, el tiempo de ejecución de integración garantiza que este valor es coherente con el tipo de enlace que se va a usar. Se genera una excepción si uno o más de los enlaces para el contrato están en conflicto. Si esta propiedad es `false`, y un canal unidireccional está en uso y hay parámetros [fuera], también se genera una excepción.|  
   

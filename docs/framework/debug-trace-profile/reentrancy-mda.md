@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874190"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854041"
 ---
 # <a name="reentrancy-mda"></a>MDA de reentrada
 El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.  
@@ -30,7 +30,7 @@ El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuand
   
  Los subprocesos que cambian entre código nativo y administrado en cualquier dirección deben realizar una transición ordenada. Pero ciertos puntos de extensibilidad de bajo nivel en el sistema operativo, por ejemplo el controlador de excepciones orientado, permiten pasar de código administrado a código nativo sin realizar una transición ordenada.  Estos modificadores están bajo el control del sistema operativo, en lugar de bajo el control de Common Language Runtime (CLR).  Cualquier código nativo que se ejecute dentro de estos puntos de extensibilidad debe evitar realizar llamadas a código administrado.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Se ha activado un punto de extensibilidad de bajo nivel del sistema operativo, como el controlador de excepciones orientado, mientras se ejecuta código administrado.  El código de aplicación que se invoca a través de ese punto de extensibilidad está intentando devolver la llamada al código administrado.  
   
  Este problema siempre está causado por código de aplicación.  
@@ -48,7 +48,7 @@ El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuand
 ## <a name="output"></a>Salida  
  El MDA informa de que se ha intentado una reentrada ilegal.  Examine la pila del subproceso para determinar por qué sucede esto y cómo corregir el problema. A continuación se incluye la salida del ejemplo.  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   

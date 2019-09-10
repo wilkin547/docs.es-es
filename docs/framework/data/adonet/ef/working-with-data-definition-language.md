@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911633"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854224"
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
-A partir de la versión 4 de .NET Framework [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , admite el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
+A partir de la versión 4 de .NET Framework, el Entity Framework admite el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
   
  Los siguientes métodos de <xref:System.Data.Objects.ObjectContext> utilizan la cadena de conexión y el contenido SSDL para crear o eliminar la base de datos, comprobar si la base de datos existe y ver el script DDL generado:  
   

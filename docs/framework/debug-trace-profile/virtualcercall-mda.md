@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2c8712837dab17f70be32617711c1bad9349508
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3864ae416df0a2516a4dd9e6cf92669f66f27bb1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766316"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853977"
 ---
 # <a name="virtualcercall-mda"></a>MDA de virtualCERCall
 El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa como una advertencia que indica que un sitio de llamada dentro de un gráfico de llamadas de región de ejecución restringida (CER) hace referencia a un destino virtual, es decir, una llamada virtual a un método virtual no final o una llamada mediante una interfaz. El Common Language Runtime (CLR) no puede predecir el método de destino de estas llamadas solo con el lenguaje intermedio y el análisis de metadatos. Como resultado, el árbol de llamadas no se puede preparar como parte del gráfico de CER y las anulaciones de subprocesos de ese subárbol no se pueden bloquear automáticamente. Este MDA advierte de los casos en los que es posible que se tenga que ampliar una CER mediante llamadas explícitas al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una vez que la información adicional necesaria para calcular el destino de la llamada se conoce en tiempo de ejecución.  
@@ -24,7 +24,7 @@ El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa c
 ## <a name="symptoms"></a>Síntomas  
  Las CER que no se ejecutan cuando se anula un subproceso o se descarga un dominio de aplicación.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Una CER contiene una llamada a un método virtual que no se puede preparar automáticamente.  
   
 ## <a name="resolution"></a>Resolución  
@@ -35,7 +35,7 @@ El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa c
   
 ## <a name="output"></a>Salida  
   
-```  
+```output
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
 at IL offset 0x0024 to 'VirtualMethod', which is virtual and cannot be prepared automatically  
 at compile time. The caller must ensure this method is prepared explicitly at  

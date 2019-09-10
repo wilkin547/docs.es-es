@@ -2,18 +2,20 @@
 title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 2c9774217b835acdb9ebf7374b964d838497fc9f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 670c1573fe4378a18c19d0a58fe58241745725bd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915336"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854786"
 ---
 # <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint>
 Este elemento de configuración define un punto de conexión estándar para controlar la ejecución de instancias de flujo de trabajo (crear, ejecutar, suspender, terminar, etc).  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> workflowControlEndpoint**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +36,7 @@ Este elemento de configuración define un punto de conexión estándar para cont
   
 |Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|name|Cadena que especifica el nombre de la configuración del punto de conexión estándar. El nombre se utiliza en el atributo `endpointConfiguration` del punto de conexión del servicio para vincular un punto de conexión estándar a su configuración.|  
+|Nombre|Cadena que especifica el nombre de la configuración del punto de conexión estándar. El nombre se utiliza en el atributo `endpointConfiguration` del punto de conexión del servicio para vincular un punto de conexión estándar a su configuración.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

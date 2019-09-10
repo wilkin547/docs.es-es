@@ -9,39 +9,44 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c7744e9e61b8ba796802e54435c0bf9fdbee50e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000979"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855621"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Procedimiento Detectar cuándo cambia el texto en un control TextBox
-En este ejemplo se muestra una forma de usar el <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> eventos para ejecutar un método cada vez que el texto en un <xref:System.Windows.Controls.TextBox> control ha cambiado.  
-  
- En la clase de código subyacente para el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que contiene el <xref:System.Windows.Controls.TextBox> control que desea supervisar para realizar cambios, insertar un método para llamar cada vez que el <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> desencadena el evento.  Este método debe tener una firma que coincida con lo que espera el <xref:System.Windows.Controls.TextChangedEventHandler> delegar.  
-  
- Se llama al controlador de eventos cada vez que el contenido de la <xref:System.Windows.Controls.TextBox> control cambian, por un usuario o mediante programación.  
-  
- **Nota:** Este evento desencadena cuando el <xref:System.Windows.Controls.TextBox> control se crea y se rellena inicialmente con el texto.  
-  
-## <a name="example"></a>Ejemplo  
- En el [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que define su <xref:System.Windows.Controls.TextBox> controlar, especifique el <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> atributo con un valor que coincida con el nombre del método de controlador de eventos.  
-  
- [!code-xaml[TextBox_MiscCode#_TextChangedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
-  
-## <a name="example"></a>Ejemplo  
- En la clase de código subyacente para el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que contiene el <xref:System.Windows.Controls.TextBox> control que desea supervisar para realizar cambios, insertar un método para llamar cada vez que el <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> desencadena el evento.  Este método debe tener una firma que coincida con lo que espera el <xref:System.Windows.Controls.TextChangedEventHandler> delegar.  
-  
- [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
- [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
-  
- Se llama al controlador de eventos cada vez que el contenido de la <xref:System.Windows.Controls.TextBox> control cambian, por un usuario o mediante programación.  
-  
- **Nota:** Este evento desencadena cuando el <xref:System.Windows.Controls.TextBox> control se crea y se rellena inicialmente con el texto.  
-  
- Comentarios  
-  
+
+En este ejemplo se muestra una manera de <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> utilizar el evento para ejecutar un método cada vez que <xref:System.Windows.Controls.TextBox> el texto de un control ha cambiado.
+
+En la clase [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de código subyacente del que contiene el <xref:System.Windows.Controls.TextBox> control en el que desea supervisar los cambios, inserte un método al que llamar cada vez <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> que se desencadene el evento.  Este método debe tener una firma que coincida con lo que el <xref:System.Windows.Controls.TextChangedEventHandler> delegado espera.
+
+Se llama al controlador de eventos cada vez que se <xref:System.Windows.Controls.TextBox> cambia el contenido del control, ya sea por un usuario o mediante programación.
+
+> [!NOTE]
+> Este evento se desencadena cuando <xref:System.Windows.Controls.TextBox> se crea el control y se rellena inicialmente con texto.
+
+## <a name="example"></a>Ejemplo
+
+En que define el control, especifique el <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> atributo con un valor que coincida con el nombre del método del controlador de eventos. <xref:System.Windows.Controls.TextBox> [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]
+
+[!code-xaml[TextBox_MiscCode#_TextChangedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]
+
+## <a name="example"></a>Ejemplo
+
+En la clase [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de código subyacente del que contiene el <xref:System.Windows.Controls.TextBox> control en el que desea supervisar los cambios, inserte un método al que llamar cada vez <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> que se desencadene el evento.  Este método debe tener una firma que coincida con lo que el <xref:System.Windows.Controls.TextChangedEventHandler> delegado espera.
+
+[!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
+[!code-vb[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]
+
+Se llama al controlador de eventos cada vez que se <xref:System.Windows.Controls.TextBox> cambia el contenido del control, ya sea por un usuario o mediante programación.
+
+> [!NOTE]
+> Este evento se desencadena cuando <xref:System.Windows.Controls.TextBox> se crea el control y se rellena inicialmente con texto.
+
+Comentarios
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Controls.TextChangedEventArgs>

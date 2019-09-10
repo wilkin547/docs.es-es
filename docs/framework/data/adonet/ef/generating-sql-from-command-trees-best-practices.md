@@ -2,12 +2,12 @@
 title: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251575"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855002"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generar SQL a partir de árboles de comandos: procedimientos recomendados
 
@@ -137,11 +137,11 @@ También, al reducir las combinaciones, las tablas (o subconsultas) que particip
 
 ## <a name="avoid-select-"></a>Evitar SELECT *
 
-No utilice `SELECT *` para seleccionar en las tablas bases. El modelo de almacenamiento de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] una aplicación solo puede incluir un subconjunto de las columnas que se encuentran en la tabla de base de datos. En este caso, `SELECT *` puede generar un resultado incorrecto. En su lugar, debe especificar todas las columnas que participan utilizando los nombres de columna del tipo de resultado de las expresiones que participan.
+No utilice `SELECT *` para seleccionar en las tablas bases. El modelo de almacenamiento de una aplicación Entity Framework puede incluir solo un subconjunto de las columnas que se encuentran en la tabla de base de datos. En este caso, `SELECT *` puede generar un resultado incorrecto. En su lugar, debe especificar todas las columnas que participan utilizando los nombres de columna del tipo de resultado de las expresiones que participan.
 
 ## <a name="reuse-of-expressions"></a>Reutilizar expresiones
 
-Las expresiones se pueden reutilizar en el árbol de comandos de consulta pasado por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. No suponga que cada expresión aparece una sola vez en el árbol de comandos de consulta.
+Las expresiones se pueden reutilizar en el árbol de comandos de consulta pasado por el Entity Framework. No suponga que cada expresión aparece una sola vez en el árbol de comandos de consulta.
 
 ## <a name="mapping-primitive-types"></a>Asignar tipos primitivos
 

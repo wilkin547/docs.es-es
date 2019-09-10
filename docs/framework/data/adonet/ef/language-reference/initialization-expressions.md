@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250682"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854434"
 ---
 # <a name="initialization-expressions"></a>Expresiones de inicialización
 Una expresión de inicialización inicializa un objeto nuevo. Se admiten la mayoría de las expresiones de inicialización, incluso las de Visual Basic 9.0 y C# 3.0. Los tipos siguientes pueden ser inicializados y devueltos por una consulta de LINQ to Entities:  
   
 - Una colección de cero o más objetos entidad con tipo o una proyección de tipos complejos definidos en el modelo conceptual.  
   
-- Tipos CLR admitidos por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipos CLR admitidos por el Entity Framework.
   
 - Colecciones insertadas.  
   

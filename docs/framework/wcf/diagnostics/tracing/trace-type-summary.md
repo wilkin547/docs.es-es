@@ -2,21 +2,21 @@
 title: Resumen del tipo de seguimiento
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647188"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856012"
 ---
 # <a name="trace-type-summary"></a>Resumen del tipo de seguimiento
-[Niveles de origen](https://go.microsoft.com/fwlink/?LinkID=94943) definen los distintos niveles de seguimiento: Crítico, Error, advertencia, información y detallado, así, proporciona una descripción de la `ActivityTracing` marca, que alterna el resultado de seguimiento de eventos de transferencia de actividad y el límite.  
+[Niveles de origen](https://go.microsoft.com/fwlink/?LinkID=94943) define varios niveles de seguimiento: Crítico, error, ADVERTENCIA, información y detallado, además de proporcionar una descripción de la `ActivityTracing` marca, que alterna la salida del límite de seguimiento y los eventos de transferencia de actividad.  
   
- También puede revisar [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) para los tipos de seguimiento que se puede emitir desde <xref:System.Diagnostics>.  
+ También puede revisar [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) para ver los tipos de seguimientos que se pueden emitir <xref:System.Diagnostics>desde.  
   
  La tabla siguiente enumera los más importantes.  
   
-|Tipo de traza|Descripción|  
+|Tipo de traza|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |Crítico|Error irrecuperable o bloqueo de la aplicación.|  
 |Error|Error recuperable.|  
@@ -47,12 +47,8 @@ ms.locfileid: "64647188"
   
  La siguiente expresión se utiliza habitualmente para definir una actividad ideal en el ámbito global,  
   
-```  
-R+   
-```  
+`R+`  
   
  en la que R es la expresión regular para una actividad en el ámbito local. Esto se traduce en,  
   
-```  
-[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  
-```
+`[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+`

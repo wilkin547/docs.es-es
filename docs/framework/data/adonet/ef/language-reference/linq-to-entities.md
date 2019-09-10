@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: bdc93b609dd88449308508bf88635cc706d91e64
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bc568cb9dff170062651c908471a36cd17eac980
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250407"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854364"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities proporciona la capacidad de realizar consultas integradas en lenguajes (LINQ) que permite a los desarrolladores de software escribir consultas contra el modelo conceptual de Entity Framework mediante Visual Basic o Visual C#. Las consultas con Entity Framework se representan mediante consultas de árboles de comandos, que se ejecutan en el contexto del objeto. LINQ to Entities convierte las consultas de Language-Integrated Queries (LINQ) en consultas de árboles de comandos, ejecuta las consultas en Entity Framework y devuelve objetos que se pueden usar tanto en Entity Framework como en LINQ. A continuación se muestra el proceso para crear y ejecutar una consulta de LINQ to Entities.  
@@ -59,7 +59,7 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
 - Una colección con cero o más objetos entidad con tipo o una proyección de tipos complejos que se define en el modelo conceptual.  
   
-- Tipos CLR admitidos por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipos CLR admitidos por el Entity Framework.  
   
 - Colecciones insertadas.  
   

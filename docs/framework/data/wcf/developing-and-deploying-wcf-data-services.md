@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780318"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854073"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desarrolle e implemente WCF Data Services
 
@@ -111,7 +111,7 @@ El servicio de datos de WCF proporciona flexibilidad al elegir el proceso que ho
      Para obtener más información sobre las opciones de implementación de una aplicación de ASP.NET, vea [información general sobre la implementación web para Visual Studio y ASP.net](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
-    > Antes de intentar implementar el servicio de datos en IIS, asegúrese de haber probado la implementación en un servidor web que esté ejecutando IIS. Para obtener más información, consulte [Cómo Desarrolle un servicio de datos de WCF](how-to-develop-a-wcf-data-service-running-on-iis.md)que se ejecute en IIS.
+    > Antes de intentar implementar el servicio de datos en IIS, asegúrese de haber probado la implementación en un servidor web que esté ejecutando IIS. Para obtener más información, vea [Cómo: Desarrolle un servicio de datos de WCF](how-to-develop-a-wcf-data-service-running-on-iis.md)que se ejecute en IIS.
 
 - **Windows Azure**
 
@@ -121,7 +121,7 @@ El servicio de datos de WCF proporciona flexibilidad al elegir el proceso que ho
 
 Debe plantearse lo siguiente cuando implemente un servicio de datos:
 
-- Al implementar un servicio de datos que usa el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para tener acceso a una base de datos de SQL Server, también podría tener que propagar estructuras de datos, datos o ambos con su implementación del servicio de datos. Visual Studio puede crear automáticamente scripts (archivos. SQL) para hacer esto en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación web de una aplicación ASP.NET. Para obtener más información, consulte [Cómo Implementar una base de datos con un proyecto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))de aplicación Web. Para un sitio web de ASP.NET, puede hacerlo mediante el **Asistente para la publicación de bases de datos** en Visual Studio. Para obtener más información, vea [publicar un SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Al implementar un servicio de datos que usa el proveedor de Entity Framework para tener acceso a una base de datos SQL Server, también podría tener que propagar estructuras de datos, datos o ambos con la implementación del servicio de datos. Visual Studio puede crear automáticamente scripts (archivos. SQL) para hacer esto en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación web de una aplicación ASP.NET. Para obtener más información, consulte [Cómo Implementar una base de datos con un proyecto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))de aplicación Web. Para un sitio web de ASP.NET, puede hacerlo mediante el **Asistente para la publicación de bases de datos** en Visual Studio. Para obtener más información, vea [publicar un SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Dado que WCF Data Services incluye una implementación de WCF básica, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. Para obtener más información acerca del uso de Windows Server AppFabric para supervisar un servicio de datos, consulte el [WCF Data Services de seguimiento posterior con Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

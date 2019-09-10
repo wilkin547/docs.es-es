@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779784"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854112"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
@@ -53,7 +53,7 @@ Para indicar que una entidad es una entrada de vínculo multimedia, agregue el a
 
 También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.
 
-Para obtener un ejemplo de un servicio de datos que [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] usa el proveedor y expone un recurso multimedia, vea la [serie post Data Services streaming Provider: Implementación de un proveedor de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkID=198989)(parte 1).
+Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea [la serie post Data Services streaming Provider: Implementación de un proveedor de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkID=198989)(parte 1).
 
 **Proveedor de reflexión**
 

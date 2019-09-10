@@ -2,20 +2,20 @@
 title: Generador de EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251625"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854722"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generador de EDM (EdmGen.exe)
 
-EdmGen.exe es una herramienta de línea de comandos utilizada para trabajar con archivos de modelo y asignación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Puede utilizar la herramienta EdmGen.exe para lo siguiente:
+EdmGen. exe es una herramienta de línea de comandos que se usa para trabajar con Entity Framework los archivos de modelo y asignación. Puede utilizar la herramienta EdmGen.exe para lo siguiente:
 
-- Conectarse a un origen de datos utilizando un proveedor de datos .NET Framework específico del origen de datos y generar los archivos de asignación (.msl), modelo conceptual (.csdl) y modelo de almacenamiento (.ssdl) utilizados por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obtener más información, vea [Cómo: Use EdmGen. exe para generar los archivos](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de asignación y de modelo.
+- Conectarse a un origen de datos mediante un proveedor de datos de .NET Framework específico del origen de datos y generar los archivos de modelo conceptual (. CSDL), de modelo de almacenamiento (. SSDL) y de asignación (. MSL) utilizados por el Entity Framework. Para obtener más información, vea [Cómo: Use EdmGen. exe para generar los archivos](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de asignación y de modelo.
 
-- Validar un modelo existente. Para obtener más información, consulte [Cómo Use EdmGen. exe para validar los archivos](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)de asignación y de modelo.
+- Validar un modelo existente. Para obtener más información, vea [Cómo: Use EdmGen. exe para validar los archivos](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)de asignación y de modelo.
 
 - Generar un o archivo de código de C# o Visual Basic que contenga las clases de objetos generados a partir de un archivo de modelo conceptual (.csdl). Para obtener más información, consulte [Cómo Use EdmGen. exe para generar código](how-to-use-edmgen-exe-to-generate-object-layer-code.md)de nivel de objeto.
 
@@ -70,9 +70,9 @@ Cuando use la herramienta EdmGen.exe, deberá especificar uno de los modos sigui
 
 [Cómo: Usar EdmGen. exe para generar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
 
-[Procedimientos: Usar EdmGen. exe para generar código de nivel de objeto](how-to-use-edmgen-exe-to-generate-object-layer-code.md)
+[Cómo: Usar EdmGen. exe para generar código de nivel de objeto](how-to-use-edmgen-exe-to-generate-object-layer-code.md)
 
-[Cómo: Usar EdmGen. exe para validar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+[Procedimientos: Usar EdmGen. exe para validar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
 
 ## <a name="see-also"></a>Vea también
 

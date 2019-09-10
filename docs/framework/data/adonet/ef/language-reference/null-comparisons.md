@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249832"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854332"
 ---
 # <a name="null-comparisons"></a>Comparaciones NULL
 Un valor `null` en el origen de datos indica que el valor es desconocido. En LINQ to Entities consultas, puede comprobar si hay valores NULL para que determinados cálculos o comparaciones solo se realicen en filas con datos válidos o no nulos. Sin embargo, la semántica de NULL de CLR puede diferir de la del origen de datos. La mayoría de las bases de datos utilizan una versión de lógica con tres valores para tratar las comparaciones de NULL. Es decir, una comparación con un valor NULL no se evalúa como `true` o `false`, se evalúa como `unknown`. A menudo ésta es una implementación de los valores NULL ANSI, pero este no es siempre el caso.  
@@ -36,7 +36,7 @@ WHERE h.ShipDate IS Null
  Un *selector de claves* es una función que se usa en los operadores de consulta estándar para extraer una clave de un elemento. En la función de selector de clave, una expresión se puede comparar con una constante. La semántica de NULL del CLR se exhibe si una expresión se compara con una constante NULL o si se comparan dos constantes NULL. La semántica de NULL del almacén se exhibe si se comparan dos columnas con valores NULL del origen de datos. Los selectores de clave se encuentran en muchos de los operadores de consulta estándar de agrupamiento y ordenación, como <xref:System.Linq.Queryable.GroupBy%2A>, y se utilizan para seleccionar las claves por las que ordenar o agrupar los resultados de una consulta.  
   
 ## <a name="null-property-on-a-null-object"></a>Propiedad NULL en un objeto NULL  
- En el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)], las propiedades de un objeto NULL son NULL. Al intentar hacer referencia a una propiedad de un objeto NULL en el CLR, recibirá <xref:System.NullReferenceException>. Cuando una consulta de LINQ implica una propiedad de un objeto NULL, puede provocarse un comportamiento incoherente.  
+ En el Entity Framework, las propiedades de un objeto null son NULL. Al intentar hacer referencia a una propiedad de un objeto NULL en el CLR, recibirá <xref:System.NullReferenceException>. Cuando una consulta de LINQ implica una propiedad de un objeto NULL, puede provocarse un comportamiento incoherente.  
   
  Por ejemplo, en la consulta siguiente, la conversión a `NewProduct` se efectúa en el nivel de árbol de comandos, que podría hacer que la propiedad `Introduced` sea NULL. Si la base de datos definió las comparaciones de NULL de modo que la comparación de <xref:System.DateTime> se evalúe como true, la fila se incluirá.  
   

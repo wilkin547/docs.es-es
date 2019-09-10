@@ -2,19 +2,21 @@
 title: Elemento <endpoint>
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925828"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855381"
 ---
 # <a name="endpoint-element"></a>\<elemento Endpoint >
 Especifica enlace, contrato y propiedades de dirección para un extremo de servicio, que se utiliza para exponer los servicios.  
   
- \<system.ServiceModel>  
-\<service>  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de servicios**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de servicio**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de extremo**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +55,7 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 |kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la sección `<extensions>` o en machine.config. Si no se especifica nada, se crea un extremo de servicio común.|  
 |listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explicit<br />-Único<br /><br /> El valor predeterminado es Explicito.|  
 |listenUri|Una cadena que especifica el URI en el que el extremo de servicio realiza escuchas. El valor predeterminado es una cadena vacía.|  
-|name|Atributo opcional. Cadena que especifica el nombre del punto de conexión del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
+|Nombre|Atributo opcional. Cadena que especifica el nombre del punto de conexión del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790854"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854186"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalización de fuentes (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]utiliza para [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] exponer los datos como una fuente. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]admite los formatos Atom y notación de objetos JavaScript (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] proporciona un método estándar para serializar los datos, como entidades y relaciones, en un formato XML que se puede incluir en el cuerpo del mensaje http. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define una asignación de propiedad de entidad predeterminada entre los datos contenidos en entidades y elementos Atom. Para obtener más información, [consulte OData: Formato](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -31,7 +31,7 @@ ms.locfileid: "70790854"
 > Cuando defina las fuentes personalizadas, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, consulte [proyecciones de consultas](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personalizar fuentes con el proveedor de Entity Framework  
- El modelo de datos usado con el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] se representa como XML en el archivo .edmx. En este caso, los atributos que definen las fuentes personalizadas se agregan a los elementos `EntityType` y `Property`, que representan tipos de entidad y propiedades en el modelo de datos. Estos atributos de personalización de fuentes no se [definen en \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)de archivo de definición de esquemas conceptuales, que [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] es el formato que el proveedor utiliza para definir el modelo de datos. Por consiguiente, debe declarar los atributos de personalización de fuentes en un espacio de nombres de esquema concreto, que se define como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. El fragmento XML siguiente muestra los atributos de personalización de la fuente aplicados a los elementos `Property` del tipo de entidad `Products` que definen las propiedades `ProductName`, `ReorderLevel` y `UnitsInStock`.  
+ El modelo de datos usado con el proveedor de Entity Framework se representa como XML en el archivo .edmx. En este caso, los atributos que definen las fuentes personalizadas se agregan a los elementos `EntityType` y `Property`, que representan tipos de entidad y propiedades en el modelo de datos. Estos atributos de personalización de fuentes no se [definen en \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)de archivo de definición de esquemas conceptuales, que es el formato que utiliza el proveedor de Entity Framework para definir el modelo de datos. Por consiguiente, debe declarar los atributos de personalización de fuentes en un espacio de nombres de esquema concreto, que se define como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. El fragmento XML siguiente muestra los atributos de personalización de la fuente aplicados a los elementos `Property` del tipo de entidad `Products` que definen las propiedades `ProductName`, `ReorderLevel` y `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

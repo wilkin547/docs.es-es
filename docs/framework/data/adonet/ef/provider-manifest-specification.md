@@ -2,32 +2,32 @@
 title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248589"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854504"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
   
  Servicios de entidad funciona con independencia de un proveedor de almacén de datos concreto aunque permite a un proveedor de datos definir explícitamente la forma en que los modelos, las asignaciones y las consultas interactuarán con un almacén de datos subyacente. Sin una capa de abstracción, Servicios de entidad solo podría seleccionarse como destino en un determinado almacén de datos o proveedor de datos.  
   
- Los tipos que admite el proveedor están directa o indirectamente admitidos por la base de datos subyacente. Estos tipos no son necesariamente los tipos de almacén exactos, sino aquellos que el proveedor utiliza para admitir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Los tipos de proveedor/almacén se describen en los términos de Entity Data Model (EDM).  
+ Los tipos que admite el proveedor están directa o indirectamente admitidos por la base de datos subyacente. Estos tipos no son necesariamente los tipos de almacén exactos, sino los tipos que el proveedor utiliza para admitir el Entity Framework. Los tipos de proveedor/almacén se describen en los términos de Entity Data Model (EDM).  
   
  Los tipos de parámetro y de valores devueltos para las funciones admitidas por el almacén de datos se especifican en términos de EDM.  
   
 ## <a name="requirements"></a>Requisitos  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] y el almacén de datos necesitan poder pasarse datos de uno a otro en tipos conocidos sin que se produzcan pérdidas de datos o truncamientos.  
+ Los Entity Framework y el almacén de datos deben poder pasar los datos de un tipo a otro en los tipos conocidos sin pérdida de datos ni truncamiento.  
   
  Las herramientas deben ser capaces de cargar el manifiesto del proveedor en tiempo de diseño sin tener que abrir una conexión al almacén de datos.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Distingue mayúsculas de minúsculas, pero es posible que el almacén de datos subyacente no sea. Cuando los artefactos de EDM (identificadores y nombres de tipo, por ejemplo) se definen y se utilizan en el manifiesto, deben utilizar la distinción entre mayúsculas y minúsculas de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Si en el manifiesto del proveedor aparecen elementos de almacén de datos que pueden distinguir entre mayúsculas y minúsculas, esa grafía debe mantenerse en el manifiesto del proveedor.  
+ El Entity Framework distingue entre mayúsculas y minúsculas, pero es posible que el almacén de datos subyacente no sea. Cuando los artefactos EDM (identificadores y nombres de tipo, por ejemplo) se definen y se usan en el manifiesto, deben usar la distinción entre mayúsculas y minúsculas Entity Framework. Si en el manifiesto del proveedor aparecen elementos de almacén de datos que pueden distinguir entre mayúsculas y minúsculas, esa grafía debe mantenerse en el manifiesto del proveedor.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requiere un manifiesto del proveedor para todos los proveedores de datos. Si intenta usar un proveedor que no tiene un manifiesto de proveedor con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], obtendrá un error.  
+ El Entity Framework requiere un manifiesto de proveedor para todos los proveedores de datos. Si intenta usar un proveedor que no tiene un manifiesto de proveedor con el Entity Framework, obtendrá un error.  
   
- En la siguiente tabla se describen los tipos de excepción que [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] genera cuando surgen excepciones de la interacción con los proveedores:  
+ En la tabla siguiente se describen los tipos de excepciones que el Entity Framework produciría cuando surjan excepciones a través de la interacción con el proveedor:  
   
 |Problema|Excepción|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
  Un proveedor debe admitir los siguientes escenarios:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Escribir un proveedor con asignación de tipos simétrica  
- Puede escribir un proveedor para el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] donde cada tipo de almacén se asigna a un tipo de EDM único, independientemente de la dirección de asignación. En el caso de un tipo de proveedor que tenga una asignación simple que se corresponda con un tipo de EDM, puede utilizar una solución simétrica, porque el sistema de tipos es simple o coincide con los tipos de EDM.  
+ Puede escribir un proveedor para el Entity Framework donde cada tipo de almacén se asigna a un tipo de EDM único, independientemente de la dirección de asignación. En el caso de un tipo de proveedor que tenga una asignación simple que se corresponda con un tipo de EDM, puede utilizar una solución simétrica, porque el sistema de tipos es simple o coincide con los tipos de EDM.  
   
  Puede utilizar la simplicidad de su dominio y generar un manifiesto del proveedor declarativo estático.  
   
@@ -50,7 +50,7 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
 - Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Escribir un proveedor con asignación de tipos asimétrica  
- Cuando se escribe un proveedor de almacén de datos para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], la asignación de tipos de EDM a proveedor para algunos tipos puede diferir de la asignación de tipos de proveedor a EDM. Por ejemplo, la cadena PrimitiveTypeKind.String de EDM ilimitada se puede asignar a nvarchar(4000) en el proveedor, mientras que nvarchar(4000) se asigna a la cadena PrimitiveTypeKind.String(MaxLength=4000) de EDM.  
+ Al escribir un proveedor de almacén de datos para el Entity Framework, la asignación de tipo de EDM a proveedor para algunos tipos puede ser diferente de la asignación de tipo de proveedor a EDM. Por ejemplo, la cadena PrimitiveTypeKind.String de EDM ilimitada se puede asignar a nvarchar(4000) en el proveedor, mientras que nvarchar(4000) se asigna a la cadena PrimitiveTypeKind.String(MaxLength=4000) de EDM.  
   
  Puede escribir un archivo XML que tenga dos secciones:  
   

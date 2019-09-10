@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951298"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855632"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un gran conjunto de contadores de rendimiento para ayudarle a medir el rendimiento de la aplicación.  
@@ -33,13 +33,13 @@ Windows Communication Foundation (WCF) incluye un gran conjunto de contadores de
   
 - Habilitar Los contadores de rendimiento de ServiceModel * están deshabilitados.  
   
- Si desea habilitar los contadores de rendimiento para todas las aplicaciones WCF, puede colocar los valores de configuración en el archivo Machine. config.  Consulte la sección **aumento del tamaño de la memoria para** los contadores de rendimiento más adelante para obtener más información sobre cómo configurar la memoria suficiente para los contadores de rendimiento de su equipo.  
+ Si desea habilitar los contadores de rendimiento para todas las aplicaciones WCF, puede colocar los valores de configuración en el archivo Machine. config.  Consulte la sección **aumento del tamaño de la memoria para los contadores de rendimiento** más adelante para obtener más información sobre cómo configurar la memoria suficiente para los contadores de rendimiento de su equipo.  
   
  Si usa puntos de extensibilidad de WCF como invocadores de operación personalizados, también debe emitir sus propios contadores de rendimiento. Esto se debe a que, si implementa un punto de extensibilidad, WCF ya no puede emitir los datos de contador de rendimiento estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el contador de rendimiento manual, puede que no vea los datos de contador de rendimiento que espera.  
   
  Además, puede habilitar los contadores de rendimiento en el código de la siguiente forma,  
   
-```  
+```csharp
 using System.Configuration;  
 using System.ServiceModel.Configuration;  
 using System.ServiceModel.Diagnostics;  
@@ -87,9 +87,7 @@ config.Save();
 ### <a name="service-performance-counters"></a>Contadores de rendimiento del servicio  
  Los contadores de rendimiento del servicio miden el conjunto del comportamiento del servicio y se utilizan para diagnosticar el rendimiento de todo el servicio. Pueden encontrarse en el objeto de rendimiento `ServiceModelService 4.0.0.0` al visualizarlo con el monitor de rendimiento. Los nombres de las instancias se establecen utilizando el siguiente patrón:  
   
-```  
-ServiceName@ServiceBaseAddress  
-```  
+`ServiceName@ServiceBaseAddress`
   
  Se agrega un contador a un ámbito del servicio desde el contador de una colección de extremos.  
   
@@ -98,9 +96,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="endpoint-performance-counters"></a>Contadores de rendimiento del punto de conexión  
  Los contadores de rendimiento del punto de conexión permiten examinar datos que reflejan la aceptación de los mensajes por un punto de conexión. Pueden encontrarse en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al visualizarlo mediante el monitor de rendimiento. Los nombres de las instancias se establecen utilizando el siguiente patrón:  
   
-```  
-(ServiceName).(ContractName)@(endpoint listener address)  
-```  
+`(ServiceName).(ContractName)@(endpoint listener address)`
   
  Los datos son similares a los recopilados para las operaciones individuales, pero solo se agregan a lo largo del punto de conexión.  
   
@@ -112,9 +108,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="operation-performance-counters"></a>Contadores de rendimiento de la operación  
  Los contadores de rendimiento de la operación se encuentran en el objeto de rendimiento `ServiceModelOperation 4.0.0.0` al visualizarlo con el monitor de rendimiento. Cada operación posee una instancia individual. Es decir, si un contrato determinado posee 10 operaciones, se asociarán 10 instancias de contador de operación a ese contrato. Los nombres de las instancias de objeto se establecen utilizando el siguiente patrón:  
   
-```  
-(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
-```  
+`(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  Este contador permite medir la utilización de la llamada y el buen rendimiento de la operación.  
   

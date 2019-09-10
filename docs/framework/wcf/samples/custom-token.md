@@ -2,14 +2,15 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 7203b55b01f51851fa94fedc4950a05343b792bd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953579"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855511"
 ---
 # <a name="custom-token"></a>Token personalizado
+
 Este ejemplo muestra cómo agregar una implementación de token personalizada en una aplicación Windows Communication Foundation (WCF). El ejemplo utiliza `CreditCardToken` para pasar de manera segura información sobre las tarjetas de crédito del cliente al servicio. El token se pasa en el encabezado de mensaje WS-Security y se firma y cifra utilizando el elemento de enlace de seguridad simétrico junto con el cuerpo del mensaje y otros encabezados del mensaje. Esto es útil en casos donde los tokens integrados no son suficiente. Este ejemplo muestra cómo proporcionar un token de seguridad personalizado a un servicio en lugar de utilizar uno de los tokens integrados. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.
 
 > [!NOTE]
@@ -26,6 +27,7 @@ Este ejemplo muestra cómo agregar una implementación de token personalizada en
 - Cómo el certificado X.509 del servidor se utiliza para proteger la clave simétrica utilizada para el cifrado y firma de mensajes.
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Autenticación del Cliente utilizando un token de seguridad personalizado
+
  El servicio expone un punto de conexión único que se crea mediante programación usando las clases `BindingHelper` y `EchoServiceHost`. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un enlace personalizado utilizando `SymmetricSecurityBindingElement` y `HttpTransportBindingElement`. Este ejemplo establece `SymmetricSecurityBindingElement` para utilizar el certificado X.509 de un servicio para proteger la clave simétrica durante la transmisión y pasar un `CreditCardToken` personalizado en un encabezado de mensaje de WS-Security como un token de seguridad firmado y cifrado. El comportamiento especifica las credenciales del servicio que se van a utilizar para la autenticación del cliente además de la información sobre el certificado X.509 del servicio.
 
 ```csharp
@@ -33,11 +35,11 @@ public static class BindingHelper
 {
     public static Binding CreateCreditCardBinding()
     {
-        HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
+        var httpTransport = new HttpTransportBindingElement();
 
         // The message security binding element will be configured to require a credit card.
         // The token that is encrypted with the service's certificate.
-        SymmetricSecurityBindingElement messageSecurity = new SymmetricSecurityBindingElement();
+        var messageSecurity = new SymmetricSecurityBindingElement();
         messageSecurity.EndpointSupportingTokenParameters.SignedEncrypted.Add(new CreditCardTokenParameters());
         X509SecurityTokenParameters x509ProtectionParameters = new X509SecurityTokenParameters();
         x509ProtectionParameters.InclusionMode = SecurityTokenInclusionMode.Never;
@@ -87,32 +89,33 @@ class EchoServiceHost : ServiceHost
 
 ```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
-EndpointAddress serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
+var serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
 
-// Create a client with given client endpoint configuration
+// Create a client with given client endpoint configuration.
 channelFactory = new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
 
-// configure the credit card credentials on the channel factory
-CreditCardClientCredentials credentials =
+// Configure the credit card credentials on the channel factory.
+var credentials =
       new CreditCardClientCredentials(
       new CreditCardInfo(creditCardNumber, issuer, expirationTime));
-// configure the service certificate on the credentials
+// Configure the service certificate on the credentials.
 credentials.ServiceCertificate.SetDefaultCertificate(
       "CN=localhost", StoreLocation.LocalMachine, StoreName.My);
 
-// replace ClientCredentials with CreditCardClientCredentials
+// Replace ClientCredentials with CreditCardClientCredentials.
 channelFactory.Endpoint.Behaviors.Remove(typeof(ClientCredentials));
 channelFactory.Endpoint.Behaviors.Add(credentials);
 
 client = channelFactory.CreateChannel();
 
-Console.WriteLine("Echo service returned: {0}", client.Echo());
+Console.WriteLine($"Echo service returned: {client.Echo()}");
 
 ((IChannel)client).Close();
 channelFactory.Close();
 ```
 
 ## <a name="custom-security-token-implementation"></a>Implementación de token de seguridad personalizada
+
  Para habilitar un token de seguridad personalizado en WCF, cree una representación de objeto del token de seguridad personalizado. El ejemplo tiene esta representación en la clase `CreditCardToken`. La representación de objeto es responsable de contener toda la información pertinente del token de seguridad y de proporcionar una lista de claves de seguridad contenida en el token de seguridad. En este caso, el token de seguridad de la tarjeta de crédito no contiene ninguna clave de seguridad.
 
  En la sección siguiente se describe lo que se debe hacer para permitir que un token personalizado se transmita a través de la conexión y lo consuma un punto de conexión de WCF.
@@ -130,10 +133,10 @@ class CreditCardToken : SecurityToken
     public CreditCardToken(CreditCardInfo cardInfo, string id)
     {
         if (cardInfo == null)
-            throw new ArgumentNullException("cardInfo");
+            throw new ArgumentNullException(nameof(cardInfo));
 
         if (id == null)
-            throw new ArgumentNullException("id");
+            throw new ArgumentNullException(nameof(id));
 
         this.cardInfo = cardInfo;
         this.id = id;
@@ -153,6 +156,7 @@ class CreditCardToken : SecurityToken
 ```
 
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Obtener el token de la tarjeta de crédito personalizado en y desde el mensaje
+
  Los serializadores de tokens de seguridad en WCF son responsables de crear una representación de objeto de tokens de seguridad a partir del XML en el mensaje y de crear un formulario XML de los tokens de seguridad. También son responsables de otras funcionalidades, como leer y escribir identificadores de clave que señalan a token de seguridad, pero este ejemplo solo utiliza funcionalidad relacionada con token de seguridad. Para habilitar un token personalizado, debe implementar su propio serializador de tokens de seguridad. Para ello, en este ejemplo se utiliza la clase `CreditCardSecurityTokenSerializer`.
 
  En el servicio, el serializador personalizado lee la forma en XML del token personalizado y crea la representación de objeto del token personalizada a partir de ella.
@@ -168,7 +172,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
     {
         XmlDictionaryReader localReader = XmlDictionaryReader.CreateDictionaryReader(reader);
 
-        if (reader == null) throw new ArgumentNullException("reader");
+        if (reader == null)
+            throw new ArgumentNullException(nameof(reader));
 
         if (reader.IsStartElement(Constants.CreditCardTokenName, Constants.CreditCardTokenNamespace))
             return true;
@@ -178,7 +183,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
     protected override SecurityToken ReadTokenCore(XmlReader reader, SecurityTokenResolver tokenResolver)
     {
-        if (reader == null) throw new ArgumentNullException("reader");
+        if (reader == null)
+            throw new ArgumentNullException(nameof(reader));
 
         if (reader.IsStartElement(Constants.CreditCardTokenName, Constants.CreditCardTokenNamespace))
         {
@@ -197,7 +203,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             string creditCardIssuer = reader.ReadElementString(Constants.CreditCardIssuerElementName, Constants.CreditCardTokenNamespace);
             reader.ReadEndElement();
 
-            CreditCardInfo cardInfo = new CreditCardInfo(creditCardNumber, creditCardIssuer, expirationTime);
+            var cardInfo = new CreditCardInfo(creditCardNumber, creditCardIssuer, expirationTime);
 
             return new CreditCardToken(cardInfo, id);
         }
@@ -211,15 +217,15 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
     {
         if (token is CreditCardToken)
             return true;
-
-        else
-            return base.CanWriteTokenCore(token);
+        return base.CanWriteTokenCore(token);
     }
 
     protected override void WriteTokenCore(XmlWriter writer, SecurityToken token)
     {
-        if (writer == null) { throw new ArgumentNullException("writer"); }
-        if (token == null) { throw new ArgumentNullException("token"); }
+        if (writer == null)
+            throw new ArgumentNullException(nameof(writer));
+        if (token == null)
+            throw new ArgumentNullException(nameof(token));
 
         CreditCardToken c = token as CreditCardToken;
         if (c != null)
@@ -241,6 +247,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 ```
 
 ## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a>Cómo se crean proveedores de tokens y clases de autenticador de tokens
+
  El cliente y las credenciales de servicio son responsables de proporcionar la instancia del administrador de tokens de seguridad. La instancia del administrador de tokens de seguridad se utiliza para obtener proveedores de tokens, autenticadores de tokens y serializadores de tokens.
 
  El proveedor de tokens crea una representación de objeto del token basada en la información contenida en las credenciales del cliente o del servicio. La representación de objeto de token se escribe a continuación en el mensaje utilizando el serializador de token (explicado en la sección anterior).
@@ -264,7 +271,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             : base()
         {
             if (creditCardInfo == null)
-                throw new ArgumentNullException("creditCardInfo");
+                throw new ArgumentNullException(nameof(creditCardInfo));
 
             this.creditCardInfo = creditCardInfo;
         }
@@ -297,10 +304,10 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
         public override SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement tokenRequirement)
         {
-            // handle this token for Custom
+            // Handle this token for Custom.
             if (tokenRequirement.TokenType == Constants.CreditCardTokenType)
                 return new CreditCardTokenProvider(this.creditCardClientCredentials.CreditCardInfo);
-            // return server cert
+            // Return server cert.
             else if (tokenRequirement is InitiatorServiceModelSecurityTokenRequirement)
             {
                 if (tokenRequirement.TokenType == SecurityTokenTypes.X509Certificate)
@@ -327,9 +334,8 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         public CreditCardTokenProvider(CreditCardInfo creditCardInfo) : base()
         {
             if (creditCardInfo == null)
-            {
-                throw new ArgumentNullException("creditCardInfo");
-            }
+                throw new ArgumentNullException(nameof(creditCardInfo));
+
             this.creditCardInfo = creditCardInfo;
         }
 
@@ -348,7 +354,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             : base()
         {
             if (creditCardFile == null)
-                throw new ArgumentNullException("creditCardFile");
+                throw new ArgumentNullException(nameof(creditCardFile));
 
             this.creditCardFile = creditCardFile;
         }
@@ -414,16 +420,16 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
             CreditCardToken creditCardToken = token as CreditCardToken;
 
             if (creditCardToken.CardInfo.ExpirationDate < DateTime.UtcNow)
-                throw new SecurityTokenValidationException("The credit card has expired");
+                throw new SecurityTokenValidationException("The credit card has expired.");
             if (!IsCardNumberAndExpirationValid(creditCardToken.CardInfo))
-                throw new SecurityTokenValidationException("Unknown or invalid credit card");
+                throw new SecurityTokenValidationException("Unknown or invalid credit card.");
 
             // the credit card token has only 1 claim - the card number. The issuer for the claim is the
             // credit card issuer
 
-            DefaultClaimSet cardIssuerClaimSet = new DefaultClaimSet(new Claim(ClaimTypes.Name, creditCardToken.CardInfo.CardIssuer, Rights.PossessProperty));
-            DefaultClaimSet cardClaimSet = new DefaultClaimSet(cardIssuerClaimSet, new Claim(Constants.CreditCardNumberClaim, creditCardToken.CardInfo.CardNumber, Rights.PossessProperty));
-            List<IAuthorizationPolicy> policies = new List<IAuthorizationPolicy>(1);
+            var cardIssuerClaimSet = new DefaultClaimSet(new Claim(ClaimTypes.Name, creditCardToken.CardInfo.CardIssuer, Rights.PossessProperty));
+            var cardClaimSet = new DefaultClaimSet(cardIssuerClaimSet, new Claim(Constants.CreditCardNumberClaim, creditCardToken.CardInfo.CardNumber, Rights.PossessProperty));
+            var policies = new List<IAuthorizationPolicy>(1);
             policies.Add(new CreditCardTokenAuthorizationPolicy(cardClaimSet));
             return policies.AsReadOnly();
         }
@@ -435,7 +441,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         {
             try
             {
-                using (StreamReader myStreamReader = new StreamReader(this.creditCardsFile))
+                using (var myStreamReader = new StreamReader(this.creditCardsFile))
                 {
                     string line = "";
                     while ((line = myStreamReader.ReadLine()) != null)
@@ -475,7 +481,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         public CreditCardTokenAuthorizationPolicy(ClaimSet issuedClaims)
         {
             if (issuedClaims == null)
-                throw new ArgumentNullException("issuedClaims");
+                throw new ArgumentNullException(nameof(issuedClaims));
             this.issuer = issuedClaims.Issuer;
             this.issuedClaimSets = new ClaimSet[] { issuedClaims };
             this.id = Guid.NewGuid().ToString();
@@ -498,6 +504,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 ```
 
 ## <a name="displaying-the-callers-information"></a>Mostrar la información de los llamadores
+
  Para mostrar la información del autor de la llamada, use `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` tal y como se muestra en el código muestra siguiente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene notificaciones de autorización asociadas con el autor de la llamada actual. La clase `CreditCardToken` proporciona las notificaciones en su colección `AuthorizationPolicies`.
 
 ```csharp
@@ -539,6 +546,7 @@ string GetCallerCreditCardNumber()
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes
+
  El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación hospedada en IIS que requiera seguridad basada en certificado de servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.
 
  A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.
@@ -588,9 +596,9 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo
 
-1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 

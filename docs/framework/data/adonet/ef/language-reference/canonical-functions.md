@@ -2,12 +2,12 @@
 title: Funciones canónicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251273"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854515"
 ---
 # <a name="canonical-functions"></a>Funciones canónicas
 Esta sección describe las funciones canónicas que son admitidas por todos los proveedores de datos y pueden ser utilizadas por todas las tecnologías de creación de consultas. Las funciones canónicas no pueden ser ampliadas por un proveedor.  
@@ -18,9 +18,9 @@ Esta sección describe las funciones canónicas que son admitidas por todos los 
   
  Cuando las funciones canónicas se usan en una consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)], se llamará a la función apropiada en el origen de datos.  
   
- Todas las funciones canónicas tienen comportamiento de entrada NULL y condiciones de error especificadas explícitamente. Los proveedores de almacenamiento deben satisfacer ese comportamiento, pero [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] no lo exige.  
+ Todas las funciones canónicas tienen comportamiento de entrada NULL y condiciones de error especificadas explícitamente. Los proveedores de almacenes deben cumplir ese comportamiento, pero Entity Framework no aplica este comportamiento.  
   
- En los escenarios de LINQ, las [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] consultas en implican la asignación de métodos CLR a métodos en el origen de datos subyacente. Los métodos de CLR se asignan a funciones canónicas de modo que un conjunto específico de métodos se asignará correctamente, con independencia del origen de datos.  
+ En el caso de los escenarios de LINQ, las consultas en el Entity Framework implican la asignación de métodos CLR a métodos en el origen de datos subyacente. Los métodos de CLR se asignan a funciones canónicas de modo que un conjunto específico de métodos se asignará correctamente, con independencia del origen de datos.  
   
 ## <a name="canonical-functions-namespace"></a>Espacio de nombres de funciones canónicas  
  El espacio de nombres para una función canónica es <xref:System.Data.Metadata.Edm>. El espacio de nombres <xref:System.Data.Metadata.Edm> se incluye automáticamente en todas las consultas. Sin embargo, si se importa otro espacio de nombres que contiene una función con el mismo nombre que una función canónica (en el espacio de nombres <xref:System.Data.Metadata.Edm>), se debe especificar el espacio de nombres.  

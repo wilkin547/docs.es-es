@@ -2,20 +2,21 @@
 title: <add> de <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920031"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850310"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<Agregar > de \<transportConfigurationType >
 Este elemento es una par clave-valor, que identifica el tipo de un transporte determinado.  
   
- \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
-\<transportConfigurationTypes>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> transportConfigurationTypes**](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
   
 ## <a name="syntax"></a>Sintaxis  
   

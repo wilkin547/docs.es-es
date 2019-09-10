@@ -2,19 +2,17 @@
 title: Contadores del rendimiento de las operaciones
 ms.date: 03/30/2017
 ms.assetid: 333a51e0-f56e-4e1a-b359-5c91ff390568
-ms.openlocfilehash: 7a9b35346333f7b910802ff2a1b1769d177f3952
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 31b0f92ae3477bd3c1de8c348a60e5c64d7c53cc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040317"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855679"
 ---
 # <a name="operation-performance-counters"></a>Contadores del rendimiento de las operaciones
 Los contadores de rendimiento de las operaciones se encuentran bajo el objeto de rendimiento `ServiceModelOperation 4.0.0.0` al visualizarlo con el monitor de rendimiento (Perfmon.exe). Cada operación posee una instancia individual. Es decir, si un contrato determinado posee 10 operaciones, se asociarán 10 instancias de contador de operación a ese contrato. Los nombres de las instancias de objeto se establecen utilizando el siguiente patrón:  
   
-```  
-(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
-```  
+`(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  Este contador permite medir la utilización de la llamada y el buen rendimiento de la operación.  
   

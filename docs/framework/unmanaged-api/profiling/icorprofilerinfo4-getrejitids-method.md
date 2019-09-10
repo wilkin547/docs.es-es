@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049484"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855943"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs (Método)
-Devuelve una matriz de identificadores que identifican todas recompilada con JIT las versiones de la función especificada que todavía se asignan. Esto incluye versiones recompilada con JIT de funciones que se han revertido posteriormente, pero aún no se ha liberado (por ejemplo, cuando el dominio de aplicación que contiene la función revertida todavía está en uso).  
+Devuelve una matriz de identificadores que identifican todas las versiones compiladas con JIT de la función especificada que se siguen asignando. Esto incluye las versiones de funciones compiladas con JIT que se han revertido posteriormente pero que todavía no se han liberado (por ejemplo, cuando el dominio de aplicación que contiene la función revertida todavía está en uso).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,26 +39,26 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El `FunctionID` de la instancia de la función para que se enumeran las versiones.  
+ de `FunctionID` De la instancia de la función para la que se van a enumerar las versiones.  
   
  `cReJitIds`  
- [in] El número de identificadores recompilada con JIT asignada en el `reJitIds` matriz.  
+ de Número de identificadores de recompilación JIT asignados en `reJitIds` la matriz.  
   
  `pcReJitIds`  
- [out] El número real de los identificadores de recompilada con JIT.  
+ enuncia Número real de identificadores recompilados con JIT.  
   
  `reJitIds`  
- [out] Una matriz asignada por el llamador que contendrá los identificadores recompilada con JIT para la función especificada.  
+ enuncia Matriz asignada por el llamador que contendrá los identificadores de recompilación JIT de la función especificada.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetReJITIDs` Enumera los identificadores de recompilada con JIT activos para una instancia de la función especificada. Sigue el mismo patrón de uso como otro `ICorProfilerInfo` funciones que aceptan los búferes asignados por el llamador.  
+ `GetReJITIDs`enumera los identificadores de compilación JIT activos para una instancia de función determinada. Sigue el mismo patrón de uso que otras `ICorProfilerInfo` funciones que aceptan búferes asignados por el autor de la llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado**: Corprof. idl, Corprof. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

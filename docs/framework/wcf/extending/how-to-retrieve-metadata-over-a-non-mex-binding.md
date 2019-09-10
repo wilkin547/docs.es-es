@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar metadatos mediante un enlace que no sea MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795575"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856032"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedimiento para recuperar metadatos mediante un enlace que no sea MEX
 En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX. El código de este ejemplo se basa en el ejemplo de [extremo de metadatos seguro personalizado](../samples/custom-secure-metadata-endpoint.md) .  
@@ -85,7 +85,7 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
   
 3. Cree un `MetadataExchangeClient` y llame a `GetMetadata`: Hay dos maneras de hacerlo: puede especificar el enlace personalizado mediante configuración o puede especificarlo mediante código, tal y como se muestra en el ejemplo siguiente:  
   
-    ```  
+    ```csharp
     // The custom binding is specified in configuration.  
     EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/Service/mex");  
   
@@ -116,7 +116,7 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
   
 4. Cree una clase `WsdlImporter` y llame a `ImportAllEndpoints`, como se muestra en el código siguiente.  
   
-    ```  
+    ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  

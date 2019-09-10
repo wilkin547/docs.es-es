@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e10b1a77586a09f8f5f7a59e811953fbede8773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586898"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851210"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 (Función)
-Notifica al generador de perfiles que la función actualmente en ejecución que va a realizar una llamada de cola a otra función y proporciona información sobre el marco de pila.  
+Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función y proporciona información sobre el marco de pila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp
 void __stdcall FunctionTailcall2 (  
     [in] FunctionID         funcId,   
     [in] UINT_PTR           clientData,   
@@ -38,39 +38,39 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Parámetros  
  `funcId`  
- [in] El identificador de la función que se ejecuta actualmente que se va a llamar a una cola.  
+ de Identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.  
   
  `clientData`  
- [in] El identificador de la función reasignada, que el generador de perfiles especificado anteriormente a través de [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), de la función actualmente en ejecución que se va a llamar a una cola.  
+ de Identificador de la función reasignada, que el generador de perfiles especificó previamente a través de [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.  
   
  `func`  
- [in] Un `COR_PRF_FRAME_INFO` valor al que apunta a la información sobre el marco de pila.  
+ de `COR_PRF_FRAME_INFO` Valor que señala a la información sobre el marco de pila.  
   
- El generador de perfiles debe tratar como un identificador opaco que puede pasarse al motor de ejecución en el [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método.  
+ El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
 ## <a name="remarks"></a>Comentarios  
- La función de destino de la llamada de cola usará el marco de pila actual y se devolverá directamente al llamador de la función que realizó la cola llamada. Esto significa que un [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) devolución de llamada no se emitirá para una función que es el destino de una llamada de cola.  
+ La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) para una función que sea el destino de una llamada de cola.  
   
- El valor de la `func` parámetro no es válido tras la `FunctionTailcall2` función devuelve porque el valor puede cambiar o se destruye.  
+ El valor del `func` parámetro no es válido después de que `FunctionTailcall2` la función devuelva porque el valor puede cambiar o ser destruido.  
   
- El `FunctionTailcall2` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
+ La `FunctionTailcall2` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec`atributo`naked`de clase de almacenamiento ().  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- En la entrada, debe guardar todos los registros que use, incluidos los de la unidad de punto flotante (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- La implementación de `FunctionTailcall2` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionTailcall2` devuelve.  
+ La implementación de `FunctionTailcall2` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el `FunctionTailcall2` tiempo de ejecución se bloqueará hasta que se devuelva.  
   
- Además, el `FunctionTailcall2` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ Además, la `FunctionTailcall2` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: CorProf.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

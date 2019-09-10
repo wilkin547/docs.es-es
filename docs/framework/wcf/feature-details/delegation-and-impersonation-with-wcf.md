@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 6e79346a448012255020cc28b6534e734980b1db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39b71d3b5cbcfdc8bde3449560587f033c437d50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968846"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856168"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener un ejemplo de cómo usar la suplantación, [consulte Cómo: Suplantar a un cliente en](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)un servicio.  
@@ -29,7 +29,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
 ## <a name="impersonation-basics"></a>Fundamentos de la suplantación  
  Windows Communication Foundation (WCF) admite la suplantación para diversas credenciales de cliente. En este tema se describe la compatibilidad del modelo de servicio para suplantar al autor de la llamada durante la implementación de un método de servicio. También se describen los escenarios de implementación comunes que implican la suplantación y la seguridad de SOAP y las opciones de WCF en estos escenarios.  
   
- Este tema se centra en la suplantación y delegación en WCF cuando se usa la seguridad de SOAP. También puede usar la suplantación y delegación con WCF al usar la seguridad de transporte, como se describe en uso de la suplantación [con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
+ Este tema se centra en la suplantación y delegación en WCF cuando se usa la seguridad de SOAP. También puede usar la suplantación y delegación con WCF al usar la seguridad de transporte, como se describe en uso de la [suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
   
 ## <a name="two-methods"></a>Dos métodos  
  La seguridad de WCF SOAP tiene dos métodos distintos para realizar la suplantación. El método utilizado depende del enlace. El primero es la suplantación de un token de Windows obtenido desde la interfaz de proveedor de compatibilidad para seguridad (SSPI) o la autenticación de Kerberos, que se almacena en la memoria caché en el servicio. El segundo es la suplantación de un token de Windows obtenido a partir de las extensiones de Kerberos, denominado en su conjunto *servicio para usuario* (S4U).  
@@ -158,7 +158,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
  En el código siguiente, se muestra cómo configurar el servicio.  
   
-```  
+```csharp
 // Create a binding that sets a certificate as the client credential type.  
 WSHttpBinding b = new WSHttpBinding();  
 b.Security.Message.ClientCredentialType = MessageCredentialType.Certificate;  

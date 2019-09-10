@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf61da362251577acadb83915404eba7508b3099
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905073"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855957"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName (Método)
 Obtiene un puntero al recurso de manifiesto con el nombre especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp
 HRESULT FindManifestResourceByName (  
     [in]  LPCWSTR                szName,   
     [out] mdManifestResource     *ptkManifestResource  
@@ -38,20 +38,20 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [in] El nombre del recurso.  
+ de Nombre del recurso.  
   
  `ptkManifestResource`  
- [out] Matriz utilizada para almacenar el `mdManifestResource` los tokens de metadatos, cada uno de los cuales representa un recurso del manifiesto.  
+ enuncia Matriz que se usa para almacenar `mdManifestResource` los tokens de metadatos, cada uno de los cuales representa un recurso de manifiesto.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FindManifestResourceByName` método usa las reglas estándares empleadas por common language runtime para resolver las referencias.  
+ El `FindManifestResourceByName` método utiliza las reglas estándar empleadas por el Common Language Runtime para resolver las referencias.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Encabezado**: Cor. h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Biblioteca** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

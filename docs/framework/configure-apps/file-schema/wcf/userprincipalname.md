@@ -2,20 +2,24 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 423a3249a9298675517f0cff08566c3735fa35f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299af8c4a013d17d7c5b7285f6fb89892c4164a8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940510"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854826"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
 Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.  
   
- Para obtener más información acerca de cómo establecer el UPN, consulte [identidad de servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md).  
+Para obtener más información acerca de cómo establecer el UPN, consulte [identidad de servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-\<> de identidad  
-\<userPrincipalName>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de cliente**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de extremo**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de identidad**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<userPrincipalName >**  
   
 ## <a name="syntax"></a>Sintaxis  
   

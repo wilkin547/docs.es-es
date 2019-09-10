@@ -2,20 +2,21 @@
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: e29db0b2412c9ccbfe83d000077e8d85332955ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926864"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850521"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<Agregar > de \<baseAddressPrefixFilter >
 Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para seleccionar los enlaces de Internet Information Services (IIS) adecuados al hospedar una aplicación Windows Communication Foundation (WCF) en IIS.  
   
- \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
-\<baseAddressPrefixFilters>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> baseAddressPrefixFilters**](baseaddressprefixfilters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
   
 ## <a name="syntax"></a>Sintaxis  
   

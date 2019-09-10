@@ -8,25 +8,29 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: da91e27b804d649f5b8010bc9d7c074425be26f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2bc70b108991fd4e3c138bfac5bff942173e33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024149"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856115"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Procedimiento Establecer el contenido de texto de un control TextBox
-En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.TextBox.Text%2A> propiedad para establecer el contenido inicial del texto de un <xref:System.Windows.Controls.TextBox> control.  
-  
- **Tenga en cuenta** aunque el [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] podría usar la versión del ejemplo el `<TextBox.Text>` etiquetas alrededor del texto de cada botón <xref:System.Windows.Controls.TextBox> contenido, no es necesario porque el <xref:System.Windows.Controls.TextBox> se aplica el <xref:System.Windows.Markup.ContentPropertyAttribute> atributo a la <xref:System.Windows.Controls.TextBox.Text%2A> propiedad. Para obtener más información, consulte [información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md).  
-  
-## <a name="example"></a>Ejemplo  
- [!code-xaml[TextBox_MiscCode#_TextBoxSetTextXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxsettextxaml)]  
-  
-## <a name="example"></a>Ejemplo  
- [!code-csharp[TextBox_MiscCode#_TextBoxSetText](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textboxsettext)]
- [!code-vb[TextBox_MiscCode#_TextBoxSetText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textboxsettext)]  
-  
+
+En este ejemplo se muestra cómo utilizar <xref:System.Windows.Controls.TextBox.Text%2A> la propiedad para establecer el contenido de texto inicial <xref:System.Windows.Controls.TextBox> de un control.
+
+> [!NOTE]
+> Aunque la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] versión del ejemplo podría usar las `<TextBox.Text>` etiquetas alrededor del <xref:System.Windows.Controls.TextBox> texto del <xref:System.Windows.Controls.TextBox> contenido de cada botón, no es necesario porque aplica el <xref:System.Windows.Markup.ContentPropertyAttribute> atributo a la <xref:System.Windows.Controls.TextBox.Text%2A> propiedad. . Para obtener más información, vea [información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md).
+
+## <a name="example"></a>Ejemplo
+
+[!code-xaml[TextBox_MiscCode#_TextBoxSetTextXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxsettextxaml)]
+
+## <a name="example"></a>Ejemplo
+
+[!code-csharp[TextBox_MiscCode#_TextBoxSetText](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textboxsettext)]
+[!code-vb[TextBox_MiscCode#_TextBoxSetText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textboxsettext)]
+
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre TextBox](textbox-overview.md)

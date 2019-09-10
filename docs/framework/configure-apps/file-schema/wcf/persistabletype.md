@@ -2,19 +2,22 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: fcfd338e289b5151688724f0e84b6878707d32be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 328caaefe0cc24da45b460cab0a672dc8a6ccce1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933835"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855073"
 ---
 # <a name="persistabletype"></a>\<persistableType>
 Especifica todos los tipos con persistencia.  
   
- \<system.ServiceModel>  
-\<comContracts>  
-\<comContract>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de compactos**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> compactos**](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> persistableTypes**](persistabletypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> persistableType**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +44,7 @@ Especifica todos los tipos con persistencia.
 |Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |id|Un atributo necesario que contiene una cadena que especifica un identificador único para un tipo con persistencia.|  
-|Nombre|Un atributo opcional que contiene una cadena que especifica el nombre del tipo con persistencia.|  
+|name|Un atributo opcional que contiene una cadena que especifica el nombre del tipo con persistencia.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  None  

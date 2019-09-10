@@ -2,21 +2,22 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 273bd0d5e68a661c639b82264b440b83d8127427
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ef5890d52c3f2af42322f023b9a2a23cb583035
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933790"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855065"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 Especifica un importador de directivas que controla la importación de aserciones de directivas personalizadas de los enlaces.  
   
- \<system.ServiceModel>  
-\<client>  
-\<metadata>  
-\<policyImporters>  
-\<policyImporter>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de cliente**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<metadatos >** ](metadata.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> policyImporters**](policyimporters.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> policyImporter**  
   
 ## <a name="syntax"></a>Sintaxis  
   

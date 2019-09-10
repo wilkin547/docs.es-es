@@ -2,12 +2,12 @@
 title: Problemas conocidos en SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c0b7c32e00a0cc90367a559a41f5a7ab59a33a4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 18e3ad59af4014086bd475815011b6008bcb5052
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251388"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854549"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
@@ -43,7 +43,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Cuál es la versión correcta de SQL Server  
- El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] destino de la consulta de Transact-SQL en función de la versión de SQL Server que `ProviderManifestToken` se especifica en el atributo del elemento Schema en el archivo de modelo de almacenamiento (. SSDL). Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si utiliza SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2008, la consulta Transact-SQL generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si utiliza SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2000, la consulta Transact-SQL generada podría estar menos optimizada, o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
+ La Entity Framework tiene como destino la consulta Transact-SQL basada en la versión SQL Server que se especifica `ProviderManifestToken` en el atributo del elemento Schema en el archivo de modelo de almacenamiento (. SSDL). Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si utiliza SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2008, la consulta Transact-SQL generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si utiliza SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2000, la consulta Transact-SQL generada podría estar menos optimizada, o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
   
  Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si el `ProviderManifestToken` atributo se establece en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos se establece en "80" (SQL Server 2000), el valor de Transact-SQL generado será SQL Server 2005, pero es posible que no se ejecute según lo esperado debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
   
@@ -57,7 +57,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Valores de identidad de GUID generados por el servidor  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos SQL Server mediante la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
+ El Entity Framework admite valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir que se devuelva el valor de identidad generado por el servidor después de insertar una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos SQL Server mediante la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Vea también
 

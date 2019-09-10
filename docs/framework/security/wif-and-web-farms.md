@@ -3,12 +3,12 @@ title: WIF y granjas de servidores web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967187"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851522"
 ---
 # <a name="wif-and-web-farms"></a>WIF y granjas de servidores web
 Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de una aplicación de usuario de confianza (RP) implementada en una granja de servidores web, debe realizar determinados pasos para garantizar que WIF pueda procesar tokens de instancias de la aplicación de RP que se ejecutan en equipos diferentes de la granja de servidores. Este proceso implica la validación de firmas de token de sesión, el cifrado y descifrado de tokens de sesión, el almacenamiento en caché de tokens de sesión y la detección de tokens de seguridad reproducidos.  
@@ -64,7 +64,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
 ## <a name="the-wcf-caching-service"></a>Servicio de almacenamiento en caché de WCF  
  La siguiente interfaz define el contrato entre el servicio de almacenamiento en caché de WCF y el cliente WCF usado por la aplicación de usuario de confianza para comunicarse con él. Básicamente expone los métodos de la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> como operaciones de servicio.  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  En el siguiente código se muestra la implementación del servicio de almacenamiento en caché de WCF. En este ejemplo se usa la memoria caché del token de sesión en memoria predeterminada implementada por WIF. También se podría implementar una memoria caché duradera respaldada por una base de datos. `ISessionSecurityTokenCacheService` define la interfaz mostrada arriba. En este ejemplo no se muestran todos los métodos necesarios para implementar la interfaz en aras de la brevedad.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  Las clase invalida el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> para obtener el punto de conexión de servicio del elemento secundario `<cacheServiceAddress>` personalizado del elemento `<sessionSecurityTokenCache>`. Usa este punto de conexión para inicializar un canal `ISessionSecurityTokenCacheService` a través del que se puede comunicar con el servicio.  En este ejemplo no se muestran todos los métodos necesarios para implementar la clase <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> en aras de la brevedad.  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3ac80cfe06f8531dcd2343f676a6f78f8eb0e8f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249260"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854303"
 ---
 # <a name="query-results"></a>Resultados de la consulta
 Una vez que una consulta de LINQ to Entities se convierte en árboles de comandos y se ejecuta, los resultados de la consulta se devuelven normalmente como uno de los siguientes:  
@@ -23,9 +23,9 @@ Una vez que una consulta de LINQ to Entities se convierte en árboles de comando
   
 - Tipos anónimos.  
   
- Cuando la consulta se ha ejecutado en el origen de datos, los resultados se materializan en tipos de CLR y se devuelven al cliente. [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] realiza la materialización de todos los objetos. Los errores derivados de la imposibilidad de realizar asignaciones entre [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] y CLR hará que se produzcan excepciones durante la materialización de los objetos.  
+ Cuando la consulta se ha ejecutado en el origen de datos, los resultados se materializan en tipos de CLR y se devuelven al cliente. Entity Framework realiza la materialización de todos los objetos. Los errores derivados de la incapacidad de encontrar una correspondencia entre Entity Framework y CLR hará que se produzcan excepciones durante la materialización de los objetos.
   
- Si la ejecución de la consulta devuelve tipos primitivos del modelo conceptual, los resultados están compuestos de tipos de CLR que son independientes y están desconectados de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Sin embargo, si la consulta devuelve una colección de objetos entidad con tipo, representada por <xref:System.Data.Objects.ObjectQuery%601>, dichos tipos son sometidos a seguimiento por el contexto del objeto. Todo el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]comportamiento de los objetos (como las colecciones secundarias/primarias, el seguimiento de cambios, el polimorfismo, etc.) son los definidos en. Esta funcionalidad se puede utilizar en su capacidad, como se define en [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Para obtener más información, vea [trabajar con objetos](../working-with-objects.md).  
+ Si la ejecución de la consulta devuelve tipos de modelos conceptuales primitivos, los resultados se componen de tipos CLR que son independientes y están desconectados del Entity Framework. Sin embargo, si la consulta devuelve una colección de objetos entidad con tipo, representada por <xref:System.Data.Objects.ObjectQuery%601>, dichos tipos son sometidos a seguimiento por el contexto del objeto. Todo el comportamiento de los objetos (como las colecciones secundarias/primarias, el seguimiento de cambios, el polimorfismo, etc.) se definen en el Entity Framework. Esta funcionalidad se puede usar en su capacidad, como se define en el Entity Framework. Para obtener más información, vea [trabajar con objetos](../working-with-objects.md).
   
  Los tipos struct devueltos en las consultas (como tipos anónimos y tipos complejos que aceptan valores NULL) pueden ser de valor `null`. Una propiedad de <xref:System.Data.Objects.DataClasses.EntityCollection%601> de una entidad devuelta también puede ser de valor `null`. Esto puede deberse a la proyección de la propiedad de colección de una entidad que es de valor `null`, como la llamada a <xref:System.Linq.Queryable.FirstOrDefault%2A> en una <xref:System.Data.Objects.ObjectQuery%601> que no tiene elementos.  
   

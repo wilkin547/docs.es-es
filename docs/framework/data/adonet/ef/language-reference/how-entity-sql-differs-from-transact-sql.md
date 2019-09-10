@@ -2,12 +2,12 @@
 title: Diferencias entre Entity SQL y Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250860"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854474"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Diferencias entre Entity SQL y Transact-SQL
 En este tema se describen las [!INCLUDE[esql](../../../../../../includes/esql-md.md)] diferencias entre y Transact-SQL.  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no proporciona aún compatibilidad con las funciones analíticas.  
   
  Funciones y operadores integrados  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]admite un subconjunto de funciones y operadores integrados de Transact-SQL. Es probable que estos operadores y funciones sean admitidos por los principales proveedores de almacenamiento. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]utiliza las funciones específicas del almacén declaradas en un manifiesto del proveedor. Además, permite [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] declarar funciones de almacenamiento existentes integradas y definidas por el usuario, para [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que las use.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]admite un subconjunto de funciones y operadores integrados de Transact-SQL. Es probable que estos operadores y funciones sean admitidos por los principales proveedores de almacenamiento. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]utiliza las funciones específicas del almacén declaradas en un manifiesto del proveedor. Además, el Entity Framework permite declarar funciones de almacenamiento existentes integradas y definidas por el usuario para [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que las use.  
   
  Sugerencias  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no proporciona mecanismos para sugerencias de consulta.  

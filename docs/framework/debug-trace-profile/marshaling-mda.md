@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b1a1607e96ad9953a409d79fd265ced994cece2
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967285"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854132"
 ---
 # <a name="marshaling-mda"></a>MDA de serialización
 El asistente para la depuración administrada (MDA) `marshaling` se activa cuando el CLR establece la información de cálculo de referencias para un parámetro de método o un campo de una estructura. Este MDA no funciona para los ensamblados con compilación JIT.  
@@ -25,7 +25,7 @@ El asistente para la depuración administrada (MDA) `marshaling` se activa cuand
 ## <a name="output"></a>Salida  
  El MDA muestra el tipo de parámetro o campo en los contextos administrados y no administrados, y la estructura o método que contiene el tipo.  A continuación, se muestra un ejemplo de la salida de un campo:  
   
-```  
+```output
 Marshaling from 'Char' to 'ANSI char'  
 name="assembly!Namespace.Class::myChar  
 ```  

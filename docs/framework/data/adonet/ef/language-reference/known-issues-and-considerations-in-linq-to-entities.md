@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250496"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854388"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conocidos y consideraciones en LINQ to Entities
 En esta sección se proporciona información sobre los problemas conocidos de las consultas de LINQ to Entities.  
@@ -42,7 +42,7 @@ En esta sección se proporciona información sobre los problemas conocidos de la
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Enteros sin signo no admitidos  
- No se admite la especificación de un tipo entero sin signo en una consulta de LINQ to Entities porque [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] no admite enteros sin signo. Si especifica un entero sin signo, se producirá una <xref:System.ArgumentException> excepción durante la traducción de la expresión de consulta, como se muestra en el ejemplo siguiente. En este ejemplo se consulta un pedido cuyo número de identificación (Id.) es 48000.  
+ No se admite la especificación de un tipo entero sin signo en una consulta de LINQ to Entities porque el Entity Framework no admite enteros sin signo. Si especifica un entero sin signo, se producirá una <xref:System.ArgumentException> excepción durante la traducción de la expresión de consulta, como se muestra en el ejemplo siguiente. En este ejemplo se consulta un pedido cuyo número de identificación (Id.) es 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
