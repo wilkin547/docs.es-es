@@ -91,19 +91,19 @@ Si usa la validación de campos con anotaciones de datos, por ejemplo, no se dup
 - **Rick Anderson. Agregar validación a una aplicación ASP.NET Core MVC** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Reemplazo del inicio de excepciones por notificaciones en validaciones)
+- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Reemplazo del inicio de excepciones por notificaciones en validaciones)\
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Specification and Notification Patterns** \ (Patrones de especificación y notificación)
+- **Specification and Notification Patterns** \ (Patrones de especificación y notificación)\
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**  \ (Validación en diseños guiados por dominio)
+- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**  \ (Validación en diseños guiados por dominio)\
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack. Domain Model Validation** \ (Validación de modelos de dominio)
+- **Colin Jack. Domain Model Validation** \ (Validación de modelos de dominio)\
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard. Validation in a DDD world** \ (Validación en un mundo de diseños guiados por dominio)
+- **Jimmy Bogard. Validation in a DDD world** \ (Validación en un mundo de diseños guiados por dominio)\
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]

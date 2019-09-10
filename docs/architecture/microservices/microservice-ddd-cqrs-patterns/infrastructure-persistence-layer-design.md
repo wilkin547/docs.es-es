@@ -108,21 +108,21 @@ Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, 
 
 ### <a name="repository-pattern"></a>Modelo de repositorio
 
-- **The Repository Pattern** \ (El modelo de repositorio)
+- **The Repository Pattern** \ (El modelo de repositorio)\
   <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt y Rob Mee. Modelo de repositorio.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **The Repository Pattern** \ (El modelo de repositorio)
+- **The Repository Pattern** \ (El modelo de repositorio)\
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software) (Libro; incluye un debate sobre el patrón de repositorio) \
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software)\ (Libro; incluye un debate sobre el patrón de repositorio) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Patrón de unidades de trabajo
 
-- **Martin Fowler. Unit of Work pattern** (Patrón de unidades de trabajo). \
+- **Martin Fowler. Unit of Work pattern** (Patrón de unidades de trabajo).\ \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \ (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)
