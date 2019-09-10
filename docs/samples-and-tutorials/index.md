@@ -4,16 +4,16 @@ description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960300"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855776"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
-La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn.html). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://www.microsoft.com/net/learn/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
+La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn.html). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>Núcleo de .NET
 
@@ -116,6 +116,6 @@ Muchos temas muestran el código fuente y los ejemplos que están disponibles pa
 1. Navegue por las carpetas del repositorio hasta la ubicación del ejemplo. La ruta de acceso relativa a la ubicación del ejemplo aparece en la barra de direcciones del explorador si sigue el vínculo al ejemplo.
 1. Para ejecutar un ejemplo, cuenta con varias opciones:
    * Use las [herramientas de la CLI de dotnet](../core/tools/index.md): en una ventana de consola, vaya hasta la carpeta del ejemplo y use los comandos de la CLI de dotnet.
-   * Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto (*.csproj* o *.fsproj*).
+   * Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto ( *.csproj* o *.fsproj*).
    * Use [Visual Studio Code](https://code.visualstudio.com/): abra el ejemplo; para ello, seleccione **Archivo > Abrir carpeta** en la barra de menús y seleccione la carpeta del proyecto del ejemplo.
    * Use un IDE distinto que admita proyectos de .NET Core.

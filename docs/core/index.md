@@ -4,12 +4,12 @@ description: .NET Core es una implementación modular y de alto rendimiento de .
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: db4daa8c78a181f0599c4c75ccd31f46ee278e63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0007c1c6a9939c46f123535f9053ac1d4ced7266
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202828"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848944"
 ---
 # <a name="net-core-guide"></a>Guía de .NET Core
 
@@ -21,9 +21,9 @@ Consulte los [tutoriales de .NET Core](tutorials/index.md) para aprender a crear
 
 ## <a name="download-net-core-22"></a>Descarga de .NET Core 2.2
 
-Descargue el [SDK de .NET Core 2.2](https://www.microsoft.com/net/download) para probar .NET Core en su equipo Windows, macOS o Linux. Visite [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) si prefiere usar contenedores de Docker.
+Descargue el [SDK de .NET Core 2.2](https://dotnet.microsoft.com/download) para probar .NET Core en su equipo Windows, macOS o Linux. Visite [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) si prefiere usar contenedores de Docker.
 
-Si busca otra versión de .NET Core, todas las versiones de .NET Core están disponibles en la [página de descargas de .NET Core](https://www.microsoft.com/net/download/archives).
+Si busca otra versión de .NET Core, todas las versiones de .NET Core están disponibles en la [página de descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="net-core-22"></a>.NET Core 2.2
 
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>Soporte técnico
 
-[Microsoft admite](https://www.microsoft.com/net/support/policy) .NET Core en Windows, macOS y Linux. Varias veces al año, por lo general mensualmente, se actualiza para aumentar la seguridad y la calidad.
+[Microsoft admite](https://dotnet.microsoft.com/platform/support/policy) .NET Core en Windows, macOS y Linux. Varias veces al año, por lo general mensualmente, se actualiza para aumentar la seguridad y la calidad.
 
 Las distribuciones binarias de .NET Core se compilan y prueban en servidores mantenidos por Microsoft en Azure y reciben el mismo soporte técnico que cualquier otro producto de Microsoft.
 

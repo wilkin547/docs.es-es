@@ -4,12 +4,12 @@ description: En este artículo se le enseña cómo se crean versiones del entorn
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104955"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849285"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
@@ -108,6 +108,6 @@ Cada versión de .NET Core implementa una versión de .NET Standard. Implementar
 
 - [Marcos de trabajo de destino](../../standard/frameworks.md)
 - [Empaquetado de distribución de .NET Core](../build/distribution-packaging.md)
-- [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://www.microsoft.com/net/core/support)
+- [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Version Binding (Enlace de versión de .NET Core 2+)](https://github.com/dotnet/designs/issues/3)
 - [Imágenes de Docker para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

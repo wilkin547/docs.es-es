@@ -3,12 +3,12 @@ title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015006"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850769"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -18,7 +18,7 @@ En las primeras lecciones se explican los conceptos de C# con la utilización de
 
 Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles mediante la experiencia de explorador en línea o [en el entorno de desarrollo local](local-environment.md). Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
-## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hola mundo](hello-world.yml)
 
 En el tutorial [Hola mundo](hello-world.yml), creará el programa de C# más básico. Explorará el tipo `string` y cómo trabajar con texto.
 
@@ -45,4 +45,4 @@ En este tutorial se presupone que ha completado las lecciones que se muestran an
 Este tutorial solo se encuentra disponible para ejecutarse en el equipo con un entorno de desarrollo local propio y .NET Core.
 Creará una aplicación de consola y conocerá las características básicas orientadas a objetos que forman parte del lenguaje C#.
 
-En este tutorial se presupone que ha completado los tutoriales de introducción en línea y ha instalado el [SDK de .NET Core](https://www.microsoft.com/net/download) y [Visual Studio Code](https://code.visualstudio.com/).
+En este tutorial se presupone que ha completado los tutoriales de introducción en línea y ha instalado el [SDK de .NET Core](https://dotnet.microsoft.com/download) y [Visual Studio Code](https://code.visualstudio.com/).
