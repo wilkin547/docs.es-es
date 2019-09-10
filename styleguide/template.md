@@ -7,19 +7,19 @@ author:
 ms.author:
 - MICROSOFT ALIAS OF INTERNAL OWNER
 ms.date:
-- CREATION/UPDATE DATE - mm/dd/yyyy
+- CREATION/UPDATE DATE - MM/dd/yyyy
 ms.topic:
 - TOPIC TYPE
 ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106910"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254012"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -41,7 +41,7 @@ Puede encontrar el bloque de metadatos completo más arriba (en el [Markdown sin
 - **ms.devlang** define el filtro de lenguaje que se muestra para el tema. Puede ver una lista de los valores admitidos en la sección [Lenguajes admitidos](#supported-languages). Solo se debe establecer cuando el tema abarca más de un lenguaje de programación. Por lo general, en nuestro contenido solo se usa `csharp`, `vb`, `fsharp` y `cpp` para este valor.
 - **ms.prod**: identificación del producto que se usa con fines de inteligencia empresarial. Por lo general, se establecen en un nivel global, por lo que no suelen aparecer en el bloque de metadatos de cada artículo.
 - **ms.technology**: clasificación de inteligencia empresarial adicional. Algunos de los valores admitidos son: `devlang-csharp` para temas de C#, `devlang-fsharp` para temas de F# y `devlang-visual-basic` para temas de VB. Los valores variarán en otras guías, por lo que deberá pedir ayuda a un miembro del equipo.
-- **ms.date**: fecha con formato MM/DD/AAAA. Se muestra en la página publicada para indicar la última vez que el artículo se editó de manera sustancial o se garantizó como "actualizado" (es decir, la última vez que se revisó el artículo y se consideró como actualizado).
+- **ms.date**: fecha con formato DD/MM/AAAA. Se muestra en la página publicada para indicar la última vez que el artículo se editó de manera sustancial o se garantizó como "actualizado" (es decir, la última vez que se revisó el artículo y se consideró como actualizado).
 - **helpviewer_keywords**: las entradas se usan para los índices de libros sin conexión (una funcionalidad de Visual Studio).
 - **f1_keywords**: conecta el artículo con la tecla F1 (una funcionalidad de Visual Studio).
 
@@ -70,10 +70,7 @@ Los nombres de archivo utilizan las siguientes reglas:
 
 ## <a name="headings"></a>Encabezados
 
-Utilice mayúsculas y minúsculas de estilo de oración. Utilice siempre mayúscula en:
-
-- La primera palabra de un encabezado.
-- La palabra que sigue a un signo de dos puntos en un título o un encabezado (por ejemplo, "Cómo: Ordenar una matriz").
+Utilice mayúsculas y minúsculas de estilo de oración. Ponga siempre en mayúscula la primera palabra de un encabezado, pero no ponga en mayúsculas la palabra que sigue a un signo de dos puntos en un título o encabezado (por ejemplo, "Cómo: ordenar una matriz").
 
 Los encabezados deben realizarse con estilo atx, es decir, usar de uno a seis caracteres hash (#) al principio de la línea para indicar un título, correspondiente a los niveles de encabezados HTML de H1 a H6. Más arriba se pueden encontrar ejemplos de encabezados de primer y segundo nivel.
 
@@ -143,7 +140,7 @@ El UID equivale al nombre de miembro y de tipo completo.
 
 Si agrega un carácter \* (o %2A) después del UID, el vínculo representa la página de sobrecarga y no una API específica. Por ejemplo, puede usarlo cuando quiera establecer un vínculo a la página [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) de manera genérica en lugar de una sobrecarga específica como [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). También puede usar \* para establecer un vínculo a una página de miembro cuando el miembro no está sobrecargado. Esto evitará que tenga que incluir la lista de parámetros en el UID.
 
-Para establecer un vínculo a una sobrecarga de método específica, debe incluir el nombre de tipo completo de cada uno de los parámetros del método. Por ejemplo, \<xref:System.DateTime.ToString> establece un vínculo al método [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) sin parámetros, mientras que \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> establece un vínculo al método [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Puede encontrar los UID de un miembro sobrecargado específico desde `https://xref.docs.microsoft.com/autocomplete`. La cadena de consulta"?text= *\<type-member-name>* " identifica el tipo o miembro cuyos UID quiere ver. Por ejemplo, `https://xref.docs.microsoft.com/autocomplete?text=string.format` recupera las sobrecargas [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
+Para establecer un vínculo a una sobrecarga de método específica, debe incluir el nombre de tipo completo de cada uno de los parámetros del método. Por ejemplo, \<xref:System.DateTime.ToString> establece un vínculo al método [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) sin parámetros, mientras que \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> establece un vínculo al método [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Puede encontrar los UID de un miembro sobrecargado específico desde `https://xref.docs.microsoft.com/autocomplete`. La cadena de consulta"?text=*\<type-member-name>*" identifica el tipo o miembro cuyos UID quiere ver. Por ejemplo, `https://xref.docs.microsoft.com/autocomplete?text=string.format` recupera las sobrecargas [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
 
 Para establecer un vínculo a un tipo genérico, como [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), puede usar el carácter ` (%60), seguido del número de parámetros de tipo genérico. Por ejemplo, \<xref:System.Nullable%601> establece un vínculo al tipo [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), mientras que \<xref:System.Func%602> establece un vínculo al delegado [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
@@ -185,7 +182,7 @@ Ejemplos:
 1. Esto
 1. Es
 1. Una
-1. Por orden
+1. Por orden 
 1. Lista
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Lista ordenada con una lista insertada
@@ -390,7 +387,7 @@ Actualmente, puede insertar vídeos tanto de Channel 9 como de YouTube con la s
 > [!VIDEO <channel9_video_link>]
 ```
 
-Para obtener la dirección URL correcta del vídeo, seleccione la pestaña **Insertar** debajo del fotograma de vídeo y copie la dirección URL del elemento `<iframe>`. Por ejemplo:
+Para obtener la dirección URL correcta del vídeo, seleccione la pestaña **Insertar** debajo del fotograma de vídeo y copie la dirección URL del elemento `<iframe>`. Por ejemplo: 
 
 ```markdown
 > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released/player]
@@ -404,7 +401,7 @@ Para obtener la dirección URL correcta del vídeo, haga clic con el botón dere
 > [!VIDEO <youtube_video_link>]
 ```
 
-Por ejemplo:
+Por ejemplo: 
 
 ```markdown
 > [!VIDEO https://www.youtube.com/embed/Q2mMbjw6cLA]

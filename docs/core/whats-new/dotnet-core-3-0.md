@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037835"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394282"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>Novedades de .NET Core 3.0 (versión preliminar 8)
+# <a name="whats-new-in-net-core-30-preview-9"></a>Novedades de .NET Core 3.0 (versión preliminar 9)
 
-En este artículo se describen las novedades de .NET Core 3.0 (a través de la versión preliminar 8). Una de las mejoras más importantes es la compatibilidad con las aplicaciones de Escritorio de Windows (solo Windows). Mediante el componente Escritorio de Windows del SDK de .NET Core 3.0, puede portar sus aplicaciones de Windows Forms y Windows Presentation Foundation (WPF). Para ser más precisos, el componente Escritorio de Windows solo se admite e incluye en Windows. Para obtener más información, vea la sección [Escritorio de Windows](#windows-desktop) más adelante en este artículo.
+En este artículo se describen las novedades de .NET Core 3.0 (a través de la versión preliminar 9). Una de las mejoras más importantes es la compatibilidad con las aplicaciones de Escritorio de Windows (solo Windows). Mediante el componente Escritorio de Windows del SDK de .NET Core 3.0, puede portar sus aplicaciones de Windows Forms y Windows Presentation Foundation (WPF). Para ser más precisos, el componente Escritorio de Windows solo se admite e incluye en Windows. Para obtener más información, vea la sección [Escritorio de Windows](#windows-desktop) más adelante en este artículo.
 
-.NET Core 3.0 agrega compatibilidad con C# 8.0. Se recomienda encarecidamente usar la [versión más reciente de Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) o Visual Studio Code con la extensión de OmniSharp.
+.NET Core 3.0 agrega compatibilidad con C# 8.0. Se recomienda encarecidamente usar [Visual Studio 2019 16.3 (versión preliminar 3)](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio para Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) o [Visual Studio Code](https://code.visualstudio.com/) con la **extensión de C#**.
 
-[Descargue la versión preliminar 8 de .NET Core 3.0 y empiece a trabajar](https://aka.ms/netcore3download) ya en Windows, macOS o Linux.
+[Descargue la versión preliminar 9 de .NET Core 3.0 y empiece a trabajar](https://aka.ms/netcore3download) ya en Windows, macOS o Linux.
 
 Si desea obtener más información sobre cada versión preliminar, vea los anuncios siguientes:
 
+- [Anuncio de la versión preliminar 9 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [Anuncio de la versión preliminar 8 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Anuncio de la versión preliminar 7 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Anuncio de la versión preliminar 6 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
@@ -35,9 +36,9 @@ Si desea obtener más información sobre cada versión preliminar, vea los anunc
 
 ## <a name="production-supported-preview"></a>Versión preliminar compatible con producción
 
-Microsoft considera la versión preliminar 8 de .NET Core como lista para producción, y es totalmente compatible. A partir de la versión preliminar 7, las versiones se centrarán en el ajuste de .NET Core 3.0, en lugar de agregar nuevas características. Para más información sobre lo que ha cambiado en la versión preliminar 8, consulte el [anuncio de la versión preliminar 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/).
+Microsoft considera la versión preliminar 9 de .NET Core como lista para producción y es totalmente compatible. A partir de la versión preliminar 7, las versiones se centrarán en el ajuste de .NET Core 3.0, en lugar de agregar nuevas características. Para obtener más información sobre lo que ha cambiado en la versión preliminar 9, consulte el [anuncio de la versión preliminar 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
 
-Si usa una versión preliminar anterior, debe pasar a la versión preliminar 8 para ofrecer soporte técnico continuo "Go Live".
+Si usa una versión preliminar anterior, debe pasar a la versión preliminar 9 para ofrecer soporte técnico continuo "Go Live".
 
 ## <a name="net-core-sdk-windows-installer"></a>Windows Installer del SDK de .NET Core
 
@@ -67,7 +68,7 @@ Si usa Visual Studio, necesita [Visual Studio 2019](https://visualstudio.micr
 
 ## <a name="improved-net-core-version-apis"></a>API de versión mejoradas de .NET Core
 
-A partir de .NET Core 3.0, las API de versión incluidas con .NET Core ahora devuelven la información que se espera. Por ejemplo:
+A partir de .NET Core 3.0, las API de versión incluidas con .NET Core ahora devuelven la información que se espera. Por ejemplo: 
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

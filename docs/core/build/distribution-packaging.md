@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo empaquetar, nombrar y versionar .N
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394159"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 
@@ -33,17 +33,34 @@ Cuando se instala, .NET Core consta de varios componentes que están dispuestos
 ├── sdk
 │   ├── <sdk version>            (3)
 │   └── NuGetFallbackFolder      (4)
-└── shared
-    ├── Microsoft.NETCore.App
-    │   └── <runtime version>    (5)
-    └── Microsoft.AspNetCore.App
-        └── <aspnetcore version> (6)
-    └── Microsoft.AspNetCore.All
-        └── <aspnetcore version> (7)
+├── packs
+│   ├── Microsoft.AspNetCore.App.Ref
+│   │   └── <aspnetcore ref version>     (11)
+│   ├── Microsoft.NETCore.App.Ref
+│   │   └── <netcore ref version>        (12)
+│   ├── Microsoft.NETCore.App.Host.<rid>
+│   │   └── <apphost version>            (13)
+│   ├── Microsoft.WindowsDesktop.App.Ref
+│   │   └── <desktop ref version>        (14)
+│   └── NETStandard.Library.Ref
+│       └── <netstandard version>        (15)
+├── shared
+│   ├── Microsoft.NETCore.App
+│   │   └── <runtime version>     (5)
+│   ├── Microsoft.AspNetCore.App
+│   │   └── <aspnetcore version>  (6)
+│   ├── Microsoft.AspNetCore.All
+│   │   └── <aspnetcore version>  (6)
+│   └── Microsoft.WindowsDesktop.App
+│       └── <desktop app version> (7)
+└── templates
+│   └── <templates version>      (17)
 /
-├─usr/share/man/man1
+├── etc/dotnet
+│       └── install_location     (16)
+├── usr/share/man/man1
 │       └── dotnet.1.gz          (9)
-└─usr/bin
+└── usr/bin
         └── dotnet               (10)
 ```
 
@@ -51,21 +68,35 @@ Cuando se instala, .NET Core consta de varios componentes que están dispuestos
 
 Aunque hay un único host, la mayoría del resto de componentes está en directorios con versión (2,3,5,6). Esto significa que puede haber varias versiones en el sistema ya que se instalan en paralelo.
 
-- (2) **host/fxr/\<versión de fxr>** : contiene la lógica de resolución del marco que usa el host. El host usa la versión más reciente de hostfxr que está instalada. Hostfxr es responsable de seleccionar el entorno de ejecución adecuado cuando se ejecuta una aplicación de .NET Core. Por ejemplo, una aplicación compilada para .NET Core 2.0.0 utiliza el runtime de 2.0.5 cuando esté disponible. De forma similar, hostfxr selecciona el SDK adecuado durante el desarrollo.
+- (2) **host/fxr/\<versión de fxr>**: contiene la lógica de resolución del marco que usa el host. El host usa la versión más reciente de hostfxr que está instalada. Hostfxr es responsable de seleccionar el entorno de ejecución adecuado cuando se ejecuta una aplicación de .NET Core. Por ejemplo, una aplicación compilada para .NET Core 2.0.0 utiliza el runtime de 2.0.5 cuando esté disponible. De forma similar, hostfxr selecciona el SDK adecuado durante el desarrollo.
 
-- (3) **sdk/\<versión sdk>** : el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
+- (3) **sdk/\<versión sdk>**: el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
 
-- (4) **sdk/NuGetFallbackFolder**: contiene una caché de paquetes NuGet que un SDK usa durante la operación de restauración, como cuando se ejecuta `dotnet restore` o `dotnet build /t:Restore`.
+- (4) **sdk/NuGetFallbackFolder**: contiene una caché de paquetes NuGet que un SDK usa durante la operación de restauración, como cuando se ejecuta `dotnet restore` o `dotnet build /t:Restore`. Esta carpeta solo se usa antes de .NET Core 3.0. No se puede compilar desde el origen, porque contiene recursos binarios compilados previamente desde `nuget.org`.
 
 La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjunto de bibliotecas en una ubicación central para que las puedan usar diferentes aplicaciones.
 
-- (5) **shared/Microsoft.NETCore.App/\<versión del entorno de ejecución>** : este marco contiene el entorno de ejecución de .NET Core y compatibilidad con las bibliotecas administradas.
+- (5) **shared/Microsoft.NETCore.App/\<versión del entorno de ejecución>**: este marco contiene el entorno de ejecución de .NET Core y compatibilidad con las bibliotecas administradas.
 
-- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<versión de aspnetcore>** : contiene las bibliotecas de ASP.NET Core. Las bibliotecas de `Microsoft.AspNetCore.App` se desarrollan y se admiten como parte del proyecto de .NET Core. Las bibliotecas de `Microsoft.AspNetCore.All` son un superconjunto que también contiene bibliotecas de terceros.
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<versión de aspnetcore>**: contiene las bibliotecas de ASP.NET Core. Las bibliotecas de `Microsoft.AspNetCore.App` se desarrollan y se admiten como parte del proyecto de .NET Core. Las bibliotecas de `Microsoft.AspNetCore.All` son un superconjunto que también contiene bibliotecas de terceros.
+
+- (7) **shared/Microsoft.Desktop.App/\<versión de aplicación de escritorio>**: contiene las bibliotecas de escritorio de Windows. Esto no se incluye en plataformas que no son de Windows.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**: son las licencias .NET Core y de bibliotecas de terceros que se usan en .NET Core.
 
 - (9,10) **dotnet.1.gz, dotnet**: `dotnet.1.gz` es la página manual de dotnet. `dotnet` es un vínculo simbólico al host(1) de dotnet. Estos archivos se instalan en ubicaciones bien conocidas para la integración del sistema.
+
+- (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref**: describe la API de una versión `x.y` de .NET Core y de ASP.NET Core respectivamente. Estos paquetes se utilizan al compilar para esas versiones de destino.
+
+- (13) **Microsoft.NETCore.App.Host.\<rid>**: contiene un binario nativo para la plataforma `rid`. Este binario es una plantilla cuando se compila una aplicación de .NET Core en un archivo binario nativo para esa plataforma.
+
+- (14) **Microsoft.WindowsDesktop.App.Ref**: describe la API de la versión `x.y` de las aplicaciones de escritorio de Windows. Estos archivos se usan al compilar para ese destino. Esto no se proporciona en plataformas que no son de Windows.
+
+- (15) **NETStandard.Library.Ref**: describe la API `x.y` de netstandard. Estos archivos se usan al compilar para ese destino.
+
+- (16) **/etc/dotnet/install_location**: es un archivo que contiene la ruta de acceso completa a la carpeta que contiene el binario del host `dotnet`. La ruta de acceso puede terminar con una nueva línea. No es necesario agregar este archivo cuando la raíz es `/usr/share/dotnet`.
+
+- (17) **templates**: contiene las plantillas que usa el SDK. Por ejemplo, `dotnet new` busca plantillas de proyecto aquí.
 
 ## <a name="recommended-packages"></a>Paquetes recomendados
 
@@ -76,17 +107,67 @@ Por ejemplo:  la versión 2.2.302 del SDK es la segunda versión de revisión de
 Algunos de los paquetes incluyen parte del número de versión en su nombre. Esto permite instalar una versión concreta.
 No se incluye el resto de la versión en el nombre de la versión. Esto permite al administrador de paquetes del sistema operativo actualizar los paquetes (por ejemplo, instalar automáticamente correcciones de seguridad). Los administradores de paquetes compatibles son específicos de Linux.
 
-En la tabla siguiente se muestran los paquetes recomendados:
+A continuación se enumeran los paquetes recomendados:
 
-| nombre                                    | Ejemplo                | Caso de uso: Instalar...           | Contiene           | Dependencias                                   | Versión            |
-|-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
-| dotnet-sdk-[versión principal]                      | dotnet-sdk-2           | SDK más reciente del entorno de ejecución principal    |                    | dotnet-sdk-[versión principal].[versión secundaria más reciente]               | \<versión del sdk>     |
-| dotnet-sdk-[versión principal].[versión secundaria]              | dotnet-sdk-2.1         | SDK más reciente del entorno de ejecución concreto |                    | dotnet-sdk-[versión principal].[versión secundaria].[característica del SDK más reciente]xx | \<versión del SDK>     |
-| dotnet-sdk-[versión principal].[versión secundaria].[característica del SDK]xx | dotnet-sdk-2.1.3xx     | Versión de características específica del SDK    | (3),(4)            | aspnetcore-runtime-[versión principal].[versión secundaria]             | \<versión del SDK>     |
-| aspnetcore-runtime-[versión principal].[versión secundaria]      | aspnetcore-runtime-2.1 | Entorno de ejecución concreto de ASP.NET Core   | (6),[(7)]          | dotnet-runtime-[versión principal].[versión secundaria]                 | \<versión del entorno de ejecución> |
-| dotnet-runtime-[versión principal].[versión secundaria]          | dotnet-runtime-2.1     | Entorno de ejecución concreto                | (5)                | host-fxr:\<versión del entorno de ejecución>+                   | \<versión del entorno de ejecución> |
-| dotnet-host-fxr                         | dotnet-host-fxr        | _dependencia_                    | (2)                | host:\<versión del entorno de ejecución>+                       | \<versión del entorno de ejecución> |
-| dotnet-host                             | dotnet-host            | _dependencia_                    | (1),(8),(9),(10)   |                                                | \<versión del entorno de ejecución> |
+- `dotnet-sdk-[major].[minor]`: instala el SDK más reciente del runtime concreto.
+  - **Versión:** \<versión de runtime>
+  - **Ejemplo:** dotnet-sdk-2.1
+  - **Contiene:** (3),(4)
+  - **Dependencias:** `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
+
+- `aspnetcore-runtime-[major].[minor]`: instala un runtime concreto de ASP.NET Core.
+  - **Versión:** \<versión aspnetcore de runtime>
+  - **Ejemplo:** aspnetcore-runtime-2.1
+  - **Contiene:**  (6)
+  - **Dependencias:** `dotnet-runtime-[major].[minor]`
+
+- `dotnet-runtime-deps-[major].[minor]` _(Opcional)_: instala las dependencias para ejecutar aplicaciones independientes.
+  - **Versión:** \<versión de runtime>
+  - **Ejemplo:** dotnet-runtime-deps-2.1
+  - **Dependencias:** _dependencias concretas de distribución_
+
+- `dotnet-runtime-[major].[minor]`: instala un runtime concreto.
+  - **Versión:** \<versión de runtime>
+  - **Ejemplo:** dotnet-runtime-2.1
+  - **Contiene:** (5)
+  - **Dependencias:** `dotnet-hostfxr:<runtime version>+`, `dotnet-runtime-deps-[major].[minor]`
+
+- `dotnet-hostfxr`: dependencia.
+  - **Versión:** \<versión de runtime>
+  - **Ejemplo:** dotnet-hostfxr
+  - **Contiene:** (2)
+  - **Dependencias:** `host:<runtime version>+`
+
+- `dotnet-host`: dependencia.
+  - **Versión:** \<versión de runtime>
+  - **Ejemplo:** dotnet-host
+  - **Contiene:** (1), (8), (9), (10), (16)
+
+- `dotnet-apphost-pack-[major].[minor]`: dependencia.
+  - **Versión:** \<versión de runtime>
+  - **Contiene:** (13)
+
+- `dotnet-targeting-pack-[major].[minor]`: permite establecer como destino un runtime que no sea el más reciente.
+  - **Versión:** \<versión de runtime>
+  - **Contiene:** (12)
+
+- `aspnetcore-targeting-pack-[major].[minor]`: permite establecer como destino un runtime que no sea el más reciente.
+  - **Versión:** \<versión aspnetcore de runtime>
+  - **Contiene:** (11)
+
+- `netstandard-targeting-pack-[major].[minor]`: permite establecer como destino una versión de netstandard.
+  - **Versión:** \<versión de sdk>
+  - **Contiene:** (15)
+
+- `dotnet-templates-[major].[minor]`
+  - **Versión:** \<versión de sdk>
+  - **Contiene:** (15)
+
+`dotnet-runtime-deps-[major].[minor]` requiere el conocimiento de las _dependencias concretas de distribución_. Dado que el sistema de compilación de distribución puede derivar esto de forma automática, el paquete es opcional, en cuyo caso estas dependencias se agregan directamente al paquete `dotnet-runtime-[major].[minor]`.
+
+Cuando el contenido del paquete se encuentra en una carpeta con versión, el nombre del paquete `[major].[minor]` coincide con el nombre de la carpeta con versión. En todos los paquetes, excepto en `netstandard-targeting-pack-[major].[minor]`, esto también coincide con la versión de .NET Core.
+
+Las dependencias entre paquetes deben usar un requisito de versión _igual o mayor que_. Por ejemplo, `dotnet-sdk-2.2:2.2.401` requiere `aspnetcore-runtime-2.2 >= 2.2.6`. Esto hace posible que el usuario actualice su instalación mediante un paquete raíz (por ejemplo, `dnf update dotnet-sdk-2.2`).
 
 La mayoría de las distribuciones requieren que todos los artefactos se compilen desde el origen. Esto tiene algún impacto en los paquetes:
 
@@ -95,31 +176,6 @@ La mayoría de las distribuciones requieren que todos los artefactos se compilen
 - La carpeta `NuGetFallbackFolder` se rellena con artefactos binarios desde `nuget.org`. Debe permanecer vacía.
 
 Es posible que varios paquetes `dotnet-sdk` proporcionen los mismos archivos para la carpeta `NuGetFallbackFolder`. Para evitar problemas con el administrador de paquetes, estos archivos deben ser idénticos (suma de comprobación, fecha de modificación, etc.).
-
-### <a name="preview-versions"></a>Versiones preliminares
-
-Los mantenedores de paquetes pueden decidir proporcionar versiones preliminares del marco compartido y del SDK. Pueden proporcionarse versiones preliminares con los paquetes `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]` y `dotnet-runtime-[major].[minor]`. Para las versiones preliminares, la versión principal del paquete debe establecerse en cero. De esta manera, se instalará la versión final como una actualización del paquete.
-
-### <a name="patch-packages"></a>Paquetes de revisión
-
-Puesto que una versión de revisión de un paquete puede ocasionar un cambio importante, es posible que un mantenedor de paquetes quiera proporcionar _paquetes de revisión_. Estos paquetes permiten instalar una versión de revisión concreta que no se actualiza automáticamente. Solo use paquetes de revisión en circunstancias excepcionales ya que no están actualizados con correcciones (de seguridad).
-
-En la tabla siguiente se muestran los paquetes recomendados y los **paquetes de revisión**:
-
-| nombre                                           | Ejemplo                  | Contiene         | Dependencias                                              |
-|------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
-| dotnet-sdk-[versión principal]                             | dotnet-sdk-2             |                  | dotnet-sdk-[versión principal].[versión secundaria más reciente del SDK]                     |
-| dotnet-sdk-[versión principal].[versión secundaria]                     | dotnet-sdk-2.1           |                  | dotnet-sdk-[versión principal].[versión secundaria].[característica del SDK más reciente]xx            |
-| dotnet-sdk-[versión principal].[versión secundaria].[característica del SDK]xx        | dotnet-sdk-2.1.3xx       |                  | dotnet-sdk-[versión principal].[versión secundaria].[revisión más reciente del SDK]             |
-| **dotnet-sdk-[versión principal].[versión secundaria].[revisión]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore-runtime-[versión principal].[versión secundaria].[revisión del entorno de ejecución del SDK]    |
-| aspnetcore-runtime-[versión principal].[versión secundaria]             | aspnetcore-runtime-2.1   |                  | aspnetcore-runtime-[versión principal].[versión principal].[revisión más reciente del entorno de ejecución] |
-| **aspnetcore-runtime-[versión principal].[versión secundaria].[revisión]** | aspnetcore-runtime-2.1.0 | (6),[(7)]        | dotnet-runtime-[versión principal].[versión secundaria].[revisión]                    |
-| dotnet-runtime-[versión principal].[versión secundaria]                 | dotnet-runtime-2.1       |                  | dotnet-runtime-[versión principal].[versión secundaria].[revisión más reciente del entorno de ejecución]     |
-| **dotnet-runtime-[versión principal].[versión secundaria].[revisión]**     | dotnet-runtime-2.1.0     | (5)              | host-fxr:\<versión del entorno de ejecución>+                              |
-| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | host:\<versión del entorno de ejecución>+                                  |
-| dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
-
-Una alternativa al uso de paquetes de revisión es _anclar_ los paquetes a una versión concreta mediante el administrador de paquetes. Para evitar que afecte a otros usuarios o aplicaciones, estas aplicaciones pueden compilarse e implementarse en un contenedor.
 
 ## <a name="building-packages"></a>Compilar paquetes
 
