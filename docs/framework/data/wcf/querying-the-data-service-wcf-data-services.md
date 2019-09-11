@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 21a0a02516a1fbe24378235b910df0a602900a21
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc0e8a5e7d254fc4b34566d2252869a2da4af3db
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790381"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894283"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultar el servicio de datos (Data Services de WCF)
 
@@ -43,7 +43,7 @@ Cuando se ejecuta la siguiente consulta, devuelve todas las entidades `Customers
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-Para obtener más información, consulte [Cómo Ejecutar consultas](how-to-execute-data-service-queries-wcf-data-services.md)de servicio de datos.
+Para obtener más información, vea [Cómo: Ejecutar consultas](how-to-execute-data-service-queries-wcf-data-services.md)de servicio de datos.
 
 El [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente admite consultas para objetos enlazados en tiempo de ejecución, como cuando se usa el tipo C#dinámico en. Sin embargo, por razones de rendimiento siempre debe redactar consultas fuertemente tipadas en el servicio de datos. El cliente no admite los objetos de tipo y dinámicos de la clase <xref:System.Tuple>.
 
@@ -56,7 +56,7 @@ Dado que <xref:System.Data.Services.Client.DataServiceQuery%601> la clase implem
 
 Esta consulta LINQ se traduce en el siguiente URI de consulta que se ejecuta en el servicio de datos de [Inicio rápido](quickstart-wcf-data-services.md) basado en Northwind:
 
-```
+```http
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30
 ```
 
@@ -77,7 +77,7 @@ Puede usar la opción de consulta `$orderby` tanto para ordenar como para filtra
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-Puede llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> consecutivamente para construir expresiones de consulta complejas. Para obtener más información, consulte [Cómo Agregar opciones de consulta a una consulta](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)de servicio de datos.
+Puede llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> consecutivamente para construir expresiones de consulta complejas. Para obtener más información, vea [Cómo: Agregar opciones de consulta a una consulta](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)de servicio de datos.
 
 Las opciones de consulta le proporcionan otra forma de expresar los componentes estáticos de una consulta LINQ. Para obtener más información, vea [consideraciones sobre LINQ](linq-considerations-wcf-data-services.md).
 
@@ -141,9 +141,9 @@ Además, puede obtener el recuento total de entidades del conjunto como valor de
 
 - [Cómo: Ejecutar consultas de servicio de datos](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Cómo: Agregar opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Procedimientos: Agregar opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [Procedimientos: Determinar el número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md)
+- [Cómo: Determinar el número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md)
 
 - [Procedimientos: Especificar credenciales de cliente para una solicitud de servicio de datos](specify-client-creds-for-a-data-service-request-wcf.md)
 

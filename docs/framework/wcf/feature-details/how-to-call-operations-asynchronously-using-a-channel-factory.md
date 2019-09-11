@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 3080514d06119a2f1b621cff16056ac7577c30b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adc4d519e8d29fef5595ab7ddc3168462525c4e2
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966801"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895234"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Procedimiento para llamar a operaciones de manera asincrónica mediante un generador de canales
 En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónica a una operación del servicio al utilizar una aplicación de cliente basada en <xref:System.ServiceModel.ChannelFactory%601>. (Al utilizar un objeto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> para invocar un servicio, puede utilizar el modelo de llamada asincrónica orientado a eventos. Para obtener más información, consulte [Cómo Llame a las operaciones](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)de servicio de forma asincrónica. Para obtener más información sobre el modelo de llamada asincrónica basado en eventos, vea [patrón asincrónico basado en eventos (EAP)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)).  
@@ -21,9 +21,9 @@ En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónic
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Para llamar a operaciones de servicio WCF de forma asincrónica  
   
-1. Ejecute la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con la `/async` opción como se muestra en el siguiente comando.  
+1. Ejecute la herramienta de [utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con la `/async` opción como se muestra en el siguiente comando.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   

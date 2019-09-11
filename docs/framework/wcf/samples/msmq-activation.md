@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039294"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895245"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 
@@ -92,15 +92,11 @@ Se utiliza un archivo .svc con el nombre de la clase para hospedar el código de
 
 El propio archivo Service.svc contiene una directiva para crear `OrderProcessorService`.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 El archivo Service.svc también contiene una directiva de ensamblado para asegurar que se carga System.Transactions.dll.
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 El cliente crea un ámbito de transacción. La comunicación con el servicio tiene lugar dentro del ámbito de la transacción, produciendo que se trate como una unidad atómica donde todos los mensajes tienen éxito o dan error. La transacción se confirma llamando a `Complete` en el ámbito de la transacción.
 
@@ -333,7 +329,7 @@ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguri
 
     1. Ejecute Inetmgr.exe.
 
-    2. En **grupos de aplicaciones**, haga clic con el botón derecho en el **AppPool** (normalmente, **DefaultAppPool**) y elija establecer valores predeterminados de **grupo de aplicaciones.** .
+    2. En **grupos de aplicaciones**, haga clic con el botón derecho en el **AppPool** (normalmente, **DefaultAppPool**) y elija **establecer valores predeterminados de grupo de aplicaciones.** .
 
     3. Cambie las propiedades Identity para utilizar la cuenta de usuario concreta.
 

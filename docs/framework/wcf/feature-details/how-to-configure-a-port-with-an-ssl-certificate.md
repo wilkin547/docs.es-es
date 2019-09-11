@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: fb5ca2c5e0040ed86c9f51323f390d625d658903
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e21311802b0a3ce4e415b14686b101d31f18035
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622943"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893316"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedimiento para configurar un puerto con un certificado SSL
-Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí mismos con el <xref:System.ServiceModel.WSHttpBinding> que utiliza seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con <xref:System.ServiceModel.WSHttpBinding> la clase que usa la seguridad de transporte, también debe configurar un puerto con un certificado X. 509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, vea [seguridad de transporte http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
   
- Si está ejecutando [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. Esta herramienta se instala con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [Windows XP Service Pack 2 Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [introducción general a Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605). El [documentación de las herramientas de soporte técnico de Windows](https://go.microsoft.com/fwlink/?LinkId=94840) explica la sintaxis de la herramienta Httpcfg.exe.  
+ Si está ejecutando [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. Esta herramienta se instala con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [información general de Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605). La [documentación](https://go.microsoft.com/fwlink/?LinkId=94840) de las herramientas de soporte de Windows explica la sintaxis de la herramienta Httpcfg. exe.  
   
  Si está ejecutando [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe, que ya está instalada.  
   
@@ -41,23 +41,23 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
   
 ### <a name="to-determine-how-ports-are-configured"></a>Determinar cómo se configuran los puertos  
   
-1. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe para ver la configuración de puerto actual, utilizando el **consulta** y **ssl** se activa, tal como se muestra en el ejemplo siguiente.  
+1. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg. exe para ver la configuración de puerto actual, mediante los modificadores de **consulta** y **SSL** , tal y como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console
     httpcfg query ssl  
     ```  
   
 2. En [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe para ver la configuración de puerto actual, como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     netsh http show sslcert  
     ```  
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Para obtener una huella digital de un certificado  
   
-1. Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1. Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, consulte [Cómo Ver certificados con el complemento](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC.  
   
-2. Obtenga acceso a la huella digital del certificado. Para obtener más información, vea [Cómo: Recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Obtenga acceso a la huella digital del certificado. Para obtener más información, consulte [Cómo Recupera la huella digital de un](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)certificado.  
   
 3. Copie la huella digital del certificado en un editor de texto, como por ejemplo Bloc de notas.  
   
@@ -67,59 +67,59 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
   
 1. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe en modo "set" en el almacén SSL (Capa de sockets seguros) para enlazar el certificado a un número de puerto. La herramienta utiliza la huella digital para identificar el certificado, tal y como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    - El **-i** conmutador tiene la sintaxis de `IP`:`port` e indica a la herramienta para establecer el certificado en el puerto 8012 del equipo. De forma opcional, también se pueden reemplazar los cuatro ceros que preceden el número por la dirección IP real del equipo.  
+    - El modificador **-i** tiene la sintaxis `IP`de`port` : e indica a la herramienta que establezca el certificado en el puerto 8012 del equipo. De forma opcional, también se pueden reemplazar los cuatro ceros que preceden el número por la dirección IP real del equipo.  
   
-    - El **-h** conmutador especifica la huella digital del certificado.  
+    - El modificador **-h** especifica la huella digital del certificado.  
   
 2. En [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe, como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    - El **certhash** parámetro especifica la huella digital del certificado.  
+    - El parámetro **certhash** especifica la huella digital del certificado.  
   
-    - El **ipport** parámetro especifica la dirección IP y puerto, y funciona exactamente igual que el **-i** switch de la herramienta Httpcfg.exe descrita.  
+    - El parámetro **ipport** especifica la dirección IP y el puerto, y funciona de la misma manera que el modificador **-i** de la herramienta Httpcfg. exe que se describe.  
   
-    - El **appid** parámetro es un GUID que se puede usar para identificar la aplicación propietaria.  
+    - El parámetro **AppID** es un GUID que se puede usar para identificar la aplicación propietaria.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Para enlazar un Certificado SSL a un número de puerto y a certificados de cliente de compatibilidad  
   
 1. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], para admitir clientes que se autentican con certificados X.509 en el nivel de transporte, siga el procedimiento anterior pero pase un parámetro de línea de comandos adicional a HttpCfg.exe, tal y como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     El **-f** conmutador tiene la sintaxis de `n` donde n es un número entre 1 y 7. El valor 2, como se mostraba en el ejemplo anterior, habilita los certificados de cliente en el nivel de transporte. El valor 3 habilita los certificados de cliente y los asigna a una cuenta de Windows. Consulte la Ayuda HttpCfg.exe para el comportamiento de otros valores.  
+     El modificador **-f** tiene la sintaxis `n` , donde n es un número entre 1 y 7. El valor 2, como se mostraba en el ejemplo anterior, habilita los certificados de cliente en el nivel de transporte. El valor 3 habilita los certificados de cliente y los asigna a una cuenta de Windows. Consulte la Ayuda HttpCfg.exe para el comportamiento de otros valores.  
   
 2. En [!INCLUDE[wv](../../../../includes/wv-md.md)], para admitir los clientes que se autentican con certificados X.509 en el nivel de transporte, siga el procedimiento anterior pero pase un parámetro de línea de comandos adicional a HttpCfg.exe, tal y como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
     ```  
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Eliminar un Certificado SSL desde un número de puerto  
   
-1. Use la herramienta HttpCfg.exe o Netsh.exe para ver los puertos y huellas digitales de todos los enlaces del equipo. Para imprimir la información en el disco, use el carácter de redirección ">", como se muestra en el ejemplo siguiente.  
+1. Use la herramienta HttpCfg.exe o Netsh.exe para ver los puertos y huellas digitales de todos los enlaces del equipo. Para imprimir la información en el disco, use el carácter de redireccionamiento ">", como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     httpcfg query ssl>myMachinePorts.txt  
-    ```  
+    ```
   
-2. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe con las **eliminar** y **ssl** palabras clave. Use la **-i** modificador para especificar el `IP`:`port` número y el **-h** conmutador para especificar la huella digital.  
+2. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg. exe con las palabras clave **Delete** y **SSL** . Use el modificador **-i** para especificar `IP`el`port` número: y el modificador **-h** para especificar la huella digital.  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
 3. En [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe, como se muestra en el ejemplo siguiente.  
   
-    ```  
+    ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  
     ```  
   

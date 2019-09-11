@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c01453556a71925c322e9f9aef8065cbddb3540
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780688"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894396"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 Los parámetros con valores de tabla proporcionan un método sencillo para calcular las referencias de varias filas de datos procedentes de una aplicación cliente en SQL Server sin necesidad de efectuar viajes de ida y vuelta (round trip) ni de crear lógica especial de servidor para procesar los datos. Puede usar los parámetros con valores de tabla para encapsular las filas de datos de una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos de entrada se almacenan en una variable de tabla en la que se puede operar utilizando Transact-SQL.  
@@ -43,14 +43,14 @@ Los parámetros con valores de tabla proporcionan un método sencillo para calcu
   
  La siguiente instrucción crea un tipo de tabla denominado CategoryTableType formada por las columnas CategoryID y CategoryName:  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  Después de crear un tipo de tabla, puede declarar los parámetros con valores de tabla basados en ese tipo. El siguiente fragmento de Transact-SQL muestra cómo declarar un parámetro con valores de tabla en una definición de procedimiento almacenado. Observe que se requiere la palabra clave READONLY para declarar un parámetro con valores de tabla.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -60,7 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  La siguiente instrucción UPDATE de Transact-SQL muestra cómo usar un parámetro con valores de tabla mediante su unión con la tabla Categories. Cuando use un parámetro con valores de tabla con JOIN en una cláusula FROM, también debe asignarle un alias, como se muestra aquí, donde el parámetro con valores de tabla tiene el alias "ec":  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -69,7 +69,7 @@ UPDATE dbo.Categories
   
  Este ejemplo de Transact-SQL muestra cómo seleccionar en un parámetro con valores de tabla para ejecutar INSERT en una sola operación basada en conjuntos.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  

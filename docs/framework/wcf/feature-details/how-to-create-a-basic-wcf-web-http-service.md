@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636512"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895181"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedimiento para crear un servicio básico web HTTP de WCF
 
-Windows Communication Foundation (WCF) le permite crear un servicio que expone un extremo Web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de puntos de conexión.
+Windows Communication Foundation (WCF) le permite crear un servicio que exponga un punto de conexión Web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de puntos de conexión.
 
 > [!NOTE]
 > La única manera de proteger un punto de conexión web es exponerlo a través de HTTPS, utilizando la seguridad de transporte. Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los puntos de conexión que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
     > [!NOTE]
     > Si no agrega un punto de conexión, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un punto de conexión predeterminado. <xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web (WSDL) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.
     >
-    >  Agregar un punto de conexión que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el punto de conexión. La razón de esto es el URI del extremo es el mismo que el URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio WCF) de escucha.
+    >  Agregar un punto de conexión que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el punto de conexión. El motivo es que el URI de escucha del punto de conexión es el mismo que el URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio WCF).
 
      Para evitar que esto suceda, puede realizar una de las siguientes acciones:
 
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
 
      Este ejemplo muestra cómo hospedar un servicio de tipo web con una aplicación de consola. También puede hospedar este tipo de servicios dentro de IIS. Para ello, especifique la clase <xref:System.ServiceModel.Activation.WebServiceHostFactory> en un archivo .svc como muestra el siguiente código.
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para llamar a las operaciones de servicio asignadas a GET en Internet Explorer
 
-1. Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet?s=Hello, world!`" y presione ENTRAR. La dirección URL contiene la dirección base del servicio (`http://localhost:8000/`), la dirección relativa del punto de conexión (""), la operación de servicio para llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una y comercial (&).
+1. Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet?s=Hello, world!`" y presione Entrar. La dirección URL contiene la dirección base del servicio (`http://localhost:8000/`), la dirección relativa del punto de conexión (""), la operación de servicio que se va a llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una y comercial (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Realización de llamadas a operaciones de servicio mediante código
 

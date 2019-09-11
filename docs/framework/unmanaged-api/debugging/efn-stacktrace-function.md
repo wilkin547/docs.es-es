@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738982"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895037"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_StackTrace (función)
+# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace (función)
 Proporciona una representación de texto de un seguimiento de pila administrado y una matriz de registros `CONTEXT`, uno por cada transición entre código no administrado y código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,62 +42,62 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>Parámetros  
  `Client`  
- [in] El cliente que se está depurando.  
+ de Cliente que se está depurando.  
   
  `wszTextOut`  
- [out] La representación de texto del seguimiento de pila.  
+ enuncia Representación de texto del seguimiento de la pila.  
   
  `puiTextLength`  
- [out] Un puntero al número de caracteres en `wszTextOut`.  
+ enuncia Puntero al número de caracteres de `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] La matriz de contextos de transición.  
+ enuncia Matriz de contextos de transición.  
   
  `puiTransitionContextCount`  
- [out] Un puntero al número de contextos de transición en la matriz.  
+ enuncia Puntero al número de contextos de transición de la matriz.  
   
  `uiSizeOfContext`  
- [in] El tamaño de la estructura de contexto.  
+ de Tamaño de la estructura de contexto.  
   
  `Flags`  
- [in] Se establece en 0 o SOS_STACKTRACE_SHOWADDRESSES (0 x 01) para mostrar el registro EBP y el puntero de pila (ESP) delante de cada `module!functionname` línea.  
+ de Establézcalo en 0 o SOS_STACKTRACE_SHOWADDRESSES (0x01) para mostrar el registro EBP y el puntero de pila Enter (ESP) delante de cada `module!functionname` línea.  
   
 ## <a name="remarks"></a>Comentarios  
- El `_EFN_StackTrace` estructura puede llamarse desde una interfaz de programación WinDbg. Los parámetros se usan como sigue:  
+ Se `_EFN_StackTrace` puede llamar a la estructura desde una interfaz de programación WinDbg. Los parámetros se utilizan de la siguiente manera:  
   
-- Si `wszTextOut` es null y `puiTextLength` es no nulo, la función devuelve la longitud de cadena en `puiTextLength`.  
+- Si `wszTextOut` es NULL y `puiTextLength` no es null, la función devuelve la longitud de la `puiTextLength`cadena en.  
   
-- Si `wszTextOut` es no nulo, la función almacena el texto en `wszTextOut` hasta la ubicación indicada por `puiTextLength`. Devuelve correctamente si había espacio suficiente en el búfer, o se devuelve E_OUTOFMEMORY si el búfer no es suficientemente larga.  
+- Si `wszTextOut` no es null, la función almacena el texto `wszTextOut` en la ubicación indicada por `puiTextLength`. Devuelve correctamente si hay suficiente espacio en el búfer o devuelve E_OUTOFMEMORY si el búfer no era suficientemente largo.  
   
-- La parte de la transición de la función se omite si `pTransitionContexts` y `puiTransitionContextCount` ambos son null. En este caso, la función proporciona a los llamadores con salida de texto de sólo los nombres de función.  
+- La parte de la transición de la función se `pTransitionContexts` omite `puiTransitionContextCount` si y son NULL. En este caso, la función proporciona a los llamadores la salida de texto solo de los nombres de función.  
   
-- Si `pTransitionContexts` es null y `puiTransitionContextCount` es no nulo, la función devuelve el número necesario de entradas de contexto en `puiTransitionContextCount`.  
+- Si `pTransitionContexts` es NULL y `puiTransitionContextCount` no es null, la función devuelve el número necesario de entradas de contexto `puiTransitionContextCount`en.  
   
-- Si `pTransitionContexts` es no nulo, la función lo trata como una matriz de estructuras de longitud `puiTransitionContextCount`. El tamaño de la estructura viene dado por `uiSizeOfContext`, y debe ser el tamaño de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` para la arquitectura.  
+- Si `pTransitionContexts` no es null, la función lo trata como una matriz de estructuras de longitud `puiTransitionContextCount`. Especifica `uiSizeOfContext`el tamaño de la estructura y debe ser el tamaño de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` de la arquitectura.  
   
-- `wszTextOut` se escribe en el formato siguiente:  
+- `wszTextOut`se escribe en el formato siguiente:  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- Si el desplazamiento en hexadecimal 0 x 0, no se escribe ningún desplazamiento.  
+- Si el desplazamiento en Hex es 0X0, no se escribe ningún desplazamiento.  
   
-- Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve SOS_E_NOMANAGEDCODE.  
+- Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve SOS_E_NOMANAGEDCODE.  
   
 - El `Flags` parámetro es 0 o SOS_STACKTRACE_SHOWADDRESSES para ver EBP y ESP delante de cada `module!functionname` línea. De forma predeterminada, es 0.  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: SOS_Stacktrace.h  
+ **Encabezado**: SOS_Stacktrace. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

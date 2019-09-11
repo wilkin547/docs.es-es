@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916279"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895285"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de código están diseñados para una aplicación de Windows Forms. Esta aplicación no muestra escenarios del mundo real, como el uso de tarjetas inteligentes. En su lugar, muestra los aspectos básicos del cifrado y el descifrado.  
@@ -61,7 +61,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 |<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|Exportar la clave pública|  
 |<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|Importar la clave pública|  
 |<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|Obtener la clave privada|  
-|<xref:System.Windows.Forms.Label>|`label1`||  
+|<xref:System.Windows.Forms.Label>|`label1`|Clave no establecida|  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   

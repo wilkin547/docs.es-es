@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f17f815ea0f1f91284d3223ff233a87dc7ff71eb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946210"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892688"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedimiento Interrumpir y combinar instrucciones en el código (Visual Basic)
 Al escribir el código, puede crear a veces instrucciones largas que requieren un desplazamiento horizontal en el editor de código. Aunque esto no afecta al modo en que se ejecuta el código, dificulta la lectura del código tal y como aparece en el monitor. En tales casos, debería considerar la posibilidad de dividir la única instrucción larga en varias líneas.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir una sola instrucción en varias líneas  
   
-- Use el carácter de continuación de línea, que es un carácter de`_`subrayado (), en el punto en el que desea que se interrumpa la línea. El carácter de subrayado debe tener inmediatamente antes un espacio e inmediatamente después un terminador de línea (retorno de carro).  
+-   Use el carácter de continuación de línea, que es un carácter de`_`subrayado (), en el punto en el que desea que se interrumpa la línea. El carácter de subrayado debe ir inmediatamente precedido de un espacio y seguido inmediatamente de un terminador de línea (retorno de carro) o (a partir de la versión 16,0) un comentario seguido de un retorno de carro. 
   
     > [!NOTE]
     > En algunos casos, si se omite el carácter de continuación de línea, el compilador Visual Basic continuará implícitamente la instrucción en la siguiente línea de código. Para obtener una lista de los elementos de sintaxis para los que puede omitir el carácter de continuación de línea, vea "continuación de línea implícita" en las [instrucciones](../../../visual-basic/programming-guide/language-features/statements.md).  

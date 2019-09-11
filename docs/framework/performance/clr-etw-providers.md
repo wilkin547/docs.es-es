@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003742"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894701"
 ---
 # <a name="clr-etw-providers"></a>Proveedores ETW de CLR
 El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime y el proveedor del informe detallado.  
   
  El proveedor de runtime genera eventos en función de las palabras clave (categorías de eventos) que están habilitadas. Por ejemplo, puede recopilar eventos de cargador habilitando la palabra clave `LoaderKeyword`.  
   
- Eventos de seguimiento para Windows (ETW) se registran en un archivo que tiene la extensión .etl, que posteriormente se puede procesar posterior en los archivos de valores separados por comas (.csv) según sea necesario. Para más información sobre cómo convertir el archivo .etl en un archivo .csv, vea [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](../../../docs/framework/performance/controlling-logging.md).  
+ Los eventos de seguimiento de eventos para Windows (ETW) se registran en un archivo que tiene una extensión. ETL, que posteriormente se puede procesar después en archivos de valores separados por comas (. csv) según sea necesario. Para más información sobre cómo convertir el archivo .etl en un archivo .csv, vea [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>El proveedor en tiempo de ejecución  
  El proveedor en tiempo de ejecución es el principal proveedor ETW de CLR.  
@@ -60,7 +60,7 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
 1. Active el registro ETW mediante el proveedor en tiempo de ejecución de CLR:  
   
-    ```  
+    ```console
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
     ```  
   
@@ -68,7 +68,7 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
 2. Para detener la generación de perfiles mientras continúa ejecutándose el proceso, inicie el proveedor de informe detallado para capturar los eventos `DCEnd`:  
   
-    ```  
+    ```console
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
     ```  
   
@@ -76,14 +76,14 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
 3. Desactive toda la generación de perfiles ETW:  
   
-    ```  
+    ```console
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
 4. Fusione mediante combinación los perfiles para crear un archivo de registro:  
   
-    ```  
+    ```console
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   

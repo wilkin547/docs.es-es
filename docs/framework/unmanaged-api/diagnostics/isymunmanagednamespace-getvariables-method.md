@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939495"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895052"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables (Método)
 Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,19 +39,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parámetros  
  `cVars`  
- [in] Un `ULONG32` que indica el tamaño de la `pVars` matriz.  
+ de Que indica el tamaño de la `pVars` matriz. `ULONG32`  
   
  `pcVars`  
- [out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.  
+ enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.  
   
  `pVars`  
- [out] Un puntero a un búfer que contiene los espacios de nombres.  
+ enuncia Un puntero a un búfer que contiene los espacios de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

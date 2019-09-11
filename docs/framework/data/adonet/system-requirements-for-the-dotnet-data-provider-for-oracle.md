@@ -2,12 +2,12 @@
 title: Requisitos del sistema para el proveedor de datos .NET Framework para Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780577"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894382"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisitos del sistema para el proveedor de datos .NET Framework para Oracle
 El proveedor de datos .NET Framework para Oracle requiere Microsoft Data Access Components (MDAC), versión 2.6 o posterior. Se recomienda MDAC 2.8 SP1.  
@@ -22,9 +22,7 @@ El proveedor de datos .NET Framework para Oracle requiere Microsoft Data Access 
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Definición de un valor Unicode en un atributo de cadena de conexión  
  Al trabajar con Oracle, puede utilizar el atributo de cadena de conexión  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  para inicializar las bibliotecas de cliente de Oracle en modo UTF-16. De esta manera, las bibliotecas de cliente de Oracle aceptarán UTF-16 (que es muy parecido a UCS-2) en lugar de cadenas de varios bytes. Como consecuencia, el proveedor de datos para Oracle puede trabajar siempre con cualquier página de códigos Oracle sin necesidad de trabajo de conversión adicional. Esta configuración sólo funciona si utiliza clientes Oracle 9i para comunicarse con una base de datos Oracle 9i con el juego de caracteres alternativo de AL16UTF16. Cuando un cliente de Oracle 9i se comunica con un servidor Oracle 9i, se necesitan recursos adicionales para convertir los valores **CommandText** de Unicode al Juego de caracteres de varios bytes adecuado que usa el servidor Oracle9i. Esto se puede evitar si sabe que tiene la configuración segura agregando `Unicode=True` a la cadena de conexión.  
   

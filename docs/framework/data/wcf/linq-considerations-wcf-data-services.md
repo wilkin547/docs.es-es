@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 659e3ba02367feee4539a984b679173ee4544d17
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779884"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894318"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Consideraciones sobre LINQ (WCF Data Services)
 En este tema se proporciona información sobre cómo se crean y ejecutan consultas LINQ cuando se usa el cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y las limitaciones de uso de LINQ para consultar un servicio de datos que implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Para obtener más información sobre la creación y ejecución de consultas [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]en un servicio de datos basado en, vea [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
@@ -32,7 +32,7 @@ En este tema se proporciona información sobre cómo se crean y ejecutan consult
   
  Esta consulta LINQ se traduce en el siguiente URI de consulta que se ejecuta en el servicio de datos de [Inicio rápido](quickstart-wcf-data-services.md) basado en Northwind:  
   
-```  
+```http
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   

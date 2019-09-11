@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636283"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895170"
 ---
 # <a name="duplex-services"></a>Servicios dúplex
 
 Un contrato de servicios dúplex es un patrón de intercambio de mensajes en el que ambos puntos de conexión pueden enviar mensajes al otro de manera independiente. Un servicio dúplex, por tanto, puede enviar mensajes de vuelta al punto de conexión del cliente, proporcionando un comportamiento parecido a los eventos. La comunicación dúplex se produce cuando un cliente se conecta a un servicio y proporciona al servicio un canal en el que el servicio puede devolver los mensajes al cliente. Tenga en cuenta que el comportamiento como evento de los servicios dúplex solo funciona dentro de una sesión.
 
-Para crear un contrato dúplex ha de crear un par de interfaces. La primera es la interfaz del contrato de servicio, que describe las operaciones que un cliente puede invocar. Ese contrato de servicio debe especificar un *contrato de devolución de llamada* en el <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> propiedad. El contrato de devolución de llamadas es la interfaz que define las operaciones a las que el servicio puede llamar en el punto de conexión del cliente. Un contrato dúplex no requiere una sesión, aunque los enlaces dúplex proporcionados por el sistema las utilizan.
+Para crear un contrato dúplex ha de crear un par de interfaces. La primera es la interfaz del contrato de servicio, que describe las operaciones que un cliente puede invocar. Dicho contrato de servicio debe especificar un contrato de devolución <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> de *llamada* en la propiedad. El contrato de devolución de llamadas es la interfaz que define las operaciones a las que el servicio puede llamar en el punto de conexión del cliente. Un contrato dúplex no requiere una sesión, aunque los enlaces dúplex proporcionados por el sistema las utilizan.
 
 A continuación, se muestra un ejemplo de un contrato dúplex.
 
@@ -33,7 +33,7 @@ El cliente debe proporcionar una clase que implemente la interfaz de devolución
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-El cliente de WCF que se genera para un contrato dúplex requiere una <xref:System.ServiceModel.InstanceContext> clase proporcionarse en la construcción. Esta clase <xref:System.ServiceModel.InstanceContext> se utiliza como sitio para un objeto que implementa la interfaz de devolución de llamadas y administra mensajes que se devuelven desde el servicio. Se construye una clase <xref:System.ServiceModel.InstanceContext> con una instancia de la clase `CallbackHandler`. Este objeto administra mensajes enviados desde el servicio al cliente en la interfaz de devolución de llamadas.
+El cliente de WCF que se genera para un contrato dúplex requiere <xref:System.ServiceModel.InstanceContext> que se proporcione una clase en la construcción. Esta clase <xref:System.ServiceModel.InstanceContext> se utiliza como sitio para un objeto que implementa la interfaz de devolución de llamadas y administra mensajes que se devuelven desde el servicio. Se construye una clase <xref:System.ServiceModel.InstanceContext> con una instancia de la clase `CallbackHandler`. Este objeto administra mensajes enviados desde el servicio al cliente en la interfaz de devolución de llamadas.
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -47,12 +47,12 @@ En el cliente, debe configurar una dirección que el servidor pueda utilizar par
 
 Si crea un cliente/servicio mediante el elemento `WSHttpBinding` y no incluye el punto de conexión de devolución de llamada de cliente, recibirá el siguiente error.
 
-```
+```console
 HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.
 ```
 
-El código de ejemplo siguiente muestra cómo especificar al cliente de dirección de punto de conexión mediante programación.
+En el código de ejemplo siguiente se muestra cómo especificar la dirección del punto de conexión de cliente mediante programación.
 
 ```csharp
 WSDualHttpBinding binding = new WSDualHttpBinding();
@@ -87,10 +87,10 @@ El siguiente ejemplo de código muestra cómo especificar la dirección de extre
 ```
 
 > [!WARNING]
-> El modelo dúplex no detecta automáticamente cuando un servicio o cliente cierra su canal. Por lo que si un cliente finaliza inesperadamente, de forma predeterminada el servicio no se notificará, o si un servicio termina de forma inesperada, no se notificará al cliente. Si usa un servicio que está desconectado, el <xref:System.ServiceModel.CommunicationException> se produce la excepción. Los clientes y los servicios pueden implementar su propio protocolo para notificarse si así lo deciden. Para obtener más información sobre el control de errores, vea [control de errores de WCF](../wcf-error-handling.md)
+> El modelo dúplex no detecta automáticamente cuando un servicio o cliente cierra su canal. Por tanto, si un cliente finaliza inesperadamente, de forma predeterminada no se notificará al servicio, o si un servicio finaliza inesperadamente, no se notificará al cliente. Si utiliza un servicio que está desconectado, se produce la <xref:System.ServiceModel.CommunicationException> excepción. Los clientes y los servicios pueden implementar su propio protocolo para notificarse si así lo deciden. Para obtener más información sobre el control de errores, vea [control de errores de WCF](../wcf-error-handling.md) .
 
 ## <a name="see-also"></a>Vea también
 
 - [Dúplex](../samples/duplex.md)
 - [Especificación del comportamiento de tiempo de ejecución del cliente](../specifying-client-run-time-behavior.md)
-- [Cómo: Crear un generador de canales y utilizarlo para crear y gestionar canales](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Cómo: Crear un generador de canales y usarlo para crear y administrar canales](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

@@ -2,25 +2,34 @@
 title: <issuerChannelBehaviors> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 2c0e0d8d041565edd25c4b2c2802bfd2a589b4f7
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+no-loc:
+- <system.serviceModel>
+- <behaviors>
+- <endpointBehaviors>
+- <behavior>
+- <clientCredentials>
+- <issuedToken>
+- <issuerChannelBehaviors>
+- <dataContractSerializer>
+ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397902"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893161"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors >, elemento
 
 Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que se usarán al comunicarse con los servicios de token de servicio especificados. Los comportamientos definidos no pueden incluir [ \<elementos > clientCredentials](clientcredentials.md) .
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> issuedToken**](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuerChannelBehaviors**  
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<> System. serviceModel](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamientos >](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> endpointBehaviors](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<comportamiento >](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials >](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> issuedToken](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<> issuerChannelBehaviors
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -67,5 +76,5 @@ Use este elemento cuando se deba utilizar un comportamiento (excepto los comport
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Protección de clientes](../../../wcf/securing-clients.md)
 - [Cómo: Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [Procedimientos: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Cómo: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

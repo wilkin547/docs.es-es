@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11dc050e2fe16a64db4ac95bb1386e2d90535e81
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650731"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895028"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint (Método)
-Especifica el método definido por el usuario que es el punto de entrada para este módulo. Por ejemplo, este punto de entrada podría ser el método del usuario principal en lugar de código auxiliar generado por el compilador antes de principal.  
+Especifica el método definido por el usuario que es el punto de entrada de este módulo. Por ejemplo, este punto de entrada podría ser el método Main del usuario en lugar de los códigos auxiliares generados por el compilador antes de Main.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
  `entryMethod`  
- [in] Seleccione el token de metadatos para el método que es la entrada del usuario.  
+ de Símbolo (token) de metadatos para el método que es el punto de entrada del usuario.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

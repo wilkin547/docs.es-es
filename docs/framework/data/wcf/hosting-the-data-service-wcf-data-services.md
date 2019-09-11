@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780274"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894326"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospedar el servicio de datos (Data Services de WCF)
 Con WCF Data Services, puede crear un servicio que exponga los datos como una [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente. Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, un servicio de datos no puede enlazar y escuchar en un socket de red las solicitudes HTTP entrantes. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
@@ -40,7 +40,7 @@ Con WCF Data Services, puede crear un servicio que exponga los datos como una [!
 
 Cuando se usa el cuadro de diálogo **Agregar nuevo elemento** de Visual Studio 2015 para definir un servicio de datos en una aplicación ASP.net, la herramienta genera dos nuevos archivos en el proyecto. El primer archivo tiene una extensión `.svc` e indica al tiempo de ejecución de WCF cómo crear instancias del servicio de datos. A continuación se muestra un ejemplo de este archivo para el servicio de datos de ejemplo Northwind que se crea al completar la guía de [Inicio rápido](quickstart-wcf-data-services.md):
 
-```
+```aspx-csharp
 <%@ ServiceHost Language="C#"
     Factory="System.Data.Services.DataServiceHostFactory,
             System.Data.Services, Version=4.0.0.0,

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 2d075bfebf7b5cbd2b2ce031a1c3855a925405a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0a6f1477ceec5471c22fa3e46d85f5856b298e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964028"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895068"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Procedimiento Llamar a operaciones de servicio WCF de forma asincrónica
 En este tema se explica cómo puede tener acceso un cliente a una operación de servicio de forma asincrónica. El servicio en este tema implementa la interfaz `ICalculator`. El cliente puede llamar a las operaciones de esta interfaz de forma asincrónica mediante el modelo de llamada asincrónica orientado a eventos. (Para obtener más información sobre el modelo de llamada asincrónica basado en eventos, vea [programación multiproceso con el modelo asincrónico basado en eventos](https://go.microsoft.com/fwlink/?LinkId=248184)). Para obtener un ejemplo que muestra cómo implementar una operación de forma asincrónica en un servicio [, consulte Cómo: Implemente una operación](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)de servicio asincrónica. Para obtener más información sobre las operaciones sincrónicas y asincrónicas, vea [operaciones sincrónicas y asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -22,9 +22,9 @@ En este tema se explica cómo puede tener acceso un cliente a una operación de 
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Para llamar a operaciones de servicio WCF de forma asincrónica  
   
-1. Ejecute la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con `/async` las `/tcv:Version35` opciones de comando y, tal y como se muestra en el siguiente comando.  
+1. Ejecute la herramienta de [utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con `/async` las `/tcv:Version35` opciones de comando y, tal y como se muestra en el siguiente comando.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
@@ -65,4 +65,4 @@ En este tema se explica cómo puede tener acceso un cliente a una operación de 
   
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos: Implementar una operación de servicio asincrónica](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+- [Cómo: Implementar una operación de servicio asincrónica](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

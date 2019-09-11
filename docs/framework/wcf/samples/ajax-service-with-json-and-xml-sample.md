@@ -2,12 +2,12 @@
 title: Servicio AJAX con ejemplo JSON y XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 62c573a844ce5382308814342330f778fa041a69
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eadb884667a0b29ef36056f0c3bec4675b7f1b05
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045195"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895139"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Servicio AJAX con ejemplo JSON y XML
 
@@ -22,9 +22,7 @@ Este ejemplo muestra cómo intercambiar el tipo de respuesta de una operación e
 
 Para habilitar el uso de los clientes de AJAX de ASP.NET, use <xref:System.ServiceModel.Activation.WebServiceHostFactory> (no <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) en el archivo .svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> agrega un extremo <xref:System.ServiceModel.Description.WebHttpEndpoint> estándar al servicio. El punto de conexión se configura en una dirección vacía relativa al archivo. SVC; Esto significa que la dirección del servicio es `http://localhost/ServiceModelSamples/service.svc`, sin sufijos adicionales que no sean el nombre de la operación.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>`
 
 La siguiente sección de Web.config se puede utilizar para realizar cambios de configuración adicionales en el extremo. Se puede quitar si no se necesita ningún cambio adicional.
 

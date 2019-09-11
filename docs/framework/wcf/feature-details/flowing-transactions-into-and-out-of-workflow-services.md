@@ -2,12 +2,12 @@
 title: Flujo de las transacciones en los servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: db1a1ef6bcf3f048584b39450c90fac3ff35646b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988806"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893370"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Flujo de las transacciones en los servicios de flujo de trabajo
 Los servicios y clientes de flujo de trabajo pueden participar en las transacciones.  Para que una operación de servicio se convierta en parte de una transacción de ambiente, coloque una actividad de <xref:System.ServiceModel.Activities.Receive> dentro de una actividad de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. En cualquier llamada realizada por un objeto <xref:System.ServiceModel.Activities.Send> o una actividad de <xref:System.ServiceModel.Activities.SendReply> dentro de <xref:System.ServiceModel.Activities.TransactedReceiveScope> también se realizará dentro de la transacción de ambiente. Una aplicación cliente del flujo de trabajo puede crear una transacción de ambiente utilizando la actividad de <xref:System.Activities.Statements.TransactionScope> y operaciones de servicio de llamada que usen la transacción de ambiente. Este tema sirve de guía para crear un servicio de flujo de trabajo y un cliente de flujo de trabajo que participan en transacciones.  
@@ -37,7 +37,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 3. Agregue una nueva clase denominada `PrintTransactionInfo` al proyecto `Common`. Esta clase se deriva de <xref:System.Activities.NativeActivity> y sobrecarga el método <xref:System.Activities.NativeActivity.Execute%2A>.  
   
-    ```  
+    ```csharp
     using System;  
     using System;  
     using System.Activities;  
@@ -76,7 +76,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 ### <a name="implement-the-workflow-service"></a>Implementar el servicio de flujo de trabajo  
   
-1. Agregue un nuevo servicio de flujo de trabajo `WorkflowService` WCF, `Common` llamado al proyecto. Para ello, haga clic con `Common` el botón derecho en el proyecto, seleccione **Agregar**, **nuevo elemento...** , seleccione **flujo de trabajo** en **plantillas instaladas** y seleccione servicio de flujo de **trabajo WCF**.  
+1. Agregue un nuevo servicio de flujo de trabajo `WorkflowService` WCF, `Common` llamado al proyecto. Para ello, haga clic con `Common` el botón derecho en el proyecto, seleccione **Agregar**, **nuevo elemento...** , seleccione **flujo de trabajo** en **plantillas instaladas** y seleccione **servicio de flujo de trabajo WCF**.  
   
      ![Agregar un servicio de flujo de trabajo](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -130,7 +130,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 10. Arrastre y coloque una actividad de <xref:System.Activities.Statements.Assign> después de la actividad de `PrintTransactionInfo` y establezca sus propiedades según la siguiente tabla.  
   
-    |Propiedad|Valor|  
+    |Propiedad|Value|  
     |--------------|-----------|  
     |En|replyMessage|  
     |Valor|Servicio Enviando respuesta ".|  
@@ -223,8 +223,8 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 2. Abra el archivo Program.cs generado y el siguiente código:  
   
-    ```  
-    static void Main()  
+    ```csharp
+          static void Main()  
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
@@ -263,8 +263,8 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 2. Abra el archivo Program.cs y agregue el siguiente código.  
   
-    ```  
-    class Program  
+    ```csharp
+        class Program  
         {  
   
             private static AutoResetEvent syncEvent = new AutoResetEvent(false);  

@@ -2,12 +2,12 @@
 title: Servicio AJAX básico
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 8029549ea348ebc8337bcb649b8b0d3b1f8426b9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4705070c7f7f72db835073b30c5bda115a45f179
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045766"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892705"
 ---
 # <a name="basic-ajax-service"></a>Servicio AJAX básico
 
@@ -32,9 +32,7 @@ public interface ICalculator
 
 El archivo .svc de ejemplo utiliza <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, que agrega un punto de conexión estándar <xref:System.ServiceModel.Description.WebScriptEndpoint> al servicio. El extremo se configura en una dirección vacía relativa al archivo .svc. Esto significa que la dirección del servicio es `http://localhost/ServiceModelSamples/service.svc`, sin sufijos adicionales que no sean el nombre de la operación.
 
-```svc
-<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
-```
+`<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>`
 
 <xref:System.ServiceModel.Description.WebScriptEndpoint> se preconfigura de modo que el servicio esté accesible desde una página de cliente AJAX de ASP.NET. La siguiente sección de Web.config se puede utilizar para realizar cambios de configuración adicionales en el extremo. Se puede quitar si no se necesita ningún cambio adicional.
 
