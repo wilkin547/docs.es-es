@@ -125,7 +125,7 @@ Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, 
 - **Martin Fowler. Unit of Work pattern** (Patrón de unidades de trabajo).\ \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \ (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)
+- **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \ (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)\
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
