@@ -2,29 +2,30 @@
 title: <state>de WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938207"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854952"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a><span data-ttu-id="9376a-102">\<> de estado de WCF \<, workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="9376a-102">\<state> of WCF, \<workflowInstanceQuery></span></span>
-<span data-ttu-id="9376a-103">Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="9376a-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  
+# <a name="state-of-wcf-workflowinstancequery"></a><span data-ttu-id="22e05-102">\<> de estado de WCF \<, workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="22e05-102">\<state> of WCF, \<workflowInstanceQuery></span></span>
+<span data-ttu-id="22e05-103">Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="22e05-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  
   
- <span data-ttu-id="9376a-104">Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .</span><span class="sxs-lookup"><span data-stu-id="9376a-104">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="22e05-104">Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .</span><span class="sxs-lookup"><span data-stu-id="22e05-104">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="9376a-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="9376a-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="9376a-106">\<> de seguimiento</span><span class="sxs-lookup"><span data-stu-id="9376a-106">\<tracking></span></span>  
-<span data-ttu-id="9376a-107">\<perfiles ></span><span class="sxs-lookup"><span data-stu-id="9376a-107">\<profiles></span></span>  
-<span data-ttu-id="9376a-108">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="9376a-108">\<trackingProfile></span></span>  
-<span data-ttu-id="9376a-109">\<> de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="9376a-109">\<workflow></span></span>  
-<span data-ttu-id="9376a-110">\<workflowInstanceQueries></span><span class="sxs-lookup"><span data-stu-id="9376a-110">\<workflowInstanceQueries></span></span>  
-<span data-ttu-id="9376a-111">\<workflowInstanceQuery></span><span class="sxs-lookup"><span data-stu-id="9376a-111">\<workflowInstanceQuery></span></span>  
-<span data-ttu-id="9376a-112">\<states></span><span class="sxs-lookup"><span data-stu-id="9376a-112">\<states></span></span>  
-<span data-ttu-id="9376a-113">\<> de estado</span><span class="sxs-lookup"><span data-stu-id="9376a-113">\<state></span></span>  
+<span data-ttu-id="22e05-105">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-105">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="22e05-106">&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-106">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="22e05-107">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de seguimiento**](tracking-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-107">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)</span></span>\
+<span data-ttu-id="22e05-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<perfiles >** </span><span class="sxs-lookup"><span data-stu-id="22e05-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**</span></span>\
+<span data-ttu-id="22e05-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> trackingProfile**](trackingprofile-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)</span></span>\
+<span data-ttu-id="22e05-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de flujo de trabajo**](workflow-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)</span></span>\
+<span data-ttu-id="22e05-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQueries**](workflowinstancequeries-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQueries>**](workflowinstancequeries-of-wcf.md)</span></span>\
+<span data-ttu-id="22e05-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQuery**](workflowinstancequery-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery-of-wcf.md)</span></span>\
+<span data-ttu-id="22e05-113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Estados >** ](states-of-wcf-workflowinstancequery.md)</span><span class="sxs-lookup"><span data-stu-id="22e05-113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<states>**](states-of-wcf-workflowinstancequery.md)</span></span>\
+<span data-ttu-id="22e05-114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de estado**</span><span class="sxs-lookup"><span data-stu-id="22e05-114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<state>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9376a-114">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9376a-114">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22e05-115">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="22e05-115">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -44,51 +45,51 @@ ms.locfileid: "69938207"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9376a-115">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="9376a-115">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="22e05-116">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="22e05-116">Attributes and elements</span></span>
 
-<span data-ttu-id="9376a-116">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="9376a-116">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="22e05-117">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="22e05-117">The following sections describe attributes, child elements, and parent elements.</span></span>
   
-### <a name="attributes"></a><span data-ttu-id="9376a-117">Atributos</span><span class="sxs-lookup"><span data-stu-id="9376a-117">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="22e05-118">Atributos</span><span class="sxs-lookup"><span data-stu-id="22e05-118">Attributes</span></span>
 
-|<span data-ttu-id="9376a-118">Atributo</span><span class="sxs-lookup"><span data-stu-id="9376a-118">Attribute</span></span>|<span data-ttu-id="9376a-119">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="9376a-119">Description</span></span>|  
+|<span data-ttu-id="22e05-119">Atributo</span><span class="sxs-lookup"><span data-stu-id="22e05-119">Attribute</span></span>|<span data-ttu-id="22e05-120">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="22e05-120">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="9376a-120">Una cadena que especifica un estado suscrito de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crea el registro del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="9376a-120">A string that specifies a subscribed state from the tracked workflow instance when the tracking record is created.</span></span>|  
+|`name`|<span data-ttu-id="22e05-121">Una cadena que especifica un estado suscrito de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crea el registro del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="22e05-121">A string that specifies a subscribed state from the tracked workflow instance when the tracking record is created.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9376a-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="9376a-121">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="22e05-122">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="22e05-122">Child elements</span></span>
 
-<span data-ttu-id="9376a-122">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="9376a-122">None.</span></span>
+<span data-ttu-id="22e05-123">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="22e05-123">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="9376a-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="9376a-123">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="22e05-124">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="22e05-124">Parent elements</span></span>
 
-|<span data-ttu-id="9376a-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="9376a-124">Element</span></span>|<span data-ttu-id="9376a-125">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="9376a-125">Description</span></span>|  
+|<span data-ttu-id="22e05-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="22e05-125">Element</span></span>|<span data-ttu-id="22e05-126">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="22e05-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9376a-126">\<states></span><span class="sxs-lookup"><span data-stu-id="9376a-126">\<states></span></span>](states-of-wcf-workflowinstancequery.md)|<span data-ttu-id="9376a-127">Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="9376a-127">A collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>|  
+|[<span data-ttu-id="22e05-127">\<states></span><span class="sxs-lookup"><span data-stu-id="22e05-127">\<states></span></span>](states-of-wcf-workflowinstancequery.md)|<span data-ttu-id="22e05-128">Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="22e05-128">A collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9376a-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9376a-128">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="22e05-129">Comentarios</span><span class="sxs-lookup"><span data-stu-id="22e05-129">Remarks</span></span>  
 
-<span data-ttu-id="9376a-129">Los registros devueltos se filtran por los estados de esta colección.</span><span class="sxs-lookup"><span data-stu-id="9376a-129">The returned records are filtered by the states in this collection.</span></span>  
+<span data-ttu-id="22e05-130">Los registros devueltos se filtran por los estados de esta colección.</span><span class="sxs-lookup"><span data-stu-id="22e05-130">The returned records are filtered by the states in this collection.</span></span>  
   
-<span data-ttu-id="9376a-130">Los valores de estado posibles se describen en la tabla siguiente:</span><span class="sxs-lookup"><span data-stu-id="9376a-130">Possible state values are described in the following table:</span></span>
+<span data-ttu-id="22e05-131">Los valores de estado posibles se describen en la tabla siguiente:</span><span class="sxs-lookup"><span data-stu-id="22e05-131">Possible state values are described in the following table:</span></span>
   
-|<span data-ttu-id="9376a-131">Estado</span><span class="sxs-lookup"><span data-stu-id="9376a-131">State</span></span>|<span data-ttu-id="9376a-132">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="9376a-132">Description</span></span>|  
+|<span data-ttu-id="22e05-132">Estado</span><span class="sxs-lookup"><span data-stu-id="22e05-132">State</span></span>|<span data-ttu-id="22e05-133">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="22e05-133">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="9376a-133">Anulado</span><span class="sxs-lookup"><span data-stu-id="9376a-133">Aborted</span></span>|<span data-ttu-id="9376a-134">Se ha anulado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-134">The workflow instance is aborted.</span></span>|  
-|<span data-ttu-id="9376a-135">Completada</span><span class="sxs-lookup"><span data-stu-id="9376a-135">Completed</span></span>|<span data-ttu-id="9376a-136">Se ha completado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-136">The workflow instance is completed.</span></span>|  
-|<span data-ttu-id="9376a-137">Deleted</span><span class="sxs-lookup"><span data-stu-id="9376a-137">Deleted</span></span>|<span data-ttu-id="9376a-138">Se ha eliminado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-138">The workflow instance is deleted.</span></span>|  
-|<span data-ttu-id="9376a-139">Inactivo</span><span class="sxs-lookup"><span data-stu-id="9376a-139">Idle</span></span>|<span data-ttu-id="9376a-140">La instancia de flujo de trabajo está inactiva.</span><span class="sxs-lookup"><span data-stu-id="9376a-140">The workflow instance is idle.</span></span>|  
-|<span data-ttu-id="9376a-141">Conservado</span><span class="sxs-lookup"><span data-stu-id="9376a-141">Persisted</span></span>|<span data-ttu-id="9376a-142">Se ha guardado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-142">The workflow instance is persisted.</span></span>|  
-|<span data-ttu-id="9376a-143">Reanudado</span><span class="sxs-lookup"><span data-stu-id="9376a-143">Resumed</span></span>|<span data-ttu-id="9376a-144">Se ha reanudado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-144">The workflow instance is resumed.</span></span>|  
-|<span data-ttu-id="9376a-145">Started</span><span class="sxs-lookup"><span data-stu-id="9376a-145">Started</span></span>|<span data-ttu-id="9376a-146">Se ha iniciado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-146">The workflow instance is started.</span></span>|  
-|<span data-ttu-id="9376a-147">UnhandledException</span><span class="sxs-lookup"><span data-stu-id="9376a-147">UnhandledException</span></span>|<span data-ttu-id="9376a-148">La instancia de flujo de trabajo ha detectado una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="9376a-148">The workflow instance encountered an unhandled exception.</span></span>|  
-|<span data-ttu-id="9376a-149">Descargado</span><span class="sxs-lookup"><span data-stu-id="9376a-149">Unloaded</span></span>|<span data-ttu-id="9376a-150">Se ha descargado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-150">The workflow instance is unloaded.</span></span>|  
-|<span data-ttu-id="9376a-151">Cancelado</span><span class="sxs-lookup"><span data-stu-id="9376a-151">Canceled</span></span>|<span data-ttu-id="9376a-152">Se ha cancelado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-152">The workflow instance is canceled.</span></span>|  
-|<span data-ttu-id="9376a-153">Suspendido</span><span class="sxs-lookup"><span data-stu-id="9376a-153">Suspended</span></span>|<span data-ttu-id="9376a-154">Se suspende la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-154">The workflow instance is suspended.</span></span>|  
-|<span data-ttu-id="9376a-155">Terminado</span><span class="sxs-lookup"><span data-stu-id="9376a-155">Terminated</span></span>|<span data-ttu-id="9376a-156">Se ha terminado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-156">The workflow instance is terminated.</span></span>|  
-|<span data-ttu-id="9376a-157">No suspendido</span><span class="sxs-lookup"><span data-stu-id="9376a-157">Unsuspended</span></span>|<span data-ttu-id="9376a-158">No se suspende la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="9376a-158">The workflow instance is unsuspended.</span></span>|  
+|<span data-ttu-id="22e05-134">Anulado</span><span class="sxs-lookup"><span data-stu-id="22e05-134">Aborted</span></span>|<span data-ttu-id="22e05-135">Se ha anulado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-135">The workflow instance is aborted.</span></span>|  
+|<span data-ttu-id="22e05-136">Completada</span><span class="sxs-lookup"><span data-stu-id="22e05-136">Completed</span></span>|<span data-ttu-id="22e05-137">Se ha completado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-137">The workflow instance is completed.</span></span>|  
+|<span data-ttu-id="22e05-138">Deleted</span><span class="sxs-lookup"><span data-stu-id="22e05-138">Deleted</span></span>|<span data-ttu-id="22e05-139">Se ha eliminado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-139">The workflow instance is deleted.</span></span>|  
+|<span data-ttu-id="22e05-140">Inactivo</span><span class="sxs-lookup"><span data-stu-id="22e05-140">Idle</span></span>|<span data-ttu-id="22e05-141">La instancia de flujo de trabajo está inactiva.</span><span class="sxs-lookup"><span data-stu-id="22e05-141">The workflow instance is idle.</span></span>|  
+|<span data-ttu-id="22e05-142">Conservado</span><span class="sxs-lookup"><span data-stu-id="22e05-142">Persisted</span></span>|<span data-ttu-id="22e05-143">Se ha guardado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-143">The workflow instance is persisted.</span></span>|  
+|<span data-ttu-id="22e05-144">Reanudado</span><span class="sxs-lookup"><span data-stu-id="22e05-144">Resumed</span></span>|<span data-ttu-id="22e05-145">Se ha reanudado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-145">The workflow instance is resumed.</span></span>|  
+|<span data-ttu-id="22e05-146">Started</span><span class="sxs-lookup"><span data-stu-id="22e05-146">Started</span></span>|<span data-ttu-id="22e05-147">Se ha iniciado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-147">The workflow instance is started.</span></span>|  
+|<span data-ttu-id="22e05-148">UnhandledException</span><span class="sxs-lookup"><span data-stu-id="22e05-148">UnhandledException</span></span>|<span data-ttu-id="22e05-149">La instancia de flujo de trabajo ha detectado una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="22e05-149">The workflow instance encountered an unhandled exception.</span></span>|  
+|<span data-ttu-id="22e05-150">Descargado</span><span class="sxs-lookup"><span data-stu-id="22e05-150">Unloaded</span></span>|<span data-ttu-id="22e05-151">Se ha descargado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-151">The workflow instance is unloaded.</span></span>|  
+|<span data-ttu-id="22e05-152">Cancelado</span><span class="sxs-lookup"><span data-stu-id="22e05-152">Canceled</span></span>|<span data-ttu-id="22e05-153">Se ha cancelado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-153">The workflow instance is canceled.</span></span>|  
+|<span data-ttu-id="22e05-154">Suspendido</span><span class="sxs-lookup"><span data-stu-id="22e05-154">Suspended</span></span>|<span data-ttu-id="22e05-155">Se suspende la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-155">The workflow instance is suspended.</span></span>|  
+|<span data-ttu-id="22e05-156">Terminado</span><span class="sxs-lookup"><span data-stu-id="22e05-156">Terminated</span></span>|<span data-ttu-id="22e05-157">Se ha terminado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-157">The workflow instance is terminated.</span></span>|  
+|<span data-ttu-id="22e05-158">No suspendido</span><span class="sxs-lookup"><span data-stu-id="22e05-158">Unsuspended</span></span>|<span data-ttu-id="22e05-159">No se suspende la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="22e05-159">The workflow instance is unsuspended.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="9376a-159">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9376a-159">Example</span></span>
+## <a name="example"></a><span data-ttu-id="22e05-160">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="22e05-160">Example</span></span>
 
-<span data-ttu-id="9376a-160">La siguiente configuración se suscribe a los registros de seguimiento de nivel de instancia de flujo de trabajo del estado de instancia `Started` mediante esta consulta.</span><span class="sxs-lookup"><span data-stu-id="9376a-160">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
+<span data-ttu-id="22e05-161">La siguiente configuración se suscribe a los registros de seguimiento de nivel de instancia de flujo de trabajo del estado de instancia `Started` mediante esta consulta.</span><span class="sxs-lookup"><span data-stu-id="22e05-161">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
 ```xml  
 <workflowInstanceQueries>
@@ -100,10 +101,10 @@ ms.locfileid: "69938207"
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9376a-161">Vea también</span><span class="sxs-lookup"><span data-stu-id="9376a-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22e05-162">Vea también</span><span class="sxs-lookup"><span data-stu-id="22e05-162">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="9376a-162">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="9376a-162">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="9376a-163">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="9376a-163">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="22e05-163">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="22e05-163">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="22e05-164">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="22e05-164">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
