@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675382"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373795"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -28,7 +28,7 @@ El menor número posible de proyectos para una arquitectura de aplicación es un
 
 Un proyecto nuevo de ASP.NET Core, independientemente de que se cree en Visual Studio o desde la línea de comandos, empieza como un simple monolito "todo en uno". Contiene todo el comportamiento de la aplicación, incluida la lógica de presentación, de negocios y de acceso a datos. En la figura 5-1 se muestra la estructura de archivos de una aplicación de un solo proyecto.
 
-![](./media/image5-1.png)
+![Una aplicación ASP.NET Core de un solo proyecto.](./media/image5-1.png)
 
 **Figura 5-1**. Una aplicación ASP.NET Core de un solo proyecto.
 
@@ -59,7 +59,7 @@ Las capas lógicas son una técnica común para mejorar la organización del có
 
 En la figura 5-2 se muestra la organización más común de la lógica de la aplicación en capas.
 
-![](./media/image5-2.png)
+![Capas de aplicación típicas](./media/image5-2.png)
 
 **Figura 5-2.** Capas de aplicación típicas.
 
@@ -69,19 +69,19 @@ Una desventaja de este enfoque de distribución en capas tradicional es que las 
 
 En la figura 5-3 se muestra una solución de ejemplo, en la que se divide la aplicación en tres proyectos por responsabilidad (o capa).
 
-![](./media/image5-3.png)
+![Una aplicación monolítica sencilla con tres proyectos](./media/image5-3.png)
 
 **Figura 5-3.** Una aplicación monolítica sencilla con tres proyectos.
 
 Aunque en esta aplicación se usan varios proyectos por motivos organizativos, se sigue implementando como una sola unidad y sus clientes interactúan con ella como una sola aplicación web. Esto permite que el proceso de implementación sea muy simple. En la figura 5-4 se muestra cómo se podría hospedar este tipo de aplicación con Azure.
 
-![](./media/image5-4.png)
+![Implementación simple de una aplicación web de Azure](./media/image5-4.png)
 
 **Figura 5-4.** Implementación simple de una aplicación web de Azure
 
 Cuando aumenten las necesidades de la aplicación, se pueden necesitar soluciones de implementación más sólidas y complejas. En la figura 5-5 se muestra un ejemplo de un plan de implementación más complejo que admite funciones adicionales.
 
-![](./media/image5-5.png)
+![Implementación de una aplicación web en Azure App Service](./media/image5-5.png)
 
 **Figura 5-5.** Implementación de una aplicación web en Azure App Service
 
@@ -91,7 +91,7 @@ Esta unidad se puede escalar vertical u horizontalmente para aprovechar la escal
 
 El enfoque más sencillo para escalar una aplicación web en Azure consiste en configurar manualmente el escalado en el plan de App Service de la aplicación. En la figura 5-6 se muestra la pantalla de panel de Azure adecuada para configurar el número de instancias que prestan servicio a una aplicación.
 
-![](./media/image5-6.png)
+![Escalado del plan de App Service en Azure](./media/image5-6.png)
 
 **Figura 5-6**. Escalado de plan de App Service en Azure.
 
@@ -104,7 +104,7 @@ Las aplicaciones que siguen el principio de inversión de dependencias, así com
 
 La arquitectura limpia coloca el modelo de lógica de negocios y aplicación en el centro de la aplicación. En lugar de tener lógica de negocios que depende del acceso a datos o de otros aspectos de infraestructura, esta dependencia se invierte: los detalles de la infraestructura y la implementación dependen del núcleo de la aplicación. Esto se logra mediante la definición de abstracciones o interfaces, en el núcleo de la aplicación, que después se implementan mediante tipos definidos en el nivel de infraestructura. Una forma habitual de visualizar esta arquitectura es usar una serie de círculos concéntricos, similares a una cebolla. En la figura 5-7 se muestra un ejemplo de este estilo de representación de la arquitectura.
 
-![](./media/image5-7.png)
+![Arquitectura limpia; vista de cebolla](./media/image5-7.png)
 
 **Figura 5-7.** Arquitectura limpia; vista de cebolla
 
@@ -112,7 +112,7 @@ En este diagrama, las dependencias fluyen hacia el círculo más interno. El nú
 
 En la figura 5-8 se muestra un diagrama de capas horizontal más tradicional que refleja mejor la dependencia entre la interfaz de usuario y otras capas.
 
-![](./media/image5-8.png)
+![Arquitectura limpia; vista de capas horizontal](./media/image5-8.png)
 
 **Figura 5-8.** Arquitectura limpia; vista de capas horizontal
 
@@ -120,7 +120,7 @@ Tenga en cuenta que las flechas sólidas representan las dependencias de tiempo 
 
 En la figura 5-9 se muestra una vista más detallada de la arquitectura de la aplicación ASP.NET Core cuando se compila siguiendo estas recomendaciones.
 
-![Arquitectura de ASP.NET Core](./media/image5-9.png)
+![Diagrama de arquitectura de ASP.NET Core en el que se sigue la arquitectura limpia](./media/image5-9.png)
 
 **Figura 5-9.** Diagrama de arquitectura de ASP.NET Core en el que se sigue la arquitectura limpia.
 
@@ -262,7 +262,7 @@ networks:
 
 El archivo `docker-compose.yml` hace referencia a `Dockerfile` en el proyecto `Web`. El `Dockerfile` se usa para especificar qué contenedor base se va a utilizar y cómo se configurará la aplicación en él. El `Dockerfile` de `Web`:
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 

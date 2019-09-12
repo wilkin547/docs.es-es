@@ -2,13 +2,13 @@
 title: Interpolación de cadenas en C#
 description: Obtenga información sobre cómo incluir resultados de expresión con formato en una cadena de resultado en C# con la interpolación de cadenas.
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251026"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252921"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C\#
 
@@ -26,7 +26,7 @@ Para distinguir un literal de cadena como una cadena interpolada, antepóngale e
 
 Como se ilustra en el ejemplo, para incluir una expresión en una cadena interpolada hay que meterla entre llaves:
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ Las cadenas interpoladas admiten todas las funcionalidades de la característica
 
 Para especificar una cadena de formato compatible con el tipo de resultado de expresión, coloque después de la expresión de interpolación dos puntos (":") y la cadena de formato:
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ Para más información, vea la sección [Format String (Componente)](../../stand
 
 Para especificar el ancho de campo mínimo y la alineación del resultado de expresión con formato, coloque después de la expresión de interpolación una coma (",") y la expresión constante:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ Si el valor de *alignment* es positivo, el resultado de la expresión con format
 
 En caso de que haya que especificar una alineación y una cadena de formato, comience por el componente de alineación:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ Para más información, vea la sección [Alignment (Componente)](../../standard/
 
 Las cadenas interpoladas admiten todas las secuencias de escape que se usan en los literales de cadena ordinarios. Para más información, vea [Secuencias de escape de cadena](../programming-guide/strings/index.md#string-escape-sequences).
 
-Para interpretar las secuencias de escape literalmente, use un literal de cadena [textual](../language-reference/tokens/verbatim.md). Las cadenas interpoladas textuales comienzan por el carácter `$`, seguido del carácter `@`.
+Para interpretar las secuencias de escape literalmente, use un literal de cadena [textual](../language-reference/tokens/verbatim.md). Las cadenas textuales interpoladas comienzan por el carácter `$`, seguido del carácter `@`. A partir C# 8.0, puede usar los tokens `$` y `@` en cualquier orden; tanto `$@"..."` como `@$"..."` son cadenas textuales interpoladas válidas.
 
 Para incluir una llave ("{" o "}") en una cadena de resultado, use dos llaves ("{{" o "}}"). Para más información, vea la sección [Llaves de escape](../../standard/base-types/composite-formatting.md#escaping-braces) del tema [Formatos compuestos](../../standard/base-types/composite-formatting.md).
 

@@ -1,25 +1,33 @@
 ---
 title: Tipos no administrados - Referencia de C#
-ms.date: 07/23/2019
+ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 2b675be5dbc61006725549f4b69284326650401d
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 25aa42ba8c8f0023b4f818feb2edbb325f805fb6
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512075"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374114"
 ---
 # <a name="unmanaged-types-c-reference"></a>Tipos no administrados (referencia de C#)
 
-Un **tipo no administrado** es todo aquel que no es un tipo de referencia ni un tipo construido (un tipo que incluye al menos un argumento de tipo) y que no contiene ningún campo de tipo de referencia ni de tipo construido en ningún nivel del anidamiento. En otras palabras, un tipo no administrado es uno de los siguientes:
+Un tipo es un **tipo no administrado** si es cualquiera de los siguientes tipos:
 
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` o `bool`
 - Cualquier tipo [enum](../keywords/enum.md).
 - Cualquier tipo [pointer](../../programming-guide/unsafe-code-pointers/pointer-types.md).
-- Cualquier tipo [struct](../keywords/struct.md) definido por el usuario que no sea un tipo construido y que contenga campos solo de tipos no administrados.
+- Cualquier tipo de [struct](../keywords/struct.md) definido por el usuario que solo contenga campos de tipos no administrados, en C# 7.3 y versiones anteriores, no es un tipo construido (un tipo que incluya al menos un argumento de tipo)
 
 A partir de C# 7.3, puede usar [`unmanaged`constraint](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) para especificar que un parámetro de tipo es un tipo no administrado que no es de puntero.
+
+A partir C# 8.0, un tipo de struct *construido* que solo contenga campos de tipos no administrados también es no administrado, como se muestra en el ejemplo siguiente:
+
+[!code-csharp[unmanaged constructed types](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#ProgramExample)]
+
+Un struct genérico puede ser el origen de los tipos no administrados y de los tipos construidos no administrados. En el ejemplo anterior se define un struct `Coords<T>` genérico y se presentan los ejemplos de tipos construidos no administrados. El ejemplo de un tipo no administrado es `Coords<object>`. No está administrado porque tiene los campos del tipo `object`, que es no administrado. Si desea que *todos* los tipos construidos sean tipos no administrados, use la restricción `unmanaged` en la definición de un struct genérico:
+
+[!code-csharp[unmanaged constraint in type definition](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

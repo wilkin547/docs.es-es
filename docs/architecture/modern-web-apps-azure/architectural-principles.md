@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pri
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105483"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373763"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -36,13 +36,13 @@ En las clases, la encapsulación se logra mediante la limitación del acceso ext
 
 La dirección de dependencia dentro de la aplicación debe estar en la dirección de la abstracción, no de los detalles de implementación. La mayoría de las aplicaciones se escriben de manera que la dependencia de tiempo de compilación fluya en la dirección de ejecución del tiempo de ejecución. Esto genera un gráfico de dependencias directas. Es decir, si el módulo A llama a una función en el módulo B, que llama a una función en el módulo C, en tiempo de compilación A dependerá de B que dependerá de C, como se muestra en la figura 4-1.
 
-![](./media/image4-1.png)
+![Gráfico de dependencias directas](./media/image4-1.png)
 
 **Figura 4-1.** Gráfico de dependencias directas.
 
 Aplicar el principio de inversión de dependencias permite que A llame a métodos en una abstracción que implementa B, lo que hace posible que A llame a B en tiempo de ejecución, pero que B dependa de una interfaz controlada por A en tiempo de compilación (por tanto, se *invierte* la dependencia de tiempo de compilación normal). En tiempo de ejecución, el flujo de ejecución del programa no cambia, pero la introducción de interfaces significa que se pueden conectar fácilmente otras implementaciones de estas interfaces.
 
-![](./media/image4-2.png)
+![Gráfico de dependencias invertidas](./media/image4-2.png)
 
 **Figura 4-2.** Gráfico de dependencias invertidas.
 

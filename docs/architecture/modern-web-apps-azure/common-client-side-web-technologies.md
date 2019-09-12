@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tec
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675442"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373903"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -28,9 +28,9 @@ HTML (Lenguaje de marcado de hipertexto) es el lenguaje de marcado estándar que
 
 CSS (Hoja de estilos en cascada) se usa para controlar la apariencia y el diseño de los elementos HTML. Los estilos CSS se pueden aplicar directamente a un elemento HTML, o bien definirse por separado en la misma página o en un archivo independiente al que la página haga referencia. Los estilos se aplican en cascada en función de cómo se usan para seleccionar un elemento HTML determinado. Por ejemplo, es posible que un estilo se aplique a todo el documento, pero que se reemplace por un estilo que se aplica a un elemento determinado. Del mismo modo, un estilo específico del elemento se reemplazaría por un estilo que se aplica a una clase CSS aplicada al elemento, que a su vez se reemplazaría por un estilo destinado a una instancia específica de ese elemento (a través de su identificador). Figura 6-1
 
-**Figura 6-1.** Reglas de especificidad de CSS, en orden.
+![Reglas de especificidad de CSS](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**Figura 6-1.** Reglas de especificidad de CSS, en orden.
 
 Se recomienda mantener los estilos en sus propios archivos de hoja de estilos independientes y aplicarlos en cascada en función de la selección para implementar estilos coherentes y reutilizables dentro de la aplicación. Se debe evitar colocar las reglas de estilo en el código HTML y aplicar estilos a elementos individuales específicos (en lugar de clases completas de elementos, o bien elementos a los que se ha aplicado una clase CSS determinada) debería ser la excepción, no la regla.
 

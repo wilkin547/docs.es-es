@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988825"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254227"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988825"
 > El formato de la llamada al método (estático, interpretado o compilado) afecta al rendimiento si la misma expresión regular se usa repetidamente en llamadas a métodos o si una aplicación usa muchos objetos de expresiones regulares.  
   
 ### <a name="static-regular-expressions"></a>Expresiones regulares estáticas  
- Se recomienda el uso de métodos de expresiones regulares estáticas como alternativa a crear repetidamente instancias de un objeto de expresión regular con la misma expresión regular. A diferencia de los patrones de expresiones regulares usados por los objetos de expresiones regulares, el motor de expresiones regulares almacena internamente en memoria caché los códigos de operación o el lenguaje intermedio de Microsoft (MSIL) compilado de los modelos empleados en las llamadas al método de instancia.  
+ Se recomienda el uso de métodos de expresiones regulares estáticas como alternativa a crear repetidamente instancias de un objeto de expresión regular con la misma expresión regular. A diferencia de los patrones de expresiones regulares usados por los objetos de expresiones regulares, el motor de expresiones regulares almacena internamente en memoria caché los códigos de operación o el lenguaje intermedio de Microsoft (MSIL) compilado de los patrones empleados en las llamadas al método estático.  
   
  Por ejemplo, un controlador de eventos llama con frecuencia a otro método para validar los datos proporcionados por el usuario. Esto se refleja en el código siguiente, en el que se usa el evento <xref:System.Windows.Forms.Button> de un control <xref:System.Windows.Forms.Control.Click> para llamar a un método denominado `IsValidCurrency`, que comprueba si el usuario ha escrito un símbolo de moneda seguido al menos de un dígito decimal.  
   

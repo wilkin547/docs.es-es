@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69038121"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374070"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -50,9 +50,9 @@ Como las pruebas funcionales operan en el nivel de sistema, pueden requerir cier
 
 Martin Fowler escribió sobre la pirámide de pruebas, de la que se muestra un ejemplo en la figura 9-1.
 
-![](./media/image9-1.png)
+![Pirámide de pruebas](./media/image9-1.png)
 
-Figura 9-1 Pirámide de pruebas
+**Figura 9-1**. Pirámide de pruebas
 
 Los diferentes niveles de la pirámide y sus tamaños relativos representan distintos tipos de pruebas y cuántas se deben escribir para la aplicación. Como se puede ver, la recomendación es tener una base grande de pruebas unitarias, respaldada por un nivel más pequeño de pruebas de integración, con un nivel incluso más pequeño de pruebas funcionales. Idealmente, cada nivel solo debería incluir las pruebas que no se puedan realizar de forma adecuada en un nivel inferior. Tenga presente la pirámide de pruebas al tratar de decidir qué tipo de prueba necesita para un escenario determinado.
 
@@ -66,15 +66,15 @@ Los proyectos de prueba se pueden organizar de la manera que mejor funcione. Es 
 
 Un enfoque común consiste en organizar los proyectos de la aplicación en una carpeta "src" y los proyectos de prueba en una carpeta "tests" paralela. Si esta organización le parece útil, puede crear carpetas de solución coincidentes en Visual Studio.
 
-![](./media/image9-2.png)
+![Organización de las pruebas en la solución](./media/image9-2.png)
 
-Figura 9-2 Organización de las pruebas en la solución
+**Figura 9-2**. Organización de las pruebas en la solución
 
 Puede usar el marco de pruebas que prefiera. El marco de trabajo xUnit funciona bien y es en el que se escriben todas las pruebas de ASP.NET Core y EF Core. Puede agregar un proyecto de prueba de xUnit en Visual Studio con la plantilla que se muestra en la figura 9-3 o desde la CLI mediante dotnet new xunit.
 
-![](./media/image9-3.png)
+![Agregar un proyecto de prueba de xUnit en Visual Studio](./media/image9-3.png)
 
-Figura 9-3 Agregar un proyecto de prueba de xUnit en Visual Studio
+**Figura 9-3**. Agregar un proyecto de prueba de xUnit en Visual Studio
 
 ### <a name="test-naming"></a>Nombres de pruebas
 
@@ -98,7 +98,7 @@ Para algunos equipos el segundo método de nomenclatura es más claro, aunque un
 
 Si sigue una convención de nomenclatura como la anterior que genera muchas clases de prueba pequeñas, es aconsejable organizar más las pruebas mediante carpetas y espacios de nombres. En la figura 9-4 se muestra un enfoque para organizar las pruebas por carpeta en varios proyectos de prueba.
 
-![](./media/image9-4.png)
+![Organización de las clases de prueba por carpeta en función de la clase que se prueba](./media/image9-4.png)
 
 **Figura 9-4.** Organización de las clases de prueba por carpeta en función de la clase que se está probando.
 

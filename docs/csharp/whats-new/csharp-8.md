@@ -1,17 +1,17 @@
 ---
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105509"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374008"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
-Hay muchas mejoras en el lenguaje C# que ya se pueden probar. 
+Hay muchas mejoras en el lenguaje C# que ya se pueden probar.
 
 - [Miembros de solo lectura](#readonly-members)
 - [Miembros de interfaz predeterminados](#default-interface-members)
@@ -26,6 +26,8 @@ Hay muchas mejoras en el lenguaje C# que ya se pueden probar.
 - [Tipos de referencia que aceptan valores null](#nullable-reference-types)
 - [Secuencias asincrónicas](#asynchronous-streams)
 - [Índices y rangos](#indices-and-ranges)
+- [Tipos construidos no administrados](#unmanaged-constructed-types)
+- [Mejora de las cadenas textuales interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Este artículo se actualizó por última vez para la versión preliminar 5 de C# 8.0.
@@ -376,7 +378,8 @@ Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la
 
 Los rangos e índices proporcionan una sintaxis concisa para especificar subrangos en una matriz, <xref:System.Span%601>, o <xref:System.ReadOnlySpan%601>.
 
-Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operadores.
+Esta compatibilidad con lenguajes se basa en dos nuevos tipos y dos nuevos operadores:
+
 - <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
 - El operador `^`, que especifica que un índice es relativo al final de la secuencia.
 - <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.
@@ -444,3 +447,34 @@ var text = words[phrase];
 ```
 
 Puede explorar más información acerca de los índices y los intervalos en el tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
+
+## <a name="unmanaged-constructed-types"></a>Tipos construidos no administrados
+
+En C# 7.3 y versiones anteriores, un tipo construido (un tipo que incluye al menos un argumento de tipo) no puede ser un [tipo no administrado](../language-reference/builtin-types/unmanaged-types.md). A partir de C# 8.0, un tipo de valor construido no está administrado si solo contiene campos de tipos no administrados.
+
+Por ejemplo, dada la siguiente definición del tipo genérico `Coords<T>`:
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+el tipo `Coords<int>` es un tipo no administrado en C# 8.0 y versiones posteriores. Al igual que en el caso de cualquier tipo no administrado, puede crear un puntero a una variable de este tipo o [asignar un bloque de memoria en la pila](../language-reference/operators/stackalloc.md) para las instancias de este tipo:
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+Para más información, consulte [Tipos no administrados](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Mejora de las cadenas textuales interpoladas
+
+El orden de los tokens `$` y `@` en las cadenas textuales [interpoladas](../language-reference/tokens/interpolated.md) puede ser cualquiera: tanto `$@"..."` como `@$"..."` son cadenas textuales interpoladas válidas. En versiones de C# anteriores, el token `$` debe aparecer delante del token `@`.

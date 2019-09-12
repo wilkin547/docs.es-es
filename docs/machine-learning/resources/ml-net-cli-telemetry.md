@@ -2,14 +2,14 @@
 title: Recopilación de telemetría mediante la CLI de ML.NET
 description: Descubra las características de telemetría de la CLI de ML.NET que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas. Además, encuentre vínculos al contrato de licencia de .NET, así como información sobre el cumplimiento de Microsoft del RGPD.
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567492"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254007"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Recopilación de telemetría mediante la CLI de ML.NET
 
@@ -36,14 +36,14 @@ La telemetría *está habilitada* al ejecutar un [comando de la CLI de ML.NET](.
 
 La característica de telemetría de la CLI de ML.NET está habilitada de manera predeterminada.
 
-Puede desactivar la característica de telemetría si establece la variable de entorno `MLDOTNET_CLI_TELEMETRY_OPTOUT` en `1` o `true`. Esta variable de entorno se aplica globalmente a la herramienta de la CLI de .NET.
+Puede desactivar la característica de telemetría si establece la variable de entorno `MLDOTNET_CLI_TELEMETRY_OPTOUT` en `1` o `true`. Esta variable de entorno se aplica globalmente a la herramienta CLI de ML.NET.
 
 ## <a name="data-points-collected"></a>Punto de datos recopilados
 
 La característica recopila los siguientes datos:
 
 - Qué comando se invocó, por ejemplo, `auto-train`
-- Los nombres de parámetros de la línea de comandos usados (por ejemplo, "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
+- Los nombres de parámetros de la línea de comandos usados (es decir, "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
 - Dirección MAC con hash: un id. único y anónimo criptográficamente (SHA256) para una máquina
 - Marca de tiempo de una invocación
 - Dirección IP de tres octetos (no la dirección IP completa) usada solo para determinar la ubicación geográfica

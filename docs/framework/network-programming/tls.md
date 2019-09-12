@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777511"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -66,7 +66,9 @@ En las siguientes secciones se muestra cómo comprobar que no está utilizando u
 
 ### <a name="for-http-networking"></a>Para las redes de HTTP
 
-<xref:System.Net.ServicePointManager>, que usa .NET Framework 4.7 y versiones posteriores, elige el sistema operativo predeterminado teniendo en cuenta la mejor opción en cuanto a protocolo de seguridad y versión. Para obtener la mejor opción de sistema operativo de forma predeterminada, si es posible, no establezca un valor para la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol>. En caso contrario, establezca esta propiedad en <xref:System.Net.SecurityProtocolType.SystemDefault>.
+<xref:System.Net.ServicePointManager>, con .NET Framework 4.7 y versiones posteriores, usará el protocolo de seguridad predeterminado configurado en el sistema operativo. Para obtener la mejor opción de sistema operativo de forma predeterminada, si es posible, no establezca un valor para la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType>, que adopta como predeterminado <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>.
+
+Dado que el valor <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> hace que <xref:System.Net.ServicePointManager> use el protocolo de seguridad predeterminado configurado por el sistema operativo, la aplicación puede ejecutarse de forma diferente en función del sistema operativo en el que se ejecuta. Por ejemplo, Windows 7 SP1 usa TLS 1.0, mientras que Windows 8 y Windows 10 usan TLS 1.2.
 
 El resto de este artículo no es pertinente si se toma como destino la versión .NET Framework 4.7 o una posterior para las redes de HTTP.
 

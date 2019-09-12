@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tra
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105450"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373996"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -76,9 +76,9 @@ Después de instalar EF Core, crear un tipo secundario de DbContext y configurar
 
 Puede ver las consultas que ejecuta EF Core si configura un registrador y se asegura de que su nivel se establece al menos en Información, como se muestra en la figura 8-1.
 
-![](./media/image8-1.png)
+![Registro de consultas de EF Core en la consola](./media/image8-1.png)
 
-Figura 8-1 Registro de consultas de EF Core en la consola
+**Figura 8-1**. Registro de consultas de EF Core en la consola
 
 ### <a name="fetching-and-storing-data"></a>Recuperación y almacenamiento de los datos
 

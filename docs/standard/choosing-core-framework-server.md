@@ -4,12 +4,12 @@ description: Una guía sobre qué implementación de .NET debe tener en cuenta a
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107287"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799258"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -28,7 +28,7 @@ Use .NET Framework para su aplicación de servidor cuando:
 - La aplicación usa actualmente .NET Framework (la recomendación es extender en lugar de migrar).
 - La aplicación usa bibliotecas .NET de terceros o paquetes de NuGet que no están disponibles para .NET Core.
 - La aplicación usa tecnologías de .NET que no están disponibles para .NET Core.
-- La aplicación usa una plataforma que no es compatible con .NET Core.
+- La aplicación usa una plataforma que no es compatible con .NET Core. Windows, macOS y Linux admiten .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Cuándo elegir .NET Core
 
@@ -108,6 +108,6 @@ Algunas plataformas de terceros o de Microsoft no son compatibles con .NET Core.
 - [Marcos de trabajo de destino](frameworks.md)
 - [Guía de .NET Core](../core/index.md)
 - [Portabilidad de .NET Framework a .NET Core](../core/porting/index.md)
-- [Introducción a .NET y Docker](../core/docker/intro-net-docker.md)
+- [Introducción a .NET y Docker](../core/docker/introduction.md)
 - [Introducción a los componentes de .NET](components.md)
 - [.NET Microservices. Architecture for Containerized .NET Applications](../architecture/microservices/index.md) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor)

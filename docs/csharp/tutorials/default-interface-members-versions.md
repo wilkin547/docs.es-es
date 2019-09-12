@@ -3,12 +3,12 @@ title: Actualización segura de la interfaz con miembros de la predeterminada en
 description: En este tutorial avanzado se describe cómo agregar de forma segura nuevas capacidades a las definiciones de la interfaz existente sin que ello interrumpa todas las clases y estructuras que implementan esa interfaz.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971437"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252916"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Actualización de interfaces con miembros de interfaz predeterminados en C# 8.0
 
@@ -37,7 +37,7 @@ Definieron una segunda interfaz que representa un pedido:
 
 En esas interfaces, el equipo pudo generar una biblioteca para sus usuarios con el fin de crear una mejor experiencia para los clientes. Su objetivo era crear una relación más estrecha con los clientes existentes y mejorar sus relaciones con los clientes nuevos.
 
-Ahora, es momento de actualizar la biblioteca para la próxima versión. Una de las características solicitadas permite un descuento por fidelidad para los clientes que tienen muchos pedidos. Este nuevo descuento por fidelidad se aplica cada vez que un cliente realiza un pedido. El descuento específico es una propiedad de cada cliente individual. Cada implementación de ICustomer puede establecer reglas diferentes para el descuento por fidelidad. 
+Ahora, es momento de actualizar la biblioteca para la próxima versión. Una de las características solicitadas permite un descuento por fidelidad para los clientes que tienen muchos pedidos. Este nuevo descuento por fidelidad se aplica cada vez que un cliente realiza un pedido. El descuento específico es una propiedad de cada cliente individual. Cada implementación de `ICustomer` puede establecer reglas diferentes para el descuento por fidelidad. 
 
 La forma más natural para agregar esta funcionalidad es mejorar la interfaz `ICustomer` con un método para aplicar los descuentos por fidelización. Esta sugerencia de diseño es motivo de preocupación entre los desarrolladores experimentados: "Las interfaces son inmutables una vez que se han publicado. ¡Es un cambio importante!" C# 8.0 agrega *las implementaciones de interfaz predeterminadas* para actualizar las interfaces. Los autores de bibliotecas pueden agregar a nuevos miembros a la interfaz y proporcionar una implementación predeterminada para esos miembros.
 
@@ -47,7 +47,7 @@ Las implementaciones de interfaces predeterminadas permiten a los desarrolladore
 
 El equipo estuvo de acuerdo en la más probable implementación predeterminada: un descuento por fidelidad para los clientes.
 
-La actualización debe proporcionar la funcionalidad para establecer dos propiedades: el número de pedidos necesario para poder recibir el descuento y el porcentaje del descuento. Esto lo convierte en un escenario perfecto para los miembros de la interfaz predeterminada. Puede agregar un método a la interfaz ICustomer y proporcionar la implementación más probable. Todas las implementaciones existentes y nuevas pueden usar la implementación predeterminada o proporcionar una propia.
+La actualización debe proporcionar la funcionalidad para establecer dos propiedades: el número de pedidos necesario para poder recibir el descuento y el porcentaje del descuento. Esto lo convierte en un escenario perfecto para los miembros de la interfaz predeterminada. Puede agregar un método a la interfaz de `ICustomer` y proporcionar la implementación más probable. Todas las implementaciones existentes y nuevas pueden usar la implementación predeterminada o proporcionar una propia.
 
 Primero, agregue el nuevo método a la implementación:
 
@@ -69,7 +69,7 @@ Ese es un buen inicio. Pero la implementación predeterminada es demasiado restr
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-Hay muchas funciones nuevas de lenguaje que se muestran en este pequeño fragmento de código. Las interfaces ahora pueden incluir miembros estáticos, incluidos campos y métodos. También están habilitados diferentes modificadores de acceso. Los campos adicionales son privados, el nuevo método es público. Todos los modificadores están permitidos en los miembros de la interfaz.
+Hay muchas funcionalidades nuevas de lenguaje que se muestran en este pequeño fragmento de código. Las interfaces ahora pueden incluir miembros estáticos, incluidos campos y métodos. También están habilitados diferentes modificadores de acceso. Los campos adicionales son privados, el nuevo método es público. Todos los modificadores están permitidos en los miembros de la interfaz.
 
 Las aplicaciones que usan la fórmula general para calcular el descuento por fidelidad, pero diferentes parámetros, no necesitan proporcionar una implementación personalizada: pueden establecer los argumentos a través de un método estático. Por ejemplo, el siguiente código establece una "apreciación de cliente" que recompensa a cualquier cliente con más de una pertenencia al mes:
 
