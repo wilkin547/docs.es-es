@@ -1,4 +1,4 @@
-- name: Bienvenido
+- name: Pantalla de inicio
   href: welcome.md
 - name: Guía de .NET
   href: standard/index.md
@@ -189,11 +189,7 @@
         - name: Novedades de .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
     - name: Compatibilidad de aplicaciones
-      items:
-        - name: Evaluación de los cambios importantes
-          href: core/compatibility/index.md
-        - name: Categorías de cambios importantes
-          href: core/compatibility/categories.md
+      href: core/compatibility/
     - name: Tutoriales
       href: core/tutorials/index.md
       items:
@@ -474,7 +470,7 @@
   items:
     - name: Novedades
       href: framework/whats-new/
-    - name: Introducción
+    - name: Primeros pasos
       href: framework/get-started/
     - name: Guía de instalación
       href: framework/install/
@@ -539,7 +535,7 @@
 - name: 'Guía de C#'
   href: csharp/index.md
   items:
-    - name: Introducción
+    - name: Primeros pasos
       href: csharp/getting-started/
     - name: Tutoriales
       items:
@@ -549,7 +545,7 @@
           items:
             - name: Elección de la primera lección
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: Hello World
+            - name: Hola a todos
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Números en C#'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -647,9 +643,9 @@
           href: csharp/methods.md
         - name: Expresiones lambda
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
-        - name: properties (Propiedades)
+        - name: Propiedades
           href: csharp/properties.md
-        - name: Indexadores
+        - name: Indizadores
           href: csharp/indexers.md
         - name: Descartes
           href: csharp/discards.md
@@ -736,7 +732,7 @@
 - name: 'Guía de F#'
   href: fsharp/index.md
   items:
-    - name: Introducción
+    - name: Primeros pasos
       href: fsharp/get-started/index.md
       items:
         - name: 'Instalación de F#'
@@ -791,7 +787,7 @@
               href: fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md
             - name: Operadores que aceptan valores NULL
               href: fsharp/language-reference/symbol-and-operator-reference/nullable-operators.md
-        - name: Functions
+        - name: Funciones
           href: fsharp/language-reference/functions/index.md
           items:
             - name: Enlaces let
@@ -841,7 +837,7 @@
           href: fsharp/language-reference/options.md
         - name: Opciones de valores
           href: fsharp/language-reference/value-options.md
-        - name: Results
+        - name: Resultados
           href: fsharp/language-reference/results.md
         - name: Genéricos
           href: fsharp/language-reference/generics/index.md
@@ -874,14 +870,14 @@
           href: fsharp/language-reference/interfaces.md
         - name: Clases abstractas
           href: fsharp/language-reference/abstract-classes.md
-        - name: Members
+        - name: Miembros
           href: fsharp/language-reference/members/index.md
           items:
             - name: Enlaces let en clases
               href: fsharp/language-reference/members/let-bindings-in-classes.md
             - name: Enlaces do en clases
               href: fsharp/language-reference/members/do-bindings-in-classes.md
-            - name: properties (Propiedades)
+            - name: Propiedades
               href: fsharp/language-reference/members/properties.md
             - name: Propiedades indizadas
               href: fsharp/language-reference/members/indexed-properties.md
@@ -1011,7 +1007,7 @@
   items:
     - name: Novedades de Visual Basic
       href: visual-basic/getting-started/whats-new.md
-    - name: Introducción
+    - name: Primeros pasos
       href: visual-basic/getting-started/index.md
       items:
         - name: Cambios importantes de Visual Basic en Visual Studio
@@ -1035,7 +1031,7 @@
             - name: Acceso a los servicios web de las aplicaciones
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: 'Procedimientos para: Llamada a un servicio web de forma asincrónica'
+                - name: Procedimiento Llamada a un servicio web de forma asincrónica
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1078,17 +1074,17 @@
           items:
             - name: Ensamblados de confianza
               items:
-                - name: 'Procedimientos para: para crear ensamblados de confianza sin firmar'
+                - name: Procedimiento para crear ensamblados de confianza sin firmar
                   href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-                - name: 'Procedimientos para: para crear ensamblados de confianza firmados'
+                - name: Procedimiento para crear ensamblados de confianza firmados
                   href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
-            - name: 'Procedimientos para: para crear y usar ensamblados mediante la línea de comandos'
+            - name: Procedimiento para crear y usar ensamblados mediante la línea de comandos
               href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-            - name: 'Procedimientos para: para determinar si un archivo es un ensamblado'
+            - name: Procedimiento para determinar si un archivo es un ensamblado
               href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-            - name: 'Procedimientos para: para cargar y descargar ensamblados'
+            - name: Procedimiento para cargar y descargar ensamblados
               href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
-            - name: 'Procedimientos para: para compartir un ensamblado con otras aplicaciones'
+            - name: Procedimiento para compartir un ensamblado con otras aplicaciones
               href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
             - name: 'Tutorial: Inserción de tipos de ensamblados administrados'
               href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
@@ -1131,11 +1127,11 @@
           href: visual-basic/programming-guide/program-structure/coding-conventions.md
         - name: Compilación condicional
           href: visual-basic/programming-guide/program-structure/conditional-compilation.md
-        - name: 'Procedimientos para: Interrupción y combinación de instrucciones en código'
+        - name: Procedimiento Interrupción y combinación de instrucciones en código
           href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
-        - name: 'Procedimientos para: Contracción y ocultación de secciones de código'
+        - name: Procedimiento Contracción y ocultación de secciones de código
           href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
-        - name: 'Procedimientos para: Instrucciones de etiquetas'
+        - name: Procedimiento Instrucciones de etiquetas
           href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
         - name: Caracteres especiales en el código
           href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
@@ -1158,7 +1154,7 @@
           href: visual-basic/programming-guide/language-features/constants-enums/index.md
         - name: Flujo de control
           href: visual-basic/programming-guide/language-features/control-flow/index.md
-        - name: Tipo de datos
+        - name: Tipos de datos
           href: visual-basic/programming-guide/language-features/data-types/index.md
           items:
             - name: Caracteres de tipo
@@ -1175,14 +1171,14 @@
             - name: Tipos de datos compuestos
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: 'Procedimientos para: Inclusión de más de un valor en una variable'
+                - name: Procedimiento Inclusión de más de un valor en una variable
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: Tipos genéricos
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
-                - name: 'Procedimientos para: Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes'
+                - name: Procedimiento Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-                - name: 'Procedimientos para: Uso de clases genéricas'
+                - name: Procedimiento Uso de clases genéricas
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
             - name: Procedimientos genéricos
               href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
@@ -1199,14 +1195,14 @@
                   href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
                 - name: Conversiones entre cadenas y otros tipos
                   href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
-                - name: 'Procedimientos para: Conversión de un objeto a otro tipo'
+                - name: Procedimiento Conversión de un objeto a otro tipo
                   href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
                 - name: Conversiones de matriz
                   href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
             - name: Estructuras
               href: visual-basic/programming-guide/language-features/data-types/structures.md
               items:
-                - name: 'Procedimientos para: Declaración de estructuras'
+                - name: Procedimiento Declaración de estructuras
                   href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
                 - name: Variables de estructura
                   href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
@@ -1256,15 +1252,15 @@
       items:
         - name: Introducción a la interoperabilidad COM
           href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
-        - name: 'Procedimientos para: Referencia de los objetos COM'
+        - name: Procedimiento Referencia de los objetos COM
           href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
-        - name: 'Procedimientos para: Trabajo con controles ActiveX'
+        - name: Procedimiento Trabajo con controles ActiveX
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
         - name: 'Tutorial: Llamadas a las API de Windows'
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
-        - name: 'Procedimientos para: Llamadas a las API de Windows'
+        - name: Procedimiento Llamadas a las API de Windows
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
-        - name: 'Procedimientos para: Llamada una función de Windows que adopta tipos sin signo'
+        - name: Procedimiento Llamada una función de Windows que adopta tipos sin signo
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
         - name: 'Tutorial: Creación de objetos COM'
           href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
@@ -1375,7 +1371,7 @@
               href: visual-basic/language-reference/directives/if-then-else-directives.md
             - name: '#Directiva Region'
               href: visual-basic/language-reference/directives/region-directive.md
-        - name: Functions
+        - name: Funciones
           href: visual-basic/language-reference/functions/index.md
           items:
             - name: Funciones de conversión
@@ -1396,7 +1392,7 @@
           items:
             - name: Ansi
               href: visual-basic/language-reference/modifiers/ansi.md
-            - name: Assembly
+            - name: Ensamblado
               href: visual-basic/language-reference/modifiers/assembly.md
             - name: Async
               href: visual-basic/language-reference/modifiers/async.md
@@ -1406,7 +1402,7 @@
               href: visual-basic/language-reference/modifiers/byref.md
             - name: ByVal
               href: visual-basic/language-reference/modifiers/byval.md
-            - name: Valor predeterminado
+            - name: Default
               href: visual-basic/language-reference/modifiers/default.md
             - name: Friend
               href: visual-basic/language-reference/modifiers/friend.md
@@ -1414,9 +1410,9 @@
               href: visual-basic/language-reference/modifiers/in-generic-modifier.md
             - name: Iterator
               href: visual-basic/language-reference/modifiers/iterator.md
-            - name: Clave
+            - name: Key
               href: visual-basic/language-reference/modifiers/key.md
-            - name: Módulo
+            - name: Module
               href: visual-basic/language-reference/modifiers/module-keyword.md
             - name: MustInherit
               href: visual-basic/language-reference/modifiers/mustinherit.md
@@ -1428,7 +1424,7 @@
               href: visual-basic/language-reference/modifiers/notinheritable.md
             - name: NotOverridable
               href: visual-basic/language-reference/modifiers/notoverridable.md
-            - name: Opcional
+            - name: Optional
               href: visual-basic/language-reference/modifiers/optional.md
             - name: Modificador genérico Out
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md
@@ -1436,13 +1432,13 @@
               href: visual-basic/language-reference/modifiers/overloads.md
             - name: Overridable
               href: visual-basic/language-reference/modifiers/overridable.md
-            - name: Invalidaciones
+            - name: Overrides
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
             - name: Parcial
               href: visual-basic/language-reference/modifiers/partial.md
-            - name: Privada
+            - name: Private
               href: visual-basic/language-reference/modifiers/private.md
             - name: Private Protected
               href: visual-basic/language-reference/modifiers/private-protected.md
@@ -1450,15 +1446,15 @@
               href: visual-basic/language-reference/modifiers/protected.md
             - name: Protected Friend
               href: visual-basic/language-reference/modifiers/protected-friend.md
-            - name: Público
+            - name: Public
               href: visual-basic/language-reference/modifiers/public.md
             - name: ReadOnly
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Compartido
+            - name: Shared
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: estática
+            - name: Estático
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1470,9 +1466,9 @@
               href: visual-basic/language-reference/modifiers/writeonly.md
         - name: Módulos
           href: visual-basic/language-reference/modules.md
-        - name: Nada
+        - name: Nothing
           href: visual-basic/language-reference/nothing.md
-        - name: Objetos
+        - name: de la empresa
           href: visual-basic/language-reference/objects/index.md
           items:
             - name: My.Application (Objeto)
@@ -1556,17 +1552,17 @@
                   href: visual-basic/language-reference/operators/concatenation-operator.md
                 - name: Operador &=
                   href: visual-basic/language-reference/operators/and-assignment-operator.md
-                - name: '* Operator'
+                - name: '* Operador'
                   href: visual-basic/language-reference/operators/multiplication-operator.md
                 - name: Operador *=
                   href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
-                - name: + Operator
+                - name: + Operador
                   href: visual-basic/language-reference/operators/addition-operator.md
                 - name: Operador +=
                   href: visual-basic/language-reference/operators/addition-assignment-operator.md
                 - name: Operador =
                   href: visual-basic/language-reference/operators/assignment-operator.md
-                - name: '- Operator'
+                - name: '- Operador'
                   href: visual-basic/language-reference/operators/subtraction-operator.md
                 - name: Operador -=
                   href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
@@ -1574,7 +1570,7 @@
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: Operador <=
                   href: visual-basic/language-reference/operators/comparison-operators.md
-                - name: '> Operator'
+                - name: '> Operador'
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: '>Operador ='
                   href: visual-basic/language-reference/operators/comparison-operators.md
@@ -1582,7 +1578,7 @@
                   href: visual-basic/language-reference/operators/left-shift-operator.md
                 - name: Operador <<=
                   href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
-                - name: '>> Operator'
+                - name: '>> Operador'
                   href: visual-basic/language-reference/operators/right-shift-operator.md
                 - name: '>>Operador ='
                   href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
@@ -1600,7 +1596,7 @@
                   href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
                 - name: Operador ?()
                   href: visual-basic/language-reference/operators/null-conditional-operators.md
-                - name: '?. Operator'
+                - name: '?. Operador'
                   href: visual-basic/language-reference/operators/null-conditional-operators.md
                 - name: Operador AddressOf
                   href: visual-basic/language-reference/operators/addressof-operator.md
@@ -1632,7 +1628,7 @@
                   href: visual-basic/language-reference/operators/like-operator.md
                 - name: Operador Mod
                   href: visual-basic/language-reference/operators/mod-operator.md
-                - name: Nuevo operador
+                - name: New (Operador)
                   href: visual-basic/language-reference/operators/new-operator.md
                 - name: Operador Not
                   href: visual-basic/language-reference/operators/not-operator.md
@@ -1648,7 +1644,7 @@
                   href: visual-basic/language-reference/operators/typeof-operator.md
                 - name: Operador Xor
                   href: visual-basic/language-reference/operators/xor-operator.md
-        - name: properties (Propiedades)
+        - name: Propiedades
           href: visual-basic/language-reference/properties.md
         - name: Consultas
           href: visual-basic/language-reference/queries/index.md
@@ -2319,7 +2315,7 @@
             - name: Compilación desde la línea de comandos
               href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
               items:
-                - name: 'Procedimientos para: Invocación del compilador de la línea de comandos'
+                - name: Procedimiento Invocación del compilador de la línea de comandos
                   href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
                 - name: Líneas de comandos de compilación de ejemplo
                   href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md

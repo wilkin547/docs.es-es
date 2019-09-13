@@ -1,0 +1,8 @@
+- name: Compatibilidad de aplicaciones
+  items:
+    - name: Evaluación de los cambios importantes
+      href: index.md
+    - name: Cambios importantes
+      href: breaking-changes.md
+    - name: Categorías de cambios importantes
+      href: categories.md
