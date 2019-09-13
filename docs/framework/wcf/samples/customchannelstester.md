@@ -2,33 +2,33 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 1517a2eb73da778c9b84ff857f4b8ad2b4334498
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425005"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928645"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 El `CustomChannelsTester` es una herramienta que se utiliza para probar las implementaciones del canal personalizadas contra un conjunto de contratos de servicios predefinidos. Puede seleccionar el conjunto de contratos de servicios y pasarlo a la herramienta utilizando un archivo XML. La herramienta genera a continuación el servicio y el cliente que ejerce sus implementaciones del canal personalizadas durante el intercambio de mensajes.  
   
 ### <a name="to-build-the-tool"></a>Para compilar la herramienta  
   
-1. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Al compilar la solución, se generan tres archivos: CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. Samplerun.cmd del archivo tiene una línea de comandos de ejemplo que muestra cómo usar esta herramienta para probar la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
+2. Al compilar la solución, se generan tres archivos: CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. CustomChannelsTester.exe, TestSpec.xml y SampleRun.cmd. El archivo SampleRun. cmd tiene una línea de comandos de ejemplo que muestra cómo utilizar esta herramienta para probar [el transporte: Ejemplo](../../../../docs/framework/wcf/samples/transport-udp.md) de UDP.  
   
 ### <a name="to-run-the-tool"></a>Para ejecutar la herramienta  
   
 - Escriba el siguiente comando en el símbolo del sistema:  
   
-    ```  
+    ```console  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
      Se requiere utilizar la opción `/binding`.  
   
-     `/dll` es necesario si "enlace" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
+     `/dll`es necesario si "Binding" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
   
      `/testspec` es opcional.  
   

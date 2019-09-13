@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915537"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927015"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
@@ -280,7 +280,7 @@ Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejempl
   
  **Ejemplo 5: Lambdas, List\<t > y IEnumerable\<T >**  
   
- En este ejemplo se usa [LINQ y código de estilo funcional](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
+ En este ejemplo se usa [LINQ y código de estilo funcional](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- En la primera línea, la [expresión](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda se [cierra sobre](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable `name`local. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
+ En la primera línea, la [expresión](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda se [cierra sobre](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) la variable `name`local. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

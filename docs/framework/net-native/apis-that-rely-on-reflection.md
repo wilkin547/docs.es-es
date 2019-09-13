@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052669"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894518"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basada en la reflexión
-En algunos casos, el uso de reflexión en código no es obvio y, por lo que la cadena de herramientas .NET Native no conserva los metadatos que se necesita en tiempo de ejecución. En este tema se abordan algunas de las API comunes o patrones de programación habituales que no se consideran parte de la API de reflexión, pero que hacen uso de la reflexión para ejecutarse correctamente. Si los usa en su código fuente, puede agregar información sobre ellos en el archivo de directivas en tiempo de ejecución (.rd.xml) para que las llamadas a estas API no generen una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) u otra excepción en tiempo de ejecución.  
+En algunos casos, el uso de la reflexión en el código no es obvio y, por tanto, la cadena de herramientas de .NET Native no conserva los metadatos necesarios en tiempo de ejecución. En este tema se abordan algunas de las API comunes o patrones de programación habituales que no se consideran parte de la API de reflexión, pero que hacen uso de la reflexión para ejecutarse correctamente. Si los usa en su código fuente, puede agregar información sobre ellos en el archivo de directivas en tiempo de ejecución (.rd.xml) para que las llamadas a estas API no generen una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) u otra excepción en tiempo de ejecución.  
   
 ## <a name="typemakegenerictype-method"></a>Método Type.MakeGenericType  
  Puede crear dinámicamente instancias de un tipo genérico `AppClass<T>` llamando al método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> mediante código como el siguiente:  
@@ -29,11 +29,9 @@ En algunos casos, el uso de reflexión en código no es obvio y, por lo que la c
   
  Sin embargo, aun cuando se agreguen metadatos para el tipo genérico sin instancia, la llamada al método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md):  
   
-```  
-This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
+Esta operación no se puede realizar porque se quitaron metadatos para el tipo siguiente por razones de rendimiento:  
   
-App1.AppClass`1<System.Int32>.  
-```  
+`App1.AppClass`1 < System. Int32 > '.  
   
  Puede incluir la siguiente directiva en tiempo de ejecución al archivo de directivas en tiempo de ejecución para agregar metadatos de `Activate` para la creación específica de instancias sobre `AppClass<T>` de <xref:System.Int32?displayProperty=nameWithType>:  
   
@@ -55,9 +53,9 @@ App1.AppClass`1<System.Int32>.
   
 - Metadatos de `Browse` para el método que se quiere llamar.  Si se trata de un método público, la adición de metadatos de `Browse` públicos para el tipo contenedor incluye también el método.  
   
-- Metadatos dinámicos para el método que desea llamar, por lo que la cadena de herramientas .NET Native no quita el delegado de invocación de reflexión. Si no hay metadatos dinámicos para el método, se generará la siguiente excepción cuando se llame al método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
+- Metadatos dinámicos para el método al que desea llamar, de modo que la cadena de herramientas de .NET Native no quite el delegado de invocación de reflexión. Si no hay metadatos dinámicos para el método, se generará la siguiente excepción cuando se llame al método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
   
-    ```  
+    ```output
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
@@ -78,7 +76,7 @@ App1.AppClass`1<System.Int32>.
   
  Si no hay metadatos de matriz presentes, se produce el siguiente error:  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
   
 App1.Class1[]  

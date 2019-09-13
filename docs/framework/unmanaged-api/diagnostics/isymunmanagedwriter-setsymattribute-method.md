@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650783"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894469"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute (Método)
-Define un atributo personalizado basándose en su nombre. Estos atributos se encuentran en el almacén de símbolos, a diferencia de los atributos de metadatos personalizados.  
+Define un atributo personalizado basado en su nombre. Estos atributos se guardan en el almacén de símbolos, a diferencia de los atributos personalizados de metadatos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parámetros  
  `parent`  
- [in] El token de metadatos para el que se está definiendo el atributo.  
+ de Token de metadatos para el que se define el atributo.  
   
  `name`  
- [in] Un puntero a un `WCHAR` que contiene el nombre del atributo.  
+ de Un puntero a un `WCHAR` que contiene el nombre del atributo.  
   
  `cData`  
- [in] Un `ULONG32` que indica el tamaño de la `data` matriz.  
+ de Que indica el tamaño de la `data` matriz. `ULONG32`  
   
  `data`  
- [in] El valor del atributo.  
+ de Valor del atributo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

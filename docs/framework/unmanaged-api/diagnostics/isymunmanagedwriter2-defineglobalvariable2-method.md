@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650705"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894456"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 (Método)
 Define una única variable global.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,28 +42,28 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- [in] El nombre de variable global.  
+ de Nombre de la variable global.  
   
  `attributes`  
- [in] Atributos de la variable globales.  
+ de Atributos de la variable global.  
   
  `sigToken`  
- [in] El token de metadatos de la firma.  
+ de Símbolo (token) de metadatos de la firma.  
   
  `addrKind`  
- [in] El tipo de dirección.  
+ de Tipo de dirección.  
   
  `addr1`  
- [in] La primera dirección de la especificación de parámetro.  
+ de Primera dirección de la especificación de parámetro.  
   
  `addr2`  
- [in] La segunda dirección de la especificación de parámetro.  
+ de Segunda dirección de la especificación de parámetro.  
   
  `addr3`  
- [in] Tercera dirección de la especificación de parámetro.  
+ de Tercera dirección de la especificación de parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: CorSym.idl  

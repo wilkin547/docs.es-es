@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792042"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894443"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificar datos de valores grandes (max) en ADO.NET
 Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño máximo de fila de 8 kilobytes (KB). SQL Server proporciona un especificador `max` para los tipos de datos `varchar`, `nvarchar` y `varbinary` a fin de permitir el almacenamiento de valores tan grandes como 2^32 bytes. Las columnas de tabla y las variables de Transact-SQL pueden especificar tipos de datos `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. En ADO.NET, los tipos de datos `max` se pueden recuperar mediante `DataReader` y también se pueden especificar como valores de parámetros de entrada y salida sin ningún control especial. En el caso de tipos de datos `varchar` grandes, los datos se pueden recuperar y actualizar de manera incremental.  
@@ -41,7 +41,7 @@ Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño m�
   
  En el siguiente ejemplo se inserta una foto en la tabla ProductPhoto de la base de datos de ejemplo AdventureWorks. Al usar el `BULK OPENROWSET` proveedor, debe suministrar la lista con nombre de las columnas, incluso si no va a insertar valores en todas las columnas. En este caso, la clave principal se define como una columna de identidad y podría omitirse de la lista de columnas. Tenga en cuenta que también debe suministrar un nombre de correlación al final de la instrucción `OPENROWSET`, que en este caso es ThumbnailPhoto. Éste se correlaciona con la columna de la tabla `ProductPhoto` en la que se carga el archivo.  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>Ejemplo  
  En este ejemplo de Transact-SQL se actualiza un valor parcial de DocumentSummary, una columna `nvarchar(max)` de la tabla Document de la base de datos AdventureWorks. La palabra 'components' se sustituye por la palabra 'features' mediante la especificación de la palabra de sustitución, la ubicación de comienzo (desplazamiento) de la palabra que se va a sustituir en los datos existentes y el número de caracteres que se van a sustituir (longitud). El ejemplo incluye instrucciones SELECT antes y después de la instrucción UPDATE para comparar los resultados.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>Usar parámetros de tipos de valor grande  
  Los tipos de valor grande se pueden emplear en objetos <xref:System.Data.SqlClient.SqlParameter> de la misma manera que se utilizan los tipos de valor más pequeño en objetos <xref:System.Data.SqlClient.SqlParameter>. Puede recuperar tipos de valor grande como <xref:System.Data.SqlClient.SqlParameter> valores, tal como se muestra en el ejemplo siguiente. El código asume que el siguiente procedimiento almacenado GetDocumentSummary existe en la base de datos de ejemplo AdventureWorks. El procedimiento almacenado toma un parámetro de entrada @DocumentID denominado y devuelve el contenido de la columna DocumentSummary en @DocumentSummary el parámetro de salida.  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

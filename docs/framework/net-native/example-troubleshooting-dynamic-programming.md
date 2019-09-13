@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910599"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894490"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: solucionar problemas de programación dinámica
 > [!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "69910599"
   
  No todos los errores de búsqueda de metadatos en las aplicaciones desarrolladas con la cadena de herramientas de .NET Native producen una excepción.  Algunos pueden manifestarse de manera impredecible en una aplicación.  En el ejemplo siguiente se muestra una infracción de acceso causada por hacer referencia a un objeto nulo:  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>¿Qué estaba haciendo la aplicación?  
  Lo primero que hay tener en cuenta es la maquinaria de la palabra clave `async` en la base de la pila.  Determinar lo que la aplicación estaba haciendo realmente en un método `async` puede ser problemático, ya que la pila ha perdido el contexto de la llamada original y ha ejecutado el código `async` en un subproceso diferente. Sin embargo, podemos deducir que la aplicación estaba intentando cargar su primera página.  En la implementación de `NavigationArgs.Setup`, el código siguiente produjo la infracción de acceso:  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  En esta instancia, la propiedad `LayoutVM` en `AppViewModel.Current` era **NULL**.  Alguna ausencia de metadatos provocó una diferencia de comportamiento que provocó que una propiedad tuviese un estado no inicializado en vez de establecido, como esperaba la aplicación.  Establecer un punto de interrupción en el código donde `LayoutVM` debería haberse inicializado podría arrojar luz sobre la situación.  Sin embargo, tenga en cuenta que el tipo de `LayoutVM` es `App.Core.ViewModels.Layout.LayoutApplicationVM`.  La única directiva de metadatos presente en el archivo rd.xml es:  
   

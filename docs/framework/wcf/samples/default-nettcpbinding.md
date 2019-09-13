@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: e45899ddbb4c244e43d3b097cc046acf34fd433e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045590"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928591"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding predeterminado
 Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> . Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
@@ -83,7 +83,7 @@ Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> 
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -96,7 +96,7 @@ Press ENTER to terminate client.
   
 1. Instale ASP.NET 4,0 con el siguiente comando.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

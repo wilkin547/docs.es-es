@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929330"
 ---
 # <a name="mod-operator-visual-basic"></a>Operador mod (Visual Basic)
 
@@ -84,6 +84,7 @@ Entre los operadores relacionados se incluyen los siguientes:
 ## <a name="attempted-division-by-zero"></a>División intentada por cero
 
 Si `number2` se evalúa como cero, el comportamiento `Mod` del operador depende del tipo de datos de los operandos:
+
 - Una división <xref:System.DivideByZeroException> integral inicia una excepción si `number2` no se puede determinar en tiempo de compilación y genera un error `BC30542 Division by zero occurred while evaluating this expression` en tiempo de compilación `number2` si se evalúa como cero en tiempo de compilación.
 - Una división de punto flotante devuelve <xref:System.Double.NaN?displayProperty=nameWithType>.
 

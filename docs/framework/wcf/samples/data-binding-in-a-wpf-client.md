@@ -2,12 +2,12 @@
 title: Enlace de datos en un cliente de Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045111"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928634"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Enlace de datos en un cliente de Windows Presentation Foundation
 Este ejemplo muestra el uso de enlace de datos en un cliente de la Windows Presentation Foundation (WPF). En el ejemplo se usa un servicio de Windows Communication Foundation (WCF) que genera aleatoriamente una matriz de álbumes para volver al cliente. Cada álbum tiene un nombre, un precio y una lista de pistas. Las pistas del álbum tienen un nombre y duración. La información que devuelve el servicio se enlaza automáticamente a la interfaz de usuario (UI) proporcionada por el cliente de Windows Presentation Foundation (WPF).  
@@ -17,7 +17,7 @@ Este ejemplo muestra el uso de enlace de datos en un cliente de la Windows Prese
   
  El enlace de datos permite enlazar un origen de datos automáticamente a una Interfaz de usuario. Esto simplifica el modelo de programación porque no requiere que usted actualice mediante programación cada elemento de la interfaz de usuario con los datos de un objeto de datos o una matriz de objetos de datos. Puede enlazar un objeto a un elemento de la interfaz de usuario único o una matriz a un control que toma varias entradas, como un `ListBox`. El código siguiente muestra cómo enlazar los datos a `DataContext` de un elemento de la interfaz de usuario.  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

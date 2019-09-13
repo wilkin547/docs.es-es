@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637770"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929317"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements (Cláusula, Visual Basic)
-Indica que un miembro de clase o estructura proporciona la implementación de un miembro definido en una interfaz.  
+Indica que un miembro de clase o estructura proporciona la implementación para un miembro definido en una interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
-El `Implements` palabra clave no es igual que el [instrucción Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Usa el `Implements` instrucción para especificar que una clase o estructura implementa una o varias interfaces y, a continuación, para cada miembro que usa el `Implements` palabra clave para especificar qué interfaz y qué miembro implementa.
+La `Implements` palabra clave no es lo mismo que la [instrucción Implements](../../../visual-basic/language-reference/statements/implements-statement.md). La `Implements` instrucción se usa para especificar que una clase o estructura implementa una o más interfaces y, a continuación, para cada miembro, se `Implements` usa la palabra clave para especificar qué interfaz y qué miembro implementa.
 
-Si una clase o estructura implementa una interfaz, debe incluir el `Implements` instrucción inmediatamente después de la [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md) o [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md), y debe implementar todos los miembros define la interfaz.
+Si una clase o estructura implementa una interfaz, debe incluir la `Implements` instrucción inmediatamente después de la instrucción de [clase](../../../visual-basic/language-reference/statements/class-statement.md) o [instrucción de estructura](../../../visual-basic/language-reference/statements/structure-statement.md), y debe implementar todos los miembros definidos por la interfaz.
 
 ## <a name="reimplementation"></a>Reimplementación  
-En una clase derivada, puede volver a implementar a un miembro de interfaz que ya ha implementado la clase base. Esto es diferente de reemplazar al miembro de clase base en los siguientes aspectos:
+En una clase derivada, puede volver a implementar un miembro de interfaz que la clase base ya ha implementado. Esto no es lo mismo que reemplazar el miembro de clase base en los siguientes aspectos:
 
-- No es necesario ser miembro de clase base [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) para ser implementado de nuevo.
-- Puede volver a implementar al miembro con un nombre diferente.
+- No es necesario [reemplazar](../../../visual-basic/language-reference/modifiers/overridable.md) el miembro de la clase base para que se pueda volver a implementar.
+- Puede volver a implementar el miembro con un nombre diferente.
 
-El `Implements` palabra clave puede utilizarse en los contextos siguientes:
+La `Implements` palabra clave se puede usar en los contextos siguientes:
+
 - [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)

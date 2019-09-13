@@ -2,12 +2,12 @@
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 70c7237329d1ae5f6ecde2231a66bca53e220634
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045020"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928821"
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
@@ -112,7 +112,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenciales de cliente personalizadas y proveedor de tokens  
  En los pasos siguientes se muestra cómo desarrollar un proveedor de tokens personalizado que almacena en memoria caché los tokens emitidos y los integra con WCF: Security.  
   
-#### <a name="to-develop-a-custom-token-provider"></a>Para desarrollar un proveedor de tokens personalizado  
+### <a name="to-develop-a-custom-token-provider"></a>Para desarrollar un proveedor de tokens personalizado  
   
 1. Escriba un proveedor de tokens personalizado.  
   
@@ -120,7 +120,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
      Para realizar esta tarea, el proveedor de tokens personalizado deriva la clase <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Este método intenta recibir un token de la memoria caché o si un token no se puede encontrar en la caché, se recupera un token del proveedor subyacente y, a continuación, lo almacena en la caché. En ambos casos, el método devuelve un `SecurityToken`.  
   
-    ```  
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
      El <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. Un administrador de tokens de seguridad también se utiliza para crear autenticadores y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado cuando los requisitos de tokens pasados indican que se solicita un token emitido.  
   
-    ```  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        Else  
+        else  
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
      Se usa una clase de credenciales de cliente para representar las credenciales que se configuran para el proxy de cliente y crea el administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y serializadores de tokens.  
   
-    ```  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -182,11 +182,11 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
       public IssuedTokenCache IssuedTokenCache  
       {  
-        Get  
+        get  
         {  
           return this.cache;  
         }  
-        Set  
+        set  
         {  
           this.cache = value;  
         }  
@@ -206,18 +206,18 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 4. Implementar la caché del token. La implementación del ejemplo utiliza una clase base abstracta a través de la cual los consumidores de una caché de token determinada interactúan con la caché.  
   
-    ```  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
       public abstract bool TryGetToken(EndpointAddress target, EndpointAddress issuer, out GenericXmlSecurityToken cachedToken);  
     }  
-    Configure the client to use the custom client credential.  
+    // Configure the client to use the custom client credential.  
     ```  
   
      Para que el cliente utilice la credencial de cliente personalizada, el ejemplo elimina la clase de credencial de cliente predeterminada y proporciona la nueva.  
   
-    ```  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -231,7 +231,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
 ## <a name="the-setupcmd-batch-file"></a>Archivo por lotes Setup.cmd  
  El archivo por lotes de Setup.cmd incluido con este ejemplo le permite configurar el servidor y servicio de token de seguridad con certificados pertinentes para ejecutar una aplicación autohospedada. El archivo por lotes crea dos certificados en el almacén de certificados CurrentUser/TrustedPeople. El primer certificado tiene un nombre de asunto CN=STS que utiliza el servicio de token de seguridad para firmar los tokens de seguridad que emite el cliente. El segundo certificado tiene un nombre de asunto de CN=localhost que usa el servicio de token de seguridad para cifrar un secreto para que el servicio lo pueda descifrar.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
 1. Ejecute el archivo Setup.cmd para crear los certificados necesarios.  
   
@@ -241,7 +241,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 4. Ejecute Client.exe.  
   
-#### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
+### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 1. Ejecute Cleanup.cmd en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
