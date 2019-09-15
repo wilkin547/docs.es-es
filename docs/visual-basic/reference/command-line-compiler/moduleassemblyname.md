@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964674"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972375"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica el nombre del ensamblado del que este módulo formará parte.  
@@ -37,14 +37,14 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
   
 - El ensamblado al que se hace referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se va a compilar el módulo.  
   
- Para obtener más información sobre cómo crear un módulo, vea [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información sobre los ensamblados de confianza, vea ensamblados de [confianza](../../../standard/assembly/friend-assemblies.md).  
+ Para obtener más información sobre cómo crear un módulo, vea [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información sobre los ensamblados de confianza, vea [ensamblados de confianza](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
 > La `-moduleassemblyname` opción no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde un símbolo del sistema.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Compilar un ensamblado de varios archivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Cómo: Compilar un ensamblado de varios archivos](../../../framework/app-domains/build-multifile-assembly.md)
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md)
+- [Ensamblados de confianza](../../../standard/assembly/friend.md)

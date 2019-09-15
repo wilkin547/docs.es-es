@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 3e30267c8aa11ce97b3b3064ff0954378dab57af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a5a2d6b9d99693a551480fa047cedf42888fdf3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959799"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969048"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Especifica que solo se puede tener acceso a uno o varios elementos de programación declarados desde dentro del ensamblado que contiene su declaración.  
@@ -35,8 +35,8 @@ Especifica que solo se puede tener acceso a uno o varios elementos de programaci
  Para obtener una comparación `Friend` de y los demás modificadores de acceso, vea [niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
-> Puede especificar que otro ensamblado es un ensamblado de confianza, lo que le permite tener acceso a todos los tipos y `Friend`miembros marcados como. Para más información, vea [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md).  
-  
+> Puede especificar que otro ensamblado es un ensamblado de confianza, lo que le permite tener acceso a todos los tipos y `Friend`miembros marcados como. Para más información, vea [Ensamblados de confianza](../../../standard/assembly/friend.md).
+
 ## <a name="example"></a>Ejemplo  
  La siguiente clase usa el `Friend` modificador para permitir que otros elementos de programación del mismo ensamblado tengan acceso a determinados miembros.  
   

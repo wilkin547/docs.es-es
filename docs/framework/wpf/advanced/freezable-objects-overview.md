@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 854565e28e646ef57658e2bfdb7326d8453448d2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05cd3c27430146f575c23011f53995aa07aaf99e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856073"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991493"
 ---
 # <a name="freezable-objects-overview"></a>Información general sobre objetos Freezable
 
@@ -100,13 +100,13 @@ Para inmovilizar un <xref:System.Windows.Freezable> objeto declarado en el marca
 
 Para usar el `Freeze` atributo, debe asignar al espacio de nombres de las opciones `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`de presentación:. `PresentationOptions`es el prefijo recomendado para asignar este espacio de nombres:
 
-```
+```xaml
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
 ```
 
 Dado que no todos los lectores de XAML reconocen este atributo, se recomienda usar el [atributo MC: ignorable](mc-ignorable-attribute.md) para marcar el `Presentation:Freeze` atributo como ignorable:
 
-```
+```xaml
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="PresentationOptions"
 ```

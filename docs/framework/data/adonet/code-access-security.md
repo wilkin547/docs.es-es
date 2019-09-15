@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786871"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971818"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -50,12 +50,12 @@ ms.locfileid: "70786871"
  En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, consulte [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Ensamblados  
- Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre la creación e implementación de ensamblados, vea [programar con ensamblados](../../app-domains/programming-with-assemblies.md).  
+ Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre la creación e implementación de ensamblados, vea [programar con ensamblados](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Ensamblados con nombre seguro  
  Un nombre seguro, o firma digital, consta de la identidad del ensamblado, que incluye su nombre de texto sencillo, el número de versión, la información de referencia cultural (si se proporciona), así como una clave pública y una firma digital. La firma digital se genera a partir de un archivo de ensamblado que usa la clave privada correspondiente. El archivo de ensamblado contiene el manifiesto del ensamblado, que contiene los nombres y códigos hash de todos los archivos que forman el ensamblado.  
   
- La asignación de un nombre seguro al ensamblado proporciona a una aplicación o a un componente una identidad única que puede usar otro software para referirse a ella de manera explícita. La asignación de nombres seguros protege a los ensamblados de la suplantación por parte de un ensamblado que contenga código malintencionado. También garantiza la coherencia entre las diferentes versiones de un componente. Debe usar nombres seguros en los ensamblados que se van a implementar en la caché global de ensamblados (GAC). Para obtener más información, vea [Crear y utilizar ensamblados con nombre seguro](../../app-domains/create-and-use-strong-named-assemblies.md).  
+ La asignación de un nombre seguro al ensamblado proporciona a una aplicación o a un componente una identidad única que puede usar otro software para referirse a ella de manera explícita. La asignación de nombres seguros protege a los ensamblados de la suplantación por parte de un ensamblado que contenga código malintencionado. También garantiza la coherencia entre las diferentes versiones de un componente. Debe usar nombres seguros en los ensamblados que se van a implementar en la caché global de ensamblados (GAC). Para obtener más información, vea [Crear y utilizar ensamblados con nombre seguro](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Confianza parcial en ADO.NET 2.0  
  En ADO.NET 2.0, se pueden ejecutar los proveedores de datos .NET Framework para SQL Server, OLE DB, ODBC y para Oracle en entornos de confianza parcial. En versiones anteriores de .NET Framework, solo se admitía el uso de <xref:System.Data.SqlClient> en aplicaciones que no fuesen de plena confianza.  

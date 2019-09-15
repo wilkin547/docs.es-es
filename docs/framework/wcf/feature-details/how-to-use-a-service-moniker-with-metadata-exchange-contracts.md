@@ -2,12 +2,12 @@
 title: Procedimiento para usar un moniker de servicio con contratos de intercambio de metadatos
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 00aa1bbde95c0636391f213f830fc67b2dedf459
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e114bc2c046ba7145a91121ce23c82912680a048
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968789"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968962"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Procedimiento para usar un moniker de servicio con contratos de intercambio de metadatos
 Después de desarrollar algunos servicios WCF nuevos, puede decidir que desea poder llamar a estos servicios desde un script o una aplicación Visual Basic 6,0. Un método sería generar un ensamblado de cliente de WCF, registrar el ensamblado con COM, instalar el ensamblado en la GAC y, a continuación, hacer referencia a los tipos COM desde el código de Visual Basic. Al distribuir la aplicación, tendrá que distribuir también el ensamblado de cliente de WCF. El usuario tendrá que registrar, a continuación, el ensamblado de cliente de WCF con COM y colocarlo en la GAC. La interoperabilidad COM de WCF también permite realizar las mismas llamadas de servicio sin depender de un ensamblado de cliente de WCF. El moniker de WCF le permite llamar a cualquier servicio de WCF desde cualquier lenguaje compatible con COM (Visual Basic, VBScript, Visual Basic para Aplicaciones (VBA), etc.) especificando un URI de extremo de intercambio de metadatos (MEX) que el moniker de servicio utiliza para extraer el tipo información sobre el servicio. En este tema se describe cómo llamar al ejemplo de Introducción WCF mediante un moniker de WCF que especifica un extremo de Mex.  
@@ -21,7 +21,7 @@ Después de desarrollar algunos servicios WCF nuevos, puede decidir que desea po
   
 2. Crear un script Visual Basic o aplicación Visual Basic que contiene el código siguiente:  
   
-    ```  
+    ```vb
     monString = "service:mexaddress=http://localhost/ServiceModelSamples/Service.svc/MEX"  
     monString = monString + ", address=http://localhost/ServiceModelSamples/Service.svc"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -34,12 +34,12 @@ Después de desarrollar algunos servicios WCF nuevos, puede decidir que desea po
 3. Ejecute la aplicación Visual Basic o script.  
   
     > [!NOTE]
-    > El servicio al que está llamando debe exponer un extremo de Mex para que el moniker pueda leer los metadatos del servicio. Para obtener más información, consulte [Cómo Publicar metadatos para un servicio mediante un archivo](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)de configuración.  
+    > El servicio al que está llamando debe exponer un extremo de Mex para que el moniker pueda leer los metadatos del servicio. Para obtener más información, vea [Cómo: Publicar metadatos para un servicio mediante un archivo](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)de configuración.  
   
     > [!NOTE]
     > Si el moniker es incorrecto o si el servicio no está disponible, la llamada a `GetObject` devolverá un error que dirá "Sintaxis no válida."  Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Usar el moniker de servicio Windows Communication Foundation sin registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Procedimientos: Usar el moniker de servicio Windows Communication Foundation sin registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
 - [Cómo: Uso de un moniker de servicio con contratos WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

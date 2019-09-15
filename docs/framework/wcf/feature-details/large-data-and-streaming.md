@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911865"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991521"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basada en XML. Dado que los datos XML se codifican normalmente en el formato de texto estándar definido en la [especificación de xml 1,0](https://go.microsoft.com/fwlink/?LinkId=94838), los desarrolladores y arquitectos de sistemas conectados suelen preocuparse por la superficie de conexión (o el tamaño) de los mensajes enviados a través de la red y el la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de datos binarios.  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
 ### <a name="programming-model"></a>Modelo de programación  
  Independientemente de cuál de los tres codificadores integrados utiliza en su aplicación, la experiencia de programación es idéntica con respecto a la transferencia de datos binarios. La diferencia radica en cómo WCF controla los datos en función de sus tipos de datos.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>Modelo de programación para las transferencias de transmisión  
  El modelo de programación para transmisión es sencillo. Para recibir los datos transmitidos, especifique un contrato de operación que tiene un parámetro de entrada único de tipo <xref:System.IO.Stream>. Para devolver los datos transmitidos, devuelva una referencia <xref:System.IO.Stream>.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  Esta regla se aplica de igual forma a los contratos de mensaje. Como se muestra en el contrato de mensaje siguiente, puede tener solo un miembro de un único cuerpo en el contrato del mensaje que sea una secuencia. Si desea comunicar la información adicional con la secuencia, esta información debe estar incluida en los encabezados del mensaje. El cuerpo del mensaje se reserva exclusivamente para el contenido de la secuencia.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  
@@ -240,4 +240,4 @@ public class UploadStreamMessage
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Habilitar streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedimientos: Habilitar streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

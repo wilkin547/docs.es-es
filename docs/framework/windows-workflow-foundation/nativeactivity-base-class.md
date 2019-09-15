@@ -2,12 +2,12 @@
 title: Clase base NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637473"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989560"
 ---
 # <a name="nativeactivity-base-class"></a>Clase base NativeActivity
 
@@ -36,11 +36,11 @@ ms.locfileid: "65637473"
 
 1. OpenVisual Studio 2010.
 
-2. Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".
+2. Seleccione **archivo**, **nuevo**y **proyecto**. Seleccione **flujo de trabajo 4,0** en  **C# visual** en la ventana **tipos de proyecto** y seleccione el nodo **V2010** . Seleccione **biblioteca de actividades** en la ventana **plantillas** . Dé al nuevo proyecto el nombre "HelloActivity".
 
-3. Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.
+3. Haga clic con el botón secundario en Activity1. XAML en el proyecto HelloActivity y seleccione **eliminar**.
 
-4. Haga clic en el proyecto HelloActivity y seleccione **agregar**y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
+4. Haga clic con el botón derecho en el proyecto HelloActivity, seleccione **Agregar**y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
 
 5. En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637473"
 
 9. Utilice el objeto <xref:System.Activities.NativeActivityContext> para programar un marcador. Vea <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> para obtener detalles sobre cómo crear, programar y reanudar un marcador.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

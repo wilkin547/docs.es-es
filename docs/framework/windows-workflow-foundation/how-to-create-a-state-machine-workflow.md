@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044385"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989810"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedimiento para crear un flujo de trabajo de máquina de estados
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas <xref:System.Activities.Statements.StateMachine> , como la actividad, y las actividades personalizadas [de los procedimientos anteriores: Cree un tema](how-to-create-an-activity.md) de la actividad. El flujo de trabajo modela un juego de adivinanzas de números.  
@@ -71,7 +71,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 2. Haga doble clic en el estado de **destino Initialize** recién cambiado en el diseñador de flujo de trabajo para expandirlo.  
   
-3. Arrastre una actividad Assign de la sección **primitivas** del **cuadro de herramientas** y colóquela en la sección **entrada** del estado. Escriba `Target` en el cuadro **para** y la siguiente expresión en el cuadro **Escriba C# una expresión** o **Escriba una expresión de VB** .  
+3. Arrastre una actividad **assign** de la sección **primitivas** del **cuadro de herramientas** y colóquela en la sección **entrada** del estado. Escriba `Target` en el cuadro **para** y la siguiente expresión en el cuadro **Escriba C# una expresión** o **Escriba una expresión de VB** .  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -86,11 +86,11 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 4. Vuelva a la vista de equipo de estado general en el diseñador de flujo de trabajo haciendo clic en **StateMachine** en la pantalla de la ruta de navegación en la parte superior del diseñador de flujo de trabajo.  
   
-5. Arrastre una actividad **State** desde la sección **máquina de Estados** del **cuadro de herramientas** hasta el diseñador de flujo de trabajo y mantenga el mouse sobre el estado de inicialización de **destino** . Tenga en cuenta que se mostrarán cuatro triángulos alrededor del estado de **destino** de inicialización cuando el nuevo estado se sitúa sobre él. Quite el nuevo estado del triángulo que está inmediatamente por debajo del estado de inicialización de **destino** . Esto coloca el nuevo estado en el flujo de trabajo y crea una transición desde el estado de **destino Initialize** al nuevo estado.  
+5. Arrastre una actividad **State** desde la sección **máquina de Estados** del **cuadro de herramientas** hasta el diseñador de flujo de trabajo y mantenga el mouse sobre el estado de **inicialización de destino** . Tenga en cuenta que se mostrarán cuatro triángulos alrededor del estado de **destino de inicialización** cuando el nuevo estado se sitúa sobre él. Quite el nuevo estado del triángulo que está inmediatamente por debajo del estado de **inicialización de destino** . Esto coloca el nuevo estado en el flujo de trabajo y crea una transición desde el estado de **destino Initialize** al nuevo estado.  
   
 6. Haga clic en **State1** para seleccionarlo, cambie DisplayName `Enter Guess`a y, a continuación, haga doble clic en el estado en el diseñador de flujo de trabajo para expandirlo.  
   
-7. Arrastre una actividad **WriteLine** de la sección **primitivas** del cuadro de **herramientas** y colóquela en la sección **entrada** del estado.  
+7. Arrastre una actividad **WriteLine** de la sección **primitivas** del **cuadro de herramientas** y colóquela en la sección **entrada** del estado.  
   
 8. Escriba la siguiente expresión en el cuadro de propiedad **texto** de **WriteLine**.  
   
@@ -102,7 +102,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     "Please enter a number between 1 and " + MaxNumber  
     ```  
   
-9. Arrastre una actividad Assign desde la sección **primitivas** del **cuadro de herramientas** y colóquela en la sección de **salida** del estado.  
+9. Arrastre una actividad **assign** desde la sección **primitivas** del **cuadro de herramientas** y colóquela en la sección de **salida** del estado.  
   
 10. Escriba `Turns` en el cuadro **para** y `Turns + 1` en el cuadro **Escriba C# una expresión** o **Escriba una expresión de VB** .  
   
@@ -118,7 +118,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 16. En la **ventana Propiedades** de la actividad **ReadInt** , escriba `"EnterGuess"` entre comillas en el cuadro de valor de la propiedad **BookmarkName** y escriba `Guess` en el cuadro de valor de la propiedad **resultado** .  
   
-17. Escriba la siguiente expresión en el cuadro de valor de la propiedad de **condición** adivinar la transición **correcta** .  
+17. Escriba la siguiente expresión en el cuadro de valor de la propiedad de **condición** **adivinar** la transición correcta.  
   
     ```vb  
     Guess = Target  
@@ -141,7 +141,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     > [!NOTE]
     > Tenga en cuenta que si la condición <xref:System.Activities.Statements.Transition.Condition%2A> de una transición se evalúa en `false` (o todas las condiciones de una transición de desencadenador compartido se evalúan en `false`), la transición no se producirá y se reprogramarán todos los desencadenadores para todas las transiciones desde el estado. En este tutorial, no puede suceder esta situación debido a la forma en que están configuradas las condiciones (tenemos acciones específicas para determinar si el supuesto es correcto o incorrecto).  
   
-20. Haga doble clic en la transición adivinar incorrectamente en el diseñador de flujo de trabajo para expandirla. Tenga en cuenta que el desencadenador ya está establecido en la misma actividad **ReadInt** usada por la transición **Guess correct** .  
+20. Haga doble clic en la transición **adivinar incorrectamente** en el diseñador de flujo de trabajo para expandirla. Tenga en cuenta que el **desencadenador** ya está establecido en la misma actividad **ReadInt** usada por la transición **Guess correct** .  
   
 21. Escriba la siguiente expresión en el cuadro de valor de la propiedad **condición** .  
   
@@ -157,21 +157,21 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 23. Escriba la siguiente expresión en el cuadro de valor de la propiedad **condición** de la actividad **If** .  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
-24. Arrastre dos actividades **WriteLine** de la **sección primitivas** del cuadro de **herramientas** y colóquelas de modo que una esté en la sección **then** de la actividad **If** y otra esté en la sección **else** .  
+24. Arrastre dos actividades **WriteLine** de la sección **primitivas** del **cuadro de herramientas** y colóquelas de modo que una esté en la sección **then** de la actividad **If** y otra esté en la sección **else** .  
   
 25. Haga clic en la actividad **WriteLine** en la sección **then** para seleccionarla y escriba la siguiente expresión en el cuadro de valor de la propiedad **Text** .  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. Haga clic en la actividad **WriteLine** en la sección **otro** para seleccionarla y escriba la siguiente expresión en el cuadro de valor de la propiedad **texto** .  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -195,4 +195,4 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
 - [Cómo: Crear una actividad](how-to-create-an-activity.md)
-- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Procedimientos: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

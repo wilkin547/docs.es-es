@@ -2,12 +2,12 @@
 title: Argumentos necesarios y grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964910"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989309"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **No se proporcionó el valor de un argumento de actividad necesario ' Operand1 '.**  
 > [!NOTE]
-> Para obtener más información sobre la comprobación y el control de errores y advertencias de validación, consulte invocar la [validación de actividad](invoking-activity-validation.md).  
+> Para obtener más información sobre la comprobación y el control de errores y advertencias de validación, consulte [invocar la validación de actividad](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Usar grupos de sobrecargas
 
@@ -108,8 +108,8 @@ class CreateLocation: Activity
   
  En el ejemplo siguiente, tomado del ejemplo de [actividades de acceso a bases de datos](./samples/database-access-activities.md) , hay dos `ConnectionString` grupos de sobrecargas: y. `ConfigFileSectionName` Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

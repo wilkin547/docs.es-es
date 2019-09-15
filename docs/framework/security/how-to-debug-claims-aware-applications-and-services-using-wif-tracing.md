@@ -3,12 +3,12 @@ title: Cómo depurar servicios y aplicaciones con reconocimiento de notificacion
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: effd670a4d0e12f0bca10301fabc361c73e03328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 604ebf5ad71197f6614ffa45b6d7c181d474e1aa
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625876"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990478"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Cómo depurar servicios y aplicaciones con reconocimiento de notificaciones mediante el seguimiento de WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -76,14 +76,14 @@ ms.locfileid: "64625876"
     </system.diagnostics>  
     ```  
   
-3. La configuración anterior le indica a WIF que genere eventos de seguimiento detallados y los registre en el archivo *WIFTrace.e2e*. Para obtener una lista completa de valores para el **switchValue** conmutador, consulte la tabla de nivel de seguimiento se encuentra en el siguiente tema: [Configuración del seguimiento](../wcf/diagnostics/tracing/configuring-tracing.md).  
+3. La configuración anterior le indica a WIF que genere eventos de seguimiento detallados y los registre en el archivo *WIFTrace.e2e*. Para obtener una lista completa de los valores del modificador **switchValue** , consulte la tabla del nivel de seguimiento que se encuentra en el tema siguiente: [Configuración](../wcf/diagnostics/tracing/configuring-tracing.md)de la traza.  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Paso 2: analizar los archivos de seguimiento de WIF mediante la herramienta Visor de seguimiento  
  En este paso, usará la herramienta Visor de seguimiento (SvcTraceViewer.exe) para analizar los registros de seguimiento de WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Para analizar los registros de seguimiento de WIF con la herramienta Visor de seguimiento (SvcTraceViewer.exe)  
   
-1. La herramienta Visor de seguimiento (SvcTraceViewer.exe) se incluye como parte de Windows SDK. Si ya no ha instalado el SDK de Windows, puede descargar aquí: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
+1. La herramienta Visor de seguimiento (SvcTraceViewer.exe) se incluye como parte de Windows SDK. Si aún no ha instalado el Windows SDK, puede descargarlo aquí: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2. Ejecute la herramienta Visor de seguimiento (SvcTraceViewer.exe) Normalmente está disponible en la carpeta **Bin** de la ruta de instalación.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64625876"
   
 4. Consulte las entradas de la pestaña **Actividad**. Cada entrada debe contener un número de actividad, el número de seguimientos que se registraron, la duración de la actividad y sus marcas de tiempo de inicio y finalización.  
   
-5. Haga clic en la pestaña **Actividad**. Verá las entradas de seguimiento detalladas en el área principal de la herramienta. Use la **nivel** lista desplegable en el menú para filtrar por nivel específico de seguimiento, por ejemplo: **Todos los**, **advertencia**, **errores**, **información**, etcetera.  
+5. Haga clic en la pestaña **Actividad**. Verá las entradas de seguimiento detalladas en el área principal de la herramienta. Use la lista desplegable **nivel** del menú para filtrar el nivel específico de seguimientos, por ejemplo: **Todo**, **ADVERTENCIA**, **errores**, **información**, etc.  
   
 6. Haga clic en entradas de seguimiento específicas para revisar los detalles en el área inferior de la herramienta. Elija las pestañas **Con formato** o **XML** para ver los detalles en la vista correspondiente.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "64625876"
   
 |**Identificador del error**|**Mensaje de error**|**Acción necesaria para corregir el error**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry no reconoció el emisor del token de seguridad.  Para aceptar los tokens de seguridad de este emisor, configure IssuerNameRegistry para devolver un nombre válido para este emisor.|Este error se puede producir cuando se copia una huella digital desde el complemento MMC y se pega en el archivo *Web.config*. En concreto, puede obtener un carácter adicional no imprimible en la cadena de texto cuando se copia desde la ventana de propiedades del certificado. Este carácter adicional produce la coincidencia de huella digital para producir un error. El procedimiento para copiar correctamente la huella digital puede encontrarse en [basada en notificaciones de inicio de sesión único-en para la Web y Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
+|ID4175|IssuerNameRegistry no reconoció el emisor del token de seguridad.  Para aceptar los tokens de seguridad de este emisor, configure IssuerNameRegistry para devolver un nombre válido para este emisor.|Este error se puede producir cuando se copia una huella digital desde el complemento MMC y se pega en el archivo *Web.config*. En concreto, puede obtener un carácter adicional no imprimible en la cadena de texto cuando se copia desde la ventana de propiedades del certificado. Este carácter adicional produce un error en la coincidencia de la huella digital. El procedimiento para copiar correctamente la huella digital se puede encontrar en [el inicio de sesión único basado en notificaciones para web y Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Elementos relacionados  
   

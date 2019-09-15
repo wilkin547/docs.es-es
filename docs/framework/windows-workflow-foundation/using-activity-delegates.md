@@ -2,12 +2,12 @@
 title: Usar delegados de actividad
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004619"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989090"
 ---
 # <a name="using-activity-delegates"></a>Usar delegados de actividad
 Los delegados de actividad permiten a los autores de actividad exponer devoluciones de llamada con firmas específicas, para las que los usuarios de la actividad pueden proporcionar controladores basados en actividades. Hay dos tipos de delegados de actividad disponibles: <xref:System.Activities.ActivityAction%601> se usa para definir delegados de actividad que no tienen un valor devuelto y <xref:System.Activities.ActivityFunc%601> se utiliza para definir delegados de actividad que tienen un valor devuelto.
@@ -22,7 +22,7 @@ Varias actividades de [!INCLUDE[netfx_current_short](../../../includes/netfx-cur
 
 ActionArgument se utiliza para pasar los elementos individuales de la colección a WriteLine. Cuando se invoca el flujo de trabajo, en la consola se muestra el siguiente resultado.
 
-```
+```console
 HelloWorld.
 ```
 
@@ -30,9 +30,9 @@ Los ejemplos de este tema usan la sintaxis de inicialización del objeto. Esta s
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-Para obtener más información sobre los inicializadores de objeto, vea [Cómo: Inicializar objetos sin llamar a un Constructor (C# Guía de programación)](https://go.microsoft.com/fwlink/?LinkId=161015) y [Cómo: Declarar un objeto usando un inicializador de objeto](https://go.microsoft.com/fwlink/?LinkId=161016).
+Para obtener más información sobre los inicializadores de [objeto, consulte Cómo: Inicializar objetos sin llamar a unC# constructor (guía](https://go.microsoft.com/fwlink/?LinkId=161015) de [programación) y cómo: Declare un objeto mediante un inicializador](https://go.microsoft.com/fwlink/?LinkId=161016)de objeto.
 
-En el siguiente ejemplo, se utiliza una actividad <xref:System.Activities.Statements.TryCatch> en un flujo de trabajo. El flujo de trabajo produce una excepción <xref:System.ApplicationException>, que es controlada por una actividad <xref:System.Activities.Statements.Catch%601>. El controlador para el <xref:System.Activities.Statements.Catch%601> acción de la actividad de la actividad está un <xref:System.Activities.Statements.WriteLine> actividad y el detalle de excepción se pasa a él mediante el `ex` <xref:System.Activities.DelegateInArgument%601>.
+En el siguiente ejemplo, se utiliza una actividad <xref:System.Activities.Statements.TryCatch> en un flujo de trabajo. El flujo de trabajo produce una excepción <xref:System.ApplicationException>, que es controlada por una actividad <xref:System.Activities.Statements.Catch%601>. El controlador de la <xref:System.Activities.Statements.Catch%601> acción de actividad de la actividad <xref:System.Activities.Statements.WriteLine> es una actividad, y el detalle de la excepción se transmite a `ex` <xref:System.Activities.DelegateInArgument%601>través de.
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

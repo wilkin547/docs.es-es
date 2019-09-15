@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044420"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989703"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procedimiento para crear un flujo de trabajo secuencial
 
@@ -65,7 +65,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 
 ## <a name="to-add-the-workflow-activities"></a>Para agregar actividades de flujo de trabajo
 
-1. Arrastre una actividad Assign de la sección **primitivas** del **cuadro de herramientas** y colóquela en la actividad **Sequence** . Escriba `Target` en el cuadro **para** y la siguiente expresión en el cuadro **Escriba C# una expresión** o **Escriba una expresión de VB** .
+1. Arrastre una actividad **assign** de la sección **primitivas** del **cuadro de herramientas** y colóquela en la actividad **Sequence** . Escriba `Target` en el cuadro **para** y la siguiente expresión en el cuadro **Escriba C# una expresión** o **Escriba una expresión de VB** .
 
     ```vb
     New System.Random().Next(1, MaxNumber + 1)
@@ -78,9 +78,9 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     > [!TIP]
     > Si no se muestra la ventana **cuadro de herramientas** , seleccione **cuadro de herramientas** en el menú **Ver** .
 
-2. Arrastre una actividad **While** de la sección **flujo de control** del **cuadro de herramientas** y colóquela en el flujo de trabajo para que esté debajo de la actividad Assign.
+2. Arrastre una actividad **While** de la sección **flujo de control** del **cuadro de herramientas** y colóquela en el flujo de trabajo para que esté debajo de la actividad **assign** .
 
-3. Escriba la siguiente expresión en el cuadro de valor de la propiedad **condición** de la actividad.
+3. Escriba la siguiente expresión en el **cuadro de valor** de la propiedad **condición** de la actividad.
 
     ```vb
     Guess <> Target
@@ -107,14 +107,14 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     > [!TIP]
     > Si no se muestra la **ventana Propiedades** , seleccione **ventana Propiedades** en el menú **Ver** .
 
-6. Arrastre una actividad Assign desde la sección **primitivas** del **cuadro de herramientas** y colóquela en la actividad **While** para que siga la actividad **prompt** .
+6. Arrastre una actividad **assign** desde la sección **primitivas** del **cuadro de herramientas** y colóquela en la actividad **While** para que siga la actividad **prompt** .
 
     > [!NOTE]
-    > Al quitar la actividad **assign** , observe cómo el diseñador de flujo de trabajo agrega automáticamente una actividad **Sequence** para que contenga la actividad **prompt** y la actividad Assign recién agregada.
+    > Al quitar la actividad **assign** , observe cómo el diseñador de flujo de trabajo agrega automáticamente una actividad **Sequence** para que contenga la actividad **prompt** y la actividad **assign** recién agregada.
 
 7. Escriba `Turns` en el cuadro **para** y `Turns + 1` en el cuadro **Escriba C# una expresión** o **Escriba una expresión de VB** .
 
-8. Arrastre una actividad **If** de la sección **flujo de control** del **cuadro de herramientas** y colóquela en la actividad **Sequence** para que siga la actividad Assign recién agregada.
+8. Arrastre una actividad **If** de la sección **flujo de control** del **cuadro de herramientas** y colóquela en la actividad **Sequence** para que siga la actividad **assign** recién agregada.
 
 9. Escriba la siguiente expresión en el cuadro de valor de la propiedad **condición** de la actividad **If** .
 
@@ -130,11 +130,11 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 
 11. Escriba la siguiente expresión en el cuadro de valor de la propiedad **condición** de la actividad **If** recién agregada.
 
-    ```
+    ```text
     Guess < Target
     ```
 
-12. Arrastre dos actividades **WriteLine** de la **sección primitivas** del cuadro de **herramientas** y colóquelas de modo que una esté en la sección **then** de la actividad **If** recién agregada, y otra esté en la sección **else** .
+12. Arrastre dos actividades **WriteLine** de la sección **primitivas** del **cuadro de herramientas** y colóquelas de modo que una esté en la sección **then** de la actividad **If** recién agregada, y otra esté en la sección **else** .
 
 13. Haga clic en la actividad **WriteLine** en la sección **then** para seleccionarla y escriba la siguiente expresión en el cuadro de valor de la propiedad **Text** .
 
@@ -165,5 +165,5 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
-- [Procedimientos: Crear una actividad](how-to-create-an-activity.md)
-- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Cómo: Crear una actividad](how-to-create-an-activity.md)
+- [Procedimientos: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

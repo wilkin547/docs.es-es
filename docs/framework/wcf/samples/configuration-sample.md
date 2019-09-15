@@ -2,12 +2,12 @@
 title: Ejemplo de configuración
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040102"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990079"
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -67,9 +67,7 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
   
  Este archivo de configuración supera esos pasos sencillos al modificar comportamientos adicionales. Es posible controlar la información relacionada con la detección utilizando extremos concretos. Es decir, un usuario puede controlar si se puede detectar un punto de conexión y también puede marcar ese punto de conexión con metadatos XML personalizados y la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A>. Para ello, el usuario debe agregar una propiedad `behaviorConfiguration` al extremo de la aplicación. En este caso, la siguiente propiedad se agrega al extremo de la aplicación.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  Ahora, a través del elemento de configuración de comportamiento, puede controlar los atributos relacionados con la detección. En este caso, se agregan dos ámbitos al extremo de la aplicación.  
   

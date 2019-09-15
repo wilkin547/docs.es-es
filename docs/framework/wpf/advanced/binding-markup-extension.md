@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 616e405e191cb264a002e903bed60cf04559a675
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6776c89db474668b3aed0e38a3e18359bf93399d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964901"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991479"
 ---
 # <a name="binding-markup-extension"></a>Enlazar extensión de marcado
 Aplaza un valor de propiedad para que sea un valor enlazado a datos, creando un objeto de expresión intermedio e interpretando el contexto de datos que se aplica al elemento y su enlace en tiempo de ejecución.  
   
 ## <a name="binding-expression-usage"></a>Uso de expresiones de enlace  
   
-```  
+```xaml  
 <object property="{Binding}" .../>  
 -or-  
 <object property="{Binding  bindProp1=value1[, bindPropN=valueN]*}" ...  
@@ -33,7 +33,7 @@ Aplaza un valor de propiedad para que sea un valor enlazado a datos, creando un 
 ## <a name="syntax-notes"></a>Notas sobre la sintaxis  
  En estas sintaxis, `[]` y `*` no son literales. Forman parte de una notación para indicar que se pueden usar cero`=`o más pares de*valores* de bindProp, con `,` un separador entre ellos y los pares de*valores* de *bindProp*`=`anteriores.  
   
- Cualquiera de las propiedades enumeradas en la sección "las propiedades de enlace que se pueden establecer con la extensión de enlace" podría establecerse en su <xref:System.Windows.Data.Binding> lugar utilizando los atributos de un elemento de objeto. Sin embargo, eso no es realmente el uso de la <xref:System.Windows.Data.Binding>extensión de marcado de, sino simplemente el procesamiento XAML general de atributos que establecen las <xref:System.Windows.Data.Binding> propiedades de la clase de CLR. En otras palabras, `<Binding` *bindProp1*`="`*value1* `"[` <xref:System.Windows.Data.Binding> *bindPropN* valuenesunasintaxisequivalenteparalosatributosdelusodeelementosde`"]*/>`objeto `="` en lugar de un `Binding` uso de la expresión. Para obtener información sobre el uso de atributos XAML de propiedades <xref:System.Windows.Data.Binding>específicas de, vea la sección sobre el uso de atributos XAML de la <xref:System.Windows.Data.Binding> propiedad correspondiente de en la biblioteca de clases de .NET Framework.  
+ Cualquiera de las propiedades enumeradas en la sección "las propiedades de enlace que se pueden establecer con la extensión de enlace" podría establecerse en su <xref:System.Windows.Data.Binding> lugar utilizando los atributos de un elemento de objeto. Sin embargo, eso no es realmente el uso de la <xref:System.Windows.Data.Binding>extensión de marcado de, sino simplemente el procesamiento XAML general de atributos que establecen las <xref:System.Windows.Data.Binding> propiedades de la clase de CLR. En otras palabras, `<Binding` *bindProp1*`="`*value1* `"[` <xref:System.Windows.Data.Binding> *bindPropN* *valuen* es una sintaxis equivalente para los atributos del uso de elementos de objeto`"]*/>` `="` en lugar de un `Binding` uso de la expresión. Para obtener información sobre el uso de atributos XAML de propiedades <xref:System.Windows.Data.Binding>específicas de, vea la sección sobre el uso de atributos XAML de la <xref:System.Windows.Data.Binding> propiedad correspondiente de en la biblioteca de clases de .NET Framework.  
   
 ## <a name="xaml-values"></a>Valores XAML  
   

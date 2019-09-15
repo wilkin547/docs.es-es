@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948025"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971557"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 
@@ -154,13 +154,13 @@ Puede habilitar la redirección de enlace automática si la aplicación tiene co
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Procedimientos: Habilitar y deshabilitar redireccionamiento de enlaces automático](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<Elemento de > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
 - [Permiso de seguridad para la redirección de enlaces de ensamblados](assembly-binding-redirection-security-permission.md)
-- [Ensamblados en Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programar con ensamblados](../app-domains/programming-with-assemblies.md)
+- [Ensamblados de .NET](../../standard/assembly/index.md)
+- [Programar con ensamblados](../../standard/assembly/program.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurar aplicaciones](index.md)
 - [Esquema de la configuración de Common Language Runtime](./file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](./file-schema/index.md)
-- [Procedimientos: Crear una directiva de edición](how-to-create-a-publisher-policy.md)
+- [Cómo: Crear una directiva de edición](how-to-create-a-publisher-policy.md)

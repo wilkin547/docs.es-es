@@ -2,16 +2,16 @@
 title: Directiva de autorización
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: f148af25f85731c4ff15727b328f3f905356fe6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9b73eea1f51454dd82ba577c4d4d5fd5a1c0efd4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637467"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990187"
 ---
 # <a name="authorization-policy"></a>Directiva de autorización
 
-Este ejemplo muestra cómo implementar una directiva de autorización de notificación personalizada y un administrador de autorización de servicio personalizado asociado. Esto es útil cuando el servicio realiza las comprobaciones de acceso basadas en las notificaciones para operaciones de servicio y antes de las comprobaciones de acceso, concede ciertos derechos al autor de la llamada. Este ejemplo muestra el proceso de agregar las notificaciones así como el proceso para hacer una comprobación de acceso con el conjunto finalizado de notificaciones. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, con el enlace `wsHttpBinding`, se utiliza un nombre de usuario y una contraseña proporcionadas por el cliente para iniciar sesión con una cuenta válida de Windows NT. Este ejemplo muestra cómo utilizar un <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personalizado para autenticar el cliente. Además, este ejemplo muestra el cliente que se autentica con el servicio utilizando un certificado X.509. Este ejemplo muestra una implementación de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> y <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre ellos conceden acceso a métodos concretos del servicio para usuarios específicos. En este ejemplo se basa en el [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md), pero se muestra cómo realizar una transformación de notificaciones anteriores a la <xref:System.ServiceModel.ServiceAuthorizationManager> que se llama.
+Este ejemplo muestra cómo implementar una directiva de autorización de notificación personalizada y un administrador de autorización de servicio personalizado asociado. Esto es útil cuando el servicio realiza las comprobaciones de acceso basadas en las notificaciones para operaciones de servicio y antes de las comprobaciones de acceso, concede ciertos derechos al autor de la llamada. Este ejemplo muestra el proceso de agregar las notificaciones así como el proceso para hacer una comprobación de acceso con el conjunto finalizado de notificaciones. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, con el enlace `wsHttpBinding`, se utiliza un nombre de usuario y una contraseña proporcionadas por el cliente para iniciar sesión con una cuenta válida de Windows NT. Este ejemplo muestra cómo utilizar un <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personalizado para autenticar el cliente. Además, este ejemplo muestra el cliente que se autentica con el servicio utilizando un certificado X.509. Este ejemplo muestra una implementación de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> y <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre ellos conceden acceso a métodos concretos del servicio para usuarios específicos. Este ejemplo se basa en el [nombre de usuario de seguridad del mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md), pero muestra cómo realizar una transformación de notificaciones antes de que <xref:System.ServiceModel.ServiceAuthorizationManager> se llame a.
 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
@@ -30,7 +30,7 @@ Este ejemplo muestra cómo implementar una directiva de autorización de notific
 
 - Cómo implementar <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
 
-El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada extremo está compuesto por una dirección, un enlace y un contrato. Un enlace se configura con un enlace `wsHttpBinding` estándar que utiliza la autenticación de WS-Security y del nombre de usuario del cliente. El otro enlace se configura con un enlace `wsHttpBinding` estándar que utiliza la autenticación de WS-Security y del certificado de cliente. El [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) especifica que las credenciales de usuario que se usará para la autenticación de servicio. El certificado de servidor debe contener el mismo valor para el `SubjectName` propiedad como el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada extremo está compuesto por una dirección, un enlace y un contrato. Un enlace se configura con un enlace `wsHttpBinding` estándar que utiliza la autenticación de WS-Security y del nombre de usuario del cliente. El otro enlace se configura con un enlace `wsHttpBinding` estándar que utiliza la autenticación de WS-Security y del certificado de cliente. [ El\<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) especifica que las credenciales de usuario se usarán para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para `SubjectName` la propiedad que `findValue` el atributo en el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ El servicio expone dos puntos de conexión para comunicarse con el servicio, def
 </system.serviceModel>
 ```
 
-Cada configuración de extremo de cliente está compuesta de un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato. El enlace del cliente se configura con el modo de seguridad adecuados según lo especificado en este caso en el [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) y `clientCredentialType` según lo especificado en el [ \<mensaje >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).
+Cada configuración de extremo de cliente está compuesta de un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato. El enlace de cliente se configura con el modo de seguridad adecuado, tal y como se especifica en este `clientCredentialType` caso en el [ \<> de seguridad](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) y tal y como se especifica en el [ \<> de mensajes](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).
 
 ```xml
 <system.serviceModel>
@@ -261,7 +261,7 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
 }
 ```
 
-Una vez que se implementa el validador en el código de servicio, se debe informar al host de servicio sobre la instancia del validador que se va a usar. Esto se realiza mediante el código siguiente:
+Una vez que se implementa el validador en el código de servicio, se debe informar al host de servicio sobre la instancia del validador que se va a usar. Esto se hace mediante el código siguiente:
 
 ```csharp
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
@@ -282,9 +282,9 @@ O bien, puede hacer lo mismo en la configuración:
 </behavior>
 ```
 
-Windows Communication Foundation (WCF) proporciona un modelo enriquecido basado en notificaciones para realizar comprobaciones de acceso. El objeto <xref:System.ServiceModel.ServiceAuthorizationManager> se utiliza para realizar la comprobación de acceso y determinar si las notificaciones asociadas con el cliente satisfacen los requisitos necesarios para tener acceso al método de servicio.
+Windows Communication Foundation (WCF) proporciona un modelo avanzado basado en notificaciones para realizar comprobaciones de acceso. El objeto <xref:System.ServiceModel.ServiceAuthorizationManager> se utiliza para realizar la comprobación de acceso y determinar si las notificaciones asociadas con el cliente satisfacen los requisitos necesarios para tener acceso al método de servicio.
 
-Para los fines de demostración, este ejemplo muestra una implementación de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa el <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir el acceso de un usuario a los métodos en función de las notificaciones de tipo `http://example.com/claims/allowedoperation` cuyo valor es el URI de acción de la operación permite que se llame.
+Para fines de demostración, este ejemplo muestra una implementación de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa el método para permitir el <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> acceso de un usuario a los métodos según las notificaciones de `http://example.com/claims/allowedoperation` tipo cuyo valor es el URI de la acción que es se permite llamar a.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -401,7 +401,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable %SERVER_NAME% especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado es el host local.
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -415,7 +415,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Se requiere este paso porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
@@ -425,7 +425,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
     El certificado está almacenado en Mi almacén (Personal) debajo de la ubicación de almacén CurrentUser.
 
-    ```
+    ```bat
     echo ************
     echo making client cert
     echo ************
@@ -436,13 +436,13 @@ A continuación, se proporciona información general breve de las diferentes sec
 
     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado del cliente en el almacén de los usuarios de confianza. Se requiere este paso porque el sistema servidor no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado del cliente.
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
 ### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo
 
-1. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 2. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.
 
@@ -451,60 +451,60 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1. Abra el símbolo del sistema para desarrolladores de Visual Studio con privilegios de administrador y ejecute *Setup.bat* desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Abra Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecute *setup. bat* desde la carpeta de instalación de ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    > El archivo por lotes Setup.bat está diseñado para ejecutarse en línea de comandos para desarrolladores de Visual Studio. La variable de entorno PATH establece dentro de símbolo para desarrolladores de Visual Studio de los puntos en el directorio que contiene los archivos ejecutables requeridos por la *Setup.bat* secuencia de comandos.
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde Símbolo del sistema para desarrolladores para Visual Studio. La variable de entorno PATH establecida en Símbolo del sistema para desarrolladores para Visual Studio apunta al directorio que contiene los archivos ejecutables requeridos por el script *setup. bat* .
 
-1. Inicie Service.exe desde *service\bin*.
+1. Inicie Service. exe desde *service\bin*.
 
-1. Inicie Client.exe desde *\client\bin*. La actividad del cliente se muestra en la aplicación de consola del cliente.
+1. Inicie Client. exe desde *\client\bin\* . La actividad del cliente se muestra en la aplicación de consola del cliente.
 
-Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
 
 1. Cree un directorio en el equipo del servicio.
 
-2. Copie los archivos de programa de servicio de *\service\bin* en el directorio en el equipo del servicio. Copie también los archivos Setup.bat, Cleanup.bat, GetComputerName.vbs e ImportClientCert.bat en el equipo de servicio.
+2. Copie los archivos de programa de servicio de *\service\bin* en el directorio del equipo de servicio. Copie también los archivos Setup.bat, Cleanup.bat, GetComputerName.vbs e ImportClientCert.bat en el equipo de servicio.
 
 3. Cree un directorio en el equipo cliente para los archivos binarios del cliente.
 
 4. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.
 
-5. En el servidor, ejecute `setup.bat service` en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
+5. En el servidor, ejecute `setup.bat service` en símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador.
 
-    Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado *Service.cer*.
+    Al `setup.bat` ejecutar con `service` el argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado *Service. cer*.
 
-6. Editar *Service.exe.config* para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo. Cambie también el **computername** en el \<servicio > /\<baseAddresses > elemento desde el host local para el nombre completo de su equipo de servicio.
+6. Edite *Service. exe. config* para reflejar el nuevo nombre del certificado ( `findValue` en el atributo en el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es igual que el nombre de dominio completo del equipo. Cambie también el **ComputerName** en el \<elemento Service >\</baseAddresses > de localhost al nombre completo de su equipo de servicio.
 
-7. Copia el *Service.cer* archivo desde el directorio de servicio al directorio del cliente en el equipo cliente.
+7. Copie el archivo *Service. cer* del directorio de servicio al directorio del cliente en el equipo cliente.
 
-8. En el cliente, ejecute `setup.bat client` en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
+8. En el cliente, ejecute `setup.bat client` en símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador.
 
-    Ejecutando `setup.bat` con el `client` argumento crea un certificado de cliente denominado **test1** y exporta el certificado de cliente a un archivo denominado *Client.cer*.
+    Al `setup.bat` ejecutar con `client` el argumento se crea un certificado de cliente denominado **Test1** y se exporta el certificado de cliente a un archivo denominado *Client. cer*.
 
-9. En el *Client.exe.config* de archivos en el equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Realizar esto reemplazando **localhost** con el nombre de dominio completo del servidor.
+9. En el archivo *Client. exe. config* del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección del servicio. Para ello, reemplace **localhost** con el nombre de dominio completo del servidor.
 
 10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.
 
-11. En el cliente, ejecute *ImportServiceCert.bat* en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
+11. En el cliente, ejecute *ImportServiceCert. bat* en símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador.
 
-    Esto importa el certificado de servicio desde el archivo Service.cer en el **CurrentUser - TrustedPeople** almacenar.
+    Esto importa el certificado de servicio del archivo Service. cer en el almacén **CurrentUser-TrustedPeople** .
 
-12. En el servidor, ejecute *ImportClientCert.bat* en línea de comandos de desarrollador para Visual Studio abierto con privilegios de administrador.
+12. En el servidor, ejecute *ImportClientCert. bat* en símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador.
 
-    Esto importa el certificado de cliente desde el archivo Client.cer en el **LocalMachine - TrustedPeople** almacenar.
+    Esto importa el certificado de cliente del archivo Client. cer en el almacén **LocalMachine-TrustedPeople** .
 
 13. En el equipo servidor, inicie Service.exe desde la ventana de símbolo del sistema.
 
 14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema.
 
-    Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
-### <a name="clean-up-after-the-sample"></a>Limpiar después de la muestra
+### <a name="clean-up-after-the-sample"></a>Limpiar después del ejemplo
 
-Para limpiar después de la muestra, ejecute *Cleanup.bat* en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Esto quita los certificados de cliente y servidor del almacén de certificados.
+Para realizar la limpieza después del ejemplo, ejecute *Cleanup. bat* en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Esto quita los certificados de cliente y servidor del almacén de certificados.
 
 > [!NOTE]
-> Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de WCF que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - TrustedPeople almacenar. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de WCF que usan certificados entre equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

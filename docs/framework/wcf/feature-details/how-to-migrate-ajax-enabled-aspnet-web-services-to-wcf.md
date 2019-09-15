@@ -2,45 +2,45 @@
 title: Procedimiento para migrar servicios web de ASP.NET con AJAX habilitado a WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 1650ba6a12a9e81ff398e66a96ee2c70592f2428
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f492efe9e364195dce6b73a14e9ca5fa34a6df25
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643690"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972304"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedimiento para migrar servicios web de ASP.NET con AJAX habilitado a WCF
-En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.NET básico a un servicio de Windows Communication Foundation (WCF) con AJAX habilitado equivalente. Muestra cómo crear una versión WCF funcionalmente equivalente de un servicio AJAX de ASP.NET. Los dos servicios, a continuación, se pueden usar en paralelo, o el servicio de WCF puede utilizarse para reemplazar el servicio de AJAX de ASP.NET.
+En este tema se describen los procedimientos para migrar un servicio básico de AJAX de ASP.NET a un servicio equivalente compatible con AJAX Windows Communication Foundation (WCF). Muestra cómo crear una versión de WCF funcionalmente equivalente de un servicio de AJAX de ASP.NET. Los dos servicios se pueden usar en paralelo, o el servicio WCF se puede usar para reemplazar el servicio ASP.NET AJAX.
 
- Migración de ASP.NET AJAX existente servicio a un servicio AJAX de WCF le ofrece las siguientes ventajas:
+ La migración de un servicio de ASP.NET AJAX existente a un servicio de AJAX de WCF proporciona las siguientes ventajas:
 
 - Puede exponer su servicio de AJAX como un servicio SOAP con una configuración adicional mínima.
 
-- Puede beneficiarse de las características WCF, como el seguimiento y así sucesivamente.
+- Puede beneficiarse de las características de WCF como el seguimiento, etc.
 
- Los procedimientos siguientes suponen que está usando Visual Studio 2012.
+ En los procedimientos siguientes se supone que usa Visual Studio 2012.
 
  El código resultado del procedimiento descrito en este tema se proporciona en el ejemplo que sigue a los procedimientos.
 
- Para obtener más información acerca de cómo exponer un servicio WCF a través de un extremo con AJAX habilitado, consulte el [Cómo: Usar configuración para agregar un extremo ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tema.
+ Para obtener más información acerca de cómo exponer un servicio WCF a través de un punto de conexión [habilitado para Ajax, consulte la Use configuración para agregar un tema de punto](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) de conexión de ASP.NET AJAX.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Crear y probar la aplicación de servicio web ASP.NET
 
 1. Abra Visual Studio 2012.
 
-2. Desde el **archivo** menú, seleccione **New**, a continuación, **proyecto**, a continuación, **Web**y, a continuación, seleccione **aplicación de servicio Web de ASP.NET** .
+2. En el menú **archivo** , seleccione **nuevo**, **proyecto**, **Web**y, a continuación, seleccione **aplicación de servicio Web ASP.net**.
 
-3. Denomine el proyecto `ASPHello` y haga clic en **Aceptar**.
+3. Asigne un nombre `ASPHello` al proyecto y haga clic en **Aceptar**.
 
 4. Quite los comentarios de línea en el archivo Service1.asmx.cs que contiene `System.Web.Script.Services.ScriptService]` para habilitar AJAX en este servicio.
 
-5. Desde el **compilar** menú, seleccione **compilar solución**.
+5. En el menú **compilar** , seleccione **compilar solución**.
 
 6. En el menú **Depurar**, seleccione **Iniciar sin depurar**.
 
 7. En la página web generada, seleccione la operación `HelloWorld`.
 
-8. Haga clic en el **Invoke** situado en la `HelloWorld` página de prueba. Debería recibir la siguiente respuesta XML.
+8. Haga clic en el botón **invocar** en la `HelloWorld` página de prueba. Debería recibir la siguiente respuesta XML.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -49,28 +49,28 @@ En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.
 
 9. Esta respuesta confirma que ha recibido un servicio de AJAX de ASP.NET que funciona y, en particular, que el servicio ha expuesto un punto de conexión en Service1.asmx/HelloWorld que responde a la solicitud HTTP POST y devuelve XML.
 
-     Ahora está listo para convertir este servicio para utilizar un servicio AJAX de WCF.
+     Ahora está listo para convertir este servicio para utilizar un servicio de AJAX de WCF.
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Para crear una aplicación de servicio de AJAX de WCF equivalente.
 
-1. Haga clic en el **ASPHello** del proyecto y seleccione **agregar**, a continuación, **nuevo elemento**y, a continuación, **servicio WCF habilitado para AJAX**.
+1. Haga clic con el botón derecho en el proyecto **ASPHello** y seleccione **Agregar**, **nuevo elemento**y, a continuación, **servicio WCF habilitado para Ajax**.
 
-2. Nombre del servicio `WCFHello` y haga clic en **agregar**.
+2. Asigne un nombre `WCFHello` al servicio y haga clic en **Agregar**.
 
 3. Abra el archivo WCFHello.svc.cs.
 
-4. En Service1.asmx.cs, copie la siguiente implementación de la `HelloWorld` operación.
+4. En Service1.asmx.CS, copie la siguiente implementación de la `HelloWorld` operación.
 
-    ```
+    ```csharp
     public string HelloWorld()
     {
          return "Hello World";
     }
     ```
 
-5. Pegar implementación copiada de la `HelloWorld` operación en el archivo WCFHello.svc.cs en lugar de en el código siguiente.
+5. Pegue la implementación copiada de `HelloWorld` la operación en el archivo WCFHello.SVC.CS en lugar del código siguiente.
 
-    ```
+    ```csharp
     public void DoWork()
     {
           // Add your operation implementation here
@@ -78,18 +78,18 @@ En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.
     }
     ```
 
-6. Especifique el `Namespace` atributo <xref:System.ServiceModel.ServiceContractAttribute> como `WCFHello`.
+6. Especifique el `Namespace` <xref:System.ServiceModel.ServiceContractAttribute> atributo como `WCFHello`.
 
-    ```
+    ```csharp
     [ServiceContract(Namespace="WCFHello")]
     [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Required)]
     public class WCFHello
     { … }
     ```
 
-7. Agregar el <xref:System.ServiceModel.Web.WebInvokeAttribute> a la `HelloWorld` operación y establezca el <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propiedad para devolver <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Observe que, si no se establece, el tipo devuelto predeterminado es <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Agregue a la `HelloWorld` operación y establezca la <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> propiedad en devuelta <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. <xref:System.ServiceModel.Web.WebInvokeAttribute> Observe que, si no se establece, el tipo devuelto predeterminado es <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
-    ```
+    ```csharp
     [OperationContract]
     [WebInvoke(ResponseFormat=WebMessageFormat.Xml)]
     public string HelloWorld()
@@ -98,17 +98,17 @@ En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.
     }
     ```
 
-8. Desde el **compilar** menú, seleccione **compilar solución**.
+8. En el menú **compilar** , seleccione **compilar solución**.
 
-9. Abra el archivo Wcfhello.svc.cs y desde el **depurar** menú, seleccione **iniciar sin depurar**.
+9. Abra el archivo WCFHello. SVC y, en el menú **depurar** , seleccione **iniciar sin depurar**.
 
-10. El servicio expone un punto de conexión en `WCFHello.svc/HelloWorld`, que responde a solicitudes HTTP POST. Las solicitudes HTTP POST no se pueden probar desde el explorador, pero los puntos de conexión devuelven XML a continuación de XML.
+10. El servicio ahora expone un punto de conexión `WCFHello.svc/HelloWorld`en, que responde a las solicitudes HTTP POST. Las solicitudes HTTP POST no se pueden probar desde el explorador, pero los puntos de conexión devuelven XML a continuación de XML.
 
     ```xml
     <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Hello World</string>
     ```
 
-11. El `WCFHello.svc/HelloWorld` y `Service1.aspx/HelloWorld` puntos de conexión ahora son funcionalmente equivalentes.
+11. Los `WCFHello.svc/HelloWorld` extremos`Service1.aspx/HelloWorld` y son funcionalmente equivalentes.
 
 ## <a name="example"></a>Ejemplo
  El código resultado del procedimiento descrito en este tema se proporciona en el ejemplo siguiente.
@@ -177,15 +177,15 @@ namespace ASPHello
 
  El tipo <xref:System.Xml.XmlDocument> no es compatible con <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> porque no es serializable por <xref:System.Xml.Serialization.XmlSerializer>. Puede utilizar un tipo <xref:System.Xml.Linq.XDocument> o serializar <xref:System.Xml.XmlDocument.DocumentElement%2A> en su lugar.
 
- Si los servicios Web ASMX se están actualizando y migran en paralelo a los servicios WCF, evite asignar dos tipos en el mismo nombre en el cliente. Esto produce una excepción en los serializadores si el mismo tipo se utiliza en <xref:System.Web.Services.WebMethodAttribute> y <xref:System.ServiceModel.ServiceContractAttribute>:
+ Si los servicios web ASMX se van a actualizar y migrar en paralelo a los servicios WCF, evite asignar dos tipos al mismo nombre en el cliente. Esto produce una excepción en los serializadores si el mismo tipo se utiliza en <xref:System.Web.Services.WebMethodAttribute> y <xref:System.ServiceModel.ServiceContractAttribute>:
 
-- Si se agrega primero el servicio WCF, invocar el método de servicio Web ASMX produce una excepción en <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> porque la definición de estilo WCF del orden en el proxy tiene prioridad.
+- Si primero se agrega el servicio WCF, al invocar el método en el servicio Web asmx <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> se produce una excepción en porque la definición de estilo WCF del orden en el proxy tiene prioridad.
 
-- Si primero se agrega el servicio Web ASMX, invocar el método en el servicio WCF produce una excepción en <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> porque la definición de estilo del servicio Web del orden en el proxy tiene prioridad.
+- Si el servicio Web ASMX se agrega primero, al invocar el método en el servicio <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> WCF se produce una excepción en porque la definición de estilo de servicio Web del orden en el proxy tiene prioridad.
 
  Hay diferencias significativas en el comportamiento entre <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> y el AJAX de ASP.NET <xref:System.Web.Script.Serialization.JavaScriptSerializer>. Por ejemplo, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> representa un diccionario como una matriz de pares clave-valor, mientras que el <xref:System.Web.Script.Serialization.JavaScriptSerializer> de AJAX de ASP.NET representa un diccionario como objetos JSON reales. Por tanto lo siguiente es el diccionario representado en ASP.NET AJAX.
 
-```
+```csharp
 Dictionary<string, int> d = new Dictionary<string, int>();
 d.Add("one", 1);
 d.Add("two", 2);
@@ -195,7 +195,7 @@ d.Add("two", 2);
 
 - [{"Clave":"uno","Valor":1}, {"Clave":"dos","Valor":2}] por <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
-- {"uno": 1, "dos": 2} por el AJAX de ASP.NET <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"uno": 1, "dos": 2} por ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> es más eficaz en el sentido de que puede controlar los diccionarios cuyo tipo de clave no es de cadena, mientras que <xref:System.Web.Script.Serialization.JavaScriptSerializer> no puede. Pero el último es más compatible con JSON.
 
@@ -204,14 +204,14 @@ d.Add("two", 2);
 |Categoría de diferencias|DataContractJsonSerializer|JavaScriptSerializer de AJAX de ASP.NET|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Deserializar el búfer vacío (nuevo byte [0]) en <xref:System.Object> (o <xref:System.Uri> o algunas otras clases).|SerializationException|nulo|
-|Serialización de <xref:System.DBNull.Value>|{} (o {"__type": "#System"})|Null|
+|Serialización de <xref:System.DBNull.Value>|{}(o {"_ _ Type": "#System"})|Null|
 |Serialización de los miembros privados de tipos [Serializable].|serialized|not serialized|
 |Serialización de las propiedades públicas de los tipos <xref:System.Runtime.Serialization.ISerializable>.|not serialized|serialized|
 |"Extensiones" de JSON|Conforme con la especificación de JSON, que requiere comillas en los nombres de miembro de objetos ({"a":"hola"}).|Admite los nombres de miembros de objeto sin comillas ({a:"hola"}).|
-|<xref:System.DateTime>Hora universal coordinada (UTC)|No es compatible con el formato "\\/Date(123456789U)\\/" o "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Admite el formato "\\/Date(123456789U)\\/" y "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "como valores de fecha y hora.|
-|Representación de diccionarios|Una matriz de KeyValuePair\<K, V >, administra tipos clave que no son cadenas.|Como objetos JSON reales, pero solo controla los tipos clave que son cadenas.|
+|<xref:System.DateTime>Hora universal coordinada (UTC)|No admite el formato "\\/Date (123456789U)\\/" o "\\/Date\\(\d + (U&#124;(\\{4}+\\-[\d]))?\\) \\\\/)".|Admite el formato\\"/Date (123456789U\\)/" y\\"\\/Date (\d + (&#124;U\\(\\+-[{4}\d]))\\?) \\ /)\\"como valores DateTime.|
+|Representación de diccionarios|Una matriz de KeyValuePair\<K, V >, controla los tipos de clave que no son cadenas.|Como objetos JSON reales, pero solo controla los tipos clave que son cadenas.|
 |Caracteres con escape|Siempre con una barra diagonal de escape (/); nunca permite caracteres de JSON no válidos sin escape, como "\n".|Con una barra diagonal de escape (/) para los valores DateTime .|
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Usar la configuración para agregar un extremo de AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Cómo: Uso de la configuración para agregar un punto de conexión de ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

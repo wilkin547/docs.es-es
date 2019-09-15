@@ -11,12 +11,12 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 96ec50e5d3aca2aa24d68d565a35ec7687df2a2e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3e2366513183337c3c5dd05ff45f8a6f724deaae
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893246"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988442"
 ---
 # <a name="windows-forms-designer-error-page"></a>Diseñador de Windows Forms página de error
 
@@ -33,6 +33,7 @@ Cuando se expande la barra de error amarilla, se muestra cada instancia del erro
 ![Error expandido Diseñador de Windows Forms](media/windows-forms-designer-error-page-expanded.png)
 
 > [!NOTE]
+>
 > - En el caso de las aplicaciones Visual Basic, la página de errores en tiempo de diseño no muestra más de un error, pero puede mostrar varias instancias del mismo error.
 > - En C++ el caso de las aplicaciones, los errores no tienen vínculos de ubicación de código.
 

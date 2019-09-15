@@ -2,29 +2,29 @@
 title: Utilizar extensiones de actividad
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669516"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988634"
 ---
 # <a name="using-activity-extensions"></a>Utilizar extensiones de actividad
 Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.  En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>Utilizar una extensión de actividad para contar las ejecuciones
 
-1. Abra Visual Studio 2010. Seleccione **nueva**, **proyecto**. En el **Visual C#** nodo, seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** desde la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.
+1. Abra Visual Studio 2010. Seleccione **nuevo**, **proyecto**. En el **nodo C# visual** , seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** en la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.
 
-2. Agregar un `using` instrucción en el archivo Program.cs para el **System.Collections.Generic** espacio de nombres.
+2. Agregue una `using` instrucción en el archivo Program.CS para el espacio de nombres **System. Collections. Generic** .
 
-    ```
+    ```csharp
     using System.Collections.Generic;
     ```
 
-3. En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**. El código siguiente crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando su **registrar** se llama al método.
+3. En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**. En el código siguiente se crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando se llama a su método de **registro** .
 
-    ```
+    ```csharp
     // This extension collects a list of workflow Ids
     public class ExecutionCountExtension
     {
@@ -56,9 +56,9 @@ Las actividades pueden interactuar con extensiones de aplicación de flujo de tr
     }
     ```
 
-4. Crear una actividad que consume el **ExecutionCountExtension**. El código siguiente define una actividad que recupera el **ExecutionCountExtension** objeto desde el tiempo de ejecución y llama a su **registrar** método cuando se ejecuta la actividad.
+4. Cree una actividad que consuma **ExecutionCountExtension**. En el código siguiente se define una actividad que recupera el objeto **ExecutionCountExtension** del Runtime y llama a su método de **registro** cuando se ejecuta la actividad.
 
-    ```
+    ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
     // in the context, it will invoke (in this case, registers the Id of the executing workflow)
     public class MyActivity: CodeActivity
@@ -75,9 +75,9 @@ Las actividades pueden interactuar con extensiones de aplicación de flujo de tr
     }
     ```
 
-5. Implemente la actividad en el **Main** método del archivo program.cs. El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.
+5. Implemente la actividad en el método **Main** del archivo Program.cs. El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.
 
-    ```
+    ```csharp
     class Program
     {
         // Creates a workflow that uses the activity that consumes the extension

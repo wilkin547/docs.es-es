@@ -2,12 +2,12 @@
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: b59f5c42f5a0f81f666bc5d22924f14c678a60e1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045700"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990115"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 
@@ -328,7 +328,7 @@ Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada ele
 
 1. Instale ASP.NET 4,0 con el siguiente comando.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -344,7 +344,7 @@ Al ejecutar el ejemplo, se espera el resultado siguiente.
 
 Cliente:
 
-```
+```console
 Press enter when service is available
 
  > Sent chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
@@ -371,7 +371,7 @@ Press enter when service is available
 
 Servidor:
 
-```
+```console
 Service started, press enter to exit
  < Received chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
  < Received chunk 2 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10

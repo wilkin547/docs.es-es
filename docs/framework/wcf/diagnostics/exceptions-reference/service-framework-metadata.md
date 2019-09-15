@@ -2,12 +2,12 @@
 title: Metadatos del marco de trabajo del servicio
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780805"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991205"
 ---
 # <a name="service-framework-metadata"></a>Metadatos del marco de trabajo del servicio
 En este tema se enumeran las excepciones generadas por Service Framework Metadata.  
@@ -18,7 +18,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Metadat
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|Se llamó a un End asincrónico en el canal equivocado.|  
 |AsyncEndCalledWithAnIAsyncResult|Se llamó a un End asincrónico con un IAsyncResult desde un método Begin diferente.|  
-|AttemptedToGetContractTypeForButThatTypeIs1|Se intentó obtener el tipo de contrato para el tipo especificado. El tipo no es un ServiceContract y no hereda un ServiceContract.|  
+|AttemptedToGetContractTypeForButThatTypeIs1|Se intentó obtener el tipo de contrato para el especificado. El tipo no es ServiceContract y no hereda ServiceContract.|  
 |CannotHaveTwoOperationsWithTheSameName3|No se pueden tener dos operaciones en el mismo contrato con el mismo nombre. Los métodos especificados en el tipo especificado infringen esta regla. Cambie el nombre de una de las operaciones cambiando el nombre del método o utilizando la propiedad Name de OperationContractAttribute.|  
 |CannotInheritTwoOperationsWithTheSameName3|No puede heredar dos operaciones diferentes con el mismo nombre. La operación especificada de los contratos especificados infringe esta regla. Cambie el nombre de una de las operaciones cambiando el nombre del método o utilizando la propiedad Name de OperationContractAttribute.|  
 |CantCreateChannelWithManualAddressing|No puede crear un canal para un contrato que requiera una solicitud/respuesta y un enlace que requiera un direccionamiento manual pero solo admite la comunicación dúplex.|  

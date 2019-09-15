@@ -2,25 +2,25 @@
 title: 'Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6339969c52a5c4eedfb0e89eebdc982ca3fe6686
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641545"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988710"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid
-En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles y agregarlos a rehospedado [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+En esta tarea, creará los paneles **cuadro de herramientas** y **PropertyGrid** y los agregará a la hospedada en otro host [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Como referencia, el código que debe estar en el archivo MainWindow.xaml.cs después de completar las tres tareas en el [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md) serie de temas se proporciona al final de este tema.  
+ Como referencia, al final de este tema se proporciona el código que debe estar en el archivo MainWindow.xaml.cs después de completar las tres tareas de la serie de temas de [rehospedamiento diseñador de flujo de trabajo](rehosting-the-workflow-designer.md) .  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Para crear el Cuadro de herramientas y agregarlo a la cuadrícula  
   
-1. Abra el proyecto HostingApplication que obtuvo siguiendo el procedimiento descrito en [tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md).  
+1. Abra el proyecto HostingApplication que obtuvo siguiendo el procedimiento descrito en [tarea 2: Hospede el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md).  
   
-2. En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
+2. En el panel **Explorador de soluciones** , haga clic con el botón secundario en el archivo MainWindow. XAML y seleccione **Ver código**.  
   
-3. Agregar un `GetToolboxControl` método a la `MainWindow` clase que crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, agrega un nuevo **cuadro de herramientas** categoría a la **cuadro de herramientas**y asigna el <xref:System.Activities.Statements.Assign> y <xref:System.Activities.Statements.Sequence> tipos de actividad en esa categoría.  
+3. Agregue un `GetToolboxControl` método a la `MainWindow` clase que crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, agrega una nueva categoría del **cuadro de herramientas** al **cuadro de herramientas**y asigna <xref:System.Activities.Statements.Assign> los <xref:System.Activities.Statements.Sequence> tipos de actividad y a esa categoría.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-4. Agregar una privada `AddToolbox` método a la `MainWindow` clase que coloca el **cuadro de herramientas** en la columna izquierda de la cuadrícula.  
+4. Agregue un método `AddToolbox` privado a la `MainWindow` clase que coloca el **cuadro de herramientas** en la columna izquierda de la cuadrícula.  
   
     ```csharp  
     private void AddToolBox()  
@@ -73,13 +73,13 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-6. Presione F5 para compilar y ejecutar la solución. El **cuadro de herramientas** que contiene el <xref:System.Activities.Statements.Assign> y <xref:System.Activities.Statements.Sequence> se deben mostrar las actividades.  
+6. Presione F5 para compilar y ejecutar la solución. Se debe mostrar el <xref:System.Activities.Statements.Assign> cuadro <xref:System.Activities.Statements.Sequence> de **herramientas** que contiene las actividades y.  
   
 ### <a name="to-create-the-propertygrid"></a>Para crear PropertyGrid  
   
-1. En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
+1. En el panel **Explorador de soluciones** , haga clic con el botón secundario en el archivo MainWindow. XAML y seleccione **Ver código**.  
   
-2. Agregar el `AddPropertyInspector` método a la `MainWindow` clase para colocar el **PropertyGrid** panel en la columna situada en la cuadrícula.  
+2. Agregue el `AddPropertyInspector` método a la `MainWindow` clase para colocar el panel **PropertyGrid** en la columna situada más a la derecha en la cuadrícula.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,12 +103,12 @@ En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles 
     }  
     ```  
   
-4. Presione F5 para compilar y ejecutar la solución. El **cuadro de herramientas**, lienzo de diseño de flujo de trabajo, y **PropertyGrid** paneles todos se deben mostrar y, cuando se arrastra un <xref:System.Activities.Statements.Assign> actividad o un <xref:System.Activities.Statements.Sequence> actividades al lienzo del diseño, el cuadrícula de propiedades debe actualizarse dependiendo de la actividad resaltada.  
+4. Presione F5 para compilar y ejecutar la solución. Se deben mostrar todos los paneles **cuadro de herramientas**, lienzo de diseño de flujo de trabajo y **PropertyGrid** , <xref:System.Activities.Statements.Assign> y al arrastrar <xref:System.Activities.Statements.Sequence> una actividad o una actividad al lienzo de diseño, la cuadrícula de propiedades debe actualizarse en función del actividad resaltada.  
   
 ## <a name="example"></a>Ejemplo  
  El archivo MainWindow.xaml.cs debe contener ahora el siguiente código.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -216,4 +216,4 @@ namespace HostingApplication
 
 - [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
 - [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)
+- [Tarea 2: Hospede el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)

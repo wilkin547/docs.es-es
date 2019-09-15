@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168992"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991414"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 En este tema se definen los términos que se usan para describir los elementos de la sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente como para los otros marcos de trabajo que usan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel System. Xaml. En este tema se amplía la terminología básica introducida en el tema [información general sobre XAML (WPF)](xaml-overview-wpf.md).  
@@ -112,7 +112,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
  En el caso de las enumeraciones basadas en marcadores, <xref:System.Enum.Parse%2A?displayProperty=nameWithType> el comportamiento se basa en el método. Puede especificar varios valores para una enumeración basada en marcadores separando cada valor con una coma. Sin embargo, no se pueden combinar valores de enumeración que no estén en marcadores. Por ejemplo, no puede usar la sintaxis de coma para intentar crear un <xref:System.Windows.Trigger> que actúe en varias condiciones de una enumeración de no marca:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ En este tema se definen los términos que se usan para describir los elementos d
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>Los valores de propiedad de contenido XAML deben ser contiguos  
  El valor de una propiedad de contenido XAML se debe proporcionar en su totalidad antes o por completo después de cualquier otro elemento de propiedad de ese elemento de objeto. Esto es así si el valor de una propiedad de contenido XAML se especifica como una cadena o como uno o más objetos. Por ejemplo, el marcado siguiente no se analiza:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
  Esto no es válido básicamente porque si esta sintaxis se hizo explícita mediante la sintaxis de elementos de propiedad para la propiedad de contenido, la propiedad de contenido se establecería dos veces:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
  Un ejemplo no válido similar es si la propiedad de contenido es una colección y los elementos secundarios se intercalan con elementos de propiedad:  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  

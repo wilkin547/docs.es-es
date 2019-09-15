@@ -2,12 +2,12 @@
 title: Migración de .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045853"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990178"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -15,7 +15,7 @@ En este artículo se describe el procedimiento para migrar una aplicación que u
  .NET Remoting es un producto heredado que solo se admite para la compatibilidad con versiones anteriores. No es seguro en entornos de confianza mixta porque no puede mantener los niveles de confianza independientes entre el cliente y el servidor. Por ejemplo, nunca debe exponer un punto de conexión de .NET Remoting a Internet o a los clientes que no son de confianza. Recomendamos que las aplicaciones de Remoting existentes se migren a tecnologías más recientes y seguras. Si el diseño de la aplicación solo usa HTTP y es RESTful, recomendamos ASP.NET Web API. Para obtener más información, consulte ASP.NET Web API. Si la aplicación se basa en SOAP o necesita protocolos que no sean HTTP, como TCP, recomendamos WCF.  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>Comparación de .NET Remoting con WCF  
- En esta sección se comparan los bloques de creación básicos de .NET Remoting con sus equivalentes de WCF. Usaremos estos bloques de creación más adelante para crear algunos escenarios comunes de cliente-servidor en WCF. El siguiente gráfico resume las principales similitudes y diferencias entre .NET Remoting y WCF.  
+ En esta sección se comparan los bloques de creación básicos de .NET Remoting con sus equivalentes de WCF. Usaremos estos bloques de creación más adelante para crear algunos escenarios comunes de cliente-servidor en WCF. En el gráfico siguiente se resumen las similitudes y diferencias principales entre .NET Remoting y WCF.  
   
 ||.NET Remoting|WCF|  
 |-|-------------------|---------|  
@@ -144,7 +144,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
 - [Programación de nivel de canal de cliente](./extending/client-channel-level-programming.md)  
   
-- [Cómo: Agregar, actualizar o quitar una referencia de servicio](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+- [Procedimientos: Agregar, actualizar o quitar una referencia de servicio](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Uso de la serialización  
  Tanto .NET Remoting como WCF usan la serialización para enviar objetos entre el cliente y el servidor, pero se diferencian en estos aspectos importantes:  
@@ -207,7 +207,7 @@ public class WCFCustomer
   
  El atributo [DataContract] identifica este tipo como uno que se puede serializar y deserializar entre el cliente y el servidor. El atributo [DataMember] identifica las propiedades o los campos individuales para serializar.  
   
- Cuando WCF envía un objeto entre niveles, solo serializa los valores y crea una nueva instancia del objeto en el otro nivel. Cualquier interacción con los valores del objeto se produce solo localmente; no se comunican con el nivel del mismo modo que lo hacen los objetos por referencia de .NET Remoting. Para obtener más información, vea [serialización y](./feature-details/serialization-and-deserialization.md)deserialización.  
+ Cuando WCF envía un objeto entre niveles, solo serializa los valores y crea una nueva instancia del objeto en el otro nivel. Cualquier interacción con los valores del objeto se produce solo localmente; no se comunican con el nivel del mismo modo que lo hacen los objetos por referencia de .NET Remoting. Para obtener más información, vea [serialización y deserialización](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Capacidades de control de excepciones  
   

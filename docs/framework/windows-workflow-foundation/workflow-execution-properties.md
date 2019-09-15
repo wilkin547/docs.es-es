@@ -2,12 +2,12 @@
 title: Propiedades de ejecución del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913610"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988599"
 ---
 # <a name="workflow-execution-properties"></a>Propiedades de ejecución del flujo de trabajo
 A través del almacenamiento local para el subproceso (TLS), el CLR mantiene un contexto de ejecución para cada subproceso. Este contexto de ejecución rige propiedades de subproceso bien conocidas, como la identidad del subproceso, la transacción ambiente y el conjunto de permisos actual así como las propiedades de subproceso definidas por el usuario como ranuras con nombre.  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  Cuando se invoca el flujo de trabajo, se escribe la siguiente salida en la ventana de la consola.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  
