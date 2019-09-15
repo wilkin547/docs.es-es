@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 31a6189c0126d6dff000bb84978c1527dbe4e2ae
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870624"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926135"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Creación de una plantilla de proyecto
 
@@ -19,6 +19,7 @@ Con .NET Core, puede crear e implementar plantillas que generan proyectos, arch
 En esta parte de la serie, aprenderá a:
 
 > [!div class="checklist"]
+>
 > * Crear los recursos de una plantilla de proyecto.
 > * Crear el archivo y la carpeta de configuración de la plantilla.
 > * Instalar una plantilla desde una ruta de acceso de archivo.

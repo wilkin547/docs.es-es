@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear bibliotecas de .NET Core con
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202664"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849484"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
 
@@ -17,7 +17,7 @@ En este artículo se explica cómo escribir bibliotecas para .NET mediante el us
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Necesita [la CLI y el SDK de .NET Core](https://www.microsoft.com/net/core) que están instalados en la máquina.
+Necesita [la CLI y el SDK de .NET Core](https://dotnet.microsoft.com/download) que están instalados en la máquina.
 
 En las secciones de este documento que se refieren a las versiones de .NET Framework, necesita tener instalado [.NET Framework](https://dotnet.microsoft.com) en una máquina con Windows.
 

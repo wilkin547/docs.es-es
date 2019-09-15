@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410373"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926385"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -43,6 +43,7 @@ Cuando el código está estrechamente acoplado, puede resultar difícil realizar
 Al escribir pruebas para el código, este se desacopla naturalmente, ya que, de otra forma, sería más difícil de probar.
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Características de una buena prueba unitaria
+
 - **Rápida**. No es infrecuente que los proyectos maduros tengan miles de pruebas unitarias. Las pruebas unitarias deberían tardar muy poco tiempo en ejecutarse. Milisegundos.
 - **Aislada**. Las pruebas unitarias son independientes, se pueden ejecutar de forma aislada y no tienen ninguna dependencia en ningún factor externo, como sistemas de archivos o bases de datos.
 - **Reiterativa**. La ejecución de una prueba unitaria debe ser coherente con sus resultados, es decir, devolver siempre el mismo resultado si no cambia nada entre ejecuciones.
@@ -106,11 +107,13 @@ Lo principal que debe recordar sobre los objetos ficticios frente a los stubs es
 
 ### <a name="naming-your-tests"></a>Asignar nombre a las pruebas
 El nombre de la prueba debe constar de tres partes:
+
 - Nombre del método que se va a probar.
 - Escenario en el que se está probando.
 - Comportamiento esperado al invocar al escenario.
 
 #### <a name="why"></a>¿Por qué?
+
 - Los estándares de nomenclatura son importantes porque expresan de forma explícita la intención de la prueba.
 
 Las pruebas van más allá de garantizar que el código funciona, también proporcionan documentación. Con solo mirar el conjunto de pruebas unitarias, debe ser capaz de deducir el comportamiento del código sin ni siquiera mirar el propio código. Además, cuando no se superan las pruebas, puede ver exactamente qué escenarios no cumplen las expectativas.
@@ -123,11 +126,13 @@ Las pruebas van más allá de garantizar que el código funciona, también propo
 
 ### <a name="arranging-your-tests"></a>Organizar las pruebas
 **Organizar, actuar, declarar** es un patrón común al realizar pruebas unitarias. Como el propio nombre implica, consta de tres acciones principales:
+
 - *Organizar* los objetos, crearlos y configurarlos según sea necesario.
 - *Actuar* en un objeto.
 - *Declarar* que algo es como se espera.
 
 #### <a name="why"></a>¿Por qué?
+
 - Separa claramente lo que se está probando de los pasos *organizar* y *declarar*.
 - Menos posibilidad de mezclar aserciones con el código para "actuar".
 
@@ -143,6 +148,7 @@ La legibilidad es uno de los aspectos más importantes a la hora de escribir una
 La entrada que se use en una prueba unitaria debe ser lo más sencilla posible para comprobar el comportamiento que se está probando.
 
 #### <a name="why"></a>¿Por qué?
+
 - Las pruebas se hacen más resistentes a los cambios futuros en el código base.
 - Más cercano al comportamiento de prueba que a la implementación.
 
@@ -158,6 +164,7 @@ Las pruebas que incluyen más información de la necesaria para superarse tienen
 La asignación de nombres a las variables de las pruebas unitarias es tan importante, si no más, que la asignación de nombres a las variables del código de producción. Las pruebas unitarias no deben contener cadenas mágicas.
 
 #### <a name="why"></a>¿Por qué?
+
 - Evita la necesidad de que el lector de la prueba inspeccione el código de producción con el fin de averiguar lo que hace que el valor sea especial.
 - Muestra explícitamente lo que se intenta *probar*, en lugar de lo que se intenta *lograr*.
 
@@ -176,6 +183,7 @@ Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una
 Al escribir las pruebas unitarias, evite la concatenación de cadenas manual y las condiciones lógicas como `if`, `while`, `for`, `switch`, etc.
 
 #### <a name="why"></a>¿Por qué?
+
 - Menos posibilidad de incorporar un error a las pruebas.
 - El foco está en el resultado final, en lugar de en los detalles de implementación.
 
@@ -194,6 +202,7 @@ Al incorporar lógica al conjunto de pruebas, aumenta considerablemente la posib
 Si necesita un objeto o un estado similares para las pruebas, se prefiere un método auxiliar al aprovechamiento de los atributos de instalación y desmontaje, si existen.
 
 #### <a name="why"></a>¿Por qué?
+
 - Menos confusión al leer las pruebas, puesto que todo el código es visible desde dentro de cada prueba.
 - Menor posibilidad de configurar demasiado o muy poco para la prueba.
 - Menor posibilidad de compartir el estado entre las pruebas, lo que crea dependencias no deseadas entre ellas.
@@ -223,10 +232,12 @@ En los marcos de trabajo de pruebas unitarias, se llama a `Setup` antes de cada 
 
 ### <a name="avoid-multiple-asserts"></a>Evitar varias aserciones
 Al escribir las pruebas, intente incluir solo una aserción por prueba. Los enfoques comunes para usar solo una aserción incluyen:
+
 - Crear una prueba independiente para cada aserción.
 - Usar pruebas con parámetros.
 
 #### <a name="why"></a>¿Por qué?
+
 - Si se produce un error en una aserción, no se evalúan las aserciones posteriores.
 - Garantiza que no se estén declarando varios casos en las pruebas.
 - Proporciona la imagen completa de por qué se producen errores en las pruebas. 

@@ -4,12 +4,12 @@ description: Versiones de Linux admitidas y dependencias de .NET Core para desar
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612230"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969866"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Requisitos previos para .NET Core en Linux
 
@@ -23,11 +23,13 @@ En este artículo se muestran las dependencias necesarias para desarrollar aplic
 
 ## <a name="supported-linux-versions"></a>Versiones de Linux compatibles
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x considera a Linux como un único sistema operativo. Hay una compilación de Linux única (según la arquitectura de chip) para las distribuciones de Linux compatibles. 
 
-Para los vínculos de descarga y más información, consulte [.NET Core 2.2 downloads](https://www.microsoft.com/net/download/dotnet-core/2.2) (Descargas de .NET Core 2.2) o [.NET Core 2.1 downloads](https://www.microsoft.com/net/download/dotnet-core/2.1) (Descargas de .NET Core 2.1).
+Para los vínculos de descarga y más información, consulte [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2) (Descargas de .NET Core 2.2) o [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1) (Descargas de .NET Core 2.1).
 
 .NET Core 2.x se admite en las siguientes versiones o distribuciones de Linux:
 
@@ -46,7 +48,7 @@ Vea [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/ma
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Para los vínculos de descarga y más información, consulte [.NET Core 1.1 downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) (Descargas de .NET Core 1.1) o [.NET Core 1.0 downloads](https://www.microsoft.com/net/download/dotnet-core/1.0) (Descargas de .NET Core 1.0).
+Para los vínculos de descarga y más información, consulte [.NET Core 1.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.1) (Descargas de .NET Core 1.1) o [.NET Core 1.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.0) (Descargas de .NET Core 1.0).
 
 NET Core 2.1 se admite en las siguientes versiones o distribuciones de Linux de 64 bits (`x86_64` o `amd64`):
 

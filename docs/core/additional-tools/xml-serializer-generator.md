@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 74d10b0fb27a4acf477fc66451a5cf6fc1f4317c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631692"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926599"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usar el generador de serializador XML de Microsoft en .NET Core
 
 Este tutorial muestra cómo usar el generador de serializador XML de Microsoft en una aplicación .NET Core de C#. Este tutorial ayuda a:
 
 > [!div class="checklist"]
+>
 > * Cómo crear una aplicación .NET Core
 > * Cómo agregar una referencia al paquete Microsoft.XmlSerializer.Generator
 > * Cómo editar MyApp.csproj para agregar dependencias
@@ -29,7 +30,7 @@ Tal y como sucede con el [generador de serializador de XML (sgen.exe)](../../sta
 
 Para realizar este tutorial:
 
-* [SDK de .NET Core 2.1](https://www.microsoft.com/net/download) o versiones posteriores
+* [SDK de .NET Core 2.1](https://dotnet.microsoft.com/download) o versiones posteriores
 * Su editor de código favorito.
 
 > [!TIP]
@@ -120,6 +121,7 @@ Si todo se realiza correctamente, se genera un ensamblado con el nombre *.dll My
 
 ¡Enhorabuena! Acaba de:
 > [!div class="checklist"]
+>
 > * Crear una aplicación .NET Core.
 > * Agregar una referencia al paquete Microsoft.XmlSerializer.Generator.
 > * Editar MyApp.csproj para agregar dependencias.

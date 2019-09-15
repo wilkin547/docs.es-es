@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374124"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849666"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Prueba unitaria de C# con NUnit y .NET Core
 
@@ -19,7 +19,7 @@ Este tutorial le guía por una experiencia interactiva de creación de una soluc
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [SDK de .NET Core 2.1](https://www.microsoft.com/net/download) o versiones posteriores.
+- [SDK de .NET Core 2.1](https://dotnet.microsoft.com/download) o versiones posteriores.
 - Un editor de texto o un editor de código de su elección.
 
 ## <a name="creating-the-source-project"></a>Crear el proyecto de origen

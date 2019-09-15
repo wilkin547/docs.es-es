@@ -1,15 +1,16 @@
 ---
-ms.openlocfilehash: cb8cc6574caad6da25b3fced70c58175a33ec896
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68616335"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929176"
 ---
 # <a name="voice-and-tone-guidelines"></a>Instrucciones de voz y tono
 
 Una gran variedad de personas, incluidos profesionales de TI y desarrolladores, leen tus documentos tanto para aprender .NET como para usarlo en su trabajo habitual.
 Tu objetivo es crear documentación útil que ayude al lector en su trabajo. Nuestras instrucciones proporcionan ayuda en esa labor. La guía de estilo incluye las recomendaciones siguientes:
+
 - [Utiliza un tono de conversación](#use-a-conversational-tone)
 - [Escribe en segunda persona](#write-in-2nd-person)
 - [Utiliza la voz activa](#use-active-voice)

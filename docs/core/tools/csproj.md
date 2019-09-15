@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397536"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969841"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -389,7 +389,7 @@ Lista separada por punto y coma de pares clave=valor.
 
 ## <a name="assemblyinfo-properties"></a>Propiedades de AssemblyInfo
 
-Los [atributos de ensamblado](../../framework/app-domains/set-assembly-attributes.md) que solían estar presentes en un archivo *AssemblyInfo* ahora se generan automáticamente a partir de las propiedades.
+Los [atributos de ensamblado](../../standard/assembly/set-attributes.md) que solían estar presentes en un archivo *AssemblyInfo* ahora se generan automáticamente a partir de las propiedades.
 
 ### <a name="properties-per-attribute"></a>Propiedades por atributo
 

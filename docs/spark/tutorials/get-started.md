@@ -4,12 +4,12 @@ description: Sepa cómo ejecutar una aplicación .NET para Apache Spark con .NET
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577012"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928480"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -18,6 +18,7 @@ En este tutorial aprenderá a ejecutar una aplicación .NET para Apache Spark co
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > * Preparar el entorno de Windows para .NET para Apache Spark
 > * Descargar **Microsoft.Spark.Worker**
 > * Compilar y ejecutar una aplicación de .NET para Apache Spark sencilla
@@ -124,6 +125,7 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > * Preparar el entorno de Windows para .NET para Apache Spark
 > * Descargar **Microsoft.Spark.Worker**
 > * Compilar y ejecutar una aplicación de .NET para Apache Spark sencilla

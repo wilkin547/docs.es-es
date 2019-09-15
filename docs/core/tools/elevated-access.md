@@ -3,12 +3,12 @@ title: Acceso con privilegios elevados para comandos de dotnet
 description: Obtenga información sobre los procedimientos recomendados para los comandos de dotnet que requieren acceso con privilegios elevados.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105075"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969863"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acceso con privilegios elevados para comandos de dotnet
 
@@ -26,6 +26,8 @@ Puede ejecutar comandos como raíz siempre y cuando no cambie repetidas veces en
 ## <a name="global-tool-installation"></a>Instalación de herramienta global
 
 Las instrucciones siguientes muestran la manera recomendada para instalar, ejecutar y desinstalar las herramientas de .NET Core que requieren privilegios elevados para ejecutarse.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

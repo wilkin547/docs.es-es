@@ -4,12 +4,12 @@ description: Aprenda a implementar una aplicación de .NET para Apache Spark en 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 81d1af1fd4e3329c4a289eea388edf8af57d7c4e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243947"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928470"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight
 
@@ -18,6 +18,7 @@ En este tutorial aprenderá a implementar una aplicación de .NET para Apache Sp
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
+>
 > * Preparar Microsoft.Spark.Worker
 > * Publicar la aplicación de .NET para Spark
 > * Implementar de una aplicación en Azure HDInsight

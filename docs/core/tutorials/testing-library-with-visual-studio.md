@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402208"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970651"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017
 
@@ -23,7 +23,10 @@ En [Creación de una biblioteca de .NET Standard con C# y .NET Core en Visual St
 
 Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. En el **Explorador de soluciones**, abra el menú contextual del nodo de solución **ClassLibraryProjects** y seleccione **Agregar** > **Nuevo proyecto**.
 
 1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual C#** . Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)** . En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
@@ -52,7 +55,9 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 1. En el cuadro de diálogo **Administrador de referencias**, expanda el nodo **Proyectos** y marque la casilla junto a **StringLibrary**. Agregar una referencia al ensamblado `StringLibrary` permite al compilador buscar métodos **StringLibrary**. Seleccione el botón **Aceptar**. Se agrega una referencia a su proyecto de biblioteca de clases, `StringLibrary`.
 
    ![Cuadro de diálogo Agregar referencia de proyecto de Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. En el **Explorador de soluciones**, abra el menú contextual del nodo de solución **ClassLibraryProjects** y seleccione **Agregar** > **Nuevo proyecto**.
 
 1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual Basic**. Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)** . En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
@@ -81,6 +86,7 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 1. En el cuadro de diálogo **Administrador de referencias**, expanda el nodo **Proyectos** y marque la casilla junto a **StringLibrary**. Agregar una referencia al ensamblado `StringLibrary` permite al compilador buscar métodos **StringLibrary**. Seleccione el botón **Aceptar**. Se agrega una referencia a su proyecto de biblioteca de clases, `StringLibrary`.
 
    ![Cuadro de diálogo Agregar referencia de proyecto de Visual Studio: Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Adición y ejecución de métodos de prueba unitaria
@@ -106,7 +112,8 @@ Definirá tres métodos, cada uno de los cuales llama a su método <xref:Microso
 
 Para crear los métodos de prueba:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Reemplace el código de la ventana de código *UnitTest1.cs* por el código siguiente:
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
@@ -116,7 +123,9 @@ Para crear los métodos de prueba:
 1. En la barra de menús, seleccione **Archivo** > **Guardar UnitTest1.cs como**. En el cuadro de diálogo **Guardar archivo como**, seleccione la flecha junto al botón **Guardar** y seleccione **Guardar con codificación**.
 
    ![Cuadro de diálogo Guardar archivo como de Visual Studio: C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Reemplace el código de la ventana de código *UnitTest1.vb* por el código siguiente:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -126,6 +135,7 @@ Para crear los métodos de prueba:
 1. En la barra de menús, seleccione **Archivo** > **Guardar UnitTest1.vb como**. En el cuadro de diálogo **Guardar archivo como**, seleccione la flecha junto al botón **Guardar** y seleccione **Guardar con codificación**.
 
    ![Cuadro de diálogo Guardar archivo como de Visual Studio: Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
 1. En el cuadro de diálogo **Confirmar guardar como**, seleccione el botón **Sí** para guardar el archivo.

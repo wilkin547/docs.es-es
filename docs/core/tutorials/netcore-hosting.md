@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660525"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970856"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -23,7 +23,7 @@ En este artículo se proporciona información general sobre los pasos necesarios
 
 Como los hosts son aplicaciones nativas, este tutorial tratará la creación de una aplicación de C++ para hospedar .NET Core. Necesitará un entorno de desarrollo de C++ (como el que se proporciona mediante [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
-También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://www.microsoft.com/net/core) y [crear una pequeña aplicación de prueba de .NET Core](with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
+También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://dotnet.microsoft.com/download) y [crear una pequeña aplicación de prueba de .NET Core](with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
 
 ## <a name="hosting-apis"></a>API de hospedaje
 Hay tres API distintas que pueden usarse para hospedar .NET Core. En este documento (y sus [ejemplos](https://github.com/dotnet/samples/tree/master/core/hosting) asociados) se tratan todas las opciones.
@@ -44,6 +44,7 @@ En los siguientes pasos se explica cómo usar las bibliotecas `nethost` y `hostf
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>Paso 1: Carga de HostFxr y obtención de funciones de hospedaje exportadas
 
 La biblioteca `nethost` proporciona la función `get_hostfxr_path` para buscar la biblioteca `hostfxr`. La biblioteca `hostfxr` expone funciones para hospedar el entorno de ejecución de .NET Core. Encontrará la lista completa de funciones en [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) y en el [documento de diseño de hospedaje nativo](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). El ejemplo y este tutorial usan lo siguiente:
+
 * `hostfxr_initialize_for_runtime_config`: Inicializa un contexto de host y se prepara para la inicialización del entorno de ejecución de .NET Core mediante la configuración del entorno de ejecución especificado.
 * `hostfxr_get_runtime_delegate`: Obtiene un delegado para la funcionalidad del entorno de ejecución.
 * `hostfxr_close`: Cierra un contexto del host.
@@ -134,7 +135,7 @@ A diferencia de la API de hospedaje mscoree.h (que se describe a continuación),
 
 ### <a name="step-5---run-managed-code"></a>Paso 5: Ejecutar el código administrado
 
-Con el entorno de ejecución iniciado, el host puede llamar al código administrado. Esta operación se puede realizar de diferentes maneras. El código de ejemplo vinculado a este tutorial usa la función `coreclr_create_delegate` para crear un delegado para un método administrado estático. Esta API toma el [nombre del ensamblado](../../framework/app-domains/assembly-names.md), el nombre de tipo calificado por el espacio de nombres y el nombre del método como entradas y devuelve un delegado que puede usarse para invocar al método.
+Con el entorno de ejecución iniciado, el host puede llamar al código administrado. Esta operación se puede realizar de diferentes maneras. El código de ejemplo vinculado a este tutorial usa la función `coreclr_create_delegate` para crear un delegado para un método administrado estático. Esta API toma el [nombre del ensamblado](../../standard/assembly/names.md), el nombre de tipo calificado por el espacio de nombres y el nombre del método como entradas y devuelve un delegado que puede usarse para invocar al método.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -230,7 +231,7 @@ Con un AppDomain en funcionamiento, ahora el host puede comenzar a ejecutar el c
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Otra opción, si `ExecuteAssembly` no satisface las necesidades del host, es usar `CreateDelegate` para crear un puntero de función a un método administrado estático. Esto requiere que el host conozca la firma del método al que está llamando (para crear el tipo de puntero de función), pero permite a los hosts tener flexibilidad para invocar código que no sea el punto de entrada del ensamblado. El nombre del ensamblado proporcionado en el segundo parámetro es el [nombre del ensamblado administrado completo](../../framework/app-domains/assembly-names.md) de la biblioteca que se va a cargar.
+Otra opción, si `ExecuteAssembly` no satisface las necesidades del host, es usar `CreateDelegate` para crear un puntero de función a un método administrado estático. Esto requiere que el host conozca la firma del método al que está llamando (para crear el tipo de puntero de función), pero permite a los hosts tener flexibilidad para invocar código que no sea el punto de entrada del ensamblado. El nombre del ensamblado proporcionado en el segundo parámetro es el [nombre del ensamblado administrado completo](../../standard/assembly/names.md) de la biblioteca que se va a cargar.
 
 ```C++
 void *pfnDelegate = NULL;

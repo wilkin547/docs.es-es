@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925718"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -99,6 +99,7 @@ A partir de .NET Core 2.0, si la versión de .NET Core que se creó una aplicaci
 > Este comportamiento de puesta al día no se aplica para versiones preliminares. De forma predeterminada, tampoco se aplica a las versiones principales, pero se puede cambiar con las opciones siguientes.
 
 Este comportamiento se puede modificar si se cambia la configuración para la puesta al día en los marcos de trabajo compartidos que no sean candidatos. Los valores disponibles son los siguientes:
+
 - `0`: se deshabilita el comportamiento de puesta al día de las versiones secundarias. Con este valor, una aplicación compilada para .NET Core 2.0.0 se pondrá al día a .NET Core 2.0.1, pero no a .NET Core 2.2.0 ni .NET Core 3.0.0.
 - `1`: se habilita el comportamiento de puesta al día de las versiones secundarias. Este es el valor predeterminado de la opción. Con este valor, una aplicación compilada para .NET Core 2.0.0 se pondrá al día a .NET Core 2.0.1 o .NET Core 2.2.0, en función de la versión instalada, pero no a .NET Core 3.0.0.
 - `2`: se habilita el comportamiento de puesta al día de las versiones principales y secundarias. Si se establece, se tienen en cuenta incluso versiones principales diferentes, por lo que una aplicación compilada para .NET Core 2.0.0 se pondrá al día a .NET Core 3.0.0.
@@ -178,15 +179,17 @@ Sin estos tipos, al pasar tales elementos como una porción de una matriz o una 
 
 En el ejemplo siguiente se usa una instancia de <xref:System.Span%601> y <xref:System.Memory%601> para proporcionar una vista virtual de 10 elementos de una matriz.
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compresión de Brotli
 
 .NET Core 2.1 agrega compatibilidad con la compresión y descompresión de Brotli. Brotli es un algoritmo de compresión sin pérdida de datos de uso general que se define en [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) y es compatible con la mayoría de los exploradores web y servidores web principales. Puede usar la clase <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> basada en secuencias o las clases <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> y <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> basadas en intervalos de alto rendimiento. En el ejemplo siguiente se muestra la compresión con la clase <xref:System.IO.Compression.BrotliStream>:
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 El comportamiento de <xref:System.IO.Compression.BrotliStream> es el mismo que <xref:System.IO.Compression.DeflateStream> y <xref:System.IO.Compression.GZipStream>, lo que facilita la conversión de código que llama a estas API a <xref:System.IO.Compression.BrotliStream>.
 

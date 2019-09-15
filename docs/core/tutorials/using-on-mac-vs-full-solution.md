@@ -4,12 +4,12 @@ description: Este tema le guía en la creación de una solución .NET Core que i
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6a3f6c82a92042eeca1cb79f4634277d6870ebaf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 46d118cc4dc54e34db0f964aa3f8d76f0ad67249
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105251"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925999"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac
 
@@ -19,13 +19,14 @@ En este tutorial se muestra cómo crear una aplicación que acepte una palabra d
 
 > [!NOTE]
 > Sus comentarios son muy importantes. Hay dos maneras de proporcionar comentarios al equipo de desarrollo de Visual Studio para Mac:
+>
 > - En Visual Studio para Mac, seleccione **Ayuda** > **Notificar un problema** en el menú o **Notificar un problema** desde la pantalla de bienvenida, que abre una ventana para presentar un informe de errores. Puede realizar un seguimiento de sus comentarios en el portal de la [Comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Para hacer una sugerencia, seleccione **Ayuda** > **Aportar una sugerencia** en el menú o **Aportar una sugerencia** desde la pantalla de bienvenida, que le lleva a la [página web de la Comunidad de desarrolladores de Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - OpenSSL (si se ejecuta en .NET Core 1.1): Vea el tema [Requisitos previos para .NET Core en Mac](../macos-prerequisites.md).
-- [.NET Core SDK 1.1 o posterior](https://www.microsoft.com/net/core#macos)
+- [.NET Core SDK 1.1 o posterior](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Para más información sobre los requisitos previos, consulte los [requisitos previos para .NET Core en Mac](../macos-prerequisites.md). Para consultar todos los requisitos del sistema de Visual Studio 2017 para Mac, vea [Requisitos del sistema de la familia de productos de Visual Studio 2017 para Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).

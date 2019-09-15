@@ -4,22 +4,22 @@ description: Encuentre recursos para aprender a crear aplicaciones .NET Core en 
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802297"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969897"
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
 
 En este artículo se proporciona información sobre cómo comenzar con .NET Core. .NET Core se puede instalar en Windows, Linux y macOS. Puede programar en su editor de texto preferido y crear aplicaciones y bibliotecas multiplataforma. 
 
-Si no está seguro de qué es .NET Core o cómo se relaciona con otras tecnologías .NET, comience con la información general [¿Qué es .NET?](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet). En resumen, .NET Core es una implementación multiplataforma de código abierto de .NET.
+Si no está seguro de qué es .NET Core o cómo se relaciona con otras tecnologías .NET, comience con la información general [¿Qué es .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet). En resumen, .NET Core es una implementación multiplataforma de código abierto de .NET.
 
-## <a name="create-an-application"></a>Creación de una aplicación
+## <a name="create-an-application"></a>Crear una aplicación
 
-En primer lugar, descargue e instale el [SDK de .NET Core](https://www.microsoft.com/net/download/) en el equipo.
+En primer lugar, descargue e instale el [SDK de .NET Core](https://dotnet.microsoft.com/download) en el equipo.
 
 A continuación, abra un terminal como **PowerShell**, **Símbolo del sistema** o **bash**. Escriba los comandos `dotnet` siguientes para crear y ejecutar una aplicación de C#.
 
@@ -28,17 +28,19 @@ dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Debería ver la siguiente salida:
+Debería ver los siguientes resultados:
 
 ```console
 Hello World!
 ```
 
-Felicidades. Ha creado una sencilla aplicación .NET Core. También puede usar [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio ](tutorials/with-visual-studio.md) (solo Windows) o [Visual Studio para Mac](tutorials/using-on-mac-vs.md) (solo macOS), para crear una aplicación .NET Core.
+¡Enhorabuena! Ha creado una sencilla aplicación .NET Core. También puede usar [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio ](tutorials/with-visual-studio.md) (solo Windows) o [Visual Studio para Mac](tutorials/using-on-mac-vs.md) (solo macOS), para crear una aplicación .NET Core.
 
 ## <a name="tutorials"></a>Tutoriales
 
 Para comenzar a desarrollar aplicaciones .NET Core, puede seguir estos tutoriales paso a paso.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

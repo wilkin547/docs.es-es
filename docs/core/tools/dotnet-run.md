@@ -2,12 +2,12 @@
 title: Comando dotnet run
 description: El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202807"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969752"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202807"
 `dotnet run`: ejecuta el código fuente sin comandos explícitos de compilación o inicio.
 
 ## <a name="synopsis"></a>Sinopsis
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

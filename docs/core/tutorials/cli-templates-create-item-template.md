@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870614"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926149"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Creación de una plantilla de elemento
 
@@ -19,6 +19,7 @@ Con .NET Core, puede crear e implementar plantillas que generan proyectos, arch
 En esta parte de la serie, aprenderá a:
 
 > [!div class="checklist"]
+>
 > * Crear una clase para una plantilla de elemento.
 > * Crear el archivo y la carpeta de configuración de la plantilla.
 > * Instalar una plantilla desde una ruta de acceso de archivo.
@@ -27,7 +28,7 @@ En esta parte de la serie, aprenderá a:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [SDK de .NET Core 2.2](https://www.microsoft.com/net/core) o versiones posteriores.
+* [SDK de .NET Core 2.2](https://dotnet.microsoft.com/download) o versiones posteriores.
 * Leer el artículo de referencia [Plantillas personalizadas para dotnet new](../tools/custom-templates.md).
 
   En el artículo de referencia se explican los aspectos básicos de las plantillas y cómo se unen. Parte de esta información se repetirá en este tutorial.

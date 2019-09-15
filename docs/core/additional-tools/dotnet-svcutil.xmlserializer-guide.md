@@ -3,12 +3,12 @@ title: Uso de dotnet-svcutil.xmlserializer en .NET Core
 description: Obtenga información sobre cómo puede usar el paquete NuGet `dotnet-svcutil.xmlserializer` para generar previamente un ensamblado de serialización para los proyectos de .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632197"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848966"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Uso de dotnet-svcutil.xmlserializer en .NET Core
 
@@ -16,7 +16,7 @@ El paquete NuGet `dotnet-svcutil.xmlserializer` puede generar previamente un ens
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [SDK de .NET Core 2.1](https://www.microsoft.com/net/download) o versiones posteriores
+* [SDK de .NET Core 2.1](https://dotnet.microsoft.com/download) o versiones posteriores
 * Su editor de código favorito
 
 Puede usar el comando `dotnet --info` para comprobar qué versiones del SDK de .NET Core y del Runtime ya ha instalado.

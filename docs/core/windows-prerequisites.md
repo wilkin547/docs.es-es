@@ -3,12 +3,12 @@ title: Requisitos previos para .NET Core en Windows
 description: Obtenga información sobre qué dependencias necesita en la máquina con Windows para desarrollar y ejecutar aplicaciones .NET Core.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331076"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970281"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Requisitos previos para .NET Core en Windows
 
@@ -61,6 +61,8 @@ Puede usar cualquier editor para desarrollar aplicaciones .NET Core con el SDK d
 
 Puede leer más sobre los cambios en Visual Studio 2017 en las [notas de la versión](/visualstudio/releasenotes/vs2017-relnotes).
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Para desarrollar aplicaciones .NET Core en Visual Studio 2017 con el SDK de .NET Core 2.2:
@@ -97,8 +99,9 @@ Para desarrollar aplicaciones de .NET Core 1.x en Visual Studio, [descargue e in
 
 > [!IMPORTANT]
 > Es posible usar Visual Studio 2015 para el desarrollo con .NET Core 1.x, pero no se recomienda por las razones siguientes:
-  > * Las herramientas de .NET Core están en versión preliminar, lo que no es compatible.
-  > * Los proyectos están basados en project.json, que está en desuso.
+>
+> * Las herramientas de .NET Core están en versión preliminar, lo que no es compatible.
+> * Los proyectos están basados en project.json, que está en desuso.
 >
 > Para obtener más información sobre los cambios de formato de proyecto, consulte [High-level overview of changes](./tools/cli-msbuild-architecture.md) (Información general de alto nivel sobre los cambios).
 

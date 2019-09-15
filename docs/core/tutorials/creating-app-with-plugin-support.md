@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330980"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849445"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -22,7 +22,7 @@ En este tutorial se le enseñará a hacer lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Instale el [SDK de la versión preliminar 2 de .NET Core 3.0](https://www.microsoft.com/net/core) o una versión más reciente.
+- Instale el [SDK de la versión preliminar 2 de .NET Core 3.0](https://dotnet.microsoft.com/download) o una versión más reciente.
 
 ## <a name="create-the-application"></a>Crear la aplicación
 

@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410366"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988546"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -18,6 +18,8 @@ ms.locfileid: "67410366"
 `dotnet test`: controlador de prueba de .NET usado para ejecutar pruebas unitarias.
 
 ## <a name="synopsis"></a>Sinopsis
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -264,7 +266,7 @@ Ejecute las pruebas en el proyecto `test1`:
 
 Ejecute las pruebas en el proyecto en el directorio actual y genere un archivo de resultados de prueba en formato trx:
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>Detalles de la opción de filtro
 

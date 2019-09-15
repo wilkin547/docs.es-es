@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373747"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969773"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -18,6 +18,8 @@ ms.locfileid: "70373747"
 `dotnet`: herramienta para administrar archivos binarios y código fuente de .NET.
 
 ## <a name="synopsis"></a>Sinopsis
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -94,6 +96,7 @@ Muestra los SDK de .NET Core instalados.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Define el comportamiento cuando el marco de trabajo compartido necesario no está disponible. `N` puede ser:
+
 - `0`: se deshabilita la puesta al día incluso de las versiones secundarias.
 - `1`: puesta al día de la versión secundaria, pero no de la versión principal. Éste es el comportamiento predeterminado.
 - `2`: puesta al día de las versiones principales y secundarias.

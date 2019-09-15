@@ -3,16 +3,16 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660585"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849841"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
-El [SDK de .NET Core](https://www.microsoft.com/net/download/core) cuenta con muchas plantillas ya instaladas y listas para su uso. El [comando `dotnet new`](dotnet-new.md) no es solo la forma de usar una plantilla, sino también cómo instalarlas y desinstalarlas. A partir de .NET Core 2.0, puede crear sus propias plantillas personalizadas para cualquier tipo de proyecto, como una aplicación, un servicio, una herramienta o una biblioteca de clases. Incluso puede crear una plantilla que genere uno o más archivos independientes, como un archivo de configuración.
+El [SDK de .NET Core](https://dotnet.microsoft.com/download) cuenta con muchas plantillas ya instaladas y listas para su uso. El [comando `dotnet new`](dotnet-new.md) no es solo la forma de usar una plantilla, sino también cómo instalarlas y desinstalarlas. A partir de .NET Core 2.0, puede crear sus propias plantillas personalizadas para cualquier tipo de proyecto, como una aplicación, un servicio, una herramienta o una biblioteca de clases. Incluso puede crear una plantilla que genere uno o más archivos independientes, como un archivo de configuración.
 
 Puede instalar plantillas personalizadas desde un paquete NuGet en cualquier fuente NuGet, haciendo referencia a un archivo *.nupkg* de NuGet directamente o especificando un directorio del sistema de archivos que contenga la plantilla. El motor de plantillas ofrece características que le permiten reemplazar valores, incluir y excluir archivos y ejecutar operaciones de procesamiento personalizadas cuando se usa la plantilla.
 
@@ -22,7 +22,7 @@ Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una
 
 ### <a name="net-default-templates"></a>Plantillas predeterminadas .NET
 
-Cuando instala el [SDK de .NET Core](https://www.microsoft.com/net/download/core), recibe más de una docena de plantillas integradas para crear proyectos y archivos, incluidas las aplicaciones de consola, bibliotecas de clases, proyectos de prueba unitaria, aplicaciones de ASP.NET Core (incluidos los proyectos [Angular](https://angular.io/) y [React](https://facebook.github.io/react/)), y archivos de configuración. Para enumerar las plantillas integradas, ejecute el comando `dotnet new` con la opción `-l|--list`:
+Cuando instala el [SDK de .NET Core](https://dotnet.microsoft.com/download), recibe más de una docena de plantillas integradas para crear proyectos y archivos, incluidas las aplicaciones de consola, bibliotecas de clases, proyectos de prueba unitaria, aplicaciones de ASP.NET Core (incluidos los proyectos [Angular](https://angular.io/) y [React](https://facebook.github.io/react/)), y archivos de configuración. Para enumerar las plantillas integradas, ejecute el comando `dotnet new` con la opción `-l|--list`:
 
 ```console
 dotnet new --list

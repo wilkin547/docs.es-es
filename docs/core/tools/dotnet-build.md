@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168071"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988532"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -25,7 +25,7 @@ ms.locfileid: "70168071"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
@@ -94,13 +94,13 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
   Marca la compilación como no segura para la compilación incremental. Esta marca desactiva la compilación incremental y fuerza una recompilación limpia del gráfico de dependencias del proyecto.
 
-* **`--no-logo`**
-
-  No se muestra la pancarta de inicio ni el mensaje de copyright. Disponible desde el SDK de .NET Core 3.0.
-
 * **`--no-restore`**
 
   No ejecuta una restauración implícita durante la compilación. Disponible a partir del SDK de .NET Core 2.0.
+
+* **`--nologo`**
+
+  No se muestra la pancarta de inicio ni el mensaje de copyright. Disponible desde el SDK de .NET Core 3.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
