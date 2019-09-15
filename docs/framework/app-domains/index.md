@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675356"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971922"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programar con dominios de aplicación y ensamblados
 Hosts como Microsoft Internet Explorer, ASP.NET y el shell de Windows cargan Common Language Runtime en un proceso, crean un [dominio de aplicación](../../../docs/framework/app-domains/application-domains.md) en ese proceso y luego cargan y ejecutan el código de usuario en ese dominio de aplicación cuando se ejecuta una aplicación de .NET Framework. En la mayoría de los casos, no tiene que preocuparse por crear dominios de aplicación y cargar ensamblados en ellos porque el host en tiempo de ejecución realiza esas tareas.  
@@ -28,14 +28,14 @@ Hosts como Microsoft Internet Explorer, ASP.NET y el shell de Windows cargan Com
  [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)  
  Proporciona ejemplos sobre cómo crear, configurar y usar dominios de aplicación.  
   
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programar con ensamblados](../../standard/assembly/program.md)  
  Describe cómo crear, firmar y establecer atributos en los ensamblados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Emitir métodos y ensamblados dinámicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Describe la creación de ensamblados dinámicos.  
   
- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Ensamblados de .NET](../../standard/assembly/index.md)  
  Proporciona una introducción general a los conceptos de los ensamblados.  
   
  [Dominios de aplicación](../../../docs/framework/app-domains/application-domains.md)  

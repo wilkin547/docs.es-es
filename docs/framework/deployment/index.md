@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910969"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971596"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 
@@ -118,7 +118,7 @@ Use los siguientes vínculos a otros temas de MSDN para obtener información esp
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Empaquetar y distribuir aplicaciones de .NET Framework
 
-Parte de la información relacionada con el empaquetado y la implementación de .NET Framework se describe en otras secciones de la documentación. En esas secciones se proporciona información sobre los [ensamblados](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), que son unidades autodescriptivas que no necesitan entradas del Registro, los [ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md), que garantizan el carácter unívoco del nombre e impiden la simulación de este, y el [control de versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md), que aborda muchos de los problemas asociados a conflictos de archivos DLL. En las siguientes secciones, se proporciona información sobre cómo se empaquetan y se distribuyen las aplicaciones de .NET Framework.
+Parte de la información relacionada con el empaquetado y la implementación de .NET Framework se describe en otras secciones de la documentación. En esas secciones se proporciona información sobre los [ensamblados](../../standard/assembly/index.md), que son unidades autodescriptivas que no necesitan entradas del Registro, los [ensamblados con nombre seguro](../../standard/assembly/strong-named.md), que garantizan el carácter unívoco del nombre e impiden la simulación de este, y el [control de versiones de los ensamblados](../../standard/assembly/versioning.md), que aborda muchos de los problemas asociados a conflictos de archivos DLL. En las siguientes secciones, se proporciona información sobre cómo se empaquetan y se distribuyen las aplicaciones de .NET Framework.
 
 ### <a name="packaging"></a>Empaquetado
 

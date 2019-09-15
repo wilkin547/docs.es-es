@@ -3,12 +3,12 @@ title: Herramientas de la interfaz de línea de comandos (CLI) de .NET Core
 description: Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI) de .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105044"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969878"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -26,6 +26,8 @@ De forma predeterminada, la CLI se instala en paralelo (SxS), para que varias ve
 ## <a name="cli-commands"></a>Comandos de la CLI
 
 De forma predeterminada, se instalan los siguientes comandos:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
