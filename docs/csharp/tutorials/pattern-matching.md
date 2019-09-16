@@ -3,12 +3,12 @@ title: Uso de las características de coincidencia de patrones para ampliar los 
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105569"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926656"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -17,6 +17,7 @@ C# 7 introdujo las características básicas de coincidencia de patrones. Esas c
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
+>
 > - Reconocer situaciones donde se debe usar la coincidencia de patrones.
 > - Usar las expresiones de coincidencia de patrones para implementar un comportamiento en función de los tipos y los valores de propiedad.
 > - Combinar la coincidencia de patrones con otras técnicas para crear algoritmos completos.

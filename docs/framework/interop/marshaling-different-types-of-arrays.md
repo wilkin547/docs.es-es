@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648605"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894169"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Cálculo de referencias de tipos diferentes de matrices
 Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](copying-and-pinning.md).  
   
  En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.  
   
-|Matriz|Descripción|  
+|Matriz|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |De enteros por valor.|Pasa una matriz de enteros como un parámetro In.|  
 |De enteros por referencia.|Pasa una matriz de enteros como un parámetro In/Out.|  
@@ -52,43 +52,43 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
   
 - **TestArrayOfInts** exportada desde PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
 - **TestRefArrayOfInts** exportada desde PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
 - **TestMatrixOfInts** exportada desde PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
 - **TestArrayOfStrings** exportada desde PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
 - **TestArrayOfStructs** exportada desde PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
 - **TestArrayOfStructs2** exportada desde PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**. Estas estructuras contienen los siguientes elementos:  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

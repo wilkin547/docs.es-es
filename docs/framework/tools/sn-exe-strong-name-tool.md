@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938018"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971843"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
-La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
+La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../standard/assembly/strong-named.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
   
 > [!WARNING]
 > Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.
 
- Para obtener más información sobre los nombres seguros y los ensamblados con nombre seguro, vea [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md) y [Cómo: Firma de un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
+ Para obtener más información sobre los nombres seguros y los ensamblados con nombre seguro, vea [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md) y [Cómo: Firma de un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).  
   
  La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, utilice el símbolo del sistema para desarrolladores (o el símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
@@ -36,7 +36,7 @@ La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -90,37 +90,37 @@ La herramienta Nombre seguro asume que los pares de claves pública y privada se
 ## <a name="examples"></a>Ejemplos  
  El comando siguiente crea un nuevo par de claves aleatorio y lo almacena en el `keyPair.snk`.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  El comando siguiente almacena la clave en `keyPair.snk` en el contenedor `MyContainer` del CSP de nombres seguros.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  El comando siguiente extrae la clave pública de `keyPair.snk` y la almacena en `publicKey.snk`.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  El siguiente comando muestra la clave pública y el token para la clave pública incluida en `publicKey.snk`.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  El comando siguiente comprueba el ensamblado `MyAsm.dll`.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  El comando siguiente elimina `MyContainer` del CSP predeterminado.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

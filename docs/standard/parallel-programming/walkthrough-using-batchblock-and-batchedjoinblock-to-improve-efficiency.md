@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d704702e74b5f7d4a315bd14a467296245f90257
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32255c988397853c4b38e4ab723c7261a8999899
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046501"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929216"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia
 
@@ -53,7 +53,6 @@ Este tutorial contiene las siguientes secciones:
 
 ## <a name="creating-the-console-application"></a>Crear la aplicación de consola
 
-<a name="consoleApp"></a>
 1. En Visual Studio, cree un proyecto **Aplicación de consola** de Visual C# o Visual Basic. En este documento, el proyecto se denomina `DataflowBatchDatabase`.
 
 2. En el proyecto, agregue una referencia a System.Data.SqlServerCe.dll y una referencia a System.Threading.Tasks.Dataflow.dll.

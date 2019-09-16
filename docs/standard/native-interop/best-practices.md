@@ -4,12 +4,12 @@ description: Conozca los procedimientos recomendados para interactuar con compon
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063084"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923770"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedimientos recomendados de interoperabilidad nativa
 
@@ -46,12 +46,12 @@ Recuerde marcar `[DllImport]` como `Charset.Unicode`, a menos que explícitament
 
 **❌EVITE** usar parámetros `StringBuilder`. La serialización `StringBuilder` *siempre* crea una copia del búfer nativo. Por lo tanto, puede ser extremadamente ineficaz. Siga el escenario típico de una llamada a una API de Windows que toma una cadena:
 
-1. Cree un SB de la capacidad deseada (asigna la capacidad administrada) **{1}**.
+1. Cree un SB de la capacidad deseada (asigna la capacidad administrada) **{1}** .
 2. Invocar
-   1. Asigna un búfer nativo **{2}**.  
-   2. Copia el contenido si `[In]` _(el valor predeterminado de un `StringBuilder` parámetro)_.  
-   3. Copia el búfer de nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado de`StringBuilder`)_.  
-3. `ToString()` asigna otra matriz administrada **{4}**.
+   1. Asigna un búfer nativo **{2}** .  
+   2. Copia el contenido si `[In]` _(el valor predeterminado de un `StringBuilder` parámetro)_ .  
+   3. Copia el búfer de nativo en una matriz administrada recién asignada si `[Out]` **{3}** _(también el valor predeterminado de`StringBuilder`)_ .  
+3. `ToString()` asigna otra matriz administrada **{4}** .
 
 Es decir, asignaciones *{4}* para obtener una cadena del código nativo. Lo mejor que puede hacer para limitar esto consiste en reutilizar `StringBuilder` en otra llamada, pero esta todavía solo guarda la asignación *1*. Es mucho mejor usar y almacenar en caché un búfer de caracteres de `ArrayPool`; después, puede llegar a la asignación de `ToString()` en las llamadas posteriores.
 
@@ -67,6 +67,7 @@ Para obtener más información sobre la serialización cadenas, vea [Cálculo de
 > Para las cadenas `[Out]`, CLR utilizará `CoTaskMemFree` de forma predeterminada para liberar las cadenas o `SysStringFree` para las cadenas que están marcadas como `UnmanagedType.BSTR`.  
 **Para la mayoría de las API con un búfer de cadena de salida:**  
 > El número de caracteres pasados debe incluir el valor NULL. Si el valor devuelto es menor que el número de caracteres pasados, la llamada se realiza correctamente y el valor es el número de caracteres *sin* el carácter NULL. En caso contrario, el número es el tamaño del búfer necesario *incluyendo* el carácter NULL.  
+>
 > - Pase 5 y obtenga 4: la cadena tiene 4 caracteres de longitud con un valor NULL final.
 > - Pase 5 y obtenga 6: la cadena tiene 5 caracteres de longitud y necesita un búfer de 6 caracteres para contener el valor NULL.  
 > [Tipos de datos de Windows para cadenas](/windows/desktop/Intl/windows-data-types-for-strings)

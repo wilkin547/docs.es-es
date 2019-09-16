@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469279"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894771"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)
 La herramienta Anotador de seguridad de .NET (SecAnnotate.exe) es una aplicación de línea de comandos que identifica los elementos `SecurityCritical` y `SecuritySafeCritical` de uno o más ensamblados.  
@@ -25,13 +25,13 @@ La herramienta Anotador de seguridad de .NET (SecAnnotate.exe) es una aplicació
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`/a`<br /><br /> o<br /><br /> `/showstatistics`|Muestra estadísticas sobre el uso de transparencia en los ensamblados que se van a analizar.|  
 |`/d:` *directory*<br /><br /> o<br /><br /> `/referencedir:` *directory*|Especifica el directorio en el que buscar los ensamblados dependientes durante la anotación.|  

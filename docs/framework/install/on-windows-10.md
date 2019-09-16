@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106542"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853943"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalación de .NET Framework en Windows 10 y Windows Server 2016 y posterior
 
@@ -72,7 +72,7 @@ Las versiones de .NET Framework 4.x son actualizaciones locales de versiones ant
 
 - Las versiones 4.x de .NET Framework se pueden usar para ejecutar aplicaciones creadas para un rango que va desde .NET Framework 4.0 hasta esa versión. Por ejemplo, .NET Framework 4.7 se puede usar para ejecutar aplicaciones creadas para .NET Framework de 4.0 a 4.7. La versión más reciente (.NET Framework 4.8) se puede usar para ejecutar aplicaciones desarrolladas con todas las versiones de .NET Framework a partir de 4.0.
 
-Para obtener una lista de todas las versiones de .NET Framework disponibles para su descarga, vea la página [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (Descargas de .NET).
+Para obtener una lista de todas las versiones de .NET Framework disponibles para su descarga, vea la página [.NET Downloads](https://dotnet.microsoft.com/download) (Descargas de .NET).
 
 ## <a name="help"></a>Ayuda
 
@@ -80,6 +80,6 @@ Si no puede obtener la versión correcta de la versión de .NET Framework instal
 
 ## <a name="see-also"></a>Vea también
 
-- [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (Descargas de .NET)
+- [.NET Downloads](https://dotnet.microsoft.com/download) (Descargas de .NET)
 - [Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Instalación de .NET Framework para desarrolladores](guide-for-developers.md)

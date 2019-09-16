@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911007"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969103"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de una aplicación o componente en el mismo equipo. Se pueden tener varias versiones de Common Language Runtime y varias versiones de las aplicaciones y componentes que utilice una versión del motor en tiempo de ejecución, de forma simultánea y en el mismo equipo.  
@@ -35,7 +35,7 @@ La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de un
   
 - Ensamblados con nombre seguro  
   
-     La ejecución en paralelo utiliza ensamblados con nombre seguro para enlazar la información de los tipos a una versión específica de un ensamblado. De este modo, se impide que una aplicación o componente se enlace a una versión no válida de un ensamblado. Los ensamblados con nombre seguro también permiten múltiples versiones de un archivo en el mismo equipo y que las aplicaciones las utilicen. Para más información, vea [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).  
+     La ejecución en paralelo utiliza ensamblados con nombre seguro para enlazar la información de los tipos a una versión específica de un ensamblado. De este modo, se impide que una aplicación o componente se enlace a una versión no válida de un ensamblado. Los ensamblados con nombre seguro también permiten múltiples versiones de un archivo en el mismo equipo y que las aplicaciones las utilicen. Para más información, vea [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md).  
   
 - Almacenamiento de código con identificación de versión  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Describe cómo enlazar una aplicación a una versión específica de un ensamblado.|  
 |[Configurar el redireccionamiento del enlace de ensamblados](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica cómo redirigir referencias a enlaces de ensamblados a una versión específica de los ensamblados de .NET Framework.|  
 |[Ejecución en paralelo en proceso](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Describe cómo se puede utilizar la activación del host en tiempo de ejecución en paralelo y en el mismo proceso para ejecutar varias versiones de CLR en un solo proceso.|  
-|[Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Proporciona una introducción general a los conceptos de los ensamblados.|  
+|[Ensamblados de .NET](../../standard/assembly/index.md)|Proporciona una introducción general a los conceptos de los ensamblados.|  
 |[Dominios de aplicación](../../../docs/framework/app-domains/application-domains.md)|Proporciona una introducción general a los conceptos de los dominios de aplicación.|  
   
 ## <a name="reference"></a>Referencia  

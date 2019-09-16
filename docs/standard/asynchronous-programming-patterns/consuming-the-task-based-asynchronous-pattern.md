@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169132"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929006"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizar el modelo asincrónico basado en tareas
 
@@ -727,7 +727,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- La clase [AsyncCache\<TKey, TValue >](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) acepta como un delegado a su constructor una función que adopta `TKey` y devuelve una clase <xref:System.Threading.Tasks.Task%601>.  Todos los valores a los que se accedió previamente desde la memoria caché se almacenan en el diccionario interno y `AsyncCache` asegura que solo una tarea se genera por clave, incluso si se tiene acceso a la memoria caché al mismo tiempo.
+ La clase [AsyncCache\<TKey, TValue >](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) acepta como un delegado a su constructor una función que adopta `TKey` y devuelve una clase <xref:System.Threading.Tasks.Task%601>.  Todos los valores a los que se accedió previamente desde la memoria caché se almacenan en el diccionario interno y `AsyncCache` asegura que solo una tarea se genera por clave, incluso si se tiene acceso a la memoria caché al mismo tiempo.
 
  Por ejemplo, puede crear una caché de páginas web descargadas:
 

@@ -4,12 +4,12 @@ description: Descubra las características de telemetría de la CLI de ML.NET qu
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254007"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929283"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Recopilación de telemetría mediante la CLI de ML.NET
 
@@ -58,6 +58,7 @@ Los datos se envían de forma segura a los servidores de Microsoft con tecnolog�
 
 ### <a name="data-points-not-collected"></a>Punto de datos no recopilados
 La característica de telemetría *no* recopila:
+
 - datos personales, como los nombres de usuario
 - nombres de archivo de conjunto de datos
 - datos de los archivos del conjunto de datos
@@ -73,6 +74,7 @@ La distribución de Microsoft de la CLI de ML.NET cuenta con licencia en virtud 
 Al ejecutar por primera vez un [comando de la CLI de ML.NET](../reference/ml-net-cli-reference.md) como `mlnet auto-train`, la herramienta de la CLI de ML.NET muestra el texto de divulgación que indica cómo dejar de participar en la telemetría. El texto puede variar ligeramente según la versión de la CLI que ejecute.
 
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de la CLI de ML.NET](../reference/ml-net-cli-reference.md)
 - [Términos de licencia del software de Microsoft: biblioteca de Microsoft .NET](https://aka.ms/dotnet-core-eula)
 - [Privacidad en Microsoft](https://www.microsoft.com/trustcenter/privacy/)

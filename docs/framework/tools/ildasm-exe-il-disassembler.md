@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912488"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894872"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -28,7 +28,7 @@ En el símbolo del sistema, escriba lo siguiente:
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -117,14 +117,14 @@ A partir de .NET Framework 4.5, *Ildasm.exe* controla un objeto binario grande 
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 A partir de .NET Framework 4.5, *Ildasm.exe* muestra atributos que se aplican a las implementaciones de interfaz, tal como se muestra en el siguiente fragmento de salida de *Ildasm.exe*:
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

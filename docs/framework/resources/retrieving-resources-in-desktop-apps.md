@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941466"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971171"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  
@@ -43,19 +43,19 @@ Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Frame
 ### <a name="retrieving-string-data-an-example"></a>Recuperación de datos de cadena: Un ejemplo  
  En el ejemplo siguiente se llama al método <xref:System.Resources.ResourceManager.GetString%28System.String%29> para recuperar los recursos de cadena de la referencia cultural de interfaz de usuario actual. Incluye un recurso de cadena neutro para la referencia cultural de inglés (Estados Unidos) y recursos localizados para las referencias culturales de ruso (Rusia) y de francés (Francia). El siguiente recurso de inglés (Estados Unidos) está en un archivo denominado Strings.txt:  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  El recurso de francés (Francia) está en un archivo denominado Strings.fr-FR.txt:  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  El recurso de ruso (Rusia) está en un archivo denominado Strings.ru-RU.txt:  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  El siguiente archivo por lotes (.bat) compila el ejemplo y genera los ensamblados satélite en los directorios correspondientes. Los comandos se proporcionan para el lenguaje C# y para el compilador. Si usa Visual Basic, cambie `csc` por `vbc`y `GetString.cs` por `GetString.vb`.  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Puede usar el siguiente archivo por lotes para compilar el ejemplo de C#. Si usa Visual Basic, cambie `csc` por `vbc`y la extensión del archivo de código fuente de `.cs` a `.vb`.  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  Puede crear el archivo de recursos y los ensamblados necesarios y ejecutar la aplicación con el siguiente archivo por lotes. Debe usar la opción `/r` para proporcionar a Resgen.exe una referencia a UIElements.dll para que pueda tener acceso a la información de la estructura `PersonTable` . Si usa C#, reemplace el nombre del compilador `vbc` por `csc`y la extensión `.vb` por `.cs`.  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -142,7 +142,7 @@ GetObject.exe
   
  Para habilitar la compatibilidad completa de versiones de ensamblados, se recomienda implementar ensamblados con nombres seguros en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md) e implementar los ensamblados que no tengan nombres seguros en el directorio de la aplicación. Si quiere implementar ensamblados con nombres seguros en el directorio de la aplicación, no podrá aumentar el número de versión de un ensamblado satélite al actualizar el ensamblado. En lugar de ello, debe llevar a cabo una actualización local en la que deberá reemplazar el código existente por el código actualizado y conservar el mismo número de versión. Por ejemplo, si quiere actualizar la versión 1.0.0.0 de un ensamblado satélite con el nombre de ensamblado especificado por completo "MyApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a", sobrescríbalo con el archivo actualizado myApp.resources.dll que se ha compilado con el mismo nombre de ensamblado especificado por completo "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a". Tenga en cuenta que el uso de actualizaciones locales en los archivos del ensamblado satélite dificulta que una aplicación pueda determinar con exactitud la versión de un ensamblado satélite.  
   
- Para obtener más información sobre las versiones de los ensamblados, consulte [Assembly Versioning](../../../docs/framework/app-domains/assembly-versioning.md) (Versiones de los ensamblados) y [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Para obtener más información sobre las versiones de los ensamblados, consulte [Assembly Versioning](../../standard/assembly/versioning.md) (Versiones de los ensamblados) y [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Recuperar recursos desde archivos .resources  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>Un ejemplo  
  En el ejemplo siguiente se muestra cómo el Administrador de recursos recupera los recursos directamente desde archivos .resources. El ejemplo consta de tres archivos de recursos basados en texto para las referencias culturales de inglés (Estados Unidos), francés (Francia) y ruso (Rusia). Inglés (Estados Unidos) es la referencia cultural predeterminada del ejemplo. Sus recursos están almacenados en el siguiente archivo, denominado Strings.txt:  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  Los recursos de la referencia cultural de francés (Francia) están almacenados en el siguiente archivo, que se denomina Strings.fr-FR.txt:  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  Los recursos de la referencia cultural de ruso (Rusia) están almacenados en el siguiente archivo, que se denomina Strings.ru-RU.txt:  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  Puede compilar la versión de C# del ejemplo ejecutando el siguiente archivo por lotes. Si usa Visual Basic, reemplace `csc` por `vbc` y la extensión `.cs` por `.vb`.  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

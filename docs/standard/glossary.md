@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106922"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929076"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -85,6 +85,7 @@ El término "ecosistema de .NET" se diferencia de términos parecidos como "pila
 En general, una colección completa de API que facilita el desarrollo y la implementación de aplicaciones que se basan en una tecnología concreta. En este sentido general, ASP.NET Core y Windows Forms son ejemplos de marcos de trabajo de la aplicación. Vea también [biblioteca](#library).
 
 Los siguientes términos tienen un significado técnico más específico:
+
 - [.NET Framework](#net-framework)
 - [Plataforma de destino](#target-framework)
 - [TFM (moniker de la plataforma de destino)](#tfm)

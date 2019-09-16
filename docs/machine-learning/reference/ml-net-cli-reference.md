@@ -3,12 +3,12 @@ title: El comando de entrenamiento automático en la herramienta de la CLI de ML
 description: Información general, ejemplos y referencia del comando de entrenamiento automático en la herramienta de la CLI de ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397664"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929203"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>El comando de entrenamiento automático en la herramienta de la CLI de ML.NET
 
@@ -217,6 +217,7 @@ Ejemplo:
 
 Especifique si los archivos del conjunto de datos tienen una fila de encabezado.
 Los valores posibles son:
+
 - `true`
 - `false`
 

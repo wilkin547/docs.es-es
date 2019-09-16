@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d0aba8be60611527d6216227a6c4939479fc38
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613049"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926872"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
 
@@ -36,19 +36,19 @@ En el símbolo del sistema, escriba lo siguiente:
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 ```
 
 ## <a name="parameters"></a>Parámetros
 
-|Argumento|Descripción|
+|Argumento|DESCRIPCIÓN|
 |--------------|-----------------|
 |*assemblyName*|El nombre de un ensamblado. Puede especificar parte del nombre del ensamblado, como `myAssembly`, o puede especificar un nombre de ensamblado completo, como `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|
 |*assemblyPath*|El nombre de un archivo que contiene un manifiesto del ensamblado.|
 |*assemblyListFile*|La ruta de acceso a un archivo de texto ANSI donde se enumeran los ensamblados que se van a instalar o desinstalar. Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo. La herramienta interpreta las rutas de acceso relativas en relación con la ubicación de *assemblyListFile*. Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo. Puede ver algunos ejemplos del contenido de *assemblyListFile* más adelante en este tema.|
 
-|Opción|Descripción|
+|Opción|DESCRIPCIÓN|
 |------------|-----------------|
 |**/cdl**|Elimina el contenido de la memoria caché de descarga.|
 |**/f**|Especifique esta opción con las opciones **/i** o **/il** para forzar la reinstalación de un ensamblado. Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.|
@@ -81,7 +81,7 @@ Gacutil.exe proporciona opciones compatibles con el recuento de referencias, alg
 
 Use las opciones **/il** o **/ul** para instalar o desinstalar una lista de ensamblados almacenados en un archivo de texto ANSI. El contenido del archivo de texto debe tener el formato correcto. Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo. En el siguiente ejemplo se muestra el contenido de un archivo que contiene ensamblados que se van a instalar.
 
-```
+```text
 myAssembly1.dll
 myAssembly2.dll
 myAssembly3.dll
@@ -89,7 +89,7 @@ myAssembly3.dll
 
 Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo. En el siguiente ejemplo se muestra el contenido de un archivo que contiene ensamblados que se van a desinstalar.
 
-```
+```text
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
@@ -98,11 +98,12 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > [!NOTE]
 > Al intentar instalar a un ensamblado con un nombre de archivo que tenga entre 79 y 91 caracteres (sin incluir la extensión de archivo) se puede producir el error siguiente:
 >
-> ```
+> ```output
 > Failure adding assembly to the cache:   The file name is too long.
 > ```
 >
 > Esto es porque Gacutil.exe crea internamente una ruta de acceso de hasta MAX_PATH caracteres que consta de los siguientes elementos:
+>
 > - Raíz de GAC: 34 caracteres (es decir, `C:\Windows\Microsoft.NET\assembly\`)
 > - Arquitectura: 7 o 9 caracteres (es decir, `GAC_32\`, `GAC_64\` y `GAC_MSIL`)
 > - AssemblyName: hasta 91 caracteres, según el tamaño de los demás elementos (por ejemplo, `System.Xml.Linq\`)
@@ -117,13 +118,13 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 
 El comando siguiente instala el ensamblado `mydll.dll` en la caché global de ensamblados.
 
-```
+```console
 gacutil /i mydll.dll
 ```
 
 El comando siguiente quita el ensamblado `hello` de la caché global de ensamblados, ya que no existen recuentos de referencias para el ensamblado.
 
-```
+```console
 gacutil /u hello
 ```
 
@@ -131,49 +132,49 @@ Observe que el comando anterior puede quitar más de un ensamblado de la memoria
 
 Use el ejemplo siguiente si solo desea quitar un ensamblado. Este comando solo quita el ensamblado `hello` cuyo número de versión, referencia cultural y clave pública coincide con los especificados.
 
-```
+```console
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
 ```
 
 El comando siguiente instala los ensamblados especificados en el archivo `assemblyList.txt` en la caché global de ensamblados.
 
-```
+```console
 gacutil /il assemblyList.txt
 ```
 
 El comando siguiente quita los ensamblados especificados en el archivo `assemblyList.txt` de la caché global de ensamblados.
 
-```
+```console
 gacutil /ul assemblyList.txt
 ```
 
 El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo. La aplicación `myDll.dll` usa el ensamblado `MyApp`. El parámetro `UNINSTALL_KEY MyApp` especifica la clave del Registro que agrega `MyApp` a Agregar o quitar programas en Windows. El parámetro de descripción se especifica como `My Application Description`.
 
-```
+```console
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"
 ```
 
 El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo. El parámetro de esquema, `FILEPATH`, y el parámetro de identificador, `c:\applications\myApp\myApp.exe`, especifican la ruta de acceso a la aplicación que va a instalar `myDll.dll.` El parámetro de descripción se especifica como `MyApp`.
 
-```
+```console
 gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo. El parámetro de esquema, `OPAQUE`, permite personalizar los parámetros de identificador y descripción.
 
-```
+```console
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"
 ```
 
 El comando siguiente quita la referencia a `myDll.dll` procedente de la aplicación `myApp`. Si se trata de la última referencia al ensamblado, también quitará el ensamblado de la caché global de ensamblados.
 
-```
+```console
 gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 El comando siguiente enumera el contenido de la caché global de ensamblados.
 
-```
+```console
 gacutil /l
 ```
 

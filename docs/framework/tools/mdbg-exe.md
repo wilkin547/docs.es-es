@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200004"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894856"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
 El Depurador de la línea de comandos de .NET Framework ayuda a los proveedores de herramientas y a los programadores de aplicaciones a encontrar y a corregir los errores que pueden producirse en programas orientados al Common Language Runtime de .NET Framework. Esta herramienta utiliza el runtime de la API de depuración para proporcionar servicios de depuración. Puede utilizar MDbg.exe para depurar solo código administrado; no se admite la depuración de código no administrado.  
@@ -23,18 +23,18 @@ A petición del Administrador de paquetes, escriba lo siguiente:
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 MDbg [ProgramName[arguments]] [options]  
 ```  
   
 ## <a name="commands"></a>Comandos  
- En el depurador (según lo indicado en el símbolo del sistema **mdbg>**), escriba uno de los comandos descritos en la sección siguiente:  
+ En el depurador (según lo indicado en el símbolo del sistema **mdbg>** ), escriba uno de los comandos descritos en la sección siguiente:  
   
  **command** [*arguments*]  
   
  Los comandos de MDbg.exe distinguen mayúsculas de minúsculas.  
   
-|Comando|Descripción|  
+|Comando|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|Cambia a otro proceso depurado o imprime los procesos disponibles. Los números no son identificadores de proceso reales (PID), sino una lista indizada por 0.|  
 |**a**[**ttach**] [*pid*]|Asocia a un proceso o imprime los procesos disponibles.|  
@@ -52,7 +52,7 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*OtherCommand*]|Ejecuta un comando en todos los subprocesos. *OtherCommand* es un comando válido que funciona en un subproceso; **foreach** *OtherCommand* ejecuta el mismo comando en todos los subprocesos.|  
 |**f**[**unceval**] [`-ad` *Num*] *functionName* [*args ...* ]|Realiza una evaluación de función en el subproceso activo actual donde la función que se va a evaluar es *functionName*. El nombre de la función debe estar completo, incluidos los espacios de nombres.<br /><br /> La opción `-ad` especifica el dominio de aplicación que se utiliza para resolver la función. Si no se especifica la opción `-ad`, el dominio de aplicación para la resolución establece su valor predeterminado en el dominio de aplicación donde esté ubicado el subproceso utilizado para la evaluación de la función.<br /><br /> Si la función que se evalúa no es estática, el primer parámetro pasado debería ser un puntero `this`. En todos los dominios de aplicación se buscan argumentos para la evaluación de función.<br /><br /> Para solicitar un valor de un dominio de aplicación, anteponga la variable con el módulo y el nombre de dominio de aplicación; por ejemplo, `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Este comando evalúa la función `System.Object.ToString` en el dominio de aplicación `0`. Dado que el método `ToString` es una función de instancia, el primer parámetro debe ser un puntero `this`.|  
 |**g**[**o**]|Hace que el programa continúe hasta que encuentre un punto de interrupción, se cierre o se produzca un evento (por ejemplo, una excepción no controlada) que haga que el programa se detenga.|  
-|**h**[**elp**] [*command*]<br /><br /> o bien<br /><br /> **?** [*command*]|Muestra una descripción de todos los comandos o una descripción detallada de un comando específico.|  
+|**h**[**elp**] [*command*]<br /><br /> O bien<br /><br /> **?** [*command*]|Muestra una descripción de todos los comandos o una descripción detallada de un comando específico.|  
 |**ig**[**nore**] [*event*]|Hace que el depurador solo se detenga en excepciones no controladas.|  
 |**int**[**ercept**] *FrameNumber*|Revierte el depurador hasta un número de marco especificado.<br /><br /> Si el depurador encuentra una excepción, utilice este comando para revertir el depurador hasta el número de marco especificado. También puede cambiar el estado del programa mediante el comando **set** y seguir usando el comando **go**.|  
 |**k**[**ill**]|Detiene el proceso activo.|  
@@ -61,13 +61,13 @@ MDbg [ProgramName[arguments]] [options]
 |**log** [*eventType*]|Permite establecer o mostrar los eventos que se van a registrar.|  
 |**mo**[**de**] [*option on/off*]|Establece las distintas opciones de depurador. Utilice `mode` sin opciones para obtener una lista de los modos de depuración y su configuración actual.|  
 |**mon**[**itorInfo**] *monitorReference*|Muestra la información de bloqueo del monitor de objetos.|  
-|**newo**[**bj**] *typeName* [*arguments...*]|Crea un objeto de tipo *typeName*.|  
+|**newo**[**bj**] *typeName* [*arguments...* ]|Crea un objeto de tipo *typeName*.|  
 |**n**[**ext**]|Ejecuta el código y se desplaza a la línea siguiente (incluso cuando la línea siguiente incluye muchas llamadas a funciones).|  
 |**Opendump** *pathToDumpFile*|Abre el archivo de volcado de memoria especificado para la depuración.|  
 |**o**[**ut**]|Se desplaza al final de la función actual.|  
 |**pa**[**th**] [*pathName*]|Busca los archivos de código fuente en la ruta de acceso especificada si la ubicación no está disponible en los archivos binarios.|  
 |**p**[**rint**] [*var*] &#124; [`-d`]|Imprime todas las variables del ámbito (**print**), imprime la variable especificada (**print** *var*) o imprime las variables del depurador (**print**`-d`).|  
-|**printe**[**xception**] [*-r*]|Imprime la última excepción del subproceso actual. Use la opción `–r` (recursiva) para atravesar la propiedad `InnerException` del objeto de excepción a fin de obtener información sobre la cadena completa de excepciones.|  
+|**printe**[**xception**] [ *-r*]|Imprime la última excepción del subproceso actual. Use la opción `–r` (recursiva) para atravesar la propiedad `InnerException` del objeto de excepción a fin de obtener información sobre la cadena completa de excepciones.|  
 |**pro**[**cessenum**]|Muestra los procesos activos.|  
 |**q**[**uit**] [*exitcode*]|Sale del shell de MDbg.exe y, opcionalmente, especifica el código de salida del proceso.|  
 |**re**[**sume**] [`*` &#124; [`~`]*threadNumber*]|Reanuda el subproceso actual o el subproceso especificado por el parámetro *threadNumber*.<br /><br /> Si el parámetro *threadNumber* se especifica como `*` o si el número de subproceso comienza con `~`, el comando se aplica a todos los subprocesos excepto al especificado por *threadNumber*.<br /><br /> La reanudación de un subproceso no suspendido no tiene ningún efecto.|  
@@ -83,14 +83,14 @@ MDbg [ProgramName[arguments]] [options]
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|Imprime la variable en la que un identificador ha realizado el seguimiento. El identificador se puede especificar por nombre o dirección.|  
 |**when**|Muestra las instrucciones `when` activas actualmente.<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]]: elimina la instrucción `when` especificada por el número, o bien todas las instrucciones `when` si se especifica `all`.<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ]: el parámetro *stopReason* puede tener uno de los siguientes valores:<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* puede ser uno de los siguientes valores:<br /><br /> -   *number*: para `ThreadCreated` y `BreakpointHit`, desencadena la acción solo cuando se detiene a través de un número de identificador de subproceso o de punto de interrupción con el mismo valor.<br />-   [`!`]*name*: para `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ExceptionThrown` y `UnhandledExceptionThrown`, desencadena la acción solo cuando el nombre coincide con el nombre de *stopReason*.<br /><br /> *specific_condition* debe estar vacío para otros valores de *stopReason*.|  
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|Muestra información de depuración sobre los marcos de pila.<br /><br /> - La opción `-v` proporciona información detallada sobre los marcos de pila mostrados.<br />- Al especificar un número para `depth`, se limita el número de marcos que se muestran. Use el comando **all** para mostrar todos los marcos. El valor predeterminado es 100.<br />- Si especifica el parámetro *threadID*, puede controlar los subprocesos que se asocian a la pila. El valor predeterminado es únicamente el subproceso actual. Use el comando **all** para obtener todos los subprocesos.|  
-|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|Muestra las funciones que coinciden con `pattern` para un módulo.<br /><br /> Si se especifica *numSymbols*, la salida se limita al número especificado. Si no se especifica `!` (que indica una expresión regular) para *pattern*, se muestran todas las funciones. Si no se proporciona *module*, se muestran todos los módulos cargados. Se pueden usar símbolos (*~#*) para establecer puntos de interrupción mediante el comando **break**.|  
+|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|Muestra las funciones que coinciden con `pattern` para un módulo.<br /><br /> Si se especifica *numSymbols*, la salida se limita al número especificado. Si no se especifica `!` (que indica una expresión regular) para *pattern*, se muestran todas las funciones. Si no se proporciona *module*, se muestran todos los módulos cargados. Se pueden usar símbolos ( *~#* ) para establecer puntos de interrupción mediante el comando **break**.|  
   
 ## <a name="remarks"></a>Comentarios  
  Compile la aplicación que se va a depurar mediante marcas específicas del compilador que hacen que el compilador genere símbolos de depuración. Consulte la documentación del compilador para obtener más información acerca de estas marcas. Puede depurar aplicaciones optimizadas, aunque parte de la información de depuración se perderá. Por ejemplo, muchas variables locales no estarán visibles y las líneas de código fuente serán incorrectas.  
   
  Después de compilar la aplicación, escriba **mdbg** en el símbolo del sistema para iniciar una sesión de depuración, como se muestra en el ejemplo siguiente.  
   
-```  
+```console  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
 MDbg (Managed debugger) v2.0.50727.42 (RTM.050727-4200) started.  
 Copyright (C) Microsoft Corporation. All rights reserved.  

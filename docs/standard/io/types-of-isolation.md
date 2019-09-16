@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8875ed10c4cb144995b602287f904d3c98dcdb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6c5337fedd13cb18b8e5eeadec48a2e4695a543
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948761"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969353"
 ---
 # <a name="types-of-isolation"></a>Tipos de aislamiento
 El acceso al almacenamiento aislado siempre está restringido al usuario que lo creó. Para implementar este tipo de aislamiento, Common Language Runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, que es la identidad asociada con el proceso en el que se ejecuta el código cuando se abre el almacén. Esta identidad es una identidad de usuario autenticado, pero la suplantación puede hacer que la identidad del usuario actual cambie de forma dinámica.  
@@ -34,7 +34,7 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
   
 - La identidad de dominio representa la evidencia de la aplicación, que en el caso de una aplicación web podría ser la dirección URL completa. Para el código hospedado en el shell, la identidad de dominio podría basarse en la ruta de acceso del directorio de la aplicación. Por ejemplo, si se ejecuta el ejecutable desde la ruta de acceso C:\Office\MyApp.exe, la identidad de dominio sería C:\Office\MyApp.exe.  
   
-- Identidad del ensamblado es la evidencia del ensamblado. Esto podría proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md) del ensamblado, el editor de software del ensamblado o su identidad de dirección URL. Si un ensamblado tiene un nombre seguro y una identidad del editor de software, se utiliza la identidad del editor de software. Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL. Para obtener más información sobre los ensamblados y nombres seguros, vea [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- Identidad del ensamblado es la evidencia del ensamblado. Esto podría proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../assembly/strong-named.md) del ensamblado, el editor de software del ensamblado o su identidad de dirección URL. Si un ensamblado tiene un nombre seguro y una identidad del editor de software, se utiliza la identidad del editor de software. Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL. Para obtener más información sobre los ensamblados y nombres seguros, vea [Programar con ensamblados](../assembly/program.md).  
   
 - Los almacenes móviles se mueven con un usuario que tenga un perfil de usuario móvil. Los archivos se escriben en un directorio de red y se descargan en cualquier equipo en que el usuario inicia sesión. Para obtener más información sobre los perfiles de usuarios móviles, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   

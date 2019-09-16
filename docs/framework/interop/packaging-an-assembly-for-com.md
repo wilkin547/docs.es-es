@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988161"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969062"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Empaquetar un ensamblado de .NET Framework para COM
 
@@ -45,7 +45,7 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
 
   Los ensamblados con nombre seguro que están firmados por un editor se pueden instalar en la caché global de ensamblados. Los ensamblados no firmados deben instalarse en el equipo del usuario como ensamblados privados.
 
-  Para más información, vea [Consideraciones de seguridad sobre ensamblados](../app-domains/assembly-security-considerations.md).
+  Para más información, vea [Consideraciones de seguridad sobre ensamblados](../../standard/assembly/security-considerations.md).
 
 - Inclusión de la biblioteca de tipos
 
@@ -96,7 +96,7 @@ La [Herramienta de instalación de servicios de .NET (Regsvcs.exe)](../tools/reg
 - [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)
 - [Habilitar tipos de .NET para la interoperación](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Presentar la interfaz de clase](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Consideraciones de seguridad sobre ensamblados](../app-domains/assembly-security-considerations.md)
+- [Consideraciones de seguridad sobre ensamblados](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrar ensamblados con COM](registering-assemblies-with-com.md)
 - [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -5,12 +5,12 @@ author: briacht
 ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107255"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929482"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Creación de un recomendador de películas mediante factorización matricial con ML.NET
 
@@ -18,6 +18,7 @@ Este tutorial muestra cómo compilar una recomendación de películas con ML.NET
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > * Seleccionar un algoritmo de Machine Learning
 > * Preparar y cargar los datos
 > * Compilar y entrenar un modelo
@@ -47,7 +48,7 @@ Hay varias maneras de enfocar los problemas vinculados a las recomendaciones, co
 
 ### <a name="create-a-project"></a>Crear un proyecto
 
-1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "MovieRecommender" y haga clic en el botón **Aceptar**.
+1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "MovieRecommender" y haga clic en el botón **Aceptar**.
 
 2. Cree un directorio denominado *Datos* en el proyecto para almacenar el conjunto de datos:
 
@@ -467,6 +468,7 @@ Los datos que se han usado en este tutorial se han tomado del [conjunto de datos
 En este tutorial ha aprendido a:
 
 > [!div class="checklist"]
+>
 > * Seleccionar un algoritmo de Machine Learning
 > * Preparar y cargar los datos
 > * Compilar y entrenar un modelo

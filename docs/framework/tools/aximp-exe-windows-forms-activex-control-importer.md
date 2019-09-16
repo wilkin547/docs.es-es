@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915418"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970592"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -30,7 +30,7 @@ El Importador de controles ActiveX convierte definiciones de tipos de una biblio
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
-|`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../standard/assembly/delay-sign.md).|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/keycontainer:` *containerName*|Firma el control resultante con un nombre seguro mediante el par de claves pública y privada que se encuentra en el contenedor de claves especificado mediante *containerName*.|  
 |`/keyfile:` *filename*|Firma el control resultante con un nombre seguro mediante el par de claves pública y privada oficial del editor que se encuentra en *filename*.|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Ejemplo  
  El comando siguiente genera los archivos MediaPlayer.dll y AxMediaPlayer.dll para el control de Media Player `msdxm.ocx`.  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

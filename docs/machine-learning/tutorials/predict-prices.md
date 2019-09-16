@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo compilar un modelo de regresión 
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929447"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Predicción de precios mediante regresión con ML.NET
 
@@ -17,6 +17,7 @@ En este tutorial se muestra cómo compilar un [modelo de regresión](../resource
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > * Preparar y entender los datos
 > * Cargar y transformar los datos
 > * Elegir un algoritmo de aprendizaje
@@ -269,6 +270,7 @@ Ejecute el programa para ver la tarifa de taxi predicha para su caso de prueba.
 En este tutorial ha aprendido a:
 
 > [!div class="checklist"]
+>
 > * Preparar y entender los datos
 > * Crear una canalización de aprendizaje
 > * Cargar y transformar los datos

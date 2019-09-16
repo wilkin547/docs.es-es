@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 231d658cf13d27936b7b362ef8b4ccad78614b73
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624576"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894712"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>Procedimiento para obtener información sobre el protocolo y la interfaz
 En este ejemplo se muestra cómo leer las estadísticas TCP de una interfaz de red.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
 {  
     IPGlobalProperties properties =  

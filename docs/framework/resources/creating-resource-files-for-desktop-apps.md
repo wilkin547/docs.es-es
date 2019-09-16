@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313663"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851580"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creación de archivos de recursos para aplicaciones .NET
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  Las cadenas vacías (es decir, un recurso cuyo valor es <xref:System.String.Empty?displayProperty=nameWithType>) se permiten en los archivos de texto. Por ejemplo:
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  Si está utilizando C# y el archivo de código fuente se denomina Greeting.cs, el comando siguiente crea un archivo ejecutable que incluye el archivo .resources incrustado:
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

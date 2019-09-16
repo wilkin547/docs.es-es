@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666644"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929102"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Clasificación de flores de iris mediante la agrupación en clústeres k-means con ML.NET
 
@@ -18,6 +18,7 @@ En este tutorial se muestra cómo usar ML.NET para crear un [modelo de agrupaci�
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > - Entender el problema
 > - Seleccionar la tarea de aprendizaje automático adecuada
 > - Preparar los datos
@@ -185,6 +186,7 @@ Distances: 11.69127 0.02159119 25.59896
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > - Entender el problema
 > - Seleccionar la tarea de aprendizaje automático adecuada
 > - Preparar los datos

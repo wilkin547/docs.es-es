@@ -3,12 +3,12 @@ title: Actualización segura de la interfaz con miembros de la predeterminada en
 description: En este tutorial avanzado se describe cómo agregar de forma segura nuevas capacidades a las definiciones de la interfaz existente sin que ello interrumpa todas las clases y estructuras que implementan esa interfaz.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252916"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926700"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Actualización de interfaces con miembros de interfaz predeterminados en C# 8.0
 
@@ -17,6 +17,7 @@ A partir de C# 8.0 en .NET Core 3.0, puede definir una implementación cuando de
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
+>
 > * Extender interfaces de forma segura mediante la adición de métodos con implementaciones.
 > * Crear implementaciones con parámetros para proporcionar mayor flexibilidad.
 > * Permitir que los implementadores proporcionen una implementación más específica en forma de una invalidación.

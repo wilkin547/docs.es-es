@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107379"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929360"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -30,6 +30,7 @@ El analizador de API está disponible como un paquete NuGet [Microsoft.DotNet.An
 ### <a name="what-are-deprecated-apis"></a>¿Qué son las API en desuso?
 
 La familia de .NET es un conjunto de productos de gran tamaño que se actualizan constantemente para satisfacer mejor las necesidades del cliente. Es natural dejar de utilizar algunas API y sustituirlas por otras nuevas. Se considera que una API está en desuso cuando existen alternativas mejores. Una manera de notificar que una API está en desuso y que no debe utilizarse consiste en marcarla con el atributo <xref:System.ObsoleteAttribute>. El inconveniente de este enfoque es que hay un único identificador de diagnóstico para todas las API en desuso (en C#, [CS0612](../../csharp/misc/cs0612.md)). Esto significa que:
+
 - Es imposible dedicar documentos a cada caso.
 - Es imposible suprimir determinadas categorías de advertencias. Puede suprimirlas todas o ninguna.
 - Para informar a los usuarios de una nueva degradación, es necesario actualizar un paquete de destino o un ensamblado de referencia.

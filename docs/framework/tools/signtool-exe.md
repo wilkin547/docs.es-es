@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168876"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894792"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
@@ -23,7 +23,7 @@ La herramienta Firmar es una herramienta de la línea de comandos que firma arch
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>Ejemplos  
  El comando siguiente agrega el archivo de catálogo MyCatalogFileName.cat al componente del sistema y la base de datos del controlador. La opción `/u` genera un nombre único si es necesario para impedir que se reemplace un archivo de catálogo existente denominado `MyCatalogFileName.cat`.  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  El comando siguiente firma un archivo automáticamente y para ello usa el mejor certificado.  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  El comando siguiente firma un archivo digitalmente con un certificado almacenado en un archivo PFX protegido por contraseña.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  El comando siguiente firma digitalmente un archivo y le agrega una marca de tiempo. El certificado utilizado para firmar el archivo se almacena en un archivo PFX.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  El comando siguiente firma un archivo con un certificado ubicado en el almacén `My` cuyo nombre de sujeto sea `My Company Certificate`.  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  El comando siguiente firma un control ActiveX y proporciona información que Internet Explorer muestra cuando se le pide al usuario que instale el control.  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  El comando siguiente agrega una marca de tiempo a un archivo que ya se ha firmado digitalmente.  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  El comando siguiente comprueba que se ha firmado un archivo.  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  El comando siguiente comprueba si un archivo del sistema puede estar firmado en un catálogo.  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  El comando siguiente comprueba un archivo del sistema firmado en un catálogo denominado `MyCatalog.cat`.  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

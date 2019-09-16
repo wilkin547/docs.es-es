@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105914"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851603"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -176,13 +176,13 @@ Como alternativa, puede quitar recursos del ensamblado principal y especificar q
 
 En el ejemplo de .NET Framework siguiente se usa el atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para almacenar los recursos de reserva de una aplicación en un ensamblado satélite para el idioma francés (`fr`). El ejemplo tiene dos archivos de recursos basados en texto que definen un recurso de cadena única denominado `Greeting`. El primero, resources.fr.txt, contiene un recurso de idioma francés.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 El segundo, resources.ru.txt, contiene un recurso de idioma ruso.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ Dado que no hay ningún recurso insertado en el ensamblado principal, no es nece
 
 Cuando se ejecute el ejemplo desde un sistema cuyo idioma sea distinto del ruso, se mostrará la salida siguiente:
 
-```
+```output
 Bon jour!
 ```
 

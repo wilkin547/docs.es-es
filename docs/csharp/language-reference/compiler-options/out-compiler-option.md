@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602594"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970377"
 ---
 # <a name="-out-c-compiler-options"></a>-out (Opciones del compilador de C#)
 La opción **-out** especifica el nombre del archivo de salida.  
@@ -45,7 +45,7 @@ La opción **-out** especifica el nombre del archivo de salida.
   
  Todos los módulos que se produzcan como parte de una compilación se convierten en archivos asociados a cualquier ensamblado que también se haya producido en la compilación. Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) para ver el manifiesto del ensamblado y los archivos asociados.  
   
- Es obligatorio usar la opción -out del compilador para que un archivo exe sea el destino de un ensamblado de confianza. Para obtener más información, vea [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md).  
+ Es obligatorio usar la opción -out del compilador para que un archivo exe sea el destino de un ensamblado de confianza. Para obtener más información, vea [Ensamblados de confianza](../../../standard/assembly/friend.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](./index.md)
-- [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md)
+- [Ensamblados de confianza](../../../standard/assembly/friend.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

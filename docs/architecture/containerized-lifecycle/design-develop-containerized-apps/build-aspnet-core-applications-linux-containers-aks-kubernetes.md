@@ -2,12 +2,12 @@
 title: Compilación de aplicaciones ASP.NET Core 2.2 implementadas como contenedores de Linux en clústeres de AKS/Kubernetes
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672582"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848757"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilación de aplicaciones ASP.NET Core 2.2 implementadas como contenedores de Linux en un orquestador de AKS/Kubernetes
 
@@ -43,7 +43,7 @@ Compruebe que ha seleccionado ASP.NET Core 2.2 como marco. .NET Core 2.2 está
 
 **Figura 4-37**. Selección de ASP.NET Core 2.2 y del tipo de proyecto API web
 
-Si tiene una versión anterior de .NET Core, puede descargar e instalar la versión 2.2 de <https://www.microsoft.com/net/download/core#/sdk>.
+Si tiene una versión anterior de .NET Core, puede descargar e instalar la versión 2.2 de <https://dotnet.microsoft.com/download>.
 
 Puede agregar compatibilidad con Docker al crear el proyecto o más adelante, por lo que se puede aplicar Docker al proyecto en cualquier momento. Para agregar compatibilidad con Docker después de crear el proyecto, haga clic con el botón derecho en el nodo del proyecto en el Explorador de soluciones y seleccione **Agregar** > **Compatibilidad con Docker** en el menú contextual.
 

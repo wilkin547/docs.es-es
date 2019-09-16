@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el control de versiones de las bib
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204748"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969018"
 ---
 # <a name="versioning"></a>Control de versiones
 
@@ -53,7 +53,7 @@ La versión del ensamblado es lo que CLR usa en tiempo de ejecución para selecc
 
 CLR de Windows .NET Framework exige una coincidencia exacta para cargar un ensamblado con nombre seguro. Por ejemplo, `Libary1, Version=1.0.0.0` se compiló con una referencia a `Newtonsoft.Json, Version=11.0.0.0`. .NET Framework solo cargará esa versión exacta `11.0.0.0`. Para cargar una versión diferente en tiempo de ejecución, se debe agregar una redirección de enlace al archivo de configuración de la aplicación .NET.
 
-La asignación de nombres seguros junto con la versión de ensamblado permite la [carga de la versión de ensamblado estricta](../../framework/app-domains/assembly-versioning.md). Aunque la asignación de nombres seguros a una biblioteca una serie de ventajas, suele dar lugar a excepciones en tiempo de ejecución que un ensamblado no se puede encontrar y [requiere que las redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) en `app.config`/`web.config` se corrijan. La carga de ensamblados de .NET Core se ha moderada y CLR de .NET Core cargará automáticamente los ensamblados en tiempo de ejecución con una versión posterior.
+La asignación de nombres seguros junto con la versión de ensamblado permite la [carga de la versión de ensamblado estricta](../assembly/versioning.md). Aunque la asignación de nombres seguros a una biblioteca una serie de ventajas, suele dar lugar a excepciones en tiempo de ejecución que un ensamblado no se puede encontrar y [requiere que las redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) en `app.config`/`web.config` se corrijan. La carga de ensamblados de .NET Core se ha moderada y CLR de .NET Core cargará automáticamente los ensamblados en tiempo de ejecución con una versión posterior.
 
 **✔️ ES RECOMENDABLE** que solo incluya una versión principal en AssemblyVersion.
 

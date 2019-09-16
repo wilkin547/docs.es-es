@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957993"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894806"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) (Crear archivos de recursos)).  
@@ -43,13 +43,13 @@ El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.
   
  Para obtener ayuda sobre Resgen.exe, use el comando siguiente sin especificar ninguna opción; podrá ver las opciones y la sintaxis de los comandos de Resgen.exe:  
   
-```  
+```console  
 resgen  
 ```  
   
  También puede usar el modificador `/?`.  
   
-```  
+```console  
 resgen /?  
 ```  
   
@@ -61,11 +61,11 @@ resgen /?
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
-```  
+```console  
 resgen filename.extension [outputDirectory]  
 ```  
   
@@ -134,7 +134,7 @@ resgen filename.extension [outputDirectory]
   
  La sintaxis para compilar un archivo de recursos es la siguiente:  
   
-```  
+```console  
 resgen inputFilename [outputFilename]   
 ```  
   
@@ -150,19 +150,19 @@ resgen inputFilename [outputFilename]
   
  El comando siguiente lee los pares nombre-valor de Resources.txt y escribe un archivo .resources binario denominado Resources.resources. Dado que el nombre del archivo de salida no se especifica de forma explícita, de forma predeterminada recibe el mismo nombre que el archivo de entrada.  
   
-```  
+```console  
 resgen Resources.txt   
 ```  
   
  El comando siguiente lee los pares nombre-valor de Resources.restext y escribe un archivo de recursos binario denominado StringResources.resources.  
   
-```  
+```console  
 resgen Resources.restext StringResources.resources  
 ```  
   
  El comando siguiente lee un archivo de entrada basado en XML denominado Resources.resx y escribe un archivo .resources binario denominado Resources.resources.  
   
-```  
+```console  
 resgen Resources.resx Resources.resources  
 ```  
   
@@ -184,19 +184,19 @@ resgen Resources.resx Resources.resources
   
  El comando siguiente lee un archivo de recursos binario denominado Resources.resources y escribe un archivo de entrada basado en XML denominado Resources.resx.  
   
-```  
+```console  
 resgen Resources.resources Resources.resx  
 ```  
   
  El comando siguiente lee un archivo de recursos basado en texto denominado StringResources.txt y escribe un archivo de recursos basado en XML denominado LibraryResources.resx. Además de contener recursos de cadena, el archivo .resx también se puede usar para almacenar recursos que no son de cadena.  
   
-```  
+```console  
 resgen StringResources.txt LibraryResources.resx  
 ```  
   
  Los dos comandos siguientes leen un archivo de recursos basado en XML denominado Resources.resx y escriben archivos de texto denominados Resources.txt y Resources.restext. Tenga en cuenta que si el archivo .resx contiene objetos incrustados, no se convertirán de forma precisa en los archivos de texto.  
   
-```  
+```console  
 resgen Resources.resx Resources.txt  
 resgen Resources.resx Resources.restext  
 ```  
@@ -205,13 +205,13 @@ resgen Resources.resx Resources.restext
 ### <a name="compiling-or-converting-multiple-files"></a>Compilar o convertir varios archivos  
  Puede usar el modificador `/compile` para convertir el formato de una lista de archivos de recursos en otro formato en una única operación. La sintaxis es la siguiente:  
   
-```  
+```console  
 resgen /compile filename.extension [filename.extension...]  
 ```  
   
  El comando siguiente compila tres archivos, StringResources.txt, TableResources.resw e ImageResources.resw, en archivos .resources independientes denominados StringResources.resources, TableResources.resources e ImageResources.resources.  
   
-```  
+```console  
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
@@ -224,7 +224,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
  La sintaxis para generar archivos .resw a partir de un ensamblado es la siguiente:  
   
-```  
+```console  
 resgen filename.extension  [outputDirectory]  
 ```  
   
@@ -238,7 +238,7 @@ resgen filename.extension  [outputDirectory]
   
  El siguiente comando crea un archivo .resw en el directorio Win8Resources para cada archivo .resources incrustado en MyApp.exe:  
   
-```  
+```console  
 resgen MyApp.exe Win8Resources  
 ```  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
  Por ejemplo, el siguiente archivo denominado UIResources.rext incluye un recurso de cadena denominado `AppTitle` que puede tomar uno de tres valores posibles dependiendo de si se han definido los símbolos denominados `PRODUCTION`, `CONSULT` o `RETAIL`.  
   
-```  
+```text
 #ifdef PRODUCTION  
 AppTitle=My Software Company Project Manager   
 #endif  
@@ -265,7 +265,7 @@ FileMenuName=File
   
  A continuación, el archivo se puede compilar en un archivo .resources binario con el comando siguiente:  
   
-```  
+```console  
 resgen /define:CONSULT UIResources.restext  
 ```  
   
@@ -277,7 +277,7 @@ resgen /define:CONSULT UIResources.restext
   
  La sintaxis para crear un recurso fuertemente tipado es la siguiente:  
   
-```  
+```console  
 resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filename]]] [/publicClass]  
 ```  
   
@@ -325,7 +325,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Por ejemplo, el comando siguiente compila un archivo de recursos denominado StringResources.txt en StringResources.resources y genera una clase denominada `StringResources` en un archivo de código fuente de Visual Basic denominado StringResources.vb que se puede usar para tener acceso al Administrador de recursos.  
   
-```  
+```console  
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   

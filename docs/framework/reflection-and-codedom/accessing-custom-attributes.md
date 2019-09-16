@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6955c24c12936ef37bedea2a1dd290bac45a5a2e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321736"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894915"
 ---
 # <a name="accessing-custom-attributes"></a>Acceso a atributos personalizados
 Después de asociar atributos a elementos de un programa, puede usar la reflexión para consultar su existencia y sus valores. En .NET Framework versión 1.0 y 1.1, los atributos personalizados se examinan en el contexto de ejecución. .NET Framework versión 2.0 proporciona un nuevo contexto de carga, el contexto de solo reflexión, que puede usarse para examinar el código que no se puede cargar para su ejecución.  
@@ -34,7 +34,7 @@ Después de asociar atributos a elementos de un programa, puede usar la reflexi�
   
  El siguiente ejemplo de C# es un modelo de diseño típico de atributos personalizados en el que se muestra el modelo de reflexión de atributos personalizados en tiempo de ejecución.  
   
-```  
+```csharp
 System.DLL  
 public class DescriptionAttribute : Attribute  
 {  

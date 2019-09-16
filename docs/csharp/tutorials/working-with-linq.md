@@ -3,12 +3,12 @@ title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926613"
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -339,6 +339,7 @@ En la práctica, algunos algoritmos se ejecutan bien con la evaluación diligent
 ## <a name="conclusion"></a>Conclusión
 
 En este proyecto ha tratado lo siguiente:
+
 - Uso de consultas LINQ para agregar datos a una secuencia significativa
 - Escritura de métodos de extensión para agregar nuestra propia funcionalidad personalizada a las consultas LINQ
 - Localización de áreas en nuestro código donde nuestras consultas LINQ pueden tener problemas de rendimiento como la degradación de la velocidad
@@ -347,6 +348,7 @@ En este proyecto ha tratado lo siguiente:
 Aparte de LINQ, ha aprendido algo sobre una técnica que los magos utilizan para hacer trucos de cartas. Los magos usan el orden aleatorio Faro porque les permite controlar dónde está cada carta en la baraja. Ahora que lo conoce, no se lo estropee a los demás.
 
 Para más información sobre LINQ, vea:
+
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
   - [Introducción a LINQ](../programming-guide/concepts/linq/index.md)
   - [Operaciones básicas de consulta LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

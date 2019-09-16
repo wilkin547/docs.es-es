@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041413"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851244"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visor de registro de enlaces de ensamblados)
 
@@ -29,7 +29,7 @@ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la
 
 En el símbolo del sistema, escriba lo siguiente:
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ El visor muestra una entrada para cada enlace de ensamblado con errores. Para ca
 
 En el siguiente ejemplo de entrada del registro se muestra información detallada sobre un enlace de ensamblado con errores.
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ De forma predeterminada, Fuslogvw.exe registra las solicitudes de enlace de ensa
 
 El registro siguiente muestra un error producido por una dependencia que no existía cuando se creó la imagen nativa para la aplicación. Si las dependencias en tiempo de ejecución difieren de las dependencias en el momento de la ejecución de Ngen.exe, no se permitirá el enlace a una imagen nativa.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 El registro siguiente muestra un error de enlace a una imagen nativa producido porque la configuración de seguridad del equipo cuando se ejecutó la aplicación era distinta de la configuración de seguridad en el momento en que se creó la imagen nativa.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.

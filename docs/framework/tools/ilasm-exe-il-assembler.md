@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933665"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894690"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
@@ -110,7 +110,7 @@ Para obtener más información sobre la gramática de IL, vea el archivo asmpars
 
 A partir de .NET Framework 4.5, se puede asociar un atributo personalizado a una implementación de interfaz mediante código similar al siguiente:
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ A partir de .NET Framework 4.5, se puede asociar un atributo personalizado a un
 
 A partir de .NET Framework 4.5, se puede especificar un objeto binario grande (BLOB) de serialización arbitraria mediante su representación binaria sin formato, tal como se muestra en el código siguiente:
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 El siguiente ejemplo de código IL se corresponde con el ejemplo de código de C# anterior. Puede compilar este código en un ensamblado con la herramienta Ensamblador de IL. Tanto el ejemplo de código IL como el de C# muestran "Hello World!" en la consola.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

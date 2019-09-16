@@ -3,12 +3,12 @@ title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926635"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
@@ -17,6 +17,7 @@ Los rangos e índices proporcionan una sintaxis concisa para acceder a elementos
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
+>
 > - Usar la sintaxis para intervalos de una secuencia.
 > - Comprender las decisiones de diseño para iniciar y finalizar cada secuencia.
 > - Descubrir escenarios para los tipos <xref:System.Index> y <xref:System.Range>.
@@ -24,6 +25,7 @@ En este tutorial aprenderá lo siguiente:
 ## <a name="language-support-for-indices-and-ranges"></a>Compatibilidad con idiomas para los índices y los rangos
 
 Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operadores.
+
 - <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
 - El operador `^`, que especifica que un índice es relativo al final de una secuencia.
 - <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.

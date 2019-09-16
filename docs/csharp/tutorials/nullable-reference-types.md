@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e046ca88eecfe97cfc8553a2c661be930cc73465
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105842"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926671"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -17,6 +17,7 @@ C#8 presenta **tipos de referencia que aceptan valores NULL**, qué complementan
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
+>
 > - Incorporar los tipos de referencia que aceptan valores NULL y que no aceptan valores NULL en los diseños
 > - Habilitar las comprobaciones de tipos de referencia que aceptan valores NULL en todo el código
 > - Escribir código en la parte en la que el compilador aplica esas decisiones de diseño

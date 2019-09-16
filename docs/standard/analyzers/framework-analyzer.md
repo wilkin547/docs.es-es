@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769468"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929307"
 ---
 # <a name="the-net-framework-analyzer"></a>Analizador de .NET Framework
 
@@ -23,6 +23,7 @@ El analizador se ejecuta de forma interactiva en Visual Studio mientras escribe 
 Los analizadores de seguridad de .NET deben instalarse como un paquete NuGet en todos los proyectos en los que quiera ejecutarlos. Solo los tiene que agregar un desarrollador al proyecto. El paquete de analizadores es una dependencia del proyecto y se ejecutará en el equipo de todos los desarrolladores cuando tengan la solución actualizada.
 
 El analizador de .NET Framework se entrega en el paquete NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Este paquete solo proporciona los analizadores específicos de .NET Framework, que incluye los analizadores de seguridad. En la mayoría de los casos, le interesará el paquete NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). El paquete de agregados FxCopAnalyzers contiene todos los analizadores de .NET Framework incluidos en el paquete Framework.Analyzers, así como los siguientes analizadores:
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): proporciona instrucciones generales e instrucciones para las API de .NET Standard.
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): proporciona analizadores específicos para las API de .NET Core.
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): proporciona instrucciones para el texto incluido como código, incluidos los comentarios.

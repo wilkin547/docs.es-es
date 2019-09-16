@@ -4,12 +4,12 @@ description: Cómo usar el Generador de modelos de ML.NET para entrenar un model
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104832"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929476"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -29,6 +29,7 @@ Para usar el Generador de modelos no se necesita experiencia previa con el apren
 Se pueden incorporar muchos escenarios diferentes al Generador de modelos a fin de generar un modelo de Machine Learning para la aplicación.
 
 Un escenario es una descripción del tipo de predicción que se quiere realizar usando los datos. Por ejemplo:
+
 - predecir el volumen futuro de ventas de productos en función de los datos de ventas históricos
 - clasificar opiniones como positivas o negativas en función de las revisiones de los clientes
 - detectar si una transacción bancaria es fraudulenta
@@ -41,6 +42,7 @@ En el generador de modelos, debe seleccionar un tipo de modelo de Machine Learni
 En los escenarios que predicen un número, el tipo de modelo de Machine Learning se denomina `regression`.
 
 En los escenarios que predicen una categoría, el tipo de modelo es `classification`. Hay dos tipos de clasificaciones:
+
 - la que cuenta con solo dos categorías: `binary classification`.
 - la que cuenta con tres categorías o más: `multiclass classification`.
 
@@ -89,10 +91,12 @@ Una vez que ha elegido el tipo de modelo, el generador de modelos pide que se pr
 ### <a name="choose-the-output-to-predict-label"></a>Selección del resultado que se va a predecir (etiqueta)
 
 Un conjunto de datos es una tabla de filas de ejemplos de entrenamiento y columnas de atributos. Cada fila tiene:
+
 - una **etiqueta** (el atributo que se quiere predecir)
 - **características** (atributos que se usan como entradas para predecir la etiqueta).
 
 En el escenario de predicción del precio de las viviendas, las características podrían ser:
+
 - los metros cuadrados de la vivienda
 - el número de dormitorios y baños
 - el código postal

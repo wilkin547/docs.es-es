@@ -4,16 +4,16 @@ description: Procedimientos recomendados para nombres de seguros de las bibliote
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640794"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968967"
 ---
 # <a name="strong-naming"></a>Nombres seguros
 
-Nombres seguros se refiere a firmar un ensamblado con una clave, generando un [ensamblado con nombre seguro](../../framework/app-domains/strong-named-assemblies.md). Una vez que un ensamblado tiene un nombre seguro, crea una identidad única en función del nombre y del número de versión del ensamblado y puede ayudar a evitar conflictos de ensamblado.
+Nombres seguros se refiere a firmar un ensamblado con una clave, generando un [ensamblado con nombre seguro](../assembly/strong-named.md). Una vez que un ensamblado tiene un nombre seguro, crea una identidad única en función del nombre y del número de versión del ensamblado y puede ayudar a evitar conflictos de ensamblado.
 
 El inconveniente de los nombres seguros es que .NET Framework en Windows habilita la carga estricta de ensamblados una vez que un ensamblado tiene un nombre seguro. Una referencia de ensamblado con nombre seguro debe coincidir exactamente con la versión a la que un ensamblado hace referencia, obligando a los desarrolladores a [configurar redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) cuando se usa el ensamblado:
 

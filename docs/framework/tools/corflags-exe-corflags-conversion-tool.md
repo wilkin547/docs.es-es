@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378660"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851291"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Herramienta de conversión de CorFlags)
 La herramienta de conversión CorFlags permite configurar la sección de CorFlags del encabezado de una imagen ejecutable portátil.  
@@ -24,17 +24,17 @@ La herramienta de conversión CorFlags permite configurar la sección de CorFlag
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
 ## <a name="parameters"></a>Parámetros  
   
-|Parámetro requerido|Descripción|  
+|Parámetro requerido|DESCRIPCIÓN|  
 |------------------------|-----------------|  
 |`assembly`|El nombre del ensamblado para el que se va a configurar CorFlags.|  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Establece la marca 32BITREQUIRED.|  
 |**/32BIT[REQ]-**|Borra la marca 32BITREQUIRED.|  

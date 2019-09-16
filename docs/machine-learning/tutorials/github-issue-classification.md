@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación multic
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929220"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
@@ -17,6 +17,7 @@ Este tutorial de ejemplo ilustra el uso de ML.NET para crear un clasificador de 
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > * Preparar los datos
 > * Transformar los datos
 > * Entrenar el modelo
@@ -372,6 +373,7 @@ Los resultados deberían ser similares a los indicados a continuación. A medida
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > * Preparar los datos
 > * Transformar los datos
 > * Entrenar el modelo

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5e80e044fe01172c587ef029186035a64cdf0b42
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492444"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971220"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Herramienta de registro de ensamblados)
 
@@ -26,25 +26,25 @@ En el símbolo del sistema, escriba lo siguiente:
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```console
 regasm assemblyFile [options]
 ```
 
 ## <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*assemblyFile*|El ensamblado que se va a registrar con COM.|
 
-|Opción|Descripción|
+|Opción|DESCRIPCIÓN|
 |------------|-----------------|
-|**/codebase**|Crea una entrada de código base en el Registro. La entrada de código base especifica la ruta de acceso de archivo de un ensamblado que no está instalado en la caché global de ensamblados. No debe especificar esta opción si posteriormente va a instalar el ensamblado que va a registrar en la caché global de ensamblados. El argumento *assemblyFile* especificado con la opción **/codebase** debe ser un [ensamblado con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).|
+|**/codebase**|Crea una entrada de código base en el Registro. La entrada de código base especifica la ruta de acceso de archivo de un ensamblado que no está instalado en la caché global de ensamblados. No debe especificar esta opción si posteriormente va a instalar el ensamblado que va a registrar en la caché global de ensamblados. El argumento *assemblyFile* especificado con la opción **/codebase** debe ser un [ensamblado con nombre seguro](../../standard/assembly/strong-named.md).|
 |**/registered**|Especifica que esta herramienta solo hará referencia a las bibliotecas de tipos que ya se hayan registrado.|
 |**/asmpath:directory**|Especifica un directorio que contiene las referencias de ensamblado. Se debe usar con la opción **/regfile**.|
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|
-|**/regfile** [**:** *regFile*]|Genera el archivo .reg especificado para el ensamblado, que contiene las entradas del Registro necesarias. El hecho de especificar esta opción no cambia el Registro. No se puede usar esta opción con las opciones **/u** o **/tlb**.|
+|**/regfile** [ **:** *regFile*]|Genera el archivo .reg especificado para el ensamblado, que contiene las entradas del Registro necesarias. El hecho de especificar esta opción no cambia el Registro. No se puede usar esta opción con las opciones **/u** o **/tlb**.|
 |**/silent** o **/s**|Suprime la presentación de mensajes de aprobación.|
-|**/tlb** [**:** *typeLibFile*]|Genera una biblioteca de tipos a partir del ensamblado especificado que contiene definiciones de los tipos accesibles definidos en el ensamblado.|
+|**/tlb** [ **:** *typeLibFile*]|Genera una biblioteca de tipos a partir del ensamblado especificado que contiene definiciones de los tipos accesibles definidos en el ensamblado.|
 |**/unregister** o **/u**|Anula el registro de las clases que se pueden crear que se encuentran en *assemblyFile*. Cuando se omite esta opción, Regasm.exe registra en el ensamblado las clases que se pueden crear.|
 |**/verbose**|Especifica el modo detallado; cuando se especifica con la opción **/tlb**, muestra una lista de los ensamblados a los que se hace referencia para los que es necesario generar una biblioteca de tipos.|
 |**/?** o **/help**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
@@ -68,19 +68,19 @@ Después de registrar un ensamblado mediante Regasm.exe, puede instalarlo en la 
 
 El comando siguiente registra todas las clases públicas contenidas en `myTest.dll`.
 
-```
+```console
 regasm myTest.dll
 ```
 
 El comando siguiente genera el archivo `myTest.reg`, que contiene todas las entradas del Registro necesarias. Este comando no actualiza el Registro.
 
-```
+```console
 regasm myTest.dll /regfile:myTest.reg
 ```
 
 El comando siguiente registra todas las clases públicas contenidas en `myTest.dll`, y genera y registra la biblioteca de tipos `myTest.tlb`, que contiene definiciones de todos los tipos públicos definidos en `myTest.dll`.
 
-```
+```console
 regasm myTest.dll /tlb:myTest.tlb
 ```
 

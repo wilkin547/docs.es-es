@@ -3,12 +3,12 @@ title: Interpretación de expresiones
 description: Obtenga información sobre cómo escribir código para examinar la estructura de un árbol de expresión.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202974"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925685"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
@@ -357,6 +357,7 @@ Este código representa una posible implementación para la función *factorial*
 Podría si ya fuera un delegado, pero no puedo llamarla en su forma de árbol de expresión. En la sección de [Crear árboles de expresión](expression-trees-building.md), obtendrá las técnicas para superar estas limitaciones.
 
 En esta expresión, encontrará nodos de todos estos tipos:
+
 1. Equal (expresión binaria)
 2. Multiply (expresión binaria)
 3. Conditional (la expresión ? :)

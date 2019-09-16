@@ -3,12 +3,12 @@ title: Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 description: El Visualizador de sintaxis proporciona una herramienta visual para explorar los modelos que genera el SDK de .NET Compiler Platform para el código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307206"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972014"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 
@@ -20,7 +20,7 @@ Para familiarizarse con los conceptos usados en el SDK de .NET Compiler Platform
 
 ## <a name="syntax-visualizer"></a>Visualizador de sintaxis
 
-El **Visualizador de sintaxis** permite inspeccionar el árbol de sintaxis para el archivo de código de C# o VB en la ventana del editor activo actual en el IDE de Visual Studio. El visualizador se puede iniciar haciendo clic en **Vista** > **Other Windows (Otras ventanas)** > **Syntax Visualizer (Visualizador de sintaxis)**.  También puede usar la barra de herramientas **Inicio rápido** en la esquina superior derecha. Escriba "syntax" y se mostrará el comando para abrir el **Visualizador de sintaxis**.
+El **Visualizador de sintaxis** permite inspeccionar el árbol de sintaxis para el archivo de código de C# o VB en la ventana del editor activo actual en el IDE de Visual Studio. El visualizador se puede iniciar haciendo clic en **Vista** > **Other Windows (Otras ventanas)**  > **Syntax Visualizer (Visualizador de sintaxis)** .  También puede usar la barra de herramientas **Inicio rápido** en la esquina superior derecha. Escriba "syntax" y se mostrará el comando para abrir el **Visualizador de sintaxis**.
 
 Este comando abre el Visualizador de sintaxis como una ventana de herramientas flotante. Si no tiene abierta ninguna ventana de editor de código, la presentación está en blanco, tal como se muestra en esta imagen. 
 
@@ -29,6 +29,8 @@ Este comando abre el Visualizador de sintaxis como una ventana de herramientas f
 Acople esta ventana de herramienta en una ubicación cómoda dentro de Visual Studio, como por ejemplo, en el lado izquierdo. El visualizador muestra información sobre el archivo de código actual.
 
 Cree un nuevo proyecto con los comandos **Archivo** > **Nuevo proyecto**. Puede crear un proyecto de VB o de C#. Cuando Visual Studio abre el principal archivo de código para este proyecto, el visualizador muestra el árbol de sintaxis correspondiente. Puede abrir cualquier archivo de C# o VB existente en esta instancia de Visual Studio y el visualizador mostrará el árbol de sintaxis de ese archivo. Si tiene varios archivos de código abiertos dentro de Visual Studio, el visualizador muestra el árbol de sintaxis para el archivo de código activo (el archivo de código que tiene el foco de teclado).
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizar un árbol de sintaxis de C#](media/syntax-visualizer/visualize-csharp.png)
@@ -44,6 +46,7 @@ Los árboles de sintaxis incluyen tres tipos de elementos: *nodos*, *tokens* y *
 Cada elemento del árbol también muestra su propio **intervalo**. El **intervalo** está comprendido por los índices (la posición inicial y la final) de ese nodo en el archivo de texto.  En el anterior ejemplo de C#, el token “UsingKeyword [0..5)” seleccionado tiene un **intervalo** de cinco caracteres de ancho [0..5). La notación “[.)” significa que el índice inicial forma parte del intervalo, pero el índice final no.
 
 Se puede navegar por el árbol de dos maneras:
+
 * Expandir el árbol o hacer clic en él. El visualizador selecciona automáticamente el texto correspondiente al intervalo de este elemento en el editor de código.
 * Hacer clic en el texto o seleccionarlo en el editor de código. En el ejemplo de VB anterior, si selecciona la línea que contiene "Module Module1" en el editor de código, el visualizador navega automáticamente al nodo ModuleStatement correspondiente en el árbol. 
 

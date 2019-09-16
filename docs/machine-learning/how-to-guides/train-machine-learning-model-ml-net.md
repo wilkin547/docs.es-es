@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169047"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929345"
 ---
 # <a name="train-and-evaluate-a-model"></a>Entrenamiento y evaluación de un modelo
 
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 En el ejemplo de código anterior:  
+
 1. El conjunto de datos de prueba está procesado previamente mediante transformaciones de preparación de datos definidas con anterioridad. 
 2. El modelo de aprendizaje automático entrenado se utiliza para realizar predicciones sobre los datos de prueba.
 3. En el método `Evaluate`, los valores de la columna `CurrentPrice` del conjunto de datos de prueba se comparan con la columna `Score` de las predicciones recientemente generadas para calcular las métricas del modelo de regresión, una de las cuales, R cuadrado, se almacena en la variable `rSquared`.

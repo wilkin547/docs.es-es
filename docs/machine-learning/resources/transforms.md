@@ -4,16 +4,17 @@ description: Explore los componentes de ingeniería de características que se a
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929257"
 ---
 # <a name="data-transformations"></a>Transformaciones de datos
 
 Las transformaciones de datos se usan para:
+
 - Preparar datos para el entrenamiento de modelos.
 - Aplicar un modelo importado en formato de TensorFlow o de ONNX.
 - Realizar el procesamiento posterior de los datos una vez pasados a través de un modelo.

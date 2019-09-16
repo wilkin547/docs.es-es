@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374513"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929089"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -21,6 +21,7 @@ Entrenar un modelo de detección de objetos desde cero requiere establecer millo
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > - Entender el problema
 > - Conocer qué es ONNX y cómo funciona con ML.NET
 > - Entender el modelo
@@ -710,6 +711,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > - Entender el problema
 > - Conocer qué es ONNX y cómo funciona con ML.NET
 > - Entender el modelo

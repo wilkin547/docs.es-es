@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 374a97eea7f6432833ebbcf40736ea6c7a6d4039
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133744"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970949"
 ---
 # <a name="reflection-in-net"></a>Reflexión en .NET
-Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../app-domains/assemblies-in-the-common-language-runtime.md) cargados y los tipos definidos dentro de ellos, como [clases](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) y [tipos de valor](../../csharp/language-reference/keywords/value-types.md). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.
+Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../../standard/assembly/index.md) cargados y los tipos definidos dentro de ellos, como [clases](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) y [tipos de valor](../../csharp/language-reference/keywords/value-types.md). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.
   
  El cargador de [Common Language Runtime](../../standard/clr.md) administra [dominios de aplicación](../../../docs/framework/app-domains/application-domains.md), que constituyen los límites definidos alrededor de los objetos que tienen el mismo ámbito de aplicación. Esta administración incluye la carga de cada ensamblado en el dominio de aplicación apropiado y el control del diseño de memoria de la jerarquía de tipos de cada ensamblado.  
   
- Los [ensamblados](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) contienen módulos, los módulos contienen tipos y los tipos contienen miembros. La reflexión proporciona objetos que encapsulan ensamblados, módulos y tipos. Puede usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente. Después, puede invocar los métodos del tipo o acceder a sus campos y propiedades. Normalmente, la reflexión se usa para lo siguiente:  
+ Los [ensamblados](../../../docs/framework/app-domains/index.md) contienen módulos, los módulos contienen tipos y los tipos contienen miembros. La reflexión proporciona objetos que encapsulan ensamblados, módulos y tipos. Puede usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente. Después, puede invocar los métodos del tipo o acceder a sus campos y propiedades. Normalmente, la reflexión se usa para lo siguiente:  
   
 - Use <xref:System.Reflection.Assembly> para definir y cargar ensamblados, cargar módulos enumerados en el manifiesto del ensamblado y buscar un tipo en este ensamblado y crear una instancia a partir de él.  
   

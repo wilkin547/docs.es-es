@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331330"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894201"
 ---
 # <a name="how-to-implement-callback-functions"></a>Procedimiento para implementar funciones de devolución de llamada
 El procedimiento y el ejemplo siguiente muestran cómo una aplicación administrada, mediante la invocación de la plataforma, puede imprimir el valor del identificador de cada ventana en el equipo local. En concreto, el uso del procedimiento y el ejemplo usan la función **EnumWindows** para recorrer la lista de ventanas y una función de devolución de llamada administrada (denominada CallBack) para imprimir el valor del identificador de ventana.  
@@ -24,9 +24,9 @@ El procedimiento y el ejemplo siguiente muestran cómo una aplicación administr
   
 1. Observe la firma de la función **EnumWindows** antes de continuar con la implementación. **EnumWindows** tiene la siguiente firma:  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
      Una pista para saber que esta función requiere una devolución de llamada es la presencia del argumento **lpEnumFunc**. Es habitual ver el prefijo **lp** (puntero largo) combinado con el sufijo **Func** en el nombre de los argumentos con un puntero a una función de devolución de llamada. Para consultar documentación acerca de las funciones de Win32, consulte Microsoft Platform SDK.  
   

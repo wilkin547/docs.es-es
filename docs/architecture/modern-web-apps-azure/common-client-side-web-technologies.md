@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tec
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373903"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926500"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -141,6 +141,7 @@ Al considerar qué marco JavaScript funcionará mejor para admitir la SPA, tenga
 Los marcos de JavaScript siguen evolucionando a una velocidad de vértigo. Use las consideraciones enumeradas anteriormente para ayudar a mitigar el riesgo de elegir un marco del que más adelante se arrepienta de depender. Si es especialmente reacio a los riesgos, considere la posibilidad de un marco de trabajo que ofrezca soporte técnico comercial o esté desarrollado por una gran empresa.
 
 > ### <a name="references--client-web-technologies"></a>Referencias: tecnologías web cliente
+>
 > - **HTML y CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass vs. LESS** (Diferencias entre Sass y LESS)  

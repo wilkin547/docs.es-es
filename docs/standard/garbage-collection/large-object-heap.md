@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753953"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929137"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -132,7 +132,7 @@ Antes de recopilar datos de rendimiento para un área específica, conviene habe
 
 2. Haber agotado otras áreas que conozca sin haber hallado una explicación al problema de rendimiento que ha visto.
 
-Vea el blog [Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) (Conocer el problema antes de intentar buscar una solución) para más información sobre los conceptos básicos de memoria y la CPU.
+Vea el blog [Understand the problem before you try to find a solution](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) (Conocer el problema antes de intentar buscar una solución) para más información sobre los conceptos básicos de memoria y la CPU.
 
 Puede usar las siguientes herramientas para recopilar datos sobre el rendimiento del montón de objetos grandes:
 
@@ -168,13 +168,13 @@ Los contadores de rendimiento también se pueden consultar mediante programació
 
 El recolector de elementos no utilizados proporciona un amplio conjunto de eventos ETW que sirven para entender qué hace el montón y por qué. En las siguientes entradas de blog se explica cómo recopilar y entender los eventos de recolección de elementos no utilizados con ETW:
 
-- [GC ETW Events - 1 ](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/) (Eventos ETW de recolección de elementos no utilizados, 1)
+- [GC ETW Events - 1 ](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/) (Eventos ETW de recolección de elementos no utilizados, 1)
 
-- [GC ETW Events - 2 ](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/) (Eventos ETW de recolección de elementos no utilizados, 2)
+- [GC ETW Events - 2 ](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/) (Eventos ETW de recolección de elementos no utilizados, 2)
 
-- [GC ETW Events - 3 ](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/) (Eventos ETW de recolección de elementos no utilizados, 3)
+- [GC ETW Events - 3 ](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/) (Eventos ETW de recolección de elementos no utilizados, 3)
 
-- [GC ETW Events - 4 ](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/) (Eventos ETW de recolección de elementos no utilizados, 4)
+- [GC ETW Events - 4 ](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/) (Eventos ETW de recolección de elementos no utilizados, 4)
 
 Para identificar los excesos de recolecciones de elementos no utilizados de generación 2 provocados por las asignaciones temporales del montón de objetos grandes, busque en la columna Razón del desencadenador de las recolecciones. Para realizar una sencilla prueba en la que solo se asignan objetos grandes temporales, puede recopilar información sobre los eventos ETW con la siguiente línea de comandos de [PerfView](https://www.microsoft.com/download/details.aspx?id=28567):
 

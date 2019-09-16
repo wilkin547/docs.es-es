@@ -4,12 +4,12 @@ description: Aprenda a crear una aplicación de detección de anomalías para lo
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733281"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929056"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detección de anomalías en ventas de productos con ML.NET
 
@@ -17,6 +17,7 @@ Aprenda a crear una aplicación de detección de anomalías para los datos de ve
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > * Carga de los datos
 > * Crear una transformación para la detección de anomalías de picos
 > * Detectar anomalías de picos con la transformación
@@ -372,6 +373,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > * Carga de los datos
 > * Entrenar el modelo para la detección de anomalías de picos
 > * Detectar anomalías de picos con el modelo entrenado

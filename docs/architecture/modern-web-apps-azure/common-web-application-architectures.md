@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373795"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926681"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -292,16 +292,17 @@ Tenga en cuenta que los contenedores de Docker en ejecución pueden estar enlaza
 Si quiere agregar compatibilidad con Docker a la aplicación mediante Visual Studio, asegúrese de que Docker Desktop se esté ejecutando. Si Docker Desktop no está funcionando cuando se inicia el asistente, el asistente no se ejecutará correctamente. Además, el asistente examinará el contenedor que ha elegido actualmente para agregar la compatibilidad correcta con Docker. Si quiere agregar compatibilidad con contenedores de Windows, debe ejecutar el asistente mientras Docker Desktop se ejecuta con contenedores de Windows configurados. Si quiere agregar compatibilidad con contenedores de Linux, ejecute el asistente mientras Docker se ejecuta con contenedores de Linux configurados.
 
 ### <a name="references--common-web-architectures"></a>Referencias: arquitecturas web comunes
-> - **The Clean Architecture** (La arquitectura limpia)  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **The Onion Architecture** (La arquitectura cebolla)  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **The Repository Pattern** (El modelo de repositorio)  
->   <https://deviq.com/repository-pattern/>
-> - **Clean Architecture Solution Sample** (Ejemplo de solución de arquitectura limpia)  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **Architecting Microservices e-book** (Libro electrónico de arquitectura de microservicios)  
->   <https://aka.ms/MicroservicesEbook>
+
+- **The Clean Architecture** (La arquitectura limpia)  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **The Onion Architecture** (La arquitectura cebolla)  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **The Repository Pattern** (El modelo de repositorio)  
+  <https://deviq.com/repository-pattern/>
+- **Clean Architecture Solution Sample** (Ejemplo de solución de arquitectura limpia)  
+  <https://github.com/ardalis/cleanarchitecture>
+- **Architecting Microservices e-book** (Libro electrónico de arquitectura de microservicios)  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[Anterior](architectural-principles.md)

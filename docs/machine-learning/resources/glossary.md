@@ -4,12 +4,12 @@ description: Un glosario de los términos importantes sobre aprendizaje automát
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710535"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929265"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -48,6 +48,7 @@ En [regresión](#regression), una métrica de evaluación que indica en qué gra
 ## <a name="data"></a>Datos
 
 Los datos son esenciales en cualquier aplicación de aprendizaje automático. En ML.NET, los datos se representan mediante objetos <xref:Microsoft.ML.IDataView>. Objetos de vista de datos:
+
 - están formados por filas y columnas
 - se evalúan de forma diferida, es decir, solo cargan datos cuando una operación lo requiere
 - contienen un esquema que define el tipo, el formato y la longitud de cada columna

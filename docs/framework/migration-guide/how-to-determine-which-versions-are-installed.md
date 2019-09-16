@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928420"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -32,6 +32,7 @@ Los usuarios pueden [instalar](https://docs.microsoft.com/dotnet/framework/insta
 > Cada versión de .NET Framework contiene características de versiones anteriores e incorpora nuevas características. Puede cargar varias versiones de .NET Framework en un equipo al mismo tiempo, lo que significa que puede instalarlo sin tener que eliminar las versiones anteriores. En general, no debe desinstalar ninguna versión anterior de .NET Framework, ya que una determinada aplicación puede depender de una versión concreta y puede dejar de funcionar si se quita esa versión.
 >
 > Hay una diferencia entre la versión de .NET Framework y la versión de CLR:
+>
 > - Las versiones de .NET Framework se basan en el conjunto de ensamblados que conforman la biblioteca de clases .NET Framework. Por ejemplo, las versiones de .NET Framework incluyen 4.5, 4.6.1 y 4.7.2.
 >- La versión de CLR se basa en el tiempo de ejecución en el que se ejecutan las aplicaciones de .NET Framework. Normalmente, una misma versión de CLR admite varias versiones de .NET Framework. Por ejemplo, la versión de CLR 4.0.30319.*xxxxx* admite las versiones de la 4 a la 4.5.2 de .NET Framework; donde *xxxxx* es inferior a 42000, y la versión de CLR 4.0.30319.42000 admite las versiones de .NET Framework a partir de .NET Framework 4.6.
 >

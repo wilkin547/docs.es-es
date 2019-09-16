@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937984"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894752"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de la biblioteca de tipos)
 El Exportador de la biblioteca de tipos genera una biblioteca que describe los tipos definidos en un ensamblado de Common Language Runtime.  
@@ -26,7 +26,7 @@ El Exportador de la biblioteca de tipos genera una biblioteca que describe los t
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  Si utiliza el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para especificar un valor <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> de `VT_UNKOWN` o `VT_DISPATCH`, Tlbexp.exe omite cualquier uso subsiguiente del campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>. Por ejemplo, dadas las siguientes signaturas:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  se genera la biblioteca de tipos siguiente:  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Ejemplos  
  El comando siguiente genera una biblioteca de tipos con el mismo nombre que el ensamblado que se encuentra en `myTest.dll`.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  El comando siguiente genera una biblioteca de tipos con el nombre `clipper.tlb`.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Primero se utiliza Tlbimp.exe para importar la biblioteca de tipos `myLib.tlb` y guardarla como `myLib.dll`.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  En el siguiente comando se usa el compilador de C# para compilar el archivo `Sample.dll,` que hace referencia al archivo `myLib.dll` creado en el ejemplo anterior.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  El comando siguiente genera una biblioteca de tipos para `Sample.dll` que hace referencia a `myLib.dll`.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   
