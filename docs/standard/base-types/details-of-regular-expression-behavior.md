@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963394"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895226"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.  
@@ -98,7 +98,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
     |`^`|Inicia la búsqueda de coincidencias al principio de una línea.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Coincide con cero o una repetición de la cadena `<PRIVATE>` seguida de un carácter de espacio en blanco. Asigna la coincidencia a un grupo de capturas denominado `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Si existe el grupo de capturas `Pvt`, coincide con una o más repeticiones de uno o más caracteres de palabra seguidos de cero o un separador de puntuación, seguido de un carácter de espacio en blanco. Asigna la subcadena al primer grupo de capturas.|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|Si no existe el grupo de capturas `Pvt`, coincide con una o más repeticiones de uno o más caracteres de palabra seguidos de cero o un separador de puntuación, seguido de un carácter de espacio en blanco. Asigna la subcadena al tercer grupo de capturas.|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|Si no existe el grupo de capturas `Pvt`, coincide con una o más repeticiones de uno o más caracteres de palabra seguidos de cero o un separador de puntuación, seguido de un carácter de espacio en blanco. Asigna la subcadena al tercer grupo de capturas.|  
     |`\r?$`|Coincide con el final de una línea o con el final de la cadena.|  
   
      Para obtener más información sobre la evaluación condicional, consulte [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
