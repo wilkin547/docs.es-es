@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868997"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206097"
 ---
 # <a name="security-and-remoting-considerations"></a>Consideraciones de seguridad y de interacción remota
 La comunicación remota permite configurar llamadas transparentes entre dominios de aplicación, procesos o equipos. Sin embargo, el recorrido de la pila de seguridad de acceso del código no puede cruzar los límites de los procesos o equipos (se aplica entre dominios de aplicación del mismo proceso).  
   
  Las clases que se pueden usar de forma remota (derivadas de una clase <xref:System.MarshalByRefObject>) deben asumir la responsabilidad de la seguridad. El código debe usarse solo en entornos cerrados donde el código llamador puede ser de confianza de forma implícita, o las llamadas remotas deben diseñarse de modo que no sometan el código protegido a entradas externas que pudieran usarlo de forma malintencionada.  
   
- Por lo general, nunca debe exponer métodos, propiedades o eventos que están protegidos por declarativa [LinkDemand](../../../docs/framework/misc/link-demands.md) y <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> comprobaciones de seguridad. Con la comunicación remota, estas comprobaciones no se fuerzan. Otras comprobaciones de seguridad, como <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md), etc., funcionan entre dominios de aplicación dentro de un proceso, pero no funcionan en escenarios entre procesos o entre equipos.  
+ Por lo general, nunca debe exponer los métodos, las propiedades o los eventos que estén protegidos por las comprobaciones de seguridad[LinkDemand](link-demands.md) y <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> declarativas. Con la comunicación remota, estas comprobaciones no se fuerzan. Otras comprobaciones de seguridad, <xref:System.Security.Permissions.SecurityAction.Demand>como, [Assert](using-the-assert-method.md), etc., funcionan entre dominios de aplicación dentro de un proceso, pero no funcionan en escenarios entre procesos o entre equipos.  
   
 ## <a name="protected-objects"></a>Objetos protegidos  
  Algunos objetos contienen un estado de seguridad en sí mismos. Estos objetos no se deben pasar a código que no sea de confianza, porque este adquiriría una autorización de seguridad más allá de sus propios permisos.  
   
  Un ejemplo es la creación de un objeto <xref:System.IO.FileStream>. <xref:System.Security.Permissions.FileIOPermission> se solicita en el momento de la creación y, si se realiza correctamente, se devuelve el objeto de archivo. Sin embargo, si esta referencia de objeto se pasa al código sin los permisos de archivo, el objeto podrá leer y escribir este archivo en particular.  
   
- La defensa más sencilla para este tipo de objeto es solicitar el mismo **FileIOPermission** de cualquier código que intente obtener la referencia de objeto a través de un elemento de la API público.  
+ La defensa más sencilla para este tipo de objeto es solicitar el mismo **FileIOPermission** de cualquier código que intente obtener la referencia de objeto a través de un elemento de la API pública.  
   
 ## <a name="application-domain-crossing-issues"></a>Problemas de cruce entre dominios de aplicaciones  
  Para aislar código en entornos de hospedaje administrado, es habitual generar varios dominios de aplicación secundarios con directiva explícita para reducir los niveles de permiso para varios ensamblados. Sin embargo, la directiva de estos ensamblados no cambia en el dominio de aplicación predeterminado. Si uno de los dominios de aplicación secundarios puede forzar que el dominio de aplicación predeterminado cargue un ensamblado, se pierde el efecto de aislamiento del código y los tipos del ensamblado cargado forzosamente podrán ejecutar código en un nivel de confianza más alto.  
@@ -39,4 +39,4 @@ La comunicación remota permite configurar llamadas transparentes entre dominios
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

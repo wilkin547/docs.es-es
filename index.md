@@ -5,13 +5,13 @@ hide_bc: true
 title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
-ms.date: 12/04/2018
-ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.date: 09/04/2019
+ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799291"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928944"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,8 +80,8 @@ ms.locfileid: "70799291"
                 <a data-default="true" href="#docs">Documentación</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Primeros pasos</a>
-                        <ul id="getstarted" class="cardsF">
+                        <a href="#dotnetguides">Guías de .NET</a>
+                        <ul id="dotnetguides" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -94,6 +94,7 @@ ms.locfileid: "70799291"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">Guía de .NET</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">Primeros pasos</a></p>
+                                                <p><a href="https://docs.microsoft.com/learn/browse/?roles=developer&products=dotnet">Módulos de aprendizaje práctico</a></p>
                                                 <p><a href="/dotnet/standard/tour">Paseo por .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">Conceptos de arquitectura de .NET</a></p>
                                             </div>
@@ -192,7 +193,7 @@ ms.locfileid: "70799291"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp/">F# Guide</a></h3>
+                                                <h3><a href="/dotnet/fsharp/">Guía de F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/get-started/">Primeros pasos</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Paseo por F</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference/">Referencia del lenguaje F#</a></p>
@@ -267,6 +268,68 @@ ms.locfileid: "70799291"
                         </ul>
                     </li>
                     <li>
+                        <a href="#getstarted">Primeros pasos</a>
+                        <ul id="getstarted" class="cardsC">
+                            <li>
+                                <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-csharp.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Introducción a C#</h3>
+                                                    <p>Un inicio rápido interactivo.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/core/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-dotnet-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Creación de la primera aplicación de .NET Core</h3>
+                                                    <p>Aprenda a crear su primera aplicación de consola de .NET Core.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Creación de la primera aplicación web</h3>
+                                                    <p>Aprenda a crear su primera aplicación web de ASP.NET Core.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#web">Web</a>
                         <ul id="web" class="cardsC">
                             <li>
@@ -280,7 +343,7 @@ ms.locfileid: "70799291"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Compilación de la primera aplicación web</h3>
+                                                    <h3>Creación de la primera aplicación web</h3>
                                                     <p>Aprenda a crear su primera aplicación web de ASP.NET Core.</p>
                                                 </div>
                                             </div>
@@ -401,7 +464,7 @@ ms.locfileid: "70799291"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Azure Storage</h3>
+                                                    <h3>Almacenamiento de Azure</h3>
                                                     <p>Obtenga información sobre Azure Storage y cómo crear aplicaciones con blobs, tablas, colas y archivos de Azure.
                                                     </p>
                                                 </div>

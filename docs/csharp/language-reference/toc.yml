@@ -315,9 +315,9 @@
     - name: 'Operador ?:'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
-    - name: '?? operador'
+    - name: '?? Operadores and ??='
       href: operators/null-coalescing-operator.md
-      displayName: null-coalescing
+      displayName: 'null-coalescing, assignment'
     - name: Operador =>
       href: operators/lambda-operator.md
       displayName: lambda
@@ -555,7 +555,7 @@
       href: ../../../_csharplang/spec/unsafe-code.md
     - name: Comentarios de documentación
       href: ../../../_csharplang/spec/documentation-comments.md
-- name: 'Propuestas del lenguaje de C#7.0'
+- name: 'Propuestas de especificación de C# 7.0'
   items:
     - name: Detección de patrones
       href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -569,7 +569,7 @@
       href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
     - name: Separadores de dígitos
       href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-- name: 'Propuestas del lenguaje de C# 7.1'
+- name: 'Propuestas de especificación de C# 7.1'
   items:
     - name: Método async main
       href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -579,7 +579,7 @@
       href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
     - name: Coincidencia de patrones con genéricos
       href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-- name: 'Propuestas del lenguaje de C# 7.2'
+- name: 'Propuestas de especificación de C# 7.2'
   items:
     - name: Referencias readonly
       href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -593,7 +593,7 @@
       href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
     - name: Separador de dígito inicial
       href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-- name: 'Propuestas del lenguaje de C# 7.3'
+- name: 'Propuestas de especificación de C# 7.3'
   items:
     - name: Restricciones de tipo genérico no administrado
       href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -613,14 +613,16 @@
       href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
     - name: Mejoras en los candidatos de sobrecarga
       href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-- name: 'Propuestas del lenguaje de C# 8.0'
+- name: 'Propuesta de especificación de C# 8.0'
   items:
-    - name: 'Tipos de referencia NULL: propuesta'
+    - name: 'Tipos de referencia que aceptan valores NULL: propuesta'
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
     - name: 'Tipos de referencias que aceptan valores NULL: especificación'
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: Coincidencia de patrones recursiva
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+    - name: Miembros de interfaz predeterminados
+      href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: Flujos asincrónicos
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
     - name: Intervalos
@@ -629,3 +631,5 @@
       href: ../../../_csharplang/proposals/csharp-8.0/using.md
     - name: Asignación de uso combinado de NULL
       href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+    - name: Miembros de instancia de solo lectura
+      href: ../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
