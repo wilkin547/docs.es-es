@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254012"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928923"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -140,7 +140,7 @@ El UID equivale al nombre de miembro y de tipo completo.
 
 Si agrega un carácter \* (o %2A) después del UID, el vínculo representa la página de sobrecarga y no una API específica. Por ejemplo, puede usarlo cuando quiera establecer un vínculo a la página [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) de manera genérica en lugar de una sobrecarga específica como [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). También puede usar \* para establecer un vínculo a una página de miembro cuando el miembro no está sobrecargado. Esto evitará que tenga que incluir la lista de parámetros en el UID.
 
-Para establecer un vínculo a una sobrecarga de método específica, debe incluir el nombre de tipo completo de cada uno de los parámetros del método. Por ejemplo, \<xref:System.DateTime.ToString> establece un vínculo al método [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) sin parámetros, mientras que \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> establece un vínculo al método [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Puede encontrar los UID de un miembro sobrecargado específico desde `https://xref.docs.microsoft.com/autocomplete`. La cadena de consulta"?text=*\<type-member-name>*" identifica el tipo o miembro cuyos UID quiere ver. Por ejemplo, `https://xref.docs.microsoft.com/autocomplete?text=string.format` recupera las sobrecargas [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
+Para establecer un vínculo a una sobrecarga de método específica, debe incluir el nombre de tipo completo de cada uno de los parámetros del método. Por ejemplo, \<xref:System.DateTime.ToString> establece un vínculo al método [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) sin parámetros, mientras que \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> establece un vínculo al método [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Puede encontrar los UID de un miembro sobrecargado específico desde `https://xref.docs.microsoft.com/autocomplete`. La cadena de consulta"?text= *\<type-member-name>* " identifica el tipo o miembro cuyos UID quiere ver. Por ejemplo, `https://xref.docs.microsoft.com/autocomplete?text=string.format` recupera las sobrecargas [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
 
 Para establecer un vínculo a un tipo genérico, como [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), puede usar el carácter ` (%60), seguido del número de parámetros de tipo genérico. Por ejemplo, \<xref:System.Nullable%601> establece un vínculo al tipo [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), mientras que \<xref:System.Func%602> establece un vínculo al delegado [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
@@ -182,7 +182,7 @@ Ejemplos:
 1. Esto
 1. Es
 1. Una
-1. Por orden 
+1. Por orden
 1. Lista
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Lista ordenada con una lista insertada
@@ -387,7 +387,7 @@ Actualmente, puede insertar vídeos tanto de Channel 9 como de YouTube con la s
 > [!VIDEO <channel9_video_link>]
 ```
 
-Para obtener la dirección URL correcta del vídeo, seleccione la pestaña **Insertar** debajo del fotograma de vídeo y copie la dirección URL del elemento `<iframe>`. Por ejemplo: 
+Para obtener la dirección URL correcta del vídeo, seleccione la pestaña **Insertar** debajo del fotograma de vídeo y copie la dirección URL del elemento `<iframe>`. Por ejemplo:
 
 ```markdown
 > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released/player]
@@ -401,7 +401,7 @@ Para obtener la dirección URL correcta del vídeo, haga clic con el botón dere
 > [!VIDEO <youtube_video_link>]
 ```
 
-Por ejemplo: 
+Por ejemplo:
 
 ```markdown
 > [!VIDEO https://www.youtube.com/embed/Q2mMbjw6cLA]
@@ -445,6 +445,7 @@ Puede insertar el Markdown de un archivo en otro con Include.
 Hay disponible un estilo personalizado para las listas. Puede representar las listas con marcas de verificación verdes.
 
 > [!div class="checklist"]
+>
 > - Cómo crear una aplicación .NET Core
 > - Cómo agregar una referencia al paquete Microsoft.XmlSerializer.Generator
 > - Cómo editar MyApp.csproj para agregar dependencias
@@ -463,8 +464,9 @@ Puede ver un ejemplo de los botones en acción en la [documentación de Visual 
 ### <a name="selectors"></a>Selectores
 
 > [!div class="op_single_selector"]
-- [macOS](../docs/core/tutorials/using-on-macos.md)
-- [Windows](../docs/core/tutorials/with-visual-studio.md)
+>
+> - [macOS](../docs/core/tutorials/using-on-macos.md)
+> - [Windows](../docs/core/tutorials/with-visual-studio.md)
 
 Puede ver un ejemplo de los selectores en acción en la [documentación de Azure](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic).
 
