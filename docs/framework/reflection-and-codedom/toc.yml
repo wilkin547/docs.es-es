@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: Procedimiento para cargar ensamblados en el contexto de solo reflexión
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: Procedimiento para obtener información sobre tipos y miembros mediante la reflexión
+          href: get-type-member-information.md
         - name: Acceso a atributos personalizados
           href: accessing-custom-attributes.md
         - name: Especificar nombres de tipo completos

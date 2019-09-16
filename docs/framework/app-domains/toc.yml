@@ -1,29 +1,33 @@
 - name: Dominios de aplicación y ensamblados
   href: index.md
   items:
-    - name: Ensamblados en Common Language Runtime
-      href: assemblies-in-the-common-language-runtime.md
+    - name: Colocación de ensamblados
+      href: assembly-placement.md
+    - name: Caché global de ensamblados
+      href: gac.md
+    - name: Trabajar con ensamblados y la memoria caché global de ensamblados
+      href: working-with-assemblies-and-the-gac.md
       items:
-        - name: Contenido de los ensamblados
-          href: assembly-contents.md
-        - name: Manifiesto del ensamblado
-          href: assembly-manifest.md
-        - name: Caché global de ensamblados
-          href: gac.md
-        - name: Ensamblados con nombre seguro
-          href: strong-named-assemblies.md
-        - name: Consideraciones de seguridad sobre ensamblados
-          href: assembly-security-considerations.md
-        - name: Versiones de los ensamblados
-          href: assembly-versioning.md
-        - name: Colocación de ensamblados
-          href: assembly-placement.md
-        - name: ensamblados y ejecución simultánea
-          href: assemblies-and-side-by-side-execution.md
+        - name: Procedimiento para consultar el contenido de la caché global de ensamblados
+          href: how-to-view-the-contents-of-the-gac.md
+        - name: Procedimiento Instalar un ensamblado en la caché global de ensamblados
+          href: install-assembly-into-gac.md
+        - name: Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
+          href: how-to-remove-an-assembly-from-the-gac.md
+        - name: Utilizar componentes con servicio junto con la memoria caché global de ensamblados
+          href: use-serviced-components-with-the-gac.md
     - name: Dominios de aplicación
       href: application-domains.md
     - name: Temas "Cómo..." sobre dominios de aplicación y ensamblados
       href: application-domains-and-assemblies-how-to-topics.md
+    - name: Procedimiento para compilar un ensamblado de un solo archivo
+      href: build-single-file-assembly.md
+    - name: Ensamblados de múltiples archivos
+      href: multifile-assemblies.md
+    - name: Procedimiento para compilar un ensamblado de varios archivos
+      href: build-multifile-assembly.md
+    - name: Procedimiento para compartir un ensamblado con otras aplicaciones
+      href: how-to-share-an-assembly-with-other-applications.md
     - name: Utilizar dominios de aplicación
       href: use.md
       items:
@@ -37,62 +41,9 @@
           href: retrieve-setup-information.md
         - name: Procedimiento para cargar ensamblados en un dominio de aplicación
           href: how-to-load-assemblies-into-an-application-domain.md
-        - name: Procedimiento para obtener información sobre tipos y miembros desde un ensamblado
-          href: how-to-obtain-type-and-member-information-from-an-assembly.md
         - name: Copias sombra de ensamblados
           href: shadow-copy-assemblies.md
         - name: Procedimiento para recibir notificaciones de excepciones de primera oportunidad
           href: how-to-receive-first-chance-exception-notifications.md
-        - name: resolver cargas de ensamblado
-          href: resolve-assembly-loads.md
-    - name: Programar con ensamblados
-      href: programming-with-assemblies.md
-      items:
-        - name: Crear ensamblados
-          href: create-assemblies.md
-        - name: Nombres de ensamblado
-          href: assembly-names.md
-        - name: Procedimiento Determinar el nombre completo de un ensamblado
-          href: how-to-determine-assembly-fully-qualified-name.md
-        - name: Ejecutar aplicaciones de Intranet con plena confianza
-          href: running-intranet-applications-in-full-trust.md
-        - name: Ubicación del ensamblado
-          href: assembly-location.md
-        - name: Procedimiento para compilar un ensamblado de un solo archivo
-          href: how-to-build-a-single-file-assembly.md
-        - name: Ensamblados de varios archivos
-          href: multifile-assemblies.md
-        - name: Procedimiento para compilar un ensamblado de varios archivos
-          href: how-to-build-a-multifile-assembly.md
-        - name: Configurar atributos de ensamblados
-          href: set-assembly-attributes.md
-        - name: Crear y utilizar ensamblados con nombre seguro
-          href: create-and-use-strong-named-assemblies.md
-          items:
-            - name: Procedimiento para crear un par de claves privada y pública
-              href: how-to-create-a-public-private-key-pair.md
-            - name: Procedimiento Firma de un ensamblado con un nombre seguro
-              href: how-to-sign-an-assembly-with-a-strong-name.md
-            - name: Nombres seguros mejorados
-              href: enhanced-strong-naming.md
-            - name: Procedimiento para hacer referencia a un ensamblado con nombre seguro
-              href: how-to-reference-a-strong-named-assembly.md
-            - name: Procedimiento para deshabilitar la característica de omisión de nombres seguros
-              href: how-to-disable-the-strong-name-bypass-feature.md
-        - name: Retrasar la firma de un ensamblado
-          href: delay-sign-assembly.md
-        - name: Trabajar con ensamblados y la memoria caché global de ensamblados
-          href: working-with-assemblies-and-the-gac.md
-          items:
-            - name: Procedimiento para instalar un ensamblado en la caché global de ensamblados
-              href: how-to-install-an-assembly-into-the-gac.md
-            - name: Procedimiento para consultar el contenido de la caché global de ensamblados
-              href: how-to-view-the-contents-of-the-gac.md
-            - name: Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
-              href: how-to-remove-an-assembly-from-the-gac.md
-            - name: Utilizar componentes con servicio junto con la memoria caché global de ensamblados
-              href: use-serviced-components-with-the-gac.md
-        - name: Procedimiento para ver el contenido de un ensamblado
-          href: how-to-view-assembly-contents.md
-        - name: Reenvío de tipos en Common Language Runtime
-          href: type-forwarding-in-the-common-language-runtime.md
+    - name: Ejecutar aplicaciones de Intranet con plena confianza
+      href: running-intranet-applications-in-full-trust.md
