@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23a36d1709f03583ce39af0e7c80bb1ecd7cf809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754393"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052669"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>MDA de illegalPrepareConstrainedRegion
 El Asistente para la depuración administrada (MDA) `illegalPrepareConstrainedRegion` se activa cuando una llamada al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> no precede inmediatamente a la instrucción `try` del controlador de excepciones. Esta restricción está en el nivel de MSIL, por lo que permite tener un origen de no generación de código entre la llamada y `try` (por ejemplo comentarios).  
@@ -23,8 +23,8 @@ El Asistente para la depuración administrada (MDA) `illegalPrepareConstrainedRe
 ## <a name="symptoms"></a>Síntomas  
  Una región de ejecución restringida (CER) que nunca se trata como tal, sino como un simple bloque de control de excepciones (`finally` o `catch`). En consecuencia, la región no se ejecuta en el caso de una condición de memoria insuficiente o una anulación del subproceso.  
   
-## <a name="cause"></a>Motivo  
- El modelo de preparación para una región CER no se ha seguido correctamente.  Se trata de un evento de error. El <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> llamada al método utilizado para marcar los controladores de excepción presentaban una región CER en sus `catch` / `finally` / `fault` / `filter` bloques deben usarse inmediatamente antes del `try` instrucción.  
+## <a name="cause"></a>Causa  
+ El modelo de preparación para una región CER no se ha seguido correctamente.  Se trata de un evento de error. La <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> llamada al método que se usa para marcar los controladores de excepciones como la `catch` introducción de una CER en sus `fault` `filter` / `finally` / / bloques debe usarse inmediatamente antes de la `try` instrucción.  
   
 ## <a name="resolution"></a>Resolución  
  Asegúrese de que la llamada a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> se produce inmediatamente antes de la instrucción `try`.  
@@ -32,7 +32,7 @@ El Asistente para la depuración administrada (MDA) `illegalPrepareConstrainedRe
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  El MDA muestra el nombre del método que llama al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>, el desplazamiento MSIL y un mensaje que indica que la llamada no precede inmediatamente al inicio del bloque try.  
   
 ## <a name="configuration"></a>Configuración  
@@ -68,5 +68,5 @@ void MethodWithInvalidPCR()
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

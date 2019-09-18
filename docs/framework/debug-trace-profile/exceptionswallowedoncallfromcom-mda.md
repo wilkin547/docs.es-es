@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a49bdce78c1445cd25de8755ded0f27a4902937
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874450"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052815"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>MDA de exceptionSwallowedOnCallFromCom
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `exceptionSwallowedOnCallFromCOM` se activa cuando se produce una excepción del código de Common Language Runtime (CLR) llamado desde COM a través de un método que no tiene un tipo de resultado HRESULT sin administrar.  
@@ -24,7 +24,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="symptoms"></a>Síntomas  
  Una llamada de COM a un componente administrado devuelve un valor FALSE o 0. También puede ser que, si el método tiene un tipo de valor devuelto void, no haya indicación de que se produjese una excepción durante la ejecución del método. En este caso, la excepción se detectará de forma silenciosa y la ejecución regresará al emisor de la llamada COM.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Se produjo una excepción, pero no hay ningún modo válido de notificarla.  
   
 ## <a name="resolution"></a>Resolución  
@@ -33,7 +33,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR. Solo recoge los datos sobre excepciones detectadas de forma silenciosa.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  Mensaje informativo que contiene el nombre del método, el nombre del tipo y el mensaje de la excepción.  
   
 ## <a name="configuration"></a>Configuración  
@@ -49,5 +49,5 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875074"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052928"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA de callbackOnCollectedDelegate
 El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate` se activa si se serializa un delegado desde código administrado a no administrado como un puntero de función y se coloca una devolución de llamada en dicho puntero después de que el delegado haya sido recolectado como elemento no utilizado.  
@@ -31,7 +31,7 @@ El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate
   
  El error no es constante; a veces, la llamada al puntero de función se realiza correctamente y otras veces no. El error podría producirse solo en condiciones de mucha carga o después de un número aleatorio de intentos.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  El delegado a partir del cual se creó el puntero de función y se expuso al código no administrado se recolectó como elemento no utilizado. Cuando el componente no administrado intenta llamar al puntero de función, genera una infracción de acceso.  
   
  El error parece aleatorio porque depende de cuándo se produce la recolección de elementos no utilizados. Si un delegado es candidato para la recolección, la recolección de elementos no utilizados puede producirse después de la devolución de llamada y la llamada se realiza correctamente. En otras ocasiones, la recolección de elementos no utilizados se produce antes de la devolución de llamada, la devolución de llamada genera una infracción de acceso y el programa se detiene.  
@@ -44,7 +44,7 @@ El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Cuando las referencias de los delegados se calculan como punteros de función, CLR asigna un código thunk que realiza la transición de no administrado a administrado. El código no administrado llama a este código thunk antes de invocar en última instancia al delegado administrado. Si el MDA `callbackOnCollectedDelegate` no está habilitado, el código no administrado de cálculo de referencias se elimina al recopilar el delegado. Si el MDA `callbackOnCollectedDelegate` está habilitado, el código no administrado de serialización no se elimina inmediatamente al recopilar el delegado. En su lugar, se mantienen activas las últimas 1.000 instancias de forma predeterminada y se cambian para activar el MDA cuando se le llama. El código thunk se borra después de recopilar 1.001 delegados con referencias calculadas.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  El MDA notifica el nombre de tipo del delegado que se recopiló antes de intentar una devolución de llamada en su puntero de función no administrado.  
   
 ## <a name="configuration"></a>Configuración  
@@ -114,6 +114,6 @@ public class Entry
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

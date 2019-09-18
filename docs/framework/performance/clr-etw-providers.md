@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894701"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046737"
 ---
 # <a name="clr-etw-providers"></a>Proveedores ETW de CLR
 El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime y el proveedor del informe detallado.  
   
  El proveedor de runtime genera eventos en función de las palabras clave (categorías de eventos) que están habilitadas. Por ejemplo, puede recopilar eventos de cargador habilitando la palabra clave `LoaderKeyword`.  
   
- Los eventos de seguimiento de eventos para Windows (ETW) se registran en un archivo que tiene una extensión. ETL, que posteriormente se puede procesar después en archivos de valores separados por comas (. csv) según sea necesario. Para más información sobre cómo convertir el archivo .etl en un archivo .csv, vea [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](../../../docs/framework/performance/controlling-logging.md).  
+ Los eventos de seguimiento de eventos para Windows (ETW) se registran en un archivo que tiene una extensión. ETL, que posteriormente se puede procesar después en archivos de valores separados por comas (. csv) según sea necesario. Para más información sobre cómo convertir el archivo .etl en un archivo .csv, vea [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>El proveedor en tiempo de ejecución  
  El proveedor en tiempo de ejecución es el principal proveedor ETW de CLR.  
   
  El GUID del proveedor en tiempo de ejecución de CLR es e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
- Para obtener ejemplos sobre cómo registrar y ver eventos ETW de CLR con las herramientas habituales, vea [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](../../../docs/framework/performance/controlling-logging.md).  
+ Para obtener ejemplos sobre cómo registrar y ver eventos ETW de CLR con las herramientas habituales, vea [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](controlling-logging.md).  
   
- Además de utilizar las palabras clave como `LoaderKeyword`, puede que sea preciso habilitar palabras clave para registrar eventos que se generen con demasiada frecuencia. Las palabras clave `StartEnumerationKeyword` y `EndEnumerationKeyword` habilitan estos eventos y se resumen en [Palabras clave y niveles ETW de CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ Además de utilizar las palabras clave como `LoaderKeyword`, puede que sea preciso habilitar palabras clave para registrar eventos que se generen con demasiada frecuencia. Las palabras clave `StartEnumerationKeyword` y `EndEnumerationKeyword` habilitan estos eventos y se resumen en [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md).  
   
 ## <a name="the-rundown-provider"></a>El proveedor de informe detallado  
  El proveedor del informe detallado debe estar activado para algunos usos específicos. Sin embargo, para la mayoría de los usuarios, el proveedor de runtime debe bastar.  
@@ -93,4 +93,4 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Eventos ETW en Common Language Runtime](etw-events-in-the-common-language-runtime.md)

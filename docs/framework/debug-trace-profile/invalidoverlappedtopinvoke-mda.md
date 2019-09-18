@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e9c7e1038591e5e8ea6f62b37ff4d02b2b6a9c5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967301"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052557"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA de invalidOverlappedToPinvoke
 El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke` se activa cuando un puntero superpuesto que no se ha creado en el montón de recolección de elementos no utilizados se pasa a funciones de Win32 específicas.  
@@ -57,7 +57,7 @@ El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke`
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  A continuación se muestra un ejemplo de resultado de este MDA.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
@@ -75,5 +75,5 @@ El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke`
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

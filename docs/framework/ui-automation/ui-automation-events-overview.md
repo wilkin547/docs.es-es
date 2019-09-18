@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911551"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042159"
 ---
 # <a name="ui-automation-events-overview"></a>Información general sobre eventos de UI Automation
 > [!NOTE]
@@ -79,10 +79,10 @@ ms.locfileid: "69911551"
   
  Los proveedores obtienen los objetos <xref:System.Windows.Automation.AutomationEvent> , usados para identificar los eventos, a partir de los campos de <xref:System.Windows.Automation.AutomationElementIdentifiers> y de las clases de identificadores de patrones de control como <xref:System.Windows.Automation.DockPatternIdentifiers>. Las aplicaciones cliente obtienen los campos equivalentes a partir de campos de <xref:System.Windows.Automation.AutomationElement> y de clases de patrones de control como <xref:System.Windows.Automation.DockPattern>.  
   
- Para obtener una lista de identificadores de eventos, consulte [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
+ Para obtener una lista de identificadores de eventos, consulte [UI Automation Events for Clients](ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Suscripción a eventos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [Eventos de Automatización de la interfaz de usuario para clientes](ui-automation-events-for-clients.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
+- [Suscripción a eventos de Automatización de la interfaz de usuario](subscribe-to-ui-automation-events.md)

@@ -3,12 +3,12 @@ title: índice de ejemplo de código WIF
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b1c875f6c49a3097a75f88b1c25555fd7e891b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e90c5f8681706aa0d52c74e6caff08edbf283da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909407"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045157"
 ---
 # <a name="wif-code-sample-index"></a>índice de ejemplo de código WIF
 
@@ -24,7 +24,7 @@ A continuación se muestran ejemplos de código de Windows Identity Foundation 4
 
 - [ClaimsAwareFormsAuthentication](https://go.microsoft.com/fwlink/?LinkID=248409): en este ejemplo muy sencillo se muestra que en .NET 4.5 puede obtener notificaciones en las entidades de seguridad, independientemente del modo en que autentique a los usuarios.
 
-- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410): ejemplos se muestra cómo usar las clases ClaimsAuthorizationManager y ClaimsAuthorizationModule para aplicar sus propias directivas de autorización.
+- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410): en este ejemplo se muestra cómo usar la clase ClaimsAuthorizationManager y ClaimsAuthorizationModule para aplicar sus propias directivas de autorización.
 
 - [FederationMetadata](https://go.microsoft.com/fwlink/?LinkID=248411): en este ejemplo se muestra la generación dinámica (en un STS personalizado) y el consumo dinámico (en una aplicación de usuario de confianza) de documentos de metadatos.
 
@@ -32,4 +32,4 @@ A continuación se muestran ejemplos de código de Windows Identity Foundation 4
 
 ## <a name="see-also"></a>Vea también
 
-- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+- [Windows Identity Foundation](index.md)

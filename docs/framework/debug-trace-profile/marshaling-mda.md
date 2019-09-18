@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b1a1607e96ad9953a409d79fd265ced994cece2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6a6399828f934ad97cde9f36d75cfe3bfc410885
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854132"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052486"
 ---
 # <a name="marshaling-mda"></a>MDA de serialización
 El asistente para la depuración administrada (MDA) `marshaling` se activa cuando el CLR establece la información de cálculo de referencias para un parámetro de método o un campo de una estructura. Este MDA no funciona para los ensamblados con compilación JIT.  
@@ -22,7 +22,7 @@ El asistente para la depuración administrada (MDA) `marshaling` se activa cuand
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  El MDA muestra el tipo de parámetro o campo en los contextos administrados y no administrados, y la estructura o método que contiene el tipo.  A continuación, se muestra un ejemplo de la salida de un campo:  
   
 ```output
@@ -53,5 +53,5 @@ name="assembly!Namespace.Class::myChar
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

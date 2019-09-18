@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660322"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052926"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA de contextSwitchDeadlock
 
@@ -29,7 +29,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 
 El síntoma más común es que no se devuelve una llamada en un componente COM sin administrar de código administrado.  Otro síntoma es el aumento de uso de memoria con el tiempo.
 
-## <a name="cause"></a>Motivo
+## <a name="cause"></a>Causa
 
 La causa más probable es que haya un subproceso de contenedor uniproceso (STA, por sus siglas en inglés) que no esté suministrando mensajes. El subproceso de STA está en espera sin suministrar mensajes o está realizando operaciones extensas y no permite que la cola de mensajes se suministre.
 
@@ -48,7 +48,7 @@ Es posible que el MDA se active equivocadamente si se cumplen todas las condicio
 Para determinar si el MDA se activa equivocadamente, deshabilite todos los puntos de interrupción, reinicie la aplicación y deje que se ejecute sin detenerla. Si el MDA no se activa, es probable que la activación inicial fuese falsa. En este caso, deshabilite el MDA para evitar interferencias con la sesión de depuración.
 
 > [!NOTE]
-> Este MDA está en el conjunto predeterminado de Visual Studio. Para obtener información acerca de cómo deshabilitar los MDA, vea [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
+> Este MDA está en el conjunto predeterminado de Visual Studio. Para obtener información sobre cómo deshabilitar los MDA, vea [diagnosticar errores con asistentes para la depuración administrada](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
 
 ## <a name="resolution"></a>Resolución
 
@@ -58,7 +58,7 @@ Siga las reglas COM respecto al suministro de mensajes de STA.
 
 Este MDA no tiene ningún efecto en el CLR. Solo recoge datos sobre contextos COM.
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Resultados
 
 Mensaje que describe el contexto actual y el de destino.
 
@@ -75,5 +75,5 @@ Mensaje que describe el contexto actual y el de destino.
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

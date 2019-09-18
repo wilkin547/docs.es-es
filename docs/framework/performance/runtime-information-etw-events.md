@@ -7,29 +7,29 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ab3844b293d09cec02236fb9befd836aa4113ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949219"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046225"
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de información en tiempo de ejecución
 Estos eventos ETW registran información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante. Si se están ejecutando varios tiempos de ejecución dentro de un proceso, la información proporcionada por estos eventos (ClrInstanceID) ayuda a eliminar la ambigüedad de los tiempos de ejecución.  
   
- En la tabla siguiente se muestran los dos eventos de información en tiempo de ejecución. Los eventos se pueden generar bajo cualquier palabra clave o máscara. (Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)).  
+ En la tabla siguiente se muestran los dos eventos de información en tiempo de ejecución. Los eventos se pueden generar bajo cualquier palabra clave o máscara. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
-|evento|Id. de evento|Proveedor|Descripción|  
+|Evento|Id. de evento|Proveedor|DESCRIPCIÓN|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Se genera cuando se carga un tiempo de ejecución.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Enumera los tiempos de ejecución que se han cargado.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|DESCRIPCIÓN|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
-|Sku|win:UInt16|1 – CLR de escritorio.<br /><br /> 2 – CoreCLR.|  
+|SKU|win:UInt16|1 – CLR de escritorio.<br /><br /> 2 – CoreCLR.|  
 |BclVersion – Versión principal|win:UInt16|Versión principal de mscorlib.dll.|  
 |BclVersion – Versión secundaria|win:UInt16|Número de versión secundaria de mscorlib.dll.|  
 |BclVersion – Número de compilación|win:UInt16|Número de compilación de mscorlib.dll.|  
@@ -46,4 +46,4 @@ Estos eventos ETW registran información sobre el tiempo de ejecución, lo que i
   
 ## <a name="see-also"></a>Vea también
 
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

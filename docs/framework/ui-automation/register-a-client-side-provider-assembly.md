@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: ed45b7e5d60e42f03bce8b9dc4abbf8226916304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a63a955fdf782670bb60dfc6845261990cdcd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966355"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042783"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>Registrar un ensamblado de proveedor de cliente
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "69966355"
   
 ## <a name="see-also"></a>Vea también
 
-- [Creación de un proveedor de Automatización de la interfaz de usuario en el cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [Creación de un proveedor de Automatización de la interfaz de usuario en el cliente](create-a-client-side-ui-automation-provider.md)

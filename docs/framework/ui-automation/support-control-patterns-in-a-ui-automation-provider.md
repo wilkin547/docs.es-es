@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: da423af259ac3ef88d5b52d576d3ab5ebb4f916e
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 67f37dfe1fe63f2130646cb227fec855ccc7bf75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971799"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042601"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Patrones de control compatibles en un proveedor de UI Automation
 
@@ -44,5 +44,5 @@ En el ejemplo siguiente se muestra una implementación de <xref:System.Windows.A
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)

@@ -10,22 +10,22 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675369"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053241"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de clases y API adicionales
 
-.NET Framework evoluciona constantemente. Para mejorar el desarrollo multiplataforma e introducir nuevas funciones al principio, se lanzan nuevas características fuera de banda (OOB). En este tema se muestran los proyectos OOB para los que ofrecemos documentación.  
+El .NET Framework evoluciona constantemente. Para mejorar el desarrollo multiplataforma e introducir nuevas funciones con antelación, se lanzan nuevas características fuera de banda (OOB). En este tema se muestran los proyectos OOB para los que ofrecemos documentación.  
   
-Además, algunas bibliotecas se orientan a plataformas o implementaciones específicas de .NET Framework. Por ejemplo, el <xref:System.Text.CodePagesEncodingProvider> clase hace codificaciones de páginas de código disponibles para las aplicaciones para UWP desarrolladas con .NET Framework. En este tema también se enumeran estas bibliotecas.  
+Además, algunas bibliotecas se orientan a plataformas o implementaciones específicas de .NET Framework. Por ejemplo, la <xref:System.Text.CodePagesEncodingProvider> clase hace que las codificaciones de páginas de códigos estén disponibles para las aplicaciones UWP desarrolladas mediante el .NET Framework. En este tema también se enumeran estas bibliotecas.  
   
 ## <a name="oob-projects"></a>Proyectos OOB
   
-| Proyecto | Descripción |  
+| Proyecto | DESCRIPCIÓN |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Ofrece colecciones que son seguras para subprocesos en las que se garantiza que no cambiará nunca su contenido. |
 | <xref:System.Net.Http.WinHttpHandler> | Ofrece un controlador de mensajes para <xref:System.Net.Http.HttpClient> basados en la interfaz de WinHTTP de Windows. |
@@ -34,9 +34,9 @@ Además, algunas bibliotecas se orientan a plataformas o implementaciones espec�
 
 ## <a name="platform-specific-libraries"></a>Bibliotecas específicas de plataforma
   
-| Proyecto | Descripción |  
+| Proyecto | DESCRIPCIÓN |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Extiende la <xref:System.Text.EncodingProvider> clase a disposición codificaciones de páginas de código a las aplicaciones que tienen como destino la plataforma Universal de Windows. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Extiende la <xref:System.Text.EncodingProvider> clase para que las codificaciones de páginas de códigos estén disponibles para las aplicaciones destinadas a la plataforma universal de Windows. |  
   
 ## <a name="private-apis"></a>API privadas  
 
@@ -44,22 +44,22 @@ Estas API admiten la infraestructura del producto y no están previstas ni se ad
   
 | Nombre de API |
 | -------- |
-| [Clase System.Net.Connection](../../../docs/framework/additional-apis/connection.md) |
-| [System.Net.Connection.m\_WriteList campo](../../../docs/framework/additional-apis/m_writelist.md) |
-| [Clase System.Net.ConnectionGroup](../../../docs/framework/additional-apis/connectiongroup.md) |
-| [System.Net.ConnectionGroup.m\_ConnectionList campo](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [Clase System.Net.CoreResponseData](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders campo](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_campo StatusCode](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest. \_AutoRedirects campo](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest. \_CoreResponse campo](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest. \_HttpResponse campo](../../../docs/framework/additional-apis/_httpresponse.md) |
-| [System.Net.ServicePoint.m\_ConnectionGroupList campo](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
-| [System.Net.ServicePointManager.s\_ServicePointTable campo](../../../docs/framework/additional-apis/s_servicepointtable.md) |
-| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes campo](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [Clase System.Windows.Forms.Design.DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
-| [Clase System.Windows.Forms.Design.DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
+| [System .net. Connection (clase)](connection.md) |
+| [Campo WriteList de System .net.\_Connection. m](m_writelist.md) |
+| [System .net. ConnectionGroup (clase)](connectiongroup.md) |
+| [Campo ConnectionList de System .net.\_ConnectionGroup. m](m_connectionlist.md) |
+| [System .net. CoreResponseData (clase)](coreresponsedata.md) |
+| [Campo ResponseHeaders de System .net.\_CoreResponseData. m](coreresponsedata_m_responseheaders.md) |
+| [Campo StatusCode de System .net.\_CoreResponseData. m](coreresponsedata_m_statuscode.md) |
+| [System .net. HttpWebRequest. \_Campo AutoRedirects](_autoredirects.md) |
+| [System .net. HttpWebRequest. \_Campo CoreResponse](httpwebrequest__coreresponse.md) |
+| [System .net. HttpWebRequest. \_HttpResponse (campo)](_httpresponse.md) |
+| [Campo ConnectionGroupList de System .net.\_ServicePoint. m](m_connectiongrouplist.md) |
+| [Campo ServicePointTable de System .net.\_ServicePointManager. s](s_servicepointtable.md) |
+| [Campo isDebuggerCheckDisabledForTestPurposes de System. Windows. Diagnostics\_. VisualDiagnostics. s](s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [Clase System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md) |
+| [Clase System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>Vea también
 
-- [.NET Framework y versiones fuera de banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [.NET Framework y versiones fuera de banda](../get-started/the-net-framework-and-out-of-band-releases.md)

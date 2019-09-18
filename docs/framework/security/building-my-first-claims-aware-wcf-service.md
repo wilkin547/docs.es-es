@@ -3,12 +3,12 @@ title: Compilación del primer servicio WCF para notificaciones
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: f242de43f1917dd6b01e15914359049ee754aa92
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 330d785721cb434f74ec746310a71bfd39fefd0b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690178"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045548"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Compilación del primer servicio WCF para notificaciones
 ## <a name="applies-to"></a>Se aplica a  
@@ -20,7 +20,7 @@ ms.locfileid: "66690178"
 ## <a name="overview"></a>Información general  
  En este tema se describe el escenario para compilar servicios WCF para notificaciones mediante WIF. En un escenario de servicio Web para notificaciones suele haber tres participantes: el propio servicio Web, el usuario final y el servicio de token de seguridad (STS). En la ilustración siguiente se describe este escenario:  
   
- ![Diagrama que muestra los componentes de WIF básica servicio de WCF para notificaciones.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
+ ![Diagrama que muestra los componentes de servicio WCF con reconocimiento de notificaciones básicos de WIF.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1. El cliente de servicio WCF (a veces denominado agente) usa WIF para enviar credenciales al STS que a su vez, y tras llevarse la autenticación a cabo correctamente, emite un token para el agente.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66690178"
   
  El STS es un servicio que emite tokens tras haberse realizado la autenticación correctamente. Microsoft ofrece dos STS estándar del sector:  
   
-- [Servicios de federación de Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Servicios de federación de Active Directory (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
+- [Access Control Service de Windows Azure (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
   
- AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. El control de acceso de Active Directory de Azure (también conocido como Servicio de control de acceso o ACS) es un servicio en la nube que se ofrece como parte de Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo Local que forma parte de la [Identity and Access Tool para Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponible de forma gratuita en línea.  
+ AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. El control de acceso de Active Directory de Azure (también conocido como Servicio de control de acceso o ACS) es un servicio en la nube que se ofrece como parte de Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo local que forma parte de la [herramienta de identidad y acceso para Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , que está disponible en línea de forma gratuita.  
   
- Para crear su primer servicio WCF para notificaciones mediante WIF, consulte [How To: Habilitar WIF para una aplicación de servicio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Para compilar el primer servicio WCF compatible con notificaciones mediante [WIF, consulte Cómo: Habilite WIF para una aplicación](how-to-enable-wif-for-a-wcf-web-service-application.md)de servicio Web WCF.
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Introducción a WIF](getting-started-with-wif.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa882762479995448a99d9cb63fbdea941a253d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941635"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049489"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>Clase MissingRuntimeArtifactException (.NET Native)
 **.NET para aplicaciones de Windows para Windows 10, solo .NET Native**  
@@ -19,7 +19,7 @@ ms.locfileid: "69941635"
  **Espacio de nombres**: System.Reflection  
   
 > [!IMPORTANT]
-> La `MissingRuntimeArtifactException` clase está pensada únicamente para uso interno de la cadena de herramientas de .net Native. No está pensada para usarse en código de terceros y tampoco debe usarse para controlar la excepción en el código de la aplicación. En su lugar, elimine la excepción. Para ello, agregue entradas al [archivo de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Para obtener más información, vea la sección Comentarios.  
+> La `MissingRuntimeArtifactException` clase está pensada únicamente para uso interno de la cadena de herramientas de .net Native. No está pensada para usarse en código de terceros y tampoco debe usarse para controlar la excepción en el código de la aplicación. En su lugar, elimine la excepción. Para ello, agregue entradas al [archivo de directivas en tiempo de ejecución](runtime-directives-rd-xml-configuration-file-reference.md). Para obtener más información, vea la sección Comentarios.  
   
 ## <a name="syntax"></a>Sintaxis  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -35,7 +35,7 @@ ms.locfileid: "69941635"
 |`public MissingRuntimeArtifactException()`|Inicializa una nueva instancia de la clase `MissingRuntimeArtifactException` mediante un mensaje proporcionado por el sistema que describe el error.<br /><br /> Este constructor es para uso interno solo por la cadena de herramientas de .NET Native.|  
 |`public MissingRuntimeArtifactException(String message)`|Inicializa una nueva instancia de la clase `MissingRuntimeArtifactException` con el mensaje de error especificado.<br /><br /> Este constructor es para uso interno solo por la cadena de herramientas de .NET Native.|  
   
-## <a name="properties"></a>Properties (Propiedades)  
+## <a name="properties"></a>Propiedades  
   
 |Propiedad|DESCRIPCIÓN|  
 |--------------|-----------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "69941635"
 ## <a name="usage-details"></a>Detalles de uso  
  La excepción `MissingRuntimeArtifactException` se genera cuando se intenta crear una instancia de un tipo o invocar un miembro de tipo y, aunque existen metadatos de dicho tipo o miembro, su implementación se ha quitado.  
   
- Si los metadatos y el código de implementación para ejecutar dinámicamente un método están disponibles para una aplicación en tiempo de ejecución, se define en el archivo de directivas \*en tiempo de ejecución (configuración XML),. Rd. Xml. Para evitar que la aplicación genere esta excepción, debe modificar \*.rd.xml para garantizar que un tipo o un miembro de tipo va a disponer de los metadatos necesarios en tiempo de ejecución. Para obtener información sobre el formato del archivo \*.rd.xml, vea [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)).  
+ Si los metadatos y el código de implementación para ejecutar dinámicamente un método están disponibles para una aplicación en tiempo de ejecución, se define en el archivo de directivas \*en tiempo de ejecución (configuración XML),. Rd. Xml. Para evitar que la aplicación genere esta excepción, debe modificar \*.rd.xml para garantizar que un tipo o un miembro de tipo va a disponer de los metadatos necesarios en tiempo de ejecución. Para obtener información sobre el formato del archivo \*.rd.xml, vea [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)).  
   
 > [!IMPORTANT]
 > Puesto que esta excepción indica que el código de implementación que la aplicación necesita no está disponible en tiempo de ejecución, no debe controlar esta excepción en un bloque `try`/`catch`. En su lugar, diagnostique la causa de la excepción y elimínela mediante un archivo de directivas en tiempo de ejecución. Normalmente, se elimina esta excepción especificando la Directiva o `Activate` `Dynamic` adecuada para un elemento de programa en el archivo de directivas en\*tiempo de ejecución (archivo. Rd. xml). Para obtener la entrada que se puede agregar al archivo de directivas en tiempo de ejecución que elimina la excepción, puede usar uno de estos dos solucionadores de problemas:  
@@ -82,5 +82,5 @@ ms.locfileid: "69941635"
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)

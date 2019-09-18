@@ -1,18 +1,18 @@
 ---
-title: <Directives> Elemento (.NET Native)
+title: <Directives>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9ec9a09e2fc03adbfcff0d7e69489e37da6e4a5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868593"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049880"
 ---
-# <a name="directives-element-net-native"></a>\<Directivas > elemento (.NET Native)
-El elemento raíz en cada archivo de directivas en tiempo de ejecución de .NET Native.  
+# <a name="directives-element-net-native"></a>\<Elemento directives > (.NET Native)
+Elemento raíz de cada archivo de directivas en tiempo de ejecución para .NET Native.  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
   
@@ -26,23 +26,23 @@ El elemento raíz en cada archivo de directivas en tiempo de ejecución de .NET 
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`xmlns`|El espacio de nombres XML. Su valor es siempre **"http://schemas.microsoft.com/netfx/2013/01/metadata"**.|  
+|`xmlns`|El espacio de nombres XML. Su valor siempre es **"http://schemas.microsoft.com/netfx/2013/01/metadata"** .|  
   
 ## <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Actúa como contenedor para los miembros de tipos y los tipos de toda la aplicación cuyos metadatos están disponibles para la reflexión.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define el ensamblado cuyos tipos secundarios y miembros de tipo requieren metadatos en tiempo de ejecución.|  
+|[\<Application>](application-element-net-native.md)|Actúa como contenedor para los miembros de tipos y los tipos de toda la aplicación cuyos metadatos están disponibles para la reflexión.|  
+|[\<Library>](library-element-net-native.md)|Define el ensamblado cuyos tipos secundarios y miembros de tipo requieren metadatos en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada archivo de directivas de tiempo de ejecución solo puede contener un elemento `<Directives>`.  
   
- El elemento `<Directives>` puede contener cero o un elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) y cero, uno o más elementos [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ El elemento `<Directives>` puede contener cero o un elemento [\<Application>](application-element-net-native.md) y cero, uno o más elementos [\<Library>](library-element-net-native.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

@@ -2,12 +2,12 @@
 title: Patrones activos
 description: Obtenga información sobre cómo usar patrones activos para definir particiones con nombre que subdividen F# los datos de entrada en el lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629953"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083079"
 ---
 # <a name="active-patterns"></a>Patrones activos
 
@@ -30,7 +30,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, los identificadores son nombres para las particiones de los datos de entrada que se representan mediante *argumentos*o, en otras palabras, nombres para subconjuntos del conjunto de todos los valores de los argumentos. Puede haber hasta siete particiones en una definición de modelo activo. La *expresión* describe el formulario en el que se descomponen los datos. Puede usar una definición de modelo activa para definir las reglas para determinar a qué particiones con nombre se encuentran los valores especificados como argumentos. Los símbolos (| y |) se conocen como *clips de banana* y la función creada por este tipo de enlace Let se denomina reconocedor *activo*.
+En la sintaxis anterior, los identificadores son nombres para las particiones de los datos de entrada que se representan mediante *argumentos*o, en otras palabras, nombres para subconjuntos del conjunto de todos los valores de los argumentos. Puede haber hasta siete particiones en una definición de modelo activo. La *expresión* describe el formulario en el que se descomponen los datos. Puede usar una definición de modelo activa para definir las reglas para determinar a qué particiones con nombre se encuentran los valores especificados como argumentos. Los símbolos (| y |) se conocen como *clips de banana* y la función creada por este tipo de enlace Let se denomina *reconocedor activo*.
 
 Como ejemplo, considere el siguiente patrón activo con un argumento.
 
@@ -42,7 +42,7 @@ Puede usar el modelo activo en una expresión de coincidencia de patrones, como 
 
 La salida de este programa es la siguiente:
 
-```
+```console
 7 is odd
 11 is odd
 32 is even
@@ -54,7 +54,7 @@ Otro uso de los patrones activos es descomponer los tipos de datos de varias man
 
 La salida del programa anterior es la siguiente:
 
-```
+```console
 Red
  Red: 255 Green: 0 Blue: 0
  Hue: 360.000000 Saturation: 1.000000 Brightness: 0.500000
@@ -84,7 +84,7 @@ A veces, solo necesita crear particiones de parte del espacio de entrada. En ese
 
 La salida del ejemplo anterior es la siguiente:
 
-```
+```console
 1.100000 : Floating point
 0 : Integer
 0.000000 : Floating point
@@ -98,7 +98,7 @@ Cuando se usan modelos activos parciales, algunas veces las opciones individuale
 
 La salida es la siguiente:
 
-```
+```console
 1 is a cube and a square
 8 is a cube
 27 is a cube
@@ -119,7 +119,7 @@ Los modelos activos siempre toman al menos un argumento para el elemento que se 
 
 La salida del código anterior es la siguiente:
 
-```
+```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
@@ -129,7 +129,7 @@ Los modelos activos no se limitan solo a las expresiones de coincidencia de patr
 
 La salida del código anterior es la siguiente:
 
-```
+```console
 Hello, random citizen!
 Hello, George!
 ```

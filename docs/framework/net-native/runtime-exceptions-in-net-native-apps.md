@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68fe50d24ce547e1cad092e3d871c2d0990fd5af
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 27a2e0906343d115c47230c726efb74cd51d4c93
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894971"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049159"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 Es importante probar las versiones de lanzamiento de la aplicación de la Plataforma universal de Windows en las plataformas de destino, ya que las configuraciones de depuración y de lanzamiento son completamente diferentes. De forma predeterminada, la configuración de depuración utiliza el tiempo de ejecución de .NET Core para compilar la aplicación, pero la configuración de lanzamiento usa .NET Native para compilar la aplicación en código nativo.  
   
 > [!IMPORTANT]
-> Para obtener información sobre cómo tratar las excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) que se pueden encontrar al probar las versiones de lanzamiento de la aplicación, vea "paso 4: Resuelva manualmente los metadatos que faltan: en el [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md) tema, así como la [reflexión y .net Native](../../../docs/framework/net-native/reflection-and-net-native.md) y la [Referencia del archivo de configuración de directivas de tiempo de ejecución (Rd. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> Para obtener información sobre cómo tratar las excepciones [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)y [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) que se pueden encontrar al probar las versiones de lanzamiento de la aplicación, vea "paso 4: Resuelva manualmente los metadatos que faltan: en el [Introducción](getting-started-with-net-native.md) tema, así como la [reflexión y .net Native](reflection-and-net-native.md) y la [Referencia del archivo de configuración de directivas de tiempo de ejecución (Rd. xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Compilaciones de depuración y de lanzamiento  
  Cuando se ejecuta la compilación de depuración en el tiempo de ejecución de .NET Core, no se ha compilado en código nativo. Esto hace que todos los servicios que normalmente ofrece el tiempo de ejecución estén disponibles para su aplicación.  
@@ -62,4 +62,4 @@ Additional information: Value does not fall within the expected range.
 ## <a name="see-also"></a>Vea también
 
 - [Depuración .NET Native aplicaciones universales de Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
-- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Introducción](getting-started-with-net-native.md)

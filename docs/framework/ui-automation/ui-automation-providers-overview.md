@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914388"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042042"
 ---
 # <a name="ui-automation-providers-overview"></a>Información general sobre proveedores de UI Automation
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "69914388"
 ### <a name="navigation"></a>Navegación  
  Los elementos[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se exponen a  clientes como un árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] construye el árbol navegando de un elemento a otro. Los proveedores habilitan la navegación para cada elemento y cada uno de ellos puede señalar a un elemento primario, elementos del mismo nivel y elementos secundarios.  
   
- Para más información sobre la vista del cliente del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Para más información sobre la vista del cliente del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 ### <a name="views"></a>Vistas  
  Un cliente puede ver el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en tres vistas principales, como se muestra en la tabla siguiente.  
@@ -57,7 +57,7 @@ ms.locfileid: "69914388"
 |Vista de control|Contiene elementos que son controles.|  
 |Vista de contenido|Contiene elementos que tienen contenido.|  
   
- Para más información sobre vistas del cliente del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Para más información sobre vistas del cliente del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
  Es responsabilidad de la implementación del proveedor definir un elemento como un elemento de contenido o un elemento de control. Los elementos de control pueden o no ser elementos de contenido, pero todos los elementos de contenido son elementos de control.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69914388"
   
 ## <a name="see-also"></a>Vea también
 
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)

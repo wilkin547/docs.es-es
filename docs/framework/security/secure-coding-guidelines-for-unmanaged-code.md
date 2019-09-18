@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966120"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045359"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instrucciones de programación segura para código sin administrar
 El código de algunas bibliotecas necesita llamar a código no administrado (por ejemplo, las API de código nativo, como Win32). Como esto implica salir del perímetro de seguridad del código administrado, se requiere mucha precaución. Si el código es neutro en cuanto a seguridad, tanto su código como cualquier otro código que lo llame deberán tener permiso de código no administrado (<xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificada).  
   
- Sin embargo, a menudo sucede que es absurdo conceder al llamador permisos tan amplios. En esos casos, el código de confianza puede actuar como intermediario, de forma similar al contenedor administrado o el código de biblioteca que se describen en [Proteger código de contenedor](../../../docs/framework/misc/securing-wrapper-code.md). Si la funcionalidad del código no administrado subyacente es totalmente segura, se puede exponer directamente. Si no, es necesario realizar primero la comprobación (solicitud) de permisos correspondiente.  
+ Sin embargo, a menudo sucede que es absurdo conceder al llamador permisos tan amplios. En esos casos, el código de confianza puede actuar como intermediario, de forma similar al contenedor administrado o el código de biblioteca que se describen en [Proteger código de contenedor](../misc/securing-wrapper-code.md). Si la funcionalidad del código no administrado subyacente es totalmente segura, se puede exponer directamente. Si no, es necesario realizar primero la comprobación (solicitud) de permisos correspondiente.  
   
  Si su código llama a código no administrado, pero no quiere exigir que los llamadores tengan permiso para acceder a código no administrado, debe declarar este derecho con una aserción. Las aserciones bloquean el recorrido de la pila en su marco. Debe tener cuidado de no crear una vulnerabilidad de seguridad en este proceso. Normalmente, para esto es necesario solicitar un permiso adecuado a los llamadores y, luego, utilizar código no administrado para realizar solamente lo que permite el permiso y nada más. En algunos casos (por ejemplo, una función get time-of-day), el código no administrado se puede exponer directamente a los llamadores sin ninguna comprobación de seguridad. En cualquier caso, todo el código que se declare con aserciones debe asumir la responsabilidad de mantener la seguridad.  
   

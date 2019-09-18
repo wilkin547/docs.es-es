@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumn (Método)
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataTables.GetColumn
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22f9ceab2f01ac12762710f313c56f3f0ee4e6be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781544"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053674"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn (Método)
-Obtiene un puntero al valor incluido en la celda de la columna especificada y la fila en la tabla dada.  
+Obtiene un puntero al valor contenido en la celda de la columna y la fila especificadas en la tabla especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,27 +38,49 @@ HRESULT GetColumn (
 );  
 ```  
   
-## <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros
+
  `ixTbl`  
- [in] El índice de la tabla.  
+ de Índice de la tabla.  
   
  `ixCol`  
- [in] El índice de la columna en la tabla.  
+ de Índice de la columna de la tabla.  
   
  `rid`  
- [in] El índice de la fila en la tabla.  
+ de Índice de la fila de la tabla.  
   
  `pVal`  
- [out] Un puntero al valor de la celda.  
+ enuncia Puntero al valor de la celda.  
+ 
+## <a name="remarks"></a>Comentarios
+
+La interpretación del valor devuelto a través `pVal` de depende del tipo de la columna. El tipo de columna se puede determinar mediante una llamada a [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+
+- El método **getcolumn (** convierte automáticamente las columnas de tipo **RID** o **CodedToken** a valores completos de 32 `mdToken` bits.
+- También convierte automáticamente los valores de 8 o 16 bits en valores completos de 32 bits. 
+- En el caso de las columnas de tipo de *montón* , el *pval* devuelto será un índice en el montón correspondiente.
+
+| Tipo de columna              | pVal contiene | Comentario                          |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *pval* contendrá un token completo. La función convierte automáticamente el RID en un token completo. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Después de la devolución, *pval* contendrá un token completo. La función descomprime automáticamente CodedToken en un token completo. |
+| `iSHORT`(96)            | Int16         | El signo se extiende automáticamente a 32 bits.  |
+| `iUSHORT`(97)           | UInt16        | El signo se extiende automáticamente a 32 bits.  |
+| `iLONG`(98)             | Int32         |                                        | 
+| `iULONG`(99)            | UInt32        |                                        |
+| `iBYTE`(100)            | Byte          | El signo se extiende automáticamente a 32 bits.  |
+| `iSTRING`(101)          | Índice de montón de cadena | *pval* es un índice del montón de cadenas. Use [IMetadataTables:: GetString](imetadatatables-getstring-method.md) para obtener el valor de cadena de columna real. |
+| `iGUID`(102)            | Índice de montón GUID | *pval* es un índice en el montón de GUID. Use [IMetadataTables:: GetGuid](imetadatatables-getguid-method.md) para obtener el valor de GUID de columna real. |
+| `iBLOB`(103)            | Índice de montón de BLOB | *pval* es un índice del montón de blobs. Use [IMetadataTables:: GetBlob](imetadatatables-getblob-method.md) para obtener el valor de BLOB de columna real. |
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Encabezado**: Cor. h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Biblioteca** Se utiliza como recurso en MsCorEE. dll  
   
- **Versiones de .NET framework** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

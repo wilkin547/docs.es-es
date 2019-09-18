@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1819fffaf2eccb6a26578eaf993100b8eca7c76e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 670a32b4d198d2762e0bb51e41297836e471e05b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966434"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052840"
 ---
 # <a name="disconnectedcontext-mda"></a>MDA de disconnectedContext
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `disconnectedContext` se activa cuando el CLR intenta realizar una transición a un contexto o apartamento desconectado mientras atiende una solicitud relativa a un objeto COM.  
@@ -33,7 +33,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR. Solo recoge datos sobre el contexto desconectado.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  Recoge la cookie de contexto del apartamento o contexto desconectado.  
   
 ## <a name="configuration"></a>Configuración  
@@ -49,5 +49,5 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

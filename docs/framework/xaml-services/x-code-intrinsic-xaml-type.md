@@ -10,43 +10,43 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: f6898008fa3e3e7e385a2bc77c5b2eac7eeda2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b7713548b6269f079ef32b5bf1fe4fa630edcc8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617155"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053793"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code (Tipo XAML intrínseco)
-Permite la selección de ubicación de código dentro de una producción de XAML. Dicho código puede compilarse por cualquier implementación de procesador XAML que se compila en XAML o a la izquierda en la producción de XAML para usos posteriores como interpretación por un tiempo de ejecución.  
+Permite colocar código dentro de un entorno de producción XAML. Este código se puede compilar con cualquier implementación de procesador XAML que compile XAML, o bien en la producción XAML para usos posteriores, como la interpretación de un Runtime.  
   
 ## <a name="xaml-object-element-usage"></a>Uso de elementos de objeto XAML  
   
-```  
+```xaml  
 <x:Code>  
    // code instructions, usually enclosed by CDATA...  
 </x:Code>  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El código dentro de la `x:Code` elemento de directiva de XAML es todavía interpretado dentro del espacio de nombres XML general y los espacios de nombres XAML proporcionados. Por lo tanto, resulta suele ser necesario incluir el código utilizado para `x:Code` dentro de un `CDATA` segmento.  
+ El código dentro del `x:Code` elemento de directiva de XAML se interpreta en el espacio de nombres XML general y en los espacios de nombres XAML proporcionados. Por lo tanto, normalmente es necesario incluir el código utilizado para `x:Code` dentro de `CDATA` un segmento.  
   
- `x:Code` no se permite para todos los mecanismos de implementación posibles de una producción de XAML. El código debe compilarse en marcos concretos (por ejemplo, WPF). En otros marcos, `x:Code` podría denegar uso general.  
+ `x:Code`no está permitida para todos los mecanismos de implementación posibles de una producción de XAML. En marcos de trabajo específicos (por ejemplo, WPF), se debe compilar el código. En otros marcos, `x:Code` el uso podría no estar permitido por lo general.  
   
- Para los marcos que permiten administrado `x:Code` de contenido, el compilador del lenguaje correcto que se usará para `x:Code` contenido viene determinado por la configuración y los destinos del proyecto contenedor que se utiliza para compilar la aplicación.  
+ En el caso de los marcos `x:Code` que permiten contenido administrado, el compilador `x:Code` de lenguaje correcto que se va a usar para el contenido está determinado por la configuración y los destinos del proyecto contenedor que se usa para compilar la aplicación.  
   
-## <a name="wpf-usage-notes"></a>Notas de uso WPF  
- Código declarados dentro de `x:Code` para WPF tiene varias limitaciones importantes:  
+## <a name="wpf-usage-notes"></a>Notas de uso de WPF  
+ El código declarado `x:Code` en para WPF tiene varias limitaciones importantes:  
   
-- El `x:Code` elemento de directiva debe ser un elemento secundario inmediato del elemento raíz de la producción de XAML.  
+- El `x:Code` elemento de Directiva debe ser un elemento secundario inmediato del elemento raíz de la producción XAML.  
   
-- [x: Class directiva](x-class-directive.md) debe proporcionarse en el elemento raíz primario.  
+- se debe proporcionar la [Directiva x:Class](x-class-directive.md) en el elemento raíz primario.  
   
-- El código se coloca dentro de `x:Code` se tratará de compilación dentro del ámbito de la clase parcial que ya se está creando para esa página XAML. Por lo tanto, todo el código que defina debe ser miembros o las variables de la clase parcial.  
+- El código colocado dentro `x:Code` de se tratará mediante compilación para que esté dentro del ámbito de la clase parcial que ya se está creando para esa página XAML. Por lo tanto, todo el código que defina debe ser miembro o variables de esa clase parcial.  
   
-- No se puede definir clases adicionales, aparte de mediante el anidamiento de una clase dentro de la clase parcial (se permite el anidamiento, pero no es habitual, ya que no se puede hacer referencia a clases anidadas en XAML). No se define o agregado a espacios de nombres CLR que no sea el espacio de nombres que se usa para la clase parcial existente.  
+- No se pueden definir clases adicionales, aparte de anidar una clase dentro de la clase parcial (se permite el anidamiento, pero no es típico porque no se puede hacer referencia a las clases anidadas en XAML). Los espacios de nombres CLR distintos del espacio de nombres que se usa para la clase parcial existente no se pueden definir ni agregar a.  
   
-- Las referencias a entidades de código fuera del espacio de nombres CLR de la clase parcial deben ubicarse completas. Si los miembros que se declara reemplazos para los miembros de clase parcial que se puede invalidar, esto debe especificarse con la palabra clave override específicos del idioma. Si los miembros declaran en `x:Code` ámbito entran en conflicto con los miembros de la clase parcial creada desde el XAML, de tal forma que el compilador informa el conflicto, el archivo XAML no se puede compilar o cargar.  
+- Todas las referencias a entidades de código fuera del espacio de nombres CLR de clase parcial deben ser completas. Si los miembros que se declaran son invalidaciones de los miembros reemplazables de clase parcial, debe especificarse con la palabra clave override específica del lenguaje. Si los miembros declarados en el ámbito entran en `x:Code` conflicto con los miembros de la clase parcial creada fuera del código XAML, de tal forma que el compilador notifique el conflicto, el archivo XAML no se puede compilar ni cargar.  
   
 ## <a name="see-also"></a>Vea también
 

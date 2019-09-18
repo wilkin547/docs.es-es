@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875087"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052949"
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
 
@@ -26,7 +26,7 @@ El asistente para la depuración administrada (MDA) `bindingFailure` se activa c
 
 El código ha intentado cargar un ensamblado con una referencia estática o uno de los métodos del cargador, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. No se ha cargado el ensamblado y se ha producido una excepción <xref:System.IO.FileNotFoundException> o <xref:System.IO.FileLoadException>.
 
-## <a name="cause"></a>Motivo
+## <a name="cause"></a>Causa
 
 Si el tiempo de ejecución no puede cargar un ensamblado, se produce un error de enlace. Un error de enlace podría deberse a una de las siguientes situaciones:
 
@@ -46,7 +46,7 @@ El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado
 
 - Determine la causa con los datos proporcionados por el MDA `bindingFailure`:
 
-  - Ejecute [Fuslogvw.exe (Visor de registro de enlaces de ensamblados)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) para leer los registros de errores generados por el enlazador de ensamblados.
+  - Ejecute [Fuslogvw.exe (Visor de registro de enlaces de ensamblados)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) para leer los registros de errores generados por el enlazador de ensamblados.
 
   - Determine si el ensamblado se encuentra en la ubicación solicitada. En el caso de los métodos <xref:System.Reflection.Assembly.LoadFrom%2A> y <xref:System.Reflection.Assembly.LoadFile%2A>, la ubicación solicitada se puede determinar fácilmente. En el caso del método <xref:System.Reflection.Assembly.Load%2A>, que enlaza con la identidad del ensamblado, debe buscar ensamblados que coincidan con esa identidad en la ruta de acceso de sondeo de la propiedad <xref:System.AppDomain.BaseDirectory%2A> del dominio de aplicación y la memoria caché global de ensamblados.
 
@@ -64,7 +64,7 @@ El primer paso es determinar por qué CLR no ha podido enlazar con el ensamblado
 
 Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre errores de enlace.
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Resultados
 
 El MDA notifica qué ensamblado no se ha podido cargar, incluida la ruta de acceso solicitada o el nombre para mostrar, el contexto de enlace, el dominio de aplicación en el que se ha solicitado la carga y el motivo del error.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Vea también
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

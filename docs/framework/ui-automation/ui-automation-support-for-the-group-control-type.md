@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Group control type
 - control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-ms.openlocfilehash: 537ab4485cb85fde12325ad9bb95bfd2c430e7b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4bcb9ddd1f8a926ff320dfe86de088ec2f65386
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911905"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041616"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Compatibilidad de UI Automation para el tipo de control Group
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "69911905"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de automatización de interfaz de usuario necesaria  
- En la tabla siguiente se describen la vista de control y la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de grupo y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ En la tabla siguiente se describen la vista de control y la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de grupo y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
 |Grupo<br /><br /> -0 o muchos controles|Grupo<br /><br /> -0 o muchos controles|  
   
- Normalmente, los controles de grupo tendrán [compatibilidad de UI Automation para el tipo de control ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md), [compatibilidad de UI Automation para el tipo de control TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)o [compatibilidad de UI Automation para los tipos de control de tipo de control DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) encontrados debajo en el subárbol. Como 'Group' es un contenedor genérico, es posible que cualquier tipo de control se encuentre por debajo el control Group en el árbol.  
+ Normalmente, los controles de grupo tendrán [compatibilidad de UI Automation para el tipo de control ListItem](ui-automation-support-for-the-listitem-control-type.md), [compatibilidad de UI Automation para el tipo de control TreeItem](ui-automation-support-for-the-treeitem-control-type.md)o [compatibilidad de UI Automation para los tipos de control de tipo de control DataItem](ui-automation-support-for-the-dataitem-control-type.md) encontrados debajo en el subárbol. Como 'Group' es un contenedor genérico, es posible que cualquier tipo de control se encuentre por debajo el control Group en el árbol.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propiedades necesarias para la automatización de la interfaz de usuario  
- En la tabla siguiente se muestran las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que tienen un valor o una definición que es especialmente relevante para los controles de grupo. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ En la tabla siguiente se muestran las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que tienen un valor o una definición que es especialmente relevante para los controles de grupo. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|Notas|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -52,7 +52,7 @@ ms.locfileid: "69911905"
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control necesarios para la automatización de la interfaz de usuario  
- En la tabla siguiente se muestran los patrones de control de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir los tipos de control Group. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ En la tabla siguiente se muestran los patrones de control de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir los tipos de control Group. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 |Patrón de control|Soporte técnico|Notas|  
 |---------------------|-------------|-----------|  
@@ -60,7 +60,7 @@ ms.locfileid: "69911905"
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
- En la tabla siguiente se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de grupo. Para más información sobre eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+ En la tabla siguiente se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de grupo. Para más información sobre eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -75,5 +75,5 @@ ms.locfileid: "69911905"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Automation.ControlType.Group>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre la Automatización de la interfaz de usuario](ui-automation-overview.md)

@@ -2,12 +2,12 @@
 title: Tipos flexibles
 description: Aprenda a usar F# una anotación de tipo flexible, que indica que un parámetro, una variable o un valor tiene un tipo que es compatible con un tipo especificado.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630267"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083061"
 ---
 # <a name="flexible-types"></a>Tipos flexibles
 
@@ -57,7 +57,7 @@ En el código siguiente `Seq.concat` se usa para mostrar los escenarios que se p
 
 La salida es la siguiente.
 
-```
+```console
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044131"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049438"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native y compilación
 
@@ -82,7 +82,7 @@ Dado que la cadena de herramientas de .NET Native vincula el código de implemen
 
 - Interoperabilidad COM.
 
-Si el código de implementación o los metadatos necesarios no están presentes en runtime, el runtime de .NET Native genera una excepción. Para evitar estas excepciones y asegurarse de que la cadena de herramientas de .NET Native incluye el código de implementación y los metadatos necesarios, use un [archivo de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md), que es un archivo XML que designa los elementos del programa cuyo código de implementación o metadatos deben estar disponibles en tiempo de ejecución y les asigna una directiva en tiempo de ejecución. A continuación se incluye el archivo de directivas de runtime predeterminado que se agrega a un proyecto de la Tienda Windows compilado por la cadena de herramientas de .NET Native:
+Si el código de implementación o los metadatos necesarios no están presentes en runtime, el runtime de .NET Native genera una excepción. Para evitar estas excepciones y asegurarse de que la cadena de herramientas de .NET Native incluye el código de implementación y los metadatos necesarios, use un [archivo de directivas en tiempo de ejecución](runtime-directives-rd-xml-configuration-file-reference.md), que es un archivo XML que designa los elementos del programa cuyo código de implementación o metadatos deben estar disponibles en tiempo de ejecución y les asigna una directiva en tiempo de ejecución. A continuación se incluye el archivo de directivas de runtime predeterminado que se agrega a un proyecto de la Tienda Windows compilado por la cadena de herramientas de .NET Native:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ Esto habilita la reflexión y la invocación dinámica en todos los tipos, así 
 
 ## <a name="net-native-and-ngen"></a>.NET Native y NGEN
 
-El [generador de imágenes nativas](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) compila los ensamblados en código nativo y los instala en la caché de imágenes nativas del equipo local. Sin embargo, a pesar de que NGEN (al igual que .NET Native) genera código nativo, se diferencia de .NET Native en algunos aspectos importantes:
+El [generador de imágenes nativas](../tools/ngen-exe-native-image-generator.md) (NGEN) compila los ensamblados en código nativo y los instala en la caché de imágenes nativas del equipo local. Sin embargo, a pesar de que NGEN (al igual que .NET Native) genera código nativo, se diferencia de .NET Native en algunos aspectos importantes:
 
 - Si no hay ninguna imagen nativa disponible para un método concreto, NGEN recurre a aplicar JIT al código. Esto significa que las imágenes nativas deben seguir incluyendo metadatos e IL en caso de que NGEN deba recurrir a la compilación JIT. En cambio, .NET Native solo genera imágenes nativas y no recurre a la compilación JIT. Como resultado, tan solo deben conservarse los metadatos necesarios para algunos escenarios de interoperabilidad, serialización y reflexión.
 
@@ -108,5 +108,5 @@ El [generador de imágenes nativas](../../../docs/framework/tools/ngen-exe-nativ
 
 - [Metadatos y componentes autodescriptivos](../../standard/metadata-and-self-describing-components.md)
 - [Dentro de .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)
-- [Solución de problemas generales de .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)
+- [Solución de problemas generales de .NET Native](net-native-general-troubleshooting.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938754"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053899"
 ---
 # <a name="xamlname-grammar"></a>Gramática de XamlName
-Gramática de XamlName es una gramática concreta que se define en la especificación del lenguaje XAML [MS-XAML], que se reproduce aquí por comodidad.  
+La gramática de XamlName es una gramática específica que se define en la especificación del lenguaje XAML [MS-XAML], que se reproduce aquí por comodidad.  
   
-## <a name="from-the-xaml-specification"></a>De la especificación de XAML  
- La especificación [MS-XAML] define la gramática de XamlName para identificar el conjunto de identificadores simbólicos válidos utilizados para los tipos y propiedades.  
+## <a name="from-the-xaml-specification"></a>De la especificación XAML  
+ La especificación [MS-XAML] define la gramática de XamlName para identificar el conjunto de identificadores simbólicos válidos que se usan para los tipos y las propiedades.  
   
- Valores de cadena que son del tipo que XamlName debe ajustarse a la gramática siguiente:  
+ Los valores de cadena que son del tipo XamlName deben ajustarse a la gramática siguiente:  
   
-```  
+```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
 NameStartChar ::= LetterCharacter | '_'   
 NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter   
@@ -32,36 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- Lo que supone los siguientes valores de categoría general tal como se define en la base de datos de caracteres Unicode  
+ Que presupone los siguientes valores de categoría generales según se define en la base de datos de caracteres Unicode  
+
+| Categoría Unicode   | DESCRIPCIÓN                   |
+|--------------------|-------------------------------|
+| Lu                 | Letra, mayúscula             |
+| Ll                 | Letra, minúscula             |
+| Lt                 | Letra, inicial en mayúscula             |
+| Lm                 | Letra, modificador              |
+| Lo                 | Letra, otra                 |
+| Mn                 | Marca, sin espaciado             |
+| Mc                 | Marca, con espacios y combinación       |
+| Nd                 | Número, decimal               |
+| Nl                 | Número, letra                |
+ 
+ XAML define una segunda gramática, DottedXamlName, que se usa para las referencias calificadas de propiedades y eventos, y también para los miembros adjuntos. Para obtener más información, <xref:System.Windows.DependencyProperty> vea e [información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
   
-```  
-Lu  
-Letter, Uppercase  
-Ll  
-Letter, Lowercase  
-Lt  
-Letter, Titlecase  
-Lm  
-Letter, Modifier  
-Lo  
-Letter, Other  
-Mn  
-Mark, Non-Spacing  
-Mc  
-Mark, Spacing Combining  
-Nd  
-Number, Decimal  
-Nl  
-Number, Letter  
-```  
+ Los valores de cadena que son de tipo DottedXamlName deben ajustarse a la gramática siguiente:  
   
- XAML define una segunda gramática, DottedXamlName, que se usa para la propiedad y las referencias de evento y también para los miembros asociados. Para obtener más información, consulte <xref:System.Windows.DependencyProperty> y [información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
-  
- Valores de cadena que son del tipo que DottedXamlName debe ajustarse a la gramática siguiente:  
-  
-```  
+```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener la especificación completa, consulte [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).
+ Para obtener la especificación completa, consulte [ \[MS-\]XAML](https://go.microsoft.com/fwlink/?LinkId=114525).

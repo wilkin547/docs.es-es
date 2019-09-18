@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854030"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052311"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA de releaseHandleFailed
 El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se activa para notificar a los desarrolladores cuando el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> devuelve `false`.  
@@ -52,7 +52,7 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  Un mensaje que indica que un <xref:System.Runtime.InteropServices.SafeHandle> o un <xref:System.Runtime.InteropServices.CriticalHandle> no pudieron liberar correctamente el identificador. Por ejemplo:  
   
 ```output
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

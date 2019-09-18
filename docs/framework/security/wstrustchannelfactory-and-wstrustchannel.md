@@ -3,12 +3,12 @@ title: WSTrustChannelFactory y WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633171"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044917"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory y WSTrustChannel
 Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que un cliente WCF ya reconoce la federación. Al configurar un cliente WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un enlace personalizado similar, puede habilitar la autenticación federada en un servicio.
@@ -25,7 +25,7 @@ Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que u
 
 - Mediante WIF solo para obtener un token del STS y habilitar a continuación un cliente WCF para autenticar con este token. Para más información, vea el ejemplo [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- El primer escenario no necesita explicación: Los clientes WCF existentes seguirán funcionando con confianza de WIF y STS. En este tema se describen los dos escenarios restantes.
+ El primer escenario se explica por sí solo: Los clientes de WCF existentes seguirán funcionando con los usuarios de confianza de WIF y STS. En este tema se describen los dos escenarios restantes.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Mejorar un cliente de WCF existente con ActAs/OnBehalfOf
 En un escenario de delegación de identidad típico, un cliente llama a un servicio de nivel intermedio, que a su vez llama a un servicio back-end. El servicio de nivel intermedio actúa como el cliente o en su nombre.
@@ -102,4 +102,4 @@ El método de extensión <xref:System.ServiceModel.ChannelFactory%601.CreateChan
 
 ## <a name="see-also"></a>Vea también
 
-- [Características de WIF](../../../docs/framework/security/wif-features.md)
+- [Características de WIF](wif-features.md)

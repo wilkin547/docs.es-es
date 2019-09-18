@@ -3,16 +3,16 @@ title: Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5
 ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
-ms.openlocfilehash: ef5801ccfdda22b1c89c22ea9c2b14ea0855ed26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d967ce931e81ca14645e7464943e1411264d6ca2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670038"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045405"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5
 
-A partir de .NET 4.5, Windows Identity Foundation (WIF) se ha integrado por completo en .NET Framework. Esta integración ha dado lugar a cambios en los nombres y a la consolidación de los espacios de nombres y la superficie de la API de WIF. En este tema se proporcionan directrices y una asignación general entre los espacios de nombres de WIF 3.5 y los espacios de nombres de WIF 4.5. No pretende ser exhaustivo, sino proporcionar información general sobre dónde encontrar las clases conocidas de WIF 3.5 en WIF 4.5. Para obtener más información sobre las diferencias entre WIF 3.5 y WIF 4.5, vea [What's New in Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md) (Novedades de Windows Identity Foundation 4.5). Para obtener instrucciones sobre cómo migrar a WIF 4.5 una aplicación compilada con WIF 3.5, vea [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md) (Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5).
+A partir de .NET 4.5, Windows Identity Foundation (WIF) se ha integrado por completo en .NET Framework. Esta integración ha dado lugar a cambios en los nombres y a la consolidación de los espacios de nombres y la superficie de la API de WIF. En este tema se proporcionan directrices y una asignación general entre los espacios de nombres de WIF 3.5 y los espacios de nombres de WIF 4.5. No pretende ser exhaustivo, sino proporcionar información general sobre dónde encontrar las clases conocidas de WIF 3.5 en WIF 4.5. Para obtener más información sobre las diferencias entre WIF 3.5 y WIF 4.5, vea [What's New in Windows Identity Foundation 4.5](whats-new-in-wif.md) (Novedades de Windows Identity Foundation 4.5). Para obtener instrucciones sobre cómo migrar a WIF 4.5 una aplicación compilada con WIF 3.5, vea [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md) (Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5).
 
 ## <a name="wif-35-to-wif-45-namespace-map"></a>Asignación de espacios de nombres de WIF 3.5 a WIF 4.5
 
@@ -48,5 +48,5 @@ En la tabla siguiente se proporciona información sobre dónde se pueden encontr
 
 ## <a name="see-also"></a>Vea también
 
-- [Novedades de Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
-- [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [Novedades de Windows Identity Foundation 4.5](whats-new-in-wif.md)
+- [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

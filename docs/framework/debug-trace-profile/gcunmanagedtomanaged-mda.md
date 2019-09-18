@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f662114868832f909d734a482e1dc9aefb841a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754484"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052760"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>MDA de gcUnmanagedToManaged
 El asistente para la depuración administrada (MDA) `gcUnmanagedToManaged` produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código no administrado a administrado.  
@@ -27,7 +27,7 @@ El asistente para la depuración administrada (MDA) `gcUnmanagedToManaged` produ
 ## <a name="symptoms"></a>Síntomas  
  Una aplicación que ejecute componentes de usuario no administrados con la invocación de plataforma y COM genera una infracción de acceso no determinista en CLR.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Si una aplicación está ejecutando componentes de usuario no administrados, dichos componentes podrían haber dañado el montón de recolección de elementos no utilizados. Esto provoca una infracción de acceso en CLR cuando el recolector de elementos no utilizados intenta desplazarse por el gráfico de objetos.  
   
 ## <a name="resolution"></a>Resolución  
@@ -36,7 +36,7 @@ El asistente para la depuración administrada (MDA) `gcUnmanagedToManaged` produ
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código no administrado a administrado.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  Este MDA no produce ninguna salida.  
   
 ## <a name="configuration"></a>Configuración  
@@ -52,6 +52,6 @@ El asistente para la depuración administrada (MDA) `gcUnmanagedToManaged` produ
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

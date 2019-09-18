@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754419"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052691"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedimiento para usar TraceSource y filtros con agentes de escucha de seguimiento
 Una de las nuevas características de la versión 2.0 de .NET Framework es un sistema de seguimiento mejorado. La idea básica no se ha modificado: se envían mensajes de seguimiento a través de conmutadores a agentes de escucha, que notifican los datos a un medio de salida asociado. Una diferencia principal de la versión 2.0 es que los seguimientos se pueden iniciar a través de instancias de la clase <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> está pensada para funcionar como un sistema de seguimiento mejorado y se puede usar en lugar de los métodos estáticos de las clases anteriores de seguimiento <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug>. Las clases <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug> conocidas siguen existiendo, pero la práctica recomendada es usar la clase <xref:System.Diagnostics.TraceSource> para realizar el seguimiento.  
   
- En este tema se describe el uso de <xref:System.Diagnostics.TraceSource> junto con un archivo de configuración de aplicación.  Es posible, aunque no aconsejable, realizar el seguimiento mediante <xref:System.Diagnostics.TraceSource> sin el uso de un archivo de configuración. Para obtener información sobre el seguimiento sin un archivo de configuración, vea [Cómo: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
+ En este tema se describe el uso de <xref:System.Diagnostics.TraceSource> junto con un archivo de configuración de aplicación.  Es posible, aunque no aconsejable, realizar el seguimiento mediante <xref:System.Diagnostics.TraceSource> sin el uso de un archivo de configuración. Para obtener información sobre el seguimiento sin un archivo de [configuración, consulte Cómo: Crear e inicializar orígenes](how-to-create-and-initialize-trace-sources.md)de seguimiento.  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>Para crear e inicializar el origen de seguimiento  
   
@@ -169,5 +169,5 @@ Una de las nuevas características de la versión 2.0 de .NET Framework es un si
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Cómo: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Cómo: Crear e inicializar orígenes de seguimiento](how-to-create-and-initialize-trace-sources.md)
+- [Agentes de escucha de seguimiento](trace-listeners.md)

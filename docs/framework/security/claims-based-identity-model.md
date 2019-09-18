@@ -3,15 +3,15 @@ title: Modelo de identidad basado en notificaciones
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c09d3e177d8b0638f0260b76c163bf668235db29
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422408"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045521"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
-Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario, otra podría ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
+Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una demanda podría ser el nombre del usuario, otro podría ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
   
  Con este modelo, el inicio de sesión único es mucho más fácil de lograr y la aplicación ya no es responsable de las siguientes acciones:  
   
@@ -27,9 +27,9 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
   
  En este tema se proporciona la información siguiente:  
   
-- [Introducción a la identidad basada en notificaciones](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Introducción a la identidad basada en notificaciones](claims-based-identity-model.md#BKMK_1)  
   
-- [Escenario básico para un modelo de identidad basado en notificaciones](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Escenario básico para un modelo de identidad basado en notificaciones](claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Introducción a la identidad basada en notificaciones  
@@ -39,7 +39,7 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
  En las descripciones del modelo de programación de Windows Identity Foundation (WIF), se usa el término "identidad" para representar un conjunto de atributos que describen a un usuario o a alguna otra entidad de un sistema que se quiere proteger.  
   
 ### <a name="claim"></a>Notificación  
- Piense en una notificación como un fragmento de información de identidad, como el nombre, dirección de correo electrónico, edad, la pertenencia al rol ventas. Cuantas más notificaciones reciba la aplicación, más información se tendrá del usuario. Puede que se pregunte por qué se les denomina "notificaciones" en lugar de "atributos", que es el término que se usa habitualmente para describir directorios de empresa. El motivo está relacionado con el método de entrega. En este modelo, la aplicación no busca atributos de usuario en un directorio. En su lugar, el usuario envía notificaciones a la aplicación que, a su vez, las examina. Cada notificación la realiza un emisor y se confía en la notificación en la misma medida en que se confía en el emisor. Por ejemplo, se confía más en una notificación realizada por el controlador de dominio de su empresa que en otra realizada por el propio usuario. WIF representa las notificaciones con un tipo <xref:System.Security.Claims.Claim>, que tiene una propiedad <xref:System.Security.Claims.Claim.Issuer%2A> que permite averiguar quién emitió la notificación.  
+ Piense en una demanda como una parte de la información de identidad, como el nombre, la dirección de correo electrónico, la edad, la pertenencia al rol de ventas. Cuantas más notificaciones reciba la aplicación, más información se tendrá del usuario. Puede que se pregunte por qué se les denomina "notificaciones" en lugar de "atributos", que es el término que se usa habitualmente para describir directorios de empresa. El motivo está relacionado con el método de entrega. En este modelo, la aplicación no busca atributos de usuario en un directorio. En su lugar, el usuario envía notificaciones a la aplicación que, a su vez, las examina. Cada notificación la realiza un emisor y se confía en la notificación en la misma medida en que se confía en el emisor. Por ejemplo, se confía más en una notificación realizada por el controlador de dominio de su empresa que en otra realizada por el propio usuario. WIF representa las notificaciones con un tipo <xref:System.Security.Claims.Claim>, que tiene una propiedad <xref:System.Security.Claims.Claim.Issuer%2A> que permite averiguar quién emitió la notificación.  
   
 ### <a name="security-token"></a>Token de seguridad  
  El usuario envía un conjunto de notificaciones a la aplicación junto con una solicitud. En un servicio Web, estas notificaciones se incluyen en el encabezado de seguridad de la envoltura SOAP. En una aplicación web basada en el explorador, las notificaciones llegan a través de HTTP POST desde el explorador del usuario y pueden almacenarse en caché posteriormente en una cookie para sesiones futuras. Independientemente de cómo lleguen las notificaciones, estas deben serializarse y para ello se usan los tokens de seguridad. Un token de seguridad es un conjunto serializado de notificaciones firmadas digitalmente por la autoridad emisora. La signatura es importante: garantiza que el usuario no se limitó a realizar una serie de notificaciones y enviarlas. En situaciones de escasa seguridad donde la criptografía no es necesaria o no se desea aplicarla, pueden usarse tokens sin firma, pero ese escenario no se describe en este tema.  
@@ -58,7 +58,7 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
  Cuando se compila una aplicación basada en las notificaciones, se está compilando una aplicación de usuario de confianza (RP). Entre los sinónimos de RP se incluyen "aplicación para notificaciones" y "aplicación basada en notificaciones". Tanto las aplicaciones web como los servicios Web pueden ser de este tipo. Una aplicación de usuario de confianza usa los tokens emitidos por un STS y extrae las notificaciones de los tokens para usarlas en tareas relacionadas con la identidad. WIF ofrece funcionalidades para ayudar a compilar aplicaciones de usuario de confianza.  
   
 ### <a name="standards"></a>Estándares  
- Para que haya interoperabilidad, en el escenario anterior se usan varios estándares WS-*. La directiva se recupera usando WS-MetadataExchange, mientras que la propia directiva se estructura según la especificación WS-Policy. El STS expone los extremos que implementan la especificación WS-Trust, que describe cómo solicitar y recibir tokens de seguridad. La mayoría de los STS hoy emiten tokens con formato con el lenguaje de marcado de aserción de seguridad (SAML). El lenguaje SAML es un vocabulario XML reconocido del sector que se puede usar para representar las notificaciones de forma interoperable. Asimismo, en una situación multiplataforma, este permite comunicarse con un STS o una plataforma completamente distinta y lograr un inicio de sesión único en todas las aplicaciones, independientemente de la plataforma.  
+ Para que haya interoperabilidad, en el escenario anterior se usan varios estándares WS-*. La directiva se recupera usando WS-MetadataExchange, mientras que la propia directiva se estructura según la especificación WS-Policy. El STS expone los extremos que implementan la especificación WS-Trust, que describe cómo solicitar y recibir tokens de seguridad. La mayoría de los STS actuales emiten tokens con formato Lenguaje de marcado de aserción de seguridad (SAML). El lenguaje SAML es un vocabulario XML reconocido del sector que se puede usar para representar las notificaciones de forma interoperable. Asimismo, en una situación multiplataforma, este permite comunicarse con un STS o una plataforma completamente distinta y lograr un inicio de sesión único en todas las aplicaciones, independientemente de la plataforma.  
   
 ### <a name="browser-based-applications"></a>Aplicaciones basadas en el explorador  
  Los clientes inteligentes no son los únicos que pueden usar el modelo de identidad basado en notificaciones. Las aplicaciones basadas en el explorador (también conocidas como clientes pasivos) también pueden usarlo. En el escenario siguiente se describe su funcionamiento.  
@@ -69,14 +69,14 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
 ## <a name="basic-scenario-for-a-claims-based-identity-model"></a>Escenario básico para un modelo de identidad basado en notificaciones  
  A continuación se muestra un ejemplo de sistema basado en notificaciones.  
   
- ![Recurrir al flujo de autenticación de partner](../../../docs/framework/security/media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
+ ![Recurrir al flujo de autenticación de partner](./media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
   
  En este diagrama se muestra un sitio web (la aplicación de usuario de confianza, RP) que se ha configurado para usar WIF para la autenticación y un cliente, un explorador web, que desea usar ese sitio.  
   
-1. Cuando un usuario no autenticado solicita una página, el explorador se redirige a las páginas de identidades (IdP) del proveedor.  
+1. Cuando un usuario no autenticado solicita una página, su explorador se redirige a las páginas del proveedor de identidades (IdP).  
   
-2. El proveedor de identidades requiere que el usuario presentar sus credenciales, como el nombre de usuario/contraseña o la autenticación Kerberos.  
+2. El IdP requiere que el usuario presente sus credenciales, como el nombre de usuario/contraseña o la autenticación Kerberos.  
   
-3. Los problemas de IdP un token que se devuelve al explorador.  
+3. El IdP emite un token de vuelta al explorador.  
   
 4. A continuación, el explorador se redirige a la página solicitada originalmente, donde WIF determina si el token cumple los requisitos para tener acceso a la misma. En ese caso, se emite una cookie para establecer una sesión de modo que la autenticación solo tenga que realizarse una vez y el control se pase a la aplicación.

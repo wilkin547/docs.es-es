@@ -2,12 +2,12 @@
 title: Implementación de un servicio WFC hospedado en Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895099"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053313"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 
@@ -29,7 +29,7 @@ Para obtener un tutorial detallado sobre cómo crear un servicio WCF hospedado e
 
 WCF, IIS y ASP.NET deben estar instalados para que los servicios WCF hospedados en IIS funcionen correctamente. Los procedimientos para instalar WCF (como parte de la .NET Framework), ASP.NET e IIS varían en función del sistema operativo. Para obtener más información sobre la instalación de WCF y el .NET Framework, consulte [instalación del .NET Framework para desarrolladores](../../install/guide-for-developers.md). Para instalar IIS en Windows 10, Abra **programas y características** en el **Panel de control** y seleccione **activar o desactivar las características de Windows**. En **características de Windows**, seleccione **Internet Information Services** y, a continuación, elija **Aceptar**.
 
-![Características de Windows con IIS resaltado](media/windows-features-iis.png)
+![Características de Windows con IIS resaltado](./media/windows-features-iis.png)
 
 Las instrucciones para instalar IIS en otros sistemas operativos se pueden encontrar en [instalación de IIS en Windows Vista y Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) e [instalar IIS 8,5 en Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 

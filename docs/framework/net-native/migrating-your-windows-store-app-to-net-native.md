@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941732"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049512"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la Tienda Windows a .NET Native
 
-.NET Native proporciona la compilación estática de aplicaciones en la tienda Windows o en el equipo del desarrollador. Esto difiere de la compilación dinámica para las aplicaciones de la Tienda Windows realizada por el compilador Just-in-time (JIT) o el [generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) en el dispositivo. A pesar de las diferencias, .NET Native intenta mantener la compatibilidad con [.net para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). En su mayor parte, todo lo que funciona en .NET para aplicaciones de la tienda Windows también funciona con .NET Native.  Sin embargo, en algunos casos, puede encontrar cambios de comportamiento. En este documento se describen estas diferencias entre las aplicaciones estándar de .NET para la tienda Windows y .NET Native en las siguientes áreas:
+.NET Native proporciona la compilación estática de aplicaciones en la tienda Windows o en el equipo del desarrollador. Esto difiere de la compilación dinámica para las aplicaciones de la Tienda Windows realizada por el compilador Just-in-time (JIT) o el [generador de imágenes nativas (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) en el dispositivo. A pesar de las diferencias, .NET Native intenta mantener la compatibilidad con [.net para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). En su mayor parte, todo lo que funciona en .NET para aplicaciones de la tienda Windows también funciona con .NET Native.  Sin embargo, en algunos casos, puede encontrar cambios de comportamiento. En este documento se describen estas diferencias entre las aplicaciones estándar de .NET para la tienda Windows y .NET Native en las siguientes áreas:
 
 - [Diferencias de tiempo de ejecución generales](#Runtime)
 
@@ -67,7 +67,7 @@ La configuración predeterminada para .NET Native es suficiente para la mayoría
 - Dado que el compilador no puede determinar la creación de instancias, un tipo genérico que desee reflejar tiene que especificarse mediante directivas de tiempo de ejecución. Esto no es solo porque se debe incluir todo el código, sino también porque la reflexión en tipos genéricos puede formar un ciclo infinito (por ejemplo, cuando se invoca un método genérico en un tipo genérico).
 
 > [!NOTE]
-> Las directivas de tiempo de ejecución se definen en un archivo de directivas de tiempo de ejecución (.rd.xml). Para obtener información general sobre el uso de este archivo, vea [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md) (Introducción). Para obtener información sobre las directivas de tiempo de ejecución, vea [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
+> Las directivas de tiempo de ejecución se definen en un archivo de directivas de tiempo de ejecución (.rd.xml). Para obtener información general sobre el uso de este archivo, vea [Getting Started](getting-started-with-net-native.md) (Introducción). Para obtener información sobre las directivas de tiempo de ejecución, vea [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native también incluye herramientas de generación de perfiles que ayudan al desarrollador a determinar qué tipos fuera del conjunto predeterminado deben admitir la reflexión.
 
@@ -665,7 +665,7 @@ No se admite la habilitación de .NET Native en una biblioteca de pruebas unitar
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Introducción](getting-started-with-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Información general de .NET para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

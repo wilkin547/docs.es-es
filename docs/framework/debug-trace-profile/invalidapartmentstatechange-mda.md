@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff68ce5f612255f41ce3a7c6f2526c3a340cfcd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967312"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052662"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA de invalidApartmentStateChange
 El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange` se activa por cualquiera de estos dos problemas:  
@@ -47,7 +47,7 @@ El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  El estado de contenedor COM del subproceso actual y el estado que el código intentaba aplicar.  
   
 ## <a name="configuration"></a>Configuración  
@@ -80,5 +80,5 @@ namespace ApartmentStateMDA
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

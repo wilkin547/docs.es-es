@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894490"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049800"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: solucionar problemas de programación dinámica
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- Vamos a intentar solucionar esta excepción mediante el enfoque de tres pasos descrito en la sección "Resolver manualmente los metadatos que faltan" de [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md).  
+ Vamos a intentar solucionar esta excepción mediante el enfoque de tres pasos descrito en la sección "Resolver manualmente los metadatos que faltan" de [Introducción](getting-started-with-net-native.md).  
   
 ## <a name="what-was-the-app-doing"></a>¿Qué estaba haciendo la aplicación?  
  Lo primero que hay tener en cuenta es la maquinaria de la palabra clave `async` en la base de la pila.  Determinar lo que la aplicación estaba haciendo realmente en un método `async` puede ser problemático, ya que la pila ha perdido el contexto de la llamada original y ha ejecutado el código `async` en un subproceso diferente. Sin embargo, podemos deducir que la aplicación estaba intentando cargar su primera página.  En la implementación de `NavigationArgs.Setup`, el código siguiente produjo la infracción de acceso:  
@@ -56,9 +56,9 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  También pueden surgir otros problemas al utilizar `App.Core.ViewModels`.  Debe decidir si merece la pena identificar y corregir cada excepción debida a la falta de metadatos, o ahorrar tiempo y agregar directivas para una clase más grande de tipos.  Aquí, agregar metadatos `dynamic` para `App.Core.ViewModels` podría ser el mejor método si el aumento de tamaño resultante del archivo binario de salida no supone un problema.  
   
 ## <a name="could-the-code-be-rewritten"></a>¿Podría modificarse el código?  
- Si la aplicación hubiera usado `typeof(LayoutApplicationVM)` en lugar de `Type.GetType("LayoutApplicationVM")`, la cadena de herramientas podría haber conservado los metadatos de `browse`.  En cambio, aun así no habría creado metadatos de `invoke`, que habrían producido una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) al crear una instancia del tipo. Para evitar la excepción, se tendría que agregar una directiva de tiempo de ejecución para el espacio de nombres o el tipo que especifica la directiva `dynamic`. Para obtener información sobre las directivas de tiempo de ejecución, vea [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Si la aplicación hubiera usado `typeof(LayoutApplicationVM)` en lugar de `Type.GetType("LayoutApplicationVM")`, la cadena de herramientas podría haber conservado los metadatos de `browse`.  En cambio, aun así no habría creado metadatos de `invoke`, que habrían producido una excepción [MissingMetadataException](missingmetadataexception-class-net-native.md) al crear una instancia del tipo. Para evitar la excepción, se tendría que agregar una directiva de tiempo de ejecución para el espacio de nombres o el tipo que especifica la directiva `dynamic`. Para obtener información sobre las directivas de tiempo de ejecución, vea [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Ejemplo: Controlar excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Introducción](getting-started-with-net-native.md)
+- [Ejemplo: Controlar excepciones al enlazar datos](example-handling-exceptions-when-binding-data.md)

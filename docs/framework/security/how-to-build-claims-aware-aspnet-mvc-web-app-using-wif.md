@@ -3,12 +3,12 @@ title: Cómo compilar aplicaciones web MVC de ASP.NET con reconocimiento de noti
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626128"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045447"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Cómo compilar aplicaciones web MVC de ASP.NET con reconocimiento de notificaciones mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -70,7 +70,7 @@ ms.locfileid: "64626128"
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Para configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
-1. Agregue las siguientes definiciones de la sección de configuración al archivo de configuración *Web.config*. Estas definen las secciones de configuración necesarias para Windows Identity Foundation. Agregue las definiciones inmediatamente después del elemento de apertura **\<configuration>**:  
+1. Agregue las siguientes definiciones de la sección de configuración al archivo de configuración *Web.config*. Estas definen las secciones de configuración necesarias para Windows Identity Foundation. Agregue las definiciones inmediatamente después del elemento de apertura **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -100,7 +100,7 @@ ms.locfileid: "64626128"
     <authentication mode="None" />  
     ```  
   
-4. Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
+4. Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>** , el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>** . También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -218,4 +218,4 @@ ms.locfileid: "64626128"
   
 ## <a name="related-items"></a>Elementos relacionados  
   
-- [Cómo: Crear aplicaciones de formularios Web ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Cómo: Creación de una aplicación de formularios Web Forms ASP.NET compatible con notificaciones mediante WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

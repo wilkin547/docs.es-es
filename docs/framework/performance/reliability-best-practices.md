@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935723"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046257"
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 
@@ -91,7 +91,7 @@ La mayoría de las clases que actualmente tienen un finalizador simplemente para
 
 Tenga en cuenta que <xref:System.Runtime.InteropServices.SafeHandle> no es un sustituto de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  Todavía hay posibles ventajas de contención de recursos y rendimiento a la eliminación explícita de recursos del sistema operativo.  Simplemente tenga en cuenta que es posible que los bloques `finally` que eliminan explícitamente de los recursos no se ejecuten hasta su finalización.
 
-<xref:System.Runtime.InteropServices.SafeHandle> permite implementar su propio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> que realiza el trabajo necesario para liberar el identificador, como pasar el estado a una rutina de liberación de identificadores del sistema operativo o liberar un conjunto de identificadores en un bucle.  El CLR garantiza que este método se ejecute.  Es responsabilidad del autor de la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> asegurarse de que el identificador se libera en todas las circunstancias. Si no lo hace, se producirá la pérdida del identificador, lo que a menudo produce la pérdida de recursos nativos asociados al identificador. Por tanto, es fundamental estructurar las clases derivadas de <xref:System.Runtime.InteropServices.SafeHandle> para que la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> no requiera la asignación de ningún recurso que pueda no estar disponible en el momento de la invocación. Tenga en cuenta que se permite llamar a métodos que pueden producir un error en la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> siempre que el código pueda controlar esos errores y finalizar el contrato para liberar el identificador nativo. Para la depuración, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tiene un valor devuelto de <xref:System.Boolean>, que se puede establecer en `false` si se produce un error catastrófico que impida la liberación del recurso. Si se hace esto, se activará el MDA [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md), si está habilitado, para ayudar a identificar el problema. No afecta el tiempo de ejecución de ninguna otra forma; no se volverá a llamar a <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> para el mismo recurso y, por tanto, el identificador se perderá.
+<xref:System.Runtime.InteropServices.SafeHandle> permite implementar su propio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> que realiza el trabajo necesario para liberar el identificador, como pasar el estado a una rutina de liberación de identificadores del sistema operativo o liberar un conjunto de identificadores en un bucle.  El CLR garantiza que este método se ejecute.  Es responsabilidad del autor de la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> asegurarse de que el identificador se libera en todas las circunstancias. Si no lo hace, se producirá la pérdida del identificador, lo que a menudo produce la pérdida de recursos nativos asociados al identificador. Por tanto, es fundamental estructurar las clases derivadas de <xref:System.Runtime.InteropServices.SafeHandle> para que la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> no requiera la asignación de ningún recurso que pueda no estar disponible en el momento de la invocación. Tenga en cuenta que se permite llamar a métodos que pueden producir un error en la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> siempre que el código pueda controlar esos errores y finalizar el contrato para liberar el identificador nativo. Para la depuración, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tiene un valor devuelto de <xref:System.Boolean>, que se puede establecer en `false` si se produce un error catastrófico que impida la liberación del recurso. Si se hace esto, se activará el MDA [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md), si está habilitado, para ayudar a identificar el problema. No afecta el tiempo de ejecución de ninguna otra forma; no se volverá a llamar a <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> para el mismo recurso y, por tanto, el identificador se perderá.
 
 <xref:System.Runtime.InteropServices.SafeHandle> no es adecuado en ciertos contextos.  Como el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> se puede ejecutar en un subproceso de finalizador de <xref:System.GC>, los identificadores que deban liberarse en un subproceso concreto no deben estar contenidos en <xref:System.Runtime.InteropServices.SafeHandle>.
 
@@ -316,4 +316,4 @@ Hacer esto indica al compilador Just-In-Time que prepare todo el código en el b
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [Programación en SQL Server y atributos de protección de host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [Programación en SQL Server y atributos de protección de host](sql-server-programming-and-host-protection-attributes.md)

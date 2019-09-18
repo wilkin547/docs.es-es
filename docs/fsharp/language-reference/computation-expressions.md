@@ -2,12 +2,12 @@
 title: Expresiones de cálculo
 description: Aprenda a crear una sintaxis adecuada para escribir cálculos en que F# se pueden secuenciar y combinar mediante construcciones y enlaces de flujo de control.
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106568"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083054"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
@@ -22,7 +22,7 @@ Los cálculos pueden adoptar muchas formas. La forma más común de cálculo es 
 - Cálculos con efecto
 - Cálculos generativos
 
-En general, hay cálculos contextuales que debe realizar en determinadas partes de una aplicación. La escritura de código dependiente del contexto puede ser desafiante, ya que es fácil "perder" los cálculos fuera de un contexto determinado sin abstracciones para evitar que lo haga. A menudo, estas abstracciones son difíciles de escribir por sí mismo, F# por lo que tiene una manera generalizada de hacerlo denominada **expresiones de cálculo**.
+En general, hay cálculos *contextuales* que debe realizar en determinadas partes de una aplicación. La escritura de código dependiente del contexto puede ser desafiante, ya que es fácil "perder" los cálculos fuera de un contexto determinado sin abstracciones para evitar que lo haga. A menudo, estas abstracciones son difíciles de escribir por sí mismo, F# por lo que tiene una manera generalizada de hacerlo denominada **expresiones de cálculo**.
 
 Las expresiones de cálculo ofrecen un modelo de abstracción y sintaxis uniformes para codificar cálculos contextuales.
 
@@ -32,7 +32,7 @@ Cada expresión de cálculo está respaldada por un tipo de *generador* . El tip
 
 Todas las expresiones de cálculo tienen el formato siguiente:
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 
@@ -194,7 +194,7 @@ Al llamar a una expresión de cálculo `match!`con, se obtendrá el resultado de
 
 ## <a name="built-in-computation-expressions"></a>Expresiones de cálculo integradas
 
-La F# biblioteca principal define tres expresiones de cálculo integradas: [Expresiones de secuencia](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md)y expresiones de [consulta](query-expressions.md).
+La F# biblioteca principal define tres expresiones de cálculo integradas: [Expresiones de secuencia](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md)y [expresiones de consulta](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Crear un nuevo tipo de expresión de cálculo
 

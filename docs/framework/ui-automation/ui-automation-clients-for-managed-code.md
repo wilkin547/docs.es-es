@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953204"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042512"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Clientes de UI Automation para código administrado
 > [!NOTE]
@@ -21,16 +21,16 @@ ms.locfileid: "69953204"
  Esta sección contiene información general y temas de procedimientos que le ayudarán a desarrollar clientes de Automatización de la interfaz de usuario.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Automatización de la interfaz de usuario y ajuste de escala de la pantalla](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [Compatibilidad de Automatización de la interfaz de usuario con los controles estándar](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [Eventos de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Propiedades de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Obtención de elementos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Problemas de subproceso de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [Temas "Cómo..."](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [Automatización de la interfaz de usuario y ajuste de escala de la pantalla](ui-automation-and-screen-scaling.md)  
+ [Compatibilidad de Automatización de la interfaz de usuario con los controles estándar](ui-automation-support-for-standard-controls.md)  
+ [Eventos de Automatización de la interfaz de usuario para clientes](ui-automation-events-for-clients.md)  
+ [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](caching-in-ui-automation-clients.md)  
+ [Propiedades de Automatización de la interfaz de usuario para clientes](ui-automation-properties-for-clients.md)  
+ [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](control-pattern-mapping-for-ui-automation-clients.md)  
+ [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)  
+ [Obtención de elementos de Automatización de la interfaz de usuario](obtaining-ui-automation-elements.md)  
+ [Problemas de subproceso de Automatización de la interfaz de usuario](ui-automation-threading-issues.md)  
+ [Temas "Cómo..."](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Automation>

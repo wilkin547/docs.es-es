@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 64c3dccac61ceb2934904c5d03fc96d961976d6b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cfd8e5dbe34df7b947646c714a360cf56b0435a4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932626"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043860"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Asignación de patrones de controles para clientes de UI Automation
 > [!NOTE]
@@ -78,4 +78,4 @@ ms.locfileid: "69932626"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Información general sobre la Automatización de la interfaz de usuario](ui-automation-overview.md)

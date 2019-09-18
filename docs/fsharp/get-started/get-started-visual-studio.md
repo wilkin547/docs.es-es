@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio
 description: Obtenga información sobre cómo F# usar con Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629768"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082700"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introducción a F# en Visual Studio
 
@@ -33,7 +33,7 @@ Vamos a empezar por escribir código primero.  Asegúrese de que el `Program.fs`
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-En el ejemplo de código anterior, se `square` ha definido una función que toma una entrada `x` denominada y la multiplica por sí misma.  Dado F# que utiliza la inferencia de [tipos](../language-reference/type-inference.md), `x` no es necesario especificar el tipo de.  El F# compilador entiende los tipos en los que la multiplicación es válida y asignará un tipo `square` a `x` basándose en cómo se llama a.  Si mantiene el puntero `square`sobre, debería ver lo siguiente:
+En el ejemplo de código anterior, se `square` ha definido una función que toma una entrada `x` denominada y la multiplica por sí misma.  Dado F# que utiliza la [inferencia de tipos](../language-reference/type-inference.md), `x` no es necesario especificar el tipo de.  El F# compilador entiende los tipos en los que la multiplicación es válida y asignará un tipo `square` a `x` basándose en cómo se llama a.  Si mantiene el puntero `square`sobre, debería ver lo siguiente:
 
 ```fsharp
 val square: x:int -> int
@@ -47,15 +47,15 @@ En esta función se llama a la `square` función con un argumento de. `12`  A F#
 
 ## <a name="running-your-code"></a>Ejecución del código
 
-Puede ejecutar el código y ver los resultados presionando **Ctrl**+**F5**.  Esto ejecuta el programa sin depuración y permite ver los resultados.  Como alternativa, puede elegir el elemento de menú Depurar de nivel superior en Visual Studio y elegir **iniciar sin**depurar.
+Puede ejecutar el código y ver los resultados presionando **Ctrl**+**F5**.  Esto ejecuta el programa sin depuración y permite ver los resultados.  Como alternativa, puede elegir el elemento de menú **depurar** de nivel superior en Visual Studio y elegir **iniciar sin depurar**.
 
 Ahora debería ver lo siguiente en la ventana de la consola que Visual Studio ha extraído:
 
-```
+```console
 12 squared is 144!
 ```
 
-Felicidades.  Ha creado su primer F# proyecto en Visual Studio, ha escrito una F# función que ha impreso los resultados de la llamada a esa función y ejecutado el proyecto para ver algunos resultados.
+¡Enhorabuena!  Ha creado su primer F# proyecto en Visual Studio, ha escrito una F# función que ha impreso los resultados de la llamada a esa función y ejecutado el proyecto para ver algunos resultados.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -1,17 +1,17 @@
 ---
-title: <MethodInstantiation> Elemento (.NET Native)
+title: <MethodInstantiation>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2c0354853e4725ba3e673fb9142c4a7a85d2121
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867086"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049619"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > elemento (.NET Native)
+# <a name="methodinstantiation-element-net-native"></a>\<Elemento > MethodInstantiation (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un método genérico construido.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,7 +29,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un método genérico
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|Descripción|  
+|Atributo|Tipo de atributo|DESCRIPCIÓN|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del método.|  
 |`Signature`|General|Atributo opcional. Especifica los parámetros con nombre del método. Cuando hay varios parámetros con nombre, se separan mediante coma. El atributo `Signature` se usa para diferenciar los métodos sobrecargados.|  
@@ -39,44 +39,44 @@ Aplica la directiva de reflexión en tiempo de ejecución a un método genérico
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*method_name*|El nombre del método. El tipo del método se define mediante el elemento primario [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
+|*method_name*|El nombre del método. El tipo del método se define mediante el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Signature (atributo)  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |*method_signature*|Especifica los parámetros con nombre del método. Si hay varios parámetros, se separan mediante comas.|  
   
 ## <a name="arguments-attribute"></a>Arguments (atributo)  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |*method_arguments*|Especifica los argumentos de tipo genérico. Si hay varios argumentos, se separan mediante coma. Cada argumento debe contener el nombre de tipo completo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*policy_setting*|Configuración que se aplica a este tipo de directiva para el método. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
+|*policy_setting*|Configuración que se aplica a este tipo de directiva para el método. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<MethodInstantiation>` invalida la directiva de reflexión en tiempo de ejecución de su correspondiente método genérico abierto.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Elemento \<Method>](method-element-net-native.md)

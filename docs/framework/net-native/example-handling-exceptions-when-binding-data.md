@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894507"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049889"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: control de excepciones al enlazar datos
 > [!NOTE]
 > En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
- En el ejemplo siguiente se muestra cómo resolver una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) que se produce cuando una aplicación compilada con la cadena de herramientas de .net Native intenta enlazar datos. Esta es la información de la excepción:  
+ En el ejemplo siguiente se muestra cómo resolver una excepción [MissingMetadataException](missingmetadataexception-class-net-native.md) que se produce cuando una aplicación compilada con la cadena de herramientas de .net Native intenta enlazar datos. Esta es la información de la excepción:  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Ejemplo: Solución de problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Introducción](getting-started-with-net-native.md)
+- [Ejemplo: Solución de problemas de programación dinámica](example-troubleshooting-dynamic-programming.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32217b9e681179c246560ff5b51b65b4f4e044d5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874671"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052882"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>MDA de dateTimeInvalidLocalFormat
 El MDA `dateTimeInvalidLocalFormat` se activa cuando una instancia de <xref:System.DateTime> que está almacenada como horario universal coordinado (UTC) tiene un formato pensado para usarse solo para instancias locales de <xref:System.DateTime>. Este MDA no está activado para instancias de <xref:System.DateTime> sin especificar o predeterminadas.  
@@ -32,7 +32,7 @@ DateTime myDateTime = DateTime.UtcNow;
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
   
-### <a name="cause"></a>Motivo  
+### <a name="cause"></a>Causa  
  El formato "z" para el método <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> incluye el desplazamiento de zona horaria local, por ejemplo, "+ 10:00" para la hora de Sydney. Por lo tanto, solo genera un resultado significativo si el valor de <xref:System.DateTime> es local. Si el valor es la hora UTC, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> incluye el desplazamiento de zona horaria local, pero no muestra ni ajusta el especificador de zona horaria.  
   
 ### <a name="resolution"></a>Resolución  
@@ -53,7 +53,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no afecta al tiempo de ejecución.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  No hay ningún resultado especial como consecuencia de la activación de este MDA, aunque se puede usar la pila de llamadas para determinar la ubicación de la llamada a <xref:System.DateTime.ToString%2A> que ha activado el MDA.  
   
 ## <a name="configuration"></a>Configuración  
@@ -89,4 +89,4 @@ String serialized = XmlConvert.ToString(myDateTime,
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

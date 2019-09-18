@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044095"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040337"
 ---
 # <a name="use-the-automationid-property"></a>Utilizar la propiedad AutomationID
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044095"
   
  Este tema contiene escenarios y código de ejemplo que muestran cómo y cuándo puede usarse el elemento <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> para buscar un elemento dentro del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifica de manera única un elemento de Automatización de la interfaz de usuario de sus elementos del mismo nivel. Para más información sobre los identificadores de propiedad relacionados con la identificación de controles, vea [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifica de manera única un elemento de Automatización de la interfaz de usuario de sus elementos del mismo nivel. Para más información sobre los identificadores de propiedad relacionados con la identificación de controles, vea [UI Automation Properties Overview](ui-automation-properties-overview.md).  
   
 > [!NOTE]
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> no garantiza una identidad única para todo el árbol; normalmente se necesita información de ámbito y de contenedor para ser útil. Por ejemplo, una aplicación puede contener un control de menú con varios elementos de menú de nivel superior que, a su vez, tienen varios elementos de menú secundarios. Estos elementos de menú secundarios pueden identificarse mediante un esquema genérico como "Elemento1", "Elemento2", etc., lo que permite identificadores duplicados para elementos secundarios en los elementos del menú de nivel superior.  
@@ -59,5 +59,5 @@ ms.locfileid: "70044095"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)
+- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](find-a-ui-automation-element-based-on-a-property-condition.md)

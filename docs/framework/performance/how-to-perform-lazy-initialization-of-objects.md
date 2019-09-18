@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722996"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046479"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedimiento para realizar la inicialización diferida de objetos
-La clase <xref:System.Lazy%601?displayProperty=nameWithType> simplifica el trabajo de creación de instancias e inicialización diferida de los objetos. Al inicializar los objetos de manera diferida, se puede evitar su creación en caso de que no sean necesarios o se puede aplazar su inicialización hasta el primer acceso. Para obtener más información, vea [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md).  
+La clase <xref:System.Lazy%601?displayProperty=nameWithType> simplifica el trabajo de creación de instancias e inicialización diferida de los objetos. Al inicializar los objetos de manera diferida, se puede evitar su creación en caso de que no sean necesarios o se puede aplazar su inicialización hasta el primer acceso. Para obtener más información, vea [Inicialización diferida](lazy-initialization.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, se muestra cómo inicializar un valor con <xref:System.Lazy%601>. Es posible que la variable Lazy no sea necesaria, dependiendo de si otro código establece la variable `someCondition` en True o False.  
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md)
+- [Inicialización diferida](lazy-initialization.md)

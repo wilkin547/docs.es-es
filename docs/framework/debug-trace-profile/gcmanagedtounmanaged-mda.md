@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7bb4779e300df71a5d075a322bcac8398ce42f34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754445"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052781"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>MDA de gcManagedToUnmanaged
 El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produce una recolección de elementos no utilizados siempre que un subproceso realiza la transición de código administrado a no administrado.  
@@ -27,7 +27,7 @@ El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produ
 ## <a name="symptoms"></a>Síntomas  
  Un componente de usuario no administrado produce una infracción de acceso al intentar usar un objeto administrado que se había expuesto a COM. El objeto COM aparece como liberado. La infracción de acceso es no determinista.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Si un componente no administrado no cuenta correctamente las referencias de un objeto COM administrado, CLR podría recopilar un objeto administrado expuesto a COM cuando el componente no administrado todavía contiene una referencia al objeto. Como CLR llama a <xref:System.Runtime.InteropServices.Marshal.Release%2A> durante las recolecciones de elementos no utilizados, si el componente de usuario utiliza el objeto antes de que se produzca la recolección de elementos no utilizados, aún no se habrá recolectado. Este es el origen del no determinismo.  
   
 ## <a name="resolution"></a>Resolución  
@@ -36,7 +36,7 @@ El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produ
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Produce una recolección de elementos no utilizados siempre que un subproceso realice la transición de código administrado a no administrado.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  Este MDA no produce ninguna salida.  
   
 ## <a name="configuration"></a>Configuración  
@@ -52,6 +52,6 @@ El asistente para la depuración administrada (MDA) `gcManagedToUnmanaged` produ
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

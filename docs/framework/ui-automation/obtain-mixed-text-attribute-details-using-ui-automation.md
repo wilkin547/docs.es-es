@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 24aad50647fc5aef5b2c2a83cbab37120eccd88c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 13ebc6aefe925ecefe48a9b0fa8cf7a6ecd3c454
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966407"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042949"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obtener detalles de atributos de texto diversos mediante UI Automation
 > [!NOTE]
@@ -28,9 +28,9 @@ ms.locfileid: "69966407"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Obtención de atributos de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)
+- [Información general sobre TextPattern en Automatización de la interfaz de usuario](ui-automation-textpattern-overview.md)
+- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](add-content-to-a-text-box-using-ui-automation.md)
+- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](find-and-highlight-text-using-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [Obtención de atributos de texto mediante Automatización de la interfaz de usuario](obtain-text-attributes-using-ui-automation.md)

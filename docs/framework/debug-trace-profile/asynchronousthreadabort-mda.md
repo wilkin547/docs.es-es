@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875711"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052960"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA de asynchronousThreadAbort
 El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se activa cuando un subproceso intenta incorporar una anulación asincrónica a otro subproceso. Las anulaciones de subproceso sincrónicas no activan el MDA `asynchronousThreadAbort`.
@@ -27,7 +27,7 @@ El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se
 
  Los síntomas pueden variar enormemente debido a la aleatoriedad inherente al problema.
 
-## <a name="cause"></a>Motivo
+## <a name="cause"></a>Causa
  El código de un subproceso ha llamado al método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> de un subproceso de destino para incorporar una anulación de subproceso asincrónica. La anulación de subproceso es asincrónica porque el código que realiza la llamada a <xref:System.Threading.Thread.Abort%2A> se ejecuta en un subproceso distinto al destino de la operación de anulación. Las anulaciones de subproceso sincrónicas no deberían causar problemas, ya que el subproceso que realiza la <xref:System.Threading.Thread.Abort%2A> debe haberla hecho únicamente en un punto de control seguro donde el estado de la aplicación es coherente.
 
  Las anulaciones de subproceso asincrónicas presentan un problema, ya que se procesan en puntos impredecibles de la ejecución del subproceso de destino. Para evitar esto, el código escrito para ejecutarse en un subproceso que se pueda anular de este modo tendría que controlar una <xref:System.Threading.ThreadAbortException> prácticamente en cada línea de código, teniendo cuidado de volver a poner los datos de la aplicación en un estado coherente. No es realista esperar que el código se escriba teniendo en cuenta este problema ni escribir código protegido frente a todas las circunstancias posibles.
@@ -42,7 +42,7 @@ El Asistente para la depuración administrada (MDA) `asynchronousThreadAbort` se
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime
  Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre las anulaciones de subproceso asincrónicas.
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Resultados
  El MDA notifica el identificador del subproceso que realiza la anulación y el identificador del subproceso que es el destino de ella. Nunca serán iguales, porque eso está limitado a las interrupciones asincrónicas.
 
 ## <a name="configuration"></a>Configuración
@@ -73,4 +73,4 @@ void FireMda()
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Thread>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

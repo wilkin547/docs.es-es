@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe15d718a9c5f91bfae4f37c04e726990e2fbd45
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754367"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052586"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA de invalidMemberDeclaration
 El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration` se activa para informar acerca de un error que se produce a la hora de determinar cómo serializar los parámetros de un miembro al que se va a llamar desde COM.  
@@ -23,7 +23,7 @@ El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration
 ## <a name="symptoms"></a>Síntomas  
  Se devuelve a COM un valor HRESULT de error sin que se haya llamado al método administrado.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Esto probablemente se debe a un atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> incompatible en uno de los parámetros.  
   
 ## <a name="resolution"></a>Resolución  
@@ -32,7 +32,7 @@ El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  Mensaje informativo que contiene el nombre de miembro, el nombre de tipo y el mensaje de error.  
   
 ## <a name="configuration"></a>Configuración  
@@ -48,5 +48,5 @@ El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../interop/interop-marshaling.md)

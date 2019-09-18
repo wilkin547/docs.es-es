@@ -3,12 +3,12 @@ title: Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940574"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045486"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5
 
@@ -32,9 +32,9 @@ En WIF 3.5, todas las clases de WIF se incluían en el ensamblado `Microsoft.Ide
 
 Todas las clases de WIF 3.5 se incluían en uno de los espacios de nombres `Microsoft.IdentityModel`; por ejemplo, `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web`, etc. En WIF 4.5, las clases de WIF ahora se extienden por los espacios de nombres [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004), el espacio de nombres <xref:System.Security.Claims?displayProperty=nameWithType> y el espacio de nombres <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Además de esta reorganización, algunas clases de WIF 3.5 se han quitado en WIF 4.5.
 
-En la tabla siguiente se muestran algunos de los espacios de nombres de WIF 4.5 más importantes y el tipo de clases que contienen. Para obtener información detallada sobre la asignación de espacios de nombres entre WIF 3.5 y WIF 4.5 y los espacios de nombres y las clases que se han quitado en WIF 4.5, vea [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).
+En la tabla siguiente se muestran algunos de los espacios de nombres de WIF 4.5 más importantes y el tipo de clases que contienen. Para obtener información detallada sobre la asignación de espacios de nombres entre WIF 3.5 y WIF 4.5 y los espacios de nombres y las clases que se han quitado en WIF 4.5, vea [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md).
 
-|Espacio de nombres de WIF 4.5|Descripción|
+|Espacio de nombres de WIF 4.5|DESCRIPCIÓN|
 |-----------------------|-----------------|
 |<xref:System.IdentityModel?displayProperty=nameWithType>|Contiene clases que representan las transformaciones de cookies, los servicios de token de seguridad y los lectores de diccionario XML especializados. Contiene clases de los siguientes espacios de nombres de WIF 3.5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` y `Microsoft.IdentityModel.Threading`.|
 |<xref:System.Security.Claims?displayProperty=nameWithType>|Contiene clases que representan notificaciones, identidades basadas en notificaciones, entidades de seguridad basadas en notificaciones y otros artefactos del modelo de identidad basado en notificaciones. Contiene clases del espacio de nombres `Microsoft.IdentityModel.Claims`.|
@@ -86,23 +86,23 @@ Esta entrada se ha actualizado en WIF 4.5 para incluir los nuevos espacios de no
 
 En la lista siguiente se muestran los cambios principales en el archivo de configuración de WIF 4.5.
 
-- La sección `<microsoft.identityModel>` es ahora la sección [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md).
+- La sección `<microsoft.identityModel>` es ahora la sección [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md).
 
-- El elemento `<service>` es ahora el elemento [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md).
+- El elemento `<service>` es ahora el elemento [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md).
 
-- Se ha agregado una nueva sección, [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md), para especificar valores que controlan el comportamiento en escenarios pasivos (WS-Federation).
+- Se ha agregado una nueva sección, [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md), para especificar valores que controlan el comportamiento en escenarios pasivos (WS-Federation).
 
-- El elemento [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) y sus elementos secundarios se han movido del elemento `<service>` de WIF 3.5 al nuevo elemento `<system.identityModel.services>`.
+- El elemento [\<federationConfiguration>](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) y sus elementos secundarios se han movido del elemento `<service>` de WIF 3.5 al nuevo elemento `<system.identityModel.services>`.
 
-- Se han restringido varios elementos que se podían especificar en el nivel de servicio directamente bajo el elemento `<service>` en WIF 3.5 a su especificación bajo el elemento [\<securityTokenHandlerConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md). (Todavía se pueden especificar bajo el elemento [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) en WIF 4.5 para facilitar la compatibilidad con versiones anteriores).
+- Se han restringido varios elementos que se podían especificar en el nivel de servicio directamente bajo el elemento `<service>` en WIF 3.5 a su especificación bajo el elemento [\<securityTokenHandlerConfiguration>](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md). (Todavía se pueden especificar bajo el elemento [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) en WIF 4.5 para facilitar la compatibilidad con versiones anteriores).
 
-Para obtener una lista completa de los elementos de configuración de WIF 4.5, vea [Esquema de configuración de WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md).
+Para obtener una lista completa de los elementos de configuración de WIF 4.5, vea [Esquema de configuración de WIF](../configure-apps/file-schema/windows-identity-foundation/index.md).
 
 ### <a name="visual-studio-tooling-changes"></a>Cambios en las herramientas de Visual Studio
 
 El SDK de WIF 3.5 ofrecía una utilidad de federación independiente, FedUtil.exe (FedUtil), que podía utilizar para externalizar la administración de identidades en aplicaciones habilitadas para WIF a un servicio de token de seguridad (STS). Esta herramienta agregaba valores de WIF al archivo de configuración de la aplicación para que la aplicación obtuviera los tokens de seguridad de uno o más STS, y aparecía en Visual Studio mediante el botón **Agregar referencia de servicio STS**. FedUtil no se distribuye con WIF 4.5. En su lugar, WIF 4.5 admite una nueva extensión de Visual Studio denominada Identity and Access Tool for Visual Studio 2012 que puede utilizar para modificar el archivo de configuración de la aplicación con los valores de WIF necesarios para externalizar la administración de identidades a un STS. Identity and Access Tool también implementa un STS denominado STS local que puede usar para probar las aplicaciones habilitadas para WIF. En muchos casos, esta característica obvia la necesidad de compilar STS personalizados que, a menudo, son necesarios en WIF 3.5 para probar soluciones en desarrollo. Por este motivo, las plantillas de STS ya no se admiten en Visual Studio 2012. Sin embargo, las clases que admiten el desarrollo de STS siguen estando disponibles en WIF 4.5.
 
-Puede instalar la herramienta identidad y acceso desde el Administrador de actualizaciones en Visual Studio y las extensiones o puede descargarlo desde la página siguiente en la Galería de código: [Identity and Access Tool para Visual Studio 2012 en la Galería de código](https://go.microsoft.com/fwlink/?LinkID=245849). Los cambios de las herramientas de Visual Studio se resumen en la siguiente lista:
+Puede instalar la herramienta de identidad y acceso desde el administrador de extensiones y actualizaciones en Visual Studio, o puede descargarla de la siguiente página en la galería de código: [Identity and Access Tool for Visual Studio 2012 en la galería de código](https://go.microsoft.com/fwlink/?LinkID=245849). Los cambios de las herramientas de Visual Studio se resumen en la siguiente lista:
 
 - Se ha quitado la funcionalidad Agregar referencia de servicio de STS. Se ha sustituido por la extensión Identity and Access Tool.
 
@@ -110,7 +110,7 @@ Puede instalar la herramienta identidad y acceso desde el Administrador de actua
 
 - La utilidad de federación independiente (FedUtil) no está disponible en WIF 4.5. Puede utilizar la extensión Identity and Access Tool para modificar los archivos de configuración y externalizar la administración de identidades a un STS.
 
-Para obtener más información sobre la herramienta de identidad y acceso, vea [Herramienta de identidad y acceso para Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).
+Para obtener más información sobre la herramienta de identidad y acceso, vea [Herramienta de identidad y acceso para Visual Studio 2012](identity-and-access-tool-for-vs.md).
 
 <a name="BKMK_ToolingChanges"></a>
 
@@ -182,7 +182,7 @@ Add-WindowsFeature windows-identity-foundation
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de configuración de WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
-- [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-- [Novedades de Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
-- [Identity and Access Tool para Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+- [Esquema de configuración de WIF](../configure-apps/file-schema/windows-identity-foundation/index.md)
+- [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Novedades de Windows Identity Foundation 4.5](whats-new-in-wif.md)
+- [Identity and Access Tool para Visual Studio 2012](identity-and-access-tool-for-vs.md)

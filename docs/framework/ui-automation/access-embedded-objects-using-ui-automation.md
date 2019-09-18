@@ -9,12 +9,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 83e54da5fdb75e3da44009ec700102d6bd7ae5e9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 110407079b37bce13bb6037d5755d2ef16a40214
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937966"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043963"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Acceso a objetos incrustados mediante la UI Automation
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69937966"
   
  Los objetos incrustados se consideran elementos secundarios del proveedor de texto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Esto permite que se puedan exponer mediante la misma estructura de árbol de Automatización de la interfaz de usuario que todos los demás elementos de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . La funcionalidad, a su vez, se expone a través de los patrones de control que normalmente requiere el tipo de control de los objetos incrustados (por ejemplo, como los hipervínculos están basados en texto, admitirán <xref:System.Windows.Automation.TextPattern>).  
   
- ![Objetos incrustados en un contenedor de texto.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+ ![Objetos incrustados en un contenedor de texto.](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
 Un documento de ejemplo con contenido textual, ("¿sabía que?" ...) y dos objetos incrustados (una imagen de una ballena y un hipervínculo de texto), que se usan como destino para los ejemplos de código.  
   
 ## <a name="example"></a>Ejemplo  
@@ -54,8 +54,8 @@ Un documento de ejemplo con contenido textual, ("¿sabía que?" ...) y dos objet
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Información general sobre TextPattern en Automatización de la interfaz de usuario](ui-automation-textpattern-overview.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](add-content-to-a-text-box-using-ui-automation.md)
+- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](find-and-highlight-text-using-ui-automation.md)

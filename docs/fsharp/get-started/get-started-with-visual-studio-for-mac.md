@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio para Mac
 description: Aprenda a usar F# con Visual Studio para Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629753"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082977"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introducción a F# en Visual Studio para Mac
 
@@ -33,9 +33,9 @@ Vamos a empezar por escribir código primero.  Asegúrese de que el `Program.fs`
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-En el ejemplo de código anterior, se `square` ha definido una función que toma una entrada `x` denominada y la multiplica por sí misma.  Dado F# que utiliza la inferencia de [tipos](../language-reference/type-inference.md), `x` no es necesario especificar el tipo de.  El F# compilador entiende los tipos en los que la multiplicación es válida y asignará un tipo `square` a `x` basándose en cómo se llama a.  Si mantiene el puntero `square`sobre, debería ver lo siguiente:
+En el ejemplo de código anterior, se `square` ha definido una función que toma una entrada `x` denominada y la multiplica por sí misma.  Dado F# que utiliza la [inferencia de tipos](../language-reference/type-inference.md), `x` no es necesario especificar el tipo de.  El F# compilador entiende los tipos en los que la multiplicación es válida y asignará un tipo `square` a `x` basándose en cómo se llama a.  Si mantiene el puntero `square`sobre, debería ver lo siguiente:
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -47,15 +47,15 @@ En esta función se llama a la `square` función con un argumento de. `12`  A F#
 
 ## <a name="running-your-code"></a>Ejecución del código
 
-Puede ejecutar el código y ver los resultados haciendo clic en **Ejecutar** en el menú de nivel superior y, a continuación, **iniciar sin**depurar.  Así se ejecutará el programa sin depurar y podrá ver los resultados.
+Puede ejecutar el código y ver los resultados haciendo clic en **Ejecutar** en el menú de nivel superior y, a continuación, **iniciar sin depurar**.  Así se ejecutará el programa sin depurar y podrá ver los resultados.
 
 Ahora debería ver lo siguiente impreso en la ventana de la consola que Visual Studio para Mac emerge:
 
-```
+```console
 12 squared is 144!
 ```
 
-Felicidades.  Ha creado su primer F# proyecto en Visual Studio para Mac, ha escrito una F# función que ha impreso los resultados de llamar a esa función y ejecuta el proyecto para ver algunos resultados.
+¡Enhorabuena!  Ha creado su primer F# proyecto en Visual Studio para Mac, ha escrito una F# función que ha impreso los resultados de llamar a esa función y ejecuta el proyecto para ver algunos resultados.
 
 ## <a name="using-f-interactive"></a>Uso F# de Interactive
 
@@ -63,7 +63,7 @@ Una de las mejores características de las herramientas F# visuales en Visual St
 
 Para empezar a usarlo, resalte `square` la función definida en el código.  A continuación, haga clic en **Editar** en el menú de nivel superior.  A continuación, seleccione **enviar F# selección a interactivo**.  Esto ejecuta el código en la F# ventana interactiva.  Como alternativa, puede hacer clic con el botón derecho en la selección y elegir **Enviar selección a F# interactivo**.  Debería ver que la F# ventana interactiva aparece con lo siguiente en ella:
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 Esto muestra la misma firma de función para `square` la función, que vio anteriormente al mantener el mouse sobre la función.  Dado `square` que ahora se define en F# el proceso interactivo, puede llamarlo con valores diferentes:
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 De esta forma, se ejecuta la función, se enlaza el resultado a `it`un nuevo nombre y se muestra el tipo `it`y el valor de.  Tenga en cuenta que debe terminar cada línea `;;`con.  Así es como F# la interactiva sabe cuándo finaliza la llamada de función.  También puede definir nuevas funciones en F# Interactive:
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 Lo anterior define una nueva función, `isOdd`, que `int` toma y comprueba si es impar.  Puede llamar a esta función para ver lo que devuelve con diferentes entradas.  Puede llamar a funciones dentro de las llamadas de función:
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
 También puede usar el [operador de canalización directa](../language-reference/symbol-and-operator-reference/index.md) para canalizar el valor en las dos funciones:
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```

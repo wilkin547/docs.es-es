@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: d7069769d381a1806f28d538319a49e0cc9cce60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914497"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042142"
 ---
 # <a name="ui-automation-properties-overview"></a>Información general acerca de las propiedades de UI Automation
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "69914497"
   
  En esta sección se ofrece información general sobre las propiedades de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . En los temas siguientes se proporciona información más específica:  
   
-- [Propiedades de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [Propiedades de Automatización de la interfaz de usuario para clientes](ui-automation-properties-for-clients.md)  
   
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Identificadores de propiedad  
@@ -55,7 +55,7 @@ ms.locfileid: "69914497"
 ## <a name="properties-by-category"></a>Propiedades por categoría  
  En las siguientes tablas se clasifican las propiedades cuyos identificadores <xref:System.Windows.Automation.AutomationElement> se <xref:System.Windows.Automation.AutomationElementIdentifiers>encuentran en y. Estas propiedades son comunes para todos los controles. Salvo algunas de ellas, todas suelen ser estáticas a lo largo de la duración de la aplicación de proveedor; la mayoría de propiedades dinámicas están asociadas con patrones de control.  
   
- En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
 > Para obtener información específica sobre cada propiedad, siga el vínculo de la columna **Property Access** .  
@@ -161,9 +161,9 @@ ms.locfileid: "69914497"
   
 ## <a name="see-also"></a>Vea también
 
-- [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Propiedades de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](caching-in-ui-automation-clients.md)
+- [Propiedades de Automatización de la interfaz de usuario para clientes](ui-automation-properties-for-clients.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)
+- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Devolución de propiedades de un proveedor de Automatización de la interfaz de usuario](return-properties-from-a-ui-automation-provider.md)
+- [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](raise-events-from-a-ui-automation-provider.md)

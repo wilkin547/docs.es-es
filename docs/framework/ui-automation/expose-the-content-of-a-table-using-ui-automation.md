@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: 5c82041058bfa90079c5d1d0f4de4ff40faae699
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee565fa07a8b137152bbc0ef6aa4038f2cf6d421
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965187"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043797"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Exponer el contenido de una tabla mediante UI Automation
 > [!NOTE]
@@ -43,9 +43,9 @@ ms.locfileid: "69965187"
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementación del patrón de control Table de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)
-- [Implementación del patrón de control TableItem de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)
-- [Implementación del patrón de control Grid de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
-- [Implementación del patrón de control GridItem de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](ui-automation-control-patterns-for-clients.md)
+- [Implementación del patrón de control Table de Automatización de la interfaz de usuario](implementing-the-ui-automation-table-control-pattern.md)
+- [Implementación del patrón de control TableItem de Automatización de la interfaz de usuario](implementing-the-ui-automation-tableitem-control-pattern.md)
+- [Implementación del patrón de control Grid de Automatización de la interfaz de usuario](implementing-the-ui-automation-grid-control-pattern.md)
+- [Implementación del patrón de control GridItem de Automatización de la interfaz de usuario](implementing-the-ui-automation-griditem-control-pattern.md)

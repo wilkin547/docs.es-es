@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b1223839be3747b04810d6b5bd131733c41631f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614390"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052456"
 ---
 # <a name="moduloobjecthashcode-mda"></a>MDA de moduloObjectHashcode
 El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambia el comportamiento de la clase <xref:System.Object> para realizar una operación de módulo en el código hash devuelto por el método <xref:System.Object.GetHashCode%2A>. El módulo predeterminado para este MDA es 1, lo que hace que <xref:System.Object.GetHashCode%2A> devuelva 0 para todos los objetos.  
@@ -33,7 +33,7 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
   
 - Dos objetos que solían ser no iguales ahora lo son.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  El programa puede estar recibiendo el objeto equivocado desde <xref:System.Collections.Hashtable> porque la implementación del método <xref:System.Object.Equals%2A> en la clase para la clave en <xref:System.Collections.Hashtable> comprueba la igualdad de objetos al comparar los resultados de la llamada al método <xref:System.Object.GetHashCode%2A>. No deben usarse códigos hash para comprobar la igualdad de objetos porque dos objetos pueden tener el mismo código hash incluso si sus respectivos campos tienen valores diferentes. Estas colisiones de código hash, aunque sean poco frecuentes en la práctica, se producen. El efecto que tiene en una búsqueda de <xref:System.Collections.Hashtable> es que dos claves que no son iguales parecen iguales, y se devuelve el objeto incorrecto de la <xref:System.Collections.Hashtable>. Por motivos de rendimiento, la implementación de <xref:System.Object.GetHashCode%2A> puede cambiar entre las versiones del tiempo de ejecución, por lo que es posible que en una versión se produzcan conflictos que no aparezcan en versiones posteriores. Habilite este MDA para probar si el código tiene errores cuando se producen colisiones de códigos hash. Cuando está habilitado, este MDA hace que el método <xref:System.Object.GetHashCode%2A> devuelva un valor 0, lo que provoca que todos los códigos hash colisionen. El único efecto que debería tener la habilitación de este MDA en el programa es que se ejecute más lentamente.  
   
  El orden de enumeración de una <xref:System.Collections.Hashtable> puede cambiar de una versión del tiempo de ejecución a otra si cambia el algoritmo que se usa para calcular los códigos hash para la clave. Para comprobar si el programa ha tomado una dependencia en el orden de enumeración de claves o valores fuera de una tabla hash, puede habilitar este MDA.  
@@ -46,7 +46,7 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Las aplicaciones se ejecutan más despacio cuando se habilita este MDA. Este MDA simplemente toma el código hash que se habría devuelto y, en su lugar, devuelve el resto cuando se divide por un módulo.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  No hay ningún resultado para este MDA.  
   
 ## <a name="configuration"></a>Configuración  
@@ -64,4 +64,4 @@ El Asistente para la depuración administrada (MDA) `moduloObjectHashcode` cambi
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

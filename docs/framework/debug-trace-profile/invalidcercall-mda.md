@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754434"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052632"
 ---
 # <a name="invalidcercall-mda"></a>MDA de invalidCERCall
 El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa cuando hay una llamada desde el gráfico de región de ejecución restringida (CER) a un método que no tiene ningún contrato de confiabilidad o un contrato excesivamente débil. Un contrato débil es el que declara que el peor caso de daño de estado tiene un ámbito mayor que la instancia que se pasa a la llamada, es decir, el estado de <xref:System.AppDomain> o del proceso puede resultar dañado o su resultado no siempre se puede calcular de forma determinista cuando se llama desde dentro de una CER.  
@@ -24,7 +24,7 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
 ## <a name="symptoms"></a>Síntomas  
  Resultados inesperados cuando se ejecuta código en una CER. Los síntomas no son específicos. Podría ser una excepción <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException> inesperada o de otro tipo en la llamada al método no confiable porque el tiempo de ejecución no lo preparó por adelantado ni lo protegió de excepciones <xref:System.Threading.ThreadAbortException> en tiempo de ejecución. Una amenaza mayor es que cualquier excepción resultante del método en tiempo de ejecución podría dejar al <xref:System.AppDomain> o al proceso en un estado inestable, lo que contradice el objetivo de una CER. El motivo por el que se crea una CER es para evitar este tipo de daños de estado. Los síntomas de estado dañado son específicos de la aplicación porque la definición de estado coherente es diferente entre aplicaciones.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  El código dentro de una CER llama a una función sin <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> o con un <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> débil que no es compatible con la ejecución en una CER.  
   
  En cuanto a la sintaxis de contratos de confiabilidad, un contrato débil es el que no especifica un valor de enumeración <xref:System.Runtime.ConstrainedExecution.Consistency> o especifica un valor <xref:System.Runtime.ConstrainedExecution.Consistency> de <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>, o <xref:System.Runtime.ConstrainedExecution.Cer.None>. Cualquiera de estas condiciones indica que el código que se llama puede impedir los esfuerzos del otro código de la CER para mantener un estado coherente.  Las CER permiten al código tratar los errores de una manera muy determinista, manteniendo invariables internas que son importantes para la aplicación y permitiendo que se siga ejecutando en presencia de errores transitorios como excepciones de memoria insuficiente.  
@@ -39,7 +39,7 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  El efecto de llamar a un contrato débil desde una CER podría ser que la CER no pueda completar sus operaciones. Esto podría provocar daños en el estado de proceso del <xref:System.AppDomain>.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  A continuación puede ver un resultado de ejemplo de este MDA.  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
@@ -58,4 +58,4 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

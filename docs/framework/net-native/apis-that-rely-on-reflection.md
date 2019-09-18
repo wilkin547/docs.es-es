@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894518"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049975"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basada en la reflexión
-En algunos casos, el uso de la reflexión en el código no es obvio y, por tanto, la cadena de herramientas de .NET Native no conserva los metadatos necesarios en tiempo de ejecución. En este tema se abordan algunas de las API comunes o patrones de programación habituales que no se consideran parte de la API de reflexión, pero que hacen uso de la reflexión para ejecutarse correctamente. Si los usa en su código fuente, puede agregar información sobre ellos en el archivo de directivas en tiempo de ejecución (.rd.xml) para que las llamadas a estas API no generen una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) u otra excepción en tiempo de ejecución.  
+En algunos casos, el uso de la reflexión en el código no es obvio y, por tanto, la cadena de herramientas de .NET Native no conserva los metadatos necesarios en tiempo de ejecución. En este tema se abordan algunas de las API comunes o patrones de programación habituales que no se consideran parte de la API de reflexión, pero que hacen uso de la reflexión para ejecutarse correctamente. Si los usa en su código fuente, puede agregar información sobre ellos en el archivo de directivas en tiempo de ejecución (.rd.xml) para que las llamadas a estas API no generen una excepción [MissingMetadataException](missingmetadataexception-class-net-native.md) u otra excepción en tiempo de ejecución.  
   
 ## <a name="typemakegenerictype-method"></a>Método Type.MakeGenericType  
  Puede crear dinámicamente instancias de un tipo genérico `AppClass<T>` llamando al método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> mediante código como el siguiente:  
@@ -27,7 +27,7 @@ En algunos casos, el uso de la reflexión en el código no es obvio y, por tanto
   
  Esto permite que la llamada al método <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> se realice correctamente y devuelva un objeto <xref:System.Type> válido.  
   
- Sin embargo, aun cuando se agreguen metadatos para el tipo genérico sin instancia, la llamada al método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md):  
+ Sin embargo, aun cuando se agreguen metadatos para el tipo genérico sin instancia, la llamada al método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera una excepción [MissingMetadataException](missingmetadataexception-class-net-native.md):  
   
 Esta operación no se puede realizar porque se quitaron metadatos para el tipo siguiente por razones de rendimiento:  
   
@@ -92,5 +92,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Introducción](getting-started-with-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)

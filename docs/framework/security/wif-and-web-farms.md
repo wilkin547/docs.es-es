@@ -3,17 +3,17 @@ title: WIF y granjas de servidores web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045252"
 ---
 # <a name="wif-and-web-farms"></a>WIF y granjas de servidores web
 Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de una aplicación de usuario de confianza (RP) implementada en una granja de servidores web, debe realizar determinados pasos para garantizar que WIF pueda procesar tokens de instancias de la aplicación de RP que se ejecutan en equipos diferentes de la granja de servidores. Este proceso implica la validación de firmas de token de sesión, el cifrado y descifrado de tokens de sesión, el almacenamiento en caché de tokens de sesión y la detección de tokens de seguridad reproducidos.  
   
- En el caso típico, cuando se usa WIF para proteger los recursos de una aplicación de RP (tanto si el RP se está ejecutando en un único equipo como en una granja de servidores web), se establece una sesión con el cliente en función del token de seguridad obtenido del servicio de token de seguridad (STS). Esto es así para evitar forzar al cliente a autenticarse en el STS para cada recurso de aplicación que se proteja mediante WIF. Para más información sobre cómo controla WIF las sesiones, vea [WIF Session Management (Administración de sesiones de WIF)](../../../docs/framework/security/wif-session-management.md).  
+ En el caso típico, cuando se usa WIF para proteger los recursos de una aplicación de RP (tanto si el RP se está ejecutando en un único equipo como en una granja de servidores web), se establece una sesión con el cliente en función del token de seguridad obtenido del servicio de token de seguridad (STS). Esto es así para evitar forzar al cliente a autenticarse en el STS para cada recurso de aplicación que se proteja mediante WIF. Para más información sobre cómo controla WIF las sesiones, vea [WIF Session Management (Administración de sesiones de WIF)](wif-session-management.md).  
   
  Cuando se usa la configuración predeterminada, WIF hace lo siguiente:  
   
@@ -40,7 +40,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
     </securityTokenHandlers>  
     ```  
   
-- Derive de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implemente el almacenamiento en caché distribuido, es decir, una memoria caché que sea accesible desde todos los equipos de la granja de servidores en la que se puede ejecutar el RP. Configure el RP para que use la memoria caché distribuida al especificar el elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) del archivo de configuración. Puede invalidar el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> de la clase derivada para implementar elementos secundarios del elemento `<sessionSecurityTokenCache>` si fueran necesarios.  
+- Derive de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implemente el almacenamiento en caché distribuido, es decir, una memoria caché que sea accesible desde todos los equipos de la granja de servidores en la que se puede ejecutar el RP. Configure el RP para que use la memoria caché distribuida al especificar el elemento [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) del archivo de configuración. Puede invalidar el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> de la clase derivada para implementar elementos secundarios del elemento `<sessionSecurityTokenCache>` si fueran necesarios.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
   
      Una manera de implementar el almacenamiento en caché distribuido es proporcionar un front-end de WCF para la memoria caché personalizada. Para más información sobre la implementación de un servicio de almacenamiento en caché de WCF, vea [Servicio de almacenamiento en caché de WCF](#BKMK_TheWCFCachingService). Para más información sobre la implementación de un cliente WCF que la aplicación de RP pueda usar para llamar al servicio de almacenamiento en caché, vea [Cliente de almacenamiento en caché de WCF](#BKMK_TheWCFClient).  
   
-- Si la aplicación detecta tokens reproducidos, debe seguir una estrategia similar de almacenamiento en caché distribuido para la memoria caché de reproducción de tokens al derivar de <xref:System.IdentityModel.Tokens.TokenReplayCache> y apuntar al servicio de almacenamiento en caché de reproducción de tokens del elemento de configuración [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
+- Si la aplicación detecta tokens reproducidos, debe seguir una estrategia similar de almacenamiento en caché distribuido para la memoria caché de reproducción de tokens al derivar de <xref:System.IdentityModel.Tokens.TokenReplayCache> y apuntar al servicio de almacenamiento en caché de reproducción de tokens del elemento de configuración [\<tokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
 > Todo el código y XML de ejemplo de este tema se toma del ejemplo [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) .  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>Cliente de almacenamiento en caché de WCF  
- En esta sección se muestra la implementación de una clase que deriva de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> y que delega llamadas al servicio de almacenamiento en caché. La aplicación de RP se configura de modo que use esta clase en el elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) como en el siguiente XML.  
+ En esta sección se muestra la implementación de una clase que deriva de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> y que delega llamadas al servicio de almacenamiento en caché. La aplicación de RP se configura de modo que use esta clase en el elemento [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) como en el siguiente XML.  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [Administración de sesiones de WIF](../../../docs/framework/security/wif-session-management.md)
+- [Administración de sesiones de WIF](wif-session-management.md)

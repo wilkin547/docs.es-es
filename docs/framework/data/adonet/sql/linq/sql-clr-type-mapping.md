@@ -2,12 +2,12 @@
 title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792525"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053039"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -44,7 +44,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matriz de comportamiento de la asignación de tipos en tiempo de ejecución  
  En el diagrama siguiente se muestra el comportamiento de las asignaciones de tipos específicos que se espera en tiempo de ejecución, cuando los datos se recuperan de la base de datos o se guardan en ella. Con la excepción de la serialización, LINQ to SQL no admite la asignación entre los tipos de datos de CLR o SQL Server no especificados en esta matriz. Para obtener más información sobre la compatibilidad con la serialización, vea [serialización binaria](#BinarySerialization).  
  
-![SQL Server a la tabla de asignación de tipos de datos CLR de SQL](media/sql-clr-type-mapping.png)
+![SQL Server a la tabla de asignación de tipos de datos CLR de SQL](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > Algunas asignaciones de tipos pueden tener como resultado excepciones de desbordamiento o de pérdida de datos mientras se convierten a la base de datos o desde ella.  

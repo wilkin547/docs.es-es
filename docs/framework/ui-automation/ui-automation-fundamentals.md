@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: da333fcd5f76359400e44511820ad9aa34e83bd7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 371d52a09445f735efb41b02780c65579207724f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911473"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042114"
 ---
 # <a name="ui-automation-fundamentals"></a>Fundamentos de UI Automation
 > [!NOTE]
@@ -20,14 +20,14 @@ ms.locfileid: "69911473"
  Esta sección contiene información general de alto nivel de la [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Automatización de la interfaz de usuario y Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Información general sobre las propiedades de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [Información general sobre eventos de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [Información general sobre la seguridad de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [Uso de la Automatización de la interfaz de usuario para pruebas automatizadas](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [Información general sobre la Automatización de la interfaz de usuario](ui-automation-overview.md)  
+ [Automatización de la interfaz de usuario y Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
+ [Información general sobre el árbol de la Automatización de la interfaz de usuario](ui-automation-tree-overview.md)  
+ [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](ui-automation-control-patterns-overview.md)  
+ [Información general sobre las propiedades de la Automatización de la interfaz de usuario](ui-automation-properties-overview.md)  
+ [Información general sobre eventos de la Automatización de la interfaz de usuario](ui-automation-events-overview.md)  
+ [Información general sobre la seguridad de la Automatización de la interfaz de usuario](ui-automation-security-overview.md)  
+ [Uso de la Automatización de la interfaz de usuario para pruebas automatizadas](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Automation>  

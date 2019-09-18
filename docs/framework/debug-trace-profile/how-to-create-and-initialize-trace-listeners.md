@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754380"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052725"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Procedimiento para crear e inicializar agentes de escucha de seguimiento
 
 Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envían mensajes a objetos denominados agentes de escucha que reciben y procesan estos mensajes. Un agente de escucha de este tipo, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, se crea y se inicializa automáticamente si la traza o la depuración está habilitada. Si desea que los resultados de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.
 
-Los agentes de escucha que cree deben reflejar las necesidades de la aplicación. Por ejemplo, si desea un registro de texto de todo el resultado de traza, cree un agente de escucha <xref:System.Diagnostics.TextWriterTraceListener>, que escribe todo el resultado en un nuevo archivo de texto cuando se habilita. Por otra parte, si desea ver el resultado solo durante la ejecución de la aplicación, cree un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener>, que envía todo el resultado a una ventana de consola. <xref:System.Diagnostics.EventLogTraceListener> puede dirigir el resultado de traza a un registro de eventos. Para más información, vea [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md).
+Los agentes de escucha que cree deben reflejar las necesidades de la aplicación. Por ejemplo, si desea un registro de texto de todo el resultado de traza, cree un agente de escucha <xref:System.Diagnostics.TextWriterTraceListener>, que escribe todo el resultado en un nuevo archivo de texto cuando se habilita. Por otra parte, si desea ver el resultado solo durante la ejecución de la aplicación, cree un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener>, que envía todo el resultado a una ventana de consola. <xref:System.Diagnostics.EventLogTraceListener> puede dirigir el resultado de traza a un registro de eventos. Para más información, vea [Agentes de escucha de seguimiento](trace-listeners.md).
 
-Puede crear agentes de escucha de seguimiento en un [archivo de configuración de la aplicación](../../../docs/framework/configure-apps/index.md) o en el código. Se recomienda el uso de archivos de configuración de la aplicación, ya que permiten agregar, modificar o quitar agentes de escucha de traza sin necesidad de modificar el código.
+Puede crear agentes de escucha de seguimiento en un [archivo de configuración de la aplicación](../configure-apps/index.md) o en el código. Se recomienda el uso de archivos de configuración de la aplicación, ya que permiten agregar, modificar o quitar agentes de escucha de traza sin necesidad de modificar el código.
 
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Para crear y usar un agente de escucha de traza mediante un archivo de configuración
 
@@ -45,7 +45,7 @@ Puede crear agentes de escucha de seguimiento en un [archivo de configuración d
     </configuration>
     ```
 
-2. Utilice la clase <xref:System.Diagnostics.Trace> en el código para escribir un mensaje a los agentes de escucha de traza. 
+2. Utilice la clase <xref:System.Diagnostics.Trace> en el código para escribir un mensaje a los agentes de escucha de traza.
 
     ```vb
     Trace.TraceInformation("Test message.")
@@ -79,7 +79,7 @@ Puede crear agentes de escucha de seguimiento en un [archivo de configuración d
 
     \- o -
 
-- Si no desea que el agente de escucha reciba el resultado de la traza, no lo agregue a la colección <xref:System.Diagnostics.Trace.Listeners%2A>. Puede emitir la salida a través de un agente de escucha independientemente de la colección <xref:System.Diagnostics.Trace.Listeners%2A>, llamando a los propios métodos de salida del agente de escucha. El siguiente ejemplo muestra cómo escribir una línea a un agente de escucha que no se encuentra en la colección <xref:System.Diagnostics.Trace.Listeners%2A>: 
+- Si no desea que el agente de escucha reciba el resultado de la traza, no lo agregue a la colección <xref:System.Diagnostics.Trace.Listeners%2A>. Puede emitir la salida a través de un agente de escucha independientemente de la colección <xref:System.Diagnostics.Trace.Listeners%2A>, llamando a los propios métodos de salida del agente de escucha. El siguiente ejemplo muestra cómo escribir una línea a un agente de escucha que no se encuentra en la colección <xref:System.Diagnostics.Trace.Listeners%2A>:
 
     ```vb
     Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")
@@ -97,7 +97,7 @@ Puede crear agentes de escucha de seguimiento en un [archivo de configuración d
 
 ## <a name="see-also"></a>Vea también
 
-- [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Agentes de escucha de seguimiento](trace-listeners.md)
+- [Modificadores de seguimiento](trace-switches.md)
+- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)

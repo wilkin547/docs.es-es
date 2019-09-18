@@ -1,17 +1,17 @@
 ---
-title: <TypeParameter> Elemento (.NET Native)
+title: <TypeParameter>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982467"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049061"
 ---
-# <a name="typeparameter-element-net-native"></a>\<TypeParameter > elemento (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<Elemento > TypeParameter (.NET Native)
 Aplica la directiva al tipo representado por un argumento de tipo pasado a un método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +35,7 @@ Aplica la directiva al tipo representado por un argumento de tipo pasado a un m�
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|Descripción|  
+|Atributo|Tipo de atributo|DESCRIPCIÓN|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Nombre del parámetro de tipo <xref:System.Type>. Por ejemplo, en la firma de método `Type.GetInterfaceMap(Type interfaceType)`, el valor del atributo `Name` es "interfaceType".|  
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|  
@@ -51,27 +51,27 @@ Aplica la directiva al tipo representado por un argumento de tipo pasado a un m�
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |*parameter_name*|Nombre del parámetro de tipo <xref:System.Type>. Por ejemplo, en la firma de método `Type.GetInterfaceMap(Type interfaceType)`, el valor del atributo `Name` es "interfaceType".|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
+|*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
+|[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento `<TypeParameter>` es similar al elemento [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md), salvo que únicamente se puede aplicar a los parámetros de tipo <xref:System.Type>. Aplica la directiva a cualquier tipo que se represente en tiempo de ejecución mediante el argumento de tipo especificado por el atributo `Name`.  
+ El elemento `<TypeParameter>` es similar al elemento [\<Parameter>](parameter-element-net-native.md), salvo que únicamente se puede aplicar a los parámetros de tipo <xref:System.Type>. Aplica la directiva a cualquier tipo que se represente en tiempo de ejecución mediante el argumento de tipo especificado por el atributo `Name`.  
   
  Por ejemplo, el serializador JSON NewtonSoft incluye un método `JsonConvert.DeserializeObject(String value, Type type)` estático. Las siguientes directivas de reflexión:  
   
@@ -96,7 +96,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>Vea también
 
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Elemento \<Method>](method-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

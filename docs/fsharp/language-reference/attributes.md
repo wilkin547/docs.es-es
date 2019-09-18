@@ -2,12 +2,12 @@
 title: Atributos
 description: Obtenga información F# sobre cómo los atributos permiten aplicar metadatos a una construcción de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567507"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082935"
 ---
 # <a name="attributes"></a>Atributos
 
@@ -27,8 +27,8 @@ El *atributo-name* hace referencia al nombre (posiblemente calificado con espaci
 
 Los *argumentos* son los argumentos del constructor para el tipo de atributo. Si un atributo tiene un constructor predeterminado, se pueden omitir la lista de argumentos y los paréntesis. Los atributos admiten argumentos posicionales y argumentos con nombre. Los *argumentos posicionales* son argumentos que se usan en el orden en que aparecen. Se pueden usar argumentos con nombre si el atributo tiene propiedades públicas. Puede establecerlos mediante la siguiente sintaxis en la lista de argumentos.
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 Dichas inicializaciones de propiedad pueden estar en cualquier orden, pero deben seguir cualquier argumento posicional. A continuación se encuentra un ejemplo de un atributo que usa argumentos posicionales e inicializaciones de propiedad.

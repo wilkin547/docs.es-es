@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: c8829afda1b2b8c2b82ed9f7d569d1c2357a7b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd07b07d2ccf649952cddfcca47d30a12570b048
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914367"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042026"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>Proveedores de UI Automation para código administrado
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "69914367"
  Esta sección contiene información general y temas de procedimientos que describen cómo escribir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] proveedores para los elementos personalizados. [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Implementación del proveedor de Automatización de la interfaz de usuario en el cliente](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
- [Temas "Cómo..."](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)
+ [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](server-side-ui-automation-provider-implementation.md)  
+ [Información general sobre proveedores de la Automatización de la interfaz de usuario](ui-automation-providers-overview.md)  
+ [Implementación del proveedor de Automatización de la interfaz de usuario en el cliente](client-side-ui-automation-provider-implementation.md)  
+ [Temas "Cómo..."](ui-automation-providers-for-managed-code-how-to-topics.md)

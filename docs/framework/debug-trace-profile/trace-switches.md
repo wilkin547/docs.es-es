@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614338"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052258"
 ---
 # <a name="trace-switches"></a>Modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento. Son objetos que existen en el código y que se pueden configurar externamente mediante el archivo config. Hay tres tipos de modificadores de seguimiento en .NET Framework: la clase <xref:System.Diagnostics.BooleanSwitch> , la clase <xref:System.Diagnostics.TraceSwitch> y la clase <xref:System.Diagnostics.SourceSwitch> . La clase <xref:System.Diagnostics.BooleanSwitch> actúa como modificador para alternar que habilita o deshabilita una serie de instrucciones de seguimiento. Las clases <xref:System.Diagnostics.TraceSwitch> y <xref:System.Diagnostics.SourceSwitch> permiten habilitar un modificador de seguimiento para un nivel de seguimiento determinado para que aparezcan los mensajes de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> especificados para ese nivel y todos sus niveles inferiores. Si deshabilita el modificador, los mensajes de seguimiento no aparecerán. Todas estas clases derivan de la clase abstracta (**MustInherit**) **Switch**, igual que deberían todos los modificadores desarrollados por el usuario.  
   
- Los modificadores de seguimiento pueden ser útiles para filtrar información. Por ejemplo, quizás quiera ver todos los mensajes de seguimiento de un módulo de acceso a datos, pero solo los mensajes de error del resto de la aplicación. En ese caso, usaría un modificador de seguimiento para el módulo de acceso a datos y otro para el resto de la aplicación. Se puede usar el archivo .config para configurar las opciones apropiadas de los modificadores con el fin de controlar qué tipos de mensajes de seguimiento recibe. Para obtener más información, vea [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ Los modificadores de seguimiento pueden ser útiles para filtrar información. Por ejemplo, quizás quiera ver todos los mensajes de seguimiento de un módulo de acceso a datos, pero solo los mensajes de error del resto de la aplicación. En ese caso, usaría un modificador de seguimiento para el módulo de acceso a datos y otro para el resto de la aplicación. Se puede usar el archivo .config para configurar las opciones apropiadas de los modificadores con el fin de controlar qué tipos de mensajes de seguimiento recibe. Para obtener más información, consulte [Cómo Crear, inicializar y configurar modificadores](how-to-create-initialize-and-configure-trace-switches.md)de seguimiento.  
   
  Normalmente, una aplicación implementada se ejecuta con sus modificadores deshabilitados para que los usuarios no tengan que ver numerosos mensajes de seguimiento irrelevantes en la pantalla o que el archivo de registro se llene durante la ejecución de la aplicación. Si surge un problema durante la ejecución de la aplicación, puede detener la aplicación, habilitar los modificadores y reiniciar la aplicación. Después, se mostrarán los mensajes de seguimiento.  
   
@@ -49,7 +49,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 |Valor enumerado|Valor entero|Tipo de mensaje que se muestra (o se escribe en un destino de salida especificado)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Desactivado|0|Ninguna|  
+|Desactivado|0|None|  
 |Error|1|Solo mensajes de error|  
 |Advertencia|2|Mensajes de advertencia y mensajes de error|  
 |Info|3|Mensajes informativos, mensajes de advertencia y mensajes de error|  
@@ -85,6 +85,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
   
 ## <a name="see-also"></a>Vea también
 
-- [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Agentes de escucha de seguimiento](trace-listeners.md)
+- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)

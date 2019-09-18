@@ -2,12 +2,12 @@
 title: Introducción a F# en Visual Studio Code
 description: Aprenda a usar F# con Visual Studio Code y el conjunto de complementos de Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: baaa87207122cfe314972aee5dfaf8a41de2c394
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2fa0518488d37b2130aaba96028ac92dac77eb97
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629982"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082983"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introducción a F# en Visual Studio Code
 
@@ -24,7 +24,7 @@ Para crear un nuevo F# proyecto, abra Visual Studio Code en una nueva carpeta (p
 
 A continuación, abra la paleta de comandos (**ver > paleta de comandos**) y escriba lo siguiente:
 
-```
+```console
 > F# new project
 ```
 
@@ -158,7 +158,7 @@ Seleccione ambas líneas de texto y presione Alt + Entrar para ejecutar estas l�
 
 A continuación, en la ventana FSI, llame a la función `PigLatin` con el módulo que definió anteriormente:
 
-```
+```console
 > PigLatin.toPigLatin "banana";;
 val it : string = "ananabay"
 > PigLatin.toPigLatin "apple";;

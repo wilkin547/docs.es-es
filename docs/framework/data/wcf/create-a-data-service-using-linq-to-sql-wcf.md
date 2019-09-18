@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791056"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052999"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Procedimiento Crear un servicio de datos mediante un origen de datos de LINQ to SQL (WCF Data Services)
 
@@ -52,7 +52,7 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
 2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione la plantilla de **servicio de datos de WCF** en la categoría **Web** .
 
-   ![Plantilla de elemento de servicio de datos de WCF en Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Plantilla de elemento de servicio de datos de WCF en Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > La plantilla de **servicio de datos de WCF** está disponible en visual Studio 2015, pero no en visual Studio 2017.
@@ -74,6 +74,6 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Creación de un servicio de datos mediante un origen de datos de ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [Procedimientos: Crear un servicio de datos mediante el proveedor de reflexión](create-a-data-service-using-rp-wcf-data-services.md)
+- [Procedimientos: Creación de un servicio de datos mediante un origen de datos de ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [Cómo: Crear un servicio de datos mediante el proveedor de reflexión](create-a-data-service-using-rp-wcf-data-services.md)
 - [Proveedores de Data Services](data-services-providers-wcf-data-services.md)

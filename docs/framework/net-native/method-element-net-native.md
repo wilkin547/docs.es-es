@@ -1,17 +1,17 @@
 ---
-title: <Method> Elemento (.NET Native)
+title: <Method>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d741f51abf02f4bfda2b007efd4c859027e54d9b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867123"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049585"
 ---
-# <a name="method-element-net-native"></a>\<Método > elemento (.NET Native)
+# <a name="method-element-net-native"></a>\<Elemento > del método (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -28,7 +28,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|Descripción|  
+|Atributo|Tipo de atributo|DESCRIPCIÓN|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del método.|  
 |`Signature`|General|Atributo opcional. Especifica la signatura del método. Si hay varios parámetros, se separan mediante comas. Por ejemplo, el elemento `<Method>` siguiente define la política del método <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29>.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Si el atributo no está presente, la directiva de tiempo de ejecución se aplica a todas las sobrecargas del método.|  
@@ -37,44 +37,44 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*method_name*|El nombre del método. El tipo del método se define mediante el elemento primario [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
+|*method_name*|El nombre del método. El tipo del método se define mediante el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Signature (atributo)  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |*method_signature*|Los tipos de parámetros que constituyen la signatura del método. Si hay varios parámetros, se separan por comas; por ejemplo, `"System.String,System.Int32,System.Int32)"`. Los nombres de tipo de parámetro deben ser completos.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
+|*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|Aplica la directiva al tipo del argumento que se pasa a un método.|  
-|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Aplica la directiva al tipo de parámetro de un método o tipo genérico.|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Aplica la directiva a un tipo, si esa directiva se ha aplicado al método representado por el elemento `<Method>` contenedor.|  
-|[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Aplica la directiva al tipo representado por un argumento <xref:System.Type> que se pasa a un método.|  
+|[\<Parameter>](parameter-element-net-native.md)|Aplica la directiva al tipo del argumento que se pasa a un método.|  
+|[\<GenericParameter>](genericparameter-element-net-native.md)|Aplica la directiva al tipo de parámetro de un método o tipo genérico.|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|Aplica la directiva a un tipo, si esa directiva se ha aplicado al método representado por el elemento `<Method>` contenedor.|  
+|[\<TypeParameter>](typeparameter-element-net-native.md)|Aplica la directiva al tipo representado por un argumento <xref:System.Type> que se pasa a un método.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un elemento `<Method>` de un método genérico aplica su directiva a todas las instancias que no tienen su propia directiva.  
   
  Puede utilizar el atributo `Signature` para especificar la directiva de sobrecarga de un método determinado. Por otra parte, si el atributo `Signature` no está presente, la directiva de tiempo de ejecución se aplica a todas las sobrecargas del método.  
   
- No se puede definir la directiva de reflexión en tiempo de ejecución para un constructor mediante el uso del elemento `<Method>`. En su lugar, use el atributo `Activate` del elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
+ No se puede definir la directiva de reflexión en tiempo de ejecución para un constructor mediante el uso del elemento `<Method>`. En su lugar, use el atributo `Activate` del elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md), [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
   
 ## <a name="example"></a>Ejemplo  
  El método `Stringify` del siguiente ejemplo es un método de formato de uso general que utiliza la reflexión para convertir un objeto en su representación de cadena. Además de llamar al método `ToString` predeterminado del objeto, el método puede generar una cadena de resultado con formato; para ello, se pasa el método `ToString` de un objeto a una cadena de formato, a una implementación de <xref:System.IFormatProvider> o a ambos. También puede llamar a una de las sobrecargas <xref:System.Convert.ToString%2A?displayProperty=nameWithType> que convierte un número en su representación binaria, octal o hexadecimal.  
@@ -85,9 +85,9 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
- Pero cuando se compila con .NET Native, el ejemplo puede producir un número de excepciones en tiempo de ejecución, incluidas excepciones <xref:System.NullReferenceException> y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Esto se produce porque el método `Stringify` está pensado principalmente para admitir el formato dinámico de los tipos primitivos de la biblioteca de clases de .NET Framework. No obstante, sus metadatos no están disponibles en el archivo de directivas predeterminado. Incluso cuando sus metadatos están disponibles, el ejemplo genera excepciones [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) porque las implementaciones `ToString` adecuadas no se han incluido en el código nativo.  
+ Pero cuando se compila con .NET Native, el ejemplo puede producir un número de excepciones en tiempo de ejecución, incluidas excepciones <xref:System.NullReferenceException> y [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Esto se produce porque el método `Stringify` está pensado principalmente para admitir el formato dinámico de los tipos primitivos de la biblioteca de clases de .NET Framework. No obstante, sus metadatos no están disponibles en el archivo de directivas predeterminado. Incluso cuando sus metadatos están disponibles, el ejemplo genera excepciones [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) porque las implementaciones `ToString` adecuadas no se han incluido en el código nativo.  
   
- Para eliminar todas estas excepciones, se puede usar el elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) para definir los tipos cuyos metadatos deben estar presentes y agregar elementos `<Method>` para asegurarse de que la implementación de sobrecargas del método que se pueden llamar dinámicamente también está presente. El siguiente es el archivo default.rd.xml que elimina estas excepciones y permite que el ejemplo se ejecute sin errores.  
+ Para eliminar todas estas excepciones, se puede usar el elemento [\<Type>](type-element-net-native.md) para definir los tipos cuyos metadatos deben estar presentes y agregar elementos `<Method>` para asegurarse de que la implementación de sobrecargas del método que se pueden llamar dinámicamente también está presente. El siguiente es el archivo default.rd.xml que elimina estas excepciones y permite que el ejemplo se ejecute sin errores.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -147,7 +147,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-- [Elemento \<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Elemento \<MethodInstantiation>](methodinstantiation-element-net-native.md)
