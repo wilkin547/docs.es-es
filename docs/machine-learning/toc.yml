@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: Detección de objetos en imágenes (detección de objetos)
           href: tutorials/object-detection-onnx.md
+        - name: Clasificación de opiniones mediante TensorFlow (clasificación de texto)
+          href: tutorials/text-classification-tf.md
     - name: Herramientas
       items:
         - name: Predicción de los precios con el generador de modelos
           href: tutorials/predict-prices-with-model-builder.md
         - name: Análisis de opiniones mediante la CLI de ML.NET
           href: tutorials/mlnet-cli.md
+        - name: Análisis de opiniones mediante Model Builder y Razor Pages
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: Conceptos
   items:
     - name: Tareas de ML.NET (tipos de modelo)
