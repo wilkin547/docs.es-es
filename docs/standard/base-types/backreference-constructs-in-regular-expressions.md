@@ -15,19 +15,19 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678363"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991645"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 
 Las referencias inversas proporcionan una forma cómoda de identificar un carácter o subcadena repetidos dentro de una cadena. Por ejemplo, si la cadena de entrada contiene varias apariciones de una subcadena arbitraria, puede buscar una coincidencia con la primera aparición con un grupo de captura y después usar una referencia inversa para buscar una coincidencia con las siguientes apariciones de la subcadena.
 
 > [!NOTE]
-> Se usa una sintaxis independiente para hacer referencia a los grupos de captura con numeración y con nombre de las cadenas de reemplazo. Para obtener más información, consulta [Substituciones](substitutions-in-regular-expressions.md).
+> Se usa una sintaxis independiente para hacer referencia a los grupos de captura con numeración y con nombre de las cadenas de reemplazo. Para obtener más información, consulte [Substituciones](substitutions-in-regular-expressions.md).
 
 .NET define elementos del lenguaje independientes para hacer referencia a los grupos de captura con numeración y con nombre. Para más información sobre los grupos de captura con nombre, vea [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
@@ -53,7 +53,7 @@ Si la ambigüedad constituye un problema, puede usar la notación `\k<`*nombre*`
 
 En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(\w)\1`, que consta de los siguientes elementos.
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |`(\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|
 |`\1`|Coincide con el siguiente carácter que sea igual que el valor del primer grupo de captura.|
@@ -65,17 +65,17 @@ En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una caden
 
 Una referencia inversa con nombre se define mediante la sintaxis siguiente:
 
-`\k<` *name* `>`
+`\k<` *nombre* `>`
 
 O bien
 
-`\k'` *name* `'`
+`\k'` *nombre* `'`
 
 donde *nombre* es el nombre de un grupo de captura definido en el patrón de expresión regular. Si *nombre* no está definido en el patrón de expresión regular, se produce un error de análisis y el motor de expresiones regulares produce una clase <xref:System.ArgumentException>.
 
 En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(?<char>\w)\k<char>`, que consta de los siguientes elementos.
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |`(?<char>\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna a un grupo de captura denominado `char`.|
 |`\k<char>`|Coincide con el siguiente carácter que sea igual que el valor del grupo de captura `char`.|
@@ -106,7 +106,7 @@ Una referencia inversa constituye la definición más reciente de un grupo (la d
 
 En el ejemplo siguiente, se incluye un patrón de expresión regular, `(?<1>a)(?<1>\1b)*`, que redefine el grupo con nombre \1. En la tabla siguiente, se describe cada patrón de la expresión regular.
 
-|Modelo|Descripción|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`(?<1>a)`|Coincide con el carácter "a" y asigna el resultado al grupo de captura denominado `1`.|
 |`(?<1>\1b)*`|Coincide con ninguna o más apariciones del grupo denominado `1` junto con una "b" y asigna el resultado al grupo de captura denominado `1`.|
@@ -126,7 +126,7 @@ En este ejemplo, `*` es un cuantificador de bucle: se evalúa repetidas veces ha
 
 Si un grupo no ha capturado ninguna subcadena, no se define una referencia inversa a ese grupo y no coincide nunca. Así lo ilustra el patrón de expresión regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` que se define de la siguiente forma:
 
-|Modelo|Descripción|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|
 |`(\p{Lu}{2})`|Coincide con dos letras mayúsculas. Este es el primer grupo de captura.|
