@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254158"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972008"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Análisis de opiniones mediante la CLI de ML.NET
 
@@ -19,6 +19,7 @@ Aprenda a usar la CLI de ML.NET para generar automáticamente un modelo de ML.NE
 
 En este tutorial, llevará a cabo los pasos siguientes:
 > [!div class="checklist"]
+>
 > - Preparar los datos para la tarea de aprendizaje automático seleccionada
 > - Ejecutar el comando "mlnet auto-train" desde la CLI
 > - Revisar los resultados de métrica de calidad
@@ -26,7 +27,7 @@ En este tutorial, llevará a cabo los pasos siguientes:
 > - Explorar el código de C# generado que se usó para entrenar el modelo
 
 > [!NOTE]
-> Este tema hace referencia a la herramienta de la CLI de ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Este tema hace referencia a la herramienta de la CLI de ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, visite la página de [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet).
 
 La CLI de ML.NET forma parte de ML.NET y su objetivo principal es "democratizar" ML.NET para desarrolladores de .NET durante el aprendizaje de ML.NET, por lo que no es necesario codificar desde cero para empezar a trabajar.
 
@@ -94,7 +95,8 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
 
     Verá la salida de la CLI, similar a:
 
-    <!-- markdownlint-disable MD023 -->
+    <!-- markdownlint-disable MD023 MD025 -->
+
     # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
     ![Comando de entrenamiento automático de la CLI de ML.NET en PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
@@ -259,6 +261,7 @@ Resulta interesante comparar el algoritmo elegido y la configuración de canaliz
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > - Preparar los datos para la tarea de ML seleccionada (problema para resolver)
 > - Ejecutar el comando "mlnet auto-train" en la herramienta de la CLI
 > - Revisar los resultados de métrica de calidad

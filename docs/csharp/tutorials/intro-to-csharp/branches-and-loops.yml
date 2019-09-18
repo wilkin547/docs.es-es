@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Colección de listas
-  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
-  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/06/2019
-  ms.locfileid: "65063859"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850781"
 items:
 - durationInMinutes: 1
   content: >
@@ -218,7 +218,7 @@ items:
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: ¡Enhorabuena!
   content: >
-    Ha completado el tutorial interactivo "Bifurcaciones y bucles". Puede hacer clic en el vínculo **Colección de listas** que aparece a continuación para iniciar el siguiente tutorial interactivo. También puede visitar el [sitio .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial interactivo "Bifurcaciones y bucles". Puede hacer clic en el vínculo **Colección de listas** que aparece a continuación para iniciar el siguiente tutorial interactivo. También puede visitar el [sitio .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Puede obtener más información sobre estos conceptos en los temas siguientes:

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170656"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854025"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de .NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -200,31 +200,23 @@ Ambos métodos permiten utilizar el instalador web o el instalador sin conexión
 
 Para encadenar de forma silenciosa el proceso de instalación de .NET Framework y dejar que el instalador de .NET Framework proporcione la interfaz de usuario, agregue el siguiente comando al programa de instalación:
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 Por ejemplo, si el programa ejecutable es Contoso.exe y desea instalar el paquete redistribuible sin conexión de .NET Framework 4.5 de forma silenciosa, utilice el comando:
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 Puede utilizar las opciones de línea de comandos adicionales para personalizar la instalación. Por ejemplo:
 
 - Para proporcionar un método para que los usuarios cierren las aplicaciones de .NET Framework que estén en ejecución con el fin de minimizar los reinicios del sistema, establezca el modo pasivo y utilice la opción `/showrmui` de la forma siguiente:
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      Este comando permite reiniciar el administrador para mostrar un cuadro de mensaje que proporciona a los usuarios la oportunidad de cerrar las aplicaciones de .NET Framework antes de instalar el componente.
 
 - Si está utilizando el instalador web, puede utilizar la opción `/LCID` para especificar un paquete de idioma. Por ejemplo, para encadenar el instalador web de .NET Framework 4.5 en el programa de instalación de Contoso e instalar el paquete de idioma japonés, agregue el siguiente comando al proceso de instalación de la aplicación:
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      Si se omite la opción `/LCID` , el programa de instalación instalará el paquete de idioma que coincida con la configuración de MUI del usuario.
 
@@ -294,13 +286,13 @@ El instalador de .NET Framework escribe las claves del Registro cuando la instal
 
 Puede asegurarse de que se ha instalado un paquete de idioma determinado si comprueba que la carpeta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* del Registro tiene un valor DWORD denominado `Release`. (Tenga en cuenta que "NET Framework Setup" no comienza con un punto). *LCID* especifica un identificador de configuración regional. Vea [Idiomas compatibles](#supported-languages) para obtener una lista de ellos.
 
-Por ejemplo, para detectar si ya está instalado el paquete de idioma japonés completo (LCID=1041), compruebe los siguientes valores en el Registro:
+Por ejemplo, para detectar si ya está instalado el paquete de idioma japonés completo (LCID=1041), recupere el siguiente valor con nombre en el Registro:
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| nombre | Release |
+| Tipo | DWORD |
 
 Para averiguar si la versión de lanzamiento final de un paquete de idioma está instalada para una versión concreta de NET Framework entre 4.5 y 4.7.2, compruebe el valor DWORD de la clave RELEASE descrita en la sección anterior, [Detectar .NET Framework](#detect_net).
 
@@ -337,9 +329,7 @@ A partir de .NET Framework 4.5.1, los nombres de paquete adoptan la forma NDP<`v
 
 Para instalar un paquete de idioma con el instalador sin conexión de .NET Framework, debe encadenarlo al programa de instalación de la aplicación. Por ejemplo, para implementar un instalador sin conexión de .NET Framework 4.5.1 con el paquete de idioma japonés, utilice el comando siguiente:
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 No tiene que encadenar los paquetes de idioma si utiliza el instalador web, ya que el programa de instalación instalará el paquete de idioma que coincida con la configuración de MUI del usuario. Si desea instalar un idioma diferente, puede utilizar la opción `/LCID` para especificar un paquete de idioma.
 

@@ -1,37 +1,54 @@
 ---
-title: ?? Operador (referencia de C#)
+title: ?? Operadores ?? y ?? - Referencia de C#
 ms.custom: seodec18
-ms.date: 06/07/2019
+ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
+- ??=_CSharpKeyword
 helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
+- null-coalescing assignment [C#]
+- ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 1e94038a41a6a6cc19be6c67bff2891397793fb3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024994"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924684"
 ---
-# <a name="-operator-c-reference"></a>?? Operador (referencia de C#)
+# <a name="-and--operators-c-reference"></a>?? Operadores ?? y ?? (referencia de C#)
 
 El operador de uso combinado de NULL `??` devuelve el valor del operando izquierdo si no es `null`; en caso contrario, evalúa el operando derecho y devuelve su resultado. El operador `??` no evalúa su operando derecho si el operando izquierdo se evalúa como no NULL.
 
-El operador de uso combinado de NULL es asociativo a la derecha, es decir, una expresión de la forma.
+Disponible en C# 8.0 y versiones posteriores, el operador de asignación de uso combinado de NULL `??=` asigna el valor de su operando derecho al operando izquierdo solo si el operando izquierdo se evalúa como `null`. El operador `??=` no evalúa su operando derecho si el operando izquierdo se evalúa como no NULL.
+
+[!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
+
+El operando izquierdo del operador `??=` debe ser una variable, una [propiedad](../../programming-guide/classes-and-structs/properties.md) o un elemento de [indizador](../../programming-guide/indexers/index.md). Para más información sobre la asignación de uso combinado de NULL, consulte la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md).
+
+En C# 7.3 y versiones anteriores, el tipo del operando izquierdo del operador `??` debe ser un tipo de referencia o un [tipo de valor que acepta valores NULL](../../programming-guide/nullable-types/index.md). A partir C# 8.0, ese requisito se reemplaza por lo siguiente: el tipo del operando izquierdo de los operadores `??` y `??=` no puede ser un tipo de valor que no acepta valores NULL. En concreto, en C# 8.0 y versiones posteriores puede usar los operadores de uso combinado de NULL con parámetros de tipo sin restricciones:
+
+[!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
+
+Los operadores de uso combinado de NULL son asociativos a la derecha. Es decir, las expresiones del formulario
 
 ```csharp
 a ?? b ?? c
+d ??= e ??= f
 ```
 
-se evalúa como
+se evalúan como
 
 ```csharp
 a ?? (b ?? c)
+d ??= (e ??= f)
 ```
 
-El operador `??` puede resultar útil en los siguientes escenarios:
+## <a name="examples"></a>Ejemplos
+
+Los operadores `??` y `??=` puede resultar útiles en los siguientes escenarios:
 
 - En expresiones con los [operadores no condicionales ? y ?[]](member-access-operators.md#null-conditional-operators--and-), puede usar el operador de uso combinado de NULL para proporcionar una expresión alternativa para evaluar en caso de que el resultado de la expresión con la operación condicional NULL sea `null`:
 
@@ -49,13 +66,28 @@ El operador `??` puede resultar útil en los siguientes escenarios:
 
   El ejemplo anterior también muestra cómo usar [miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) para definir una propiedad.
 
+- A partir C# 8.0, puede usar el operador `??=` para reemplazar el código del formulario
+
+  ```csharp
+  if (variable is null)
+  {
+      variable = expression;
+  }
+  ```
+
+  por el siguiente:
+
+  ```csharp
+  variable ??= expression;
+  ```
+
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-El operador de uso combinado de NULL no se puede sobrecargar.
+Los operadores `??` y `??=` no se pueden sobrecargar.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para obtener más información, vea la sección [El operador de uso combinado de NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+Para obtener más información sobre el operador `??`, vea la sección [El operador de uso combinado de NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vea también
 

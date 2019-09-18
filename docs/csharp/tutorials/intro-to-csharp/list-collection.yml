@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880564"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850744"
 items:
 - durationInMinutes: 1
   content: >
@@ -227,7 +227,7 @@ items:
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ha completado el tutorial interactivo de la lista. Se trata de la introducción final al tutorial interactivo de C#. Puede visitar el [sitio .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial interactivo de la lista. Se trata de la introducción final al tutorial interactivo de C#. Puede visitar el [sitio .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Puede obtener más información sobre las [colecciones de .NET](../../../standard/collections/index.md) en los siguientes artículos:

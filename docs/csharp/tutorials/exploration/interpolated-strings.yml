@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
-  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/24/2019
-  ms.locfileid: "66195948"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850945"
 items:
 - durationInMinutes: 2
   content: >
@@ -125,7 +125,7 @@ items:
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ha completado el tutorial interactivo sobre interpolación de cadenas. Puede hacer clic en el vínculo **Números en C# ** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial interactivo sobre interpolación de cadenas. Puede hacer clic en el vínculo **Números en C# ** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Para más información, vea [Interpolación de cadenas](../../language-reference/tokens/interpolated.md).

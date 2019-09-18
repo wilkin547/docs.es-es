@@ -2,12 +2,12 @@
 title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195917"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851068"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -56,20 +56,18 @@ La nulabilidad de un tipo en una declaración de variable se controla mediante e
 
 ## <a name="nullable-contexts"></a>Contextos que aceptan valores NULL
 
-Los contextos que aceptan valores NULL permiten un control preciso sobre cómo interpreta el compilador las variables de tipos de referencia. El **contexto de anotación que acepta valores NULL** de cualquier línea de código es `enabled` o `disabled`. Puede considerar que el compilador anterior al de C# 8 compilaba todo el código en un contexto que acepta valores NULL `disabled`: Cualquier tipo de referencia puede ser NULL. El **contexto de advertencia que acepta valores NULL** puede configurarse como `enabled`, `disabled` o `safeonly`. Este contexto especifica las advertencias que genera el compilador usando el análisis de flujos.
+Los contextos que aceptan valores NULL permiten un control preciso sobre cómo interpreta el compilador las variables de tipos de referencia. El **contexto de anotación que acepta valores NULL** de cualquier línea de código es `enabled` o `disabled`. Puede considerar que el compilador anterior al de C# 8 compilaba todo el código en un contexto que acepta valores NULL `disabled`: Cualquier tipo de referencia puede ser NULL. El **contexto de advertencia que acepta valores NULL** puede configurarse como `enabled` o `disabled`. Este contexto especifica las advertencias que genera el compilador usando el análisis de flujos.
 
 Tanto el contexto de anotación que acepta valores NULL como el contexto de advertencia que acepta valores NULL pueden establecerse para un proyecto con el elemento `Nullable` del archivo `csproj`. Este elemento configura la forma en la que el compilador interpreta la nulabilidad de los tipos y las advertencias que se generan. Estos son los valores válidos:
 
 - `enable`: el contexto de anotación que acepta valores NULL es **enabled**. El contexto de advertencia que acepta valores NULL es **enabled**.
   - Las variables de un tipo de referencia, como `string`, no aceptan valores NULL.  Todas las advertencias de nulabilidad están habilitadas.
-- `disable`: el contexto de anotación que acepta valores NULL es **disabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
-  - Las variables de tipo de referencia son inconscientes, como en versiones anteriores de C#. Todas las advertencias de nulabilidad están deshabilitadas.
-- `safeonly`: el contexto de anotación que acepta valores NULL es **enabled**. El contexto de advertencia que acepta valores NULL es **safeonly**.
-  - Las variables de un tipo de referencia no aceptan valores NULL. Todas las advertencias de nulabilidad de seguridad están habilitadas.
 - `warnings`: el contexto de anotación que acepta valores NULL es **disabled**. El contexto de advertencia que acepta valores NULL es **enabled**.
   - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad están habilitadas.
-- `safeonlywarnings`: el contexto de anotación que acepta valores NULL es **disabled**. El contexto de advertencia que acepta valores NULL es **safeonly**.
-  - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad de seguridad están habilitadas.
+- `annotations`: el contexto de anotación que acepta valores NULL es **enabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
+  - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad están habilitadas.
+- `disable`: el contexto de anotación que acepta valores NULL es **disabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
+  - Las variables de tipo de referencia son inconscientes, como en versiones anteriores de C#. Todas las advertencias de nulabilidad están deshabilitadas.
 
 > [!IMPORTANT]
 > El elemento `Nullable` se denominaba anteriormente `NullableContextOptions`. El cambio de nombre incluido con Visual Studio 2019, 16.2 p1. .NET Core SDK 3.0.100-preview5-011568 no tiene este cambio. Si usa la CLI de .NET Core, deberá usar `NullableContextOptions` hasta que esté disponible la siguiente versión preliminar.
@@ -78,21 +76,12 @@ También puede usar directivas para establecer los mismos contextos en cualquier
 
 - `#nullable enable`: establece el contexto de anotación que acepta valores NULL y el contexto de advertencia que acepta valores NULL en **enabled**.
 - `#nullable disable`: establece el contexto de anotación que acepta valores NULL y el contexto de advertencia que acepta valores NULL en **disabled**.
-- `#nullable safeonly`: establece el contexto de anotación que acepta valores NULL en **enabled** y el contexto de advertencia que acepta valores NULL en **safeonly**.
 - `#nullable restore`: restaura el contexto de anotación que acepta valores NULL y el contexto de advertencia que acepta valores NULL según la configuración del proyecto.
 - `#pragma warning disable nullable`: establece el contexto de advertencia que acepta valores NULL en **disabled**.
 - `#pragma warning enable nullable`: establece el contexto de advertencia que acepta valores NULL en **enabled**.
 - `#pragma warning restore nullable`: restaura el contexto de advertencia que acepta valores NULL según la configuración del proyecto.
-- `#pragma warning safeonly nullable`: establece el contexto de advertencia que acepta valores NULL en **safeonly**.
 
 Los contextos de advertencias y anotaciones que aceptan valores NULL predeterminados son `disabled`. Esta decisión implica que el código existente se compila sin cambios y sin generar ninguna advertencia nueva.
-
-Las diferencias entre los contextos de advertencias que aceptan valores NULL `enabled` y `safeonly` son las advertencias para asignar una referencia que acepta valores NULL a una referencia que no acepta valores NULL. La siguiente asignación genera una advertencia en un contexto de advertencia `enabled`, pero no en un contexto de advertencia `safeonly`. Sin embargo, en la segunda línea, donde se desreferencia `s`, se genera una advertencia en un contexto `safeonly`:
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>Contexto de anotación que admite valores NULL
 
@@ -121,7 +110,7 @@ El contexto de advertencia que acepta valores NULL no es igual al contexto de an
 1. La variable se ha asignado definitivamente a un valor distinto a NULL.
 1. Se ha comprobado que la variable o la expresión no tiene un valor NULL antes de desreferenciarla.
 
-El compilador genera advertencias cuando se desreferencia una variable o expresión en un estado **quizás NULL** si el contexto de advertencia que acepta valores NULL es `enabled` o `safeonly`. Además, se generan advertencias cuando se asigna una variable o expresión **quizás NULL** a un tipo de referencia que no acepta valores NULL en un contexto de anotación que acepta valores NULL `enabled`.
+El compilador genera advertencias cuando se desreferencia una variable o expresión en un estado **quizás NULL** si el contexto de advertencia que acepta valores NULL es `enabled`. Además, se generan advertencias cuando se asigna una variable o expresión **quizás NULL** a un tipo de referencia que no acepta valores NULL en un contexto de anotación que acepta valores NULL `enabled`.
 
 ## <a name="learn-more"></a>Más información
 

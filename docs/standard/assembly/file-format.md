@@ -3,19 +3,19 @@ title: Formato de archivo de ensamblado .NET
 description: Obtenga información sobre el formato de archivo de ensamblado .NET, que se usa para describir y contiene las bibliotecas y aplicaciones de .NET.
 author: richlander
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666635"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970152"
 ---
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET
 
-.NET define un formato de archivo binario ("ensamblado") que se usa para describir por completo y contener programas de .NET. Los ensamblados se usan para los programas, así como para las bibliotecas dependientes. Un programa de .NET se puede ejecutar como uno de varios ensamblados, no se necesitan otros artefactos, además de la implementación de .NET adecuada. Las dependencias nativas, incluidas las API del sistema operativo, constituyen un asunto independiente y no se incluyen en el formato de ensamblado. NET, aunque a veces se describen con este formato (por ejemplo, WinRT).
+.NET define un formato de archivo binario *ensamblado* que se usa para describir por completo y contener programas de .NET. Los ensamblados se usan para los programas, así como para las bibliotecas dependientes. Un programa de .NET se puede ejecutar como uno de varios ensamblados, no se necesitan otros artefactos, además de la implementación de .NET adecuada. Las dependencias nativas, incluidas las API del sistema operativo, constituyen un asunto independiente y no se incluyen en el formato de ensamblado. NET, aunque a veces se describen con este formato (por ejemplo, WinRT).
 
 > Cada componente de CLI incluye los metadatos para las declaraciones, implementaciones y referencias específicas a ese componente. Por tanto, los metadatos específicos del componente se conocen como metadatos del componente y se dice que el componente resultante es autodescriptivo (de ECMA 335 I.9.1, Componentes y ensamblados).
 
@@ -33,6 +33,6 @@ El formato binario de .NET se basa en el formato de [archivo PE](https://en.wiki
 
 Encabezados de ensamblado de ECMA 335 II.25.1, Estructura del formato de archivo en tiempo de ejecución.
 
-## <a name="processing-the-assemblies"></a>Procesar los ensamblados
+## <a name="process-the-assemblies"></a>Procesamiento de los ensamblados
 
 Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> y [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.

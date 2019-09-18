@@ -4,12 +4,12 @@ description: Aprenda cómo funcionan los atributos en C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481236"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851001"
 ---
 # <a name="using-attributes-in-c"></a>Uso de atributos en C\#
 
@@ -20,7 +20,7 @@ Considere el atributo `[Obsolete]`. Se puede aplicar a clases, structs, métodos
 En este tutorial, se le introducirá a cómo agregar atributos al código, cómo crear y usar sus propios atributos y cómo usar algunos atributos que se integran en .NET Core.
 
 ## <a name="prerequisites"></a>Requisitos previos
-Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core).
+Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download).
 Puede ejecutar esta aplicación en Windows, Ubuntu Linux, macOS o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 
 ## <a name="create-the-application"></a>Crear la aplicación
@@ -38,7 +38,7 @@ Para ejecutar el programa, use `dotnet run`. Deberá ver la salida "Hola a todos
 ## <a name="how-to-add-attributes-to-code"></a>Cómo agregar atributos al código
 
 En C#, los atributos son clases que se heredan de la clase base `Attribute`. Cualquier clase que se hereda de `Attribute` puede usarse como una especie de "etiqueta" en otros fragmentos de código.
-Por ejemplo, hay un atributo llamado `ObsoleteAttribute`,  que se usa para indicar que el código está obsoleto y ya no debe utilizarse. Puede colocar este atributo en una clase, por ejemplo, mediante corchetes.
+Por ejemplo, hay un atributo llamado `ObsoleteAttribute`, que se usa para indicar que el código está obsoleto y ya no debe utilizarse. Puede colocar este atributo en una clase, por ejemplo, mediante corchetes.
 
 [!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
 

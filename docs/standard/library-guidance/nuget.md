@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el empaquetado con NuGet para bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198184"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895214"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ Las dependencias de paquetes NuGet se tratan detalladamente en el artículo [Dep
 
 Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nuspec). La tabla siguiente contiene los metadatos principales que deben proporcionar todos los paquetes de NuGet.org:
 
-| Nombre de la propiedad de MSBuild              | Nombre de nuspec              | Descripción  |
+| Nombre de la propiedad de MSBuild              | Nombre de nuspec              | DESCRIPCIÓN  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identificador del paquete. Se puede reservar un prefijo del identificador si cumple los [criterios](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Versión del paquete NuGet. Para información, vea [NuGet package version](./versioning.md#nuget-package-version) (Versión del paquete NuGet).             |
@@ -118,7 +118,7 @@ La desventaja de los archivos de símbolos insertados es que aumentan el tamaño
 
 > Los paquetes de símbolos (`*.snupkg`) ofrecen a los desarrolladores una buena experiencia de depuración a petición sin incrementar el tamaño del paquete principal ni afectar al rendimiento de restauración para los que no tengan pensado depurar el paquete NuGet.
 >
-> La salvedad es que tendrán que localizar y configurar el servidor de símbolos de NuGet en su IDE (como una instalación única) para obtener los archivos de símbolos. En Visual Studio 2019 se pretende proporcionar el servidor de símbolos de NuGet.org como una de las opciones preconfiguradas. 
+> La salvedad es que es posible que los usuarios tengan que localizar y configurar el servidor de símbolos de NuGet en su IDE (como una instalación única) para obtener los archivos de símbolos. Visual Studio 2019 versión 16.1 ha agregado el servidor de símbolos NuGet.org a la lista de predeterminados.
 
 >[!div class="step-by-step"]
 >[Anterior](strong-naming.md)

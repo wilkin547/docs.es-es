@@ -1,6 +1,6 @@
 ---
-title: Ensamblados de varios archivos
-ms.date: 03/30/2017
+title: Ensamblados de múltiples archivos
+ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634174"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971878"
 ---
-# <a name="multifile-assemblies"></a>Ensamblados de varios archivos
+# <a name="multifile-assemblies"></a>Ensamblados de múltiples archivos
 
-Puede crear ensamblados de varios archivos mediante compiladores de línea de comandos o Visual Studio con Visual C++. Un archivo del ensamblado debe contener el manifiesto del ensamblado. Los ensamblados que inicien una aplicación también deben contener un punto de entrada, como un método Main o WinMain.
+Puede crear ensamblados de varios archivos que tengan como destino .NET Framework mediante compiladores de línea de comandos o Visual Studio con Visual C++. Un archivo del ensamblado debe contener el manifiesto del ensamblado. Los ensamblados que inicien una aplicación también deben contener un punto de entrada, como un método `Main` o `WinMain`.
 
-Por ejemplo, supongamos que tiene una aplicación que contiene dos módulos de código, Client.cs y Stringer.cs. Stringer.cs que crea el espacio de nombres `myStringer` al que hace referencia el código de Client.cs. Client.cs contiene el método `Main`, que es el punto de entrada de la aplicación. En este ejemplo, se compilan los dos módulos de código y, después, se crea un tercer archivo que contiene el manifiesto del ensamblado, que inicia la aplicación. El manifiesto del ensamblado hace referencia a los módulos `Client` y `Stringer`.
+Por ejemplo, supongamos que tiene una aplicación que contiene dos módulos de código, *Client.cs* y *Stringer.cs*. *Stringer.cs* crea el espacio de nombres `myStringer` al que hace referencia el código de *Client.cs*. *Client.cs* contiene el método `Main`, que es el punto de entrada de la aplicación. En este ejemplo, se compilan los dos módulos de código y, después, se crea un tercer archivo que contiene el manifiesto del ensamblado, que inicia la aplicación. El manifiesto del ensamblado hace referencia a los módulos *Client* y *Stringer*.
 
 > [!NOTE]
 > Los ensamblados de varios archivos pueden tener un único punto de entrada, incluso si el ensamblado tiene varios módulos de código.
@@ -39,9 +39,9 @@ Hay varias razones por las que le puede interesar crear un ensamblado de varios 
 
 - Para combinar módulos de código escritos por varios desarrolladores. Aunque cada desarrollador puede compilar cada módulo de código en un ensamblado, esto puede hacer que se expongan públicamente algunos tipos que no se exponen cuando todos los módulos se colocan en un ensamblado de varios archivos.
 
-Una vez creado el ensamblado, puede firmar el archivo que contiene el manifiesto del ensamblado (y, por tanto, el ensamblado), o bien puede asignarle al archivo (y al ensamblado) un nombre seguro y colocarlo en la caché global de ensamblados.
+Una vez creado el ensamblado, puede firmar el archivo que contiene el manifiesto del ensamblado (y, por tanto, el ensamblado), o bien puede asignarle al archivo y al ensamblado un nombre seguro y colocarlo en la caché global de ensamblados.
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Cómo: Compilar un ensamblado de varios archivos](build-multifile-assembly.md)
+- [Programación con ensamblados](../../standard/assembly/program.md)

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370324"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850801"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ha completado el tutorial de introducción a C# "Hola, C#". Puede hacer clic en el vínculo **Números en C# ** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial de introducción a C# "Hola, C#". Puede hacer clic en el vínculo **Números en C# ** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Para obtener más información sobre el tipo `string`:

@@ -1,13 +1,13 @@
 ---
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374008"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926525"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -26,6 +26,7 @@ Hay muchas mejoras en el lenguaje C# que ya se pueden probar.
 - [Tipos de referencia que aceptan valores null](#nullable-reference-types)
 - [Secuencias asincrónicas](#asynchronous-streams)
 - [Índices y rangos](#indices-and-ranges)
+- [Asignación de uso combinado de NULL](#null-coalescing-assignment)
 - [Tipos construidos no administrados](#unmanaged-constructed-types)
 - [Mejora de las cadenas textuales interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 Puede explorar más información acerca de los índices y los intervalos en el tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
+
+## <a name="null-coalescing-assignment"></a>Asignación de uso combinado de NULL
+
+C# 8.0 presenta el operador de asignación de uso combinado de `??=`. Puede usar el operador `??=` para asignar el valor de su operando derecho al operando izquierdo solo si el operando izquierdo se evalúa como `null`.
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+Para obtener más información, consulte [Operadores ?? y ??](../language-reference/operators/null-coalescing-operator.md).
 
 ## <a name="unmanaged-constructed-types"></a>Tipos construidos no administrados
 

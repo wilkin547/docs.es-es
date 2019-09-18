@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698029"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969965"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -89,7 +89,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
 1. Agregar el código fuente de la aplicación.
 
-   Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
+   Abra el archivo *Program.cs* o *Program.vb* en el editor y reemplace el código generado automáticamente por el siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -109,6 +109,8 @@ La implementación de una implementación independiente sin dependencias de terc
    Si ha habilitado el modo de globalización invariable, asegúrese especialmente de probar si la ausencia de datos dependientes de la referencia cultural es adecuada para la aplicación.
 
 Una vez que haya terminado de depurar, puede publicar la implementación independiente:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 y anterior](#tab/vs156)
 

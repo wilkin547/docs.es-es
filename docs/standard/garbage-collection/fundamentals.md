@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796861"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895276"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 
@@ -270,7 +270,7 @@ En la siguiente se muestra la recolección de elementos no utilizados simultáne
 
 ## <a name="background-workstation-garbage-collection"></a>Recolección de elementos no utilizados de estación de trabajo en segundo plano
 
-En la recolección de elementos no utilizados en segundo plano, las generaciones efímeras (0 y 1) se recolectan según sea necesario mientras la recolección de la generación 2 está en curso. No existe ningún valor para la recolección de elementos no utilizados en segundo plano; se habilita automáticamente con la recolección simultánea de elementos no utilizados. La recolección de elementos no utilizados en segundo plano reemplaza la recolección simultánea de elementos no utilizados. Como sucede con la recolección simultánea de elementos no utilizados, la recolección de elementos no utilizados en segundo plano se realiza en un subproceso dedicado y solamente es aplicable a las recolecciones de la generación 2.
+La recolección de elementos no utilizados en segundo plano reemplaza la recolección simultánea de elementos no utilizados de la estación de trabajo a partir de .NET Framework 4 y reemplaza a la recolección simultánea de elementos no utilizados de servidor a partir de .NET Framework 4.5.  En la recolección de elementos no utilizados en segundo plano, las generaciones efímeras (0 y 1) se recolectan según sea necesario mientras la recolección de la generación 2 está en curso. Se realiza en un subproceso dedicado y solo es aplicable a las recolecciones de la generación 2. La recolección de elementos no utilizados en segundo plano se habilita automáticamente de forma predeterminada y se puede habilitar o deshabilitar con la opción de configuración [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) en aplicaciones de .NET Framework. 
 
 > [!NOTE]
 > La recolección de elementos no utilizados en segundo plano únicamente está disponible en .NET Framework 4 y versiones posteriores. En .NET Framework 4, solo se admite para la recolección de elementos no utilizados de la estación de trabajo. A partir de .NET Framework 4.5, la recolección de elementos no utilizados en segundo plano está disponible para estaciones de trabajo y servidores.

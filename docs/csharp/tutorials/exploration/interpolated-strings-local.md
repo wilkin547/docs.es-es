@@ -4,18 +4,18 @@ description: En este tutorial se muestra cómo usar la característica de interp
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397806"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850931"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato
 
 En este tutorial se muestra cómo usar la [interpolación de cadenas](../../language-reference/tokens/interpolated.md) de C# para insertar valores en una cadena de resultado única. Escriba código de C# y vea los resultados de la compilación y la ejecución. Este tutorial contiene una serie de lecciones para mostrarle cómo insertar valores en una cadena y dar formato a estos valores de maneras diferentes.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. También puede completar la [versión interactiva](interpolated-strings.yml) de este tutorial en el explorador.
+En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. También puede completar la [versión interactiva](interpolated-strings.yml) de este tutorial en el explorador.
 
 ## <a name="create-an-interpolated-string"></a>Crear una cadena interpolada
 

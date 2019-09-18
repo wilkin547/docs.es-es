@@ -3,20 +3,20 @@ title: Preparación de los datos para la compilación de un modelo
 description: Aprenda cómo utilizar las transformaciones de ML.NET para manipular y preparar datos para su procesamiento adicional o la creación de modelos.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397719"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929369"
 ---
 # <a name="prepare-data-for-building-a-model"></a>Preparación de los datos para la compilación de un modelo
 
 Aprenda cómo utilizar ML.NET para preparar datos para el procesamiento adicional o la creación de un modelo.
 
-Los datos suelen estar dispersos o sin limpiar. Además, los algoritmos de aprendizaje automático de ML.NET esperan que las entradas o características estén en un vector numérico único. Por lo tanto, uno de los objetivos de la preparación de datos es obtener los datos en el formato esperado por los algoritmos de ML.NET. 
+Los datos suelen estar dispersos o sin limpiar. Los algoritmos de aprendizaje automático de ML.NET esperan que las entradas o características estén en un vector numérico único. Del mismo modo, el valor que se va a predecir (etiqueta), especialmente cuando se trata de datos categóricos, debe estar codificado. Por lo tanto, uno de los objetivos de la preparación de datos es obtener los datos en el formato esperado por los algoritmos de ML.NET. 
 
 ## <a name="filter-data"></a>Filtrar datos
 

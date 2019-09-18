@@ -3,15 +3,15 @@ title: Predicción de precios mediante regresión con el Generador de modelos
 description: En este tutorial se muestra cómo compilar un modelo de regresión con el Generador de modelos de ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107142"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991351"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Predicción de precios mediante regresión con el Generador de modelos
 
@@ -21,6 +21,7 @@ La plantilla de predicción de precios del Generador de modelos puede usarse par
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > - Preparar y entender los datos
 > - Elección de un escenario
 > - Carga de los datos
@@ -88,17 +89,9 @@ El Generador de modelos acepta datos de dos orígenes, una base de datos de SQL�
 
 La tarea de aprendizaje automático que se usa para entrenar el modelo de predicción de precio en este tutorial es la regresión. Durante el proceso de entrenamiento de modelos, el Generador de modelos entrena modelos independientes usando diferentes opciones y algoritmos de regresión para encontrar el modelo con mejor rendimiento para el conjunto de datos.
 
-El tiempo necesario para el entrenamiento del modelo es proporcional a la cantidad de datos. Use este gráfico como guía para seleccionar un valor adecuado para el campo `Time to train (seconds)`:
+El tiempo necesario para el entrenamiento del modelo es proporcional a la cantidad de datos. El generador de modelos selecciona automáticamente un valor predeterminado para **Tiempo de entrenamiento (segundos)** en función del tamaño del origen de datos.
 
-*Tamaño del conjunto de datos  | Tipo de conjunto de datos       | Prom. Tiempo de entrenamiento*
-------------- | ------------------ | --------------
-0 - 10 MB     | Numérico y texto   | 10 s
-10 - 100 MB   | Numérico y texto   | 10 min
-100 - 500 MB  | Numérico y texto   | 30 min
-500 - 1 GB    | Numérico y texto   | 60 min
-1 GB o más         | Numérico y texto   | Más de 3 horas
-
-1. Dado que el archivo de datos de entrenamiento es mayor de 10 MB, use 600 segundos (10 minutos) como valor en *Tiempo para entrenar (segundos)* .
+1. Deje el valor predeterminado como está para *Tiempo de entrenamiento (segundos)* , a menos que prefiera entrenar durante más tiempo.
 2. Seleccione *Iniciar entrenamiento*.
 
 Durante el proceso de entrenamiento, los datos de progreso se muestran en la sección `Progress` del paso de entrenamiento.
@@ -190,6 +183,7 @@ Si tiene que hacer referencia a los proyectos generados en un momento posterior 
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > - Preparar y entender los datos
 > - Elección de un escenario
 > - Carga de los datos

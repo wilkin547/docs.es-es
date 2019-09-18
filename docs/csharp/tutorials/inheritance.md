@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463818"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850991"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -18,7 +18,7 @@ Este tutorial es una introducción a la herencia en C#. La herencia es una carac
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tutorial se supone que ha instalado .NET Core. Para obtener instrucciones de instalación, consulte [.NET Core installation guide](https://www.microsoft.com/net/core) (Guía de instalación de .NET Core). También necesitará un editor de código. En este tutorial se usa [Visual Studio Code](https://code.visualstudio.com), aunque puede elegir el que prefiera.
+En este tutorial se supone que ha instalado el SDK de .NET Core. Visite la página de [descargas de .NET Core](https://dotnet.microsoft.com/download) para descargarlo. También necesitará un editor de código. En este tutorial se usa [Visual Studio Code](https://code.visualstudio.com), aunque puede elegir el que prefiera.
 
 ## <a name="running-the-examples"></a>Ejecución de los ejemplos
 

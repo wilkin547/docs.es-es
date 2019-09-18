@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Bifurcaciones y bucles en C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661018"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850676"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ha completado el tutorial interactivo "Números en C#". Puede hacer clic en el vínculo **Ramas y bucles** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial interactivo "Números en C#". Puede hacer clic en el vínculo **Ramas y bucles** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
 
 
     Puede obtener más información sobre los números en C# en los temas siguientes:

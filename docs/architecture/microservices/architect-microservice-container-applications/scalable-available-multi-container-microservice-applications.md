@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Descubra las opciones para orquestar microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad de las posibilidades de espacios de desarrollo de Azure durante el desarrollo del ciclo de vida de aplicación de Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675032"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991159"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -15,7 +15,7 @@ La utilización de orquestadores para aplicaciones listas para producción es fu
 
 La figura 4-23 ilustra la implementación en un clúster de una aplicación formada por varios microservicios (contenedores).
 
-![Aplicaciones compuestas de Docker en un clúster: use un contenedor para cada instancia de servicio. Los contenedores de Docker son "unidades de implementación" y un contenedor es una instancia de un Docker. Un host controla muchos contenedores](./media/image23.png)
+![Aplicaciones compuestas de Docker en un clúster: use un contenedor para cada instancia de servicio. Los contenedores de Docker son “unidades de implementación” y un contenedor es una instancia de Docker. Un host controla muchos contenedores.](./media/image23.png)
 
 **Figura 4-23**. Un clúster de contenedores
 

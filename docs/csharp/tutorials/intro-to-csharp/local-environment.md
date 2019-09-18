@@ -2,19 +2,19 @@
 title: 'Introducción a C#: familiarización con las herramientas de desarrollo'
 description: En este artículo se proporciona una introducción básica a las herramientas que usará para desarrollar de C# y .NET en el equipo.
 ms.date: 10/23/2018
-ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920667"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850753"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Familiarización con las herramientas de desarrollo de .NET
 
 El primer paso en la ejecución de un tutorial en el equipo es configurar un entorno de desarrollo.
-El tema de .NET [Iniciar en 10 minutos](https://www.microsoft.com/net/core) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux.
+El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux.
 
-Como alternativa, puede instalar el [SDK de .NET Core](https://www.microsoft.com/net/download) y [Visual Studio Code](https://code.visualstudio.com/).
+Como alternativa, puede instalar el [SDK de .NET Core](https://dotnet.microsoft.com/download) y [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="basic-application-development-flow"></a>Flujo de desarrollo de aplicaciones básico
 

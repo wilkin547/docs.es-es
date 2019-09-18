@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202816"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969771"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202816"
 `dotnet restore`: restaura las dependencias y las herramientas de un proyecto.
 
 ## <a name="synopsis"></a>Sinopsis
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -177,7 +179,7 @@ Especifica un tiempo de ejecución para la restauración del paquete. Se usa par
 
 `-s|--source <SOURCE>`
 
-Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Esto invalida todos los orígenes especificados en los archivos *nuget.config*. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
+Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Esto invalida todos los orígenes especificados en los archivos *nuget.config*, al leer de forma eficaz el archivo *nuget.config* como si el elemento `<packageSource>` no estuviera allí. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
 
 `--verbosity <LEVEL>`
 

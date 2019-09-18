@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625444"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853855"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  
@@ -105,7 +105,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 4. Identifique cada clase del ensamblado. Use el elemento `<clrClass>` para identificar cada clase del ensamblado administrado de manera única. El elemento, que es un subelemento del elemento `<assembly>`, tiene los atributos que se describen en la tabla siguiente.  
   
-    |Atributo|Descripción|Obligatorio|  
+    |Atributo|DESCRIPCIÓN|Obligatorio|  
     |---------------|-----------------|--------------|  
     |`clsid`|El identificador que especifica la clase que ha de ser activada.|Sí|  
     |`description`|Cadena que informa al usuario sobre el componente. De manera predeterminada, es una cadena vacía.|No|  
@@ -166,11 +166,9 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 3. Compile de nuevo el archivo de origen del ensamblado y especifique el archivo de recursos mediante la opción **/win32res**:  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
-     Una vez más, `myresource.res` es el nombre del archivo de recursos que contiene el recurso incrustado.  
+     Una vez más, `myresource.res` es el nombre del archivo de recursos que contiene los recursos incrustados.  
   
 ## <a name="see-also"></a>Vea también
 

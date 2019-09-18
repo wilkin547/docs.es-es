@@ -3,12 +3,12 @@ title: Aplicación de consola
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348835"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851012"
 ---
 # <a name="console-application"></a>Aplicación de consola
 
@@ -26,7 +26,7 @@ Hay muchas características en este tutorial. Vamos a compilarlas una a una.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker.
+Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker.
 Deberá instalar su editor de código favorito.
 
 ## <a name="create-the-application"></a>Crear la aplicación

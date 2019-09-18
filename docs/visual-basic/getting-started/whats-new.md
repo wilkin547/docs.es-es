@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666862"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895257"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -21,9 +21,12 @@ En este tema se enumeran los nombres de las características clave de cada versi
 
 ## <a name="current-version"></a>Versión actual
 
-Visual Basic 15.8 o Visual Studio 2017, versión 15.8. Para conocer las nuevas características, consulte [Visual Basic 15.8](#visual-basic-158).
+Visual Bascic 16.0 / Visual Studio 2019, versión 16.0  
+Para obtener información sobre las características nuevas, vea [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versiones anteriores
+
+Visual Basic 15.8 o Visual Studio 2017, versión 15.8. Para conocer las nuevas características, consulte [Visual Basic 15.8](#visual-basic-158).
 
 Visual Basic 15.5 o Visual Studio 2017, versión 15.5. Para conocer las nuevas características, consulte [Visual Basic 15.5](#visual-basic-155).
 
@@ -46,6 +49,21 @@ Visual Basic o Visual Studio 2005. El tipo `My` y los tipos de asistente (acceso
 Visual Basic o Visual Studio .NET 2003. Operadores de desplazamiento de bits, declaración de variables de bucle
 
 Visual Basic o Visual Studio .NET 2002. La primera versión de Visual Basic .NET
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Visual Basic 16.0 se centra en proporcionar más características del entorno de ejecución de Visual Basic (microsoft.visualbasic.dll) a .NET Core y es la primera versión de Visual Basic centrada en .NET Core. Muchas partes del entorno de ejecución de Visual Basic dependen de WinForms y se agregarán en una versión posterior de Visual Basic. 
+
+**Comentarios permitidos en más lugares dentro de las instrucciones** En Visual Basic 15.8 y versiones anteriores, solo se permiten comentarios en líneas en blanco, al final de una instrucción o en lugares específicos dentro de una instrucción donde se permita una continuación de línea implícita. A partir de Visual Basic 16.0, también se permiten comentarios después de las continuaciones de línea explícitas y dentro de una instrucción en una línea que comienza con un espacio seguido de un guion bajo.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

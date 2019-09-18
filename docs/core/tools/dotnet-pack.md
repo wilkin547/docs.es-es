@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202844"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990410"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**Este tema se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>nombre
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202844"
 
 ## <a name="synopsis"></a>Sinopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>DESCRIPCIÓN
 
-El comando `dotnet pack` compila el proyecto y crea paquetes de NuGet. El resultado de este comando es un paquete de NuGet. Si la opción `--include-symbols` está presente, se crea otro paquete que contiene los símbolos de depuración.
+El comando `dotnet pack` compila el proyecto y crea paquetes de NuGet. El resultado de este comando es un paquete de NuGet (es decir, un archivo *.nupkg*). 
+
+Si quiere generar un paquete que contenga los símbolos de depuración, tiene dos opciones a su disposición:
+
+- `--include-symbols`: crea el paquete de símbolos.
+- `--include-source`: crea el paquete de símbolos con una carpeta `src` dentro que contiene los archivos de origen.
 
 Las dependencias de NuGet del proyecto empaquetado se agregan al archivo *.nuspec*, por lo que se pueden resolver adecuadamente cuando se instala el paquete. Las referencias de proyecto a proyecto no se empaquetan dentro del proyecto. Actualmente, debe disponer de un paquete por proyecto si tiene dependencias de proyecto a proyecto.
 
@@ -59,13 +57,11 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 ## <a name="arguments"></a>Argumentos
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  El proyecto para empaquetar. O bien una ruta de acceso a un [archivo csproj](csproj.md) o a un directorio. Si no se especifica, se toma como predeterminado el directorio actual.
+  El archivo de proyecto o solución para empaquetar. Es una ruta de acceso a un [archivo csproj](csproj.md), a un archivo de solución o a un directorio. Si no se especifica, el comando busca un archivo del proyecto o de la solución en el directorio actual.
 
 ## <a name="options"></a>Opciones
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 * **`--force`**
 
-  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
+  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*. Opción disponible desde el SDK de .NET Core 2.0.
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 * **`--include-source`**
 
-  Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`.
+  Incluye los paquetes NuGet de símbolos de depuración, además de los paquetes NuGet normales en el directorio de salida. Los archivos de origen se incluyen en la carpeta `src` dentro del paquete de símbolos.
 
 * **`--include-symbols`**
 
-  Genera símbolos `nupkg`.
+  Incluye los paquetes NuGet de símbolos de depuración, además de los paquetes NuGet normales en el directorio de salida.
+
+* **`--interactive`**
+
+  Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación). Disponible desde el SDK de .NET Core 3.0.
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 * **`--no-dependencies`**
 
-  Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.
+  Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz. Opción disponible desde el SDK de .NET Core 2.0.
 
 * **`--no-restore`**
 
-  No ejecuta una restauración implícita al ejecutar el comando.
+  No ejecuta una restauración implícita al ejecutar el comando. Opción disponible desde el SDK de .NET Core 2.0.
+
+* **`--nologo`**
+
+  No se muestra la pancarta de inicio ni el mensaje de copyright. Disponible desde el SDK de .NET Core 3.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
+  Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). Opción disponible desde el SDK de .NET Core 2.0.
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 * **`-v|--verbosity <LEVEL>`**
 
   Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Define la configuración de compilación. El valor predeterminado es `Debug`.
-
-* **`-h|--help`**
-
-  Imprime una corta ayuda para el comando.
-
-* **`--include-source`**
-
-  Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`.
-
-* **`--include-symbols`**
-
-  Genera símbolos `nupkg`.
-
-* **`--no-build`**
-
-  No compila el proyecto antes de empaquetarlo.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Coloca los paquetes compilados en el directorio especificado.
-
-* **`-s|--serviceable`**
-
-  Establece la marca de servicio en el paquete. Para más información, consulte [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Define el valor de la propiedad de `$(VersionSuffix)` en el proyecto.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
-
----
 
 ## <a name="examples"></a>Ejemplos
 
@@ -212,5 +176,5 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 * Empaquete el proyecto mediante un [archivo .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

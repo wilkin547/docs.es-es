@@ -3,12 +3,12 @@ title: Información general de global.json
 description: Obtenga información sobre cómo usar el archivo global.json para establecer la versión del SDK de .NET Core al ejecutar comandos de la CLI de .NET Core.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: a3d90e39401ece8d106d89a7533b7c1e1e4433cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632396"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849601"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -51,13 +51,13 @@ En el ejemplo siguiente se muestra el contenido de un archivo *global.json*:
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json y la CLI de .NET Core
 
-Resulta útil saber qué versiones están disponibles con el fin de establecer una en el archivo *global.json*. Puede encontrar la lista completa de los SDK disponibles admitidos en el sitio de [descargas de .NET](https://www.microsoft.com/net/download/all). A partir del SDK de .NET Core SDK 2.1, puede ejecutar el comando siguiente para comprobar qué versiones del SDK ya están instaladas en el equipo:
+Resulta útil saber qué versiones están disponibles con el fin de establecer una en el archivo *global.json*. Puede encontrar la lista completa de los SDK disponibles admitidos en la página de [descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core). A partir del SDK de .NET Core SDK 2.1, puede ejecutar el comando siguiente para comprobar qué versiones del SDK ya están instaladas en el equipo:
 
 ```console
 dotnet --list-sdks
 ```
 
-Para instalar otras versiones del SDK de .NET Core en el equipo, visite el sitio de [descargas de .NET](https://www.microsoft.com/net/download/all).
+Para instalar otras versiones del SDK de .NET Core en el equipo, visite la página de [descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 Puede crear un archivo *global.json* en el directorio actual mediante la ejecución del comando [dotnet new](dotnet-new.md), similar al ejemplo siguiente:
 

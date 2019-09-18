@@ -3,12 +3,12 @@ title: Creación de una aplicación de listas de enfrentamientos en juegos con I
 description: Descubra cómo usar la programación probabilística con Infer.NET para crear una aplicación de listas de enfrentamientos en juegos basada en una versión simplificada de TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211433"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855787"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística
 
@@ -22,7 +22,7 @@ La programación probabilística permite crear modelos estadísticos de los proc
 
 - Configuración del entorno de desarrollo local
 
-  En esta guía paso a paso se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial [Iniciar en 10 minutos](https://www.microsoft.com/net/core) de .NET cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux.
+  En esta guía paso a paso se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en MacOS, Windows o Linux.
 
 ## <a name="create-your-app"></a>Creación de una aplicación
 

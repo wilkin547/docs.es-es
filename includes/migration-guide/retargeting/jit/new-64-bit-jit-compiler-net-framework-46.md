@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5aa37169ae0e5c5e6b88aae5ceb5d758286c3d3a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 137ecc5f0e132450e5c7857f214d3a10df7ce172
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804525"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997723"
 ---
 ### <a name="new-64-bit-jit-compiler-in-the-net-framework-46"></a>Nuevo compilador JIT de 64 bits en .NET Framework 4.6
 
@@ -15,4 +15,3 @@ ms.locfileid: "67804525"
 |Ámbito|Borde|
 |Versión|4.6|
 |Tipo|Redestinación|
-

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: df8c33856195ba7feacd32203e4a885997b50ad2
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870634"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926078"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Creación de un paquete de plantillas
 
@@ -19,7 +19,8 @@ Con .NET Core, puede crear e implementar plantillas que generan proyectos, arch
 En esta parte de la serie, aprenderá a:
 
 > [!div class="checklist"]
-> * Crear un proyecto _.csproj* para compilar un paquete de plantillas.
+>
+> * Crear un proyecto \*.csproj para compilar un paquete de plantillas
 > * Configurar el archivo del proyecto para el empaquetado.
 > * Instalar una plantilla a partir de un archivo de paquete de NuGet.
 > * Desinstalar una plantilla por el identificador del paquete.

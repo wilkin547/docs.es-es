@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Las aplicaciones de producción real deben implementarse y administrarse con orquestadores que controlen el mantenimiento, la carga de trabajo y los ciclos de vida de todos los contenedores.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373694"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990495"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -15,7 +15,7 @@ La utilización de orquestadores para aplicaciones listas para producción es fu
 
 La figura 4-6 ilustra la implementación en un clúster de una aplicación formada por varios microservicios (contenedores).
 
-![Aplicaciones compuestas de Docker en un clúster: use un contenedor para cada instancia de servicio. Los contenedores de Docker son "unidades de implementación" y un contenedor es una instancia de un Docker. Un host controla muchos contenedores](./media/image6.png)
+![Aplicaciones compuestas de Docker en un clúster: use un contenedor para cada instancia de servicio. Los contenedores de Docker son “unidades de implementación” y un contenedor es una instancia de Docker. Un host controla muchos contenedores.](./media/image6.png)
 
 **Figura 4-6**. Un clúster de contenedores
 
