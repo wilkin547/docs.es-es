@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648669"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051725"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificar funciones en archivos DLL
 La identidad de una función DLL consta de los siguientes elementos:  
@@ -31,7 +31,7 @@ La identidad de una función DLL consta de los siguientes elementos:
   
  **MessageBoxA** es el punto de entrada ANSI para la función **MessageBox**; **MessageBoxW** es la versión de Unicode. Puede enumerar los nombres de función de un archivo DLL específico, como user32.dll, mediante la ejecución de una variedad de herramientas de línea de comandos. Por ejemplo, puede usar `dumpbin /exports user32.dll` o `link /dump /exports user32.dll` para obtener los nombres de función.  
   
- Puede cambiar el nombre de una función no administrada por el nombre que quiera dentro del código siempre que se asigne el nombre nuevo al punto de entrada original en el archivo DLL. Para obtener instrucciones sobre cómo cambiar el nombre de una función DLL no administrada en código fuente administrado, vea [Especificar un punto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ Puede cambiar el nombre de una función no administrada por el nombre que quiera dentro del código siempre que se asigne el nombre nuevo al punto de entrada original en el archivo DLL. Para obtener instrucciones sobre cómo cambiar el nombre de una función DLL no administrada en código fuente administrado, vea [Especificar un punto de entrada](specifying-an-entry-point.md).  
   
  La invocación de plataforma permite controlar una parte importante del sistema operativo mediante la llamada a las funciones de la API de Windows y otros archivos DLL. Además de la API de Windows, hay muchas otras API y archivos DLL disponibles a través de la invocación de plataforma.  
   
@@ -43,12 +43,12 @@ La identidad de una función DLL consta de los siguientes elementos:
 |Kernel32.dll|Funciones de bajo nivel del sistema operativo para la administración de memoria y el control de recursos.|  
 |User32.dll|Funciones de administración de Windows para el control de mensajes, temporizadores, menús y comunicaciones.|  
   
- Para obtener la documentación completa sobre la API de Windows, vea el SDK de la plataforma. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Para obtener la documentación completa sobre la API de Windows, vea el SDK de la plataforma. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Consumir funciones DLL no administradas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Especificar un punto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [Creación de una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Consumir funciones DLL no administradas](consuming-unmanaged-dll-functions.md)
+- [Especificar un punto de entrada](specifying-an-entry-point.md)
+- [Creación de una clase para contener funciones de archivos DLL](creating-a-class-to-hold-dll-functions.md)
+- [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)
+- [Llamar a una función DLL](calling-a-dll-function.md)

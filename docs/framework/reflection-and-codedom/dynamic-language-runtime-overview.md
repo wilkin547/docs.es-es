@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915573"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046121"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Información general acerca de Dynamic Language Runtime
 
@@ -76,7 +76,7 @@ Algunos ejemplos de lenguajes desarrollados con DLR son los siguientes:
 ## <a name="dlr-architecture"></a>Arquitectura de DLR
  En la ilustración siguiente se muestra la arquitectura de Dynamic Language Runtime.
 
- ![Información general sobre la arquitectura de Dynamic Language Runtime](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") Arquitectura de DLR
+ ![Información general sobre la arquitectura de Dynamic Language Runtime](./media/dlr-archoverview.png "DLR_ArchOverview") Arquitectura de DLR
 
  DLR agrega un conjunto de servicios a CLR para una mejor compatibilidad con los lenguajes dinámicos. Entre estos servicios, se incluyen los siguientes:
 

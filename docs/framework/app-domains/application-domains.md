@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040732"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053218"
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 
@@ -48,7 +48,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
     > [!NOTE]
     > No se puede descargar ensamblados o tipos por separado. Sólo se puede descargar un dominio completo.  
   
-- El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo <xref:System.IO.FileNotFoundException>. Para obtener más información, consulta [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para más información, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo <xref:System.IO.FileNotFoundException>. Para obtener más información, consulta [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, consulta <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 - La aplicación en la que se ejecuta el código establece el comportamiento del mismo. En otras palabras, el dominio de aplicación proporciona valores de configuración tales como las directivas de versión de la aplicación, la ubicación de los ensamblados remotos a los que tiene acceso e información sobre dónde encontrar los ensamblados que se cargan en el dominio.  
   
@@ -64,7 +64,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
 - Si un ensamblado no se carga con dominio neutro, debe utilizarse la compilación JIT de ese ensamblado en los dominios de aplicación en que se carga. Sin embargo, el ensamblado se puede descargar del proceso; para ello, tendrán que descargarse todos los dominios de aplicación en que está cargado el ensamblado.  
   
- El host en tiempo de ejecución determina si los ensamblados se cargan con dominio neutro cuando se carga el motor en tiempo de ejecución en un proceso. En las aplicaciones administradas, aplique el atributo <xref:System.LoaderOptimizationAttribute> al método de punto de entrada del proceso y especifique un valor de la enumeración <xref:System.LoaderOptimization> asociada. En las aplicaciones no administradas que hospedan Common Language Runtime, especifique el marcador adecuado cuando llame al método [CorBindToRuntimeEx Function](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
+ El host en tiempo de ejecución determina si los ensamblados se cargan con dominio neutro cuando se carga el motor en tiempo de ejecución en un proceso. En las aplicaciones administradas, aplique el atributo <xref:System.LoaderOptimizationAttribute> al método de punto de entrada del proceso y especifique un valor de la enumeración <xref:System.LoaderOptimization> asociada. En las aplicaciones no administradas que hospedan Common Language Runtime, especifique el marcador adecuado cuando llame al método [CorBindToRuntimeEx Function](../unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
  Existen tres opciones para cargar ensamblados neutrales respecto al dominio:  
   
@@ -76,7 +76,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  El código compilado JIT no se puede compartir en los ensamblados que se cargan en la carga de ensamblado por contexto especificado por el usuario utilizando el método <xref:System.Reflection.Assembly.LoadFrom%2A> de la clase <xref:System.Reflection.Assembly>, o que se cargan a partir de imágenes que utilizan las sobrecargas del método <xref:System.Reflection.Assembly.Load%2A> que especifican matrices de bytes.  
   
- Los ensamblados que se han compilado en código nativo utilizando [Ngen.exe (Native Image Generator )](../../../docs/framework/tools/ngen-exe-native-image-generator.md) se pueden compartir entre dominios de aplicación si la primera vez que se cargaron en un proceso lo hicieron con dominio neutro.  
+ Los ensamblados que se han compilado en código nativo utilizando [Ngen.exe (Native Image Generator )](../tools/ngen-exe-native-image-generator.md) se pueden compartir entre dominios de aplicación si la primera vez que se cargaron en un proceso lo hicieron con dominio neutro.  
   
  El código compilado JIT del ensamblado que contiene el punto de entrada de la aplicación sólo se puede compartir si pueden hacerlo todas sus dependencias.  
   
@@ -110,7 +110,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  La <xref:System.AppDomain> es la interfaz de programación para los dominios de aplicación. Esta clase incluye métodos para crear y descargar dominios, crear instancias de tipos en dominios y registrar diversas notificaciones, como por ejemplo cuando una aplicación descarga un dominio. En la tabla siguiente, se presentan los métodos <xref:System.AppDomain> más usados.  
   
-|Método de AppDomain|DESCRIPCIÓN|  
+|Método de AppDomain|Descripción|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Crea un nuevo dominio de aplicación. Se recomienda utilizar una sobrecarga de este método que especifique un objeto <xref:System.AppDomainSetup>. Ésta es la forma recomendada para establecer las propiedades de un nuevo dominio, como la base de la aplicación o el directorio raíz para la aplicación; la ubicación del archivo de configuración para el dominio; y la ruta de búsqueda que va a utilizar Common Language Runtime para cargar ensamblados en el dominio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> y <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Ejecuta un ensamblado en el dominio de aplicación. Éste es un método de instancia, por lo que se puede utilizar para ejecutar el código en otro dominio de aplicación al que se haga referencia.|  

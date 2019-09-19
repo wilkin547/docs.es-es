@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5503d8a474d7f19348b9342bc02e216bd987223
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: c9edab859900bf2001956045a5285801bb61d310
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378612"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045938"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexión en .NET Framework para aplicaciones de la Tienda Windows
 A partir de .NET Framework 4.5, .NET Framework incluye un conjunto de tipos y miembros de reflexión para su uso en aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Estos tipos y miembros están disponibles en la versión completa de .NET Framework, así como en [.NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/?LinkID=225700). En este documento se explican las diferencias principales entre estos y sus homólogos en .NET Framework 4 y versiones anteriores.  
@@ -43,5 +43,5 @@ A partir de .NET Framework 4.5, .NET Framework incluye un conjunto de tipos y m
   
 ## <a name="see-also"></a>Vea también
 
-- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Reflexión](reflection.md)
 - [.NET para aplicaciones de la Tienda Windows: API admitidas](https://go.microsoft.com/fwlink/?LinkID=225700)

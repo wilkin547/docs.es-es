@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970992"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045698"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 
@@ -54,7 +54,7 @@ El modelo de concentrador y radio requiere colocar recursos en ubicaciones espec
 
 - La información sobre la referencia cultural del ensamblado satélite debe incluirse en los metadatos del ensamblado. Para almacenar el nombre de la referencia cultural en los metadatos del ensamblado satélite, especifique la opción `/culture` cuando use [Assembly Linker](../tools/al-exe-assembly-linker.md) para insertar recursos en el ensamblado satélite.
 
-En la ilustración siguiente se muestran los requisitos de ejemplo de la estructura y la ubicación de los directorios para las aplicaciones que no se instalan en la [caché global de ensamblados](../../framework/app-domains/gac.md). Los elementos con las extensiones .txt y .resources no se incluirán en la aplicación final. Estos son los archivos de recursos intermedios que se usan para crear los ensamblados de recursos satélite finales. En este ejemplo, los archivos .resx se pueden sustituir por archivos .txt. Para obtener más información, vea [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos).
+En la ilustración siguiente se muestran los requisitos de ejemplo de la estructura y la ubicación de los directorios para las aplicaciones que no se instalan en la [caché global de ensamblados](../app-domains/gac.md). Los elementos con las extensiones .txt y .resources no se incluirán en la aplicación final. Estos son los archivos de recursos intermedios que se usan para crear los ensamblados de recursos satélite finales. En este ejemplo, los archivos .resx se pueden sustituir por archivos .txt. Para obtener más información, vea [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos).
 
 La imagen siguiente muestra el directorio del ensamblado satélite:
 
@@ -78,7 +78,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  En la tabla siguiente se describen detalladamente las opciones de Al.exe usadas en estos comandos.
   
-|Opción|DESCRIPCIÓN|
+|Opción|Descripción|
 |------------|-----------------|
 |**-target:** lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|
 |**-embed:** strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. Para indicar que el inglés (en) es la referencia cultural predeterminada de la aplicación, agregue el siguiente atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> al archivo AssemblyInfo de la aplicación o al archivo de código fuente principal que se compilará en el ensamblado principal de la aplicación.
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. Agregue compatibilidad para referencias culturales adicionales (en-US, fr-FR y ru-RU) a la aplicación de la manera siguiente:  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  Después, ya puede ejecutar el ejemplo. Seleccionará aleatoriamente como referencia cultural actual una de las referencias culturales admitidas y mostrará un saludo localizado.
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Instalar ensamblados satélite en la caché global de ensamblados  
- En lugar de instalar los ensamblados en el subdirectorio de una aplicación local, puede instalarlos en la caché global de ensamblados. Esto es especialmente útil si tiene bibliotecas de clases y ensamblados de recursos de bibliotecas de clases que usan varias aplicaciones.
+En lugar de instalar los ensamblados en el subdirectorio de una aplicación local, puede instalarlos en la caché global de ensamblados. Esto es especialmente útil si tiene bibliotecas de clases y ensamblados de recursos de bibliotecas de clases que usan varias aplicaciones.
   
- Para instalar ensamblados en la caché global de ensamblados, es necesario que tengan nombres seguros. Los ensamblados con nombre seguro se firman con un par de claves pública y privada válido. Contienen información de versión que el tiempo de ejecución usa para determinar qué ensamblado debe usar para atender a una solicitud de enlace. Para obtener más información sobre los nombres seguros y las versiones, vea [Assembly Versioning](../../standard/assembly/versioning.md) (Versiones de los ensamblados). Para obtener más información sobre los nombres seguros, vea [Strong-Named Assemblies](../../standard/assembly/strong-named.md) (Ensamblados con nombre seguro).
+Para instalar ensamblados en la caché global de ensamblados, es necesario que tengan nombres seguros. Los ensamblados con nombre seguro se firman con un par de claves pública y privada válido. Contienen información de versión que el tiempo de ejecución usa para determinar qué ensamblado debe usar para atender a una solicitud de enlace. Para obtener más información sobre los nombres seguros y las versiones, vea [Assembly Versioning](../../standard/assembly/versioning.md) (Versiones de los ensamblados). Para obtener más información sobre los nombres seguros, vea [Strong-Named Assemblies](../../standard/assembly/strong-named.md) (Ensamblados con nombre seguro).
   
- Cuando esté desarrollando una aplicación, es poco probable que tenga acceso al par de claves pública y privada final. Para instalar un ensamblado satélite en la caché global de ensamblados y asegurarse de que funciona según lo previsto, puede usar una técnica denominada firma retardada. Cuando se retrasa la firma de un ensamblado, en tiempo de compilación se reserva espacio en el archivo para la firma de nombre seguro. La firma real se retrasa hasta más adelante, cuando esté disponible el par de claves pública y privada final. Para obtener más información sobre la firma retardada, vea [Delay Signing an Assembly](../../standard/assembly/delay-sign.md) (Retrasar la firma de un ensamblado).
+Cuando esté desarrollando una aplicación, es poco probable que tenga acceso al par de claves pública y privada final. Para instalar un ensamblado satélite en la caché global de ensamblados y asegurarse de que funciona según lo previsto, puede usar una técnica denominada firma retardada. Cuando se retrasa la firma de un ensamblado, en tiempo de compilación se reserva espacio en el archivo para la firma de nombre seguro. La firma real se retrasa hasta más adelante, cuando esté disponible el par de claves pública y privada final. Para obtener más información sobre la firma retardada, vea [Delay Signing an Assembly](../../standard/assembly/delay-sign.md) (Retrasar la firma de un ensamblado).
   
 ### <a name="obtaining-the-public-key"></a>Obtener la clave pública  
- Para retrasar la firma de un ensamblado, debe tener acceso a la clave pública. Puede obtener la clave pública real de la organización que se encargará de la firma, o bien puede crear una clave pública mediante la [herramienta de nombre seguro (Sn.exe)](../tools/sn-exe-strong-name-tool.md).
+
+Para retrasar la firma de un ensamblado, debe tener acceso a la clave pública. Puede obtener la clave pública real de la organización que se encargará de la firma, o bien puede crear una clave pública mediante la [herramienta de nombre seguro (Sn.exe)](../tools/sn-exe-strong-name-tool.md).
   
- El siguiente comando de Sn.exe crea un par de claves pública y privada de prueba. La opción **–k** especifica que Sn.exe debe crear un par de claves y guardarlo en un archivo denominado TestKeyPair.snk.
+El siguiente comando de Sn.exe crea un par de claves pública y privada de prueba. La opción **–k** especifica que Sn.exe debe crear un par de claves y guardarlo en un archivo denominado TestKeyPair.snk.
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Instalar un ensamblado satélite en la caché global de ensamblados
 
-Cuando el tiempo de ejecución busca recursos en el proceso de reserva de recursos, busca primero en la [caché global de ensamblados](../../framework/app-domains/gac.md). (Para obtener más información, vea la sección sobre el proceso de reserva de recursos del tema [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos)). En cuanto se firma un ensamblado satélite con un nombre seguro, puede instalarse en la caché global de ensamblados mediante la [herramienta Caché global de ensamblados (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
+Cuando el tiempo de ejecución busca recursos en el proceso de reserva de recursos, busca primero en la [caché global de ensamblados](../app-domains/gac.md). (Para obtener más información, vea la sección sobre el proceso de reserva de recursos del tema [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos)). En cuanto se firma un ensamblado satélite con un nombre seguro, puede instalarse en la caché global de ensamblados mediante la [herramienta Caché global de ensamblados (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
 
 El siguiente comando de Gacutil.exe instala StringLibrary.resources.dll en la caché global de ensamblados:
 

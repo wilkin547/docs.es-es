@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952507"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053648"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Procedimiento para agregar instaladores a una aplicación de servicio
 Visual Studio incluye componentes de instalación que pueden instalar recursos asociados con sus aplicaciones de servicios. Los componentes de la instalación registran un servicio individual en el sistema en el que se está instalando e informan al Administrador de control de servicios que el servicio existe. Cuando trabaje con una aplicación de servicio, puede seleccionar un vínculo en la ventana Propiedades para agregar automáticamente los instaladores apropiados a su proyecto.  
@@ -47,11 +47,11 @@ Visual Studio incluye componentes de instalación que pueden instalar recursos a
   
     |Valor|Resultado|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|El servicio debe iniciarse manualmente después de la instalación. Para obtener más información, vea [Cómo: Iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|El servicio debe iniciarse manualmente después de la instalación. Para obtener más información, vea [Cómo: Iniciar servicios](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|El servicio se iniciará por sí mismo cada vez que el equipo se reinicia.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|No se puede iniciar el servicio.|  
   
-6. Para determinar el contexto de seguridad en el que se ejecutará el servicio, haga clic en el componente <xref:System.ServiceProcess.ServiceProcessInstaller> y establezca los valores de propiedad adecuados. Para obtener más información, vea [Cómo: Especificar el contexto de seguridad de los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Para determinar el contexto de seguridad en el que se ejecutará el servicio, haga clic en el componente <xref:System.ServiceProcess.ServiceProcessInstaller> y establezca los valores de propiedad adecuados. Para obtener más información, vea [Cómo: Especificar el contexto de seguridad de los servicios](how-to-specify-the-security-context-for-services.md).  
   
 7. Sustituya cualquier método para el que necesite realizar un procesamiento personalizado.  
   
@@ -62,7 +62,7 @@ Visual Studio incluye componentes de instalación que pueden instalar recursos a
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Cómo: Iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Cómo: Especificar el contexto de seguridad de los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [Introducción a las aplicaciones de servicios de Windows](introduction-to-windows-service-applications.md)
+- [Cómo: Instalar y desinstalar servicios](how-to-install-and-uninstall-services.md)
+- [Cómo: Iniciar servicios](how-to-start-services.md)
+- [Cómo: Especificar el contexto de seguridad de los servicios](how-to-specify-the-security-context-for-services.md)

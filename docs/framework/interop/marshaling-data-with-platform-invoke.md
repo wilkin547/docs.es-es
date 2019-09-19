@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: HT
+ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412401"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051686"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Serialización de datos con invocación de plataforma
 
@@ -25,7 +25,7 @@ Para llamar a las funciones exportadas desde una biblioteca no administrada, una
 
 - Sustituya los tipos de datos administrados por tipos de datos no administrados.
 
-Puede usar la documentación suministrada con una función no administrada para construir un prototipo administrado equivalente aplicando el atributo con sus campos opcionales y sustituyendo los tipos de datos administrados por tipos administrados. Para obtener instrucciones sobre cómo aplicar <xref:System.Runtime.InteropServices.DllImportAttribute>, vea [Consumir funciones DLL no administradas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).
+Puede usar la documentación suministrada con una función no administrada para construir un prototipo administrado equivalente aplicando el atributo con sus campos opcionales y sustituyendo los tipos de datos administrados por tipos administrados. Para obtener instrucciones sobre cómo aplicar <xref:System.Runtime.InteropServices.DllImportAttribute>, vea [Consumir funciones DLL no administradas](consuming-unmanaged-dll-functions.md).
 
 En esta sección se proporcionan ejemplos que muestran cómo crear prototipos de función administrada para pasar argumentos y recibir los valores devueltos de funciones exportadas por bibliotecas no administradas. Los ejemplos demuestran también cuándo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> y la clase <xref:System.Runtime.InteropServices.Marshal> para calcular las referencias de los datos de forma explícita.
 

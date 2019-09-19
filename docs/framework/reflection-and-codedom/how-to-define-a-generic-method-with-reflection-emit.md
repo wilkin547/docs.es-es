@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043723"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046054"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 
@@ -27,7 +27,7 @@ El segundo procedimiento muestra cómo emitir el cuerpo del método y cómo util
 El tercero de los procedimientos explica cómo invocar el método genérico.
 
 > [!IMPORTANT]
-> Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. Un método genérico puede aparecer en un tipo no genérico, como se puede ver en este ejemplo. Para obtener un ejemplo de un método no genérico en un tipo genérico, vea [Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).
+> Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. Un método genérico puede aparecer en un tipo no genérico, como se puede ver en este ejemplo. Para obtener un ejemplo de un método no genérico en un tipo genérico, vea [Cómo: Definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-type-with-reflection-emit.md).
 
 ### <a name="to-define-a-generic-method"></a>Para definir un método genérico
 
@@ -36,7 +36,7 @@ El tercero de los procedimientos explica cómo invocar el método genérico.
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. Defina un ensamblado dinámico y un módulo dinámico para contener el tipo al que pertenece el método genérico. En este caso, el ensamblado sólo tiene un módulo, denominado `DemoMethodBuilder1`, y el nombre del módulo es el mismo que el nombre del ensamblado más una extensión. En este ejemplo, el ensamblado se guarda en el disco y se ejecuta, por lo que se especifica <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. Puede usar [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar DemoMethodBuilder1.dll y compararlo con el lenguaje intermedio de Microsoft (MSIL) para el método que se muestra en el paso 1.
+2. Defina un ensamblado dinámico y un módulo dinámico para contener el tipo al que pertenece el método genérico. En este caso, el ensamblado sólo tiene un módulo, denominado `DemoMethodBuilder1`, y el nombre del módulo es el mismo que el nombre del ensamblado más una extensión. En este ejemplo, el ensamblado se guarda en el disco y se ejecuta, por lo que se especifica <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. Puede usar [Ildasm.exe (Desensamblador de IL)](../tools/ildasm-exe-il-disassembler.md) para examinar DemoMethodBuilder1.dll y compararlo con el lenguaje intermedio de Microsoft (MSIL) para el método que se muestra en el paso 1.
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ El ejemplo de código siguiente crea un tipo no genérico, `DemoType`, con un m�
 
 El método tiene un parámetro formal que es una matriz de `TInput`. El método devuelve una instancia de `TOutput` que contiene todos los elementos de la matriz de entrada. `TOutput` puede ser cualquier tipo de colección genérico que implemente la interfaz genérica <xref:System.Collections.Generic.ICollection%601>.
 
-Cuando se ejecuta el código, el ensamblado dinámico se guarda como DemoGenericMethod1.dll y se puede examinar con [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+Cuando se ejecuta el código, el ensamblado dinámico se guarda como DemoGenericMethod1.dll y se puede examinar con [Ildasm.exe (Desensamblador de IL)](../tools/ildasm-exe-il-disassembler.md).
 
 > [!NOTE]
 > Una buena manera de aprender cómo emitir código es escribir un programa de Visual Basic, C# o Visual C++ que realice la tarea que está intentando emitir y utilizar el desensamblador para examinar el código MSIL producido por el compilador.
@@ -169,4 +169,4 @@ El ejemplo de código incluye código fuente que es equivalente al método emiti
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Cómo: Definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-type-with-reflection-emit.md)

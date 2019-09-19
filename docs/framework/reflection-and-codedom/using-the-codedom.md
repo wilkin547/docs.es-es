@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591498"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045741"
 ---
 # <a name="using-the-codedom"></a>Usar CodeDOM
 CodeDOM proporciona tipos que representan muchos tipos comunes de elementos de código fuente. Se puede diseñar un programa que compile un modelo de código fuente utilizando los elementos de CodeDOM para ensamblar un gráfico de objetos. Este gráfico de objetos se puede representar como código fuente utilizando un generador de código de CodeDOM para un lenguaje de programación compatible. CodeDOM también se puede utilizar para compilar código fuente en un ensamblado binario.  
@@ -120,7 +120,7 @@ CodeDOM proporciona tipos que representan muchos tipos comunes de elementos de c
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- Ahora, la unidad <xref:System.CodeDom.CodeCompileUnit> denominada `compileUnit` contiene el gráfico CodeDOM para un programa Hello World sencillo. Para obtener información sobre la forma de generar y compilar código desde un gráfico CodeDOM, vea [Generar código fuente y compilar un programa a partir de un gráfico CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md).  
+ Ahora, la unidad <xref:System.CodeDom.CodeCompileUnit> denominada `compileUnit` contiene el gráfico CodeDOM para un programa Hello World sencillo. Para obtener información sobre la forma de generar y compilar código desde un gráfico CodeDOM, vea [Generar código fuente y compilar un programa a partir de un gráfico CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md).  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>Más información sobre la forma de compilar un gráfico CodeDOM.  
  CodeDOM admite muchos de los tipos comunes de elementos de código que se encuentran en los lenguajes de programación compatibles con Common Language Runtime. CodeDOM no fue diseñado para disponer de elementos que representen todas las características posibles de un lenguaje de programación. El código que no se puede representar fácilmente con elementos CodeDOM se puede encapsular en un <xref:System.CodeDom.CodeSnippetExpression>, <xref:System.CodeDom.CodeSnippetStatement>, <xref:System.CodeDom.CodeSnippetTypeMember> o <xref:System.CodeDom.CodeSnippetCompileUnit>. No obstante, los miniprogramas no pueden traducirse automáticamente a otros lenguajes por medio de CodeDOM.  

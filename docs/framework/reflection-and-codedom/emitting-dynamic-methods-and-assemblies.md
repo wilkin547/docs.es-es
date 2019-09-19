@@ -9,17 +9,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 767382f27a96e8aacce4cc625de610949b3f02a3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: d8e2b9aeb8c632efcbf8c506da4da7c6e7b408e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971042"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046086"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitir métodos y ensamblados dinámicos
+
 En esta sección se describe un conjunto de tipos administrados del espacio de nombres <xref:System.Reflection.Emit> que permite a un compilador o una herramienta emitir metadatos y el Lenguaje Intermedio de Microsoft (MSIL) en tiempo de ejecución y, opcionalmente, generar un archivo portable ejecutable (PE) en el disco. Los motores de scripts y los compiladores son los principales usuarios de este espacio de nombres. En esta sección, la funcionalidad proporcionada por el espacio de nombres <xref:System.Reflection.Emit> se conoce como emisión de la reflexión.  
   
- La emisión de la reflexión permite lo siguiente:  
+La emisión de la reflexión permite lo siguiente:  
   
 - Definir métodos globales ligeros en tiempo de ejecución, usando la clase <xref:System.Reflection.Emit.DynamicMethod>, y ejecutarlos usando delegados.  
   
@@ -33,13 +34,13 @@ En esta sección se describe un conjunto de tipos administrados del espacio de n
   
 - Definir información simbólica para módulos definidos que puedan usar herramientas como depuradores y generadores de perfiles de código.  
   
- Además de los tipos administrados del espacio de nombres <xref:System.Reflection.Emit>, hay interfaces de metadatos no administradas que se describen en la documentación de referencia [Interfaces de metadatos](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md). La emisión de reflexión administrada proporciona una comprobación más estricta de los errores semánticos y un mayor nivel de abstracción de los metadatos que las interfaces de metadatos no administradas.  
+Además de los tipos administrados del espacio de nombres <xref:System.Reflection.Emit>, hay interfaces de metadatos no administradas que se describen en la documentación de referencia [Interfaces de metadatos](../unmanaged-api/metadata/metadata-interfaces.md). La emisión de reflexión administrada proporciona una comprobación más estricta de los errores semánticos y un mayor nivel de abstracción de los metadatos que las interfaces de metadatos no administradas.  
   
- Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)". La documentación está disponible en línea en [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](https://go.microsoft.com/fwlink/?LinkId=116487).  
+Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)". La documentación está disponible en línea en [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](https://go.microsoft.com/fwlink/?LinkId=116487).  
   
 ## <a name="in-this-section"></a>En esta sección
   
-[Problemas de seguridad de la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+[Problemas de seguridad de la emisión de la reflexión](security-issues-in-reflection-emit.md)  
 Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  
 
 [Cómo: Definición y ejecución de métodos dinámicos](how-to-define-and-execute-dynamic-methods.md)   
@@ -55,21 +56,23 @@ Muestra cómo crear, emitir e invocar un método genérico simple.
 Presenta los ensamblados recopilables, que son ensamblados dinámicos que se pueden descargar sin descargar el dominio de aplicación en el que se crearon.
   
 ## <a name="reference"></a>Referencia  
- <xref:System.Reflection.Emit.OpCodes>  
- Cataloga los códigos de instrucción de MSIL que puede usar para compilar cuerpos de método.  
+
+<xref:System.Reflection.Emit.OpCodes>  
+Cataloga los códigos de instrucción de MSIL que puede usar para compilar cuerpos de método.  
   
- <xref:System.Reflection.Emit>  
- Contiene clases administradas usadas para emitir ensamblados, tipos y métodos dinámicos.  
+<xref:System.Reflection.Emit>  
+Contiene clases administradas usadas para emitir ensamblados, tipos y métodos dinámicos.  
   
- <xref:System.Type>  
- Describe la clase <xref:System.Type>, que representa los tipos en reflexión administrada y emisión de la reflexión, y que es clave para el uso de estas tecnologías.  
+<xref:System.Type>  
+Describe la clase <xref:System.Type>, que representa los tipos en reflexión administrada y emisión de la reflexión, y que es clave para el uso de estas tecnologías.  
   
- <xref:System.Reflection>  
- Contiene clases administradas usadas para explorar metadatos y código administrado.  
+<xref:System.Reflection>  
+Contiene clases administradas usadas para explorar metadatos y código administrado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Explica cómo explorar metadatos y código administrado.  
+
+[Reflexión](reflection.md)  
+Explica cómo explorar metadatos y código administrado.  
   
- [Ensamblados de .NET](../../standard/assembly/index.md)  
- Proporciona información general sobre los ensamblados de las implementaciones de. NET.
+[Ensamblados de .NET](../../standard/assembly/index.md)  
+Proporciona información general sobre los ensamblados de las implementaciones de. NET.

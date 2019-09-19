@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851603"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045577"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -58,7 +58,7 @@ Este modelo cuenta con varias ventajas:
 Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Consulte la columna **Etiqueta de idioma** en la [lista de nombres de los idiomas y las regiones compatibles con Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Los nombres de las referencias culturales siguen el estándar definido por [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Para más información sobre cómo crear archivos de recursos, vea [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) y [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Para más información sobre cómo crear archivos de recursos, vea [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md) y [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ Para mejorar el rendimiento de la búsqueda, aplique el atributo <xref:System.Re
 El proceso de reserva de recursos de .NET Framework conlleva los pasos siguientes:
 
 > [!TIP]
-> Es posible que pueda usar el elemento de configuración [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) para optimizar el proceso de reserva de recursos y el proceso mediante el cual el tiempo de ejecución sondea los ensamblados de recursos. Para obtener más información, vea la sección [Optimizar el proceso de reserva de recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Es posible que pueda usar el elemento de configuración [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para optimizar el proceso de reserva de recursos y el proceso mediante el cual el tiempo de ejecución sondea los ensamblados de recursos. Para obtener más información, vea la sección [Optimizar el proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
-1. El tiempo de ejecución busca primero en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md) un ensamblado que coincida con la referencia cultural solicitada para la aplicación.
+1. El tiempo de ejecución busca primero en la [caché global de ensamblados](../app-domains/gac.md) un ensamblado que coincida con la referencia cultural solicitada para la aplicación.
 
      La caché global de ensamblados puede almacenar ensamblados de recursos compartidos por varias aplicaciones. Esto evita tener que incluir conjuntos de recursos específicos en la estructura de directorios de cada aplicación que se cree. Si el tiempo de ejecución encuentra una referencia al ensamblado, busca en el ensamblado el recurso solicitado. Si encuentra la entrada en el ensamblado, usará el recurso solicitado. Si no encuentra la entrada, seguirá con la búsqueda.
 
@@ -112,13 +112,13 @@ Por ejemplo, supongamos que la aplicación solicita un recurso localizado para e
 
 En las siguientes condiciones, puede optimizar el proceso por el que el tiempo de ejecución busca recursos en ensamblados satélite.
 
-- Los ensamblados satélite se implementan en la misma ubicación que el ensamblado de código. Si el ensamblado de código está instalado en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md), los ensamblados satélite también se instalan en la caché global de ensamblados. Si el ensamblado de código está instalado en un directorio, los ensamblados satélite se instalan en carpetas específicas de referencias culturales de ese directorio.
+- Los ensamblados satélite se implementan en la misma ubicación que el ensamblado de código. Si el ensamblado de código está instalado en la [caché global de ensamblados](../app-domains/gac.md), los ensamblados satélite también se instalan en la caché global de ensamblados. Si el ensamblado de código está instalado en un directorio, los ensamblados satélite se instalan en carpetas específicas de referencias culturales de ese directorio.
 
 - Los ensamblados satélite no se instalan a petición.
 
 - El código de la aplicación no controla el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Para optimizar el sondeo de ensamblados satélite, incluya el elemento [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) y establezca su atributo `enabled` en `true` en el archivo de configuración de la aplicación, como se muestra en el ejemplo siguiente.
+Para optimizar el sondeo de ensamblados satélite, incluya el elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) y establezca su atributo `enabled` en `true` en el archivo de configuración de la aplicación, como se muestra en el ejemplo siguiente.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ Para optimizar el sondeo de ensamblados satélite, incluya el elemento [\<relati
 </configuration>
 ```
 
-El sondeo optimizado de los ensamblados satélite es una característica opcional. Es decir, el tiempo de ejecución sigue los pasos documentados en [El proceso de reserva de recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que el elemento [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) esté presente en el archivo de configuración de la aplicación y su atributo `enabled` esté establecido en `true`. Si este es el caso, el proceso de sondeo de un ensamblado satélite se modifica de la manera siguiente:
+El sondeo optimizado de los ensamblados satélite es una característica opcional. Es decir, el tiempo de ejecución sigue los pasos documentados en [El proceso de reserva de recursos](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que el elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) esté presente en el archivo de configuración de la aplicación y su atributo `enabled` esté establecido en `true`. Si este es el caso, el proceso de sondeo de un ensamblado satélite se modifica de la manera siguiente:
 
 - El tiempo de ejecución usa la ubicación del ensamblado de código principal para sondear el ensamblado satélite. Si el ensamblado principal está instalado en la caché global de ensamblados, el tiempo de ejecución sondea la memoria caché, pero no el directorio de la aplicación. Si el ensamblado principal está instalado en un directorio de aplicación, el tiempo de ejecución sondea el directorio de la aplicación, pero no la caché global de ensamblados.
 
@@ -186,7 +186,7 @@ El segundo, resources.ru.txt, contiene un recurso de idioma ruso.
 Greeting=Добрый день
 ```
 
-Estos dos archivos se compilan en archivos .resources al ejecutar el [generador de archivos de recursos (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) desde la línea de comandos. Para el recurso de idioma francés, el comando es:
+Estos dos archivos se compilan en archivos .resources al ejecutar el [generador de archivos de recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) desde la línea de comandos. Para el recurso de idioma francés, el comando es:
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Para el recurso de idioma ruso, el comando es:
 
 **resgen.exe resources.ru.txt**
 
-Los archivos .resources se insertan en bibliotecas de vínculos dinámicos mediante la ejecución de [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) desde la línea de comandos para el recurso de idioma francés de la manera siguiente:
+Los archivos .resources se insertan en bibliotecas de vínculos dinámicos mediante la ejecución de [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) desde la línea de comandos para el recurso de idioma francés de la manera siguiente:
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Las restricciones de tiempo o de presupuesto podrían impedir la creación de un
 
 ## <a name="see-also"></a>Vea también
 
-- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
-- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
-- [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Recursos de aplicaciones de escritorio](index.md)
+- [Caché global de ensamblados](../app-domains/gac.md)
+- [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
+- [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md)

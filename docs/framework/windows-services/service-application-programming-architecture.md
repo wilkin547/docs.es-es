@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935439"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053499"
 ---
 # <a name="service-application-programming-architecture"></a>Arquitectura de programación de aplicaciones de servicio
 Las aplicaciones de servicios de Windows se basan en una clase que hereda de la clase <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Se sustituyen los métodos de esta clase y se define la funcionalidad para que determinen el comportamiento del servicio.  
@@ -57,7 +57,7 @@ Las aplicaciones de servicios de Windows se basan en una clase que hereda de la 
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > Estos ejemplos usan una matriz del tipo <xref:System.ServiceProcess.ServiceBase>, en la que cada servicio que contiene la aplicación puede agregarse, y entonces todos los servicios pueden ejecutarse juntos. Sin embargo, si solo está creando un único servicio, puede optar por no usar la matriz y simplemente declarar un nuevo objeto heredado de <xref:System.ServiceProcess.ServiceBase> y después ejecutarlo. Como ejemplo, vea [Cómo: Escribir servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > Estos ejemplos usan una matriz del tipo <xref:System.ServiceProcess.ServiceBase>, en la que cada servicio que contiene la aplicación puede agregarse, y entonces todos los servicios pueden ejecutarse juntos. Sin embargo, si solo está creando un único servicio, puede optar por no usar la matriz y simplemente declarar un nuevo objeto heredado de <xref:System.ServiceProcess.ServiceBase> y después ejecutarlo. Como ejemplo, vea [Cómo: Escribir servicios mediante programación](how-to-write-services-programmatically.md).  
   
 - Una serie de propiedades de la clase <xref:System.ServiceProcess.ServiceBase>. Determinan qué métodos se pueden llamar en el servicio. Por ejemplo, cuando la propiedad <xref:System.ServiceProcess.ServiceBase.CanStop%2A> se establece en `true`, se puede llamar al método <xref:System.ServiceProcess.ServiceBase.OnStop%2A> del servicio. Cuando la propiedad <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> se establece en `true`, se pueden llamar a los métodos <xref:System.ServiceProcess.ServiceBase.OnPause%2A> y <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>. Cuando configure una de estas propiedades en `true`, deberá reemplazar y definir el procesamiento para los métodos asociados.  
   
@@ -68,5 +68,5 @@ Las aplicaciones de servicios de Windows se basan en una clase que hereda de la 
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Cómo: Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Introducción a las aplicaciones de servicios de Windows](introduction-to-windows-service-applications.md)
+- [Cómo: Creación de servicios de Windows](how-to-create-windows-services.md)

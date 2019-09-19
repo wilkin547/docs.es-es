@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469683"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051636"
 ---
 # <a name="specifying-a-character-set"></a>Especificar un juego de caracteres
 El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL. En este tema se describen ambos comportamientos.  
@@ -149,6 +149,6 @@ extern "C" int MessageBox(
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md)
+- [Ejemplos de invocación de plataforma](platform-invoke-examples.md)
+- [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)

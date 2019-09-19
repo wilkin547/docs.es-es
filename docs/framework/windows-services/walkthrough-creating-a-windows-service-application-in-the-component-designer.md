@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545320"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053486"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Creación de una aplicación de servicio de Windows
 
@@ -28,7 +28,7 @@ Para empezar, cree el proyecto y defina los valores necesarios para que el servi
 
 2. Vaya a la plantilla de proyecto **Windows Service (.NET Framework)** [Servicio de Windows (.NET Framework)] y selecciónela. Para encontrarla, expanda **Instalado** y **Visual C#**  o **Visual Basic**. Después, seleccione **Escritorio de Windows**. También puede escribir *Servicio de Windows* en el cuadro de búsqueda en la esquina superior derecha y presionar **ENTRAR**.
 
-   ![Plantilla Servicio de Windows en el cuadro de diálogo Nuevo proyecto en Visual Studio](media/new-project-dialog.png)
+   ![Plantilla Servicio de Windows en el cuadro de diálogo Nuevo proyecto en Visual Studio](./media/new-project-dialog.png)
 
    > [!NOTE]
    > Si no ve la plantilla **Servicio de Windows**, puede que tenga que instalar la carga de trabajo **Desarrollo de escritorio de .NET**:
@@ -51,11 +51,11 @@ Cambie el nombre del servicio **Service1** por **MyNewService**.
 
 2. En la ventana emergente, seleccione **Sí**.
 
-    ![Ventana para cambiar el nombre](media/windows-service-rename.png "Ventana para cambiar el nombre en el servicio de Windows")
+    ![Ventana para cambiar el nombre](./media/windows-service-rename.png "Ventana para cambiar el nombre en el servicio de Windows")
 
 3. En la pestaña **Diseño**, seleccione **Propiedades** en el menú contextual. En la ventana **Propiedades**, cambie el valor **ServiceName** a *MyNewService*.
 
-    ![Propiedades del servicio](media/windows-service-properties.png "Propiedades del servicio de Windows")
+    ![Propiedades del servicio](./media/windows-service-properties.png "Propiedades del servicio de Windows")
 
 4. Seleccione **Guardar todo** en el menú **Archivo**.
 
@@ -162,7 +162,7 @@ Para establecer un mecanismo de sondeo sencillo, use el componente <xref:System.
    Private eventId As Integer = 1
    ```
 
-En lugar de ejecutar todo el trabajo en el subproceso principal, puede ejecutar las tareas mediante el uso de subprocesos de trabajo en segundo plano. Para más información, consulte <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+En lugar de ejecutar todo el trabajo en el subproceso principal, puede ejecutar las tareas mediante el uso de subprocesos de trabajo en segundo plano. Para obtener más información, consulta <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Definición de qué ocurre al detener el servicio
 
@@ -340,7 +340,7 @@ Para poder ejecutar un servicio de Windows, antes debe instalarlo, lo que lo reg
 
      Este texto aparece en la columna **Descripción** de la ventana **Servicios** y describe el servicio al usuario.
 
-    ![Descripción del servicio en la ventana Servicios](media/windows-service-description.png "Descripción del servicio")
+    ![Descripción del servicio en la ventana Servicios](./media/windows-service-description.png "Descripción del servicio")
 
 6. Agregue texto a la propiedad <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>. Por ejemplo, *Nombre para mostrar de MyNewService*.
 
@@ -350,7 +350,7 @@ Para poder ejecutar un servicio de Windows, antes debe instalarlo, lo que lo reg
 
 8. Cuando haya terminado, la ventana **Propiedades** debería tener un aspecto similar al siguiente:
 
-     ![Propiedades de instalador para un servicio de Windows](media/windows-service-installer-properties.png "Propiedades de instalador de un servicio de Windows")
+     ![Propiedades de instalador para un servicio de Windows](./media/windows-service-installer-properties.png "Propiedades de instalador de un servicio de Windows")
 
 9. En la vista **Diseño** de **ProjectInstaller**, seleccione **serviceProcessInstaller1** para un proyecto de Visual C# o **ServiceProcessInstaller1** para un proyecto de Visual Basic. Después, seleccione **Propiedades** en el menú contextual. Establezca la propiedad <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> en <xref:System.ServiceProcess.ServiceAccount.LocalSystem> en la lista desplegable.
 
@@ -497,7 +497,7 @@ Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](ho
 
      El servicio debería aparecer en **Servicios**, mostrado en orden alfabético por el nombre para mostrar que se haya establecido.
 
-     ![MyNewService en la ventana Servicios.](media/windowsservices-serviceswindow.PNG)
+     ![MyNewService en la ventana Servicios.](./media/windowsservices-serviceswindow.PNG)
 
 2. Para iniciar el servicio, seleccione **Iniciar** en el menú contextual del servicio.
 
@@ -516,7 +516,7 @@ Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](ho
 
 3. Localice la lista correspondiente a **MyNewLog** (o **MyLogFile1** si ha seguido el procedimiento para agregar argumentos de línea de comandos) y expándala. Debería ver las entradas de las dos acciones (iniciar y detener) que el servicio ha llevado a cabo.
 
-     ![Uso del Visor de eventos para consultar las entradas del registro de eventos](media/windows-service-event-viewer.png)
+     ![Uso del Visor de eventos para consultar las entradas del registro de eventos](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Limpiar los recursos
 
@@ -542,7 +542,7 @@ Ahora que ha creado el servicio, puede hacer lo siguiente:
 
 - Explorar el componente <xref:System.ServiceProcess.ServiceController>, que permite enviar comandos al servicio instalado.
 
-- En lugar de crear el registro de eventos cuando se ejecuta la aplicación, use un instalador para crearlo al instalar la aplicación. El instalador elimina el registro de eventos cuando se desinstala la aplicación. Para más información, consulte <xref:System.Diagnostics.EventLogInstaller>.
+- En lugar de crear el registro de eventos cuando se ejecuta la aplicación, use un instalador para crearlo al instalar la aplicación. El instalador elimina el registro de eventos cuando se desinstala la aplicación. Para obtener más información, consulta <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>Vea también
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626292"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051752"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procedimiento Migrar código administrado DCOM a WCF
 Windows Communication Foundation (WCF) es la opción recomendada y segura para reemplazar al modelo de objetos de componentes distribuidos (DCOM) en las llamadas de código administrado entre servidores y clientes en un entorno distribuido. En este artículo se muestra cómo migrar el código de DCOM a WCF en los escenarios siguientes.  
@@ -20,9 +20,9 @@ Windows Communication Foundation (WCF) es la opción recomendada y segura para r
   
 - El servicio remoto devuelve un objeto por referencia al cliente.  
   
- Por motivos de seguridad, en WCF no se permite enviar objetos por referencia desde el cliente al servicio. En WCF puede conseguir un escenario que necesite una conversación entre el cliente y el servidor con un servicio dúplex.  Para más información sobre los servicios dúplex, vea [Duplex Services](../../../docs/framework/wcf/feature-details/duplex-services.md) (Servicios dúplex).  
+ Por motivos de seguridad, en WCF no se permite enviar objetos por referencia desde el cliente al servicio. En WCF puede conseguir un escenario que necesite una conversación entre el cliente y el servidor con un servicio dúplex.  Para más información sobre los servicios dúplex, vea [Duplex Services](../wcf/feature-details/duplex-services.md) (Servicios dúplex).  
   
- Para obtener más detalles sobre cómo crear servicios WCF y clientes para esos servicios, vea [Programación basica de WFC](../../../docs/framework/wcf/basic-wcf-programming.md), [Diseño e implementación de servicios](../../../docs/framework/wcf/designing-and-implementing-services.md) y [Creación de clientes](../../../docs/framework/wcf/building-clients.md).  
+ Para obtener más detalles sobre cómo crear servicios WCF y clientes para esos servicios, vea [Programación basica de WFC](../wcf/basic-wcf-programming.md), [Diseño e implementación de servicios](../wcf/designing-and-implementing-services.md) y [Creación de clientes](../wcf/building-clients.md).  
   
 ## <a name="dcom-example-code"></a>Código de ejemplo DCOM  
  Para estos escenarios, las interfaces DCOM que se muestran con WCF tienen la siguiente estructura:  
@@ -82,7 +82,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>Paso 2: Definir el contrato de datos  
  A continuación debe crear un contrato de datos para el servicio, en el que se describirá cómo se intercambian los datos entre el servicio y sus clientes.  Las clases descritas en el contrato de datos deben marcarse con el atributo [<xref:System.Runtime.Serialization.DataContractAttribute>]. Las propiedades o los campos individuales que quiera que sean visibles para el cliente y el servidor deben marcarse con el atributo [<xref:System.Runtime.Serialization.DataMemberAttribute>]. Si quiere que los tipos derivados de una clase estén permitidos en el contrato de datos, debe identificarlos con el atributo [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. WCF solo serializará o deserializará tipos en la interfaz de servicio y tipos identificados como tipos conocidos. Si intenta usar un tipo que no sea un tipo conocido, se producirá una excepción.  
   
- Para más información sobre los contratos de datos, vea [Data Contracts](../../../docs/framework/wcf/samples/data-contracts.md) (Contratos de datos).  
+ Para más información sobre los contratos de datos, vea [Data Contracts](../wcf/samples/data-contracts.md) (Contratos de datos).  
   
 ```csharp  
 [DataContract]  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>Paso 5: Ejecutar el servicio  
- Por último, puede probarlo internamente en una aplicación de consola; para ello, agregue las líneas siguientes a la aplicación de servicio e inicie la aplicación. Para más información sobre otras formas de hospedar una aplicación de servicio WCF, vea [Hosting Services](../../../docs/framework/wcf/hosting-services.md) (Servicios de hospedaje).  
+ Por último, puede probarlo internamente en una aplicación de consola; para ello, agregue las líneas siguientes a la aplicación de servicio e inicie la aplicación. Para más información sobre otras formas de hospedar una aplicación de servicio WCF, vea [Hosting Services](../wcf/hosting-services.md) (Servicios de hospedaje).  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Diseño e implementación de servicios](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Creación de clientes](../../../docs/framework/wcf/building-clients.md)
-- [Servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Programación básica de WCF](../wcf/basic-wcf-programming.md)
+- [Diseño e implementación de servicios](../wcf/designing-and-implementing-services.md)
+- [Creación de clientes](../wcf/building-clients.md)
+- [Servicios dúplex](../wcf/feature-details/duplex-services.md)

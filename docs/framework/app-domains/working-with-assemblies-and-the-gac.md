@@ -10,22 +10,23 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971588"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053019"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabajar con ensamblados y la memoria caché global de ensamblados
+
 Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo en la caché global de ensamblados. Cada equipo tiene esta memoria caché de código donde se instala Common Language Runtime. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo. Un ensamblado debe tener un nombre seguro para que se pueda instalar en la caché global de ensamblados.  
   
 > [!NOTE]
 > Los ensamblados ubicados en la caché global de ensamblados deben tener el mismo nombre de ensamblado y de archivo, sin contar la extensión de nombre de archivo. Por ejemplo, un ensamblado con el nombre de ensamblado myAssembly debe tener un nombre de archivo myAssembly.exe o myAssembly.dll.  
   
- Se recomienda compartir los ensamblados mediante su instalación en la caché global de ensamblados sólo cuando sea necesario. Como norma general, mantenga las dependencias de los ensamblados privadas y coloque los ensamblados en el directorio de la aplicación, a menos que sea necesario compartir un ensamblado en concreto. Además, no es necesario instalar los ensamblados en la caché global de ensamblados para que pueda tener acceso a ellos el código de interoperabilidad COM o el código no administrado.  
+Se recomienda compartir los ensamblados mediante su instalación en la caché global de ensamblados sólo cuando sea necesario. Como norma general, mantenga las dependencias de los ensamblados privadas y coloque los ensamblados en el directorio de la aplicación, a menos que sea necesario compartir un ensamblado en concreto. Además, no es necesario instalar los ensamblados en la caché global de ensamblados para que pueda tener acceso a ellos el código de interoperabilidad COM o el código no administrado.  
   
- Existen varias razones para instalar un ensamblado en la caché global de ensamblados:  
+Existen varias razones para instalar un ensamblado en la caché global de ensamblados:  
   
 - Ubicación compartida.  
   
@@ -46,30 +47,31 @@ Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo
  Tenga en cuenta que hay escenarios en los que no deseará instalar un ensamblado en la memoria caché global de ensamblados. Si coloca uno de los ensamblados que componen una aplicación en la memoria caché global de ensamblados, ya no podrá replicar ni instalar la aplicación utilizando XCOPY para copiar el directorio de la aplicación. En este caso, debe mover también el ensamblado a la caché global de ensamblados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Instalar un ensamblado en la caché global de ensamblados](install-assembly-into-gac.md)  
- Describe las formas de instalar un ensamblado en la caché global de ensamblados.  
+[Cómo: Instalar un ensamblado en la caché global de ensamblados](install-assembly-into-gac.md)  
+Describe las formas de instalar un ensamblado en la caché global de ensamblados.  
   
- [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- Explica cómo usar [Gacutil.exe (herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.  
+[Cómo: Consultar el contenido de la memoria caché global de ensamblados](how-to-view-the-contents-of-the-gac.md)  
+Explica cómo usar [Gacutil.exe (herramienta Caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.  
   
- [Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- Explica cómo usar [Gacutil.exe (herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para quitar un ensamblado de la caché global de ensamblados.  
+[Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](how-to-remove-an-assembly-from-the-gac.md)  
+Explica cómo usar [Gacutil.exe (herramienta Caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md) para quitar un ensamblado de la caché global de ensamblados.  
   
- [Utilizar componentes con servicio junto con la memoria caché global de ensamblados](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
- Explica por qué se deben colocar los componentes con servicio (componentes COM+ administrados) en la caché global de ensamblados.  
+[Utilizar componentes con servicio junto con la memoria caché global de ensamblados](use-serviced-components-with-the-gac.md)  
+Explica por qué se deben colocar los componentes con servicio (componentes COM+ administrados) en la caché global de ensamblados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Creación de ensamblados](../../standard/assembly/create.md)  
- Proporciona información general sobre la creación de ensamblados.  
+
+[Creación de ensamblados](../../standard/assembly/create.md)  
+Proporciona información general sobre la creación de ensamblados.  
   
- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)  
- Describe la caché global de ensamblados.  
+[Caché global de ensamblados](gac.md)  
+Describe la caché global de ensamblados.  
   
- [Cómo: Ver el contenido de un ensamblado](../../standard/assembly/view-contents.md)  
- Explica cómo usar [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver la información del Lenguaje intermedio de Microsoft (MSIL) de un ensamblado.  
+[Cómo: Ver el contenido de un ensamblado](../../standard/assembly/view-contents.md)  
+Explica cómo usar [Ildasm.exe (Desensamblador de IL)](../tools/ildasm-exe-il-disassembler.md) para ver la información del Lenguaje intermedio de Microsoft (MSIL) de un ensamblado.  
   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- Describe cómo Common Language Runtime busca y carga los ensamblados que conforman la aplicación.  
+[Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)  
+Describe cómo Common Language Runtime busca y carga los ensamblados que conforman la aplicación.  
   
- [Programar con ensamblados](../../standard/assembly/program.md)  
- Describe los ensamblados, los bloques de creación de las aplicaciones administradas.
+[Programar con ensamblados](../../standard/assembly/program.md)  
+Describe los ensamblados, los bloques de creación de las aplicaciones administradas.

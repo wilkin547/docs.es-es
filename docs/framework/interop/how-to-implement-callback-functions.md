@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894201"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051766"
 ---
 # <a name="how-to-implement-callback-functions"></a>Procedimiento para implementar funciones de devolución de llamada
 El procedimiento y el ejemplo siguiente muestran cómo una aplicación administrada, mediante la invocación de la plataforma, puede imprimir el valor del identificador de cada ventana en el equipo local. En concreto, el uso del procedimiento y el ejemplo usan la función **EnumWindows** para recorrer la lista de ventanas y una función de devolución de llamada administrada (denominada CallBack) para imprimir el valor del identificador de ventana.  
@@ -38,7 +38,7 @@ El procedimiento y el ejemplo siguiente muestran cómo una aplicación administr
   
 4. Asegúrese de que el recolector de elementos no utilizados no reclama al delegado antes de que la función de devolución de llamada complete su tarea. Al pasar a un delegado como parámetro o pasar a un delegado contenido como campo en una estructura, se queda sin recopilar mientras dure la llamada. Por lo tanto, como ocurre en el siguiente ejemplo de enumeración, la función de devolución de llamada completa su tarea antes de que vuelva la llamada y no requiere que el llamador administrado realice ninguna acción adicional.  
   
-     Sin embargo, si la función de devolución de llamada se puede invocar después de que vuelva la llamada, el llamador administrado debe seguir los pasos para asegurarse de que el delegado sigue sin recopilar hasta que finalice la función de devolución de llamada. Para obtener información detallada sobre cómo evitar la recolección de elementos no utilizados, vea [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md) con invocación de plataforma.  
+     Sin embargo, si la función de devolución de llamada se puede invocar después de que vuelva la llamada, el llamador administrado debe seguir los pasos para asegurarse de que el delegado sigue sin recopilar hasta que finalice la función de devolución de llamada. Para obtener información detallada sobre cómo evitar la recolección de elementos no utilizados, vea [Serialización de interoperabilidad](interop-marshaling.md) con invocación de plataforma.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones de devolución de llamada](../../../docs/framework/interop/callback-functions.md)
-- [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Funciones de devolución de llamada](callback-functions.md)
+- [Llamar a una función DLL](calling-a-dll-function.md)

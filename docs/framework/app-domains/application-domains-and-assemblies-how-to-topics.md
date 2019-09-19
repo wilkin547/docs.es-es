@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971767"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053239"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Temas "Cómo..." sobre dominios de aplicación y ensamblados
 Las siguientes secciones contienen vínculos a todos los temas de procedimientos que se encuentran en la documentación conceptual para programación con dominios de aplicación y ensamblados.  
   
  **Dominios de aplicación**  
   
-- [Cómo: Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [Cómo: Crear un dominio de aplicación](how-to-create-an-application-domain.md)  
   
-- [Cómo: Descargar un dominio de aplicación](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [Cómo: Descargar un dominio de aplicación](how-to-unload-an-application-domain.md)  
   
-- [Cómo: Configurar un dominio de aplicación](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [Cómo: Configurar un dominio de aplicación](how-to-configure-an-application-domain.md)  
   
-- [Cómo: Cargar ensamblados en un dominio de aplicación](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [Cómo: Cargar ensamblados en un dominio de aplicación](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [Cómo: Obtener información sobre tipos y miembros desde un ensamblado](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ Las siguientes secciones contienen vínculos a todos los temas de procedimientos
   
 - [Cómo: Instalar un ensamblado en la caché global de ensamblados](install-assembly-into-gac.md)  
   
-- [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [Cómo: Consultar el contenido de la memoria caché global de ensamblados](how-to-view-the-contents-of-the-gac.md)  
   
-- [Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [Cómo: Ver el contenido de un ensamblado](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Dominios de aplicación y ensamblados](../../../docs/framework/app-domains/index.md)
+- [Dominios de aplicación y ensamblados](index.md)

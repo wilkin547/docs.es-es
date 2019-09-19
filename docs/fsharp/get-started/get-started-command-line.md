@@ -2,12 +2,12 @@
 title: Introducción F# a las herramientas de línea de comandos
 description: Obtenga información sobre cómo crear una solución sencilla de varios proyectos F# en el uso de la CLI de .net Core en cualquier sistema operativo (Windows, MacOS o Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855828"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117930"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Comience con F# el CLI de .net Core
 
@@ -23,7 +23,7 @@ En este artículo se supone que sabe cómo usar una línea de comandos y tener u
 
 Abra un símbolo del sistema o terminal y use el comando [dotnet New](../../core/tools/dotnet-new.md) para crear un nuevo archivo `FSNetCore`de solución denominado:
 
-```console
+```dotnetcli
 dotnet new sln -o FSNetCore
 ```
 
@@ -40,7 +40,7 @@ Cambie los directorios a *FSNetCore*.
 
 Use el `dotnet new` comando, cree un proyecto de biblioteca de clases en la carpeta **src** denominada Library.
 
-```console
+```dotnetcli
 dotnet new classlib -lang F# -o src/Library
 ```
 
@@ -68,13 +68,13 @@ let getJsonNetJson value =
 
 Agregue el paquete NuGet Newtonsoft. JSON al proyecto de biblioteca.
 
-```console
+```dotnetcli
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
 Agregue el `Library` proyecto a la `FSNetCore` solución mediante el comando [dotnet sln Add](../../core/tools/dotnet-sln.md) :
 
-```console
+```dotnetcli
 dotnet sln add src/Library/Library.fsproj
 ```
 
@@ -84,7 +84,7 @@ Ejecute `dotnet build` para compilar el proyecto. Las dependencias no resueltas 
 
 Use el `dotnet new` comando para crear una aplicación de consola en la carpeta **src** denominada app.
 
-```console
+```dotnetcli
 dotnet new console -lang F# -o src/App
 ```
 
@@ -121,13 +121,13 @@ let main argv =
 
 Agregue una referencia al `Library` proyecto mediante [dotnet Add Reference](../../core/tools/dotnet-add-reference.md).
 
-```console
+```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
 Agregue el `App` proyecto a la `FSNetCore` solución mediante el `dotnet sln add` comando:
 
-```console
+```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 

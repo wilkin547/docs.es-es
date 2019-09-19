@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946844"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051845"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumir funciones DLL no administradas
 La invocación de plataforma es un servicio que permite al código administrado llamar a funciones no administradas implementadas en bibliotecas de vínculos dinámicos (DLL), como los de la API de Windows. Busca y llama a una función exportada y calcula las referencias de sus argumentos (enteros, cadenas, matrices, estructuras etc.) a través de los límites de interoperación según sea necesario.  
@@ -29,15 +29,15 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
 #### <a name="to-consume-exported-dll-functions"></a>Para consumir funciones DLL exportadas  
   
-1. [Identificar funciones en archivos DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Identificar funciones en archivos DLL](identifying-functions-in-dlls.md).  
   
      Como mínimo, debe especificar el nombre de la función y el nombre del archivo DLL que la contiene.  
   
-2. [Crear una clase para contener funciones de archivos DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Crear una clase para contener funciones de archivos DLL](creating-a-class-to-hold-dll-functions.md).  
   
      Puede usar una clase existente, crear una clase individual para cada función no administrada o crear una clase que contiene un conjunto de funciones no administradas relacionadas.  
   
-3. [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Crear prototipos en código administrado](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Use la instrucción **Declare** con las palabras clave **Function** y **Lib**. En algunos casos excepcionales, puede usar **DllImportAttribute** con las palabras clave **Shared Function**. Estos casos se explican más adelante en esta sección.  
   
@@ -45,11 +45,11 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
      [C++] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque la función o el método contenedor con **extern "C"** .  
   
-4. [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Llamar a una función DLL](calling-a-dll-function.md).  
   
-     Llame al método de la clase administrada como haría con cualquier otro método administrado. [Pasar estructuras](../../../docs/framework/interop/passing-structures.md) e [implementar funciones de devolución de llamada](../../../docs/framework/interop/callback-functions.md) son casos especiales.  
+     Llame al método de la clase administrada como haría con cualquier otro método administrado. [Pasar estructuras](passing-structures.md) e [implementar funciones de devolución de llamada](callback-functions.md) son casos especiales.  
   
- Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Aproximación a la invocación de plataforma  
  La invocación de plataforma usa metadatos para encontrar las funciones exportadas y serializar sus argumentos en tiempo de ejecución. En la siguiente ilustración se muestra este proceso.  
@@ -73,6 +73,6 @@ La invocación de plataforma es un servicio que permite al código administrado 
 
 ## <a name="see-also"></a>Vea también
 
-- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)
-- [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+- [Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)
+- [Ejemplos de invocación de plataforma](platform-invoke-examples.md)
+- [Serialización de interoperabilidad](interop-marshaling.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040720"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053082"
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 
@@ -76,7 +76,7 @@ Cuando se inicia un dominio de aplicación que utiliza instantáneas, hay un ret
 
 A partir de .NET Framework 4, el comportamiento de inicio predeterminado consiste en comparar directamente la fecha y la hora de cada archivo de ensamblado del directorio de aplicación con la fecha y la hora de la copia situada en el directorio de instantáneas. Si el ensamblado se ha actualizado, se copiará con el mismo procedimiento que en las versiones anteriores de .NET Framework. Si no, se cargará la copia del directorio de instantáneas.
 
-La mejora del rendimiento resultante es mayor en las aplicaciones en las que los ensamblados no cambian con frecuencia y, normalmente, los cambios se producen en un pequeño subconjunto de ensamblados. Si la mayoría de los ensamblados de una aplicación cambia con frecuencia, el nuevo comportamiento predeterminado puede provocar una regresión del rendimiento. Puede restaurar el comportamiento de inicio de las versiones anteriores de .NET Framework. Para ello, agregue el [elemento \<shadowCopyVerifyByTimestamp&gt;](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al archivo de configuración, con `enabled="false"`.
+La mejora del rendimiento resultante es mayor en las aplicaciones en las que los ensamblados no cambian con frecuencia y, normalmente, los cambios se producen en un pequeño subconjunto de ensamblados. Si la mayoría de los ensamblados de una aplicación cambia con frecuencia, el nuevo comportamiento predeterminado puede provocar una regresión del rendimiento. Puede restaurar el comportamiento de inicio de las versiones anteriores de .NET Framework. Para ello, agregue el [elemento \<shadowCopyVerifyByTimestamp&gt;](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al archivo de configuración, con `enabled="false"`.
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ La clase <xref:System.AppDomain> tiene varios métodos, como <xref:System.AppDom
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [Elemento \<shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [Elemento \<shadowCopyVerifyByTimestamp>](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61793008"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045814"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
 
@@ -143,13 +143,13 @@ Si el espacio de nombres fuera `Ozzy.Out+Back`, el signo más debería ir preced
 
 La información mínima necesaria en una especificación de nombre de ensamblado es el nombre textual (IDENTIFIER) del ensamblado. Puede seguir el IDENTIFIER mediante una lista separada por comas de pares de propiedad-valor, como se describe en la tabla siguiente. La nomenclatura de IDENTIFIER debe seguir las reglas de la nomenclatura de archivos. IDENTIFIER no distingue mayúsculas de minúsculas.
 
-|Nombre de la propiedad|DESCRIPCIÓN|Valores permitidos|
+|Nombre de la propiedad|Descripción|Valores permitidos|
 |-------------------|-----------------|----------------------|
 |**Versión**|Número de versión del ensamblado|*Major.Minor.Build.Revision*, donde *Major*, *Minor*, *Build* y *Revision* son números enteros entre 0 y 65535, ambos incluidos.|
 |**PublicKey**|Clave pública completa|Valor de cadena de la clave pública completa en formato hexadecimal. Especifique una referencia nula (**Nothing** en Visual Basic) para indicar explícitamente un ensamblado privado.|
 |**PublicKeyToken**|Token de clave pública (hash de 8 bytes de la clave pública completa)|Valor de cadena del token de clave pública en formato hexadecimal. Especifique una referencia nula (**Nothing** en Visual Basic) para indicar explícitamente un ensamblado privado.|
 |**Referencia cultural**|Referencia cultural del ensamblado|Referencia cultural del ensamblado en formato RFC-1766, o "neutral" para los ensamblados independientes del lenguaje (no satélite).|
-|**Custom**|Objeto binario grande personalizado (BLOB). Actualmente esto solo se usa en los ensamblados generados por el [Generador de imágenes nativas (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|Cadena personalizada que la herramienta Generador de imágenes nativas usa para notificar a la caché de ensamblados que el ensamblado que se está instalando es una imagen nativa y, por tanto, se tiene que instalar en la caché de imágenes nativas. También se denomina cadena ZAP.|
+|**Custom**|Objeto binario grande personalizado (BLOB). Actualmente esto solo se usa en los ensamblados generados por el [Generador de imágenes nativas (Ngen)](../tools/ngen-exe-native-image-generator.md).|Cadena personalizada que la herramienta Generador de imágenes nativas usa para notificar a la caché de ensamblados que el ensamblado que se está instalando es una imagen nativa y, por tanto, se tiene que instalar en la caché de imágenes nativas. También se denomina cadena ZAP.|
 
 En el ejemplo siguiente se muestra un **AssemblyName** para un ensamblado de nombre simple con una referencia cultural predeterminada.
 
@@ -224,4 +224,4 @@ Para **ModuleBuilder.GetType**, `MyArray[0..5]` indica una matriz unidimensional
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
+- [Viewing Type Information](viewing-type-information.md) (Ver información tipos)

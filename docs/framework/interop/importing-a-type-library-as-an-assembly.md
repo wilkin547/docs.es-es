@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662399"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051711"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importar una biblioteca de tipos como un ensamblado
 
@@ -36,7 +36,7 @@ Hay dos maneras de hacer que esta información de tipos esté disponible para la
 
 Al usar ensamblados de interoperabilidad solo de tiempo de diseño, se puede insertar información de tipos del ensamblado de interoperabilidad primario publicado por el autor del componente COM. En cambio, no es necesario implementar el ensamblado de interoperabilidad primario con la aplicación.
 
-El uso de ensamblados de interoperabilidad solo de tiempo de diseño reduce el tamaño de la aplicación, dado que la mayoría de las aplicaciones no usa todas las características de un componente COM. El compilador es muy eficaz cuando inserta información de tipos; si la aplicación solo usa algunos de los métodos de una interfaz COM, el compilador no inserta los métodos que no se usan. Cuando una aplicación que contiene información de tipos insertada interactúa con otra aplicación, o interactúa con una aplicación que usa un ensamblado de interoperabilidad primario, Common Language Runtime usa reglas de equivalencia de tipos para determinar si dos tipos con el mismo nombre representan el mismo tipo de COM. No es necesario conocer estas reglas para usar los objetos COM. Si está interesado en las reglas, vea [Equivalencia de tipos y tipos de interoperabilidad incrustados](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md).
+El uso de ensamblados de interoperabilidad solo de tiempo de diseño reduce el tamaño de la aplicación, dado que la mayoría de las aplicaciones no usa todas las características de un componente COM. El compilador es muy eficaz cuando inserta información de tipos; si la aplicación solo usa algunos de los métodos de una interfaz COM, el compilador no inserta los métodos que no se usan. Cuando una aplicación que contiene información de tipos insertada interactúa con otra aplicación, o interactúa con una aplicación que usa un ensamblado de interoperabilidad primario, Common Language Runtime usa reglas de equivalencia de tipos para determinar si dos tipos con el mismo nombre representan el mismo tipo de COM. No es necesario conocer estas reglas para usar los objetos COM. Si está interesado en las reglas, vea [Equivalencia de tipos y tipos de interoperabilidad incrustados](type-equivalence-and-embedded-interop-types.md).
 
 ## <a name="generating-metadata"></a>Generación de metadatos
 
@@ -46,11 +46,11 @@ Después de encontrar la biblioteca de tipos que contiene la implementación del
 
 - Programa para la mejora
 
-  Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Adición de referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).
+  Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Adición de referencias a bibliotecas de tipos](how-to-add-references-to-type-libraries.md).
 
-- [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [TlbImp.exe (Importador de la biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
 
-  El importador de la biblioteca de tipos proporciona opciones de línea de comandos para ajustar los metadatos en el archivo de interoperabilidad resultante, importa tipos desde una biblioteca de tipos existente y genera un ensamblado de interoperabilidad y un espacio de nombres. Para obtener instrucciones, vea [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).
+  El importador de la biblioteca de tipos proporciona opciones de línea de comandos para ajustar los metadatos en el archivo de interoperabilidad resultante, importa tipos desde una biblioteca de tipos existente y genera un ensamblado de interoperabilidad y un espacio de nombres. Para obtener instrucciones, vea [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - Clase <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>
 
@@ -75,12 +75,12 @@ Después de encontrar la biblioteca de tipos que contiene la implementación del
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Exponer componentes COM en .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Exponer componentes COM en .NET Framework](exposing-com-components.md)
 - [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [TlbImp.exe (Importador de la biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
 - [Personalización de contenedores estándar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Uso de tipos COM en código administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Compilar un proyecto de interoperabilidad](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [Implementar una aplicación interoperativa](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Compilar un proyecto de interoperabilidad](compiling-an-interop-project.md)
+- [Implementar una aplicación interoperativa](deploying-an-interop-application.md)
+- [Cómo: Agregar referencias a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)
+- [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)

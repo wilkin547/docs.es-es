@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205805"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051816"
 ---
 # <a name="exposing-net-components-to-com"></a>Exposición de los componentes de .NET a COM
 
@@ -27,7 +27,7 @@ Escribir un tipo .NET y consumirlo desde código no administrado son actividades
 
      Los atributos personalizados de código administrado pueden mejorar la interoperabilidad de un componente.
 
-- [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Empaquetar un ensamblado para COM](packaging-an-assembly-for-com.md).
 
      Es posible que los programadores de COM requieran que resuma los pasos necesarios para hacer referencia a los ensamblados e implementarlos.
 
@@ -35,11 +35,11 @@ Escribir un tipo .NET y consumirlo desde código no administrado son actividades
 
 ## <a name="to-consume-a-managed-type-from-com"></a>Para consumir un tipo administrado desde COM
 
-1. [Registrar ensamblados con COM](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [Registrar ensamblados con COM](registering-assemblies-with-com.md).
 
      Los tipos de un ensamblado (y bibliotecas de tipos) deben registrarse en tiempo de diseño. Si un instalador no registra el ensamblado, indique a los programadores de COM que usen Regasm.exe.
 
-2. [Hacer referencia a tipos de .NET desde COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Hacer referencia a tipos de .NET desde COM](how-to-reference-net-types-from-com.md).
 
      Los desarrolladores de COM pueden hacer referencia a tipos en un ensamblado con las mismas herramientas y técnicas que usan actualmente.
 
@@ -53,5 +53,5 @@ Escribir un tipo .NET y consumirlo desde código no administrado son actividades
 
 ## <a name="see-also"></a>Vea también
 
-- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)
-- [Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)
+- [Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET](com-interop-sample-com-client-and-net-server.md)

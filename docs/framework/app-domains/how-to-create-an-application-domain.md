@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff85f5737babb73d87f4918ca0f4981263f7dadc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7f42f85adf3e9b0874df6c0360bea25b07facc0d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166756"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053157"
 ---
 # <a name="how-to-create-an-application-domain"></a>Procedimiento para crear un dominio de aplicación
 Un host de Common Language Runtime habitual crea dominios de aplicación automáticamente cuando son necesarios, pero puede crear sus propios dominios de aplicación y cargar en ellos los ensamblados que desee administrar personalmente. También puede crear dominios de aplicación desde los que puede ejecutar el código.  
@@ -32,4 +32,4 @@ Un host de Common Language Runtime habitual crea dominios de aplicación automá
 ## <a name="see-also"></a>Vea también
 
 - [Programar con dominios de aplicación](application-domains.md#programming-with-application-domains)
-- [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)
+- [Utilizar dominios de aplicación](use.md)
