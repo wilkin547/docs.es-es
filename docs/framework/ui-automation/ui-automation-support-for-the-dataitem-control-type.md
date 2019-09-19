@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 7ba338a2eeb222dc8c807bc3a2bb4d1baf7de39d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63d957eaaff7503aa8ba4dde9d836aea28f419ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912008"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041803"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Compatibilidad de UI Automation para el tipo de control DataItem
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "69912008"
  En las secciones siguientes se definen la estructura del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , las propiedades, los patrones de control y los eventos necesarios para el tipo de control DataItem. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplican a todos los controles de elemento de datos, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de automatización de interfaz de usuario necesaria  
- En la tabla siguiente se detallan la vista de control y la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de elemento de datos y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ En la tabla siguiente se detallan la vista de control y la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de elemento de datos y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |Árbol[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Vista de control|Árbol[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Vista de contenido|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
@@ -33,9 +33,9 @@ ms.locfileid: "69912008"
  Un elemento de datos de una cuadrícula de datos puede hospedar diversos objetos, entre los que se incluye otra capa de elementos de datos o elementos de cuadrícula concretos como controles de edición, texto o imágenes. Si el elemento de datos tiene un rol de objeto concreto, el elemento debe exponerse como un tipo de control concreto; por ejemplo, un tipo de control ListItem para un elemento de datos seleccionable de la cuadrícula.  
   
 ## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
- En la tabla siguiente se muestran las propiedades que tienen un valor o una definición que es especialmente relevante para los controles de elemento de datos. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ En la tabla siguiente se muestran las propiedades que tienen un valor o una definición que es especialmente relevante para los controles de elemento de datos. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
-|Propiedad|Value|Notas|  
+|Propiedad|Valor|Notas|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas.|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas.|El rectángulo exterior que contiene el control completo.|  
@@ -51,7 +51,7 @@ ms.locfileid: "69912008"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vea las notas.|El control de elemento de datos siempre contiene un elemento de texto principal que está relacionado con lo que el usuario asociaría como el identificador más semántico para el elemento.|  
   
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control necesarios para la automatización de la interfaz de usuario  
- En la tabla siguiente se muestran los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] necesarios para que todos los controles de elemento de datos los admitan. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ En la tabla siguiente se muestran los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] necesarios para que todos los controles de elemento de datos los admitan. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 |Patrón de control|Soporte técnico|Notas|  
 |---------------------|-------------|-----------|  
@@ -69,7 +69,7 @@ ms.locfileid: "69912008"
  Al llamar a `SetFocus` en la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del elemento de datos, el caso [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] devolverá correctamente y el foco se establecerá en la edición dentro del subárbol del elemento de datos.  
   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
- En la siguiente tabla se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de elemento de datos. Para más información sobre eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+ En la siguiente tabla se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de elemento de datos. Para más información sobre eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -90,7 +90,7 @@ ms.locfileid: "69912008"
 ## <a name="dataitem-control-type-example"></a>Ejemplo de tipo de control DataItem  
  En la imagen siguiente se muestra un tipo de control DataItem en un control List View con compatibilidad con información completa para las columnas.  
   
- ![Gráfico de un control de vista de lista con dos elementos de datos](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Gráfico de un control de vista de lista con dos elementos de datos](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  Las vistas de control y de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece al control del elemento de datos se muestran a continuación. Los patrones de control de cada elemento de automatización se muestran entre paréntesis. El grupo "Contoso" también forma parte de la cuadrícula del control de host Data Grid.  
   
@@ -103,5 +103,5 @@ ms.locfileid: "69912008"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Información general sobre tipos de control de Automatización de la interfaz de usuario](ui-automation-control-types-overview.md)
+- [Información general sobre la Automatización de la interfaz de usuario](ui-automation-overview.md)
