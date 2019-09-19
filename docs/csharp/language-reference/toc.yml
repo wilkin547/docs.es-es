@@ -184,13 +184,13 @@
           items:
             - name: Contextos de uso
               href: keywords/using.md
-            - name: Directiva using
+            - name: using (directiva)
               href: keywords/using-directive.md
             - name: Directiva using static
               href: keywords/using-static.md
             - name: Instrucción using
               href: keywords/using-statement.md
-        - name: Alias externo
+        - name: alias externo
           href: keywords/extern-alias.md
     - name: Palabras clave de prueba de tipos
       items:
@@ -226,7 +226,7 @@
           href: keywords/add.md
         - name: get
           href: keywords/get.md
-        - name: partial (tipo)
+        - name: partial (Tipos)
           href: keywords/partial-type.md
         - name: partial (método)
           href: keywords/partial-method.md
@@ -244,7 +244,7 @@
       items:
         - name: Referencia rápida
           href: keywords/query-keywords.md
-        - name: Cláusula from
+        - name: from (cláusula)
           href: keywords/from-clause.md
         - name: where (cláusula)
           href: keywords/where-clause.md
@@ -270,7 +270,7 @@
           href: keywords/equals.md
         - name: by
           href: keywords/by.md
-        - name: in
+        - name: en
           href: keywords/in.md
 - name: 'Operadores de C#'
   items:
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Operadores de acceso a miembros
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: Operadores de prueba de tipos y conversión
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
@@ -321,7 +321,7 @@
     - name: Operador =>
       href: operators/lambda-operator.md
       displayName: lambda
-    - name: 'Operador ::'
+    - name: ':: (operador)'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
     - name: await (operador)
@@ -335,9 +335,9 @@
       displayName: anonymous
     - name: operador nameof
       href: operators/nameof.md
-    - name: new (Operador)
+    - name: Operador new
       href: operators/new-operator.md
-    - name: sizeof (Operador)
+    - name: Operador sizeof
       href: operators/sizeof.md
     - name: Operador stackalloc
       href: operators/stackalloc.md

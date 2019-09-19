@@ -4,12 +4,12 @@ description: .NET Core es una implementación modular y de alto rendimiento de .
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0007c1c6a9939c46f123535f9053ac1d4ced7266
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848944"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117079"
 ---
 # <a name="net-core-guide"></a>Guía de .NET Core
 
@@ -33,7 +33,7 @@ La última versión es [.NET Core 2.2](whats-new/dotnet-core-2-2.md). Entre las 
 
 Después de instalar el SDK de .NET Core, abra un símbolo del sistema. Escriba los comandos `dotnet` siguientes para crear y ejecutar una aplicación de C#.
 
-```console
+```dotnetcli
 dotnet new console
 dotnet run
 ```
