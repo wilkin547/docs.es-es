@@ -3,12 +3,12 @@ title: Crear mi primera aplicación web de ASP.NET para notificaciones
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422392"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045590"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Crear mi primera aplicación web de ASP.NET para notificaciones
 ## <a name="applies-to"></a>Se aplica a  
@@ -19,7 +19,7 @@ ms.locfileid: "67422392"
   
  En este tema se describe el escenario de compilación de aplicaciones web ASP.NET compatibles con notificaciones mediante WIF. En un escenario de aplicación compatible con notificaciones suele haber tres participantes: la propia aplicación, el usuario final y el servicio de token de seguridad (STS). En la ilustración siguiente se describe este escenario:  
   
- ![Diagrama que muestra los componentes de una aplicación Web básica de WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![Diagrama que muestra los componentes básicos de una aplicación Web de WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. La aplicación para notificaciones usa WIF para identificar las solicitudes no autenticadas y redirigirlas al STS.  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422392"
   
  El STS es un servicio que emite tokens tras haberse realizado la autenticación correctamente. Microsoft ofrece dos STS estándar del sector:  
   
-- [Servicios de federación de Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Servicios de federación de Active Directory (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Access Control Service de Windows Azure (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. ACS es un servicio de nube que se ofrece como parte de la plataforma Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo Local que forma parte de la [Identity and Access Tool para Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponible de forma gratuita en línea.  
+ AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. ACS es un servicio de nube que se ofrece como parte de la plataforma Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo local que forma parte de la [herramienta de identidad y acceso para Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , que está disponible en línea de forma gratuita.  
   
  Para compilar la primera aplicación ASP.NET compatible con notificaciones mediante WIF, siga las instrucciones de uno de los sitios siguientes:  
   
-- [Cómo: Compilar la aplicación Web de MVC de ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [Cómo: Compilación de una aplicación web MVC de ASP.NET compatible con notificaciones mediante WIF](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [Cómo: Crear aplicaciones de formularios Web ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [Cómo: Creación de una aplicación de formularios Web Forms ASP.NET compatible con notificaciones mediante WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [Cómo: Crear aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [Cómo: Creación de una aplicación ASP.NET compatible con notificaciones mediante la autenticación basada en formularios](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Introducción a WIF](getting-started-with-wif.md)

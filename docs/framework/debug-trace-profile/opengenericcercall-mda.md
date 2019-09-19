@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6ad656a5f762bf86d277d986bb087c97d7a78f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753717"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052417"
 ---
 # <a name="opengenericcercall-mda"></a>MDA de openGenericCERCall
 El asistente para la depuración administrada `openGenericCERCall` se activa para advertir que se está procesando un gráfico de región de ejecución restringida (CER) con variables de tipo genérico en el método raíz en la compilación JIT o en tiempo de generación de imágenes nativas y al menos una de las variables de tipo genérico es un tipo de referencia de objeto.  
@@ -25,7 +25,7 @@ El asistente para la depuración administrada `openGenericCERCall` se activa par
 ## <a name="symptoms"></a>Síntomas  
  El código de la CER no se ejecuta cuando se anula un subproceso o se descarga un dominio de aplicación.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  En tiempo de compilación JIT, una instancia que contiene un tipo de referencia de objeto solo es representativa porque el código resultante es compartido, y cada una de las variables de tipo de referencia de objeto puede ser cualquier tipo de referencia de objeto. Esto puede impedir la preparación de algunos recursos de tiempo de ejecución antes de tiempo.  
   
  En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano. Estas se denominan entradas de diccionario genéricas. Por ejemplo, en el caso de la instrucción `List<T> list = new List<T>();` donde `T` es una variable de tipo genérico, el tiempo de ejecución debe buscar y posiblemente crear las instancias exactas en tiempo de ejecución, como `List<Object>, List<String>` y así sucesivamente. Esto puede producir un error por diferentes motivos que se escapan al control del desarrollador, como memoria insuficiente.  
@@ -40,7 +40,7 @@ El asistente para la depuración administrada `openGenericCERCall` se activa par
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Resultados  
  A continuación se muestra un ejemplo de resultado de este MDA.  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
@@ -110,4 +110,4 @@ class Program
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](diagnosing-errors-with-managed-debugging-assistants.md)

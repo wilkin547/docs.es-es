@@ -1,17 +1,17 @@
 ---
-title: <TypeInstantiation> Elemento (.NET Native)
+title: <TypeInstantiation>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052368"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049110"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > elemento (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<Elemento > TypeInstantiation (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico construido.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,7 +36,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|Descripción|  
+|Atributo|Tipo de atributo|DESCRIPCIÓN|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del tipo.|  
 |`Arguments`|General|Atributo necesario. Especifica los argumentos de tipo genérico. Si hay varios argumentos, se separan mediante coma.|  
@@ -53,57 +53,57 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*type_name*|Nombre del tipo. Si el elemento `<TypeInstantiation>` es un elemento secundario de un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) u otro elemento `<TypeInstantiation>`, *type_name* puede especificar el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo. El nombre de tipo no es representativo. Por ejemplo, para un objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, el elemento `<TypeInstantiation>` puede aparecer del siguiente modo:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Nombre del tipo. Si el elemento `<TypeInstantiation>` es un elemento secundario de un elemento [\<Namespace>](namespace-element-net-native.md), un elemento [\<Type>](type-element-net-native.md) u otro elemento `<TypeInstantiation>`, *type_name* puede especificar el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo. El nombre de tipo no es representativo. Por ejemplo, para un objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, el elemento `<TypeInstantiation>` puede aparecer del siguiente modo:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Arguments (atributo)  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |*type_argument*|Especifica los argumentos de tipo genérico. Si hay varios argumentos, se separan mediante coma. Cada argumento debe contener el nombre de tipo completo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|*policy_setting*|Configuración que se aplica a este tipo de directiva para el tipo genérico construido. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
+|*policy_setting*|Configuración que se aplica a este tipo de directiva para el tipo genérico construido. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Aplica la directiva de reflexión a un evento perteneciente a este tipo.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Aplica la directiva de reflexión a un campo de este tipo.|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Aplica la directiva a un tipo, en caso de que dicha directiva se haya aplicado al tipo representado por el elemento `<TypeInstantiation>` que lo contiene.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica la directiva de reflexión a un método perteneciente a este tipo.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un método genérico construido perteneciente a este tipo.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Aplica la directiva de reflexión a una propiedad de este tipo.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo anidado.|  
+|[\<Event>](event-element-net-native.md)|Aplica la directiva de reflexión a un evento perteneciente a este tipo.|  
+|[\<Field>](field-element-net-native.md)|Aplica la directiva de reflexión a un campo de este tipo.|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|Aplica la directiva a un tipo, en caso de que dicha directiva se haya aplicado al tipo representado por el elemento `<TypeInstantiation>` que lo contiene.|  
+|[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión a un método perteneciente a este tipo.|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un método genérico construido perteneciente a este tipo.|  
+|[\<Property>](property-element-net-native.md)|Aplica la directiva de reflexión a una propiedad de este tipo.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo anidado.|  
 |`<TypeInstantiation>`|Aplica la directiva de reflexión a un tipo genérico construido anidado.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un ensamblado especificado.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<Application>](application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución.|  
+|[\<Assembly>](assembly-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un ensamblado especificado.|  
+|[\<Library>](library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución.|  
+|[\<Namespace>](namespace-element-net-native.md)|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres.|  
+|[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |`<TypeInstantiation>`|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
  La reflexión, la serialización y los atributos de interoperabilidad son opcionales. Sin embargo, al menos uno debe estar presente.  
   
- Si un elemento `<TypeInstantiation>` es un elemento secundario de un elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) o [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), invalida la configuración de directiva definida por el elemento primario. Si un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) establece una definición de tipo genérico correspondiente, el elemento `<TypeInstantiation>` invalida la directiva de reflexión en tiempo de ejecución solo en el caso de la creación de instancias del tipo genérico construido especificado.  
+ Si un elemento `<TypeInstantiation>` es un elemento secundario de un elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md) o [\<Type>](type-element-net-native.md), invalida la configuración de directiva definida por el elemento primario. Si un elemento [\<Type>](type-element-net-native.md) establece una definición de tipo genérico correspondiente, el elemento `<TypeInstantiation>` invalida la directiva de reflexión en tiempo de ejecución solo en el caso de la creación de instancias del tipo genérico construido especificado.  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se usa la reflexión para recuperar la definición de tipo genérico de un objeto <xref:System.Collections.Generic.Dictionary%602> construido. También se usa la reflexión para mostrar información sobre objetos <xref:System.Type> que representan tipos genéricos construidos y definiciones de tipos genéricos. La variable `b` en el ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control.  
+ En el siguiente ejemplo se usa la reflexión para recuperar la definición de tipo genérico de un objeto <xref:System.Collections.Generic.Dictionary%602> construido. También se usa la reflexión para mostrar información sobre objetos <xref:System.Type> que representan tipos genéricos construidos y definiciones de tipos genéricos. La variable `b` del ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Después de la compilación con la cadena de herramientas .NET Native, el ejemplo se inicia un [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) excepción en la línea que llama el <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> método. Puede eliminar la excepción e indicar los metadatos necesarios agregando el siguiente elemento `<TypeInstantiation>` al archivo de directivas en tiempo de ejecución:  
+ Después de la compilación con la cadena de herramientas de .net Native, en el ejemplo se produce una excepción [MissingMetadataException](missingmetadataexception-class-net-native.md) en <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> la línea que llama al método. Puede eliminar la excepción e indicar los metadatos necesarios agregando el siguiente elemento `<TypeInstantiation>` al archivo de directivas en tiempo de ejecución:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -118,6 +118,6 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
+- [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)

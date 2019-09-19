@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4e4b5822306fa8f4e6b4437f4a1bef92b53a86b9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927015"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046130"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
@@ -39,7 +39,7 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Unas herramientas buenas marcan la diferencia  
  Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella. Microsoft incluye una variedad de herramientas de rendimiento como [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) y [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
- PerfView es una herramienta gratuita muy potente que sirve para centrarse en los problemas con raíces profundas como, por ejemplo, E/S de disco, eventos de GC y memoria. Puede capturar eventos de [Seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) relacionados con el rendimiento y ver fácilmente información por aplicación, por proceso, por pila y por subproceso. PerfView muestra la cantidad y el tipo de memoria que asigna la aplicación, así como las funciones o pilas de llamadas que contribuyen en determinada medida a las asignaciones de memoria. Para más información, vea los completos artículos de ayuda, las demostraciones y los vídeos que se incluyen con la herramienta (como los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) de Channel 9). 
+ PerfView es una herramienta gratuita muy potente que sirve para centrarse en los problemas con raíces profundas como, por ejemplo, E/S de disco, eventos de GC y memoria. Puede capturar eventos de [Seguimiento de eventos para Windows](../wcf/samples/etw-tracing.md) (ETW) relacionados con el rendimiento y ver fácilmente información por aplicación, por proceso, por pila y por subproceso. PerfView muestra la cantidad y el tipo de memoria que asigna la aplicación, así como las funciones o pilas de llamadas que contribuyen en determinada medida a las asignaciones de memoria. Para más información, vea los completos artículos de ayuda, las demostraciones y los vídeos que se incluyen con la herramienta (como los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) de Channel 9). 
   
 ### <a name="fact-4-its-all-about-allocations"></a>Hecho 4: La clave son las asignaciones.  
  Podría pensarse que la compilación de una aplicación de .NET Framework que muestre una buena capacidad de respuesta depende de la utilización de los algoritmos —como usar una ordenación rápida en vez de una de burbuja—, pero no es así. El factor de mayor peso a la hora de compilar una aplicación diligente es la asignación de memoria, sobre todo cuando la aplicación es muy grande o procesa grandes cantidades de datos. 
@@ -465,7 +465,7 @@ class Compilation { /*...*/
 
 - [Vídeo de presentación de este tema](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guía básica para la generación de perfiles de rendimiento](/visualstudio/profiling/beginners-guide-to-performance-profiling)
-- [Rendimiento](../../../docs/framework/performance/index.md)
+- [Rendimiento](index.md)
 - [Sugerencias de rendimiento de .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Tutoriales de PerfView de Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [SDK de .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)

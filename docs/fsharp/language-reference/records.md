@@ -2,12 +2,12 @@
 title: Registros
 description: Obtenga información F# sobre cómo los registros representan agregados simples de valores con nombre, opcionalmente con miembros.
 ms.date: 06/09/2019
-ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627285"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053937"
 ---
 # <a name="records"></a>Registros
 
@@ -108,7 +108,8 @@ type Person =
 and Address =
   { Line1: string
     Line2: string
-    PostCode: string }
+    PostCode: string
+    Occupant: Person }
 ```
 
 Si fuera a definir el ejemplo anterior sin la `and` palabra clave, no se compilaría. La `and` palabra clave es necesaria para las definiciones mutuamente recursivas.
