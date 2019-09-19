@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894938"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046686"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Cambie el directorio prompt a la carpeta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<Versión de .net > \). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
+Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Cambie el directorio prompt a la carpeta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<. Versión de .net > \). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
 
 `wevtutil im CLR-ETW.man`
 
@@ -85,7 +85,7 @@ Para activar el registro, el usuario debe especificar tres cosas:
 
 ## <a name="viewing-clr-etw-events"></a>Ver eventos ETW de CLR
 
-Utilice los comandos enumerados a continuación para ver los eventos ETW de CLR. Para obtener una descripción de los eventos, vea [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md).
+Utilice los comandos enumerados a continuación para ver los eventos ETW de CLR. Para obtener una descripción de los eventos, vea [Eventos ETW de CLR](clr-etw-events.md).
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Para ver los eventos ETW de CLR mediante Tracerpt
 
@@ -114,4 +114,4 @@ Utilice los comandos enumerados a continuación para ver los eventos ETW de CLR.
 ## <a name="see-also"></a>Vea también
 
 - [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/)
-- [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Eventos ETW en Common Language Runtime](etw-events-in-the-common-language-runtime.md)
