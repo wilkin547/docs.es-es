@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254172"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151847"
 ---
 # <a name="cleartype-registry-settings"></a>Configuración del Registro de ClearType
 En este tema se proporciona información general sobre la configuración del registro de ClearType de Microsoft que usan las aplicaciones de WPF.  
@@ -29,7 +29,7 @@ En este tema se proporciona información general sobre la configuración del reg
 ## <a name="registry-settings"></a>Configuración de registro  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]especifica cuatro valores del registro para controlar las características de ClearType:  
   
-|Parámetro|DESCRIPCIÓN|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |Nivel de ClearType|Describe el nivel de claridad de color de ClearType.|  
 |Nivel de gamma|Describe el nivel del componente de color de píxel de una pantalla.|  
@@ -63,7 +63,7 @@ En este tema se proporciona información general sobre la configuración del reg
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Nivel de gamma  
- El nivel de gamma hace referencia a la relación no lineal entre un valor de píxel y la luminancia. El valor de nivel de gamma debe corresponder a las características físicas de la pantalla; de lo contrario, pueden producirse distorsiones en la salida representada. Por ejemplo, la prueba pueda parecer demasiado ancha o demasiado estrecha, o bien pueden aparecer franjas de color en los bordes de las bandas verticales de los glifos.  
+ El nivel de gamma hace referencia a la relación no lineal entre un valor de píxel y la luminancia. El valor de nivel de gamma debe corresponder a las características físicas de la pantalla; de lo contrario, pueden producirse distorsiones en la salida representada. Por ejemplo, el texto puede aparecer demasiado ancho o demasiado estrecho, o bien pueden aparecer halos de color en los bordes de las raíces verticales de los glifos.  
   
  El nivel de gamma es un valor entero comprendido entre 1000 y 2200. El nivel predeterminado es 1900.  
   
@@ -80,7 +80,7 @@ En este tema se proporciona información general sobre la configuración del reg
 ## <a name="pixel-structure"></a>Estructura de píxeles  
  La estructura de píxeles describe el tipo de píxeles que componen una pantalla. La estructura de píxeles se define como uno de estos tres tipos:  
   
-|Type|Value|DESCRIPCIÓN|  
+|Tipo|Valor|Descripción|  
 |----------|-----------|-----------------|  
 |Plano|0|La pantalla no tiene ninguna estructura de píxeles. Esto significa que los orígenes de la luz de cada color se expanden por igual en el área de píxeles, lo que se conoce como representación en escala de grises. Así es como funciona una pantalla estándar. ClearType nunca se aplica al texto representado.|  
 |RGB|1|La pantalla tiene píxeles que se componen de tres franjas en el orden siguiente: rojo, verde y azul. ClearType se aplica al texto representado.|  

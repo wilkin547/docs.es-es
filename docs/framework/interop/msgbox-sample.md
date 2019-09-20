@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71d7bb4cc85b0388e18cc7304dfa8c7951eab629
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 9469cc5db1ada479e97026cae40b3019ae10c2c6
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894153"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151737"
 ---
 # <a name="msgbox-sample"></a>Ejemplo MsgBox
 En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetros In y cuándo utilizar los campos <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> y <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -30,7 +30,7 @@ En este ejemplo se muestra cómo pasar tipos de cadena por valor como parámetro
        UINT uType);  
     ```  
   
- En este ejemplo, la clase `LibWrap` contiene un prototipo administrado para cada función no administrada a la que se llama desde la clase `MsgBoxSample`. Los métodos de prototipo administrados `MsgBox`, `MsgBox2` y `MsgBox3` tienen declaraciones diferentes para la misma función no administrada.  
+ En este ejemplo, la clase `NativeMethods` contiene un prototipo administrado para cada función no administrada a la que se llama desde la clase `MsgBoxSample`. Los métodos de prototipo administrados `MsgBox`, `MsgBox2` y `MsgBox3` tienen declaraciones diferentes para la misma función no administrada.  
   
  La declaración para `MsgBox2` produce una salida incorrecta en el cuadro de mensaje porque el tipo de caracteres, especificado como ANSI, no corresponde con el punto de entrada `MessageBoxW`, que es el nombre de la función Unicode. La declaración de `MsgBox3` genera una falta de coincidencia entre los campos **EntryPoint**, **CharSet** y **ExactSpelling**. Al llamar a `MsgBox3`, se produce una excepción. Para obtener información detallada sobre los nombres de cadena y la serialización de nombres, vea [Especificar un juego de caracteres](specifying-a-character-set.md).  
   

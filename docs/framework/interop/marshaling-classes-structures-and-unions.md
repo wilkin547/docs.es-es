@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894181"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151756"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
 Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener campos, propiedades y eventos, además de métodos estáticos y no estáticos. Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
   
  En la tabla siguiente se enumeran las opciones de serialización para clases, estructuras y uniones, se describe su uso y se proporciona un vínculo al ejemplo de invocación de la plataforma correspondiente.  
   
-|Tipo|DESCRIPCIÓN|Ejemplo|  
+|Tipo|Descripción|Ejemplo|  
 |----------|-----------------|------------|  
 |Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|SysTime (ejemplo)|  
 |Estructura por valor.|Pasa las estructuras como parámetros In.|Ejemplo Structs|  
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  En todas las estructuras de este ejemplo, el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se aplica para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene prototipos administrados para los métodos `TestStructInStruct`, `TestStructInStruct3` y `TestArrayInStruct` llamados por la clase `App`. Cada prototipo declara un único parámetro, como sigue:  
+ La clase `NativeMethods` contiene prototipos administrados para los métodos `TestStructInStruct`, `TestStructInStruct3` y `TestArrayInStruct` llamados por la clase `App`. Cada prototipo declara un único parámetro, como sigue:  
   
 - `TestStructInStruct` declara una referencia al tipo `MyPerson2` como su parámetro.  
   
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  En este ejemplo, la clase `FindData` contiene un miembro de datos correspondiente para cada elemento de la estructura original y de la estructura insertada. En lugar de dos búferes de caracteres originales, la clase sustituye cadenas. **MarshalAsAttribute** establece el valor de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValTStr**, que se usa para identificar las matrices de caracteres de longitud fija insertadas que aparecen en las estructuras no administradas.  
   
- La clase `LibWrap` contiene un prototipo administrado del método `FindFirstFile`, que pasa la clase `FindData` como un parámetro. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada.  
+ La clase `NativeMethods` contiene un prototipo administrado del método `FindFirstFile`, que pasa la clase `FindData` como un parámetro. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada.  
   
 ### <a name="declaring-prototypes"></a>Declaración de prototipos  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1` y `MyUnion2_2` contienen un tipo de valor (entero) y una cadena, respectivamente. En código administrado, los tipos de valor y los tipos de referencia no pueden superponerse. En este ejemplo se usa la sobrecarga de métodos para permitir que el llamador utilice ambos tipos cuando llama a la misma función no administrada. El diseño de `MyUnion2_1` es explícito y tiene un valor de desplazamiento preciso. Por el contrario, `MyUnion2_2` tiene un diseño secuencial porque no se permiten diseños explícitos con tipos de referencia. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> establece el valor de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValTStr**, que se usa para identificar las matrices de caracteres de longitud fija insertadas que aparecen en la representación no administrada de la unión.  
   
- La clase `LibWrap` contiene los prototipos para los métodos `TestUnion` y `TestUnion2`. `TestUnion2` se sobrecarga para declarar `MyUnion2_1` o `MyUnion2_2` como parámetros.  
+ La clase `NativeMethods` contiene los prototipos para los métodos `TestUnion` y `TestUnion2`. `TestUnion2` se sobrecarga para declarar `MyUnion2_1` o `MyUnion2_2` como parámetros.  
   
 ### <a name="declaring-prototypes"></a>Declaración de prototipos  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  En este ejemplo, la clase `SystemTime` contiene los elementos de la estructura original representados como miembros de clase. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.  
+ La clase `NativeMethods` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.  
   
 ### <a name="code-samples"></a>Ejemplos de código  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI. El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI. `MyUnsafeStruct` es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
   
- La clase `LibWrap` contiene el método de prototipo `TestOutArrayOfStructs` sobrecargado. Si un método declara un puntero como parámetro, la clase se debe marcar con la palabra clave `unsafe`. Puesto que Visual Basic no puede utilizar código no seguro, el método sobrecargado, el modificado unsafe y la estructura `MyUnsafeStruct` no son innecesarios.  
+ La clase `NativeMethods` contiene el método de prototipo `TestOutArrayOfStructs` sobrecargado. Si un método declara un puntero como parámetro, la clase se debe marcar con la palabra clave `unsafe`. Puesto que Visual Basic no puede utilizar código no seguro, el método sobrecargado, el modificado unsafe y la estructura `MyUnsafeStruct` no son innecesarios.  
   
  La clase `App` implementa el método `UsingMarshaling`, que realiza todas las tareas necesarias para pasar la matriz. La matriz se marca con la palabra clave `out` (`ByRef` en Visual Basic) para indicar que los datos se pasan del destinatario al llamador. La implementación usa los siguientes métodos de la clase <xref:System.Runtime.InteropServices.Marshal>:  
   

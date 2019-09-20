@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894169"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151742"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Cálculo de referencias de tipos diferentes de matrices
 Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](copying-and-pinning.md).  
   
  En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.  
   
-|Matriz|DESCRIPCIÓN|  
+|Matriz|Descripción|  
 |-----------|-----------------|  
 |De enteros por valor.|Pasa una matriz de enteros como un parámetro In.|  
 |De enteros por referencia.|Pasa una matriz de enteros como un parámetro In/Out.|  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  En este ejemplo, las estructuras `MyPoint` y `MyPerson` contienen tipos insertados. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene un conjunto de métodos llamados por la clase `App` . Para obtener detalles específicos sobre cómo pasar matrices, consulte los comentarios del ejemplo siguiente. Una matriz, que es un tipo de referencia, se pasa como un parámetro In de forma predeterminada. Para que el llamador reciba los resultados, se deben aplicar **InAttribute** y **OutAttribute** de manera explícita al argumento que contiene la matriz.  
+ La clase `NativeMethods` contiene un conjunto de métodos llamados por la clase `App` . Para obtener detalles específicos sobre cómo pasar matrices, consulte los comentarios del ejemplo siguiente. Una matriz, que es un tipo de referencia, se pasa como un parámetro In de forma predeterminada. Para que el llamador reciba los resultados, se deben aplicar **InAttribute** y **OutAttribute** de manera explícita al argumento que contiene la matriz.  
   
 ### <a name="declaring-prototypes"></a>Declaración de prototipos  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
