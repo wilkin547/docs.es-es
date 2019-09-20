@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104786"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117321"
 ---
 # <a name="get-started-with-c"></a>Introducción a C\#
 
@@ -27,7 +27,7 @@ Los siguientes temas se encuentran disponibles:
 
 - [Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017, la última versión de Visual Studio, permite codificar, compilar, ejecutar, depurar, generar perfiles y publicar aplicaciones para Windows desde un entorno de desarrollo integrado.
+   Visual Studio 2019 permite codificar, compilar, ejecutar, depurar, generar perfiles y publicar aplicaciones para Windows o Mac desde un entorno de desarrollo integrado.
 
    El tema le permite crear y ejecutar una aplicación Hola mundo sencilla y, a continuación, modificarla para ejecutar una aplicación Hola mundo algo más interactiva. Una vez que haya terminado de generar y ejecutar la aplicación, también puede aprender cómo [depurarla](../../core/tutorials/debugging-with-visual-studio.md) y [publicarla](../../core/tutorials/publishing-with-visual-studio.md) para que se pueda ejecutar en cualquier plataforma compatible con .NET Core.
 
