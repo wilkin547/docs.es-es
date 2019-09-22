@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926303"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116563"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -55,7 +55,7 @@ Guarde este archivo. La presencia del archivo obligará a .NET Core a usar la ve
 
 Necesita una aplicación .NET Core que el contenedor de Docker ejecutará. Abra el terminal, cree una carpeta de trabajo si todavía no lo ha hecho y entre en ella. En la carpeta de trabajo, ejecute el comando siguiente para crear un proyecto en un subdirectorio denominado app:
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Antes de agregar la aplicación .NET Core a la imagen de Docker, publíquela. Q
 
 Desde la carpeta de trabajo, entre en la carpeta **app** con el código fuente de ejemplo y ejecute el comando siguiente:
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

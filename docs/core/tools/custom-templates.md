@@ -3,12 +3,12 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849841"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117813"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -24,7 +24,7 @@ Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una
 
 Cuando instala el [SDK de .NET Core](https://dotnet.microsoft.com/download), recibe más de una docena de plantillas integradas para crear proyectos y archivos, incluidas las aplicaciones de consola, bibliotecas de clases, proyectos de prueba unitaria, aplicaciones de ASP.NET Core (incluidos los proyectos [Angular](https://angular.io/) y [React](https://facebook.github.io/react/)), y archivos de configuración. Para enumerar las plantillas integradas, ejecute el comando `dotnet new` con la opción `-l|--list`:
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
@@ -170,7 +170,7 @@ Use el comando [dotnet new -i|--install](dotnet-new.md) para instalar un paquete
 
 Use el identificador del paquete NuGet para instalar un paquete de plantillas.
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 Proporcione la ruta de acceso a un archivo de paquete NuGet *.nupkg*.
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 Las plantillas se pueden instalar desde una carpeta de plantillas, como la carpeta *mytemplate1* del ejemplo anterior. Especifique la ruta de acceso de la carpeta *.template.config*. La ruta de acceso al directorio de plantillas no es necesario que sea absoluto. Sin embargo, se requiere una ruta de acceso absoluta para desinstalar una plantilla que se instala desde una carpeta.
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 El comando de desinstalación, sin ningún otro parámetro, enumerará todas las plantillas instaladas.
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Use el comando [dotnet new -u|--uninstall](dotnet-new.md) para desinstalar un pa
 
 Si el paquete lo instaló una fuente de NuGet o un archivo *.nupkg* directamente, proporcione el identificador.
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 Si el paquete se instaló mediante la especificación de una ruta de acceso a la carpeta *.template.config*, use esa ruta de acceso **absoluta** para desinstalar el paquete. Puede ver la ruta de acceso absoluta de la plantilla en el resultado proporcionado por el comando `dotnet new -u`. Para obtener más información, consulte la sección [Obtención de una lista de plantillas instaladas](#get-a-list-of-installed-templates) anterior.
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 Después de que se instale una plantilla, use la plantilla ejecutando el comando `dotnet new <TEMPLATE>` como lo haría con cualquier otra plantilla preinstalada. También puede especificar [opciones](dotnet-new.md#options) en el comando `dotnet new`, incluidas las opciones específicas de plantilla que ha definido en la configuración de la plantilla. Proporcione el nombre breve de la plantilla directamente al comando:
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

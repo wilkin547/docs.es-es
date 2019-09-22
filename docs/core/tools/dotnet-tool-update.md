@@ -2,30 +2,30 @@
 title: Comando dotnet tool update
 description: El comando dotnet tool update actualiza la herramienta global de .NET Core en su equipo.
 ms.date: 05/29/2018
-ms.openlocfilehash: bc7edada013c118564d44cbe4542dacb76925692
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b10ce39c8b9d4df23243bcf672454a455e34eec1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516648"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117532"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet tool update`: actualiza la [herramienta global de .NET Core](global-tools.md) especificada en el equipo.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```console
+```dotnetcli
 dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <-h|--help>
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>DESCRIPCIÓN
 
 El comando `dotnet tool update` permite actualizar las herramientas globales de .NET Core en su equipo a la versión estable más reciente del paquete. El comando desinstala y vuelve a instalar una herramienta, actualizándola de facto. Para utilizar el comando, especifique que quiere actualizar una herramienta de una instalación en el ámbito de los usuarios con la opción `--global`, o bien especifique una ruta de acceso en la que instalar la herramienta usando para ello la opción `--tool-path`.
 

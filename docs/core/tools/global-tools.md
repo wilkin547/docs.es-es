@@ -4,12 +4,12 @@ description: Información general sobre las herramientas globales de .NET Core y
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202591"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117459"
 ---
 # <a name="net-core-global-tools-overview"></a>Información general sobre las herramientas globales de .NET Core
 
@@ -49,7 +49,7 @@ Si la herramienta está hospedada en NuGet, busque la herramienta para comprobar
 
 Para instalar una herramienta global, use el comando de CLI de .NET Core [dotnet tool install](dotnet-tool-install.md). En el ejemplo siguiente se muestra cómo instalar una herramienta global en la ubicación predeterminada:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ Si no se puede instalar la herramienta, se muestran mensajes de error. Verifique
 
 Si está intentando instalar una versión preliminar o una versión específica de la herramienta, puede especificar el número de versión con el formato siguiente:
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 Si la intención del autor era mostrar la herramienta ante una petición de `dotnet`, puede haberla escrito de manera que se llame como `dotnet <command>`, por ejemplo:
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ Si una aplicación no encuentra el runtime apropiado, no se puede ejecutar y not
 
 Otro problema que puede ocurrir es que una herramienta global que se creó durante una versión preliminar anterior no funcione con los runtime de .NET Core instalados actualmente. Puede usar el comando siguiente para ver los runtime que están instalados en su equipo:
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ El SDK de .NET Core contiene otros comandos que pueden usarse con las herramient
 
 Para saber qué comandos están disponibles con las herramientas globales:
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 La actualización de una herramienta global implica desinstalarla y reinstalarla con la versión estable más reciente. Para actualizar una herramienta global, utilice el comando [dotnet tool update](dotnet-tool-update.md):
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 Para quitar una herramienta global con [dotnet tool uninstall](dotnet-tool-uninstall.md):
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 Para mostrar todas las herramientas globales instaladas actualmente en el equipo, junto con su versión y los comandos, use el comando [dotnet tool list](dotnet-tool-list.md):
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

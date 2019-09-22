@@ -2,12 +2,12 @@
 title: Comando dotnet add package
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
 ms.date: 06/26/2019
-ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105161"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117798"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -17,7 +17,7 @@ ms.locfileid: "70105161"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet add package`: agrega una referencia de paquete a un archivo del proyecto.
 
@@ -96,19 +96,19 @@ El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuge
 
 - Agregar un paquete de NuGet `Newtonsoft.Json` a un proyecto:
 
-  ```console
+  ```dotnetcli
   dotnet add package Newtonsoft.Json
   ```
 
 - Agregar una versión específica de un paquete a un proyecto:
 
-  ```console
+  ```dotnetcli
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
 - Agregar un paquete con un origen de NuGet específico:
 
-  ```console
+  ```dotnetcli
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 

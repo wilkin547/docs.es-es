@@ -4,12 +4,12 @@ description: En este tutorial se explica cómo organizar y probar proyectos .NET
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: a8724c971521b8d65700d61a1ce523c1dfdddf0a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203001"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117375"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organización y prueba de proyectos con la línea de comandos de .NET Core
 
@@ -86,7 +86,7 @@ Cree la siguiente estructura de carpetas con el contenido del archivo indicado:
 
 Ejecute el siguiente comando:
 
-```console
+```dotnetcli
 dotnet run
 ```
 
@@ -107,7 +107,7 @@ Vuelva a la carpeta *src* y cree una carpeta *test* con una carpeta *NewTypesTes
 
 El proyecto de prueba no puede probar actualmente los tipos de `NewTypes` y necesita una referencia del proyecto para el proyecto `NewTypes`. Para agregar una referencia del proyecto, use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 

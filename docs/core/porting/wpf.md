@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512280"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117062"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Procedimiento Procedimiento para portar una aplicación de escritorio WPF a .NET Core
 
@@ -94,7 +94,7 @@ A continuación, tendrá que crear el proyecto **MyWPFCore.csproj** en el direct
 
 Si no desea crear manualmente el archivo de proyecto, puede usar Visual Studio o el SDK de .NET Core para generar el proyecto. Sin embargo, debe eliminar todos los demás archivos generados por la plantilla de proyecto, excepto el archivo de proyecto. Para usar el SDK, ejecute el siguiente comando desde el directorio **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
@@ -111,7 +111,7 @@ SolutionFolder
 
 Tendrá que agregar el proyecto **MyWPFCore.csproj** a **MyApps.sln** con Visual Studio o la CLI de .NET Core desde el directorio **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
@@ -187,7 +187,7 @@ Agregue cada paquete NuGet al que hace referencia el proyecto de .NET Framework 
 
 Lo más probable es que la aplicación WPF de .NET Framework tenga un archivo **packages.config** en el que se incluya una lista de todos los paquetes NuGet a los que hace referencia su proyecto. Puede buscar en esta lista para determinar qué paquetes de NuGet se agregarán al proyecto de .NET Core. Por ejemplo, si el proyecto de .NET Framework hace referencia al paquete NuGet `MahApps.Metro`, agréguelo al proyecto con Visual Studio. También puede agregar la referencia del paquete con la CLI de .NET Core desde el directorio **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
@@ -203,7 +203,7 @@ El comando anterior agregaría las siguientes referencias de NuGet al proyecto *
 
 Si tiene problemas al compilar los proyectos, puede que esté usando algunas API solo de Windows que están disponibles en .NET Framework, pero no en .NET Core. Puede intentar agregar el paquete de NuGet del [paquete de compatibilidad de Windows][compat-pack] al proyecto. Este paquete solo se ejecuta en Windows y agrega aproximadamente 20 000 API de Windows a los proyectos de .NET Core y .NET Standard.
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 

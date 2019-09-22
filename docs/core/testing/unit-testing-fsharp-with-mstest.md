@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: d402d6a8e4d9285f7107d0cacaea9f00e1e9344b
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374175"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117007"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y MSTest
 
@@ -64,7 +64,7 @@ Convierta el directorio *MathService.Tests* en el directorio actual y cree un pr
 
 El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias. `dotnet new` en el paso anterior agregó MSTest y el ejecutor de MSTest. Ahora, agregue la biblioteca de clases `MathService` como otra dependencia al proyecto. Use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 

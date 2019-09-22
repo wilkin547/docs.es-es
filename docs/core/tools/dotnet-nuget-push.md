@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202549"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117496"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -18,13 +18,13 @@ ms.locfileid: "70202549"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet nuget push`: inserta un paquete en el servidor y lo publica.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```console
+```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
@@ -90,37 +90,37 @@ Imprime una corta ayuda para el comando.
 
 * Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica una clave de API:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
 * Inserta *foo.nupkg* en el origen de inserción personalizado `https://customsource`, y especifica una clave de API:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
 * Inserta *foo.nupkg* en el origen de inserción predeterminado:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
 * Inserta *foo.symbols.nupkp* en el origen de símbolos predeterminado:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
 * Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica un tiempo de espera de 360 segundos:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
 * Inserta todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push *.nupkg
   ```
   

@@ -2,24 +2,24 @@
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 ms.date: 06/13/2018
-ms.openlocfilehash: 3f18d6a2851d955d07cecc0cbc4c161cf0ec3e08
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202790"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117588"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet sln`: modifica un archivo de solución de .NET Core.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```console
+```dotnetcli
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -34,7 +34,7 @@ El comando `dotnet sln` proporciona una opción conveniente para agregar, quitar
 
 Para usar el comando `dotnet sln`, debe existir el archivo de solución. Si necesita crear uno, use el comando [dotnet new](dotnet-new.md), como en el ejemplo siguiente:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 

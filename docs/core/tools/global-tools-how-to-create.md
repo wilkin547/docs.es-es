@@ -4,12 +4,12 @@ description: Se describe cómo crear una herramienta global. La herramienta glob
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202770"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117446"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creación de una herramienta global de .NET Core mediante la CLI de .NET Core
 
@@ -23,7 +23,7 @@ En este artículo se usa la CLI de .NET Core para crear y administrar un proyect
 
 Nuestra herramienta de ejemplo será una aplicación de consola que genera un bot de ASCII e imprime un mensaje. En primer lugar, cree una aplicación de consola de .NET Core.
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 Ejecute el proyecto y observe la salida. Pruebe estas variaciones de la línea de comandos para ver resultados diferentes:
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ Aunque `<PackageOutputPath>` es opcional, úselo en este ejemplo. Asegúrese de 
 
 A continuación, cree un paquete NuGet para la aplicación.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ El archivo `botsay.1.0.0.nupkg` se crea en la carpeta identificada por el valor 
 
 Ahora que tiene un paquete, instale la herramienta desde ese paquete:
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Ahora podrá escribir `botsay` y obtener una respuesta de la herramienta.
 
 Cuando haya terminado de experimentar con la herramienta, puede quitarla con el comando siguiente:
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

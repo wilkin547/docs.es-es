@@ -4,12 +4,12 @@ description: Aprenda a usar el almacenamiento de paquetes en tiempo de ejecució
 author: bleroy
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697990"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116544"
 ---
 # <a name="runtime-package-store"></a>Almacenamiento de paquetes en tiempo de ejecución
 
@@ -64,13 +64,13 @@ El siguiente manifiesto de almacenamiento de paquetes de ejemplo (*packages.cspr
 
 Aprovisione el almacenamiento de paquetes en tiempo de ejecución ejecutando `dotnet store` con el manifiesto de almacenamiento de paquetes, el runtime y el marco:
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **Ejemplo**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +94,13 @@ El siguiente archivo *artifact.xml* se genera después de ejecutar el ejemplo an
 
 Si tiene un archivo de manifiesto de destino en disco, especifique la ruta al archivo al publicar su aplicación con el comando [`dotnet publish`](../tools/dotnet-publish.md):
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **Ejemplo**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 
@@ -110,7 +110,7 @@ Especifique varios manifiestos de destino al publicar una aplicación repitiendo
 
 ## <a name="specifying-target-manifests-in-the-project-file"></a>Especificar los manifiestos de destino en el archivo del proyecto
 
-Una alternativa de especificar manifiestos de destino con el comando [`dotnet publish`](../tools/dotnet-publish.md) es especificarlos en el archivo de proyecto como una lista de rutas separadas por punto y coma en una etiqueta **\<TargetManifestFiles>**.
+Una alternativa de especificar manifiestos de destino con el comando [`dotnet publish`](../tools/dotnet-publish.md) es especificarlos en el archivo de proyecto como una lista de rutas separadas por punto y coma en una etiqueta **\<TargetManifestFiles>** .
 
 ```xml
 <PropertyGroup>

@@ -3,13 +3,13 @@ title: Introducción a .NET Core
 description: Encuentre recursos para aprender a crear aplicaciones .NET Core en Windows, Linux y macOS.
 author: thraka
 ms.author: adegeo
-ms.date: 06/27/2018
-ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.date: 09/19/2019
+ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969897"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151503"
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
 
@@ -23,7 +23,7 @@ En primer lugar, descargue e instale el [SDK de .NET Core](https://dotnet.micros
 
 A continuación, abra un terminal como **PowerShell**, **Símbolo del sistema** o **bash**. Escriba los comandos `dotnet` siguientes para crear y ejecutar una aplicación de C#.
 
-```console
+```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```

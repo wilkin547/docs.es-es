@@ -4,12 +4,12 @@ description: Información general sobre la herramienta dotnet-svcutil de WCF de 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969932"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117252"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Herramienta dotnet-svcutil de WCF para .NET Core
 
@@ -64,14 +64,14 @@ Desde una ventana de comandos de Windows, Mac OS o Linux, siga estos pasos:
 
 2. Cree un nuevo proyecto web de C# en ese directorio mediante el comando [`dotnet new`](../tools/dotnet-new.md) del modo siguiente:
 
-    ```console
+    ```dotnetcli
     dotnet new web
     ```
 
 3. Instale el [paquete NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como herramienta CLI:  <!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-    ```console
+    ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
@@ -86,7 +86,7 @@ Desde una ventana de comandos de Windows, Mac OS o Linux, siga estos pasos:
 
     Restaure el paquete _dotnet-svcutil_ mediante el comando [`dotnet restore`](../tools/dotnet-restore.md) de la siguiente manera:
 
-    ```console
+    ```dotnetcli
     dotnet restore
     ```
 
@@ -96,13 +96,13 @@ Desde una ventana de comandos de Windows, Mac OS o Linux, siga estos pasos:
 
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-    ```console
+    ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
     # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-    ```console
+    ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
     ```
 
@@ -114,7 +114,7 @@ El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_
 
 1. Restaure los paquetes de WCF mediante el comando [`dotnet restore`](../tools/dotnet-restore.md) como sigue:
 
-    ```console
+    ```dotnetcli
     dotnet restore
     ```
 
@@ -148,7 +148,7 @@ El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_
 
 5. Ejecute la aplicación con el comando [`dotnet run`](../tools/dotnet-run.md) como sigue:
 
-    ```console
+    ```dotnetcli
     dotnet run
     ```
 
@@ -159,13 +159,13 @@ Debería ver los siguientes resultados: "Hello dotnet-svcutil!"
 Para obtener una descripción detallada de los parámetros de la herramienta `dotnet-svcutil`, invoque la herramienta pasando el parámetro de ayuda del siguiente modo:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
+```dotnetcli
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-```console
+```dotnetcli
 dotnet svcutil --help
 ```
 

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926078"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117402"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Creación de un paquete de plantillas
 
@@ -45,7 +45,7 @@ El paquete que va a crear incluirá la [plantilla de elemento](cli-templates-cre
 
 En el terminal, vaya a la carpeta _working_. Cree un proyecto nuevo y establezca el nombre en `templatepack` y la carpeta de salida en la carpeta actual.
 
-```console
+```dotnetcli
 dotnet new console -n templatepack -o .
 ```
 
@@ -103,7 +103,7 @@ Los tres últimos valores están relacionados con la configuración correcta del
 
 Guarde este archivo y, a continuación, ejecute el comando pack.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 

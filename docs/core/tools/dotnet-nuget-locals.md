@@ -3,12 +3,12 @@ title: Comando dotnet nuget locals
 description: El comando dotnet nuget locals borra o muestra los recursos de NuGet locales, como la caché de solicitudes http, la caché temporal o la carpeta de paquetes global de toda la máquina.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0cf025f91a7582fafc401799cd1d8b933b087535
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 482e841d3b402084eb8c7f2456779f1600a5dd19
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202467"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117631"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -18,13 +18,13 @@ ms.locfileid: "70202467"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet nuget locals`: borra o enumera recursos locales de NuGet.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```console
+```dotnetcli
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
 dotnet nuget locals [-h|--help]
 ```
@@ -66,31 +66,31 @@ El comando `dotnet nuget locals` borra o enumera los recursos locales de NuGet e
 
 * Muestra las rutas de acceso de todos los directorios de caché locales (el directorio de caché http, el directorio de caché de paquetes globales y el directorio de caché temporal):
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals –l all
   ```
 
 * Muestra la ruta de acceso del directorio de la caché de solicitudes http:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --list http-cache
   ```
 
 * Borra todos los archivos de todos los directorios de caché locales (directorio de caché http, directorio de caché de paquetes globales y directorio de caché temporal):
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --clear all
   ```
 
 * Borra todos los archivos del directorio local de la caché de paquetes globales:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c global-packages
   ```
 
 * Borra todos los archivos del directorio local de la caché temporal:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c temp
   ```
 

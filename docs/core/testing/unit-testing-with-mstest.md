@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 1e0625adb5b96d95d8ed8ceed67c5acb134bb2e9
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d9ad21aded45c8955e24b93fd4ddf8a86b989055
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373855"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116187"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Prueba unitaria de C# con MSTest y .NET Core
 
@@ -72,7 +72,7 @@ Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un p
 
 El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias. `dotnet new` en el paso anterior agregó el SDK de MSTest, el marco de prueba de MSTest y el ejecutor de MSTest. Ahora, agregue la biblioteca de clases `PrimeService` como otra dependencia al proyecto. Use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 

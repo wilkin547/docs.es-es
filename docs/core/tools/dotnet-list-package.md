@@ -2,24 +2,24 @@
 title: Comando dotnet list package
 description: El comando "dotnet list package" ofrece una opción práctica para mostrar las referencias de paquete de un proyecto o una solución.
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168023"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117733"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 [!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet list package`: muestra las referencias de paquete de un proyecto o una solución.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
@@ -121,18 +121,18 @@ El archivo de proyecto o solución donde se operará. Si no se especifica, el co
 
 * Muestre las referencias de paquete de un proyecto específico:
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * Muestre las referencias de paquete que tienen versiones más recientes disponibles, incluidas versiones preliminares:
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * Muestre las referencias de paquete para un marco de destino específico:
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```

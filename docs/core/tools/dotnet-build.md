@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
 ms.date: 08/08/2019
-ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988532"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117755"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -17,13 +17,13 @@ ms.locfileid: "70988532"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nombre
+## <a name="name"></a>Name
 
 `dotnet build`: compila un proyecto y todas sus dependencias.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```console
+```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
@@ -122,30 +122,30 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
 * Creación de un proyecto y sus dependencias:
 
-  ```console
+  ```dotnetcli
   dotnet build
   ```
 
 * Creación de un proyecto y sus dependencias mediante la configuración de lanzamiento:
 
-  ```console
+  ```dotnetcli
   dotnet build --configuration Release
   ```
 
 * Compilación de un proyecto y sus dependencias para un tiempo de ejecución concreto (en este ejemplo, Ubuntu 18.04):
 
-  ```console
+  ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Compile el proyecto y use origen del paquete NuGet especificado durante la operación de restauración (SDK de .NET Core 2.0 y versiones posteriores):
 
-  ```console
+  ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
 * Compile el proyecto y establezca la versión 1.2.3.4 como un parámetro de compilación mediante la `-p`opción [ de MSBuild](#msbuild):
 
-  ```console
+  ```dotnetcli
   dotnet build -p:Version=1.2.3.4
   ```

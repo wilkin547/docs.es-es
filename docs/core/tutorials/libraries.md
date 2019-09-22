@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear bibliotecas de .NET Core con
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849484"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117413"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
 
@@ -249,7 +249,7 @@ Es importante poder probar las plataformas. Puede usar [xUnit](https://xunit.git
 
 1. Restaurar paquetes y crear proyectos:
 
-   ```bash
+   ```dotnetcli
    dotnet restore
    dotnet build
    ```
@@ -321,7 +321,7 @@ Esto agregará los tres proyectos anteriores y un archivo de solución que los v
 
 La mejor manera de hacer referencia a un proyecto es usar la CLI de .NET Core para agregar una referencia de proyecto. Desde los directorios del proyecto **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp**, puede ejecutar el siguiente comando:
 
-```console
+```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 

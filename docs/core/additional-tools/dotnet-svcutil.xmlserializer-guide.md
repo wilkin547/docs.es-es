@@ -3,12 +3,12 @@ title: Uso de dotnet-svcutil.xmlserializer en .NET Core
 description: Obtenga información sobre cómo puede usar el paquete NuGet `dotnet-svcutil.xmlserializer` para generar previamente un ensamblado de serialización para los proyectos de .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848966"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117269"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Uso de dotnet-svcutil.xmlserializer en .NET Core
 
@@ -39,7 +39,7 @@ Para usar `dotnet-svcutil.xmlserializer` en una aplicación de consola de .NET C
 
 2. Cree una aplicación de consola de .NET Core como aplicación cliente de WCF que tenga como destino .NET Core 2.1 o versiones posteriores. Por ejemplo, cree una aplicación denominada "MyWCFClient" con el comando siguiente:
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ Para usar `dotnet-svcutil.xmlserializer` en una aplicación de consola de .NET C
 
 3. Ejecute el comando siguiente para agregar una referencia de paquete a `System.ServiceModel.Http`:
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ Para usar `dotnet-svcutil.xmlserializer` en una aplicación de consola de .NET C
 
 5. Agregue una referencia al paquete `dotnet-svcutil.xmlserializer` mediante la ejecución del comando siguiente:
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 
