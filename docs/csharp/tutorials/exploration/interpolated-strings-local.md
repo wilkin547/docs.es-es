@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo usar la característica de interp
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850931"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117842"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato
 
@@ -21,7 +21,7 @@ En este tutorial se supone que cuenta con una máquina que puede usar para el de
 
 Cree un directorio denominado **interpolated**. Conviértalo en el directorio actual y ejecute este comando desde una ventana de consola:
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
