@@ -2,12 +2,12 @@
 title: Implementación del patrón de interruptor
 description: Aprenda a implementar el patrón de interruptor como un sistema complementario en los reintentos HTTP.
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674642"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181926"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco fallos consecutivos al reintentar las solicitudes HTTP. Cuando esto ocurre, el circuito se interrumpirá durante 30 segundos. En ese período, las llamadas no se podrán realizar debido al interruptor del circuito.  La directiva interpreta automáticamente las [excepciones relevantes y los códigos de estado HTTP](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) como errores.  
+En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco fallos consecutivos al reintentar las solicitudes HTTP. Cuando esto ocurre, el circuito se interrumpirá durante 30 segundos. En ese período, las llamadas no se podrán realizar debido al interruptor del circuito.  La directiva interpreta automáticamente las [excepciones relevantes y los códigos de estado HTTP](/aspnet/core/fundamentals/http-requests#handle-transient-faults) como errores.  
 
 Los interruptores también se deben usar para redirigir las solicitudes a una infraestructura de reserva siempre que haya tenido problemas en un recurso concreto implementado en otro entorno que no sea el de la aplicación cliente o del servicio que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo a los microservicios de back-end, pero no a las aplicaciones cliente, estas aplicaciones pueden redirigir a los servicios de reserva. Polly está creando una directiva nueva para automatizar este escenario de [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
 

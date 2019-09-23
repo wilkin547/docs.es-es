@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b86b2706968bf302a8421bcc8e12c32a97102e9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d36a6ee7d524933577928daa9993fba8ce62f6c7
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632118"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116709"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Cómo crear un paquete NuGet con herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -33,7 +33,7 @@ cd src/SuperAwesomeLibrary
 
 Luego, es solo cuestión de un comando desde la línea de comandos:
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -49,7 +49,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 Tenga en cuenta que esto producirá un paquete que se puede depurar. Si quiere compilar un paquete NuGet con archivos binarios de versión comercial, todo lo que tiene que hacer es agregar el modificador `--configuration` (o`-c`) y usar `release` como argumento.
 
-```console
+```dotnetcli
 dotnet pack --configuration release
 ```
 

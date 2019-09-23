@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373776"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181942"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -109,7 +109,7 @@ Para los proyectos de API web, debería valorarse el uso del atributo `[ApiContr
 > - **Filtros**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **Atributo ApiController**
- > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
+ > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Trabajar con dependencias
 

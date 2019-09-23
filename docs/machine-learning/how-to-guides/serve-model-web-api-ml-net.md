@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666662"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182553"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Implementación de un modelo en una ASP.NET Core Web API
 
@@ -105,7 +105,7 @@ Debe crear algunas clases para los datos de entrada y las predicciones. Agregue 
 
 Para realizar una sola predicción, use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Para poder usar [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) en la aplicación, debe crearlo cuando sea necesario. En ese caso, un procedimiento recomendado que se debe considerar es la inserción de dependencias.
 
-En el vínculo siguiente se proporciona más información si quiere aprender sobre la [inserción de dependencias en ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+En el vínculo siguiente se proporciona más información si quiere aprender sobre la [inserción de dependencias en ASP.NET Core](/aspnet/core/fundamentals/dependency-injection).
 
 1. Abra la clase *Startup.cs* y agregue la siguiente instrucción using en la parte superior del archivo:
 
@@ -202,4 +202,4 @@ Una vez que todo está configurado, es momento de probar la aplicación.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Implementación en Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [Implementación en Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

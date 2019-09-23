@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052222"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182468"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedimientos recomendados para cargar ensamblados
 En este artículo se abordan formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros. En él se ofrecen las siguientes recomendaciones:  
@@ -154,7 +154,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
  Si no es posible colocar todos los ensamblados en la ruta de acceso de sondeo, considere alternativas como usar el modelo de complementos de .NET Framework, colocar los ensamblados en la caché global de ensamblados o crear dominios de aplicación.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Considere la posibilidad de usar el modelo de complementos de .NET Framework  
- Si está usando el contexto de origen de carga para implementar complementos, que normalmente no están instalados en la base de la aplicación, use el modelo de complementos de .NET Framework. Este modelo proporciona aislamiento en el nivel del proceso o el dominio de la aplicación sin exigirle que administre los dominios de aplicación usted mismo. Para más información sobre el modelo de complementos, vea [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
+ Si está usando el contexto de origen de carga para implementar complementos, que normalmente no están instalados en la base de la aplicación, use el modelo de complementos de .NET Framework. Este modelo proporciona aislamiento en el nivel del proceso o el dominio de la aplicación sin exigirle que administre los dominios de aplicación usted mismo. Para más información sobre el modelo de complementos, vea [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Considere la posibilidad de usar la caché global de ensamblados  
  Coloque los ensamblados en la caché global de ensamblados para beneficiarse de una ruta de acceso de ensamblado compartida que esté fuera de la base de la aplicación, sin perder las ventajas del contexto de carga predeterminado ni asumir las desventajas de los otros contextos.  

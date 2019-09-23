@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Obtenga información sobre cómo implementar una aplicación con Azure Kubernetes Service.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672632"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182371"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Implementación en Azure Kubernetes Service (AKS)
 
@@ -19,12 +19,12 @@ Estos son los requisitos previos para el uso de AKS:
 - Máquina de desarrollo Windows
   - Modo de desarrollador habilitado en Windows
   - Subsistema de Windows para Linux
-- CLI de Azure instalada en [Windows, Mac o Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+- CLI de Azure instalada en [Windows, Mac o Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 > [!NOTE]
 > Aquí encontrará información completa sobre los siguientes temas:
 >
-> CLI de Azure: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> CLI de Azure: <https://docs.microsoft.com/cli/azure/index>
 >
 > Subsistema Windows para Linux: <https://docs.microsoft.com/windows/wsl/about>
 
