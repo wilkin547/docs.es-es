@@ -12,12 +12,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949133"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182641"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedimiento Crear un complemento que sea una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que es un Windows Presentation Foundation (WPF) que se hospeda en una aplicación independiente de WPF.  
@@ -28,7 +28,7 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
   
  En este ejemplo se resaltan las extensiones de WPF al modelo de complemento .NET Framework que habilitan este escenario y se presupone lo siguiente:  
   
-- Conocimiento del modelo de complementos de .NET Framework, incluidos el desarrollo de canalizaciones, complementos y hosts. Si no está familiarizado con estos conceptos, vea [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para ver un tutorial en el que se muestra la implementación de una canalización, un complemento y una aplicación host [, vea Tutorial: Crear una aplicación](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))extensible.  
+- Conocimiento del modelo de complementos de .NET Framework, incluidos el desarrollo de canalizaciones, complementos y hosts. Si no está familiarizado con estos conceptos, vea [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para ver un tutorial en el que se muestra la implementación de una canalización, un complemento y una aplicación host [, vea Tutorial: Crear una aplicación](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))extensible.  
   
 - Conocimiento de las extensiones de WPF para el modelo de complemento de .NET Framework. Vea [información general sobre los complementos de WPF](wpf-add-ins-overview.md).  
   
@@ -120,5 +120,5 @@ La aplicación host usa el código del modelo de complementos de .NET Framework 
   
 ## <a name="see-also"></a>Vea también
 
-- [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Información general sobre los complementos de WPF](wpf-add-ins-overview.md)

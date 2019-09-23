@@ -3,12 +3,12 @@ title: Introducción a Azure Table Storage mediante F#
 description: Almacene datos estructurados en la nube mediante Azure Table Storage o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929005"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182603"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table Storage y el Table API de Azure Cosmos DB con F\#
 
@@ -192,7 +192,7 @@ Puede eliminar una tabla de una cuenta de almacenamiento. Una tabla que se ha el
 Ahora que ha aprendido los aspectos básicos del almacenamiento de tablas, siga estos vínculos para obtener más información acerca de las tareas de almacenamiento más complejas y el Table API de Azure Cosmos DB.
 
 - [Introducción a Azure Cosmos DB Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Referencia de la biblioteca de cliente de almacenamiento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Referencia de la biblioteca de cliente de almacenamiento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure Storage proveedor de tipos](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog del equipo de Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Configurar cadenas de conexión](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373685"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182628"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Tutorial: Serializar colecciones de tipos estándar
 
 A veces, los controles personalizados exponen una colección como una propiedad. En este tutorial se muestra cómo utilizar <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> la clase para controlar cómo se serializa una colección en tiempo de diseño. Aplicar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor a la propiedad de colección garantiza que se serializará la propiedad.
 
-Para copiar el código de este tema como una sola lista, vea [Cómo: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Para copiar el código de este tema como una sola lista, vea [Cómo: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -45,7 +45,7 @@ El primer paso es crear un control que tenga una colección serializable como un
 
 5. Seleccione el control <xref:System.Windows.Forms.TextBox>. En la ventana **propiedades** , establezca las siguientes propiedades.
 
-    |Propiedad|Cambiar a|
+    |Propiedad.|Cambiar a|
     |--------------|---------------|
     |**Multiline**|`true`|
     |**Anclaje**|<xref:System.Windows.Forms.DockStyle.Fill>|
@@ -129,11 +129,11 @@ Para probar el comportamiento de la serialización del control, lo colocará en 
 
 Una vez que sepa cómo serializar una colección de tipos estándar, considere la posibilidad de integrar los controles personalizados más profundamente en el entorno en tiempo de diseño. En los temas siguientes se describe cómo mejorar la integración en tiempo de diseño de los controles personalizados:
 
-- [Arquitectura en tiempo de diseño](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Arquitectura en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)
 
-- [Información general sobre la serialización del diseñador](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Información general sobre la serialización del diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [Tutorial: Crear un control de Windows Forms que aprovecha las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)
 

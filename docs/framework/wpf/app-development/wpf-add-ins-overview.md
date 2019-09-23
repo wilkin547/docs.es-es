@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401697"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182534"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401697"
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Es necesario estar familiarizado con el modelo de complemento de .NET Framework. Para más información, consulte [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+Es necesario estar familiarizado con el modelo de complemento de .NET Framework. Para más información, consulte [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -66,7 +66,7 @@ Para que se usen los complementos, es preciso que las aplicaciones host los encu
 Por último, el desarrollo de un sólido modelo de complemento es una empresa que no es trivial. Por esta razón, el .NET Framework proporciona una infraestructura para crear modelos de complementos.
 
 > [!NOTE]
-> Para más información acerca de los complementos, consulte [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Para más información acerca de los complementos, consulte [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ El uso <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapte
 
 Para que un complemento devuelva una interfaz de usuario a una aplicación host, se requiere lo siguiente:
 
-1. Se deben crear la aplicación host, el complemento y la canalización, como se describe en la documentación de [extensibilidad y complementos](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) de .NET Framework.
+1. Se deben crear la aplicación host, el complemento y la canalización, como se describe en la documentación de [extensibilidad y complementos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) de .NET Framework.
 
 2. El contrato debe implementar <xref:System.AddIn.Contract.IContract> y, para devolver una interfaz de usuario, el contrato debe declarar un método con un valor devuelto de tipo. <xref:System.AddIn.Contract.INativeHandleContract>
 
@@ -147,7 +147,7 @@ Para obtener un ejemplo que muestra cómo implementar un complemento que devuelv
 
 Cuando un complemento es una interfaz de usuario, se requiere lo siguiente:
 
-1. Se deben crear la aplicación host, el complemento y la canalización, como se describe en la documentación de [extensibilidad y complementos](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) de .NET Framework.
+1. Se deben crear la aplicación host, el complemento y la canalización, como se describe en la documentación de [extensibilidad y complementos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) de .NET Framework.
 
 2. La interfaz de contrato para el complemento debe implementar <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -171,7 +171,7 @@ A menudo, los complementos proporcionan varias interfaces de usuario para que se
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Complementos y aplicaciones del explorador XAML
 
-Hasta ahora, en los ejemplos, la aplicación host ha sido una aplicación independiente instalada. Pero [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] también pueden hospedar complementos, aunque con los siguientes requisitos adicionales de compilación e implementación:
+Hasta ahora, en los ejemplos, la aplicación host ha sido una aplicación independiente instalada. Pero las aplicaciones del explorador XAML (XBAP) también pueden hospedar complementos, aunque con los siguientes requisitos adicionales de compilación e implementación:
 
 - El [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] manifiesto de aplicación debe configurarse de forma especial para descargar la canalización (carpetas y ensamblados) y el ensamblado del complemento en la caché de la aplicación ClickOnce en el [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]equipo cliente, en la misma carpeta que.
 
@@ -311,7 +311,7 @@ De forma predeterminada, cuando se usan varios dominios de aplicación, se carga
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Complementos y extensibilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Dominios de aplicación](../../app-domains/application-domains.md)
 - [Información general sobre .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Convertir objetos en modo remoto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

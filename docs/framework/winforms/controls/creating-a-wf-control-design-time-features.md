@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 53824336e1ae47870e6acffe20340f145caf9b4d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016007"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182595"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Tutorial: Crear un control que aproveche las características en tiempo de diseño
 
@@ -34,7 +34,7 @@ Cuando haya terminado con este tutorial, el control personalizado tendrá un asp
 
 ![Aplicación que muestra una marquesina que indica el texto y los botones de inicio y detención.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-Para obtener la lista de código completa [, consulte Cómo: Cree un control de Windows Forms que aproveche las características](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))en tiempo de diseño.
+Para obtener la lista de código completa [, consulte Cómo: Cree un control de Windows Forms que aproveche las características](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))en tiempo de diseño.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -134,7 +134,7 @@ Al desarrollar una experiencia personalizada en tiempo de diseño, será necesar
 
 1. Haga clic con el `MarqueeControlLibrary` botón derecho en el proyecto y seleccione **propiedades**.
 
-2. En el cuadro de diálogo **páginas de propiedades de MarqueeControlLibrary** , seleccione la página Depurar.
+2. En el cuadro de diálogo **páginas de propiedades de MarqueeControlLibrary** , seleccione la página **depurar** .
 
 3. En la sección **acción de inicio** , seleccione **programa externo de inicio**. Va a depurar una instancia independiente de Visual Studio, por lo que debe hacer![clic en los puntos suspensivos (el botón de puntos suspensivos (..](./media/visual-studio-ellipsis-button.png).) del botón ventana Propiedades de Visual Studio) para buscar el IDE de Visual Studio. El nombre del archivo ejecutable es devenv. exe y, si lo instaló en la ubicación predeterminada, su ruta de acceso es *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE\devenv.exe*.
 

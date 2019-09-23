@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331543"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182568"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic opciones del compilador por categoría
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. A continuación se muestra una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas por categoría funcional.  
@@ -72,14 +72,14 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Promueve las advertencias a errores.|  
 |`-ruleset:<file>`|Especifica un archivo de conjunto de reglas que deshabilita diagnósticos específicos.|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>Ayuda  
   
 |Opción|Propósito|  
 |---|---|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `-help`. No se produce ninguna compilación.|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `-?`. No se produce ninguna compilación.|  
   
-## <a name="language"></a>Idioma  
+## <a name="language"></a>Lenguaje  
   
 |Opción|Propósito|  
 |---|---|  
@@ -129,4 +129,4 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de Visual Basic, por orden alfabético](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Administración de propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Administración de propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
