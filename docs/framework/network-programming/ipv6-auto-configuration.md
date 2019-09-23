@@ -2,12 +2,12 @@
 title: Configuración automática de IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647317"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047816"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuración automática de IPv6
 Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es decir, debería ser posible conectar un nodo en una red IPv6 y hacer que se configurase automáticamente sin intervención humana.  
@@ -26,5 +26,5 @@ Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es
   
 ## <a name="see-also"></a>Vea también
 
-- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+- [Protocolo de Internet versión 6](internet-protocol-version-6.md)
+- [Sockets](sockets.md)

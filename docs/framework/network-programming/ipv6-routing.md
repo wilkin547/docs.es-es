@@ -2,12 +2,12 @@
 title: Enrutamiento de IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: caa1f33f46d13440eab18ba321ebcd8fa4eef129
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647274"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047787"
 ---
 # <a name="ipv6-routing"></a>Enrutamiento de IPv6
 Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a la manera en que se asignaban y todavía se asignan los identificadores de red IPv4, los enrutadores que se encuentran en las redes troncales de Internet deben mantener grandes tablas de enrutamiento. Estos enrutadores deben conocer todas las rutas con el fin de reenviar los paquetes que se dirigen potencialmente a cualquier nodo de Internet. Con su capacidad para agregar direcciones, IPv6 permite el direccionamiento flexible y reduce drásticamente el tamaño de las tablas de enrutamiento. En esta nueva arquitectura de direccionamiento, los enrutadores intermedios deben realizar un seguimiento únicamente de la parte local de su red para reenviar los mensajes de forma adecuada.  
@@ -35,5 +35,5 @@ Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a l
   
 ## <a name="see-also"></a>Vea también
 
-- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+- [Protocolo de Internet versión 6](internet-protocol-version-6.md)
+- [Sockets](sockets.md)

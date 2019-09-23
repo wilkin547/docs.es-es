@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063050"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051953"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework y versiones fuera de banda
 
@@ -55,4 +55,4 @@ Las versiones OOB para componentes básicos de Common Language Runtime (CLR) se 
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../docs/framework/get-started/index.md)
+- [Introducción](index.md)

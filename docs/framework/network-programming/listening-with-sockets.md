@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109959"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047770"
 ---
 # <a name="listening-with-sockets"></a>escuchas con sockets
 Los sockets de escucha o de servidor abren un puerto en la red y esperan a que un cliente se conecte a ese puerto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear un servicio remoto para una red TCP/IP.  
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>Vea también
 
-- [Uso de un socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Uso de un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Uso de sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Cómo: Crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+- [Uso de un socket de servidor sincrónico](using-a-synchronous-server-socket.md)
+- [Uso de un socket de servidor asincrónico](using-an-asynchronous-server-socket.md)
+- [Uso de sockets de cliente](using-client-sockets.md)
+- [Cómo: Crear un socket](how-to-create-a-socket.md)
+- [Sockets](sockets.md)

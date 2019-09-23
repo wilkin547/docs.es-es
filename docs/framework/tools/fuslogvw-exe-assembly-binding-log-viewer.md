@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851244"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044677"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visor de registro de enlaces de ensamblados)
 
@@ -25,7 +25,7 @@ El Visor de registro de enlaces de ensamblados es una herramienta que muestra lo
 > [!IMPORTANT]
 > Debe ejecutar fuslogvw.exe con privilegios de administrador.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7) con credenciales de administrador. Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7) con credenciales de administrador. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -60,7 +60,7 @@ El visor muestra una entrada para cada enlace de ensamblado con errores. Para ca
 
     - Una descripción de las directivas de versión (aplicación, edición o administrador) que se han aplicado.
 
-    - Si se ha encontrado el ensamblado en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md).
+    - Si se ha encontrado el ensamblado en la [caché global de ensamblados](../app-domains/gac.md).
 
     - Una lista de todas las direcciones URL de búsqueda.
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>Registros de enlaces de las imágenes nativas
 
-De forma predeterminada, Fuslogvw.exe registra las solicitudes de enlace de ensamblado normales. También tiene la opción de registrar los enlaces de ensamblado de las imágenes nativas creadas mediante [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).
+De forma predeterminada, Fuslogvw.exe registra las solicitudes de enlace de ensamblado normales. También tiene la opción de registrar los enlaces de ensamblado de las imágenes nativas creadas mediante [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md).
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>Para registrar los enlaces de ensamblado de las imágenes nativas
 
@@ -218,7 +218,7 @@ Puede usar el cuadro de diálogo **Configuración de registro** para realizar la
 2. Escriba la ruta de acceso en el cuadro de texto **Ruta de acceso de registro personalizada**.
 
 > [!NOTE]
-> El [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) usa la memoria caché de Internet Explorer (IE) para almacenar el registro de enlaces. Debido a daños ocasionales en la memoria caché de IE, a veces el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) deja de mostrar los nuevos registros de enlaces en la ventana de visualización. Como consecuencia de estos daños, la infraestructura de enlaces (Fusion) de .NET no puede escribir en el registro de enlaces ni leerlo. (Este problema no aparece si se usa una ruta de acceso de registro personalizada).  Para corregir los daños y permitir que Fusion vuelva a mostrar los registros de enlaces, borre la memoria caché de IE; para ello, elimine los archivos temporales de Internet en el cuadro de diálogo Opciones de Internet de Internet Explorer.
+> El [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) usa la memoria caché de Internet Explorer (IE) para almacenar el registro de enlaces. Debido a daños ocasionales en la memoria caché de IE, a veces el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) deja de mostrar los nuevos registros de enlaces en la ventana de visualización. Como consecuencia de estos daños, la infraestructura de enlaces (Fusion) de .NET no puede escribir en el registro de enlaces ni leerlo. (Este problema no aparece si se usa una ruta de acceso de registro personalizada).  Para corregir los daños y permitir que Fusion vuelva a mostrar los registros de enlaces, borre la memoria caché de IE; para ello, elimine los archivos temporales de Internet en el cuadro de diálogo Opciones de Internet de Internet Explorer.
 >
 > Si la aplicación no administrada hospeda Common Language Runtime mediante la implementación de las interfaces `IHostAssemblyManager` e `IHostAssemblyStore`, las entradas de registro no pueden almacenarse en la memoria caché de wininet.  Para ver las entradas de registro para los host personalizados que implementan estas interfaces, debe especificar otra ruta de acceso de registro.
 
@@ -234,7 +234,7 @@ Puede usar el cuadro de diálogo **Configuración de registro** para realizar la
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.TypeLoadException>
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
-- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Herramientas](index.md)
+- [Caché global de ensamblados](../app-domains/gac.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

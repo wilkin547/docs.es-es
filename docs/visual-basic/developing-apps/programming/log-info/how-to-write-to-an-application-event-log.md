@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366509"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054141"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Procedimiento para escribir en el registro de eventos de una aplicación (Visual Basic)
 
@@ -22,7 +22,7 @@ No se puede escribir en el registro de seguridad. Para poder escribir en el regi
 
 Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>Para agregar y configurar el agente de escucha de registro de eventos
+## <a name="to-add-and-configure-the-event-log-listener"></a>Para agregar y configurar el agente de escucha de registro de eventos
 
 1. Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.
 
@@ -61,11 +61,11 @@ Para ver un registro de eventos, puede usar el **Explorador de servidores** o el
     > [!NOTE]
     > Normalmente, una aplicación escribe solo errores en el registro de eventos. Para obtener información sobre el filtrado de la salida del registro, vea [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-### <a name="to-write-event-information-to-the-event-log"></a>Para escribir información de eventos en el registro de eventos
+## <a name="to-write-event-information-to-the-event-log"></a>Para escribir información de eventos en el registro de eventos
 
-- Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de eventos. Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de eventos. Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-    Después de configurar el agente de escucha de registro de eventos para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.
+Después de configurar el agente de escucha de registro de eventos para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.
 
 ## <a name="see-also"></a>Vea también
 

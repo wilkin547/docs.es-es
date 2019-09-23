@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971843"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044164"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../standard/assembly/strong-named.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
@@ -27,7 +27,7 @@ La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres
 
  Para obtener más información sobre los nombres seguros y los ensamblados con nombre seguro, vea [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md) y [Cómo: Firma de un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).  
   
- La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, utilice el símbolo del sistema para desarrolladores (o el símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, utilice el símbolo del sistema para desarrolladores (o el símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
 > En los equipos de 64 bits, ejecute la versión de Sn.exe de 32 bits mediante Símbolo del sistema para desarrolladores de Visual Studio y la versión de 64 bits mediante el símbolo del sistema de Visual Studio x64 Win64. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*keysize*] *outfile*|Genera una nueva clave <xref:System.Security.Cryptography.RSACryptoServiceProvider> del tamaño especificado y la escribe en el archivo especificado.  En el archivo se escriben tanto una clave pública como una clave privada.<br /><br /> Si no especifica un tamaño de clave y tiene instalado Microsoft Enhanced Cryptographic Provider, se generará una clave de 1.024 bits de forma predeterminada; en caso contrario, se generará una clave de 512 bits.<br /><br /> El parámetro *keysize* admite longitudes de clave de 384 bits a 16 384 bits, en incrementos de 8 bits, si tiene instalado Microsoft Enhanced Cryptographic Provider.  Admite longitudes de clave de 384 bits a 512 bits, en incrementos de 8 bits, si tiene Microsoft Base Cryptographic Provider instalado.|  
 |**-m** [**y** *&#124;* **n**]|Especifica si los contenedores de claves son específicos del equipo o del usuario. Si especifica *y*, los contenedores de claves son específicos del equipo. Si especifica *n*, los contenedores de claves son específicos del usuario.<br /><br /> Si no especifica y ni n, esta opción muestra el valor actual.|  
 |**-o**  *infile* [*outfile*]|Extrae la clave pública de *infile* y la almacena en un archivo .csv. Una coma separa cada byte de la clave pública. Este formato resulta útil para incluir en el código fuente las referencias a las claves en forma de matrices inicializadas. Si no especifica un parámetro *outfile*, esta opción coloca la salida en el Portapapeles. **Nota:**  Esta opción no comprueba si la entrada es únicamente una clave pública. Si `infile` contiene un par de claves con una clave privada, la clave privada también se extrae.|  
-|**-p** *infile outfile* [*hashalg*]|Extrae la clave pública del par de claves de *infile* y la almacena en *outfile*, opcionalmente mediante el algoritmo de RSA especificado por *hashalg*. Esta clave pública se puede usar para retrasar la firma de un ensamblado mediante las opciones **/delaysign+** y **/keyfile** de [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Cuando se retrasa la firma de un ensamblado, únicamente se establece en tiempo de compilación la clave pública, y se reserva espacio en el archivo para la firma que se agregará más tarde, cuando se conozca la clave privada.|  
+|**-p** *infile outfile* [*hashalg*]|Extrae la clave pública del par de claves de *infile* y la almacena en *outfile*, opcionalmente mediante el algoritmo de RSA especificado por *hashalg*. Esta clave pública se puede usar para retrasar la firma de un ensamblado mediante las opciones **/delaysign+** y **/keyfile** de [Assembly Linker (Al.exe)](al-exe-assembly-linker.md). Cuando se retrasa la firma de un ensamblado, únicamente se establece en tiempo de compilación la clave pública, y se reserva espacio en el archivo para la firma que se agregará más tarde, cuando se conozca la clave privada.|  
 |**-pc**  *container* *outfile* [*hashalg*]|Extrae la clave pública del par de claves de *container* y la almacena en *outfile*. Si usa la opción *hashalg*, la clave pública se extrae mediante el algoritmo de RSA.|  
 |**-Pb** [**y** *&#124;* **n**]|Especifica si se impone la directiva de omisión de nombres seguros. Si especifica *y*, no se validan los nombres seguros de los ensamblados de plena confianza cuando se cargan en un objeto <xref:System.AppDomain> de plena confianza. Si especifica *n*, se valida la corrección de los nombres seguros, pero no se valida un nombre seguro específico. <xref:System.Security.Permissions.StrongNameIdentityPermission> no tiene ningún efecto en ensamblados de plena confianza. Debe realizar su propia comprobación para buscar coincidencias con un nombre seguro.<br /><br /> Si no especifica `y` ni `n`, esta opción muestra el valor actual. De manera predeterminada, es `y`. **Nota:**  En equipos de 64 bits, debe establecer este parámetro tanto en las instancias de 32 bits como en las de 64 bits de Sn.exe.|  
 |**-q**[**uiet**]|Especifica el modo silencioso; suprime la presentación de mensajes de operaciones correctas.|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Herramientas](index.md)
+- [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
 - [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

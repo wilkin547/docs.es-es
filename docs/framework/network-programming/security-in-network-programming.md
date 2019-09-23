@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: b57465d4cf89bb38dd5cda70f090f444e52ea819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195858"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047306"
 ---
 # <a name="security-in-network-programming"></a>Seguridad en la programación para redes
 
@@ -28,16 +28,16 @@ Las clases del espacio de nombres <xref:System.Net> de .NET Framework proporcion
 [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](tls.md)  
 Se describen los procedimientos recomendados de TLS con .NET Framework.
  
-[Usar Capa de sockets seguros](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+[Usar Capa de sockets seguros](using-secure-sockets-layer.md)  
 Explica cómo usar conexiones de Capa de sockets seguros (SSL).  
   
-[Autenticación de Internet](../../../docs/framework/network-programming/internet-authentication.md)  
+[Autenticación de Internet](internet-authentication.md)  
 Explica cómo usar métodos de autenticación HTTP para establecer conexiones autenticadas con servidores HTTP.  
   
-[Permisos web y de socket](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+[Permisos web y de socket](web-and-socket-permissions.md)  
 Explica cómo establecer seguridad de acceso de código para las aplicaciones que usan conexiones de Internet.  
   
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)  
+[Programación para redes en .NET Framework](index.md)  
 Presenta las clases de los espacios de nombres <xref:System.Net> y <xref:System.Net.Sockets>.

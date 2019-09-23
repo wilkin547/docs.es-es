@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928420"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051593"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -72,7 +72,7 @@ Para obtener información sobre cómo detectar las actualizaciones instaladas de
 
 3. Busque una entrada DWORD denominada **Release**. Si existe, significa que tiene instalado .NET Framework 4.5 o una versión posterior. Su valor es una clave de versión que corresponde a una versión concreta de .NET Framework. En la ilustración siguiente, por ejemplo, el valor de la entrada **Release** es *378389*, que es la clave de versión de .NET Framework 4.5.
 
-     ![Entrada del Registro para .NET Framework 4.5](media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
+     ![Entrada del Registro para .NET Framework 4.5](./media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
 
 En la tabla siguiente se muestra el valor de DWORD **Release** de sistemas operativos individuales para .NET Framework 4.5 y versiones posteriores.
 
@@ -163,7 +163,7 @@ Para comprobar si hay una versión mínima requerida de .NET Framework diferent
 
     En la siguiente ilustración se muestra la subclave y su entrada **Version** para .NET Framework 3.5.
 
-    ![Entrada del Registro de .NET Framework 3.5. ](media/net-4-and-earlier.png ".NET Framework 3.5 y versiones anteriores")
+    ![Entrada del Registro de .NET Framework 3.5. ](./media/net-4-and-earlier.png ".NET Framework 3.5 y versiones anteriores")
 
 <a name="net_c"></a>
 

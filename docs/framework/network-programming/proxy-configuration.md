@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623057"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047360"
 ---
 # <a name="proxy-configuration"></a>Configuración de proxy
 Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy puede devolver un recurso solicitado de su caché o reenviar la solicitud al servidor donde reside el recurso. Los servidores proxy pueden mejorar el rendimiento de la red al reducir el número de solicitudes enviadas a servidores remotos. Los servidores proxy también pueden usarse para restringir el acceso a los recursos.  
@@ -24,7 +24,7 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
 ## <a name="adaptive-proxies"></a>Servidores proxy adaptables  
  En .NET Framework, los servidores proxy son de dos tipos: adaptable y estático. Los servidores proxy adaptables ajustan su configuración cuando cambia la configuración de red. Por ejemplo, si un usuario de un portátil inicia una conexión de red de acceso telefónico, un proxy adaptable podría reconocer este cambio, descubrir y ejecutar su nuevo script de configuración y ajustar su configuración de manera adecuada.  
   
- Los servidores proxy adaptables se configuran por medio de un script de configuración (vea [Detección automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)). El script genera un conjunto de protocolos de aplicación y un proxy para cada protocolo.  
+ Los servidores proxy adaptables se configuran por medio de un script de configuración (vea [Detección automática de proxy](automatic-proxy-detection.md)). El script genera un conjunto de protocolos de aplicación y un proxy para cada protocolo.  
   
  Los cambios en el entorno de red pueden requerir que el sistema use un nuevo conjunto de servidores proxy. Si una conexión de red deja de funcionar o se inicializa una nueva conexión de red, el sistema debe descubrir el origen adecuado del script de configuración en el nuevo entorno y ejecutar el script nuevo.  
   
@@ -53,7 +53,7 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
   
  En la siguiente tabla se muestran las opciones de configuración de un proxy estático.  
   
-|Parámetro, atributo o propiedad del archivo de configuración|Descripción|  
+|Parámetro, atributo o propiedad del archivo de configuración|DESCRIPCIÓN|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` o <xref:System.Net.WebProxy.Address>|La dirección de proxy que se va a usar.|  
 |`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Controla si se omite el proxy para direcciones locales.|  
@@ -79,4 +79,4 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [Detección automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [Detección automática de proxy](automatic-proxy-detection.md)

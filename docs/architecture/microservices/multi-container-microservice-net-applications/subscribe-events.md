@@ -2,12 +2,12 @@
 title: Suscripción a eventos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
 ms.date: 10/02/2018
-ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675872"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039782"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -301,8 +301,8 @@ Algún procesamiento de mensajes es idempotente de forma inherente. Por ejemplo,
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Honoring message idempotency** (Respeto de la idempotencia de los mensajes) <br/>
-    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
+- **Honoring message idempotency** (Respeto de la idempotencia de los mensajes)  
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Desduplicación de mensajes de eventos de integración
 

@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854004"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052117"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Cómo: Depuración de problemas de activación de CLR
 
-Si detecta problemas al intentar que la aplicación se ejecute con la versión correcta de Common Language Runtime (CLR), puede ver y depurar los registros de activación de CLR. Estos registros pueden resultar muy útiles a la hora de determinar la causa de un problema de activación, cuando la aplicación carga una versión de CLR que no es la prevista o simplemente no lo carga. En [Errores de inicialización de .NET Framework: Administración de la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) se habla de la experiencia de no encontrar ningún CLR para una aplicación.
+Si detecta problemas al intentar que la aplicación se ejecute con la versión correcta de Common Language Runtime (CLR), puede ver y depurar los registros de activación de CLR. Estos registros pueden resultar muy útiles a la hora de determinar la causa de un problema de activación, cuando la aplicación carga una versión de CLR que no es la prevista o simplemente no lo carga. En [Errores de inicialización de .NET Framework: Administración de la experiencia del usuario](initialization-errors-managing-the-user-experience.md) se habla de la experiencia de no encontrar ningún CLR para una aplicación.
 
 El registro de activación de CLR se puede habilitar en todo el sistema mediante una clave del Registro HKEY_LOCAL_MACHINE o una variable de entorno del sistema. Se generará el registro hasta que se quite la entrada del Registro o la variable de entorno. También puede emplear una variable de entorno de proceso local o de usuario para habilitar el registro con un ámbito y una duración diferentes.
 
-Los registros de activación de CLR no se deben confundir con los [registros de enlaces de ensamblados](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que son completamente diferentes.
+Los registros de activación de CLR no se deben confundir con los [registros de enlaces de ensamblados](../tools/fuslogvw-exe-assembly-binding-log-viewer.md), que son completamente diferentes.
 
 ## <a name="to-enable-clr-activation-logging"></a>Para habilitar el registro de activación de CLR
 
@@ -106,13 +106,13 @@ En el siguiente ejemplo de un registro de activación, la información más úti
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **se generó con la versión** es la versión de CLR que se ha usado para crear el binario que se ha proporcionado a un método como [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
+- **se generó con la versión** es la versión de CLR que se ha usado para crear el binario que se ha proporcionado a un método como [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
 
     ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **instalación de características previa petición** hace referencia a la habilitación de .NET Framework 3.5 en Windows 8. Vea [Errores de inicialización de .NET Framework: Administración de la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) para obtener más información sobre este escenario.
+- **instalación de características previa petición** hace referencia a la habilitación de .NET Framework 3.5 en Windows 8. Vea [Errores de inicialización de .NET Framework: Administración de la experiencia del usuario](initialization-errors-managing-the-user-experience.md) para obtener más información sobre este escenario.
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -120,5 +120,5 @@ En el siguiente ejemplo de un registro de activación, la información más úti
 
 ## <a name="see-also"></a>Vea también
 
-- [Implementación](../../../docs/framework/deployment/index.md)
-- [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Implementación](index.md)
+- [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

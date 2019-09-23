@@ -2,12 +2,12 @@
 title: Nombres de mismo nivel e identificadores PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047504"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
 Un nombre de mismo nivel representa un punto de conexión para la comunicación, que puede ser un equipo, un usuario, un grupo, un servicio o cualquier elemento asociado a un elemento del mismo nivel que se puede resolver en una dirección IPv6. El Protocolo de resolución de nombres de mismo nivel (PNRP) toma el nombre de mismo nivel estadísticamente único para la creación de un identificador PNRP, que se usa para identificar a los miembros de la nube.  
@@ -20,7 +20,7 @@ Un nombre de mismo nivel representa un punto de conexión para la comunicación,
  Los nombres de mismo nivel seguros solo se registran por su propietario y están protegidos con criptografía de clave pública. Un nombre seguro de mismo nivel se considera que pertenecen a la entidad de mismo nivel que tiene la clave privada correspondiente. La propiedad se puede probar a través de la dirección de mismo nivel certificada (CPA), que se firma con la clave privada. Un usuario malintencionado no puede falsificar la propiedad de un nombre de mismo nivel sin la clave privada correspondiente.  
   
 ## <a name="pnrp-ids"></a>Identificadores PNRP  
- ![Identificador PNRP](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![Identificador PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  Los identificadores PNRP se componen de lo siguiente:  
   

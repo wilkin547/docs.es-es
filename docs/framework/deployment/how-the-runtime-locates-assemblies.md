@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969120"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052127"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 
@@ -144,7 +144,9 @@ El modo seguro se puede establecer para toda la aplicación o para los ensamblad
 En tercer lugar, el tiempo de ejecución examina el archivo de configuración del equipo. Este archivo, denominado Machine.config, reside en el equipo local, el subdirectorio Config del directorio raíz donde está instalado el tiempo de ejecución. Los administradores pueden usar este archivo para especificar las restricciones de enlace de ensamblado locales de ese equipo. La configuración incluida en el archivo de configuración del equipo tiene prioridad sobre otras opciones de configuración; sin embargo, esto no significa que todos los valores de configuración deban colocarse en este archivo. La versión determinada por el archivo de directiva del administrador es final y no se puede invalidar. Los reemplazos especificados en el archivo Machine.config afectan a todas las aplicaciones. Para obtener más información acerca de los archivos de configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Paso 2: Comprobación de los ensamblados a los que se ha hecho referencia previamente
+
 Si el ensamblado solicitado también se solicitó en llamadas anteriores, Common Language Runtime usa el ensamblado que ya está cargado. Esto puede tener consecuencias cuando se asignan nombres a los ensamblados que componen una aplicación. Para obtener más información sobre los nombres de ensamblados, vea [Nombres de ensamblados](../../standard/assembly/names.md).
 
 Si una solicitud anterior para el ensamblado produjo un error, las solicitudes posteriores para el ensamblado producen un error inmediatamente sin intentar cargar el ensamblado. A partir de .NET Framework versión 2.0, los errores de enlace de ensamblado se almacenan en caché y la información en caché se usa para determinar si se intenta cargar el ensamblado.

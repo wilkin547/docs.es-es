@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228515"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047315"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
 El desarrollo de aplicaciones que se ejecutan en el entorno operativo distribuido de Internet hoy en día requiere un método eficaz y fácil de usar para recuperar datos de recursos de todo tipo. Los protocolos acoplables permiten desarrollar aplicaciones que usan una sola interfaz para recuperar datos de varios protocolos de Internet.  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Cómo: Solicitar una página web y recuperar los resultados como una secuencia](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Cómo: Recuperar una WebResponse específica de protocolo que coincida con una WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Programación para redes en .NET Framework](index.md)
+- [Cómo: Solicitar una página web y recuperar los resultados como una secuencia](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Cómo: Recuperar una WebResponse específica de protocolo que coincida con una WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

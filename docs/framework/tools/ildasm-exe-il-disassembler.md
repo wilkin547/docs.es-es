@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894872"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044657"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
 El Desensamblador de IL es una herramienta complementaria del Ensamblador de IL (*Ilasm.exe*). A partir de un archivo portable ejecutable (PE) que contiene código de lenguaje intermedio (IL), *Ildasm.exe* crea un archivo de texto que se puede usar como entrada para *Ilasm.exe*.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -186,7 +186,7 @@ Un tipo anidado debe ir precedido de su clase contenedora delimitada por una bar
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (Ensamblador de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Herramientas](index.md)
+- [Ilasm.exe (Ensamblador de IL)](ilasm-exe-il-assembler.md)
 - [Proceso de ejecución administrada](../../standard/managed-execution-process.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

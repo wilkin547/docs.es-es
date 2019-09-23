@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894728"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047900"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretar el seguimiento de red
 Cuando está habilitado el seguimiento de red, puede usarlo para capturar las llamadas que la aplicación realiza a diversos miembros de clase <xref:System.Net>. La salida de estas llamadas puede ser similar a los ejemplos siguientes.  
@@ -26,7 +26,7 @@ Cuando está habilitado el seguimiento de red, puede usarlo para capturar las ll
   
  En el ejemplo anterior, [588] es el identificador único del subproceso actual. (4357) y (4387) son marcas de tiempo que indican el número de milisegundos que han transcurrido desde que se ha iniciado la aplicación. Los datos que aparecen después de la marca de tiempo muestran la aplicación que entra y sale del método **Socket.Send**. El objeto que ejecuta el método **Send** tiene como identificador único 33574638. El seguimiento de salida del método incluye el valor devuelto (61 en el ejemplo anterior).  
   
- Los seguimientos de red pueden capturar el tráfico de red que se envía desde la aplicación o que se recibe en esta mediante protocolos de nivel de aplicación, como el Protocolo de transferencia de hipertexto (HTTP). Estos datos se pueden capturar como texto y, opcionalmente, como datos hexadecimales. Los datos hexadecimales están disponibles cuando se especifica **includehex** como valor del atributo **tracemode**. (Para obtener información detallada sobre este atributo, vea [Cómo: Configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)). El seguimiento del ejemplo siguiente se ha generado con **includehex**.  
+ Los seguimientos de red pueden capturar el tráfico de red que se envía desde la aplicación o que se recibe en esta mediante protocolos de nivel de aplicación, como el Protocolo de transferencia de hipertexto (HTTP). Estos datos se pueden capturar como texto y, opcionalmente, como datos hexadecimales. Los datos hexadecimales están disponibles cuando se especifica **includehex** como valor del atributo **tracemode**. (Para obtener información detallada sobre este atributo, vea [Cómo: Configurar el seguimiento de red](how-to-configure-network-tracing.md)). El seguimiento del ejemplo siguiente se ha generado con **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,6 +46,6 @@ Cuando está habilitado el seguimiento de red, puede usarlo para capturar las ll
   
 ## <a name="see-also"></a>Vea también
 
-- [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [Cómo: Configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
-- [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
+- [Habilitar el seguimiento de red](enabling-network-tracing.md)
+- [Cómo: Configurar el seguimiento de red](how-to-configure-network-tracing.md)
+- [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](network-tracing.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664036"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054064"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
@@ -249,7 +249,7 @@ En el procedimiento siguiente se describe cómo establecer un punto de interrupc
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Para establecer un punto de interrupción al final de la recolección de elementos no utilizados
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Para establecer un punto de interrupción al final de la recolección de elementos no utilizados
 
 - En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente:
 
@@ -301,7 +301,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Para determinar si el problema está provocado por la recolección de elementos no utilizados
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Para determinar si el problema está provocado por la recolección de elementos no utilizados
 
 - Examine los dos contadores de rendimiento de memoria siguientes:
 
@@ -313,7 +313,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar si la excepción de memoria insuficiente está administrada
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar si la excepción de memoria insuficiente está administrada
 
 1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):
 
@@ -347,7 +347,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Para determinar cuánta memoria virtual se puede reservar
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Para determinar cuánta memoria virtual se puede reservar
 
 - En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para obtener la mayor región disponible:
 
@@ -381,7 +381,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar si hay suficiente memoria física
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar si hay suficiente memoria física
 
 1. Inicie el Administrador de tareas de Windows.
 
@@ -391,7 +391,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Para determinar cuánta memoria está confirmando el montón administrado
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Para determinar cuánta memoria está confirmando el montón administrado
 
 - Use el contador de rendimiento de memoria `# Total committed bytes` para obtener el número de bytes que el montón administrado está confirmando. El recolector de elementos no utilizados confirma fragmentos de un segmento a medida que son necesarios, no todos al mismo tiempo.
 
@@ -400,7 +400,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Para determinar cuánta memoria reserva el montón administrado
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Para determinar cuánta memoria reserva el montón administrado
 
 - Use el contador de rendimiento de memoria `# Total reserved bytes`.
 
@@ -449,7 +449,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>Para determinar los objetos grandes de la generación 2
+### <a name="to-determine-large-objects-in-generation-2"></a>Para determinar los objetos grandes de la generación 2
 
 - En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:
 
@@ -489,7 +489,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>Para determinar las referencias a objetos
+### <a name="to-determine-references-to-objects"></a>Para determinar las referencias a objetos
 
 - En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar las referencias a objetos:
 
@@ -523,7 +523,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Para determinar si se ha ejecutado un finalizador
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Para determinar si se ha ejecutado un finalizador
 
 - Ejecute un programa de prueba que contenga el código siguiente:
 
@@ -537,7 +537,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar si hay objetos en espera de finalización
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar si hay objetos en espera de finalización
 
 1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:
 
@@ -562,7 +562,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Para determinar la cantidad de espacio disponible en el montón administrado
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Para determinar la cantidad de espacio disponible en el montón administrado
 
 - En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:
 
@@ -639,7 +639,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>Para determinar el número de objetos anclados
+### <a name="to-determine-the-number-of-pinned-objects"></a>Para determinar el número de objetos anclados
 
 - En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:
 
@@ -655,7 +655,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Para determinar la duración de una recolección de elementos no utilizados
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Para determinar la duración de una recolección de elementos no utilizados
 
 - Examine el contador de rendimiento de memoria `% Time in GC`.
 
@@ -743,7 +743,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Para determinar qué desencadenó una recolección de elementos no utilizados
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>Para determinar qué desencadenó una recolección de elementos no utilizados
 
 - En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar todos los subprocesos con sus pilas de llamadas:
 
@@ -822,7 +822,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Para determinar si el uso elevado de CPU está provocado por la recolección de elementos no utilizados
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Para determinar si el uso elevado de CPU está provocado por la recolección de elementos no utilizados
 
 - Correlacione el valor del contador de rendimiento de memoria `% Time in GC` con el tiempo de proceso.
 

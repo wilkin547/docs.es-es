@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917968"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051997"
 ---
 # <a name="overview-of-the-net-framework"></a>Información general acerca de .NET Framework
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917968"
 - Basar toda la comunicación en estándares del sector para asegurar que el código de .NET Framework se puede integrar con otros tipos de código.
 
 > [!NOTE]
-> Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](../../../docs/framework/get-started/index.md).
+> Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](index.md).
 
 .NET Framework consta de dos componentes principales: Common Language Runtime (CLR) y la biblioteca de clases de .NET Framework. Common Language Runtime es el fundamento de .NET Framework. El tiempo de ejecución se puede considerar como un agente que administra el código en tiempo de ejecución y proporciona servicios centrales, como la administración de memoria, la administración de subprocesos y la comunicación remota, al tiempo que aplica una seguridad de tipos estricta y otras formas de especificación del código que promueven su seguridad y solidez. De hecho, el concepto de administración de código es un principio básico del motor en tiempo de ejecución. El código destinado al tiempo de ejecución se denomina código administrado, a diferencia del resto de código, que se conoce como código no administrado. La biblioteca de clases es una colección completa orientada a objetos de tipos reutilizables que se pueden emplear para desarrollar aplicaciones que abarcan desde las tradicionales herramientas de interfaz gráfica de usuario (GUI) o de línea de comandos hasta las aplicaciones basadas en las innovaciones más recientes proporcionadas por ASP.NET, como formularios Web Forms y Servicios web XML.
 
@@ -77,15 +77,15 @@ Como en cualquier biblioteca de clases orientada a objetos, los tipos de .NET Fr
 
 - Aplicaciones de consola. Consulte [Compilar aplicaciones de consola](../../standard/building-console-apps.md).
 
-- Aplicaciones de GUI de Windows (Windows Forms). Consulte [Windows Forms](../../../docs/framework/winforms/index.md).
+- Aplicaciones de GUI de Windows (Windows Forms). Consulte [Windows Forms](../winforms/index.md).
 
-- Aplicaciones de Windows Presentation Foundation (WPF). Vea [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
+- Aplicaciones de Windows Presentation Foundation (WPF). Vea [Windows Presentation Foundation](../wpf/index.md).
 
-- Aplicaciones ASP.NET. Vea [Aplicaciones web con ASP.NET](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- Aplicaciones ASP.NET. Vea [Aplicaciones web con ASP.NET](../develop-web-apps-with-aspnet.md).
 
-- Servicios de Windows. Vea [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- Servicios de Windows. Vea [Introducción a las aplicaciones de servicios de Windows](../windows-services/introduction-to-windows-service-applications.md).
 
-- Aplicaciones orientadas a servicios mediante Windows Communication Foundation (WCF). Vea [Aplicaciones orientadas a servicios con WCF](../../../docs/framework/wcf/index.md).
+- Aplicaciones orientadas a servicios mediante Windows Communication Foundation (WCF). Vea [Aplicaciones orientadas a servicios con WCF](../wcf/index.md).
 
 - Aplicaciones habilitadas para el flujo de trabajo mediante Windows Workflow Foundation (WF). Vea [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
@@ -93,9 +93,9 @@ Las clases de Windows Forms son un conjunto completo de tipos reutilizables que 
 
 ## <a name="see-also"></a>Vea también
 
-- [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)
-- [Guía de instalación](../../../docs/framework/install/index.md)
-- [Guía de desarrollo](../../../docs/framework/development-guide.md)
-- [Herramientas](../../../docs/framework/tools/index.md)
+- [Requisitos del sistema](system-requirements.md)
+- [Guía de instalación](../install/index.md)
+- [Guía de desarrollo](../development-guide.md)
+- [Herramientas](../tools/index.md)
 - [Ejemplos y tutoriales de .NET](../../samples-and-tutorials/index.md)
 - [Biblioteca de clases .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

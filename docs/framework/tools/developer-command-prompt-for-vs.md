@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877060"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044728"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Símbolo del sistema para desarrolladores de Visual Studio
 
@@ -88,9 +88,9 @@ Para un acceso más sencillo, puede agregar el símbolo del sistema para desarro
 
    Se agregará el nuevo elemento de menú y podrá acceder al símbolo del sistema desde el menú **Herramientas**.
 
-   ![Elemento de menú del símbolo del sistema en Visual Studio](media/command-prompt-vs-menu.png)
+   ![Elemento de menú del símbolo del sistema en Visual Studio](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
+- [Herramientas](index.md)
 - [Administrar herramientas externas](/visualstudio/ide/managing-external-tools)

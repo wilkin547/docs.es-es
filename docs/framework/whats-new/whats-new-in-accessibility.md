@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952823"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053722"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novedades de accesibilidad en .NET Framework
 
@@ -169,7 +169,7 @@ En las aplicaciones que tienen como destino .NET Framework 4.7.2 y versiones ant
 
 La siguiente ilustración muestra la información sobre herramientas cuando el usuario ha seleccionado un botón con el teclado.
 
-![Información sobre herramientas cuando el usuario se desplaza a un botón con el teclado](media/tooltip.png)
+![Información sobre herramientas cuando el usuario se desplaza a un botón con el teclado](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ En .NET Framework 4.7.2, WPF agrega la capacidad de dibujar una selección de te
 
 Para usar esta propiedad, simplemente agréguela a su código XAML y use el enlace o el pincel adecuado. La selección de texto resultante tiene este aspecto:
 
-![Información sobre herramientas cuando el usuario se desplaza a un botón con el teclado](media/selectiontextbrush-property.png)
+![Información sobre herramientas cuando el usuario se desplaza a un botón con el teclado](./media/selectiontextbrush-property.png)
 
 Puede combinar el uso de las propiedades `SelectionBrush` y `SelectionTextBrush` para generar cualquier combinación de color de primer plano y de fondo que le parezca adecuada.
 
@@ -482,11 +482,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   Antes: 
 
-  ![Control de expansor con foco antes de las mejoras de accesibilidad](media/expander-before.png)
+  ![Control de expansor con foco antes de las mejoras de accesibilidad](./media/expander-before.png)
 
   Después: 
 
-  ![Control de expansor con foco después de las mejoras de accesibilidad](media/expander-after.png)
+  ![Control de expansor con foco después de las mejoras de accesibilidad](./media/expander-after.png)
 
 - Controles <xref:System.Windows.Controls.CheckBox> y <xref:System.Windows.Controls.RadioButton>
 
@@ -494,11 +494,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   Antes: 
 
-  ![Botón de opción de contraste alto con foco antes de las mejoras de accesibilidad](media/radio-button-before.png)
+  ![Botón de opción de contraste alto con foco antes de las mejoras de accesibilidad](./media/radio-button-before.png)
 
   Después: 
 
-  ![Botón de opción de contraste alto con foco después de las mejoras de accesibilidad](media/radio-button-after.png)
+  ![Botón de opción de contraste alto con foco después de las mejoras de accesibilidad](./media/radio-button-after.png)
 
 - Control <xref:System.Windows.Controls.ComboBox>
 
@@ -506,31 +506,31 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   Antes: 
 
-  ![Borde y texto de cuadro combinado deshabilitado antes de las mejoras de accesibilidad](media/combo-disabled-before.png)
+  ![Borde y texto de cuadro combinado deshabilitado antes de las mejoras de accesibilidad](./media/combo-disabled-before.png)
 
   Después:   
 
-  ![Borde y texto de cuadro combinado deshabilitado después de las mejoras de accesibilidad](media/combo-disabled-after.png)
+  ![Borde y texto de cuadro combinado deshabilitado después de las mejoras de accesibilidad](./media/combo-disabled-after.png)
 
   Además, los botones deshabilitados y con foco usan el color de tema correcto.
 
   Antes:
 
-  ![Colores de tema de botón antes de las mejoras de accesibilidad](media/button-themes-before.png) 
+  ![Colores de tema de botón antes de las mejoras de accesibilidad](./media/button-themes-before.png) 
 
   Después: 
 
-  ![Colores de tema de botón después de las mejoras de accesibilidad](media/button-themes-after.png) 
+  ![Colores de tema de botón después de las mejoras de accesibilidad](./media/button-themes-after.png) 
 
   Por último, en .NET Framework 4.7 y versiones anteriores, al establecer el estilo de un control <xref:System.Windows.Controls.ComboBox> en `Toolbar.ComboBoxStyleKey`, la flecha de lista desplegable se hacía invisible. Este problema se corrigió a partir de .NET Framework 4.7.1. Por ejemplo:
 
   Antes: 
 
-  ![Toolbar.ComboBoxStyleKey antes de las mejoras de accesibilidad](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey antes de las mejoras de accesibilidad](./media/comboboxstylekey-before.png) 
 
   Después: 
 
-  ![Toolbar.ComboBoxStyleKey después de las mejoras de accesibilidad](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey después de las mejoras de accesibilidad](./media/comboboxstylekey-after.png) 
 
 - Control <xref:System.Windows.Controls.DataGrid>
 
@@ -538,21 +538,21 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
   Antes: 
 
-  ![Flecha de indicador de orden antes de las mejoras de accesibilidad](media/sort-indicator-before.png) 
+  ![Flecha de indicador de orden antes de las mejoras de accesibilidad](./media/sort-indicator-before.png) 
 
   Después:   
 
-  ![Flecha de indicador de orden después de las mejoras de accesibilidad](media/sort-indicator-after.png) 
+  ![Flecha de indicador de orden después de las mejoras de accesibilidad](./media/sort-indicator-after.png) 
 
   Además, en .NET Framework 4.7 y versiones anteriores, el estilo de vínculo predeterminado cambiaba a un color incorrecto cuando se colocaba el mouse encima en los modos de contraste alto. Esto se resolvió a partir de .NET Framework 4.7.1. Del mismo modo, a partir de .NET Framework 4.7.1, las columnas de casilla <xref:System.Windows.Controls.DataGrid> usan los colores esperados para comentarios de foco de teclado.
 
   Antes: 
 
-  ![Estilo de vínculo predeterminado de cuadrícula de datos antes de las mejoras de accesibilidad](media/default-link-style-before.png) 
+  ![Estilo de vínculo predeterminado de cuadrícula de datos antes de las mejoras de accesibilidad](./media/default-link-style-before.png) 
 
   Después:    
 
-  ![Estilo de vínculo predeterminado de cuadrícula de datos después de las mejoras de accesibilidad](media/default-link-style-after.png) 
+  ![Estilo de vínculo predeterminado de cuadrícula de datos después de las mejoras de accesibilidad](./media/default-link-style-after.png) 
 
 Para más información sobre las mejoras de accesibilidad de WPF en .NET Framework 4.7.1, vea [Mejoras de accesibilidad en WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -583,11 +583,11 @@ Algunos ejemplos de cambios de contraste alto:
 
   Antes:
 
-  ![Texto deshabilitado antes de las mejoras de accesibilidad](media/wf-disabled-before.png) 
+  ![Texto deshabilitado antes de las mejoras de accesibilidad](./media/wf-disabled-before.png) 
 
   Después:
 
-  ![Texto deshabilitado después de las mejoras de accesibilidad](media/wf-disabled-after.png) 
+  ![Texto deshabilitado después de las mejoras de accesibilidad](./media/wf-disabled-after.png) 
 
 - Mejoras de contraste alto en el cuadro de diálogo de excepción de subproceso.
 

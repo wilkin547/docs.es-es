@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cdc700ecc8195da1b5e0975f00a4dc6785d330
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 35bf61ffd2a85221cdf33a0304765d94770c1eab
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972754"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053986"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedimiento para deshabilitar la característica de omisión de nombres seguros
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nombre seguro no se validan cuando un ensamblado se carga en un objeto <xref:System.AppDomain> de plena confianza, como el objeto <xref:System.AppDomain> predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La única restricción es que el ensamblado debe ser de plena confianza porque su zona es de plena confianza. Dado que el nombre seguro no es un factor determinante en estas condiciones, no hay ninguna razón para que se valide. La omisión de la validación de firmas de nombre seguro proporciona importantes mejoras en el rendimiento.  
@@ -36,7 +36,7 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
   
 1. Abra o cree el archivo de configuración de la aplicación.  
   
-     Para obtener más información sobre este archivo, vea la sección sobre archivos de configuración de la aplicación en [Configuración de aplicaciones](../../framework/configure-apps/index.md).  
+    Para obtener más información sobre este archivo, vea la sección sobre archivos de configuración de la aplicación en [Configuración de aplicaciones](../../framework/configure-apps/index.md).  
   
 2. Agregue la siguiente entrada:  
   

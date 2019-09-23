@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911113"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052100"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -60,7 +60,7 @@ A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo 
   
      Versiones de .NET Framework instaladas: Versión anterior de .NET Framework y .NET Framework 4.  
   
-     Qué se debe hacer: en el [archivo de configuración de la aplicación](../../../docs/framework/configure-apps/index.md) que está en el directorio de la aplicación, use el [elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) y el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) establecidos de esta forma:  
+     Qué se debe hacer: en el [archivo de configuración de la aplicación](../configure-apps/index.md) que está en el directorio de la aplicación, use el [elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md) y el [elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) establecidos de esta forma:  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Vea también
 
-- [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime > Elemento](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [Elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime > Elemento](../configure-apps/file-schema/startup/supportedruntime-element.md)

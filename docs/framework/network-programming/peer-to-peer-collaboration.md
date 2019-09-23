@@ -2,12 +2,12 @@
 title: Colaboración de punto a punto
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623172"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047381"
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
 
@@ -42,4 +42,4 @@ La infraestructura de colaboración de punto a punto es una implementación simp
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.PeerToPeer.Collaboration>
-- [Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+- [Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration](about-the-system-net-peertopeer-collaboration-namespace.md)

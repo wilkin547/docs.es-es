@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911599"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044363"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 
@@ -59,7 +59,7 @@ Para información adicional sobre el uso de Ngen.exe y el servicio de imágenes 
 > [!NOTE]
 > Puede encontrar información sobre la sintaxis de Ngen.exe para las versiones 1.0 y 1.1 de .NET Framework en [Sintaxis heredada del generador de imágenes nativas (Ngen.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100)).
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -392,7 +392,7 @@ Ngen.exe registra esta información cuando genera una imagen nativa. Al ejecutar
 
      Si se modifica la directiva de seguridad del equipo para restringir los permisos previamente concedidos a un ensamblado, la imagen nativa compilada con anterioridad para dicho ensamblado puede dejar de ser válida.
 
-     Para información detallada sobre cómo Common Language Runtime administra la seguridad de acceso del código y sobre cómo usar los permisos, consulte [Seguridad de acceso del código](../../../docs/framework/misc/code-access-security.md).
+     Para información detallada sobre cómo Common Language Runtime administra la seguridad de acceso del código y sobre cómo usar los permisos, consulte [Seguridad de acceso del código](../misc/code-access-security.md).
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Los temas de solución de problemas siguientes permiten ver cuáles son las imá
 
 ### <a name="assembly-binding-log-viewer"></a>Visor de registro de enlaces de ensamblados
 
-Para confirmar que la aplicación está usando imágenes nativas, puede usar [Fuslogvw.exe (Visor de registro de enlaces de ensamblados)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Seleccione **Imágenes nativas** en el cuadro **Categorías de registro** de la ventana del visor de registro de enlaces. Fuslogvw.exe proporciona información sobre el motivo por el que se ha rechazado una imagen nativa.
+Para confirmar que la aplicación está usando imágenes nativas, puede usar [Fuslogvw.exe (Visor de registro de enlaces de ensamblados)](fuslogvw-exe-assembly-binding-log-viewer.md). Seleccione **Imágenes nativas** en el cuadro **Categorías de registro** de la ventana del visor de registro de enlaces. Fuslogvw.exe proporciona información sobre el motivo por el que se ha rechazado una imagen nativa.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>Asistente para la depuración administrada JITCompilationStart
 
-Puede usar el Asistente para la depuración administrada (MDA) [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) para determinar el momento en el que el compilador JIT empieza a compilar una función.
+Puede usar el Asistente para la depuración administrada (MDA) [jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md) para determinar el momento en el que el compilador JIT empieza a compilar una función.
 
 <a name="OptOut"></a>
 
@@ -562,7 +562,7 @@ Para ver ejemplos relacionados con el servicio de imágenes nativas, consulte [S
 
 ## <a name="native-image-task"></a>Tarea de imagen nativa
 
-La tarea de imagen nativa es una tarea de Windows que genera y mantiene imágenes nativas. La tarea de imagen nativa genera y recupera automáticamente imágenes nativas para los escenarios admitidos. También permite que los instaladores usen [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para aplazar la creación y la actualización de las imágenes nativas.
+La tarea de imagen nativa es una tarea de Windows que genera y mantiene imágenes nativas. La tarea de imagen nativa genera y recupera automáticamente imágenes nativas para los escenarios admitidos. También permite que los instaladores usen [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md) para aplazar la creación y la actualización de las imágenes nativas.
 
 La tarea de imagen nativa se registra una vez por cada arquitectura de CPU admitida en un equipo, para permitir la compilación de las aplicaciones que tienen como destino cada arquitectura:
 
@@ -639,7 +639,7 @@ En la versión 2.0 de .NET Framework, la única interacción con el servicio de 
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
+- [Herramientas](index.md)
 - [Proceso de ejecución administrada](../../standard/managed-execution-process.md)
-- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

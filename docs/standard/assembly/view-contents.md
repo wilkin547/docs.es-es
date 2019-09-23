@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972526"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053945"
 ---
 # <a name="how-to-view-assembly-contents"></a>Procedimiento para ver el contenido de un ensamblado
+
 Se puede usar [Ildasm.exe (Desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) para ver la información del Lenguaje intermedio de Microsoft (MSIL) de un archivo. Si el archivo que se examina es un ensamblado, esta información puede incluir los atributos del ensamblado además de referencias a otros módulos y ensamblados. Esta información puede ser útil para determinar si un archivo es un ensamblado o forma parte de uno y si el archivo tiene referencias a otros módulos o ensamblados.  
   
 Para mostrar el contenido de un ensamblado mediante *Ildasm.exe*, escriba **ildasm** \<*nombre del ensamblado*> en un símbolo del sistema. Por ejemplo, el comando siguiente desensambla el ensamblado *Hello.exe*.  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 Para ver la información del manifiesto del ensamblado, haga doble clic en el icono **Manifiesto** en la ventana del desensamblador de MSIL.  
   
 ## <a name="example"></a>Ejemplo  
+
 El ejemplo siguiente se inicia con un programa básico “Hola mundo”. Después de compilar el programa, use *Ildasm.exe* para desensamblar el ensamblado *Hello.exe* y ver el manifiesto del ensamblado.  
 
 ```cpp

@@ -2,12 +2,12 @@
 title: Selección del sistema operativo de destino con contenedores de .NET
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Selección del sistema operativo de destino con contenedores de .NET
 ms.date: 01/07/2019
-ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675762"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039689"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Selección del sistema operativo de destino con contenedores de .NET
 
@@ -27,33 +27,12 @@ También puede crear su propia imagen de Docker en los casos en que quiera utili
 
 Al agregar el nombre de imagen al archivo Dockerfile, puede seleccionar el sistema operativo y la versión dependiendo de la etiqueta que utilice, como en los ejemplos siguientes:
 
-<table>
-<thead>
-<tr class="header">
-<th>Imagen</th>
-<th>Comentarios</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
-<td>Arquitectura múltiple de .NET Core 2.2: es compatible con Linux y Windows Nano Server en función del host de Docker.</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
-<td><p>Arquitectura múltiple de .NET Core 2.2: es compatible con Linux y Windows Nano Server en función del host de Docker.</p>
-<p>La imagen de aspnetcore tiene algunas optimizaciones para ASP.NET Core.</p></td>
-</tr>
-<tr class="even">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
-<td>.NET Core 2.2 solo en tiempo de ejecución en una distribución de Alpine Linux</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
-<td>.NET Core 2.2 solo en tiempo de ejecución en Windows Nano Server (Windows Server 1803)</td>
-</tr>
-</tbody>
-</table>
+| Imagen | Comentarios |
+|-------|----------|
+| mcr.microsoft.com/dotnet/core/runtime:2.2 | Arquitectura múltiple de .NET Core 2.2: es compatible con Linux y Windows Nano Server en función del host de Docker. |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2 | Arquitectura múltiple de .NET Core 2.2: es compatible con Linux y Windows Nano Server en función del host de Docker. <br/> La imagen de aspnetcore tiene algunas optimizaciones para ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | .NET Core 2.2 solo en tiempo de ejecución en una distribución de Alpine Linux |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | .NET Core 2.2 solo en tiempo de ejecución en Windows Nano Server (Windows Server 1803) |
 
 > [!div class="step-by-step"]
 > [Anterior](container-framework-choice-factors.md)

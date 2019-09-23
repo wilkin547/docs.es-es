@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965756"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052181"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurar la redirección del enlace de ensamblados
-De forma predeterminada, las aplicaciones usan los ensamblados de .NET Framework que se incluyen con la versión del tiempo de ejecución usada para compilar la aplicación. Puede usar el atributo **appliesTo** en el elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) de un archivo de configuración de la aplicación para redirigir las referencias de enlace de ensamblados a una versión específica de los ensamblados de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework.  
+De forma predeterminada, las aplicaciones usan los ensamblados de .NET Framework que se incluyen con la versión del tiempo de ejecución usada para compilar la aplicación. Puede usar el atributo **appliesTo** en el elemento [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) de un archivo de configuración de la aplicación para redirigir las referencias de enlace de ensamblados a una versión específica de los ensamblados de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework.  
   
  El atributo **appliesTo** se incorporó en la versión 1.1 de .NET Framework; se pasa por alto en la versión 1.0 de .NET Framework. Esto significa que se aplican todos los elementos **\<assemblyBinding>** cuando se usa la versión 1.0 de .NET Framework, aunque se especifique un atributo **appliesTo**.  
   
@@ -55,8 +55,8 @@ De forma predeterminada, las aplicaciones usan los ensamblados de .NET Framework
 ## <a name="debugging-configuration-file-errors"></a>Depurar errores de archivos de configuración  
  El tiempo de ejecución analiza los archivos de configuración una vez cuando se crea un dominio de aplicación y carga el código en ese dominio de aplicación. Common Language Runtime controla los errores en un archivo de configuración omitiendo la entrada. El tiempo de ejecución omite el archivo de configuración completo si contiene código XML con formato incorrecto. En el caso de código XML no válido, se omiten solo las secciones no válidas.  
   
- Para determinar si un archivo de configuración se está usando, determine si se producen redirecciones de enlace de ensamblados. Use el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ver qué ensamblados se van a cargar. Para ver todos los enlaces de ensamblado, debe establecer una entrada para **ForceLog** en el Registro.  
+ Para determinar si un archivo de configuración se está usando, determine si se producen redirecciones de enlace de ensamblados. Use el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ver qué ensamblados se van a cargar. Para ver todos los enlaces de ensamblado, debe establecer una entrada para **ForceLog** en el Registro.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

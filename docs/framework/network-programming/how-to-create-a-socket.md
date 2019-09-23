@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048384"
 ---
 # <a name="how-to-create-a-socket"></a>Procedimiento para crear un socket
 Para poder usar un socket a fin de comunicarse con dispositivos remotos, es necesario inicializarlo con la información del protocolo y de la dirección de red. El constructor para la clase <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de direcciones, el tipo de socket y el tipo de protocolo que el socket usa para establecer conexiones.  
@@ -62,5 +62,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
 ## <a name="see-also"></a>Vea también
 
-- [Uso de sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Uso de sockets de cliente](using-client-sockets.md)
+- [Escuchas con sockets](listening-with-sockets.md)

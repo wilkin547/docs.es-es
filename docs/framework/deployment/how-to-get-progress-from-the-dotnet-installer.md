@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853962"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052083"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853962"
 
 ## <a name="chainer-sample"></a>Ejemplo de encadenador
 
-El ejemplo de Chainer inicia de forma silenciosa el programa de instalación de .NET Framework 4.5 y realiza un seguimiento de este mientras se muestra el progreso. Este ejemplo es similar al ejemplo de encadenador proporcionado para .NET Framework 4. Sin embargo, también puede evitar reinicios del sistema procesando el cuadro de mensaje para cerrar las aplicaciones de .NET Framework 4. Para más información sobre este cuadro de mensaje, vea [Reducing System Restarts During .NET Framework 4.5 Installations](../../../docs/framework/deployment/reducing-system-restarts.md) (Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5). Puede usar este ejemplo con el programa de instalación de .NET Framework 4; en ese caso, el mensaje simplemente no se envía.
+El ejemplo de Chainer inicia de forma silenciosa el programa de instalación de .NET Framework 4.5 y realiza un seguimiento de este mientras se muestra el progreso. Este ejemplo es similar al ejemplo de encadenador proporcionado para .NET Framework 4. Sin embargo, también puede evitar reinicios del sistema procesando el cuadro de mensaje para cerrar las aplicaciones de .NET Framework 4. Para más información sobre este cuadro de mensaje, vea [Reducing System Restarts During .NET Framework 4.5 Installations](reducing-system-restarts.md) (Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5). Puede usar este ejemplo con el programa de instalación de .NET Framework 4; en ese caso, el mensaje simplemente no se envía.
 
 > [!WARNING]
 > Debe ejecutar el ejemplo como administrador.
@@ -311,5 +311,5 @@ Un servidor normal crea un nombre de archivo MMIO aleatorio, crea el archivo (ta
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Implementación](../../../docs/framework/deployment/index.md)
+- [Guía de implementación para desarrolladores](deployment-guide-for-developers.md)
+- [Implementación](index.md)

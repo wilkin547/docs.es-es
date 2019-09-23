@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129901"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047665"
 ---
 # <a name="location-based-cache-policies"></a>directivas de caché basadas en la ubicación
-Una directiva de caché basada en la ubicación define la actualización de las entradas válidas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Un recurso almacenado en caché es válido si al usarlo no se infringen los requisitos de revalidación especificados por el servidor. Una directiva de caché basada en la ubicación se crea mediante programación con un constructor de clase <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. El tipo de la directiva basada en la ubicación se pasa al constructor con un valor de enumeración <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obtener ejemplos de código en los que se crean directivas de caché basadas en ubicación, vea [Cómo: Establecer en una aplicación una directiva de caché basada en la ubicación](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). En las secciones siguientes se explica cada tipo de directiva de caché basada en la ubicación para recursos del Protocolo de transferencia de hipertexto (http y https).  
+Una directiva de caché basada en la ubicación define la actualización de las entradas válidas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Un recurso almacenado en caché es válido si al usarlo no se infringen los requisitos de revalidación especificados por el servidor. Una directiva de caché basada en la ubicación se crea mediante programación con un constructor de clase <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. El tipo de la directiva basada en la ubicación se pasa al constructor con un valor de enumeración <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obtener ejemplos de código en los que se crean directivas de caché basadas en ubicación, vea [Cómo: Establecer en una aplicación una directiva de caché basada en la ubicación](how-to-set-a-location-based-cache-policy-for-an-application.md). En las secciones siguientes se explica cada tipo de directiva de caché basada en la ubicación para recursos del Protocolo de transferencia de hipertexto (http y https).  
   
 ## <a name="cache-if-available-policy"></a>Directiva de caché si está disponible  
  Si un recurso solicitado válido se encuentra en la caché local, se usa el recurso almacenado en caché; en caso contrario, la solicitud del recurso se envía al servidor. Si el recurso solicitado está disponible en cualquier caché entre el cliente y el servidor, una caché intermedia puede atender a la solicitud.  
@@ -48,8 +48,8 @@ Una directiva de caché basada en la ubicación define la actualización de las 
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)
-- [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)
-- [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Administración de la memoria caché para aplicaciones de red](cache-management-for-network-applications.md)
+- [Directiva de caché](cache-policy.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [Configurar el almacenamiento en caché de las aplicaciones de red](configuring-caching-in-network-applications.md)
+- [Elemento \<requestCaching> (configuración de red)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

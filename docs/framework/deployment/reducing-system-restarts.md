@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379921"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052036"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
-El instalador de .NET Framework 4.5 usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+El instalador de .NET Framework 4.5 usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Razones para reiniciar  
  La instalación de .NET Framework 4.5 requiere un reinicio del sistema si una aplicación de .NET Framework 4 está en uso durante la instalación. Esto se debe a que .NET Framework 4.5 reemplaza los archivos de .NET Framework 4 y requiere que dichos archivos estén disponibles durante la instalación. En muchos casos, el reinicio se puede impedir de forma preventiva detectando y cerrando las aplicaciones de .NET framework 4 que están en uso. Sin embargo, algunas aplicaciones del sistema no se deben cerrar. En estos casos, no puede evitarse el reinicio.  
@@ -29,12 +29,12 @@ El instalador de .NET Framework 4.5 usa el [Administrador de reinicio](https://
  ![Cuadro de diálogo Cerrar aplicación con una lista de los programas en ejecución.](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>Usar un instalador encadenado  
- Si desea redistribuir .NET Framework con la aplicación, pero desea utilizar su propio programa de instalación e interfaz de usuario, puede incluir (encadenar) el proceso de instalación de .NET Framework en el proceso de configuración. Para obtener más información sobre instalaciones encadenadas, vea [Deployment Guide for Developers](../../../docs/framework/deployment/deployment-guide-for-developers.md) (Guía de implementación para desarrolladores). Para reducir reinicios del sistema en instalaciones encadenadas, el instalador de .NET Framework proporciona la lista de aplicaciones que se deben cerrar al programa de instalación. El programa de instalación debe proporcionar esta información al usuario a través de una interfaz de usuario como un cuadro de mensaje, obtener la respuesta del usuario y, a continuación, devolver esta respuesta al instalador de .NET Framework. Para obtener un ejemplo de un instalador encadenado, vea el artículo [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+ Si desea redistribuir .NET Framework con la aplicación, pero desea utilizar su propio programa de instalación e interfaz de usuario, puede incluir (encadenar) el proceso de instalación de .NET Framework en el proceso de configuración. Para obtener más información sobre instalaciones encadenadas, vea [Deployment Guide for Developers](deployment-guide-for-developers.md) (Guía de implementación para desarrolladores). Para reducir reinicios del sistema en instalaciones encadenadas, el instalador de .NET Framework proporciona la lista de aplicaciones que se deben cerrar al programa de instalación. El programa de instalación debe proporcionar esta información al usuario a través de una interfaz de usuario como un cuadro de mensaje, obtener la respuesta del usuario y, a continuación, devolver esta respuesta al instalador de .NET Framework. Para obtener un ejemplo de un instalador encadenado, vea el artículo [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
   
- Si usa un instalador encadenado, pero no desea proporcionar su propio cuadro de mensaje para cerrar las aplicaciones, puede usar las opciones `/showrmui` y `/passive` en la línea de comandos al encadenar el proceso de instalación de .NET Framework. Cuando usa ambas opciones, el programa de instalación muestra el cuadro de mensaje de cierre de aplicaciones, en el caso de que puedan cerrarse para evitar reiniciar el sistema. Este cuadro de mensaje se comporta igual en modo pasivo que con la interfaz de usuario completa. Vea [Deployment Guide for Developers](../../../docs/framework/deployment/deployment-guide-for-developers.md) (Guía de implementación para desarrolladores) para conocer el conjunto completo de opciones de línea de comandos para el paquete redistribuible de .NET Framework.  
+ Si usa un instalador encadenado, pero no desea proporcionar su propio cuadro de mensaje para cerrar las aplicaciones, puede usar las opciones `/showrmui` y `/passive` en la línea de comandos al encadenar el proceso de instalación de .NET Framework. Cuando usa ambas opciones, el programa de instalación muestra el cuadro de mensaje de cierre de aplicaciones, en el caso de que puedan cerrarse para evitar reiniciar el sistema. Este cuadro de mensaje se comporta igual en modo pasivo que con la interfaz de usuario completa. Vea [Deployment Guide for Developers](deployment-guide-for-developers.md) (Guía de implementación para desarrolladores) para conocer el conjunto completo de opciones de línea de comandos para el paquete redistribuible de .NET Framework.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Implementación](../../../docs/framework/deployment/index.md)
-- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Implementación](index.md)
+- [Guía de implementación para desarrolladores](deployment-guide-for-developers.md)
+- [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226578"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048110"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Procedimiento para establecer una directiva de caché para una solicitud
 En el ejemplo siguiente se muestra cómo establecer una directiva de caché para una solicitud. La entrada de ejemplo es un URI como `http://www.contoso.com/`.  
@@ -107,8 +107,8 @@ End Namespace
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)
-- [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)
-- [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Administración de la memoria caché para aplicaciones de red](cache-management-for-network-applications.md)
+- [Directiva de caché](cache-policy.md)
+- [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](location-based-cache-policies.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [Elemento \<requestCaching> (configuración de red)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894620"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044093"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extensión de depuración de SOS)
 
@@ -74,7 +74,7 @@ La extensión de depuración de SOS (SOS.dll) ayuda a depurar programas administ
 |**IP2MD** \<*dirección del código*>|Muestra la estructura `MethodDesc` en la dirección especificada en el código compilado JIT.|
 |`ListNearObj` (`lno`) *\<obj_address>*|Muestra los objetos anteriores y posteriores a la dirección especificada. El comando busca en el montón de recolección de elementos no utilizados la dirección que parece un principio válido de un objeto administrado (basándose en una tabla de métodos válida) y el objeto que sigue a la dirección del argumento.|
 |**MinidumpMode** [**0**] [**1**]|Evita que se ejecuten comandos no seguros al usar un minivolcado.<br /><br /> Pase **0** para deshabilitar esta característica o **1** para habilitarla. De forma predeterminada, el valor **MinidumpMode** se establece en **0**.<br /><br /> Los minivolcados creados con el comando **.dump /m** o **.dump** tienen datos limitados específicos de CLR y permiten ejecutar correctamente un único subconjunto de comandos de SOS. Algunos comandos pueden producir errores inesperados porque no se hayan asignado, o solo se hayan asignado parcialmente, áreas de memoria necesarias. Esta opción le impide ejecutar comandos no seguros en minivolcados.|
-|**Name2EE** \<*nombre del módulo*> \<*tipo o nombre del método*><br /><br /> O bien<br /><br /> **Name2EE** \<*nombre del módulo*> **!** \<*tipo o nombre del método*>|Muestra la estructura `MethodTable` y la estructura `EEClass` para el tipo o método especificado del módulo especificado.<br /><br /> El módulo especificado se debe cargar en el proceso.<br /><br /> Para obtener el nombre de tipo correcto, examine el módulo mediante [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). También puede pasar `*` como parámetro de nombre de módulo para buscar en todos los módulos administrados cargados. El parámetro *nombre del módulo* también puede ser el nombre del depurador de un módulo, como `mscorlib` o `image00400000`.<br /><br /> Este comando admite la sintaxis del depurador de Windows <`module`>`!`<`type`>. El nombre del tipo debe ser completo.|
+|**Name2EE** \<*nombre del módulo*> \<*tipo o nombre del método*><br /><br /> O bien<br /><br /> **Name2EE** \<*nombre del módulo*> **!** \<*tipo o nombre del método*>|Muestra la estructura `MethodTable` y la estructura `EEClass` para el tipo o método especificado del módulo especificado.<br /><br /> El módulo especificado se debe cargar en el proceso.<br /><br /> Para obtener el nombre de tipo correcto, examine el módulo mediante [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md). También puede pasar `*` como parámetro de nombre de módulo para buscar en todos los módulos administrados cargados. El parámetro *nombre del módulo* también puede ser el nombre del depurador de un módulo, como `mscorlib` o `image00400000`.<br /><br /> Este comando admite la sintaxis del depurador de Windows <`module`>`!`<`type`>. El nombre del tipo debe ser completo.|
 |**ObjSize** [\<*dirección del objeto*>] &#124; [ **-aggregate**] [ **-stat**]|Muestra el tamaño del objeto especificado. Si no especifica ningún parámetro, el comando **ObjSize** muestra el tamaño de todos los objetos encontrados en subprocesos administrados, muestra todos los identificadores del recolector de elementos no utilizados del proceso, y suma el tamaño de todos los objetos a los que señalan esos identificadores. El comando **ObjSize** incluye el tamaño de todos los objetos secundarios y del objeto primario.<br /><br /> La opción **-aggregate** se puede usar junto con el argumento **-stat** para obtener una vista detallada de los tipos que todavía disponen de raíz. Mediante el uso de **!dumpheap -stat** y **!objsize -aggregate -stat**, puede determinar qué objetos han dejado de tener raíz y diagnosticar diversos problemas de memoria.|
 |**PrintException** [ **-nested**] [ **-lines**] [\<*dirección del objeto de excepción*>]<br /><br /> O bien<br /><br /> **PE** [ **-nested**] [\<*dirección del objeto de excepción*>]|Muestra y da formato a los campos de cualquier objeto derivado de la clase <xref:System.Exception> en la dirección especificada. Si no especifica una dirección, el comando **PrintException** muestra la última excepción iniciada en el subproceso actual.<br /><br /> La opción **-nested** muestra detalles acerca de los objetos de excepción anidados.<br /><br /> La opción **-lines** muestra información de origen, si está disponible.<br /><br /> Puede usar este comando para dar formato y ver el campo `_stackTrace`, que es una matriz binaria.|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|Muestra variables de entorno del proceso, el tiempo de CPU en modo kernel y estadísticas de uso de la memoria.|
@@ -206,5 +206,5 @@ El comando siguiente muestra información acerca del token de metadatos en la di
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Herramientas](index.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

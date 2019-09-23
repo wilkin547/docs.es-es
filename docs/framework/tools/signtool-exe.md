@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894792"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044197"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |Comando|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|`catdb`|Agrega un archivo de catálogo a una base de datos de catálogo o bien lo quita de esta. Las bases de datos de catálogo se utilizan para la búsqueda automática de archivos de catálogo y se identifican mediante un GUID. Para obtener una lista de las opciones admitidas por el comando `catdb`, vea [Opciones del comando catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
-|`sign`|Firma archivos digitalmente. Las signaturas digitales protegen los archivos contra la manipulación y permiten a los usuarios comprobar el firmante en función de un certificado de firma. Para obtener una lista de las opciones admitidas por el comando `sign`, vea [Opciones del comando sign](../../../docs/framework/tools/signtool-exe.md#sign).|  
-|`Timestamp`|Asigna marcas de tiempo a archivos. Para obtener una lista de las opciones admitidas por el comando `TimeStamp`, vea [Opciones del comando TimeStamp](../../../docs/framework/tools/signtool-exe.md#TimeStamp).|  
-|`Verify`|Comprueba la signatura digital de los archivos; para ello, determina si una autoridad de confianza ha emitido el certificado de firma, si se ha revocado y, opcionalmente, si es válido para una directiva determinada. Para obtener una lista de las opciones admitidas por el comando `Verify`, vea [Opciones del comando Verify](../../../docs/framework/tools/signtool-exe.md#Verify).|  
+|`catdb`|Agrega un archivo de catálogo a una base de datos de catálogo o bien lo quita de esta. Las bases de datos de catálogo se utilizan para la búsqueda automática de archivos de catálogo y se identifican mediante un GUID. Para obtener una lista de las opciones admitidas por el comando `catdb`, vea [Opciones del comando catdb](signtool-exe.md#catdb).|  
+|`sign`|Firma archivos digitalmente. Las signaturas digitales protegen los archivos contra la manipulación y permiten a los usuarios comprobar el firmante en función de un certificado de firma. Para obtener una lista de las opciones admitidas por el comando `sign`, vea [Opciones del comando sign](signtool-exe.md#sign).|  
+|`Timestamp`|Asigna marcas de tiempo a archivos. Para obtener una lista de las opciones admitidas por el comando `TimeStamp`, vea [Opciones del comando TimeStamp](signtool-exe.md#TimeStamp).|  
+|`Verify`|Comprueba la signatura digital de los archivos; para ello, determina si una autoridad de confianza ha emitido el certificado de firma, si se ha revocado y, opcionalmente, si es válido para una directiva determinada. Para obtener una lista de las opciones admitidas por el comando `Verify`, vea [Opciones del comando Verify](signtool-exe.md#Verify).|  
   
  Las opciones siguientes se aplican a todos los comandos de la herramienta Firmar.  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Herramientas](index.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

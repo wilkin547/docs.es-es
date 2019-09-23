@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894574"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043901"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
-El Editor de recursos para localización de Windows, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Resources in Desktop Apps](../../../docs/framework/resources/index.md) (Recursos de aplicaciones de escritorio).
+El Editor de recursos para localización de Windows, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Resources in Desktop Apps](../resources/index.md) (Recursos de aplicaciones de escritorio).
 
-Winres.exe se instala con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Winres.exe se instala con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,7 +55,7 @@ El estado de los elementos de la interfaz de usuario de un formulario de un proy
 
 Vea también [Organización jerárquica de recursos para la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) u [Organización jerárquica de recursos para la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
-Winres.exe no puede convertir un archivo .resx en el archivo .resources correspondiente; en su lugar, utilice la herramienta Resgen.exe. Para obtener más información sobre Resgen.exe, vea [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) (Resgen.exe (Generador de archivos de recursos)).
+Winres.exe no puede convertir un archivo .resx en el archivo .resources correspondiente; en su lugar, utilice la herramienta Resgen.exe. Para obtener más información sobre Resgen.exe, vea [Resgen.exe (Resource File Generator)](resgen-exe-resource-file-generator.md) (Resgen.exe (Generador de archivos de recursos)).
 
 Winres.exe es una aplicación gráfica que vuelve a crear una versión en tiempo de diseño de un formulario de Windows Forms a partir del archivo de recursos, sin tener acceso al código fuente. Winres.exe hospeda el **Diseñador de Windows Forms** y la ventana **Propiedades** de Visual Studio. Estas características permiten la edición visual de archivos .resources o .resx que contengan un formulario de Windows Forms. Generalmente, los localizadores utilizan Winres.exe para editar etiquetas de control y ajustar la ubicación y el tamaño de los mismos a fin de organizar las etiquetas según la referencia cultural de destino.
 
@@ -76,7 +76,7 @@ Para adaptar mediante Winres.exe, primero se debe desarrollar una aplicación co
 > [!NOTE]
 > Winres.exe no se puede utilizar para editar el archivo de recursos predeterminado. Winres.exe interpreta todas las propiedades cambiadas como propiedades adaptadas y las guarda en el archivo de recursos de la referencia cultural de destino.
 
-Las versiones finales de los archivos de recursos de referencia cultural se pueden utilizar para crear versiones localizadas de la aplicación. Para obtener más información, vea [Resources in Desktop Apps](../../../docs/framework/resources/index.md) (Recursos de aplicaciones de escritorio).
+Las versiones finales de los archivos de recursos de referencia cultural se pueden utilizar para crear versiones localizadas de la aplicación. Para obtener más información, vea [Resources in Desktop Apps](../resources/index.md) (Recursos de aplicaciones de escritorio).
 
 Winres.exe incluye las siguientes características y funciones:
 
@@ -127,7 +127,7 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
     ```
 
     > [!NOTE]
-    > Si el formulario cuyos recursos va a editar es un formulario heredado, tanto el ensamblado que contiene el formulario heredado como el que contiene el formulario que hereda (derivado) deben estar registrados en la caché global de ensamblados (GAC), o deben residir en el mismo directorio que WinRes.exe. Para obtener más información sobre cómo instalar componentes de .NET Framework en la caché global de ensamblados, vea [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) (Caché global de ensamblados).
+    > Si el formulario cuyos recursos va a editar es un formulario heredado, tanto el ensamblado que contiene el formulario heredado como el que contiene el formulario que hereda (derivado) deben estar registrados en la caché global de ensamblados (GAC), o deben residir en el mismo directorio que WinRes.exe. Para obtener más información sobre cómo instalar componentes de .NET Framework en la caché global de ensamblados, vea [Global Assembly Cache](../app-domains/gac.md) (Caché global de ensamblados).
 
 3. Seleccione los controles en el formulario y cambie la propiedad <xref:System.Windows.Forms.Control.Text%2A> y otras propiedades para reflejar la referencia cultural adaptada y su lenguaje. Desplace o cambie el tamaño de los controles según sea necesario para que quepa el texto adaptado.
 
@@ -135,7 +135,7 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
 
 5. Seleccione la referencia cultural adecuada y el modo de archivo y haga clic en **Aceptar**.
 
-   La herramienta guardará el archivo con la convención de nomenclatura que el motor en tiempo de ejecución espera para los archivos de recursos adaptados. Por ejemplo, si adapta `TestApp.resources` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resources`. Si adapta `TestApp.resx` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resx`. Para obtener más información sobre las convenciones de nomenclatura de recursos, vea [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos). Para obtener una lista de los nombres de referencias culturales predefinidos que usa el tiempo de ejecución, vea la clase <xref:System.Globalization.CultureInfo>.
+   La herramienta guardará el archivo con la convención de nomenclatura que el motor en tiempo de ejecución espera para los archivos de recursos adaptados. Por ejemplo, si adapta `TestApp.resources` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resources`. Si adapta `TestApp.resx` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resx`. Para obtener más información sobre las convenciones de nomenclatura de recursos, vea [Packaging and Deploying Resources](../resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos). Para obtener una lista de los nombres de referencias culturales predefinidos que usa el tiempo de ejecución, vea la clase <xref:System.Globalization.CultureInfo>.
 
 ## <a name="see-also"></a>Vea también
 
@@ -144,6 +144,6 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
+- [Herramientas](index.md)
+- [Recursos de aplicaciones de escritorio](../resources/index.md)
 - [Globalización y localización](../../standard/globalization-localization/index.md)

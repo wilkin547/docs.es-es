@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072346"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047401"
 ---
 # <a name="programming-pluggable-protocols"></a>programar protocolos acoplables
 Las clases abstractas <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> proporcionan la base para los protocolos conectables. Al derivar clases específicas del protocolo de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, una aplicación puede solicitar datos desde un recurso de Internet y leer la respuesta sin especificar el protocolo que se está usando.  
@@ -33,7 +33,7 @@ Las clases abstractas <xref:System.Net.WebRequest> y <xref:System.Net.WebRespons
   
 ## <a name="see-also"></a>Vea también
 
-- [Derivar de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [Derivar de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Cómo: Convertir un elemento WebRequest a propiedades específicas del protocolo de acceso](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Derivar de WebRequest](deriving-from-webrequest.md)
+- [Derivar de WebResponse](deriving-from-webresponse.md)
+- [Programación para redes en .NET Framework](index.md)
+- [Cómo: Convertir un elemento WebRequest a propiedades específicas del protocolo de acceso](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

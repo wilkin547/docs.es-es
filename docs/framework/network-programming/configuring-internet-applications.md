@@ -21,17 +21,17 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133807"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048631"
 ---
 # <a name="configuring-internet-applications"></a>Configuración de aplicaciones de Internet
-El elemento de configuración [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
+El elemento de configuración [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
   
- El [Elemento \<defaultProxy> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) define el servidor proxy devuelto por la clase `GlobalProxySelection`. Cualquier elemento <xref:System.Net.HttpWebRequest> que no tenga su propia propiedad <xref:System.Net.HttpWebRequest.Proxy%2A> establecida en un valor específico, usa el proxy predeterminado. Además de establecer la dirección de proxy, puede crear una lista de direcciones de servidor que no vayan a usar el proxy y puede indicar que no se debería usar el proxy para direcciones locales.  
+ El [Elemento \<defaultProxy> (configuración de red)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) define el servidor proxy devuelto por la clase `GlobalProxySelection`. Cualquier elemento <xref:System.Net.HttpWebRequest> que no tenga su propia propiedad <xref:System.Net.HttpWebRequest.Proxy%2A> establecida en un valor específico, usa el proxy predeterminado. Además de establecer la dirección de proxy, puede crear una lista de direcciones de servidor que no vayan a usar el proxy y puede indicar que no se debería usar el proxy para direcciones locales.  
   
  Es importante tener en cuenta que la configuración de Microsoft Internet Explorer se combina con los valores de configuración, que tienen preferencia.  
   
@@ -54,7 +54,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Use el [Elemento \<connectionManagement> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar el número de conexiones persistentes que pueden realizarse a un servidor concreto o a todos los demás servidores. En el ejemplo siguiente se configura la aplicación para que use dos conexiones persistentes al servidor `www.contoso.com`, cuatro conexiones persistentes al servidor con la dirección IP 192.168.1.2 y una conexión persistente a todos los demás servidores.  
+ Use el [Elemento \<connectionManagement> (configuración de red)](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar el número de conexiones persistentes que pueden realizarse a un servidor concreto o a todos los demás servidores. En el ejemplo siguiente se configura la aplicación para que use dos conexiones persistentes al servidor `www.contoso.com`, cuatro conexiones persistentes al servidor con la dirección IP 192.168.1.2 y una conexión persistente a todos los demás servidores.  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Los módulos de autenticación personalizados se configuran con el [Elemento \<authenticationModules> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md). Los módulos de autenticación personalizados deben implementar la interfaz <xref:System.Net.IAuthenticationModule>.  
+ Los módulos de autenticación personalizados se configuran con el [Elemento \<authenticationModules> (configuración de red)](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md). Los módulos de autenticación personalizados deben implementar la interfaz <xref:System.Net.IAuthenticationModule>.  
   
  En el ejemplo siguiente se configura un módulo de autenticación personalizado.  
   
@@ -82,7 +82,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Puede usar el [Elemento \<webRequestModules> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) para configurar la aplicación de modo que use módulos personalizados específicos del protocolo para solicitar información de recursos de Internet. Los módulos especificados deben implementar la interfaz <xref:System.Net.IWebRequestCreate>. Puede invalidar los módulos predeterminados HTTP, HTTPS y de solicitud de archivos si especifica el módulo personalizado en el archivo de configuración, como en el ejemplo siguiente.  
+ Puede usar el [Elemento \<webRequestModules> (configuración de red)](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) para configurar la aplicación de modo que use módulos personalizados específicos del protocolo para solicitar información de recursos de Internet. Los módulos especificados deben implementar la interfaz <xref:System.Net.IWebRequestCreate>. Puede invalidar los módulos predeterminados HTTP, HTTPS y de solicitud de archivos si especifica el módulo personalizado en el archivo de configuración, como en el ejemplo siguiente.  
   
 ```xml  
 <configuration>  
@@ -99,6 +99,6 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [Programación para redes en .NET Framework](index.md)
+- [Esquema de la configuración de red](../configure-apps/file-schema/network/index.md)
+- [Elemento \<system.Net> (configuración de red)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

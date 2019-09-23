@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894841"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044406"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 
-La herramienta de optimización guiada por perfiles administrados (Mpgo.exe) es una herramienta de línea de comandos que usa escenarios de usuario final comunes para optimizar los ensamblados de imagen nativa creados por el [Generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Esta herramienta permite ejecutar escenarios de aprendizaje que generan datos de perfil. El [Generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa estos datos para optimizar los ensamblados de aplicación de imagen nativa generados. Un escenario de aprendizaje es una ejecución de prueba de un uso previsto de la aplicación. Mpgo.exe está disponible en Visual Studio Ultimate 2012 y versiones posteriores. A partir de Visual Studio 2013, también puede usar Mpgo.exe para optimizar las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+La herramienta de optimización guiada por perfiles administrados (Mpgo.exe) es una herramienta de línea de comandos que usa escenarios de usuario final comunes para optimizar los ensamblados de imagen nativa creados por el [Generador de imágenes nativas (Ngen.exe)](ngen-exe-native-image-generator.md). Esta herramienta permite ejecutar escenarios de aprendizaje que generan datos de perfil. El [Generador de imágenes nativas (Ngen.exe)](ngen-exe-native-image-generator.md) usa estos datos para optimizar los ensamblados de aplicación de imagen nativa generados. Un escenario de aprendizaje es una ejecución de prueba de un uso previsto de la aplicación. Mpgo.exe está disponible en Visual Studio Ultimate 2012 y versiones posteriores. A partir de Visual Studio 2013, también puede usar Mpgo.exe para optimizar las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 La optimización guiada por perfiles mejora el tiempo de inicio de la aplicación, el uso de la memoria (tamaño del espacio de trabajo) y el rendimiento mediante la recopilación de datos procedentes de escenarios de aprendizaje y el uso de dichos datos para optimizar el diseño de las imágenes nativas.  
   
 Si encuentra problemas de rendimiento relacionados con el tiempo de inicio y el tamaño del espacio de trabajo de los ensamblados de Lenguaje intermedio (IL), le recomendamos que primero use Ngen.exe para eliminar los costos de compilación Just-In-Time (JIT) y facilitar el uso compartido de código. Si necesita mejoras adicionales, después puede usar Mpgo.exe para optimizar aún más la aplicación. Puede usar los datos de rendimiento de los ensamblados de imagen nativa no optimizados como línea base para evaluar las mejoras de rendimiento. Mpgo.exe puede agilizar los tiempos de inicio en frío y reducir el tamaño del espacio de trabajo. Mpgo.exe agrega información a los ensamblados de IL que Ngen.exe usa para crear ensamblados de imagen nativa optimizados. Para obtener más información, vea la entrada sobre cómo [mejorar el rendimiento de inicio de las aplicaciones de escritorio](https://go.microsoft.com/fwlink/p/?LinkId=248943) del blog de .NET.  
   
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7) con credenciales de administrador y escriba lo siguiente en dicho símbolo. Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7) con credenciales de administrador y escriba lo siguiente en dicho símbolo. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
   
 Para aplicaciones de escritorio:  
   
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>Vea también
 
-- [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)
 - [Improving Launch Performance for your Desktop Applications (Mejorar el rendimiento de inicio de las aplicaciones de escritorio)](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [Información general de las mejoras de rendimiento en .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)

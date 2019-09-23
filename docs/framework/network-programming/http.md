@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170604"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048009"
 ---
 # <a name="http"></a>HTTP
 .NET Framework proporciona compatibilidad completa para el protocolo HTTP, que constituye la mayor parte de todo el tráfico de Internet, con las clases <xref:System.Net.HttpWebRequest> y <xref:System.Net.HttpWebResponse>. Estas clases, derivadas de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, se devuelven de manera predeterminada siempre que el método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> detecte un URI que comience por "http" o "https". En la mayoría de los casos, las clases **WebRequest** y **WebResponse** proporcionan todo lo necesario para realizar la solicitud, pero si necesita tener acceso a las características específicas de HTTP expuestas como propiedades, puede convertir estas clases en **HttpWebRequest** o **HttpWebResponse**.  
@@ -33,6 +33,6 @@ ms.locfileid: "59170604"
   
 ## <a name="see-also"></a>Vea también
 
-- [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Cómo: Acceder a propiedades específicas de HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Acceso a Internet a través de un proxy](accessing-the-internet-through-a-proxy.md)
+- [Usar protocolos de aplicaciones](using-application-protocols.md)
+- [Cómo: Acceder a propiedades específicas de HTTP](how-to-access-http-specific-properties.md)

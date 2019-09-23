@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117257"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047035"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Usar un socket de servidor sincrónico
 Los sockets de servidor sincrónico suspenden la ejecución de la aplicación hasta que se recibe una solicitud de conexión en el socket. Los sockets de servidor sincrónico no son adecuados para las aplicaciones que hacen un uso intensivo de la red durante su funcionamiento, pero pueden ser adecuados para las aplicaciones de red simple.  
@@ -77,6 +77,6 @@ handler.Close();
   
 ## <a name="see-also"></a>Vea también
 
-- [Uso de un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Ejemplo de sockets de servidor sincrónicos](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Uso de un socket de servidor asincrónico](using-an-asynchronous-server-socket.md)
+- [Ejemplo de sockets de servidor sincrónicos](synchronous-server-socket-example.md)
+- [Escuchas con sockets](listening-with-sockets.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614102"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052138"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
 Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  
@@ -60,9 +60,9 @@ Siga estas instrucciones generales para crear aplicaciones administradas o compo
   
  El runtime usa la versión del ensamblado para el enlace de ensamblados. El runtime considera ensamblados diferentes a dos ensamblados idénticos con un número de versión distinto.  
   
- La [herramienta de caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite reemplazar un ensamblado solo cuando el número de versión del archivo es más reciente. Generalmente, el programa de instalación no instala encima de un ensamblado a menos que el número de versión del ensamblado sea mayor.  
+ La [herramienta de caché global de ensamblados (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) permite reemplazar un ensamblado solo cuando el número de versión del archivo es más reciente. Generalmente, el programa de instalación no instala encima de un ensamblado a menos que el número de versión del ensamblado sea mayor.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)
-- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Ejecución en paralelo](side-by-side-execution.md)
+- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

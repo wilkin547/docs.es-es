@@ -6,12 +6,12 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199596"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048877"
 ---
 # <a name="cache-management-for-network-applications"></a>Administración de la memoria caché para aplicaciones de red
 Este tema y los temas secundarios relacionados describen el almacenamiento en caché de los recursos obtenidos mediante las clases <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> y <xref:System.Net.FtpWebRequest>.  
@@ -23,16 +23,16 @@ Este tema y los temas secundarios relacionados describen el almacenamiento en ca
  Por motivos de seguridad, el almacenamiento en caché **no** se recomienda para escenarios de nivel intermedio.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)  
+ [Directiva de caché](cache-policy.md)  
  Explica qué es una directiva de caché y cómo definirla.  
   
- [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](location-based-cache-policies.md)  
  Define cada tipo de directiva de caché basada en la ubicación disponible para recursos de protocolo de transferencia de hipertexto (http y https).  
   
- [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)  
+ [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)  
  Describe los criterios que pueden usarse para personalizar una directiva de caché basada en el tiempo.  
   
- [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Configurar el almacenamiento en caché de las aplicaciones de red](configuring-caching-in-network-applications.md)  
  Explica cómo crear directivas de caché mediante programación y solicitudes que usen el almacenamiento en caché.  
   
 ## <a name="reference"></a>Referencia  

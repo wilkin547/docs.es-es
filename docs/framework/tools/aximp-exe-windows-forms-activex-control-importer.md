@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970592"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044885"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -24,7 +24,7 @@ El Importador de controles ActiveX convierte definiciones de tipos de una biblio
   
  Para hospedar el control ActiveX, debe generar un control contenedor que se derive de <xref:System.Windows.Forms.AxHost>. Este control contenedor contiene una instancia del control ActiveX subyacente. También sabe cómo establecer comunicación con el control ActiveX, pero aparece como un control de Windows Forms. Este control generado contiene el control ActiveX y proporciona sus propiedades, métodos y eventos como si fuesen propios.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -64,13 +64,13 @@ aximp [options]{file.dll | file.ocx}
 > [!NOTE]
 > Si el nombre de un miembro del control ActiveX coincide con un nombre definido en .NET Framework, Aximp.exe agregará el prefijo "Ctl" al nombre del miembro al crear la clase derivada AxHost. Por ejemplo, si el control ActiveX tiene un miembro denominado "Layout", el nombre de este se cambia a "CtlLayout" en la clase derivada AxHost porque el evento Layout está definido en .NET Framework.  
   
- Puede examinar estos archivos generados con herramientas como [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
+ Puede examinar estos archivos generados con herramientas como [Ildasm.exe (Desensamblador de IL)](ildasm-exe-il-disassembler.md).  
   
  No se puede utilizar Aximp.exe con el fin de generar un ensamblado .NET para el control ActiveX WebBrowser (shdocvw.dll).  
   
  Cuando se ejecuta Aximp.exe sobre shdocvw.dll, siempre se crea otro archivo denominado shdocvw.dll en el directorio desde el que se ejecuta la herramienta. Si este archivo generado se ubica en el directorio Documents and Settings, causará problemas a Microsoft Internet Explorer y al Explorador de Windows. Cuando se reinicia el equipo, Windows busca una copia de shdocvw.dll en el directorio los Documents and Settings antes que en el directorio system32. Usará la copia que encuentre en Documents and Settings e intentará cargar los contenedores administrados. Internet Explorer y el Explorador de Windows no funcionarán correctamente, porque se basan en el motor de representación de la versión de shdocvw.dll ubicada en el directorio system32. Si se produce este problema, elimine la copia de shdocvw.dll del directorio Documents and Settings y reinicie el equipo.  
   
- Si se utiliza Aximp.exe con shdocvw.dll con el fin de crear un ensamblado .NET para utilizarlo en el desarrollo de aplicaciones, también pueden producirse problemas. En este caso, la aplicación cargará la versión del sistema de shdocvw.dll y la versión generada, por lo que la versión del sistema podría tener prioridad. En este caso, al intentar cargar una página web dentro del control ActiveX WebBrowser, es posible que a los usuarios les aparezca un cuadro de diálogo para abrir o guardar. Cuando el usuario haga clic en **Abrir**, la página web se abrirá en Internet Explorer. Esto solo ocurre en los equipos que ejecutan Internet Explorer versión 6 o una versión anterior. Para evitar este problema, use el control <xref:System.Windows.Forms.WebBrowser> administrado o Visual Studio para generar el elemento shdocvw.dll administrado como se describe en [Cómo: Adición de referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
+ Si se utiliza Aximp.exe con shdocvw.dll con el fin de crear un ensamblado .NET para utilizarlo en el desarrollo de aplicaciones, también pueden producirse problemas. En este caso, la aplicación cargará la versión del sistema de shdocvw.dll y la versión generada, por lo que la versión del sistema podría tener prioridad. En este caso, al intentar cargar una página web dentro del control ActiveX WebBrowser, es posible que a los usuarios les aparezca un cuadro de diálogo para abrir o guardar. Cuando el usuario haga clic en **Abrir**, la página web se abrirá en Internet Explorer. Esto solo ocurre en los equipos que ejecutan Internet Explorer versión 6 o una versión anterior. Para evitar este problema, use el control <xref:System.Windows.Forms.WebBrowser> administrado o Visual Studio para generar el elemento shdocvw.dll administrado como se describe en [Cómo: Adición de referencias a bibliotecas de tipos](../interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Ejemplo  
  El comando siguiente genera los archivos MediaPlayer.dll y AxMediaPlayer.dll para el control de Media Player `msdxm.ocx`.  
@@ -81,5 +81,5 @@ aximp c:\systemroot\system32\msdxm.ocx
   
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Herramientas](index.md)
+- [Ildasm.exe (Desensamblador de IL)](ildasm-exe-il-disassembler.md)

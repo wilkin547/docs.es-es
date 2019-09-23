@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926872"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044660"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
 
 La herramienta Caché global de ensamblados permite ver y manipular el contenido de la caché global de ensamblados y la memoria caché de descarga.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u**  *assemblyName*|Desinstala un ensamblado de la caché global de ensamblados.|
 |**/uf**  *assemblyName*|Fuerza la desinstalación de un ensamblado específico mediante la eliminación de todas las referencias a este.<br /><br /> Especificar esta opción equivale a especificar las opciones **/u** y **/f** juntas. **Nota:**  No puede usar esta opción para quitar un ensamblado instalado con Microsoft Windows Installer. Si intenta realizar esta operación, la herramienta muestra un mensaje de error.|
 |**/ul** *assemblyListFile*|Desinstala uno o varios ensamblados especificados en *assemblyListFile* de la caché global de ensamblados.|
-|**/u**[**ngen**] *assemblyName*|Desinstala el ensamblado especificado de la caché global de ensamblados. Si el ensamblado especificado tiene recuentos de referencias, la herramienta muestra dichos recuentos y no quita el ensamblado de la caché global de ensamblados. **Nota:**  En la versión 2.0 de .NET Framework, no se admite `/ungen`. En su lugar, use el comando `uninstall` de [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> En las versiones 1.0 y 1.1 de .NET Framework, si se especifica **/ungen**, Gacutil.exe quita el ensamblado de la memoria caché de imágenes nativas. Esta caché almacena las imágenes nativas de los ensamblados creados mediante [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|
+|**/u**[**ngen**] *assemblyName*|Desinstala el ensamblado especificado de la caché global de ensamblados. Si el ensamblado especificado tiene recuentos de referencias, la herramienta muestra dichos recuentos y no quita el ensamblado de la caché global de ensamblados. **Nota:**  En la versión 2.0 de .NET Framework, no se admite `/ungen`. En su lugar, use el comando `uninstall` de [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md). <br /><br /> En las versiones 1.0 y 1.1 de .NET Framework, si se especifica **/ungen**, Gacutil.exe quita el ensamblado de la memoria caché de imágenes nativas. Esta caché almacena las imágenes nativas de los ensamblados creados mediante [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md).|
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *identificador*<br /><br /> *description*|Desinstala una referencia a un ensamblado especificado de la caché global de ensamblados. Para quitar una referencia a un ensamblado, debe especificar los mismos parámetros *scheme*, *id* y *description* que especificó con las opciones **/i** y **/r** (o **/ir)** al instalar el ensamblado. Para obtener una descripción de los valores válidos que puede especificar para estos parámetros, vea la opción **/r**.<br /><br /> Especificar esta opción equivale a especificar las opciones **/u** y **/r** juntas.|
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas](../../../docs/framework/tools/index.md)
-- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (Herramienta de registro de ensamblados)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Herramientas](index.md)
+- [Caché global de ensamblados](../app-domains/gac.md)
+- [Regasm.exe (Herramienta de registro de ensamblados)](regasm-exe-assembly-registration-tool.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

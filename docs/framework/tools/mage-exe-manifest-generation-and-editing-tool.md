@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422355"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044505"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
 La herramienta de generación y edición de manifiestos (*Mage.exe*) es una herramienta de línea de comandos que permite crear y editar manifiestos de aplicación y de implementación. Como herramienta de línea de comandos, *Mage.exe* se puede ejecutar desde scripts por lotes y desde otras aplicaciones basadas en Windows, incluidas las aplicaciones de ASP.NET.
 
-También puede usar *MageUI.exe*, una aplicación gráfica, en lugar de *Mage.exe*. Para obtener más información, consulta [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+También puede usar *MageUI.exe*, una aplicación gráfica, en lugar de *Mage.exe*. Para obtener más información, consulta [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 
 En Visual Studio se incluyen dos versiones de *Mage.exe* y *MageUI.exe*. Para ver información sobre la versión, ejecute *MageUI.exe*, seleccione **Ayuda** y, después, seleccione **Acerca de**. En esta documentación se describe la versión 4.0.x.x de *Mage.exe* y *MageUI.exe*.
 
@@ -107,7 +107,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  La opción **-TrustLevel** de los manifiestos de aplicación describe el conjunto de permisos que requiere una aplicación para ejecutarse en el equipo cliente. De manera predeterminada, a las aplicaciones se les asigna un nivel de confianza basado en la *zona* donde residen sus direcciones URL. Las aplicaciones implementadas en una red corporativa se colocan generalmente en la zona Intranet, mientras que las que se implementan en Internet se colocan en la zona Internet. Ambas zonas de seguridad imponen restricciones en el acceso de la aplicación a los recursos locales, siendo la zona Intranet ligeramente más permisiva que la zona Internet. La zona FullTrust otorga a las aplicaciones acceso completo a los recursos locales de un equipo. Si usa la opción **-TrustLevel** para colocar una aplicación en esta zona, el componente de administrador de confianza de CLR pedirá al usuario que decida si quiere otorgar este nivel de confianza mayor. Si va a implementar la aplicación en una red corporativa, puede usar la implementación de aplicaciones de confianza para aumentar el nivel de confianza de la aplicación sin preguntar al usuario.
 
- Los manifiestos de aplicación también admiten las secciones de confianza personalizadas. Esto facilita que la aplicación obedezca al principio de seguridad de solicitar un permiso mínimo, ya que puede configurar el manifiesto para que exija solo los permisos específicos necesarios para ejecutar la aplicación. *Mage.exe* no permite agregar directamente una sección de confianza personalizada. Puede agregar una mediante un editor de texto, un analizador XML o la herramienta gráfica *MageUI.exe*. Para obtener más información sobre cómo usar *MageUI.exe* para agregar secciones de confianza personalizadas, vea [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+ Los manifiestos de aplicación también admiten las secciones de confianza personalizadas. Esto facilita que la aplicación obedezca al principio de seguridad de solicitar un permiso mínimo, ya que puede configurar el manifiesto para que exija solo los permisos específicos necesarios para ejecutar la aplicación. *Mage.exe* no permite agregar directamente una sección de confianza personalizada. Puede agregar una mediante un editor de texto, un analizador XML o la herramienta gráfica *MageUI.exe*. Para obtener más información sobre cómo usar *MageUI.exe* para agregar secciones de confianza personalizadas, vea [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
 Visual Studio 2017 incluye la versión 4.6.1 de *Mage.exe*. Los manifiestos creados con esta versión de *Mage.exe* tienen como destino .NET Framework 4. Para elegir como destino versiones anteriores de .NET Framework, use una versión anterior de *Mage.exe*.
 
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Tutorial: Implementación manual de una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

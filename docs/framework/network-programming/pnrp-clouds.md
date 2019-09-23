@@ -2,12 +2,12 @@
 title: Nubes PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623029"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047371"
 ---
 # <a name="pnrp-clouds"></a>Nubes PNRP
 Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí a través de la red. El término "nube" es sinónimo de "malla del mismo nivel" y "grafo punto a punto".  
@@ -34,4 +34,4 @@ Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.PeerToPeer.Cloud>
-- [Protocolo de resolución de nombres del mismo nivel](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [Protocolo de resolución de nombres del mismo nivel](peer-name-resolution-protocol.md)

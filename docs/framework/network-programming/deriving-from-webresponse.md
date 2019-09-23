@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226050"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048573"
 ---
 # <a name="deriving-from-webresponse"></a>Derivar de WebResponse
 La clase <xref:System.Net.WebResponse> es una clase base abstracta que proporciona las propiedades y métodos básicos para crear una respuesta específica del protocolo adecuada al modelo de protocolo acoplable de .NET Framework. Las aplicaciones que usan la clase <xref:System.Net.WebRequest> para solicitar datos de recursos reciben las respuestas en una **WebResponse**. Los descendientes de **WebResponse** específicos del protocolo deben implementar los miembros abstractos de la clase **WebResponse**.  
@@ -43,5 +43,5 @@ La clase <xref:System.Net.WebResponse> es una clase base abstracta que proporcio
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Derivar de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Programming Pluggable Protocols (Programar protocolos acoplables)](programming-pluggable-protocols.md)
+- [Derivar de WebRequest](deriving-from-webrequest.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379956"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052154"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 
-En este artículo paso a paso se describe cómo puede implementar un administrador del sistema .NET Framework 4.5 y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar .NET Framework 4.5, consulte [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md).
+En este artículo paso a paso se describe cómo puede implementar un administrador del sistema .NET Framework 4.5 y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar .NET Framework 4.5, consulte [Requisitos de sistema](../get-started/system-requirements.md).
 
 > [!NOTE]
 > El software al que se hace referencia en este documento, a título enunciativo y en ningún caso limitativo, .NET Framework 4.5, System Center Configuration Manager y Active Directory, está sujeto a los términos y condiciones de licencia. En estas instrucciones se asume que los usuarios con la licencia apropiada del software han leído y aceptado dichos términos y condiciones. Estas instrucciones no anulan ninguno de los términos y condiciones de dichos contratos de licencia.
@@ -280,5 +280,5 @@ Otros códigos de error:
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Guía de implementación para desarrolladores](deployment-guide-for-developers.md)
+- [Requisitos del sistema](../get-started/system-requirements.md)

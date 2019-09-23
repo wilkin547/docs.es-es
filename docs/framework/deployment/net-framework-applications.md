@@ -7,23 +7,23 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132618"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052046"
 ---
 # <a name="deploying-net-framework-applications"></a>Implementar aplicaciones de .NET Framework
 Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Cómo el motor en tiempo de ejecución ubica ensamblados](how-the-runtime-locates-assemblies.md)  
  Describe cómo Common Language Runtime busca y establece vínculos con los ensamblados que conforman la aplicación.  
   
- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ [Procedimientos recomendados para cargar ensamblados](best-practices-for-assembly-loading.md)  
  Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de desarrollo](../../../docs/framework/development-guide.md)
+- [Guía de desarrollo](../development-guide.md)
