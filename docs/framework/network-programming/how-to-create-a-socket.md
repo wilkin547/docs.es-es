@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048384"
 ---
-# <a name="how-to-create-a-socket"></a><span data-ttu-id="07a70-102">Procedimiento para crear un socket</span><span class="sxs-lookup"><span data-stu-id="07a70-102">How to: Create a Socket</span></span>
-<span data-ttu-id="07a70-103">Para poder usar un socket a fin de comunicarse con dispositivos remotos, es necesario inicializarlo con la información del protocolo y de la dirección de red.</span><span class="sxs-lookup"><span data-stu-id="07a70-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="07a70-104">El constructor para la clase <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de direcciones, el tipo de socket y el tipo de protocolo que el socket usa para establecer conexiones.</span><span class="sxs-lookup"><span data-stu-id="07a70-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
+# <a name="how-to-create-a-socket"></a><span data-ttu-id="edad2-102">Procedimiento para crear un socket</span><span class="sxs-lookup"><span data-stu-id="edad2-102">How to: Create a Socket</span></span>
+<span data-ttu-id="edad2-103">Para poder usar un socket a fin de comunicarse con dispositivos remotos, es necesario inicializarlo con la información del protocolo y de la dirección de red.</span><span class="sxs-lookup"><span data-stu-id="edad2-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="edad2-104">El constructor para la clase <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de direcciones, el tipo de socket y el tipo de protocolo que el socket usa para establecer conexiones.</span><span class="sxs-lookup"><span data-stu-id="edad2-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07a70-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="07a70-105">Example</span></span>  
- <span data-ttu-id="07a70-106">En el ejemplo siguiente se crea un socket que se puede usar para comunicarse en una red basada en TCP/IP, como Internet.</span><span class="sxs-lookup"><span data-stu-id="07a70-106">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
+## <a name="example"></a><span data-ttu-id="edad2-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="edad2-105">Example</span></span>  
+ <span data-ttu-id="edad2-106">En el ejemplo siguiente se crea un socket que se puede usar para comunicarse en una red basada en TCP/IP, como Internet.</span><span class="sxs-lookup"><span data-stu-id="edad2-106">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -40,7 +40,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Stream, ProtocolType.Tcp)  
 ```  
   
- <span data-ttu-id="07a70-107">Para usar UDP en lugar de TCP, cambie el tipo de protocolo, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="07a70-107">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
+ <span data-ttu-id="edad2-107">Para usar UDP en lugar de TCP, cambie el tipo de protocolo, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="edad2-107">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -52,15 +52,15 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Dgram, ProtocolType.Udp)  
 ```  
   
- <span data-ttu-id="07a70-108">La enumeración <xref:System.Net.Sockets.AddressFamily> especifica las familias de direcciones estándar usadas por la clase **Socket** para resolver direcciones de red (por ejemplo, el miembro **AddressFamily.InterNetwork** especifica la familia de direcciones IP de versión 4).</span><span class="sxs-lookup"><span data-stu-id="07a70-108">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
+ <span data-ttu-id="edad2-108">La enumeración <xref:System.Net.Sockets.AddressFamily> especifica las familias de direcciones estándar usadas por la clase **Socket** para resolver direcciones de red (por ejemplo, el miembro **AddressFamily.InterNetwork** especifica la familia de direcciones IP de versión 4).</span><span class="sxs-lookup"><span data-stu-id="edad2-108">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
   
- <span data-ttu-id="07a70-109">La enumeración <xref:System.Net.Sockets.SocketType> especifica el tipo de socket (por ejemplo, el miembro **SocketType.Stream** indica un socket estándar para enviar y recibir datos con control de flujo).</span><span class="sxs-lookup"><span data-stu-id="07a70-109">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
+ <span data-ttu-id="edad2-109">La enumeración <xref:System.Net.Sockets.SocketType> especifica el tipo de socket (por ejemplo, el miembro **SocketType.Stream** indica un socket estándar para enviar y recibir datos con control de flujo).</span><span class="sxs-lookup"><span data-stu-id="edad2-109">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
   
- <span data-ttu-id="07a70-110">La enumeración <xref:System.Net.Sockets.ProtocolType> especifica el protocolo de red que se va a usar al comunicarse en el **Socket** (por ejemplo, **ProtocolType.Tcp** indica que el socket usa TCP y **ProtocolType.Udp** indica que el socket usa UDP).</span><span class="sxs-lookup"><span data-stu-id="07a70-110">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
+ <span data-ttu-id="edad2-110">La enumeración <xref:System.Net.Sockets.ProtocolType> especifica el protocolo de red que se va a usar al comunicarse en el **Socket** (por ejemplo, **ProtocolType.Tcp** indica que el socket usa TCP y **ProtocolType.Udp** indica que el socket usa UDP).</span><span class="sxs-lookup"><span data-stu-id="edad2-110">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
   
- <span data-ttu-id="07a70-111">Una vez que se ha creado un **socket**, puede iniciar una conexión con un punto de conexión remoto o recibir conexiones procedentes de dispositivos remotos.</span><span class="sxs-lookup"><span data-stu-id="07a70-111">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
+ <span data-ttu-id="edad2-111">Una vez que se ha creado un **socket**, puede iniciar una conexión con un punto de conexión remoto o recibir conexiones procedentes de dispositivos remotos.</span><span class="sxs-lookup"><span data-stu-id="edad2-111">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07a70-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="07a70-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="edad2-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="edad2-112">See also</span></span>
 
-- [<span data-ttu-id="07a70-113">Uso de sockets de cliente</span><span class="sxs-lookup"><span data-stu-id="07a70-113">Using Client Sockets</span></span>](../../../docs/framework/network-programming/using-client-sockets.md)
-- [<span data-ttu-id="07a70-114">Escuchas con sockets</span><span class="sxs-lookup"><span data-stu-id="07a70-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [<span data-ttu-id="edad2-113">Uso de sockets de cliente</span><span class="sxs-lookup"><span data-stu-id="edad2-113">Using Client Sockets</span></span>](using-client-sockets.md)
+- [<span data-ttu-id="edad2-114">Escuchas con sockets</span><span class="sxs-lookup"><span data-stu-id="edad2-114">Listening with Sockets</span></span>](listening-with-sockets.md)
