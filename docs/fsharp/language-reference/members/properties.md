@@ -1,15 +1,15 @@
 ---
-title: Properties (Propiedades)
+title: Propiedades
 description: Obtenga información F# sobre las propiedades, que son miembros que representan valores asociados a un objeto.
 ms.date: 05/16/2016
-ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c71d61e033501c2d535b5582c82d36ed8cb2241b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627415"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216421"
 ---
-# <a name="properties"></a>Properties (Propiedades)
+# <a name="properties"></a>Propiedades
 
 *Las propiedades* son miembros que representan valores asociados a un objeto.
 
@@ -59,7 +59,7 @@ with set parameter =
 
 Las propiedades representan la relación "tiene una" en la programación orientada a objetos, que representa los datos que están asociados a instancias de objeto o, para las propiedades estáticas, con el tipo.
 
-Puede declarar propiedades de dos maneras, en función de si desea especificar explícitamente el valor subyacente (también denominado memoria auxiliar) para la propiedad, o si desea permitir que el compilador genere automáticamente la memoria auxiliar. Por lo general, debe usar la manera más explícita si la propiedad tiene una implementación no trivial y la manera automática cuando la propiedad es simplemente un contenedor simple para un valor o una variable. Para declarar una propiedad explícitamente, use `member` la palabra clave. Esta sintaxis declarativa va seguida de la sintaxis que especifica los `get` métodos `set` y, también denominados descriptores de *acceso*. Las distintas formas de sintaxis explícita que se muestran en la sección sintaxis se utilizan para las propiedades de lectura/escritura, de solo lectura y de solo escritura. En el caso de las propiedades de solo lectura, `get` solo se define un método; en el caso de las `set` propiedades de solo escritura, solo se define un método. Tenga en cuenta que cuando una propiedad `get` tiene `set` los descriptores de acceso y, la sintaxis alternativa le permite especificar los atributos y modificadores de accesibilidad que son diferentes para cada descriptor de acceso, como se muestra en el código siguiente.
+Puede declarar propiedades de dos maneras, en función de si desea especificar explícitamente el valor subyacente (también denominado memoria auxiliar) para la propiedad, o si desea permitir que el compilador genere automáticamente la memoria auxiliar. Por lo general, debe usar la manera más explícita si la propiedad tiene una implementación no trivial y la manera automática cuando la propiedad es simplemente un contenedor simple para un valor o una variable. Para declarar una propiedad explícitamente, use `member` la palabra clave. Esta sintaxis declarativa va seguida de la sintaxis que especifica los `get` métodos `set` y, también denominados *descriptores de acceso*. Las distintas formas de sintaxis explícita que se muestran en la sección sintaxis se utilizan para las propiedades de lectura/escritura, de solo lectura y de solo escritura. En el caso de las propiedades de solo lectura, `get` solo se define un método; en el caso de las `set` propiedades de solo escritura, solo se define un método. Tenga en cuenta que cuando una propiedad `get` tiene `set` los descriptores de acceso y, la sintaxis alternativa le permite especificar los atributos y modificadores de accesibilidad que son diferentes para cada descriptor de acceso, como se muestra en el código siguiente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
@@ -93,7 +93,7 @@ printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 
 **Salida**
 
-```
+```console
 class1.AutoProperty = 1853799794
 class1.AutoProperty = 1853799794
 class1.ExplicitProperty = 978922705

@@ -1,21 +1,21 @@
 ---
 title: Sintaxis detallada
-description: Obtenga información sobre la diferencia entre la sintaxis ligera y detallado en el F# lenguaje de programación.
+description: Obtenga información sobre la diferencia entre la sintaxis detallada y ligera F# en el lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641660"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214038"
 ---
 # <a name="verbose-syntax"></a>Sintaxis detallada
 
-Hay dos formas de sintaxis disponibles para muchas construcciones en el F# idioma: *sintaxis detallada* y *sintaxis ligera*. La sintaxis detallada no se utiliza normalmente, pero tiene la ventaja de ser menos sensible a la sangría. La sintaxis ligera es más corta y utiliza la sangría para señalar el principio y final de las construcciones, en lugar de palabras clave adicionales como `begin`, `end`, `in`, y así sucesivamente. La sintaxis predeterminada es la sintaxis ligera. En este tema se describe la sintaxis para F# construye cuando no está habilitada la sintaxis ligera. Sintaxis detallada siempre está habilitada, por lo que incluso si habilita la sintaxis ligera, todavía puede utilizar la sintaxis detallada para algunas construcciones. Sintaxis ligera se puede deshabilitar mediante la `#light "off"` directiva.
+Hay dos formas de sintaxis disponibles para muchas construcciones en el F# lenguaje: *Sintaxis detallada* y *Sintaxis ligera*. La sintaxis detallada no se utiliza normalmente, pero tiene la ventaja de ser menos sensible a la sangría. La sintaxis ligera es más corta y usa la sangría para indicar el principio y el final de las construcciones, en lugar de `begin`palabras `end`clave `in`adicionales como,,, etc. La sintaxis predeterminada es la sintaxis ligera. En este tema se describe la F# sintaxis de las construcciones cuando la sintaxis ligera no está habilitada. La sintaxis detallada siempre está habilitada, por lo que incluso si habilita la sintaxis ligera, todavía puede usar la sintaxis detallada para algunas construcciones. Puede deshabilitar la sintaxis ligera mediante la `#light "off"` Directiva.
 
 ## <a name="table-of-constructs"></a>Tabla de construcciones
 
-En la tabla siguiente se muestra la sintaxis ligera y detallada para F# construcciones de lenguaje en contextos donde hay una diferencia entre las dos formas. En esta tabla, los corchetes angulares (&lt;&gt;) incluya los elementos de la sintaxis proporcionada por el usuario. Consulte la documentación de cada construcción de lenguaje para obtener más información sobre la sintaxis usada dentro de estas construcciones.
+En la tabla siguiente se muestra la sintaxis ligera y detallada F# para construcciones de lenguaje en contextos en los que hay una diferencia entre las dos formas. En esta tabla, los corchetes&lt;angulares (&gt;) encierran los elementos de sintaxis proporcionados por el usuario. Consulte la documentación de cada construcción de lenguaje para obtener información más detallada sobre la sintaxis utilizada en estas construcciones.
 
 <table>
 <tr>
@@ -25,7 +25,7 @@ En la tabla siguiente se muestra la sintaxis ligera y detallada para F# construc
 </tr>
 <tr>
 <td>
-expresiones compuestas
+Expresiones compuestas
 </td>
 <td>
 
@@ -44,7 +44,7 @@ expresiones compuestas
 </tr>
 <tr><td>
 
-anidada `let` enlaces
+`let` enlaces anidados
 
 </td><td>
 
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>unión discriminada</td><td>
+<tr><td>Unión discriminada</td><td>
 
 ```fsharp
 type <union-name> =

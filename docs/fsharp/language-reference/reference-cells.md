@@ -2,12 +2,12 @@
 title: Celdas de referencia
 description: Obtenga información F# sobre cómo las celdas de referencia son ubicaciones de almacenamiento que permiten crear valores mutables con semántica de referencia.
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627249"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216772"
 ---
 # <a name="reference-cells"></a>Celdas de referencia
 
@@ -50,11 +50,11 @@ let ref x = { contents = x }
 
 En la tabla siguiente se muestran las características que están disponibles en la celda de referencia.
 
-|Operador, miembro o campo|DESCRIPCIÓN|Type|Definición|
+|Operador, miembro o campo|Descripción|Tipo|Definición|
 |--------------------------|-----------|----|----------|
 |`!` (operador de desreferencia)|Devuelve el valor subyacente.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (operador de asignación)|Cambia el valor subyacente.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`Operator|Encapsula un valor en una nueva celda de referencia.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`ref` (operador)|Encapsula un valor en una nueva celda de referencia.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value`propiedad|Obtiene o establece el valor subyacente.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (campo de registro)|Obtiene o establece el valor subyacente.|`'a`|`let ref x = { contents = x }`|
 
@@ -66,7 +66,7 @@ Tanto la propiedad `Value` como el campo `contents` son valores asignables. Así
 
 La salida es la siguiente.
 
-```
+```console
 10
 10
 11

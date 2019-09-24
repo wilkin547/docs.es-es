@@ -2,12 +2,12 @@
 title: Sobrecarga de operadores
 description: Obtenga información sobre cómo sobrecargar operadores aritméticos en un tipo de clase o registro y F#en el nivel global en.
 ms.date: 05/16/2016
-ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d902a06193481ed87131b3336cd8a2ff54b811b4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627387"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216838"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
@@ -97,7 +97,7 @@ En la tabla siguiente se muestran los operadores estándar y sus nombres generad
 
 Hay otras combinaciones de caracteres de operador que no se muestran en este texto y que se pueden utilizar como operadores; sus nombres se crean a partir de la concatenación de los nombres de los caracteres individuales según la tabla siguiente. Por ejemplo, +! se `op_PlusBang`convierte en.
 
-|Carácter de operador|NOMBRE|
+|Carácter de operador|Name|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|
@@ -123,7 +123,7 @@ Hay otras combinaciones de caracteres de operador que no se muestran en este tex
 
 ## <a name="prefix-and-infix-operators"></a>Operadores de prefijo e infijo
 
-Se espera que los operadores de prefijo se colocan delante de los operandos u operandos, de forma muy parecida a una función. Se espera que los operadores de infijo se colocan entre los dos operandos.
+Se espera que los operadores de *prefijo* se colocan delante de los operandos u operandos, de forma muy parecida a una función. Se espera que los operadores de *infijo* se colocan entre los dos operandos.
 
 Solo se pueden usar determinados operadores como operadores de prefijo. Algunos operadores siempre son operadores de prefijo, otros pueden ser de infijo o de prefijo, y el resto son siempre operadores de infijo. Los operadores que comienzan por `!`, excepto `!=`, el operador `~` y las secuencias repetidas de `~`, son siempre operadores de prefijo. Los operadores `+`, `-`, `+.`, `-.`, `&`, `&&`, `%` y `%%` pueden ser operadores de prefijo u operadores de infijo. La versión prefija de estos operadores se distingue de su versión infija agregando `~` al principio de un operador de prefijo cuando se define. `~` no se usa al utilizar el operador, solo al definirlo.
 
@@ -135,7 +135,7 @@ En el código siguiente se muestra el uso de la sobrecarga de operadores para im
 
 **Salida:**
 
-```
+```console
 3/4 + 1/2 = 5/4
 3/4 - 1/2 = 1/4
 3/4 * 1/2 = 3/8

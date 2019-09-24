@@ -1,15 +1,15 @@
 ---
-title: Events
+title: Eventos
 description: Obtenga información F# sobre cómo los eventos le permiten asociar las llamadas de función a las acciones del usuario, que son importantes en la programación de la GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917276"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216463"
 ---
-# <a name="events"></a>Events
+# <a name="events"></a>Eventos
 
 > [!NOTE]
 > Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
@@ -36,7 +36,7 @@ Para crear en una clase un evento que actúe como cualquier otro evento de .NET 
 
 La salida es la siguiente.
 
-```
+```console
 Event1 occurred! Object data: Hello World!
 ```
 
@@ -46,7 +46,7 @@ Aquí se muestra la funcionalidad adicional que proporciona el módulo `Event`. 
 
 La salida del código anterior es la siguiente.
 
-```
+```console
 Event occurred.
 Given a value: Event occurred.
 ```

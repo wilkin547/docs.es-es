@@ -2,12 +2,12 @@
 title: Parámetros y argumentos
 description: Obtenga información F# sobre la compatibilidad de lenguajes para definir parámetros y pasar argumentos a funciones, métodos y propiedades.
 ms.date: 05/16/2016
-ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106605"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216823"
 ---
 # <a name="parameters-and-arguments"></a>Parámetros y argumentos
 
@@ -56,7 +56,7 @@ Otros patrones que a veces se usan en argumentos son `as` el patrón y los patro
 
 La salida es la siguiente.
 
-```
+```console
 Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
@@ -121,7 +121,7 @@ En el ejemplo siguiente se muestra el uso de parámetros opcionales.
 
 La salida es la siguiente.
 
-```
+```console
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true

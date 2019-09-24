@@ -2,12 +2,12 @@
 title: Cadenas
 description: Obtenga información sobre F# cómo el tipo ' cadena ' representa texto inmutable como una secuencia de caracteres Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 25f5d7ce5059ba5ddb4e938313c511734c2d7320
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627101"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216733"
 ---
 # <a name="strings"></a>Cadenas
 
@@ -71,7 +71,7 @@ O bien, puede extraer subcadenas mediante la sintaxis de segmento de matriz, com
 
 La salida es la siguiente.
 
-```
+```console
 abc
 def
 ```

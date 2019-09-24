@@ -2,12 +2,12 @@
 title: 'Tutorial: Creación de un proveedor de tipos'
 description: Aprenda a crear sus propios F# proveedores de tipos en F# 3,0 examinando varios proveedores de tipos simples para ilustrar los conceptos básicos.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991866"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214274"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Creación de un proveedor de tipos
 
@@ -152,13 +152,13 @@ Antes de volver a compilar el proveedor, asegúrese de que se han cerrado todas 
 
 Para depurar este proveedor mediante instrucciones de impresión, cree un script que exponga un problema con el proveedor y, a continuación, utilice el código siguiente:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Para depurar este proveedor mediante Visual Studio, abra el Símbolo del sistema para desarrolladores de Visual Studio con credenciales administrativas y ejecute el siguiente comando:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -459,7 +459,7 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-Tenga en cuenta los siguientes puntos:
+Tenga en cuenta los puntos siguientes:
 
 - El tipo estándar Regex representa el tipo parametrizado `RegexTyped`.
 
@@ -525,7 +525,7 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-Tenga en cuenta los siguientes puntos:
+Tenga en cuenta los puntos siguientes:
 
 - El proveedor de tipos toma dos parámetros estáticos: `pattern`, el patrón, que es obligatorio, y `options`, las opciones, que son opcionales (porque se proporciona un valor predeterminado).
 
@@ -899,7 +899,7 @@ let function1 () =
 
 A continuación se muestra una imagen del código resultante descompilado mediante ildasm.exe:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ Respete las convenciones siguientes al crear proveedores de tipos.
 
 **Proveedores de protocolos de conectividad** En general, los nombres de la mayoría de los archivos dll de proveedor para los protocolos de datos y conectividad de servicio, como `TypeProvider` las `TypeProviders`conexiones de oData o SQL, deben acabar en o. Por ejemplo, utilice un nombre de DLL similar a la siguiente cadena:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Asegúrese de que los tipos proporcionados son miembros del espacio de nombres correspondiente e indican el protocolo de conexión que se ha implementado:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ Puede invocar proveedores de tipo mediante las herramientas siguientes:
 
 A menudo, lo más fácil es depurar los proveedores de tipo mediante fsc.exe en un archivo de script de prueba (por ejemplo, script.fsx). Puede iniciar un depurador desde el símbolo del sistema.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   Puede usar print-to-stdout como registro.

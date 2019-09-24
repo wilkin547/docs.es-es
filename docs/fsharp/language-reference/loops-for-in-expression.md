@@ -2,12 +2,12 @@
 title: 'Bucles: expresión for...in'
 description: Vea cómo F# ... en, la construcción de bucle de expresión se usa para iterar por las coincidencias de un patrón en una colección Enumerable.
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630717"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216447"
 ---
 # <a name="loops-forin-expression"></a>Bucles: expresión for...in
 
@@ -44,7 +44,7 @@ En los siguientes ejemplos de código se muestra el `for...in` uso de la expresi
 
 La salida es la siguiente.
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ En el ejemplo siguiente se muestra cómo crear un bucle sobre una secuencia y c�
 
 La salida es la siguiente.
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ En el ejemplo siguiente se muestra cómo recorrer un intervalo entero simple.
 
 La salida de function1 es como se indica a continuación.
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ En el ejemplo siguiente se muestra cómo recorrer en bucle un intervalo con un s
 
 La salida de `function2` es como se indica a continuación.
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ En el ejemplo siguiente se muestra cómo usar un intervalo de caracteres.
 
 La salida de `function3` es como se indica a continuación.
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ En el ejemplo siguiente se muestra cómo usar un valor de SKIP negativo para una
 
 La salida de `function4` es como se indica a continuación.
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ El principio y el final del intervalo también pueden ser expresiones, como las 
 
 La salida de `function5` con esta entrada es como se indica a continuación.
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,11 +127,11 @@ En el ejemplo siguiente se muestra el uso de un carácter\_comodín () cuando el
 
 La salida es la siguiente.
 
-```
+```console
 Number of elements in list1: 5
 ```
 
-`Note`Puede usar `for...in` en expresiones de secuencia y otras expresiones de cálculo, en cuyo caso se utiliza una versión personalizada `for...in` de la expresión. Para obtener más información, vea [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md)y expresiones de [cálculo](computation-expressions.md).
+`Note`Puede usar `for...in` en expresiones de secuencia y otras expresiones de cálculo, en cuyo caso se utiliza una versión personalizada `for...in` de la expresión. Para obtener más información, vea [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md)y [expresiones de cálculo](computation-expressions.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: 'Campos explícitos: La palabra clave Val'
 description: Obtenga información sobre F# la palabra clave ' Val ', que se usa para declarar una ubicación para almacenar un valor en un tipo de clase o estructura sin inicializar el tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627531"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216480"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: La palabra clave Val
 
@@ -48,7 +48,7 @@ El código siguiente muestra el uso de campos explícitos y, para la comparació
 
 La salida es la siguiente:
 
-```
+```console
 11 12 abc
 30 def
 ```

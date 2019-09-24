@@ -2,12 +2,12 @@
 title: Coincidencia de modelos
 description: Obtenga información sobre cómo se usan F# los patrones en para comparar datos con estructuras lógicas, descomponer datos en elementos constituyentes o extraer información de los datos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733464"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216803"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -29,7 +29,7 @@ Cada patrón actúa como una regla para transformar la entrada de alguna manera.
 
 Los patrones admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la entrada se prueba con cada uno de los patrones siguientes en el orden indicado en la tabla y los patrones se aplican de forma recursiva, de la primera a la última como aparecen en el código y de izquierda a derecha para los patrones de cada línea.
 
-|NOMBRE|DESCRIPCIÓN|Ejemplo|
+|Name|Descripción|Ejemplo|
 |----|-----------|-------|
 |Patrón de constante|Cualquier literal numérico, de carácter o de cadena, una constante de enumeración o un identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
 |Patrón de identificador|Un valor de caso de una Unión discriminada, una etiqueta de excepción o un caso de modelo activo|`Some(x)`<br /><br />`Failure(msg)`|
@@ -95,7 +95,7 @@ El uso del campo con nombre es opcional, por lo que en el ejemplo anterior `Circ
 
 Cuando especifique varios campos, use el punto y coma (;) como separador.
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()

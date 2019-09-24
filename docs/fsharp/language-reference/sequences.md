@@ -2,12 +2,12 @@
 title: Secuencias
 description: Obtenga información sobre cómo F# usar secuencias, si tiene una colección grande ordenada de datos, pero no es necesario que use todos los elementos.
 ms.date: 02/19/2019
-ms.openlocfilehash: a57142c5d07455cff02b0b691ebccb9cb9f347fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627171"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216758"
 ---
 # <a name="sequences"></a>Secuencias
 
@@ -82,7 +82,7 @@ Puede usar [Seq. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be8
 
 El resultado es
 
-```
+```console
 0 10 20 30 40
 ```
 
@@ -104,7 +104,7 @@ Puede definir secuencias infinitas mediante la función [Seq. initInfinite (](ht
 
 La salida es la siguiente:
 
-```
+```console
 The sequence seq1 contains numbers from 0 to 20.
 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
@@ -134,7 +134,7 @@ En el código siguiente se muestra el comportamiento de y `Seq.truncate` las `Se
 
 La salida, antes de que se produzca el error, es como se indica a continuación.
 
-```
+```console
 1 4 9 16 25 
 1 4 9 16 25 36 49 64 81 100 
 1 4 9 16 25 
@@ -149,7 +149,7 @@ En el ejemplo de código siguiente se muestra el comportamiento de y `Seq.takeWh
 
 La salida es la siguiente.
 
-```
+```console
 1 4 9 
 36 49 64 81 100 
 16 25 36 49 64 81 100
@@ -171,7 +171,7 @@ La salida es la siguiente.
 
 Secuencia inicial:
 
-```
+```console
 1.0 1.5 2.0 1.5 1.0 1.5 
 
 Windows of length 3: 
@@ -203,7 +203,7 @@ En el código anterior, solo se calcula y examina el primer elemento y el result
 
 La salida es la siguiente.
 
-```
+```console
 (1, 34) (2, 33) (0, 33)
 ```
 
@@ -217,7 +217,7 @@ En el ejemplo de código siguiente se muestra `Seq.groupBy` el uso de para parti
 
 La salida es la siguiente.
 
-```
+```console
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 
