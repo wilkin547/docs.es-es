@@ -144,7 +144,7 @@
       href: standard/security/
     - name: Serialización
       href: standard/serialization/
-    - name: Desarrollo para varias plataformas
+    - name: Desarrollo de varias plataformas
       href: standard/cross-platform/
 - name: Guía de .NET Core
   href: core/index.md
@@ -215,7 +215,7 @@
           href: core/tutorials/libraries.md
         - name: Creación de una aplicación de .NET Core con complementos
           href: core/tutorials/creating-app-with-plugin-support.md
-        - name: Desarrollo de aplicaciones ASP.NET Core
+        - name: Desarrollo de aplicaciones de ASP.NET Core
           href: core/tutorials/aspnet-core.md
         - name: Hospedaje de .NET Core desde código nativo
           href: core/tutorials/netcore-hosting.md
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'Novedades de C#'
       items:
-        - name: 'C# 8.0 (versión preliminar 5)'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -769,7 +769,7 @@
               href: fsharp/tutorials/type-providers/type-provider-security.md
             - name: Solución de problemas en proveedores de tipos
               href: fsharp/tutorials/type-providers/troubleshooting-type-providers.md
-        - name: 'F# interactivo'
+        - name: 'F# Interactive'
           href: fsharp/tutorials/fsharp-interactive/index.md
     - name: 'Referencia del lenguaje F#'
       href: fsharp/language-reference/index.md
@@ -1035,7 +1035,7 @@
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
-            - name: 'Procesamiento de unidades, directorios y archivos'
+            - name: 'Procesar unidades, directorios y archivos'
               href: visual-basic/developing-apps/programming/drives-directories-files/processing.md
         - name: Desarrollo con My
           href: visual-basic/developing-apps/development-with-my/index.md
@@ -1067,10 +1067,10 @@
               href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
             - name: Personalización de los objetos disponibles en My
               href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
-    - name: Conceptos de programación
+    - name: Programar los conceptos
       href: visual-basic/programming-guide/concepts/index.md
       items:
-        - name: Programación asincrónica con async y await
+        - name: Programación asincrónica con Async y Await
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: Atributos
           href: visual-basic/programming-guide/concepts/attributes/index.md
@@ -1202,7 +1202,7 @@
           href: visual-basic/programming-guide/language-features/declared-elements/index.md
         - name: Delegados
           href: visual-basic/programming-guide/language-features/delegates/index.md
-        - name: Enlace anticipado y en tiempo de ejecución
+        - name: Enlace en tiempo de compilación y en tiempo de ejecución
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: Tipos de errores
           href: visual-basic/programming-guide/language-features/error-types.md
@@ -1536,17 +1536,17 @@
                   href: visual-basic/language-reference/operators/and-assignment-operator.md
                 - name: '* Operador'
                   href: visual-basic/language-reference/operators/multiplication-operator.md
-                - name: Operador *=
+                - name: '*= (Operador)'
                   href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
                 - name: + Operador
                   href: visual-basic/language-reference/operators/addition-operator.md
-                - name: Operador +=
+                - name: += (Operador)
                   href: visual-basic/language-reference/operators/addition-assignment-operator.md
-                - name: Operador =
+                - name: = (Operador)
                   href: visual-basic/language-reference/operators/assignment-operator.md
                 - name: '- Operador'
                   href: visual-basic/language-reference/operators/subtraction-operator.md
-                - name: Operador -=
+                - name: '-= (Operador)'
                   href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
                 - name: Operador <
                   href: visual-basic/language-reference/operators/comparison-operators.md
@@ -1554,7 +1554,7 @@
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: '> Operador'
                   href: visual-basic/language-reference/operators/comparison-operators.md
-                - name: '>Operador ='
+                - name: '>= (Operador)'
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: Operador <<
                   href: visual-basic/language-reference/operators/left-shift-operator.md
@@ -1562,19 +1562,19 @@
                   href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
                 - name: '>> Operador'
                   href: visual-basic/language-reference/operators/right-shift-operator.md
-                - name: '>>Operador ='
+                - name: '>>= (Operador)'
                   href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
-                - name: Operador /
+                - name: / (Operador)
                   href: visual-basic/language-reference/operators/floating-point-division-operator.md
-                - name: Operador /=
+                - name: /= (Operador)
                   href: visual-basic/language-reference/operators/floating-point-division-assignment-operator.md
                 - name: \ (Operador)
                   href: visual-basic/language-reference/operators/integer-division-operator.md
                 - name: Operador \=
                   href: visual-basic/language-reference/operators/integer-division-assignment-operator.md
-                - name: Operador ^
+                - name: ^ (Operador)
                   href: visual-basic/language-reference/operators/exponentiation-operator.md
-                - name: Operador ^=
+                - name: ^= (Operador)
                   href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
                 - name: Operador ?()
                   href: visual-basic/language-reference/operators/null-conditional-operators.md
