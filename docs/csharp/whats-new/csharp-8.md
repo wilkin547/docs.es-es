@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926525"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117814"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -377,7 +377,7 @@ Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la
 
 ## <a name="indices-and-ranges"></a>Índices y rangos
 
-Los rangos e índices proporcionan una sintaxis concisa para especificar subrangos en una matriz, <xref:System.Span%601>, o <xref:System.ReadOnlySpan%601>.
+Los rangos e índices proporcionan una sintaxis concisa para especificar subrangos en una matriz, [cadena](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>.
 
 Esta compatibilidad con lenguajes se basa en dos nuevos tipos y dos nuevos operadores:
 

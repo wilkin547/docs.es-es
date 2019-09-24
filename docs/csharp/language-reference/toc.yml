@@ -200,7 +200,7 @@
       items:
         - name: Restricción new
           href: keywords/new-constraint.md
-        - name: donde
+        - name: where
           href: keywords/where-generic-type-constraint.md
     - name: Palabras clave de acceso
       items:
