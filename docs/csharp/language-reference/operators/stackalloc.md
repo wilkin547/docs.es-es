@@ -1,17 +1,17 @@
 ---
 title: 'Operador stackalloc: Referencia de C#'
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433829"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182418"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Operador stackalloc (referencia de C#)
 
@@ -31,6 +31,10 @@ Puede asignar el resultado del operador `stackalloc` a una variable de uno de lo
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  A partir de C# 8.0, se puede usar una expresión `stackalloc` dentro de otras expresiones siempre que se permita una variable <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>, como se muestra en este ejemplo:
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > Se recomienda usar los tipos <xref:System.Span%601> o <xref:System.ReadOnlySpan%601> para trabajar con memoria asignada a la pila siempre que sea posible.
 
@@ -39,6 +43,8 @@ Puede asignar el resultado del operador `stackalloc` a una variable de uno de lo
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   Como se muestra en el ejemplo anterior, se debe utilizar un contexto `unsafe` cuando se trabaja con tipos de puntero.
+
+  En el caso de los tipos de puntero, solo se puede usar una expresión `stackalloc` en una declaración de variable local para inicializar la variable.
 
 El contenido de la memoria recién asignada está sin definir. A partir de C# 7.3, puede usar la sintaxis de inicializador de matriz para definir el contenido de la memoria recién asignada. En el ejemplo siguiente se muestran diversas formas de hacerlo:
 

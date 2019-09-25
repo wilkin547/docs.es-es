@@ -19,6 +19,9 @@
             - name: Libro electrónico sobre la arquitectura de microservicios de .NET
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
+            - name: Nativo en la nube
+              tocHref: /dotnet/architecture/cloud-native/
+              topicHref: /dotnet/architecture/cloud-native/index
             - name: Libro electrónico sobre la modernización de aplicaciones .NET
               tocHref: /dotnet/architecture/modernize-with-azure-containers/
               topicHref: /dotnet/architecture/modernize-with-azure-containers/index
@@ -28,6 +31,12 @@
             - name: Libro electrónico de aplicaciones sin servidor
               tocHref: /dotnet/architecture/serverless/
               topicHref: /dotnet/architecture/serverless/index
+            - name: Libro electrónico de Blazor para desarrolladores de ASP.NET Web Forms
+              tocHref: /dotnet/architecture/blazor-for-web-forms-developers/
+              topicHref: /dotnet/architecture/blazor-for-web-forms-developers/index
+            - name: gRPC de ASP.NET Core para desarrolladores de WCF
+              tocHref: /dotnet/architecture/grpc-for-wcf-developers/
+              topicHref: /dotnet/architecture/grpc-for-wcf-developers/index
         - name: Guía de .NET
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
