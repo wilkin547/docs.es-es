@@ -2,12 +2,12 @@
 title: Uso de bases de datos NoSQL como una infraestructura de persistencia
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre el uso de bases de datos NoSql en general, y Azure Cosmos DB en concreto, como una opción para implementar la persistencia.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374039"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039964"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Uso de bases de datos NoSQL como una infraestructura de persistencia
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-La variable de entorno `ConnectionString` se resuelve de esta manera: si la variable global `ESHOP_AZURE_COSMOSDB` está definida en el archivo `.env` con la cadena de conexión de Azure Cosmos DB, la usará para acceder a la base de datos de Azure Cosmos DB en la nube. Si no está definida, tomará el valor mongodb://nosql.data y usará el contenedor mongodb de desarrollo.
+La variable de entorno `ConnectionString` se resuelve de esta manera: si la variable global `ESHOP_AZURE_COSMOSDB` está definida en el archivo `.env` con la cadena de conexión de Azure Cosmos DB, la usará para acceder a la base de datos de Azure Cosmos DB en la nube. Si no está definida, tomará el valor `mongodb://nosql.data` y usará el contenedor mongodb de desarrollo.
 
 El código siguiente muestra el archivo `.env` con la variable de entorno global de cadena de conexión de Azure Cosmos DB, tal y como se implementa en eShopOnContainers:
 
@@ -324,7 +324,7 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB: Compilación de una aplicación web mediante la API de MongoDB con .NET y Azure Portal**  \
-  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **Uso del Emulador de Azure Cosmos DB para desarrollo y pruebas de forma local**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>
