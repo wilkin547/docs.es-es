@@ -2,8 +2,7 @@
 title: Procedimiento para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos
 ms.date: 03/30/2017
 dev_langs:
-- CSharp
-- VB
+- vb
 helpviewer_keywords:
 - COM interop [Windows Forms], Windows Forms
 - COM [Windows Forms]
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 90bbd7df45424f8513598e9d7439d8ae6bf6f52c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 41af4d81995a0a4eac912ecce7dc70cf04f012cd
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040313"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306387"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Procedimiento Compatibilidad con la interoperabilidad COM mostrando cada Windows Forms en su propio subproceso
 
@@ -24,7 +23,7 @@ Puede resolver problemas de interoperabilidad COM mostrando el formulario en un 
 
 Para que un Windows Form funcione correctamente con una aplicación cliente COM, debe ejecutar el formulario en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:
 
-- Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el Windows Form. Para obtener más información, consulte [Cómo Compatibilidad con la interoperabilidad COM al mostrar Windows Forms](com-interop-by-displaying-a-windows-form-shadow.md)con el método ShowDialog.
+- Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el Windows Form. Para obtener más información, vea [Cómo: Compatibilidad con la interoperabilidad COM al mostrar Windows Forms](com-interop-by-displaying-a-windows-form-shadow.md)con el método ShowDialog.
 
 - Muestre cada Windows Form en un subproceso independiente.
 
