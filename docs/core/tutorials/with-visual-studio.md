@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660446"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039597"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilación de una aplicación "Hola mundo" en C# con el SDK de .NET Core en Visual Studio 2017
 
@@ -18,7 +18,7 @@ En este tema se proporciona una introducción detallada para compilar, depurar y
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-[Visual Studio de 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. Puede desarrollar su aplicación con .NET Core 1.1 o .NET Core 2.0.
+[Visual Studio de 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. Puede desarrollar su aplicación con .NET Core 2.1 o versiones posteriores.
 
 Para obtener más información, vea el tema [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md).
 

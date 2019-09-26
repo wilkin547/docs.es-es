@@ -3,16 +3,16 @@ title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926635"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117852"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
-Los rangos e índices proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una <xref:System.Array>, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Estas características permiten una sintaxis más concisa y clara para acceder a elementos únicos o intervalos de elementos de una secuencia.
+Los intervalos e índices proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Estas características permiten una sintaxis más concisa y clara para acceder a elementos únicos o intervalos de elementos de una secuencia.
 
 En este tutorial aprenderá lo siguiente:
 
@@ -24,12 +24,12 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Compatibilidad con idiomas para los índices y los rangos
 
-Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operadores.
+Esta compatibilidad con lenguajes se basa en dos nuevos tipos y dos nuevos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
-- El operador `^`, que especifica que un índice es relativo al final de una secuencia.
+- Índice desde el operador final `^`, que especifica que un índice es relativo al final de una secuencia.
 - <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.
-- El operador de rango (`..`), que especifica el inicio y el fin de un intervalo como sus operandos.
+- El operador de intervalo `..`, que especifica el inicio y el final de un intervalo como sus operandos.
 
 Comencemos con las reglas de los índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence[sequence.Length - n]`.
 

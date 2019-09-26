@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928923"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151834"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -274,28 +274,47 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 
 #### <a name="supported-languages"></a>Idiomas compatibles
 
-|nombre|Etiqueta de Markdown|
+|Name|Etiqueta de Markdown|
 |-----|-------|
-|ASP.NET con C#|aspx-csharp|
-|ASP.NET con VB|aspx-vb|
+|Consola de .NET|dotnetcli|
+|ASP.NET (C#)|aspx-csharp|
+|ASP.NET (VB)|aspx-vb|
 |CLI de Azure|azurecli|
 |AzCopy|azcopy|
+|Azure PowerShell|azurepowershell|
+|Bash|Bash|
 |C++|cpp|
+|C++/CX|cppcx|
+|C++/WinRT|cppwinrt|
 |C#|csharp|
 |C# en el explorador|csharp-interactive|
 |Consola|consola|
+|CSHTML|cshtml|
+|DAX|dax|
+|Dockerfile|dockerfile|
 |F#|fsharp|
+|Ir|go|
+|HTML|html|
+|HTTP|http|
 |Java|Java|
 |JavaScript|javascript|
 |JSON|json|
+|Lenguaje de consulta de Kusto|kusto|
+|Markdown|md|
 |NodeJS|nodejs|
 |Objective-C|objc|
+|OData|odata|
 |PHP|php|
+|PowerApps (punto como separador decimal)|powerapps-dot|
+|PowerApps (coma como separador decimal)|powerapps-comma|
 |PowerShell|powershell|
 |Python|Python|
+|Q#|qsharp|
+|R|r|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
+|TypeScript|typescript|
 |VB|vb|
 |XAML|xaml|
 |XML|xml|

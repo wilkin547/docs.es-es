@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602757"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151778"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético
 
@@ -29,7 +29,7 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica la dirección base de la biblioteca que se compilará.|
 |[-bugreport](bugreport-compiler-option.md)|Crea un archivo 'Informe de errores'. Este archivo se enviará junto con la información de bloqueo si se usa con -errorreport:prompt o -errorreport:send.|
 |[/checked](checked-compiler-option.md)|Hace que el compilador genere comprobaciones de desbordamiento.|
-|-checksumalgorithm:\<alg>|Especifica el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256. |
+|-checksumalgorithm:\<alg>|Especifica el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA256 (valor predeterminado) o SHA1.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256. |
 |[-codepage](codepage-compiler-option.md)|Especifica la página de códigos que se va a utilizar cuando se abren los archivos de código fuente.|
 |[-debug](debug-compiler-option.md)|Emite información de depuración.|
 |[-define](define-compiler-option.md)|Define símbolos de compilación condicional.|

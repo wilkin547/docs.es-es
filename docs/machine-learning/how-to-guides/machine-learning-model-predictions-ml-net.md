@@ -1,16 +1,16 @@
 ---
 title: Realizar predicciones con un modelo entrenado
 description: Aprenda a realizar predicciones con un modelo entrenado
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307396"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118012"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Realizar predicciones con un modelo entrenado
 
@@ -43,14 +43,12 @@ Al igual que los nombres de las columnas de entrada `Features` y `Label`, ML.NET
 Dado que el algoritmo utilizado en este ejemplo es un algoritmo de regresión lineal, el nombre predeterminado de la columna de salida es `Score`, que se define mediante el atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) en la propiedad `PredictedPrice`.
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-El modelo de datos `HousingPrediction` se hereda de `HousingData` para facilitar la visualización de los datos de entrada originales, junto con la salida generada por el modelo.  
 
 ## <a name="set-up-a-prediction-pipeline"></a>Configuración de una canalización de predicción
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 Si accede a la propiedad `Score` del objeto `prediction`, debe obtener un valor similar a `150079`.
 
-## <a name="batch-prediction"></a>Predicción por lotes
+## <a name="multiple-predictions"></a>Varias predicciones
 
 Dados los siguientes datos, cárguelos en un [`IDataView`](xref:Microsoft.ML.IDataView). En este caso, el nombre de la [`IDataView`](xref:Microsoft.ML.IDataView) es `inputData`. Dado que `CurrentPrice` es el destino o la etiqueta que intenta predecir mediante datos nuevos, se asume que en este momento no hay ningún valor para este.
 

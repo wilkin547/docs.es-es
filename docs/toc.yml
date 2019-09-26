@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: Bibliotecas de clases y API adicionales
       href: framework/additional-apis/
+- name: 'Guía de escritorio de .NET: WPF'
+  href: desktop-wpf/
 - name: 'Guía de C#'
   href: csharp/index.md
   items:

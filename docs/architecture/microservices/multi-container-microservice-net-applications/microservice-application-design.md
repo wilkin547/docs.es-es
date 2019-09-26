@@ -2,12 +2,12 @@
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926538"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039811"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -89,8 +89,8 @@ Por tanto, las unidades de implementación de los microservicios (e incluso de l
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Repositorio de GitHub de eShopOnContainers. Código fuente de la aplicación de referencia**\
-    <https://aka.ms/eShopOnContainers/>
+- **Repositorio de GitHub de eShopOnContainers. Código fuente de la aplicación de referencia** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Ventajas de una solución basada en microservicios
 
@@ -118,7 +118,7 @@ Una solución basada en microservicios como esta tiene muchas ventajas:
 
 Una solución basada en microservicios como esta también tiene algunas desventajas:
 
-**Aplicación distribuida**. La distribución de la aplicación agrega complejidad para los desarrolladores cuando diseñen y creen los servicios. Por ejemplo, los desarrolladores deben implementar la comunicación entre servicios mediante protocolos como HTTP o AMPQ, lo que agrega complejidad para las pruebas y el control de excepciones. También agrega latencia al sistema.
+**Aplicación distribuida**. La distribución de la aplicación agrega complejidad para los desarrolladores cuando diseñen y creen los servicios. Por ejemplo, los desarrolladores deben implementar la comunicación entre servicios mediante protocolos como HTTP o AMPQ, lo que agrega complejidad a efectos de pruebas y control de excepciones. También agrega latencia al sistema.
 
 **Complejidad de la implementación**. Una aplicación que tiene docenas de tipos de microservicios y que necesita alta escalabilidad (debe ser capaz de crear varias instancias por cada servicio y equilibrarlos entre varios hosts) supone un alto grado de complejidad de implementación para las operaciones de TI y administración. Si no se usa una infraestructura orientada a microservicios (por ejemplo, un orquestador y un programador), esa complejidad adicional puede requerir muchos más esfuerzos de desarrollo que la propia aplicación empresarial.
 

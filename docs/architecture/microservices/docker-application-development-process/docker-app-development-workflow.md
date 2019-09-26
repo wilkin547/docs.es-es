@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674822"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040277"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -204,28 +204,37 @@ El Dockerfile inicial podría ser algo parecido a esto:
 
 Y estos son los detalles, línea a línea:
 
-<!-- markdownlint-disable MD029-->
-1. Comience una fase con una imagen base "pequeña" de solo el entorno de ejecución, denomínela **base** para referencia.
-2. Cree un directorio **/app** en la imagen.
-3. Exponga el puerto **80**.
-<!-- skip -->
-5. Comience una nueva fase con una imagen "grande" para compilar y publicar, denomínela **build** para referencia.
-6. Cree un directorio **/src** en la imagen.
-7. Hasta la línea 16, copie los archivos **.csproj** de los proyectos a los que se hace referencia para poder restaurar los paquetes más adelante.
-<!-- skip -->
-17. Restaure los paquetes del proyecto **Catalog.API** y los proyectos a los que se hace referencia.
-18. Copie **todo el árbol de directorio de la solución** (excepto los archivos o directorios incluidos en el archivo **.dockerignore**) del directorio **/src** en la imagen.
-19. Cambie la carpeta actual al proyecto **Catalog.API**.
-20. Compile el proyecto (y otras dependencias del proyecto) y use como salida el directorio **/app** de la imagen.
-<!-- skip -->
-22. Comience una nueva fase a partir de la compilación, denomínela **publish** para referencia.
-23. Publique el proyecto (y las dependencias) y use como salida el directorio **/app** de la imagen.
-<!-- skip -->
-25. Comience una nueva fase a partir de **base** y denomínela **final**
-26. Cambie el directorio actual a **/app**
-27. Copie el directorio **/app** de la fase **publish** en el directorio actual
-28. Defina el comando que se va a ejecutar cuando se inicie el contenedor.
-<!-- markdownlint-enable MD029-->
+- **Línea 1:** Comience una fase con una imagen base "pequeña" de solo el entorno de ejecución, denomínela **base** para referencia.
+
+- **Línea 2:** Cree el directorio **/app** de la imagen.
+
+- **Línea 3:** Exponga el puerto **80**.
+
+- **Línea 5:** Comience una nueva fase con una imagen "grande" para compilar y publicar. Denomínela **build** como referencia.
+
+- **Línea 6:** Cree un directorio **/src** en la imagen.
+
+- **Línea 7:** Hasta la línea 16, copie los archivos del proyecto **.csproj** a los que se hace referencia para poder restaurar los paquetes más adelante.
+
+- **Línea 17:** Restaure los paquetes del proyecto **Catalog.API** y los proyectos a los que se hace referencia.
+
+- **Línea 18:** Copie **todo el árbol de directorio de la solución** (excepto los archivos o directorios incluidos en el archivo **.dockerignore**) en el directorio **/src** de la imagen.
+
+- **Línea 19:** Cambie la carpeta actual al proyecto **Catalog.API**.
+
+- **Línea 20:** Compile el proyecto (y otras dependencias del proyecto) y use como salida el directorio **/app** de la imagen.
+
+- **Línea 22:** Comience una nueva fase a partir de la compilación. Denomínela **publish** como referencia.
+
+- **Línea 23:** Publique el proyecto (y las dependencias) y use como salida el directorio **/app** de la imagen.
+
+- **Línea 25:** Comience una nueva fase a partir de **base** y denomínela **final**.
+
+- **Línea 26:** Cambie el directorio actual a **/app**.
+
+- **Línea 27:** Copie el directorio **/app** de la fase **publish** en el directorio actual.
+
+- **Línea 28:** Defina el comando que se va a ejecutar cuando se inicie el contenedor.
 
 Ahora vamos a examinar algunas optimizaciones para mejorar el rendimiento del proceso completo, lo que, en el caso de eShopOnContainers, significa aproximadamente 22 minutos o más para compilar la solución completa en contenedores de Linux.
 
@@ -239,9 +248,9 @@ COPY . .
 
 Luego, sería igual para cada servicio, se copiaría la solución completa y se crearía una capa más grande pero:
 
-1) El proceso de copia solo se ejecutaría la primera vez (y al recompilar si se modifica un archivo) y se usaría la memoria caché para todos los demás servicios y
+1. El proceso de copia solo se ejecutaría la primera vez (y al recompilar si se modifica un archivo) y se usaría la memoria caché para todos los demás servicios y
 
-2) Puesto que la imagen más grande se produce en una fase intermedia, no afecta al tamaño final de la imagen.
+2. Puesto que la imagen más grande se produce en una fase intermedia, no afecta al tamaño final de la imagen.
 
 La siguiente optimización importante implica al comando `restore` ejecutado en la línea 17, que también es diferente para cada servicio de eShopOnContainers. Si cambia esa línea a:
 
