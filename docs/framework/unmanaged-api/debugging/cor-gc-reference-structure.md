@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740697"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274225"
 ---
-# <a name="corgcreference-structure"></a>COR_GC_REFERENCE (Estructura)
+# <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE (Estructura)
 Contiene información sobre un objeto que se va a recolectar con elemento no utilizado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,40 +39,40 @@ typedef struct _COR_GC_REFERENCE {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`domain`|Un puntero al dominio de aplicación a la que pertenece el objeto o identificador. Su valor puede ser `null`.|  
-|`location`|ICorDebugValue o una ICorDebugReferenceValue (interfaz) que se corresponde con el objeto que se recopilan de elementos no utilizados.|  
-|`type`|Un [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valor de enumeración que indica de dónde procede la raíz. Para obtener más información, vea la sección Comentarios.|  
-|`extraData`|Datos adicionales sobre el objeto que se recopilan de elementos no utilizados. Esta información depende del origen del objeto, tal y como indica la `type` campo. Para obtener más información, vea la sección Comentarios.|  
+|`domain`|Puntero al dominio de aplicación al que pertenece el identificador u objeto. Su valor puede ser `null`.|  
+|`location`|Una interfaz ICorDebugValue o ICorDebugReferenceValue que corresponde al objeto que se va a recolectar como elemento no utilizado.|  
+|`type`|Un valor de enumeración de [corgcreferencetype (](corgcreferencetype-enumeration.md) que indica de dónde procede la raíz. Para obtener más información, vea la sección Comentarios.|  
+|`extraData`|Datos adicionales sobre el objeto que se va a recolectar como elemento no utilizado. Esta información depende del origen del objeto, como se indica en el `type` campo. Para obtener más información, vea la sección Comentarios.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `type` campo es un [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valor de enumeración que indica de dónde procede la referencia. Una determinada `COR_GC_REFERENCE` valor puede reflejar cualquiera de los siguientes tipos de objetos administrados:  
+ El `type` campo es un valor de enumeración [corgcreferencetype (](corgcreferencetype-enumeration.md) que indica de dónde procede la referencia. Un valor `COR_GC_REFERENCE` determinado puede reflejar cualquiera de los siguientes tipos de objetos administrados:  
   
-- Los objetos de todas las pilas administradas (`CorGCReferenceType.CorReferenceStack`). Esto incluye referencias activas en código administrado, así como los objetos creados por common language runtime.  
+- Objetos de todas las pilas administradas`CorGCReferenceType.CorReferenceStack`(). Esto incluye las referencias dinámicas en el código administrado, así como los objetos creados por el Common Language Runtime.  
   
-- Objetos de la tabla de identificadores (`CorGCReferenceType.CorHandle*`). Esto incluye las referencias fuertes (`HNDTYPE_STRONG` y `HNDTYPE_REFCOUNT`) y las variables estáticas en un módulo.  
+- Objetos de la tabla de identificadores (`CorGCReferenceType.CorHandle*`). Esto incluye referencias seguras (`HNDTYPE_STRONG` y `HNDTYPE_REFCOUNT`) y variables estáticas en un módulo.  
   
-- Los objetos de la cola del finalizador (`CorGCReferenceType.CorReferenceFinalizer`). La cola del finalizador raíces objetos hasta que se ha ejecutado el finalizador.  
+- Objetos de la cola del finalizador`CorGCReferenceType.CorReferenceFinalizer`(). Los objetos raíces de la cola del finalizador hasta que se haya ejecutado el finalizador.  
   
- El `extraData` campo contiene datos adicionales según el origen (o tipo) de la referencia. Los valores posibles son:  
+ El `extraData` campo contiene datos adicionales en función del origen (o tipo) de la referencia. Los valores posibles son:  
   
-- `DependentSource`. Si el `type` es `CorGCREferenceType.CorHandleStrongDependent`, este campo es el objeto que, si se activa, raíces para recopilar los elementos no utilizados en el objeto de `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Si es, `CorGCREferenceType.CorHandleStrongDependent`este campo es el objeto que, si está activo, es la raíz del objeto en el que `COR_GC_REFERENCE.Location`se va a realizar la recolección de elementos no utilizados. `type`  
   
-- `RefCount` Si el `type` es `CorGCREferenceType.CorHandleStrongRefCount`, este campo es el recuento de referencias del identificador.  
+- `RefCount`. `type` Si es `CorGCREferenceType.CorHandleStrongRefCount`, este campo es el recuento de referencias del identificador.  
   
-- `Size` Si el `type` es `CorGCREferenceType.CorHandleStrongSizedByref`, este campo es el último tamaño del árbol de objetos para el que el recolector de elementos no utilizados calcula las raíces de objeto. Tenga en cuenta que este cálculo no es necesariamente actualizado.  
+- `Size`. Si es, `CorGCREferenceType.CorHandleStrongSizedByref`este campo es el último tamaño del árbol de objetos para el que el recolector de elementos no utilizados calculó las raíces del objeto. `type` Tenga en cuenta que este cálculo no está necesariamente actualizado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

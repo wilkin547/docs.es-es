@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740784"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274078"
 ---
-# <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP (Estructura)
+# <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP (Estructura)
 Contiene los desplazamientos que se usan para asignar código de lenguaje intermedio de Microsoft (MSIL) a código nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,24 +38,24 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`ilOffset`|El desplazamiento del código MSIL.|  
-|`nativeStartOffset`|El desplazamiento del inicio del código nativo.|  
-|`nativeEndOffset`|El desplazamiento del final del código nativo.|  
+|`ilOffset`|Desplazamiento del código MSIL.|  
+|`nativeStartOffset`|Desplazamiento del inicio del código nativo.|  
+|`nativeEndOffset`|Desplazamiento del final del código nativo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorDebug.idl  
+ **Encabezado**: Corprof. idl, Cordebug. idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [GetILToNativeMapping (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [GetILToNativeMapping (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetILToNativeMapping (método)](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping (método)](icordebugcode-getiltonativemapping-method.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

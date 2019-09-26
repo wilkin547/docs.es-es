@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740994"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274264"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance (Función)
 Crea un objeto de interfaz para el elemento de destino especificado.  
@@ -39,26 +39,26 @@ HRESULT CLRDataCreateInstance (
   
 ## <a name="parameters"></a>Parámetros  
  `iid`  
- [in] El identificador de la interfaz de creación de instancias.  
+ de Identificador de la interfaz de la que se va a crear una instancia.  
   
  `target`  
- [in] Un puntero a un usuario implementa [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) objeto que representa el elemento de destino para el que se va a crear el objeto de interfaz.  
+ de Un puntero a un objeto [ICLRDataTarget](iclrdatatarget-interface.md) implementado por el usuario que representa el elemento de destino para el que se va a crear el objeto de interfaz.  
   
  `iface`  
- [out] Un puntero a la dirección del objeto de interfaz devuelto.  
+ enuncia Puntero a la dirección del objeto de interfaz devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- La `ICLRDataTarget` objeto es implementado por el sistema de escritura de la aplicación de depuración. La implementación depende del tipo de elemento de destino que se va a representar. El elemento de destino puede ser un proceso, volcado de memoria, equipo remoto y así sucesivamente.  
+ El `ICLRDataTarget` escritor de la aplicación de depuración implementa el objeto. La implementación depende del tipo de elemento de destino que se está representando. El elemento de destino puede ser un proceso, un volcado de memoria, una máquina remota, etc.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: ClrData.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Funciones estáticas globales de depuración](debugging-global-static-functions.md)

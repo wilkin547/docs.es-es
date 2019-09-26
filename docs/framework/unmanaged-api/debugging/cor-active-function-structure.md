@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740825"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274153"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION (Estructura)
-Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. Esta estructura se usa por la [Icordebugthread2](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION (Estructura)
+Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. El método [ICorDebugThread2:: GetActiveFunctions (](icordebugthread2-getactivefunctions-method.md) usa esta estructura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,24 +40,24 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`pAppDomain`|Puntero en el propietario del dominio de aplicación de la `ilOffset` campo.|  
-|`pModule`|Puntero al propietario del módulo de la `ilOffset` campo.|  
-|`pFunction`|Puntero al propietario de la función de la `ilOffset` campo.|  
-|`ilOffset`|El desplazamiento de lenguaje intermedio (MSIL) de Microsoft del marco.|  
+|`pAppDomain`|Puntero al propietario del dominio de aplicación del `ilOffset` campo.|  
+|`pModule`|Puntero al propietario del módulo del `ilOffset` campo.|  
+|`pFunction`|Puntero al propietario de la función del `ilOffset` campo.|  
+|`ilOffset`|Desplazamiento del lenguaje intermedio de Microsoft (MSIL) del marco.|  
 |`flags`|Reservado para extensibilidad futura.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: CorDebug.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

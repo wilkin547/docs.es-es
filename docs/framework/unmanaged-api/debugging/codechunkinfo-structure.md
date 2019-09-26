@@ -1,5 +1,5 @@
 ---
-title: Estructura CodeChunkInfo
+title: CodeChunkInfo (Estructura)
 ms.date: 03/30/2017
 api_name:
 - CodeChunkInfo
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740885"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274254"
 ---
-# <a name="codechunkinfo-structure"></a>Estructura CodeChunkInfo
+# <a name="codechunkinfo-structure"></a>CodeChunkInfo (Estructura)
 
 Representa un único fragmento de código en la memoria.  
   
@@ -38,25 +38,25 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`startAddr`|Un `CORDB_ADDRESS` valor que especifica la dirección inicial del fragmento.|  
-|`length`|El tamaño, en bytes, del fragmento.|  
+|`startAddr`|`CORDB_ADDRESS` Valor que especifica la dirección de inicio del fragmento.|  
+|`length`|Tamaño, en bytes, del fragmento.|  
   
 ## <a name="remarks"></a>Comentarios  
  El único fragmento de código es una región de código nativo que forma parte de un objeto de código como una función.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: CorDebug.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [GetCodeChunks (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetCodeChunks (método)](icordebugcode2-getcodechunks-method.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

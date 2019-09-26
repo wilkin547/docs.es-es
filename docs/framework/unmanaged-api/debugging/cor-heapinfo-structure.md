@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740656"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274191"
 ---
-# <a name="corheapinfo-structure"></a>COR_HEAPINFO (Estructura)
+# <a name="cor_heapinfo-structure"></a>COR_HEAPINFO (Estructura)
 Proporciona información general sobre el montón de recolección de elementos no utilizados, incluido si es enumerable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,29 +40,29 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` Si las estructuras de la colección de elementos no utilizados son válidas y se puede enumerar el montón; en caso contrario, `false`.|  
-|`pointerSize`|El tamaño, en bytes, de punteros en la arquitectura de destino.|  
-|`numHeaps`|El número de recolección de elementos lógicos montones en el proceso.|  
-|`concurrent`|`TRUE` Si simultánea está habilitada la recolección de elementos (fondo); en caso contrario, `FALSE`.|  
-|`gcType`|Un miembro de la [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumeración que indica si el recolector de elementos no utilizados se ejecuta en una estación de trabajo o un servidor.|  
+|`areGCStructuresValid`|`true`Si las estructuras de recolección de elementos no utilizados son válidas y se puede enumerar el montón; en caso `false`contrario,.|  
+|`pointerSize`|Tamaño, en bytes, de los punteros en la arquitectura de destino.|  
+|`numHeaps`|El número de montones de recolección de elementos no utilizados lógicas en el proceso.|  
+|`concurrent`|`TRUE`Si la recolección de elementos no utilizados simultánea (en segundo plano) está habilitada; en caso `FALSE`contrario,.|  
+|`gcType`|Miembro de la enumeración [cordebuggctype (](cordebuggctype-enumeration.md) que indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una instancia de la `COR_HEAPINFO` estructura se devuelve mediante una llamada a la [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método.  
+ Se devuelve una instancia `COR_HEAPINFO` de la estructura llamando al método [ICorDebugProcess5:: getgcheapinformation (](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Antes de enumerar los objetos del montón de la colección de elementos no utilizados, debe comprobar siempre el `areGCStructuresValid` campo para asegurarse de que el montón está en un estado enumerable. Para obtener más información, consulte el [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método.  
+ Antes de enumerar los objetos en el montón de recolección de elementos no utilizados `areGCStructuresValid` , debe comprobar siempre el campo para asegurarse de que el montón se encuentra en un estado Enumerable. Para obtener más información, vea el método [ICorDebugProcess5:: getgcheapinformation (](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

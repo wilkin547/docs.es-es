@@ -1,5 +1,5 @@
 ---
-title: Filtrar para dar formato al control DataGrid de formularios Windows Forms mediante el diseñador
+title: Procedimiento para dar formato al control DataGrid de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666171"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Filtrar para dar formato al control DataGrid de formularios Windows Forms mediante el diseñador
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedimiento para dar formato al control DataGrid de formularios Windows Forms mediante el diseñador
 
 > [!NOTE]
 > El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
@@ -41,7 +41,7 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 2. En la ventana **propiedades** , establezca las siguientes propiedades, según corresponda.
 
-    |Propiedad|DESCRIPCIÓN|
+    |Propiedad.|Descripción|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La `BackColor` propiedad define el color de las filas pares de la cuadrícula. Cuando se establece la <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> propiedad en un color diferente, todas las demás filas se establecen en este nuevo color (filas 1, 3, 5, etc.).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Color de fondo de las filas pares de la cuadrícula (filas 0, 2, 4, 6, etc.).|

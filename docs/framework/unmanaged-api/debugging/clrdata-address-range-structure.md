@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afcb4e642c9b54107423f7474771fdc28cde709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8eb841b4c4f06a3932805ae6222bdd693def5ea0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741017"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274309"
 ---
-# <a name="clrdataaddressrange-structure"></a>Estructura CLRDATA_ADDRESS_RANGE
+# <a name="clrdata_address_range-structure"></a>Estructura CLRDATA_ADDRESS_RANGE
 
 Define un intervalo de direcciones.
 
@@ -40,23 +40,23 @@ typedef struct
 
 ## <a name="members"></a>Miembros
 
-| Member         | DESCRIPCIÓN                     |
+| Miembro         | Descripción                     |
 | -------------- | ------------------------------- |
-| `startAddress` | La dirección de inicio del intervalo. |
-| `endAddress`   | La dirección final del intervalo.   |
+| `startAddress` | Dirección de inicio del intervalo. |
+| `endAddress`   | Dirección final del intervalo.   |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para ello, defina la estructura según lo especificado anteriormente, donde `CLRDATA_ADDRESS` es un entero de 64 bits sin signo.
+Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura como se especificó anteriormente, `CLRDATA_ADDRESS` donde es un entero de 64 bits sin signo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: None  
-**Biblioteca:** None  
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+**Encabezado**: Ninguna  
+**Biblioteca** Ninguna  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
 
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuración](index.md)
+- [Estructuras de depuración](debugging-structures.md)

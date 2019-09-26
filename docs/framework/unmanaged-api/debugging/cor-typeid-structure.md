@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740505"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273995"
 ---
-# <a name="cortypeid-structure"></a>COR_TYPEID (Estructura)
+# <a name="cor_typeid-structure"></a>COR_TYPEID (Estructura)
 Contiene un identificador de tipos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,26 +37,26 @@ typedef struct COR_TYPEID{
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`token1`|El primer token.|  
-|`token2`|El segundo token.|  
+|`token2`|Segundo token.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `COR_TYPEID` estructura devuelto por una serie de métodos de depuración que proporcionan información acerca de los objetos para recopilar los elementos no utilizados. A continuación, puede pasarse como argumento a otros métodos de depuración que proporcionen información adicional sobre dicho elemento. Por ejemplo, al enumerar un [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) objeto, puede recuperar individuales [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objetos que representan objetos individuales en el montón administrado. A continuación, puede pasar el `COR_TYPEID` valor desde el `COR_HEAPOBJECT.type` campo el [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) método para recuperar un objeto ICorDebugType que proporciona información sobre el objeto.  
+ La `COR_TYPEID` estructura es devuelta por una serie de métodos de depuración que proporcionan información sobre los objetos que se van a recolectar como elemento no utilizado. A continuación, se puede pasar como argumento a otros métodos de depuración que proporcionan información adicional sobre ese elemento. Por ejemplo, mediante la enumeración de un objeto [icordebugheapenum (](icordebugheapenum-interface.md) , puede recuperar objetos [COR_HEAPOBJECT](cor-heapobject-structure.md) individuales que representan objetos individuales en el montón administrado. Después, puede pasar el `COR_TYPEID` valor `COR_HEAPOBJECT.type` del campo al método [ICorDebugProcess5:: gettypefortypeid (](icordebugprocess5-gettypefortypeid-method.md) para recuperar un objeto ICorDebugType que proporcione información de tipo sobre el objeto.  
   
- Un `COR_TYPEID` objeto está pensado para ser opaca. No se deben tener acceso a sus campos individuales ni manipular. Es su uso exclusivo como un identificador que se proporciona como un `out` parámetro en una llamada al método y que puede, a su vez, se pasa a otros métodos para proporcionar información adicional.  
+ Un `COR_TYPEID` objeto está diseñado para ser opaco. No se debe tener acceso a sus campos individuales ni manipularlos. Su único uso es como un identificador que se proporciona como un `out` parámetro en una llamada al método y que, a su vez, se puede pasar a otros métodos para proporcionar información adicional.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

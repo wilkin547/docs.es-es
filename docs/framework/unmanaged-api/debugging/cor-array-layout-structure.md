@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740811"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274217"
 ---
-# <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT (Estructura)
+# <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT (Estructura)
 Proporciona información sobre la distribución de un objeto de matriz en la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,32 +43,32 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`componentID`|El identificador del tipo de objetos que contiene la matriz.|  
-|`componentType`|Un valor de enumeración CorElementType que indica si el componente es un tipo primitivo, una clase de valor o una referencia de la colección de elementos no utilizados.|  
-|`firstElementOffset`|El desplazamiento al primer elemento de la matriz.|  
-|`elementSize`|El tamaño de cada elemento.|  
-|`countOffset`|El desplazamiento en el número de elementos de la matriz.|  
-|`rankSize`|El tamaño de la clasificación, en bytes.|  
-|`numRanks`|El número de rangos en la matriz.|  
-|`rankOffset`|El desplazamiento en el que iniciar los rangos.|  
+|`componentID`|Identificador del tipo de objetos que contiene la matriz.|  
+|`componentType`|Un valor de enumeración de CorElementType que indica si el componente es una referencia de recolección de elementos no utilizados, una clase de valor o un primitivo.|  
+|`firstElementOffset`|Desplazamiento al primer elemento de la matriz.|  
+|`elementSize`|Tamaño de cada elemento.|  
+|`countOffset`|Desplazamiento al número de elementos de la matriz.|  
+|`rankSize`|Tamaño del rango, en bytes.|  
+|`numRanks`|Número de rangos de la matriz.|  
+|`rankOffset`|Desplazamiento en el que se inician los rangos.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `rankSize` campo especifica el tamaño de un rango en una matriz multidimensional. Es preciso para las matrices unidimensionales también.  
+ El `rankSize` campo especifica el tamaño de un rango en una matriz multidimensional. También es preciso para las matrices unidimensionales.  
   
  El valor de `numRanks` es 1 para una matriz unidimensional y `N` para una matriz multidimensional de `N` dimensiones.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740775"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274203"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE (Estructura)
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE (Estructura)
 Contiene información de desplazamiento para un intervalo de código.  
   
- Esta estructura se usa por la [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) método.  
+ Esta estructura la usa el método [ICorDebugStepper:: steprange (](icordebugstepper-steprange-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +39,22 @@ typedef struct {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`startOffset`|El desplazamiento del principio del intervalo.|  
-|`endOffset`|El desplazamiento del final del intervalo.|  
+|`startOffset`|Desplazamiento del principio del intervalo.|  
+|`endOffset`|Desplazamiento del final del intervalo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: CorDebug.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [StepRange (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange (método)](icordebugstepper-steprange-method.md)
+- [Estructuras de depuración](debugging-structures.md)
+- [Depuración](index.md)

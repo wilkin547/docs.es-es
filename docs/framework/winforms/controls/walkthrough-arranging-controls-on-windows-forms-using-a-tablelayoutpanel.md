@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666799"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel
@@ -53,9 +53,9 @@ El primer paso es crear el proyecto y configurar el formulario.
 
 #### <a name="to-create-the-project"></a>Para crear el proyecto
 
-1. Cree un proyecto de aplicación para Windows denominado "TableLayoutPanelExample". Para obtener más información, consulte [Cómo Cree un proyecto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicación de Windows Forms.
+1. Cree un proyecto de aplicación para Windows denominado "TableLayoutPanelExample". Para obtener más información, vea [Cómo: Cree un proyecto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicación de Windows Forms.
 
-2. Seleccione el formulario en el **Diseñador**de Windows Forms.
+2. Seleccione el formulario en el diseñador de **Windows** **Forms**.
 
 ## <a name="arranging-controls-in-rows-and-columns"></a>Organizar controles en filas y columnas
 
@@ -199,5 +199,5 @@ Puede lograr un diseño complejo mediante una combinación de controles y panele
 - [Procedimientos recomendados para el control TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
 - [Cómo: Acoplar controles en Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procedimientos: Delimitar controles en Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Cómo: Delimitar controles en Windows Forms](how-to-anchor-controls-on-windows-forms.md)
 - [Tutorial: Diseñar Windows Forms controles con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)

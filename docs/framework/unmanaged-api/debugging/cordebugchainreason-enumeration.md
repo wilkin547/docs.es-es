@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740361"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273975"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason (Enumeración)
 Indica el motivo o los motivos para que se inicie una cadena de llamadas.  
@@ -48,7 +48,7 @@ typedef enum CorDebugChainReason {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`CHAIN_NONE`|No se inició ninguna cadena de llamadas.|  
 |`CHAIN_CLASS_INIT`|Un constructor inició la cadena.|  
@@ -65,17 +65,17 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|Una evaluación de función inició la cadena.|  
   
 ## <a name="remarks"></a>Comentarios  
- Use la [ICorDebugChain:: GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) método para determinar las razones para la iniciación de una cadena de llamadas.  
+ Use el método [ICorDebugChain:: GetReason (](icordebugchain-getreason-method.md) para averiguar los motivos de inicio de una cadena de llamadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumeraciones de depuración](debugging-enumerations.md)

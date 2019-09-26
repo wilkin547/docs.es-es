@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70016142"
 ---
 # <a name="opentype-font-features"></a>Características de las fuentes OpenType
@@ -150,7 +150,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
    
  Sin embargo, puede deshabilitar las características de ligadura estándar para que una ligadura estándar, como "ff", se muestre como dos glifos independientes, en lugar de un glifo de caracteres combinados.  
   
- ![Texto que usa ligaduras estándar OpenType] deshabilitadas (./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Texto que usa ligaduras estándar OpenType") deshabilitadas  
+ ![Texto que usa ligaduras estándar OpenType deshabilitadas](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Texto que usa ligaduras estándar OpenType deshabilitadas")  
     
  En el ejemplo de marcación siguiente se muestra cómo deshabilitar los glifos de ligadura estándar para la fuente Palatino Linotype mediante <xref:System.Windows.Documents.Typography> las propiedades del objeto.  
   
@@ -289,7 +289,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
 ### <a name="typography-class-properties"></a>Propiedades de la clase de tipografía  
  En la tabla siguiente se enumeran las propiedades, los valores y la <xref:System.Windows.Documents.Typography> configuración predeterminada del objeto.  
   
-|Propiedad|Valores|Valor predeterminado|  
+|Propiedad.|Valores|Valor predeterminado|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Valor numérico: byte|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  

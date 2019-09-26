@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040070"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Procedimiento para agregar y quitar nodos con el control TreeView de formularios Windows Forms mediante el diseñador
@@ -38,5 +38,5 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 - [Información general del control TreeView](treeview-control-overview-windows-forms.md)
 - [Cómo: Establecer iconos para el control TreeView Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
 - [Cómo: Recorrer en iteración todos los nodos de un control TreeView Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Procedimientos: Determinar en qué nodo de TreeView se hizo clic](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Cómo: Determinar en qué nodo de TreeView se hizo clic](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
 - [Cómo: Agregar información personalizada a un control TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67b85917be590bdba7ed3f10972ad39b731dbcdd
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740986"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274246"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags (Enumeración)
-Indica qué regiones de memoria de una llamada a la [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) debe incluir el método.  
+Indica qué regiones de memoria debe incluir una llamada al método [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +38,20 @@ typedef enum CLRDataEnumMemoryFlags {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|Un minivolcado, es decir, un volcado de memoria dispersa.|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|Un minivolcado, es decir, un volcado de memoria disperso.|  
 |`CLRDATA_ENUM_MEM_HEAP`|Un volcado de memoria completo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado**: ClrData. idl, ClrData. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumeraciones de depuración](debugging-enumerations.md)
