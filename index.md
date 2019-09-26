@@ -5,13 +5,13 @@ hide_bc: true
 title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928944"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216700"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928944"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "70928944"
         <h1>Documentación de .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Documentación</a>
+                <a data-default="true" href="#docs">Documentos</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">Guías de .NET</a>
@@ -268,7 +268,7 @@ ms.locfileid: "70928944"
                         </ul>
                     </li>
                     <li>
-                        <a href="#getstarted">Primeros pasos</a>
+                        <a href="#getstarted">Introducción</a>
                         <ul id="getstarted" class="cardsC">
                             <li>
                                 <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
@@ -496,7 +496,7 @@ ms.locfileid: "70928944"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobile</a>
+                        <a href="#mobile">Móvil</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios/">
