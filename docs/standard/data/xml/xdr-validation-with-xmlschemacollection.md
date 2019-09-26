@@ -8,78 +8,72 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca806f0f9c7e1ad859affe05d5db8ec0d3b36b03
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.openlocfilehash: 83eabbccfa2116142e9ee5889e3368ad4273b541
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078880"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306393"
 ---
-# <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="f5ce5-102">Validación de XDR con XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="f5ce5-102">XDR Validation with XmlSchemaCollection</span></span>
+# <a name="xdr-validation-with-xmlschemacollection"></a><span data-ttu-id="eaa5b-102">Validación de XDR con XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="eaa5b-102">XDR Validation with XmlSchemaCollection</span></span>
 
-<span data-ttu-id="f5ce5-103">Si el esquema reducido de datos XML (XDR) que va a utilizar para la validación se almacena en **XmlSchemaCollection**, se asociará al identificador URI de espacio de nombres que se especificó al agregar el esquema a la colección.</span><span class="sxs-lookup"><span data-stu-id="f5ce5-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="f5ce5-104">**XmlValidatingReader** asigna el URI de espacio de nombres del documento XML al esquema que corresponde a ese URI en la colección.</span><span class="sxs-lookup"><span data-stu-id="f5ce5-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>
+<span data-ttu-id="eaa5b-103">Si el esquema reducido de datos XML (XDR) que va a utilizar para la validación se almacena en **XmlSchemaCollection**, se asociará al identificador URI de espacio de nombres que se especificó al agregar el esquema a la colección.</span><span class="sxs-lookup"><span data-stu-id="eaa5b-103">If the XML-Data Reduced (XDR) schema you are validating against is stored in the **XmlSchemaCollection**, it is associated with the namespace URI specified when the schema was added to the collection.</span></span> <span data-ttu-id="eaa5b-104">**XmlValidatingReader** asigna el URI de espacio de nombres del documento XML al esquema que corresponde a ese URI en la colección.</span><span class="sxs-lookup"><span data-stu-id="eaa5b-104">**XmlValidatingReader** maps the namespace URI in the XML document to the schema that corresponds to that URI in the collection.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="f5ce5-105">La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>.</span><span class="sxs-lookup"><span data-stu-id="f5ce5-105">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="f5ce5-106">Para más información sobre la clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [XmlSchemaSet para compilación de esquemas](xmlschemaset-for-schema-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="f5ce5-106">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](xmlschemaset-for-schema-compilation.md).</span></span>
+> <span data-ttu-id="eaa5b-105">La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>.</span><span class="sxs-lookup"><span data-stu-id="eaa5b-105">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="eaa5b-106">Para más información sobre la clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [XmlSchemaSet para compilación de esquemas](xmlschemaset-for-schema-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="eaa5b-106">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](xmlschemaset-for-schema-compilation.md).</span></span>
 
-<span data-ttu-id="f5ce5-107">Por ejemplo, si el elemento raíz del documento XML es `<bookstore xmlns="urn:newbooks-schema">`, cuando el esquema se agrega a la colección **XmlSchemaCollection** hace referencia al mismo espacio de nombres, como se indica a continuación:</span><span class="sxs-lookup"><span data-stu-id="f5ce5-107">For example, if the root element of the XML document is `<bookstore xmlns="urn:newbooks-schema">`, when the schema is added to the **XmlSchemaCollection** it references the same namespace, as follows:</span></span>
+<span data-ttu-id="eaa5b-107">Por ejemplo, si el elemento raíz del documento XML es `<bookstore xmlns="urn:newbooks-schema">`, cuando el esquema se agrega a la colección **XmlSchemaCollection** hace referencia al mismo espacio de nombres, como se indica a continuación:</span><span class="sxs-lookup"><span data-stu-id="eaa5b-107">For example, if the root element of the XML document is `<bookstore xmlns="urn:newbooks-schema">`, when the schema is added to the **XmlSchemaCollection** it references the same namespace, as follows:</span></span>
 
 ```
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 ```
 
-<span data-ttu-id="f5ce5-108">En el ejemplo de código siguiente se crea una clase **XmlValidatingReader** que acepta una clase **XmlTextReader** y agrega un esquema XDR, HeadCount.xdr, a **XmlSchemaCollection**.</span><span class="sxs-lookup"><span data-stu-id="f5ce5-108">The following code example creates an **XmlValidatingReader** that takes an **XmlTextReader** and adds an XDR schema, HeadCount.xdr, to the **XmlSchemaCollection**.</span></span>
+<span data-ttu-id="eaa5b-108">En el ejemplo de código siguiente se crea un **XmlValidatingReader** que toma **XmlTextReader** y agrega un esquema XDR, HeadCount. XDR, a **XmlSchemaCollection**:</span><span class="sxs-lookup"><span data-stu-id="eaa5b-108">The following code example creates an **XmlValidatingReader** that takes an **XmlTextReader** and adds an XDR schema, HeadCount.xdr, to the **XmlSchemaCollection**:</span></span>
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
 
 Namespace ValidationSample
 
-   Class Sample
+    Class Sample
 
-      Public Shared Sub Main()
-         Dim tr As New XmlTextReader("HeadCount.xml")
-         Dim vr As New XmlValidatingReader(tr)
+        Public Shared Sub Main()
+            Dim tr As New XmlTextReader("HeadCount.xml")
+            Dim vr As New XmlValidatingReader(tr)
 
-         vr.Schemas.Add("xdrHeadCount", "HeadCount.xdr")
-         vr.ValidationType = ValidationType.XDR
-         AddHandler vr.ValidationEventHandler, AddressOf ValidationHandler
+            vr.Schemas.Add("xdrHeadCount", "HeadCount.xdr")
+            vr.ValidationType = ValidationType.XDR
+            AddHandler vr.ValidationEventHandler, AddressOf ValidationHandler
 
-         While vr.Read()
-            PrintTypeInfo(vr)
-            If vr.NodeType = XmlNodeType.Element Then
-               While vr.MoveToNextAttribute()
-                  PrintTypeInfo(vr)
-               End While
+            While vr.Read()
+                PrintTypeInfo(vr)
+                If vr.NodeType = XmlNodeType.Element Then
+                    While vr.MoveToNextAttribute()
+                        PrintTypeInfo(vr)
+                    End While
+                End If
+            End While
+            Console.WriteLine("Validation finished")
+        End Sub
+
+        Public Shared Sub PrintTypeInfo(vr As XmlValidatingReader)
+            If vr.SchemaType IsNot Nothing Then
+                If TypeOf vr.SchemaType Is XmlSchemaDatatype Or TypeOf vr.SchemaType Is XmlSchemaSimpleType Then
+                    Dim value As Object = vr.ReadTypedValue()
+                    Console.WriteLine($"{vr.NodeType}({vr.Name},{value.GetType().Name}):{value}")
+                End If
             End If
-         End While
-         Console.WriteLine("Validation finished")
-      End Sub
-      ' Main
+        End Sub
 
-      Public Shared Sub PrintTypeInfo(vr As XmlValidatingReader)
-         If Not (vr.SchemaType Is Nothing) Then
-            If TypeOf vr.SchemaType Is XmlSchemaDatatype Or TypeOf vr.SchemaType Is XmlSchemaSimpleType Then
-               Dim value As Object = vr.ReadTypedValue()
-               Console.WriteLine("{0}({1},{2}):{3}", vr.NodeType, vr.Name, value.GetType().Name, value)
-            End If
-         End If
-      End Sub
-      ' PrintTypeInfo
-
-      Public Shared Sub ValidationHandler(sender As Object, args As ValidationEventArgs)
-         Console.WriteLine("***Validation error")
-         Console.WriteLine("Severity:{0}", args.Severity)
-         Console.WriteLine("Message:{0}", args.Message)
-      End Sub
-      ' ValidationHandler
-   End Class
-   ' Sample
+        Public Shared Sub ValidationHandler(sender As Object, args As ValidationEventArgs)
+            Console.WriteLine("***Validation error")
+            Console.WriteLine($"Severity:{args.Severity}")
+            Console.WriteLine($"Message:{args.Message}")
+        End Sub
+    End Class
 End Namespace
-' ValidationSample
 ```
 
 ```csharp
@@ -90,52 +84,52 @@ using System.Xml.Schema;
 
 namespace ValidationSample
 {
-   class Sample
-   {
-      public static void Main()
-      {
-         XmlTextReader tr = new XmlTextReader("HeadCount.xml");
-         XmlValidatingReader vr = new XmlValidatingReader(tr);
+    class Sample
+    {
+        public static void Main()
+        {
+            var tr = new XmlTextReader("HeadCount.xml");
+            var vr = new XmlValidatingReader(tr);
 
-         vr.Schemas.Add("xdrHeadCount", "HeadCount.xdr");
-         vr.ValidationType = ValidationType.XDR;
-         vr.ValidationEventHandler += new ValidationEventHandler (ValidationHandler);
+            vr.Schemas.Add("xdrHeadCount", "HeadCount.xdr");
+            vr.ValidationType = ValidationType.XDR;
+            vr.ValidationEventHandler += new ValidationEventHandler (ValidationHandler);
 
-         while(vr.Read())
-         {
-            PrintTypeInfo(vr);
-            if(vr.NodeType == XmlNodeType.Element)
+            while(vr.Read())
             {
-               while(vr.MoveToNextAttribute())
-                  PrintTypeInfo(vr);
+                PrintTypeInfo(vr);
+                if (vr.NodeType == XmlNodeType.Element)
+                {
+                   while(vr.MoveToNextAttribute())
+                       PrintTypeInfo(vr);
+                }
             }
-         }
-         Console.WriteLine("Validation finished");
-      }
+            Console.WriteLine("Validation finished");
+        }
 
-      public static void PrintTypeInfo(XmlValidatingReader vr)
-      {
-         if(vr.SchemaType != null)
-         {
-            if(vr.SchemaType is XmlSchemaDatatype || vr.SchemaType is XmlSchemaSimpleType)
+        public static void PrintTypeInfo(XmlValidatingReader vr)
+        {
+            if (vr.SchemaType != null)
             {
-               object value = vr.ReadTypedValue();
-               Console.WriteLine("{0}({1},{2}):{3}", vr.NodeType, vr.Name, value.GetType().Name, value);
+                if(vr.SchemaType is XmlSchemaDatatype || vr.SchemaType is XmlSchemaSimpleType)
+                {
+                    object value = vr.ReadTypedValue();
+                    Console.WriteLine($"{vr.NodeType}({vr.Name},{value.GetType().Name}):{value}");
+                }
             }
-         }
-      }
+        }
 
-      public static void ValidationHandler(object sender, ValidationEventArgs args)
-      {
-         Console.WriteLine("***Validation error");
-         Console.WriteLine("\tSeverity:{0}", args.Severity);
-         Console.WriteLine("\tMessage:{0}", args.Message);
-      }
-   }
+        public static void ValidationHandler(object sender, ValidationEventArgs args)
+        {
+            Console.WriteLine("***Validation error");
+            Console.WriteLine($"\tSeverity:{args.Severity}");
+            Console.WriteLine($"\tMessage:{args.Message}");
+        }
+    }
 }
 ```
 
-<span data-ttu-id="f5ce5-109">A continuación se describe el contenido del archivo de entrada, *HeadCount.xml*, que se va a validar:</span><span class="sxs-lookup"><span data-stu-id="f5ce5-109">The following outlines the contents of the input file, *HeadCount.xml*, to be validated:</span></span>
+<span data-ttu-id="eaa5b-109">A continuación se describe el contenido del archivo de entrada, *HeadCount.xml*, que se va a validar:</span><span class="sxs-lookup"><span data-stu-id="eaa5b-109">The following outlines the contents of the input file, *HeadCount.xml*, to be validated:</span></span>
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->
@@ -145,7 +139,7 @@ namespace ValidationSample
 </HeadCount>
 ```
 
-<span data-ttu-id="f5ce5-110">A continuación se describe el contenido del archivo de esquema XDR, *HeadCount.xdr*, sobre el que se va realizar la validación:</span><span class="sxs-lookup"><span data-stu-id="f5ce5-110">The following outlines the contents of the XDR schema file, *HeadCount.xdr*, to be validated against:</span></span>
+<span data-ttu-id="eaa5b-110">A continuación se describe el contenido del archivo de esquema XDR, *HeadCount.xdr*, sobre el que se va realizar la validación:</span><span class="sxs-lookup"><span data-stu-id="eaa5b-110">The following outlines the contents of the XDR schema file, *HeadCount.xdr*, to be validated against:</span></span>
 
 ```xml
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
@@ -158,7 +152,7 @@ namespace ValidationSample
 </Schema>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f5ce5-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="f5ce5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eaa5b-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="eaa5b-111">See also</span></span>
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
-- [<span data-ttu-id="f5ce5-112">Compilación de esquema XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="f5ce5-112">XmlSchemaCollection Schema Compilation</span></span>](xmlschemacollection-schema-compilation.md)
+- [<span data-ttu-id="eaa5b-112">Compilación de esquema XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="eaa5b-112">XmlSchemaCollection Schema Compilation</span></span>](xmlschemacollection-schema-compilation.md)
