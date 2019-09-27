@@ -65,7 +65,7 @@ El directorio virtual **ServiceModelSamples** se utiliza para compilar y ejecuta
 
 11. Cree un directorio C:\logs en el equipo; en algunos ejemplos podría esperarse que exista. Asegúrese de que la cuenta adecuada tiene concedido acceso de escritura en esta carpeta. En Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]y Windows Server 2008 R2, esta cuenta es **servicio de red**. En [!INCLUDE[lserver](../../../../includes/lserver-md.md)], la cuenta es NT Authority\Network Service. En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la cuenta es ASPNET.
 
-12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la \<carpeta InstallPath > \WF_WCF_Samples\WCF\Setup\  Este script realizará las siguientes tareas:
+12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la \<carpeta InstallPath > \WF_WCF_Samples\WCF\Setup  Este script realizará las siguientes tareas:
 
     - Compile La herramienta FindPrivateKey.
 
