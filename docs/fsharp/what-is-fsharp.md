@@ -2,14 +2,14 @@
 title: ¿Qué es F#?
 description: Obtenga información sobre qué F# es el lenguaje de programación F# y qué programación es como. Obtenga información sobre los tipos de datos enriquecidos, las funciones y cómo encajan entre sí.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630462"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332730"
 ---
-# <a name="what-is-f"></a>Qué es F\#
+# <a name="what-is-f"></a>Qué es F @ no__t-0
 
 F#es un lenguaje de programación funcional que facilita la escritura de código correcto y fácil de mantener.
 
@@ -100,7 +100,7 @@ F#las funciones son también de primera clase, lo que significa que se pueden pa
 F#tiene compatibilidad total con objetos, que son tipos de datos útiles cuando es necesario combinar datos y funcionalidad. F#las funciones se usan para manipular objetos.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 
@@ -119,7 +118,7 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-En lugar de escribir código orientado a objetos, en F#, a menudo escribirá código que trata los objetos como otro tipo de datos para las funciones que se van a manipular. Las características como las [interfaces genéricas](./language-reference/interfaces.md), las [expresiones de objeto](./language-reference/object-expressions.md)y el uso prudente de [los miembros](./language-reference/members/index.md) son comunes en los programas más grandes F# .
+En lugar de escribir código orientado a objetos, en F#, a menudo escribirá código que trata los objetos como otro tipo de datos para las funciones que se van a manipular. Las características como las [interfaces genéricas](./language-reference/interfaces.md), las [expresiones de objeto](./language-reference/object-expressions.md)y el uso prudente de [los miembros](./language-reference/members/index.md) son comunes en los programas más grandes. F#
 
 ## <a name="next-steps"></a>Pasos siguientes
 

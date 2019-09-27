@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770592"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332811"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState (Método)
-Establece las marcas que describen el estado de depuración de este ICorDebugThread.  
+Establece marcas que describen el estado de depuración de esta ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +37,16 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>Parámetros  
  `state`  
- [in] Una combinación bit a bit de valores de enumeración CorDebugThreadState que especifican el estado de depuración de este subproceso.  
+ de Combinación bit a bit de los valores de enumeración CorDebugThreadState (que especifican el estado de depuración de este subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- `SetDebugState` establece el estado de depuración actual del subproceso. (El "estado de depuración actual" representa el estado de depuración si el proceso se puede continuar, no el estado actual real). El valor normal es THREAD_RUNNING. Solo el depurador puede afectar el estado de depuración de un subproceso. Estados de depuración continuaciones, por lo que si desea mantener un subproceso THREAD_SUSPENDed en varias continuaciones, puede configurarla una vez y no volver a preocuparse. Subprocesos de suspender y reanudar el proceso pueden provocar interbloqueos, aunque es poco probable que normalmente. Esto es una cualidad intrínseca de procesos y subprocesos y es por diseño. Forma asincrónica, un depurador puede interrumpir y reanudar los subprocesos para interrumpir el interbloqueo. Si el estado de usuario del subproceso incluye USER_UNSAFE_POINT, el subproceso puede bloquear una colección de elementos no utilizados (GC). Esto significa que el subproceso suspendido tiene una probabilidad mucho más alta de producir un interbloqueo. Esto puede no afectar a ya está en cola los eventos de depuración. Por lo tanto, un depurador debe purgar la cola de eventos completo (mediante una llamada a [HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender o reanudar subprocesos. Lo contrario, pueden obtener los eventos de un subproceso que cree que ya ha suspendido.  
+ `SetDebugState` establece el estado de depuración actual del subproceso. (El "estado de depuración actual" representa el estado de depuración si se va a continuar el proceso, no el estado actual real). El valor normal de esto es THREAD_RUN. Solo el depurador puede afectar al estado de depuración de un subproceso. Los Estados de depuración continúan en el pasado, por lo que si desea mantener una THREAD_SUSPENDed de subprocesos en varias continuaciones, puede establecerla una vez y, a partir de ese momento, no tendrá que preocuparse por ella. La suspensión de subprocesos y la reanudación del proceso pueden provocar interbloqueos, aunque normalmente es improbable. Se trata de una calidad intrínseca de subprocesos y procesos y es por diseño. Un depurador puede interrumpir y reanudar asincrónicamente los subprocesos para interrumpir el interbloqueo. Si el estado de usuario del subproceso incluye USER_UNSAFE_POINT, el subproceso puede bloquear una recolección de elementos no utilizados (GC). Esto significa que el subproceso suspendido tiene una probabilidad mucho mayor de provocar un interbloqueo. Esto puede no afectar a los eventos de depuración ya en cola. Por lo tanto, un depurador debe purgar toda la cola de eventos (llamando a [ICorDebugController:: HasQueuedCallbacks (](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender o reanudar los subprocesos. En caso contrario, puede recibir eventos en un subproceso que cree que ya se ha suspendido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
