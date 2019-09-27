@@ -2,12 +2,12 @@
 title: Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Elección de las plataformas de proceso de Azure para aplicaciones basadas en contenedores
 ms.date: 05/04/2018
-ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578348"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331964"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 
@@ -25,9 +25,9 @@ Sin embargo, esta recomendación se debe llevar a cabo con un contacto de sal, y
 
 Después de un análisis más profundo de las necesidades de la aplicación, el producto seleccionado podría ser diferente. Sin embargo, como punto de partida, es conveniente tener una guía inicial desde la que puede comenzar a evaluar y probar en función de una prioridad determinada.
 
-En la ilustración siguiente, puede ver un desglose de los diferentes tipos de aplicaciones y sus escenarios de hospedaje de Azure ideales.
+En la figura 1, puede ver un desglose de los diferentes tipos de aplicaciones y sus escenarios de hospedaje de Azure ideales.
 
-![](./media/image8.5.png)
+![Figura 1](./media/image8.5.png)
 
 > [!div class="step-by-step"]
 > [Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
