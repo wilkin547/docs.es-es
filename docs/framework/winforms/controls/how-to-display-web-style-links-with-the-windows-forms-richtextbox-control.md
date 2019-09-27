@@ -23,7 +23,7 @@ El control <xref:System.Windows.Forms.RichTextBox> Windows Forms puede mostrar v
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Para vincular a una página web con el control RichTextBox
 
-1. Establezca la <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad en una cadena que incluya una dirección URL válida (por ejemplo, http://www.microsoft.com/"").
+1. Establezca la <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad en una cadena que incluya una dirección URL válida (por ejemplo,"http://www.microsoft.com/").
 
 2. Asegúrese de que <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> la propiedad está establecida `true` en (el valor predeterminado).
 
