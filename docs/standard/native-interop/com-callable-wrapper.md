@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 601f9a216bc2e11ccb34f1f3b3df267002efb01f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631469"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353908"
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 
@@ -49,7 +49,7 @@ Para crear este enfoque uniforme, el CCW genera interfaces COM tradicionales com
 
 Además de exponer las interfaces implementadas explícitamente por una clase en el entorno administrado, el runtime de .NET proporciona implementaciones de las interfaces COM enumeradas en la tabla siguiente en nombre del objeto. Una clase .NET puede proporcionar su propia implementación de estas interfaces para invalidar el comportamiento predeterminado. El tiempo de ejecución proporciona siempre la implementación de las interfaces **IUnknown** e **IDispatch**.
 
-|Interfaz|DESCRIPCIÓN|
+|Interfaz|Descripción|
 |---------------|-----------------|
 |**IDispatch**|Proporciona un mecanismo para el enlace en tiempo de ejecución al tipo.|
 |**IErrorInfo**|Proporciona una descripción textual del error, su origen, un archivo de ayuda, contexto de ayuda y el GUID de la interfaz que definió el error (siempre **GUID_NULL** para las clases. NET).|
@@ -60,7 +60,7 @@ Además de exponer las interfaces implementadas explícitamente por una clase en
 
  Una clase administrada también puede proporcionar las interfaces COM que se describe en la tabla siguiente.
 
-|Interfaz|DESCRIPCIÓN|
+|Interfaz|Descripción|
 |---------------|-----------------|
 |Interfaz de clase (\_*nombreDeClase*)|Interfaz, expuesta por el runtime y no definida explícitamente, que expone todas las interfaces públicas, métodos, propiedades y campos que se exponen explícitamente en un objeto administrado.|
 |**IConnectionPoint** e **IConnectionPointContainer**|Interfaz para objetos que son origen de eventos basados en delegados (interfaz para registrar suscriptores de eventos).|
@@ -100,7 +100,7 @@ public class Mammal
 
 El cliente COM puede obtener un puntero a una interfaz de clase denominada `_Mammal`. En .NET Framework, se puede usar la herramienta [Exportador de la biblioteca de tipos (Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) para generar una biblioteca de tipos que contiene la definición de la interfaz `_Mammal`. La herramienta Exportador de la biblioteca de tipos no es compatible con .NET Core. Si la clase `Mammal` implementó una o más interfaces, estas aparecerán bajo la coclase.
 
-```
+```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
 interface _Mammal : IDispatch
 {

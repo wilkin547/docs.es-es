@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Objetos de referencia COM desde Visual Basic
+title: Procedimiento Hacer referencia a objetos COM desde Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592174"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352000"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedimiento Objetos de referencia COM desde Visual Basic
-En Visual Basic, agregar referencias a objetos COM que tienen bibliotecas de tipos requiere la creación de un ensamblado de interoperabilidad de la biblioteca COM. Las referencias a los miembros del objeto COM se enrutan al ensamblado de interoperabilidad y, a continuación, se reenvían al objeto COM real. Las respuestas desde el objeto COM se enrutan al ensamblado de interoperabilidad y reenvían a la aplicación de .NET Framework.  
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedimiento Hacer referencia a objetos COM desde Visual Basic
+En Visual Basic, la adición de referencias a objetos COM que tienen bibliotecas de tipos requiere la creación de un ensamblado de interoperabilidad para la biblioteca COM. Las referencias a los miembros del objeto COM se enrutan al ensamblado de interoperabilidad y, a continuación, se reenvían al objeto COM real. Las respuestas del objeto COM se enrutan al ensamblado de interoperabilidad y se reenvían a la aplicación .NET Framework.  
   
- Puede hacer referencia a un objeto COM sin usar un ensamblado de interoperabilidad insertando la información de tipo para el objeto COM en un ensamblado. NET. Para incrustar información de tipo, establezca el `Embed Interop Types` propiedad `True` para la referencia al objeto COM. Si está compilando mediante el compilador de línea de comandos, use el `/link` opción para hacer referencia a la biblioteca COM. Para obtener más información, consulte [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Puede hacer referencia a un objeto COM sin utilizar un ensamblado de interoperabilidad incrustando la información de tipo para el objeto COM en un ensamblado .NET. Para insertar información de tipo, establezca la propiedad `Embed Interop Types` en `True` para la referencia al objeto COM. Si va a compilar mediante el compilador de línea de comandos, use la opción `/link` para hacer referencia a la biblioteca COM. Para obtener más información, consulte [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- Visual Basic crea automáticamente ensamblados de interoperabilidad cuando se agrega una referencia a una biblioteca de tipos desde el entorno de desarrollo integrado (IDE). Cuando se trabaja desde la línea de comandos, puede usar la utilidad Tlbimp para crear manualmente los ensamblados de interoperabilidad.  
+ Visual Basic crea automáticamente ensamblados de interoperabilidad al agregar una referencia a una biblioteca de tipos desde el entorno de desarrollo integrado (IDE). Al trabajar desde la línea de comandos, puede usar la utilidad TlbImp para crear manualmente ensamblados de interoperabilidad.  
   
 ### <a name="to-add-references-to-com-objects"></a>Para agregar referencias a objetos COM  
   
-1. En el **proyecto** menú, elija **Agregar referencia** y, a continuación, haga clic en el **COM** ficha en el cuadro de diálogo.  
+1. En el menú **proyecto** , elija **Agregar referencia** y, a continuación, haga clic en la pestaña **com** del cuadro de diálogo.  
   
 2. Seleccione el componente que desea usar en la lista de objetos COM.  
   
-3. Para simplificar el acceso al ensamblado de interoperabilidad, agregue un `Imports` instrucción a la parte superior de la clase o módulo en el que va a utilizar el objeto COM. Por ejemplo, en el ejemplo de código siguiente se importa el espacio de nombres `INKEDLib` para los objetos que se hace referenciados en el `Microsoft InkEdit Control 1.0` biblioteca.  
+3. Para simplificar el acceso al ensamblado de interoperabilidad, agregue una instrucción `Imports` a la parte superior de la clase o módulo en el que va a usar el objeto COM. Por ejemplo, en el ejemplo de código siguiente se importa el espacio de nombres `INKEDLib` para los objetos a los que se hace referencia en la biblioteca `Microsoft InkEdit Control 1.0`.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Para crear un ensamblado de interoperabilidad mediante Tlbimp  
   
-1. Agregue la ubicación de Tlbimp a la ruta de búsqueda, si ya no es parte de la ruta de acceso de búsqueda y no está actualmente en el directorio donde se encuentra.  
+1. Agregue la ubicación de Tlbimp a la ruta de búsqueda, si aún no forma parte de la ruta de acceso de búsqueda y no está actualmente en el directorio donde se encuentra.  
   
-2. Llame a Tlbimp desde un símbolo del sistema, que proporciona la siguiente información:  
+2. Llame a Tlbimp desde un símbolo del sistema y proporcione la siguiente información:  
   
-    - Nombre y la ubicación del archivo DLL que contiene la biblioteca de tipos  
+    - Nombre y ubicación de la DLL que contiene la biblioteca de tipos  
   
-    - Nombre y la ubicación del espacio de nombres donde se debe colocar la información  
+    - Nombre y ubicación del espacio de nombres donde se debe colocar la información  
   
-    - Nombre y la ubicación del ensamblado de interoperabilidad de destino  
+    - Nombre y ubicación del ensamblado de interoperabilidad de destino  
   
      El siguiente fragmento de código muestra un ejemplo:  
   
-    ```  
+    ```console  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     Puede utilizar Tlbimp para crear ensamblados de interoperabilidad para bibliotecas de tipos, incluso para los objetos COM no registrados. Sin embargo, los objetos COM que hace referencia a ensamblados de interoperabilidad deben registrarse correctamente en el equipo donde va a utilizar. Puede registrar un objeto COM mediante la utilidad Regsvr32 incluida con el sistema operativo Windows.  
+     Puede usar TlbImp para crear ensamblados de interoperabilidad para bibliotecas de tipos, incluso para objetos COM no registrados. Sin embargo, los objetos COM a los que hacen referencia los ensamblados de interoperabilidad deben estar registrados correctamente en el equipo en el que se van a utilizar. Puede registrar un objeto COM mediante la utilidad regsvr32 incluida en el sistema operativo Windows.  
   
 ## <a name="see-also"></a>Vea también
 

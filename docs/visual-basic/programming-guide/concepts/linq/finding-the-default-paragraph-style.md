@@ -2,12 +2,12 @@
 title: Buscar el estilo de párrafo predeterminado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: f874033b9a070b951d27f37aae36f738ab1fd222
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6754c48148e81b02eb8c63843b57bc3d28a5774a
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618375"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352903"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Buscar el estilo de párrafo predeterminado (Visual Basic)
 La primera tarea del tutorial Manipular información en un documento WordprocessingML consiste en buscar el estilo predeterminado de los párrafos del documento.  
@@ -15,7 +15,7 @@ La primera tarea del tutorial Manipular información en un documento Wordprocess
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- El siguiente ejemplo abre un documento XML WordprocessingML abierto de Office, busca las partes del documento y del estilo del paquete y ejecuta una consulta que busca el nombre de estilo predeterminado. Para obtener información acerca de los paquetes de documentos de Office Open XML y las partes que constan, vea [detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+ El siguiente ejemplo abre un documento XML WordprocessingML abierto de Office, busca las partes del documento y del estilo del paquete y ejecuta una consulta que busca el nombre de estilo predeterminado. Para obtener información acerca de los paquetes de documentos XML abierto de Office y las partes de las que constan, vea los [detalles de los documentos WordprocessingML de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
  La consulta busca un nodo con el nombre `w:style` que tiene un atributo con el nombre `w:type` con un valor de "paragraph" y también un atributo con el nombre `w:default` con un valor de "1". Puesto que sólo habrá un nodo XML con estos atributos, la consulta utiliza el operador <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> para convertir una recopilación en un singleton. A continuación obtiene el valor de un atributo con el nombre `w:styleId`.  
   
@@ -82,7 +82,7 @@ End Module
 ### <a name="comments"></a>Comentarios  
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 The default style is: Normal  
 ```  
   
@@ -93,4 +93,4 @@ The default style is: Normal
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipular el contenido de un documento WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

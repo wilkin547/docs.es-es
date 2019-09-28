@@ -7,19 +7,19 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 3366a0d1a90667cf1d9b58b211892ad264849c59
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e3e05973f2ef72fef5e429bc98cc58b4b21f2c2
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633246"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592154"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType (Operador, Visual Basic)
-Devuelve un <xref:System.Type> objeto para el tipo especificado. La <xref:System.Type> objeto proporciona información sobre el tipo como sus propiedades, métodos y eventos.  
+Devuelve un objeto <xref:System.Type> para el tipo especificado. El objeto <xref:System.Type> proporciona información sobre el tipo, como sus propiedades, métodos y eventos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 GetType(typename)  
 ```  
   
@@ -27,14 +27,14 @@ GetType(typename)
   
 |Parámetro|Descripción|  
 |---|---|  
-|`typename`|El nombre del tipo para el que se desea obtener información.|  
+|`typename`|Nombre del tipo del que se desea obtener información.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetType` operador devuelve el <xref:System.Type> objeto para el elemento especificado `typename`. Puede pasar el nombre de cualquier tipo definido en `typename`. Entre estas estructuras se incluyen las siguientes:  
+ El operador `GetType` devuelve el objeto <xref:System.Type> para el @no__t 2 especificado. Puede pasar el nombre de cualquier tipo definido en `typename`. Entre estas estructuras se incluyen las siguientes:  
   
-- Escriba los datos de Visual Basic, como `Boolean` o `Date`.  
+- Cualquier tipo de datos Visual Basic, como `Boolean` o `Date`.  
   
-- Cualquier clase, estructura, módulo o interfaz, .NET Framework, como <xref:System.ArgumentException?displayProperty=nameWithType> o <xref:System.Double?displayProperty=nameWithType>.  
+- Cualquier .NET Framework clase, estructura, módulo o interfaz, como <xref:System.ArgumentException?displayProperty=nameWithType> o <xref:System.Double?displayProperty=nameWithType>.  
   
 - Cualquier clase, estructura, módulo o interfaz definida por la aplicación.  
   
@@ -42,18 +42,18 @@ GetType(typename)
   
 - Cualquier delegado definido por la aplicación.  
   
-- Cualquiera de las enumeraciones definida por la aplicación, .NET Framework o Visual Basic.  
+- Cualquier enumeración definida por Visual Basic, la .NET Framework o la aplicación.  
   
- Si desea obtener el objeto de tipo de una variable de objeto, utilice el <xref:System.Type.GetType%2A?displayProperty=nameWithType> método.  
+ Si desea obtener el objeto de tipo de una variable de objeto, use el método <xref:System.Type.GetType%2A?displayProperty=nameWithType>.  
   
- El `GetType` operador puede ser útil en las siguientes circunstancias:  
+ El operador `GetType` puede ser útil en las siguientes circunstancias:  
   
-- Debe tener acceso a los metadatos para un tipo en tiempo de ejecución. La <xref:System.Type> objeto proporciona los metadatos como miembros de tipo y la información de implementación. Necesita esto, por ejemplo, para reflejar a través de un ensamblado. Para obtener más información, consulta <xref:System.Reflection?displayProperty=nameWithType>.  
+- Debe tener acceso a los metadatos de un tipo en tiempo de ejecución. El objeto <xref:System.Type> proporciona metadatos, como los miembros de tipo e información de implementación. Necesita esto, por ejemplo, para reflejarse en un ensamblado. Para obtener más información, consulta <xref:System.Reflection?displayProperty=nameWithType>.  
   
-- Desea comparar dos referencias de objeto para ver si hacen referencia a las instancias del mismo tipo. Si lo hacen, `GetType` devuelve referencias al mismo <xref:System.Type> objeto.  
+- Desea comparar dos referencias de objeto para ver si hacen referencia a instancias del mismo tipo. Si lo hacen, `GetType` devuelve referencias al mismo objeto <xref:System.Type>.  
   
 ## <a name="example"></a>Ejemplo  
- Los ejemplos siguientes muestran el `GetType` operador en uso.  
+ En los siguientes ejemplos se muestra el operador `GetType` en uso.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   

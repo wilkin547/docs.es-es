@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757500"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353706"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
 Los tipos están conformados por miembros: métodos, propiedades, eventos, constructores y campos. En las siguientes secciones se detallan las instrucciones para asignar un nombre a los miembros de tipos.  
@@ -28,7 +28,7 @@ Los tipos están conformados por miembros: métodos, propiedades, eventos, const
   
  **✓ DO** Los nombres de métodos deben ser verbos o enunciados verbales.  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -56,7 +56,7 @@ public class String {
   
  Por ejemplo, la propiedad siguiente permite obtener y establecer un valor de enumeración denominado `Color`, de modo que el nombre de la propiedad es `Color`:  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -99,7 +99,7 @@ public class Control {
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ @no__t 0Reprinted por el permiso de Pearson Education, Inc. de las directrices de diseño de [Framework: Convenciones, expresiones y patrones para bibliotecas de .NET reutilizables, 2ª edición @ no__t-0 de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 de Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows. *  
   
 ## <a name="see-also"></a>Vea también
 

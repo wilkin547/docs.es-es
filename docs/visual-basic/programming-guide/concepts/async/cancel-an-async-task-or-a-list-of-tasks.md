@@ -2,12 +2,12 @@
 title: Cancelar una tarea asincrónica o una lista de tareas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630958"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353132"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancelar una tarea asincrónica o una lista de tareas (Visual Basic)
 
@@ -125,16 +125,16 @@ Después, agregue los siguientes cambios al archivo MainWindow. Xaml. VB de ese 
     End Function
     ```
 
-5. Si no lo cancela, el programa produce el resultado siguiente.
+5. Si no cancela el programa, se genera el siguiente resultado:
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Si elige el botón **Cancelar** antes de que el programa termine de descargar el contenido, el programa produce el resultado siguiente.
+    Si elige el botón **Cancelar** antes de que el programa termine de descargar el contenido, el programa genera el siguiente resultado:
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
@@ -222,9 +222,9 @@ Para ampliar el ejemplo personalmente, paso a paso, siga las instrucciones de la
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Si no lo cancela, el programa produce el resultado siguiente.
+5. Si no cancela el programa, se genera el siguiente resultado:
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ Para ampliar el ejemplo personalmente, paso a paso, siga las instrucciones de la
 
     Si elige el botón **Cancelar** antes de que se completen las descargas, la salida contiene las duraciones de las descargas completadas antes de la cancelación.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.

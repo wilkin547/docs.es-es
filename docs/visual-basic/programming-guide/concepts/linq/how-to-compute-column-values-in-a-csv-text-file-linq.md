@@ -1,22 +1,22 @@
 ---
-title: Procedimiento Calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)
+title: Procedimiento Valores de las columnas de cálculo en un archivo de texto CSV (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592992"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351757"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Procedimiento Calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Procedimiento Valores de las columnas de cálculo en un archivo de texto CSV (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  
   
 ### <a name="to-create-the-source-file"></a>Para crear el archivo de origen  
   
 1. Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. Imagínese que la primera columna representa un identificador de estudiante y que las columnas siguientes representan las notas de cuatro exámenes.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -143,7 +143,7 @@ End Class
  La consulta funciona usando el método <xref:System.String.Split%2A> para convertir cada línea de texto en una matriz. Cada elemento de matriz representa una columna. Por último, el texto de cada columna se convierte en su representación numérica. Si el archivo es un archivo separado por tabulaciones, actualice el argumento del método `Split` a `\t`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
-Cree un proyecto de aplicación de consola VB.NET, con un `Imports` instrucción del espacio de nombres System.Linq.
+Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
   
 ## <a name="see-also"></a>Vea también
 

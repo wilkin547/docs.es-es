@@ -2,12 +2,12 @@
 title: Agrupación
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: a6d0ea8705721b707dd4c70673c36c5a122d0f09
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 846e93022145495518489e652707e5cb06a9c7e2
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045509"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353343"
 ---
 # <a name="pooling"></a>Agrupación
 Este ejemplo muestra cómo extender Windows Communication Foundation (WCF) para admitir la agrupación de objetos. El ejemplo muestra cómo crear un atributo que es sintáctica y semánticamente similar a la funcionalidad del atributo `ObjectPoolingAttribute` de Enterprise Services. La agrupación de objetos puede aumentar de manera considerable el rendimiento de una aplicación. Sin embargo, puede tener el efecto contrario si no se utiliza correctamente. La agrupación de objetos ayuda a reducir la sobrecarga que supone volver a crear objetos usados con frecuencia que requieren inicialización extensa. Sin embargo, si una llamada a un método en un objeto agrupado necesita una cantidad considerable de tiempo para completarse, la agrupación de objetos pone en la cola solicitudes adicionales en cuanto se alcance el tamaño máximo del grupo. Así, puede ser que no se preste servicio a algunas solicitudes de creación de objetos produciendo una excepción de tiempo de espera agotado.  
@@ -22,13 +22,13 @@ Este ejemplo muestra cómo extender Windows Communication Foundation (WCF) para 
  Los distribuidores de extremos y canales proporcionan extensibilidad para canales y contratos exponiendo varias propiedades que controlan el comportamiento del distribuidor. La propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> también le permite inspeccionar, modificar o personalizar el proceso de distribución. Este ejemplo se centra en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> que señala al objeto que proporciona las instancias de la clase de servicio.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- En WCF, el distribuidor crea instancias de la clase de servicio mediante <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, que implementa la <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfaz. Esta interfaz tiene tres métodos:  
+ En WCF, el distribuidor crea instancias de la clase de servicio mediante un <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, que implementa la interfaz <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. Esta interfaz tiene tres métodos:  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Cuando llega un mensaje, el distribuidor llama <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> al método para crear una instancia de la clase de servicio para procesar el mensaje. La propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> determina la frecuencia de las llamadas a este método. Por ejemplo, si la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está establecida en <xref:System.ServiceModel.InstanceContextMode.PerCall>, se crea una nueva instancia de la clase de servicio para procesar cada mensaje que llegue, por lo que se llama a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> siempre que llegue un mensaje.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Cuando llega un mensaje, el distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> para crear una instancia de la clase de servicio para procesar el mensaje. La propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> determina la frecuencia de las llamadas a este método. Por ejemplo, si la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está establecida en <xref:System.ServiceModel.InstanceContextMode.PerCall>, se crea una nueva instancia de la clase de servicio para procesar cada mensaje que llegue, por lo que se llama a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> siempre que llegue un mensaje.  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Es idéntico al método anterior, salvo que se invoca cuando no hay ningún argumento de mensaje.  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Cuando ha transcurrido la duración de una instancia de servicio, el distribuidor llama al <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> método. Tal y como ocurre en el método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la frecuencia de las llamadas a este método está determinada por la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Cuando ha transcurrido la duración de una instancia de servicio, el distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>. Tal y como ocurre en el método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la frecuencia de las llamadas a este método está determinada por la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
   
 ## <a name="the-object-pool"></a>Agrupación de objetos  
  Una implementación <xref:System.ServiceModel.Dispatcher.IInstanceProvider> personalizada proporciona la semántica de la agrupación de objetos necesaria para un servicio. Por consiguiente, este ejemplo tiene un tipo `ObjectPoolingInstanceProvider` que proporciona implementación personalizada de <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para la agrupación. Cuando `Dispatcher` llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, en lugar de crear una nueva instancia, la implementación personalizada busca un objeto existente en un grupo en memoria. Si hay uno disponible, se devuelve. De lo contrario, se crea un nuevo objeto. Se muestra la implementación para `GetInstance` en el código de ejemplo siguiente.  
@@ -80,7 +80,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
 }  
 ```  
   
- El `ReleaseInstance` método proporciona una característica de "inicialización de limpieza". Normalmente el grupo mantiene un número mínimo de objetos para la duración del grupo. Sin embargo, puede haber períodos de uso excesivo que requieren la creación de objetos adicionales en el grupo para alcanzar el límite máximo especificado en la configuración. Finalmente, cuando el grupo se vuelve menos activo, esos objetos adicionales pueden suponer una sobrecarga adicional. Por consiguiente, cuando `activeObjectsCount` llega a cero, se inicia un temporizador inactivo que activa y realiza un ciclo de limpieza.  
+ El método `ReleaseInstance` proporciona una característica de "inicialización de limpieza". Normalmente el grupo mantiene un número mínimo de objetos para la duración del grupo. Sin embargo, puede haber períodos de uso excesivo que requieren la creación de objetos adicionales en el grupo para alcanzar el límite máximo especificado en la configuración. Finalmente, cuando el grupo se vuelve menos activo, esos objetos adicionales pueden suponer una sobrecarga adicional. Por consiguiente, cuando `activeObjectsCount` llega a cero, se inicia un temporizador inactivo que activa y realiza un ciclo de limpieza.  
   
 ## <a name="adding-the-behavior"></a>Adición del comportamiento  
  Las extensiones de nivel de distribuidor se enlazan utilizando los comportamientos siguientes:  
@@ -101,7 +101,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  Este ejemplo utiliza un atributo personalizado. Cuando se construye <xref:System.ServiceModel.ServiceHost>, examina los atributos utilizados en la definición de tipo del servicio y agrega los comportamientos disponibles a la colección de comportamientos de la descripción del servicio.  
   
- La interfaz <xref:System.ServiceModel.Description.IServiceBehavior> tiene tres métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> y <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Se usa el método <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> para garantizar que se pueda aplicar el comportamiento al servicio. En este ejemplo, la implementación asegura que el servicio no se ha configurado con <xref:System.ServiceModel.InstanceContextMode.Single>. Se usa el método <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> para configurar los enlaces del servicio. No es necesario en este escenario. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> se utiliza para configurar los distribuidores del servicio. WCF llama a este método cuando <xref:System.ServiceModel.ServiceHost> se está inicializando. Los parámetros siguientes se pasan a este método:  
+ La interfaz <xref:System.ServiceModel.Description.IServiceBehavior> tiene tres métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> y <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Se usa el método <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> para garantizar que se pueda aplicar el comportamiento al servicio. En este ejemplo, la implementación asegura que el servicio no se ha configurado con <xref:System.ServiceModel.InstanceContextMode.Single>. Se usa el método <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> para configurar los enlaces del servicio. No es necesario en este escenario. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> se utiliza para configurar los distribuidores del servicio. WCF llama a este método cuando se está inicializando <xref:System.ServiceModel.ServiceHost>. Los parámetros siguientes se pasan a este método:  
   
 - `Description`: Este argumento proporciona la descripción del servicio para todo el servicio. Esto se puede utilizar para inspeccionar los datos de la descripción sobre los extremos, contratos, enlaces y otros datos del servicio.  
   
@@ -142,10 +142,7 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
             if ((this.throttlingBehavior == null) &&   
                         (this.maxPoolSize != Int32.MaxValue))  
             {  
-                if (throttle == null)  
-                {  
-                    throttle = cd.ServiceThrottle;  
-                }  
+                throttle ??= cd.ServiceThrottle;
                 if (cd.ServiceThrottle == null)  
                 {  
                     throw new   

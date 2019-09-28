@@ -8,38 +8,38 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebadf5ded1a23fe46b8e16cf18ae265b5d3c255
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760379"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591657"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf (Operador) (Visual Basic)
-Crea una instancia de delegado que hace referencia el procedimiento específico.  
+Crea una instancia de delegado que hace referencia al procedimiento específico.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 AddressOf procedurename  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `procedurename`  
- Necesario. Especifica el procedimiento que hace referencia el delegado recién creado.  
+ Obligatorio. Especifica el procedimiento al que debe hacer referencia el delegado recién creado.  
   
 ## <a name="remarks"></a>Comentarios  
- El `AddressOf` operador crea un delegado que apunta a la función especificada por o a sub `procedurename`. Cuando el procedimiento especificado es un método de instancia, a continuación, el delegado que hace referencia a la instancia y el método. A continuación, cuando se invoca el delegado se llama al método especificado de la instancia especificada.  
+ El operador `AddressOf` crea un delegado que apunta a la función Sub o especificada por `procedurename`. Cuando el procedimiento especificado es un método de instancia, el delegado hace referencia tanto a la instancia como al método. A continuación, cuando se invoca al delegado, se llama al método especificado de la instancia especificada.  
   
- El `AddressOf` operador puede utilizarse como operando de un constructor de delegado o se puede usar en un contexto en el que se puede determinar el tipo del delegado por el compilador.  
+ El operador `AddressOf` se puede usar como operando de un constructor de delegado o en un contexto en el que el compilador puede determinar el tipo del delegado.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se usa el `AddressOf` operador para designar un delegado para controlar el `Click` eventos de un botón.  
+ En este ejemplo se usa el operador `AddressOf` para designar un delegado que controle el evento `Click` de un botón.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el `AddressOf` operador para designar la función de inicio de un subproceso.  
+ En el ejemplo siguiente se usa el operador `AddressOf` para designar la función de inicio de un subproceso.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

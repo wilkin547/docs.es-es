@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793065"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353018"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedimiento para usar procedimientos almacenados que toman parámetros
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los parámetros de salida a parámetros de referencia y, para los tipos de valor, declara el parámetro como que acepta valores NULL.  
   
- Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de [filas, vea cómo: Devolver conjuntos de](how-to-return-rowsets.md)filas.  
+ Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de filas, vea [How para: Devuelve conjuntos de filas @ no__t-0.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza un parámetro de entrada único (el identificador de cliente) y se devuelve un parámetro de salida (las ventas totales para ese cliente).  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Procedimientos almacenados](stored-procedures.md)
 - [Descargar bases de datos de ejemplo](downloading-sample-databases.md)
-- [Utilizar tipos que aceptan valores NULL](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Usar tipos de valor que aceptan valores NULL](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipos de valor que aceptan valores NULL](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

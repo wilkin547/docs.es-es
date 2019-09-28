@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929949"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592113"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indica que una declaración de tipo es una definición parcial del tipo.  
@@ -31,7 +31,7 @@ Indica que una declaración de tipo es una definición parcial del tipo.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
 Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]  
     [ Inherits classname ]  
@@ -45,12 +45,12 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Término|Definición|  
 |---|---|  
-|`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir la [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre corchetes angulares`< >`().|  
+|`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir la [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre corchetes angulares (`< >`).|  
 |`accessmodifier`|Opcional. Especifica qué código puede tener acceso a este tipo. Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Vea [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Opcional. Vea [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|Opcional. Vea [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Necesario. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
+|`name`|Obligatorio. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
 |`Of`|Opcional. Especifica que se trata de un tipo genérico. Vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
 |`typelist`|Obligatorio si se usa [de](../../../visual-basic/language-reference/statements/of-clause.md). Consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|Opcional. Vea [Inherits (instrucción](../../../visual-basic/language-reference/statements/inherits-statement.md)).|  

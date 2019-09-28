@@ -16,34 +16,34 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: d30d871d48bc87e050a072cd01a38065be20616c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 238c062b2dd0744ba96cf9ba8591c0ef39f81bb3
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933258"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592197"
 ---
 # <a name="-operator-visual-basic"></a>/ (Operador, Visual Basic)
 Divide dos números y devuelve un resultado de punto flotante.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 expression1 / expression2  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `expression1`  
- Necesario. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
  `expression2`  
- Necesario. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
 ## <a name="supported-types"></a>Tipos admitidos  
- Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo `Decimal`y.  
+ Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo y `Decimal`.  
   
 ## <a name="result"></a>Resultado  
- El resultado es el cociente completo de `expression1` `expression2`dividido entre, incluido cualquier resto.  
+ El resultado es el cociente completo de `expression1` dividido por `expression2`, incluido cualquier resto.  
   
  El [operador \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) devuelve el cociente entero, que quita el resto.  
   
@@ -57,28 +57,28 @@ expression1 / expression2
 |Una expresión es un tipo de datos [decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) y la otra no es [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) o [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
 |Cualquier expresión es un tipo de datos [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
   
- Antes de que se realice la división, cualquier expresión numérica entera se `Double`amplía a. Si asigna el resultado a un tipo de datos entero, Visual Basic intenta convertir el resultado de `Double` a ese tipo. Esto puede producir una excepción si el resultado no cabe en ese tipo. En concreto, vea "se ha intentado la división por cero" en esta página de ayuda.  
+ Antes de que se realice la división, las expresiones numéricas enteras se amplían a `Double`. Si asigna el resultado a un tipo de datos entero, Visual Basic intenta convertir el resultado de `Double` a ese tipo. Esto puede producir una excepción si el resultado no cabe en ese tipo. En concreto, vea "se ha intentado la división por cero" en esta página de ayuda.  
   
  Si `expression1` o`expression2` se evalúa como [Nothing](../../../visual-basic/language-reference/nothing.md), se trata como cero.  
   
 ## <a name="attempted-division-by-zero"></a>División intentada por cero  
- Si `expression2` se evalúa como cero, el `/` operador se comporta de forma diferente para los distintos tipos de datos de operando. En la tabla siguiente se muestran los posibles comportamientos.  
+ Si `expression2` se evalúa como cero, el operador `/` se comporta de forma diferente para los distintos tipos de datos de operando. En la tabla siguiente se muestran los posibles comportamientos.  
   
 |Tipos de datos de operando|Comportamiento si `expression2` es cero|  
 |------------------------|---------------------------------------|  
-|Punto flotante (`Single` o `Double`)|Devuelve Infinity (<xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>) o <xref:System.Double.NaN> (no un número) si `expression1` también es cero.|  
-|`Decimal`|Produce<xref:System.DivideByZeroException>|  
-|Entero (con signo o sin signo)|Se produce <xref:System.OverflowException> un intento de conversión de nuevo a un tipo entero, ya <xref:System.Double.NegativeInfinity>que los tipos enteros no pueden aceptar <xref:System.Double.PositiveInfinity>, o<xref:System.Double.NaN>|  
+|Punto flotante (`Single` o `Double`)|Devuelve Infinity (<xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>) o <xref:System.Double.NaN> (no un número) si `expression1` también es cero|  
+|`Decimal`|Produce <xref:System.DivideByZeroException>|  
+|Entero (con signo o sin signo)|Al intentar la conversión de nuevo a un tipo entero se produce <xref:System.OverflowException> porque los tipos enteros no pueden aceptar <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity> o <xref:System.Double.NaN>|  
   
 > [!NOTE]
-> El `/` operador se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> El operador `/` se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se `/` usa el operador para realizar una división de punto flotante. El resultado es el cociente de los dos operandos.  
+ En este ejemplo se usa el operador `/` para realizar la división de punto flotante. El resultado es el cociente de los dos operandos.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- Las expresiones del ejemplo anterior devuelven los valores 2,5 y 3,333333. Tenga en cuenta que el resultado siempre es el punto`Double`flotante (), aunque ambos operandos son constantes de tipo entero.  
+ Las expresiones del ejemplo anterior devuelven los valores 2,5 y 3,333333. Tenga en cuenta que el resultado es siempre de punto flotante (`Double`), aunque ambos operandos son constantes de tipo entero.  
   
 ## <a name="see-also"></a>Vea también
 

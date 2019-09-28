@@ -10,138 +10,138 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757409"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353745"
 ---
 # <a name="parameter-design"></a>Diseño de parámetros
-Esta sección proporciona instrucciones generales sobre el diseño de parámetro, incluidas secciones con instrucciones para la comprobación de argumentos. Además, debe hacer referencia a las directrices descritas en [parámetros nomenclatura](../../../docs/standard/design-guidelines/naming-parameters.md).  
+En esta sección se proporcionan instrucciones generales sobre el diseño de parámetros, incluidas las secciones con instrucciones para comprobar los argumentos. Además, debe consultar las directrices descritas en nomenclatura de [parámetros](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
  **✓ DO** usar el tipo de parámetro menos derivado que proporciona la funcionalidad requerida por el miembro.  
   
- Por ejemplo, suponga que desea diseñar un método que enumera una colección e imprime cada elemento en la consola. Este método debe tomar <xref:System.Collections.IEnumerable> como parámetro, no <xref:System.Collections.ArrayList> o <xref:System.Collections.IList>, por ejemplo.  
+ Por ejemplo, suponga que desea diseñar un método que enumera una colección e imprime cada elemento en la consola. Este tipo de método debe tomar <xref:System.Collections.IEnumerable> como parámetro, no <xref:System.Collections.ArrayList> o <xref:System.Collections.IList>, por ejemplo.  
   
  **X DO NOT** utilizar parámetros reservados.  
   
- Si se necesitan más entradas para un miembro de alguna versión futura, se puede agregar una nueva sobrecarga.  
+ Si se necesita más entrada a un miembro en alguna versión futura, se puede Agregar una nueva sobrecarga.  
   
  **X DO NOT** públicamente ha expuesto métodos que toman punteros, matrices de punteros o matrices multidimensionales como parámetros.  
   
- Los punteros y matrices multidimensionales son relativamente difíciles de usar correctamente. En casi todos los casos, las API pueden modificarse para evitar realizar estos tipos como parámetros.  
+ Los punteros y las matrices multidimensionales son relativamente difíciles de usar correctamente. En casi todos los casos, las API se pueden rediseñar para evitar que estos tipos sean parámetros.  
   
  **✓ DO** colocar todos `out` seguir todos los valores de parámetros y `ref` parámetros (excluyendo matrices de parámetros), incluso si se produce una incoherencia en el orden entre las sobrecargas de los parámetros (consulte [miembro Sobrecarga](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- El `out` parámetros pueden verse como valores devueltos adicionales y agruparlos hace más fácil de entender que la firma del método.  
+ Los parámetros `out` se pueden ver como valores devueltos adicionales y agruparlos hace que la firma del método sea más fácil de entender.  
   
  **✓ DO** sea coherente en los nombres de parámetros al reemplazar los miembros o implementar miembros de interfaz.  
   
  Esto comunica mejor la relación entre los métodos.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Elegir entre las enumeraciones y los parámetros booleanos  
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración  
  **✓ DO** utilice enumeraciones si un miembro podría tener dos o más parámetros booleanos.  
   
  **X DO NOT** utilice valores booleanos a menos que esté completamente seguro de que nunca será una necesidad de más de dos valores.  
   
- Las enumeraciones proporcionan algo de espacio para futuras además de valores, pero debe tener en cuenta todas las implicaciones de agregar valores a las enumeraciones, que se describen en [diseño de enumeraciones](../../../docs/standard/design-guidelines/enum.md).  
+ Las enumeraciones ofrecen algún espacio para la adición futura de valores, pero debe tener en cuenta todas las implicaciones de agregar valores a las enumeraciones, que se describen en el [diseño de enumeraciones](../../../docs/standard/design-guidelines/enum.md).  
   
  **✓ CONSIDER** con valores booleanos para parámetros de constructor que son valores realmente de dos Estados y simplemente se utilizan para inicializar propiedades booleanas.  
   
-### <a name="validating-arguments"></a>Validación de argumentos  
- **✓ DO** validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Producir <xref:System.ArgumentException?displayProperty=nameWithType>, o uno de sus subclases, si se produce un error en la validación.  
+### <a name="validating-arguments"></a>Validar argumentos  
+ **✓ DO** validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Inicie <xref:System.ArgumentException?displayProperty=nameWithType>, o una de sus subclases, si se produce un error en la validación.  
   
- Tenga en cuenta que la validación real no tiene necesariamente que se producen en el propio miembro público o protegido. Se puede producir en un nivel inferior de algunos rutina privado o interno. La cuestión principal es que todo el área de superficie que se expone a los usuarios finales las comprobaciones de los argumentos.  
+ Tenga en cuenta que no es necesario que la validación real se produzca en el propio miembro público o protegido. Podría producirse en un nivel inferior en algunas rutinas internas o privadas. El punto principal es que todo el área expuesta que se expone a los usuarios finales comprueba los argumentos.  
   
  **✓ DO** throw <xref:System.ArgumentNullException> si se pasa un argumento nulo y el miembro no es compatible con los argumentos null.  
   
  **✓ DO** validar los parámetros enum.  
   
- No suponga argumentos enum estará en el intervalo definido por la enumeración. El CLR permite convertir cualquier valor entero a un valor de enumeración, incluso si el valor no está definido en la enumeración.  
+ No asuma que los argumentos de enumeración estarán en el intervalo definido por la enumeración. CLR permite convertir cualquier valor entero en un valor de enumeración incluso si el valor no está definido en la enumeración.  
   
  **X DO NOT** usar <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para intervalo de enumeración comprueba.  
   
  **✓ DO** tenga en cuenta que los argumentos mutables pueden haber cambiado después de que se validaron.  
   
- Si el miembro es importante para la seguridad, se recomienda realizar una copia y, a continuación, validar y procesar el argumento.  
+ Si el miembro es sensible a la seguridad, se recomienda hacer una copia y, a continuación, validar y procesar el argumento.  
   
 ### <a name="parameter-passing"></a>Paso de parámetros  
- Desde la perspectiva de un diseñador de framework, hay tres grupos principales de parámetros: parámetros, por valor `ref` parámetros, y `out` parámetros.  
+ Desde la perspectiva de un diseñador de .NET Framework, hay tres grupos principales de parámetros: por valor, parámetros `ref` y parámetros `out`.  
   
- Cuando se pasa un argumento mediante un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Lenguajes de CLR más populares, como C#, VB.NET y C++, de forma predeterminada para pasar parámetros por valor.  
+ Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, C#como, VB.net y C++, de forma predeterminada pasan los parámetros por valor.  
   
- Cuando se pasa un argumento a través de un `ref` parámetro, el miembro recibe una referencia para el argumento real pasado. Si el argumento es un tipo de valor, una referencia al argumento se coloca en la pila. Si el argumento es un tipo de referencia, se coloca una referencia a la referencia en la pila. `Ref` parámetros se pueden usar para permitir que el miembro modificar los argumentos pasados por el llamador.  
+ Cuando un argumento se pasa a través de un parámetro `ref`, el miembro recibe una referencia al argumento real pasado. Si el argumento es un tipo de valor, se coloca una referencia al argumento en la pila. Si el argumento es un tipo de referencia, se coloca en la pila una referencia a la referencia. los parámetros `Ref` se pueden usar para permitir que el miembro modifique los argumentos pasados por el autor de la llamada.  
   
- `Out` los parámetros son similares a `ref` parámetros, con algunas pequeñas diferencias. El parámetro se considera inicialmente sin asignar y no se puede leer en el cuerpo de miembro antes de asignarle algún valor. Además, el parámetro debe asignarse a algún valor antes de que devuelve el miembro.  
+ los parámetros `Out` son similares a los parámetros `ref`, con algunas pequeñas diferencias. El parámetro se considera inicialmente sin asignar y no se puede leer en el cuerpo del miembro antes de que se le asigne algún valor. Además, el parámetro tiene que tener asignado algún valor antes de que el miembro devuelva.  
   
  **X AVOID** con `out` o `ref` parámetros.  
   
- Uso de `out` o `ref` parámetros requiere experiencia con punteros, saber la diferencia entre los tipos de valor y tipos de referencia y controlar métodos con varios valores devueltos. Además, la diferencia entre `out` y `ref` parámetros no se entiende ampliamente. Arquitectos de Framework diseñar para una audiencia general no deben esperar que los usuarios dominen el uso `out` o `ref` parámetros.  
+ El uso de los parámetros `out` o `ref` requiere experiencia con punteros, comprender cómo difieren los tipos de valor y de referencia, y cómo controlar métodos con varios valores devueltos. Además, la diferencia entre `out` los `ref` parámetros y no se comprende ampliamente. Los arquitectos de Framework que diseñan para una audiencia general no deben esperar que los usuarios dominen el trabajo con `out` o `ref`.  
   
  **X DO NOT** pasar tipos de referencia por referencia.  
   
- Hay algunas excepciones limitadas a la regla, como un método que se puede usar para intercambiar las referencias.  
+ Hay algunas excepciones limitadas a la regla, como un método que se puede utilizar para intercambiar referencias.  
   
-### <a name="members-with-variable-number-of-parameters"></a>Miembros con un número Variable de parámetros  
+### <a name="members-with-variable-number-of-parameters"></a>Miembros con número variable de parámetros  
  Los miembros que pueden tomar un número variable de argumentos se expresan proporcionando un parámetro de matriz. Por ejemplo, <xref:System.String> proporciona el método siguiente:  
   
-```  
+```csharp  
 public class String {  
     public static string Format(string format, object[] parameters);  
 }  
 ```  
   
- A continuación, puede llamar un usuario la <xref:System.String.Format%2A?displayProperty=nameWithType> método, como se indica a continuación:  
+ Después, un usuario puede llamar al método <xref:System.String.Format%2A?displayProperty=nameWithType>, como se indica a continuación:  
   
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`  
   
- Agregar la palabra clave params de C# para un parámetro de matriz cambia el parámetro a un parámetro de matriz de parámetros denominados y proporciona un acceso directo a la creación de una matriz temporal.  
+ Al agregar C# la palabra clave params a un parámetro de matriz, se cambia el parámetro a un parámetro de matriz denominado params y se proporciona un acceso directo a la creación de una matriz temporal.  
   
-```  
+```csharp  
 public class String {  
     public static string Format(string format, params object[] parameters);  
 }  
 ```  
   
- Esto permite al usuario que llame al método pasando los elementos de matriz directamente en la lista de argumentos.  
+ De este modo, el usuario puede llamar al método pasando los elementos de la matriz directamente en la lista de argumentos.  
   
  `String.Format("File {0} not found in {1}",filename,directory);`  
   
- Tenga en cuenta que se puede agregar la palabra clave params solo para el último parámetro en la lista de parámetros.  
+ Tenga en cuenta que la palabra clave params solo se puede Agregar al último parámetro de la lista de parámetros.  
   
- **✓ CONSIDER** agregar la palabra clave params a los parámetros de matriz si espera que los usuarios finales para pasar matrices con un número pequeño de elementos. Si se espera que una gran cantidad de elementos se pasará en común los escenarios, los usuarios probablemente no pasará estos elementos insertados de todos modos y, por lo que la palabra clave params no es necesaria.  
+ **✓ CONSIDER** agregar la palabra clave params a los parámetros de matriz si espera que los usuarios finales para pasar matrices con un número pequeño de elementos. Si se espera que se pasen muchos elementos en escenarios comunes, es probable que los usuarios no pasen estos elementos en línea de todas formas, por lo que no es necesario usar la palabra clave params.  
   
  **X AVOID** usar matrices de parámetros si el llamador casi siempre tendrá la entrada ya en una matriz.  
   
- Por ejemplo, los miembros con los parámetros de matriz de bytes casi nunca se llamaría pasando bytes individuales. Por este motivo, los parámetros de matriz de bytes en .NET Framework no use la palabra clave params.  
+ Por ejemplo, nunca se llamaría a los miembros con parámetros de matriz de bytes pasando bytes individuales. Por esta razón, los parámetros de matriz de bytes del .NET Framework no utilizan la palabra clave params.  
   
  **X DO NOT** usar matrices de parámetros si se modifica la matriz por el miembro que toma el parámetro de matriz de parámetros.  
   
- Por el hecho de que muchos compiladores convierten los argumentos para el miembro en una matriz temporal en el sitio de llamada, la matriz podría ser un objeto temporal y, por lo tanto, se perderán las modificaciones en la matriz.  
+ Debido al hecho de que muchos compiladores convierten los argumentos en el miembro en una matriz temporal en el sitio de llamada, la matriz puede ser un objeto temporal y, por tanto, se perderán todas las modificaciones de la matriz.  
   
  **✓ CONSIDER** mediante la palabra clave params en una sobrecarga simple, aun cuando una sobrecarga más compleja no pudo usar.  
   
- Pregúntese si los usuarios Valoraremos con la matriz de parámetros en una sobrecarga, aunque no en todas las sobrecargas.  
+ Pregúntese si los usuarios van a tener la matriz params en una sobrecarga aunque no estuvieran en todas las sobrecargas.  
   
  **✓ DO** intenta reorganizar los parámetros para que sea posible utilizar la palabra clave params.  
   
  **✓ CONSIDER** proporcionar sobrecargas especiales y las rutas de código para las llamadas con un número pequeño de argumentos en las API de rendimiento es sumamente importante.  
   
- Esto hace que sea posible para evitar la creación de objetos de matriz cuando se llama a la API con un pequeño número de argumentos. Formar los nombres de los parámetros tomando una forma singular del parámetro de matriz y agregar un sufijo numérico.  
+ Esto permite evitar la creación de objetos de matriz cuando se llama a la API con un pequeño número de argumentos. Formar los nombres de los parámetros tomando una forma singular del parámetro de la matriz y agregando un sufijo numérico.  
   
- Solo debe hacerlo si va a la ruta de acceso de código completo de casos especiales, no basta con crear una matriz y llame al método más general.  
+ Solo debe hacerlo si va a utilizar la ruta de acceso a todo el código, no solo crea una matriz y llama al método más general.  
   
  **✓ DO** tenga en cuenta que null podría pasarse como un argumento de matriz de parámetros.  
   
- Debe validar que la matriz no es null antes del procesamiento.  
+ Debe validar que la matriz no sea NULL antes del procesamiento.  
   
  **X DO NOT** utilizar el `varargs` métodos, también conocidas como los puntos suspensivos.  
   
- Algunos lenguajes CLR, como C++, admiten una convención alternativa para pasar las listas de parámetros de variable llamadas `varargs` métodos. No debe utilizarse la convención en marcos, porque no es conforme a CLS.  
+ Algunos lenguajes CLR, como C++, admiten una Convención alternativa para pasar listas de parámetros de variables llamadas métodos `varargs`. La Convención no debe usarse en marcos de trabajo, ya que no es conforme a CLS.  
   
 ### <a name="pointer-parameters"></a>Parámetros de puntero  
- En general, los punteros no deben aparecer en el área de superficie público de un marco de código administrado bien diseñada. La mayoría de los casos, se deben encapsular punteros. Sin embargo, en algunos casos, los punteros son necesarios por motivos de interoperabilidad y el uso de punteros en estos casos es adecuado.  
+ En general, los punteros no deberían aparecer en el área expuesta pública de un marco de código administrado bien diseñado. La mayoría de las veces, se deben encapsular los punteros. Sin embargo, en algunos casos, se requieren punteros por motivos de interoperabilidad y el uso de punteros en estos casos es adecuado.  
   
  **✓ DO** proporcionan una alternativa para cualquier miembro que tome un argumento de puntero, como punteros no son conformes a CLS.  
   
@@ -149,11 +149,11 @@ public class String {
   
  **✓ DO** siga las convenciones comunes relacionadas con el puntero al diseñar los miembros con punteros.  
   
- Por ejemplo, no hay ninguna necesidad de pasar el índice de inicio, porque se puede usar aritmética de puntero simple para lograr el mismo resultado.  
+ Por ejemplo, no es necesario pasar el índice de inicio, ya que se puede usar una aritmética de puntero simple para lograr el mismo resultado.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ @no__t 0Reprinted por el permiso de Pearson Education, Inc. de las directrices de diseño de [Framework: Convenciones, expresiones y patrones para bibliotecas de .NET reutilizables, 2ª edición @ no__t-0 de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 de Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows. *  
   
 ## <a name="see-also"></a>Vea también
 
