@@ -31,7 +31,7 @@
       href: generics/
     - name: Espacios de nombres
       href: namespaces/
-    - name: Tipos que aceptan valores NULL
+    - name: Tipos de valor que aceptan valores NULL
       href: nullable-types/
     - name: Código no seguro y punteros
       href: unsafe-code-pointers/
