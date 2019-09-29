@@ -2,12 +2,12 @@
 title: 'Tutorial: Acceso a la web mediante Async y Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928451"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351904"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a la web mediante Async y Await (Visual Basic)
 
@@ -215,9 +215,9 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 1. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .
 
-    Debería aparecer un resultado similar a la lista siguiente.
+    Debería aparecer un resultado similar a la lista siguiente:
 
-    ```
+    ```console
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832
     msdn.microsoft.com                                            33964
     msdn.microsoft.com/library/hh290136.aspx               225793
@@ -666,5 +666,5 @@ End Class
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
 - [Task-based Asynchronous Programming (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847) (Programación asincrónica basada en tareas [TAP])
-- [Procedimientos: Extienda el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Cómo: Extienda el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Cómo: Hacer varias solicitudes web en paralelo mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

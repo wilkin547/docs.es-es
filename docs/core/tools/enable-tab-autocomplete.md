@@ -4,12 +4,12 @@ description: En este artículo se describe cómo habilitar la finalización con 
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202495"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182464"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
 
@@ -44,7 +44,7 @@ Entrada                                | se convierte en                        
 
 ## <a name="powershell"></a>PowerShell
 
-Para agregar finalización con tabulación a **PowerShell** para la CLI de .NET Core, cree o edite el perfil almacenado en la variable `$PROFILE`. Para obtener más información, vea [Cómo crear el perfil](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile) y [Los perfiles y la directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy). 
+Para agregar finalización con tabulación a **PowerShell** para la CLI de .NET Core, cree o edite el perfil almacenado en la variable `$PROFILE`. Para obtener más información, vea [Cómo crear el perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) y [Los perfiles y la directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy). 
 
 Agregue el código siguiente al perfil:
 

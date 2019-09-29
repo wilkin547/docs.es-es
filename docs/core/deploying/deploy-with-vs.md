@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969965"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216242"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -26,7 +26,7 @@ En las secciones siguientes se muestra cómo usar Microsoft Visual Studio para c
 - Implementación autocontenida
 - Implementación autocontenida con dependencias de terceros
 
-Para obtener información sobre el uso de Visual Studio para desarrollar aplicaciones de .NET Core, vea [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md#prerequisites-with-visual-studio-2017).
+Para obtener información sobre el uso de Visual Studio para desarrollar aplicaciones de .NET Core, vea [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
 
 ## <a name="framework-dependent-deployment"></a>Implementación dependiente de marco de trabajo
 
