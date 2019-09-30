@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054064"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354030"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
@@ -321,7 +321,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
     Si la excepción es administrada, se mostrará <xref:System.OutOfMemoryException> como el tipo de excepción, como se muestra en el ejemplo siguiente.
 
-    ```
+    ```console
     Exception object: 39594518
     Exception type: System.OutOfMemoryException
     Message: <none>
@@ -335,7 +335,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
     El argumento `RaiseTheException` indica el subproceso con la pila que tiene llamadas de excepción. Este es el objeto de excepción administrado.
 
-    ```
+    ```console
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0
     ```
 
@@ -355,7 +355,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   La mayor región disponible se muestra como en el resultado siguiente.
 
-  ```
+  ```console
   Largest free region: Base 54000000 - Size 0003A980
   ```
 
@@ -369,7 +369,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   La mayor región disponible es el valor mayor de la columna MAXIMUM, como se muestra en el resultado siguiente.
 
-  ```
+  ```console
   TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL
   ~~~~        ~~~~~~~   ~~~~~~~     ~~~~~~~   ~~~~~~~~~~  ~~~~
   Free:
@@ -415,7 +415,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   El resultado es el siguiente.
 
-  ```
+  ```console
   Number of GC Heaps: 2
   ------------------------------
   Heap 0 (002db550)
@@ -459,7 +459,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Puede empezar el análisis por las últimas líneas del resultado, ya que muestran los objetos que usan la mayor parte del espacio. Por ejemplo:
 
-  ```
+  ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
   00155f80      533     15216804      Free
   7a747c78   791070     15821400 System.Collections.Specialized.ListDictionary+DictionaryNode
@@ -479,7 +479,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   A continuación se muestra un ejemplo de los resultados.
 
-  ```
+  ```console
   Address  MT           Size  Gen
   1875d2c0 790fa3e0      152    2 System.String HighlightNullStyle_Blotter_PendingOrder-11_Blotter_PendingOrder-11
   …
@@ -503,7 +503,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Las raíces encontradas en pilas pueden ser falsos positivos. Para obtener más información, use el comando `!help gcroot`.
 
-  ```
+  ```console
   ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->
   19010b78(DemoApp.FormDemoApp)->
   19011158(System.Windows.Forms.PropertyStore)->
@@ -551,7 +551,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
     Este comando proporciona resultados como el siguiente.
 
-    ```
+    ```console
        OSID     Special thread type
     2    cd0    DbgHelper
     3    c18    Finalizer
@@ -570,7 +570,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Este comando muestra el tamaño total de todos los objetos disponibles en el montón administrado, como se muestra en el ejemplo siguiente.
 
-  ```
+  ```console
   total 230 objects
   Statistics:
         MT    Count    TotalSize Class Name
@@ -584,7 +584,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Este comando muestra un resultado similar al siguiente. La última línea muestra el segmento efímero.
 
-  ```
+  ```console
   Heap 0 (0015ad08)
   generation 0 starts at 0x49521f8c
   generation 1 starts at 0x494d7f64
@@ -604,7 +604,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   El resultado es el siguiente. La generación 0 ocupa aproximadamente 9 MB.
 
-  ```
+  ```console
   Evaluate expression: 9321848 = 008e3d78
   ```
 
@@ -614,7 +614,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   El resultado es el siguiente.
 
-  ```
+  ```console
   ------------------------------
   Heap 0
   total 409 objects
@@ -647,7 +647,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Las estadísticas mostradas incluyen el número de identificadores anclados, como se muestra en el ejemplo siguiente.
 
-  ```
+  ```console
   GC Handle Statistics:
   Strong Handles:      29
   Pinned Handles:      10
@@ -665,7 +665,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Los datos siguientes muestran cuatro intervalos de muestreo de dos segundos para un estudio de 8 segundos. Las columnas `Gen0`, `Gen1` y `Gen2` muestran el número de recolecciones de elementos no utilizados que se produjeron durante ese intervalo para esa generación.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2    % Time in GC
           1       9       3       1              10
           2      10       3       1               1
@@ -677,7 +677,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   En este ejemplo, hay 5 periodos.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2     % Time in GC
           1       9       3       1                3
           2      10       3       1                1
@@ -692,7 +692,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Por ejemplo, los datos siguiente muestran una secuencia de eventos que se produjo durante una recolección de elementos no utilizados no simultánea.
 
-  ```
+  ```console
   Timestamp    Event name
   513052        GCSuspendEEBegin_V1
   513078        GCSuspendEEEnd
@@ -711,7 +711,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   El resultado siguiente proporciona un ejemplo de recolección de elementos no utilizados en segundo plano, e incluye los campos de proceso, subproceso y evento. (No se muestra todos los datos.)
 
-  ```
+  ```console
   timestamp(us)    event name            process    thread    event field
   42504385        GCSuspendEEBegin_V1    Test.exe    4372             1
   42504648        GCSuspendEEEnd         Test.exe    4372
@@ -751,7 +751,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Este comando muestra un resultado similar al siguiente.
 
-  ```
+  ```console
   0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect
   0012f454 30002894 mscorwks!GCInterface::CollectGeneration+0xa4
   0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48
@@ -761,7 +761,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Si la recolección de elementos no utilizados se produjo por la asignación de memoria, la pila aparece de la manera siguiente:
 
-  ```
+  ```console
   0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration
   0012f2b8 7a07cba8 mscorwks!WKS::gc_heap::try_allocate_more_space+0x1a1
   0012f2d4 7a07cefb mscorwks!WKS::gc_heap::allocate_more_space+0x18
@@ -781,7 +781,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Resultado de ejemplo (abreviado para mostrar los objetos que usan más espacio):
 
-  ```
+  ```console
   79124228    31857      9862328 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   00155f80    21248     12256296      Free
@@ -803,7 +803,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   Resultado de ejemplo (abreviado para mostrar los objetos que usan más espacio):
 
-  ```
+  ```console
   79124228    26648      9314256 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   79103b6c   296770     13057880 System.Threading.ReaderWriterLock

@@ -2,12 +2,12 @@
 title: Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly
 description: Obtenga información sobre cómo controlar los errores HTTP con Polly y HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674572"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331976"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con HttpClientFactory y las directivas de Polly
 
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 Con Polly, se puede definir una directiva de reintentos con el número de reintentos, la configuración de retroceso exponencial y las acciones necesarias cuando se produce una excepción de HTTP, como registrar el error. En este caso, la directiva está configurada para intentar seis veces con un reintento exponencial, a partir de dos segundos. 
-
-Por tanto, lo intentará seis veces y los segundos entre cada reintento serán exponenciales, a partir de dos segundos.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Agregar una estrategia de vibración a la directiva de reintentos
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb262f5a02343aeb91c28eb21c939edef8a70f61
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1066a3533dedd5976f2dd73b1858ad8fa0c1f653
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666299"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392695"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
 El multithreading requiere que la programación sea cuidadosa. La complejidad de muchas tareas se puede reducir poniendo las solicitudes de ejecución en cola por subprocesos del grupo de subprocesos. En este tema se tratan situaciones más complicadas, como coordinar el trabajo de múltiples subprocesos, o controlar los subprocesos que se bloquean.  
@@ -145,10 +145,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
     {  
         lock (lockObject)  
         {  
-            if (x == null)  
-            {  
-                x = y;  
-            }  
+            x ??= y;
         }  
     }  
     ```  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754944"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353893"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadatos y componentes autodescriptivos
 
@@ -84,9 +84,7 @@ Cada fila de cada tabla de metadatos se identifica de forma exclusiva en la part
 
 Un token de metadatos es un número de cuatro bytes. El byte superior indica la tabla de metadatos a la que se refiere un token concreto (método, tipo, etc.). Los tres bytes restantes especifican la fila de la tabla de metadatos que corresponde al elemento de programación que se describe. Si se define un método en C# y se compila en un archivo PE, en la porción de MSIL del archivo PE podrían aparecer los tokens de metadatos siguientes:
 
-```
-0x06000004
-```
+`0x06000004`
 
 El byte superior (`0x06`) indica que este es un token de **MethodDef**. Los tres bytes inferiores (`000004`) indican a Common Language Runtime que busque en la cuarta fila de la tabla **MethodDef** la información que describe la definición de este método.
 
@@ -140,7 +138,7 @@ Cuando se ejecuta el código, el motor en tiempo de ejecución carga el módulo 
 
 En el siguiente ejemplo de código se muestra parte del MSIL producido a partir de la función `Main` del código anterior. El MSIL y los metadatos se pueden ver desde cualquier aplicación de .NET Framework usando el [Desensamblador de MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
 
-```
+```console
 .entrypoint
 .maxstack  3
 .locals ([0] int32 ValueOne,
@@ -161,7 +159,7 @@ El compilador JIT lee el MSIL de todo el método, lo analiza exhaustivamente y g
 
 En la siguiente tabla, se muestra parte de la tabla **MethodDef** a la que hace referencia el token de los metadatos que describe el método `Add`. Aunque existen otras tablas de metadatos en el ensamblado y tienen sus propios valores únicos, sólo se trata esta tabla.
 
-|Fila|Dirección relativa virtual (RVA)|ImplFlags|Marcas|nombre<br /><br /> (señala el montón de cadenas).|Firma (señala el montón de objetos binarios)|
+|Fila|Dirección relativa virtual (RVA)|ImplFlags|Marcas|Name<br /><br /> (señala el montón de cadenas).|Firma (señala el montón de objetos binarios)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> Administrado|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (constructor)||
 |2|0x00002058|IL<br /><br /> Administrado|Public<br /><br /> Estático<br /><br /> ReuseSlot|Método Main|String|
@@ -175,6 +173,6 @@ Usando metadatos, el motor en tiempo de ejecución tiene acceso a toda la inform
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Title|DESCRIPCIÓN|
 |-----------|-----------------|
 |[Atributos](../../docs/standard/attributes/index.md)|Describe cómo aplicar atributos, escribir atributos personalizados y recuperar información almacenada en atributos.|

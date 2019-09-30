@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054265"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216895"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -21,6 +21,7 @@ El modelo de TensorFlow que se usa en este tutorial se entrenó con reseñas de 
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
+>
 > * Carga de un modelo de TensorFlow entrenado previamente
 > * Transformación del texto de comentario del sitio web en características adecuadas para el modelo
 > * Uso del modelo para realizar una predicción
@@ -120,7 +121,7 @@ El tamaño de la matriz de características de longitud variable se cambia a una
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction` es la clase de predicción que se utiliza tras el entrenamiento del modelo. `MovieReviewSentimentPrediction` tiene una sola matriz `float` (`Prediction`) y un atributo `VectorType`.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Creación de la clase MLContext, el diccionario de búsqueda y la acción para cambiar el tamaño de las características
 
 La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. La inicialización de `mlContext` crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
@@ -191,7 +192,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
 1. Agregue el código para crear el modelo a partir de la canalización:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     Un modelo de ML.NET se crea a partir de la cadena de estimadores de la canalización llamando al método `Fit`. En este caso, no se adaptan los datos para crear el modelo, puesto que el modelo de TensorFlow ya se ha entrenado previamente. Proporcionamos un objeto de vista de datos vacío para satisfacer los requisitos del método `Fit`.
 
@@ -200,10 +201,10 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 1. Agregue el método `PredictSentiment` después del método `Main`:
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. Agregue el código siguiente para crear `PredictionEngine` como la primera línea en el método `PredictSentiment()`:
@@ -241,8 +242,8 @@ Compile y ejecute su aplicación.
 Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Estos mensajes se han quitado de los resultados siguientes para mayor claridad.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 ¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para clasificar y predecir la opinión de los mensajes reutilizando un modelo de `TensorFlow` entrenado previamente en ML.NET.
@@ -251,6 +252,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
+>
 > * Carga de un modelo de TensorFlow entrenado previamente
 > * Transformación del texto de comentario del sitio web en características adecuadas para el modelo
 > * Uso del modelo para realizar una predicción

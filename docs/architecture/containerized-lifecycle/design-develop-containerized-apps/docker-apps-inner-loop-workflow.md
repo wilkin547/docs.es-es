@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 description: Conozca el flujo de trabajo de "bucle interno" del desarrollo de aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673982"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214361"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 
@@ -47,8 +47,7 @@ La forma de desarrollar una aplicación es similar a la forma en que se lleva a 
 
 Con las últimas versiones de Docker para Mac y Windows, desarrollar aplicaciones de Docker es más fácil que nunca y la configuración es sencilla.
 
-> [INFORMACIÓN]
->
+> [!TIP]
 > Para obtener instrucciones sobre cómo configurar Docker para Windows, vaya a <https://docs.docker.com/docker-for-windows/>.
 >
 >Para obtener instrucciones sobre cómo configurar Docker para Mac, vaya a <https://docs.docker.com/docker-for-mac/>.
@@ -57,8 +56,7 @@ Además, necesitará un editor de código para que realmente pueda desarrollar s
 
 Microsoft ofrece Visual Studio Code, que es un editor de código ligero compatible con Mac, Windows y Linux y que proporciona IntelliSense con [compatibilidad con numerosos lenguajes](https://code.visualstudio.com/docs/languages/overview) (JavaScript,. NET, Go, Java, Ruby, Python y la mayoría de lenguajes modernos), [depuración](https://code.visualstudio.com/Docs/editor/debugging), [integración con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) y [compatibilidad con extensiones](https://code.visualstudio.com/docs/extensions/overview). Este editor es muy adecuado para desarrolladores de Mac y Linux. En Windows, también se puede usar la aplicación Visual Studio completa.
 
-> [INFORMACIÓN]
->
+> [!TIP]
 > Para obtener instrucciones sobre cómo instalar Visual Studio Code para Windows, Mac o Linux, vaya a <https://code.visualstudio.com/docs/setup/setup-overview/>.
 >
 > Para obtener instrucciones sobre cómo configurar Docker para Mac, vaya a <https://docs.docker.com/docker-for-mac/>.
@@ -94,7 +92,6 @@ Necesitará un `DockerFile` por imagen personalizada que quiera crear y por cont
 El archivo `DockerFile` normalmente se coloca en la carpeta raíz de la aplicación o el servicio y contiene los comandos necesarios para que Docker sepa cómo configurar y ejecutar esa aplicación o ese servicio. Puede crear el `DockerFile` y agregarlo al proyecto junto con el código (node.js, .NET Core, etc.) o, si no está familiarizado con el entorno, eche un vistazo a la siguiente sugerencia.
 
 > [!TIP]
->
 > Puede usar la extensión de Docker como guía al usar los archivos `Dockerfile` y `docker-compose.yml` relacionados con los contenedores de Docker. Con el tiempo, es probable que escriba este tipo de archivos sin esta herramienta, pero el uso de la extensión de Docker es un buen punto de partida que acelerará su curva de aprendizaje.
 
 En la figura 4-24, puede ver cómo se agrega un archivo docker-compose mediante la extensión de Docker para VS Code.
@@ -133,8 +130,7 @@ En el DockerFile, también puede indicar a Docker que escuche el puerto TCP que 
 
 Puede especificar otros valores de configuración en el Dockerfile, según el lenguaje y el marco que use. Por ejemplo, la línea `ENTRYPOINT` con `["dotnet", "MySingleContainerWebApp.dll"]` indica a Docker que ejecute una aplicación .NET Core. Si usa el SDK y la CLI de .NET Core (`dotnet CLI`) para compilar y ejecutar la aplicación .NET, este valor sería diferente. El punto clave aquí es que la línea ENTRYPOINT y otros valores varían según el lenguaje y la plataforma que se elijan para la aplicación.
 
-> [INFORMACIÓN]
->
+> [!TIP]
 > Para más información sobre cómo crear imágenes de Docker para aplicaciones .NET Core, vaya a <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 >
 > Para más información sobre cómo crear sus propias imágenes, vaya a <https://docs.docker.com/engine/tutorials/dockerimages/>.
@@ -154,7 +150,6 @@ Puede crear su propia imagen de base de Docker desde cero, tal y como se explica
 Por cada servicio personalizado que incluya su aplicación, deberá crear una imagen relacionada. Si la aplicación consta de un único servicio o aplicación web, solo necesitará una imagen.
 
 > [!NOTE]
->
 > Si se tiene en cuenta el "flujo de trabajo de bucle exterior de DevOps", las imágenes se crearán mediante un proceso de compilación automatizado cada vez que el código fuente se inserte en un repositorio de Git (integración continua), por lo que las imágenes se crearán en ese entorno global a partir de su código fuente.
 >
 > Pero antes de contemplar la posibilidad de ir a esa ruta de bucle externo, hemos de asegurarnos de que la aplicación Docker funciona correctamente para que no inserte código que podría no funcionar correctamente en el sistema de control de código fuente (Git, etcétera).
