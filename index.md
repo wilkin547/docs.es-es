@@ -6,12 +6,12 @@ title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
 ms.date: 09/23/2019
-ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: f58e1c03f529629556f79881aebd69afc9ed9bde
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216700"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351645"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -118,6 +118,7 @@ ms.locfileid: "71216700"
                                                 <p><a href="/dotnet/core/porting/">Portabilidad de .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
                                                 <p><a href="/ef/core/">EF Core</a></p>
+                                                <p><a href="/dotnet/desktop-wpf/">Guía de escritorio (WPF)</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -581,17 +582,37 @@ ms.locfileid: "71216700"
                                 </a>
                             </li>
                             <li>
+                                <a href="/dotnet/desktop-wpf/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Windows Presentation Foundation (.NET Core)</h3>
+                                                    <p>WPF proporciona a los desarrolladores un modelo basado en XAML para crear aplicaciones de escritorio en Windows.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2-framework.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Windows Presentation Foundation (WPF)</h3>
+                                                    <h3>Windows Presentation Foundation (.NET Framework)</h3>
                                                     <p>WPF proporciona a los desarrolladores un modelo basado en XAML para crear aplicaciones de escritorio en Windows.
                                                     </p>
                                                 </div>

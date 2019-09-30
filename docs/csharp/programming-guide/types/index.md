@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588401"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392160"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -46,11 +46,11 @@ El compilador usa información de tipo para garantizar que todas las operaciones
 > [!NOTE]
 > Los desarrolladores de C y C++ deben tener en cuenta que, en C#, [bool](../../language-reference/keywords/bool.md) no se puede convertir en [int](../../language-reference/builtin-types/integral-numeric-types.md).
 
-El compilador inserta la información de tipo en el archivo ejecutable como metadatos. Common Language Runtime (CLR) utiliza esos metadatos en tiempo de ejecución para garantizar aún más la seguridad de tipos cuando asigna y reclama memoria.
+El compilador inserta la información de tipo en el archivo ejecutable como metadatos. Common Language Runtime (CLR) usa esos metadatos en tiempo de ejecución para garantizar aún más la seguridad de tipos cuando asigna y reclama memoria.
 
-### <a name="specifying-types-in-variable-declarations"></a>Definición de tipos en declaraciones de variable
+### <a name="specifying-types-in-variable-declarations"></a>Especificar tipos en declaraciones de variable
 
-Cuando declare una variable o constante en un programa, debe especificar su tipo o utilizar la palabra clave [var](../../language-reference/keywords/var.md) para que el compilador infiera el tipo. En el ejemplo siguiente se muestran algunas declaraciones de variable que utilizan tanto tipos numéricos integrados como tipos complejos definidos por el usuario:
+Cuando declare una variable o constante en un programa, debe especificar su tipo o usar la palabra clave [var](../../language-reference/keywords/var.md) para que el compilador infiera el tipo. En el ejemplo siguiente se muestran algunas declaraciones de variable que utilizan tanto tipos numéricos integrados como tipos complejos definidos por el usuario:
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
@@ -168,13 +168,13 @@ stringList.Add(4);
 
 El uso del parámetro de tipo permite reutilizar la misma clase para incluir cualquier tipo de elemento, sin necesidad de convertir cada elemento en [object](../../language-reference/keywords/object.md). Las clases de colección genéricas se denominan *colecciones fuertemente tipadas* porque el compilador conoce el tipo específico de los elementos de la colección y puede generar un error en tiempo de compilación si, por ejemplo, intenta agregar un valor entero al objeto `stringList` del ejemplo anterior. Para más información, vea [Genéricos](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Tipos implícitos, tipos anónimos y tipos que aceptan valores NULL
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Tipos implícitos, tipos anónimos y tipos que admiten un valor NULL
 
 Como se ha mencionado anteriormente, puede asignar implícitamente un tipo a una variable local (pero no miembros de clase) mediante la palabra clave [var](../../language-reference/keywords/var.md). La variable sigue recibiendo un tipo en tiempo de compilación, pero este lo proporciona el compilador. Para más información, vea [Variables locales con asignación implícita de tipos](../classes-and-structs/implicitly-typed-local-variables.md).
 
 En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no desea almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para más información, vea [Tipos anónimos](../classes-and-structs/anonymous-types.md).
 
-Los tipos de valor normales no pueden tener un valor [null](../../language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](../../language-reference/keywords/null.md). En CTS, los tipos que aceptan valores NULL son instancias del tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos que aceptan valores NULL son especialmente útiles cuando se pasan datos hacia y desde bases de datos en las que los valores numéricos podrían ser nulos. Para más información, vea [Tipos que aceptan valores NULL](../nullable-types/index.md).
+Los tipos de valor normales no pueden tener un valor [null](../../language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](../../language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos. Para más información, vea [Tipos que admiten un valor NULL](../nullable-types/index.md).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
