@@ -25,13 +25,13 @@ Por último, si utiliza una arquitectura REST, [Hypermedia](https://www.infoq.co
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy** \ (Control de versiones simplificado de API web RESTful de ASP.NET Core)
+- **Scott Hanselman. Control de versiones simplificado de API web RESTful de ASP.NET Core** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Control de versiones de una API web RESTful** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Versioning, Hypermedia, and REST** \ (Control de versiones, hipermedios y REST)
+- **Roy Fielding. Control de versiones, hipermedios y REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]

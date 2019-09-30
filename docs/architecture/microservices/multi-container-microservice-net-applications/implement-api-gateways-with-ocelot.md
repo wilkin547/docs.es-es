@@ -562,19 +562,19 @@ En los archivos de código fuente de eShopOnContainers, los archivos "configurat
 
 Cuando se usa una puerta de enlace de API de Ocelot hay otras características importantes para investigar y utilizar, como se describe en los vínculos siguientes.
 
-- **Service discovery in the client side integrating Ocelot with Consul or Eureka** \ (Detección de servicios en el lado cliente mediante la integración de Ocelot con Consul o Eureka)
+- **Detección de servicios en el lado cliente mediante la integración de Ocelot con Consul o Eureka** \
   <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
-- **Caching at the API Gateway tier** \ (Almacenamiento en caché en el nivel de puerta de enlace de API)
+- **Almacenamiento en caché en el nivel de puerta de enlace de API** \
   <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
-- **Logging at the API Gateway tier** \ (Registro en el nivel de puerta de enlace de API)
+- **Registro en el nivel de puerta de enlace de API)**  \
   <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
-- **Quality of Service (Retries and Circuit breakers) at the API Gateway tier** \ (Calidad de servicio (reintentos e interruptores) en el nivel de puerta de enlace de API)
+- **Calidad de servicio (reintentos e interruptores) en el nivel de puerta de enlace de API** \
   <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
-- **Rate limiting** \ (Limitación de velocidad)
+- **Limitación de velocidad** \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]

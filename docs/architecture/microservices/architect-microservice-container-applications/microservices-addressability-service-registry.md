@@ -19,13 +19,13 @@ En algunos entornos de implementación de microservicios (denominados clústeres
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Chris Richardson. Patrón: Service registry** \ (Registro de servicios)
+- **Chris Richardson. Patrón: Registro de servicios** \
   <https://microservices.io/patterns/service-registry.html>
 
-- **Auth0. The Service Registry** \ (El registro de servicios)
+- **Auth0. El registro de servicios** \
   <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
-- **Gabriel Schenker. Service discovery** \ (Detección de servicios)
+- **Gabriel Schenker. Detección de servicios** \
   <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]

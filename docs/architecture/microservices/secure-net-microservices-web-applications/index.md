@@ -288,13 +288,13 @@ El software intermedio de autenticación del portador de JWT también puede admi
 - **Habilitación de la autenticación con Facebook, Google y otros proveedores externos** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. An Introduction to OAuth 2** \ (Una introducción a OAuth 2)
+- **Michell Anicas. Una introducción a OAuth 2** \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
-- **AspNet.Security.OAuth.Providers** (repositorio de GitHub para proveedores de OAuth de ASP.NET) \
+- **repositorio de GitHub para proveedores de OAuth de ASP.NET)**
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app** \ (Integración de Azure AD en una aplicación web ASP.NET Core)
+- **Danny Strockis. Integración de Azure AD en una aplicación web ASP.NET Core** \
   <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4. Documentación oficial** \
