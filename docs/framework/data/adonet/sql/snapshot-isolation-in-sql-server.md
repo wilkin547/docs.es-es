@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791744"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699064"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Aislamiento de instantáneas en SQL Server
 El aislamiento de instantánea mejora la simultaneidad para las aplicaciones OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Descripción del aislamiento de instantáneas y la versión de fila  
- Una vez habilitado el aislamiento de instantánea, las versiones de fila actualizadas para cada transacción se mantienen en **tempdb**. Cada transacción se identifica con un número único de secuencia de transacción, y estos números únicos se registran para cada versión de fila. La transacción trabaja con las versiones de filas más recientes que tienen un número de secuencia anterior al número de secuencia de la transacción, y omite las versiones de filas más nuevas creadas con posterioridad a su comienzo.  
+ Una vez habilitado el aislamiento de instantánea, se deben mantener las versiones de fila actualizadas para cada transacción.  Antes de SQL Server 2019, estas versiones se almacenaban en **tempdb**. SQL Server 2019 presenta una nueva característica, una recuperación de base de datos acelerada (ADR) que requiere su propio conjunto de versiones de fila.  Por tanto, a partir de SQL Server 2019, si ADR no está habilitado, las versiones de fila se mantienen en **tempdb** como siempre.  Si el ADR está habilitado, todas las versiones de fila, relacionadas con el aislamiento de instantáneas y la ADR, se mantienen en el almacén de versiones persistente (PVS) de ADR, que se encuentra en la base de datos de usuario de un grupo de archivos que el usuario especifica. Cada transacción se identifica con un número único de secuencia de transacción, y estos números únicos se registran para cada versión de fila. La transacción trabaja con las versiones de filas más recientes que tienen un número de secuencia anterior al número de secuencia de la transacción, y omite las versiones de filas más nuevas creadas con posterioridad a su comienzo.  
   
  El término "instantánea" refleja el hecho de que todas las consultas de la transacción ven la misma versión, o instantánea, de la base de datos, en función del estado de ésta en el momento en que comienza la transacción. En una transacción de instantánea no se adquieren bloqueos en las filas o las páginas de datos subyacentes, lo que permite que se ejecuten otras transacciones sin que una transacción anterior sin completarse las bloquee. Las transacciones que modifican datos no bloquean a las que los leen, y éstas no bloquean a las que los escriben, como normalmente sucedería con el nivel de aislamiento predeterminado READ COMMITTED de SQL Server. Este comportamiento de no bloqueo también reduce de forma significativa la probabilidad de interbloqueo en transacciones complejas.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Una transacción de instantánea siempre utiliza un control de simultaneidad optimista, que retiene los bloqueos que impedirían que otras transacciones actualizaran filas. Si una transacción de instantánea intenta confirmar una actualización en una fila que se cambió después de que comenzara, la transacción se revierte y se genera un error.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Trabajo con aislamiento de instantáneas en ADO.NET  
- El aislamiento de instantáneas se admite en ADO.NET mediante la clase <xref:System.Data.SqlClient.SqlTransaction>. Si una base de datos se ha habilitado para el aislamiento de instantáneas pero no está configurada <xref:System.Data.SqlClient.SqlTransaction> para READ_COMMITTED_SNAPSHOT on, debe iniciar mediante el <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> valor de enumeración **IsolationLevel. Snapshot** al llamar al método. Este fragmento de código asume que la conexión es un objeto <xref:System.Data.SqlClient.SqlConnection> abierto.  
+ El aislamiento de instantáneas se admite en ADO.NET mediante la clase <xref:System.Data.SqlClient.SqlTransaction>. Si una base de datos se ha habilitado para el aislamiento de instantáneas pero no está configurada para READ_COMMITTED_SNAPSHOT en, debe iniciar un <xref:System.Data.SqlClient.SqlTransaction> mediante el valor de enumeración **IsolationLevel. Snapshot** al llamar al método <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>. Este fragmento de código asume que la conexión es un objeto <xref:System.Data.SqlClient.SqlConnection> abierto.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  

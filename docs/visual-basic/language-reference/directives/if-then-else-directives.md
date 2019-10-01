@@ -18,19 +18,19 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 697521276e2d5a8d0a4aaae38789a21b7aa87fcb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5357dca24b03ddd03779866019baf14175be992
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940762"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698545"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else (Directivas)
 Compila condicionalmente bloques seleccionados de código Visual Basic.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 #If expression Then  
    statements  
 [ #ElseIf expression Then  
@@ -45,23 +45,23 @@ Compila condicionalmente bloques seleccionados de código Visual Basic.
   
 ## <a name="parts"></a>Elementos  
  `expression`  
- Necesario para `#If` las `#ElseIf` instrucciones y, opcional en cualquier otro lugar. Cualquier expresión, que consta exclusivamente de una o varias constantes, literales y operadores del compilador condicionales, que se `True` evalúa `False`como o.  
+ Se requiere para las instrucciones `#If` y `#ElseIf`, opcional en otro lugar. Cualquier expresión, que consta exclusivamente de una o varias constantes, literales y operadores de compilador condicionales, que se evalúa como `True` o `False`.  
   
  `statements`  
- Requerido para `#If` el bloque de instrucciones, opcional en otro lugar. Visual Basic líneas de programa o directivas de compilador que se compilan si `True`la expresión asociada se evalúa como.  
+ Se requiere para el bloque de instrucciones `#If`, opcional en otro lugar. Visual Basic líneas de programa o directivas de compilador que se compilan si la expresión asociada se evalúa como `True`.  
   
  `#End If`  
- Finaliza el bloque `#If` de instrucciones.  
+ Finaliza el bloque de instrucciones `#If`.  
   
 ## <a name="remarks"></a>Comentarios  
- En la superficie, el comportamiento de las `#If...Then...#Else` directivas aparece igual que el de las `If...Then...Else` instrucciones. Sin embargo, `#If...Then...#Else` las directivas evalúan lo que compila el compilador `If...Then...Else` , mientras que las instrucciones evalúan las condiciones en tiempo de ejecución.  
+ En la superficie, el comportamiento de las directivas `#If...Then...#Else` aparece igual que el de las instrucciones `If...Then...Else`. Sin embargo, las directivas de `#If...Then...#Else` evalúan lo que compila el compilador, mientras que las instrucciones `If...Then...Else` evalúan las condiciones en tiempo de ejecución.  
   
  La compilación condicional se usa normalmente para compilar el mismo programa para distintas plataformas. También se usa para evitar que el código de depuración aparezca en un archivo ejecutable. El código excluido durante la compilación condicional se omite completamente del archivo ejecutable final, por lo que no tiene ningún efecto en el tamaño o el rendimiento.  
   
- Independientemente del resultado de cualquier evaluación, todas las expresiones se evalúan `Option Compare Binary`utilizando. La `Option Compare` instrucción no afecta a las expresiones `#If` de `#ElseIf` las instrucciones y.  
+ Independientemente del resultado de cualquier evaluación, todas las expresiones se evalúan utilizando `Option Compare Binary`. La instrucción `Option Compare` no afecta a las expresiones de las instrucciones `#If` y `#ElseIf`.  
   
 > [!NOTE]
-> No existe ninguna forma de una línea `#If`de `#Else`las `#ElseIf`directivas, `#End If` , y. No puede aparecer ningún otro código en la misma línea que ninguna de las directivas. 
+> No existe ninguna forma de línea única de las directivas `#If`, `#Else`, `#ElseIf` y `#End If`. No puede aparecer ningún otro código en la misma línea que ninguna de las directivas. 
 
 Las instrucciones de un bloque de compilación condicional deben ser instrucciones lógicas completas. Por ejemplo, no puede compilar condicionalmente solo los atributos de una función, pero puede declarar condicionalmente la función junto con sus atributos:
 
@@ -76,7 +76,7 @@ Las instrucciones de un bloque de compilación condicional deben ser instruccion
 ```
 
 ## <a name="example"></a>Ejemplo
- En este ejemplo se `#If...Then...#Else` usa la construcción para determinar si se deben compilar ciertas instrucciones.  
+ En este ejemplo se usa la construcción `#If...Then...#Else` para determinar si se deben compilar ciertas instrucciones.  
   
  [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   

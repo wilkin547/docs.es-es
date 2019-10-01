@@ -2,22 +2,19 @@
 title: Elemento <iriParsing> (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 2c99edf2f1a03e0e510858c106cad43b0eaa27b4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd617d1b4ac8e532c6f9aeaa01465e9866b059e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664087"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698091"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<Análisisiri > elemento (configuración de URI)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing (elemento de >) (configuración de URI)
 Especifica si se aplica el análisis de identificadores de recursos internacionales (IRI) a un <xref:System.Uri> y si se deben aplicar reglas de análisis de IRI.  
   
-## <a name="schema-hierarchy"></a>Jerarquía del esquema  
- [Elemento \<configuration>](../configuration-element.md)  
-  
- [\<Elemento URI > (configuración de URI)](uri-element-uri-settings.md)  
-  
- [\<iriParsing>](iriparsing-element-uri-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<iriParsing >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +34,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
 |`enabled`|Especifica si está habilitado el análisis de IRI. El valor predeterminado es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- None  
+ Ninguna  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -65,8 +62,8 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
- En el ejemplo siguiente se muestra una configuración utilizada <xref:System.Uri> por la clase para admitir el análisis de IRI y los nombres IDN.  
+### <a name="description"></a>Descripción  
+ En el ejemplo siguiente se muestra una configuración utilizada por la clase <xref:System.Uri> para admitir el análisis de IRI y los nombres IDN.  
   
 ### <a name="code"></a>Código  
   

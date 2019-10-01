@@ -14,40 +14,40 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: 29e2b159e4c6261a62e788b537102b9b457fe0c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ebc5f9dbf674a9a6560bd96b3e8c9edcae08a81
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955829"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701075"
 ---
 # <a name="not-operator-visual-basic"></a>Not (Operador, Visual Basic)
-Realiza una negación lógica de `Boolean` una expresión o una negación bit a bit en una expresión numérica.  
+Realiza una negación lógica de una expresión @no__t 0 o una negación bit a bit en una expresión numérica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 result = Not expression  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Necesario. Cualquier `Boolean` expresión numérica o.  
+ Obligatorio. Cualquier `Boolean` expresión numérica o.  
   
  `expression`  
- Necesario. Cualquier `Boolean` expresión numérica o.  
+ Obligatorio. Cualquier `Boolean` expresión numérica o.  
   
 ## <a name="remarks"></a>Comentarios  
- En `Boolean` el caso de las expresiones, en la `result` tabla siguiente se muestra cómo se determina.  
+ En el caso de las expresiones `Boolean`, en la tabla siguiente se muestra cómo se determina `result`.  
   
 |Si `expression` es|El valor de `result` es|  
 |------------------------|------------------------------|  
 |`True`|`False`|  
 |`False`|`True`|  
   
- En el caso de las `Not` expresiones numéricas, el operador invierte los valores de bit de cualquier expresión numérica `result` y establece el bit correspondiente en de acuerdo con la tabla siguiente.  
+ En el caso de las expresiones numéricas, el operador `Not` invierte los valores de bit de cualquier expresión numérica y establece el bit correspondiente en `result` de acuerdo con la tabla siguiente.  
   
-|Si el bit `expression` de es|El bit de `result` es|  
+|Si el bit de `expression` es|El bit en `result` es|  
 |-------------------------------|----------------------------|  
 |1|0|  
 |0|1|  
@@ -56,20 +56,20 @@ result = Not expression
 > Puesto que los operadores lógicos y bit a bit tienen una prioridad más baja que otros operadores aritméticos y relacionales, las operaciones bit a bit deben ir entre paréntesis para garantizar una ejecución precisa.  
   
 ## <a name="data-types"></a>Tipos de datos  
- En el caso de una negación booleana, el tipo de datos `Boolean`del resultado es. En el caso de una negación bit a bit, el tipo de datos del `expression`resultado es el mismo que el de. Sin embargo, si Expression `Decimal`es, el resultado `Long`es.  
+ En el caso de una negación booleana, el tipo de datos del resultado es `Boolean`. En el caso de una negación bit a bit, el tipo de datos del resultado es el mismo que el de `expression`. Sin embargo, si Expression es `Decimal`, el resultado es `Long`.  
   
 ## <a name="overloading"></a>Sobrecarga  
- El `Not` operador se puedesobrecargar, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando su operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El operador `Not` se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando su operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se `Not` usa el operador para realizar la negación `Boolean` lógica de una expresión. El resultado es un `Boolean` valor que representa el inverso del valor de la expresión.  
+ En el ejemplo siguiente se usa el operador `Not` para realizar la negación lógica de una expresión `Boolean`. El resultado es un valor `Boolean` que representa el inverso del valor de la expresión.  
   
  [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
- En el ejemplo anterior se generan `False` los `True`resultados de y, respectivamente.  
+ En el ejemplo anterior se generan los resultados de `False` y `True`, respectivamente.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se `Not` usa el operador para realizar la negación lógica de los bits individuales de una expresión numérica. El bit en el patrón del resultado se establece en la inversa del bit correspondiente en el patrón de operando, incluido el bit de signo.  
+ En el ejemplo siguiente se usa el operador `Not` para realizar la negación lógica de los bits individuales de una expresión numérica. El bit en el patrón del resultado se establece en la inversa del bit correspondiente en el patrón de operando, incluido el bit de signo.  
   
  [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   

@@ -10,39 +10,39 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 7c009a6b3acfe1528a2c34ed1e10735ac86507e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47d3239af6ff24501e6babc23c0db4103c477796
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032146"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701066"
 ---
 # <a name="-operator-visual-basic"></a>*= (Operador, Visual Basic)
-Multiplica el valor de una propiedad o variable por el valor de una expresión y asigna el resultado a la variable o propiedad.  
+Multiplica el valor de una variable o propiedad por el valor de una expresión y asigna el resultado a la variable o propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 variableorproperty *= expression  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `variableorproperty`  
- Obligatorio. Cualquier propiedad o variable numérica.  
+ Obligatorio. Cualquier variable o propiedad numérica.  
   
  `expression`  
  Obligatorio. Cualquier expresión numérica.  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento en el lado izquierdo de la `*=` operador puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ El elemento del lado izquierdo del operador `*=` puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- El `*=` operador primero multiplica el valor de la expresión (en el lado derecho del operador) por el valor de la variable o propiedad (en el lado izquierdo del operador). El operador, a continuación, asigna el resultado de esa operación a la variable o propiedad.  
+ El operador `*=` multiplica primero el valor de la expresión (en el lado derecho del operador) por el valor de la variable o propiedad (en el lado izquierdo del operador). A continuación, el operador asigna el resultado de la operación a la variable o propiedad.  
   
 ## <a name="overloading"></a>Sobrecarga  
- El [* operador](../../../visual-basic/language-reference/operators/multiplication-operator.md) puede ser *sobrecargado*, lo que significa que una clase o estructura puede redefinir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Sobrecargar el `*` operador afecta al comportamiento de la `*=` operador. Si el código usa `*=` en una clase o estructura que sobrecarga `*`, asegúrese de conocer su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El [operador *](../../../visual-basic/language-reference/operators/multiplication-operator.md) se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. La sobrecarga del operador `*` afecta al comportamiento del operador `*=`. Si el código usa `*=` en una clase o estructura que sobrecarga `*`, asegúrese de que entiende su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el `*=` operador Multiplicar uno `Integer` variable por un segundo y asigna el resultado a la primera variable.  
+ En el ejemplo siguiente se usa el operador `*=` para multiplicar una variable `Integer` por un segundo y asignar el resultado a la primera variable.  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   

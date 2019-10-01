@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17b380b12977423669fd413132d69a3082daca41
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659443"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698358"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<borrar > elemento de connectionManagement (configuración de red)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<clear elemento > para connectionManagement (configuración de red)
 Borra la lista de administración de conexiones.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,13 +47,13 @@ Borra la lista de administración de conexiones.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `clear` elemento borra todas las entradas de la lista de administración de conexiones.  
+ El elemento `clear` borra todas las entradas de la lista de administración de conexiones.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se borra la lista de administración de conexiones y, después, se agregan `www.contoso.com` nuevas entradas de administración de conexiones para el servidor y todos los demás hosts de red.  
+ En el siguiente ejemplo se borra la lista de administración de conexiones y, después, se agregan nuevas entradas de administración de conexiones para el servidor `www.contoso.com` y todos los demás hosts de red.  
   
 ```xml  
 <configuration>  

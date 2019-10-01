@@ -18,30 +18,30 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 11c4f119360af386fa2c5609ea7815b9ae7a64f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d2fd226735622de5cd7197060c05b8ac12b69f1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647004"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696836"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
-Contiene secuencias de puntos de código (2 bytes) de 16 bits sin signo de ese intervalo de valor comprendido entre 0 y 65535. Cada *punto de código*, o código de carácter representa un único carácter Unicode. Puede contener una cadena de 0 a dos mil millones (2 ^ 31) caracteres Unicode.  
+Contiene secuencias de puntos de código sin signo de 16 bits (2 bytes) que van desde 0 hasta 65535. Cada *punto de código*, o código de carácter, representa un único carácter Unicode. Una cadena puede contener entre 0 y aproximadamente 2 mil millones (2 ^ 31) caracteres Unicode.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `String` tipo de datos que contenga varios caracteres sin la sobrecarga de administración de la matriz de `Char()`, una matriz de `Char` elementos.  
+ Utilice el tipo de datos `String` para contener varios caracteres sin la sobrecarga de administración de la matriz de `Char()`, una matriz de elementos `Char`.  
   
- El valor predeterminado de `String` es `Nothing` (una referencia nula). Tenga en cuenta que esto no es igual que la cadena vacía (valor `""`).  
+ El valor predeterminado de `String` es `Nothing` (referencia nula). Tenga en cuenta que esto no es lo mismo que la cadena vacía (valor `""`).  
   
 ## <a name="unicode-characters"></a>Caracteres Unicode  
- Los primeros puntos de 128 código (0 – 127) de Unicode corresponden a las letras y símbolos en un teclado US estándar. Estos primeros puntos de 128 código son los mismos que los define el juego de caracteres ASCII. El segundo 128 puntos de código (128-255) representan caracteres especiales, como letras del alfabeto latino, acentos, símbolos de moneda y fracciones. Unicode utiliza los puntos de código restantes (256-65535) para una amplia variedad de símbolos. Esto incluye caracteres de texto de todo el mundo, los signos diacríticos y símbolos técnicos y matemáticos.  
+ Los primeros 128 puntos de código (0 – 127) de Unicode corresponden a las letras y símbolos de un teclado estándar de EE. UU. Estos primeros 128 puntos de código son los mismos que los que define el juego de caracteres ASCII. Los dos puntos de código 128 (128 – 255) representan caracteres especiales, como Letras de alfabetos basados en latín, acentos, símbolos de moneda y fracciones. Unicode utiliza el resto de puntos de código (256-65535) para una amplia variedad de símbolos. Esto incluye los caracteres de texto, los signos diacríticos y los símbolos matemáticos y técnicos del mundo.  
   
- Puede usar métodos como <xref:System.Char.IsDigit%2A> y <xref:System.Char.IsPunctuation%2A> en un carácter individual en un `String` variable para determinar su clasificación Unicode.  
+ Puede usar métodos como <xref:System.Char.IsDigit%2A> y <xref:System.Char.IsPunctuation%2A> en un carácter individual de una variable `String` para determinar su clasificación Unicode.  
   
 ## <a name="format-requirements"></a>Requisitos de formato  
- Debe incluir un `String` literal entre comillas (`" "`). Si se debe incluir una comilla como uno de los caracteres de la cadena, utilice dos comillas contiguas (`""`). Esto se ilustra en el siguiente ejemplo:  
+ Debe incluir un literal @no__t 0 entre comillas (`" "`). Si debe incluir una comilla tipográfica como uno de los caracteres de la cadena, utilice dos comillas contiguas (`""`). Esto se ilustra en el siguiente ejemplo:  
   
-```  
+```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
 Dim h As String = "Hello"  
 ' The following messages all display the same thing:  
@@ -51,32 +51,32 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Tenga en cuenta que las comillas contiguas que representan una comilla en la cadena son independientes de las comillas que comienzan y terminan la `String` literal.  
+ Tenga en cuenta que las comillas contiguas que representan una comilla en la cadena son independientes de las comillas que comienzan y finalizan el literal `String`.  
   
 ## <a name="string-manipulations"></a>Manipulaciones de cadenas  
- Una vez que asigne una cadena a un `String` variable, esa cadena es *inmutable*, lo que significa que no puede cambiar su longitud ni su contenido. Cuando se modifica una cadena de cualquier manera, Visual Basic crea una nueva cadena y abandona la anterior. El `String` variable apunta a la nueva cadena.  
+ Una vez que se asigna una cadena a una variable `String`, esa cadena es *inmutable*, lo que significa que no se puede cambiar su longitud o su contenido. Al modificar una cadena de alguna manera, Visual Basic crea una nueva cadena y abandona la anterior. A continuación, la variable `String` apunta a la nueva cadena.  
   
- Puede manipular el contenido de un `String` variable mediante una variedad de funciones de cadena. El siguiente ejemplo ilustra el <xref:Microsoft.VisualBasic.Strings.Left%2A> (función)  
+ Puede manipular el contenido de una variable `String` mediante una variedad de funciones de cadena. En el ejemplo siguiente se muestra la función <xref:Microsoft.VisualBasic.Strings.Left%2A>  
   
-```  
+```vb  
 Dim S As String = "Database"  
 ' The following statement sets S to a new string containing "Data".  
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- Una cadena creada por otro componente podría estar rellena con espacios iniciales o finales. Si recibe este tipo de cadena, puede usar el <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, y <xref:Microsoft.VisualBasic.Strings.RTrim%2A> funciones para quitar estos espacios.  
+ Una cadena creada por otro componente se puede rellenar con espacios iniciales o finales. Si recibe este tipo de cadena, puede usar las funciones <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A> y <xref:Microsoft.VisualBasic.Strings.RTrim%2A> para quitar estos espacios.  
   
- Para obtener más información acerca de las manipulaciones de cadenas, vea [cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Para obtener más información sobre las manipulaciones de cadenas, vea [cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
-- **Números negativos.** Recuerde que los caracteres mantienen por `String` están firmados y no puede representar los valores negativos. En cualquier caso, no debe utilizar `String` para contener valores numéricos.  
+- **Números negativos.** Recuerde que los caracteres que contiene `String` están sin signo y no pueden representar valores negativos. En cualquier caso, no debe utilizar `String` para contener valores numéricos.  
   
-- **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, recuerde que los caracteres de cadena tienen un ancho de datos diferentes (8 bits) en otros entornos. Si se pasa un argumento de cadena de caracteres de 8 bits a esos componentes, declárelo como `Byte()`, una matriz de `Byte` elementos, en lugar de `String` en el nuevo código de Visual Basic.  
+- **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para el .NET Framework, por ejemplo, objetos de automatización o COM, recuerde que los caracteres de cadena tienen un ancho de datos diferente (8 bits) en otros entornos. Si va a pasar un argumento de cadena de caracteres de 8 bits a este componente, declárelo como `Byte()`, una matriz de elementos `Byte`, en lugar de `String` en el nuevo código de Visual Basic.  
   
-- **Caracteres de tipo.** Anexar el carácter de tipo identificador `$` a cualquier identificador lo fuerza a la `String` tipo de datos. `String` no tiene ningún carácter de tipo literal. Sin embargo, el compilador trata los literales incluidos entre comillas (`" "`) como `String`.  
+- **Caracteres de tipo.** Anexar el carácter de tipo de identificador `$` a cualquier identificador lo convierte al tipo de datos `String`. `String` no tiene ningún carácter de tipo literal. Sin embargo, el compilador trata los literales entre comillas (`" "`) como `String`.  
   
-- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la <xref:System.String?displayProperty=nameWithType> clase.  
+- **Tipo de marco.** El tipo correspondiente en el .NET Framework es la clase <xref:System.String?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

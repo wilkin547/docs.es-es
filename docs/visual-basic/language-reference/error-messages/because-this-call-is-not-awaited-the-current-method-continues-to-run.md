@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619559"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701200"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta llamada no es "awaited", la ejecución del método actual continuará antes de que se complete la llamada.
 Dado que no se esperaba esta llamada, la ejecución del método actual continuará antes de que se complete la llamada. Considere la posibilidad de aplicar el operador "Await" al resultado de la llamada.  
@@ -25,7 +25,7 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
   
  De forma predeterminada, este mensaje es una advertencia. Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Identificador de error:** BC42358  
+ **IDENTIFICADOR de error:** BC42358  
   
 ### <a name="to-address-this-warning"></a>Para resolver esta advertencia  
   
@@ -83,7 +83,7 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
   
      En el ejemplo, si elige Call #1 o Call #2, el método asincrónico no esperado (`CalledMethodAsync`) termina después de que se completen su llamador (`CallingMethodAsync`) y el llamador del llamador (`StartButton_Click`). La última línea de la salida siguiente muestra cuándo finaliza el método llamado. La entrada y la salida del controlador de eventos que llama a `CallingMethodAsync` en el ejemplo completo se marcan en la salida.  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  

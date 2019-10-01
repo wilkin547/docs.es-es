@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920408"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699179"
 ---
-# <a name="trace-element"></a>\<Elemento > de seguimiento
+# <a name="trace-element"></a>\<trace >, elemento
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<> de seguimiento  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,33 +45,33 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
   
 ## <a name="autoflush-attribute"></a>AutoFlush (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`false`|No vacía automáticamente el búfer de salida. Este es el valor predeterminado.|  
 |`true`|Vacía automáticamente el búfer de salida.|  
   
 ## <a name="usegloballock-attribute"></a>Atributo useGlobalLock  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`false`|No utiliza el bloqueo global si el agente de escucha es seguro para subprocesos; de lo contrario, utiliza el bloqueo global.|  
 |`true`|Utiliza el bloqueo global independientemente de si el agente de escucha es seguro para subprocesos. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|Especifica un agente de escucha que recopila, almacena y enruta los mensajes.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar `<trace>` el elemento para agregar el `MyListener` agente de escucha `Listeners` a la colección. `MyListener`crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. El `useGlobalLock` atributo se establece en `false`, lo que hace que no se use el bloqueo global si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo se establece en `true`, que hace que el agente de escucha de seguimiento escriba en el archivo independientemente de <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> si se llama al método. El `indentsize` atributo se establece en 0 (cero), lo que hace que el agente de escucha Aplique sangría a <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> cero espacios cuando se llama al método.  
+ En el ejemplo siguiente se muestra cómo usar el elemento `<trace>` para agregar el agente de escucha `MyListener` a la colección `Listeners`. `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. El atributo `useGlobalLock` se establece en `false`, lo que hace que no se use el bloqueo global si el agente de escucha de seguimiento es seguro para subprocesos. El atributo `autoflush` se establece en `true`, lo que hace que el agente de escucha de seguimiento escriba en el archivo independientemente de si se llama al método <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. El atributo `indentsize` se establece en 0 (cero), lo que hace que el agente de escucha Aplique sangría a cero espacios cuando se llama al método <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.  
   
 ```xml  
 <configuration>  

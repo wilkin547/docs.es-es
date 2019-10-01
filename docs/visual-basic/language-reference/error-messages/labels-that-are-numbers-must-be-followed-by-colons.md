@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 3634ea4b97f25e41e27629c51119f2ea4df5f887
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589772"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700988"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Las etiquetas que son números deben ir seguidas de dos puntos
-Números de línea siguen las mismas reglas que los demás tipos de etiquetas y deben contener dos puntos.  
+Los números de línea siguen las mismas reglas que otros tipos de etiquetas y deben contener un signo de dos puntos.  
   
- **Identificador de error:** BC30801  
+ **IDENTIFICADOR de error:** BC30801  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Colocar el número seguido de dos puntos al principio de una línea de código; Por ejemplo:  
+- Coloque el número seguido de un signo de dos puntos al principio de una línea de código. por ejemplo:  
   
-    ```  
+    ```vb  
     400:    X += 1  
     ```  
   

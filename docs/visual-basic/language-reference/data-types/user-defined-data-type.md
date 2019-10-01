@@ -23,16 +23,16 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630130"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696867"
 ---
 # <a name="user-defined-data-type"></a>Tipo de datos definido por el usuario
 
-Contiene los datos en un formato definido por el usuario. La `Structure` instrucción define el formato.
+Contiene los datos en un formato definido por el usuario. La instrucción `Structure` define el formato.
 
 Las versiones anteriores de Visual Basic admiten el tipo definido por el usuario (UDT). La versión actual expande el UDT a una *estructura*. Una estructura es una concatenación de uno o más *miembros* de varios tipos de datos. Visual Basic trata una estructura como una sola unidad, aunque también puede tener acceso a sus miembros individualmente.
 
@@ -44,13 +44,13 @@ El valor predeterminado de un tipo de datos de estructura consta de la combinaci
 
 ## <a name="declaration-format"></a>Formato de declaración
 
-Una declaración de estructura comienza con la [instrucción Structure](../../../visual-basic/language-reference/statements/structure-statement.md) y termina con `End Structure` la instrucción. La `Structure` instrucción proporciona el nombre de la estructura, que también es el identificador del tipo de datos que la estructura está definiendo. Otras partes del código pueden utilizar este identificador para declarar variables, parámetros y valores devueltos por la función para que sean del tipo de datos de esta estructura.
+Una declaración de estructura comienza con la [instrucción Structure](../../../visual-basic/language-reference/statements/structure-statement.md) y termina con la instrucción `End Structure`. La instrucción `Structure` proporciona el nombre de la estructura, que también es el identificador del tipo de datos que la estructura está definiendo. Otras partes del código pueden utilizar este identificador para declarar variables, parámetros y valores devueltos por la función para que sean del tipo de datos de esta estructura.
 
-Las declaraciones entre las `Structure` instrucciones y `End Structure` definen los miembros de la estructura.
+Las declaraciones entre las instrucciones `Structure` y `End Structure` definen los miembros de la estructura.
 
 ## <a name="member-access-levels"></a>Niveles de acceso a miembros
 
-Debe declarar cada miembro mediante una [instrucción Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o una instrucción que especifique el nivel de acceso, como [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)o [Private](../../../visual-basic/language-reference/modifiers/private.md). Si utiliza una `Dim` instrucción, el nivel de acceso predeterminado es Public.
+Debe declarar cada miembro mediante una [instrucción Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o una instrucción que especifique el nivel de acceso, como [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)o [Private](../../../visual-basic/language-reference/modifiers/private.md). Si usa una instrucción `Dim`, el nivel de acceso predeterminado es público.
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
@@ -62,13 +62,13 @@ Debe declarar cada miembro mediante una [instrucción Dim](../../../visual-basic
 
 - **Caracteres de tipo.** Los tipos de datos de estructura no tienen un carácter de tipo literal o un carácter de tipo de identificador.
 
-- **Tipo de marco.** No hay ningún tipo correspondiente en el .NET Framework. Todas las estructuras heredan de la <xref:System.ValueType?displayProperty=nameWithType>clase .NET Framework, pero ninguna estructura individual <xref:System.ValueType?displayProperty=nameWithType>corresponde a.
+- **Tipo de marco.** No hay ningún tipo correspondiente en el .NET Framework. Todas las estructuras heredan de la clase .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, pero ninguna estructura individual corresponde a <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Ejemplo
 
 El paradigma siguiente muestra el contorno de la declaración de una estructura.
 
-```
+```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
     {Dim | Public | Friend | Private} member1 As datatype1
     ' ...

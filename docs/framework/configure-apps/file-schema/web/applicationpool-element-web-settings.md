@@ -5,22 +5,22 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 786f667bcba7959ac485b4abe667239b05059c45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c88f4e5407e550047eaf0f5c8d0d2924da611e93
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941446"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699226"
 ---
-# <a name="applicationpool-element-web-settings"></a>\<applicationPool > elemento (configuración Web)
+# <a name="applicationpool-element-web-settings"></a>Elemento > \<applicationPool (configuración Web)
 Especifica los valores de configuración que usa ASP.NET para administrar el comportamiento de todo el proceso cuando una aplicación ASP.NET se ejecuta en modo integrado en IIS 7,0 o una versión posterior.  
   
 > [!IMPORTANT]
 > Este elemento y la característica que admite solo funcionan si la aplicación ASP.NET se hospeda en IIS 7,0 o versiones posteriores.  
   
- \<configuration>  
-\<Elemento System. Web > (configuración Web)  
-\<applicationPool > elemento (configuración Web)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. Web >** ](system-web-element-web-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<applicationPool >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,11 +32,12 @@ Especifica los valores de configuración que usa ASP.NET para administrar el com
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+
+En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|Especifica cuántas solicitudes simultáneas ASP.NET permite por CPU.|  
 |`maxConcurrentThreadsPerCPU`|Especifica el número de subprocesos simultáneos que se pueden ejecutar para un grupo de aplicaciones para cada CPU. Esto proporciona una manera alternativa de controlar la simultaneidad de ASP.NET, ya que puede limitar el número de subprocesos administrados que se pueden usar por CPU para atender las solicitudes. De forma predeterminada, este valor es 0, lo que significa que ASP.NET no limita el número de subprocesos que se pueden crear por CPU, aunque el grupo de subprocesos de CLR también limita el número de subprocesos que se pueden crear.|  
@@ -47,24 +48,26 @@ Especifica los valores de configuración que usa ASP.NET para administrar el com
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|Contiene información sobre cómo interactúa ASP.NET con una aplicación host.|  
   
 ## <a name="remarks"></a>Comentarios  
- Al ejecutar IIS 7,0 o una versión posterior en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y pone en cola las solicitudes cuando la aplicación se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 6 o ejecuta IIS 7,0 en modo clásico o en modo ISAPI, se omite esta configuración.  
+
+Al ejecutar IIS 7,0 o una versión posterior en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y pone en cola las solicitudes cuando la aplicación se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 6 o ejecuta IIS 7,0 en modo clásico o en modo ISAPI, se omite esta configuración.  
   
- La `applicationPool` configuración se aplica a todos los grupos de aplicaciones que se ejecutan en una versión determinada del .NET Framework. La configuración se encuentra en un archivo Aspnet. config. Hay una versión de este archivo para las versiones 2,0 y 4,0 del .NET Framework. (Las versiones 3,0 y 3,5 del .NET Framework compartir el archivo Aspnet. config con la versión 2,0).  
+La configuración `applicationPool` se aplica a todos los grupos de aplicaciones que se ejecutan en una versión determinada del .NET Framework. La configuración se encuentra en un archivo Aspnet. config. Hay una versión de este archivo para las versiones 2,0 y 4,0 del .NET Framework. (Las versiones 3,0 y 3,5 del .NET Framework compartir el archivo Aspnet. config con la versión 2,0).  
   
 > [!IMPORTANT]
 > Si ejecuta IIS 7,0 en [!INCLUDE[win7](../../../../../includes/win7-md.md)], puede configurar un archivo Aspnet. config independiente para cada grupo de aplicaciones. Esto le permite adaptar el rendimiento de los subprocesos de cada grupo de aplicaciones.  
   
- En el `maxConcurrentRequestsPerCPU` caso de la configuración, el valor predeterminado de "5000" en el .NET Framework 4 desactiva eficazmente la limitación de solicitudes que está controlada por ASP.net, a menos que tenga en realidad 5000 o más solicitudes por CPU. La configuración predeterminada depende en su lugar del grupo de subprocesos de CLR para administrar automáticamente la simultaneidad por CPU. Las aplicaciones que hacen un uso intensivo del procesamiento de solicitudes asincrónicas, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en e/s de red, se beneficiarán del aumento del límite predeterminado en el .NET Framework 4. Si `maxConcurrentRequestsPerCPU` se establece en cero, se desactiva el uso de subprocesos administrados para procesar solicitudes ASP.net. Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de e/s de IIS y, por lo tanto, la simultaneidad se limita mediante la configuración del subproceso de IIS.  
+En el caso de la configuración `maxConcurrentRequestsPerCPU`, el valor predeterminado de "5000" en el .NET Framework 4 desactiva eficazmente la limitación de solicitudes controlada por ASP.NET, a menos que realmente tenga 5000 o más solicitudes por CPU. La configuración predeterminada depende en su lugar del grupo de subprocesos de CLR para administrar automáticamente la simultaneidad por CPU. Las aplicaciones que hacen un uso intensivo del procesamiento de solicitudes asincrónicas, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en e/s de red, se beneficiarán del aumento del límite predeterminado en el .NET Framework 4. Si se establece `maxConcurrentRequestsPerCPU` en cero, se desactiva el uso de subprocesos administrados para procesar solicitudes ASP.NET. Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de e/s de IIS y, por lo tanto, la simultaneidad se limita mediante la configuración del subproceso de IIS.  
   
- La `requestQueueLimit` configuración funciona de la misma manera que `requestQueueLimit` el atributo del elemento [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) , que se establece en los archivos Web. config para las aplicaciones de ASP.net. Sin embargo, `requestQueueLimit` la configuración de un archivo Aspnet. config invalida la `requestQueueLimit` configuración de un archivo Web. config. En otras palabras, si se establecen ambos atributos (de forma predeterminada, es true), la `requestQueueLimit` configuración del archivo Aspnet. config tiene prioridad.  
+El valor `requestQueueLimit` funciona de la misma manera que el atributo `requestQueueLimit` del elemento [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) , que se establece en los archivos Web. config para las aplicaciones de ASP.net. Sin embargo, el valor `requestQueueLimit` en un archivo Aspnet. config invalida el valor de `requestQueueLimit` en un archivo Web. config. En otras palabras, si se establecen ambos atributos (de forma predeterminada, esto es true), la configuración de `requestQueueLimit` en el archivo Aspnet. config tiene prioridad.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso de ASP.NET en el archivo Aspnet. config en las siguientes circunstancias:  
+
+En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso de ASP.NET en el archivo Aspnet. config en las siguientes circunstancias:  
   
 - La aplicación se hospeda en un grupo de aplicaciones de IIS 7,0.  
   
@@ -72,7 +75,7 @@ Especifica los valores de configuración que usa ASP.NET para administrar el com
   
 - La aplicación está usando .NET Framework 3,5 SP1 o una versión posterior.  
   
- Los valores del ejemplo son los valores predeterminados.  
+Los valores del ejemplo son los valores predeterminados.  
   
 ```xml  
 <configuration>  

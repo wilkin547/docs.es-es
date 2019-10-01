@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920491"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697300"
 ---
-# <a name="listeners-element-for-source"></a>\<agentes de escucha > elemento \<de > de origen
-Agrega o quita los agentes de escucha <xref:System.Diagnostics.TraceSource.Listeners%2A> de la colección <xref:System.Diagnostics.TraceSource>para. Un agente de escucha dirige los resultados del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
+# <a name="listeners-element-for-source"></a>\<listeners > elemento para \<source >
+Agrega o quita agentes de escucha en la colección <xref:System.Diagnostics.TraceSource.Listeners%2A> para un <xref:System.Diagnostics.TraceSource>. Un agente de escucha dirige los resultados del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<orígenes >  
-\<> de origen  
-\<agentes de escucha > elemento  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,15 +41,15 @@ Agrega o quita los agentes de escucha <xref:System.Diagnostics.TraceSource.Liste
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Quita un agente de escucha de `Listeners` la colección.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` de un origen de seguimiento.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
@@ -62,7 +62,7 @@ Agrega o quita los agentes de escucha <xref:System.Diagnostics.TraceSource.Liste
  Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar `<listeners>` el elemento para agregar un agente de escucha de seguimiento `mySource` de la consola al origen y quitar el agente de escucha de seguimiento predeterminado.  
+ En el ejemplo siguiente se muestra cómo usar el elemento `<listeners>` para agregar un agente de escucha de seguimiento de consola al origen de `mySource` y para quitar el agente de escucha de seguimiento predeterminado.  
   
 ```xml  
 <configuration>  

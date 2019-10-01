@@ -1,5 +1,5 @@
 ---
-title: <filter><add> (<listeners> Elemento) para para<source>
+title: Elemento @no__t 0 para <add> para <listeners> para <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 0d25d0b955a94986147922914068c8a1cf2d96c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec288685f47c8a35e2371c31d359b604a4967196
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920518"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697171"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<Filter > elemento para \<Add > para \<agentes de escucha > \<para > de origen
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filter > elemento para \<add > para \<listeners > para \<source >
 Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<orígenes >  
-\<> de origen  
-\<listeners>  
-\<add>  
-\<filter>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2add >** ](add-element-for-listeners-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 **&nbsp;3filter >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,9 +40,9 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|`type`|Atributo necesario.<br /><br /> Especifica el tipo del filtro, que debe heredar de la <xref:System.Diagnostics.TraceFilter> clase. Puede usar el nombre completo del espacio de nombres del tipo, que corresponde a la propiedad del <xref:System.Type.FullName%2A> tipo, o puede usar el nombre de tipo completo, incluida la información de ensamblado, que corresponde <xref:System.Type.AssemblyQualifiedName%2A> a la propiedad. Para obtener información sobre los nombres de tipo completos, vea [especificar nombres de tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Atributo necesario.<br /><br /> Especifica el tipo del filtro, que debe heredar de la clase <xref:System.Diagnostics.TraceFilter>. Puede usar el nombre completo del espacio de nombres del tipo, que corresponde a la propiedad <xref:System.Type.FullName%2A> del tipo, o puede usar el nombre de tipo completo, incluida la información del ensamblado, que corresponde a la propiedad <xref:System.Type.AssemblyQualifiedName%2A>. Para obtener información sobre los nombres de tipo completos, vea [especificar nombres de tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase de filtro especificada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -50,7 +50,7 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
@@ -60,12 +60,12 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 |`add`|Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<filter>` elemento debe estar contenido en un `<add>` elemento para un agente de escucha de origen de seguimiento que especifique el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en un [ \<> sharedListeners](sharedlisteners-element.md). Si el agente de escucha se define en un [ \<> sharedListeners](sharedlisteners-element.md), el filtro para ese agente de escucha debe definirse en ese elemento.  
+ El elemento `<filter>` debe estar incluido en un elemento `<add>` para un agente de escucha de origen de seguimiento que especifique el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en un [> \<sharedListeners](sharedlisteners-element.md). Si el agente de escucha se define en un [> \<sharedListeners](sharedlisteners-element.md), el filtro para ese agente de escucha debe definirse en ese elemento.  
   
  Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar `<filter>` el elemento para agregar un filtro al `console` agente de escucha de `Listeners` la colección para el origen `myTraceSource`de seguimiento, especificando el nivel de `Error`evento de filtro como.  
+ En el ejemplo siguiente se muestra cómo usar el elemento `<filter>` para agregar un filtro al agente de escucha `console` en la colección `Listeners` para el origen de seguimiento `myTraceSource`, especificando el nivel de evento de filtro como `Error`.  
   
 ```xml  
 <configuration>  

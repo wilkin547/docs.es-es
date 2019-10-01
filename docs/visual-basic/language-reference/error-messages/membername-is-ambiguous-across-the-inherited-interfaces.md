@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06e0d8863c74041f81977b3187fe99a1d05bcd53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622659"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700881"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<membername >' es ambiguo en las interfaces heredadas\<interfacename1 >' y '\<interfacename2 >'
-La interfaz hereda a dos o más miembros con el mismo nombre de varias interfaces.  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>' \<membername > ' es ambiguo en las interfaces heredadas ' \<interfacename1 > ' y ' \<interfacename2 > '
+La interfaz hereda dos o más miembros con el mismo nombre de varias interfaces.  
   
- **Identificador de error:** BC30685  
+ **IDENTIFICADOR de error:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Convierte el valor a la interfaz base que desea usar; Por ejemplo:  
+- Convierta el valor a la interfaz base que desea utilizar; por ejemplo:  
   
-    ```  
+    ```vb  
     Interface Left  
         Sub MySub()  
     End Interface  

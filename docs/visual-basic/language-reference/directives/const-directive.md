@@ -1,5 +1,5 @@
 ---
-title: '##Const (directiva) (Visual Basic)'
+title: '#Const (Directiva) (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,33 +15,33 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 5458bbebc6064eb6273b8deb5447b8941e1d233f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b8d2da2158a8244b4533eb6ef49049949417216
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746704"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696853"
 ---
 # <a name="const-directive"></a>#Const (Directiva)
-Define las constantes de compilador condicionales para Visual Basic.  
+Define constantes de compilador condicionales para Visual Basic.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 #Const constname = expression  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `constname`  
- Obligatorio. Nombre de la constante que se está definida.  
+ Obligatorio. Nombre de la constante que se está definiendo.  
   
  `expression`  
- Obligatorio. Literal, otra constante de compilación condicional o cualquier combinación que incluya operadores aritméticos o lógicos, excepto `Is`.  
+ Obligatorio. Literal, otra constante del compilador condicional o cualquier combinación que incluya todos los operadores aritméticos o lógicos, excepto `Is`.  
   
 ## <a name="remarks"></a>Comentarios  
- Constantes de compilador condicionales son siempre privadas en el archivo en el que aparecen. No se puede crear constantes de compilación público con el `#Const` directiva; puede crear solo en la interfaz de usuario o con el `/define` opción del compilador.  
+ Las constantes de compilador condicionales siempre son privadas en el archivo en el que aparecen. No se pueden crear constantes del compilador públicas mediante la Directiva `#Const`; solo puede crearlos en la interfaz de usuario o con la opción del compilador `/define`.  
   
- Puede usar solo constantes de compilador condicionales y literales en `expression`. Uso de una constante estándar definida con `Const` produce un error. Por el contrario, puede usar constantes definidas con el `#Const` palabra clave para la compilación condicional. Las constantes pueden también no estén definidas, en cuyo caso su valor `Nothing`.  
+ Solo se pueden usar constantes y literales del compilador condicional en `expression`. El uso de una constante estándar definida con `Const` produce un error. Por el contrario, puede usar constantes definidas con la palabra clave `#Const` solo para la compilación condicional. Las constantes también pueden ser undefined, en cuyo caso tienen un valor de `Nothing`.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se usa la directiva `#Const`.  

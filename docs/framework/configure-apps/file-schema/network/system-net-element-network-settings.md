@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663954"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697504"
 ---
 # <a name="systemnet-element-network-settings"></a>Elemento \<system.Net> (configuración de red)
 Contiene valores que especifican cómo se conecta .NET Framework a la red.  
   
- \<configuration>  
-\<system.net>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. net >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,10 +53,10 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 |[configuration](../configuration-element.md)|Contiene la configuración de todos los espacios de nombres.|  
   
 ## <a name="remarks"></a>Comentarios  
- <xref:System.Net> El [ \<elemento System. net >](system-net-element-network-settings.md) contiene la configuración de las clases de y los espacios de nombres secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de los hosts de Internet.  
+ El elemento [@no__t -1System. net >](system-net-element-network-settings.md) contiene la configuración de las clases de los espacios de nombres de @no__t 2 y los elementos secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de los hosts de Internet.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una configuración típica <xref:System.Net> utilizada por las clases.  
+ En el ejemplo siguiente se muestra una configuración típica utilizada por las clases <xref:System.Net>.  
   
 ```xml  
 <configuration>  

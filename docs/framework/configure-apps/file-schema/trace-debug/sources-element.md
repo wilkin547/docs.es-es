@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926953"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699205"
 ---
-# <a name="sources-element"></a>\<sources > elemento
+# <a name="sources-element"></a>\<sources >, elemento
 Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<orígenes >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sources >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,13 +39,13 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<source>](source-element.md)|Elemento necesario.<br /><br /> Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
@@ -54,7 +54,7 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
  Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar `<sources>` el elemento para agregar el origen `mySource` de seguimiento y establecer el nivel para el modificador `sourceSwitch`de origen denominado. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
+ En el ejemplo siguiente se muestra cómo utilizar el elemento `<sources>` para agregar el origen de seguimiento `mySource` y para establecer el nivel del modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  
 <configuration>  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: faaba1b9de302ed916ad1a81c7e80b3fb5a67170
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d377a77a4a1b4c57e9edd4fbfa364387f1bae479
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664167"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699430"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement (elemento >) (configuración de red)
 Especifica el número máximo de conexiones a un host de red.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<connectionManagement >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ Especifica el número máximo de conexiones a un host de red.
 |[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `connectionManagement` elemento define el número máximo de conexiones a un servidor o grupo de servidores.  
+ El elemento `connectionManagement` define el número máximo de conexiones a un servidor o grupo de servidores.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

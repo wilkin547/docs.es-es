@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f657048a8aa9748104e40503e727a5e6d90a87ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38f669fe183ac79ebed6e5a122bc70aedc9bb753
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646854"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701227"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>El nombre de miembro de tipo anónimo sólo se puede inferir a partir de un nombre simple o completo sin argumentos
-No se puede inferir un nombre de miembro de tipo anónimo en una expresión compleja.  
+No se puede inferir un nombre de miembro de tipo anónimo a partir de una expresión compleja.  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,19 +23,19 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- Para obtener más información acerca de los orígenes desde el que los tipos anónimos pueden y no pueden deducir tipos y nombres de miembro, vea [Cómo: Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ Para obtener más información sobre los orígenes de los que los tipos anónimos pueden y no pueden inferir nombres y tipos de miembros, vea [How para: Inferir nombres y tipos de propiedades en declaraciones de tipos anónimos @ no__t-0.  
   
- **Identificador de error:** BC36556  
+ **IDENTIFICADOR de error:** BC36556  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
 - Asigne la expresión a un nombre de miembro, como se muestra en el código siguiente:  
   
-    ```  
+    ```vb  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
 ## <a name="see-also"></a>Vea también
 
 - [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Cómo: Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Cómo: Inferir nombres y tipos de propiedades en declaraciones de tipos anónimos @ no__t-0

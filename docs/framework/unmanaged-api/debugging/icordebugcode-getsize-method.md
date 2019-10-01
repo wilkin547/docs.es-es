@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747490"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700811"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize (Método)
-Obtiene el tamaño, en bytes, del código binario representado por "ICorDebugCode".  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a>Parámetros  
+
+Obtiene el tamaño, en bytes, del código binario representado por esta "ICorDebugCode".
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a>Parámetros
+
  `pcBytes`  
- [out] Un puntero al tamaño, en bytes, del archivo binario del que este código `ICorDebugCode` objeto representa.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado**: CorDebug.idl, CorDebug.h  
-  
- **Biblioteca:** CorGuids.lib  
-  
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Vea también
+ enuncia Puntero al tamaño, en bytes, del código binario que representa este objeto `ICorDebugCode`.
+
+## <a name="requirements"></a>Requisitos
+
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+
+ **Encabezado**: Cordebug. idl, Cordebug. h
+
+ **Biblioteca** CorGuids.lib
+
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

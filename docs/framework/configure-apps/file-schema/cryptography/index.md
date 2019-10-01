@@ -10,44 +10,36 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: a7964d01905be4e3dd6e8149e5533e9a2cfd9a71
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 474c3274bfba6803ebb17289f138251d755250e4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927632"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699799"
 ---
 # <a name="cryptography-settings-schema"></a>Esquema de la configuración de criptografía
 El esquema de la configuración de criptografía contiene elementos que especifican cómo asignar nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.  
   
- [**\<configuration>**](../configuration-element.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoClasses >** ](cryptoclasses-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2cryptoClass >** ](cryptoclass-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0nameEntry >** ](nameentry-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6[ **\<oidEntry >** ](oidentry-element.md)  
   
- [**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
-  
- [**\<cryptographySettings>**](cryptographysettings-element.md)  
-  
- [**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
-  
- [**\<cryptoClasses>**](cryptoclasses-element.md)  
-  
- [**\<cryptoClass>**](cryptoclass-element.md)  
-  
- [**\<nameEntry>**](nameentry-element.md)  
-  
- [**\<oidMap>**](oidmap-element.md)  
-  
- [**\<oidEntry>**](oidentry-element.md)  
-  
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[**\<cryptoClasses**>](cryptoclasses-element.md)|Contiene una lista de las clases de criptografía que tienen una asignación a un nombre descriptivo en el elemento **\<nameEntry>**.|  
-|[**\<cryptoClass**>](cryptoclass-element.md)|Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento **\<nameEntry>**.|  
-|[**\<cryptographySettings**>](cryptographysettings-element.md)|Contiene la configuración de criptografía.|  
-|[**\<cryptoNameMapping**>](cryptonamemapping-element.md)|Contiene asignaciones de clases a nombres descriptivos.|  
-|[Elemento **\<mscorlib>** para la configuración de criptografía](mscorlib-element-for-cryptography-settings.md)|Contiene el elemento **\<cryptographySettings>**.|  
-|[**\<nameEntry>**](nameentry-element.md)|Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que una clase tenga varios nombres descriptivos.|  
-|[**\<oidEntry>**](oidentry-element.md)|Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.|  
-|[**\<oidMap>**](oidmap-element.md)|Contiene asignaciones de OID ASN.1 a clases.|  
+|[ **\<cryptoClasses**>](cryptoclasses-element.md)|Contiene una lista de las clases de criptografía que tienen una asignación a un nombre descriptivo en el elemento **\<nameEntry>** .|  
+|[ **\<cryptoClass**>](cryptoclass-element.md)|Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento **\<nameEntry>** .|  
+|[ **\<cryptographySettings**>](cryptographysettings-element.md)|Contiene la configuración de criptografía.|  
+|[ **\<cryptoNameMapping**>](cryptonamemapping-element.md)|Contiene asignaciones de clases a nombres descriptivos.|  
+|[Elemento **\<mscorlib>** para la configuración de criptografía](mscorlib-element-for-cryptography-settings.md)|Contiene el elemento **\<cryptographySettings>** .|  
+|[ **\<nameEntry>** ](nameentry-element.md)|Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que una clase tenga varios nombres descriptivos.|  
+|[ **\<oidEntry>** ](oidentry-element.md)|Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.|  
+|[ **\<oidMap>** ](oidmap-element.md)|Contiene asignaciones de OID ASN.1 a clases.|  
   
 ## <a name="see-also"></a>Vea también
 

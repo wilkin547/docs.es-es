@@ -1,5 +1,5 @@
 ---
-title: <remove>(Elemento <listeners> ) para<trace>
+title: Elemento @no__t 0 para <listeners> para <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920484"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697222"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<quitar > elemento de \<los agentes de escucha \<> para el seguimiento >
-Quita un agente de escucha de la colección Listeners.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove > elemento para > \<listeners para \<trace >
+Quita un agente de escucha de la colección **Listeners** .  
   
- \<configuration>  
-\<system.diagnostics>  
-\<> de seguimiento  
-\<listeners>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,16 +34,16 @@ Quita un agente de escucha de la colección Listeners.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|**name**|Atributo necesario.<br /><br /> Nombre del agente de escucha que se va a quitar de la colección Listeners.|  
+|**name**|Atributo necesario.<br /><br /> Nombre del agente de escucha que se va a quitar de la colección **Listeners** .|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`listeners`|Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.|  
@@ -53,7 +53,7 @@ Quita un agente de escucha de la colección Listeners.
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
-> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> Al quitar delacolecciónsemodificaelcomportamientodelosmétodos,,y.<xref:System.Diagnostics.DefaultTraceListener> `Listeners` La llamada `Assert` a `Fail` un método o suele tener como resultado la presentación de un cuadro de mensaje; sin embargo, el cuadro <xref:System.Diagnostics.DefaultTraceListener> de mensaje no se `Listeners` muestra si no está en la colección.  
+> Al quitar el <xref:System.Diagnostics.DefaultTraceListener> de la colección `Listeners` se modifica el comportamiento de los métodos @no__t 2, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>. La llamada a un método `Assert` o `Fail` suele tener como resultado la presentación de un cuadro de mensaje; sin embargo, el cuadro de mensaje no se muestra si el <xref:System.Diagnostics.DefaultTraceListener> no está en la colección `Listeners`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo quitar el agente de escucha de seguimiento predeterminado de la colección de **agentes de escucha** de seguimiento.  

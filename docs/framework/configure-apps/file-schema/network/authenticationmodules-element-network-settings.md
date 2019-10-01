@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 6488bfcd97e27a184b4a8cd1498d1c60f32babda
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659483"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699534"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > elemento (configuración de red)
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules (elemento >) (configuración de red)
 Especifica los módulos que se usan para autenticar las solicitudes de red.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<authenticationModules >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ Especifica los módulos que se usan para autenticar las solicitudes de red.
 |[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `authenticationModule` elemento especifica los módulos de autenticación que llevan a cabo el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar <xref:System.Net.IAuthenticationModule> la interfaz.  
+ El elemento `authenticationModule` especifica los módulos de autenticación que llevan a cabo el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar la interfaz <xref:System.Net.IAuthenticationModule>.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

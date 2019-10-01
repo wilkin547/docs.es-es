@@ -1,41 +1,41 @@
 ---
-title: Procedimiento Buscar en una cadena (Visual Basic)
+title: 'Cómo: buscar en una cadena: Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 57a3d9650ad78e1c8580fd46839c9a1cbc7794c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665339"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700062"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>Procedimiento Buscar en una cadena (Visual Basic)
-Este ejemplo llama a la <xref:System.String.IndexOf%2A> método en un <xref:System.String> objeto para informar del índice de la primera aparición de una subcadena.  
-  
-## <a name="example"></a>Ejemplo  
- [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
- Para este ejemplo se necesita:  
-  
-- Un `Imports` instrucción que especifica el <xref:System> espacio de nombres. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
-  
-## <a name="robust-programming"></a>Programación sólida  
- El <xref:System.String.IndexOf%2A> método informa de la ubicación del primer carácter de la primera aparición de la subcadena. El índice está basado en 0, lo que significa que el primer carácter de una cadena tiene un índice de 0.  
-  
- Si <xref:System.String.IndexOf%2A> no encuentra la subcadena, devuelve -1.  
-  
- El <xref:System.String.IndexOf%2A> método distingue mayúsculas de minúsculas y utiliza la referencia cultural actual.  
-  
- Para el control de errores óptimo, podría incluir la cadena de búsqueda en el `Try` block de un [intente... Catch... Finally (instrucción)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) construcción.  
-  
+# <a name="how-to-search-within-a-string-visual-basic"></a>Cómo: buscar en una cadena (Visual Basic)
+
+En este artículo se muestra un ejemplo de cómo buscar dentro de una cadena en Visual Basic.
+
+## <a name="example"></a>Ejemplo
+
+En este ejemplo se llama al método <xref:System.String.IndexOf%2A> en un objeto <xref:System.String> para notificar el índice de la primera aparición de una subcadena:
+
+ [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]
+
+## <a name="robust-programming"></a>Programación sólida
+
+El método <xref:System.String.IndexOf%2A> devuelve la ubicación del primer carácter de la primera aparición de la subcadena. El índice es de base 0, lo que significa que el primer carácter de una cadena tiene un índice de 0.
+
+Si <xref:System.String.IndexOf%2A> no encuentra la subcadena, devuelve-1.
+
+El método <xref:System.String.IndexOf%2A> distingue entre mayúsculas y minúsculas y usa la referencia cultural actual.
+
+Para un control de errores óptimo, es posible que desee incluir la búsqueda de cadenas en el bloque `Try` de una [instrucción try... Detectar... Construcción de la instrucción Finally](../../../language-reference/statements/try-catch-finally-statement.md) .
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.String.IndexOf%2A>
-- [Try...Catch...Finally (instrucción)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [Cadenas](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Try...Catch...Finally (instrucción)](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Introducción a las cadenas en Visual Basic](introduction-to-strings.md)
+- [Cadenas](index.md)

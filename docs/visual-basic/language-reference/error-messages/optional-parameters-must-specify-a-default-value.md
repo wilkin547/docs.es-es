@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 0f501b518d5b3f2d48ced33885da2afd353c609e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b32c150f0faf4a9dcec3cec7620c3a9c050f6f20
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665674"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696884"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Los parámetros opcionales deben especificar un valor predeterminado
-Parámetros opcionales deben proporcionar valores predeterminados que se pueden usar si no se proporciona ningún parámetro de un procedimiento que realiza la llamada.  
+Los parámetros opcionales deben proporcionar valores predeterminados que se pueden utilizar si un procedimiento que realiza la llamada no proporciona ningún parámetro.  
   
- **Identificador de error:** BC30812  
+ **IDENTIFICADOR de error:** BC30812  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Especificar valores predeterminados para los parámetros opcionales; Por ejemplo:  
+- Especifique los valores predeterminados para los parámetros opcionales; por ejemplo:  
   
-    ```  
+    ```vb  
     Sub Proc1(ByVal X As Integer,   
           Optional ByVal Y As String = "Default Value")  
        MsgBox("Default argument is: " & Y)  

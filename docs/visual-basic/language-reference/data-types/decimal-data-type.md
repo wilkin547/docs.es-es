@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: bab5a0bd7e0a85d550362bc3c1166566f6dcb81b
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 892824b61cfb6a0172361d220c638cab0a78565d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512771"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700877"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal (Tipo de datos, Visual Basic)
 
@@ -33,19 +33,19 @@ Contiene valores con signo de 128 bits (16 bytes) que representan números enter
 
 ## <a name="remarks"></a>Comentarios
 
-El `Decimal` tipo de datos proporciona el mayor número de dígitos significativos para un número. Admite hasta 29 dígitos significativos y puede representar valores que superan los 7,9228 x 10 ^ 28. Es especialmente adecuado para los cálculos, como finanzas, que requieren un gran número de dígitos, pero no pueden tolerar errores de redondeo.
+El tipo de datos `Decimal` proporciona el mayor número de dígitos significativos para un número. Admite hasta 29 dígitos significativos y puede representar valores que superan los 7,9228 x 10 ^ 28. Es especialmente adecuado para los cálculos, como finanzas, que requieren un gran número de dígitos, pero no pueden tolerar errores de redondeo.
 
 El valor predeterminado de `Decimal` es 0.
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
-- **Precisión.** `Decimal`no es un tipo de datos de punto flotante. La `Decimal` estructura contiene un valor entero binario, junto con un bit de signo y un factor de escala entero que especifica qué parte del valor es una fracción decimal. Debido a esto, `Decimal` los números tienen una representación más precisa en la memoria que los tipos de`Single` punto `Double`flotante (y).
+- **Precisión.** `Decimal` no es un tipo de datos de punto flotante. La estructura `Decimal` contiene un valor entero binario, junto con un bit de signo y un factor de escala entero que especifica qué parte del valor es una fracción decimal. Por este motivo, los números `Decimal` tienen una representación más precisa en la memoria que los tipos de punto flotante (`Single` y `Double`).
 
-- **Rendimiento.** El `Decimal` tipo de datos es el más lento de todos los tipos numéricos. Debe sopesar la importancia de la precisión respecto al rendimiento antes de elegir un tipo de datos.
+- **Rendimiento.** El tipo de datos `Decimal` es el más lento de todos los tipos numéricos. Debe sopesar la importancia de la precisión respecto al rendimiento antes de elegir un tipo de datos.
 
-- **Ampliación.** El `Decimal` tipo de datos se amplía `Single` a `Double`o. Esto significa que puede convertir `Decimal` en cualquiera de estos tipos sin que se produzca un <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Ampliación.** El tipo de datos `Decimal` se amplía a `Single` o `Double`. Esto significa que puede convertir `Decimal` en cualquiera de estos tipos sin encontrar un error <xref:System.OverflowException?displayProperty=nameWithType>.
 
-- **Ceros a la derecha.** Visual Basic no almacena los ceros finales en un `Decimal` literal. Sin embargo, `Decimal` una variable conserva los ceros finales adquiridos de cálculo. Esto se ilustra en el siguiente ejemplo:
+- **Ceros a la derecha.** Visual Basic no almacena los ceros finales en un literal @no__t 0. Sin embargo, una variable `Decimal` conserva los ceros finales adquiridos de cálculo. Esto se ilustra en el siguiente ejemplo:
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -59,7 +59,7 @@ El valor predeterminado de `Decimal` es 0.
 
   La salida de `MsgBox` en el ejemplo anterior es la siguiente:
 
-  ```
+  ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
@@ -68,7 +68,7 @@ El valor predeterminado de `Decimal` es 0.
 - **Tipo de marco.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Decimal?displayProperty=nameWithType>.
 
 ## <a name="range"></a>Intervalo
- Es posible que tenga que usar `D` el carácter de tipo para asignar un valor grande `Decimal` a una variable o constante. Este requisito se debe a que el compilador interpreta `Long` un literal como a menos que un carácter de tipo literal siga el literal, como se muestra en el ejemplo siguiente.
+ Es posible que tenga que usar el carácter de tipo `D` para asignar un valor grande a una variable o constante `Decimal`. Este requisito se debe a que el compilador interpreta un literal como `Long` a menos que un carácter de tipo literal siga el literal, como se muestra en el ejemplo siguiente.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -76,11 +76,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-La declaración de `bigDec1` no produce un desbordamiento porque el valor que se le asigna se encuentra dentro del intervalo de `Long`. El `Long` valor se puede asignar a la `Decimal` variable.
+La declaración de `bigDec1` no produce un desbordamiento porque el valor asignado a él está dentro del intervalo de `Long`. El valor `Long` se puede asignar a la variable `Decimal`.
 
-La declaración de `bigDec2` genera un error de desbordamiento porque el valor asignado a él es demasiado grande para. `Long` Dado que el literal numérico no se puede interpretar primero `Long`como, no se puede asignar a `Decimal` la variable.
+La declaración de `bigDec2` genera un error de desbordamiento porque el valor asignado a él es demasiado grande para `Long`. Dado que el literal numérico no se puede interpretar primero como `Long`, no se puede asignar a la variable `Decimal`.
 
-En `bigDec3`el caso de, el `D` carácter de tipo literal soluciona el problema obligando al compilador a `Decimal` interpretar el literal como en `Long`lugar de como.
+En el caso de `bigDec3`, el carácter de tipo literal `D` resuelve el problema obligando al compilador a interpretar el literal como `Decimal` en lugar de como `Long`.
 
 ## <a name="see-also"></a>Vea también
 

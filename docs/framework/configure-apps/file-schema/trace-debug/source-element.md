@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920451"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697210"
 ---
-# <a name="source-element"></a>\<Elemento > de origen
+# <a name="source-element"></a>\<source >, elemento
 Contiene un origen de seguimiento que inicia mensajes de seguimiento.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<orígenes >  
-\<> de origen  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<source >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,19 +38,19 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`name`|Atributo opcional.<br /><br /> Especifica el nombre del origen de seguimiento.|  
-|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia del modificador de seguimiento en la aplicación. Si no se identifica el modificador en `<switches>` un elemento, el valor especifica el nivel del modificador.|  
+|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia del modificador de seguimiento en la aplicación. Si el modificador no se identifica en un elemento `<switches>`, el valor especifica el nivel del modificador.|  
 |`switchType`|Atributo opcional.<br /><br /> Especifica el tipo del modificador de seguimiento. Si está presente, el tipo debe ser un nombre de clase válido y no puede ser una cadena vacía.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> el método para ese origen de seguimiento.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por el método <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> para ese origen de seguimiento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-source.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
@@ -60,7 +60,7 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
  Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar `<source>` el elemento para agregar el origen `mySource` de seguimiento y establecer el nivel para el modificador `sourceSwitch`de origen denominado. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
+ En el ejemplo siguiente se muestra cómo utilizar el elemento `<source>` para agregar el origen de seguimiento `mySource` y para establecer el nivel del modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  
 <configuration>  

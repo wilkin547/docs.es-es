@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2abab3de2965c31c11d9acaf7b78f3a668563506
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659043"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697452"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > elemento (configuración de red)
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript (elemento >) (configuración de red)
 Configura las características del script que se usan para detectar los proxies Web.  
   
- \<configuration>  
-\<system.net>  
-\<> de configuración  
-\<webProxyScript>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<webProxyScript >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ Configura las características del script que se usan para detectar los proxies 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`downloadTimeout`|Especifica el tiempo máximo para descargar el script en horas, minutos y segundos. El valor predeterminado es un minuto.|  
   
@@ -45,7 +45,7 @@ Configura las características del script que se usan para detectar los proxies 
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[Configuración](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   

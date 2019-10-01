@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927475"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699544"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<BypassList > elemento (configuración de red)
+# <a name="bypasslist-element-network-settings"></a>\<bypasslist (elemento >) (configuración de red)
 Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,9 +51,9 @@ Proporciona un conjunto de expresiones regulares que describen las direcciones q
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
   
 ## <a name="remarks"></a>Comentarios  
- La lista de omisión contiene expresiones regulares que describen los <xref:System.Net.WebRequest> URI a los que las instancias tienen acceso directamente en lugar de a través del servidor proxy.  
+ La lista de omisión contiene expresiones regulares que describen los URI a los que @no__t las instancias de-0 tienen acceso directamente en lugar de a través del servidor proxy.  
   
- Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\. contoso\\. com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.CPANDL.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-\\z]\\+. contoso. com $".  
+ Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] + @no__t -0.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
   
  Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).  
   

@@ -17,35 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1257c870371895cec89996be0e94906597b09ed8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747455"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700792"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL (Método)
-Obtiene un valor que indica si esta instancia de "ICorDebugCode" representa el código que se compila en lenguaje intermedio de Microsoft (MSIL).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-HRESULT IsIL (  
-    [out] BOOL       *pbIL  
-);  
-```  
-  
-## <a name="parameters"></a>Parámetros  
+
+Obtiene un valor que indica si esta "ICorDebugCode" representa el código compilado en el lenguaje intermedio de Microsoft (MSIL).
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HRESULT IsIL (
+    [out] BOOL       *pbIL
+);
+```
+
+## <a name="parameters"></a>Parámetros
  `pbIL`  
- [out] `true` si este `ICorDebugCode` representa el código que se compila en MSIL; en caso contrario, `false`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado**: CorDebug.idl, CorDebug.h  
-  
- **Biblioteca:** CorGuids.lib  
-  
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Vea también
+ [out] `true` si este `ICorDebugCode` representa el código compilado en MSIL; de lo contrario, `false`.
+
+## <a name="requirements"></a>Requisitos
+
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+
+ **Encabezado**: Cordebug. idl, Cordebug. h  
+
+ **Biblioteca** CorGuids.lib  
+
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

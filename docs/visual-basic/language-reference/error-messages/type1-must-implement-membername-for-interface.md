@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>'debe implementar'<membername>'para la interfaz'<interfacename>'
+title: <type1>"<typename>" debe implementar "<membername>" para la interfaz "<interfacename>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: 86b0d46e0e27b2fd8d1fccb37f4a3c45e95f5f63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a824b66eaad964049ced5cae5eb2cc370d00ba7f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792098"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696890"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<tipo1 >'\<typename >' debe implementar '\<membername >' para la interfaz '\<interfacename >'
-'\<typename >' debe implementar '\<membername >' para la interfaz '\<interfacename >'. Propiedad de implementación debe tener coincidentes 'ReadOnly' o 'WriteOnly' especificadores.  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 > ' \<typename > ' debe implementar ' \<membername > ' para la interfaz ' \<interfacename > '
+' \<typename > ' debe implementar ' \<membername > ' para la interfaz ' \<interfacename > '. La implementación de la propiedad debe tener especificadores ' ReadOnly '/' WriteOnly ' coincidentes.  
   
- Una clase o estructura intenta implementar una interfaz, pero no implementa un procedimiento, propiedad o evento definido por la interfaz. Se deben implementar todos los miembros de la interfaz.  
+ Una clase o estructura notifica a que implemente una interfaz pero no implementa un procedimiento, una propiedad o un evento definidos por la interfaz. Se deben implementar todos los miembros de la interfaz.  
   
- **Identificador de error:** BC30154  
+ **IDENTIFICADOR de error:** BC30154  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Declarar a un miembro con el mismo nombre y firma, tal como se define en la interfaz. No olvide incluir al menos el `End Function`, `End Sub`, o `End Property` instrucción.  
+1. Declare un miembro con el mismo nombre y la misma signatura que el definido en la interfaz. Asegúrese de incluir al menos la instrucción `End Function`, `End Sub` o `End Property`.  
   
-2. Agregar un `Implements` cláusula al final de la `Function`, `Sub`, `Property`, o `Event` instrucción. Por ejemplo:  
+2. Agregue una cláusula `Implements` al final de la instrucción `Function`, `Sub`, `Property` o `Event`. Por ejemplo:  
   
-    ```  
+    ```vb  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
     ```  
   
-3. Al implementar una propiedad, asegúrese de que `ReadOnly` o `WriteOnly` se usa en la misma forma que la definición de interfaz.  
+3. Al implementar una propiedad, asegúrese de que `ReadOnly` o `WriteOnly` se utiliza de la misma manera que en la definición de la interfaz.  
   
-4. Al implementar una propiedad, declare `Get` y `Set` procedimientos, según corresponda.  
+4. Al implementar una propiedad, declare @no__t los procedimientos-0 y `Set`, según corresponda.  
   
 ## <a name="see-also"></a>Vea también
 

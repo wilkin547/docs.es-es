@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665161"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698568"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Expresión llama recursivamente a la propiedad contenedora '\<propertyname >'
-Una instrucción en el `Set` procedimiento de una definición de propiedad almacena un valor en el nombre de la propiedad.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>La expresión llama de forma recursiva a la propiedad contenedora ' \<propertyname > '
+Una instrucción en el procedimiento `Set` de una definición de propiedad almacena un valor en el nombre de la propiedad.  
   
- Es el enfoque recomendado para conservar el valor de una propiedad definir un `Private` variable en el contenedor de la propiedad y su uso en ambos el `Get` y `Set` procedimientos. El `Set` procedimiento a continuación, debe almacenar el valor de entrada en este `Private` variable.  
+ El enfoque recomendado para contener el valor de una propiedad es definir una variable `Private` en el contenedor de la propiedad y utilizarla en los procedimientos `Get` y `Set`. A continuación, el procedimiento `Set` debe almacenar el valor entrante en esta variable `Private`.  
   
- El `Get` procedimiento se comporta como un `Function` procedimiento, por lo que puede asignar un valor al nombre de propiedad y devolver el control cuando se encuentra el `End Get` instrucción. Sin embargo, es el enfoque recomendado, debe incluir el `Private` variable como el valor de un [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ El procedimiento `Get` se comporta como un procedimiento `Function`, por lo que puede asignar un valor al nombre de la propiedad y devolver el control al encontrar la instrucción @no__t 2. Sin embargo, el enfoque recomendado consiste en incluir la variable `Private` como valor en una [instrucción return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- El `Set` procedimiento se comporta como un `Sub` procedimiento, que no devuelve un valor. Por lo tanto, el nombre del procedimiento o propiedad no tiene ningún significado especial dentro de un `Set` procedimiento y no se puede almacenar un valor en él.  
+ El procedimiento `Set` se comporta como un procedimiento `Sub`, que no devuelve un valor. Por lo tanto, el nombre del procedimiento o de la propiedad no tiene ningún significado especial dentro de un procedimiento `Set` y no se puede almacenar un valor en él.  
   
- El ejemplo siguiente muestra el enfoque que puede producir este error, seguido por el enfoque recomendado.  
+ En el ejemplo siguiente se muestra el enfoque que puede producir este error, seguido del enfoque recomendado.  
   
-```  
+```vb  
 Public Class illustrateProperties  
 ' The code in the following property causes this error.  
     Public Property badProp() As Char  
@@ -57,11 +57,11 @@ End Class
   
  De forma predeterminada, este mensaje es una advertencia. Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Identificador de error:** BC42026  
+ **IDENTIFICADOR de error:** BC42026  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Vuelva a escribir la definición de propiedad para utilizar el enfoque recomendado como se muestra en el ejemplo anterior.  
+- Vuelva a escribir la definición de la propiedad para usar el enfoque recomendado, tal como se muestra en el ejemplo anterior.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: 9f24dd2a20dc3a4935cd288a20a0e12c1d47bee1
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 9e8bb7b79b5a770c3c92e47d8e7c01c5b83d6061
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912340"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701211"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>Una matriz declarada como variable de control de bucle no se puede declarar con un tamaño inicial
-Un `For Each` bucle utiliza una matriz como su *elemento* variable de iteración, pero inicializa esa matriz.  
+Un bucle `For Each` usa una matriz como su variable de iteración de *elemento* , pero inicializa esa matriz.  
   
  Las instrucciones siguientes muestran cómo se puede generar este error.  
   
-```  
+```vb  
 Dim arrayList As New List(Of Integer())  
 For Each listElement() As Integer In arrayList  
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- La primera `For Each` instrucción es la manera correcta de tener acceso a elementos de `arrayList`. El segundo `For Each` instrucción genera este error.  
+ La primera instrucción `For Each` es la manera correcta de tener acceso a los elementos de `arrayList`. La segunda instrucción `For Each` genera este error.  
   
- **Identificador de error:** BC32039  
+ **IDENTIFICADOR de error:** BC32039  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Quite la inicialización de la declaración de la *elemento* variable de iteración.  
+- Quite la inicialización de la declaración de la variable de iteración del *elemento* .  
   
 ## <a name="see-also"></a>Vea también
 
