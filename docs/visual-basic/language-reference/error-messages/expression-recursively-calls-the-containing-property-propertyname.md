@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665161"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698568"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a><span data-ttu-id="0c971-102">Expresión llama recursivamente a la propiedad contenedora '\<propertyname >'</span><span class="sxs-lookup"><span data-stu-id="0c971-102">Expression recursively calls the containing property '\<propertyname>'</span></span>
-<span data-ttu-id="0c971-103">Una instrucción en el `Set` procedimiento de una definición de propiedad almacena un valor en el nombre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="0c971-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a><span data-ttu-id="32dd4-102">La expresión llama de forma recursiva a la propiedad contenedora ' \<propertyname > '</span><span class="sxs-lookup"><span data-stu-id="32dd4-102">Expression recursively calls the containing property '\<propertyname>'</span></span>
+<span data-ttu-id="32dd4-103">Una instrucción en el procedimiento `Set` de una definición de propiedad almacena un valor en el nombre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="32dd4-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
   
- <span data-ttu-id="0c971-104">Es el enfoque recomendado para conservar el valor de una propiedad definir un `Private` variable en el contenedor de la propiedad y su uso en ambos el `Get` y `Set` procedimientos.</span><span class="sxs-lookup"><span data-stu-id="0c971-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="0c971-105">El `Set` procedimiento a continuación, debe almacenar el valor de entrada en este `Private` variable.</span><span class="sxs-lookup"><span data-stu-id="0c971-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
+ <span data-ttu-id="32dd4-104">El enfoque recomendado para contener el valor de una propiedad es definir una variable `Private` en el contenedor de la propiedad y utilizarla en los procedimientos `Get` y `Set`.</span><span class="sxs-lookup"><span data-stu-id="32dd4-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="32dd4-105">A continuación, el procedimiento `Set` debe almacenar el valor entrante en esta variable `Private`.</span><span class="sxs-lookup"><span data-stu-id="32dd4-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
   
- <span data-ttu-id="0c971-106">El `Get` procedimiento se comporta como un `Function` procedimiento, por lo que puede asignar un valor al nombre de propiedad y devolver el control cuando se encuentra el `End Get` instrucción.</span><span class="sxs-lookup"><span data-stu-id="0c971-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="0c971-107">Sin embargo, es el enfoque recomendado, debe incluir el `Private` variable como el valor de un [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md).</span><span class="sxs-lookup"><span data-stu-id="0c971-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span>  
+ <span data-ttu-id="32dd4-106">El procedimiento `Get` se comporta como un procedimiento `Function`, por lo que puede asignar un valor al nombre de la propiedad y devolver el control al encontrar la instrucción @no__t 2.</span><span class="sxs-lookup"><span data-stu-id="32dd4-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="32dd4-107">Sin embargo, el enfoque recomendado consiste en incluir la variable `Private` como valor en una [instrucción return](../../../visual-basic/language-reference/statements/return-statement.md).</span><span class="sxs-lookup"><span data-stu-id="32dd4-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span>  
   
- <span data-ttu-id="0c971-108">El `Set` procedimiento se comporta como un `Sub` procedimiento, que no devuelve un valor.</span><span class="sxs-lookup"><span data-stu-id="0c971-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="0c971-109">Por lo tanto, el nombre del procedimiento o propiedad no tiene ningún significado especial dentro de un `Set` procedimiento y no se puede almacenar un valor en él.</span><span class="sxs-lookup"><span data-stu-id="0c971-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
+ <span data-ttu-id="32dd4-108">El procedimiento `Set` se comporta como un procedimiento `Sub`, que no devuelve un valor.</span><span class="sxs-lookup"><span data-stu-id="32dd4-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="32dd4-109">Por lo tanto, el nombre del procedimiento o de la propiedad no tiene ningún significado especial dentro de un procedimiento `Set` y no se puede almacenar un valor en él.</span><span class="sxs-lookup"><span data-stu-id="32dd4-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
   
- <span data-ttu-id="0c971-110">El ejemplo siguiente muestra el enfoque que puede producir este error, seguido por el enfoque recomendado.</span><span class="sxs-lookup"><span data-stu-id="0c971-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
+ <span data-ttu-id="32dd4-110">En el ejemplo siguiente se muestra el enfoque que puede producir este error, seguido del enfoque recomendado.</span><span class="sxs-lookup"><span data-stu-id="32dd4-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
   
-```  
+```vb  
 Public Class illustrateProperties  
 ' The code in the following property causes this error.  
     Public Property badProp() As Char  
@@ -55,16 +55,16 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- <span data-ttu-id="0c971-111">De forma predeterminada, este mensaje es una advertencia.</span><span class="sxs-lookup"><span data-stu-id="0c971-111">By default, this message is a warning.</span></span> <span data-ttu-id="0c971-112">Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0c971-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="32dd4-111">De forma predeterminada, este mensaje es una advertencia.</span><span class="sxs-lookup"><span data-stu-id="32dd4-111">By default, this message is a warning.</span></span> <span data-ttu-id="32dd4-112">Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="32dd4-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="0c971-113">**Identificador de error:** BC42026</span><span class="sxs-lookup"><span data-stu-id="0c971-113">**Error ID:** BC42026</span></span>  
+ <span data-ttu-id="32dd4-113">**IDENTIFICADOR de error:** BC42026</span><span class="sxs-lookup"><span data-stu-id="32dd4-113">**Error ID:** BC42026</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0c971-114">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="0c971-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="32dd4-114">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="32dd4-114">To correct this error</span></span>  
   
-- <span data-ttu-id="0c971-115">Vuelva a escribir la definición de propiedad para utilizar el enfoque recomendado como se muestra en el ejemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="0c971-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
+- <span data-ttu-id="32dd4-115">Vuelva a escribir la definición de la propiedad para usar el enfoque recomendado, tal como se muestra en el ejemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="32dd4-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c971-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="0c971-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32dd4-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="32dd4-116">See also</span></span>
 
-- [<span data-ttu-id="0c971-117">Procedimientos de propiedades</span><span class="sxs-lookup"><span data-stu-id="0c971-117">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [<span data-ttu-id="0c971-118">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="0c971-118">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
-- [<span data-ttu-id="0c971-119">Set (instrucción)</span><span class="sxs-lookup"><span data-stu-id="0c971-119">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
+- [<span data-ttu-id="32dd4-117">Procedimientos de propiedades</span><span class="sxs-lookup"><span data-stu-id="32dd4-117">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [<span data-ttu-id="32dd4-118">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="32dd4-118">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="32dd4-119">Set (instrucción)</span><span class="sxs-lookup"><span data-stu-id="32dd4-119">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
