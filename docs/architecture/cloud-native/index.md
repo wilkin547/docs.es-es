@@ -3,14 +3,16 @@ title: Diseño de aplicaciones .NET nativas en la nube para Azure
 description: Guía para crear aplicaciones nativas en la nube con la ayuda de contenedores, microservicios y características sin servidor de Azure.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214164"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696770"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Diseño de aplicaciones .NET nativas en la nube para Azure
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![imagen de portada](./media/cover.png)
 

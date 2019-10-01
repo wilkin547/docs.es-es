@@ -1,19 +1,24 @@
 - name: Esquema de la configuración de criptografía
   href: index.md
   items:
-    - name: <cryptoClasses> (Elemento)
-      href: cryptoclasses-element.md
-    - name: <cryptoClass> (Elemento)
-      href: cryptoclass-element.md
-    - name: <cryptographySettings> (Elemento)
-      href: cryptographysettings-element.md
-    - name: <cryptoNameMapping> (Elemento)
-      href: cryptonamemapping-element.md
     - name: Elemento <mscorlib> para la configuración de criptografía
       href: mscorlib-element-for-cryptography-settings.md
-    - name: <nameEntry> (Elemento)
-      href: nameentry-element.md
-    - name: <oidEntry> (Elemento)
-      href: oidentry-element.md
-    - name: <oidMap> (Elemento)
-      href: oidmap-element.md
+      items:
+        - name: <cryptographySettings> (Elemento)
+          href: cryptographysettings-element.md
+          items:
+            - name: <cryptoNameMapping> (Elemento)
+              href: cryptonamemapping-element.md
+              items:
+                - name: <cryptoClasses> (Elemento)
+                  href: cryptoclasses-element.md
+                  items:
+                    - name: <cryptoClass> (Elemento)
+                      href: cryptoclass-element.md
+                - name: <nameEntry> (Elemento)
+                  href: nameentry-element.md
+            - name: <oidMap> (Elemento)
+              href: oidmap-element.md
+              items:
+                - name: <oidEntry> (Elemento)
+                  href: oidentry-element.md

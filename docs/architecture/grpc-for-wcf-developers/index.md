@@ -3,14 +3,16 @@ title: 'gRPC de ASP.NET Core para desarrolladores de WCF: gRPC para desarrollado
 description: PENDIENTE DE REDACTAR
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7d02d7914aed39613b4a41da55515df80abddfe8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182752"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696920"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>gRPC de ASP.NET Core para desarrolladores de WCF
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![imagen de portada](./media/cover.png)
 
