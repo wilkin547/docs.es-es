@@ -2,16 +2,16 @@
 title: Constructores
 description: Obtenga información sobre cómo definir y usar constructores F# en para crear e inicializar objetos de clase y estructura.
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627599"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736849"
 ---
 # <a name="constructors"></a>Constructores
 
-En este tema se describe cómo definir y usar constructores para crear e inicializar objetos de clase y estructura.
+En este artículo se describe cómo definir y usar constructores para crear e inicializar objetos de clase y estructura.
 
 ## <a name="construction-of-class-objects"></a>Construcción de objetos de clase
 
@@ -21,11 +21,11 @@ El constructor principal contiene `let` enlaces `do` y que aparecen al principio
 
 Independientemente de si el constructor al que desea llamar es un constructor principal o un constructor adicional, puede crear objetos mediante una `new` expresión, con o sin la palabra clave opcional. `new` Los objetos se inicializan junto con los argumentos del constructor, ya sea mediante una lista de los argumentos en orden y se separan mediante comas y entre paréntesis, o usando argumentos y valores con nombre entre paréntesis. También puede establecer las propiedades de un objeto durante la construcción del objeto utilizando los nombres de propiedad y asignando valores de la misma forma que se usan los argumentos del constructor con nombre.
 
-En el código siguiente se muestra una clase que tiene un constructor y varias maneras de crear objetos.
+En el código siguiente se muestra una clase que tiene un constructor y varias maneras de crear objetos:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
-La salida es la siguiente.
+La salida es la siguiente:
 
 ```console
 Initialized object that has coordinates (1, 2, 3)
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>Construcción de estructuras
 
-Las estructuras siguen todas las reglas de las clases. Por lo tanto, puede tener un constructor principal y puede proporcionar constructores `new`adicionales mediante. Sin embargo, hay una diferencia importante entre las estructuras y las clases: las estructuras pueden tener un constructor sin parámetros (es decir, uno sin argumentos) aunque no se haya definido ningún constructor principal. El constructor sin parámetros inicializa todos los campos en el valor predeterminado de ese tipo, normalmente cero o su equivalente. Los constructores que defina para las estructuras deben tener al menos un argumento para que no entren en conflicto con el constructor predeterminado.
+Las estructuras siguen todas las reglas de las clases. Por lo tanto, puede tener un constructor principal y puede proporcionar constructores `new`adicionales mediante. Sin embargo, hay una diferencia importante entre las estructuras y las clases: las estructuras pueden tener un constructor sin parámetros (es decir, uno sin argumentos) aunque no se haya definido ningún constructor principal. El constructor sin parámetros inicializa todos los campos en el valor predeterminado de ese tipo, normalmente cero o su equivalente. Los constructores que defina para las estructuras deben tener al menos un argumento para que no entren en conflicto con el constructor sin parámetros.
 
 Además, las estructuras suelen tener campos que se crean mediante la `val` palabra clave; las clases también pueden tener estos campos. Las estructuras y las clases que tienen campos definidos mediante `val` la palabra clave también se pueden inicializar en constructores adicionales mediante el uso de expresiones de registro, como se muestra en el código siguiente.
 
@@ -50,7 +50,7 @@ Un constructor principal de una clase puede ejecutar código en un `do` enlace. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
-Los efectos secundarios del constructor principal todavía se ejecutan. Por lo tanto, el resultado es el siguiente.
+Los efectos secundarios del constructor principal todavía se ejecutan. Por lo tanto, la salida es la siguiente:
 
 ```console
 Created a person object.
@@ -64,7 +64,7 @@ En otros miembros, se proporciona un nombre para el objeto actual en la definici
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-En los constructores adicionales, también puede definir un identificador propio colocando la `as` cláusula justo después de los parámetros del constructor. En el ejemplo siguiente se muestra esta sintaxis.
+En los constructores adicionales, también puede definir un identificador propio colocando la `as` cláusula justo después de los parámetros del constructor. En el ejemplo siguiente se muestra esta sintaxis:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
@@ -74,11 +74,11 @@ No es necesario que el nombre del propio identificador sea `this`. Puede ser cua
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>Asignar valores a propiedades en la inicialización
 
-Puede asignar valores a las propiedades de un objeto de clase en el código de inicialización anexando una lista de asignaciones del formulario `property = value` a la lista de argumentos de un constructor. Esto se muestra en el ejemplo de código siguiente.
+Puede asignar valores a las propiedades de un objeto de clase en el código de inicialización anexando una lista de asignaciones del formulario `property = value` a la lista de argumentos de un constructor. Esto se muestra en el ejemplo de código siguiente:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-La siguiente versión del código anterior muestra la combinación de argumentos ordinarios, argumentos opcionales y valores de propiedades en una llamada a un constructor.
+La siguiente versión del código anterior muestra la combinación de argumentos ordinarios, argumentos opcionales y valores de propiedad en una llamada de constructor:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 503863dab1780b896be5d80edac88d13eaa49842
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4a6e22352a309f9d624c6922abc531cb31a5baf1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854176"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736686"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Actualizar orígenes de datos con objetos DataAdapter
 
@@ -34,7 +34,7 @@ Puede controlar la forma en que los valores devueltos desde el origen de datos s
 
 En la tabla siguiente se describen los distintos valores de la enumeración `UpdateRowSource` y la forma en que afectan al comportamiento del comando utilizado con `DataAdapter`.
 
-|Enumeración UpdatedRowSource|DESCRIPCIÓN|
+|Enumeración UpdatedRowSource|Descripción|
 |----------------------------------|-----------------|
 |<xref:System.Data.UpdateRowSource.Both>|Tanto los parámetros de salida como la primera fila del conjunto de resultados devuelto se pueden asignar a la fila modificada en `DataSet`.|
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Solo los datos de la primera fila del conjunto de resultados devuelto se pueden asignar a la fila modificada en el `DataSet`.|
@@ -84,7 +84,7 @@ adapter.Update(table.Select(Nothing, Nothing, _
   DataViewRowState.ModifiedCurrent))
 
 ' Finally, process inserts.
-dataAdapater.Update(table.Select(Nothing, Nothing, _
+adapter.Update(table.Select(Nothing, Nothing, _
   DataViewRowState.Added))
 ```
 

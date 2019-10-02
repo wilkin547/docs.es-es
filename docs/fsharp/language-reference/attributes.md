@@ -2,12 +2,12 @@
 title: Atributos
 description: Obtenga información F# sobre cómo los atributos permiten aplicar metadatos a una construcción de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082935"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736812"
 ---
 # <a name="attributes"></a>Atributos
 
@@ -25,13 +25,13 @@ En la sintaxis anterior, el *destino* es opcional y, si está presente, especifi
 
 El *atributo-name* hace referencia al nombre (posiblemente calificado con espacios de nombres) de un tipo de atributo válido, con o sin `Attribute` el sufijo que se suele utilizar en los nombres de tipo de atributo. Por ejemplo, el tipo `ObsoleteAttribute` se puede acortar a simplemente `Obsolete` en este contexto.
 
-Los *argumentos* son los argumentos del constructor para el tipo de atributo. Si un atributo tiene un constructor predeterminado, se pueden omitir la lista de argumentos y los paréntesis. Los atributos admiten argumentos posicionales y argumentos con nombre. Los *argumentos posicionales* son argumentos que se usan en el orden en que aparecen. Se pueden usar argumentos con nombre si el atributo tiene propiedades públicas. Puede establecerlos mediante la siguiente sintaxis en la lista de argumentos.
+Los *argumentos* son los argumentos del constructor para el tipo de atributo. Si un atributo tiene un constructor sin parámetros, se pueden omitir la lista de argumentos y los paréntesis. Los atributos admiten argumentos posicionales y argumentos con nombre. Los *argumentos posicionales* son argumentos que se usan en el orden en que aparecen. Se pueden usar argumentos con nombre si el atributo tiene propiedades públicas. Puede establecerlos mediante la siguiente sintaxis en la lista de argumentos.
 
 ```fsharp
 property-name = property-value
 ```
 
-Dichas inicializaciones de propiedad pueden estar en cualquier orden, pero deben seguir cualquier argumento posicional. A continuación se encuentra un ejemplo de un atributo que usa argumentos posicionales e inicializaciones de propiedad.
+Dichas inicializaciones de propiedad pueden estar en cualquier orden, pero deben seguir cualquier argumento posicional. El siguiente es un ejemplo de un atributo que usa argumentos posicionales e inicializaciones de propiedad:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
@@ -41,13 +41,13 @@ Los atributos son una construcción de programación de .NET que permite asociar
 
 Los atributos F# de se pueden aplicar a las siguientes construcciones de programación: funciones, métodos, ensamblados, módulos, tipos (clases, registros, estructuras, interfaces, delegados, enumeraciones, uniones, etc.), constructores, propiedades, campos, parámetros, parámetros de tipo y valores devueltos. No se permiten atributos en `let` los enlaces dentro de las clases, expresiones o expresiones de flujo de trabajo.
 
-Normalmente, la declaración de atributo aparece directamente antes de la declaración del destino de atributo. Se pueden usar varias declaraciones de atributos juntas, como se indica a continuación.
+Normalmente, la declaración de atributo aparece directamente antes de la declaración del destino de atributo. Se pueden usar varias declaraciones de atributos juntas, como se indica a continuación:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
 Puede consultar los atributos en tiempo de ejecución mediante la reflexión de .NET.
 
-Puede declarar varios atributos individualmente, como en el ejemplo de código anterior, o puede declararlos en un conjunto de corchetes si usa un punto y coma para separar los atributos y constructores individuales, como se muestra aquí.
+Puede declarar varios atributos individualmente, como en el ejemplo de código anterior, o puede declararlos en un conjunto de corchetes si usa un punto y coma para separar los atributos y constructores individuales, como se indica a continuación:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
@@ -55,13 +55,13 @@ Normalmente, los atributos encontrados `Obsolete` incluyen el atributo, atributo
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-En el caso de `assembly` los `module`destinos de atributo y, aplique los atributos a un `do` enlace de nivel superior en el ensamblado. Puede incluir la palabra `assembly` o `module` en la declaración de atributo, como se indica a continuación.
+En el caso de `assembly` los `module`destinos de atributo y, aplique los atributos a un `do` enlace de nivel superior en el ensamblado. Puede incluir la palabra `assembly` o `module` en la declaración de atributo, como se indica a continuación:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
 Si se omite el destino de atributo para un atributo aplicado a `do` un enlace, F# el compilador intenta determinar el destino de atributo que tiene sentido para ese atributo. Muchas clases de atributos tienen un atributo de `System.AttributeUsageAttribute` tipo que incluye información sobre los posibles destinos admitidos para ese atributo. `System.AttributeUsageAttribute` Si indica que el atributo admite funciones como destinos, se toma el atributo para aplicar al punto de entrada principal del programa. `System.AttributeUsageAttribute` Si indica que el atributo admite ensamblados como destinos, el compilador toma el atributo para aplicar al ensamblado. La mayoría de los atributos no se aplican a las funciones y los ensamblados, pero en los casos en que lo hacen, el atributo se toma para aplicarse a la función principal del programa. Si el destino del atributo se especifica explícitamente, el atributo se aplica al destino especificado.
 
-Aunque normalmente no es necesario especificar explícitamente el destino de atributo, en la siguiente tabla se muestran los valores válidos para el *destino* en un atributo, junto con ejemplos de uso.
+Aunque normalmente no es necesario especificar explícitamente el destino de atributo, en la tabla siguiente se muestran los valores válidos para el *destino* en un atributo junto con ejemplos de uso:
 
 <table>
   <tr>
