@@ -1,17 +1,17 @@
 ---
-title: 'Novedades de C# 8.0: Guía de C#'
-description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
+title: 'Novedades de C# 8.0: Guía de C#'
+description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182412"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396027"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
-Hay muchas mejoras en el lenguaje C# que ya se pueden probar.
+C# 8.0 agrega las siguientes características y mejoras al lenguaje C#:
 
 - [Miembros de solo lectura](#readonly-members)
 - [Miembros de interfaz predeterminados](#default-interface-members)
@@ -30,9 +30,6 @@ Hay muchas mejoras en el lenguaje C# que ya se pueden probar.
 - [Tipos construidos no administrados](#unmanaged-constructed-types)
 - [stackalloc en expresiones anidadas](#stackalloc-in-nested-expressions)
 - [Mejora de las cadenas textuales interpoladas](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Este artículo se actualizó por última vez para la versión preliminar 5 de C# 8.0.
 
 En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 
@@ -378,18 +375,18 @@ Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la
 
 ## <a name="indices-and-ranges"></a>Índices y rangos
 
-Los rangos e índices proporcionan una sintaxis concisa para especificar subrangos en una matriz, [cadena](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>.
+Los índices y rangos proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una secuencia.
 
 Esta compatibilidad con lenguajes se basa en dos nuevos tipos y dos nuevos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
-- El operador `^`, que especifica que un índice es relativo al final de la secuencia.
+- El índice desde el operador final `^`, que especifica que un índice es relativo al final de la secuencia.
 - <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.
-- El operador de rango (`..`), que especifica el inicio y el fin de un intervalo como sus operandos.
+- El operador de intervalo `..`, que especifica el inicio y el final de un intervalo como sus operandos.
 
 Comencemos con las reglas de índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence.Length - n`.
 
-Un rango especifica el *inicio* y el *final* de un intervalo. El inicio del intervalo es inclusivo, pero su final es exclusivo, lo que significa que el *inicio* se incluye en el intervalo, pero el *final* no. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo. 
+Un rango especifica el *inicio* y el *final* de un intervalo. El inicio del intervalo es inclusivo, pero su final es exclusivo, lo que significa que el *inicio* se incluye en el intervalo, pero el *final* no. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo.
 
 Veamos algunos ejemplos. Tenga en cuenta la siguiente matriz, anotada con su índice desde el principio y desde el final:
 
@@ -447,6 +444,8 @@ El rango se puede usar luego dentro de los caracteres `[` y `]`:
 ```csharp
 var text = words[phrase];
 ```
+
+No solo las matrices admiten índices y rangos. También puede usar índices y rangos con [string](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Para más información, consulte [Compatibilidad con tipos para los índices y los rangos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Puede explorar más información acerca de los índices y los intervalos en el tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
 

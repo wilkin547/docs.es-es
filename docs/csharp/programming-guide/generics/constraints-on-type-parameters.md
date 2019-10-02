@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: bb545d9da73154c237f55809a3a72ff0f121ce1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253020"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396283"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
@@ -20,7 +20,7 @@ Las restricciones informan al compilador sobre las capacidades que debe tener un
 
 |Restricción|DESCRIPCIÓN|
 |----------------|-----------------|
-|`where T : struct`|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable%601> puede especificarse. Para obtener más información sobre los tipos que aceptan valores NULL, vea [Tipos que aceptan valores NULL](../nullable-types/index.md).|
+|`where T : struct`|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable%601> puede especificarse. Para más información sobre los tipos de valor que admiten un valor NULL, consulte [Tipos de valor que admiten un valor NULL](../nullable-types/index.md).|
 |`where T : class`|El argumento de tipo debe ser un tipo de referencia. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
 |`where T : notnull`|El argumento de tipo debe ser un tipo que no acepta valores NULL. El argumento puede ser un tipo de referencia que no acepta valores NULL en C# 8.0 o posterior, o un tipo de valor que no acepta valores NULL. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
 |`where T : unmanaged`|El argumento de tipo debe ser [un tipo no administrado](../../language-reference/builtin-types/unmanaged-types.md).|

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo definir y usar valores locales y d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081854"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353884"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -27,12 +27,12 @@ Hay algunas restricciones en la expresión que un método puede devolver como un
 
 - El valor devuelto no puede ser el literal `null`. Si devuelve `null`, se genera el error del compilador CS8156, "No se puede usar una expresión en este contexto porque no se puede devolver por referencia".
 
-   Un método con un valor devuelto de referencia puede devolver un alias a una variable cuyo valor es actualmente el valor null (sin instancias) o un [tipo que acepta valores NULL](../nullable-types/index.md) para un tipo de valor.
- 
+   Un método con un valor devuelto de referencia puede devolver un alias a una variable cuyo valor es actualmente el valor NULL (sin instancias) o un [tipo de valor que admite un valor NULL](../nullable-types/index.md) para un tipo de valor.
+
 - El valor devuelto no puede ser una constante, un miembro de enumeración, el valor devuelto por valor desde una propiedad o un método de `class` o `struct`. Si infringe esta regla, se genera el error del compilador CS8156, "No se puede usar una expresión en este contexto porque no se puede devolver por referencia".
 
 Además, los valores devueltos por referencia no se permiten en métodos asincrónicos. Un método asincrónico puede volver antes de que haya terminado de ejecutarse, mientras que su valor devuelto aún no se conoce.
- 
+
 ## <a name="defining-a-ref-return-value"></a>Definir un valor devuelto de tipo ref
 
 Un método que devuelve un *valor devuelto de referencia* debe cumplir las dos condiciones siguientes:

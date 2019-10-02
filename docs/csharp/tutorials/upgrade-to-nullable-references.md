@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926625"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332333"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -25,7 +25,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador beta de C# 8.0. El compilador beta de C# 8 está disponible con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o la [versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download).
 
 En este tutorial se da por supuesto que está familiarizado con C# y. NET, incluidos Visual Studio o la CLI de .NET Core.
 
@@ -52,9 +52,6 @@ Un buen paso es activar el contexto de anotación que admite valores NULL y ver 
 ```xml
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> El elemento `Nullable` se denominaba anteriormente `NullableContextOptions`. El cambio de nombre incluido con Visual Studio 2019, 16.2 p1. .NET Core SDK 3.0.100-preview5-011568 no tiene este cambio. Si usa la CLI de .NET Core, deberá usar `NullableContextOptions` hasta que esté disponible la siguiente versión preliminar.
 
 Realice una compilación de prueba y observe la lista de advertencias. En esta pequeña aplicación, el compilador genera cinco advertencias, por lo que es probable que dejara el contexto de anotación que admite valores NULL habilitado y empezara a corregir las advertencias para todo el proyecto.
 

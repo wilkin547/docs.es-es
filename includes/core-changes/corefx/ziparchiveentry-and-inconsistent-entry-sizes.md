@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 748e7f484227b6a60a2309bde185079b30fe19de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117204"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216940"
 ---
 ### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry ya no controla los archivos con tamaños de entrada incoherentes
 
@@ -24,7 +24,7 @@ Este cambio se realizó para asegurarse de que un <xref:System.IO.Compression.Zi
 
 #### <a name="recommended-action"></a>Acción recomendada
 
-Vuelva a empaquetar cualquier archivo zip que presente estos problemas.
+Vuelva a empaquetar los archivos ZIP que presentan estos problemas.
 
 #### <a name="category"></a>Categoría
 
@@ -46,6 +46,4 @@ CoreFX
 `Overload:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A`
 `Overload:System.IO.Compression.ZipFile.ExtractToDirectory%2A`
 
-
 -->
-

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374507"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216713"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -53,7 +53,7 @@ Las cadenas con formato numérico estándar son compatibles con:
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico estándar y se muestran los resultados de ejemplo generados por cada especificador de formato. Consulte la sección [Notas](#NotesStandardFormatting) para obtener información adicional sobre cómo usar las cadenas con formato numérico estándar y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
-|Especificador de formato|nombre|DESCRIPCIÓN|Ejemplos|
+|Especificador de formato|Name|DESCRIPCIÓN|Ejemplos|
 |----------------------|----------|-----------------|--------------|
 |"C" o "c"|Moneda|Resultado:  un valor de divisa.<br /><br /> Compatible con: todos los tipos numéricos.<br /><br /> Especificador de precisión: número de dígitos decimales.<br /><br /> Especificador de precisión predeterminado: Definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Más información: [Especificador de formato de divisa ("C")](#CFormatString).|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" o "d"|Decimal|Resultado:  dígitos enteros con signo negativo opcional.<br /><br /> Compatible con: solo tipos enteros.<br /><br /> Especificador de precisión: número mínimo de dígitos.<br /><br /> Especificador de precisión predeterminado: número mínimo de dígitos necesario.<br /><br /> Más información: [Especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
@@ -117,10 +117,10 @@ La información de formato del objeto <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Define la cadena que separa los grupos de números integrales.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Define el número de dígitos enteros que aparecen en un grupo.|
 
-En el ejemplo siguiente se da formato a un valor <xref:System.Double> con el especificador de formato de divisa.
+En el ejemplo siguiente se da formato a un valor <xref:System.Double> con el especificador de formato de divisa:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+[!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
 [Volver a la tabla](#table)
@@ -165,10 +165,10 @@ La información de formato del objeto <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa el dígito integral de los dígitos decimales en el coeficiente.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Define la cadena que indica que un exponente es positivo.|
 
-En el ejemplo siguiente se da formato a un valor <xref:System.Double> con el especificador de formato exponencial.
+En el ejemplo siguiente se da formato a un valor <xref:System.Double> con el especificador de formato exponencial:
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+[!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
 [Volver a la tabla](#table)
@@ -189,10 +189,10 @@ La información de formato del objeto <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Define el número predeterminado de dígitos decimales. Este valor puede reemplazarse por el uso del especificador de precisión.|
 
-En el ejemplo siguiente se da formato a un valor <xref:System.Double> e <xref:System.Int32> con el especificador de formato de punto fijo.
+En el ejemplo siguiente se da formato a un valor <xref:System.Double> e <xref:System.Int32> con el especificador de formato de punto fijo:
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+[!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
 [Volver a la tabla](#table)
@@ -236,10 +236,10 @@ La información de formato del objeto <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales de los decimales.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Define la cadena que indica que un exponente es positivo.|
 
-En el ejemplo siguiente se da formato a valores de punto flotante ordenados con el especificador de formato general.
+En el ejemplo siguiente se da formato a valores de punto flotante ordenados con el especificador de formato general:
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+[!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
 [Volver a la tabla](#table)
@@ -261,10 +261,10 @@ La información de formato del objeto <xref:System.Globalization.NumberFormatInf
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define la cadena que separa los dígitos integrales y decimales.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Define el número predeterminado de dígitos decimales. Este valor puede reemplazarse por el uso de un especificador de precisión.|
 
-En el ejemplo siguiente se da formato a valores de punto flotante ordenados con el especificador de formato numérico.
+En el ejemplo siguiente se da formato a valores de punto flotante ordenados con el especificador de formato numérico:
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+[!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
 [Volver a la tabla](#table)
@@ -288,10 +288,10 @@ En la tabla siguiente se enumeran las propiedades de <xref:System.Globalization.
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|Define la cadena que separa los grupos de números integrales.|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|Define el número de dígitos enteros que aparecen en un grupo.|
 
-En el ejemplo siguiente se da formato a valores de punto flotante con el especificador de formato de porcentaje.
+En el ejemplo siguiente se da formato a valores de punto flotante con el especificador de formato de porcentaje:
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+[!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
 [Volver a la tabla](#table)
@@ -324,9 +324,9 @@ En el ejemplo siguiente se da formato a un valor <xref:System.Numerics.BigIntege
 > [!IMPORTANT]
 > En algunos casos, los valores <xref:System.Double> con el formato de cadena numérica estándar "R" no realizan correctamente la operación de ida y vuelta si se compilan usando los modificadores `/platform:x64` o `/platform:anycpu` y se ejecutan en sistemas de 64 bits. Para más información, consulte el siguiente párrafo.
 
-Para solucionar el problema de los valores <xref:System.Double> con formato de cadena numérico estándar “R” que no hacen correctamente el viaje de ida y vuelta si se compilan con conmutadores `/platform:x64` o `/platform:anycpu` y se ejecutan en sistemas de 64 bits, puede dar formato a los valores <xref:System.Double> usando la cadena de formato numérico estándar “G17”. En el ejemplo siguiente se usa la cadena de formato "R" con un valor <xref:System.Double> que no realiza correctamente la operación de ida y vuelta, y usa también la cadena de formato "G17" para realizar correctamente la operación de ida y vuelta del valor original.
+Para solucionar el problema de los valores <xref:System.Double> con formato de cadena numérico estándar “R” que no hacen correctamente el viaje de ida y vuelta si se compilan con conmutadores `/platform:x64` o `/platform:anycpu` y se ejecutan en sistemas de 64 bits, puede dar formato a los valores <xref:System.Double> usando la cadena de formato numérico estándar “G17”. En el ejemplo siguiente se usa la cadena de formato "R" con un valor <xref:System.Double> que no realiza correctamente la operación de ida y vuelta, y usa también la cadena de formato "G17" para realizar correctamente la operación de ida y vuelta del valor original:
 
-[!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
+[!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
 [Volver a la tabla](#table)
@@ -380,7 +380,7 @@ Independientemente de la cadena de formato, si el valor de un tipo de punto flot
 
 En el ejemplo siguiente se da formato a un valor numérico integral y de punto flotante mediante la referencia cultural en-US y todos los especificadores de formato numérico estándar. En este ejemplo se usan dos tipos numéricos concretos (<xref:System.Double> y <xref:System.Int32>), pero se obtendrían resultados similares con cualquiera de los demás tipos base numéricos (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> y <xref:System.Single>).
 
-[!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
+[!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
 ## <a name="see-also"></a>Vea también

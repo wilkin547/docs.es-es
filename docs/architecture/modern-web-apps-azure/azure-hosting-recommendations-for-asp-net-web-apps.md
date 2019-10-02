@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Recomendacione
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675472"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331988"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendaciones de hospedaje en Azure de aplicaciones web ASP.NET Core
 
@@ -124,9 +124,9 @@ Los datos transitorios basados en eventos o comandos que se usan para coordinar 
 
 Los requisitos de la aplicación deben dictar su arquitectura. Hay muchos servicios de Azure diferentes disponibles. Elegir el adecuado es una decisión importante. Microsoft ofrece una galería de arquitecturas de referencia para ayudar a identificar arquitecturas típicas optimizadas para escenarios comunes. Es posible que encuentre una arquitectura de referencia estrechamente relacionada con los requisitos de la aplicación o, que al menos, ofrezca un punto de partida.
 
-En la figura 11-2 se muestra una arquitectura de referencia de ejemplo. En este diagrama se describe un enfoque de arquitectura recomendada para un sitio web del sistema de administración de contenido de Sitecore optimizado para marketing.
+En la figura 11-1 se muestra una arquitectura de referencia de ejemplo. En este diagrama se describe un enfoque de arquitectura recomendada para un sitio web del sistema de administración de contenido de Sitecore optimizado para marketing.
 
-![](./media/image11-2.png)
+![Figura 11-1](./media/image11-2.png)
 
 **Figura 11-1.** Arquitectura de referencia del sitio web de marketing Sitecore.
 

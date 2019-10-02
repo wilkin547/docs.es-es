@@ -2,12 +2,12 @@
 title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851068"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332374"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -35,7 +35,7 @@ string? name;
 
 Cualquier variable en la que `?` no esté junto al nombre de tipo es un **tipo de referencia que no acepta valores NULL**. Esto incluye todas las variables de tipo de referencia en el código existente en el momento en el que se habilita esta característica.
 
-El compilador usa el análisis estático para determinar si se sabe si una referencia que acepta valores NULL no tiene este tipo de valor. Si desreferencia una referencia que acepta valores NULL cuando esta puede ser NULL, el compilador genera una advertencia. Puede invalidar este comportamiento usando el **operador de limitación de advertencias de valores NULL** (`!`) después del nombre de una variable. Por ejemplo, si sabe que la variable `name` no es NULL, pero el compilador genera una advertencia, puede escribir el código siguiente para invalidar el análisis del compilador:
+El compilador usa el análisis estático para determinar si se sabe si una referencia que acepta valores NULL no tiene este tipo de valor. Si desreferencia una referencia que acepta valores NULL cuando esta puede ser NULL, el compilador genera una advertencia. Puede invalidar este comportamiento usando el **operador de limitación de advertencias de valores NULL** `!` después del nombre de una variable. Por ejemplo, si sabe que la variable `name` no es NULL, pero el compilador genera una advertencia, puede escribir el código siguiente para invalidar el análisis del compilador:
 
 ```csharp
 name!.Length;
@@ -58,7 +58,7 @@ La nulabilidad de un tipo en una declaración de variable se controla mediante e
 
 Los contextos que aceptan valores NULL permiten un control preciso sobre cómo interpreta el compilador las variables de tipos de referencia. El **contexto de anotación que acepta valores NULL** de cualquier línea de código es `enabled` o `disabled`. Puede considerar que el compilador anterior al de C# 8 compilaba todo el código en un contexto que acepta valores NULL `disabled`: Cualquier tipo de referencia puede ser NULL. El **contexto de advertencia que acepta valores NULL** puede configurarse como `enabled` o `disabled`. Este contexto especifica las advertencias que genera el compilador usando el análisis de flujos.
 
-Tanto el contexto de anotación que acepta valores NULL como el contexto de advertencia que acepta valores NULL pueden establecerse para un proyecto con el elemento `Nullable` del archivo `csproj`. Este elemento configura la forma en la que el compilador interpreta la nulabilidad de los tipos y las advertencias que se generan. Estos son los valores válidos:
+Tanto el contexto de anotación que acepta valores NULL como el contexto de advertencia que acepta valores NULL pueden establecerse para un proyecto con el elemento `Nullable` del archivo *.csproj*. Este elemento configura la forma en la que el compilador interpreta la nulabilidad de los tipos y las advertencias que se generan. Estos son los valores válidos:
 
 - `enable`: el contexto de anotación que acepta valores NULL es **enabled**. El contexto de advertencia que acepta valores NULL es **enabled**.
   - Las variables de un tipo de referencia, como `string`, no aceptan valores NULL.  Todas las advertencias de nulabilidad están habilitadas.
@@ -69,21 +69,21 @@ Tanto el contexto de anotación que acepta valores NULL como el contexto de adve
 - `disable`: el contexto de anotación que acepta valores NULL es **disabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
   - Las variables de tipo de referencia son inconscientes, como en versiones anteriores de C#. Todas las advertencias de nulabilidad están deshabilitadas.
 
-> [!IMPORTANT]
-> El elemento `Nullable` se denominaba anteriormente `NullableContextOptions`. El cambio de nombre incluido con Visual Studio 2019, 16.2 p1. .NET Core SDK 3.0.100-preview5-011568 no tiene este cambio. Si usa la CLI de .NET Core, deberá usar `NullableContextOptions` hasta que esté disponible la siguiente versión preliminar.
-
 También puede usar directivas para establecer los mismos contextos en cualquier lugar del proyecto:
 
 - `#nullable enable`: establece el contexto de anotación que acepta valores NULL y el contexto de advertencia que acepta valores NULL en **enabled**.
 - `#nullable disable`: establece el contexto de anotación que acepta valores NULL y el contexto de advertencia que acepta valores NULL en **disabled**.
 - `#nullable restore`: restaura el contexto de anotación que acepta valores NULL y el contexto de advertencia que acepta valores NULL según la configuración del proyecto.
-- `#pragma warning disable nullable`: establece el contexto de advertencia que acepta valores NULL en **disabled**.
-- `#pragma warning enable nullable`: establece el contexto de advertencia que acepta valores NULL en **enabled**.
-- `#pragma warning restore nullable`: restaura el contexto de advertencia que acepta valores NULL según la configuración del proyecto.
+- `#nullable disable warnings`: establece el contexto de advertencia que acepta valores NULL en **disabled**.
+- `#nullable enable warnings`: establece el contexto de advertencia que acepta valores NULL en **enabled**.
+- `#nullable restore warnings`: restaura el contexto de advertencia que acepta valores NULL según la configuración del proyecto.
+- `#nullable disable annotations`: establezca el contexto de anotación que admite un valor NULL en **disabled**.
+- `#nullable enable annotations`: establezca el contexto de anotación que admite un valor NULL en **enabled**.
+- `#nullable restore annotations`: restaura el contexto de advertencia de anotación según la configuración del proyecto.
 
 Los contextos de advertencias y anotaciones que aceptan valores NULL predeterminados son `disabled`. Esta decisión implica que el código existente se compila sin cambios y sin generar ninguna advertencia nueva.
 
-### <a name="nullable-annotation-context"></a>Contexto de anotación que admite valores NULL
+## <a name="nullable-annotation-context"></a>Contexto de anotación que admite valores NULL
 
 El compilador usa las siguientes reglas en un contexto de anotación deshabilitado que acepta valores NULL:
 
@@ -101,7 +101,7 @@ El compilador usa las siguientes reglas en un contexto de anotación habilitado 
 - Todos los tipos de referencia que aceptan valores NULL (con la anotación de `?` después del tipo en la declaración de la variable) pueden ser NULL. El análisis estático determina si se sabe que el valor no es NULL cuando se desreferencia. Si no, el compilador emite una advertencia.
 - Puede usar el operador de limitación de advertencias de valores NULL para declarar que una referencia que acepta valores NULL no tiene un valor NULL.
 
-En un contexto de anotación que acepta valores NULL, el carácter `?` junto a un tipo de referencia declara un **tipo de referencia que acepta valores NULL**. Se puede incorporar un **operador de limitación de advertencias de valores NULL** (`!`) junto a una expresión para declarar que no tiene un valor NULL.
+En un contexto de anotación que acepta valores NULL, el carácter `?` junto a un tipo de referencia declara un **tipo de referencia que acepta valores NULL**. Se puede incorporar un **operador de limitación de advertencias de valores NULL** `!` junto a una expresión para declarar que no tiene un valor NULL.
 
 ## <a name="nullable-warning-context"></a>Contexto de advertencia que acepta valores NULL
 

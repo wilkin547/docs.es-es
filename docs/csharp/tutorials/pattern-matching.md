@@ -3,12 +3,12 @@ title: Uso de las características de coincidencia de patrones para ampliar los 
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926656"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332351"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de versión preliminar de C# 8.0. El compilador de versión preliminar de C# 8 está disponible con la versión de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) más reciente o la [versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download).
 
 En este tutorial se da por supuesto que está familiarizado con C# y. NET, incluidos Visual Studio o la CLI de .NET Core.
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 

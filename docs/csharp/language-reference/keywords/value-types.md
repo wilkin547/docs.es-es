@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608381"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353749"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -32,7 +32,7 @@ Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?di
 
 A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.
 
-Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos que aceptan valores NULL](../../programming-guide/nullable-types/index.md) correspondientes pueden ser `null`.
+Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos de valor que admiten un valor NULL](../../programming-guide/nullable-types/index.md) correspondientes pueden ser `null`.
 
 Cada tipo de valor tiene un constructor sin parámetros implícito que inicializa el valor predeterminado de ese tipo. Para información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](default-values-table.md).
 
@@ -109,4 +109,4 @@ Para información sobre cómo aplicar formato al resultado de los tipos numéric
 - [Palabras clave de C#](index.md)
 - [Tipos](types.md)
 - [Tipos de referencia](reference-types.md)
-- [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])
+- [Tipos de valores que aceptan valores NULL](../../programming-guide/nullable-types/index.md)

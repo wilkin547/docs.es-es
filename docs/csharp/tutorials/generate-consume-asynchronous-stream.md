@@ -3,12 +3,12 @@ title: Generación y consumo de secuencias asincrónicas
 description: En este tutorial avanzado se muestran escenarios donde la generación y utilización de secuencias asincrónicas proporciona una manera más natural de trabajar con secuencias de datos que pueden generarse de forma asincrónica.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926692"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216552"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador beta de C# 8.0. El compilador beta de C# 8 está disponible a partir de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o el [SDK de la versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente. Las secuencias asincrónicas están disponibles por primera vez en la versión preliminar 1 de NET Core 3.0.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download).
 
 Deberá crear un [token de acceso de GitHub](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) para poder tener acceso al punto de conexión de GraphQL de GitHub. Seleccione los siguientes permisos para el token de acceso de GitHub:
 

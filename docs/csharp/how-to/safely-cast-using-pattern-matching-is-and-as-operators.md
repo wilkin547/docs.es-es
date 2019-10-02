@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566278"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353728"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as
 
@@ -23,11 +23,11 @@ El código siguiente muestra la instrucción `is` de coincidencia de patrones. C
 
 El ejemplo anterior muestra una serie de características de sintaxis de coincidencia de patrones. Las instrucciones `if (a is Mammal m)` e `if (o is Mammal m)` combinan la prueba con una asignación de inicialización. La asignación solo se produce cuando la prueba se realiza correctamente. La variable `m` solo está en ámbito en la instrucción `if` insertada donde se ha asignado. No se puede acceder a `m` más adelante en el mismo método. Pruébela en la ventana interactiva.
 
-También puede usar la misma sintaxis para probar si un [tipo que acepta valores NULL](../programming-guide/nullable-types/index.md) tiene un valor, como se muestra en el código de ejemplo siguiente:
+También puede usar la misma sintaxis para probar si un [tipo de valor que admite un valor NULL](../programming-guide/nullable-types/index.md) tiene un valor, como se muestra en el código de ejemplo siguiente:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-El ejemplo anterior muestra otras características de coincidencia de patrones para usar con conversiones. Puede probar una variable para el patrón null si busca específicamente el valor `null`. Cuando el valor de runtime de la variable es `null`, una instrucción `is` que busca un tipo siempre devuelve `false`. La instrucción `is` de coincidencia de patrones no permite un tipo de valor que acepta valores NULL, como `int?` o `Nullable<int>`, pero puede probar con cualquier otro tipo de valor.
+El ejemplo anterior muestra otras características de coincidencia de patrones para usar con conversiones. Puede probar una variable para el patrón null si busca específicamente el valor `null`. Cuando el valor de runtime de la variable es `null`, una instrucción `is` que busca un tipo siempre devuelve `false`. La instrucción `is` de coincidencia de patrones no permite un tipo de valor que acepta valores NULL, como `int?` o `Nullable<int>`, pero puede probar con cualquier otro tipo de valor. Los patrones `is` del ejemplo anterior no se limitan a los tipos de valor que admiten un valor NULL. También puede usar esos patrones para probar si una variable de un tipo de referencia tiene un valor o es `null`.
 
 El ejemplo anterior también muestra cómo usar la expresión `is` de coincidencia de patrones en una instrucción `switch` donde la variable puede ser uno de muchos tipos diferentes.
 

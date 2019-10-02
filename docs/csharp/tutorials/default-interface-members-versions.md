@@ -3,12 +3,12 @@ title: Actualización segura de la interfaz con miembros de la predeterminada en
 description: En este tutorial avanzado se describe cómo agregar de forma segura nuevas capacidades a las definiciones de la interfaz existente sin que ello interrumpa todas las clases y estructuras que implementan esa interfaz.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926700"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216563"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Actualización de interfaces con miembros de interfaz predeterminados en C# 8.0
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de versión preliminar de C# 8.0. El compilador en versión preliminar de C# 8.0 está disponible a partir de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o el [SDK de la versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente. Los miembros de la interfaz predeterminada están disponibles a partir de la versión preliminar 4 de .NET Core 3.0.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8.0 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download).
 
 ## <a name="scenario-overview"></a>Información general del escenario
 

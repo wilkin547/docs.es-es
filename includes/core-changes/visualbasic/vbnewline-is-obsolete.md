@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2a0ebcf61fd96df6d2235962c1f1e9cac3fb22e6
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117109"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181996"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine está obsoleto
 
-La constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> está marcada con el atributo [Obsolete](xref:System.ObsoleteAttribute) en .NET Framework, pero faltaba el atributo en la biblioteca de .NET Core 3.0.
+La constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> está marcada con el atributo [Obsolete](xref:System.ObsoleteAttribute) a partir de .NET Core 3.0 (versión preliminar 8).
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -16,10 +16,10 @@ La constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=ful
 
 #### <a name="details"></a>Detalles
 
-A partir de .NET Core 3.0 (versión preliminar 8), se ha aplicado el atributo [Obsolete](xref:System.ObsoleteAttribute) a la constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> para ajustarse a la constante `vbNewLine` en .NET Framework. El uso de la constante `vbNewLine` genera una advertencia del compilador. 
+A partir de .NET Core 3.0 (versión preliminar 8), se ha aplicado el atributo [Obsolete](xref:System.ObsoleteAttribute) a la constante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>. El uso de la constante genera una advertencia del compilador. En versiones anteriores de .NET Core y .NET Framework, no estaba marcada como “Obsolete”.
 
-En versiones anteriores de .NET Core, `vbNewLine` no producía una advertencia del compilador.
-
+Este cambio se realizó para admitir Visual Basic como lenguaje para el desarrollo multiplataforma. La constante `vbNewLine` equivale a `\r\n`, la secuencia de caracteres de nueva línea en Windows. En los sistemas basados en Unix, el carácter de nueva línea es `\n`.
+ 
 #### <a name="recommended-action"></a>Acción recomendada
 
 El mensaje del atributo [Obsolete](xref:System.ObsoleteAttribute) para `vbNewLine` incluye la siguiente recomendación:

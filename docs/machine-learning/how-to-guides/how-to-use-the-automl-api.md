@@ -3,12 +3,12 @@ title: Cómo usar la API de ML automatizada de ML.NET
 description: La API de ML automatizada de ML.NET automatiza el proceso de compilación de modelos y genera un modelo listo para la implementación. Descubra las opciones que puede usar para configurar tareas de aprendizaje automático.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929382"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332717"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Cómo usar la API de aprendizaje automático automatizada de ML.NET
 
@@ -126,6 +126,9 @@ La métrica de optimización, tal como se muestra en el ejemplo anterior, determ
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>Caracterización y procesamiento previo de datos
+
+> [!NOTE]
+> La columna de características solo admitía los tipos de [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) y [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
 
 El procesamiento previo de datos se produce de forma predeterminada y los pasos siguientes se realizan automáticamente:
 

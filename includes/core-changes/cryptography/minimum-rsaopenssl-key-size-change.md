@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 07ab65de16b72bd0844a39e4b35235c5f043f3ec
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117214"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216404"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Ha aumentado el tamaño mínimo de la generación de claves RSAOpenSsl
 
@@ -12,11 +12,11 @@ El tamaño mínimo para generar nuevas claves RSA en Linux ha aumentado de 384 
 
 #### <a name="change-description"></a>Descripción del cambio
 
-A partir de .NET Core 3.0, el tamaño mínimo de clave permitido que la propiedad `LegalKeySizes` notifica en instancias de RSA desde <System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>, <System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType> y <System.Security.Cryptography.RSACryptoServicePlatform.%23ctor%2A?displayProperty=nameWithType> en Linux ha aumentado de 384 a 512.
+A partir de .NET Core 3.0, el tamaño mínimo de clave permitido que notifica la propiedad `LegalKeySizes` en instancias de RSA desde <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>, <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType> y <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> en Linux ha aumentado de 384 a 512.
 
 Por consiguiente, .NET Core 2.2 y versiones anteriores, una llamada de método como `RSA.Create(384)` se realiza correctamente. En .NET Core 3.0 y versiones posteriores, la llamada de método `RSA.Create(384)` produce una excepción que indica que el tamaño es demasiado pequeño.
 
-Estos cambios se realizaron porque OpenSSL, que realiza las operaciones criptográficas en Linux, ha aumentado su mínimo entre las versiones 1.0.2 y 1.1.0.  .NET Core 3.0 prefiere OpenSSL 1.1. x a 1.0. x, y la versión mínima notificada se elevó para reflejar esta nueva limitación de dependencia más alta.
+Este cambio se realizó porque OpenSSL, que realiza las operaciones criptográficas en Linux, ha aumentado su mínimo entre las versiones 1.0.2 y 1.1.0. .NET Core 3.0 prefiere OpenSSL 1.1. x a 1.0. x, y la versión mínima notificada se elevó para reflejar esta nueva limitación de dependencia más alta.
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -47,6 +47,5 @@ Criptografía
 - `Overload:System.Security.Cryptography.RSA.Create`
 - `Overload:System.Security.Cryptography.RSAOpenSsl.#ctor`
 - `Overload:System.Security.Cryptography.RSACryptoServiceProvider.#ctor`
-
 
 -->

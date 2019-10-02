@@ -1,18 +1,18 @@
 ---
 title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117852"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391969"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
-Los intervalos e índices proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Estas características permiten una sintaxis más concisa y clara para acceder a elementos únicos o intervalos de elementos de una secuencia.
+Los intervalos e índices proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una secuencia.
 
 En este tutorial aprenderá lo siguiente:
 
@@ -74,6 +74,14 @@ También puede declarar rangos o índices como variables. La variable se puede u
 El ejemplo siguiente muestra muchos de los motivos para esas opciones. Modifique `x`, `y` y `z` para probar diferentes combinaciones. Al experimentar, use valores donde `x` sea menor que `y` y `y` sea menor que `z` para las combinaciones válidas. Agregue el código siguiente a un nuevo método. Pruebe diferentes combinaciones:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>Compatibilidad con tipos para los índices y los rangos
+
+Si un tipo proporciona un [indizador](../programming-guide/indexers/index.md) con un parámetro <xref:System.Index> o <xref:System.Range>, admite de manera explícita los índices o rangos, respectivamente.
+
+Un tipo es **contable** si tiene una propiedad denominada `Length` o `Count` con un captador accesible y un tipo de valor devuelto de `int`. Un tipo contable que no admite índices ni rangos de manera explícita podría admitirlos implícitamente. Para más información, consulte las secciones [Compatibilidad implícita de índices](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) y [Compatibilidad implícita de rangos](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) de la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/ranges.md).
+
+Por ejemplo, los tipos de .NET siguientes admiten tanto índices como rangos: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> y <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> admite índices, pero no rangos.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Escenarios para los índices y los rangos
 

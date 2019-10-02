@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926681"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332007"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -186,7 +186,7 @@ Puede compilar una aplicación o un servicio web único basado en una implementa
 
 Para administrar este modelo, debe implementar un único contenedor para representar la aplicación. Para escalar, solo tiene que agregar más copias con un equilibrador de carga delante. La simplicidad proviene de administrar una única implementación en un solo contenedor o máquina virtual.
 
-![](./media/image5-13.png)
+![Figura 5-13](./media/image5-13.png)
 
 Puede incluir varios componentes, bibliotecas o capas internas en cada contenedor, como se muestra en la figura 5-13. Pero, al seguir el principio de contenedor "_un contenedor realiza una acción y lo hace en un proceso_", es posible que el patrón monolítico entre en conflicto.
 
@@ -198,7 +198,7 @@ Además del problema de "escalarlo todo", los cambios en un único componente re
 
 El enfoque monolítico es habitual y muchas organizaciones realizan el desarrollo con este enfoque de diseño. Muchas obtienen resultados bastante positivos, mientras que otras alcanzan los límites. Muchas diseñaron sus aplicaciones con este modelo, ya que crear arquitecturas orientadas a servicios (SOA) con infraestructura y herramientas resultaba demasiado difícil, y no vieron la necesidad hasta que la aplicación creció. Si comprueba que está alcanzando los límites del enfoque monolítico, dividir la aplicación para que pueda aprovechar mejor los contenedores y microservicios puede ser el siguiente paso lógico.
 
-![](./media/image5-14.png)
+![Figura 5-14](./media/image5-14.png)
 
 La implementación de aplicaciones monolíticas en Microsoft Azure se puede conseguir con máquinas virtuales dedicadas para cada instancia. Con [Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), las máquinas virtuales se pueden escalar fácilmente. [Azure App Services](https://azure.microsoft.com/services/app-service/) puede ejecutar aplicaciones monolíticas y escalar fácilmente instancias sin necesidad de administrar las máquinas virtuales. Azure App Services también puede ejecutar instancias únicas de contenedores de Docker, lo que simplifica la implementación. Con Docker, se puede implementar una única máquina virtual como un host de Docker y ejecutar varias instancias. Con el equilibrador de Azure, como se muestra en la figura 5-14, se puede administrar el escalado.
 

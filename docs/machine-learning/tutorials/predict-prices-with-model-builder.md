@@ -3,15 +3,15 @@ title: 'Tutorial: Predicción de precios mediante regresión con el Generador de
 description: En este tutorial se muestra cómo compilar un modelo de regresión con el Generador de modelos de ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/18/2019
+ms.date: 09/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117960"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332593"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Predicción de precios mediante regresión con el Generador de modelos
 
@@ -46,11 +46,11 @@ Para obtener una lista de los requisitos previos e instrucciones de instalación
 
 1. El conjunto de datos que se usa para entrenar y evaluar el modelo de Machine Learning procede originalmente del conjunto de datos NYC TLC Taxi Trip.
 
-    Para descargar el conjunto de datos, vaya al [vínculo de descarga de taxi-fare-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
+    1. Para descargar el conjunto de datos, vaya al [vínculo de descarga de taxi-fare-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
 
-    Cuando se cargue la página, haga clic con el botón derecho en cualquier parte de la página y seleccione **Guardar como**.
+    1. Cuando se cargue la página, haga clic con el botón derecho en cualquier parte de la página y seleccione **Guardar como**.
 
-    Use el **cuadro de diálogo Guardar como** para guardar el archivo en la carpeta *Data* que creó en el paso anterior.
+    1. Use el **cuadro de diálogo Guardar como** para guardar el archivo en la carpeta *Data* que creó en el paso anterior.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo *taxi-fare-train.csv* y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
@@ -63,12 +63,12 @@ Cada fila del conjunto de datos `taxi-fare-train.csv` contiene los detalles de l
     - **vendor_id:** el identificador del taxista es una característica.
     - **rate_code:** el tipo de tarifa del viaje en taxi es una característica.
     - **passenger_count:** el número de pasajeros en el recorrido es una característica.
-    - **trip_time_in_secs:** la cantidad de tiempo que tardó el viaje.
+    - **trip_time_in_secs:** la cantidad de tiempo que tardó el viaje. Por ejemplo, si quiere calcular la tarifa del viaje antes de que termine y aún no conoce la duración del viaje, el tiempo del viaje no es una característica, por lo que deberá excluir esta columna del modelo.
     - **trip_distance:** la distancia del viaje es una característica.
     - **payment_type:** el método de pago (efectivo o tarjeta de crédito) es una característica.
     - **fare_amount:** la tarifa de taxi total pagada es la etiqueta.
 
-`label` es la columna que quiere predecir. Al realizar una tarea de regresión, el objetivo es predecir un valor numérico. En este escenario de predicción de precio, se predice el coste de un viaje de taxi. Por lo tanto, **fare_amount** es la etiqueta. Los valores de `features` identificados son las entradas que se proporcionan al modelo para predecir `label`. En este caso, el resto de columnas se usan como entradas o características para predecir el importe de la tarifa.
+`label` es la columna que quiere predecir. Al realizar una tarea de regresión, el objetivo es predecir un valor numérico. En este escenario de predicción de precio, se predice el coste de un viaje de taxi. Por lo tanto, **fare_amount** es la etiqueta. Los valores de `features` identificados son las entradas que se proporcionan al modelo para predecir `label`. En este cas, el resto de las columnas, con la excepción de **trip_time_in_secs**, se usan como características o entradas para predecir el importe de la tarifa.
 
 ## <a name="choose-a-scenario"></a>Elección de un escenario
 
@@ -83,7 +83,8 @@ El Generador de modelos acepta datos de dos orígenes, una base de datos de SQL�
 
 1. En el paso de datos de la herramienta Generador de modelos, seleccione *Archivo* en la lista desplegable origen de datos.
 1. Seleccione el botón junto al cuadro de texto *Seleccionar un archivo* y use el Explorador de archivos para examinar y seleccionar *taxi-fare-test.csv* en el directorio *Datos*.
-1. Elija *fare_amount* en la lista desplegable *Etiqueta o columna para la predicción* y vaya al paso de entrenamiento de la herramienta Generador de modelos.
+1. Elija *fare_amount* en la lista desplegable *Column to Predict (Label)* (Columna para la predicción [etiqueta]) y vaya al paso de entrenamiento de la herramienta Generador de modelos.
+1. Expanda la lista desplegable *Input Columns (Features)* (Columnas de entrada [características]) y desactive la columna *trip_time_in_secs* para excluirla como característica durante el entrenamiento.
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
@@ -113,43 +114,19 @@ Si no está satisfecho con las métricas de precisión, una forma sencilla de in
 
 Se crearán dos proyectos como resultado del proceso de entrenamiento.
 
-- TaxiFarePredictionML.ConsoleApp: Una aplicación de consola de .NET Core que contiene el entrenamiento del modelo y el código de consumo.
-- TaxiFarePredictionML.Model: Una biblioteca de clases .NET Standard que contienen los modelos de datos que definen el esquema de entrada y salida de los datos del modelo, así como la versión persistente del modelo con mejor rendimiento durante el entrenamiento.
+- TaxiFarePredictionML.ConsoleApp: Una aplicación de consola de .NET Core que contiene el entrenamiento del modelo y el código de consumo de ejemplo.
+- TaxiFarePredictionML.Model: Una biblioteca de clase de .NET Standard que contiene los modelos de datos que definen el esquema de los datos de modelo de entrada y salida, la versión guardada del modelo con mejor rendimiento durante el entrenamiento y una clase auxiliar llamada `ConsumeModel` para hacer predicciones.
 
 1. En el paso de código de la herramienta Generador de modelos, seleccione **Agregar proyectos** para agregar a la solución los proyectos generados automáticamente.
-1. Haga clic con el botón derecho en el proyecto *TaxiFarePrediction*. A continuación, **Agregar > Referencia**. Elija el nodo **Proyectos > Solución** y, en la lista, marque el proyecto *TaxiFarePredictionML.Model* y haga clic en Aceptar.
 1. Abra el archivo *Program.cs* en el proyecto *TaxiFarePrediction*.
-1. Agregue las siguientes instrucciones USING para hacer referencia al paquete de NuGet *Microsoft.ML* y al proyecto *TaxiFarePredictionML.Model*:
+1. Agregue la instrucción using siguiente para hacer referencia al proyecto *TaxiFarePredictionML.Model*:
 
     ```csharp
     using System;
-    using Microsoft.ML;
-    using TaxiFarePredictionML.Model.DataModels;
+    using TaxiFarePredictionML.Model;
     ```
 
-1. Agregue el método `ConsumeModel` a la clase `Program`.
-
-    ```csharp
-    static ModelOutput ConsumeModel(ModelInput input)
-    {
-        // 1. Load the model
-        MLContext mlContext = new MLContext();
-        ITransformer mlModel = mlContext.Model.Load("MLModel.zip", out var modelInputSchema);
-
-        // 2. Create PredictionEngine
-        var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-        // 3. Use PredictionEngine to use model on input data
-        ModelOutput result = predictionEngine.Predict(input);
-
-        // 4. Return prediction result
-        return result;
-    }
-    ```
-
-    `ConsumeModel` cargará el modelo entrenado, creará un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para el modelo y lo usará para realizar predicciones según los datos nuevos.
-
-1. Para hacer una predicción según los datos nuevos con el modelo, cree una instancia de la clase `ModelInput` y use el método `ConsumeModel`. Observe que el importe de la tarifa no forma parte de la entrada. Esto se debe a que el modelo generará la predicción para él. Agregue el siguiente código al método `Main` y ejecute la aplicación.
+1. Para hacer una predicción según los datos nuevos con el modelo, cree una instancia nueva de la clase `ModelInput` dentro del método `Main` de la aplicación. Observe que el importe de la tarifa no forma parte de la entrada. Esto se debe a que el modelo generará la predicción para él. 
 
     ```csharp
     // Create sample data
@@ -158,23 +135,28 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
         Vendor_id = "CMT",
         Rate_code = 1,
         Passenger_count = 1,
-        Trip_time_in_secs = 1271,
         Trip_distance = 3.8f,
         Payment_type = "CRD"
     };
+    ```
 
+1. Use el método `Predict` de la clase `ConsumeModel`. El método `Predict` carga el modelo entrenado, crea un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para el modelo y lo usa para realizar predicciones según los datos nuevos. 
+
+    ```csharp
     // Make prediction
-    ModelOutput prediction = ConsumeModel(input);
+    ModelOutput prediction = ConsumeModel.Predict(input);
 
     // Print Prediction
     Console.WriteLine($"Predicted Fare: {prediction.Score}");
     Console.ReadKey();
     ```
 
+1. Ejecute la aplicación.
+
     La salida generada por el programa debe ser similar al siguiente fragmento de código:
 
     ```bash
-    Predicted Fare: 16.82245
+    Predicted Fare: 14.96086
     ```
 
 Si tiene que hacer referencia a los proyectos generados en un momento posterior dentro de otra solución, puede encontrarlos en el directorio `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.

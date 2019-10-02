@@ -4,12 +4,12 @@ description: Información general sobre las herramientas globales de .NET Core y
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117459"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332018"
 ---
 # <a name="net-core-global-tools-overview"></a>Información general sobre las herramientas globales de .NET Core
 
@@ -107,31 +107,6 @@ También puede buscar las instrucciones de uso en el sitio web de la herramienta
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>Cosas que pueden fallar
-
-Las herramientas globales son [aplicaciones que dependen del marco](../deploying/index.md#framework-dependent-deployments-fdd), lo que significa que se basan en un runtime de .NET Core instalado en el equipo. Si no se encuentra el runtime esperado, se siguen las reglas normales de puesta al día de runtime de .NET Core:
-
-* Una aplicación avanza a la versión de revisión más alta de las versiones principal y secundaria especificadas.
-* Si no hay ningún runtime que coincida con un número de versión principal y secundaria, se usa la siguiente versión secundaria más alta.
-* Esta puesta al día no se produce entre versiones preliminares del runtime ni entre versiones preliminares y versiones de lanzamiento. En consecuencia, las herramientas globales creadas con versiones preliminares deben ser recompiladas por el autor y posteriormente reinstaladas.
-* Pueden producirse otros problemas con las herramientas globales creadas en .NET Core 2.1, versión preliminar 1. Para obtener más información, consulte [.NET Core 2.1 Preview 2 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md) (Problemas conocidos de .NET Core 2.1, versión preliminar 2).
-
-Si una aplicación no encuentra el runtime apropiado, no se puede ejecutar y notifica un error.
-
-Otro problema que puede ocurrir es que una herramienta global que se creó durante una versión preliminar anterior no funcione con los runtime de .NET Core instalados actualmente. Puede usar el comando siguiente para ver los runtime que están instalados en su equipo:
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Póngase en contacto con el autor de la herramienta global y vea si puede volver a compilar y publicar en NuGet el paquete de la herramienta con un número de versión actualizada. Una vez que hayan actualizado el paquete en NuGet, puede actualizar su copia.
-
-La primera vez que se usa, la CLI de .NET Core intenta agregar las ubicaciones predeterminadas a la variable de entorno PATH. Pero hay un par de escenarios en los que la ubicación podría no agregarse automáticamente a PATH:
-
-* Si ha establecido la variable de entorno `DOTNET_SKIP_FIRST_TIME_EXPERIENCE`.
-* En macOS, si ha instalado el SDK de .NET Core usando archivos *.tar.gz* en lugar de *.pkg*.
-* En Linux, debe editar el archivo de entorno de shell para configurar PATH.
-
 ## <a name="other-cli-commands"></a>Otros comandos de la CLI
 
 El SDK de .NET Core contiene otros comandos que pueden usarse con las herramientas globales de .NET Core. Utilice cualquiera de los comandos de `dotnet tool` combinado con las opciones siguientes:
@@ -162,3 +137,7 @@ Para mostrar todas las herramientas globales instaladas actualmente en el equipo
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>Vea también
+
+* [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md)

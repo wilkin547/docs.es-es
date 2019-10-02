@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Análisis de sentimiento: clasificación binaria'
 description: En este tutorial se muestra cómo crear una aplicación Razor Pages que clasifica los sentimientos de los comentarios del sitio web y toma las medidas oportunas. El clasificador binario de sentimientos usa el Generador de modelos en Visual Studio.
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6184e097daf4604173db9e2a34606e68eb0fdc8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054277"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332582"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Análisis del sentimiento de los comentarios del sitio web en una aplicación web con el Generador de modelos de ML.NET
 
@@ -22,13 +22,14 @@ En este tutorial se muestra cómo crear una aplicación Razor Pages de ASP.NET 
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
-> * Crear una aplicación Razor Pages de ASP.NET Core
-> * Preparar y entender los datos
-> * Elección de un escenario
-> * Carga de los datos
-> * Entrenar el modelo
-> * Evaluar el modelo
-> * Usar el modelo para las predicciones
+>
+> - Crear una aplicación Razor Pages de ASP.NET Core
+> - Preparar y entender los datos
+> - Elección de un escenario
+> - Carga de los datos
+> - Entrenar el modelo
+> - Evaluar el modelo
+> - Usar el modelo para las predicciones
 
 > [!NOTE]
 > De momento, el Generador de modelos se encuentra en versión preliminar.
@@ -43,17 +44,17 @@ Para obtener una lista de los requisitos previos e instrucciones de instalación
 
 1. Cree una **aplicación Razor Pages de ASP.NET Core**.
 
-    1. Abra Visual Studio y seleccione **Archivo > Nuevo > Proyecto** en la barra de menús. 
-    1. En el cuadro de diálogo Nuevo proyecto, seleccione el nodo **Visual C#** seguido del nodo **Web**. 
-    1. Seleccione la plantilla de proyecto **Aplicación web de ASP.NET Core**. 
+    1. Abra Visual Studio y seleccione **Archivo > Nuevo > Proyecto** en la barra de menús.
+    1. En el cuadro de diálogo Nuevo proyecto, seleccione el nodo **Visual C#** seguido del nodo **Web**.
+    1. Seleccione la plantilla de proyecto **Aplicación web de ASP.NET Core**.
     1. En el cuadro de texto **Nombre**, escriba "SentimentRazor".
-    1. La casilla **Create a directory for solution** (Crear un directorio para la solución) debe estar activada de manera predeterminada. Si no es así, actívela. 
+    1. La casilla **Create a directory for solution** (Crear un directorio para la solución) debe estar activada de manera predeterminada. Si no es así, actívela.
     1. Seleccione el botón **Aceptar**.
     1. Elija **Aplicación web** en la ventana que muestra los distintos tipos de proyectos de ASP.NET Core y, luego, haga clic en el botón **Aceptar**.
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 
-Descargue el [conjunto de datos detox de Wikipedia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Cuando se abra la página web, haga clic con el botón derecho en la página, seleccione **Guardar como** y guarde el archivo en cualquier parte del equipo. 
+Descargue el [conjunto de datos detox de Wikipedia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Cuando se abra la página web, haga clic con el botón derecho en la página, seleccione **Guardar como** y guarde el archivo en cualquier parte del equipo.
 
 Cada fila del conjunto de datos *wikipedia-detox-250-line-data.tsv* presenta una opinión distinta que un usuario deja en Wikipedia. La primera columna representa el sentimiento del texto (0 indica no tóxico, 1 indica tóxico) y la segunda columna representa el comentario que deja el usuario. Las columnas están separadas por tabulaciones. Los datos tienen un aspecto similar al siguiente:
 
@@ -65,9 +66,9 @@ Cada fila del conjunto de datos *wikipedia-detox-250-line-data.tsv* presenta una
 
 ## <a name="choose-a-scenario"></a>Elección de un escenario
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Asistente para el generador de modelos en Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-Para entrenar el modelo, deberá seleccionarlo en la lista de escenarios de aprendizaje automático disponibles proporcionada por el Generador de modelos. 
+Para entrenar el modelo, deberá seleccionarlo en la lista de escenarios de aprendizaje automático disponibles proporcionada por el Generador de modelos.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto *SentimentRazor* y seleccione **Agregar** > **Machine Learning**.
 1. En este ejemplo, el escenario es el análisis de sentimiento. En el paso *Escenario* de la herramienta Generador de modelos, seleccione el escenario **Análisis de sentimiento**.
@@ -78,14 +79,15 @@ El Generador de modelos acepta datos de dos orígenes, una base de datos de SQL�
 
 1. En el paso de datos de la herramienta Generador de modelos, seleccione **Archivo** en la lista desplegable origen de datos.
 1. Seleccione el botón junto al cuadro de texto **Seleccionar un archivo** y use el Explorador de archivos para examinar y seleccionar el archivo *wikipedia-detox-250-line-data.tsv*.
-1. Elija **Sentimiento** en el menú desplegable **Etiqueta o columna para la predicción**.
+1. Elija **Sentimiento** en el menú desplegable **Column to Predict (Label)** (Columna para la predicción [etiqueta]).
+1. Deje los valores predeterminados del menú desplegable **Input Columns (Features)** (Columnas de entrada [características]).
 1. Seleccione el vínculo **Entrenar** para ir al paso siguiente en la herramienta Generador de modelos.
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
 La tarea de aprendizaje automático que se usa para entrenar el modelo de predicción de precio en este tutorial es la clasificación binaria. Durante el proceso de entrenamiento de modelos, el Generador de modelos entrena modelos independientes con diferentes opciones y algoritmos de clasificación binaria para encontrar el modelo con mejor rendimiento para el conjunto de datos.
 
-El tiempo necesario para el entrenamiento del modelo es proporcional a la cantidad de datos. El generador de modelos selecciona automáticamente un valor predeterminado para **Tiempo de entrenamiento (segundos)** en función del tamaño del origen de datos. 
+El tiempo necesario para el entrenamiento del modelo es proporcional a la cantidad de datos. El generador de modelos selecciona automáticamente un valor predeterminado para **Tiempo de entrenamiento (segundos)** en función del tamaño del origen de datos.
 
 1. Aunque el Generador de modelos establezca el valor de **Tiempo de entrenamiento (segundos)** en 10 segundos, debe aumentarlo a 30 segundos. El entrenamiento durante un período de tiempo más prolongado permite que el Generador de modelos explore un mayor número de algoritmos y combinación de parámetros en la búsqueda del mejor modelo.
 1. Seleccione **Iniciar entrenamiento**.
@@ -116,37 +118,27 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
     Los proyectos siguientes deben aparecer en el **Explorador de soluciones**:
 
     - *SentimentRazorML.ConsoleApp*: una aplicación de consola de .NET Core que contiene el entrenamiento del modelo y el código de predicción.
-    - *SentimentRazorML.Model*: Una biblioteca de clases .NET Standard que contienen los modelos de datos que definen el esquema de entrada y salida de los datos del modelo, así como la versión persistente del modelo con mejor rendimiento durante el entrenamiento.
+    - *SentimentRazorML.Model*: Una biblioteca de clases .NET Standard que contienen los modelos de datos que definen el esquema de entrada y salida de los datos del modelo, así como la versión guardada del modelo con mejor rendimiento durante el entrenamiento.
 
     En este tutorial, solo se usa el proyecto *SentimentRazorML.Model*, porque las predicciones se realizarán en la aplicación web *SentimentRazor* en lugar de hacerlo en la consola. Aunque *SentimentRazorML.ConsoleApp* no se usará para la puntuación, se puede usar para volver a entrenar el modelo con datos nuevos más adelante. No obstante, el reentrenamiento queda fuera del ámbito de este tutorial.
 
-1. Para usar el modelo entrenado dentro de la aplicación Razor Pages, agregue una referencia al proyecto *SentimentRazorML.Model*.
-
-    1. Haga clic con el botón derecho en el proyecto **SentimentRazor**. 
-    1. Seleccione **Agregar > Referencia**. 
-    1. Elija el nodo **Proyectos > Solución** y, en la lista, active el proyecto **SentimentRazorML.Model**.
-    1. Seleccione **Aceptar**.
-
 ### <a name="configure-the-predictionengine-pool"></a>Configuración del grupo PredictionEngine
 
-Para realizar una sola predicción, use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Para poder usar [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) en la aplicación, debe crearlo cuando sea necesario. En ese caso, un procedimiento recomendado que se debe considerar es la inserción de dependencias.
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Para mejorar el rendimiento y la seguridad para subprocesos, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos `PredictionEngine` para el uso de la aplicación. Lea la siguiente entrada de blog para obtener más información acerca de la [creación y el uso de grupos de objetos `PredictionEngine` en ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
+Para hacer una sola predicción, debe crear un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Además, tiene que crear una instancia de ella en cualquier lugar en que se necesite dentro de la aplicación. A medida que crece la aplicación, este proceso puede volverse difícil de administrar. Para mejorar el rendimiento y la seguridad para subprocesos, use una combinación de inserción de dependencias y el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación.
 
 1. Instale el paquete *Microsoft.Extensions.ML* de NuGet:
 
-    1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Administrar paquetes NuGet**. 
-    1. Elija "nuget.org" como origen del paquete. 
-    1. Seleccione la pestaña **Examinar** y busque **Microsoft.Extensions.ML**. 
-    1. Seleccione el paquete en la lista y haga clic en el botón **Instalar**. 
+    1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Administrar paquetes NuGet**.
+    1. Elija "nuget.org" como origen del paquete.
+    1. Seleccione la pestaña **Examinar** y busque **Microsoft.Extensions.ML**.
+    1. Seleccione el paquete en la lista y haga clic en el botón **Instalar**.
     1. Haga clic en el botón **Aceptar** en el cuadro de diálogo **Vista previa de los cambios**.
-    1. Haga clic en el botón **Acepto** en el cuadro de diálogo **Aceptación de la licencia** si está de acuerdo con los términos de licencia de los paquetes que aparecen. 
+    1. Haga clic en el botón **Acepto** en el cuadro de diálogo **Aceptación de la licencia** si está de acuerdo con los términos de licencia de los paquetes que aparecen.
 
 1. Abra el archivo *Startup.cs* en el proyecto *SentimentRazor*.
 1. Agregue las instrucciones USING siguientes para hacer referencia al paquete de NuGet *Microsoft.Extensions.ML* y al proyecto *SentimentRazorML.Model*:
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]        
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
 
 1. Cree una variable global para almacenar la ubicación del archivo del modelo entrenado.
 
@@ -172,7 +164,7 @@ Las predicciones se realizarán dentro de la página principal de la aplicación
 
     [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
 
-    Para usar el `PredictionEnginePool` configurado en la clase `Startup`, debe insertarlo en el constructor del modelo donde quiere usarlo. 
+    Para usar el `PredictionEnginePool` configurado en la clase `Startup`, debe insertarlo en el constructor del modelo donde quiere usarlo.
 
 1. Agregue una variable para hacer referencia al `PredictionEnginePool` dentro de la clase `IndexModel`.
 
@@ -195,15 +187,15 @@ Las predicciones se realizarán dentro de la página principal de la aplicación
 
     1. Dentro del método `OnGetAnalyzeSentiment`, devuelva un sentimiento *neutral* si la información ingresada por el usuario es nula o está en blanco.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)] 
-    
-    1. Dada una entrada válida, cree una instancia nueva de `ModelInput`. 
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)] 
+    1. Dada una entrada válida, cree una instancia nueva de `ModelInput`.
+
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
 
     1. Use `PredictionEnginePool` para predecir el sentimiento.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)] 
+        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
 
     1. Convierta el valor `bool` de predicción en Tóxico o No tóxico con el código siguiente.
 
@@ -217,7 +209,7 @@ Las predicciones se realizarán dentro de la página principal de la aplicación
 
 Los resultados que devuelve el `OnGetAnalyzeSentiment` se mostrarán de manera dinámica en la página web `Index`.
 
-1. Abra el archivo *Index.cshtml* del directorio *Pages* y reemplace su contenido por el código siguiente: 
+1. Abra el archivo *Index.cshtml* del directorio *Pages* y reemplace su contenido por el código siguiente:
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
@@ -249,7 +241,7 @@ Ahora que la aplicación está configurada, ejecútela. Debería iniciarse en el
 
 Cuando se inicie la aplicación, escriba *¡El Generador de modelos es genial!* en el área de texto. El sentimiento de predicción que aparece debe ser *Not Toxic* (No tóxico).
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![Ventana en ejecución con la ventana de sentimiento de predicción](./media/sentiment-analysis-model-builder/web-app.png)
 
 Si tiene que hacer referencia a los proyectos generados por el Generador de modelos más adelante en otra solución, puede encontrarlos en el directorio `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
@@ -257,13 +249,14 @@ Si tiene que hacer referencia a los proyectos generados por el Generador de mode
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
-> * Crear una aplicación Razor Pages de ASP.NET Core
-> * Preparar y entender los datos
-> * Elección de un escenario
-> * Carga de los datos
-> * Entrenar el modelo
-> * Evaluar el modelo
-> * Usar el modelo para las predicciones
+>
+> - Crear una aplicación Razor Pages de ASP.NET Core
+> - Preparar y entender los datos
+> - Elección de un escenario
+> - Carga de los datos
+> - Entrenar el modelo
+> - Evaluar el modelo
+> - Usar el modelo para las predicciones
 
 ### <a name="additional-resources"></a>Recursos adicionales
 

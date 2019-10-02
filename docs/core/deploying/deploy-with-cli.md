@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306071"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181510"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
 
@@ -59,7 +59,7 @@ En las secciones [Archivo ejecutable dependiente de la plataforma](#framework-de
 
 ## <a name="sample-app"></a>Aplicación de ejemplo
 
-Puede usar la siguiente aplicación de ejemplo para explorar los comandos de publicación. La aplicación se crea mediante la ejecución de los comandos siguientes en el terminal:
+Puede usar la siguiente aplicación para explorar los comandos de publicación. La aplicación se crea mediante la ejecución de los comandos siguientes en el terminal:
 
 ```dotnetcli
 mkdir apptest1
@@ -118,7 +118,7 @@ Al publicar una FDD se crea una aplicación que realiza la puesta al día autom�
 
 ## <a name="framework-dependent-executable"></a>Archivo ejecutable dependiente de la plataforma
 
-Para la CLI del SDK de .NET Core 3.x, el archivo ejecutable dependiente de la plataforma (FDE) es el modo predeterminado para el comando `dotnet publish` básico. No es necesario especificar ningún otro parámetro, siempre que se quiera establecer como destino el sistema operativo actual.
+Para la CLI del SDK de .NET Core 3.x, el archivo ejecutable dependiente de la plataforma (FDE) es el modo predeterminado para el comando `dotnet publish` básico. No es necesario especificar ningún otro parámetro, siempre que se quiera establecer como destino el sistema operativo actual.
 
 En este modo, se crea un host ejecutable específico de la plataforma para hospedar la aplicación multiplataforma. Este modo es similar a FDD ya requiere un host en forma del comando `dotnet`. El nombre de archivo ejecutable de host varía según la plataforma y es similar a `<PROJECT-FILE>.exe`. Este archivo ejecutable se puede ejecutar directamente en lugar de llamar a `dotnet <PROJECT-FILE>.dll`, que sigue siendo una forma aceptable de ejecutar la aplicación.
 

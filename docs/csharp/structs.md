@@ -3,14 +3,15 @@ title: 'Structs: Guía de C#'
 description: Obtenga información sobre el tipo struct y cómo se crea.
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608019"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396127"
 ---
 # <a name="structs"></a>Estructuras
+
 Un *struct* es un tipo de valor. Cuando se crea un struct, la variable a la que se asigna el struct contiene los datos reales del struct. Cuando la estructura se asigna a una nueva variable, se copia. Por lo tanto, la nueva variable y la variable original contienen dos copias independientes de los mismos datos. Los cambios realizados en una copia no afectan a la otra copia.
 
 Las variables de tipo de valor contienen directamente sus valores, lo que significa que la memoria se asigna insertada en cualquier contexto en el que se declare la variable. No se produce ninguna asignación del montón independiente ni sobrecarga de la recolección de elementos no utilizados para las variables de tipo de valor.  
@@ -51,7 +52,8 @@ Los structs comparten la mayoría de la sintaxis con las clases, aunque están m
   
 - Un struct puede implementar interfaces.
 
-## <a name="literal-values"></a>Valores literales  
+## <a name="literal-values"></a>Valores literales
+
 En C#, los valores literales reciben un tipo del compilador. Puede especificar cómo debe escribirse un literal numérico; para ello, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá el tipo `double` para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea las páginas de referencia de los tipos individuales en [Tipos de valor](./language-reference/keywords/value-types.md).  
   
 Dado que los literales tienen tipo y todos los tipos derivan en última instancia de <xref:System.Object>, puede escribir y compilar código como el siguiente:  
@@ -62,8 +64,9 @@ En los dos últimos ejemplos se muestran las características del lenguaje inclu
 
 En el segundo se muestran *literales binarios*, que permiten especificar patrones de bits directamente, en lugar de mediante la notación hexadecimal.
 
-## <a name="nullable-types"></a>Tipos que aceptan valores NULL  
-Los tipos de valor normales no pueden tener un valor [null](./language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de un carácter **?** después del tipo. Por ejemplo, **int?** es un tipo **int** que también puede tener el valor [null](./language-reference/keywords/null.md). En CTS, los tipos que aceptan valores NULL son instancias del tipo struct genérico <xref:System.Nullable%601>. Los tipos que aceptan valores NULL son especialmente útiles cuando se pasan datos hacia y desde bases de datos en las que los valores numéricos podrían ser nulos. Para obtener más información, vea [Tipos que aceptan valores NULL (Guía de programación de C#)](./programming-guide/nullable-types/index.md).
+## <a name="nullable-value-types"></a>Tipos de valor que aceptan valores NULL
+
+Los tipos de valor normales no pueden tener un valor [null](language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](./language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos o no definidos. Para más información, consulte [Tipos que admiten un valor NULL](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Vea también
 

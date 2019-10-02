@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948920"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353945"
 ---
 # <a name="generic-collections-in-net"></a>Colecciones genéricas en .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "69948920"
  La estructura genérica <xref:System.Nullable%601> permite usar tipos de valor como si se les pudiera asignar el valor `null`. Esto puede ser útil para trabajar con consultas de base de datos en las que pueden faltar campos que contienen tipos de valor. El parámetro de tipo genérico puede ser cualquier tipo de valor.  
   
 > [!NOTE]
-> En C# y Visual Basic no hay que usar <xref:System.Nullable%601> explícitamente porque el lenguaje tiene sintaxis para tipos que aceptan valores NULL. Vea [Tipos que aceptan valores NULL (Guía de programación de C#)](../../csharp/programming-guide/nullable-types/index.md) y [Tipos que admiten valores NULL (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> En C# y Visual Basic no hay que usar <xref:System.Nullable%601> explícitamente porque el lenguaje tiene sintaxis para tipos que aceptan valores NULL. Consulte [Tipos de valor que admiten un valor NULL (Guía de programación de C#)](../../csharp/programming-guide/nullable-types/index.md) y [Tipos de valor que admiten un valor NULL (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
   
  La estructura genérica <xref:System.ArraySegment%601> proporciona una manera de delimitar un intervalo de elementos en una matriz unidimensional basada en cero de cualquier tipo. El parámetro de tipo genérico es el tipo de los elementos de la matriz.  
   

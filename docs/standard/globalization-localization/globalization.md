@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442482"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393123"
 ---
 # <a name="globalization"></a>Globalización
 
@@ -143,8 +143,7 @@ Normalmente, cuando las fechas y horas se muestran en la interfaz de usuario, de
 
 - El método <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> sin parámetros
 
-- 
-  <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, que incluye una cadena de formato
+- <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, que incluye una cadena de formato
 
 - La característica [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md), cuando se usa con fechas
 
@@ -184,7 +183,7 @@ El siguiente ejemplo ilustra este problema. Guarda un solo valor de fecha y hora
 
 Cuando se restauran los datos en un sistema en la misma zona horaria que el sistema en el que se han serializado, los valores de fecha y hora deserializados reflejan exactamente el valor original, como muestra el resultado:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -194,7 +193,7 @@ Cuando se restauran los datos en un sistema en la misma zona horaria que el sist
 
 En cambio, si restaura los datos en un sistema en una zona horaria diferente, solo el valor de fecha y hora con el formato de la cadena de formato estándar "o" (ida y vuelta) conserva la información de zona horaria y, por tanto, representa la misma instantánea en el tiempo. Este es el resultado cuando se restauran datos de fecha y hora en un sistema en la zona horaria estándar romance:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -219,7 +218,7 @@ En el siguiente ejemplo se ilustra cada técnica.
 
 Cuando los datos se serializan en un sistema en la zona horaria estándar del Pacífico y se deserializan en un sistema en la zona horaria estándar romance, el ejemplo muestra el siguiente resultado:
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local
