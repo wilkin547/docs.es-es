@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151834"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306360"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -315,7 +315,8 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 |SQL|sql|
 |Swift|swift|
 |TypeScript|typescript|
-|VB|vb|
+|Visual Basic|vb|
+|VBScript|vbscript|
 |XAML|xaml|
 |XML|xml|
 
