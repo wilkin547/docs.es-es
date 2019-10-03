@@ -4,12 +4,12 @@ description: Una guía para las distintas formas en que se implementan las arqui
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577638"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834339"
 ---
 # <a name="architecture-deployment-approaches"></a>Enfoques para la implementación de arquitecturas
 
@@ -97,13 +97,13 @@ Las ventajas de los contenedores incluyen:
 
 Un contenedor se ejecuta en un host de contenedor (que, a su vez, se puede ejecutar en un equipo sin sistema operativo o en una máquina virtual). Se pueden ejecutar varios contenedores o instancias de los mismos contenedores en un solo host. En el caso de una conmutación por error y resistencia verdaderas, los contenedores se deben escalar entre los hosts.
 
-Para más información sobre los contenedores de Docker, consulte [¿Qué es Docker](../microservices/container-docker-introduction/docker-defined.md)?
+Para obtener más información sobre los contenedores de Docker, consulte [Qué es Docker](../microservices/container-docker-introduction/docker-defined.md).
 
 La administración de contenedores en hosts normalmente requiere una herramienta de orquestación como Kubernetes. La configuración y administración de soluciones de orquestación puede Agregar sobrecarga y complejidad adicionales a los proyectos. Afortunadamente, muchos proveedores de nube proporcionan servicios de orquestación a través de soluciones PaaS para simplificar la administración de contenedores.
 
 En la imagen siguiente se muestra una instalación de Kubernetes de ejemplo. Los nodos de la dirección de instalación se escalan horizontalmente y la conmutación por error. Ejecutan instancias de contenedor de Docker administradas por el servidor maestro. *Kubelet* es el cliente que retransmite comandos de Kubernetes a Docker.
 
-![kubernetes](./media/kubernetes-example.png)
+![Kubernetes](./media/kubernetes-example.png)
 
 Para obtener más información acerca de la orquestación, consulte [Kubernetes en Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes).
 
@@ -140,7 +140,7 @@ Hay una amplia gama de opciones disponibles para la arquitectura, incluido un en
 |---------|---------|---------|---------|----------|
 |**Escalar**|MEDIO       |Instancia |Aplicación      |Función  |
 |**Abstrae**|Hardware|Plataforma|Host de SO|Tiempo de ejecución   |
-|**Unidad** |MEDIO       |Proyecto  |Image    |Código      |
+|**Unitario** |MEDIO       |Proyecto  |Image    |Código      |
 |**Duración**|Partir|Días a meses|Minutos a días|Milisegundos hasta minutos|
 |**Resp**|Aplicaciones, dependencias, tiempo de ejecución y sistema operativo|Aplicaciones y dependencias|Aplicaciones, dependencias y tiempo de ejecución|Función
 
