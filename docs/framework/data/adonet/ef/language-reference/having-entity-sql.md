@@ -2,19 +2,19 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: fe8a177b83932c1c7607f8444c05292c0ee29684
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 97ed6e06241804bf2f576c910a2235b0cb570bbb
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250846"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833731"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Especifica una condición de búsqueda para un grupo o agregado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 [ HAVING search_condition ]  
 ```  
   
@@ -28,9 +28,9 @@ Especifica una condición de búsqueda para un grupo o agregado.
 > [!NOTE]
 > HAVING solo se puede usar con la instrucción [Select](select-entity-sql.md) . Cuando no se usa [Group by](group-by-entity-sql.md) , having se comporta como una cláusula WHERE.  
   
- La cláusula HAVING funciona como la cláusula WHERE salvo que se aplica después de la operación GROUP BY. Esto significa que la cláusula HAVING solo puede hacer referencias a agrupar alias y agregados, como se muestra en el ejemplo siguiente.  
+La cláusula HAVING funciona como la cláusula WHERE salvo que se aplica después de la operación GROUP BY. Esto significa que la cláusula HAVING solo puede hacer referencias a agrupar alias y agregados, como se muestra en el ejemplo siguiente:
   
-```  
+```sql  
 SELECT Name, SUM(o.Price * o.Quantity) AS Total FROM orderLines AS o GROUP BY o.Product AS Name  
 HAVING SUM(o.Quantity) > 1  
 ```  
@@ -40,11 +40,11 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza los operadores HAVING y GROUP BY para especificar una condición de búsqueda para un grupo o un agregado. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
+1. Siga el procedimiento descrito en [How para: Ejecute una consulta que devuelva los resultados de PrimitiveType @ no__t-0.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
+ [!code-sql[DP EntityServices Concepts#HAVING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#having)]  
   
 ## <a name="see-also"></a>Vea también
 
