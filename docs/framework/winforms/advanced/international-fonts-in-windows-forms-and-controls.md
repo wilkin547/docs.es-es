@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ddbd6d7a1b614d588a2572b410957a5ed3b768c
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942901"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956916"
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Fuentes internacionales en Windows Forms y controles
 
-En aplicaciones internacionales, el método recomendado para seleccionar fuentes es usar la reserva de fuentes siempre que sea posible. Reserva de fuentes significa que el sistema determina qué script el carácter pertenece.
+En aplicaciones internacionales, el método recomendado para seleccionar fuentes es usar la reserva de fuentes siempre que sea posible. La reserva de fuentes significa que el sistema determina el script al que pertenece el carácter.
 
-## <a name="using-font-fallback"></a>Uso de reserva de fuentes
+## <a name="using-font-fallback"></a>Usar la reserva de fuentes
 
-Para aprovechar las ventajas de esta característica, no establezca la <xref:System.Drawing.Font> propiedad para el formulario o cualquier otro elemento. La aplicación usará automáticamente la fuente predeterminada del sistema, que es diferente del idioma del sistema operativo a otro. Cuando se ejecuta la aplicación, el sistema proporcionará automáticamente la fuente correcta para la referencia cultural seleccionada en el sistema operativo.
+Para aprovechar esta característica, no establezca la propiedad <xref:System.Drawing.Font> del formulario o de cualquier otro elemento. La aplicación usará automáticamente la fuente predeterminada del sistema, que difiere de un idioma localizado del sistema operativo a otro. Cuando se ejecuta la aplicación, el sistema proporcionará automáticamente la fuente correcta para la referencia cultural seleccionada en el sistema operativo.
 
-Hay una excepción a la regla de no establecer la fuente, que es para cambiar el estilo de fuente. Esto podría ser importante para una aplicación en el que el usuario hace clic en un botón para crear el texto en un cuadro de texto aparecen en negrita. Para ello, escribiría una función para cambiar el estilo de fuente del cuadro de texto en negrita, en función de cualquier fuente del formulario. Es importante llamar a esta función en dos lugares: en el botón <xref:System.Windows.Forms.Control.Click> controlador de eventos y en el <xref:System.Windows.Forms.Control.FontChanged> controlador de eventos. Si se llama a la función solo en el <xref:System.Windows.Forms.Control.Click> controlador de eventos y algún otro elemento de código cambia la familia de fuentes de todo el formulario, el cuadro de texto no cambia con el resto del formulario.
+Existe una excepción a la regla de no establecer la fuente, que es para cambiar el estilo de fuente. Esto puede ser importante para una aplicación en la que el usuario hace clic en un botón para que el texto de un cuadro de texto aparezca en negrita. Para ello, debe escribir una función para cambiar el estilo de fuente del cuadro de texto a negrita, en función de la fuente del formulario. Es importante llamar a esta función en dos lugares: en el controlador de eventos <xref:System.Windows.Forms.Control.Click> del botón y en el controlador de eventos <xref:System.Windows.Forms.Control.FontChanged>. Si solo se llama a la función en el controlador de eventos <xref:System.Windows.Forms.Control.Click> y algún otro fragmento de código cambia la familia de fuentes del formulario completo, el cuadro de texto no cambia con el resto del formulario.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-Sin embargo, al localizar la aplicación, la fuente en negrita puede mostrar incorrectamente en algunos idiomas. Si se trata de un problema, desea que los localizadores tienen la opción de cambiar la fuente de negrita al texto normal. Dado que los localizadores no suelen ser los desarrolladores y no tienen acceso al código fuente, solo a los archivos de recursos, esta opción debe establecerse en los archivos de recursos. Para ello, establecería el <xref:System.Drawing.Font.Bold%2A> propiedad `true`. Esto da como resultado la configuración de fuente que se escriben en los archivos de recursos, donde pueden editar los localizadores. A continuación, escribir código después de la `InitializeComponent` método para restablecer la fuente basada en cualquier fuente del formulario, pero usando el estilo de fuente especificado en el archivo de recursos.
+Sin embargo, al localizar la aplicación, la fuente en negrita puede mostrarse mal para determinados idiomas. Si esto supone un problema, querrá que los localizadores tengan la opción de cambiar la fuente de negrita a texto normal. Dado que los localizadores no suelen ser desarrolladores y no tienen acceso al código fuente, solo a los archivos de recursos, esta opción debe establecerse en los archivos de recursos. Para ello, debe establecer la propiedad <xref:System.Drawing.Font.Bold%2A> en `true`. Esto hace que la configuración de fuente se escriba en los archivos de recursos, donde los localizadores pueden modificarla. Después, escriba el código después del método `InitializeComponent` para restablecer la fuente en función de la fuente del formulario, pero con el estilo de fuente especificado en el archivo de recursos.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,4 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Vea también
 
-- [Globalizar aplicaciones de Windows Forms](globalizing-windows-forms.md)
 - [Utilizar fuentes y texto](using-fonts-and-text.md)

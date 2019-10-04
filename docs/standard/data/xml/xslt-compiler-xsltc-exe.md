@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923284"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956991"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador XSLT (xsltc.exe)
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. La hoja de estilos compilada se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. No se pueden generar ensamblados firmados con xsltc.exe.  
@@ -19,19 +19,19 @@ El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensambla
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
 ## <a name="argument"></a>Argumento  
   
-|Argumento|DESCRIPCIÓN|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`sourceFile`|Especifica el nombre de la hoja de estilos. La hoja de estilos debe ser un archivo local o bien estar ubicada en la intranet.|  
   
 ## <a name="options"></a>Opciones  
   
-|Opción|DESCRIPCIÓN|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Especifica el nombre de la clase para la hoja de estilos siguiente. El nombre de la clase puede ser completo.<br /><br /> De forma predeterminada, el nombre de la clase es igual al de la hoja de estilos. Por ejemplo, si se compila la hoja de estilos customer.xsl, el nombre predeterminado de la clase será customers.|  
 |`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:**  Si se compila en modo de depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
@@ -54,31 +54,31 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 ## <a name="examples"></a>Ejemplos  
  La siguiente instrucción compila la hoja de estilos y crea un ensamblado llamado booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  La siguiente instrucción compila la hoja de estilos, para después crear un ensamblado y un archivo PDB que se llaman booksort.dll y booksort.pdb, respectivamente.  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  La instrucción siguiente compila una hoja de estilos que contiene un elemento msxsl:script y crea dos ensamblados, cuyos nombres son calc.dll y calc_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  La instrucción siguiente habilita el procesamiento DTD y el uso de scripts, para después crear dos ensamblados que se llamarán myTest.dll y myTest_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  La siguiente instrucción compila dos módulos de hoja de estilos y crea un único ensamblado llamado booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   

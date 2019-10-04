@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666528"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957143"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procedimiento para realizar una transformación XSLT mediante un ensamblado
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. Dicho ensamblado se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -134,15 +134,15 @@ El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensambla
   
 1. Si ejecuta la siguiente instrucción desde la línea de comandos, se crearán dos ensamblados, cuyos nombres son `Transform.dll` y `Transform_Script1.dll` (este es el comportamiento predeterminado. A menos que se especifique lo contrario, el nombre de la clase y del ensamblado será, de forma predeterminada, el nombre de la hoja de estilos principal):  
   
-    ```  
+    ```console  
     xsltc /settings:script+ Transform.xsl  
+    ```
+  
+    La siguiente instrucción establece explícitamente el nombre de la clase en Transform:  
+  
+    ```console  
+    xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
-  
- La siguiente instrucción establece explícitamente el nombre de la clase en Transform:  
-  
-```  
-xsltc /settings:script+ /class:Transform Transform.xsl  
-```  
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Para incluir el ensamblado compilado como referencia a la hora de compilar el código.  
   
@@ -150,36 +150,36 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 2. En C#, utilice lo siguiente en la línea de comandos:  
   
-    ```  
+    ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 3. En Visual Basic, utilice lo siguiente en la línea de comandos:  
   
-    ```  
+    ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Para utilizar el ensamblado compilado en su código.  
   
-1. El siguiente ejemplo muestra cómo ejecutar la transformación XSLT utilizando la hoja de estilos compilada.  
+El siguiente ejemplo muestra cómo ejecutar la transformación XSLT utilizando la hoja de estilos compilada.  
   
- [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
- [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
+[!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
+[!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Para vincular dinámicamente el ensamblado compilado, sustituya  
+Para vincular dinámicamente el ensamblado compilado, sustituya
   
-```  
-xslt.Load(typeof(Transform))  
-```  
-  
- with  
-  
-```  
-xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
+```csharp  
+xslt.Load(typeof(Transform));  
 ```  
   
- en el ejemplo anterior. Para obtener más información acerca del método Assembly.Load, vea <xref:System.Reflection.Assembly.Load%2A>  
+with  
+  
+```csharp 
+xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
+``` 
+  
+en el ejemplo anterior. Para obtener más información sobre el método Assembly. Load, vea <xref:System.Reflection.Assembly.Load%2A>.  
   
 ## <a name="see-also"></a>Vea también
 

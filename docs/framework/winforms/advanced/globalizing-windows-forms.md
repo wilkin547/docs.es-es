@@ -1,6 +1,6 @@
 ---
-title: Globalizar aplicaciones de Windows Forms
-description: En este tema se presenta una lista de temas relacionados con la globalización de las aplicaciones de Windows Forms.
+title: Globalizar aplicaciones Windows Forms
+description: En este tema se presenta una lista de temas relacionados con la globalización de aplicaciones Windows Forms.
 ms.date: 06/08/2018
 helpviewer_keywords:
 - Windows Forms, globalization
@@ -9,27 +9,24 @@ helpviewer_keywords:
 - world-ready applications
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
-ms.openlocfilehash: 72bab76245b7b613ed97acec4cc616732c54de0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e7794b731294e03515265ff33e82af4fde40efa
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004515"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956439"
 ---
-# <a name="globalizing-windows-forms-applications"></a>Globalizar aplicaciones de Windows Forms
+# <a name="globalizing-windows-forms-applications"></a>Globalizar aplicaciones Windows Forms
 
-*Globalización* es el proceso de diseñar y desarrollar un producto de software que funciona en diferentes referencias culturales.
+La *globalización* es el proceso de diseño y desarrollo de un producto de software que funciona para varias referencias culturales.
 
 ## <a name="in-this-section"></a>En esta sección
-
-[Codificación y globalización de Windows Forms](encoding-and-windows-forms-globalization.md)  
-Describe la compatibilidad total con Unicode y sus implicaciones.
 
 [Fuentes internacionales en Windows Forms y controles](international-fonts-in-windows-forms-and-controls.md)  
 Explica cuándo y cómo seleccionar fuentes para mostrar caracteres internacionales en Windows Forms.
 
 [Compatibilidad bidireccional en las aplicaciones de Windows Forms](bi-directional-support-for-windows-forms-applications.md)  
-Explica cómo crear aplicaciones basadas en Windows que admiten idiomas de bidireccionales (de derecha a izquierda).
+Explica cómo crear aplicaciones basadas en Windows que admitan idiomas bidireccionales (de derecha a izquierda).
 
 [Visualización de caracteres asiáticos con la propiedad ImeMode](display-of-asian-characters-with-the-imemode-property.md)  
 Presenta la propiedad `ImeMode`, que se usa para controlar el tipo de entrada que un control o un Windows Form acepta.
@@ -44,12 +41,12 @@ Presenta la propiedad `ImeMode`, que se usa para controlar el tipo de entrada qu
 
 - [Tutorial: Descarga de ensamblados satélite a petición con la API de implementación de ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Cómo: Establecer la referencia cultural y la referencia cultural de interfaz de usuario para la globalización de formularios Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
+- [Cómo: Establezca la referencia cultural y la referencia cultural de la interfaz de usuario para Windows Forms Globalization @ no__t-0
 
-- [Cómo: Crear reflejados de Windows Forms y controles](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
+- [Cómo: Crear Windows Forms y controles reflejados @ no__t-0
 
-- [Cómo: Admitir la localización en formularios de Windows Forms mediante AutoSize y el Control TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
+- [Cómo: Compatibilidad con la localización en Windows Forms mediante AutoSize y el control TableLayoutPanel @ no__t-0
 
-- [Tutorial: Adaptar formularios de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
+- [Tutorial: Localizar Windows Forms @ no__t-0
 
-- [Tutorial: Crear un diseño que ajuste las proporciones para la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
+- [Tutorial: Crear un diseño que ajuste la proporción de la localización @ no__t-0

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: f6facc047d87c503313015eff4e869861cd6b301
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835504"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957001"
 ---
 # <a name="xpath-namespace-navigation"></a>Navegación por el espacio de nombres XPath
 Para usar consultas XPath con documentos XML, debe direccionar correctamente los espacios de nombres XML y los elementos que contienen los espacios de nombres. Los espacios de nombres evitan las ambigüedades que pueden producirse cuando los nombres se utilizan en varios contextos; por ejemplo, el nombre `ID` puede referirse a varios identificadores asociados con distintos elementos de un documento XML. La sintaxis de los espacios de nombres especifica los URI, nombres y prefijos que distinguen los elementos de un documento XML.  
@@ -40,32 +40,26 @@ Para usar consultas XPath con documentos XML, debe direccionar correctamente los
 ## <a name="navigation-by-namespace-prefix"></a>Navegación por prefijos de los espacios de nombres  
  El código de esta sección utiliza objetos <xref:System.Xml.XPath.XPathNavigator> y <xref:System.Xml.XmlNamespaceManager> para seleccionar el elemento `Search` del documento XML de la sección anterior. La expresión `xpath` de la consulta incluye los prefijos de los espacios de nombres para cada elemento de la ruta. El hecho de especificar la identidad precisa de los espacios de nombres que contienen cada elemento garantiza una navegación correcta al elemento `Search` con el método <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.  
   
-```  
+```csharp  
 using (XmlReader reader = XmlReader.Create("response.xml"))  
-            {  
-                XPathDocument doc = new XPathDocument(reader);  
-                XPathNavigator nav = doc.CreateNavigator();  
-                XmlNamespaceManager nsmgr =  
-                         new XmlNamespaceManager(nav.NameTable);  
-                nsmgr.AddNamespace("e",   
-                         @"http://schemas.xmlsoap.org/soap/envelope/");  
-                nsmgr.AddNamespace("s",   
-                            @"http://schemas.microsoft.com/v1/Search");  
-                nsmgr.AddNamespace("r",   
-                   @"http://schemas.microsoft.com/v1/Search/metadata");  
-                nsmgr.AddNamespace("i",   
-                         @"http://www.w3.org/2001/XMLSchema-instance");  
+{  
+    XPathDocument doc = new XPathDocument(reader);  
+    XPathNavigator nav = doc.CreateNavigator();
   
-                string xpath = "/e:Envelope/e:Body/s:Search";  
+    XmlNamespaceManager nsmgr = new XmlNamespaceManager(nav.NameTable);  
+    nsmgr.AddNamespace("e", @"http://schemas.xmlsoap.org/soap/envelope/");  
+    nsmgr.AddNamespace("s", @"http://schemas.microsoft.com/v1/Search");  
+    nsmgr.AddNamespace("r", @"http://schemas.microsoft.com/v1/Search/metadata");  
+    nsmgr.AddNamespace("i", @"http://www.w3.org/2001/XMLSchema-instance");  
   
-                XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
+    string xpath = "/e:Envelope/e:Body/s:Search";  
   
-                Console.WriteLine("Element Prefix:" + element.Prefix +   
-                           " Local name:" + element.LocalName);  
-                Console.WriteLine("Namespace URI: " +   
-                            element.NamespaceURI);  
+    XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-            }  
+    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    " Local name:" + element.LocalName);  
+    Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
+}  
 ```  
   
  La precisión que se logra al usar espacios de nombres completos y nombres completos no se obtiene solo por comodidad. Basta con experimentar un poco con la definición del documento y el código de los ejemplos anteriores para comprobar que la navegación sin nombres de elemento completos produce excepciones. Por ejemplo, la definición del elemento: `<Search xmlns="http://schemas.microsoft.com/v1/Search">` y la consulta: string `xpath = "/s:Envelope/s:Body/Search";` sin el prefijo del espacio de nombres en el elemento `Search` devuelve `null` en lugar del elemento `Search`.  
