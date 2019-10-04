@@ -8,30 +8,32 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051611"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833618"
 ---
-# <a name="specifying-an-entry-point"></a><span data-ttu-id="72f13-102">Especificar un punto de entrada</span><span class="sxs-lookup"><span data-stu-id="72f13-102">Specifying an Entry Point</span></span>
-<span data-ttu-id="72f13-103">Un punto de entrada identifica la ubicación de una función en un archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="72f13-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="72f13-104">En un proyecto administrado, el nombre original o el punto de entrada ordinal de una función de destino identifica dicha función dentro de los límites de la interoperabilidad.</span><span class="sxs-lookup"><span data-stu-id="72f13-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="72f13-105">Además, puede asignarle otro nombre al punto de entrada, lo que supone en realidad un cambio de nombre de la función.</span><span class="sxs-lookup"><span data-stu-id="72f13-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
+# <a name="specifying-an-entry-point"></a><span data-ttu-id="5b81d-102">Especificar un punto de entrada</span><span class="sxs-lookup"><span data-stu-id="5b81d-102">Specifying an Entry Point</span></span>
+
+<span data-ttu-id="5b81d-103">Un punto de entrada identifica la ubicación de una función en un archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="5b81d-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="5b81d-104">En un proyecto administrado, el nombre original o el punto de entrada ordinal de una función de destino identifica dicha función dentro de los límites de la interoperabilidad.</span><span class="sxs-lookup"><span data-stu-id="5b81d-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="5b81d-105">Además, puede asignarle otro nombre al punto de entrada, lo que supone en realidad un cambio de nombre de la función.</span><span class="sxs-lookup"><span data-stu-id="5b81d-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
   
- <span data-ttu-id="72f13-106">A continuación, se muestra una lista de las razones que pueden existir para desear cambiarle el nombre a una función de un archivo DLL:</span><span class="sxs-lookup"><span data-stu-id="72f13-106">Following is a list of possible reasons to rename a DLL function:</span></span>  
+ <span data-ttu-id="5b81d-106">A continuación se muestra una lista de posibles razones para cambiar el nombre de una función DLL:</span><span class="sxs-lookup"><span data-stu-id="5b81d-106">The following is a list of possible reasons to rename a DLL function:</span></span>  
   
-- <span data-ttu-id="72f13-107">Para no utilizar nombres de función de la API que distinguen mayúsculas de minúsculas</span><span class="sxs-lookup"><span data-stu-id="72f13-107">To avoid using case-sensitive API function names</span></span>  
+- <span data-ttu-id="5b81d-107">Para no utilizar nombres de función de la API que distinguen mayúsculas de minúsculas</span><span class="sxs-lookup"><span data-stu-id="5b81d-107">To avoid using case-sensitive API function names</span></span>  
   
-- <span data-ttu-id="72f13-108">Para cumplir los estándares de nomenclatura existentes</span><span class="sxs-lookup"><span data-stu-id="72f13-108">To comply with existing naming standards</span></span>  
+- <span data-ttu-id="5b81d-108">Para cumplir los estándares de nomenclatura existentes</span><span class="sxs-lookup"><span data-stu-id="5b81d-108">To comply with existing naming standards</span></span>  
   
-- <span data-ttu-id="72f13-109">Para incluir funciones que toman tipos de datos distintos (declarando varias versiones de la misma función de un archivo DLL)</span><span class="sxs-lookup"><span data-stu-id="72f13-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
+- <span data-ttu-id="5b81d-109">Para incluir funciones que toman tipos de datos distintos (declarando varias versiones de la misma función de un archivo DLL)</span><span class="sxs-lookup"><span data-stu-id="5b81d-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
   
-- <span data-ttu-id="72f13-110">Para simplificar el uso de las API que contienen versiones ANSI y Unicode</span><span class="sxs-lookup"><span data-stu-id="72f13-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
+- <span data-ttu-id="5b81d-110">Para simplificar el uso de las API que contienen versiones ANSI y Unicode</span><span class="sxs-lookup"><span data-stu-id="5b81d-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
   
- <span data-ttu-id="72f13-111">En este tema se muestra la forma de cambiar el nombre de una función de un archivo DLL en código administrado.</span><span class="sxs-lookup"><span data-stu-id="72f13-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
+ <span data-ttu-id="5b81d-111">En este tema se muestra la forma de cambiar el nombre de una función de un archivo DLL en código administrado.</span><span class="sxs-lookup"><span data-stu-id="5b81d-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
   
-## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="72f13-112">Cambiar el nombre de una función en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="72f13-112">Renaming a Function in Visual Basic</span></span>  
- <span data-ttu-id="72f13-113">Visual Basic usa la palabra clave **Function** en la instrucción **Declare** para establecer el campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="72f13-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="72f13-114">En el siguiente ejemplo muestra una declaración básica.</span><span class="sxs-lookup"><span data-stu-id="72f13-114">The following example shows a basic declaration.</span></span>  
+## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="5b81d-112">Cambiar el nombre de una función en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5b81d-112">Renaming a Function in Visual Basic</span></span>  
+ 
+<span data-ttu-id="5b81d-113">Visual Basic usa la palabra clave **Function** en la instrucción **Declare** para establecer el campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5b81d-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="5b81d-114">En el siguiente ejemplo muestra una declaración básica.</span><span class="sxs-lookup"><span data-stu-id="5b81d-114">The following example shows a basic declaration.</span></span>  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- <span data-ttu-id="72f13-115">Es posible reemplazar el punto de entrada **MessageBox** por **MsgBox** incluyendo la palabra clave **Alias** en la definición, tal y como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="72f13-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="72f13-116">En los dos ejemplos, la palabra clave **Auto** elimina la necesidad de especificar la versión del juego de caracteres del punto de entrada.</span><span class="sxs-lookup"><span data-stu-id="72f13-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="72f13-117">Para obtener más información sobre cómo seleccionar un juego de caracteres, vea [Specifying a Character Set](specifying-a-character-set.md) (Especificar un juego de caracteres).</span><span class="sxs-lookup"><span data-stu-id="72f13-117">For more information about selecting a character set, see [Specifying a Character Set](specifying-a-character-set.md).</span></span>  
+<span data-ttu-id="5b81d-115">Es posible reemplazar el punto de entrada **MessageBox** por **MsgBox** incluyendo la palabra clave **Alias** en la definición, tal y como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="5b81d-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="5b81d-116">En los dos ejemplos, la palabra clave **Auto** elimina la necesidad de especificar la versión del juego de caracteres del punto de entrada.</span><span class="sxs-lookup"><span data-stu-id="5b81d-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="5b81d-117">Para obtener más información sobre cómo seleccionar un juego de caracteres, vea [Specifying a Character Set](specifying-a-character-set.md) (Especificar un juego de caracteres).</span><span class="sxs-lookup"><span data-stu-id="5b81d-117">For more information about selecting a character set, see [Specifying a Character Set](specifying-a-character-set.md).</span></span>  
   
 ```vb
 Friend Class NativeMethods
@@ -56,17 +58,17 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="72f13-118">Cambiar el nombre de una función en C# y C++</span><span class="sxs-lookup"><span data-stu-id="72f13-118">Renaming a Function in C# and C++</span></span>  
- <span data-ttu-id="72f13-119">Puede utilizar el campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> para especificar una función DLL por nombre u ordinal.</span><span class="sxs-lookup"><span data-stu-id="72f13-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="72f13-120">Si el nombre de la función en la definición del método es el mismo que el punto de entrada en el archivo DLL, no es necesario identificar la función de forma explícita con el campo **EntryPoint**.</span><span class="sxs-lookup"><span data-stu-id="72f13-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="72f13-121">En caso contrario, utilice una de las siguientes formas de atributo para indicar un nombre u ordinal:</span><span class="sxs-lookup"><span data-stu-id="72f13-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
+## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="5b81d-118">Cambiar el nombre de una función en C# y C++</span><span class="sxs-lookup"><span data-stu-id="5b81d-118">Renaming a Function in C# and C++</span></span>  
+ <span data-ttu-id="5b81d-119">Puede utilizar el campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> para especificar una función DLL por nombre u ordinal.</span><span class="sxs-lookup"><span data-stu-id="5b81d-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="5b81d-120">Si el nombre de la función en la definición del método es el mismo que el punto de entrada en el archivo DLL, no es necesario identificar la función de forma explícita con el campo **EntryPoint**.</span><span class="sxs-lookup"><span data-stu-id="5b81d-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="5b81d-121">En caso contrario, utilice una de las siguientes formas de atributo para indicar un nombre u ordinal:</span><span class="sxs-lookup"><span data-stu-id="5b81d-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
   
 ```csharp
 [DllImport("DllName", EntryPoint = "Functionname")]
 [DllImport("DllName", EntryPoint = "#123")]
 ```
   
- <span data-ttu-id="72f13-122">Tenga en cuenta que los ordinales deben ir precedidos del símbolo de libra esterlina (#).</span><span class="sxs-lookup"><span data-stu-id="72f13-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
+ <span data-ttu-id="5b81d-122">Tenga en cuenta que los ordinales deben ir precedidos del símbolo de libra esterlina (#).</span><span class="sxs-lookup"><span data-stu-id="5b81d-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
   
- <span data-ttu-id="72f13-123">En el siguiente ejemplo se muestra cómo reemplazar **MessageBoxA** por **MsgBox** en el código usando el campo **EntryPoint**.</span><span class="sxs-lookup"><span data-stu-id="72f13-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
+ <span data-ttu-id="5b81d-123">En el siguiente ejemplo se muestra cómo reemplazar **MessageBoxA** por **MsgBox** en el código usando el campo **EntryPoint**.</span><span class="sxs-lookup"><span data-stu-id="5b81d-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
   
 ```csharp
 using System;
@@ -90,9 +92,9 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a><span data-ttu-id="72f13-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="72f13-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b81d-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b81d-124">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="72f13-125">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="72f13-125">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="72f13-126">Ejemplos de invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="72f13-126">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
-- [<span data-ttu-id="72f13-127">Serialización de datos con invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="72f13-127">Marshaling Data with Platform Invoke</span></span>](marshaling-data-with-platform-invoke.md)
+- [<span data-ttu-id="5b81d-125">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="5b81d-125">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="5b81d-126">Ejemplos de invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="5b81d-126">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
+- [<span data-ttu-id="5b81d-127">Serialización de datos con invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="5b81d-127">Marshaling Data with Platform Invoke</span></span>](marshaling-data-with-platform-invoke.md)
