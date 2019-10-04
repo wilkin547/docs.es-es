@@ -2,15 +2,15 @@
 title: Arquitectura de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: d341ebd354d5324c5ad71436837cb85737f46c08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2effc0f53153057b8a9034e4dc80cb19bbe7685
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605892"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834859"
 ---
 # <a name="windows-workflow-architecture"></a>Arquitectura de Windows Workflow
-Windows Workflow Foundation (WF) se eleva el nivel de abstracción para desarrollar aplicaciones interactivas de ejecución prolongada. Las unidades de trabajo se encapsulan como actividades. Las actividades se ejecutan en un entorno que proporcione los medios para el control de flujo, el control de excepciones, la propagación de errores, la persistencia de los datos de estado, la carga y descarga de flujos de trabajo en progreso de la memoria, el seguimiento y el flujo de la transacción.  
+Windows Workflow Foundation (WF) eleva el nivel de abstracción para desarrollar aplicaciones interactivas de ejecución prolongada. Las unidades de trabajo se encapsulan como actividades. Las actividades se ejecutan en un entorno que proporcione los medios para el control de flujo, el control de excepciones, la propagación de errores, la persistencia de los datos de estado, la carga y descarga de flujos de trabajo en progreso de la memoria, el seguimiento y el flujo de la transacción.  
   
 ## <a name="activity-architecture"></a>Arquitectura de la actividad  
  Las actividades se desarrollan como tipos CLR que derivan de <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, o sus variantes que devuelven un valor, <xref:System.Activities.NativeActivity>, <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601> o <xref:System.Activities.NativeActivity%601>. Desarrollar actividades que derivan de <xref:System.Activities.Activity> le permite al usuario ensamblar actividades existentes previamente para crear las unidades de trabajo que se ejecutan en el entorno del flujo de trabajo. <xref:System.Activities.CodeActivity>, por otro lado, permite crear la lógica de ejecución en código administrado usando principalmente <xref:System.Activities.CodeActivityContext> para el acceso a los argumentos de actividad. <xref:System.Activities.AsyncCodeActivity> es similar a <xref:System.Activities.CodeActivity> salvo que puede usarse para implementar tareas asincrónicas. Desarrollar actividades que derivan de <xref:System.Activities.NativeActivity> permite a los usuarios tener acceso al runtime a través de <xref:System.Activities.NativeActivityContext> para funciones como la programación de elementos secundarios, la creación de marcadores, invocar el trabajo asincrónico, el registro de transacciones y mucho más.  
@@ -41,12 +41,12 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
  [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
   
 ## <a name="activity-life-cycle"></a>Ciclo de vida de la actividad  
- La instancia de una actividad empieza en el estado <xref:System.Activities.ActivityInstanceState.Executing>. A menos que se encuentren excepciones, permanece en este estado hasta que todas las actividades secundarias se hayan terminado de ejecutar y se hayan completado otros trabajos pendientes (objetos <xref:System.Activities.Bookmark>, por ejemplo). Una vez llegado este punto, cambia al estado <xref:System.Activities.ActivityInstanceState.Closed>. El elemento primario de una instancia de actividad puede pedir a un elemento secundario que cancele; si el elemento secundario puede cancelarse, se completa en el estado <xref:System.Activities.ActivityInstanceState.Canceled>. Si una excepción se produce durante la ejecución, el tiempo en ejecución coloca la actividad <xref:System.Activities.ActivityInstanceState.Faulted> en el estado de error y propaga la excepción a la cadena primaria de actividades. A continuación se describen tres estados de realización de una actividad:  
+ La instancia de una actividad empieza en el estado <xref:System.Activities.ActivityInstanceState.Executing>. A menos que se encuentren excepciones, permanece en este estado hasta que todas las actividades secundarias se hayan terminado de ejecutar y se hayan completado otros trabajos pendientes (objetos <xref:System.Activities.Bookmark>, por ejemplo). Una vez llegado este punto, cambia al estado <xref:System.Activities.ActivityInstanceState.Closed>. El elemento primario de una instancia de actividad puede pedir a un elemento secundario que cancele; si el elemento secundario puede cancelarse, se completa en el estado <xref:System.Activities.ActivityInstanceState.Canceled>. Si una excepción se produce durante la ejecución, el tiempo en ejecución coloca la actividad <xref:System.Activities.ActivityInstanceState.Faulted> en el estado de error y propaga la excepción a la cadena primaria de actividades. A continuación se muestran los tres Estados de finalización de una actividad:
   
-- **Cerrado:** La actividad ha finalizado su trabajo y se cerró.  
+- **Subtítulos** La actividad ha completado su trabajo y ha salido.  
   
-- **Cancelado:** La actividad ha abandonado su trabajo y se se cerró correctamente. En este estado, el trabajo no se revierte de manera explícita.  
+- **Cancelado** La actividad ha abandonado correctamente su trabajo y ha salido. En este estado, el trabajo no se revierte de manera explícita.  
   
-- **Error:** La actividad ha encontrado un error y ha salido sin completar su trabajo.  
+- **Error** La actividad ha encontrado un error y ha salido sin completar su trabajo.  
   
  Las actividades permanecen en el estado <xref:System.Activities.ActivityInstanceState.Executing> cuando se conservan o descargan.

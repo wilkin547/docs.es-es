@@ -2,19 +2,19 @@
 title: Introducción a los literales XML en Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834280"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834991"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introducción a los literales XML de Visual Basic
-Esta sección proporciona información sobre cómo crear árboles XML en Visual Basic.  
+En esta sección se proporciona información sobre cómo crear árboles XML en Visual Basic.  
   
- Para obtener información sobre el uso de los resultados de las consultas LINQ como contenido de un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Para obtener información sobre el uso de los resultados de las consultas LINQ como contenido para un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Para obtener más información sobre los literales XML en Visual Basic, vea [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obtener más información sobre los literales XML en Visual Basic, consulte [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Crear árboles XML  
  El siguiente ejemplo muestra cómo crear un <xref:System.Xml.Linq.XElement>; en este caso, `contacts`:  
@@ -190,7 +190,7 @@ Console.WriteLine("Child2 was {0}", _
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  

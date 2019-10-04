@@ -2,12 +2,12 @@
 title: Procedimiento Escribir consultas con filtrado complejo (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 0459c9549238257c0a76276a1d10f6d370144214
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 41b967e2876be98016b48da5122478f63385c6a8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709863"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834969"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Procedimiento Escribir consultas con filtrado complejo (Visual Basic)
 Es posible que desee escribir consultas LINQ to XML con filtros complejos. Por ejemplo, quizás debe buscar todos los elementos que tienen un elemento secundario con un valor y un nombre específicos. En este tema se proporciona un ejemplo de escritura de una consulta con un filtrado complejo.  
@@ -17,7 +17,7 @@ Es posible que desee escribir consultas LINQ to XML con filtros complejos. Por e
   
  Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Para obtener más información sobre `Any` el operador, vea [operaciones cuantificadoras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ Para obtener más información sobre el operador `Any`, vea [operaciones de cuantificador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -38,7 +38,7 @@ Next
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 99505  
 ```  
   
@@ -72,7 +72,7 @@ End Module
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 99505  
 ```  
   

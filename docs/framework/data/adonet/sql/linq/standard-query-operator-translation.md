@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781019"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833680"
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
 
@@ -38,12 +38,12 @@ El método <xref:System.Linq.Enumerable.Union%2A> se define para los conjuntos m
 
 ### <a name="take-skip"></a>Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A>los <xref:System.Linq.Enumerable.Skip%2A> métodos y están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.
+los métodos <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada sobre cómo omitir y tomar excepciones en SQL Server 2000 "en [solución de problemas](troubleshooting.md).
 
-Debido a las limitaciones de la ordenación [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en SQL, intenta trasladar la ordenación del argumento de estos métodos al resultado del método. Por ejemplo, considere la siguiente consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
+Debido a las limitaciones de la ordenación en SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta trasladar la ordenación del argumento de estos métodos al resultado del método. Por ejemplo, considere la siguiente consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -94,7 +94,7 @@ SQL Server define el valor `null` en la intercalación. [!INCLUDE[vbtecdlinq](..
 
 ### <a name="aggregates"></a>Agregados
 
-El método de agregado del operador de consulta estándar <xref:System.Linq.Enumerable.Sum%2A> se evalúa como cero para una secuencia vacía o para una secuencia que solo contiene valores nulos. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semántica de SQL se deja sin cambios y <xref:System.Linq.Enumerable.Sum%2A> se evalúa como en `null` lugar de cero para una secuencia vacía o para una secuencia que solo contiene valores NULL.
+El método de agregado del operador de consulta estándar <xref:System.Linq.Enumerable.Sum%2A> se evalúa como cero para una secuencia vacía o para una secuencia que solo contiene valores nulos. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semántica de SQL se deja sin cambios y <xref:System.Linq.Enumerable.Sum%2A> se evalúa como @no__t 2 en lugar de cero para una secuencia vacía o para una secuencia que solo contiene valores NULL.
 
 En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se aplican las restricciones de SQL para los agregados en los resultados intermedios. <xref:System.Linq.Enumerable.Sum%2A> para cantidades enteras de 32 bits no se calcula utilizando los resultados de 64 bits. Puede producirse un desbordamiento en la conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que realiza <xref:System.Linq.Enumerable.Sum%2A> aun cuando la implementación del operador de consulta estándar no produce un desbordamiento para la secuencia en memoria correspondiente.
 
@@ -102,7 +102,7 @@ De igual forma, la conversión que realiza [!INCLUDE[vbtecdlinq](../../../../../
 
 ### <a name="entity-arguments"></a>Argumentos de entidad
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]permite usar tipos de entidad en los <xref:System.Linq.Enumerable.GroupBy%2A> métodos y. <xref:System.Linq.Enumerable.OrderBy%2A> En la conversión de estos operadores, el uso de un argumento de un tipo se considera equivalente a especificar todos los miembros de ese tipo. Por ejemplo, el código siguiente es equivalente:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permite usar tipos de entidad en los métodos <xref:System.Linq.Enumerable.GroupBy%2A> y <xref:System.Linq.Enumerable.OrderBy%2A>. En la conversión de estos operadores, el uso de un argumento de un tipo se considera equivalente a especificar todos los miembros de ese tipo. Por ejemplo, el código siguiente es equivalente:
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -123,15 +123,15 @@ La igualdad de los argumentos se requiere en la implementación de los métodos 
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite la igualdad y comparación para los argumentos *planos*, pero no para los argumentos que son secuencias o las contienen. Un argumento plano es un tipo que asignarse a una fila de SQL. Una proyección de uno o más tipos de entidad que se pueden determinar estáticamente que no contiene una secuencia se considera un argumento plano.
 
-A continuación se ofrecen ejemplos de argumentos planos:
+A continuación se muestran ejemplos de argumentos planos:
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-A continuación se ofrecen ejemplos de argumentos no planos (jerárquicos).
+A continuación se muestran ejemplos de argumentos no planos (jerárquicos):
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Conversión de funciones de Visual Basic
 
@@ -158,7 +158,7 @@ Métodos de conversión:
 
 ### <a name="inheritance-mapping-restrictions"></a>Restricciones de la asignación de herencia
 
-Para obtener más información, consulte [Cómo Asignar jerarquías](how-to-map-inheritance-hierarchies.md)de herencia.
+Para obtener más información, vea [Cómo: Asignar jerarquías de herencia @ no__t-0.
 
 ### <a name="inheritance-in-queries"></a>Herencia en consultas
 
@@ -198,7 +198,7 @@ Para obtener más información sobre la asignación a estos SQL Server tipos de 
 
 ## <a name="sql-server-2000-support"></a>Compatibilidad con SQL Server 2000
 
-Las siguientes limitaciones SQL Server 2000 (en comparación con Microsoft SQL Server 2005) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] afectan al soporte técnico.
+Las siguientes limitaciones SQL Server 2000 (en comparación con Microsoft SQL Server 2005) afectan a la compatibilidad con @no__t 0.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operadores Cross Apply y Outer Apply
 
@@ -208,13 +208,13 @@ Estos operadores no están disponibles en SQL Server 2000. [!INCLUDE[vbtecdlinq]
 
 ### <a name="text--ntext"></a>text / ntext
 
-`text`  /  `ntext` Nosepuedenusartiposdedatosendeterminadasoperacionesdeconsultaen,quesoncompatiblesconMicrosoftSQLServer2005. /  `varchar(max)` `nvarchar(max)`
+Los tipos de datos `text` @ no__t-1 @ no__t-2 no se pueden usar en algunas operaciones de consulta en `varchar(max)` @ no__t-4 @ no__t-5, que son compatibles con Microsoft SQL Server 2005.
 
 Esta limitación no tiene ninguna resolución. Concretamente, no puede utilizar `Distinct()` en ningún resultado que contenga miembros que se asignen a columnas `text` o `ntext`.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamiento desencadenado por las consultas anidadas
 
-SQL Server 2000 (a SP4) el enlazador tiene algunas idiosincrasias que se desencadenan mediante consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por esta razón, no se puede definir el conjunto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de consultas que pueden provocar excepciones SQL Server.
+SQL Server 2000 (a SP4) el enlazador tiene algunas idiosincrasias que se desencadenan mediante consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por esta razón, no se puede definir el conjunto de consultas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que pueden provocar excepciones SQL Server.
 
 ### <a name="skip-and-take-operators"></a>Operadores Skip y Take
 
@@ -232,7 +232,7 @@ La materialización crea objetos CLR a partir de las filas devueltas por una o m
 
   - Conversiones de tipos en las proyecciones
 
-- Los métodos que siguen <xref:System.Linq.Enumerable.AsEnumerable%2A> al método se *ejecutan localmente*. Este método no produce la ejecución inmediata.
+- Los métodos que siguen al método <xref:System.Linq.Enumerable.AsEnumerable%2A> se *ejecutan localmente*. Este método no produce la ejecución inmediata.
 
 - Puede utilizar `struct` como tipo de valor devuelto en el resultado de una consulta o como un miembro del tipo de resultado. Las entidades deben ser clases. Los tipos anónimos se materializan como instancias de clase, pero los structs con nombre (no entidades) se pueden utilizar en la proyección.
 

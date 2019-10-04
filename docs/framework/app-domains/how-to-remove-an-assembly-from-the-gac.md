@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053147"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834041"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
 
@@ -28,29 +28,29 @@ Hay dos formas de quitar un ensamblado de la caché global de ensamblados (GAC):
 
 - Con [Windows Installer](/windows/desktop/Msi/windows-installer-portal). Debe usar esta opción para desinstalar ensamblados al probar los paquetes de instalación y en sistemas de producción.
 
-### <a name="removing-an-assembly-with-gacutilexe"></a>Quitar un ensamblado con Gacutil.exe
+## <a name="removing-an-assembly-with-gacutilexe"></a>Quitar un ensamblado con Gacutil.exe
 
-1. En el símbolo del sistema, escriba el siguiente comando:
+En el símbolo del sistema, escriba el siguiente comando:
 
-    **gacutil –u** \<*nombre del ensamblado*>
+**gacutil –u** \<*nombre del ensamblado*>
 
-    En este comando, *nombre del ensamblado* es el nombre del ensamblado que se va a quitar de la caché global de ensamblados.
+En este comando, *nombre del ensamblado* es el nombre del ensamblado que se va a quitar de la caché global de ensamblados.
 
-    > [!WARNING]
-    > No debe utilizar Gacutil.exe para quitar ensamblados en sistemas de producción porque existe la posibilidad de que alguna aplicación necesite aún el ensamblado. En su lugar, debe usar el instalador de Windows, que mantiene un recuento de referencias para cada ensamblado que se instala en la GAC.
+> [!WARNING]
+> No debe utilizar Gacutil.exe para quitar ensamblados en sistemas de producción porque existe la posibilidad de que alguna aplicación necesite aún el ensamblado. En su lugar, debe usar el instalador de Windows, que mantiene un recuento de referencias para cada ensamblado que se instala en la GAC.
 
- En el ejemplo siguiente se quita un ensamblado llamado `hello.dll` de la caché global de ensamblados.
+En el ejemplo siguiente se quita un ensamblado denominado `hello.dll` de la caché global de ensamblados:
 
-```
+```console
 gacutil -u hello
 ```
 
-### <a name="removing-an-assembly-with-windows-installer"></a>Quitar un ensamblado con Windows Installer
+## <a name="removing-an-assembly-with-windows-installer"></a>Quitar un ensamblado con Windows Installer
 
-1. En la aplicación **Programas y características** del **Panel de Control**, seleccione la aplicación que quiere desinstalar. Si el paquete de instalación colocó ensamblados en la GAC, Windows Installer los quitará si otra aplicación no lo está usando.
+En la aplicación **Programas y características** del **Panel de Control**, seleccione la aplicación que quiere desinstalar. Si el paquete de instalación colocó ensamblados en la GAC, Windows Installer los quitará si otra aplicación no lo está usando.
 
-    > [!NOTE]
-    > Windows Installer mantiene un recuento de referencias para los ensamblados instalados en la GAC. Un ensamblado se quita de la GAC solo cuando su recuento de referencias llega a cero, lo que indica que no lo está usando ninguna aplicación instalada por un paquete de Windows Installer.
+> [!NOTE]
+> Windows Installer mantiene un recuento de referencias para los ensamblados instalados en la GAC. Un ensamblado se quita de la GAC solo cuando su recuento de referencias llega a cero, lo que indica que no lo está usando ninguna aplicación instalada por un paquete de Windows Installer.
 
 ## <a name="see-also"></a>Vea también
 

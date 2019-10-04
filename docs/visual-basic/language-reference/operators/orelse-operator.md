@@ -11,15 +11,15 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 8290e642db3ec76a931bdd2febe427309457bc86
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860143"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835245"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse (Operador) (Visual Basic)
-Realiza una disyunción lógica inclusiva en dos expresiones de cortocircuito.  
+Realiza una disyunción lógica inclusiva de cortocircuito en dos expresiones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,18 +29,18 @@ result = expression1 OrElse expression2
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Necesario. Cualquier expresión `Boolean` .  
+ Obligatorio. Cualquier expresión `Boolean` .  
   
  `expression1`  
- Necesario. Cualquier expresión `Boolean` .  
+ Obligatorio. Cualquier expresión `Boolean` .  
   
  `expression2`  
- Necesario. Cualquier expresión `Boolean` .  
+ Obligatorio. Cualquier expresión `Boolean` .  
   
 ## <a name="remarks"></a>Comentarios  
- Se dice que una operación lógica sea *cortocircuitar* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no hay ninguna necesidad de evaluar la segunda expresión, porque no se puede cambiar el resultado final. Evaluación cortocircuitada puede mejorar el rendimiento si la expresión omitida es compleja, o si se trata de las llamadas a procedimiento.  
+ Se dice que una operación lógica es *cortocircuitada* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no es necesario evaluar la segunda expresión, porque no puede cambiar el resultado final. El cortocircuito puede mejorar el rendimiento si la expresión omitida es compleja o si implica llamadas a procedimientos.  
   
- Si una o ambas expresiones se evalúan como `True`, `result` es `True`. La tabla siguiente se muestra cómo `result` viene determinada.  
+ Si una o ambas expresiones se evalúan como `True`, `result` es `True`. En la tabla siguiente se muestra cómo se determina `result`.  
   
 |Si `expression1` es|Y `expression2` es|El valor de `result` es|  
 |-------------------------|--------------------------|------------------------------|  
@@ -49,21 +49,21 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Tipos de datos  
- El `OrElse` operador está definido solo para el [tipo de datos Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic convierte cada operando según sea necesario para `Boolean` antes de evaluar la expresión. Si asigna el resultado a un tipo numérico, Visual Basic convierte desde `Boolean` a ese tipo de modo que `False` se convierte en `0` y `True` se convierte en `-1`.
-Para obtener más información, consulte [conversiones de tipo booleano](../data-types/boolean-data-type.md#type-conversions)
+ El operador `OrElse` solo se define para el [tipo de datos booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic convierte cada operando según sea necesario a `Boolean` antes de evaluar la expresión. Si asigna el resultado a un tipo numérico, Visual Basic lo convierte de `Boolean` a ese tipo, de modo que `False` se convierte en `0` y `True` se convierte en `-1`.
+Para obtener más información, vea [conversiones de tipo booleano](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Sobrecarga  
- El [operador o](../../../visual-basic/language-reference/operators/or-operator.md) y [IsTrue (operador)](../../../visual-basic/language-reference/operators/istrue-operator.md) puede ser *sobrecargado*, lo que significa que una clase o estructura puede redefinir su comportamiento cuando un operando tiene el tipo de la clase o estructura. Sobrecargar el `Or` y `IsTrue` operadores afecta al comportamiento de la `OrElse` operador. Si el código usa `OrElse` en una clase o estructura que sobrecarga `Or` y `IsTrue`, asegúrese de conocer su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El [operador o](../../../visual-basic/language-reference/operators/or-operator.md) y el [operador IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md) se pueden *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. La sobrecarga de los operadores `Or` y `IsTrue` afecta al comportamiento del operador `OrElse`. Si el código usa `OrElse` en una clase o estructura que sobrecarga `Or` y `IsTrue`, asegúrese de que entiende su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el `OrElse` operador para realizar una disyunción lógica entre dos expresiones. El resultado es un `Boolean` valor que representa si cualquiera de las dos expresiones es true. Si la primera expresión es `True`, no se evalúa el segundo.  
+ En el ejemplo siguiente se usa el operador `OrElse` para realizar una disyunción lógica entre dos expresiones. El resultado es un valor `Boolean` que indica si cualquiera de las dos expresiones es true. Si la primera expresión es `True`, la segunda no se evalúa.  
   
  [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
- El ejemplo anterior genera los resultados de `True`, `True`, y `False` respectivamente. En el cálculo de `firstCheck`, la segunda expresión no se evalúa porque ya se encuentra la primera `True`. Sin embargo, la segunda expresión se evalúa en el cálculo de `secondCheck`.  
+ En el ejemplo anterior se generan los resultados de `True`, `True` y `False` respectivamente. En el cálculo de `firstCheck`, la segunda expresión no se evalúa porque la primera ya está `True`. Sin embargo, la segunda expresión se evalúa en el cálculo de `secondCheck`.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se muestra un `If`... `Then` instrucción que contiene dos llamadas a procedimiento. Si la primera llamada devuelve `True`, no se llama al procedimiento de segundo. Esto podría producir resultados inesperados si el segundo procedimiento realiza las tareas importantes que siempre se deben realizar cuando se ejecuta en esta sección del código.  
+ En el ejemplo siguiente se muestra una instrucción `If`... `Then` que contiene dos llamadas a procedimiento. Si la primera llamada devuelve `True`, no se llama al segundo procedimiento. Esto podría producir resultados inesperados si el segundo procedimiento realiza tareas importantes que siempre deben realizarse cuando se ejecuta esta sección del código.  
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   

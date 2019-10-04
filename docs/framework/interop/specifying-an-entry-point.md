@@ -8,17 +8,18 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051611"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833618"
 ---
 # <a name="specifying-an-entry-point"></a>Especificar un punto de entrada
+
 Un punto de entrada identifica la ubicación de una función en un archivo DLL. En un proyecto administrado, el nombre original o el punto de entrada ordinal de una función de destino identifica dicha función dentro de los límites de la interoperabilidad. Además, puede asignarle otro nombre al punto de entrada, lo que supone en realidad un cambio de nombre de la función.  
   
- A continuación, se muestra una lista de las razones que pueden existir para desear cambiarle el nombre a una función de un archivo DLL:  
+ A continuación se muestra una lista de posibles razones para cambiar el nombre de una función DLL:  
   
 - Para no utilizar nombres de función de la API que distinguen mayúsculas de minúsculas  
   
@@ -31,7 +32,8 @@ Un punto de entrada identifica la ubicación de una función en un archivo DLL. 
  En este tema se muestra la forma de cambiar el nombre de una función de un archivo DLL en código administrado.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Cambiar el nombre de una función en Visual Basic  
- Visual Basic usa la palabra clave **Function** en la instrucción **Declare** para establecer el campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. En el siguiente ejemplo muestra una declaración básica.  
+ 
+Visual Basic usa la palabra clave **Function** en la instrucción **Declare** para establecer el campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. En el siguiente ejemplo muestra una declaración básica.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- Es posible reemplazar el punto de entrada **MessageBox** por **MsgBox** incluyendo la palabra clave **Alias** en la definición, tal y como se muestra en el ejemplo siguiente. En los dos ejemplos, la palabra clave **Auto** elimina la necesidad de especificar la versión del juego de caracteres del punto de entrada. Para obtener más información sobre cómo seleccionar un juego de caracteres, vea [Specifying a Character Set](specifying-a-character-set.md) (Especificar un juego de caracteres).  
+Es posible reemplazar el punto de entrada **MessageBox** por **MsgBox** incluyendo la palabra clave **Alias** en la definición, tal y como se muestra en el ejemplo siguiente. En los dos ejemplos, la palabra clave **Auto** elimina la necesidad de especificar la versión del juego de caracteres del punto de entrada. Para obtener más información sobre cómo seleccionar un juego de caracteres, vea [Specifying a Character Set](specifying-a-character-set.md) (Especificar un juego de caracteres).  
   
 ```vb
 Friend Class NativeMethods

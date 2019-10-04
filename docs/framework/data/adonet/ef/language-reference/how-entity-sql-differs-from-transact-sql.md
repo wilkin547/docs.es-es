@@ -2,12 +2,12 @@
 title: Diferencias entre Entity SQL y Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0af0a415d812337d6abf449e9ee170526c3df0c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854474"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833723"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Diferencias entre Entity SQL y Transact-SQL
 En este tema se describen las [!INCLUDE[esql](../../../../../../includes/esql-md.md)] diferencias entre y Transact-SQL.  
@@ -37,7 +37,7 @@ En este tema se describen las [!INCLUDE[esql](../../../../../../includes/esql-md
   
  A continuación se muestran consultas válidas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
+```sql  
 1+2 *3  
 "abc"  
 row(1 as a, 2 as b)  
@@ -72,33 +72,33 @@ set(e1)
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] también impone restricciones adicionales en consultas que afectan a cláusulas `group by`. Las expresiones de `select` la cláusula `having` y de estas consultas solo pueden hacer referencia a `group by` las claves a través de sus alias. La siguiente construcción es válida en Transact-SQL, pero no en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
-select t.x + t.y from T as t group by t.x + t.y  
+```sql  
+SELECT t.x + t.y FROM T AS t group BY t.x + t.y
 ```  
   
  Para hacer esto en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
-select k from T as t group by (t.x + t.y) as k  
+```sql  
+SELET k FROM T AS t GROUP BY (t.x + t.y) AS k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>Hacer referencia a columnas (propiedades) de tablas (colecciones)  
  Todas las referencias de columna de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se deben calificar con el alias de la tabla. La construcción siguiente (suponiendo que `a` es una columna válida de la `T`tabla) es válida en Transact-SQL, pero [!INCLUDE[esql](../../../../../../includes/esql-md.md)]no en.  
   
-```  
-select a from T  
+```sql  
+SELECT a FROM T
 ```  
   
  El formato de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es:  
   
-```  
-select t.a as A from T as t  
+```sql  
+SELECT t.a AS A FROM T AS t
 ```  
   
  Los alias de tabla son opcionales en la cláusula `from`. El nombre de la tabla se utiliza como alias implícito. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] también permite el formato siguiente:  
   
-```  
-select Tab.a from Tab  
+```sql  
+SELET Tab.a FROM Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>Navegación a través de objetos  
@@ -106,7 +106,7 @@ select Tab.a from Tab
   
  Por ejemplo, si `p` es una expresión de tipo Persona, lo siguiente es la sintaxis de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para hacer referencia a la ciudad de la dirección de esta persona.  
   
-```  
+```sql  
 p.Address.City   
 ```  
   
@@ -120,18 +120,18 @@ p.Address.City
 ## <a name="changes-to-group-by"></a>Cambios de Group By  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite el uso de alias de las claves `group by`. Las expresiones de la cláusula `select` y de la cláusula `having` deben hacer referencia a las claves `group by` a través de estos alias. Por ejemplo, considere esta sintaxis de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
-select k1, count(t.a), sum(t.a)  
-from T as t  
-group by t.b + t.c as k1  
+```sql  
+SELECT k1, count(t.a), sum(t.a)
+FROM T AS t
+GROUP BY t.b + t.c AS k1
 ```  
   
  ... es equivalente a la siguiente instrucción Transact-SQL:  
   
-```  
-select b + c, count(*), sum(a)   
-from T  
-group by b + c  
+```sql  
+SELECT b + c, count(*), sum(a)
+FROM T
+GROUP BY b + c
 ```  
   
 ## <a name="collection-based-aggregates"></a>Agregados basados en colecciones  
@@ -139,27 +139,27 @@ group by b + c
   
  Los agregados basados en colecciones operan en colecciones y generan el resultado agregado. Estos pueden aparecer en cualquier parte de la consulta y no requieren una cláusula `group by`. Por ejemplo:  
   
-```  
-select t.a as a, count({1,2,3}) as b from T as t     
+```sql  
+SELECT t.a AS a, count({1,2,3}) AS b FROM T AS t
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] también admite agregados del estilo de SQL. Por ejemplo:  
   
-```  
-select a, sum(t.b) from T as t group by t.a as a  
+```sql  
+SELECT a, sum(t.b) FROM T AS t GROUP BY t.a AS a
 ```  
   
 ## <a name="order-by-clause-usage"></a>Uso de la cláusula ORDER BY  
- Transact-SQL permite especificar cláusulas ORDER BY solo en el nivel superior SELECT. FROM . WHERE de nivel superior. En [!INCLUDE[esql](../../../../../../includes/esql-md.md)], puede utilizar una expresión ORDER BY anidada que se puede colocar en cualquier parte de la consulta, pero la ordenación en una consulta anidada no se conserva.  
+Transact-SQL permite especificar cláusulas `ORDER BY` solo en el bloque de nivel superior `SELECT .. FROM .. WHERE`. En [!INCLUDE[esql](../../../../../../includes/esql-md.md)], puede usar una expresión de `ORDER BY` anidada y se puede colocar en cualquier parte de la consulta, pero no se conserva la ordenación en una consulta anidada.  
   
-```  
+```sql  
 -- The following query will order the results by the last name  
 SELECT C1.FirstName, C1.LastName  
-        FROM AdventureWorks.Contact as C1  
+        FROM AdventureWorks.Contact AS C1
         ORDER BY C1.LastName  
 ```  
   
-```  
+```sql  
 -- In the following query ordering of the nested query is ignored.  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
@@ -197,16 +197,16 @@ SELECT C2.FirstName, C2.LastName
  Resultados de un consulta por lotes  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no admite resultados de una consulta por lotes. Por ejemplo, el siguiente código de Transact-SQL es válido (se envía como un lote):  
   
-```  
-select * from products;  
-select * from catagories;  
+```sql  
+SELECT * FROM products;
+SELECT * FROM catagories;
 ```  
   
  Sin embargo, no se admite el código [!INCLUDE[esql](../../../../../../includes/esql-md.md)] equivalente:  
   
-```  
-Select value p from Products as p;  
-Select value c from Categories as c;  
+```sql  
+SELECT value p FROM Products AS p;
+SELECT value c FROM Categories AS c;
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite únicamente una instrucción de consulta que genera un solo resultado por comando.  

@@ -3,12 +3,12 @@ title: Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 645fd09de91d8190384faea9df2ef18511162c2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045486"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834521"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5
 
@@ -34,7 +34,7 @@ Todas las clases de WIF 3.5 se incluían en uno de los espacios de nombres `Micr
 
 En la tabla siguiente se muestran algunos de los espacios de nombres de WIF 4.5 más importantes y el tipo de clases que contienen. Para obtener información detallada sobre la asignación de espacios de nombres entre WIF 3.5 y WIF 4.5 y los espacios de nombres y las clases que se han quitado en WIF 4.5, vea [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md).
 
-|Espacio de nombres de WIF 4.5|DESCRIPCIÓN|
+|Espacio de nombres de WIF 4.5|Descripción|
 |-----------------------|-----------------|
 |<xref:System.IdentityModel?displayProperty=nameWithType>|Contiene clases que representan las transformaciones de cookies, los servicios de token de seguridad y los lectores de diccionario XML especializados. Contiene clases de los siguientes espacios de nombres de WIF 3.5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` y `Microsoft.IdentityModel.Threading`.|
 |<xref:System.Security.Claims?displayProperty=nameWithType>|Contiene clases que representan notificaciones, identidades basadas en notificaciones, entidades de seguridad basadas en notificaciones y otros artefactos del modelo de identidad basado en notificaciones. Contiene clases del espacio de nombres `Microsoft.IdentityModel.Claims`.|
@@ -110,7 +110,7 @@ Puede instalar la herramienta de identidad y acceso desde el administrador de ex
 
 - La utilidad de federación independiente (FedUtil) no está disponible en WIF 4.5. Puede utilizar la extensión Identity and Access Tool para modificar los archivos de configuración y externalizar la administración de identidades a un STS.
 
-Para obtener más información sobre la herramienta de identidad y acceso, vea [Herramienta de identidad y acceso para Visual Studio 2012](identity-and-access-tool-for-vs.md).
+Para obtener más información sobre la herramienta de identidad y acceso, consulte [Identity and Access Tool for Visual Studio 2012](identity-and-access-tool-for-vs.md).
 
 <a name="BKMK_ToolingChanges"></a>
 

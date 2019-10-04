@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Stream streaming de fragmentos XML desde un objeto XmlReader (Visual Basic)
+title: Procedimiento Transmitir fragmentos XML desde un objeto XmlReader (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 8c5aa1afff983f3763bbf7c74268eba622df7751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3edb9cbbe9b649a5b4d232a3937e6f322b4a6b7d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614901"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835147"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Procedimiento Stream streaming de fragmentos XML desde un objeto XmlReader (Visual Basic)
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Procedimiento Transmitir fragmentos XML desde un objeto XmlReader (Visual Basic)
 Cuando deba procesar archivos XML grandes quizás no sea factible cargar la totalidad del árbol XML en memoria. En este tema se muestra cómo transmitir por secuencias fragmentos usando <xref:System.Xml.XmlReader>.  
   
  Una de las formas más efectivas de usar <xref:System.Xml.XmlReader> para leer objetos <xref:System.Xml.Linq.XElement> es escribir un método de eje personalizado propio. Un método de eje suele devolver una recopilación como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, tal y como se muestra en el ejemplo de este tema. En el método de eje personalizado, tras crear el fragmento XML llamando al método <xref:System.Xml.Linq.XNode.ReadFrom%2A>, devuelva la recopilación usando `yield return`. Esto proporciona semántica de ejecución aplazada al método de eje personalizado.  
@@ -18,9 +18,9 @@ Cuando deba procesar archivos XML grandes quizás no sea factible cargar la tota
   
  Si desea crear un árbol parcial, puede crear una instancia de un <xref:System.Xml.XmlReader>, colocar el lector en el nodo que desea convertir a un árbol <xref:System.Xml.Linq.XElement> y después crear el objeto <xref:System.Xml.Linq.XElement>.  
   
- El tema [Cómo: Stream fragmentos XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene información y un ejemplo de cómo hacer streaming de un documento más complejo.  
+ El tema [Cómo: Streaming XML Fragments con acceso a la información de encabezado (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene información y un ejemplo sobre cómo transmitir un documento más complejo.  
   
- El tema [Cómo: Realizar Streaming transformación de documentos XML grandes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un ejemplo del uso de LINQ to XML para transformar documentos XML extremadamente grandes manteniendo una superficie de memoria pequeña.  
+ El tema [Cómo: Realizar la transformación de transmisión por secuencias de documentos XML de gran tamaño (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un ejemplo del uso de LINQ to XML para transformar documentos XML extremadamente grandes manteniendo una superficie de memoria pequeña.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo crea un método de eje personalizado. Puede consultarlo usando una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. El método de eje personalizado, `StreamRootChildDoc`, es un método que está específicamente diseñado para leer un documento que tiene un elemento `Child` que se repite.  
@@ -138,7 +138,7 @@ End Class
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 bbb  
 ccc  
 ```  
@@ -147,5 +147,5 @@ ccc
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Implementar IEnumerable(Of T) en Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
+- [Tutorial: Implementar IEnumerable (of T) en Visual Basic @ no__t-0
 - [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

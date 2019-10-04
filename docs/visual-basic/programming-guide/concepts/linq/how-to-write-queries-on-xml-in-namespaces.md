@@ -2,12 +2,12 @@
 title: Procedimiento Escribir consultas en XML en espacios de nombres (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709873"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835007"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedimiento Escribir consultas en XML en espacios de nombres (Visual Basic)
 Para escribir una consulta en XML que esté en un espacio de nombres, debe usar objetos <xref:System.Xml.Linq.XName> que tengan el espacio de nombres correcto.  
@@ -45,7 +45,7 @@ End Module
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 1  
 2  
 3  
@@ -82,7 +82,7 @@ End Module
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 1  
 2  
 3  

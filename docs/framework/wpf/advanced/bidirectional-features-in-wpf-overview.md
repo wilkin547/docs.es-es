@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856193"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834748"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Información general sobre características bidireccionales en WPF
 
@@ -178,7 +178,7 @@ Esto permite a las aplicaciones procesar valores numéricos sin necesidad de con
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] continúa con la tradición y agrega más compatibilidad con esta característica, que aumenta el control del usuario sobre cuándo y cómo usar la sustitución. Aunque esta característica está diseñada para cualquier idioma, es especialmente útil en el contenido bidireccional, donde definir los dígitos de un idioma concreto normalmente constituye un desafío para los desarrolladores de aplicaciones debido a las distintas referencias culturales en las que se puede ejecutar una aplicación.
 
-La propiedad principal que controla cómo funciona la sustitución [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de números <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> en es la propiedad de dependencia. La <xref:System.Windows.Media.NumberSubstitution> clase especifica cómo se mostrarán los números en el texto. Tiene tres propiedades públicas que definen su comportamiento. A continuación se muestra un resumen de cada una de las propiedades.
+La propiedad principal que controla cómo funciona la sustitución [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de números <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> en es la propiedad de dependencia. La <xref:System.Windows.Media.NumberSubstitution> clase especifica cómo se mostrarán los números en el texto. Tiene tres propiedades públicas que definen su comportamiento. El siguiente es un resumen de cada una de las propiedades:
 
 **CultureSource:**
 

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: d9767844400d67e81c7065148b22c62352af0428
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784789"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834270"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Aplicar una transformación XSL a un DataSet
-El método **WriteXml** de <xref:System.Data.DataSet> le permite escribir el contenido de un **DataSet** como datos XML. Normalmente se transforma ese XML en otro formato mediante transformaciones XSL (XSLT). Sin embargo, la sincronización de un <xref:System.Xml.XmlDataDocument> conjunto de datos con un le permite aplicar una hoja de estilos XSLT al contenido de un **conjunto** de datos sin tener que escribir primero el contenido del **conjunto** de datos como datos XML mediante **WriteXml**.  
+
+El método **WriteXml** del <xref:System.Data.DataSet> le permite escribir el contenido de un **DATASET** como datos XML. Normalmente se transforma ese XML en otro formato mediante transformaciones XSL (XSLT). Sin embargo, la sincronización de un **conjunto** de datos con un <xref:System.Xml.XmlDataDocument> le permite aplicar una hoja de estilos XSLT al contenido de un **conjunto** de datos sin tener que escribir primero el contenido del **conjunto** de datos como datos XML mediante **WriteXml**.  
   
- En el ejemplo siguiente se rellena un **DataSet** con tablas y relaciones, se sincroniza el **DataSet** con un **XmlDataDocument**y se escribe una parte del **conjunto** de elementos como un archivo HTML mediante una hoja de estilos XSLT. A continuación se muestra el contenido de la hoja de estilos XSLT.  
+ En el ejemplo siguiente se rellena un **DataSet** con tablas y relaciones, se sincroniza el **DataSet** con un **XmlDataDocument**y se escribe una parte del **conjunto** de elementos como un archivo HTML mediante una hoja de estilos XSLT. A continuación se muestran los contenidos de la hoja de estilos XSLT:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +60,7 @@ El método **WriteXml** de <xref:System.Data.DataSet> le permite escribir el con
  En el código siguiente se rellena el **conjunto** de elementos y se aplica la hoja de estilos XSLT.  
   
 > [!NOTE]
-> Si va a aplicar una hoja de estilos XSLT a un **conjunto** de resultados que contiene relaciones, obtendrá un rendimiento óptimo si establece la <xref:System.Data.DataRelation> propiedad **Nested** de en **true** para cada relación anidada. Esto le permite utilizar hojas de estilos XSLT que implementan un procesamiento natural, de arriba abajo, para navegar por la jerarquía y transformar los datos, en lugar de utilizar ejes de ubicación XPath de rendimiento intensivo (por ejemplo, el elemento anterior y el siguiente en expresiones de prueba de nodos de la hoja de estilos) para navegar por ésta. Para obtener más información sobre las relaciones anidadas, vea anidamiento de objetos [DataRelation](nesting-datarelations.md).  
+> Si va a aplicar una hoja de estilos XSLT a un **conjunto** de resultados que contiene relaciones, obtendrá un rendimiento óptimo si establece la propiedad **nested** de <xref:System.Data.DataRelation> en **true** para cada relación anidada. Esto le permite utilizar hojas de estilos XSLT que implementan un procesamiento natural, de arriba abajo, para navegar por la jerarquía y transformar los datos, en lugar de utilizar ejes de ubicación XPath de rendimiento intensivo (por ejemplo, el elemento anterior y el siguiente en expresiones de prueba de nodos de la hoja de estilos) para navegar por ésta. Para obtener más información sobre las relaciones anidadas, vea anidamiento de objetos [DataRelation](nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

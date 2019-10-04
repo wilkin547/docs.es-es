@@ -11,38 +11,39 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c87419a4d730f72a7ee15fcc3127781a8eaff75
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364212"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834810"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procedimiento Creación de una aplicación Windows Forms desde la línea de comandos
-Los procedimientos siguientes describen los pasos básicos que debe seguir para crear y ejecutar una aplicación de Windows Forms desde la línea de comandos. Visual Studio es altamente compatible con estos procedimientos.  Consulte [también Tutorial: Hospedar un control de Windows Forms](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)en WPF.  
+
+Los procedimientos siguientes describen los pasos básicos que debe seguir para crear y ejecutar una aplicación de Windows Forms desde la línea de comandos. Visual Studio es altamente compatible con estos procedimientos.  Consulte [también Tutorial: Hospedar un control de Windows Forms](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)en WPF.
   
 ## <a name="procedure"></a>Procedimiento  
   
 #### <a name="to-create-the-form"></a>Para crear el formulario  
   
-1. En un archivo de código vacío, escriba las siguientes instrucciones import o using:  
+1. En un archivo de código vacío, escriba las siguientes instrucciones `Imports` o `using`:  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. Declare una clase llamada `Form1` que hereda de la clase Form.  
+2. Declare una clase llamada `Form1` que herede de la clase de formulario:
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. Cree un constructor sin parámetros para `Form1`.  
+3. Cree un constructor sin parámetros para `Form1`.
   
-     Agregará más código al constructor en un procedimiento posterior.  
+     Agregará más código al constructor en un procedimiento posterior.
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4. Agregue un método `Main` a la clase.  
+4. Agregue un método `Main` a la clase.
   
     1. <xref:System.STAThreadAttribute> Aplique C# al métodoparaespecificarquelaaplicaciónWindowsFormsesuncontenedoruniproceso.`Main` (El atributo no es necesario en Visual Basic, ya que las aplicaciones de Windows Forms desarrolladas con Visual Basic usan de forma predeterminada un modelo de apartamento de un solo subproceso).  
   
@@ -67,8 +68,9 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
   
 3. En el símbolo del sistema, escriba:`Form1.exe`  
   
-## <a name="adding-a-control-and-handling-an-event"></a>Agregar un control y controlar un evento  
- Los pasos del procedimiento anterior muestran cómo crear un Windows Form básico que se compila y se ejecuta. El procedimiento siguiente mostrará cómo crear y agregar un control al formulario y cómo controlar un evento del control. Para obtener más información sobre los controles que se pueden agregar a Windows Forms, vea [controles de Windows Forms](./controls/index.md).  
+## <a name="adding-a-control-and-handling-an-event"></a>Agregar un control y controlar un evento
+
+Los pasos del procedimiento anterior muestran cómo crear un Windows Form básico que se compila y se ejecuta. El procedimiento siguiente mostrará cómo crear y agregar un control al formulario y cómo controlar un evento del control. Para obtener más información sobre los controles que se pueden agregar a Windows Forms, vea [controles de Windows Forms](./controls/index.md).
   
  Además de comprender cómo se crean las aplicaciones de Windows Forms, debe conocer la programación basada en eventos y cómo controlar la entrada de datos del usuario. Para obtener más información, vea [crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)y [controlar los datos proporcionados](./controls/handling-user-input.md) por el usuario.  
   
@@ -80,7 +82,7 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
   
 3. Agregue el botón al formulario.  
   
-     En el ejemplo de código siguiente se muestra cómo declarar el control de botón.  
+     En el ejemplo de código siguiente se muestra cómo declarar el control de botón:
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
@@ -89,7 +91,7 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
   
 5. En el controlador de eventos de clic, muestre un <xref:System.Windows.Forms.MessageBox> con el mensaje "Hello World".  
   
-     En el ejemplo de código siguiente se muestra cómo controlar el evento de clic del control de botón.  
+     En el ejemplo de código siguiente se muestra cómo controlar el evento click del control Button:
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
@@ -104,7 +106,8 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
 7. Compile y ejecute la aplicación tal y como se describe en el procedimiento anterior.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente es el ejemplo completo de los procedimientos anteriores.  
+ 
+El ejemplo de código siguiente es el ejemplo completo de los procedimientos anteriores:
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  

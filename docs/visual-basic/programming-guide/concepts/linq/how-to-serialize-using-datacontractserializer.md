@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Serializar usando DataContractSerializer (Visual Basic)
+title: Procedimiento Serializar mediante DataContractSerializer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054437"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835162"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Procedimiento Serializar usando DataContractSerializer (Visual Basic)
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Procedimiento Serializar mediante DataContractSerializer (Visual Basic)
 Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -74,7 +74,7 @@ End Class
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  

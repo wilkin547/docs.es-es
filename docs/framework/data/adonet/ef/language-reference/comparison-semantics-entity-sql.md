@@ -2,12 +2,12 @@
 title: Semántica de comparación (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: da7b8f662d10376abd649e674701b43b7b740a6f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251178"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833943"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semántica de comparación (Entity SQL)
 El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes implica la comparación de las instancias de tipo:  
@@ -66,7 +66,7 @@ El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../incl
 ## <a name="supported-combinations"></a>Combinaciones admitidas  
  En la tabla siguiente se muestran todas las combinaciones admitidas de los operadores de comparación para cada clase de tipo:  
   
-|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **POCO**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ES NULL**<br /><br /> **NO ES NULL**|  
+|**Tipo**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **POCO**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ES NULL**<br /><br /> **NO ES NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Tipo de entidad|Referencia<sup>1</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Referencia<sup>1</sup>|  
 |Tipo complejo|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
@@ -78,7 +78,7 @@ El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../incl
   
  <sup>1</sup> Las referencias de las instancias de tipo de entidad dadas se comparan implícitamente, como se muestra en el ejemplo siguiente:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   
@@ -87,7 +87,7 @@ WHERE p1 != p2 OR p1 IS NULL
   
  Una instancia de entidad no se puede comparar con una referencia explícita. Si se intenta, se inicia una excepción. Por ejemplo, la siguiente consulta iniciaría una excepción:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   

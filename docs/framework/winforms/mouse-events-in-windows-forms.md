@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949909"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834609"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos del mouse (ratón) en formularios Windows Forms
 
@@ -48,7 +48,7 @@ Si quiere controlar los eventos de clic del mouse en el orden correcto, necesita
 
 4. Evento<xref:System.Windows.Forms.Control.MouseUp> .
 
-El siguiente es el orden de los eventos generados para un doble clic del botón del mouse:
+El siguiente es el orden de los eventos que se producen para un clic doble del botón del mouse:
 
 1. Evento<xref:System.Windows.Forms.Control.MouseDown> .
 
@@ -66,13 +66,16 @@ El siguiente es el orden de los eventos generados para un doble clic del botón 
 
 8. Evento<xref:System.Windows.Forms.Control.MouseUp> .
 
-Para obtener un ejemplo de código que muestra el orden de los eventos de clic [del mouse, consulte Cómo: Controlar los eventos de entrada del usuario](how-to-handle-user-input-events-in-windows-forms-controls.md)en los controles de Windows Forms.
+Para obtener un ejemplo de código que muestra el orden de los eventos de clic del mouse, vea [How para: Controlar los eventos de entrada del usuario en los controles de Windows Forms @ no__t-0.
 
 ### <a name="individual-controls"></a>Controles individuales
 
 Los controles siguientes no siguen el comportamiento estándar de los eventos de clic del mouse:
 
-- Controles <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.RadioButton>
+- <xref:System.Windows.Forms.Button>
+- <xref:System.Windows.Forms.CheckBox>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
   > Para el control <xref:System.Windows.Forms.ComboBox>, se produce el comportamiento de eventos que se describe a continuación si el usuario hace clic en el campo de edición, en el botón o en un elemento de la lista.
@@ -124,7 +127,7 @@ Los controles siguientes no siguen el comportamiento estándar de los eventos de
 
   - Doble clic con el botón secundario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-### <a name="painting-behavior-of-toggle-controls"></a>Comportamiento de dibujo de los controles de alternancia
+### <a name="painting-behavior-of-toggle-controls"></a>Comportamiento de dibujo de controles de alternancia
 
 Los controles de alternancia, como los controles que derivan de la clase <xref:System.Windows.Forms.ButtonBase>, tienen el siguiente comportamiento de dibujo particular en combinación con los eventos de clic del mouse:
 

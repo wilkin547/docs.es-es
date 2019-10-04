@@ -2,18 +2,18 @@
 title: Procedimiento Trabajar con diccionarios mediante LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614150"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835086"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Procedimiento Trabajar con diccionarios mediante LINQ to XML (Visual Basic)
 A menudo resulta cómodo convertir variedades de estructuras de datos a XML y de XML a otras estructuras de datos. Este tema muestra una implementación específica de este enfoque general convirtiendo un <xref:System.Collections.Generic.Dictionary%602> a XML y de XML.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo usa literales XML y una consulta en una expresión incrustada. La consulta proyecta nuevos <xref:System.Xml.Linq.XElement> objetos, que se convierten en el nuevo contenido de la `Root` <xref:System.Xml.Linq.XElement> objeto.  
+ En este ejemplo se usan literales XML y una consulta en una expresión incrustada. La consulta proyecta nuevos objetos <xref:System.Xml.Linq.XElement>, que se convierten en el nuevo contenido del objeto `Root` <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -63,7 +63,7 @@ Next
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  

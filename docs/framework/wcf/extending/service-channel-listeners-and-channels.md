@@ -2,12 +2,12 @@
 title: 'Servicio: Escuchas de canales y canales'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 0a740f5dcf682c3c140adb9c4c7c9678c4eae132
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4367d844867db7fdad013e30d047f9385addbce5
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797172"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834798"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Servicio: Escuchas de canales y canales
 
@@ -25,21 +25,21 @@ Una escucha de canales recibiendo mensajes y entregándolos al nivel superior a 
 
 El proceso se puede modelar conceptualmente como una cola, aunque dentro de cada canal la implementación puede no utilizar una cola. La escucha de canales es responsable de recibir los mensajes del nivel inferior o de la red y colocarlos en la cola. El canal es responsable de recibir los mensajes de la cola y entregarlos al nivel superior cuando dicho nivel pide un mensaje, por ejemplo llamando a `Receive` en el canal.
 
-WCF proporciona aplicaciones auxiliares de clase base para este proceso. (Para ver un diagrama de las clases de aplicación auxiliar de canal descritas en este artículo, consulte [información general del modelo de canal](channel-model-overview.md)).
+WCF proporciona aplicaciones auxiliares de clase base para este proceso. Para ver un diagrama de las clases auxiliares de canal que se describen en este artículo, consulte [información general del modelo de canal](channel-model-overview.md).
 
-- La <xref:System.ServiceModel.Channels.CommunicationObject> clase<xref:System.ServiceModel.ICommunicationObject> implementa y exige el equipo de estado descrito en el paso 2 de [desarrollo de canales](developing-channels.md).
+- La clase <xref:System.ServiceModel.Channels.CommunicationObject> implementa <xref:System.ServiceModel.ICommunicationObject> y exige el equipo de estado descrito en el paso 2 de [desarrollo de canales](developing-channels.md).
 
-- La <xref:System.ServiceModel.Channels.ChannelManagerBase> clase <xref:System.ServiceModel.Channels.ChannelFactoryBase> <xref:System.ServiceModel.Channels.ChannelListenerBase>implementa y proporciona una clase base unificada para y. <xref:System.ServiceModel.Channels.CommunicationObject> La clase <xref:System.ServiceModel.Channels.ChannelManagerBase> trabaja junto con <xref:System.ServiceModel.Channels.ChannelBase>, que es una clase base que implementa <xref:System.ServiceModel.Channels.IChannel>.
+- La clase <xref:System.ServiceModel.Channels.ChannelManagerBase> implementa <xref:System.ServiceModel.Channels.CommunicationObject> y proporciona una clase base unificada para <xref:System.ServiceModel.Channels.ChannelFactoryBase> y <xref:System.ServiceModel.Channels.ChannelListenerBase>. La clase <xref:System.ServiceModel.Channels.ChannelManagerBase> trabaja junto con <xref:System.ServiceModel.Channels.ChannelBase>, que es una clase base que implementa <xref:System.ServiceModel.Channels.IChannel>.
 
-- La <xref:System.ServiceModel.Channels.ChannelFactoryBase> clase `CreateChannel` `OnCreateChannel` implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> y<xref:System.ServiceModel.Channels.IChannelFactory> y consolida las sobrecargas en un método abstracto.
+- La clase <xref:System.ServiceModel.Channels.ChannelFactoryBase> implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> y <xref:System.ServiceModel.Channels.IChannelFactory> y consolida las sobrecargas `CreateChannel` en un método Abstract `OnCreateChannel`.
 
 - La <xref:System.ServiceModel.Channels.ChannelListenerBase> clase<xref:System.ServiceModel.Channels.IChannelListener>implementa. Se encarga de la administración de estados básica.
 
-El siguiente debate se basa en el [transporte: Ejemplo](../samples/transport-udp.md) de UDP.
+La siguiente explicación se basa en el @no__t 0Transport: Ejemplo](../samples/transport-udp.md) de UDP.
 
 ## <a name="creating-a-channel-listener"></a>Creación de un agente de escucha del canal
 
-Que el ejemplo implementa se deriva de la <xref:System.ServiceModel.Channels.ChannelListenerBase> clase. `UdpChannelListener` Utiliza un socket UDP único para recibir datagramas. El método `OnOpen` recibe datos utilizando el socket UDP en un bucle asincrónico. Los datos se convierten en mensajes utilizando el sistema de la codificación de mensajes:
+El `UdpChannelListener` que implementa el ejemplo se deriva de la clase <xref:System.ServiceModel.Channels.ChannelListenerBase>. Utiliza un socket UDP único para recibir datagramas. El método `OnOpen` recibe datos utilizando el socket UDP en un bucle asincrónico. Los datos se convierten en mensajes utilizando el sistema de la codificación de mensajes:
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,7 +48,7 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-Dado que el mismo canal del datagrama representa mensajes que llegan de varios orígenes, `UdpChannelListener` es un agente de escucha singleton. Hay a lo sumo un activo <xref:System.ServiceModel.Channels.IChannel> asociado a este agente de escucha a la vez. El ejemplo solo genera otro si se elimina subsiguientemente un canal que es devuelto por el método <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A>. Cuando se recibe un mensaje, se pone en cola en este canal singleton.
+Dado que el mismo canal del datagrama representa mensajes que llegan de varios orígenes, `UdpChannelListener` es un agente de escucha singleton. Hay como máximo un @no__t activo-0 asociado a este agente de escucha a la vez. El ejemplo solo genera otro si se elimina subsiguientemente un canal que es devuelto por el método <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A>. Cuando se recibe un mensaje, se pone en cola en este canal singleton.
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 

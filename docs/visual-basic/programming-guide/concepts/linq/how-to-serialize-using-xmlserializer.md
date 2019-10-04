@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Serializar utilizando XmlSerializer (Visual Basic)
+title: Procedimiento Serialización mediante XmlSerializer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde54ed7d0e8049f52468e17f4500fb090f3124
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614263"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835123"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedimiento Serializar utilizando XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedimiento Serialización mediante XmlSerializer (Visual Basic)
 Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -71,7 +71,7 @@ End Class
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  

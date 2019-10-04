@@ -2,19 +2,19 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: cbaea82108dd3debcca972ca15dea248227330ac
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3659f2c0690b00e728630c6e77308ba9d424bb1b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251102"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833921"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Crea referencias a una entidad en un elemento entityset.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
@@ -30,19 +30,19 @@ CreateRef(entityset_identifier, row_typed_expression)
   
  En el ejemplo siguiente, Orders y BadOrders son ambos elementos entityset de tipo Order y se supone que Id es la propiedad de clave única de Order. El ejemplo muestra cómo se puede generar una referencia a una entidad en BadOrders. Observe que la referencia puede estar pendiente.  Es decir, la referencia puede no identificar realmente una entidad concreta. En esos casos, una operación `DEREF` en esa referencia devuelve un valor NULL.  
   
-```  
-select CreateRef(LOB.BadOrders, row(o.Id))   
-from LOB.Orders as o   
+```sql  
+SELECT CreateRef(LOB.BadOrders, row(o.Id))
+FROM LOB.Orders AS o
 ```  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador CREATEREF para crear las referencias a una entidad en un conjunto de entidades. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
+1. Siga el procedimiento descrito en [How para: Ejecute una consulta que devuelva los resultados de StructuralType @ no__t-0.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
+ [!code-sql[DP EntityServices Concepts#CREATEREF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#createref)]  
   
 ## <a name="see-also"></a>Vea también
 

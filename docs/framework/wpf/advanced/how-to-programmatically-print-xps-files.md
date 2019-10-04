@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d44f372fe5ef9633e91d8e46cca9e9a0967b9615
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855745"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834573"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Procedimiento Imprimir archivos XPS mediante programación
 
@@ -27,7 +27,7 @@ Otra forma de imprimir XPS es usar los <xref:System.Windows.Controls.PrintDialog
 
 Los pasos principales para usar el método de tres <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> parámetros son los siguientes. En el ejemplo siguiente se proporciona información detallada.
 
-1. Determinar si la impresora es una impresora XPSDrv. (Vea [Introducción a la impresión](printing-overview.md) para obtener más información sobre XPSDrv).
+1. Determinar si la impresora es una impresora XPSDrv. Consulte [información general sobre impresión](printing-overview.md) para obtener más información sobre XPSDrv.
 
 2. Si la impresora no es una impresora XPSDrv, establezca el apartamento del subproceso en un subproceso único.
 

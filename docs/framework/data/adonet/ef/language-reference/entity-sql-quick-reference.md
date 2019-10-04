@@ -2,30 +2,30 @@
 title: Referencia rápida de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7780359d981b130118cb73d4892f3dcb4b6e2e7d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ccfc461d394af8804c960ebf460e7fbfb025b64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251026"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833875"
 ---
 # <a name="entity-sql-quick-reference"></a>Referencia rápida de Entity SQL
 Este tema proporciona una referencia rápida a las consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Las consultas de este tema se basan en el modelo AdventureWorks Sales.  
   
 ## <a name="literals"></a>Literales  
   
-### <a name="string"></a>string  
+### <a name="string"></a>String  
  Hay literales de cadenas de caracteres Unicode y no Unicode. Las cadenas Unicode se anteponen a N. Por ejemplo, `N'hello'`.  
   
  A continuación se incluye un ejemplo de un literal de cadena no Unicode:  
   
-```  
+```sql  
 'hello'  
 --same as  
 "hello"  
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
@@ -36,29 +36,29 @@ Este tema proporciona una referencia rápida a las consultas de [!INCLUDE[esql](
   
  Ejemplo:  
   
-```  
+```sql  
 DATETIME '2006-12-25 01:01:00.000'   
 --same as  
 DATETIME '2006-12-25 01:01'  
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
 |25.12.06 01:01:00|  
   
-### <a name="integer"></a>Entero  
+### <a name="integer"></a>Integer  
  Los literales enteros pueden ser de tipo Int32 (123), UInt32 (123U), Int64 (123L) y UInt64 (123UL).  
   
  Ejemplo:  
   
-```  
+```sql  
 --a collection of integers  
 {1, 2, 3}  
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
@@ -72,18 +72,18 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>Constructores de tipos  
   
 ### <a name="row"></a>ROW  
- La [fila](row-entity-sql.md) construye un valor anónimo, con tipo estructural (registro) como en:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ La [fila](row-entity-sql.md) construye un valor anónimo, con tipo estructural (registro) como en: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Ejemplo:  
   
-```  
-SELECT VALUE row (product.ProductID as ProductID, product.Name   
-    as ProductName) FROM AdventureWorksEntities.Product AS product  
+```sql  
+SELECT VALUE row (product.ProductID AS ProductID, product.Name
+    AS ProductName) FROM AdventureWorksEntities.Product AS product
 ```  
   
- Salida:  
+ Resultado:  
   
-|ProductID|NOMBRE|  
+|ProductID|Name|  
 |---------------|----------|  
 |1|Adjustable Race|  
 |879|All-Purpose Bike Stand|  
@@ -97,29 +97,29 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
  Ejemplo:  
   
-```  
+```sql  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
 ```  
   
- Salida:  
+ Resultado:  
   
-|ProductID|NOMBRE|ProductNumber|…|  
+|ProductID|Name|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- El [constructor de tipo con nombre](named-type-constructor-entity-sql.md) crea objetos definidos por el usuario (con nombre `person("abc", 12)`), como.  
+ El [constructor de tipos con nombre](named-type-constructor-entity-sql.md) crea objetos definidos por el usuario (con nombre), como `person("abc", 12)`.  
   
  Ejemplo:  
   
-```  
+```sql  
 SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,   
 o.ProductID, o.SpecialOfferID, o.UnitPrice, o.UnitPriceDiscount,   
 o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail   
 AS o  
 ```  
   
- Salida:  
+ Resultado:  
   
 |SalesOrderDetailID|CarrierTrackingNumber|OrderQty|ProductID|...|  
 |------------------------|---------------------------|--------------|---------------|---------|  
@@ -132,11 +132,11 @@ AS o
 ### <a name="ref"></a>REF  
  [Ref](ref-entity-sql.md) crea una referencia a una instancia de tipo de entidad. Por ejemplo, la consulta siguiente devuelve referencias a cada entidad Order en el conjunto de entidades Orders:  
   
-```  
+```sql  
 SELECT REF(o) AS OrderID FROM Orders AS o  
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
@@ -149,12 +149,12 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Ejemplo:  
   
-```  
+```sql  
 SELECT VALUE REF(p).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
@@ -168,12 +168,12 @@ SELECT VALUE REF(p).Name FROM
   
  Ejemplo:  
   
-```  
+```sql  
 SELECT VALUE DEREF(REF(p)).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
@@ -187,12 +187,12 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Ejemplo:  
   
-```  
+```sql  
 SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))   
-    FROM AdventureWorksEntities.Product as p  
+    FROM AdventureWorksEntities.Product AS p
 ```  
   
- Salida:  
+ Resultado:  
   
 |ProductID|  
 |---------------|  
@@ -204,17 +204,17 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>Funciones  
   
 ### <a name="canonical"></a>Canónicas  
- El espacio de nombres para [las funciones canónicas](canonical-functions.md) es `Edm.Length("string")`EDM, como en. No es necesario especificar el espacio de nombres a no ser que se importe otro espacio de nombres que contenga una función con el mismo nombre que una función canónica. Si dos espacios de nombres tienen la misma función, el usuario debe especificar el nombre completo.  
+ El espacio de nombres para [las funciones canónicas](canonical-functions.md) es EDM, como en `Edm.Length("string")`. No es necesario especificar el espacio de nombres a no ser que se importe otro espacio de nombres que contenga una función con el mismo nombre que una función canónica. Si dos espacios de nombres tienen la misma función, el usuario debe especificar el nombre completo.  
   
  Ejemplo:  
   
-```  
-SELECT Length(c. FirstName) As NameLen FROM   
+```sql  
+SELECT Length(c. FirstName) AS NameLen FROM
     AdventureWorksEntities.Contact AS c   
     WHERE c.ContactID BETWEEN 10 AND 12  
 ```  
   
- Salida:  
+ Resultado:  
   
 |NameLen|  
 |-------------|  
@@ -223,17 +223,17 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Específicas de proveedores de Microsoft  
- [Las funciones específicas del proveedor de Microsoft](../sqlclient-for-ef-functions.md) se `SqlServer` encuentran en el espacio de nombres.  
+ [Las funciones específicas del proveedor de Microsoft](../sqlclient-for-ef-functions.md) se encuentran en el espacio de nombres `SqlServer`.  
   
  Ejemplo:  
   
-```  
-SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM   
+```sql  
+SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
     AdventureWorksEntities.Contact AS c WHERE   
     c.ContactID BETWEEN 10 AND 12  
 ```  
   
- Salida:  
+ Resultado:  
   
 |EmailLen|  
 |--------------|  
@@ -246,13 +246,13 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
   
  Ejemplo:  
   
-```  
+```sql  
 using SqlServer; LOWER('AA');  
 ```  
   
- Salida:  
+ Resultado:  
   
-|Value|  
+|Valor|  
 |-----------|  
 |aa|  
   
@@ -261,14 +261,14 @@ using SqlServer; LOWER('AA');
   
  Ejemplo:  
   
-```  
-SELECT c.ContactID as ID, c.LastName as Name FROM   
+```sql  
+SELECT c.ContactID as ID, c.LastName AS Name FROM
     AdventureWorks.Contact AS c ORDER BY c.ContactID SKIP 9 LIMIT 3;  
 ```  
   
- Salida:  
+ Resultado:  
   
-|ID|NOMBRE|  
+|ID|Name|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -279,14 +279,14 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Ejemplo:  
   
-```  
-SELECT VALUE name FROM AdventureWorksEntities.Product as P   
+```sql  
+SELECT VALUE name FROM AdventureWorksEntities.Product AS P
     GROUP BY P.Name HAVING MAX(P.ListPrice) > 5  
 ```  
   
- Salida:  
+ Resultado:  
   
-|Nombre|  
+|name|  
 |----------|  
 |LL Mountain Seat Assembly|  
 |ML Mountain Seat Assembly|  
@@ -294,17 +294,17 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>Navegación  
- El operador de navegación por relaciones permite navegar por la relación de un tipo de entidad (extremo inicial) a otro (extremo final). [Navigate](navigate-entity-sql.md) toma el tipo de relación \<calificado como espacio\< de nombres >. nombre del tipo de relación >. Navigate devuelve\<Ref T > Si la cardinalidad del extremo final es 1. Si la cardinalidad del extremo final es n, se devolverá la\<colección < > Ref T >.  
+ El operador de navegación por relaciones permite navegar por la relación de un tipo de entidad (extremo inicial) a otro (extremo final). [Navigate](navigate-entity-sql.md) toma el tipo de relación calificado como \<namespace >. \<relationship nombre de tipo >. Navigate devuelve Ref @ no__t-0T > Si la cardinalidad del extremo final es 1. Si la cardinalidad del extremo final es n, se devolverá la colección < Ref @ no__t-0T > >.  
   
  Ejemplo:  
   
-```  
+```sql  
 SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM   
     NAVIGATE(a, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS v)   
     FROM AdventureWorksEntities.Address AS a  
 ```  
   
- Salida:  
+ Resultado:  
   
 |AddressID|  
 |---------------|  
@@ -316,17 +316,17 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE y SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona la cláusula SELECT VALUE para omitir la creación de filas implícitas. Solo se puede especificar un elemento en una cláusula SELECT VALUE. Cuando se utiliza este tipo de cláusula, no se crea ningún contenedor de filas en torno a los elementos de la cláusula SELECT y se puede generar una colección de la forma deseada `SELECT VALUE a`, por ejemplo:.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona la cláusula SELECT VALUE para omitir la creación de filas implícitas. Solo se puede especificar un elemento en una cláusula SELECT VALUE. Cuando se utiliza este tipo de cláusula, no se crea ningún contenedor de filas en torno a los elementos de la cláusula SELECT y se puede generar una colección de la forma deseada, por ejemplo: `SELECT VALUE a`.  
   
  Ejemplo:  
   
-```  
-SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 ```  
   
- Salida:  
+ Resultado:  
   
-|NOMBRE|  
+|Name|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -340,7 +340,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
-|NOMBRE|ProductID|  
+|Name|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  
@@ -352,15 +352,15 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  Ejemplo:  
   
-```  
+```sql  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
 ```  
   
- Salida:  
+ Resultado:  
   
 |Valor|  
 |-----------|  
-|TRUE|  
+|true|  
   
 ## <a name="see-also"></a>Vea también
 

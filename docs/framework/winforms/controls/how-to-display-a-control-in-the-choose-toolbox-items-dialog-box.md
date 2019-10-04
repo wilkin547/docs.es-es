@@ -11,12 +11,12 @@ ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: f52c1d127df8f0e831db0749e3453bb1c54d5886
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 86ec8f9ae76f010ebbc3be393d8d257ba5cfc6b6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972070"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834610"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Procedimiento para mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas
 
@@ -24,7 +24,7 @@ A medida que desarrolle y distribuya controles, puede que desee que estos contro
 
 Para mostrar el control en el cuadro de diálogo Elegir elementos del cuadro de herramientas:
 
-- Instale el ensamblado de control en la caché global de ensamblados. Para obtener más información, vea [Cómo: Instalar un ensamblado en la caché global de ensamblados](../../app-domains/install-assembly-into-gac.md)
+- Instale el ensamblado de control en la caché global de ensamblados. Para obtener más información, vea [Cómo: Instalar un ensamblado en la caché global de ensamblados](../../app-domains/install-assembly-into-gac.md).
 
   -o bien-
 

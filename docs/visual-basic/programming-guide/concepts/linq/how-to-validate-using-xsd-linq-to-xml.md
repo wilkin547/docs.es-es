@@ -2,12 +2,12 @@
 title: Procedimiento Validar con XSD (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67b197d3c92e7f72b7bda444f307b191eaec8304
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613362"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835063"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Procedimiento Validar con XSD (LINQ to XML) (Visual Basic)
 El espacio de nombres <xref:System.Xml.Schema> contiene métodos de extensión que hacen que sea fácil validar un árbol XML contra un archivo de lenguaje de definición de esquemas XML (XSD). Para obtener más información, vea la documentación del método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
@@ -67,7 +67,7 @@ End Sub
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 Validating doc1  
 doc1 validated  
   
@@ -113,7 +113,7 @@ End Sub
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 Attempting to validate  
 custOrdDoc validated  
   

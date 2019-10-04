@@ -1,22 +1,22 @@
 ---
-title: Procedimiento Dividir un archivo en varios mediante el uso de grupos (LINQ) (Visual Basic)
+title: Procedimiento Dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e12de7380ca34478506fde98aecae2501d2529ee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592482"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835109"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Procedimiento Dividir un archivo en varios mediante el uso de grupos (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Procedimiento Dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)
 En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.  
   
 ### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
   
 1. Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ En este ejemplo se muestra una manera de combinar el contenido de dos archivos y
   
 2. Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -116,7 +116,7 @@ End Class
  El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
-Cree un proyecto de aplicación de consola VB.NET, con un `Imports` instrucción del espacio de nombres System.Linq.
+Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
   
 ## <a name="see-also"></a>Vea también
 
