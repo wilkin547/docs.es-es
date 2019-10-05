@@ -334,8 +334,6 @@
     - name: Globalizar formularios Windows Forms
       href: globalizing-windows-forms.md
       items:
-        - name: Codificación y globalización de Windows Forms
-          href: encoding-and-windows-forms-globalization.md
         - name: Fuentes internacionales en formularios Windows Forms y controles
           href: international-fonts-in-windows-forms-and-controls.md
         - name: Compatibilidad bidireccional en las aplicaciones de Windows Forms
