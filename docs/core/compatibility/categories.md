@@ -4,12 +4,12 @@ description: Obtenga información sobre la forma de clasificar los cambios impor
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: 68cd3580e80305e54b41610f05d939a6aff8b54d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "69577157"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698450"
 ---
 # <a name="breaking-change-categories"></a>Categorías de cambios importantes
 
@@ -49,4 +49,4 @@ Mantener la compatibilidad con versiones posteriores no es un objetivo de .NET C
 
 ## <a name="see-also"></a>Vea también
 
-[Evaluación de los cambios importantes en .NET Core](index.md)
+- [Evaluación de los cambios importantes en .NET Core](index.md)
