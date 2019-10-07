@@ -3,18 +3,18 @@ title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
 ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391969"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699937"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
 Los intervalos e índices proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una secuencia.
 
-En este tutorial aprenderá lo siguiente:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -33,7 +33,7 @@ Esta compatibilidad con lenguajes se basa en dos nuevos tipos y dos nuevos opera
 
 Comencemos con las reglas de los índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence[sequence.Length - n]`.
 
-```csharp-interactive
+```csharp
 string[] words = new string[]
 {
                 // index from start    index from end

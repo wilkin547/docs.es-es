@@ -2,12 +2,12 @@
 title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo la versión del lenguaje C# se determina en función del proyecto y los distintos valores a los que puede ajustarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040350"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698805"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -21,10 +21,12 @@ El compilador determina un valor predeterminado según estas reglas:
 
 |Marco de destino|version|Versión predeterminada del lenguaje C#|
 |----------------|-------|---------------------------|
-|Núcleo de .NET|3.x|C# 8.0|
-|Núcleo de .NET|2.x|C# 7.3|
-|.NET Standard|todo|C# 7.3|
-|.NET Framework|todo|C# 7.3|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2.x|C# 7.3|
+|.NET Standard|2.1|C# 8.0|
+|.NET Standard|2.0|C# 7.3|
+|.NET Standard|1.x|C# 7.3|
+|.NET Framework|todas|C# 7.3|
 
 ## <a name="default-for-previews"></a>Valor predeterminado para las versiones preliminares
 
@@ -75,7 +77,7 @@ En la siguiente tabla se muestran las versiones actuales del lenguaje C#. El com
 |latestMajor|El compilador acepta la sintaxis de la versión principal más reciente del compilador.|
 |8.0|El compilador acepta solo la sintaxis que se incluye en C# 8.0 o versiones anteriores.|
 |7.3|El compilador acepta solo la sintaxis que se incluye en C# 7.3 o versiones anteriores.|
-|7.2|El compilador acepta solo la sintaxis que se incluye en C# 7.2 o versiones anteriores.|
+|7,2|El compilador acepta solo la sintaxis que se incluye en C# 7.2 o versiones anteriores.|
 |7.1|El compilador acepta solo la sintaxis que se incluye en C# 7.1 o versiones anteriores.|
 |7|El compilador acepta solo la sintaxis que se incluye en C# 7.0 o versiones anteriores.|
 |6|El compilador acepta solo la sintaxis que se incluye en C# 6.0 o versiones anteriores.|

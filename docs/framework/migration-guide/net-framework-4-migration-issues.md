@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9cd2b0d426e8f31f6312a4951f94ed1c52929d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789658"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699080"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migración de .NET Framework 4
 
@@ -316,17 +316,9 @@ Espacios de nombres: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:Sys
 
 ## <a name="see-also"></a>Vea también
 
-### <a name="reference"></a>Referencia
-
 - [Nuevos tipos y miembros en .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-
-### <a name="concepts"></a>Conceptos
-
 - [Guía de migración para .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [Novedades de .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [Compatibilidad de versiones en .NET Framework](version-compatibility.md)
 - [Migrar soluciones de Office a .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
-
-### <a name="other-resources"></a>Otros recursos
-
 - [Lo obsoleto en la biblioteca de clases de .NET Framework](../whats-new/whats-obsolete.md)

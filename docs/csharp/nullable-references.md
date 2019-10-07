@@ -2,12 +2,12 @@
 title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332374"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699959"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -65,7 +65,7 @@ Tanto el contexto de anotación que acepta valores NULL como el contexto de adve
 - `warnings`: el contexto de anotación que acepta valores NULL es **disabled**. El contexto de advertencia que acepta valores NULL es **enabled**.
   - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad están habilitadas.
 - `annotations`: el contexto de anotación que acepta valores NULL es **enabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
-  - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad están habilitadas.
+  - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad están deshabilitadas.
 - `disable`: el contexto de anotación que acepta valores NULL es **disabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
   - Las variables de tipo de referencia son inconscientes, como en versiones anteriores de C#. Todas las advertencias de nulabilidad están deshabilitadas.
 

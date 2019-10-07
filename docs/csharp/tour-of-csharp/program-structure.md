@@ -3,12 +3,12 @@ title: 'Estructura del programa de C#: un paseo por el lenguaje C#'
 description: Conozca más acerca de los bloques de compilación básicos de un programa de C#.
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634568"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834164"
 ---
 # <a name="program-structure"></a>Estructura del programa
 
@@ -20,7 +20,7 @@ En el ejemplo se declara una clase denominada `Stack` en un espacio de nombres l
 
 El nombre completo de esta clase es `Acme.Collections.Stack`. La clase contiene varios miembros: un campo denominado `top`, dos métodos denominados `Push` y `Pop`, y una clase anidada denominada `Entry`. La clase `Entry` contiene además tres miembros: un campo denominado `next`, un campo denominado `data` y un constructor. Suponiendo que el código fuente del ejemplo se almacene en el archivo `acme.cs`, la línea de comandos
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ Dado que un ensamblado es una unidad autodescriptiva de funcionalidad que contie
 
 Si el programa está almacenado en el archivo `example.cs`, cuando se compila `example.cs`, se puede hacer referencia al ensamblado acme.dl mediante la opción /r del compilador:
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 Esto crea un ensamblado ejecutable denominado `example.exe`, que, cuando se ejecuta, produce el resultado:
 
-```
+```console
 100
 10
 1

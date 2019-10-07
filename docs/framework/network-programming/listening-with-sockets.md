@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047770"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736775"
 ---
 # <a name="listening-with-sockets"></a>escuchas con sockets
 Los sockets de escucha o de servidor abren un puerto en la red y esperan a que un cliente se conecte a ese puerto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear un servicio remoto para una red TCP/IP.  
@@ -30,13 +30,13 @@ Los sockets de escucha o de servidor abren un puerto en la red y esperan a que u
  En el ejemplo siguiente se crea una clase <xref:System.Net.IPEndPoint> para un servidor mediante la combinación de la primera dirección IP devuelta por **Dns** para el equipo host con un número de puerto elegido entre el intervalo de números de puerto registrados.  
   
 ```vb  
-Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
 Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
 Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
 ```  
   
 ```csharp  
-IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
 ```  
