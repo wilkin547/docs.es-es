@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663983"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957356"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 
@@ -214,9 +214,7 @@ De forma predeterminada, los grupos de captura se definen con el uso de parénte
 
 A menudo, los constructores de agrupamiento se usan únicamente para aplicar cuantificadores a varios elementos de lenguaje, y las subcadenas capturadas carecen de interés. Por ejemplo, en la expresión regular siguiente:
 
-```
-\b\(?((\w+),?\s?)+[\.!?]\)?
-```
+`\b\(?((\w+),?\s?)+[\.!?]\)?`
 
 Su única finalidad es extraer de un documento las oraciones que finalizan con un punto, signo de exclamación o signo de interrogación, y solo la oración resultante (representada mediante el objeto <xref:System.Text.RegularExpressions.Match>) es de interés. En cambio, las palabras individuales de la colección no son de interés.
 
@@ -388,8 +386,8 @@ El comportamiento de las expresiones regulares canónicas y ECMAScript se difere
   |Expresión regular|Comportamiento canónico|Comportamiento de ECMAScript|
   |------------------------|------------------------|-------------------------|
   |`\0` seguido de 0 a 2 dígitos octales|Se interpreta como un octal. Por ejemplo, `\044` se interpreta siempre como un valor octal y significa “$”.|Mismo comportamiento.|
-  |`\` seguido de un dígito del 1 al 9, seguido de ningún dígito decimal adicional,|Se interpreta como una referencia inversa. Por ejemplo, `\9` siempre significa una referencia inversa de 9, incluso si no existe un noveno grupo de captura. Si el grupo de captura no existe, el analizador de expresiones regulares produce una <xref:System.ArgumentException>.|Si existe un grupo de captura de un solo dígito decimal, realice una referencia inversa a ese dígito. De lo contrario, interprete el valor como literal.|
-  |`\` seguido de un dígito del 1 al 9, seguido de dígitos decimales adicionales|Los dígitos se interpretan como un valor decimal. Si existe ese grupo de captura, interprete la expresión como una referencia inversa.<br /><br /> De lo contrario, interprete los dígitos octales iniciales hasta el octal 377; es decir, tenga en cuenta solo los 8 bits inferiores del valor. Interprete el resto de dígitos como literales. Por ejemplo, en la expresión `\3000`, si existe el grupo de captura 300, interprételo como referencia inversa de 300; si el grupo de captura 300 no existe, interprételo como un octal 300 seguido de 0.|Para interpretarlo como una referencia inversa, convierta todos los dígitos posibles en un valor decimal que pueda hacer referencia a una captura. Si no se puede convertir ningún dígito, interprételo como un octal; para ello, use los dígitos octales iniciales hasta el octal 377 e interprete el resto de dígitos como literales.|
+  |`\` seguido de un dígito de 1 a 9, seguido de ningún dígito decimal adicional|Se interpreta como una referencia inversa. Por ejemplo, `\9` siempre significa una referencia inversa de 9, incluso si no existe un noveno grupo de captura. Si el grupo de captura no existe, el analizador de expresiones regulares produce una <xref:System.ArgumentException>.|Si existe un grupo de captura de un solo dígito decimal, realice una referencia inversa a ese dígito. De lo contrario, interprete el valor como literal.|
+  |`\` seguido de un dígito de 1 a 9, seguido de dígitos decimales adicionales|Interprete los dígitos como un valor decimal. Si existe ese grupo de captura, interprete la expresión como una referencia inversa.<br /><br /> De lo contrario, interprete los dígitos octales iniciales hasta el octal 377; es decir, tenga en cuenta solo los 8 bits inferiores del valor. Interprete el resto de dígitos como literales. Por ejemplo, en la expresión `\3000`, si existe el grupo de captura 300, interprételo como referencia inversa de 300; si el grupo de captura 300 no existe, interprételo como un octal 300 seguido de 0.|Para interpretarlo como una referencia inversa, convierta todos los dígitos posibles en un valor decimal que pueda hacer referencia a una captura. Si no se puede convertir ningún dígito, interprételo como un octal; para ello, use los dígitos octales iniciales hasta el octal 377 e interprete el resto de dígitos como literales.|
 
 [Volver al principio](#Top)
 

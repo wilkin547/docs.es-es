@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963380"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957178"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -78,9 +78,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular es el siguiente:  
   
-```  
-(\w+)\s(\1)\W  
-```  
+`(\w+)\s(\1)\W`  
   
  En la siguiente tabla se muestra cómo se interpreta el patrón de expresión regular.  
   
@@ -95,15 +93,11 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 ## <a name="named-matched-subexpressions"></a>Subexpresiones coincidentes con nombre  
  La construcción de agrupamiento siguiente captura una subexpresión coincidente y permite tener acceso a ella por nombre o por número:  
   
-```  
-(?<name>subexpression)  
-```  
+`(?<name>subexpression)`  
   
  O bien  
   
-```  
-(?'name'subexpression)  
-```  
+`(?'name'subexpression)`  
   
  donde *nombre* es un nombre de grupo válido, y *subexpresión* es cualquier patrón de expresión regular válido. *nombre* no debe contener ningún carácter de puntuación y no puede comenzar por un número.  
   
@@ -141,9 +135,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular es el siguiente:  
   
-```  
-(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
-```  
+`(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)`  
   
  La tabla siguiente muestra cómo se interpreta la expresión regular.  
   
@@ -175,15 +167,11 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 ## <a name="balancing-group-definitions"></a>Definiciones de grupos de compensación  
  Una definición de grupo de compensación elimina la definición de un grupo definido anteriormente y almacena, en el grupo actual, el intervalo entre el grupo definido anteriormente y el grupo actual. Esta construcción de agrupamiento tiene el formato siguiente:  
   
-```  
-(?<name1-name2>subexpression)  
-```  
+`(?<name1-name2>subexpression)`  
   
  O bien  
   
-```  
-(?'name1-name2' subexpression)  
-```  
+`(?'name1-name2' subexpression)`
   
  donde *nombre1* es el grupo actual (opcional), *nombre2* es un grupo definido previamente y *subexpresión* es cualquier patrón de expresión regular válido. La definición de grupo de compensación elimina la definición de *nombre2* y almacena el intervalo entre *nombre2* y *nombre1* en *nombre1*. Si no se ha definido el grupo *nombre2* , la búsqueda de coincidencias retrocede. Como al eliminar la última definición de *nombre2* se revela la definición anterior de *nombre2*, esta construcción permite usar la pila de capturas del grupo *nombre2* como contador para realizar el seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre.  
   
@@ -199,9 +187,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular es:  
   
-```  
-^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$  
-```  
+`^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$`  
   
  La expresión regular se interpreta como sigue:  
   
@@ -254,9 +240,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 ## <a name="noncapturing-groups"></a>Grupos sin captura  
  La construcción de agrupamiento siguiente no captura la subcadena con la que coincide una subexpresión:  
   
-```  
-(?:subexpression)  
-```  
+`(?:subexpression)`
   
  donde *subexpresión* es cualquier patrón de expresión regular válido. La construcción de grupo sin captura se utiliza normalmente cuando un cuantificador se aplica a un grupo, pero las subcadenas capturadas por el grupo no tienen ningún interés.  
   
