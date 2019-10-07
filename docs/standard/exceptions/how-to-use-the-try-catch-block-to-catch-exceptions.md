@@ -1,5 +1,5 @@
 ---
-title: Filtrar Uso del bloque Try/Catch para detectar excepciones
+title: Procedimiento Uso del bloque Try/Catch para detectar excepciones
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092753"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696730"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Cómo usar el bloque Try/Catch para detectar excepciones
 
@@ -27,7 +27,7 @@ Coloque las instrucciones de código que podrían elevar o producir una excepci�
 En el ejemplo siguiente, un elemento <xref:System.IO.StreamReader> abre un archivo denominado *data.txt* y recupera una línea del archivo. Como es posible que el código genere cualquiera de las tres excepciones, se coloca en un bloque `try`. Tres bloques `catch` detectan las excepciones y las controlan mostrando los resultados en la consola.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
-[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
 Common Language Runtime (CLR) detecta las excepciones no controladas por los bloques `catch`. Si CLR detecta una excepción, puede producirse uno de los resultados siguientes, en función de la configuración de CLR:
 
@@ -40,5 +40,5 @@ Common Language Runtime (CLR) detecta las excepciones no controladas por los blo
 
 ## <a name="see-also"></a>Vea también
 
-[Excepciones](index.md)  
-[Control de errores de E/S en .NET](../io/handling-io-errors.md)
+- [Excepciones](index.md)
+- [Control de errores de E/S en .NET](../io/handling-io-errors.md)
