@@ -21,43 +21,43 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586254"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002534"
 ---
-# <a name="me-my-mybase-and-myclass-in-visual-basic"></a><span data-ttu-id="bd95d-102">Me, My, MyBase y MyClass en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bd95d-102">Me, My, MyBase, and MyClass in Visual Basic</span></span>
-<span data-ttu-id="bd95d-103">`Me`, `My`, `MyBase`, y `MyClass` en Visual Basic tienen nombres similares, pero con distintos fines.</span><span class="sxs-lookup"><span data-stu-id="bd95d-103">`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes.</span></span> <span data-ttu-id="bd95d-104">Este tema describe cada una de estas entidades para distinguirlos.</span><span class="sxs-lookup"><span data-stu-id="bd95d-104">This topic describes each of these entities in order to distinguish them.</span></span>  
+# <a name="me-my-mybase-and-myclass-in-visual-basic"></a><span data-ttu-id="56de9-102">Me, My, MyBase y MyClass en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="56de9-102">Me, My, MyBase, and MyClass in Visual Basic</span></span>
+<span data-ttu-id="56de9-103">`Me`, `My`, `MyBase` y `MyClass` en Visual Basic tienen nombres similares, pero con fines diferentes.</span><span class="sxs-lookup"><span data-stu-id="56de9-103">`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes.</span></span> <span data-ttu-id="56de9-104">En este tema se describe cada una de estas entidades con el fin de distinguirlas.</span><span class="sxs-lookup"><span data-stu-id="56de9-104">This topic describes each of these entities in order to distinguish them.</span></span>  
   
-## <a name="me"></a><span data-ttu-id="bd95d-105">Me</span><span class="sxs-lookup"><span data-stu-id="bd95d-105">Me</span></span>  
- <span data-ttu-id="bd95d-106">El `Me` palabra clave proporciona una manera de hacer referencia a la instancia específica de una clase o estructura en la que se está ejecutando el código.</span><span class="sxs-lookup"><span data-stu-id="bd95d-106">The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing.</span></span> <span data-ttu-id="bd95d-107">`Me` se comporta como una variable de objeto o una variable de estructura que hace referencia a la instancia actual.</span><span class="sxs-lookup"><span data-stu-id="bd95d-107">`Me` behaves like either an object variable or a structure variable referring to the current instance.</span></span> <span data-ttu-id="bd95d-108">Uso de `Me` es especialmente útil para pasar información sobre la instancia en ejecución de una clase o estructura a un procedimiento de otra clase, estructura o módulo.</span><span class="sxs-lookup"><span data-stu-id="bd95d-108">Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.</span></span>  
+## <a name="me"></a><span data-ttu-id="56de9-105">Me</span><span class="sxs-lookup"><span data-stu-id="56de9-105">Me</span></span>  
+ <span data-ttu-id="56de9-106">La palabra clave `Me` proporciona una manera de hacer referencia a la instancia específica de una clase o estructura en la que se está ejecutando el código.</span><span class="sxs-lookup"><span data-stu-id="56de9-106">The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing.</span></span> <span data-ttu-id="56de9-107">`Me` se comporta como una variable de objeto o una variable de estructura que hace referencia a la instancia actual.</span><span class="sxs-lookup"><span data-stu-id="56de9-107">`Me` behaves like either an object variable or a structure variable referring to the current instance.</span></span> <span data-ttu-id="56de9-108">El uso de `Me` es especialmente útil para pasar información sobre la instancia que se está ejecutando actualmente de una clase o estructura a un procedimiento de otra clase, estructura o módulo.</span><span class="sxs-lookup"><span data-stu-id="56de9-108">Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.</span></span>  
   
- <span data-ttu-id="bd95d-109">Por ejemplo, suponga que tiene el siguiente procedimiento en un módulo.</span><span class="sxs-lookup"><span data-stu-id="bd95d-109">For example, suppose you have the following procedure in a module.</span></span>  
+ <span data-ttu-id="56de9-109">Por ejemplo, supongamos que tiene el siguiente procedimiento en un módulo.</span><span class="sxs-lookup"><span data-stu-id="56de9-109">For example, suppose you have the following procedure in a module.</span></span>  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- <span data-ttu-id="bd95d-110">Puede llamar a este procedimiento y pasar la instancia actual de la <xref:System.Windows.Forms.Form> clase como un argumento mediante la instrucción siguiente.</span><span class="sxs-lookup"><span data-stu-id="bd95d-110">You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.</span></span>  
+ <span data-ttu-id="56de9-110">Puede llamar a este procedimiento y pasar la instancia actual de la clase <xref:System.Windows.Forms.Form> como argumento mediante la siguiente instrucción.</span><span class="sxs-lookup"><span data-stu-id="56de9-110">You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.</span></span>  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
-## <a name="my"></a><span data-ttu-id="bd95d-111">My</span><span class="sxs-lookup"><span data-stu-id="bd95d-111">My</span></span>  
- <span data-ttu-id="bd95d-112">El `My` característica proporciona acceso fácil e intuitivo a una serie de clases de .NET Framework, que permite al usuario de Visual Basic interactuar con el equipo, aplicación, configuración, recursos y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="bd95d-112">The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.</span></span>  
+## <a name="my"></a><span data-ttu-id="56de9-111">My</span><span class="sxs-lookup"><span data-stu-id="56de9-111">My</span></span>  
+ <span data-ttu-id="56de9-112">La característica `My` proporciona acceso sencillo e intuitivo a una serie de clases de .NET Framework, lo que permite al usuario de Visual Basic interactuar con el equipo, la aplicación, la configuración, los recursos, etc.</span><span class="sxs-lookup"><span data-stu-id="56de9-112">The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.</span></span>  
   
-## <a name="mybase"></a><span data-ttu-id="bd95d-113">MyBase</span><span class="sxs-lookup"><span data-stu-id="bd95d-113">MyBase</span></span>  
- <span data-ttu-id="bd95d-114">El `MyBase` palabra clave se comporta como una variable de objeto que hace referencia a la clase de la instancia actual de una clase base.</span><span class="sxs-lookup"><span data-stu-id="bd95d-114">The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class.</span></span> <span data-ttu-id="bd95d-115">`MyBase` se utiliza normalmente para tener acceso a los miembros de clase base que se reemplazan o sombrean en una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="bd95d-115">`MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class.</span></span> <span data-ttu-id="bd95d-116">`MyBase.New` se usa para llamar explícitamente a un constructor de clase base desde un constructor de clase derivada.</span><span class="sxs-lookup"><span data-stu-id="bd95d-116">`MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.</span></span>  
+## <a name="mybase"></a><span data-ttu-id="56de9-113">MyBase</span><span class="sxs-lookup"><span data-stu-id="56de9-113">MyBase</span></span>  
+ <span data-ttu-id="56de9-114">La palabra clave `MyBase` se comporta como una variable de objeto que hace referencia a la clase base de la instancia actual de una clase.</span><span class="sxs-lookup"><span data-stu-id="56de9-114">The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class.</span></span> <span data-ttu-id="56de9-115">`MyBase` se usa normalmente para tener acceso a los miembros de clase base que se invalidan o se sombrean en una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="56de9-115">`MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class.</span></span> <span data-ttu-id="56de9-116">`MyBase.New` se usa para llamar explícitamente a un constructor de clase base desde un constructor de clase derivada.</span><span class="sxs-lookup"><span data-stu-id="56de9-116">`MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.</span></span>  
   
-## <a name="myclass"></a><span data-ttu-id="bd95d-117">MyClass</span><span class="sxs-lookup"><span data-stu-id="bd95d-117">MyClass</span></span>  
- <span data-ttu-id="bd95d-118">El `MyClass` palabra clave se comporta como una variable de objeto que hace referencia a la instancia actual de una clase como se implementaron originalmente.</span><span class="sxs-lookup"><span data-stu-id="bd95d-118">The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented.</span></span> <span data-ttu-id="bd95d-119">`MyClass` es similar a `Me`, pero todas las llamadas de método en él se tratan como si fuera el método `NotOverridable`.</span><span class="sxs-lookup"><span data-stu-id="bd95d-119">`MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.</span></span>  
+## <a name="myclass"></a><span data-ttu-id="56de9-117">MyClass</span><span class="sxs-lookup"><span data-stu-id="56de9-117">MyClass</span></span>  
+ <span data-ttu-id="56de9-118">La palabra clave `MyClass` se comporta como una variable de objeto que hace referencia a la instancia actual de una clase como se implementó originalmente.</span><span class="sxs-lookup"><span data-stu-id="56de9-118">The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented.</span></span> <span data-ttu-id="56de9-119">`MyClass` es similar a `Me`, pero todas las llamadas al método en él se tratan como si el método fuera `NotOverridable`.</span><span class="sxs-lookup"><span data-stu-id="56de9-119">`MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd95d-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="bd95d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56de9-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="56de9-120">See also</span></span>
 
-- [<span data-ttu-id="bd95d-121">Fundamentos de la herencia</span><span class="sxs-lookup"><span data-stu-id="bd95d-121">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [<span data-ttu-id="56de9-121">Fundamentos de la herencia</span><span class="sxs-lookup"><span data-stu-id="56de9-121">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
