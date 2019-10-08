@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Análisis de comentarios del sitio web: clasificación binaria'
 description: En este tutorial se muestra cómo crear una aplicación de consola de .NET Core que clasifica las opiniones de los comentarios del sitio web y toma las medidas oportunas. El clasificador binario de opiniones usa C# en Visual Studio.
-ms.date: 05/13/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c6b9d51a8ab91b4365c909993211f11ab3436808
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929026"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700859"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Análisis de opinión de los comentarios del sitio web con clasificación binaria de ML.NET
 
@@ -285,13 +285,16 @@ Use el siguiente código para mostrar las métricas:
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite pasar datos y luego realizar una predicción en una única instancia de datos.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
 
+    > [!NOTE]
+    > La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
+    
 4. Agregue un comentario para probar la predicción del modelo entrenado en el método `UseModelWithSingleItem()` mediante la creación de una instancia de `SentimentData`:
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
-5. Pase los datos del comentario de prueba a `Prediction Engine` agregando lo siguiente como siguientes líneas de código al método `UseModelWithSingleItem()`:
+5. Pase los datos del comentario de prueba a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) agregando lo siguiente como siguientes líneas de código al método `UseModelWithSingleItem()`:
 
     [!code-csharp[Predict](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Predict "Create a prediction of sentiment")]
 

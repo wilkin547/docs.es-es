@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c8b4c60eb4ea09c8b10bd0b2fffc803d0a5fb6e0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181510"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834278"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
 
@@ -137,7 +137,7 @@ Siempre que se usa el modificador `-r`, la ruta de acceso de la carpeta de salid
 Si usa la [aplicación de ejemplo](#sample-app), ejecute `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Este comando crea el archivo ejecutable siguiente: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Modo de globalización invariable de .NET Core).
+> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Implementación autocontenida
 
@@ -152,7 +152,7 @@ Debe usar los modificadores siguientes con el comando `dotnet publish` para publ
 - `--self-contained true` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como una SCD.
 
 > [!NOTE]
-> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Modo de globalización invariable de .NET Core).
+> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Vea también
 

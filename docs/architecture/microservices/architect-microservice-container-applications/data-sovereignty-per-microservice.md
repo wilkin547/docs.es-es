@@ -2,12 +2,12 @@
 title: Propiedad de los datos por microservicio
 description: La propiedad de datos por microservicio es uno de los puntos clave de los microservicios. Cada microservicio debe ser el único propietario de su base de datos, sin compartirla con ningún otro. Por supuesto, todas las instancias de un microservicio se conectan a la misma base de datos de alta disponibilidad.
 ms.date: 09/20/2018
-ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566203"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834466"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 
@@ -19,11 +19,11 @@ Este principio es similar en el [diseño guiado por el dominio (DDD)](https://en
 
 Por otro lado, el enfoque tradicional (datos monolíticos) usado en muchas aplicaciones es tener una sola base de datos centralizada o solo algunas bases de datos. Suele ser una base de datos SQL normalizada que se usa para toda la aplicación y todos los subsistemas internos, como se muestra en la figura 4-7.
 
-![En el enfoque tradicional, hay una base de datos compartida en todos los servicios, normalmente en una arquitectura en capas. En el enfoque de microservicios, cada microservicio posee sus datos o modelos](./media/image7.png)
+![Diagrama que muestra los dos enfoques de la base de datos.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
 **Figura 4-7**. Comparación de propiedad de datos: base de datos monolítica frente a microservicios
 
-El enfoque de la base de datos centralizada en principio parece más sencillo y parece permitir la reutilización de entidades de diferentes subsistemas para que todo sea coherente. Pero la realidad es que se acaban teniendo tablas enormes que sirven a muchos subsistemas distintos e incluyen atributos y columnas que no se necesitan en la mayoría de los casos. Es como intentar usar el mismo mapa físico para ir de excursión un par de horas, para hacer un viaje en coche que dure todo un día y para aprender geografía.
+En el enfoque tradicional, hay una base de datos compartida en todos los servicios, normalmente en una arquitectura en capas. En el enfoque de microservicios, cada microservicio posee sus datos o modelos. El enfoque de la base de datos centralizada en principio parece más sencillo y parece permitir la reutilización de entidades de diferentes subsistemas para que todo sea coherente. Pero la realidad es que se acaban teniendo tablas enormes que sirven a muchos subsistemas distintos e incluyen atributos y columnas que no se necesitan en la mayoría de los casos. Es como intentar usar el mismo mapa físico para ir de excursión un par de horas, para hacer un viaje en coche que dure todo un día y para aprender geografía.
 
 Una aplicación monolítica que normalmente tiene una sola base de datos relacional presenta dos ventajas importantes: [Transacciones ACID](https://en.wikipedia.org/wiki/ACID) y el lenguaje SQL, ambos funcionando en todas las tablas y los datos relacionados con la aplicación. Este enfoque proporciona una manera sencilla de escribir una consulta que combina datos de varias tablas.
 

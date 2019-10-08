@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963430"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957197"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de caracteres en expresiones regulares
 
@@ -59,17 +59,13 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
   
  La sintaxis para especificar la lista de caracteres individuales es la siguiente:  
 
-```  
-[*character_group*]  
-```
+`[*character_group*]`
 
  donde *grupo_caracteres* es una lista de cada uno de los caracteres que pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
  La sintaxis para especificar un intervalo de caracteres es la siguiente:  
   
-```  
-[firstCharacter-lastCharacter]  
-```  
+`[firstCharacter-lastCharacter]`  
   
  donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacter* es el carácter final del intervalo. Un intervalo de caracteres es una serie contigua de caracteres que se define especificando el primer carácter de la serie, un guion (-) y, a continuación, el último carácter de la serie. Dos caracteres son contiguos si tienen puntos de código Unicode adyacentes. *firstCharacter* debe ser el carácter con el punto de código inferior y *lastCharacter* debe ser el carácter con el punto de código superior.
 
@@ -119,17 +115,13 @@ En la tabla siguiente se recogen algunos de los patrones de expresiones regulare
   
 La sintaxis para especificar la lista de caracteres individuales es la siguiente:  
 
-```
-[*^character_group*]  
-```
+`[*^character_group*]`
 
  donde *grupo_caracteres* es una lista de cada uno de los caracteres que no pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
  La sintaxis para especificar un intervalo de caracteres es la siguiente:  
 
-```
-[^*firstCharacter*-*lastCharacter*]  
-```
+`[^*firstCharacter*-*lastCharacter*]`
 
 donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacter* es el carácter final del intervalo. Un intervalo de caracteres es una serie contigua de caracteres que se define especificando el primer carácter de la serie, un guion (-) y, a continuación, el último carácter de la serie. Dos caracteres son contiguos si tienen puntos de código Unicode adyacentes. *firstCharacter* debe ser el carácter con el punto de código inferior y *lastCharacter* debe ser el carácter con el punto de código superior.
 
@@ -267,9 +259,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="non-word-character-w"></a>Carácter que no se usa para formar palabras: \W  
  `\W` coincide con cualquier carácter que no sea de palabra. El elemento del lenguaje \W es equivalente a la clase de caracteres siguiente:  
   
-```  
-[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
-```  
+`[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  En otras palabras, coincide con cualquier carácter excepto con los que figuran en las categorías Unicode de la tabla siguiente.  
   

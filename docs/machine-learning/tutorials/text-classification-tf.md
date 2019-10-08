@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente'
 description: En este tutorial se muestra cómo usar un modelo de TensorFlow previamente entrenado para clasificar la opinión en comentarios de sitios Web. El clasificador binario de opiniones es una aplicación de consola de C# desarrollada con Visual Studio.
-ms.date: 09/11/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216895"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700942"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -211,7 +211,10 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+    > [!NOTE]
+    > La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
 
 1. Agregue un comentario para probar la predicción del modelo entrenado en el método `Predict()` mediante la creación de una instancia de `MovieReview`:
 

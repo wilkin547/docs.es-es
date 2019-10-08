@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427362"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835265"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procedimiento Escribir un bucle Parallel.ForEach sencillo
 
@@ -32,7 +32,7 @@ En este ejemplo se supone que tiene varios archivos .jpg en la carpeta *C:\Usuar
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-Un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> funciona como un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. El bucle divide la colección de origen y programa el trabajo en varios subprocesos en función del entorno del sistema. Mientras más procesadores haya en el sistema, más rápido se ejecutará el método paralelo. Para algunas colecciones de origen, un bucle secuencial puede ser más rápido, dependiendo del tamaño del origen y del tipo de trabajo que realiza el bucle. Para obtener más información sobre el rendimiento, vea [Problemas potenciales en el paralelismo de datos y tareas](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md).
+Un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> funciona como un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. El bucle divide la colección de origen y programa el trabajo en varios subprocesos en función del entorno del sistema. Mientras más procesadores haya en el sistema, más rápido se ejecutará el método paralelo. Para algunas colecciones de origen, un bucle secuencial puede ser más rápido, dependiendo del tamaño del origen y del tipo de trabajo que realiza el bucle. Para más información sobre el rendimiento, vea [Problemas potenciales en el paralelismo de datos y tareas](potential-pitfalls-in-data-and-task-parallelism.md).
 
 Para obtener más información sobre los bucles paralelos, vea [Procedimiento para escribir un bucle Parallel.For sencillo](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 

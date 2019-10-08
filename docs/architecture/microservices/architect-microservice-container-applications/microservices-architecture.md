@@ -2,12 +2,12 @@
 title: Arquitectura de microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Vista desde unos 9000 metros de la arquitectura de microservicios.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672992"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834384"
 ---
 # <a name="microservices-architecture"></a>Arquitectura de microservicios
 
@@ -19,11 +19,11 @@ Como su nombre indica, una arquitectura de microservicios es un enfoque para la 
 
 Como ventaja adicional, los microservicios se pueden escalar horizontalmente de forma independiente. En lugar de disponer de una sola aplicación monolítica que debe escalar horizontalmente como una unidad, puede escalar horizontalmente microservicios concretos. De esa forma, puede escalar solo el área funcional que necesita más potencia de procesamiento o ancho de banda para admitir la demanda, en lugar de escalar horizontalmente otras partes de la aplicación que no hace falta escalar. Así, puede ahorrar en costes porque necesita menos hardware.
 
-![En el enfoque monolítico tradicional, la aplicación se escala mediante la clonación de toda la aplicación en varios servidores o máquinas virtuales. En el enfoque de microservicios, la funcionalidad se aísla en servicios más pequeños, por lo que cada servicio puede escalarse de forma independiente.](./media/image6.png)
+![Diagrama de las diferencias entre los dos métodos de implementación.](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **Figura 4-6**. Implementación monolítica frente al enfoque de los microservicios
 
-Tal y como se muestra en la figura 4-6, el enfoque de los microservicios permite modificaciones ágiles e iteraciones rápidas de cada microservicio, ya que puede cambiar áreas específicas y pequeñas de aplicaciones complejas, grandes y escalables.
+Como se muestra en la figura 4-6, en el enfoque monolítico tradicional, la aplicación se escala mediante la clonación de toda la aplicación en varios servidores o máquinas virtuales. En el enfoque de microservicios, la funcionalidad se aísla en servicios más pequeños, por lo que cada servicio puede escalarse de forma independiente. El enfoque de los microservicios permite modificaciones ágiles e iteraciones rápidas de cada microservicio, ya que puede cambiar áreas específicas y pequeñas de aplicaciones complejas, grandes y escalables.
 
 Diseñar la arquitectura de aplicaciones específicas basadas en microservicios habilita una integración continua y prácticas de entrega continua. También acelera la entrega de nuevas funciones en la aplicación. La composición específica de las aplicaciones también le permite ejecutar y probar los microservicios de manera aislada y hacerlos evolucionar de forma autónoma a la vez que mantiene contratos claros entre ellos. Siempre y cuando no cambie las interfaces o los contratos, puede cambiar la implementación interna de cualquier microservicio o agregar nuevas funciones sin que ello interrumpa otros microservicios.
 

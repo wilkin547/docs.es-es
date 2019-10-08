@@ -3,24 +3,24 @@ title: 'Trabajo con colecciones: tutorial de introducción a C#'
 description: Conozca C# a través de la colección de listas que se presenta en este tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850871"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834149"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Obtenga información sobre cómo administrar colecciones de datos mediante el tipo de lista genérico
 
 En este tutorial de presentación se proporciona una introducción al lenguaje C# y se exponen los conceptos básicos de la clase <xref:System.Collections.Generic.List%601>.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
 
 ## <a name="a-basic-list-example"></a>Un ejemplo de lista básico
 
-Cree un directorio denominado **list-tutorial**. Conviértalo en el directorio actual y ejecute `dotnet new console`.
+Cree un directorio denominado *list-tutorial*. Conviértalo en el directorio actual y ejecute `dotnet new console`.
 
-Abra **Program.cs** en su editor favorito y reemplace el código existente por el siguiente:
+Abra *Program.cs* en su editor favorito y reemplace el código existente por el siguiente:
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-Reemplace `<name>` por su propio nombre. Guarde **Program.cs**. Escriba `dotnet run` en la ventana de la consola para probarlo.
+Reemplace `<name>` por su propio nombre. Guarde *Program.cs*. Escriba `dotnet run` en la ventana de la consola para probarlo.
 
 Hasta ahora, solo ha creado una lista de cadenas, ha agregado tres nombres a dicha lista y ha impreso los nombres en MAYÚSCULA. Los conceptos aplicados ya se han aprendido en los tutoriales anteriores para recorrer en bucle la lista.
 

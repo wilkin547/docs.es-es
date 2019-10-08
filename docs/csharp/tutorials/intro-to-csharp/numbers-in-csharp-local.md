@@ -3,24 +3,24 @@ title: 'Números en C#: tutorial de introducción a C#'
 description: Obtenga información sobre C# mediante la exploración de tipos numéricos, sus propiedades y métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850695"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834101"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números enteros y de punto flotante en C\#
 
 En este tutorial se explican los tipos numéricos en C# de manera interactiva. Escribirá pequeñas cantidades de código y luego compilará y ejecutará ese código. El tutorial contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
 
 ## <a name="explore-integer-math"></a>Análisis de las operaciones matemáticas con enteros
 
-Cree un directorio denominado **numbers-quickstart**. Conviértalo en el directorio actual y ejecute `dotnet new console -n NumbersInCSharp -o .`.
+Cree un directorio denominado *numbers-quickstart*. Conviértalo en el directorio actual y ejecute `dotnet new console -n NumbersInCSharp -o .`.
 
-Abra **Program.cs** en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por lo siguiente:
+Abra *Program.cs* en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por lo siguiente:
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 Ejecute este código escribiendo `dotnet run` en la ventana de comandos.
 
-Ya ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:
+Ya ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser cero o un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:
 
 - `-` para resta
 - `*` para multiplicación
@@ -114,7 +114,7 @@ La salida muestra que la multiplicación se realiza antes que la suma.
 Puede forzar la ejecución de un orden diferente de las operaciones si la operación o las operaciones que realizó primero se incluyen entre paréntesis. Agregue las líneas siguientes y ejecute de nuevo:
 
 ```csharp
-d = (a  + b) * c;
+d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
@@ -133,7 +133,7 @@ Si no ha observado este comportamiento, pruebe el código siguiente al final de 
 int e = 7;
 int f = 4;
 int g = 3;
-int h = (e  + f) / g;
+int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -171,7 +171,7 @@ namespace NumbersInCSharp
             int d = a + b * c;
             Console.WriteLine(d);
 
-            d = (a  + b) * c;
+            d = (a + b) * c;
             Console.WriteLine(d);
 
             d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -204,7 +204,7 @@ Puede obtener el **resto** con el operador de **módulo**, el carácter `%`. Pru
 int a = 7;
 int b = 4;
 int c = 3;
-int d = (a  + b) / c;
+int d = (a + b) / c;
 int e = (a + b) % c;
 Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
@@ -231,7 +231,7 @@ La respuesta es un número negativo muy grande porque un desbordamiento "se ajus
 
 Hay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Veámoslo a continuación.
 
-Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Denomínelo `TestLimits`.
+Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Asígnele el nombre `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Operaciones con el tipo double
 
@@ -242,7 +242,7 @@ Comencemos a explorar. Agregue el siguiente código y observe el resultado:
 double a = 5;
 double b = 4;
 double c = 2;
-double d = (a  + b) / c;
+double d = (a + b) / c;
 Console.WriteLine(d);
 ```
 
@@ -252,7 +252,7 @@ Tenga en cuenta que la respuesta incluye la parte decimal del cociente. Pruebe u
 double e = 19;
 double f = 23;
 double g = 8;
-double h = (e  + f) / g;
+double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -277,7 +277,7 @@ Sabe que repetir `0.3` no es exactamente lo mismo que `1/3`.
 
 ***Desafío***
 
-Pruebe otros cálculos con números grandes, números pequeños, multiplicaciones y divisiones con el tipo `double`.  Intente realizar cálculos más complicados.
+Pruebe otros cálculos con números grandes, números pequeños, multiplicaciones y divisiones con el tipo `double`. Intente realizar cálculos más complicados.
 
 Una vez que haya invertido un tiempo en ello, tome el código que ha escrito y colóquelo en un nuevo método. Ponga a ese nuevo método el nombre `WorkWithDoubles`.
 

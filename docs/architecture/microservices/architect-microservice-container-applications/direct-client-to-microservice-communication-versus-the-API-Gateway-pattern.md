@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914670"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834435"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -17,7 +17,7 @@ En una arquitectura de microservicios, cada microservicio expone un conjunto de 
 
 Un posible enfoque es usar una arquitectura de comunicación directa de cliente a microservicio. En este enfoque, una aplicación cliente puede realizar solicitudes directamente a algunos de los microservicios, tal como se muestra en la figura 4-12.
 
-![Diagrama en el que se muestra la arquitectura de comunicación directa de cliente a microservicio, donde cada aplicación se comunica directamente con los microservicios individuales.](./media/image12.png)
+![Diagrama que muestra la arquitectura de comunicación directa de cliente a microservicio.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
 
 **Figura 4-12**. Uso de una arquitectura de comunicación directa de cliente a microservicio
 
@@ -69,11 +69,11 @@ Por lo tanto, la puerta de enlace de API se encuentra entre las aplicaciones cli
 
 La figura 4-13 muestra el encaje de una puerta de enlace de API personalizada en una arquitectura basada en microservicios simplificada con solo algunos microservicios.
 
-![Diagrama en el que se muestra una puerta de enlace de API implementada como un servicio personalizado, para que las aplicaciones se conecten a un único punto de conexión (la puerta de enlace de API) configurado para reenviar solicitudes a los microservicios individuales.](./media/image13.png)
+![Diagrama que muestra una puerta de enlace de API implementada como un servicio personalizado.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **Figura 4-13**. Uso de una puerta de enlace de API implementada como un servicio personalizado
 
-En este ejemplo, la puerta de enlace de API se implementa como un servicio ASP.NET Core WebHost personalizado que se ejecuta como un contenedor.
+Las aplicaciones se conecten a un único punto de conexión (la puerta de enlace de API) configurado para reenviar solicitudes a los microservicios individuales. En este ejemplo, la puerta de enlace de API se implementa como un servicio ASP.NET Core WebHost personalizado que se ejecuta como un contenedor.
 
 Es importante resaltar que en ese diagrama se usa un único servicio de puerta de enlace de API personalizado con conexión a varias aplicaciones cliente distintas. Ese hecho puede suponer un riesgo importante porque el servicio de puerta de enlace de API irá creciendo y evolucionando en función de los muchos requisitos de las aplicaciones cliente. Finalmente, se verá sobredimensionado debido a las distintas necesidades y en la práctica podría ser bastante similar a una aplicación o un servicio monolíticos. Por eso es muy recomendable dividir la puerta de enlace de API en varios servicios o varias puertas de enlace de API más pequeñas, por ejemplo, una por cada tipo de factor de forma de aplicación cliente.
 
@@ -83,11 +83,11 @@ Por lo tanto, las puertas de enlace de API se deberían segregar en función de 
 
 Al dividir el nivel de puerta de enlace de API en múltiples puertas de enlace de API, si la aplicación tiene varias aplicaciones cliente, puede servir de pivote principal al identificar los múltiples tipos de puertas de enlace de API, de manera que puede tener otra fachada para las necesidades de cada aplicación cliente. Este caso es un patrón denominado "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)), donde cada puerta de enlace de API puede proporcionar una API distinta adaptada a cada tipo de aplicación cliente, posiblemente basada incluso en el factor de forma de cliente, mediante la implementación de código adaptador específico que llame, de forma subyacente, a varios servicios internos, como se muestra en la imagen siguiente:
 
-![Diagrama en el que se muestran varias puertas de enlace de API personalizadas, segregadas por tipo de cliente; una para los clientes móviles y otra para los clientes web. Una aplicación web tradicional se conecta a un microservicio MVC que usa la puerta de enlace de API web.](./media/image13.1.png)
+![Diagrama que muestra varias puertas de enlace de API personalizadas.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **Figura 4-13.1**. Uso de varias puertas de enlace de API personalizadas
 
-La imagen anterior muestra una arquitectura simplificada con varias puertas de enlace de API específicas. En este caso, los límites identificados para cada puerta de enlace de API se basan estrictamente en el patrón "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)); por tanto, se basan solo en la API necesaria para cada aplicación cliente. Pero en aplicaciones más grandes también debe ir más allá y crear otras puertas de enlace de API basadas en los límites del negocio como un segundo pivote de diseño.
+Figura 4-13.1 que muestra puertas de enlace de API personalizadas, segregadas por tipo de cliente; una para los clientes móviles y otra para los clientes web. Una aplicación web tradicional se conecta a un microservicio MVC que usa la puerta de enlace de API web. En el ejemplo se muestra una arquitectura simplificada con varias puertas de enlace de API específicas. En este caso, los límites identificados para cada puerta de enlace de API se basan estrictamente en el patrón "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)); por tanto, se basan solo en la API necesaria para cada aplicación cliente. Pero en aplicaciones más grandes también debe ir más allá y crear otras puertas de enlace de API basadas en los límites del negocio como un segundo pivote de diseño.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Características principales en el patrón de puerta de enlace de API
 
@@ -128,11 +128,11 @@ Puede haber muchas más cuestiones transversales ofrecidas por los productos de 
 
 [Azure API Management](https://azure.microsoft.com/services/api-management/) (como se muestra en la figura 4-14) no solo resuelve las necesidades de puerta de enlace de API, sino que también proporciona características como la recopilación de información de las API. Si se usa una solución de administración de API, una puerta de enlace de API es solo un componente dentro de esa solución de administración de API completa.
 
-![Azure API Management resuelve las necesidades de administración y de puerta de enlace de API, como el registro, la seguridad, la medición, etc.](./media/api-gateway-azure-api-management.png)
+![Diagrama que muestra cómo usar Azure API Management como la puerta de enlace de API.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **Figura 4-14**. Uso de Azure API Management para la puerta de enlace de API
 
-En este caso, cuando se usa un producto como Azure API Management, el hecho de tener una sola puerta de enlace de API no es tan arriesgado porque estos tipos de puertas de enlace de API son "más estrechos", lo que significa que no implementan código C# personalizado que podría evolucionar hacia un componente monolítico. 
+Azure API Management resuelve las necesidades de administración y de puerta de enlace de API, como el registro, la seguridad, la medición, etc. En este caso, cuando se usa un producto como Azure API Management, el hecho de tener una sola puerta de enlace de API no es tan arriesgado porque estos tipos de puertas de enlace de API son "más estrechos", lo que significa que no implementan código C# personalizado que podría evolucionar hacia un componente monolítico. 
 
 Los productos de puerta de enlace de API suelen actuar más como un proxy inverso para la comunicación de entrada, en el que se pueden filtrar las API de los microservicios internos y también aplicar la autorización a las API publicadas en este nivel único.
 

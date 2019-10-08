@@ -1,62 +1,68 @@
 ### YamlMime:Landing
 title: Documentación de ML.NET
-summary: Obtenga información sobre cómo usar ML.NET de código abierto para compilar soluciones de aprendizaje automático e integrarlas en las aplicaciones. Los tutoriales, ejemplos de código, entre otros, le muestran cómo hacerlo.
+summary: Obtenga información sobre cómo usar ML.NET de código abierto para compilar modelos de aprendizaje automático personalizados e integrarlos en las aplicaciones. Los tutoriales, ejemplos de código, entre otros, le muestran cómo hacerlo.
 metadata:
   title: 'Documentación de ML.NET: tutoriales y referencia de la API'
-  description: Obtenga información sobre cómo usar ML.NET de código abierto para compilar soluciones de aprendizaje automático e integrarlas en las aplicaciones. Los tutoriales, ejemplos de código, entre otros, le muestran cómo hacerlo.
+  description: Obtenga información sobre cómo usar ML.NET de código abierto para compilar modelos de aprendizaje automático personalizados e integrarlos en las aplicaciones. Los tutoriales, ejemplos de código, entre otros, le muestran cómo hacerlo.
   ms.prod: dotnet-ml
   ms.topic: landing-page
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 09/23/2019
-  ms.openlocfilehash: f6f4d0c516a1310df5c497a3f4e7331877f3c5a9
-  ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+  ms.date: 10/02/2019
+  ms.openlocfilehash: d31cdb8046444b88a132c63867f590d72e624382
+  ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/24/2019
-  ms.locfileid: "71216644"
+  ms.lasthandoff: 10/04/2019
+  ms.locfileid: "71957218"
 landingContent:
-- title: Acerca de ML.NET
+- title: Aspectos básicos de ML.NET
   linkLists:
   - linkListType: overview
     links:
     - text: ¿Qué es ML.NET?
       url: how-does-mldotnet-work.md
+  - linkListType: video
+    links:
+    - text: Conceptos básicos de Machine Learning
+      url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
   - linkListType: concept
     links:
-    - text: Tipos de modelo de Machine Learning
+    - text: Algoritmos y tareas de aprendizaje automático
       url: resources/tasks.md
     - text: Cómo elegir un algoritmo
       url: how-to-choose-an-ml-net-algorithm.md
-    - text: Transformaciones de datos
-      url: resources/transforms.md
-- title: Uso del generador de modelos
+- title: Empezar a trabajar en 10 minutos
   linkLists:
-  - linkListType: overview
-    links:
-    - text: ¿Qué es el generador de modelos?
-      url: automate-training-with-model-builder.md
   - linkListType: quickstart
     links:
-    - text: Instalación de un generador de modelos
+    - text: Configuración del generador de modelos en Visual Studio
       url: how-to-guides/install-model-builder.md
-  - linkListType: tutorial
-    links:
-    - text: 'Predicción de los precios: generador de modelos'
-      url: tutorials/predict-prices-with-model-builder.md
-    - text: Creación de una aplicación web Razor Pages para analizar el sentimiento
-      url: tutorials/sentiment-analysis-model-builder.md
-- title: Introducción a la API
+    - text: Introducción a la API ML.NET
+      url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
+    - text: Instalación de la CLI en Mac OS, Windows o Linux
+      url: how-to-guides/install-ml-net-cli.md
+- title: Tutoriales
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Crear un clasificador de imágenes de TensorFlow con el aprendizaje de transferencia
+    - text: Análisis de opiniones de los comentarios del sitio web (generador de modelos)
+      url: tutorials/sentiment-analysis-model-builder.md
+    - text: Predicción de los precios (generador de modelos)
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: Categorización de los problemas de soporte técnico (API)
+      url: tutorials/github-issue-classification.md
+    - text: Clasificación de imágenes con TensorFlow (API)
       url: tutorials/image-classification.md
-    - text: Análisis de sentimiento de los comentarios del sitio web
-      url: tutorials/sentiment-analysis.md
-    - text: Detección de objetos en imágenes con ONNX
+    - text: Detección de objetos en imágenes (API)
       url: tutorials/object-detection-onnx.md
+    - text: Detección de anomalías en las ventas de productos (API)
+      url: tutorials/sales-anomaly-detection.md
+    - text: Creación de un elemento de recomendación de películas (API)
+      url: tutorials/movie-recommendation.md
+- title: Guías de procedimientos
+  linkLists:
   - linkListType: how-to-guide
     links:
     - text: Carga de datos desde varios orígenes
@@ -69,29 +75,13 @@ landingContent:
       url: how-to-guides/machine-learning-model-predictions-ml-net.md
     - text: Guardar y cargar un modelo entrenado
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
-- title: Uso de la CLI de ML.NET
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Automatizar el entrenamiento del modelo con la CLI de ML.NET
-      url: automate-training-with-cli.md
-  - linkListType: quickstart
-    links:
-    - text: Instalación de la CLI de ML.NET
-      url: how-to-guides/install-ml-net-cli.md
-  - linkListType: tutorial
-    links:
-    - text: 'Análisis de sentimiento: CLI de ML.NET y AutoML'
-      url: tutorials/mlnet-cli.md
-- title: referencia de API
+    - text: Volver a entrenar un modelo
+      url: how-to-guides/retrain-model-ml-net.md
+- title: Referencia
   linkLists:
   - linkListType: reference
     links:
     - text: Referencia de API de ML.NET
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
-    - text: Referencia de API ML.NET (versión preliminar)
-      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
-    - text: Referencia de la CLI de ML.NET
-      url: reference/ml-net-cli-reference.md
-    - text: Referencia de API AutoML
-      url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet
+    - text: Ejemplos de ML.NET
+      url: https://github.com/dotnet/machinelearning-samples

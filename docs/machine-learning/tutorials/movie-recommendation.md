@@ -2,15 +2,15 @@
 title: 'Tutorial: Creación de un recomendador de películas (factorización matricial)'
 description: Este tutorial muestra cómo compilar una recomendación de películas con ML.NET en una consola de aplicación de .NET Core. Los pasos utilizan C# y Visual Studio 2019.
 author: briacht
-ms.date: 08/26/2019
+ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1db2ad6c078cb6201b2a6a4e2f8572f589cee684
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929482"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700961"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Creación de un recomendador de películas mediante factorización matricial con ML.NET
 
@@ -320,7 +320,10 @@ Use `PredictionEngine` para predecir la clasificación. Para ello, agregue el c�
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-La [clase PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que permite pasar una instancia única de datos y, después, realizar una predicción en esta instancia única de datos.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+> [!NOTE]
+> La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
 
 Cree una instancia de `MovieRating` denominada `testInput` y pásela al motor de predicción. Para ello, agregue lo que se indica a continuación como las siguientes líneas de código en el método `UseModelForSinglePrediction()`:
 

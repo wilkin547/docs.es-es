@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104628"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955966"
 ---
 # <a name="contributing"></a>Contribución
 
 Le agradecemos el interés en colaborar con la documentación de .NET.
 
-> Estamos en proceso de trasladar nuestras instrucciones a una guía de contribuciones de todo el sitio. 
+> Estamos en proceso de trasladar nuestras instrucciones a una guía de contribuciones de todo el sitio.
 > Para ver las nuevas instrucciones, visite la [introducción a la guía de colaboradores de Microsoft Docs](https://docs.microsoft.com/contribute/).
 
 En este documento se describe el proceso para colaborar en los artículos y ejemplos de código que se hospedan en el [sitio de documentación de .NET](https://docs.microsoft.com/dotnet). Las contribuciones pueden ser tan simples como corregir errores ortográficos o tan complejos como redactar nuevos artículos.
@@ -22,18 +22,19 @@ En este documento se describe el proceso para colaborar en los artículos y ejem
 
 Este repositorio contiene documentación conceptual de .NET. El sitio de documentación de .NET se compiló a partir de varios repositorios, además de este:
 
-- [Ejemplos y fragmentos de código](https://github.com/dotnet/samples)
-- [Referencia de API](https://github.com/dotnet/dotnet-api-docs)
-- [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
-
-En esta sección se hace un seguimiento de las incidencias y las tareas de todos estos repositorios.
+- [Ejemplos y fragmentos de código](https://github.com/dotnet/samples)  
+    Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Referencia de API de REST](https://github.com/dotnet/dotnet-api-docs)  
+    Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
+    Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
 
 ## <a name="process-for-contributing"></a>Proceso de contribución
 
 Necesita tener conocimientos básicos de [Git y GitHub.com](https://guides.github.com/activities/hello-world/).
 
 **Paso 1:** En el caso de pequeños cambios, omita este paso (por ejemplo, si corrige un error de escritura o abre inmediatamente una solicitud de incorporación de cambios para resolver un problema que encuentre en los documentos). Si está interesado en escribir nuevo contenido o en revisar exhaustivamente el contenido existente, abra una [incidencia ](https://github.com/dotnet/docs/issues) que describa lo que quiere hacer.
-El contenido de la carpeta **docs** se organiza en secciones que se reflejan en la tabla de contenido (TOC). Defina dónde se ubicará el tema en la tabla de contenido. Recabe opiniones sobre su propuesta.
+El contenido de la carpeta *docs* se organiza en secciones que se reflejan en la tabla de contenido (TOC). Defina dónde se ubicará el tema en la tabla de contenido. Recabe opiniones sobre su propuesta.
 
 O bien
 
@@ -43,7 +44,7 @@ Puede elegir entre las incidencias existentes aquellas en las que las contribuci
 
 - **Actualizaciones de contenido**. Dada la enormidad del conjunto de documentos, el contenido se vuelve fácilmente obsoleto y requiere revisión. Además, por diversos motivos, parte del contenido se ha duplicado o incluso triplicado. La actualización de contenido implica asegurarse de que los temas individuales están actualizados o revisar el contenido de un área de características para eliminar la duplicación y garantizar que todo el contenido único se conserve en el conjunto de documentación más pequeño.
 
-- **Creación de nuevo contenido**. Si está interesado en crear su propio tema, estas incidencias muestran los temas que sabemos que nos gustaría agregar a nuestro conjunto de documentación. Pero, antes de empezar a trabajar en un tema, comuníquenoslo. Si está interesado en escribir un tema que no aparece aquí, abra una incidencia. 
+- **Creación de nuevo contenido**. Si está interesado en crear su propio tema, estas incidencias muestran los temas que sabemos que nos gustaría agregar a nuestro conjunto de documentación. Pero, antes de empezar a trabajar en un tema, comuníquenoslo. Si está interesado en escribir un tema que no aparece aquí, abra una incidencia.
 
 También puede consultar nuestra lista de [incidencias abiertas](https://github.com/dotnet/docs/issues) y ofrecerse para trabajar en las que le interesan. Se utiliza la etiqueta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) para identificar las incidencias abiertas para la contribución. 
 
@@ -58,7 +59,7 @@ Si es un tema nuevo, puede usar esta [plantilla](./styleguide/template.md) como 
 Vaya a la carpeta correspondiente a la ubicación de la tabla de contenido que se determinó para su artículo en el paso 1.
 Esa carpeta contiene los archivos Markdown de todos los artículos incluidos en esa sección.
 Si es necesario, cree una carpeta para colocar los archivos de su contenido. El artículo principal de esa sección se denomina *index.md*.
-Para las imágenes y otros recursos estáticos, cree una subcarpeta denominada **media** dentro de la carpeta que contiene el artículo, si aún no existe. Dentro de la **media** carpeta, cree una subcarpeta con el nombre de artículo (excepto para el archivo de índice).
+Para las imágenes y otros recursos estáticos, cree una subcarpeta denominada *media* dentro de la carpeta que contiene el artículo, si aún no existe. Dentro de la *media* carpeta, cree una subcarpeta con el nombre de artículo (excepto para el archivo de índice).
 Incluya los ejemplos de mayor tamaño en la carpeta *samples* en la raíz del repositorio.
 
 Asegúrese de seguir la sintaxis de Markdown adecuada. Para más información, vea la [guía de estilo](./styleguide/template.md).
@@ -76,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**Paso 4:** Envíe una solicitud de incorporación de cambios (PR) desde su rama a `dotnet/docs/master`.
+**Paso 4:** Envíe una solicitud de incorporación de cambios (PR) desde su rama a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` o `dotnet/samples/master`.
 
 La PR *siempre* debe tener como destino la rama principal. *Nunca* debe abrir una PR que tenga como destino la rama en vivo.
 

@@ -2,12 +2,12 @@
 title: Identificación de los límites del modelo de dominio para cada microservicio
 description: Explore la esencia de crear particiones de una aplicación grande en microservicios para lograr una arquitectura sólida.
 ms.date: 09/20/2018
-ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673092"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834416"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificar los límites del modelo de dominio para cada microservicio
 
@@ -27,21 +27,21 @@ Sabrá que obtuvo los límites y los tamaños correctos de cada BC y modelo de d
 
 Quizá la mejor respuesta a la pregunta de qué tamaño debe tener un modelo de dominio para cada microservicio es la siguiente: debe tener un BC autónomo, tan aislado como sea posible, que le permita trabajar sin tener que cambiar constantemente a otros contextos (otros modelos de microservicio). En la figura 4-10 puede ver cómo varios microservicios (varios BC) tienen su propio modelo y cómo se pueden definir sus entidades, según los requisitos específicos para cada uno de los dominios identificados en la aplicación.
 
-![Las entidades en varios límites de modelo (contextos delimitados), donde la misma entidad aparece como "Users", "Buyers", "Payers" y "Customers" en función del contexto delimitado](./media/image10.png)
+![Diagrama que muestra entidades en varios límites del modelo.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **Figura 4-10**. Identificación de las entidades y de los límites del modelo de microservicio
 
-En la figura 4-10 se ilustra un escenario de ejemplo relacionado con un sistema de administración de conferencias en línea. Ha identificado varios BC que se podrían implementar como microservicios, de acuerdo con los dominios que los expertos en dominios definieron para su caso. Como puede ver, hay entidades que están presentes solo en un modelo de microservicio único, como los pagos en el microservicio de pago. Serán fáciles de implementar.
+En la figura 4-10 se ilustra un escenario de ejemplo relacionado con un sistema de administración de conferencias en línea. La misma entidad aparece como "Users", "Buyers", "Payers" y "Customers" en función del contexto delimitado. Ha identificado varios BC que se podrían implementar como microservicios, de acuerdo con los dominios que los expertos en dominios definieron para su caso. Como puede ver, hay entidades que están presentes solo en un modelo de microservicio único, como los pagos en el microservicio de pago. Serán fáciles de implementar.
 
 Sin embargo, también puede tener entidades que tienen una forma diferente, pero comparten la misma identidad a través de los múltiples modelos de dominio de los diversos microservicios. Por ejemplo, la entidad User se identifica en el microservicio de administración de conferencias. Ese mismo usuario, con la misma identidad, es el que se llama compradores en el microservicio de pedidos, o el que se llama pagador en el microservicio de pago e incluso el que se llama cliente en el microservicio de servicio al cliente. Esto es porque, según el [lenguaje ubicuo](https://martinfowler.com/bliki/UbiquitousLanguage.html) que cada experto en dominios use, un usuario podría tener una perspectiva distinta incluso con atributos diferentes. La entidad de usuario en el modelo de microservicio denominado Administración de conferencias podría tener la mayoría de sus atributos de datos personales. Sin embargo, puede ser que ese mismo usuario en la forma de pagador en el microservicio de pago o en la forma de cliente en el microservicio de servicio al cliente no necesite la misma lista de atributos.
 
 Un enfoque similar se muestra en la figura 4-11.
 
-![Al descomponer un modelo de datos tradicionales entre contextos limitados, puede tener distintas entidades que comparten la misma identidad (un comprador también es un usuario) con otros atributos en cada contexto delimitado.](./media/image11.png)
+![Diagrama que muestra cómo descomponer un modelo de datos en varios modelos de dominio.](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
 
 **Figura 4-11**. Descomponer los modelos de datos tradicionales en varios modelos de dominio
 
-Puede ver cómo el usuario está presente en el modelo de microservicio de administración de conferencias como la entidad User y también está presente en la forma de la entidad Buyer en el microservicio de precios, con atributos o detalles alternativos sobre el usuario cuando es realmente un comprador. Puede ser que no todos los microservicios o BC necesiten todos los datos relacionados con una entidad User, solo parte de ellos, según el problema que se deba resolver o el contexto. Por ejemplo, en el modelo del microservicio de precios, no necesita la dirección ni el identificador del usuario, solo el identificador (como identidad) y el estado, que influirán en los descuentos al poner precio al número de puestos por comprador.
+Al descomponer un modelo de datos tradicionales entre contextos limitados, puede tener distintas entidades que comparten la misma identidad (un comprador también es un usuario) con otros atributos en cada contexto delimitado. Puede ver cómo el usuario está presente en el modelo de microservicio de administración de conferencias como la entidad User y también está presente en la forma de la entidad Buyer en el microservicio de precios, con atributos o detalles alternativos sobre el usuario cuando es realmente un comprador. Puede ser que no todos los microservicios o BC necesiten todos los datos relacionados con una entidad User, solo parte de ellos, según el problema que se deba resolver o el contexto. Por ejemplo, en el modelo del microservicio de precios, no necesita la dirección ni el identificador del usuario, solo el identificador (como identidad) y el estado, que influirán en los descuentos al poner precio al número de puestos por comprador.
 
 La entidad Seat tiene el mismo nombre, pero distintos atributos en cada modelo de dominio, pero Seat comparte la identidad según el mismo identificador, como sucede con User y Buyer.
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605973"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698794"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabla de tipos integrados (Referencia de C#)
 
-En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>.  
-  
-|Tipo de C#|Tipo de .NET|  
+En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>:
+
+|Tipo de C#|Tipo .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
@@ -31,16 +31,16 @@ En la siguiente tabla se muestran las palabras clave para los tipos de C# integr
 |[uint](../builtin-types/integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
 |[long](../builtin-types/integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|  
 |[ulong](../builtin-types/integral-numeric-types.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
-|[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
+|[objeto](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
 |[short](../builtin-types/integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|  
 |[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
 ## <a name="remarks"></a>Comentarios
 
-A todos los tipos de la tabla, excepto `object` y `string`, se les hace referencia como tipos simples.  
-  
-Los tipos de .NET y sus alias de palabra clave de tipo de C# son intercambiables. Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:  
+A todos los tipos de la tabla, excepto `object` y `string`, se les hace referencia como tipos simples.
+
+Los tipos de .NET y sus alias de palabra clave de tipo de C# son intercambiables. Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:
 
 ```csharp
 int x = 123;

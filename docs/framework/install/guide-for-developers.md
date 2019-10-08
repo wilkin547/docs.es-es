@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051943"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833654"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -155,7 +155,7 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 
 - .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias y .NET Framework 4.8 sustituyen .NET Framework 4. Si instala estas versiones en un sistema que tenga instalado .NET Framework 4, se reemplazarán los ensamblados.
 
-- Al desinstalar .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias o .NET Framework 4.8 también se eliminan los archivos existentes previamente de .NET Framework 4. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. (Vea [Instalar .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665)).
+- Al desinstalar .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias o .NET Framework 4.8 también se eliminan los archivos existentes previamente de .NET Framework 4. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
 
 - Debe tener credenciales administrativas para instalar .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias, .NET Framework 4.7 y sus versiones secundarias y .NET Framework 4.8.
 

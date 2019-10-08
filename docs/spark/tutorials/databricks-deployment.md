@@ -4,12 +4,12 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117942"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957246"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -119,11 +119,11 @@ Puede usar `set JAR` o `spark-submit` para enviar el trabajo a Databricks.
 
 3. Establezca los parámetros de forma adecuada.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | Parámetro   | Valor                                                |
+   |-------------|------------------------------------------------------|
+   | Clase Main  | org.apache.spark.deploy.dotnet.DotnetRunner          |
+   | Argumentos   | /dbfs/apps/<nombre-de-aplicación>.zip <clase-principal-de-aplicación> |
+
 4. Configure el **clúster** para que apunte al clúster existente para el que creó el **script Init** en la sección anterior.
 
 #### <a name="publish-and-run-your-app"></a>Publicación y ejecución de la aplicación

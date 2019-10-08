@@ -4,22 +4,22 @@ description: En este tutorial se muestra cómo usar la característica de interp
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117842"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834135"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato
 
 En este tutorial se muestra cómo usar la [interpolación de cadenas](../../language-reference/tokens/interpolated.md) de C# para insertar valores en una cadena de resultado única. Escriba código de C# y vea los resultados de la compilación y la ejecución. Este tutorial contiene una serie de lecciones para mostrarle cómo insertar valores en una cadena y dar formato a estos valores de maneras diferentes.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. También puede completar la [versión interactiva](interpolated-strings.yml) de este tutorial en el explorador.
+En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. También puede completar la [versión interactiva](interpolated-strings.yml) de este tutorial en el explorador.
 
 ## <a name="create-an-interpolated-string"></a>Crear una cadena interpolada
 
-Cree un directorio denominado **interpolated**. Conviértalo en el directorio actual y ejecute este comando desde una ventana de consola:
+Cree un directorio denominado *interpolated*. Conviértalo en el directorio actual y ejecute este comando desde una ventana de consola:
 
 ```dotnetcli
 dotnet new console
@@ -27,7 +27,7 @@ dotnet new console
 
 Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual.
 
-Abra **Program.cs** en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por el código siguiente, teniendo en cuenta que debe reemplazar `<name>` con su nombre:
+Abra *Program.cs* en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por el código siguiente, teniendo en cuenta que debe reemplazar `<name>` con su nombre:
 
 ```csharp
 var name = "<name>";

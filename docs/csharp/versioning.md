@@ -3,12 +3,12 @@ title: 'Control de versiones de C#: Guía de C#'
 description: Comprender cómo funciona el control de versiones en C# y .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926591"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834059"
 ---
 # <a name="versioning-in-c"></a>Control de versiones en C\#
 
@@ -25,9 +25,9 @@ De manera ideal, la información de la versión que proporciona a la biblioteca 
 
 El enfoque más sencillo de SemVer es el formato de 3 componentes `MAJOR.MINOR.PATCH`, donde:
 
-* `MAJOR` se incrementa cuando realiza cambios de API incompatibles
-* `MINOR` se incrementa cuando agrega funciones de manera compatible con versiones anteriores
-* `PATCH` se incrementa cuando realiza correcciones de errores compatibles con versiones anteriores
+- `MAJOR` se incrementa cuando realiza cambios de API incompatibles
+- `MINOR` se incrementa cuando agrega funciones de manera compatible con versiones anteriores
+- `PATCH` se incrementa cuando realiza correcciones de errores compatibles con versiones anteriores
 
 También existen maneras de especificar otros escenarios como versiones preliminares, etc. al aplicar información de la versión a su biblioteca .NET.
 
@@ -38,11 +38,11 @@ Una versión nueva de su biblioteca es compatible en su origen con una versión 
 
 Aquí se muestran algunos aspectos a tener en cuenta al intentar mantener la compatibilidad con versiones anteriores de su biblioteca:
 
-* Métodos virtuales: cuando hace que un método virtual sea no virtual en la versión nueva, significa que los proyectos que reemplacen ese método tendrán que actualizarse. Esto es un cambio brusco enorme y se desaconseja totalmente.
-* Firmas de método: cuando actualizar un comportamiento del método requiere que también se cambie su firma, en su lugar se debe crear una sobrecarga de manera que el código que llama a ese método siga funcionando.
+- Métodos virtuales: cuando hace que un método virtual sea no virtual en la versión nueva, significa que los proyectos que reemplacen ese método tendrán que actualizarse. Esto es un cambio brusco enorme y se desaconseja totalmente.
+- Firmas de método: cuando actualizar un comportamiento del método requiere que también se cambie su firma, en su lugar se debe crear una sobrecarga de manera que el código que llama a ese método siga funcionando.
 Siempre puede manipular la firma del método anterior para llamar a la firma del método nuevo, de manera que la implementación siga siendo coherente.
-* [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): puede usar este atributo en el código para especificar clases o miembros de clases que han quedado obsoletos y que probablemente se quiten en versiones futuras. Esto garantiza que los desarrolladores que usen su biblioteca estén mejor preparados para los cambios bruscos.
-* Argumentos de método opcionales: cuando hace que los argumentos de método opcionales anteriores sean obligatorios o cambien su valor predeterminado, se tendrá que actualizar todo el código que no proporcione esos argumentos.
+- [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): puede usar este atributo en el código para especificar clases o miembros de clases que han quedado obsoletos y que probablemente se quiten en versiones futuras. Esto garantiza que los desarrolladores que usen su biblioteca estén mejor preparados para los cambios bruscos.
+- Argumentos de método opcionales: cuando hace que los argumentos de método opcionales anteriores sean obligatorios o cambien su valor predeterminado, se tendrá que actualizar todo el código que no proporcione esos argumentos.
 
 > [!NOTE]
 > Hacer que los argumentos obligatorios sean opcionales debe tener un efecto muy pequeño, especialmente si no cambia el comportamiento del método.
@@ -62,7 +62,7 @@ Por suerte, C# y el ecosistema de .NET incluyen características y técnicas que
 
 ### <a name="assembly-binding-redirection"></a>Redirección de enlace de ensamblados
 
-Puede usar el archivo `app.config` para actualizar la versión de una biblioteca que use su aplicación. Al agregar lo que se denomina una [*redirección de enlace*](../framework/configure-apps/redirect-assembly-versions.md), se puede usar la nueva versión de la biblioteca sin tener que volver a compilar la aplicación. En el siguiente ejemplo se muestra cómo actualizaría el archivo `app.config` de la aplicación para usar la versión de revisión `1.0.1` de `ReferencedLibrary`, en lugar de la versión `1.0.0` con la que se ha compilado originalmente.
+Puede usar el archivo *app.config* para actualizar la versión de una biblioteca que use su aplicación. Al agregar lo que se denomina una [*redirección de enlace*](../framework/configure-apps/redirect-assembly-versions.md), se puede usar la nueva versión de la biblioteca sin tener que volver a compilar la aplicación. En el siguiente ejemplo se muestra cómo actualizaría el archivo *app.config* de la aplicación para usar la versión de revisión `1.0.1` de `ReferencedLibrary`, en lugar de la versión `1.0.0` con la que se ha compilado originalmente.
 
 ```xml
 <dependentAssembly>
@@ -81,11 +81,11 @@ Use el modificador `new` para ocultar los miembros heredados de una clase base. 
 
 Considere el ejemplo siguiente:
 
-[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
 **Salida**
 
-```
+```console
 A base method
 A derived method
 ```
@@ -103,12 +103,11 @@ El modificador `override` significa que una implementación derivada extiende la
 
 **Salida**
 
-```
+```console
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```
 
 El modificador `override` se evalúa en tiempo de compilación y el compilador producirá un error si no encuentra un miembro virtual que reemplazar.
 
-Su conocimiento de las técnicas que se han tratado y su comprensión de las situaciones para usarlas harán mucho por mejorar la facilidad de la transición entre las versiones de una biblioteca.
- 
+Su conocimiento de las técnicas que se han tratado y su comprensión de las situaciones en las cuales usarlas, contribuirá en gran medida a facilitar la transición entre las versiones de una biblioteca.

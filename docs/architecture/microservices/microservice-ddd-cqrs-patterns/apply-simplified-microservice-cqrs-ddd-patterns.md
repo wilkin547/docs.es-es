@@ -2,12 +2,12 @@
 title: Aplicar los patrones CQRS y DDD simplificados en un microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre la relación general entre patrones DDD y CQRS.
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674382"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834314"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicación de patrones CQRS y DDD simplificados en un microservicio
 
@@ -27,9 +27,11 @@ CQRS significa tener dos objetos para una operación de lectura/escritura cuando
 
 Un ejemplo de este tipo de servicio es el microservicio de pedidos de la aplicación de referencia de eShopOnContainers. Este servicio implementa un microservicio basado en un enfoque simplificado de CQRS. Usa un solo origen de datos o base de datos, pero dos modelos lógicos, además de patrones de DDD para el dominio transaccional, como se muestra en la figura 7-2.
 
-![El microservicio Ordering lógico incluye su base de datos Ordering, que puede estar o no en el mismo host de Docker. La presencia de la base de datos en el mismo host de Docker es buena para el desarrollo, pero no para producción.](./media/image2.png)
+![Diagrama que muestra un microservicio CQRS y DDD simplificado de alto nivel.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Figura 7-2**. Microservicio con CQRS simplificado y basado en DDD
+
+El microservicio "Ordering" lógico incluye su base de datos Ordering, que puede estar, pero no tiene que estar, en el mismo host de Docker. La presencia de la base de datos en el mismo host de Docker es buena para el desarrollo, pero no para producción.
 
 El nivel de aplicación puede ser la propia API web. Aquí, el aspecto de diseño importante es que el microservicio, siguiendo el patrón de CQRS, ha dividido las consultas y los ViewModels (modelos de datos creados especialmente para las aplicaciones cliente) de los comandos, del modelo del dominio y de las transacciones. Este enfoque mantiene las consultas independientes de las restricciones procedentes de los patrones DDD que solo tienen sentido para las transacciones y las actualizaciones, como se explica en secciones posteriores.
 

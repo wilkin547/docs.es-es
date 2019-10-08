@@ -2,12 +2,12 @@
 title: Arquitectura lógica frente a arquitectura física
 description: Obtenga más información sobre las diferencias entre arquitecturas físicas y lógicas.
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673062"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834400"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Arquitectura lógica frente a arquitectura física
 
@@ -25,7 +25,7 @@ Por tanto, un microservicio o contexto limitado empresarial es una arquitectura 
 
 Como se muestra en la figura 4-8, el microservicio empresarial de catálogo podría estar compuesto de varios servicios o procesos. Estos podrían ser varios servicios de ASP.NET Web API o cualquier otro tipo de servicio que use HTTP o cualquier otro protocolo. Lo más importante es que los servicios puedan compartir los mismos datos, siempre y cuando estos servicios sean cohesivos con relación al mismo dominio empresarial.
 
-![Diagrama del microservicio empresarial Catalog, que contiene un servicio de API, un servicio de búsqueda y una base de datos de SQL Server.](./media/image8.png)
+![Diagrama del microservicio empresarial de catálogo con servidores físicos.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Figura 4-8**. Microservicio empresarial con varios servicios físicos
 

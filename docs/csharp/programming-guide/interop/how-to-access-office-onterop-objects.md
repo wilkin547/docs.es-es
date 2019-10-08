@@ -1,5 +1,5 @@
 ---
-title: 'Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#: Guía de programación de C#'
+title: 'Procedimientos para: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#: Guía de programación de C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972098"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834205"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedimientos para: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
 
 Visual C# tiene nuevas características que simplifican el acceso a objetos de la API de Office. Las nuevas características incluyen argumentos con nombre y opcionales, un nuevo tipo llamado `dynamic` y la capacidad de pasar argumentos a parámetros de referencia en los métodos COM como si fueran parámetros de valor.
 
@@ -41,7 +41,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 6. Escriba un nombre para el proyecto en el campo **Nombre**.
 
-7. Haga clic en **Aceptar**.
+7. Haga clic en **OK**.
 
      El proyecto nuevo aparece en el **Explorador de soluciones**.
 
@@ -49,15 +49,15 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
 
-2. En la página de **Ensamblados**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Excel**.  Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalar ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))
+2. En la página de **Ensamblados**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Excel**.  Si no ve los ensamblados, asegúrese de que están instalados y que se muestran. Consulte [Configuración de los Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
-3. Haga clic en **Aceptar**.
+3. Haga clic en **OK**.
 
 ## <a name="to-add-necessary-using-directives"></a>Para agregar las directivas using necesarias
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Program.cs** y, después, haga clic en **Ver código**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo *Program.cs* y, después, haga clic en **Ver código**.
 
-2. Agregue las directivas `using` siguientes a la parte superior del archivo de código.
+2. Agregue las directivas `using` siguientes a la parte superior del archivo de código:
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
@@ -179,4 +179,4 @@ En el código siguiente se muestra el ejemplo completo.
 - [dynamic](../../language-reference/keywords/dynamic.md)
 - [Uso de tipo dinámico](../types/using-type-dynamic.md)
 - [Argumentos opcionales y con nombre](../classes-and-structs/named-and-optional-arguments.md)
-- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Uso de Usar argumentos opcionales y con nombre en la programación de Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

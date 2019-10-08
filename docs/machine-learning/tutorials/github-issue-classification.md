@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Clasificación de incidencias de soporte técnico (clasificación multiclase)'
 description: Descubra cómo usar ML.NET en un escenario de clasificación multiclase para clasificar los problemas de GitHub y asignarlos a un área determinada.
-ms.date: 07/31/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a6d158d51e6775feaed669c678bb9a36984f08f3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929220"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698991"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
@@ -339,7 +339,12 @@ Agregue un problema de GitHub para probar la predicción del modelo entrenado en
 Como hizo anteriormente, cree una instancia de `PredictionEngine` con el código siguiente:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
-  
+
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+> [!NOTE]
+> La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
+
 Use `PredictionEngine` para predecir la etiqueta de GitHub de área agregando el código siguiente al método `PredictIssue` para la predicción:
 
 [!code-csharp[PredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#PredictIssue)]

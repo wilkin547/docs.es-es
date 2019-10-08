@@ -3,20 +3,20 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850725"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834107"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Mac, PC o Linux. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
 
-## <a name="create-your-application"></a>Creación de una aplicación
+## <a name="create-your-application"></a>Creación de la aplicación
 
-En una ventana de terminal, cree un directorio denominado **clases**. Creará la aplicación ahí. Cambie a ese directorio y escriba `dotnet new console` en la ventana de la consola. Este comando crea la aplicación. Abra **Program.cs**. El resultado debería tener un aspecto similar a este:
+En una ventana de terminal, cree un directorio denominado *clases*. Creará la aplicación ahí. Cambie a ese directorio y escriba `dotnet new console` en la ventana de la consola. Este comando crea la aplicación. Abra *Program.cs*. Debería ser parecido a este:
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-En este tutorial, se van a crear tipos nuevos que representan una cuenta bancaria. Normalmente los desarrolladores definen cada clase en un archivo de texto diferente. De esta forma, la tarea de administración resulta más sencilla a medida que aumenta el tamaño del programa.  Cree un archivo denominado **CuentaBancaria.cs** en el directorio **clases**. 
+En este tutorial, se van a crear tipos nuevos que representan una cuenta bancaria. Normalmente los desarrolladores definen cada clase en un archivo de texto diferente. De esta forma, la tarea de administración resulta más sencilla a medida que aumenta el tamaño del programa. Cree un archivo denominado *CuentaBancaria.cs* en el directorio *clases*. 
 
 Este archivo contendrá la definición de una ***cuenta bancaria***. La programación orientada a objetos organiza el código mediante la creación de tipos en forma de ***clases***. Estas clases contienen el código que representa una entidad específica. La clase `BankAccount` representa una cuenta bancaria. El código implementa operaciones específicas a través de métodos y propiedades. En este tutorial, la cuenta bancaria admite el siguiente comportamiento:
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-A los constructores se les llama cuando se crea un objeto mediante [`new`](../../language-reference/operators/new-operator.md). Reemplace la línea `Console.WriteLine("Hello World!");` de ***program.cs*** con la siguiente línea (reemplace `<name>` con su nombre):
+A los constructores se les llama cuando se crea un objeto mediante [`new`](../../language-reference/operators/new-operator.md). Reemplace la línea `Console.WriteLine("Hello World!");` de *Program.cs* por la siguiente línea (reemplace `<name>` por su nombre):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,15 +119,15 @@ Escriba `dotnet run` para ver los resultados.
 
 La clase de la cuenta bancaria debe aceptar depósitos y reintegros para que el funcionamiento sea adecuado. Se van a implementar depósitos y reintegros con la creación de un diario de cada transacción de la cuenta. Ofrece algunas ventajas con respecto al mero hecho de actualizar el saldo en cada transacción. El historial se puede utilizar para auditar todas las transacciones y administrar los saldos diarios. Con el cálculo del saldo a partir del historial de todas las transacciones, cuando proceda, todos los errores de una única transacción que se solucionen se reflejarán correctamente en el saldo cuando se realice el siguiente cálculo.
 
-Se va a empezar por crear un tipo para representar una transacción. Se trata de un tipo simple que no tiene ninguna responsabilidad. Necesita algunas propiedades. Cree un archivo denominado ***Transaction.cs***. Agregue el código siguiente a él:
+Se va a empezar por crear un tipo para representar una transacción. Se trata de un tipo simple que no tiene ninguna responsabilidad. Necesita algunas propiedades. Cree un archivo denominado *Transaction.cs*. Agregue el código siguiente a él:
 
-[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
 Ahora se va a agregar <xref:System.Collections.Generic.List%601> de objetos `Transaction` a la clase `BankAccount`. Agregue la declaración siguiente:
 
-[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-La clase <xref:System.Collections.Generic.List%601> requiere la importación de un espacio de nombres diferente. Agregue lo siguiente al principio de **CuentaBancaria.cs**:
+La clase <xref:System.Collections.Generic.List%601> requiere la importación de un espacio de nombres diferente. Agregue lo siguiente al principio de *CuentaBancaria.cs*:
 
 ```csharp
 using System.Collections.Generic;
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 Ahora se va a cambiar la forma en que se notifica `Balance`.  Esto se puede conseguir con la suma de los valores de todas las transacciones. Modifique la declaración de `Balance` en la clase `BankAccount` por lo siguiente:
 
-[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 En este ejemplo se muestra un aspecto importante de las ***propiedades***. Ahora va a calcular el saldo cuando otro programador solicite el valor. El cálculo enumera todas las transacciones y proporciona la suma como el saldo actual.
 
@@ -143,13 +143,13 @@ Después, implemente los métodos `MakeDeposit` y `MakeWithdrawal`. Estos métod
 
 Esta operación introduce el concepto de las ***excepciones***. La forma habitual de indicar que un método no puede completar su trabajo correctamente consiste en generar una excepción. El tipo de excepción y el mensaje asociado a ella describen el error. En este caso, el método `MakeDeposit` genera una excepción si el importe del depósito es negativo. El método `MakeWithdrawal` genera una excepción si la cantidad retirada es negativa o si la aplicación del reintegro resulta en un saldo negativo:
 
-[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 La instrucción [`throw`](../../language-reference/keywords/throw.md) **genera** una excepción. La ejecución del bloque actual finaliza y el control se transfiere al primer bloque `catch` coincidente que se encuentra en la pila de llamadas. Se agregará un bloque `catch` para probar este código un poco más adelante.
 
 El constructor debe obtener un cambio para que agregue una transacción inicial, en lugar de actualizar el saldo directamente. Puesto que ya escribió el método `MakeDeposit`, llámelo desde el constructor. El constructor terminado debe tener este aspecto:
 
-[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> es una propiedad que devuelve la fecha y hora actuales. Agregue algunos depósitos y reintegros en el método `Main` para probar esta operación:
 
@@ -196,11 +196,11 @@ Guarde el archivo y escriba `dotnet run` para probarlo.
 
 Para finalizar este tutorial, puede escribir el método `GetAccountHistory` que crea `string` para el historial de transacciones. Agregue este método al tipo `BankAccount`:
 
-[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
 
 Usa la clase <xref:System.Text.StringBuilder> para dar formato a una cadena que contiene una línea para cada transacción. Se ha visto anteriormente en estos tutoriales el código utilizado para dar formato a una cadena. Un carácter nuevo es `\t`. Inserta una pestaña para dar formato a la salida.
 
-Agregue esta línea para probarla en **Program.cs**:
+Agregue esta línea para probarla en *Program.cs*:
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());

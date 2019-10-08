@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow'
 description: Obtenga información sobre cómo transferir el conocimiento de un modelo de TensorFlow existente a un modelo de clasificación de imágenes de ML.NET nuevo. El modelo TensorFlow se entrenó para clasificar las imágenes en mil categorías. El modelo de ML.NET usa el aprendizaje de transferencia para clasificar las imágenes en menos categorías más amplias.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 28d8c18721bd353e961284935758a87679c8c8e0
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353686"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698646"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -246,7 +246,10 @@ Dado que se mostrarán los datos de imagen y las predicciones relacionadas más 
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    La [clase PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia que realiza una predicción en una instancia única de datos. Para obtener la predicción, use el método [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A).
+    Para obtener la predicción, use el método [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A). [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+    > [!NOTE]
+    > La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
 
 1. Muestre el resultado de la predicción como la línea de código siguiente en el método `ClassifySingleImage()`:
 

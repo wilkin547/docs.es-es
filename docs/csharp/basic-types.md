@@ -3,12 +3,12 @@ title: 'Tipos básicos: Guía de C#'
 description: Obtenga información sobre los tipos principales (valores numéricos, cadenas y objeto) en todos los programas de C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424457"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834248"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -73,7 +73,7 @@ Como se ha mencionado anteriormente, puede asignar implícitamente un tipo a una
   
 En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no quiera almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para obtener más información, consulte [Anonymous Types](programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).
 
-Es habitual querer devolver más de un valor de un método. Puede crear *tipos de tupla* que devuelven varios valores en una única llamada de método. Para obtener más información, consulte [Tuples](tuples.md) (Tuplas).
+Es habitual querer devolver más de un valor de un método. Puede crear *tipos de tupla* que devuelven varios valores en una única llamada de método. Para más información, consulte [Tuplas](tuples.md).
 
 ## <a name="the-common-type-system"></a>Common Type System
 

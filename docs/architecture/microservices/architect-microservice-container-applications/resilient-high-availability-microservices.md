@@ -2,12 +2,12 @@
 title: Resistencia y alta disponibilidad en microservicios
 description: Con el objetivo de ofrecer una alta disponibilidad, los microservicios deben estar diseñados para soportar errores en la red transitoria y las dependencias.
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675062"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834350"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
@@ -46,7 +46,7 @@ Una aplicación basada en microservicio no debe intentar almacenar la secuencia 
 
 Crear una aplicación basada en microservicio implica enfrentarse a cierto grado de complejidad. Por supuesto, un único microservicio es fácil de tratar, pero docenas o cientos de tipos y miles de instancias de microservicios es un problema complejo. No solo se trata de crear la arquitectura del microservicio; también necesita alta disponibilidad, capacidad de direccionamiento, resistencia, estado y diagnóstico si pretende disponer de un sistema estable y cohesivo.
 
-![Los orquestadores proporcionan una plataforma de soporte técnico para ejecutar los microservicios.](./media/image22.png)
+![Diagrama de clústeres que proporcionan una plataforma de soporte para microservicios.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **Figura 4-22**. Una plataforma de microservicio es fundamental para la administración del estado de una aplicación
 

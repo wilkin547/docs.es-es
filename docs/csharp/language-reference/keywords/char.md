@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 63f8871926e8c279678c59a2256bef46b2ff514e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353763"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698776"
 ---
 # <a name="char-c-reference"></a>char (Referencia de C#)
 
@@ -21,13 +21,13 @@ La palabra clave `char` se usa para declarar una instancia de la estructura <xre
 
  Los caracteres Unicode se usan para representar la mayoría de los idiomas escritos del mundo.
 
-|Tipo|Intervalo|Tamaño|Tipo de .NET|
+|type|Intervalo|Size|Tipo .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 a U+FFFF|Carácter Unicode de 16 bits|<xref:System.Char?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Literales
 
-Las constantes de tipo `char` pueden escribirse como literales de caracteres, secuencias de escape hexadecimal o representaciones Unicode. También se pueden convertir los códigos de caracteres enteros. En el siguiente ejemplo se inicializan cuatro variables `char` con el mismo carácter `X`:
+Las constantes de tipo `char` pueden escribirse como literales de caracteres, secuencias de escape hexadecimal o representaciones Unicode. También se pueden convertir los códigos de caracteres enteros. En el siguiente ejemplo, los cuatro elementos de una matriz de `char` se inicializan con el mismo carácter `X`:
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 

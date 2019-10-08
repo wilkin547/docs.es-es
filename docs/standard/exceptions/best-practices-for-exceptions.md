@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107190"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696762"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
 
@@ -30,15 +30,15 @@ Limpie los recursos asignados con instrucciones `using` o bloques `finally`. Dé
 
 Para las condiciones con probabilidad de producirse, pero que podrían desencadenar una excepción, considere la posibilidad de controlarlas de forma que se evite la excepción. Por ejemplo, si intenta se cerrar una conexión que ya está cerrada, obtendrá `InvalidOperationException`. Se puede evitar mediante una instrucción `if` para comprobar el estado de conexión antes de intentar cerrarla.
 
-[!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
-[!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
+[!code-cpp[Conceptual.Exception.Handling#2](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
+[!code-csharp[Conceptual.Exception.Handling#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
+[!code-vb[Conceptual.Exception.Handling#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 Si no comprueba el estado de la conexión antes de cerrar, se puede detectar la excepción `InvalidOperationException`.
 
-[!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
-[!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
+[!code-cpp[Conceptual.Exception.Handling#3](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
+[!code-csharp[Conceptual.Exception.Handling#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
+[!code-vb[Conceptual.Exception.Handling#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 El método que se elija depende de la frecuencia con la que espera que se produzca el evento.
 
@@ -50,9 +50,9 @@ El método que se elija depende de la frecuencia con la que espera que se produz
 
 Una clase puede proporcionar métodos o propiedades que permiten evitar realizar una llamada que desencadenaría una excepción. Por ejemplo, una clase <xref:System.IO.FileStream> proporciona métodos que ayudan a determinar si se ha alcanzado el final del archivo. Esto se puede usar para evitar la excepción que se inicia si se lee más allá del final del archivo. En el ejemplo siguiente se muestra cómo leer hasta el final de un archivo sin desencadenar una excepción.
 
-[!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
-[!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
+[!code-cpp[Conceptual.Exception.Handling#5](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
+[!code-csharp[Conceptual.Exception.Handling#5](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
+[!code-vb[Conceptual.Exception.Handling#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
 Otro modo de evitar excepciones es devolver un valor NULL (o el valor predeterminado) para los casos de errores muy frecuentes en lugar de iniciar una excepción. Un caso de error muy común se puede considerar como un flujo de control normal. Al devolver un valor NULL en estos casos, se minimiza el impacto en el rendimiento de una aplicación.
 
@@ -74,9 +74,9 @@ Solo se deben introducir nuevas clases de excepción si no se puede aplicar ning
 
 Cuando se necesite una excepción personalizada, debe ponerse el nombre apropiado y derivarla de la clase <xref:System.Exception>. Por ejemplo:
 
-[!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
-[!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
+[!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
+[!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
+[!code-vb[Conceptual.Exception.Handling#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>Incluir tres constructores en las clases de excepciones personalizadas
 
@@ -110,7 +110,11 @@ Escriba frases claras e incluya puntuación final. Todas las oraciones de la cad
 
 El mensaje de error que ve el usuario deriva de la propiedad <xref:System.Exception.Message?displayProperty=nameWithType> de la excepción que se ha generado, y no del nombre de la clase de excepción. Normalmente, se asigna un valor a la propiedad <xref:System.Exception.Message?displayProperty=nameWithType> pasando la cadena de mensaje al argumento `message` de un [constructor de excepciones](xref:System.Exception.%23ctor%2A).
 
-Para las aplicaciones localizadas, debe proporcionar una cadena de mensaje localizada para todas las excepciones que la aplicación pueda desencadenar. Use archivos de recursos para proporcionar mensajes de error localizados. Para obtener información sobre la localización de aplicaciones y la recuperación de cadenas localizadas, vea [Recursos de aplicaciones de escritorio](../../framework/resources/index.md) y <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
+Para las aplicaciones localizadas, debe proporcionar una cadena de mensaje localizada para todas las excepciones que la aplicación pueda desencadenar. Use archivos de recursos para proporcionar mensajes de error localizados. Para información sobre la localización de aplicaciones y la recuperación de cadenas localizadas, consulte los siguientes artículos:
+
+- [Procedimientos: Creación de excepciones definidas por el usuario con mensajes de excepción localizados](how-to-create-localized-exception-messages.md)
+- [Recursos de aplicaciones de escritorio](../../framework/resources/index.md) 
+- <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>En excepciones personalizadas, proporcione propiedades adicionales según sea necesario
 
@@ -124,9 +128,9 @@ El seguimiento de pila comienza en la instrucción en que se produce la excepci�
 
 Es habitual que una clase produzca la misma excepción desde distintos lugares de su implementación. Para evitar el exceso de código, use métodos del asistente que creen la excepción y la devuelvan. Por ejemplo:
 
-[!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
-[!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+[!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
+[!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
+[!code-vb[Conceptual.Exception.Handling#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
 
 En algunos casos, es más apropiado usar el constructor de excepciones para generar la excepción. Un ejemplo es una clase de excepción global, como <xref:System.ArgumentException>.
 

@@ -2,12 +2,12 @@
 title: Desafíos y soluciones de la administración de datos distribuidos
 description: Descubra cuáles son los desafíos y soluciones de la administración de datos distribuidos en el mundo de los microservicios.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673142"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834459"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -47,7 +47,7 @@ En una hipotética versión monolítica de esta aplicación, cuando cambia el pr
 
 Pero en una aplicación basada en microservicios, las tablas Productos y Cesta pertenecen a sus respectivos microservicios. Ningún microservicio debería incluir en sus propias transacciones las tablas o el almacenamiento que pertenecen a otro microservicio, ni siquiera en consultas directas, como se muestra en la figura 4-9.
 
-![Un microservicio no puede acceder directamente a una tabla en otro microservicio, debe usarse la coherencia final para sincronizar los datos.](./media/image9.png)
+![Diagrama que muestra que los datos de la base de datos de microservicios no se pueden compartir.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Figura 4-9**. Un microservicio no puede acceder directamente a una tabla en otro microservicio
 

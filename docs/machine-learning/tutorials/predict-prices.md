@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Predicción de precios mediante regresión'
 description: En este tutorial se muestra cómo compilar un modelo de regresión con ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
-ms.date: 05/09/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929447"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957379"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Predicción de precios mediante regresión con ML.NET
 
@@ -188,7 +188,7 @@ Cargue el conjunto de datos de prueba con el método [LoadFromTextFile()](xref:M
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-Luego transforme los datos de `Test` al agregar el código siguiente a `EvaluateModel()`:
+Luego transforme los datos de `Test` al agregar el código siguiente a `Evaluate()`:
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
@@ -245,7 +245,10 @@ Use `PredictionEngine` para predecir la tarifa al agregar el código siguiente a
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-La [clase PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia que permite pasar una sola instancia de datos y luego realizar una predicción sobre ella.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+> [!NOTE]
+> La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
 
 En este tutorial se utiliza un viaje de prueba en esta clase. Más adelante, puede agregar otros escenarios para experimentar con el modelo. Agregue un viaje para probar la predicción de costo del modelo entrenado en el método `TestSinglePrediction()` mediante la creación de una instancia de `TaxiTrip`:
 

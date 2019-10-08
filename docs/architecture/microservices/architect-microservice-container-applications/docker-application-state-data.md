@@ -2,12 +2,12 @@
 title: Estado y datos en aplicaciones de Docker
 description: Administración de estado y datos en aplicaciones de Docker. Las instancias de microservicios son prescindibles, pero LOS DATOS NO, aquí se explica cómo controlarlos con microservicios.
 ms.date: 09/20/2018
-ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039581"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834425"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
@@ -47,11 +47,11 @@ Los **montajes tmpfs** son básicamente carpetas virtuales que solo existen en l
 
 Tal como se muestra en la figura 4-5, los volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o de la máquina virtual. Pero los contenedores de Docker no pueden acceder a un volumen desde un servidor de host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos que se comparten entre contenedores que se ejecutan en otros hosts de Docker, aunque se podría lograr con un controlador de volumen que sea compatible con los hosts remotos.
 
-![Los volúmenes se pueden compartir entre contenedores, pero solo en el mismo host, a menos que use un controlador remoto compatible con hosts remotos.](./media/image5.png)
+![Diagrama que muestra volúmenes de datos y orígenes de datos externos para aplicaciones basadas en contenedor.](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **Figura 4-5**. Volúmenes y orígenes de datos externos para aplicaciones basadas en contenedor
 
-Además, cuando un orquestador administra los contenedores de Docker, estos podrían "moverse" entre hosts, según las optimizaciones que el clúster realice. Por tanto, no se recomienda usar volúmenes de datos para los datos empresariales. Pero son un buen mecanismo para trabajar con archivos de seguimiento, archivos temporales o similares que no afectarán a la coherencia de los datos empresariales.
+Los volúmenes se pueden compartir entre contenedores, pero solo en el mismo host, a menos que use un controlador remoto compatible con hosts remotos. Además, cuando un orquestador administra los contenedores de Docker, estos podrían "moverse" entre hosts, según las optimizaciones que el clúster realice. Por tanto, no se recomienda usar volúmenes de datos para los datos empresariales. Pero son un buen mecanismo para trabajar con archivos de seguimiento, archivos temporales o similares que no afectarán a la coherencia de los datos empresariales.
 
 Las herramientas de **orígenes de datos remotos y caché** como Azure SQL Database, Azure Cosmos DB o una caché remota como Redis pueden usarse en aplicaciones en contenedores del mismo modo que se usan al desarrollar sin contenedores. Se trata de una manera comprobada para almacenar datos de aplicaciones empresariales.
 

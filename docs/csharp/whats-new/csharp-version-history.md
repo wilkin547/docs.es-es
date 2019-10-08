@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391954"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956641"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -28,7 +28,7 @@ Las herramientas de compilación de C# consideran que la última versión princi
 
 ## <a name="c-version-10"></a>C# versión 1.0
 
-Si echa la vista atrás, la versión 1.0 de C#, publicada con Visual Studio.net 2002, se parecía mucho a Java. Como [parte de sus objetivos de diseño indicados para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), intentaba ser un "lenguaje orientado a objetos que fuera sencillo, moderno y para fines generales".  En aquel momento, parecerse a Java significaba que conseguía esos primeros objetivos de diseño.
+Si echa la vista atrás, la versión 1.0 de C#, publicada con Visual Studio .NET 2002, se parecía mucho a Java. Como [parte de sus objetivos de diseño indicados para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), intentaba ser un "lenguaje orientado a objetos que fuera sencillo, moderno y para fines generales".  En aquel momento, parecerse a Java significaba que conseguía esos primeros objetivos de diseño.
 
 Pero si volvemos a echarle un vistazo a C# 1.0 ahora, no lo verá tan claro. Carecía de capacidades asincrónicas integradas y de algunas funcionalidades útiles de genéricos que se dan por sentado. De hecho, carecía por completo de genéricos.  ¿Y [LINQ](../linq/index.md)? Aún no estaba disponible. Esas características tardarían unos años más en agregarse.
 
@@ -48,7 +48,7 @@ Las principales características de C# 1.0 incluían lo siguiente:
 
 ## <a name="c-version-12"></a>Versión 1.2 de C#
 
-Versión 1.2 de C# incluida en Visual Studio 2003. Contenía algunas pequeñas mejoras del lenguaje. Lo más notable es que, a partir de esa versión, el código se generaba en un bucle `foreach` llamado <xref:System.IDisposable.Dispose%2A> en un <xref:System.Collections.IEnumerator> cuando ese <xref:System.Collections.IEnumerator> implementaba <xref:System.IDisposable>.
+Versión 1.2 de C# incluida en Visual Studio .NET 2003. Contenía algunas pequeñas mejoras del lenguaje. Lo más notable es que, a partir de esa versión, el código se generaba en un bucle `foreach` llamado <xref:System.IDisposable.Dispose%2A> en un <xref:System.Collections.IEnumerator> cuando ese <xref:System.Collections.IEnumerator> implementaba <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# versión 2.0
 
@@ -132,7 +132,7 @@ Pero `async` y `await` son los auténticos protagonistas de esta versión. Cuand
 
 ## <a name="c-version-60"></a>C# versión 6.0
 
-Con las versiones 3.0 y 5.0, C# había agregado nuevas características destacables a un lenguaje orientado a objetos. Con la versión 6.0, publicada con Visual Studio 2013, en lugar de introducir una característica innovadora y predominante, se publicaron muchas características menores que aumentaron la productividad de la programación de C#. Estas son algunas de ellas:
+Con las versiones 3.0 y 5.0, C# había agregado nuevas características destacables a un lenguaje orientado a objetos. Con la versión 6.0, publicada con Visual Studio 2013, en lugar de introducir una característica innovadora y predominante, se publicaron muchas características menores que aumentaron la productividad de la programación de C#. Esta información incluye lo siguiente:
 
 - [Importaciones estáticas](./csharp-6.md#using-static)
 - [Filtros de excepciones](./csharp-6.md#exception-filters)

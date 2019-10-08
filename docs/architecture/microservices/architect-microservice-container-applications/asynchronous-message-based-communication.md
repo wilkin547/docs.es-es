@@ -2,12 +2,12 @@
 title: Comunicación asincrónica basada en mensajes
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedor | Las comunicaciones asincrónicas basadas en mensajes son un concepto fundamental en la arquitectura de microservicios, porque es la mejor manera de mantener los microservicios independientes entre sí mientras siguen sincronizándose.
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673322"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834484"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -31,7 +31,7 @@ La comunicación basada en mensajes de receptor único es especialmente idónea 
 
 Una vez que se inicia el envío mediante la comunicación basada en mensajes (ya sea a través de comandos o eventos), no se debe mezclar con la comunicación sincrónica de HTTP.
 
-![Un único microservicio en el que se recibe un mensaje asincrónico](./media/image18.png)
+![Un único microservicio en el que se recibe un mensaje asincrónico](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **Figura 4-18**. Un único microservicio en el que se recibe un mensaje asincrónico
 
@@ -53,11 +53,11 @@ Como se indicó anteriormente en la sección [Desafíos y soluciones para la adm
 
 Un punto importante es que es posible que le interese comunicarse con varios microservicios que estén suscritos al mismo evento. Para ello, puede usar la mensajería de publicación y suscripción basada en la comunicación controlada por eventos, como se muestra en la figura 4-19. Este mecanismo de publicación y suscripción no es exclusivo de la arquitectura de microservicios. Es similar a la forma en que deben comunicarse los [contextos delimitados](https://martinfowler.com/bliki/BoundedContext.html) en DDD o a la forma en que se propagan las actualizaciones desde la base de datos de escritura a la de lectura en el modelo de arquitectura [Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) (Segregación de responsabilidades de comandos y consultas). El objetivo es tener coherencia final entre varios orígenes de datos en el sistema distribuido.
 
-![En la comunicación controlada por eventos asincrónica un microservicio publica los eventos en un bus de eventos y muchos microservicios pueden suscribirse a él para recibir una notificación y actuar en consecuencia.](./media/image19.png)
+![Diagrama que muestra comunicaciones asincrónicas controladas por eventos.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **Figura 4-19**. Comunicación asincrónica de mensajes controlada por eventos
 
-La implementación determinará qué protocolo se va a usar para las comunicaciones basadas en mensajes y controladas por eventos. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) puede ayudar a lograr una comunicación en cola confiable.
+En la comunicación controlada por eventos asincrónica un microservicio publica los eventos en un bus de eventos y muchos microservicios pueden suscribirse a él para recibir una notificación y actuar en consecuencia. La implementación determinará qué protocolo se va a usar para las comunicaciones basadas en mensajes y controladas por eventos. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) puede ayudar a lograr una comunicación en cola confiable.
 
 Al usar un bus de eventos, es posible que le interese usar una capa de abstracción (como una interfaz de bus de eventos) basada en una implementación relacionada en las clases con código que use la API de un agente de mensajes como [RabbitMQ](https://www.rabbitmq.com/) o un Service Bus como [Azure Service Bus con Topics](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Como alternativa, es posible que le interese usar un Service Bus de nivel superior como NServiceBus, MassTransit o Brighter para articular el bus de eventos y el sistema de publicación y suscripción.
 

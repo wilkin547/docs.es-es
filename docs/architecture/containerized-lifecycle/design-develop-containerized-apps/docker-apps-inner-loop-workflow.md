@@ -2,18 +2,18 @@
 title: Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 description: Conozca el flujo de trabajo de "bucle interno" del desarrollo de aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214361"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956599"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 
 Antes de desencadenar el flujo de trabajo de bucle exterior que comprende el ciclo completo de DevOps, todo comienza en la máquina de cada desarrollador, al codificar la propia aplicación, utilizar sus lenguajes o plataformas preferidos y probarla localmente (figura 4-21). Pero en todos los casos, tendrá un aspecto importante en común, con independencia del lenguaje, el marco o las plataformas que elija. En este flujo de trabajo concreto, siempre desarrolla y prueba contenedores de Docker, pero localmente.
 
-![Paso 1: Código, ejecución y depuración](./media/image18.png)
+![Diagrama que muestra el concepto de un entorno de desarrollo de bucle interno.](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **Figura 4-21**. Contexto de desarrollo de bucle interno
 
@@ -35,7 +35,7 @@ Las aplicaciones se componen de sus propios servicios, además de bibliotecas ad
 
 La figura 4-22 muestra los pasos básicos que normalmente hay que llevar a cabo para compilar una aplicación de Docker, seguidos de una descripción detallada de cada paso.
 
-![Introducción al flujo de trabajo: Paso 1: código, paso 2: escritura de Dockerfiles, paso 3: creación de imágenes definidas con Dockerfiles, paso 4: definición de servicios con el archivo docker-compose, paso 5: ejecución de contenedores o aplicaciones compuestas, paso 6: prueba de aplicaciones, paso 7: inserción para comenzar el bucle exterior (canalizaciones de CI/CD) o continuar con el desarrollo.](./media/image19.png)
+![Diagrama que muestra los siete pasos necesarios para crear una aplicación en contenedores.](./media/docker-apps-inner-loop-workflow/life-cycle-containerized-apps-docker-cli.png)
 
 **Figura 4-22**. Flujo de trabajo general del ciclo de vida de aplicaciones en contenedor con la CLI de Docker
 
@@ -54,10 +54,10 @@ Con las últimas versiones de Docker para Mac y Windows, desarrollar aplicacione
 
 Además, necesitará un editor de código para que realmente pueda desarrollar su aplicación al tiempo que usa la CLI de Docker.
 
-Microsoft ofrece Visual Studio Code, que es un editor de código ligero compatible con Mac, Windows y Linux y que proporciona IntelliSense con [compatibilidad con numerosos lenguajes](https://code.visualstudio.com/docs/languages/overview) (JavaScript,. NET, Go, Java, Ruby, Python y la mayoría de lenguajes modernos), [depuración](https://code.visualstudio.com/Docs/editor/debugging), [integración con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) y [compatibilidad con extensiones](https://code.visualstudio.com/docs/extensions/overview). Este editor es muy adecuado para desarrolladores de Mac y Linux. En Windows, también se puede usar la aplicación Visual Studio completa.
+Microsoft ofrece Visual Studio Code, que es un editor de código ligero compatible con Windows, Linux y macOS y que proporciona IntelliSense con [compatibilidad con numerosos lenguajes](https://code.visualstudio.com/docs/languages/overview) (JavaScript,. NET, Go, Java, Ruby, Python y la mayoría de lenguajes modernos), [depuración](https://code.visualstudio.com/Docs/editor/debugging), [integración con Git](https://code.visualstudio.com/Docs/editor/versioncontrol) y [compatibilidad con extensiones](https://code.visualstudio.com/docs/extensions/overview). Este editor es muy adecuado para desarrolladores de macOS y Linux. En Windows, también puede usar Visual Studio.
 
 > [!TIP]
-> Para obtener instrucciones sobre cómo instalar Visual Studio Code para Windows, Mac o Linux, vaya a <https://code.visualstudio.com/docs/setup/setup-overview/>.
+> Para instrucciones sobre cómo instalar Visual Studio Code para Windows, Linux o macOS, vaya a <https://code.visualstudio.com/docs/setup/setup-overview/>.
 >
 > Para obtener instrucciones sobre cómo configurar Docker para Mac, vaya a <https://docs.docker.com/docker-for-mac/>.
 
@@ -81,7 +81,7 @@ La extensión de Docker para VS Code ofrece las siguientes características:
 
 Para instalar la extensión de Docker, presione Ctrl+Mayús+P, escriba `ext install` y ejecute el comando Instalar extensión para que aparezca la lista de extensiones de Marketplace. A continuación, escriba **docker** para filtrar los resultados y luego seleccione la extensión de compatibilidad con Docker, tal y como se muestra en la figura 4-23.
 
-![Vista de la extensión de Docker para VS Code.](./media/image20.png)
+![Vista de la extensión de Docker para VS Code.](./media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
 **Figura 4-23**. Instalación de la extensión de Docker para Visual Studio Code
 
@@ -96,7 +96,7 @@ El archivo `DockerFile` normalmente se coloca en la carpeta raíz de la aplicac
 
 En la figura 4-24, puede ver cómo se agrega un archivo docker-compose mediante la extensión de Docker para VS Code.
 
-![Vista de consola de la extensión de Docker para VS Code.](./media/image24.png)
+![Vista de consola de la extensión de Docker para VS Code.](./media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png)
 
 **Figura 4-24**. Archivos de Docker que se agregan con el **comando Add Docker files to Workspace** (Agregar archivos de Docker al área de trabajo)
 
@@ -158,7 +158,7 @@ Por cada servicio personalizado que incluya su aplicación, deberá crear una im
 
 Para crear una imagen en su entorno local y con el DockerFile, puede usar el comando de compilación de Docker, tal y como se muestra en la figura 4-25 (también puede ejecutar `docker-compose up --build` para aplicaciones compuestas por varios contenedores y servicios).
 
-![Salida de consola de la compilación de docker-compose, que muestra el progreso de descarga de imágenes.](./media/image25.png)
+![Captura de pantalla que muestra la salida de la consola del comando de compilación de Docker.](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
 **Figura 4-25**. Ejecución de la compilación de Docker
 
@@ -168,7 +168,7 @@ En este ejemplo se crea una imagen de Docker de nombre `cesardl/netcore-webapi-m
 
 Puede encontrar las imágenes existentes en el repositorio local (la máquina de desarrollo) mediante el comando docker images, tal y como se muestra en la figura 4-26.
 
-![Salida de consola del comando docker images, que muestra las imágenes existentes en la consola.](./media/image26.png)
+![Salida de consola del comando docker images, que muestra las imágenes existentes en la consola.](./media/docker-apps-inner-loop-workflow/view-existing-images-with-docker-images.png)
 
 **Figura 4-26**. Visualización de imágenes existentes con docker images
 
@@ -223,13 +223,13 @@ En el caso de esta implementación en particular, las solicitudes enviadas al pu
 
 En la mayoría de los escenarios empresariales, una aplicación de Docker se compone de varios servicios. En estos casos, puede ejecutar el comando `docker-compose up` (figura 4-27), que utilizará el archivo docker-compose.yml que haya creado anteriormente. La ejecución de este comando implementa una aplicación compuesta con todos sus contenedores relacionados.
 
-![Salida de consola del comando docker-compose up.](./media/image27.png)
+![Salida de consola del comando docker-compose up.](./media/docker-apps-inner-loop-workflow/results-docker-compose-up.png)
 
 **Figura 4-27**. Resultados de la ejecución del comando "docker-compose up"
 
 Después de ejecutar `docker-compose up`, se implementa la aplicación y sus contenedores relacionados en el host de Docker, tal y como se muestra en la figura 4-28, en la representación de la máquina virtual.
 
-![Máquina virtual que ejecuta una aplicación de varios contenedores.](./media/image28.png)
+![Máquina virtual que ejecuta una aplicación de varios contenedores.](./media/docker-apps-inner-loop-workflow/vm-with-docker-containers-deployed.png)
 
 **Figura 4-28**. Máquina virtual con contenedores de Docker implementados
 
@@ -247,7 +247,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 En el host de Docker, abra un explorador y navegue a ese sitio; debe ver la aplicación o el servicio en ejecución, tal y como se muestra en la figura 4-29.
 
-![Vista de explorador de la respuesta de localhost/API/valores.](./media/image29.png)
+![Vista de explorador de la respuesta de localhost/API/valores.](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-localhost.png)
 
 **Figura 4-29**. Prueba de la aplicación de Docker en local con localhost
 
@@ -255,7 +255,7 @@ Tenga en cuenta que utiliza el puerto 80, pero internamente se redirige al puer
 
 Puede realizar esta prueba con CURL desde el terminal. En una instalación de Docker en Windows, la dirección IP predeterminada es 10.0.75.1, tal y como se muestra en la figura 4-30.
 
-![Salida de consola de la obtención de http://10.0.75.1/API/values con CURL](./media/image30.png)
+![Salida de consola de la obtención de http://10.0.75.1/API/values con CURL](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **Figura 4-30**. Prueba de una aplicación de Docker en local mediante CURL
 
@@ -265,9 +265,8 @@ Visual Studio Code admite la depuración de Docker si utiliza Node.js y otras 
 
 También puede depurar contenedores de .NET Core o .NET Framework en Docker cuando se usa Visual Studio para Windows o Mac, tal y como se describe en la sección siguiente.
 
-> [INFORMACIÓN]
->
-> Para obtener más información sobre la depuración de contenedores de Docker de Node.js, vaya a <https://blog.docker.com/2016/07/live-debugging-docker/> y <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
+> [!TIP]
+> Para más información sobre la depuración de contenedores de Docker de Node.js, consulte <https://blog.docker.com/2016/07/live-debugging-docker/> y <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
 
 >[!div class="step-by-step"]
 >[Anterior](docker-apps-development-environment.md)
