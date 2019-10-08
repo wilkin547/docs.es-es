@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c98681493738b4e94ed14417fa1437efb6c12ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792759"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003313"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Devolver u omitir elementos de una secuencia
 Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un número determinado de elementos de una secuencia y omitir el resto.  
@@ -20,7 +20,7 @@ Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un númer
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada sobre cómo omitir y tomar excepciones en SQL Server 2000 "en [solución de problemas](troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traduce <xref:System.Linq.Queryable.Skip%2A> mediante una subconsulta con la cláusula SQL `NOT EXISTS` . Esta conversión tiene las limitaciones siguientes:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce <xref:System.Linq.Queryable.Skip%2A> mediante una subconsulta con la cláusula SQL `NOT EXISTS`. Esta conversión tiene las limitaciones siguientes:  
   
 - El argumento debe ser un conjunto. No se admiten los conjuntos múltiples, aunque estén ordenados.  
   
@@ -51,14 +51,14 @@ Utilice el operador <xref:System.Linq.Queryable.Take%2A> para devolver un númer
 > [!NOTE]
 > La traducción es diferente para SQL Server 2000 y SQL Server 2005. Si tiene previsto usar <xref:System.Linq.Queryable.Skip%2A> con una consulta de cualquier complejidad, use SQL Server 2005.  
   
- Considere la siguiente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consulta para SQL Server 2000:  
+ Considere la siguiente consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traslada la operación de ordenación al final en el código de SQL, como se observa a continuación:  
   
-```  
+```sql
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
 FROM [Customers] AS [t0]  
 WHERE (NOT (EXISTS(  

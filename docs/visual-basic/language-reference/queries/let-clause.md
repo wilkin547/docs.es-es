@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054203"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004728"
 ---
 # <a name="let-clause-visual-basic"></a>Let (Cláusula, Visual Basic)
 Calcula un valor y lo asigna a una nueva variable dentro de la consulta.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Let variable = expression [, ...]  
 ```  
   
@@ -29,15 +29,15 @@ Let variable = expression [, ...]
 |Término|Definición|  
 |---|---|  
 |`variable`|Obligatorio. Un alias que se puede usar para hacer referencia a los resultados de la expresión proporcionada.|  
-|`expression`|Obligatorio. Una expresión que se evalúa y se asigna a la variable especificada.|  
+|`expression`|Obligatorio. Expresión que se evaluará y asignará a la variable especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `Let` cláusula permite calcular valores para cada resultado de la consulta y hacer referencia a ellos mediante un alias. El alias puede usarse en otras cláusulas, como la `Where` cláusula. El `Let` cláusula le permite crear una instrucción de consulta que es más fácil de leer porque se puede especificar un alias para una cláusula de expresión incluida en la consulta y sustituye el alias cada vez que se utiliza la cláusula de expresión.  
+ La cláusula `Let` permite calcular valores para cada resultado de la consulta y hacer referencia a ellos mediante un alias. El alias se puede usar en otras cláusulas, como la cláusula `Where`. La cláusula `Let` le permite crear una instrucción de consulta que es más fácil de leer, ya que puede especificar un alias para una cláusula Expression incluida en la consulta y sustituir el alias cada vez que se use la cláusula Expression.  
   
- Puede incluir cualquier número de `variable` y `expression` asignaciones en el `Let` cláusula. Separe cada asignación con una coma (,).  
+ Puede incluir cualquier número de asignaciones `variable` y `expression` en la cláusula `Let`. Separe cada asignación con una coma (,).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo de código utiliza el `Let` cláusula para calcular un 10 por ciento de descuento en productos.  
+ En el ejemplo de código siguiente se usa la cláusula `Let` para calcular un 10% de descuento en productos.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

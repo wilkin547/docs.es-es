@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991379"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005711"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Lo llama PresentationHost. exe para obtener los mensajes de error y de progreso personalizados del host, si se implementan.  
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- enuncia El nombre de la clase que es la interfaz de usuario de progreso proporcionada por el host [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] , preferiblemente <xref:System.Windows.Controls.Page> un archivo con es su elemento de nivel superior. Esta clase reside en el ensamblado especificado por `pwzProgressAssemblyName`.  
+ enuncia El nombre de la clase que es la interfaz de usuario de progreso proporcionada por el host, preferiblemente un archivo XAML con <xref:System.Windows.Controls.Page> es su elemento de nivel superior. Esta clase reside en el ensamblado especificado por `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- enuncia El nombre de la clase que es la interfaz de usuario de error proporcionada por el host, preferiblemente un <xref:System.Windows.Controls.Page> archivo XAML con es su elemento de nivel superior. Esta clase reside en el ensamblado especificado por `pwzErrorAssemblyName`.  
+ enuncia El nombre de la clase que es la interfaz de usuario de error proporcionada por el host, preferiblemente un archivo XAML con <xref:System.Windows.Controls.Page> es el elemento de nivel superior. Esta clase reside en el ensamblado especificado por `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  HRESULT: ignorado.  

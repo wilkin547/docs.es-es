@@ -10,19 +10,19 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639631"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004783"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
-Especifica uno o más variables de rango y una colección a la consulta.  
+Especifica una o varias variables de rango y una colección que se va a consultar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
@@ -31,41 +31,41 @@ From element [ As type ] In collection [ _ ]
   
 |Término|Definición|  
 |---|---|  
-|`element`|Obligatorio. Un *variable de rango* utiliza para recorrer en iteración los elementos de la colección. Una variable de rango se usa para referirse a cada miembro de la `collection` como la consulta se recorre el `collection`. Debe ser un tipo enumerable.|  
-|`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce del `collection`.|  
-|`collection`|Obligatorio. Hace referencia a la colección que se van a consultar. Debe ser un tipo enumerable.|  
+|`element`|Obligatorio. Una *variable de rango* que se usa para recorrer en iteración los elementos de la colección. Una variable de rango se usa para hacer referencia a cada miembro del `collection`, ya que la consulta recorre en iteración el `collection`. Debe ser un tipo Enumerable.|  
+|`type`|Opcional. Tipo de `element`. Si no se especifica `type`, el tipo de `element` se deduce de `collection`.|  
+|`collection`|Obligatorio. Hace referencia a la colección que se va a consultar. Debe ser un tipo Enumerable.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `From` cláusula se usa para identificar los datos de origen para una consulta y las variables que se usan para hacer referencia a un elemento de la colección de origen. Estas variables se denominan *las variables de rango*. El `From` cláusula se requiere para una consulta, excepto cuando la `Aggregate` cláusula se usa para identificar una consulta que devuelve resultados agregados solo. Para obtener más información, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ La cláusula `From` se utiliza para identificar los datos de origen de una consulta y las variables que se usan para hacer referencia a un elemento de la colección de origen. Estas variables se denominan *variables de rango*. La cláusula `From` es necesaria para una consulta, excepto cuando se usa la cláusula `Aggregate` para identificar una consulta que devuelve solo resultados agregados. Para obtener más información, vea [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Puede especificar varios `From` cláusulas en una consulta para identificar varias colecciones a unirse. Cuando se especifican varias colecciones, se iteran en forma independiente o combinarlas si están relacionadas. Puede combinar colecciones implícitamente mediante el uso de la `Select` cláusula, o explícitamente mediante la `Join` o `Group Join` cláusulas. Como alternativa, puede especificar varias variables de rango y colecciones en una sola `From` cláusula con cada variable de rango relacionado y la colección separados de los demás por una coma. El ejemplo de código siguiente muestra ambas opciones de sintaxis para el `From` cláusula.  
+ Puede especificar varias cláusulas `From` en una consulta para identificar varias colecciones que se van a combinar. Cuando se especifican varias colecciones, se recorren en iteración de forma independiente o puede combinarlas si están relacionadas. Puede combinar las colecciones implícitamente mediante la cláusula `Select`, o explícitamente mediante las cláusulas `Join` o `Group Join`. Como alternativa, puede especificar varias colecciones y variables de rango en una sola cláusula `From`, con cada variable de rango relacionada y colección separadas de las otras por una coma. En el ejemplo de código siguiente se muestran las dos opciones de sintaxis para la cláusula `From`.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- El `From` cláusula define el ámbito de una consulta, que es similar al ámbito de un `For` bucle. Por lo tanto, cada uno de ellos `element` variable de rango en el ámbito de una consulta debe tener un nombre único. Dado que puede especificar varios `From` cláusulas para una consulta, posteriores `From` cláusulas pueden hacer referencia a las variables de rango en la `From` cláusula, o bien pueden hacer referencia a las variables de rango en una anterior `From` cláusula. Por ejemplo, en el ejemplo siguiente se muestra un anidada `From` cláusula donde la colección en la segunda cláusula se basa en una propiedad de la variable de rango en la primera cláusula.  
+ La cláusula `From` define el ámbito de una consulta, que es similar al ámbito de un bucle `For`. Por lo tanto, cada variable de rango `element` en el ámbito de una consulta debe tener un nombre único. Dado que puede especificar varias cláusulas `From` para una consulta, las cláusulas de `From` subsiguientes pueden hacer referencia a las variables de rango de la cláusula `From` o pueden hacer referencia a las variables de rango de una cláusula `From` anterior. Por ejemplo, en el ejemplo siguiente se muestra una cláusula anidada `From` en la que la colección de la segunda cláusula se basa en una propiedad de la variable de rango de la primera cláusula.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Cada `From` cláusula puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta. Puede refinar la consulta de las maneras siguientes:  
+ Cada cláusula `From` puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta. Puede refinar la consulta de las siguientes maneras:  
   
-- Combinar varias colecciones implícitamente mediante la `From` y `Select` cláusulas, o explícitamente mediante la `Join` o `Group Join` cláusulas.  
+- Combine varias colecciones implícitamente mediante el uso de las cláusulas `From` y `Select`, o explícitamente mediante las cláusulas `Join` o `Group Join`.  
   
-- Use el `Where` cláusula para filtrar el resultado de la consulta.  
+- Utilice la cláusula `Where` para filtrar el resultado de la consulta.  
   
-- Ordenar el resultado mediante la `Order By` cláusula.  
+- Ordene el resultado mediante la cláusula `Order By`.  
   
-- Agrupar resultados similares mediante el uso de la `Group By` cláusula.  
+- Agrupe resultados similares juntos mediante la cláusula `Group By`.  
   
-- Use el `Aggregate` cláusula para identificar las funciones de agregado que se evalúa para el resultado de toda la consulta.  
+- Utilice la cláusula `Aggregate` para identificar las funciones de agregado que se van a evaluar para todo el resultado de la consulta.  
   
-- Use el `Let` cláusula para introducir una variable de iteración cuyo valor viene determinado por una expresión en lugar de una colección.  
+- Utilice la cláusula `Let` para introducir una variable de iteración cuyo valor se determina mediante una expresión en lugar de una colección.  
   
-- Use el `Distinct` cláusula para pasar por alto los resultados de consulta duplicada.  
+- Utilice la cláusula `Distinct` para omitir los resultados de la consulta duplicada.  
   
-- Identificar las partes del resultado para devolver mediante el uso de la `Skip`, `Take`, `Skip While`, y `Take While` cláusulas.  
+- Identifique las partes del resultado que se van a devolver mediante las cláusulas `Skip`, `Take`, `Skip While` y `Take While`.  
   
 ## <a name="example"></a>Ejemplo  
- Consulta la siguiente expresión utiliza una `From` cláusula para declarar una variable de rango `cust` para cada `Customer` objeto en el `customers` colección. El `Where` cláusula usa la variable de rango para restringir los resultados a los clientes de la región especificada. El `For Each` bucle muestra el nombre de la empresa para cada cliente en el resultado de la consulta.  
+ La siguiente expresión de consulta usa una cláusula `From` para declarar una variable de rango `cust` para cada objeto `Customer` en la colección `customers`. La cláusula `Where` usa la variable de rango para restringir la salida a los clientes de la región especificada. El bucle `For Each` muestra el nombre de la compañía para cada cliente en el resultado de la consulta.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   

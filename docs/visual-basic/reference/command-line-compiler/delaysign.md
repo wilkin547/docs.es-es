@@ -6,28 +6,28 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 6d3c89d598714446e04ba40155951f771d474866
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 66edc45c622b78187469ccc0631beb53b68049b0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971991"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002297"
 ---
 # <a name="-delaysign"></a>-delaysign
 Especifica si el ensamblado estará firmado total o parcialmente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -delaysign[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. Use `-delaysign-` para firmar completamente un ensamblado. Use `-delaysign+` si desea colocar la clave pública en el ensamblado y reservar espacio para el hash firmado. El valor predeterminado es `-delaysign-`.  
+ Opcional. Use `-delaysign-` para firmar completamente un ensamblado. Use `-delaysign+` si desea colocar la clave pública en el ensamblado y reservar espacio para el hash firmado. De manera predeterminada, es `-delaysign-`.  
   
 ## <a name="remarks"></a>Comentarios  
- La `-delaysign` opción no tiene ningún efecto a menos que se use con [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
+ La opción `-delaysign` no tiene ningún efecto a menos que se use con [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
   
  Cuando se solicita un ensamblado totalmente firmado, el compilador genera un valor hash para el archivo que contiene el manifiesto (metadatos del ensamblado) y firma dicho valor mediante la clave privada. La firma digital resultante se almacena en el archivo que contiene el manifiesto. Cuando se retrasa la firma de un ensamblado, el compilador no calcula ni almacena la firma, sino que reserva espacio en el archivo para que la firma se pueda agregar más tarde.  
   

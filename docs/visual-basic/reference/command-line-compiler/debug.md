@@ -7,46 +7,50 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 9bf7170cee31f92481b15fb1227f21895cd3734d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2fbe5aa6f0b9ac8c99c9b9ec5cdf0a7d9764ab8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649743"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002404"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
-Hace que el compilador genere información de depuración y colocarla en los archivos de salida.  
+Hace que el compilador genere información de depuración y la coloque en los archivos de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console 
 -debug[+ | -]  
-' -or-  
+```
+
+o
+
+```console  
 -debug:[full | pdbonly]  
-```  
+```
   
 ## <a name="arguments"></a>Argumentos  
   
 |Término|Definición|  
 |---|---|  
-|`+` &#124; `-`|Opcional. Especificar `+` o `/debug` hace que el compilador genere información de depuración y lo coloca en un archivo. pdb. Especificar `-` tiene el mismo efecto que si no se especifica `/debug`.|  
-|`full` &#124; `pdbonly`|Opcional. Especifica el tipo de información de depuración generado por el compilador. Si no especifica `/debug:pdbonly`, el valor predeterminado es `full`, lo que permite adjuntar un depurador al programa en ejecución. El `pdbonly` argumento permite depurar el código fuente cuando se inicia el programa en el depurador, pero muestra código de lenguaje ensamblador solo cuando el programa que se ejecuta está asociado al depurador.|  
+|`+` &#124; `-`|Opcional. Al especificar `+` o `/debug`, el compilador genera información de depuración y la coloca en un archivo. pdb. Especificar `-` tiene el mismo efecto que no especificar `/debug`.|  
+|`full` &#124; `pdbonly`|Opcional. Especifica el tipo de información de depuración generado por el compilador. Si no especifica `/debug:pdbonly`, el valor predeterminado es `full`, lo que le permite asociar un depurador al programa en ejecución. El argumento `pdbonly` permite la depuración del código fuente cuando el programa se inicia en el depurador, pero solo muestra código de lenguaje de ensamblado cuando el programa en ejecución está asociado al depurador.|  
   
 ## <a name="remarks"></a>Comentarios  
- Use esta opción para crear versiones de depuración. Si no especifica `/debug`, `/debug+`, o `/debug:full`, podrá depurar el archivo de salida del programa.  
+ Use esta opción para crear versiones de depuración. Si no especifica `/debug`, `/debug+` o @no__t 2, no podrá depurar el archivo de salida del programa.  
   
  De forma predeterminada, no se emite información de depuración (`/debug-`). Para emitir información de depuración, especifique `/debug` o `/debug+`.  
   
  Para obtener información sobre cómo configurar el rendimiento de depuración de una aplicación, consulte [Facilitar la depuración de una imagen](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
-|Para establecer - depurar en el entorno de desarrollo integrado de Visual Studio|  
+|Para Set-debug en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**y, en el menú **Proyecto** , haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Opciones de compilación avanzadas**.<br />4.  Modifique el valor en el **generar información de depuración** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**y, en el menú **Proyecto** , haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Opciones de compilación avanzadas**.<br />4.  Modifique el valor en el cuadro **generar información de depuración** .|  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente incluye información de depuración en el archivo de salida `App.exe`.  
+ En el ejemplo siguiente se coloca información de depuración en el archivo de salida `App.exe`.  
   
-```  
+```console  
 vbc -debug -out:app.exe test.vb  
 ```  
   

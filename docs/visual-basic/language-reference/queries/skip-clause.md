@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945254"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004766"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip (Cláusula, Visual Basic)
 Omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Skip count  
 ```  
   
@@ -29,16 +29,16 @@ Skip count
  Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a omitir.  
   
 ## <a name="remarks"></a>Comentarios  
- El `Skip` cláusula hace una consulta para omitir los elementos al principio de una lista de resultados y devolver los elementos restantes. Identifica el número de elementos para omitir la `count` parámetro.  
+ La cláusula `Skip` hace que una consulta omita los elementos al principio de una lista de resultados y devuelva los elementos restantes. El número de elementos que se van a omitir se identifica mediante el parámetro `count`.  
   
- Puede usar el `Skip` cláusula con el `Take` cláusula para devolver un intervalo de datos de cualquier segmento de una consulta. Para ello, pase el índice del primer elemento del intervalo para el `Skip` cláusula y el tamaño del intervalo para el `Take` cláusula.  
+ Puede usar la cláusula `Skip` con la cláusula `Take` para devolver un intervalo de datos de cualquier segmento de una consulta. Para ello, pase el índice del primer elemento del intervalo a la cláusula `Skip` y el tamaño del intervalo a la cláusula `Take`.  
   
- Cuando se usa el `Skip` cláusula en una consulta, es posible que también deberá asegurarse de que los resultados se devuelven en un orden que le permitirán la `Skip` cláusula para omitir los resultados deseados. Para obtener más información sobre cómo ordenar los resultados de la consulta, vea [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Cuando se usa la cláusula `Skip` en una consulta, también es necesario asegurarse de que los resultados se devuelven en un orden que permita que la cláusula `Skip` omita los resultados deseados. Para obtener más información sobre cómo ordenar los resultados de una consulta, vea [cláusula order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Puede usar el `SkipWhile` cláusula para especificar que sólo determinados elementos se omiten, dependiendo de la condición proporcionada.  
+ Puede usar la cláusula `SkipWhile` para especificar que solo se omitan determinados elementos, en función de una condición proporcionada.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo de código utiliza el `Skip` cláusula junto con el `Take` cláusula para devolver datos de una consulta en las páginas. El `GetCustomers` función usa el `Skip` cláusula para omitir los clientes en la lista hasta que la proporcionada a partir de índice valor y se usa el `Take` cláusula para devolver una página de clientes a partir de ese valor de índice.  
+ En el ejemplo de código siguiente se usa la cláusula `Skip` junto con la cláusula `Take` para devolver datos de una consulta en páginas. La función `GetCustomers` usa la cláusula `Skip` para omitir los clientes de la lista hasta el valor del índice de inicio proporcionado y usa la cláusula `Take` para devolver una página de clientes a partir de ese valor de índice.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5b26e36346858d95526f5d5ce7d4645bea1dbe05
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972375"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005482"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica el nombre del ensamblado del que este módulo formará parte.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -moduleassemblyname:assembly_name  
 ```  
   
@@ -29,18 +29,18 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
 |`assembly_name`|Nombre del ensamblado del que formará parte este módulo.|  
   
 ## <a name="remarks"></a>Comentarios  
- El compilador `-moduleassemblyname` procesa la opción solo `-target:module` si se ha especificado la opción. Esto hace que el compilador cree un módulo. El módulo creado por el compilador solo es válido para el ensamblado `-moduleassemblyname` especificado con la opción. Si coloca el módulo en otro ensamblado, se producirán errores en tiempo de ejecución.  
+ El compilador procesa la opción `-moduleassemblyname` solo si se ha especificado la opción `-target:module`. Esto hace que el compilador cree un módulo. El módulo creado por el compilador solo es válido para el ensamblado especificado con la opción `-moduleassemblyname`. Si coloca el módulo en otro ensamblado, se producirán errores en tiempo de ejecución.  
   
- La `-moduleassemblyname` opción solo es necesaria cuando se cumplen las condiciones siguientes:  
+ La opción `-moduleassemblyname` solo es necesaria cuando se cumplen las condiciones siguientes:  
   
-- Un tipo de datos del módulo necesita acceso a un `Friend` tipo de un ensamblado al que se hace referencia.  
+- Un tipo de datos del módulo necesita acceso a un tipo `Friend` en un ensamblado al que se hace referencia.  
   
 - El ensamblado al que se hace referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se va a compilar el módulo.  
   
  Para obtener más información sobre cómo crear un módulo, vea [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información sobre los ensamblados de confianza, vea [ensamblados de confianza](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
-> La `-moduleassemblyname` opción no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde un símbolo del sistema.  
+> La opción `-moduleassemblyname` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde un símbolo del sistema.  
   
 ## <a name="see-also"></a>Vea también
 

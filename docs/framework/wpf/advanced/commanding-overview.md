@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627397"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004599"
 ---
 # <a name="commanding-overview"></a>Información general sobre comandos
 <a name="introduction"></a> Los comandos constituyen un mecanismo de entrada de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], que permite el control de entrada en un nivel más semántico que la entrada del dispositivo. Algunos ejemplos de comandos son las operaciones **Copiar**, **Cortar** y **Pegar** presentes en numerosas aplicaciones.  
@@ -173,7 +173,7 @@ ms.locfileid: "64627397"
 ## <a name="command-library"></a>Biblioteca de comandos  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un conjunto de comandos predefinidos.  La biblioteca de comandos se compone de las clases siguientes: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> y <xref:System.Windows.Input.ComponentCommands>.  Estas clases proporcionan comandos como <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> y <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> y <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Muchos de estos comandos incluyen un conjunto de enlaces de entrada predeterminados.  Por ejemplo, si especifica que la aplicación controla el comando Copiar, obtendrá automáticamente el enlace de teclado "CTRL + C". También obtendrá enlaces para otros dispositivos de entrada, como información de voz y gestos del lápiz de [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)].  
+ Muchos de estos comandos incluyen un conjunto de enlaces de entrada predeterminados.  Por ejemplo, si especifica que la aplicación controle el comando Copiar, obtendrá automáticamente el enlace de teclado "CTRL + C" también obtiene enlaces para otros dispositivos de entrada, como la información de voz y los gestos del lápiz de Tablet PC.  
   
  Al hacer referencia a los comandos de las diversas bibliotecas de comandos mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], normalmente puede omitir el nombre de clase de la clase de biblioteca que expone la propiedad de comando estática. En general, los nombres de comando son inequívocos como cadenas y los tipos propietarios existen para proporcionar una agrupación lógica de comandos, pero no son necesarios para la desambiguación. Por ejemplo, puede especificar `Command="Cut"` en lugar del comando `Command="ApplicationCommands.Cut"` más detallado. Se trata de un mecanismo de conveniencia que está integrado en el procesador de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para los comandos (más concretamente, es un comportamiento del convertidor de tipos de <xref:System.Windows.Input.ICommand>, al que el procesador de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hace referencia en tiempo de carga).  
   
@@ -192,5 +192,5 @@ ms.locfileid: "64627397"
 - [Información general sobre acciones del usuario](input-overview.md)
 - [Información general sobre eventos enrutados](routed-events-overview.md)
 - [Implement ICommandSource (ejemplo)](how-to-implement-icommandsource.md)
-- [Cómo: Agregar un comando a un elemento de menú](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [Cómo: Agregar un comando a un MenuItem @ no__t-0
 - [Crear un objeto RoutedCommand de muestra personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

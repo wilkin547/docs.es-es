@@ -1,24 +1,24 @@
 ---
-title: -imports (Visual Basic)
+title: -Imports (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663250"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005565"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Importa los espacios de nombres desde un ensamblado especificado.  
+# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
+Importa los espacios de nombres de un ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
@@ -26,19 +26,19 @@ Importa los espacios de nombres desde un ensamblado especificado.
   
 |Término|Definición|  
 |---|---|  
-|`namespaceList`|Obligatorio. Lista delimitada por comas de los espacios de nombres que desea importar.|  
+|`namespaceList`|Obligatorio. Lista delimitada por comas de los espacios de nombres que se van a importar.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `-imports` opción importa cualquier espacio de nombres definido dentro del conjunto actual de archivos de origen o de cualquier ensamblado que se hace referencia.  
+ La opción `-imports` importa cualquier espacio de nombres definido en el conjunto actual de archivos de código fuente o desde cualquier ensamblado al que se hace referencia.  
   
- Los miembros de un espacio de nombres especificado con `-imports` están disponibles para todos los archivos de código fuente de la compilación. Utilice la [instrucción Imports (tipo y Namespace. NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar un espacio de nombres en un archivo de código fuente único.  
+ Los miembros de un espacio de nombres especificado con `-imports` están disponibles para todos los archivos de código fuente de la compilación. Use la [instrucción Imports (espacio de nombres y tipo de .net)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar un espacio de nombres en un solo archivo de código fuente.  
   
-|Para establecer/importa en el entorno de desarrollo integrado de Visual Studio|  
+|Para establecer/Imports en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Escriba el nombre de espacio de nombres en la casilla situada junto a la **Agregar importación del usuario** botón.<br />4.  Haga clic en el **Agregar importación del usuario** botón.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Escriba el nombre del espacio de nombres en el cuadro situado junto al botón **Agregar importación de usuario** .<br />4.  Haga clic en el botón **Agregar importación de usuario** .|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila cuando `/imports:system.globalization` se especifica. Sin él, la compilación correcta requiere que un `Imports System.Globalization` incluirse instrucción al principio del archivo de código fuente, o la propiedad totalmente calificarse como `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ El siguiente código se compila cuando se especifica `/imports:system.globalization`. Sin él, la compilación correcta requiere que una instrucción `Imports System.Globalization` esté incluida al principio del archivo de código fuente o que la propiedad esté completa como `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

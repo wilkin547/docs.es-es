@@ -8,19 +8,19 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939197"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005327"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Permite el uso de la inferencia de tipo de variable local en declaraciones de variables.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
@@ -34,13 +34,13 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
 > Puede utilizar la opción `-noconfig` para conservar los valores predeterminados internos del compilador en lugar de los especificados en vbc.rsp. El valor predeterminado del compilador para esta opción es `-optioninfer-`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el archivo de código fuente contiene una [instrucción Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), la instrucción reemplaza la `-optioninfer` configuración del compilador de línea de comandos.  
+ Si el archivo de código fuente contiene una [instrucción Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), la instrucción reemplaza la configuración del compilador de línea de comandos `-optioninfer`.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para Set-optioninfer (en el IDE de Visual Studio  
   
 1. Seleccione un proyecto en **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-2. En la pestaña compilar, modifique el valor del cuadro **Option Infer** .  
+2. En la pestaña **compilar** , modifique el valor del cuadro **Option Infer** .  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `test.vb` con la inferencia de tipo de variable local habilitada.  

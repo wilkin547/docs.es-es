@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b853a6f2175009cbcbc01c14a6732b98e37e1a7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781599"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003062"
 ---
 # <a name="how-to-return-rowsets"></a>Procedimiento para devolver conjuntos de filas
 Este ejemplo devuelve un conjunto de filas de la base de datos e incluye un parámetro de entrada para filtrar el resultado.  
@@ -20,7 +20,7 @@ Este ejemplo devuelve un conjunto de filas de la base de datos e incluye un par�
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente representa un procedimiento almacenado que devuelve filas de clientes y utiliza un parámetro de entrada para devolver sólo aquellas filas en las que figura "London" como la ciudad del cliente. En el ejemplo se supone que hay una clase `CustomersByCityResult` enumerable.  
   
-```  
+```sql  
 CREATE PROCEDURE [dbo].[Customers By City]  
     (@param1 NVARCHAR(20))  
 AS  

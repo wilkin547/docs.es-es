@@ -2,28 +2,28 @@
 title: Asignación externa
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ba5af75ae34b233354fec6e9074f3cc96d924c7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793987"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003048"
 ---
 # <a name="external-mapping"></a>Asignación externa
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite la *asignación externa*, un proceso por el que se utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y el modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite la *asignación externa*, un proceso por el que se utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y el modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
   
 - Puede separar el código de la asignación del código de la aplicación. Este enfoque reduce el desorden en el código de la aplicación.  
   
 - Puede tratar un archivo de asignación externo de forma similar a un archivo de configuración. Por ejemplo, puede actualizar cómo se comportará su aplicación después de distribuir los binarios simplemente cambiando el archivo de asignación externo.  
   
 ## <a name="requirements"></a>Requisitos  
- El archivo de asignación debe ser un archivo XML y el archivo debe validarse en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un archivo de definición de esquema (. xsd).  
+ El archivo de asignación debe ser un archivo XML y el archivo debe validarse con un archivo de definición de esquema [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (. xsd).  
   
  Se aplican las siguientes reglas:  
   
 - El archivo de asignación debe ser un archivo XML.  
   
-- El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, consulte [Cómo Validar archivos](how-to-validate-dbml-and-external-mapping-files.md)DBML y de asignación externa.  
+- El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, vea [Cómo: Validar archivos DBML y de asignación externa @ no__t-0.  
   
 - La asignación externa invalida la asignación basada en atributos. En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases. Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "70793987"
  Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML. Para obtener más información, vea [generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, [consulte Cómo: Validar archivos](how-to-validate-dbml-and-external-mapping-files.md)DBML y de asignación externa.  
+> Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, consulte [How para: Validar archivos DBML y de asignación externa @ no__t-0.  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/mapping/2007" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Referencia](reference.md)
-- [Cómo: Generar el modelo de objetos como un archivo externo](how-to-generate-the-object-model-as-an-external-file.md)
+- [Cómo: Generar el modelo de objetos como un archivo externo @ no__t-0

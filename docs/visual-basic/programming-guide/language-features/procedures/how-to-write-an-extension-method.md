@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332753"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004616"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Procedimiento Escribir un método de extensión (Visual Basic)
 
@@ -27,11 +27,13 @@ Los métodos de extensión permiten agregar métodos a una clase existente. Se p
     Imports System.Runtime.CompilerServices
     ```
 
-3. Dentro de un módulo en la aplicación nueva o existente, comience la definición del método con el atributo de extensión:
+3. Dentro de un módulo en la aplicación nueva o existente, comience la definición del método con el atributo [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) :
 
     ```vb
     <Extension()>
     ```
+ 
+   Tenga en cuenta que el atributo `Extension` solo se puede aplicar a un método (un procedimiento `Sub` o `Function`) en un [módulo](../../../language-reference/statements/module-statement.md)de Visual Basic. Si se aplica a un método en un `Class` o un `Structure`, el compilador de Visual Basic genera el error [BC36551](../../../misc/bc36551.md), "los métodos de extensión solo se pueden definir en módulos".
 
 4. Declare el método de la manera habitual, salvo que el tipo del primer parámetro debe ser el tipo de datos que desea extender.
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0e11f0e5751f6d5cc51c32994dc932fd7d3e9f61
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053358"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003990"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API para el hospedaje nativo de WPF en explorador
-El hospedaje [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] de aplicaciones en exploradores Web se facilita mediante un servidor de documentos activo (también conocido como DocObject) registrado fuera del host de WPF. Internet Explorer puede activarse e integrarse directamente con un documento activo. Para hospedar documentos de XBAP y documentos XAML sueltos en exploradores de Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] proporciona un complemento de NPAPI, que proporciona un entorno de hospedaje similar [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] al servidor de documentos activos como lo hace Internet Explorer. Sin embargo, la manera más sencilla de hospedar los documentos de XBAP y XAML en otros exploradores y aplicaciones independientes se realiza a través del control de explorador Web de Internet Explorer. El control de explorador Web proporciona el entorno de host de servidor de documentos activos complejo, pero permite a su propio host personalizar y ampliar ese entorno y comunicarse directamente con el objeto de documento activo actual.  
+El hospedaje de aplicaciones WPF en exploradores Web se facilita mediante un servidor de documentos activo (también conocido como DocObject) registrado fuera del host de WPF. Internet Explorer puede activarse e integrarse directamente con un documento activo. Para el hospedaje de XBAP y documentos XAML sueltos en los exploradores de Mozilla, WPF proporciona un complemento de NPAPI, que proporciona un entorno de hospedaje similar al servidor de documentos activos de WPF como lo hace Internet Explorer. Sin embargo, la manera más sencilla de hospedar los documentos de XBAP y XAML en otros exploradores y aplicaciones independientes se realiza a través del control de explorador Web de Internet Explorer. El control de explorador Web proporciona el entorno de host de servidor de documentos activos complejo, pero permite a su propio host personalizar y ampliar ese entorno y comunicarse directamente con el objeto de documento activo actual.  
   
- El [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos implementa varias interfaces de hospedaje comunes, como [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control de explorador Web, estas interfaces pueden ser consultas del objeto devuelto por la propiedad [IWebBrowser2::D bilitar](https://go.microsoft.com/fwlink/?LinkId=162048) .  
+ El servidor de documentos activos de WPF implementa varias interfaces de hospedaje comunes, como [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control de explorador Web, estas interfaces pueden ser consultas del objeto devuelto por la propiedad [IWebBrowser2::D bilitar](https://go.microsoft.com/fwlink/?LinkId=162048) .  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  La implementación de [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) del servidor de documentos activos de WPF admite numerosos comandos relacionados con la navegación y específicos del explorador del grupo de comandos OLE estándar (con un GUID de grupo de comandos null). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, solo hay un comando definido dentro de este grupo.  

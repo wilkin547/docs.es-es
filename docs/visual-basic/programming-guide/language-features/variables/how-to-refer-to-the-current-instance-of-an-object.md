@@ -8,28 +8,28 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 70955cd55dfb91d4111e59ae58bfe409a4470433
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663529"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005657"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Procedimiento Hacer referencia a la instancia actual de un objeto (Visual Basic)
-El *instancia actual* de un objeto es la instancia en la que se está ejecutando el código.  
+La *instancia actual* de un objeto es la instancia en la que se está ejecutando el código.  
   
- Usa el `Me` palabra clave para hacer referencia a la instancia actual.  
+ Use la palabra clave `Me` para hacer referencia a la instancia actual.  
   
 ### <a name="to-refer-to-the-current-instance"></a>Para hacer referencia a la instancia actual  
   
-- Utilice el `Me` palabra clave donde utilizaría normalmente el nombre de una variable de objeto.  
+- Use la palabra clave `Me` en la que usaría normalmente el nombre de una variable de objeto.  
   
-    ```  
+    ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Aunque `Me` se comporta como un objeto variable, no puede declararla ni asignarle nada. `Me` siempre se hace referencia a la instancia actual.  
+     Aunque `Me` se comporta como una variable de objeto, no se puede declarar ni asignar nada. `Me` siempre hace referencia a la instancia actual.  
   
 ## <a name="see-also"></a>Vea también
 

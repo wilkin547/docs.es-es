@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792850"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003321"
 ---
 # <a name="querying-across-relationships"></a>Realizar consultas en varias relaciones
 Las referencias a otros objetos o colecciones de otros objetos en sus definiciones de clase se corresponden directamente con relaciones de clave externa en la base de datos. Puede utilizar estas relaciones cuando realice consultas utilizando la notación de punto para tener acceso a las propiedades de la relación y navegar entre los objetos. Estas operaciones de acceso se convierten en combinaciones más complejas o subconsultas correlacionadas en el código SQL equivalente.  
@@ -31,23 +31,23 @@ Las referencias a otros objetos o colecciones de otros objetos en sus definicion
   
  Ahora que tiene las relaciones, puede escribir consultas haciendo referencia a las propiedades de relación definidas en las clases. Estas referencias de relación se corresponden con las relaciones de clave externa de la base de datos. Las operaciones que utilizan estas relaciones se convierten en combinaciones más complejas en el código SQL equivalente. Siempre y cuando haya definido una relación (mediante el atributo <xref:System.Data.Linq.Mapping.AssociationAttribute> ), no tiene que programar una combinación explícita en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Para ayudar a mantener esta ilusión [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , implementa una técnica denominada *carga aplazada*. Para obtener más información, vea [carga aplazada frente a carga inmediata](deferred-versus-immediate-loading.md).  
+ Para ayudar a mantener esta ilusión, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa una técnica denominada *carga diferida*. Para obtener más información, vea [carga aplazada frente a carga inmediata](deferred-versus-immediate-loading.md).  
   
- Considere la siguiente consulta SQL para proyectar una lista `CustomerID` de - `OrderID` pares:  
+ Considere la siguiente consulta SQL para proyectar una lista de pares `CustomerID` @ no__t-1 @ no__t-2:  
   
-```  
+```sql
 SELECT t0.CustomerID, t1.OrderID  
 FROM   Customers AS t0 INNER JOIN  
           Orders AS t1 ON t0.CustomerID = t1.CustomerID  
 WHERE  (t0.City = @p0)  
 ```  
   
- Para obtener los mismos resultados en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], utilice la referencia de propiedad `Orders` que ya existe en la clase `Customer`. La `Orders` referencia proporciona la información necesaria para ejecutar la consulta y proyectar `CustomerID` los - `OrderID` pares, como en el código siguiente:  
+ Para obtener los mismos resultados en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], utilice la referencia de propiedad `Orders` que ya existe en la clase `Customer`. La referencia `Orders` proporciona la información necesaria para ejecutar la consulta y proyectar los pares `CustomerID` @ no__t-2 @ no__t-3, como en el código siguiente:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- También puede hacer lo contrario. Es decir, puede consultar `Orders` y utilizar su referencia de relación `Customer` para tener acceso a información sobre el objeto `Customer` asociado. El código siguiente proyecta los mismos `CustomerID` - `OrderID` pares que `Orders` antes, pero esta vez se consulta en lugar de `Customers`.  
+ También puede hacer lo contrario. Es decir, puede consultar `Orders` y utilizar su referencia de relación `Customer` para tener acceso a información sobre el objeto `Customer` asociado. El código siguiente proyecta los mismos pares `CustomerID` @ no__t-1 @ no__t-2 como antes, pero esta vez se consulta `Orders` en lugar de `Customers`.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  

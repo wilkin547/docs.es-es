@@ -5,30 +5,30 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58026ff84f1ff501bf767adebcfc01f7de5bf4a4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663276"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005586"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que se ha marcado por el [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) admite la opción del compilador dirección Space Layout Randomization (ASLR) de alta entropía.  
+Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que está marcado con la opción del compilador [/Platform: AnyCPU](../../../visual-basic/reference/command-line-compiler/platform.md) admite la selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -highentropyva[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. La opción está desactivada de forma predeterminada o si especifica `-highentropyva-`. La opción está activada si especifica `-highentropyva` o `-highentropyva+`.  
+ Opcional. La opción está desactivada de forma predeterminada o si se especifica `-highentropyva-`. La opción está activada si se especifica `-highentropyva` o `-highentropyva+`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si especifica esta opción, las versiones compatibles del kernel de Windows pueden usar niveles superiores de entropía cuando el kernel Aleatoriza el diseño del espacio de direcciones de un proceso como parte de ASLR. Si el kernel usa niveles superiores de entropía, se puede asignar un número mayor de direcciones a las regiones de memoria como pilas y montones. Como resultado, la ubicación de un área de memoria específica es más difícil de adivinar.  
+ Si especifica esta opción, las versiones compatibles del kernel de Windows pueden usar los mayores grados de entropía cuando el kernel Aleatoriza el diseño del espacio de direcciones de un proceso como parte de ASLR. Si el kernel usa mayores grados de entropía, se puede asignar un número mayor de direcciones a las regiones de memoria, como pilas y montones. Como resultado, la ubicación de un área de memoria específica es más difícil de adivinar.  
   
- Cuando la opción está activada, el archivo ejecutable de destino y los módulos en que dependa debe ser capaz de controlar los valores de puntero que son superiores a 4 gigabytes (GB) cuando dichos módulos se ejecutan como procesos de 64 bits.  
+ Cuando la opción está activada, el archivo ejecutable de destino y todos los módulos de los que depende deben ser capaces de controlar los valores de puntero que son superiores a 4 gigabytes (GB) cuando dichos módulos se ejecutan como procesos de 64 bits.  
   
 ## <a name="see-also"></a>Vea también
 

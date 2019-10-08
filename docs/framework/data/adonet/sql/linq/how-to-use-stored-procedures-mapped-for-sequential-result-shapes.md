@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
-ms.openlocfilehash: bae10e823a274304f21292cf55947a4d4eaccc10
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8378a175ab2479ab9769ca08579e1c89269eaba4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781457"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003220"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Procedimiento para usar procedimientos almacenados asignados en formas de resultados secuenciales
-Este tipo de procedimiento almacenado puede generar más de una forma de resultado, pero se sabe en qué orden se devuelven los resultados. Compare este escenario con el escenario donde no se sabe el orden de los resultados devueltos. Para obtener más información, consulte [Cómo Usar procedimientos almacenados asignados para varias formas](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)de resultados.  
+Este tipo de procedimiento almacenado puede generar más de una forma de resultado, pero se sabe en qué orden se devuelven los resultados. Compare este escenario con el escenario donde no se sabe el orden de los resultados devueltos. Para obtener más información, vea [Cómo: Use procedimientos almacenados asignados para varias formas de resultados @ no__t-0.  
   
 ## <a name="example"></a>Ejemplo  
  A continuación se muestra el código T-SQL de un procedimiento almacenado que devuelve varias formas de resultados secuencialmente:  
   
-```  
+```sql
 CREATE PROCEDURE MultipleResultTypesSequentially  
 AS  
 select * from products  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627299"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005695"
 ---
 # <a name="controls-by-category"></a>Agrupar controles por categoría
-Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  
+Los controles Windows Presentation Foundation (WPF) se pueden agrupar lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  
   
 ## <a name="layout"></a>Diseño  
  Los controles de diseño se utilizan para administrar el tamaño, las dimensiones, la posición y la disposición de los elementos secundarios.  
@@ -56,7 +56,7 @@ Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Botones  
- Los botones son uno de los controles de interfaz de usuario más básicos. Las aplicaciones suelen realizar alguna tarea en el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos cuando un usuario hace clic en ellos.  
+ Los botones son uno de los controles de interfaz de usuario más básicos. Las aplicaciones suelen realizar alguna tarea en el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> cuando un usuario hace clic en ellos.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -171,7 +171,7 @@ Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Entrada manuscrita digital  
- Los controles de entrada manuscrita digital proporcionan compatibilidad integrada con características de [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], como la lectura y escritura de entradas manuscritas.  
+ Los controles de entrada de lápiz digital proporcionan compatibilidad integrada con las características de Tablet PC, como la visualización de entradas manuscritas y la entrada manuscrita.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

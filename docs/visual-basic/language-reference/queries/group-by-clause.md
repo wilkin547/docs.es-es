@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 04378d2c9a7e565343ff663997e2a3e61f04f9d2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8b3a480c226debc529c268e83437d15192592bd3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423578"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004760"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By (Cláusula, Visual Basic)
 Agrupa los elementos de los resultados de una consulta. También se puede usar para aplicar funciones de agregado a cada grupo. La operación de agrupación se basa en una o varias claves.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]  
   Into aggregateList  
 ```  
@@ -47,13 +47,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
      Obligatorio. Una o más expresiones que identifican cómo se agregan los grupos. Para identificar un nombre de miembro para los resultados agrupados, use la palabra clave `Group` , que puede estar en cualquiera de los formatos siguientes:  
   
-    ```  
+    ```vb  
     Into Group  
     ```  
   
      -o bien-  
   
-    ```  
+    ```vb  
     Into <alias> = Group  
     ```  
   
@@ -65,7 +65,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
  El parámetro `aggregateList` de la cláusula `Into` y la palabra clave `Group` se usan para identificar el nombre del miembro usado para hacer referencia al grupo. También puede incluir funciones de agregado en la cláusula `Into` para calcular los valores de los elementos agrupados. Para obtener una lista de las funciones de agregado estándar, consulte [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se agrupa una lista de clientes según su ubicación (país o región) y proporciona un recuento de los clientes en cada grupo. Los resultados se ordenan por nombre de país o región. Los resultados agrupados se ordenan por nombre de ciudad.  
+ En el ejemplo de código siguiente se agrupa una lista de clientes según su ubicación (país o región) y se proporciona un recuento de los clientes de cada grupo. Los resultados se ordenan por nombre de país o región. Los resultados agrupados se ordenan por nombre de ciudad.  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   

@@ -1,24 +1,24 @@
 ---
-title: -platform (Visual Basic)
+title: -Platform (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380310"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005297"
 ---
-# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede ejecutar el archivo de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
@@ -31,7 +31,7 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
 |`Itanium`|Compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en un equipo con un procesador Itanium.|  
 |`arm`|Compila el ensamblado de forma que pueda ejecutarse en un equipo con un procesador ARM (Advanced RISC Machine).|  
 |`anycpu`|Compila el ensamblado de forma que pueda ejecutarse en cualquier plataforma. La aplicación se ejecutará como una aplicación de 32 bits en versiones de 32 bits de Windows, y como una aplicación de 64 bits en versiones de 64 bits de Windows. Esta marca es el valor predeterminado.|  
-|`anycpu32bitpreferred`|Compila el ensamblado de forma que pueda ejecutarse en cualquier plataforma. La aplicación se ejecutará como una aplicación de 32 bits en versiones de 32 bits y de 64 bits de Windows. Esta marca solo es válida para los archivos ejecutables (. (EXE) y requiere .NET Framework 4.5.|  
+|`anycpu32bitpreferred`|Compila el ensamblado de forma que pueda ejecutarse en cualquier plataforma. La aplicación se ejecutará como una aplicación de 32 bits en versiones de 32 bits y de 64 bits de Windows. Esta marca solo es válida para los ejecutables (. EXE) y requiere .NET Framework 4,5.|  
   
 ## <a name="remarks"></a>Comentarios  
  Use la opción `-platform` para especificar el tipo de procesador de destino del archivo de salida.  
@@ -48,7 +48,7 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
 - Uso de invocación de plataforma o interoperabilidad COM con componentes que no existen en todas las plataformas.  
   
- El **-plataforma** opción mitigará algunos problemas si sabe que ha realizado suposiciones acerca de la arquitectura de su código se ejecutará en. De manera específica:  
+ La opción **-Platform** solucionará algunos problemas si sabe que ha realizado suposiciones sobre la arquitectura en la que se ejecutará el código. De manera específica:  
   
 - Si decide que el destino sea una plataforma de 64 bits pero la aplicación se ejecuta en un equipo de 32 bits, el mensaje de error aparece mucho antes y se centra más bien en el problema que en el error que aparece sin utilizar este modificador.  
   
@@ -64,15 +64,15 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
 - Los archivos ejecutables que se compilan con `-platform:anycpu32bitpreferred` se ejecutarán en el CLR de 32 bits.  
   
- Para obtener más información sobre cómo desarrollar una aplicación se ejecute en una versión de 64 bits de Windows, consulte [aplicaciones de 64 bits](../../../framework/64-bit-apps.md).  
+ Para obtener más información sobre cómo desarrollar una aplicación para que se ejecute en una versión de 64 bits de Windows, vea [aplicaciones de 64 bits](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Establecer - plataforma en el IDE de Visual Studio  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Para establecer-Platform en el IDE de Visual Studio  
   
-1. En **el Explorador de soluciones**, elija el proyecto, abra el **proyecto** menú y, a continuación, haga clic en **propiedades**.  
+1. En **Explorador de soluciones**, elija el proyecto, abra el menú **proyecto** y, a continuación, haga clic en **propiedades**.  
   
-2. En el **compilar** ficha, active o desactive el **preferencia de 32 bits** casilla de verificación, o bien, en el **CPU de destino** lista, elija un valor.  
+2. En la pestaña **compilar** , Active o desactive la casilla **preferir 32** bits, o bien, en la lista **CPU de destino** , elija un valor.  
   
-     Para obtener más información, consulte [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Para obtener más información, vea [compilar (página, diseñador de proyectos) (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar la opción `-platform` del compilador.  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Vea también
 
-- [/target (Visual Basic)](target.md)
+- [/Target (Visual Basic)](target.md)
 - [Compilador de línea de comandos de Visual Basic](index.md)
 - [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

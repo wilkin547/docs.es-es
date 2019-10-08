@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eab7db00515f55b086b5e1beddd149f966cb27a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945293"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72001937"
 ---
 # <a name="join-clause-visual-basic"></a>Join (Cláusula, Visual Basic)
-Combina dos colecciones en una sola colección. La operación de combinación se basa en claves coincidentes y usa el `Equals` operador.  
+Combina dos colecciones en una sola colección. La operación de combinación se basa en las claves coincidentes y utiliza el operador `Equals`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Join element In collection _  
   [ joinClause _ ]   
   [ groupJoinClause ... _ ]   
@@ -31,42 +31,42 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Elementos  
  `element`  
- Obligatorio. La variable de control para la colección que se está combina.  
+ Obligatorio. Variable de control de la colección que se va a combinar.  
   
  `collection`  
- Obligatorio. La colección para combinar con la colección identificado en el lado izquierdo de la `Join` operador. Un `Join` cláusula puede estar anidada en otro `Join` cláusula, o en un `Group Join` cláusula.  
+ Obligatorio. Colección que se va a combinar con la colección identificada en el lado izquierdo del operador `Join`. Una cláusula `Join` puede estar anidada en otra cláusula `Join` o en una cláusula `Group Join`.  
   
  `joinClause`  
- Opcional. Uno o más adicionales `Join` cláusulas aún más refinar la consulta.  
+ Opcional. Una o más cláusulas `Join` adicionales para restringir aún más la consulta.  
   
  `groupJoinClause`  
- Opcional. Uno o más adicionales `Group Join` cláusulas aún más refinar la consulta.  
+ Opcional. Una o más cláusulas `Group Join` adicionales para restringir aún más la consulta.  
   
  `key1` `Equals` `key2`  
- Obligatorio. Identifica las claves para las colecciones que se están combina. Debe usar el `Equals` operador para comparar las claves de las colecciones que se están combina. Puede combinar condiciones de combinación utilizando el `And` operador para identificar varias claves. `key1` debe ser de la colección en el lado izquierdo de la `Join` operador. `key2` debe ser de la colección en el lado derecho de la `Join` operador.  
+ Obligatorio. Identifica las claves para las colecciones que se están combinando. Debe usar el operador `Equals` para comparar las claves de las colecciones que se están combinando. Puede combinar condiciones de combinación mediante el operador `And` para identificar varias claves. `key1` debe ser de la colección del lado izquierdo del operador `Join`. `key2` debe ser de la colección del lado derecho del operador `Join`.  
   
- Las claves usadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión de clave solo puede contener elementos de su colección respectiva.  
+ Las claves utilizadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión clave solo puede contener elementos de su colección respectiva.  
   
 ## <a name="remarks"></a>Comentarios  
- El `Join` cláusula combina dos colecciones basadas en valores de clave de las colecciones que se están combinando coincidentes. La colección resultante puede contener cualquier combinación de valores de la colección identificado en el lado izquierdo de la `Join` operador y la colección identificado en el `Join` cláusula. La consulta devolverá solo los resultados para el que la condición especificada por el `Equals` operador se cumple. Esto es equivalente a un `INNER JOIN` en SQL.  
+ La cláusula `Join` combina dos colecciones basadas en los valores de clave coincidentes de las colecciones que se van a combinar. La colección resultante puede contener cualquier combinación de valores de la colección identificada en el lado izquierdo del operador `Join` y la colección identificada en la cláusula `Join`. La consulta devolverá solo los resultados para los que se cumple la condición especificada por el operador `Equals`. Esto es equivalente a un `INNER JOIN` en SQL.  
   
- Puede usar varios `Join` cláusulas en una consulta para combinar dos o más colecciones en una sola colección.  
+ Puede usar varias cláusulas `Join` en una consulta para combinar dos o más colecciones en una sola colección.  
   
- Puede realizar una combinación implícita para combinar colecciones sin el `Join` cláusula. Para ello, incluyen varias `In` cláusulas en su `From` cláusula y especifique un `Where` cláusula que identifica las claves que desee usar para la combinación.  
+ Puede realizar una combinación implícita para combinar colecciones sin la cláusula `Join`. Para ello, incluya varias cláusulas `In` en la cláusula `From` y especifique una cláusula `Where` que identifique las claves que desea usar para la combinación.  
   
- Puede usar el `Group Join` cláusula para combinar colecciones en una sola colección jerárquica. Esto es similar a un `LEFT OUTER JOIN` en SQL.  
+ Puede usar la cláusula `Group Join` para combinar colecciones en una sola colección jerárquica. Esto es como un `LEFT OUTER JOIN` en SQL.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente realiza una combinación implícita para combinar una lista de clientes con sus pedidos.  
+ En el ejemplo de código siguiente se realiza una combinación implícita para combinar una lista de clientes con sus pedidos.  
   
  [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente combina dos colecciones mediante el uso de la `Join` cláusula.  
+ En el ejemplo de código siguiente se combinan dos colecciones mediante la cláusula `Join`.  
   
  [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
- En este ejemplo genera una salida similar al siguiente:  
+ Este ejemplo generará una salida similar a la siguiente:  
   
  `winlogon (968), Windows Logon`  
   
@@ -75,11 +75,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `cmd (5136), Command Window`  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente combina dos colecciones mediante el uso de la `Join` cláusula con dos columnas de clave.  
+ En el ejemplo de código siguiente se combinan dos colecciones mediante la cláusula `Join` con dos columnas de clave.  
   
  [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
- En el ejemplo se genera una salida similar al siguiente:  
+ En el ejemplo se producirá una salida similar a la siguiente:  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   

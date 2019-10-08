@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f4e415576562885c9edbd3d2dddbe2a271e9923
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793931"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005468"
 ---
 # <a name="-libpath"></a>-libpath
-Especifica la ubicación de los ensamblados que se hace referencia.  
+Especifica la ubicación de los ensamblados a los que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 -libpath:dirList  
 ```  
   
@@ -26,10 +26,10 @@ Especifica la ubicación de los ensamblados que se hace referencia.
   
 |Término|Definición|  
 |---|---|  
-|`dirList`|Obligatorio. Lista delimitada por punto y coma de directorios para el compilador buscar en caso de un ensamblado de referencia no se encuentra en el directorio de trabajo actual (el directorio desde el que se invoca el compilador) o el directorio del sistema de common language runtime. Si el nombre del directorio contiene un espacio, escriba el nombre entre comillas ("").|  
+|`dirList`|Obligatorio. Lista de directorios delimitados por punto y coma para que el compilador busque si un ensamblado al que se hace referencia no se encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema del Common Language Runtime. Si el nombre del directorio contiene un espacio, incluya el nombre entre comillas ("").|  
   
 ## <a name="remarks"></a>Comentarios  
- El `-libpath` opción especifica la ubicación de los ensamblados referenciados por la [-referencia](../../../visual-basic/reference/command-line-compiler/reference.md) opción.  
+ La opción `-libpath` especifica la ubicación de los ensamblados a los que hace referencia la opción [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .  
   
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
@@ -41,16 +41,16 @@ Especifica la ubicación de los ensamblados que se hace referencia.
   
 4. Directorios especificados por la variable de entorno LIB.  
   
- El `-libpath` opción es sumatoria; si se especifica más de una vez se anexa a valores ya existentes.  
+ La opción `-libpath` es aditiva; Si se especifica más de una vez, se anexa a los valores anteriores.  
   
  Use `-reference` para especificar una referencia de ensamblado.  
   
-|Para establecer /libpath en Visual Studio de entorno de desarrollo integrado|  
+|Para establecer/LIBPATH en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Haga clic en el **hacen referencia a las rutas de acceso...**  botón.<br />4.  En el **las rutas de acceso de referencia** diálogo cuadro, escriba el nombre del directorio en el **carpeta:** cuadro.<br />5.  Haga clic en **Agregar carpeta**.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Haga clic en el botón rutas de acceso de **referencia...** .<br />4.  En el cuadro de diálogo rutas de acceso de **referencia** , escriba el nombre del directorio en el cuadro **carpeta:** .<br />5.  Haga clic en **Agregar carpeta**.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila `T2.vb` para crear un archivo .exe. El compilador busca en el directorio de trabajo, en el directorio raíz de la unidad C: y en el directorio nuevos ensamblados de la unidad C: de referencias de ensamblado.  
+ El código siguiente compila `T2.vb` para crear un archivo. exe. El compilador busca en el directorio de trabajo, en el directorio raíz de la unidad C:, y en el directorio New assemblies de la unidad C: para las referencias de ensamblado.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  

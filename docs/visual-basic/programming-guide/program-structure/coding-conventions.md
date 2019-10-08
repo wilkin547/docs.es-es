@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433822"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003115"
 ---
 # <a name="visual-basic-coding-conventions"></a>Convenciones de código de Visual Basic
 Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de este tema. Si sigue las mismas convenciones de codificación, puede obtener las siguientes ventajas:  
@@ -28,7 +28,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
 - Para obtener información sobre las directrices de nomenclatura, vea [el tema directrices de nomenclatura](../../../standard/design-guidelines/naming-guidelines.md) .  
   
-- No use "mi" o "mi" como parte de un nombre de variable. Esta práctica crea confusión con los `My` objetos.  
+- No use "mi" o "mi" como parte de un nombre de variable. Esta práctica crea confusión con los objetos `My`.  
   
 - No es necesario cambiar los nombres de los objetos en el código generado automáticamente para que se ajusten a las instrucciones.  
   
@@ -46,7 +46,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
 - Si el **listing (volver a formatear) de código** no da formato a las líneas de continuación automáticamente, Aplique sangría manualmente a las líneas de continuación en una posición de tabulación. Sin embargo, siempre alinea a la izquierda los elementos de una lista.  
   
-    ```  
+    ```vb  
     a As Integer,  
     b As Integer  
     ```  
@@ -67,7 +67,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
 ## <a name="program-structure"></a>Estructura del programa  
   
-- Cuando use el `Main` método, utilice la construcción predeterminada para las nuevas aplicaciones de consola y use `My` para los argumentos de la línea de comandos.  
+- Cuando use el método `Main`, utilice la construcción predeterminada para las nuevas aplicaciones de consola y use `My` para los argumentos de la línea de comandos.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,7 +81,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- Para anexar cadenas en bucles, utilice <xref:System.Text.StringBuilder> el objeto.  
+- Para anexar cadenas en bucles, utilice el objeto <xref:System.Text.StringBuilder>.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -92,7 +92,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
 ### <a name="unsigned-data-type"></a>Tipo de datos sin signo  
   
-- Use `Integer` en lugar de tipos sin signo, excepto donde sean necesarios.  
+- Utilice `Integer` en lugar de tipos sin signo, excepto donde sean necesarios.  
   
 ### <a name="arrays"></a>Matrices  
   
@@ -121,7 +121,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>Usar la palabra clave with  
- Cuando realice una serie de llamadas a un objeto, considere la posibilidad de `With` usar la palabra clave:  
+ Cuando realice una serie de llamadas a un objeto, considere la posibilidad de usar la palabra clave `With`:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
@@ -129,7 +129,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
  No use `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Usar la palabra clave IsNot  
- Use la `IsNot` palabra clave en lugar `Not...Is Nothing`de.  
+ Use la palabra clave `IsNot` en lugar de `Not...Is Nothing`.  
   
 ### <a name="new-keyword"></a>New (palabra clave)  
   
@@ -147,11 +147,11 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
 ### <a name="event-handling"></a>Control de eventos  
   
-- Use `Handles` en lugar `AddHandler`de:  
+- Use `Handles` en lugar de `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Use `AddressOf`y no cree instancias del delegado explícitamente:  
+- Use `AddressOf` y no cree instancias del delegado explícitamente:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,10 +159,10 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- No Compruebe si un evento es `Nothing` (NULL) antes de llamar al `RaiseEvent` método. `RaiseEvent`comprueba antes `Nothing` de que genere el evento.  
+- No Compruebe si un evento es `Nothing` (NULL) antes de llamar al método `RaiseEvent`. `RaiseEvent` comprueba `Nothing` antes de generar el evento.  
   
 ### <a name="using-shared-members"></a>Usar miembros compartidos  
- Llame `Shared` a los miembros mediante el nombre de clase, no desde una variable de instancia.  
+ Llame a los miembros `Shared` mediante el nombre de clase, no desde una variable de instancia.  
   
 ### <a name="use-xml-literals"></a>Usar literales XML  
  Los literales XML simplifican las tareas más comunes que se producen al trabajar con XML (por ejemplo, cargar, consultar y transformar). Al desarrollar con XML, siga estas instrucciones:  
@@ -173,7 +173,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
 - Use las propiedades del eje XML para tener acceso a elementos y atributos en un documento XML.  
   
-- Utilizar expresiones incrustadas para incluir valores y crear XML a partir de valores existentes en lugar de utilizar llamadas API como `Add` el método:  
+- Utilizar expresiones incrustadas para incluir valores y crear XML a partir de valores existentes en lugar de utilizar llamadas API como el método `Add`:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -195,15 +195,15 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Alinee las cláusulas de consulta `From` en la instrucción:  
+- Alinee las cláusulas de consulta bajo la instrucción `From`:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Use `Where` cláusulas antes de otras cláusulas de consulta para que las cláusulas de consulta posteriores operen en el conjunto de datos filtrado:  
+- Use cláusulas `Where` antes de otras cláusulas de consulta para que las cláusulas de consulta posteriores operen en el conjunto de datos filtrado:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Utilice la `Join` cláusula para definir explícitamente una operación de combinación en lugar de `Where` utilizar la cláusula para definir implícitamente una operación de combinación:  
+- Utilice la cláusula `Join` para definir explícitamente una operación de combinación en lugar de utilizar la cláusula `Where` para definir implícitamente una operación de combinación:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

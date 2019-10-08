@@ -21,42 +21,42 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586254"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002534"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase y MyClass en Visual Basic
-`Me`, `My`, `MyBase`, y `MyClass` en Visual Basic tienen nombres similares, pero con distintos fines. Este tema describe cada una de estas entidades para distinguirlos.  
+`Me`, `My`, `MyBase` y `MyClass` en Visual Basic tienen nombres similares, pero con fines diferentes. En este tema se describe cada una de estas entidades con el fin de distinguirlas.  
   
 ## <a name="me"></a>Me  
- El `Me` palabra clave proporciona una manera de hacer referencia a la instancia específica de una clase o estructura en la que se está ejecutando el código. `Me` se comporta como una variable de objeto o una variable de estructura que hace referencia a la instancia actual. Uso de `Me` es especialmente útil para pasar información sobre la instancia en ejecución de una clase o estructura a un procedimiento de otra clase, estructura o módulo.  
+ La palabra clave `Me` proporciona una manera de hacer referencia a la instancia específica de una clase o estructura en la que se está ejecutando el código. `Me` se comporta como una variable de objeto o una variable de estructura que hace referencia a la instancia actual. El uso de `Me` es especialmente útil para pasar información sobre la instancia que se está ejecutando actualmente de una clase o estructura a un procedimiento de otra clase, estructura o módulo.  
   
- Por ejemplo, suponga que tiene el siguiente procedimiento en un módulo.  
+ Por ejemplo, supongamos que tiene el siguiente procedimiento en un módulo.  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- Puede llamar a este procedimiento y pasar la instancia actual de la <xref:System.Windows.Forms.Form> clase como un argumento mediante la instrucción siguiente.  
+ Puede llamar a este procedimiento y pasar la instancia actual de la clase <xref:System.Windows.Forms.Form> como argumento mediante la siguiente instrucción.  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- El `My` característica proporciona acceso fácil e intuitivo a una serie de clases de .NET Framework, que permite al usuario de Visual Basic interactuar con el equipo, aplicación, configuración, recursos y así sucesivamente.  
+ La característica `My` proporciona acceso sencillo e intuitivo a una serie de clases de .NET Framework, lo que permite al usuario de Visual Basic interactuar con el equipo, la aplicación, la configuración, los recursos, etc.  
   
 ## <a name="mybase"></a>MyBase  
- El `MyBase` palabra clave se comporta como una variable de objeto que hace referencia a la clase de la instancia actual de una clase base. `MyBase` se utiliza normalmente para tener acceso a los miembros de clase base que se reemplazan o sombrean en una clase derivada. `MyBase.New` se usa para llamar explícitamente a un constructor de clase base desde un constructor de clase derivada.  
+ La palabra clave `MyBase` se comporta como una variable de objeto que hace referencia a la clase base de la instancia actual de una clase. `MyBase` se usa normalmente para tener acceso a los miembros de clase base que se invalidan o se sombrean en una clase derivada. `MyBase.New` se usa para llamar explícitamente a un constructor de clase base desde un constructor de clase derivada.  
   
 ## <a name="myclass"></a>MyClass  
- El `MyClass` palabra clave se comporta como una variable de objeto que hace referencia a la instancia actual de una clase como se implementaron originalmente. `MyClass` es similar a `Me`, pero todas las llamadas de método en él se tratan como si fuera el método `NotOverridable`.  
+ La palabra clave `MyClass` se comporta como una variable de objeto que hace referencia a la instancia actual de una clase como se implementó originalmente. `MyClass` es similar a `Me`, pero todas las llamadas al método en él se tratan como si el método fuera `NotOverridable`.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: af0b62d6cfacbcf94f527e049e07e51bf496a6cf
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a04ebddc7db176188876da1082e1e6946e1e8eec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392759"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005169"
 ---
 # <a name="call-statement-visual-basic"></a>Call (Instrucción, Visual Basic)
 
-Transfiere el control a un procedimiento de biblioteca de vínculos dinámicos (DLL) `Function`, `Sub` o.
-
-## <a name="syntax"></a>Sintaxis
-
-```vb
-[ Call ] procedureName [ (argumentList) ]
-```
-
-## <a name="parts"></a>Elementos
+Transfiere el control a un procedimiento de biblioteca de vínculos dinámicos (DLL) `Function`, `Sub` o.  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```vb  
+[ Call ] procedureName [ (argumentList) ]  
+```  
+  
+## <a name="parts"></a>Elementos  
 
 |||
 |---|---|
