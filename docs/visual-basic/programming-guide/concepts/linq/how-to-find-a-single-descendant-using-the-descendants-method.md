@@ -2,12 +2,12 @@
 title: Procedimiento Buscar un único descendiente con el método Descendants (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 7e90e7e8c4a6cd4c91b15037be0fa422dd2108e3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: dbde5686d1b7670290d434c0a04515cbc10622fd
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709074"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249961"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Procedimiento Buscar un único descendiente con el método Descendants (Visual Basic)
 Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -39,7 +39,7 @@ Console.WriteLine(grandChild3)
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 GC3 Value  
 ```  
   
@@ -76,7 +76,7 @@ End Module
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 GC3 Value  
 ```  
   

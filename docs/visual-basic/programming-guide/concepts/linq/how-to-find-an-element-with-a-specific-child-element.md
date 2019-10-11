@@ -2,12 +2,12 @@
 title: Procedimiento Buscar un elemento con un elemento secundario específico (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709064"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249912"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Procedimiento Buscar un elemento con un elemento secundario específico (Visual Basic)
 Este tema muestra cómo encontrar un elemento en particular que tenga un elemento secundario con un valor específico.  
@@ -30,7 +30,7 @@ Next
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 0002  
 0006  
 ```  
@@ -61,7 +61,7 @@ End Module
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 0002  
 0006  
 ```  

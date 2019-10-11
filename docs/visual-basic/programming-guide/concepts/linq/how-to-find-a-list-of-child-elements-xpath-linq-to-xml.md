@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Encontrar una lista de elementos secundarios (XPath-LINQ to XML) (Visual Basic)
+title: Procedimiento Buscar una lista de elementos secundarios (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aab185cd4c157c7ee671418368668d46b4bb2a4a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021666"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249969"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Procedimiento Encontrar una lista de elementos secundarios (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar una lista de elementos secundarios (XPath-LINQ to XML) (Visual Basic)
 En este tema se compara el eje de los elementos secundarios de XPath con el eje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
   
  La expresión XPath es: `./*`  
@@ -42,7 +42,7 @@ Next
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Street>123 Maple Street</Street>  
@@ -54,4 +54,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Buscar todos los nodos en un Namespace (Visual Basic)
+title: Procedimiento Buscar todos los nodos de un espacio de nombres (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855678"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249934"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedimiento Buscar todos los nodos en un Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedimiento Buscar todos los nodos de un espacio de nombres (Visual Basic)
 Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.  
   
 ## <a name="example"></a>Ejemplo  
@@ -45,7 +45,7 @@ End Module
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

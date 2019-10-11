@@ -291,7 +291,7 @@ El software intermedio de autenticación del portador de JWT también puede admi
 - **Michell Anicas. Una introducción a OAuth 2** \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
-- **repositorio de GitHub para proveedores de OAuth de ASP.NET)**
+- **repositorio de GitHub para proveedores de OAuth de ASP.NET**\
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
 - **Danny Strockis. Integración de Azure AD en una aplicación web ASP.NET Core** \

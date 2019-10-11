@@ -2,12 +2,12 @@
 title: Procedimiento Filtrar por nombres de elemento (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: f64f80b1544e8c5f2d55a44dafe01fee8758d611
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9af4b11d6b539b976e225df6a911e2a80429d2fb
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709714"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250020"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Procedimiento Filtrar por nombres de elemento (LINQ to XML) (Visual Basic)
 Al llamar a uno de los métodos que devuelven <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, puede filtrar por nombre de elemento.  
@@ -29,7 +29,7 @@ Next
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
@@ -73,7 +73,7 @@ End Module
   
  Este código genera el siguiente resultado:  
   
-```  
+```console  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
