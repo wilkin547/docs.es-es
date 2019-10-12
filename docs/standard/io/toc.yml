@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: Procedimiento para usar canalizaciones con nombre para la comunicación de red entre procesos
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Canalizaciones
+      href: pipelines.md
     - name: Archivos asignados a memoria
       href: memory-mapped-files.md
