@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834665"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291273"
 ---
 # <a name="use-automatic-layout-overview"></a>Información general sobre el uso del diseño automático
 
-En este tema se presentan instrucciones para desarrolladores sobre cómo escribir aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con @no__t localizable-1. En el pasado, la localización de una interfaz de usuario era un proceso que consume mucho tiempo. Cada idioma al que se adapta la interfaz de usuario requiere un ajuste de píxel por píxel. En la actualidad, con el diseño correcto y los estándares de codificación correctos, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] se pueden construir para que los localizadores tengan menos cambio de tamaño y reposición. El método para escribir aplicaciones a las que se puede cambiar el tamaño y la posición de forma más sencilla se denomina diseño automático y se puede lograr mediante el diseño de la aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+En este tema se presentan instrucciones para desarrolladores sobre cómo escribir aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con interfaces de usuario localizables (IUS). En el pasado, la localización de una interfaz de usuario era un proceso que consume mucho tiempo. Cada idioma al que se adapta la interfaz de usuario requiere un ajuste de píxel por píxel. En la actualidad, con el diseño correcto y los estándares de codificación correctos, las interfaces de programación pueden construirse para que los localizadores tengan menos cambio de tamaño y de posición. El método para escribir aplicaciones a las que se puede cambiar el tamaño y la posición de forma más sencilla se denomina diseño automático y se puede lograr mediante el diseño de la aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="advantages_of_autolayout"></a>
 

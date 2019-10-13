@@ -2,29 +2,29 @@
 title: Procedimiento para hospedar un servicio WCF escrito con .NET Framework 3.5 en IIS que ejecuta .NET Framework 4
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: eb4f0538380bf2e1d0e36d69020787055230dbaf
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6a87fd5e3997e9d15810a5efb079da629908f854
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425560"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291524"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Procedimiento para hospedar un servicio WCF escrito con .NET Framework 3.5 en IIS que ejecuta .NET Framework 4
-Al hospedar un servicio de Windows Communication Foundation (WCF) que se escriben con [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] en un equipo que ejecuta [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], es posible que obtenga un <xref:System.ServiceModel.ProtocolException> con el siguiente texto.  
+Al hospedar un servicio de Windows Communication Foundation (WCF) escrito con [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] en un equipo que ejecuta [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], puede obtener un <xref:System.ServiceModel.ProtocolException> con el siguiente texto.  
   
-```Output  
+```output  
 Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
  O bien, si intenta ir al archivo .svc del servicio, puede ver una página de error con el siguiente texto.  
   
-```Output  
+```output  
 The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
  Estos errores se producen porque el dominio de aplicación en el que se ejecuta IIS está ejecutando [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] y el servicio de WCF esperaba ejecutarse en [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Este tema explica las modificaciones necesarias para hacer que el servicio se ejecute.  
   
- A continuación busque el <`compilers`> elemento y cambie la opción de proveedor de CompilerVersion para tener un valor de 4.0. De forma predeterminada, hay dos <`compiler`> elementos en el <`compilers`> elemento. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
+ A continuación, busque el elemento < `compilers` > y cambie la opción del proveedor CompilerVersion para que tenga un valor de 4,0. De forma predeterminada, hay dos < `compiler` > elementos en el elemento @no__t < >-1. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
   
 ```xml  
 <system.codedom>  
@@ -46,9 +46,9 @@ The application domain or application pool is currently running version 4.0 or l
   
 ### <a name="add-the-required-targetframework-attribute"></a>Adición del atributo targetFramework necesario  
   
-1. Abra el archivo Web.config del servicio y busque el <`compilation`> elemento.  
+1. Abra el archivo Web. config del servicio y busque el elemento < `compilation` >.  
   
-2. Agregar el `targetFramework` atributo a la <`compilation`> elemento tal como se muestra en el ejemplo siguiente.  
+2. Agregue el atributo `targetFramework` al < `compilation` >, tal como se muestra en el ejemplo siguiente.  
   
     ```xml  
     <compilation debug="false"  
@@ -64,7 +64,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3. Buscar el <`compilers`> elemento y cambie la opción de proveedor de CompilerVersion para tener un valor de 4.0. De forma predeterminada, hay dos <`compiler`> elementos en el <`compilers`> elemento. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
+3. Busque el elemento < `compilers` > y cambie la opción del proveedor CompilerVersion para que tenga un valor de 4,0. De forma predeterminada, hay dos < `compiler` > elementos en el elemento @no__t < >-1. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
   
     ```xml  
     <system.codedom>  

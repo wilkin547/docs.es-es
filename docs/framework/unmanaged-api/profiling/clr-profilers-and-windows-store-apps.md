@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7142ef36d4ed1bbcb715748202eefdd5504f697e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956639"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291414"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -106,7 +106,7 @@ Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueb
 
 La aplicación de la tienda Windows debe tener permiso para cargar y ejecutar el archivo DLL del generador de perfiles desde la ubicación en el sistema de archivos en la que se residesBy de forma predeterminada, la aplicación de la tienda Windows no tiene este permiso en la mayoría de los directorios y cualquier intento fallido de carga de la DLL del generador de perfiles producirá una entrada en el registro de eventos de aplicación de Windows que tiene un aspecto similar al siguiente:
 
-```Output
+```output
 NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateInstance.  Profiler CLSID: '{xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}'.  HRESULT: 0x80070005.  Process ID (decimal): 4688.  Message ID: [0x2504].
 ```
 
@@ -114,7 +114,7 @@ Por lo general, las aplicaciones de la tienda Windows solo pueden tener acceso a
 
 ### <a name="startup-load"></a>Carga de inicio
 
-Normalmente, en una aplicación de escritorio, la interfaz de usuario del generador de perfiles solicita una carga de inicio de la dll del generador de perfiles mediante la inicialización de un bloque de entorno que `COR_PROFILER`contiene `COR_ENABLE_PROFILING`las variables de entorno de la API de generación de perfiles de CLR necesarias (es decir,, y `COR_PROFILER_PATH`). a continuación, cree un nuevo proceso con ese bloque de entorno. Lo mismo se aplica a las aplicaciones de la tienda Windows, pero los mecanismos son diferentes.
+Normalmente, en una aplicación de escritorio, la interfaz de usuario del generador de perfiles solicita una carga de inicio de la DLL del generador de perfiles mediante la inicialización de un bloque de entorno que contiene las variables de entorno de la API de generación de perfiles de CLR necesarias (es decir, `COR_PROFILER`, `COR_ENABLE_PROFILING` y `COR_PROFILER_PATH`) y, a continuación, crear un nuevo proceso con ese bloque de entorno. Lo mismo se aplica a las aplicaciones de la tienda Windows, pero los mecanismos son diferentes.
 
 **No ejecutar con privilegios elevados**
 
@@ -124,9 +124,9 @@ Si el proceso a intenta generar el proceso de la aplicación de la tienda Window
 
 En primer lugar, querrá preguntar al usuario de Profiler qué aplicación de la tienda Windows se va a iniciar. En el caso de las aplicaciones de escritorio, quizás muestre un cuadro de diálogo de búsqueda de archivos y el usuario encontraría y seleccione un archivo. exe. Pero las aplicaciones de la tienda Windows son diferentes y el uso de un cuadro de diálogo de exploración no tiene sentido. En su lugar, es mejor mostrar al usuario una lista de las aplicaciones de la tienda Windows instaladas para que el usuario las seleccione.
 
-Puede utilizar la <xref:Windows.Management.Deployment.PackageManager> clase para generar esta lista. `PackageManager`es una clase Windows Runtime que está disponible para las aplicaciones de escritorio y, de hecho, *solo* está disponible para las aplicaciones de escritorio.
+Puede usar la clase <xref:Windows.Management.Deployment.PackageManager> para generar esta lista. `PackageManager` es una clase Windows Runtime que está disponible para las aplicaciones de escritorio y, de hecho, *solo* está disponible para las aplicaciones de escritorio.
 
-En el ejemplo de código siguiente de una interfaz de usuario hipotética del generador de C# perfiles escrita `PackageManager` como una aplicación de escritorio en se usa para generar una lista de aplicaciones de Windows:
+El siguiente ejemplo de código de una interfaz de usuario de Profiler hipotética escrita como C# una aplicación de escritorio en usa el `PackageManager` para generar una lista de aplicaciones de Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Especificar el bloque de entorno personalizado**
 
-Una nueva interfaz COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), le permite personalizar el comportamiento de ejecución de una aplicación de la tienda Windows para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), le permite pasar un bloque de entorno a la aplicación de la tienda Windows cuando se inicia, junto con otros efectos útiles como la deshabilitación de la suspensión automática del proceso. El bloque de entorno es importante porque es donde debe especificar las variables de entorno (`COR_PROFILER`, `COR_ENABLE_PROFILING`y `COR_PROFILER_PATH)`) que usa CLR para cargar el archivo DLL del generador de perfiles.
+Una nueva interfaz COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), le permite personalizar el comportamiento de ejecución de una aplicación de la tienda Windows para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), le permite pasar un bloque de entorno a la aplicación de la tienda Windows cuando se inicia, junto con otros efectos útiles como la deshabilitación de la suspensión automática del proceso. El bloque de entorno es importante porque es donde debe especificar las variables de entorno (`COR_PROFILER`, `COR_ENABLE_PROFILING` y `COR_PROFILER_PATH)`) que usa CLR para cargar el archivo DLL del generador de perfiles.
 
 Tenga en cuenta el fragmento de código siguiente:
 
@@ -149,15 +149,15 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Hay un par de elementos que debe tener derecho:
 
-- `packageFullName`se puede determinar al recorrer en iteración los paquetes y `package.Id.FullName`la captura.
+- `packageFullName` se puede determinar al recorrer en iteración los paquetes y capturar `package.Id.FullName`.
 
-- `debuggerCommandLine`es un poco más interesante. Para pasar el bloque de entorno personalizado a la aplicación de la tienda Windows, debe escribir su propio depurador ficticio simplista. Windows genera la aplicación de la tienda Windows suspendida y, a continuación, asocia el depurador iniciando el depurador con una línea de comandos como en este ejemplo:
+- `debuggerCommandLine` es un poco más interesante. Para pasar el bloque de entorno personalizado a la aplicación de la tienda Windows, debe escribir su propio depurador ficticio simplista. Windows genera la aplicación de la tienda Windows suspendida y, a continuación, asocia el depurador iniciando el depurador con una línea de comandos como en este ejemplo:
 
-    ```Output
+    ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     donde `-p 1336` significa que la aplicación de la tienda Windows tiene el identificador `-tid 1424` de proceso 1336 y significa que el ID. de subproceso 1424 es el subproceso que se suspende. El depurador ficticio analizaría el ThreadID desde la línea de comandos, reanudaría dicho subproceso y, a continuación, se cerrará.
+     donde `-p 1336` significa que la aplicación de la tienda Windows tiene el identificador de proceso 1336 y `-tid 1424` significa que el ID. de subproceso 1424 es el subproceso que se suspende. El depurador ficticio analizaría el ThreadID desde la línea de comandos, reanudaría dicho subproceso y, a continuación, se cerrará.
 
      Este es un ejemplo C++ de código para hacerlo (Asegúrese de agregar la comprobación de errores):
 
@@ -176,7 +176,7 @@ Hay un par de elementos que debe tener derecho:
     }
     ```
 
-     Deberá implementar este depurador ficticio como parte de la instalación de la herramienta de diagnóstico y, a continuación, especificar la ruta de acceso a `debuggerCommandLine` este depurador en el parámetro.
+     Deberá implementar este depurador ficticio como parte de la instalación de la herramienta de diagnóstico y, a continuación, especificar la ruta de acceso a este depurador en el parámetro `debuggerCommandLine`.
 
 **Inicio de la aplicación de la tienda Windows**
 
@@ -253,7 +253,7 @@ Por lo tanto, la aplicación de la tienda Windows ha cargado la DLL del generado
 
 Cuando examine la API de Windows, observará que todas las API se documentan como aplicables a las aplicaciones de escritorio, a las aplicaciones de la tienda Windows o a ambas. Por ejemplo, la sección de **requisitos** de la documentación de la función [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) indica que la función se aplica solo a las aplicaciones de escritorio. En cambio, la función [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) está disponible para aplicaciones de escritorio y aplicaciones de la tienda Windows.
 
-Al desarrollar el archivo DLL del generador de perfiles, trate como si se tratase de una aplicación de la tienda Windows y use solo las API que estén documentadas como disponibles para las aplicaciones de la tienda Windows. Analice las dependencias (por ejemplo, puede ejecutar `link /dump /imports` en la dll del generador de perfiles para auditar) y, a continuación, busque los documentos para ver cuáles son las dependencias correctas y cuáles no. En la mayoría de los casos, las infracciones se pueden corregir simplemente reemplazándolo por una forma más reciente de la API que se documenta como segura (por ejemplo, reemplazando [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) por [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+Al desarrollar el archivo DLL del generador de perfiles, trate como si se tratase de una aplicación de la tienda Windows y use solo las API que estén documentadas como disponibles para las aplicaciones de la tienda Windows. Analice las dependencias (por ejemplo, puede ejecutar `link /dump /imports` en la DLL del generador de perfiles para auditar) y, a continuación, buscar en los documentos para ver cuáles son las dependencias correctas y cuáles no. En la mayoría de los casos, las infracciones se pueden corregir simplemente reemplazándolo por una forma más reciente de la API que se documenta como segura (por ejemplo, reemplazando [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) por [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
 
 Es posible que observe que el archivo DLL del generador de perfiles llama a algunas API que solo se aplican a las aplicaciones de escritorio, pero parecen funcionar incluso cuando el archivo DLL del generador de perfiles se carga en una aplicación de la tienda Windows. Tenga en cuenta que es arriesgado usar cualquier API no documentada para su uso con aplicaciones de la tienda Windows en el archivo DLL del generador de perfiles cuando se carga en un proceso de aplicación de la tienda Windows:
 
@@ -287,7 +287,7 @@ Pero, por supuesto, los archivos siguen en, aunque de forma más limitada. Tambi
 
 La mayoría de los datos probablemente pasarán entre la DLL del generador de perfiles y la interfaz de usuario del generador de perfiles a través de archivos. La clave consiste en elegir una ubicación de archivo que el archivo DLL del generador de perfiles (en el contexto de una aplicación de la tienda Windows) y la interfaz de usuario del generador de perfiles tengan acceso de lectura y escritura a. Por ejemplo, la ruta de acceso de la carpeta temporal es una ubicación a la que pueden acceder tanto a la DLL del generador de perfiles como a la interfaz de usuario del generador de perfiles, pero ningún otro paquete de la aplicación de la tienda Windows puede acceder a él (con lo que se protege cualquier información que se registre desde otros paquetes de aplicaciones
 
-La interfaz de usuario del generador de perfiles y la DLL del generador de perfiles pueden determinar esta ruta de acceso de forma independiente La interfaz de usuario del generador de perfiles, cuando recorre en iteración todos los paquetes instalados para el usuario actual (vea el código de `PackageId` ejemplo anterior), obtiene acceso a la clase, de la que la ruta de acceso de la carpeta temporal se puede derivar con código similar a este fragmento de código. (Como siempre, la comprobación de errores se omite por motivos de brevedad).
+La interfaz de usuario del generador de perfiles y la DLL del generador de perfiles pueden determinar esta ruta de acceso de forma independiente La interfaz de usuario del generador de perfiles, cuando recorre en iteración todos los paquetes instalados para el usuario actual (vea el código de ejemplo anterior), obtiene acceso a la clase `PackageId`, desde la que la ruta de acceso de la carpeta temporal se puede derivar con código similar a este fragmento de código. (Como siempre, la comprobación de errores se omite por motivos de brevedad).
 
 ```csharp
 // C# code for the Profiler UI.
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Mientras tanto, el archivo DLL del generador de perfiles puede hacer básicamente lo mismo, aunque puede obtener más <xref:Windows.Storage.ApplicationData> fácilmente la clase mediante la propiedad [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
+Mientras tanto, la DLL del generador de perfiles puede hacer básicamente lo mismo, aunque puede llegar más fácilmente a la clase <xref:Windows.Storage.ApplicationData> mediante la propiedad [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
 
 **Comunicación a través de eventos**
 
@@ -319,7 +319,7 @@ La interfaz de usuario del generador de perfiles debe encontrar ese evento con n
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`es el SID del AppContainer de la aplicación de la tienda Windows. En una sección anterior de este tema se ha mostrado cómo recorrer en iteración los paquetes instalados para el usuario actual. En ese código de ejemplo, puede obtener el packageId. Y, desde el packageId, puede obtener el `<acSid>` con código similar al siguiente:
+`<acSid>` es el SID del AppContainer de la aplicación de la tienda Windows. En una sección anterior de este tema se ha mostrado cómo recorrer en iteración los paquetes instalados para el usuario actual. En ese código de ejemplo, puede obtener el packageId. Y del packageId, puede obtener el `<acSid>` con código similar al siguiente:
 
 ```csharp
 IntPtr acPSID;
@@ -334,7 +334,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="no-shutdown-notifications"></a>No hay notificaciones de apagado
 
-Al ejecutarse dentro de una aplicación de la tienda Windows, la dll del generador de perfiles no debe basarse en [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) o incluso [DllMain](/windows/desktop/Dlls/dllmain) (con `DLL_PROCESS_DETACH`) que se llama para notificar a la dll del generador de perfiles que se está cerrando la aplicación de la tienda Windows. De hecho, debería esperar que nunca se llamen. Históricamente, muchos archivos DLL del generador de perfiles han usado esas notificaciones como lugares convenientes para vaciar las cachés en el disco, cerrar archivos, enviar notificaciones de nuevo a la interfaz de usuario del generador de perfiles, etc. Pero ahora la DLL del generador de perfiles debe organizarse de un modo ligeramente diferente.
+Al ejecutarse dentro de una aplicación de la tienda Windows, la DLL del generador de perfiles no debe basarse en [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) o incluso [DllMain](/windows/desktop/Dlls/dllmain) (con `DLL_PROCESS_DETACH`) a la que se llama para notificar a la dll del generador de perfiles que se está cerrando la aplicación de la tienda Windows. De hecho, debería esperar que nunca se llamen. Históricamente, muchos archivos DLL del generador de perfiles han usado esas notificaciones como lugares convenientes para vaciar las cachés en el disco, cerrar archivos, enviar notificaciones de nuevo a la interfaz de usuario del generador de perfiles, etc. Pero ahora la DLL del generador de perfiles debe organizarse de un modo ligeramente diferente.
 
 La DLL del generador de perfiles debe registrar la información a medida que va. Por motivos de rendimiento, puede que desee procesar por lotes la información en la memoria y vaciarla en el disco a medida que el lote aumente de tamaño más allá de un umbral. Pero supongamos que se puede perder toda la información que todavía no se ha vaciado en el disco. Esto significa que querrá elegir el umbral y que la interfaz de usuario del generador de perfiles debe reforzarse para tratar con la información incompleta escrita por el archivo DLL del generador de perfiles.
 
@@ -354,7 +354,7 @@ La información siguiente se aplica a los archivos winmd administrados, que cont
 
 En lo que respecta a CLR, todos los archivos WinMD son módulos. Por lo tanto, la API de generación de perfiles de CLR indica el archivo DLL del generador de perfiles cuando se cargan los archivos WinMD y cuáles son sus los moduleids, de la misma forma que para otros módulos administrados.
 
-El archivo DLL del generador de perfiles puede distinguir los archivos WinMD de otros módulos llamando al método [ICorProfilerInfo3:: GetModuleInfo2 (](icorprofilerinfo3-getmoduleinfo2-method.md) e inspeccionando el `pdwModuleFlags` parámetro de salida para la marca [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Se establece si el valor de ModuleID representa un WinMD).
+El archivo DLL del generador de perfiles puede distinguir los archivos WinMD de otros módulos llamando al método [ICorProfilerInfo3:: GetModuleInfo2 (](icorprofilerinfo3-getmoduleinfo2-method.md) e inspeccionando el parámetro de salida `pdwModuleFlags` para la marca [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Se establece si el valor de ModuleID representa un WinMD).
 
 ### <a name="reading-metadata-from-winmds"></a>Leer metadatos de archivos winmd
 
@@ -362,11 +362,11 @@ Los archivos WinMD, como los módulos normales, contienen metadatos que se puede
 
 Por lo tanto, ¿qué vista obtendrá el generador de perfiles cuando use las API de metadatos: la vista de Windows Runtime sin formato o la vista de .NET Framework asignada?  La respuesta es que depende de usted.
 
-Al llamar al método [ICorProfilerInfo:: GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) en un archivo WinMD para obtener una interfaz de metadatos, como [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), puede elegir establecer [ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) en el `dwOpenFlags` parámetro para desactivar esta asignación. De lo contrario, de forma predeterminada, se habilitará la asignación. Normalmente, un generador de perfiles mantendrá habilitada la asignación, de modo que las cadenas que obtiene el archivo DLL del generador de perfiles de los metadatos de WinMD (por ejemplo, los nombres de tipos) resulten familiares y naturales para el usuario del generador de perfiles.
+Al llamar al método [ICorProfilerInfo:: GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) en un archivo WinMD para obtener una interfaz de metadatos, como [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), puede elegir establecer [ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) en el parámetro `dwOpenFlags` para desactivar esta asignación. De lo contrario, de forma predeterminada, se habilitará la asignación. Normalmente, un generador de perfiles mantendrá habilitada la asignación, de modo que las cadenas que obtiene el archivo DLL del generador de perfiles de los metadatos de WinMD (por ejemplo, los nombres de tipos) resulten familiares y naturales para el usuario del generador de perfiles.
 
 ### <a name="modifying-metadata-from-winmds"></a>Modificar metadatos de archivos winmd
 
-No se admite la modificación de metadatos en archivos winmd. Si llama al método [ICorProfilerInfo:: GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) para un archivo WinMD y especifica [ALWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) en el `dwOpenFlags` parámetro o solicita una interfaz de metadatos grabable como [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) puedan. Esta es de especial importancia para los perfiles de reescritura de IL, que necesitan modificar los metadatos para admitir su instrumentación (por ejemplo, para agregar AssemblyRefs o nuevos métodos). Por lo tanto, debe comprobar [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) primero (como se describe en la sección anterior) y abstenerse de solicitar interfaces de metadatos grabables en dichos módulos.
+No se admite la modificación de metadatos en archivos winmd. Si llama al método [ICorProfilerInfo:: GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) para un archivo WinMD y especifica [ALWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) en el parámetro `dwOpenFlags` o solicita una interfaz de metadatos grabable como [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) producirá un error. Esta es de especial importancia para los perfiles de reescritura de IL, que necesitan modificar los metadatos para admitir su instrumentación (por ejemplo, para agregar AssemblyRefs o nuevos métodos). Por lo tanto, debe comprobar [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) primero (como se describe en la sección anterior) y abstenerse de solicitar interfaces de metadatos grabables en dichos módulos.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Resolver referencias de ensamblado con archivos winmd
 
@@ -384,13 +384,13 @@ Para entender las consecuencias de esto, es importante comprender las diferencia
 
 El punto relevante es que las llamadas realizadas en los subprocesos creados por el generador de perfiles siempre se consideran sincrónicas, incluso si esas llamadas se realizan desde fuera de una implementación de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) del archivo DLL del generador de perfiles. Como mínimo, que solía ser el caso. Ahora que CLR ha convertido el subproceso del generador de perfiles en un subproceso administrado debido a su llamada al [método forcegc (](icorprofilerinfo-forcegc-method.md), ese subproceso ya no se considera el subproceso del generador de perfiles. Como tal, el CLR exige una definición más rigurosa de lo que se refiere como sincrónico para ese subproceso, es decir, que una llamada se debe originar desde dentro de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) de la dll del generador de perfiles para calificarse como sincrónica.
 
-¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas realizadas normalmente en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), tendrá problemas . Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Consulte la entrada [de blog sobre la pila del generador de perfiles: Aspectos básicos y](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) más información).
+¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas realizadas normalmente en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), tendrá problemas . Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Consulte la entrada de blog @no__t el recorrido de la pila de 0Profiler: Aspectos básicos y más allá de @ no__t-0 para más información).
 
 Por lo tanto, se recomienda que todos los subprocesos que crea el archivo DLL del generador de perfiles para llamar al [método forcegc (](icorprofilerinfo-forcegc-method.md) se deben usar *únicamente* con el fin de desencadenar GC y después responder a las devoluciones de llamada GC. No debe llamar a la API de generación de perfiles para realizar otras tareas, como el muestreo o desasociación de la pila.
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-A partir de la .NET Framework 4,5, hay una nueva devolución de llamada GC, [conditionalweaktableelementreferences (](icorprofilercallback5-conditionalweaktableelementreferences-method.md), que proporciona al generador de perfiles información más completa sobre los *identificadores dependientes*. Estos controles agregan de manera eficaz una referencia de un objeto de origen a un objeto de destino con el fin de administrar la duración del GC. Los identificadores dependientes no son nada nuevo y los desarrolladores que programan en código administrado han podido crear sus propios identificadores dependientes mediante la <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> clase, incluso antes de Windows 8 y el .NET Framework 4,5.
+A partir de la .NET Framework 4,5, hay una nueva devolución de llamada GC, [conditionalweaktableelementreferences (](icorprofilercallback5-conditionalweaktableelementreferences-method.md), que proporciona al generador de perfiles información más completa sobre los *identificadores dependientes*. Estos controles agregan de manera eficaz una referencia de un objeto de origen a un objeto de destino con el fin de administrar la duración del GC. Los identificadores dependientes no son nada nuevo y los desarrolladores que programan en código administrado han podido crear sus propios identificadores dependientes mediante la clase <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>, incluso antes de Windows 8 y el .NET Framework 4,5.
 
 Sin embargo, las aplicaciones de la tienda Windows XAML administradas ahora hacen un uso intensivo de los identificadores dependientes. En concreto, CLR los usa para ayudar a administrar los ciclos de referencia entre los objetos administrados y los objetos Windows Runtime no administrados. Esto significa que ahora es más importante que nunca para que los profileres de memoria estén informados de estos identificadores dependientes para que se puedan visualizar junto con el resto de los bordes en el gráfico del montón. El archivo DLL del generador de perfiles debe usar [RootReferences2 (](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)y [conditionalweaktableelementreferences (](icorprofilercallback5-conditionalweaktableelementreferences-method.md) juntos para formar una vista completa del gráfico del montón.
 
