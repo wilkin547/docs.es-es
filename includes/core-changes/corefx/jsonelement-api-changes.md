@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98893470b64de4abf7f04817871e3053bf25b86d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8a92a426ac2c5eee6fba40bfc46281420466d648
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119105"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237467"
 ---
 ### <a name="jsonelement-api-changes"></a>Cambios en la API de JsonElement
 
@@ -33,14 +33,13 @@ En la versión preliminar 7 de .NET Core 3.0, las API de <xref:System.Text.Js
 
 1. Se ha cambiado el nombre de `WriteValue` a <xref:System.Text.Json.JsonElement.WriteTo%2A>. Esto afecta a código como el siguiente:
 
-```csharp
-using (JsonDocument doc = JsonDocument.Parse(jsonString))
-{
-    JsonElement root = doc.RootElement;
-    root.WriteValue(writer);
-}
-
-```
+   ```csharp
+    using (JsonDocument doc = JsonDocument.Parse(jsonString))
+    {
+        JsonElement root = doc.RootElement;
+        root.WriteValue(writer);
+    }
+    ```
 
 1. <xref:System.Text.Json.JsonElement.WriteTo%2A> produce ahora una <xref:System.ArgumentNullException> cuando su parámetro de método es `null`.
 

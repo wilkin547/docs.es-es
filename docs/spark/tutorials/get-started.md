@@ -4,12 +4,12 @@ description: Sepa cómo ejecutar una aplicación .NET para Apache Spark con .NET
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928480"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250322"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -67,7 +67,7 @@ Confirme que puede ejecutar `dotnet`, `java`, `mvn`, `spark-shell` desde la lín
 
 1. Descargue en el equipo local la versión de [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) de la página de versiones de GitHub de .NET para Apache Spark. Por ejemplo, puede descargarlo en la ruta de acceso `c:\bin\Microsoft.Spark.Worker\`.
 
-2. Cree una [variable de entorno](https://www.java.com/en/download/help/path.xml) llamada `DotnetWorkerPath` y establézcala en el directorio donde descargó y extrajo **Microsoft.Spark.Worker**. Por ejemplo: `c:\bin\Microsoft.Spark.Worker`.
+2. Cree una [variable de entorno](https://www.java.com/en/download/help/path.xml) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde descargó y extrajo **Microsoft.Spark.Worker**. Por ejemplo: `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>Clonado del repositorio de GitHub de .NET para Apache Spark
 

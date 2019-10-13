@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4075eadf7cfb39c913b7657d43335bae5497deff
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216934"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237464"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>No se puede recurrir de formar recursiva a las instancias personalizadas de EncoderFallbackBuffer
 
 No se puede recurrir de formar recursiva a las instancias personalizadas de <xref:System.Text.EncoderFallbackBuffer>. La implementación de <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> debe traducirse en una secuencia de caracteres que se pueda convertir a la codificación de destino. De lo contrario, se produce una excepción.
 
-#### <a name="details"></a>Detalles
+#### <a name="change-description"></a>Descripción del cambio
 
 Durante una operación de transcodificación de caracteres a bytes, el runtime detecta secuencias UTF-16 de formato incorrecto o no convertibles y proporciona esos caracteres al método <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>. El método `Fallback` determina los caracteres que han de sustituirse por los datos originales no convertibles y estos caracteres se drenan llamando a <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> en un bucle.
 

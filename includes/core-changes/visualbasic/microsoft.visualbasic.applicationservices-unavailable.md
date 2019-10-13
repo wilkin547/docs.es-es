@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c3211752282b231e818d9af25322efbb6c93cf78
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 294c077b837899bd714deb2afd1bdff2b3185f38
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181789"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237457"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Los tipos del espacio de nombres Microsoft.VisualBasic.ApplicationServices no están disponibles
 
@@ -14,7 +14,7 @@ Los tipos del espacio de nombres <xref:Microsoft.VisualBasic.ApplicationServices
 
 .NET Core 3.0 (versión preliminar 8)
 
-#### <a name="details"></a>Detalles
+#### <a name="change-description"></a>Descripción del cambio
 
 Los tipos del espacio de nombres <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> estaban disponibles en algunas versiones preliminares de .NET Core 3.0. A partir del SDK de .NET Core 3.0 (versión preliminar 9), ya no están disponibles.
 
