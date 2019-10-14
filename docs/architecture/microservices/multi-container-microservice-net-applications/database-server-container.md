@@ -2,12 +2,12 @@
 title: Uso de un servidor de bases de datos que se ejecuta como un contenedor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | El uso de un servidor de bases de datos que se ejecuta como un contenedor debería limitarse al desarrollo. Aquí descubrirá por qué.
 ms.date: 10/02/2018
-ms.openlocfilehash: 3e655e26be2d6132577b0494db39d9c2e8b9aacd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039839"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291313"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Uso de un servidor de bases de datos que se ejecuta como un contenedor
 
@@ -32,7 +32,7 @@ El contenedor de SQL Server de la aplicación de ejemplo se configura con el sig
 De forma similar, en lugar de usar `docker-compose`, el siguiente comando `docker run` puede ejecutar ese contenedor:
 
 ```console
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Pero, si va a implementar una aplicación de varios contenedores, como eShopOnContainers, resulta más conveniente usar el comando `docker-compose up` para que implemente todos los contenedores necesarios para la aplicación.
@@ -167,7 +167,7 @@ Redis proporciona una imagen de Docker con Redis. Esa imagen está disponible en
 Puede ejecutar directamente un contenedor Redis de Docker ejecutando el siguiente comando de CLI de Docker en el símbolo del sistema:
 
 ```console
-  docker run --name some-redis -d redis
+docker run --name some-redis -d redis
 ```
 
 La imagen de Redis incluye expose:6379 (el puerto que usa Redis), de manera que la vinculación de contenedor estándar hará que esté automáticamente disponible para los contenedores vinculados.

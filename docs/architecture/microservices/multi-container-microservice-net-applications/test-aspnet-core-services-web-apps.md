@@ -2,12 +2,12 @@
 title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
 ms.date: 10/02/2018
-ms.openlocfilehash: 0a741fca84f456d635e1790d6be1c72e70345a24
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675842"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291287"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -192,7 +192,7 @@ services:
 
 Por tanto, para ejecutar las pruebas de integración y funcionales primero debe ejecutar este comando, desde la carpeta de prueba de la solución:
 
-``` console
+```console
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 

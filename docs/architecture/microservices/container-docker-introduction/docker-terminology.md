@@ -2,16 +2,16 @@
 title: Terminología de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Terminología de Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 700cd9a00c30b0a5fc87f9ffcd63821bb578b0cc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674832"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179404"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
-En esta sección se enumeran los términos y las definiciones que debe conocer antes de profundizar en el uso de Docker. Para obtener más definiciones, lea el amplio [glosario](https://docs.docker.com/glossary/) que Docker proporciona.
+En esta sección se enumeran los términos y las definiciones que debe conocer antes de profundizar en el uso de Docker. Para consultar más definiciones, lea el amplio [glosario](https://docs.docker.com/glossary/) que Docker proporciona.
 
 **Imagen de contenedor**: un paquete con todas las dependencias y la información necesarias para crear un contenedor. Una imagen incluye todas las dependencias (por ejemplo, los marcos), así como la configuración de implementación y ejecución que usará el runtime de un contenedor. Normalmente, una imagen se deriva de varias imágenes base que son capas que se apilan unas encima de otras para formar el sistema de archivos del contenedor. Una vez que se crea una imagen, esta es inmutable.
 
