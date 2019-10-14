@@ -200,7 +200,7 @@
       items:
         - name: Restricción new
           href: keywords/new-constraint.md
-        - name: where
+        - name: donde
           href: keywords/where-generic-type-constraint.md
     - name: Palabras clave de acceso
       items:
@@ -315,6 +315,9 @@
     - name: 'Operador ?:'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
+    - name: Operador ! (permite valores NULL)
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
     - name: '?? Operadores and ??='
       href: operators/null-coalescing-operator.md
       displayName: 'null-coalescing, assignment'
@@ -525,7 +528,7 @@
       href: ../../../_csharplang/spec/basic-concepts.md
     - name: Tipos
       href: ../../../_csharplang/spec/types.md
-    - name: Variables
+    - name: variables
       href: ../../../_csharplang/spec/variables.md
     - name: Conversiones
       href: ../../../_csharplang/spec/conversions.md
@@ -621,7 +624,7 @@
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: Coincidencia de patrones recursiva
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: Miembros de interfaz predeterminados
+    - name: Métodos de interfaz predeterminados
       href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: Flujos asincrónicos
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md

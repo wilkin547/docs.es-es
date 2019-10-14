@@ -120,7 +120,7 @@
       href: standard/numerics.md
     - name: 'Fechas, horas y zonas horarias'
       href: standard/datetime/
-    - name: Eventos
+    - name: Events
       href: standard/events/
     - name: proceso de ejecución administrada
       href: standard/managed-execution-process.md
@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: Escenarios avanzados de la interpolación de cadenas
           href: csharp/tutorials/string-interpolation.md
-        - name: Actualización segura de la interfaz con miembros de la predeterminada
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Actualización segura de la interfaz con métodos de la predeterminada
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Exploración de los índices y rangos
           href: csharp/tutorials/ranges-indexes.md
         - name: Trabajo con tipos de referencias que aceptan valores NULL
@@ -892,7 +892,7 @@
               href: fsharp/language-reference/members/methods.md
             - name: Constructores
               href: fsharp/language-reference/members/constructors.md
-            - name: Eventos
+            - name: Events
               href: fsharp/language-reference/members/events.md
             - name: 'Campos explícitos: palabra clave `val`'
               href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
@@ -1213,7 +1213,7 @@
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: Tipos de errores
           href: visual-basic/programming-guide/language-features/error-types.md
-        - name: Eventos
+        - name: Events
           href: visual-basic/programming-guide/language-features/events/index.md
         - name: Interfaces
           href: visual-basic/programming-guide/language-features/interfaces/index.md

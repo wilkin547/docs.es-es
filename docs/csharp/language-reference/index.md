@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925342"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275803"
 ---
 # <a name="c-reference"></a>Referencia de C#
 En esta sección se proporciona material de referencia sobre palabras clave, operadores, caracteres especiales, directivas de preprocesador, opciones del compilador y errores y advertencias del compilador de C#.  
@@ -55,7 +55,7 @@ Las características que se han implementado en versiones de C# posteriores a 6.
  C# 7.3 es otra versión secundaria que incluye una serie de pequeñas actualizaciones. Puede usar nuevas restricciones en parámetros de tipo genérico. Otros cambios hacen que sea más fácil trabajar con campos `fixed`, incluido el uso de asignaciones [`stackalloc`](./operators/stackalloc.md). Las variables locales declaradas con la palabra clave `ref` puede reasignarse para que hagan referencia a un almacenamiento nuevo. Puede colocar atributos en propiedades implementadas automáticamente que tengan como destino el campo de respaldo generado por el compilador. Se pueden usar variables de expresión en inicializadores. Las tuplas pueden compararse para comprobar si son iguales (o si no lo son). Además, se han realizado algunas mejoras en la resolución de sobrecarga.
   
  [Propuestas de especificación de C# 8.0](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C# 8.0 está disponible con .NET Core 3.0. Entre las características se incluyen tipos de referencia que aceptan valores NULL, coincidencia de patrones recursiva, miembros de interfaz predeterminados, secuencias asincrónicas, intervalos e índices, using basado en patrones y declaraciones using, asignación de uso combinado de NULL y miembros de instancia de solo lectura.
+ C# 8.0 está disponible con .NET Core 3.0. Entre las características se incluyen tipos de referencia que aceptan valores NULL, coincidencia de patrones recursiva, métodos de interfaz predeterminados, secuencias asincrónicas, intervalos e índices, using basado en patrones y declaraciones using, asignación de uso combinado de NULL y miembros de instancia de solo lectura.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
