@@ -2,12 +2,12 @@
 title: Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Elección de las plataformas de proceso de Azure para aplicaciones basadas en contenedores
 ms.date: 05/04/2018
-ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331964"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318665"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 
@@ -16,7 +16,7 @@ Como ha observado después de leer las secciones anteriores, Azure es una nube a
 Como recomendación *predeterminada* , los criterios principales recomendados en esta guía son los siguientes:
 
 - **Aplicación monolítica única:** Elegir Azure App Service
-- **Aplicación de N niveles:** Elija orquestadores como Azure Kubernetes Service (AKS) o App Service si tiene uno o varios servicios de back-end.
+- **Aplicación de N niveles:** Elija orquestadores como Azure Kubernetes Service (AKS) o App Service si tiene uno o varios servicios back-end.
 - **Microservicios** Elección de AKS o Azure Web Apps para contenedores
 - **Funciones sin servidor & controladores de eventos:** Elegir Azure Functions
 - **Lote a gran escala:** Elegir Azure Batch

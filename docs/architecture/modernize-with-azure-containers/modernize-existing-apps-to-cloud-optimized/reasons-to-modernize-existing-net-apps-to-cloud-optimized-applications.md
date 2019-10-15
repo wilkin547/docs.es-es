@@ -2,12 +2,12 @@
 title: Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373933"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318551"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 
@@ -41,7 +41,7 @@ En la lista siguiente se describen los principios principales o las prácticas r
 
 En la figura 4-2 se muestran los pilares opcionales principales de una aplicación optimizada para la nube. Cuanto mayor sea el número de pilares que implemente, readier su aplicación será correcta para satisfacer las expectativas de sus clientes.
 
-![Principales pilares de una aplicación optimizada para la nube](./media/image2.png)
+![Diagrama que nombra los pilares principales de una aplicación optimizada para la nube.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **Figura 4-2.** Principales pilares de una aplicación optimizada para la nube
 

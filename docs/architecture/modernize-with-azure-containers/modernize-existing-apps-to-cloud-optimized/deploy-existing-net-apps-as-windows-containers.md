@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Implementación de aplicaciones .NET existentes como contenedores de Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926491"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318645"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
@@ -51,7 +51,7 @@ En última instancia, las mejoras significativas en la agilidad, la portabilidad
 
 [Docker](https://www.docker.com/) es un [proyecto de código abierto](https://github.com/docker/docker) que automatiza la implementación de aplicaciones como contenedores portátiles y autosuficientes que se pueden ejecutar en la nube o de forma local. Docker es también una [empresa](https://www.docker.com/) que promueve esta tecnología y la hace evolucionar. La compañía trabaja en colaboración con proveedores de nube, Linux y Windows, incluido Microsoft.
 
-![Docker implementa contenedores en todas las capas de la nube híbrida](./media/image6.png)
+![Diagrama que muestra cómo Docker implementa contenedores en la nube híbrida.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **Figura 4-6.** Docker implementa contenedores en todas las capas de la nube híbrida
 
@@ -83,7 +83,7 @@ Para Linux, hay varias distribuciones disponibles y compatibles en imágenes ofi
 
 En la figura 4-7 se muestran las versiones del sistema operativo a las que puede dirigirse, en función de la versión de la aplicación del .NET Framework.
 
-![Sistemas operativos de destino en función de la versión de .NET Framework](./media/image7.png)
+![Diagrama que muestra el sistema operativo al que se destina en función de la versión de .NET Framework.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **Figura 4-7.** Sistemas operativos de destino en función de la versión de .NET Framework
 
@@ -129,7 +129,7 @@ Ejecutar un contenedor en Windows con o sin el aislamiento de Hyper-V es una dec
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Infografía Microsoft y contenedores**
+- @no__t 0Infographic: Microsoft y containers @ no__t-0
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,15 +138,15 @@ Ejecutar un contenedor en Windows con o sin el aislamiento de Hyper-V es una dec
 En las secciones anteriores, se ha explicado Cuáles son las ventajas de los contenedores de Docker, así como los detalles de las imágenes de contenedor específicas para aplicaciones .NET. Toda la información genérica es fundamental para desarrollar o incluir una aplicación en contenedores.
 Sin embargo, al pensar en el entorno de implementación de producción o incluso en entornos de QA y desarrollo y pruebas, Microsoft Azure proporciona una amplia variedad de opciones, un ecosistema de contenedores completo en la nube (que se muestra en el diagrama siguiente). En función de las necesidades específicas de la aplicación, debe elegir uno u otro producto de Azure.
 
-![El ecosistema de contenedores en Azure](./media/image7.5.png)
+![Diagrama del ecosistema de contenedor en Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **Ilustración 4:7.5.** El ecosistema de contenedores en Azure
 
 Desde el ecosistema de contenedores de Azure, los siguientes productos admiten contenedores que se consideran infraestructura:
 
 - **Azure Container Instances (ACI)**
-- **Virtual Machines de Azure** (Con compatibilidad del contenedor)
-- **Virtual Machine Scale sets de Azure** (Con compatibilidad del contenedor)
+- **Azure virtual machines** (con soporte de contenedor)
+- **Azure Virtual Machine Scale sets** (con soporte de contenedor)
 
 Desde estos tres, ACI ofrece una gran ventaja, que es el hecho de que no es necesario mantener el sistema operativo subyacente, no es necesario actualizar o revisar, etc. sin embargo, el ACI todavía se coloca en el nivel de infraestructura, como se explica mejor en las próximas secciones de este libro.
 
