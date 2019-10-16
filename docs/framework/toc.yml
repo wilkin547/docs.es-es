@@ -1,0 +1,66 @@
+- name: Guía de .NET Framework
+  href: index.md
+- name: Novedades
+  href: whats-new/
+- name: Primeros pasos
+  href: get-started/
+- name: Guía de instalación
+  href: install/
+- name: Guía de migración
+  href: migration-guide/
+- name: Guía de desarrollo
+  href: development-guide.md
+  items:
+    - name: Dominios de aplicación y ensamblados
+      href: app-domains/
+    - name: Recursos de aplicaciones de escritorio
+      href: resources/
+    - name: Accesibilidad
+      href: ui-automation/
+    - name: Datos y modelado
+      href: data/
+    - name: Aplicaciones cliente
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: Aplicaciones orientadas a servicios con WCF
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Aplicaciones de servicios de Windows
+      href: windows-services/
+    - name: Aplicaciones de 64 bits
+      href: 64-bit-apps.md
+    - name: Aplicaciones web con ASP.NET
+      href: develop-web-apps-with-aspnet.md
+    - name: Programación para redes en .NET Framework
+      href: network-programming/
+    - name: Configurar aplicaciones
+      href: configure-apps/
+    - name: Compilar aplicaciones con .NET Native
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 'Depurar, trazar y generar perfiles'
+      href: debug-trace-profile/
+    - name: Implementación
+      href: deployment/
+    - name: Rendimiento
+      href: performance/
+    - name: Programación dinámica
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: Interoperar con código no administrado
+      href: interop/
+    - name: Referencia de la API no administrada
+      href: unmanaged-api/
+    - name: Servicios XAML
+      href: xaml-services/
+- name: Herramientas
+  href: tools/
+- name: Bibliotecas de clases y API adicionales
+  href: additional-apis/

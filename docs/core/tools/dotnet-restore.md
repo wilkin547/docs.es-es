@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117605"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275753"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -137,7 +137,7 @@ Especifica un origen de paquetes de NuGet que se usará durante la operación de
 
 `--verbosity <LEVEL>`
 
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. El valor predeterminado es `minimal`.
 
 `--interactive`
 
@@ -183,7 +183,7 @@ Especifica un origen de paquetes de NuGet que se usará durante la operación de
 
 `--verbosity <LEVEL>`
 
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`. De manera predeterminada, es `minimal`.
 
 ---
 
@@ -205,6 +205,6 @@ Restaurar las dependencias y las herramientas para el proyecto en el directorio 
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-Restaurar las dependencias y herramientas para el proyecto en el directorio actual y mostrar únicamente la salida mínima:
+Restauración de dependencias y herramientas para el proyecto en el directorio actual que muestra una salida detallada:
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

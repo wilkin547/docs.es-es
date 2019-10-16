@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698680"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290942"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -51,11 +51,11 @@ En el caso de los operandos de tipo [entero](../builtin-types/integral-numeric-t
 
 ## <a name="logical-negation-operator-"></a>Operador de negación lógico !
 
-El operador `!` calcula la negación lógica de su operando. Es decir, genera `true`, si el operando se evalúa como `false`, y `false`, si el operando se evalúa como `true`:
+El operador `!` de prefijo unario calcula la negación lógica de su operando. Es decir, genera `true`, si el operando se evalúa como `false`, y `false`, si el operando se evalúa como `true`:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-A partir de C# 8.0, el operador `!` de postfijo unario es un operador de limitación de advertencias de valores NULL. En un contexto de anotación que admite un valor NULL, se usa para declarar que la expresión `x` de un tipo de referencia que acepta valores NULL no es NULL: `x!`. Para más información, consulte [Tipos de referencia que admiten un valor NULL](../../nullable-references.md).
+A partir de C# 8.0, el operador `!` de postfijo unario es un [operador que permite un valor NULL](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Operador AND lógico &amp;
 
@@ -120,14 +120,14 @@ En el caso de los operandos `bool?`, los operadores `&` y `|` admiten la lógica
 |x|y|x e y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|false|false|true|  
-|true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|nulo|  
-|null|true|null|true|  
-|null|false|false|nulo|  
-|null|null|null|null|  
+|true|False|false|true|  
+|true|nulo|nulo|true|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|nulo|False|nulo|  
+|nulo|true|nulo|true|  
+|nulo|False|False|nulo|  
+|nulo|nulo|nulo|nulo|  
 
 El comportamiento de esos operadores difiere del comportamiento típico del operador con tipos de valor que aceptan valores NULL. Por lo general, un operador que se define para los operandos de un tipo de valor también se puede usar con los operandos del tipo de valor que acepta valores NULL correspondientes. Este tipo de operador genera `null` si alguno de sus operandos es `null`. Sin embargo, los operadores `&` y `|` pueden generar un valor no NULL incluso si uno de los operandos es `null`. Para más información sobre el comportamiento de los operandos con tipos de valor que aceptan valores NULL, consulte la sección [Operadores](../../programming-guide/nullable-types/using-nullable-types.md#operators) del artículo [Uso de tipos de valor que admiten un valor NULL](../../programming-guide/nullable-types/using-nullable-types.md).
 
@@ -145,7 +145,7 @@ Para un operador binario `op`, una expresión de asignación compuesta con el fo
 x op= y
 ```
 
-equivale a
+es equivalente a
 
 ```csharp
 x = x op y

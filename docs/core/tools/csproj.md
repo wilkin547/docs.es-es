@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216206"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291237"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -270,7 +270,7 @@ Esta es la lista completa de [identificadores de licencia SPDX](https://spdx.org
 
 La sintaxis exacta de las expresiones de licencia se describe a continuación en [ABNF](https://tools.ietf.org/html/rfc5234).
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -347,6 +347,12 @@ Especifica la dirección URL del repositorio donde reside el código fuente del 
 ### <a name="repositorytype"></a>RepositoryType
 
 Especifica el tipo del repositorio. El valor predeterminado es “git”.
+
+### <a name="repositorybranch"></a>RepositoryBranch
+Especifica el nombre de la rama de origen en el repositorio. Cuando el proyecto se empaqueta en un paquete NuGet, se agrega a los metadatos del paquete.
+
+### <a name="repositorycommit"></a>RepositoryCommit
+Confirmación o conjunto de cambios opcionales de repositorio para indicar en qué origen se ha compilado el paquete. `RepositoryUrl` también se debe especificar para que esta propiedad se incluya. Cuando el proyecto se empaqueta en un paquete NuGet, esta confirmación o conjunto de cambios se agrega a los metadatos del paquete.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

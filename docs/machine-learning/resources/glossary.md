@@ -4,12 +4,12 @@ description: Un glosario de los términos importantes sobre aprendizaje automát
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929265"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180185"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -136,7 +136,7 @@ En [clasificación](#classification), la recuperación de una clase es el númer
  La regularización penaliza a un modelo lineal por ser demasiado complicado. Hay dos tipos de regularización:
 
 - La regularización $L_1$ pone a cero las ponderaciones por características insignificantes. El tamaño del modelo guardado puede ser menor después de este tipo de regularización.
-- La regularización $L_2$ minimiza el intervalo de ponderación por características insignificantes; esto es un proceso más general y menos sensible a los valores atípicos.
+- La regularización $L_2$ minimiza el rango de ponderación para las características insignificantes. Este es un proceso más general y menos sensible a valores atípicos.
 
 ## <a name="regression"></a>Regresión
 

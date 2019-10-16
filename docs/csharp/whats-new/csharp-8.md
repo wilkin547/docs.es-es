@@ -2,19 +2,19 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736698"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275772"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
 C# 8.0 agrega las siguientes características y mejoras al lenguaje C#:
 
 - [Miembros de solo lectura](#readonly-members)
-- [Miembros de interfaz predeterminados](#default-interface-members)
+- [Métodos de interfaz predeterminados](#default-interface-methods)
 - [Mejoras de coincidencia de patrones](#more-patterns-in-more-places):
   - [Expresiones switch](#switch-expressions)
   - [Patrones de propiedades](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Esta característica permite especificar la intención del diseño para que el compilador pueda aplicarla, y realizar optimizaciones basadas en dicha intención.
 
-## <a name="default-interface-members"></a>Miembros de interfaz predeterminados
+## <a name="default-interface-methods"></a>Métodos de interfaz predeterminados
 
-Ahora puede agregar miembros a interfaces y proporcionar una implementación de esos miembros. Esta característica del lenguaje permite que los creadores de API agreguen métodos a una interfaz en versiones posteriores sin interrumpir la compatibilidad binaria o de origen con implementaciones existentes de dicha interfaz. Las implementaciones existentes *heredan* la implementación predeterminada. Esta característica también permite que C# interopere con las API que tienen como destino Android o Swift, que admiten características similares. Los miembros de interfaz predeterminados también permiten escenarios similares a una característica del lenguaje de "rasgos".
+Ahora puede agregar miembros a interfaces y proporcionar una implementación de esos miembros. Esta característica del lenguaje permite que los creadores de API agreguen métodos a una interfaz en versiones posteriores sin interrumpir la compatibilidad binaria o de origen con implementaciones existentes de dicha interfaz. Las implementaciones existentes *heredan* la implementación predeterminada. Esta característica también permite que C# interopere con las API que tienen como destino Android o Swift, que admiten características similares. Los métodos de interfaz predeterminados también permiten escenarios similares a una característica del lenguaje de "rasgos".
 
-Los miembros de interfaz predeterminados afectan a muchos escenarios y elementos del lenguaje. Nuestro primer tutorial abarca la [actualización de una interfaz con implementaciones predeterminadas](../tutorials/default-interface-members-versions.md). Otros tutoriales y actualizaciones de referencia se incorporarán a tiempo en la versión general.
+Los métodos de interfaz predeterminados afectan a muchos escenarios y elementos del lenguaje. Nuestro primer tutorial abarca la [actualización de una interfaz con implementaciones predeterminadas](../tutorials/default-interface-methods-versions.md). Otros tutoriales y actualizaciones de referencia se incorporarán a tiempo en la versión general.
 
 ## <a name="more-patterns-in-more-places"></a>Más patrones en más lugares
 

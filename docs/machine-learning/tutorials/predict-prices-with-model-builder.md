@@ -3,19 +3,19 @@ title: 'Tutorial: Predicción de precios mediante regresión con el Generador de
 description: En este tutorial se muestra cómo compilar un modelo de regresión con el Generador de modelos de ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332593"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180282"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Predicción de precios mediante regresión con el Generador de modelos
 
-Obtenga información sobre cómo usar el Generador de modelos de ML.NET para crear un modelo de regresión para predecir precios.  La aplicación de consola de .NET que desarrolla en este tutorial predice las tarifas de taxi en función de los datos históricos de tarifas de taxi de Nueva York.
+Obtenga información sobre cómo usar el Generador de modelos de ML.NET con el fin de compilar un modelo de regresión para predecir precios.  La aplicación de consola de .NET que desarrolla en este tutorial predice las tarifas de taxi en función de los datos históricos de tarifas de taxi de Nueva York.
 
 La plantilla de predicción de precios del Generador de modelos puede usarse para cualquier escenario que requiera la predicción de un valor numérico. Algunos escenarios de ejemplo son: predicción del precio de la vivienda, predicción de la demanda y previsión de ventas.
 

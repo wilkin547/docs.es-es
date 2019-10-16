@@ -2,14 +2,14 @@
 title: Empaquetado de distribución de .NET Core
 description: Obtenga información sobre cómo empaquetar, nombrar y versionar .NET Core para su distribución.
 author: tmds
-ms.date: 03/02/2018
+ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394159"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250143"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 
@@ -23,37 +23,37 @@ Como .NET Core está disponible cada vez en más plataformas, resulta útil apre
 Cuando se instala, .NET Core consta de varios componentes que están dispuestos tal y como se indica a continuación en el sistema de archivos:
 
 ```
-.
+{dotnet_root}                                     (*)
 ├── dotnet                       (1)
 ├── LICENSE.txt                  (8)
 ├── ThirdPartyNotices.txt        (8)
-├── host
-│   └── fxr
+├── host                                          (*)
+│   └── fxr                                       (*)
 │       └── <fxr version>        (2)
-├── sdk
+├── sdk                                           (*)
 │   ├── <sdk version>            (3)
-│   └── NuGetFallbackFolder      (4)
-├── packs
-│   ├── Microsoft.AspNetCore.App.Ref
+│   └── NuGetFallbackFolder      (4)              (*)
+├── packs                                         (*)
+│   ├── Microsoft.AspNetCore.App.Ref              (*)
 │   │   └── <aspnetcore ref version>     (11)
-│   ├── Microsoft.NETCore.App.Ref
+│   ├── Microsoft.NETCore.App.Ref                 (*)
 │   │   └── <netcore ref version>        (12)
-│   ├── Microsoft.NETCore.App.Host.<rid>
+│   ├── Microsoft.NETCore.App.Host.<rid>          (*)
 │   │   └── <apphost version>            (13)
-│   ├── Microsoft.WindowsDesktop.App.Ref
+│   ├── Microsoft.WindowsDesktop.App.Ref          (*)
 │   │   └── <desktop ref version>        (14)
-│   └── NETStandard.Library.Ref
+│   └── NETStandard.Library.Ref                   (*)
 │       └── <netstandard version>        (15)
-├── shared
-│   ├── Microsoft.NETCore.App
+├── shared                                        (*)
+│   ├── Microsoft.NETCore.App                     (*)
 │   │   └── <runtime version>     (5)
-│   ├── Microsoft.AspNetCore.App
+│   ├── Microsoft.AspNetCore.App                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   ├── Microsoft.AspNetCore.All
+│   ├── Microsoft.AspNetCore.All                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   └── Microsoft.WindowsDesktop.App
+│   └── Microsoft.WindowsDesktop.App              (*)
 │       └── <desktop app version> (7)
-└── templates
+└── templates                                     (*)
 │   └── <templates version>      (17)
 /
 ├── etc/dotnet
@@ -68,19 +68,19 @@ Cuando se instala, .NET Core consta de varios componentes que están dispuestos
 
 Aunque hay un único host, la mayoría del resto de componentes está en directorios con versión (2,3,5,6). Esto significa que puede haber varias versiones en el sistema ya que se instalan en paralelo.
 
-- (2) **host/fxr/\<versión de fxr>**: contiene la lógica de resolución del marco que usa el host. El host usa la versión más reciente de hostfxr que está instalada. Hostfxr es responsable de seleccionar el entorno de ejecución adecuado cuando se ejecuta una aplicación de .NET Core. Por ejemplo, una aplicación compilada para .NET Core 2.0.0 utiliza el runtime de 2.0.5 cuando esté disponible. De forma similar, hostfxr selecciona el SDK adecuado durante el desarrollo.
+- (2) **host/fxr/\<versión de fxr>** : contiene la lógica de resolución del marco que usa el host. El host usa la versión más reciente de hostfxr que está instalada. Hostfxr es responsable de seleccionar el entorno de ejecución adecuado cuando se ejecuta una aplicación de .NET Core. Por ejemplo, una aplicación compilada para .NET Core 2.0.0 utiliza el runtime de 2.0.5 cuando esté disponible. De forma similar, hostfxr selecciona el SDK adecuado durante el desarrollo.
 
-- (3) **sdk/\<versión sdk>**: el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
+- (3) **sdk/\<versión sdk>** : el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
 
 - (4) **sdk/NuGetFallbackFolder**: contiene una caché de paquetes NuGet que un SDK usa durante la operación de restauración, como cuando se ejecuta `dotnet restore` o `dotnet build /t:Restore`. Esta carpeta solo se usa antes de .NET Core 3.0. No se puede compilar desde el origen, porque contiene recursos binarios compilados previamente desde `nuget.org`.
 
 La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjunto de bibliotecas en una ubicación central para que las puedan usar diferentes aplicaciones.
 
-- (5) **shared/Microsoft.NETCore.App/\<versión del entorno de ejecución>**: este marco contiene el entorno de ejecución de .NET Core y compatibilidad con las bibliotecas administradas.
+- (5) **shared/Microsoft.NETCore.App/\<versión del entorno de ejecución>** : este marco contiene el entorno de ejecución de .NET Core y compatibilidad con las bibliotecas administradas.
 
-- (6) **shared/Microsoft.AspNetCore.{App,All}/\<versión de aspnetcore>**: contiene las bibliotecas de ASP.NET Core. Las bibliotecas de `Microsoft.AspNetCore.App` se desarrollan y se admiten como parte del proyecto de .NET Core. Las bibliotecas de `Microsoft.AspNetCore.All` son un superconjunto que también contiene bibliotecas de terceros.
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<versión de aspnetcore>** : contiene las bibliotecas de ASP.NET Core. Las bibliotecas de `Microsoft.AspNetCore.App` se desarrollan y se admiten como parte del proyecto de .NET Core. Las bibliotecas de `Microsoft.AspNetCore.All` son un superconjunto que también contiene bibliotecas de terceros.
 
-- (7) **shared/Microsoft.Desktop.App/\<versión de aplicación de escritorio>**: contiene las bibliotecas de escritorio de Windows. Esto no se incluye en plataformas que no son de Windows.
+- (7) **shared/Microsoft.Desktop.App/\<versión de aplicación de escritorio>** : contiene las bibliotecas de escritorio de Windows. Esto no se incluye en plataformas que no son de Windows.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**: son las licencias .NET Core y de bibliotecas de terceros que se usan en .NET Core.
 
@@ -88,15 +88,17 @@ La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjun
 
 - (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref**: describe la API de una versión `x.y` de .NET Core y de ASP.NET Core respectivamente. Estos paquetes se utilizan al compilar para esas versiones de destino.
 
-- (13) **Microsoft.NETCore.App.Host.\<rid>**: contiene un binario nativo para la plataforma `rid`. Este binario es una plantilla cuando se compila una aplicación de .NET Core en un archivo binario nativo para esa plataforma.
+- (13) **Microsoft.NETCore.App.Host.\<rid>** : contiene un binario nativo para la plataforma `rid`. Este binario es una plantilla cuando se compila una aplicación de .NET Core en un archivo binario nativo para esa plataforma.
 
 - (14) **Microsoft.WindowsDesktop.App.Ref**: describe la API de la versión `x.y` de las aplicaciones de escritorio de Windows. Estos archivos se usan al compilar para ese destino. Esto no se proporciona en plataformas que no son de Windows.
 
 - (15) **NETStandard.Library.Ref**: describe la API `x.y` de netstandard. Estos archivos se usan al compilar para ese destino.
 
-- (16) **/etc/dotnet/install_location**: es un archivo que contiene la ruta de acceso completa a la carpeta que contiene el binario del host `dotnet`. La ruta de acceso puede terminar con una nueva línea. No es necesario agregar este archivo cuando la raíz es `/usr/share/dotnet`.
+- (16) **/etc/dotnet/install_location**: es un archivo que contiene la ruta de acceso completa a `{dotnet_root}`. La ruta de acceso puede terminar con una nueva línea. No es necesario agregar este archivo cuando la raíz es `/usr/share/dotnet`.
 
 - (17) **templates**: contiene las plantillas que usa el SDK. Por ejemplo, `dotnet new` busca plantillas de proyecto aquí.
+
+Varios paquetes usan las carpetas marcadas con `(*)`. Algunos formatos de paquete (por ejemplo, `rpm`) requieren un tratamiento especial de esas carpetas. El mantenedor de paquetes debe encargarse de esto.
 
 ## <a name="recommended-packages"></a>Paquetes recomendados
 
@@ -113,7 +115,7 @@ A continuación se enumeran los paquetes recomendados:
   - **Versión:** \<versión de runtime>
   - **Ejemplo:** dotnet-sdk-2.1
   - **Contiene:** (3),(4)
-  - **Dependencias:** `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
+  - **Dependencias:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]` y `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`: instala un runtime concreto de ASP.NET Core.
   - **Versión:** \<versión aspnetcore de runtime>
@@ -121,7 +123,7 @@ A continuación se enumeran los paquetes recomendados:
   - **Contiene:**  (6)
   - **Dependencias:** `dotnet-runtime-[major].[minor]`
 
-- `dotnet-runtime-deps-[major].[minor]` _(Opcional)_: instala las dependencias para ejecutar aplicaciones independientes.
+- `dotnet-runtime-deps-[major].[minor]` _(Opcional)_ : instala las dependencias para ejecutar aplicaciones independientes.
   - **Versión:** \<versión de runtime>
   - **Ejemplo:** dotnet-runtime-deps-2.1
   - **Dependencias:** _dependencias concretas de distribución_
@@ -130,13 +132,13 @@ A continuación se enumeran los paquetes recomendados:
   - **Versión:** \<versión de runtime>
   - **Ejemplo:** dotnet-runtime-2.1
   - **Contiene:** (5)
-  - **Dependencias:** `dotnet-hostfxr:<runtime version>+`, `dotnet-runtime-deps-[major].[minor]`
+  - **Dependencias:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
-- `dotnet-hostfxr`: dependencia.
+- `dotnet-hostfxr-[major].[minor]`: dependencia.
   - **Versión:** \<versión de runtime>
-  - **Ejemplo:** dotnet-hostfxr
+  - **Ejemplo:** dotnet-hostfxr-3.0
   - **Contiene:** (2)
-  - **Dependencias:** `host:<runtime version>+`
+  - **Dependencias:** `dotnet-host`
 
 - `dotnet-host`: dependencia.
   - **Versión:** \<versión de runtime>
@@ -155,7 +157,7 @@ A continuación se enumeran los paquetes recomendados:
   - **Versión:** \<versión aspnetcore de runtime>
   - **Contiene:** (11)
 
-- `netstandard-targeting-pack-[major].[minor]`: permite establecer como destino una versión de netstandard.
+- `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`: permite establecer como destino una versión de netstandard.
   - **Versión:** \<versión de sdk>
   - **Contiene:** (15)
 
@@ -165,7 +167,7 @@ A continuación se enumeran los paquetes recomendados:
 
 `dotnet-runtime-deps-[major].[minor]` requiere el conocimiento de las _dependencias concretas de distribución_. Dado que el sistema de compilación de distribución puede derivar esto de forma automática, el paquete es opcional, en cuyo caso estas dependencias se agregan directamente al paquete `dotnet-runtime-[major].[minor]`.
 
-Cuando el contenido del paquete se encuentra en una carpeta con versión, el nombre del paquete `[major].[minor]` coincide con el nombre de la carpeta con versión. En todos los paquetes, excepto en `netstandard-targeting-pack-[major].[minor]`, esto también coincide con la versión de .NET Core.
+Cuando el contenido del paquete se encuentra en una carpeta con versión, el nombre del paquete `[major].[minor]` coincide con el nombre de la carpeta con versión. En todos los paquetes, excepto en `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, esto también coincide con la versión de .NET Core.
 
 Las dependencias entre paquetes deben usar un requisito de versión _igual o mayor que_. Por ejemplo, `dotnet-sdk-2.2:2.2.401` requiere `aspnetcore-runtime-2.2 >= 2.2.6`. Esto hace posible que el usuario actualice su instalación mediante un paquete raíz (por ejemplo, `dnf update dotnet-sdk-2.2`).
 

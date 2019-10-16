@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216259"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250159"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -34,7 +34,7 @@ El primer paso es crear la aplicación:
     dotnet new console -o AppWithPlugin
     ```
 
-2. Para facilitar la compilación del proyecto, cree un archivo de solución de Visual Studio. Ejecute el siguiente comando en la misma carpeta:
+2. Para facilitar la compilación del proyecto, cree un archivo de solución de Visual Studio en la misma carpeta. Ejecute el siguiente comando:
 
     ```dotnetcli
     dotnet new sln

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear y depurar su primera aplicac
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849454"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002326"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -34,9 +34,10 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
       ![Abrir carpeta de Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Inicializar un proyecto de C#:
+
     - Abra el terminal integrado de Visual Studio Code al seleccionar **Ver** > **Terminal integrado** en el menú principal.
     - En la ventana de terminal, escriba `dotnet new console`.
-    - Este comando crea un archivo `Program.cs` en la carpeta con un programa "Hello World" sencillo ya escrito, junto con un archivo de proyecto de C# denominado `HelloWorld.csproj`.
+    - Este comando crea un archivo *Program.cs* en la carpeta con un programa "Hola mundo" sencillo ya escrito, junto con un archivo de proyecto de C# denominado *HelloWorld.csproj*.
 
       ![El nuevo comando de dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
@@ -70,7 +71,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
     ![Apertura de la pestaña Depurar en Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Busque la flecha verde en la parte superior del panel. Asegúrese de que `.NET Core Launch (console)` está seleccionado en el menú desplegable que está junto a la flecha.
+4. Busque la flecha verde en la parte superior del panel. Asegúrese de que **.NET Core Launch (consola)** está seleccionado en el menú desplegable que está junto a la flecha.
 
     ![Selección de .NET Core en Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
@@ -78,7 +79,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
     ![Establecer un punto de interrupción](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. Para comenzar a depurar, seleccione <kbd>F5</kbd> o la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
+6. Para empezar a depurar, presione <kbd>F5</kbd> o seleccione la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
     - Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
 
 7. Seleccione la flecha azul de la parte superior para continuar la depuración o seleccione el cuadrado rojo de la parte superior para detenerla.
@@ -91,8 +92,8 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 ## <a name="add-a-class"></a>Agregar una clase
 
 1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de Visual Studio Code y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
-2. Asigne un nombre al archivo `MyClass.cs`. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
-3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo `Program.cs`.
+2. Asigne un nombre al archivo *MyClass.cs*. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
+3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo *Program.cs*:
 
     ``` csharp
     using System;
@@ -109,7 +110,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
     }
     ```
 
-4. Llame a la nueva clase con el método principal de `Program.cs` agregando el código siguiente.
+4. Llame a la nueva clase con el método principal de *Program.cs* agregando el código siguiente:
 
     ```csharp
     using System;
@@ -120,7 +121,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
         {
             static void Main(string[] args)
             {
-                MyClass c1 = new MyClass();
+                var c1 = new MyClass();
                 Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
             }
         }
@@ -138,7 +139,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Me faltan los recursos necesarios para compilar y depurar C# en Visual Studio Code. Mi depurador dice "Sin configuración".
 
-La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando si abre la paleta de comandos (**Vista > Paleta de comandos**) y escribe ">.NET: Generar recursos para la compilación y depuración". Al seleccionar esta opción se generan los archivos de configuración .vscode, launch.json y tasks.json que necesita.
+La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando si abre la paleta de comandos (**Vista > Paleta de comandos**) y escribe ">.NET: Generar recursos para la compilación y depuración". Al seleccionar esta opción se generan los archivos de configuración *.vscode*, *launch.json* y *tasks.json* que necesita.
 
 ## <a name="see-also"></a>Vea también
 

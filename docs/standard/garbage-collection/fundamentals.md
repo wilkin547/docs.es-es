@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895276"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180193"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 
@@ -176,7 +176,7 @@ Antes de que iniciarse una recolección de elementos no utilizados, todos los su
 
 En la ilustración siguiente se muestra un subproceso que desencadena una recolección de elementos no utilizados, lo que provoca la suspensión de los demás subprocesos.
 
-![Cuando un subproceso activa una recolección](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") Subproceso que desencadena una recolección de elementos no utilizados
+![Cuando un subproceso desencadena una Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/media/gc-triggered.png "Cuando un subproceso desencadena una Recolección de elementos no utilizados")
 
 [Volver al principio](#top)
 
@@ -208,7 +208,7 @@ El recolector de elementos no utilizados se ajusta automáticamente y puede func
 
 En las siguientes ilustraciones se muestran los subprocesos dedicados que realizan la recolección de elementos no utilizados en un servidor.
 
-![Subprocesos de recolección de elementos no utilizados del servidor](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Recolección de elementos no utilizados del servidor
+![Subprocesos de recolección de elementos no utilizados del servidor](../../../docs/standard/garbage-collection/media/gc-server.png "Subprocesos de recolección de elementos no utilizados del servidor")
 
 ### <a name="configuring-garbage-collection"></a>Configurar la recolección de elementos no utilizados
 
@@ -262,7 +262,7 @@ La recolección simultánea de elementos no utilizados tiene un espacio de traba
 
 En la siguiente se muestra la recolección de elementos no utilizados simultánea realizada en un subproceso dedicado independiente.
 
-![Subprocesos de recolección simultánea de elementos no utilizados](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") Recolección simultánea de elementos no utilizados
+![Subprocesos simultáneos de recolección de elementos no utilizados](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Subprocesos simultáneos de recolección de elementos no utilizados")
 
 [Volver al principio](#top)
 
@@ -283,7 +283,7 @@ La recolección de elementos no utilizados en segundo plano quita las restriccio
 
 En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en una estación de trabajo:
 
-![Diagrama que muestra la recolección de elementos no utilizados de estación de trabajo en segundo plano.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Diagrama que muestra la recolección de elementos no utilizados de la estación de trabajo en segundo plano.](./media/fundamentals/background-workstation-garbage-collection.png "Diagrama que muestra la recolección de elementos no utilizados de la estación de trabajo en segundo plano.")
 
 [Volver al principio](#top)
 
@@ -295,7 +295,7 @@ A partir de .NET Framework 4.5, la recolección de elementos no utilizados de se
 
 En la siguiente ilustración se muestra la recolección de elementos no utilizados en segundo plano realizada en un subproceso dedicado independiente en un servidor:
 
-![Diagrama que muestra la recolección de elementos no utilizados de servidor en segundo plano.](./media/fundamentals/background-server-garbage-collection.png)
+![Diagrama que muestra la recolección de elementos no utilizados del servidor en segundo plano.](./media/fundamentals/background-server-garbage-collection.png "Diagrama que muestra la recolección de elementos no utilizados del servidor en segundo plano.")
 
 ## <a name="see-also"></a>Vea también
 
