@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para examinar el contexto de seguridad
+title: 'Cómo: Examinar el contexto de seguridad'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: e67ac9c452337b6f490d99ea4430ec2a02b952a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625796"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320988"
 ---
-# <a name="how-to-examine-the-security-context"></a>Procedimiento para examinar el contexto de seguridad
-Al programar servicios Windows Communication Foundation (WCF), el contexto de seguridad de servicio le permite determinar los detalles sobre las credenciales de cliente y las notificaciones que se usa para autenticarse con el servicio. Esto se hace utilizando las propiedades de la clase <xref:System.ServiceModel.ServiceSecurityContext>.  
+# <a name="how-to-examine-the-security-context"></a>Cómo: Examinar el contexto de seguridad
+Al programar servicios Windows Communication Foundation (WCF), el contexto de seguridad del servicio le permite determinar los detalles sobre las credenciales del cliente y las notificaciones que se usan para autenticarse con el servicio. Esto se hace utilizando las propiedades de la clase <xref:System.ServiceModel.ServiceSecurityContext>.  
   
  Por ejemplo, puede recuperar la identidad del cliente actual utilizando la propiedad <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> o <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>. Para determinar si el cliente es anónimo, utilice la propiedad <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>.  
   
@@ -56,5 +56,5 @@ Al programar servicios Windows Communication Foundation (WCF), el contexto de se
   
 ## <a name="see-also"></a>Vea también
 
-- [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
-- [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Seguridad de servicios](securing-services.md)
+- [Identidad del servicio y autenticación](./feature-details/service-identity-and-authentication.md)

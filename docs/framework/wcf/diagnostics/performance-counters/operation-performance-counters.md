@@ -2,12 +2,12 @@
 title: Contadores del rendimiento de las operaciones
 ms.date: 03/30/2017
 ms.assetid: 333a51e0-f56e-4e1a-b359-5c91ff390568
-ms.openlocfilehash: 31b0f92ae3477bd3c1de8c348a60e5c64d7c53cc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 59c75dacb2a01f1b85d67d5cc1651dbc55b6aa8e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855679"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320174"
 ---
 # <a name="operation-performance-counters"></a>Contadores del rendimiento de las operaciones
 Los contadores de rendimiento de las operaciones se encuentran bajo el objeto de rendimiento `ServiceModelOperation 4.0.0.0` al visualizarlo con el monitor de rendimiento (Perfmon.exe). Cada operación posee una instancia individual. Es decir, si un contrato determinado posee 10 operaciones, se asociarán 10 instancias de contador de operación a ese contrato. Los nombres de las instancias de objeto se establecen utilizando el siguiente patrón:  
@@ -21,4 +21,4 @@ Los contadores de rendimiento de las operaciones se encuentran bajo el objeto de
   
 ## <a name="see-also"></a>Vea también
 
-- [Contadores de rendimiento](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+- [Contadores de rendimiento](index.md)

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Mostrar todos los nodos en un árbol (Visual Basic)
+title: 'Cómo: Mostrar todos los nodos de un árbol (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c736f7e3a92e8aa92ac91ef4c32141128eff5db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021627"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320549"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Procedimiento Mostrar todos los nodos en un árbol (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Cómo: Mostrar todos los nodos de un árbol (Visual Basic)
 A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar útil cuando se aprende exactamente cómo afecta al árbol un método o propiedad. Un enfoque para enumerar todos los nodos en formato de texto consiste en generar una expresión XPath que identifique de forma exacta y específica cualquier nodo del árbol.  
   
  No resulta particularmente útil ejecutar expresiones XPath mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Las expresiones XPath tienen un rendimiento menor que las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] son mucho más eficaces. No obstante, como forma de identificar nodos en el árbol XML, XPath funciona bien.  
@@ -39,7 +39,7 @@ A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar úti
   
  A continuación se muestra la lista de nodos del árbol XML anterior, expresados como expresiones XPath:  
   
-```  
+```console
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -265,4 +265,4 @@ End Module
   
 ## <a name="see-also"></a>Vea también
 
-- [Consulta técnicas avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

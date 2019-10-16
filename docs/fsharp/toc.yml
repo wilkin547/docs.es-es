@@ -1,0 +1,272 @@
+- name: 'Guía de F#'
+  href: index.md
+- name: Primeros pasos
+  href: get-started/index.md
+  items:
+    - name: 'Instalación de F#'
+      href: get-started/install-fsharp.md
+    - name: 'Introducción a F# en Visual Studio'
+      href: get-started/get-started-visual-studio.md
+    - name: 'Introducción a F# en Visual Studio para Mac'
+      href: get-started/get-started-with-visual-studio-for-mac.md
+    - name: 'Introducción a F# en Visual Studio Code y Ionide'
+      href: get-started/get-started-vscode.md
+    - name: 'Introducción a F# con la CLI de .NET Core'
+      href: get-started/get-started-command-line.md
+- name: '¿Qué es F#?'
+  href: what-is-fsharp.md
+- name: 'Paseo por F#'
+  href: tour.md
+- name: Tutoriales
+  items:
+    - name: Introducción a la programación funcional
+      href: introduction-to-functional-programming/index.md
+      items:
+        - name: Funciones de primera clase
+          href: introduction-to-functional-programming/first-class-functions.md
+    - name: Programación asincrónica y simultánea
+      items:
+        - name: Programación asincrónica
+          href: tutorials/asynchronous-and-concurrent-programming/async.md
+    - name: Proveedores de tipos
+      href: tutorials/type-providers/index.md
+      items:
+        - name: Creación de un proveedor de tipos
+          href: tutorials/type-providers/creating-a-type-provider.md
+        - name: Seguridad de los proveedores de tipos
+          href: tutorials/type-providers/type-provider-security.md
+        - name: Solución de problemas en proveedores de tipos
+          href: tutorials/type-providers/troubleshooting-type-providers.md
+    - name: 'F# Interactive'
+      href: tutorials/fsharp-interactive/index.md
+- name: 'Referencia del lenguaje F#'
+  href: language-reference/index.md
+  items:
+    - name: Referencia de palabras clave
+      href: language-reference/keyword-reference.md
+    - name: Referencia de símbolos y operadores
+      href: language-reference/symbol-and-operator-reference/index.md
+      items:
+        - name: Operadores aritméticos
+          href: language-reference/symbol-and-operator-reference/arithmetic-operators.md
+        - name: Operadores booleanos
+          href: language-reference/symbol-and-operator-reference/boolean-operators.md
+        - name: Operadores bit a bit
+          href: language-reference/symbol-and-operator-reference/bitwise-operators.md
+        - name: Operadores que aceptan valores NULL
+          href: language-reference/symbol-and-operator-reference/nullable-operators.md
+    - name: Funciones
+      href: language-reference/functions/index.md
+      items:
+        - name: Enlaces let
+          href: language-reference/functions/let-bindings.md
+        - name: do (Enlaces)
+          href: language-reference/functions/do-bindings.md
+        - name: 'Expresiones lambda: palabra clave fun'
+          href: language-reference/functions/lambda-expressions-the-fun-keyword.md
+        - name: 'Funciones recursivas: palabra clave rev'
+          href: language-reference/functions/recursive-functions-the-rec-keyword.md
+        - name: Punto de entrada
+          href: language-reference/functions/entry-point.md
+        - name: Funciones externas
+          href: language-reference/functions/external-functions.md
+        - name: Funciones insertadas
+          href: language-reference/functions/inline-functions.md
+    - name: Valores
+      href: language-reference/values/index.md
+      items:
+        - name: Valores NULL
+          href: language-reference/values/null-values.md
+    - name: Literales
+      href: language-reference/literals.md
+    - name: 'Tipos en F#'
+      href: language-reference/fsharp-types.md
+    - name: Inferencia de tipos
+      href: language-reference/type-inference.md
+    - name: Tipos básicos
+      href: language-reference/basic-types.md
+    - name: Unit (Tipo)
+      href: language-reference/unit-type.md
+    - name: Cadenas
+      href: language-reference/strings.md
+    - name: Tuplas
+      href: language-reference/tuples.md
+    - name: 'Tipos de colección F#'
+      href: language-reference/fsharp-collection-types.md
+    - name: Listas
+      href: language-reference/lists.md
+    - name: Matrices
+      href: language-reference/arrays.md
+    - name: Secuencias
+      href: language-reference/sequences.md
+    - name: Segmentos
+      href: language-reference/slices.md
+    - name: Opciones
+      href: language-reference/options.md
+    - name: Opciones de valores
+      href: language-reference/value-options.md
+    - name: Resultados
+      href: language-reference/results.md
+    - name: Genéricos
+      href: language-reference/generics/index.md
+      items:
+        - name: Generalización automática
+          href: language-reference/generics/automatic-generalization.md
+        - name: Restricciones
+          href: language-reference/generics/constraints.md
+        - name: Parámetros de tipo resueltos estáticamente
+          href: language-reference/generics/statically-resolved-type-parameters.md
+    - name: Registros
+      href: language-reference/records.md
+    - name: Registros anónimos
+      href: language-reference/anonymous-records.md
+    - name: Expresiones de registro de copia y actualización
+      href: language-reference/copy-and-update-record-expressions.md
+    - name: Uniones discriminadas
+      href: language-reference/discriminated-unions.md
+    - name: Enumeraciones
+      href: language-reference/enumerations.md
+    - name: Abreviaturas de tipo
+      href: language-reference/type-abbreviations.md
+    - name: Clases
+      href: language-reference/classes.md
+    - name: Estructuras
+      href: language-reference/structures.md
+    - name: Herencia
+      href: language-reference/inheritance.md
+    - name: Interfaces
+      href: language-reference/interfaces.md
+    - name: Clases abstractas
+      href: language-reference/abstract-classes.md
+    - name: Miembros
+      href: language-reference/members/index.md
+      items:
+        - name: Enlaces let en clases
+          href: language-reference/members/let-bindings-in-classes.md
+        - name: Enlaces do en clases
+          href: language-reference/members/do-bindings-in-classes.md
+        - name: Propiedades
+          href: language-reference/members/properties.md
+        - name: Propiedades indizadas
+          href: language-reference/members/indexed-properties.md
+        - name: Métodos
+          href: language-reference/members/methods.md
+        - name: Constructores
+          href: language-reference/members/constructors.md
+        - name: Events
+          href: language-reference/members/events.md
+        - name: 'Campos explícitos: palabra clave `val`'
+          href: language-reference/members/explicit-fields-the-val-keyword.md
+    - name: Extensiones de tipo
+      href: language-reference/type-extensions.md
+    - name: Parámetros y argumentos
+      href: language-reference/parameters-and-arguments.md
+    - name: Sobrecarga de operadores
+      href: language-reference/operator-overloading.md
+    - name: Tipos flexibles
+      href: language-reference/flexible-types.md
+    - name: Delegados
+      href: language-reference/delegates.md
+    - name: Expresiones de objeto
+      href: language-reference/object-expressions.md
+    - name: Conversiones
+      href: language-reference/casting-and-conversions.md
+    - name: Control de acceso
+      href: language-reference/access-control.md
+    - name: 'Expresiones condicionales: if...then...else'
+      href: language-reference/conditional-expressions-if-then-else.md
+    - name: Expresiones de coincidencia
+      href: language-reference/match-expressions.md
+    - name: Coincidencia de modelos
+      href: language-reference/pattern-matching.md
+    - name: Patrones activos
+      href: language-reference/active-patterns.md
+    - name: 'Bucles: expresión for...to'
+      href: language-reference/loops-for-to-expression.md
+    - name: 'Bucles: expresión for...in'
+      href: language-reference/loops-for-in-expression.md
+    - name: 'Bucles: expresión while...do'
+      href: language-reference/loops-while-do-expression.md
+    - name: Aserciones
+      href: language-reference/assertions.md
+    - name: Control de excepciones
+      href: language-reference/exception-handling/index.md
+      items:
+        - name: Tipos de excepción
+          href: language-reference/exception-handling/exception-types.md
+        - name: Expresión try...with
+          href: language-reference/exception-handling/the-try-with-expression.md
+        - name: Expresión try...finally
+          href: language-reference/exception-handling/the-try-finally-expression.md
+        - name: Expresión raise
+          href: language-reference/exception-handling/the-raise-function.md
+        - name: Expresión failwith
+          href: language-reference/exception-handling/the-failwith-function.md
+        - name: Expresión invalidArg
+          href: language-reference/exception-handling/the-invalidArg-function.md
+    - name: Atributos
+      href: language-reference/attributes.md
+    - name: 'Administración de recursos: palabra clave use'
+      href: language-reference/resource-management-the-use-keyword.md
+    - name: Espacios de nombres
+      href: language-reference/namespaces.md
+    - name: Módulos
+      href: language-reference/modules.md
+    - name: 'Declaraciones de importación: palabra clave open'
+      href: language-reference/import-declarations-the-open-keyword.md
+    - name: Archivos de signatura
+      href: language-reference/signature-files.md
+    - name: Unidades de medida
+      href: language-reference/units-of-measure.md
+    - name: Documentación de XML
+      href: language-reference/xml-documentation.md
+    - name: Expresiones diferidas
+      href: language-reference/lazy-expressions.md
+    - name: Expresiones de cálculo
+      href: language-reference/computation-expressions.md
+    - name: Flujos de trabajo asincrónicos
+      href: language-reference/asynchronous-workflows.md
+    - name: Expresiones de consulta
+      href: language-reference/query-expressions.md
+    - name: Expresiones de código delimitadas
+      href: language-reference/code-quotations.md
+    - name: Palabra clave fixed
+      href: language-reference/fixed.md
+    - name: Byrefs
+      href: language-reference/byrefs.md
+    - name: Celdas de referencia
+      href: language-reference/reference-cells.md
+    - name: Directivas de compilador
+      href: language-reference/compiler-directives.md
+    - name: Opciones del compilador
+      href: language-reference/compiler-options.md
+    - name: 'Opciones de F# Interactive'
+      href: language-reference/fsharp-interactive-options.md
+    - name: 'Identificadores de línea, archivo y ruta de acceso de origen'
+      href: language-reference/source-line-file-path-identifiers.md
+    - name: Información del llamador
+      href: language-reference/caller-information.md
+    - name: Sintaxis detallada
+      href: language-reference/verbose-syntax.md
+- name: 'Guía de estilo de F#'
+  href: style-guide/index.md
+  items:
+    - name: 'Instrucciones de formato de código de F#'
+      href: style-guide/formatting.md
+    - name: 'Convenciones de código de F#'
+      href: style-guide/conventions.md
+    - name: 'Instrucciones de diseño de componentes de F#'
+      href: style-guide/component-design-guidelines.md
+- name: 'Uso de F# en Azure'
+  href: using-fsharp-on-azure/index.md
+  items:
+    - name: 'Introducción a Azure Blob Storage mediante F#'
+      href: using-fsharp-on-azure/blob-storage.md
+    - name: 'Introducción a Azure File Storage mediante F#'
+      href: using-fsharp-on-azure/file-storage.md
+    - name: 'Introducción a Azure Queue Storage mediante F#'
+      href: using-fsharp-on-azure/queue-storage.md
+    - name: 'Introducción a Azure Table Storage mediante F#'
+      href: using-fsharp-on-azure/table-storage.md
+    - name: 'Administración de paquetes para las dependencias de Azure de F #'
+      href: using-fsharp-on-azure/package-management.md

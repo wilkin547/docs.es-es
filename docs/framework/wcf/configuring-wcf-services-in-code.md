@@ -2,15 +2,15 @@
 title: Configurar servicios WCF en el código
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855644"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320643"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurar servicios WCF en el código
-Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante el código o los archivos de configuración.  Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de WCF (4,0 y anteriores), la configuración de servicios en código era muy fácil en escenarios autohospedados, la clase permitía configurar los <xref:System.ServiceModel.ServiceHost> extremos y comportamientos antes de llamar a ServiceHost. Open. En escenarios hospedados en web, sin embargo, no tiene acceso directo a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4,5, WCF proporciona una manera más fácil de configurar servicios hospedados en Web y autohospedados en el código.  
+Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante el código o los archivos de configuración.  Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de WCF (4,0 y anteriores), la configuración de servicios en código era muy fácil en escenarios autohospedados, la clase <xref:System.ServiceModel.ServiceHost> permitía configurar extremos y comportamientos antes de llamar a ServiceHost. Open. En escenarios hospedados en web, sin embargo, no tiene acceso directo a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4,5, WCF proporciona una manera más fácil de configurar servicios hospedados en Web y autohospedados en el código.  
   
 ## <a name="the-configure-method"></a>El método Configure  
  Defina simplemente un método estático público denominado `Configure` con la signatura siguiente en la clase de implementación del servicio:  
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- La configuración de la sección`protocolMappings`< > solo se utiliza si no se agregan puntos de conexión de <xref:System.ServiceModel.ServiceConfiguration> aplicación al mediante programación. Opcionalmente, puede cargar la configuración del servicio desde el archivo de configuración de la <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> aplicación predeterminado llamando a y, a continuación, cambiar la configuración. La clase <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> también permite cargar la configuración desde una configuración centralizada. El código siguiente muestra cómo implementar esto:  
+ La configuración de la sección < `protocolMappings` > solo se utiliza si no se agregan puntos de conexión de aplicación al <xref:System.ServiceModel.ServiceConfiguration> mediante programación. Opcionalmente, puede cargar la configuración del servicio desde el archivo de configuración de la aplicación predeterminado llamando a <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> y, a continuación, cambiar la configuración. La clase <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> también permite cargar la configuración desde una configuración centralizada. El código siguiente muestra cómo implementar esto:  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,18 +91,18 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> Tenga en <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> cuenta que omite`host`la configuración de > de`service`< dentro de la`system.serviceModel`etiqueta de > de < de < >. Conceptualmente, <`host`> es acerca de la configuración del host, no de la configuración del servicio, y se carga antes de que se ejecute el método de configuración.  
+> Tenga en cuenta que <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> omite < configuración de > `host` dentro de la etiqueta < `service` > de < `system.serviceModel` >. Conceptualmente, < `host` > es acerca de la configuración del host, no la configuración del servicio, y se carga antes de que se ejecute el método de configuración.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Configuración de servicios mediante archivos de configuración](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [Configuración de los comportamientos del cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)
-- [Configuración](../../../docs/framework/wcf/samples/configuration-sample.md)
-- [Activación basada en la configuración en IIS y WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
-- [Compatibilidad con metadatos y configuración](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
-- [Configuración](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Cómo: Especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procedimientos: Crear un punto de conexión de servicio en la configuración](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Procedimientos: Especificar un enlace de cliente en la configuración](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Configuración de servicios mediante archivos de configuración](configuring-services-using-configuration-files.md)
+- [Configuración de los comportamientos del cliente](configuring-client-behaviors.md)
+- [Configuración simplificada](simplified-configuration.md)
+- [Configuración](./samples/configuration-sample.md)
+- [Activación basada en la configuración en IIS y WAS](./feature-details/configuration-based-activation-in-iis-and-was.md)
+- [Compatibilidad con metadatos y configuración](./extending/configuration-and-metadata-support.md)
+- [Configuración](./diagnostics/exceptions-reference/configuration.md)
+- [Cómo especificar un enlace de servicio en la configuración](how-to-specify-a-service-binding-in-configuration.md)
+- [Creación de un punto de conexión de servicio en configuración](./feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Publicación de metadatos para un servicio mediante un archivo de configuración](./feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Cómo especificar un enlace de cliente en la configuración](how-to-specify-a-client-binding-in-configuration.md)

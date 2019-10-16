@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 21a01c5d59d30ac89f6baa19dbcdcf718a1b7d88
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834850"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320210"
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
 Windows Communication Foundation (WCF) es un marco para la creación de aplicaciones orientadas a servicios. Con WCF, puede enviar datos como mensajes asincrónicos de un punto de conexión de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:
@@ -32,7 +32,7 @@ Aunque es posible crear estas aplicaciones antes de la existencia de WCF, WCF ha
 
 ## <a name="features-of-wcf"></a>Características de WCF
 
-WCF incluye el siguiente conjunto de características. Para obtener más información, consulte detalles de las [características de WCF](../../../docs/framework/wcf/feature-details/index.md).
+WCF incluye el siguiente conjunto de características. Para obtener más información, consulte detalles de las [características de WCF](./feature-details/index.md).
 
 - **Orientación a servicios**
 
@@ -40,15 +40,15 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
 - **Interoperabilidad**
 
-     WCF implementa los estándares del sector modernos para la interoperabilidad de servicios Web. Para obtener más información sobre los estándares admitidos, consulte [interoperabilidad e integración](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).
+     WCF implementa los estándares del sector modernos para la interoperabilidad de servicios Web. Para obtener más información sobre los estándares admitidos, consulte [interoperabilidad e integración](./feature-details/interoperability-and-integration.md).
 
 - **Varios patrones de mensajes**
 
-     Los mensajes se intercambian mediante uno de los distintos patrones. El más común es el de solicitud/respuesta, en que un extremo solicita datos de otro extremo. y el otro extremo responde. Existen otros patrones, como un mensaje unidireccional, en que un único extremo envía un mensaje sin esperar ninguna respuesta. Un patrón más complejo es el patrón de intercambio dúplex donde dos extremos establecen una conexión y envían datos hacia delante y hacia atrás, similar a un programa de mensajería instantánea. Para obtener más información sobre cómo implementar distintos patrones de intercambio de mensajes mediante WCF, vea [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).
+     Los mensajes se intercambian mediante uno de los distintos patrones. El más común es el de solicitud/respuesta, en que un extremo solicita datos de otro extremo. y el otro extremo responde. Existen otros patrones, como un mensaje unidireccional, en que un único extremo envía un mensaje sin esperar ninguna respuesta. Un patrón más complejo es el patrón de intercambio dúplex donde dos extremos establecen una conexión y envían datos hacia delante y hacia atrás, similar a un programa de mensajería instantánea. Para obtener más información sobre cómo implementar distintos patrones de intercambio de mensajes mediante WCF, vea [Contracts](./feature-details/contracts.md).
 
 - **Metadatos de servicios**
 
-     WCF admite la publicación de metadatos del servicio mediante formatos especificados en estándares del sector como WSDL, esquema XML y WS-Policy. Estos metadatos se pueden usar para generar y configurar automáticamente clientes para tener acceso a los servicios WCF. Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. Para obtener más información, vea [metadatos](../../../docs/framework/wcf/feature-details/metadata.md).
+     WCF admite la publicación de metadatos del servicio mediante formatos especificados en estándares del sector como WSDL, esquema XML y WS-Policy. Estos metadatos se pueden usar para generar y configurar automáticamente clientes para tener acceso a los servicios WCF. Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. Para obtener más información, vea [metadatos](./feature-details/metadata.md).
 
 - **Contratos de datos**
 
@@ -56,23 +56,23 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
 - **Seguridad**
 
-     Es posible cifrar los mensajes para proteger la privacidad, así como obligar a los usuarios a que se autentiquen antes de permitirles recibir mensajes. La seguridad puede implementarse utilizando estándares conocidos como SSL o WS-SecureConversation. Para más información, consulte [Seguridad](../../../docs/framework/wcf/feature-details/security.md).
+     Es posible cifrar los mensajes para proteger la privacidad, así como obligar a los usuarios a que se autentiquen antes de permitirles recibir mensajes. La seguridad puede implementarse utilizando estándares conocidos como SSL o WS-SecureConversation. Para más información, consulte [Seguridad](./feature-details/security.md).
 
 - **Varios transportes y codificaciones**
 
-     Los mensajes pueden enviarse con cualquiera de los protocolos y codificaciones integrados. El protocolo y la codificación más comunes consisten en enviar mensajes SOAP codificados de texto mediante el protocolo de transferencia de hipertexto (HTTP) para su uso en el World Wide Web. Como alternativa, WCF le permite enviar mensajes a través de TCP, canalizaciones con nombre o MSMQ. Estos mensajes pueden codificarse como texto o utilizando un formato binario optimizado.  Los datos binarios pueden enviarse de manera eficaz utilizando el estándar MTOM. Si ninguno de los transportes o codificaciones proporcionados satisface sus necesidades, puede crear uno personalizado. Para obtener más información sobre los transportes y codificaciones admitidos por WCF, vea [transportes](../../../docs/framework/wcf/feature-details/transports.md).
+     Los mensajes pueden enviarse con cualquiera de los protocolos y codificaciones integrados. El protocolo y la codificación más comunes consisten en enviar mensajes SOAP codificados de texto mediante el protocolo de transferencia de hipertexto (HTTP) para su uso en el World Wide Web. Como alternativa, WCF le permite enviar mensajes a través de TCP, canalizaciones con nombre o MSMQ. Estos mensajes pueden codificarse como texto o utilizando un formato binario optimizado.  Los datos binarios pueden enviarse de manera eficaz utilizando el estándar MTOM. Si ninguno de los transportes o codificaciones proporcionados satisface sus necesidades, puede crear uno personalizado. Para obtener más información sobre los transportes y codificaciones admitidos por WCF, vea [transportes](./feature-details/transports.md).
 
 - **Mensajes confiables y en cola**
 
-     WCF admite el intercambio de mensajes confiable mediante sesiones confiables implementadas a través de la mensajería de confianza de WS y el uso de MSMQ. Para obtener más información acerca de la compatibilidad con mensajería confiable y en cola en WCF, vea [colas y sesiones confiables](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).
+     WCF admite el intercambio de mensajes confiable mediante sesiones confiables implementadas a través de la mensajería de confianza de WS y el uso de MSMQ. Para obtener más información acerca de la compatibilidad con mensajería confiable y en cola en WCF, vea [colas y sesiones confiables](./feature-details/queues-and-reliable-sessions.md).
 
 - **Mensajes duraderos**
 
-     Un mensaje duradero es aquel que nunca se pierde debido a una interrupción de la comunicación. Los mensajes que forman parte de un patrón de mensajes duraderos siempre se guardan en una base de datos. Si se produce una interrupción, la base de datos le permite reanudar el intercambio de mensajes cuando se restablezca la conexión. También puede crear un mensaje duradero mediante el Windows Workflow Foundation (WF). Para obtener más información, vea [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).
+     Un mensaje duradero es aquel que nunca se pierde debido a una interrupción de la comunicación. Los mensajes que forman parte de un patrón de mensajes duraderos siempre se guardan en una base de datos. Si se produce una interrupción, la base de datos le permite reanudar el intercambio de mensajes cuando se restablezca la conexión. También puede crear un mensaje duradero mediante el Windows Workflow Foundation (WF). Para obtener más información, vea [Workflow Services](./feature-details/workflow-services.md).
 
 - **Transacciones**
 
-     WCF también admite transacciones que usan uno de los tres modelos de transacción: WS-AtomicTransactions, las API del espacio de nombres <xref:System.Transactions> y Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la compatibilidad con transacciones en WCF, vea [transacciones](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     WCF también admite transacciones que usan uno de los tres modelos de transacción: WS-AtomicTransactions, las API del espacio de nombres <xref:System.Transactions> y Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la compatibilidad con transacciones en WCF, vea [transacciones](./feature-details/transactions-in-wcf.md).
 
 - **Compatibilidad con AJAX y REST**
 
@@ -80,7 +80,7 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
 - **Extensibilidad**
 
-     La arquitectura de WCF tiene una serie de puntos de extensibilidad. Si se necesita una función adicional, existen una serie de puntos de entrada que le permiten personalizar el comportamiento de un servicio. Para obtener más información acerca de los puntos de extensibilidad disponibles, vea [Extending WCF](../../../docs/framework/wcf/extending/index.md).
+     La arquitectura de WCF tiene una serie de puntos de extensibilidad. Si se necesita una función adicional, existen una serie de puntos de entrada que le permiten personalizar el comportamiento de un servicio. Para obtener más información acerca de los puntos de extensibilidad disponibles, vea [Extending WCF](./extending/index.md).
 
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integración de WCF con otras tecnologías de Microsoft
 
@@ -97,10 +97,10 @@ Las características de hospedaje del servidor de aplicaciones AppFabric de Wind
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel>
-- [Conceptos básicos de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
-- [Arquitectura de Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
-- [Instrucciones y procedimientos recomendados](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Guía de la documentación](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Conceptos básicos de Windows Communication Foundation](fundamental-concepts.md)
+- [Arquitectura de Windows Communication Foundation](architecture.md)
+- [Instrucciones y procedimientos recomendados](guidelines-and-best-practices.md)
+- [Tutorial de introducción](getting-started-tutorial.md)
+- [Guía de la documentación](guide-to-the-documentation.md)
+- [Programación básica de WCF](basic-wcf-programming.md)
 - [Ejemplos de Windows Communication Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

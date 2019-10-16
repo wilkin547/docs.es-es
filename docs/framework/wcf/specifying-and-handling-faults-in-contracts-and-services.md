@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: de12097f018e17b11a2beac663e0b0c51c7a2a17
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bbc1ca97c8887ebdfbe30f7dd76549572367efbe
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038397"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321109"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificación y administración de errores en contratos y servicios
 
@@ -21,7 +21,7 @@ En todas las aplicaciones administradas, los errores de procesamiento están rep
 
 Dado que las aplicaciones WCF se ejecutan en ambos tipos de sistemas de error, cualquier información de excepción administrada que se envíe al cliente debe convertirse de excepciones a errores de SOAP en el servicio, enviarse y convertirse de errores de SOAP a excepciones de error en clientes de WCF. En el caso de los clientes dúplex, los contratos de cliente también pueden devolver errores SOAP a un servicio. En cualquier caso, puede usar los comportamientos de excepción de servicio predeterminados o controlar explícitamente si (y cómo) se asignan las excepciones a los mensajes de error.
 
-Se pueden enviar dos tipos de errores de SOAP: declarados y no declarados. Los errores SOAP declarados son aquéllos en los que una operación tiene un atributo <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> que especifica un tipo de error SOAP personalizado. No *declarado* Los errores de SOAP no se especifican en el contrato de una operación.
+Se pueden enviar dos tipos de errores de SOAP: *declarados* y no *declarados*. Los errores SOAP declarados son aquéllos en los que una operación tiene un atributo <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> que especifica un tipo de error SOAP personalizado. No *declarado* Los errores de SOAP no se especifican en el contrato de una operación.
 
 Se recomienda encarecidamente que las operaciones de servicio declaren sus errores mediante el atributo <xref:System.ServiceModel.FaultContractAttribute> para especificar formalmente todos los errores de SOAP que un cliente puede esperar recibir en el curso normal de una operación. Además, se recomienda que solo devuelva en un error SOAP la información que un cliente deba conocer para minimizar la divulgación de información.
 
@@ -37,22 +37,22 @@ Además, los clientes y servicios de WCF pueden usar errores de SOAP no declarad
 
 El primer paso para crear una operación que administra condiciones de error es decidir bajo qué condiciones una aplicación de cliente debería informar sobre errores. Algunas operaciones tienen condiciones de error específicas de su funcionalidad. Por ejemplo, una operación `PurchaseOrder` podría devolver la información concreta a los clientes a los que ya no se les permite iniciar una orden de compra. En otros casos, como un servicio `Calculator`, un error de SOAP `MathFault` más general puede ser capaz de describir todas las condiciones de error en un servicio completo. Una vez que se identifican las condiciones de error de los clientes del servicio, se puede construir un error SOAP personalizado y la operación se puede marcar para que devuelva ese error SOAP cuando se produzca la condición de error correspondiente.
 
-Para obtener más información sobre este paso del desarrollo de un servicio o cliente, vea [definir y especificar errores](../../../docs/framework/wcf/defining-and-specifying-faults.md).
+Para obtener más información sobre este paso del desarrollo de un servicio o cliente, vea [definir y especificar errores](defining-and-specifying-faults.md).
 
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Los clientes y servicios administran los errores SOAP como excepciones
 
 La identificación de condiciones de error de operación, la definición de errores de SOAP personalizados y el marcado de esas operaciones como la devolución de estos errores son los primeros pasos en el control de errores correcto en las aplicaciones WCF. El siguiente paso es implementar correctamente el envío y la recepción de estos errores. Normalmente, los servicios envían errores para informar a las aplicaciones de cliente sobre las condiciones de error, pero los clientes dúplex también pueden enviar errores SOAP a los servicios.
 
-Para obtener más información, consulte [envío y recepción de errores](../../../docs/framework/wcf/sending-and-receiving-faults.md).
+Para obtener más información, consulte [envío y recepción de errores](sending-and-receiving-faults.md).
 
 ## <a name="undeclared-soap-faults-and-debugging"></a>Errores de SOAP no declarados y depuración
 
-Los errores de SOAP declarados son sumamente útiles para crear aplicaciones robustas, interoperables y distribuidas. Sin embargo, en algunos casos es útil para un servicio (o cliente dúplex) enviar un error SOAP no declarado, uno que no se menciona en el Lenguaje de descripción de servicios Web (WSDL) para esa operación. Por ejemplo, al desarrollar un servicio, pueden producirse situaciones inesperadas en las que es útil enviar información de vuelta al cliente para la depuración. Además, puede establecer la <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad o la <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad en `true` para permitir que los clientes de WCF obtengan información sobre las excepciones de operación de servicio internas. El envío de errores individuales y el establecimiento de las propiedades de comportamiento de depuración se describen en [envío y recepción de errores](../../../docs/framework/wcf/sending-and-receiving-faults.md).
+Los errores de SOAP declarados son sumamente útiles para crear aplicaciones robustas, interoperables y distribuidas. Sin embargo, en algunos casos es útil para un servicio (o cliente dúplex) enviar un error SOAP no declarado, uno que no se menciona en el Lenguaje de descripción de servicios Web (WSDL) para esa operación. Por ejemplo, al desarrollar un servicio, pueden producirse situaciones inesperadas en las que es útil enviar información de vuelta al cliente para la depuración. Además, puede establecer la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` para permitir que los clientes de WCF obtengan información sobre las excepciones de operación de servicio internas. El envío de errores individuales y el establecimiento de las propiedades de comportamiento de depuración se describen en [envío y recepción de errores](sending-and-receiving-faults.md).
 
 > [!IMPORTANT]
-> Dado que las excepciones administradas pueden exponer información interna <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> de <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> la `true` aplicación, establecer o en puede permitir a los clientes de WCF obtener información sobre las excepciones internas de operaciones de servicio, incluidas las de personalización información identificable u otra información confidencial.
+> Dado que las excepciones administradas pueden exponer información interna de la aplicación, si se establece <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` se puede permitir que los clientes de WCF obtengan información sobre las excepciones internas de operaciones de servicio, incluidos los identificadores personales u otros tipos de datos. informaciones.
 >
-> Por consiguiente, establecer <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` solo se recomienda como una manera de depurar temporalmente una aplicación de servicio. Además, el WSDL de un método que devuelve excepciones administradas no controladas de esta manera no contiene el contrato para la <xref:System.ServiceModel.FaultException%601> de tipo <xref:System.ServiceModel.ExceptionDetail>. Los clientes deben esperar la posibilidad de un error de SOAP desconocido (devuelto a <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> los clientes de WCF como objetos) para obtener la información de depuración correctamente.
+> Por consiguiente, establecer <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` solo se recomienda como una manera de depurar temporalmente una aplicación de servicio. Además, el WSDL de un método que devuelve excepciones administradas no controladas de esta manera no contiene el contrato para la <xref:System.ServiceModel.FaultException%601> de tipo <xref:System.ServiceModel.ExceptionDetail>. Los clientes deben esperar la posibilidad de un error de SOAP desconocido (devuelto a los clientes de WCF como objetos <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>) para obtener la información de depuración correctamente.
 
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>Personalización del control de errores con IErrorHandler
 
@@ -76,4 +76,4 @@ Cuando se deserializa un contrato de error, primero WCF intenta hacer coincidir 
 - <xref:System.ServiceModel.FaultException.Reason%2A>
 - <xref:System.ServiceModel.FaultCode.SubCode%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
-- [Definición y especificación de errores](../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [Definición y especificación de errores](defining-and-specifying-faults.md)

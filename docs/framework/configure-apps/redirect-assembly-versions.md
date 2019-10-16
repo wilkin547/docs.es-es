@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971557"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319746"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 
@@ -65,11 +65,11 @@ Si otro proyecto de la aplicación hace referencia a la versión 1.0.0.0 del mis
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Puede habilitar la redirección de enlace automática si la aplicación tiene como destino versiones anteriores de la .NET Framework. Puede invalidar este comportamiento predeterminado proporcionando información de redirección de enlace en el archivo app. config para cualquier ensamblado o desactivando la característica de redirección de enlace. Para obtener información acerca de cómo activar o desactivar esta característica, consulte [cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](how-to-enable-and-disable-automatic-binding-redirection.md).
+Puede habilitar la redirección de enlace automática si la aplicación tiene como destino versiones anteriores de la .NET Framework. Puede invalidar este comportamiento predeterminado proporcionando información de redirección de enlace en el archivo app. config para cualquier ensamblado o desactivando la característica de redirección de enlace. Para obtener información sobre cómo activar o desactivar esta característica, vea [Cómo: habilitar y deshabilitar la redirección de enlace automática](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Omisión de la directiva de edición
- Puede invalidar la directiva de edición del archivo de configuración de la aplicación en caso necesario. Por ejemplo, las nuevas versiones de los ensamblados que afirman ser compatibles con versiones anteriores todavía pueden interrumpir una aplicación. Si desea omitir la [ \<](./file-schema/runtime/dependentassembly-element.md) Directiva de edición, agregue un [ \<elemento publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) al elemento dependentAssembly > en el archivo de configuración de la aplicación y establezca el atributo Apply en no, que invalida cualquier configuración anterior de **sí** .
+ Puede invalidar la directiva de edición del archivo de configuración de la aplicación en caso necesario. Por ejemplo, las nuevas versiones de los ensamblados que afirman ser compatibles con versiones anteriores todavía pueden interrumpir una aplicación. Si desea omitir la Directiva de edición, agregue un elemento [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) al elemento [\<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) del archivo de configuración de la aplicación y establezca el atributo **Apply** en **no**, que invalida any. configuración anterior **sí** .
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ Puede habilitar la redirección de enlace automática si la aplicación tiene co
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Especificación del enlace de ensamblados en archivos de configuración
- Use el mismo formato XML para especificar redirecciones de enlace si se encuentra en el archivo de configuración de la aplicación, el archivo de configuración del equipo o el archivo de directiva de edición. Para redirigir una versión de ensamblado a otra, use el elemento de [ \<> bindingRedirect](./file-schema/runtime/bindingredirect-element.md) . El atributo **oldVersion** puede especificar una versión de ensamblado única o un intervalo de versiones. El atributo `newVersion` debe especificar una única versión.  Por ejemplo, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` especifica que el motor de tiempo de ejecución debe usar la versión 2.0.0.0 en lugar de las versiones de ensamblado comprendidas entre la versión 1.1.0.0 y la versión 1.2.0.0.
+ Use el mismo formato XML para especificar redirecciones de enlace si se encuentra en el archivo de configuración de la aplicación, el archivo de configuración del equipo o el archivo de directiva de edición. Para redirigir una versión de ensamblado a otra, use el elemento [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . El atributo **oldVersion** puede especificar una versión de ensamblado única o un intervalo de versiones. El atributo `newVersion` debe especificar una única versión.  Por ejemplo, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` especifica que el motor de tiempo de ejecución debe usar la versión 2.0.0.0 en lugar de las versiones de ensamblado comprendidas entre la versión 1.1.0.0 y la versión 1.2.0.0.
 
  El siguiente ejemplo de código muestra una variedad de escenarios de redirección de enlace. En el ejemplo se especifica una redirección para un intervalo de versiones para `myAssembly`y una redirección de enlace único para `mySecondAssembly`. En el ejemplo también se especifica que dicho archivo de directiva de edición no invalidará las redirecciones de enlace para `myThirdAssembly`.
 
- Para enlazar un ensamblado, debe especificar la cadena "urn: schemas-microsoft-com: ASM. v1" con el atributo **xmlns** en la [ \<etiqueta > de assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
+ Para enlazar un ensamblado, debe especificar la cadena "urn: schemas-microsoft-com: ASM. v1" con el atributo **xmlns** en la etiqueta de [> \<assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ Puede habilitar la redirección de enlace automática si la aplicación tiene co
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ Puede habilitar la redirección de enlace automática si la aplicación tiene co
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Limitación de enlaces de ensamblados a una versión específica
- Puede usar el atributo **appliesTo** en el [ \<elemento > de assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) en un archivo de configuración de la aplicación para redirigir las referencias de enlace de ensamblados a una versión específica de la .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) se aplica a todas las versiones de .NET Framework.
+ Puede usar el atributo **appliesTo** en el elemento [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) de un archivo de configuración de la aplicación para redirigir las referencias de enlace de ensamblados a una versión específica de la .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) se aplica a todas las versiones de .NET Framework.
 
  Por ejemplo, para redirigir el enlace para un ensamblado de .NET Framework 3.5, incluiría el siguiente código XML en el archivo de configuración de la aplicación.
 
@@ -154,8 +154,8 @@ Puede habilitar la redirección de enlace automática si la aplicación tiene co
 
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos: Habilitar y deshabilitar redireccionamiento de enlaces automático](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<Elemento de > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [\<bindingRedirect >, elemento](./file-schema/runtime/bindingredirect-element.md)
 - [Permiso de seguridad para la redirección de enlaces de ensamblados](assembly-binding-redirection-security-permission.md)
 - [Ensamblados de .NET](../../standard/assembly/index.md)
 - [Programar con ensamblados](../../standard/assembly/program.md)
@@ -163,4 +163,4 @@ Puede habilitar la redirección de enlace automática si la aplicación tiene co
 - [Configurar aplicaciones](index.md)
 - [Esquema de la configuración de Common Language Runtime](./file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](./file-schema/index.md)
-- [Cómo: Crear una directiva de edición](how-to-create-a-publisher-policy.md)
+- [Cómo: Crear una directiva de publicador](how-to-create-a-publisher-policy.md)

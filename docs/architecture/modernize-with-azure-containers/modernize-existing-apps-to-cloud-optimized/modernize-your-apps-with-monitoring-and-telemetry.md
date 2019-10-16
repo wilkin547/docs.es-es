@@ -2,12 +2,12 @@
 title: Modernización de aplicaciones con supervisión y telemetría
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Modernice sus aplicaciones con supervisión y telemetría
 ms.date: 04/30/2018
-ms.openlocfilehash: cdd7738606b086e980c4a50348166a7e23e15fa5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318486"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393850"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernización de aplicaciones con supervisión y telemetría
 
@@ -89,4 +89,4 @@ Puede usar la solución de supervisión de contenedores Log Analytics para:
 
 >[!div class="step-by-step"]
 >[Anterior](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
->[Siguiente](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Siguiente](life-cycle-ci-cd-pipelines-devops-tools.md)

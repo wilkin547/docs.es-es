@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782413"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320825"
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo de vida de programación básica
-Windows Communication Foundation (WCF) permite a las aplicaciones comunicar si están en el mismo equipo, a través de Internet o en diferentes plataformas de aplicaciones. En este tema se describe las tareas necesarias para crear una aplicación de WCF. Para una aplicación de ejemplo funcional, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+Windows Communication Foundation (WCF) permite a las aplicaciones comunicar si están en el mismo equipo, a través de Internet o en distintas plataformas de aplicación. En este tema se describen las tareas necesarias para compilar una aplicación WCF. Para obtener una aplicación de ejemplo en funcionamiento, vea el [tutorial de introducción](getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Las tareas básicas  
  Las tareas básicas que se van a realizar son, en orden:  
   
-1. Definir el contrato de servicios. Un contrato de servicio especifica la firma de un servicio, los datos que intercambia y el resto de los datos necesarios contractualmente. Para obtener más información, consulte [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
+1. Definir el contrato de servicios. Un contrato de servicio especifica la firma de un servicio, los datos que intercambia y el resto de los datos necesarios contractualmente. Para obtener más información, consulte [Designing Service Contracts](designing-service-contracts.md).  
   
-2. Implementar el contrato. Para implementar un contrato de servicio, cree una clase que implemente el contrato y especifique comportamientos personalizados que deba tener el tiempo de ejecución. Para obtener más información, consulte [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md).  
+2. Implementar el contrato. Para implementar un contrato de servicio, cree una clase que implemente el contrato y especifique comportamientos personalizados que deba tener el tiempo de ejecución. Para obtener más información, consulte [implementación de contratos de servicio](implementing-service-contracts.md).  
   
-3. Configurar el servicio especificando los puntos de conexión y el resto de la información de comportamiento. Para obtener más información, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  
+3. Configurar el servicio especificando los puntos de conexión y el resto de la información de comportamiento. Para obtener más información, vea [configuración de servicios](configuring-services.md).  
   
-4. Hospedar el servicio. Para obtener más información, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
+4. Hospedar el servicio. Para obtener más información, vea [servicios de hospedaje](hosting-services.md).  
   
-5. Compilar una aplicación cliente. Para obtener más información, consulte [generar clientes](../../../docs/framework/wcf/building-clients.md).  
+5. Compilar una aplicación cliente. Para obtener más información, consulte [Building clients](building-clients.md).  
   
  Aunque los temas de esta sección sigan este orden, algunos escenarios no se inician al principio. Por ejemplo, si desea crear un cliente para un servicio existente, ha de comenzar en el paso 5. O si está creando un servicio que usarán otros, puede omitir el paso 5.  
   
- Una vez que esté familiarizado con el desarrollo de contratos de servicio, también puede leer [Introducción a la extensibilidad](../../../docs/framework/wcf/introduction-to-extensibility.md). Si tiene problemas con su servicio, consulte [inicio rápido de solución de problemas de WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) para ver si otros tienen los problemas de iguales o similares.  
+ Una vez que esté familiarizado con el desarrollo de contratos de servicio, también puede leer la [Introducción a la extensibilidad](introduction-to-extensibility.md). Si tiene problemas con el servicio, consulte la guía de [Inicio rápido de solución de problemas de WCF](wcf-troubleshooting-quickstart.md) para ver si otros tienen problemas o similares.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Implementación de contratos de servicio](implementing-service-contracts.md)

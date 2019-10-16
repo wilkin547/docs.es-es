@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 075f62526ace1ac49d12e1bdec39d8df4b0a3ff1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645182"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321406"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificación del comportamiento de tiempo de ejecución del cliente
-Los clientes de Windows Communication Foundation (WCF), como los servicios Windows Communication Foundation (WCF), pueden configurarse para modificar el comportamiento de tiempo de ejecución para que se adapte a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Los clientes de Windows Communication Foundation (WCF), como los servicios de Windows Communication Foundation (WCF), se pueden configurar para modificar el comportamiento de tiempo de ejecución para que se ajuste a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, vea [especificar el comportamiento de tiempo de ejecución del servicio](specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Utilizar CallbackBehaviorAttribute  
  Puede configurar o extender el comportamiento de ejecución de una implementación de contrato de devolución de llamada en una aplicación cliente utilizando la clase <xref:System.ServiceModel.CallbackBehaviorAttribute>. Este atributo realiza una función similar para la clase de devolución de llamada como la clase <xref:System.ServiceModel.ServiceBehaviorAttribute>, con la excepción de crear instancias del comportamiento y configuración de la transacción.  
@@ -36,7 +36,7 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios Windo
   
 - lo haga solamente en escenarios de depuración controlados.  
   
- El ejemplo de código siguiente muestra a un cliente de archivo de configuración que se indica a WCF para devolver información de excepción administrada desde un cliente de objeto de devolución de llamada en los mensajes SOAP.  
+ En el ejemplo de código siguiente se muestra un archivo de configuración de cliente que indica a WCF que devuelva la información de excepción administrada de un objeto de devolución de llamada de cliente en los mensajes SOAP.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
@@ -45,4 +45,4 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios Windo
   
 ## <a name="see-also"></a>Vea también
 
-- [Especificación del comportamiento en tiempo de ejecución del servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Especificación del comportamiento en tiempo de ejecución del servicio](specifying-service-run-time-behavior.md)

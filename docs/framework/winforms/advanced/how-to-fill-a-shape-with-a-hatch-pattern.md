@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para rellenar una forma con un patrón de sombreado
+title: 'Cómo: Rellenar una forma con un patrón de trama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b80708f0ce722b1809fe49190639231e7e4c8329
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645437"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320051"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Procedimiento para rellenar una forma con un patrón de sombreado
-Un patrón de trama está formado por dos colores: uno para el fondo y otro para las líneas que forman el modelo sobre el fondo. Para rellenar una forma cerrada con un patrón de trama, utilice un <xref:System.Drawing.Drawing2D.HatchBrush> objeto. El ejemplo siguiente muestra cómo rellenar una elipse con un patrón de trama:  
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Cómo: Rellenar una forma con un patrón de trama
+Un patrón de trama se realiza a partir de dos colores: uno para el fondo y otro para las líneas que forman el patrón en el fondo. Para rellenar una forma cerrada con un patrón de trama, use un objeto <xref:System.Drawing.Drawing2D.HatchBrush>. En el ejemplo siguiente se muestra cómo rellenar una elipse con un patrón de trama:  
   
 ## <a name="example"></a>Ejemplo  
- El <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> constructor toma tres argumentos: el estilo de sombreado, el color de la línea de trama y el color del fondo. El argumento de estilo de trama puede ser cualquier valor de la <xref:System.Drawing.Drawing2D.HatchStyle> enumeración. Hay más de cincuenta elementos en el <xref:System.Drawing.Drawing2D.HatchStyle> enumeración; algunos de estos elementos se muestran en la lista siguiente:  
+ El constructor <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> toma tres argumentos: el estilo de trama, el color de la línea de sombreado y el color del fondo. El argumento de estilo de trama puede ser cualquier valor de la enumeración <xref:System.Drawing.Drawing2D.HatchStyle>. Hay más de 50 elementos en la enumeración <xref:System.Drawing.Drawing2D.HatchStyle>; algunos de esos elementos se muestran en la lista siguiente:  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -34,9 +34,9 @@ Un patrón de trama está formado por dos colores: uno para el fondo y otro para
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- La siguiente ilustración muestra la elipse rellena.  
+ En la ilustración siguiente se muestra la elipse rellenada.  
   
- ![El patrón de trama](./media/hatch1.png "hatch1")  
+  ![Captura de pantalla de la apariencia de una elipse con un patrón de trama.](./media/how-to-fill-a-shape-with-a-hatch-pattern/ellipse-filled-hatch.png "hatch1")
   
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  

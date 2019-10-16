@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: MT
+ms.openlocfilehash: a13cc98a88ff81afd478eaa3e40286169811233a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855632"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320302"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un gran conjunto de contadores de rendimiento para ayudarle a medir el rendimiento de la aplicación.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) incluye un gran conjunto de contadores de
   
  Puede establecer el atributo `performanceCounters` para habilitar un tipo específico de contadores de rendimiento. Los valores válidos son  
   
-- Todos Están habilitados todos los contadores de categoría (ServiceModelService, ServiceModelEndpoint y ServiceModelOperation).  
+- All: todos los contadores de categoría (ServiceModelService, ServiceModelEndpoint y ServiceModelOperation) están habilitados.  
   
-- ServiceOnly Solo se habilitan los contadores de la categoría ServiceModelService. Este es el valor predeterminado.  
+- ServiceOnly: solo se habilitan los contadores de categoría ServiceModelService. Este es el valor predeterminado.  
   
-- Habilitar Los contadores de rendimiento de ServiceModel * están deshabilitados.  
+- Off: los contadores de rendimiento ServiceModel* están deshabilitados.  
   
  Si desea habilitar los contadores de rendimiento para todas las aplicaciones WCF, puede colocar los valores de configuración en el archivo Machine. config.  Consulte la sección **aumento del tamaño de la memoria para los contadores de rendimiento** más adelante para obtener más información sobre cómo configurar la memoria suficiente para los contadores de rendimiento de su equipo.  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Ver los datos de rendimiento  
- Para ver los datos capturados por los contadores de rendimiento, utilice el monitor de rendimiento (Perfmon.exe) incluido en Windows. Puede iniciar esta herramienta; para ello, vaya a **Inicio**y haga clic en `perfmon.exe` **Ejecutar** y escriba en el cuadro de diálogo.  
+ Para ver los datos capturados por los contadores de rendimiento, utilice el monitor de rendimiento (Perfmon.exe) incluido en Windows. Puede iniciar esta herramienta; para ello, vaya a **Inicio**, haga clic en **ejecutar** y escriba @no__t 2 en el cuadro de diálogo.  
   
 > [!NOTE]
 > Se pueden lanzar instancias del contador de rendimiento antes de que el distribuidor del punto de conexión haya procesado los últimos mensajes. Esto puede dar lugar a que no se capturen los datos de rendimiento de algunos mensajes.  
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumento del tamaño de la memoria para los contadores de rendimiento  
  WCF usa memoria compartida independiente para sus categorías de contador de rendimiento.  
   
- De forma predeterminada, la memoria compartida independiente se establece en un cuarto del tamaño de la memoria global del contador de rendimiento. La memoria global del contador de rendimiento predeterminada es 524.288 bytes. Por lo tanto, las tres categorías de contador de rendimiento de WCF tienen un tamaño predeterminado de aproximadamente 128 KB cada uno. En función de las características de tiempo de ejecución de las aplicaciones WCF en un equipo, se puede agotar la memoria del contador de rendimiento. Cuando esto sucede, WCF escribe un error en el registro de eventos de la aplicación. El contenido del error indica que no se cargó un contador de rendimiento y la entrada contiene la excepción "System. InvalidOperationException: Memoria insuficiente en la vista de archivos de contadores personalizados ". Si se habilita la traza en el nivel de error, también se sigue la traza del error. Si se agota la memoria del contador de rendimiento, continuar ejecutando las aplicaciones WCF con los contadores de rendimiento habilitados podría provocar una degradación del rendimiento. Si es administrador de la máquina, configúrela y asigne memoria suficiente para admitir el número máximo de contadores de rendimiento que puedan existir en cualquier momento.  
+ De forma predeterminada, la memoria compartida independiente se establece en un cuarto del tamaño de la memoria global del contador de rendimiento. La memoria global del contador de rendimiento predeterminada es 524.288 bytes. Por lo tanto, las tres categorías de contador de rendimiento de WCF tienen un tamaño predeterminado de aproximadamente 128 KB cada uno. En función de las características de tiempo de ejecución de las aplicaciones WCF en un equipo, se puede agotar la memoria del contador de rendimiento. Cuando esto sucede, WCF escribe un error en el registro de eventos de la aplicación. El contenido del error indica que no se cargó un contador de rendimiento, y la entrada contiene la excepción "System.InvalidOperationException: Memoria insuficiente para la vista personaliza del archivo de contadores". Si se habilita la traza en el nivel de error, también se sigue la traza del error. Si se agota la memoria del contador de rendimiento, continuar ejecutando las aplicaciones WCF con los contadores de rendimiento habilitados podría provocar una degradación del rendimiento. Si es administrador de la máquina, configúrela y asigne memoria suficiente para admitir el número máximo de contadores de rendimiento que puedan existir en cualquier momento.  
   
  Puede cambiar la cantidad de memoria del contador de rendimiento para las categorías de WCF en el registro. Para cambiarla, es necesario agregar un nuevo valor DWORD, denominado `FileMappingSize`, a las tres ubicaciones siguientes y establecerlo en el valor en bytes deseado. Reinicie su equipo para que estos cambios se hagan efectivos.  
   
@@ -72,17 +72,17 @@ config.Save();
  Cuando se elimina un número importante de objetos (por ejemplo, ServiceHost) pero se espera recopilar los elementos no usados, el contador de rendimiento `PrivateBytes` registra un número excepcionalmente alto. Para solucionar este problema, puede agregar sus propios contadores específicos de la aplicación, o utilizar el atributo `performanceCounters` para habilitar solo los contadores del nivel de servicio.  
   
 ## <a name="types-of-performance-counters"></a>Tipos de contadores de rendimiento  
- El ámbito de los contadores de rendimiento es de tres niveles distintos: Servicio, extremo y operación.  
+ Los contadores de rendimiento abarcan tres niveles diferentes: servicio, punto de conexión y operación.  
   
  Puede utilizar WMI para recuperar el nombre de una instancia del contador de rendimiento. Por ejemplo,  
   
-- El nombre de la instancia del contador de servicio se puede obtener a través de la propiedad "CounterInstanceName" de la instancia del [servicio](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) WMI.  
+- El nombre de la instancia del contador de servicio se puede obtener a través de la propiedad "CounterInstanceName" de la instancia del [servicio](../wmi/service.md) WMI.  
   
-- El nombre de instancia del contador de extremo se puede obtener a través de la propiedad "CounterInstanceName" de la instancia del [punto de conexión](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) de WMI.  
+- El nombre de instancia del contador de extremo se puede obtener a través de la propiedad "CounterInstanceName" de la instancia del [punto de conexión](../wmi/endpoint.md) de WMI.  
   
-- El nombre de la instancia del contador de operaciones se puede obtener a través del método "GetOperationCounterInstanceName" de la instancia del [punto de conexión](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) de WMI.  
+- El nombre de la instancia del contador de operaciones se puede obtener a través del método "GetOperationCounterInstanceName" de la instancia del [punto de conexión](../wmi/endpoint.md) de WMI.  
   
- Para obtener más información acerca de WMI, consulte [uso de instrumental de administración de Windows para diagnósticos](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Para obtener más información acerca de WMI, consulte [uso de instrumental de administración de Windows para diagnósticos](../wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Contadores de rendimiento del servicio  
  Los contadores de rendimiento del servicio miden el conjunto del comportamiento del servicio y se utilizan para diagnosticar el rendimiento de todo el servicio. Pueden encontrarse en el objeto de rendimiento `ServiceModelService 4.0.0.0` al visualizarlo con el monitor de rendimiento. Los nombres de las instancias se establecen utilizando el siguiente patrón:  
@@ -134,4 +134,4 @@ config.Save();
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Administración y diagnóstico](../index.md)

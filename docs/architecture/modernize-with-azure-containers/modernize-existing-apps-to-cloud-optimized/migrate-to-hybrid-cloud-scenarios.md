@@ -2,12 +2,12 @@
 title: Migración a escenarios de nube híbrida
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Migración a escenarios de nube híbrida
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318466"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394547"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migración a escenarios de nube híbrida
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack kit de desarrollo es una implementación de un solo nodo d
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Anterior](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[Siguiente](../walkthroughs-technical-get-started-overview.md)

@@ -2,12 +2,12 @@
 title: Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: f3cb01531c594df5262963567438b47cbbed58a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923014"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321483"
 ---
 # <a name="service-versioning"></a>Control de versiones del servicio
 Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, los servicios (y los puntos de conexión que exponen) pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Cada cambio produce una nueva versión del servicio. En este tema se explica cómo considerar el control de versiones en Windows Communication Foundation (WCF).  
@@ -15,13 +15,13 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
 ## <a name="four-categories-of-service-changes"></a>Cuatro categorías de cambios del servicio  
  Los cambios en los servicios que se pueden requerir pueden clasificarse en cuatro categorías:  
   
-- Cambios de contrato: Por ejemplo, se puede Agregar una operación o se puede Agregar o cambiar un elemento de datos en un mensaje.  
+- Cambios del contrato: por ejemplo, se podría agregar una operación o se podría agregar o cambiar un elemento de datos en un mensaje.  
   
-- Cambios de dirección: Por ejemplo, un servicio se mueve a una ubicación diferente donde los puntos de conexión tienen direcciones nuevas.  
+- Cambios de la dirección: por ejemplo, se mueve un servicio a una ubicación diferente donde los puntos de conexión tienen nuevas direcciones.  
   
-- Cambios de enlace: Por ejemplo, un mecanismo de seguridad cambia o su configuración cambia.  
+- Cambios del enlace: por ejemplo, un mecanismo de seguridad cambia o lo hace su configuración.  
   
-- Cambios de implementación: Por ejemplo, cuando cambia la implementación de un método interno.  
+- Cambios de implementación: por ejemplo, cuando cambia una implementación de método interno.  
   
  Algunos de estos cambios se denominan "con interrupción" y otros son denominados "sin interrupción". Un cambio es sin *interrupción* si todos los mensajes que se habrían procesado correctamente en la versión anterior se procesan correctamente en la nueva versión. Cualquier cambio que no cumpla ese criterio es un cambio *importante* .  
   
@@ -58,7 +58,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
   
  Es fácil creer erróneamente que al agregar un nuevo miembro no se interrumpirán los clientes existentes. Si no está seguro de que todos los clientes puedan controlar el control lax de versiones, la recomendación es utilizar las instrucciones del control estricto de las versiones y tratar los contratos de datos como inmutables.  
   
- Para obtener instrucciones detalladas para el control de versiones de los contratos de datos [LAX y estricta, consulte prácticas recomendadas: Control de versiones](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)del contrato de datos.  
+ Para obtener instrucciones detalladas sobre el control de versiones de los contratos de datos LAX y estricta, vea [prácticas recomendadas: control de versiones de contratos de datos](best-practices-data-contract-versioning.md).  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Distinguir entre los tipos de contrato de datos y .NET  
  Una clase o estructura .NET se puede proyectar como un contrato de datos aplicando el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a la clase. El tipo .NET y sus proyecciones del contrato de datos son dos cuestiones distintas. Es posible tener varios tipos .NET con la misma proyección del contrato de datos. Esta distinción es especialmente útil para permitirle cambiar el tipo .NET mientras mantiene el contrato de datos proyectado, manteniendo así eso la compatibilidad con clientes existentes en el sentido estricto de la palabra. Hay dos cosas que siempre debería hacer para mantener esta distinción entre tipo .NET y contrato de datos:  
@@ -99,7 +99,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  De manera parecida al control de las versiones del contrato de datos, el contrato de servicios que también controla las versiones implica agregar, cambiar y quitar operaciones.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Especificar nombre, espacio de nombres y acción  
- De forma predeterminada, el nombre de un contrato de servicios es el nombre de la interfaz. Su espacio de nombres predeterminado "http://tempuri.org" es, y la acción de cada "http://tempuri.org/contractname/methodname" operación es. Se recomienda especificar explícitamente un nombre y espacio de nombres para el contrato de servicio y una acción para cada operación para evitar el uso "http://tempuri.org" de y evitar que los nombres de interfaz y método se expongan en el contrato del servicio.  
+ De forma predeterminada, el nombre de un contrato de servicios es el nombre de la interfaz. Su espacio de nombres predeterminado es "http://tempuri.org", y la acción de cada operación es "http://tempuri.org/contractname/methodname". Se recomienda especificar explícitamente un nombre y un espacio de nombres para el contrato de servicio y una acción para cada operación para evitar usar "http://tempuri.org" y evitar que los nombres de interfaz y método se expongan en el contrato del servicio.  
   
 ### <a name="adding-parameters-and-operations"></a>Agregar parámetros y operaciones  
  Agregar operaciones del servicio expuestas por el servicio es un cambio sin interrupción porque los clientes existentes no necesitan ocuparse de esas nuevas operaciones.  
@@ -125,9 +125,9 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  Los cambios de la dirección del extremo y enlace son cambios con interrupción a menos que los clientes sean capaces de detectar dinámicamente la nueva dirección del extremo o enlace. Un mecanismo para implementar esta función consiste en utilizar un registro de la Descripción e integración de la detección universal (UDDI) y el patrón de invocación UDDI donde un cliente intenta comunicar con un punto de conexión y, en cuando se produce un error, consulta los metadatos del punto de conexión actual en un registro de UDDI conocido. El cliente utiliza a continuación la dirección y el enlace desde estos metadatos para comunicarse con el extremo. Si esta comunicación se realiza con éxito, el cliente almacena en caché la dirección e información de enlace para su uso en el futuro.  
   
 ## <a name="routing-service-and-versioning"></a>Servicio de enrutamiento y control de versiones  
- Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. Para obtener más información acerca del servicio de enrutamiento de WCF, vea [servicio de enrutamiento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento de WCF para el control [de versiones del servicio, vea cómo: Control de versiones](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)del servicio.  
+ Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. Para obtener más información acerca del servicio de enrutamiento de WCF, vea [servicio de enrutamiento](./feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento de WCF para el control de versiones del servicio, vea [Cómo: control de versiones del servicio](./feature-details/how-to-service-versioning.md).  
   
-## <a name="appendix"></a>Anexo  
+## <a name="appendix"></a>Apéndice  
  La recomendación general para el control de versiones de los contratos de datos es que cuando se necesite un control estricto de las versiones los contratos de datos se traten como inmutables y crear otros nuevos cuando se requieran cambios. Se necesita crear una nueva clase para cada nuevo contrato de datos, por lo que necesita que un mecanismo evite tener que tomar código existente, que se escribió referido a la clase del contrato de datos antiguo y volverlo a escribir, referido a la nueva clase del contrato de datos.  
   
  Dicho mecanismo se utiliza en interfaces para definir los miembros de cada contrato de datos y escribir el código de implementación interno, referido a las interfaces en lugar de referirse a las clases del contrato de datos que implementan las interfaces. El código siguiente para la versión 1 de un servicio muestra una interfaz `IPurchaseOrderV1` y `PurchaseOrderV1`:  
@@ -187,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Equivalencia de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Devoluciones de llamadas en la serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Equivalencia de contratos de datos](./feature-details/data-contract-equivalence.md)
+- [Devoluciones de llamadas en la serialización tolerante a versiones](./feature-details/version-tolerant-serialization-callbacks.md)

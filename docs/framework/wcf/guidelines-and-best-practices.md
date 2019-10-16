@@ -8,30 +8,30 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929342"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319808"
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Procedimientos recomendados: Versiones de contratos de datos](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Procedimientos recomendados: creación de versiones de contratos de datos](best-practices-data-contract-versioning.md)  
  Explica cómo y cuándo crear contratos de datos que no interrumpen al crearse las versiones futuras.  
   
- [Control de versiones del servicio](../../../docs/framework/wcf/service-versioning.md)  
+ [Control de versiones del servicio](service-versioning.md)  
  Explica cómo considerar el control de versiones en WCF. Después de la implementación, los servicios (y los puntos de conexión que exponen) podrían necesitar cambios, por ejemplo, para satisfacer los cambiantes requisitos comerciales o de TI, o para corregir los problemas. Cada cambio produce una nueva versión del servicio.  
   
- [Equilibrio de carga](../../../docs/framework/wcf/load-balancing.md)  
+ [Equilibrio de carga](load-balancing.md)  
  Hace una lista de las instrucciones para el equilibrio de carga con una batería de servidores web.  
   
- [Control del consumo de recursos y mejora del rendimiento](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
+ [Control del consumo de recursos y mejora del rendimiento](controlling-resource-consumption-and-improving-performance.md)  
  Describe las propiedades que están diseñadas para ayudar a evitar el consumo de recursos indebido y mejorar la seguridad y ofrece información más completa sobre su uso.  
   
- [Implementación de aplicaciones WCF con ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
+ [Implementación de aplicaciones WCF con ClickOnce](deploying-wcf-applications-with-clickonce.md)  
  Describe las consideraciones que se han de tener en cuenta al utilizar la característica ClickOnce.  
   
 ## <a name="reference"></a>Referencia  
@@ -40,13 +40,13 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Información conceptual](conceptual-overview.md)  
   
- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Programación básica de WCF](basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
+- [¿Qué es Windows Communication Foundation?](whats-wcf.md)
 - [Ejemplos de Windows Communication Foundation (WCF)](./samples/index.md)
-- [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)
-- [Creación de clientes](../../../docs/framework/wcf/building-clients.md)
+- [Información conceptual](conceptual-overview.md)
+- [Creación de clientes](building-clients.md)

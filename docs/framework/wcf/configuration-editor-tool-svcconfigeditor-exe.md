@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 8123a504e83164f2ae842755da8ff4d8850141d2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046031"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320705"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Herramienta del editor de configuración (SvcConfigEditor.exe)
 
@@ -61,20 +61,20 @@ La interfaz de usuario del editor de configuración de servicio está dividida e
 
 ### <a name="opening-a-configuration-file"></a>Abrir un archivo de configuración
 
-1. Inicie el editor de configuración de servicio mediante una ventana de comandos para navegar a la ubicación de instalación de `SvcConfigEditor.exe`WCF y, a continuación, escriba.
+1. Inicie el editor de configuración de servicio mediante una ventana de comandos para navegar a la ubicación de instalación de WCF y, a continuación, escriba `SvcConfigEditor.exe`.
 
 2. En el menú **archivo** , seleccione **abrir** y haga clic en el tipo de archivo que desea administrar.
 
 3. En el cuadro de diálogo **abrir** , navegue hasta el archivo específico que desea administrar y haga doble clic en él.
 
-El visor sigue automáticamente la ruta de acceso de fusión mediante combinación de configuración y crea una vista de la configuración combinada. Por ejemplo, la configuración real de un servicio no hospedado es una combinación de Machine.config y App.config. Cualquier cambio se aplica al archivo activo en SvcConfigEditor. Si desea modificar un archivo concreto en la ruta de acceso de fusión mediante combinación de configuración, debería abrirlo directamente.
+El visor sigue automáticamente la ruta de acceso de fusión mediante combinación de configuración y crea una vista de la configuración combinada. Por ejemplo, la configuración real de un servicio no hospedado es una combinación de Machine. config y app. config. Cualquier cambio se aplica al archivo activo en SvcConfigEditor. Si desea modificar un archivo concreto en la ruta de acceso de fusión mediante combinación de configuración, debería abrirlo directamente.
 
 > [!NOTE]
 > El editor de configuración recarga el archivo de configuración abierto actualmente cuando éste se ha modificado fuera del editor. Cuando esto pasa, se pierden todos los cambios que no están guardados dentro del Editor de forma duradera. Si la recarga sucede constantemente, la causa más probable es un servicio que tiene acceso al archivo de configuración continuamente, por ejemplo un software antivirus que se ejecuta en segundo plano. Para resolver esto, asegúrese de que el editor de configuración es el único proceso que puede tener acceso al archivo cuando se abre.
 
 ### <a name="services"></a>Servicios
 
-El nodo **servicios** muestra todos los servicios asignados actualmente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento <`services`> del archivo de configuración.
+El nodo **servicios** muestra todos los servicios asignados actualmente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento < `services` > en el archivo de configuración.
 
 Al hacer clic en el nodo **servicios** , puede ver o realizar tareas en la página Resumen del servicio en el panel de **detalles** .
 
@@ -82,9 +82,9 @@ Al hacer clic en el nodo **servicios** , puede ver o realizar tareas en la pági
 
 Puede crear una nueva configuración de servicio de las maneras siguientes:
 
-- Mediante un asistente: Haga clic en el vínculo **crear un nuevo servicio.** . en el panel de tareas o en la página de resumen para iniciar el asistente. También puede hacerlo en el menú **archivo** -> **Agregar nuevo elemento**.
+- Mediante un asistente: haga clic en el vínculo **crear un nuevo servicio...** en el panel de tareas o en la página de resumen para iniciar el asistente. También puede hacerlo en el menú **archivo** -> **Agregar nuevo elemento**.
 
-- Crear manualmente: Puede hacer clic con el botón secundario en el nodo **servicios** y elegir **nuevo servicio**.
+- Crear manualmente: puede hacer clic con el botón secundario en el nodo **servicios** y elegir **nuevo servicio**.
 
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Crear una nueva configuración de extremo de servicio
 
@@ -92,7 +92,7 @@ Puede crear una nueva configuración de punto de conexión de servicio de las ma
 
 - Crear mediante un asistente: haga clic en el vínculo **crear un nuevo punto de conexión de servicio.** . en el panel de tareas o en la página de resumen para iniciar el asistente. También puede hacerlo en el menú **archivo** -> **Agregar nuevo elemento**.
 
-- Crear manualmente: Una vez creado un servicio, puede hacer clic con el botón secundario en el nodo **extremos** y elegir "**nuevo punto de conexión de servicio**".
+- Crear manualmente: una vez creado un servicio, puede hacer clic con el botón secundario en el nodo **extremos** y elegir "**nuevo punto de conexión de servicio**".
 
 #### <a name="editing-a-service-configuration"></a>Editar una configuración de servicio
 
@@ -114,14 +114,14 @@ Puede crear una nueva configuración de punto de conexión de servicio de las ma
 
 3. Escriba el URI de la dirección base en el cuadro de diálogo.
 
-4. Haga clic en **OK**.
+4. Haga clic en **Aceptar**.
 
 > [!NOTE]
-> No se puede modificar el valor de [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) dentro de esta herramienta. Para agregar o modificar este elemento, debe utilizar un editor de texto o Visual Studio.
+> No se puede modificar el valor de [@no__t >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) en esta herramienta. Para agregar o modificar este elemento, debe utilizar un editor de texto o Visual Studio.
 
 ### <a name="client"></a>Cliente
 
-El nodo **cliente** muestra todos los puntos de conexión de cliente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento <`client`> del archivo de configuración.
+El nodo **cliente** muestra todos los puntos de conexión de cliente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento < `client` > en el archivo de configuración.
 
 Al hacer clic en el nodo **cliente** , puede ver o realizar tareas en la **Página de Resumen** del cliente en el **Panel de detalles**.
 
@@ -129,9 +129,9 @@ Al hacer clic en el nodo **cliente** , puede ver o realizar tareas en la **Pági
 
 Puede crear una nueva configuración de extremo de cliente de las maneras siguientes:
 
-- Crear por asistente: Haga clic en el vínculo **crear un nuevo cliente...** en el **Panel de tareas** de la parte inferior izquierda de la ventana o en la **Página de Resumen** para iniciar el asistente. También puede hacerlo en el menú **archivo** -> **Agregar nuevo elemento**. El asistente le pedirá que indique la ubicación de la configuración de servicio, a partir de la cual se genera la configuración del cliente. A continuación podrá elegir el punto de conexión de servicio con el que conectarse.
+- Crear por asistente: haga clic en el vínculo **crear un nuevo cliente...** en el **Panel de tareas** de la parte inferior izquierda de la ventana o en la **Página de Resumen** para iniciar el asistente. También puede hacerlo en el menú **archivo** -> **Agregar nuevo elemento**. El asistente le pedirá que indique la ubicación de la configuración de servicio, a partir de la cual se genera la configuración del cliente. A continuación podrá elegir el punto de conexión de servicio con el que conectarse.
 
-- Crear manualmente: Haga clic con el botón secundario en el nodo **extremos** , en **cliente**, y elija **nuevo punto de conexión de cliente**.
+- Crear manualmente: haga clic con el botón secundario en el nodo **extremos** , en **cliente**, y elija **nuevo punto de conexión de cliente**.
 
 #### <a name="editing-a-client-endpoint-configuration"></a>Editar una configuración de punto de conexión de cliente
 
@@ -143,7 +143,7 @@ Puede crear una nueva configuración de extremo de cliente de las maneras siguie
 
 Los puntos de conexión estándar son puntos de conexión especializados que tienen uno o más aspectos de la dirección, contrato y enlace definidos en los valores predeterminados.
 
-Estos valores de configuración se almacenan en el nodo de **punto de conexión estándar** . El nodo **punto de conexión estándar** muestra todos los valores de punto de conexión estándar en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento `<standardEndpoints>` del elemento en el archivo de configuración.
+Estos valores de configuración se almacenan en el nodo de **punto de conexión estándar** . El nodo **punto de conexión estándar** muestra todos los valores de punto de conexión estándar en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento `<standardEndpoints>` en el archivo de configuración.
 
 Al hacer clic en el nodo **extremo estándar** , puede ver o realizar tareas en la **página Resumen** de punto de conexión estándar en el **Panel de detalles**.
 
@@ -175,13 +175,13 @@ Puede eliminar una configuración de punto de conexión estándar de las maneras
 
 - Haga clic en el nodo **punto de conexión estándar** . En el panel de **tareas** , haga clic en **Eliminar configuración de extremo estándar**.
 
-Si el extremo estándar está en uso, se muestra un mensaje de advertencia al intentar eliminarlo: **El extremo estándar está en uso. Si lo elimina ahora, asegúrese de eliminar todas sus referencias en otras partes de la configuración (por ejemplo, en el punto de conexión de servicio o punto de conexión del cliente). De lo contrario, la configuración no será válida y no se puede abrir la próxima vez. ¿Está seguro de que desea eliminar el extremo estándar? "**
+Si el extremo estándar está en uso, se muestra un mensaje de advertencia al intentar eliminarlo: **el extremo estándar está en uso. Si lo elimina ahora, asegúrese de eliminar todas sus referencias en otras partes de la configuración (por ejemplo, en el punto de conexión de servicio o punto de conexión de cliente). De lo contrario, la configuración no será válida y no se podrá abrir la próxima vez. ¿Está seguro de que desea eliminar el extremo estándar? "**
 
-### <a name="binding"></a>Enlace
+### <a name="binding"></a>Enlaces
 
 Las configuraciones de enlace se usan para configurar enlaces en extremos. Estos valores de configuración se almacenan en el nodo de **enlace** . Los puntos de conexión hacen referencia a las configuraciones de enlace por nombre y varios puntos de conexión pueden hacer referencia a una configuración de enlace única.
 
-El nodo **enlaces** muestra todos los valores de enlace en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento <`bindings`> del archivo de configuración.
+El nodo **enlaces** muestra todos los valores de enlace en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento < `bindings` > en el archivo de configuración.
 
 Al hacer clic en el nodo **enlaces** , puede ver o realizar tareas en la **página Resumen** de enlace en el **Panel de detalles**.
 
@@ -225,19 +225,19 @@ Un enlace personalizado es una colección de elementos de enlace que forman una 
 
 ### <a name="diagnostics"></a>Diagnóstico
 
-El nodo diagnósticos muestra toda la configuración de diagnóstico en el archivo de configuración. Permite activar o desactivar los contadores de rendimiento, habilitar o deshabilitar Instrumental de administración de Windows (WMI), configurar el seguimiento de WCF y configurar el registro de mensajes de WCF. La configuración del nodo **diagnósticos** corresponde a la sección`system.diagnostics`< > y `<diagnostics>` en `<system.serviceModel>` el archivo de configuración.
+El nodo **diagnósticos** muestra toda la configuración de diagnóstico en el archivo de configuración. Permite activar o desactivar los contadores de rendimiento, habilitar o deshabilitar Instrumental de administración de Windows (WMI), configurar el seguimiento de WCF y configurar el registro de mensajes de WCF. La configuración del nodo **diagnósticos** corresponde a la sección < `system.diagnostics` > y `<diagnostics>` de `<system.serviceModel>` en el archivo de configuración.
 
-Al hacer clic en el nodo diagnósticos, puede ver o realizar tareas en la **página Resumen** de diagnósticos en el **Panel de detalles**.
+Al hacer clic en el nodo **diagnósticos** , puede ver o realizar tareas en la **página Resumen** de diagnósticos en el **Panel de detalles**.
 
 #### <a name="configuring-performance-counters-and-wmi"></a>Configurar contadores de rendimiento y WMI
 
-1. Haga clic en el nodo diagnósticos.
+1. Haga clic en el nodo **diagnósticos** .
 
-2. Haga clic en alternar contadores de **rendimiento**. El contador de rendimiento tiene tres Estados: OFF (valor predeterminado), ServiceOnly y ALL. Al hacer clic en el vínculo, se alterna el valor entre estos tres estados.
+2. Haga clic en **alternar contadores de rendimiento**. El contador de rendimiento tiene tres estados: Apagado (valor predeterminado), ServiceOnly y todos. Al hacer clic en el vínculo, se alterna el valor entre estos tres estados.
 
 #### <a name="configuring-wmi-provider"></a>Configurar proveedor de WMI
 
-1. Haga clic en el nodo diagnósticos.
+1. Haga clic en el nodo **diagnósticos** .
 
 2. Para habilitar el proveedor de WMI, haga clic en el vínculo **Habilitar proveedor WMI** .
 
@@ -245,11 +245,11 @@ Al hacer clic en el nodo diagnósticos, puede ver o realizar tareas en la **pág
 
 Puede crear un archivo de seguimiento de WCF con propiedades estándar o configurar un archivo de seguimiento personalizado.
 
-1. Haga clic en el nodo diagnósticos.
+1. Haga clic en el nodo **diagnósticos** .
 
 2. Haga clic en **Habilitar seguimiento**.
 
-3. Haga clic en el vínculo **nivel de seguimiento** para ajustar el nivel de seguimiento. Hay seis niveles de seguimiento: OFF, Critical, error, warning, Information y verbose. La opción **seguimiento de actividad** y propagar **actividad** le permiten usar la característica de seguimiento de la actividad WCF.
+3. Haga clic en el vínculo **nivel de seguimiento** para ajustar el nivel de seguimiento. Hay seis niveles de seguimiento: apagado, crítico, error, advertencia, información y detallado. La opción **seguimiento de actividad** y **propagar actividad** le permiten usar la característica de seguimiento de la actividad WCF.
 
 4. Haga clic en el nombre del agente de escucha de traza para especificar el archivo y las opciones de seguimiento.
 
@@ -257,22 +257,22 @@ Puede crear un archivo de seguimiento de WCF con propiedades estándar o configu
 
 Puede crear un archivo de seguimiento de WCF con propiedades estándar o configurar un archivo de seguimiento personalizado.
 
-1. Haga clic en el nodo diagnósticos.
+1. Haga clic en el nodo **diagnósticos** .
 
 2. Haga clic en **Habilitar registro de mensajes**.
 
-3. Haga clic en el vínculo **nivel de registro** para ajustar el nivel de registro. Hay tres niveles de registro: Incorrecto, servicio y transporte.
+3. Haga clic en el vínculo **nivel de registro** para ajustar el nivel de registro. Hay tres niveles de registro: incorrecto, servicio y transporte.
 
 4. Haga clic en el nombre de agente de escucha para especificar el archivo y las opciones de registro.
 
 > [!NOTE]
 > Si desea que los registros de seguimiento y de mensajes se vacíen automáticamente cuando se cierre la aplicación, habilite la opción **vaciado automático** .
 
-La **Página de Resumen** de diagnósticos le permite realizar las tareas más comunes en la configuración de diagnósticos. Sin embargo, si desea modificar manualmente la configuración de los agentes de escucha y los orígenes, debe expandir el nodo diagnósticos y editar la configuración en el nodo **registro de mensajes**, **agentes de escucha** y **orígenes** .
+La **Página de Resumen** de **diagnósticos** le permite realizar las tareas más comunes en la configuración de diagnósticos. Sin embargo, si desea modificar manualmente la configuración de los agentes de escucha y los orígenes, debe expandir el nodo **diagnósticos** y editar la configuración en el nodo **registro de mensajes**, **agentes de escucha** y **orígenes** .
 
 #### <a name="enabling-wcf-custom-tracing-or-message-logging"></a>Habilitar traza personalizada o registro de mensajes de WCF
 
-1. Haga clic en el nodo diagnósticos y expándalo.
+1. Haga clic en el nodo **diagnósticos** y expándalo.
 
 2. Haga clic con el botón secundario en el nodo **agentes de escucha** y seleccione **nuevo agente de escucha**.
 
@@ -360,7 +360,7 @@ Seleccione uno de los nodos de extensión en los nodos avanzados:
 
 2. Escriba un nombre y tipo.
 
-3. Haga clic en **OK**.
+3. Haga clic en **Aceptar**.
 
 4. La extensión aparece ahora en el lugar adecuado en el editor. Por ejemplo, si agrega una extensión de elemento de comportamiento, aparece en la lista de extensiones disponibles.
 
@@ -374,7 +374,7 @@ Una forma de crear un archivo de configuración nuevo es utilizar el Asistente p
 
 #### <a name="creating-a-configuration-file"></a>Crear un archivo de configuración
 
-1. Inicie el editor de configuración de servicio mediante una ventana de comandos para navegar a la ubicación de instalación de `SvcConfigEditor.exe`WCF y, a continuación, escriba.
+1. Inicie el editor de configuración de servicio mediante una ventana de comandos para navegar a la ubicación de instalación de WCF y, a continuación, escriba `SvcConfigEditor.exe`.
 
 2. En el menú **archivo** , seleccione **abrir** y haga clic en **ejecutable**, **servicio com+** o **servicio hospedado en host**, dependiendo del tipo de archivo de configuración que desee crear.
 
@@ -389,13 +389,13 @@ Una forma de crear un archivo de configuración nuevo es utilizar el Asistente p
 
 ## <a name="configuring-com"></a>Configurar COM+
 
-El editor de configuración de servicio le permite crear un nuevo archivo de configuración para una aplicación COM+ existente o editar una configuración COM+ existente. El nodo de **contrato com** solo está visible cuando la`comContract`sección < > existe en el archivo de configuración.
+El editor de configuración de servicio le permite crear un nuevo archivo de configuración para una aplicación COM+ existente o editar una configuración COM+ existente. El nodo de **contrato com** solo está visible cuando la sección < `comContract` > existe en el archivo de configuración.
 
 ### <a name="creating-a-new-com-configuration"></a>Crear una nueva configuración de COM+
 
 Antes de crear una nueva configuración de COM+, asegúrese de que su aplicación COM+ esté instalada en servicios de componente y registrada en la caché global de ensamblados (GAC).
 
-1. Menú **archivo** : > **integrar** -> la**aplicación com+.** Esta operación cierra el archivo abierto actual. Si hay datos no guardados en el archivo actual, aparece el cuadro de diálogo Guardar. A continuación, se inicia el **Asistente para la integración de com+** .
+1. Menú seleccionar **archivo** : > **integrar**la**aplicación com+** @no__t 2. Esta operación cierra el archivo abierto actual. Si hay datos no guardados en el archivo actual, aparece el cuadro de diálogo Guardar. A continuación, se inicia el **Asistente para la integración de com+** .
 
 2. En la primera página, seleccione la aplicación COM+ del árbol. Si no encuentra su aplicación COM+ en el árbol, compruebe que está instalada en los servicios de componente y registrada en la caché global de ensamblados (GAC).
 
@@ -409,7 +409,7 @@ Antes de crear una nueva configuración de COM+, asegúrese de que su aplicació
 
 ### <a name="editing-an-existing-com-configuration"></a>Editar una configuración COM+ existente
 
-1. Seleccione el menú **archivo** -> **abrir** -> el**servicio com+** ...
+1. Seleccione el menú **archivo** > **abrir**el**servicio com+**  -> ...
 
 2. Seleccione el servicio COM+ que desee editar en la lista.
 
@@ -420,6 +420,6 @@ Antes de crear una nueva configuración de COM+, asegúrese de que su aplicació
 
 ## <a name="security"></a>Seguridad
 
-No se garantiza que un archivo de configuración de servicio generado por el editor de configuración sea seguro. Consulte la documentación de [seguridad](../../../docs/framework/wcf/feature-details/security.md) para averiguar cómo proteger los servicios WCF.
+No se garantiza que un archivo de configuración de servicio generado por el editor de configuración sea seguro. Consulte la documentación de [seguridad](./feature-details/security.md) para averiguar cómo proteger los servicios WCF.
 
 Además, el editor de configuración solo se puede utilizar para leer y escribir elementos de configuración de WCF válidos. La herramienta omite los elementos conformes a esquema definidos por el usuario. Tampoco intenta quitar estos elementos del archivo de configuración o determinar sus efectos sobre los elementos de WCF conocidos. Es la responsabilidad del usuario determinar si estos elementos suponen una amenaza para la aplicación o el sistema.

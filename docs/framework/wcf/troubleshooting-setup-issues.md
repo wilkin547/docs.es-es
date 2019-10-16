@@ -2,12 +2,12 @@
 title: Solución de problemas de instalación
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291517"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321358"
 ---
 # <a name="troubleshooting-setup-issues"></a>Solución de problemas de instalación
 En este tema se describe cómo solucionar problemas de configuración de Windows Communication Foundation (WCF).  
@@ -42,11 +42,11 @@ En este tema se describe cómo solucionar problemas de configuración de Windows
   
      O bien  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: El inicializador de tipo para ' System. Management. ManagementPath ' produjo una excepción. ---> System. Runtime. InteropServices. COMException (0x80040154): No se pudo recuperar el generador de clases COM para el componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} debido al siguiente error: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: El inicializador de tipo para 'System.Management.ManagementPath' produjo una excepción. ---> System. Runtime. InteropServices. COMException (0x80040154): no se pudo recuperar el generador de clases COM para el componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} debido al siguiente error: 80040154.  
   
      O bien  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: No se pudo cargar el archivo o ensamblado ' C:\WINDOWS\system32\wbem\mofcomp.exe ' o una de sus dependencias. El sistema no puede encontrar el archivo especificado.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: No pudo cargar el archivo ni ensamblado 'C:\WINDOWS\system32\wbem\mofcomp.exe' o uno de sus dependencias. El sistema no puede encontrar el archivo especificado.  
   
      Nombre del archivo: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
@@ -57,14 +57,14 @@ En este tema se describe cómo solucionar problemas de configuración de Windows
  Repare la instalación de .NET Framework 3,0 mediante el applet **Agregar o quitar programas** que se encuentra en el **Panel de control**, o bien desinstale o vuelva a instalar el .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Reparar .NET Framework 3.0 después de que la instalación de .NET Framework 3.5 quite los elementos de configuración introducidos por .NET Framework 3.5 en el archivo machine.config  
- Si repara .NET Framework 3.0 después de instalar [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], se quitan los elementos de configuración introducidos por [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] en el archivo machine.config. No obstante, el archivo web.config permanece intacto. La solución consiste en reparar [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] después de hacerlo a través de ARP, o bien usar la [herramienta de registro del servicio de flujo de trabajo (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con el conmutador `/c`.  
+ Si repara .NET Framework 3.0 después de instalar [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], se quitan los elementos de configuración introducidos por [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] en el archivo machine.config. No obstante, el archivo web.config permanece intacto. La solución consiste en reparar [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] después de hacerlo a través de ARP, o bien usar la [herramienta de registro del servicio de flujo de trabajo (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) con el conmutador `/c`.  
   
- La [herramienta de registro de servicio de flujo de trabajo (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) se puede encontrar en%WINDIR%\Microsoft.NET\framework\v3.5\ o%WINDIR%\Microsoft.NET\framework64\v3.5\  
+ La [herramienta de registro de servicio de flujo de trabajo (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) se puede encontrar en%WINDIR%\Microsoft.NET\framework\v3.5\ o%WINDIR%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configurar IIS correctamente para Webhost de WCF/WF después de instalar .NET Framework 3.5  
  Cuando se produce un error en la instalación de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] al configurar otras opciones de configuración de IIS relacionadas con WCF, se registra un error en el registro de instalación y continúa. Cualquier intento de ejecutar las aplicaciones de WorkflowServices será en vano ya que faltan los valores de configuración necesarios. Por ejemplo, puede fallar la carga de los archivos .xoml o .rules.  
   
- Para solucionar este problema, use la [herramienta de registro del servicio de flujo de trabajo (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con el modificador `/c` para configurar correctamente las asignaciones de script de IIS en la máquina. La [herramienta de registro de servicio de flujo de trabajo (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) se puede encontrar en%WINDIR%\Microsoft.NET\framework\v3.5\ o%WINDIR%\Microsoft.NET\framework64\v3.5\  
+ Para solucionar este problema, use la [herramienta de registro del servicio de flujo de trabajo (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) con el modificador `/c` para configurar correctamente las asignaciones de script de IIS en la máquina. La [herramienta de registro de servicio de flujo de trabajo (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) se puede encontrar en%WINDIR%\Microsoft.NET\framework\v3.5\ o%WINDIR%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>No se puede cargar el tipo ‘System.ServiceModel.Activation.HttpModule’ del ensamblado ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
  Este error se produce si se instala [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] y, a continuación, se habilita la activación HTTP de WCF. Para resolver el problema, ejecute la siguiente línea de comandos desde el Símbolo del sistema para desarrolladores para Visual Studio:  
@@ -75,4 +75,4 @@ aspnet_regiis.exe -i -enable
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de instalación](../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Instrucciones de instalación](./samples/set-up-instructions.md)

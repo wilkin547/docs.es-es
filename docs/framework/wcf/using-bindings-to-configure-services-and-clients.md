@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 0f01fefc46cbc2cddaef9b025d59db8e2f734d9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645124"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321510"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilización de enlaces para configurar servicios y clientes
-Los enlaces son los objetos que especifican los datos de comunicación exigidos para conectar a un punto de conexión. Más específicamente, los enlaces contienen información de configuración utilizada para crear el cliente o servicio en tiempo de ejecución mediante la definición de las características de transportes, formatos de la conexión (codificación de mensajes) y protocolos que se utilizarán en el punto de conexión respectivo o canal de cliente. Para crear un servicio de Windows Communication Foundation (WCF) funcione, cada punto de conexión en el servicio requiere un enlace. Este tema explica qué enlaces son, cómo se definen, y cómo se especifica un enlace determinado para un punto de conexión.  
+Los enlaces son los objetos que especifican los datos de comunicación exigidos para conectar a un punto de conexión. Más específicamente, los enlaces contienen información de configuración utilizada para crear el cliente o servicio en tiempo de ejecución mediante la definición de las características de transportes, formatos de la conexión (codificación de mensajes) y protocolos que se utilizarán en el punto de conexión respectivo o canal de cliente. Para crear un servicio de Windows Communication Foundation (WCF) en funcionamiento, cada punto de conexión del servicio requiere un enlace. Este tema explica qué enlaces son, cómo se definen, y cómo se especifica un enlace determinado para un punto de conexión.  
   
 ## <a name="what-a-binding-defines"></a>Qué define un enlace  
  La información de un enlace puede ser muy básica o muy compleja. El enlace más básico especifica solo el protocolo de transporte (como HTTP) que se debe utilizar para conectar al extremo. Más generalmente, la información que contiene un enlace sobre cómo conectarse a un extremo queda incluida en una de las categorías de la tabla siguiente.  
@@ -27,20 +27,20 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
  Determina la codificación del mensaje, por ejemplo, texto/XML, binario o Mecanismo de optimización de transmisión del mensaje (MTOM), que determinan cómo se representan los mensajes como secuencias de bytes en la conexión.  
   
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
- WCF incluye un conjunto de enlaces proporcionados por el sistema que están diseñados para cubrir la mayoría de los escenarios y requisitos de la aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
+ WCF incluye un conjunto de enlaces proporcionados por el sistema que están diseñados para cubrir la mayoría de los requisitos y escenarios de la aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
   
-- <xref:System.ServiceModel.BasicHttpBinding>: Un protocolo HTTP enlace adecuado para conectarse a servicios Web que se ajusta a WS-I Basic Profile 1.1 especificación (por ejemplo, los servicios Web ASP.NET [ASMX]-servicios basados en).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los Servicios Web que cumple a la especificación del WS-I Basic Profile 1.1 (por ejemplo, servicios web ASP.NET [ASMX] - servicios basados).  
   
-- <xref:System.ServiceModel.WSHttpBinding>: Protocolos de especificaciones de servicios de un protocolo HTTP conveniente para conectar a los puntos de conexión que se ajustan a la Web de enlace.  
+- <xref:System.ServiceModel.WSHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los extremos que cumplen con los protocolos de especificaciones de servicios Web.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa la codificación binaria .NET y tramas tecnologías junto con el transporte de canalización con nombre de Windows para conectarse a otros extremos WCF en el mismo equipo.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: utiliza la codificación binaria de .NET y las tecnologías de tramas junto con el transporte de canalización con nombre de Windows para conectarse a otros puntos de conexión de WCF en el mismo equipo.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Usa la codificación binaria .NET y las tecnologías junto con el Message Queuing (también conocido como MSMQ) trama para crear las conexiones de mensajes en cola con otros extremos WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: utiliza la codificación binaria de .NET y las tecnologías de tramas junto con Message Queue Server (también conocido como MSMQ) para crear conexiones de mensajes en cola con otros extremos de WCF.  
   
- Para obtener una lista completa de los enlaces proporcionados por el sistema, con descripciones, consulte [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
+ Para obtener una lista completa de los enlaces proporcionados por el sistema, con descripciones, vea [enlaces proporcionados por el sistema](system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Enlaces personalizados  
- Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información acerca de los elementos de un <xref:System.ServiceModel.Channels.CustomBinding> enlace, vea [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información sobre los elementos de un enlace @no__t 0, vea [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](./extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilizar los enlaces  
  El uso de enlaces conlleva dos pasos básicos:  
@@ -50,16 +50,16 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
 2. Cree un punto de conexión que utiliza este enlace.  
   
 ## <a name="code-and-configuration"></a>Código y configuración  
- Puede definir o configurar los enlaces a través del código o configuración. Estos dos enfoques son independientes según el tipo de enlace utilizado, por ejemplo, si utiliza un enlace proporcionado por el sistema o un enlace <xref:System.ServiceModel.Channels.CustomBinding>. En general, el uso de código proporciona un control total sobre la definición de un enlace cuando se compila. Con la configuración, por otro lado, permite que un administrador del sistema o el usuario de un servicio WCF o cliente cambiar los parámetros de enlaces. Esta flexibilidad es a menudo deseable porque no hay ninguna manera de predecir los requisitos específicos del equipo y condiciones en la que una aplicación de WCF es implementar la red. Separar la información de enlace (y direccionamiento) del código permite a los administradores cambiar los datos obligatorios sin tener que recompilar o implementar de nuevo la aplicación. Tenga en cuenta que si el enlace se define en código, sobrescribe las definiciones basadas en configuración realizadas en el archivo de configuración. Para obtener ejemplos de estos enfoques, consulte los temas siguientes:  
+ Puede definir o configurar los enlaces a través del código o configuración. Estos dos enfoques son independientes según el tipo de enlace utilizado, por ejemplo, si utiliza un enlace proporcionado por el sistema o un enlace <xref:System.ServiceModel.Channels.CustomBinding>. En general, el uso de código proporciona un control total sobre la definición de un enlace cuando se compila. Por otro lado, el uso de la configuración permite a un administrador del sistema o al usuario de un servicio o cliente WCF cambiar los parámetros de los enlaces. Esta flexibilidad es a menudo deseable porque no hay ninguna manera de predecir los requisitos de máquina y las condiciones de red específicos en los que se va a implementar una aplicación WCF. Separar la información de enlace (y direccionamiento) del código permite a los administradores cambiar los datos obligatorios sin tener que recompilar o implementar de nuevo la aplicación. Tenga en cuenta que si el enlace se define en código, sobrescribe las definiciones basadas en configuración realizadas en el archivo de configuración. Para obtener ejemplos de estos enfoques, consulte los temas siguientes:  
   
-- [Cómo: Hospedar un servicio WCF en una aplicación administrada](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) proporciona un ejemplo de cómo crear un enlace en código.  
+- [Cómo: hospedar un servicio WCF en una aplicación administrada](how-to-host-a-wcf-service-in-a-managed-application.md) proporciona un ejemplo de cómo crear un enlace en el código.  
   
-- [Tutorial: Crear un cliente de Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) proporciona un ejemplo de creación de un cliente mediante configuración.  
+- [Tutorial: crear un cliente de Windows Communication Foundation](how-to-create-a-wcf-client.md) proporciona un ejemplo de creación de un cliente mediante la configuración.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Cómo: Especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Cómo: Especificar un enlace de servicio en el código](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [Cómo: Especificar un enlace de cliente en configuración](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Cómo: Especificar un enlace de cliente en el código](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [Información general sobre la creación de puntos finales](endpoint-creation-overview.md)
+- [Cómo especificar un enlace de servicio en la configuración](how-to-specify-a-service-binding-in-configuration.md)
+- [Cómo especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md)
+- [Cómo especificar un enlace de cliente en la configuración](how-to-specify-a-client-binding-in-configuration.md)
+- [Cómo especificar un enlace de cliente en el código](how-to-specify-a-client-binding-in-code.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9110198fa64e43c20e1e6ba0dcf158dddeac93a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967926"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321151"
 ---
 # <a name="services-and-transactions"></a>Servicios y transacciones
 Las aplicaciones de Windows Communication Foundation (WCF) pueden iniciar una transacción desde dentro de un cliente y coordinar la transacción dentro de la operación de servicio. Los clientes pueden iniciar una transacción e invocación varias operaciones del servicio y garantizar que las operaciones del servicio se confirmen o reviertan como una unidad única.  
   
- Puede habilitar el comportamiento de la transacción en el contrato de servicios especificando <xref:System.ServiceModel.ServiceBehaviorAttribute> y estableciendo su <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> y las propiedades <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> para las operaciones del servicio que requieren las transacciones del cliente. El parámetro <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> especifica si se completa automáticamente la transacción en la que se ejecuta el método si no se produce ninguna excepción no controlada. Para obtener más información acerca de estos atributos, vea [atributos de transacción de ServiceModel](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Puede habilitar el comportamiento de la transacción en el contrato de servicios especificando <xref:System.ServiceModel.ServiceBehaviorAttribute> y estableciendo su <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> y las propiedades <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> para las operaciones del servicio que requieren las transacciones del cliente. El parámetro <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> especifica si se completa automáticamente la transacción en la que se ejecuta el método si no se produce ninguna excepción no controlada. Para obtener más información sobre estos atributos, consulte [atributos de transacción de ServiceModel](./feature-details/servicemodel-transaction-attributes.md).  
   
  El trabajo que se realiza en las operaciones del servicio y que es administrado por un administrador de recursos, como registrar las actualizaciones de base de datos, forma parte de la transacción del cliente.  
   
@@ -59,7 +59,7 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- Puede permitir que las transacciones y configurando el cliente de flujo de transacciones y enlaces para usar el protocolo WS-AtomicTransaction y configuración del servicio el [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) elemento `true`, como se muestra en el siguiente ejemplo de configuración.  
+ Puede habilitar transacciones y el flujo de transacciones mediante la configuración de los enlaces del cliente y del servicio para utilizar el protocolo WS-AtomicTransaction y establecer el elemento [de > \<transactionFlow](../configure-apps/file-schema/wcf/transactionflow.md) en `true`, tal como se muestra en el ejemplo siguiente. configuraciones.  
   
 ```xml  
 <client>  
@@ -90,6 +90,6 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
   
 ## <a name="see-also"></a>Vea también
 
-- [Compatibilidad transaccional en System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
-- [Modelos de transacción](../../../docs/framework/wcf/feature-details/transaction-models.md)
-- [Flujo de la transacción WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+- [Compatibilidad transaccional en System.ServiceModel](./feature-details/transactional-support-in-system-servicemodel.md)
+- [Modelos de transacción](./feature-details/transaction-models.md)
+- [Flujo de la transacción WS](./samples/ws-transaction-flow.md)

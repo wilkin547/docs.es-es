@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415928"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291595"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -55,7 +55,7 @@ En el ejemplo siguiente, el entorno de ejecución devuelve una excepción `Inval
 
 Algunos objetos hacen referencia a *recursos no administrados*. Los recursos no administrados son recursos que el entorno de ejecución .NET no mantiene de forma automática. Por ejemplo, un identificador de archivo es un recurso no administrado. Un objeto <xref:System.IO.FileStream> es un objeto administrado, pero hace referencia a un identificador de archivo, que es uno no administrado. Cuando haya acabado de usar <xref:System.IO.FileStream>, deberá liberar el identificador de archivo.
 
-En .NET, los objetos que hacen referencia a recursos no administrados implementan la interfaz de <xref:System.IDisposable>. Cuando haya acabado de usar el objeto, deberá llamar al método <xref:System.IDisposable.Dispose> del objeto, que es el responsable de liberar cualquier recurso no administrado. Los lenguajes .NET ofrecen una sintaxis `using` muy útil para esos objetos, como se muestra en el ejemplo siguiente:
+En .NET, los objetos que hacen referencia a recursos no administrados implementan la interfaz de <xref:System.IDisposable>. Cuando haya acabado de usar el objeto, deberá llamar al método <xref:System.IDisposable.Dispose> del objeto, que es el responsable de liberar cualquier recurso no administrado. Los lenguajes .NET ofrecen una [`using` instrucción ](../csharp/language-reference/keywords/using.md) muy útil para esos objetos, como se muestra en el ejemplo siguiente:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

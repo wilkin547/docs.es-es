@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 6f62d0f712f7461ef8cd65f15f3ed2690446bae1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 47a7bb42ea2441ffef2fd27f26a20beceb871173
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044452"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321132"
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificación de una dirección de punto de conexión
 
@@ -22,33 +22,33 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
 
 En WCF, un <xref:System.ServiceModel.EndpointAddress> modela una referencia de extremo (EPR) tal y como se define en el estándar WS-Addressing.
 
-El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, este URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` tiene las cuatro partes siguientes:
+El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, este URI, `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` tiene las cuatro partes siguientes:
 
 - Esquema: http:
 
-- Sistema`www.fabrikam.com`
+- Máquina: `www.fabrikam.com`
 
-- Opta Casilla 322
+- (Opcional) Puerto: 322
 
 - Ruta de acceso: /mathservice.svc/secureEndpoint
 
-Parte del modelo EPR consiste en que cada referencia de extremo puede llevar algunos parámetros de referencia que agregan información de identificación adicional. En WCF, estos parámetros de referencia se modelan como instancias de <xref:System.ServiceModel.Channels.AddressHeader> la clase.
+Parte del modelo EPR consiste en que cada referencia de extremo puede llevar algunos parámetros de referencia que agregan información de identificación adicional. En WCF, estos parámetros de referencia se modelan como instancias de la clase <xref:System.ServiceModel.Channels.AddressHeader>.
 
 La dirección del punto de conexión de un servicio puede especificarse de manera imperativa mediante código, o de manera declarativa mediante configuración. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Generalmente, es más práctico definir extremos de servicio mediante la configuración en lugar del código. Mantener la información del enlace y el direccionamiento fuera del código les permite cambiar sin tener que recompilar e implementar la aplicación. Si no se especifica ningún extremo en el código o en la configuración, el tiempo de ejecución agrega un extremo predeterminado en cada dirección base de cada contrato de servicio implementado por el servicio.
 
 Hay dos maneras de especificar las direcciones de punto de conexión para un servicio en WCF. Puede especificar una dirección absoluta para cada punto de conexión asociado al servicio o puede proporcionar una dirección base para <xref:System.ServiceModel.ServiceHost> de un servicio y, a continuación, especificar una dirección para cada punto de conexión asociado a este servicio que se define relativo a esta dirección base. Puede utilizar cada uno de estos procedimientos para especificar las direcciones de extremo de un servicio mediante configuración o código. Si no especifica una dirección relativa, el servicio utiliza la dirección base. También puede tener varias direcciones base para un servicio, pero en cada servicio se permite sólo una dirección base para cada transporte. Si tiene varios puntos de conexión, cada uno de los cuales está configurado con un enlace diferente, sus direcciones deben ser únicas. Los extremos que utilizan el mismo enlace pero contratos diferentes pueden utilizar la misma dirección.
 
-Al hospedarse con IIS, no administra por sí mismo las instancias <xref:System.ServiceModel.ServiceHost>. La dirección base siempre es la dirección especificada en el archivo .svc para el servicio al hospedarse en IIS. De modo que siempre debe utilizar direcciones de punto de conexión relativas para los puntos de conexión de servicio hospedados en IIS. Proporcionar una dirección de punto de conexión completa puede conducir a errores en la implementación del servicio. Para obtener más información, consulte [implementación de un servicio WCF hospedado en Internet Information Services](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
+Al hospedarse con IIS, no administra por sí mismo las instancias <xref:System.ServiceModel.ServiceHost>. La dirección base siempre es la dirección especificada en el archivo .svc para el servicio al hospedarse en IIS. De modo que siempre debe utilizar direcciones de punto de conexión relativas para los puntos de conexión de servicio hospedados en IIS. Proporcionar una dirección de punto de conexión completa puede conducir a errores en la implementación del servicio. Para obtener más información, consulte [implementación de un servicio WCF hospedado en Internet Information Services](./feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definición de direcciones de puntos de conexión mediante configuración
 
-Para definir un punto de conexión en un archivo de configuración, use el [ \<punto de conexión >](../configure-apps/file-schema/wcf/endpoint-element.md) elemento.
+Para definir un punto de conexión en un archivo de configuración, use el elemento [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md) .
 
 [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]
 
-Cuando se llama al [ \<](../../../docs/framework/configure-apps/file-schema/wcf/service.md) método(esdecir,cuandolaaplicacióndehospedajeintentainiciarelservicio),elsistemabuscaunelementode>deservicioconunatributodenombrequeespecifica"UE.<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> Samples. HelloService ". Si se [ \<](../../../docs/framework/configure-apps/file-schema/wcf/service.md) encuentra el elemento de > de servicio, el sistema carga la clase especificada y crea extremos con las definiciones de extremo proporcionadas en el archivo de configuración. Este mecanismo le permite cargar e iniciar un servicio con dos líneas de código, mientras mantiene la información de enlace y dirección fuera de su código. La ventaja de este enfoque es que estas modificaciones se pueden realizar sin tener que recompilar o implementar la aplicación.
+Cuando se llama al método <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> (es decir, cuando la aplicación de hospedaje intenta iniciar el servicio), el sistema busca un elemento de [> \<Service](../configure-apps/file-schema/wcf/service.md) con un atributo de nombre que especifica "UE. Samples. HelloService ". Si se encuentra el elemento [de > \<service](../configure-apps/file-schema/wcf/service.md) , el sistema carga la clase especificada y crea puntos de conexión con las definiciones de extremo proporcionadas en el archivo de configuración. Este mecanismo le permite cargar e iniciar un servicio con dos líneas de código, mientras mantiene la información de enlace y dirección fuera de su código. La ventaja de este enfoque es que estas modificaciones se pueden realizar sin tener que recompilar o implementar la aplicación.
 
-Los encabezados opcionales se declaran en un [ \<> de encabezados](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). El siguiente es un ejemplo de los elementos utilizados para especificar los extremos de un servicio en un archivo de configuración que distingue entre dos encabezados: Clientes `http://tempuri1.org/` "Gold" desde y "estándar" desde `http://tempuri2.org/`. El cliente que llama a este servicio debe tener los [ \<encabezados correspondientes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) en su archivo de configuración.
+Los encabezados opcionales se declaran en un [> \<headers](../configure-apps/file-schema/wcf/headers-element.md). El siguiente es un ejemplo de los elementos que se usan para especificar los extremos de un servicio en un archivo de configuración que distingue entre dos encabezados: clientes "Gold" de `http://tempuri1.org/` y clientes estándar de `http://tempuri2.org/`. El cliente que llama a este servicio debe tener el [> \<headers](../configure-apps/file-schema/wcf/headers-element.md) adecuado en su archivo de configuración.
 
 [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]
 
@@ -84,11 +84,11 @@ El ejemplo siguiente muestra cómo agregar una dirección relativa ("MyService")
 
 Si no se especifica ningún extremo en el código ni en la configuración, el tiempo de ejecución proporciona extremos predeterminados, agregando uno en cada dirección base de cada contrato de servicio implementado por el servicio. La dirección base se puede especificar en el código o en la configuración, y los extremos predeterminados se agregan al llamar al método <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> en el objeto <xref:System.ServiceModel.ServiceHost>.
 
-Si se proporcionan puntos de conexión de forma explícita, es posible agregar puntos de conexión predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+Si se proporcionan puntos de conexión de forma explícita, es posible agregar puntos de conexión predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](./samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.EndpointAddress>
-- [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Información general sobre la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Hospedar aplicaciones de WPF](../../../docs/framework/wcf/feature-details/hosting.md)
+- [Identidad del servicio y autenticación](./feature-details/service-identity-and-authentication.md)
+- [Información general sobre la creación de puntos finales](endpoint-creation-overview.md)
+- [Hospedar aplicaciones de WPF](./feature-details/hosting.md)

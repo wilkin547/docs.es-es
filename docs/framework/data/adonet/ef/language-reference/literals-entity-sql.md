@@ -2,12 +2,12 @@
 title: Literales (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e07dd3217e133fff98beb11ecad47e1474e4974a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250343"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319662"
 ---
 # <a name="literals-entity-sql"></a>Literales (Entity SQL)
 En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -19,10 +19,10 @@ En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](
   
  Para las reglas sobre dónde se pueden usar los literales null flotantes, vea [literales null e inferencia de tipos](null-literals-and-type-inference-entity-sql.md).  
   
-## <a name="boolean"></a>Boolean  
+## <a name="boolean"></a>Booleano  
  Los literales booleanos se representan mediante las palabras clave `true` y `false`.  
   
-## <a name="integer"></a>Entero  
+## <a name="integer"></a>Integer  
  Los literales enteros pueden ser de tipo <xref:System.Int32> o <xref:System.Int64>. Un literal <xref:System.Int32> es una serie de caracteres numéricos. Un literal <xref:System.Int64> es una serie de caracteres numéricos seguidos de una letra L en mayúsculas.  
   
 ## <a name="decimal"></a>Decimal  
@@ -31,10 +31,10 @@ En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](
 ## <a name="float-double"></a>Flotante y doble  
  Un número de punto flotante de doble precisión es una serie de caracteres numéricos, un punto (.) y otra serie de caracteres numéricos seguidos, posiblemente, de un exponente. Un número de punto flotante de precisión sencilla (o float) es un número de punto flotante de precisión doble seguido de la letra f en minúsculas.  
   
-## <a name="string"></a>string  
+## <a name="string"></a>String  
  Una cadena es una serie de caracteres incluidos entre comillas. Las comillas pueden ser simples (`'`) o dobles ("). Los literales de cadenas de caracteres pueden ser Unicode o no Unicode. Para declarar un literal de cadena de caracteres como Unicode, anteponga al literal la letra "N" mayúscula. De forma predeterminada, son literales de cadena de caracteres no Unicode. No puede haber espacios entre la N y la carga del literal de cadena, y la N debe estar en mayúsculas.  
   
-```  
+```sql  
 'hello' -- non-Unicode character string literal  
 N'hello' -- Unicode character string literal  
 "x"  
@@ -45,23 +45,23 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Un literal datetime es independiente de la configuración regional y está compuesto de una fecha y una hora. Tanto la fecha como la hora deben aparecer y no hay valores predeterminados.  
   
- La parte de la fecha debe tener el `YYYY`formato: `MM` `DD` - -, donde `YYYY` es un valor de año de cuatro dígitos entre `MM` 0001 y 9999, es el mes comprendido entre 1 y 12 y `DD` es valor de día válido para el mes `MM`especificado.  
+ La parte de la fecha debe tener el formato siguiente: `YYYY` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4, donde `YYYY` es un valor de año de cuatro dígitos entre 0001 y 9999, `MM` es el mes comprendido entre 1 y 12 y `DD` es el valor de día válido para el mes determinado `MM`.  
   
  La hora debe tener el formato: `HH`:`MM`[:`SS`[.fffffff]], donde `HH` es el valor correspondiente a la hora comprendido entre 0 y 23, `MM` es el valor correspondiente a los minutos comprendido entre 0 y 59, `SS` es el valor correspondiente a los segundos comprendido entre 0 y 59, y fffffff es el valor correspondiente a la fracción de segundo comprendido entre 0 y 9999999. Todos los intervalos de valores incluyen los valores extremos. Las fracciones de segundo son opcionales. Los segundos son opcionales a menos que se especifiquen fracciones de segundo; en este caso, los segundos son necesarios. Cuando no se especifican segundos o fracciones de segundo, se usa el valor cero predeterminado.  
   
  Puede haber cualquier número de espacios entre el símbolo DATETIME y la carga del literal, pero no puede haber líneas nuevas.  
   
-```  
+```sql  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>Hora  
+## <a name="time"></a>Tiempo  
  Un literal time es independiente de la configuración regional y está compuesto de una hora exclusivamente. La hora debe aparecer y no hay ningún valor predeterminado. Debe tener el formato HH:MM[:SS[.fffffff]], donde HH es el valor correspondiente a la hora comprendido entre 0 y 23, MM es el valor correspondiente a los minutos comprendido entre 0 y 59, SS es el valor correspondiente a los segundos comprendido entre 0 y 59, y fffffff es el valor correspondiente a la fracción de segundo comprendido entre 0 y 9999999. Todos los intervalos de valores incluyen los valores extremos. Las fracciones de segundo son opcionales. Los segundos son opcionales a menos que se especifiquen fracciones de segundo; en este caso, los segundos son necesarios. Cuando no se especifican segundos o fracciones de segundo, se usa el valor cero predeterminado.  
   
  Puede haber cualquier número de espacios entre el símbolo TIME y la carga del literal, pero no puede haber líneas nuevas.  
   
-```  
+```sql  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
@@ -71,7 +71,7 @@ TIME‘01:01:00.1234567’
   
  Puede haber cualquier número de espacios entre el símbolo DATETIMEOFFSET y la carga del literal, pero no puede haber líneas nuevas.  
   
-```  
+```sql  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
 DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’  
 ```  
@@ -84,19 +84,19 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
   
  Los caracteres hexadecimales tampoco distinguen mayúsculas de minúsculas. Si el literal está compuesto de un número impar de dígitos hexadecimales, el literal se alineará con el siguiente dígito hexadecimal par anteponiéndole un dígito cero hexadecimal. No hay ningún límite formal para el tamaño de la cadena binaria.  
   
-```  
+```sql  
 Binary'00ffaabb'  
 X'ABCabc'  
 BINARY    '0f0f0f0F0F0F0F0F0F0F'  
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
- Un literal `GUID` representa un identificador único global. Es una secuencia formada por la palabra clave `GUID` seguida de dígitos hexadecimales en el formato conocido como formato *del registro* : 8-4-4-4-12 entre comillas simples. Los dígitos hexadecimales no distinguen mayúsculas de minúsculas.  
+## <a name="guid"></a>GUID  
+ Un literal `GUID` representa un identificador único global. Es una secuencia formada por la palabra clave `GUID` seguida de dígitos hexadecimales en el formato denominado *registro* : 8-4-4-4-12 entre comillas simples. Los dígitos hexadecimales no distinguen mayúsculas de minúsculas.  
   
  Puede haber cualquier número de espacios entre el símbolo GUID y la carga del literal, pero no puede haber líneas nuevas.  
   
-```  
+```sql  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  

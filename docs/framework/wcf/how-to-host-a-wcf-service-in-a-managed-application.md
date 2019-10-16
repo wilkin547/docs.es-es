@@ -1,26 +1,26 @@
 ---
-title: Procedimiento para hospedar un servicio WCF en una aplicación administrada
+title: Hospedaje de un servicio WCF en una aplicación administrada
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637577"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320976"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Procedimiento Hospedar un servicio WCF en una aplicación administrada
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Cómo: hospedar un servicio WCF en una aplicación administrada
 
 Para hospedar un servicio dentro de una aplicación administrada, incruste el código del servicio dentro del código de la aplicación administrada, defina un extremo para el servicio de manera imperativa mediante código, de manera declarativa mediante configuración o usando extremos predeterminados y, a continuación, cree una instancia de <xref:System.ServiceModel.ServiceHost>.
 
 Para comenzar a recibir mensajes, llame al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> en <xref:System.ServiceModel.ServiceHost>. Esto crea y abre el agente de escucha del servicio. Hospedar un servicio de esta manera se conoce a menudo como "autohospedaje", puesto que la aplicación administrada está haciendo el propio trabajo de hospedaje. Para cerrar el servicio, llame al método <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ServiceHost>.
 
-Un servicio también se puede hospedar en un servicio de Windows administrado, en Internet Information Services (IIS) o en Servicio de activación de procesos de Windows (WAS). Para obtener más información acerca de las opciones para un servicio de hospedaje, vea [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).
+Un servicio también se puede hospedar en un servicio de Windows administrado, en Internet Information Services (IIS) o en Servicio de activación de procesos de Windows (WAS). Para obtener más información sobre las opciones de hospedaje de un servicio, vea [servicios de hospedaje](hosting-services.md).
 
-Hospedar un servicio en una aplicación administrada es la opción más flexible porque es la que necesita una menor infraestructura para su implementación. Para obtener más información sobre el hospedaje de servicios en las aplicaciones administradas, vea [hospedaje en una aplicación administrada](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+Hospedar un servicio en una aplicación administrada es la opción más flexible porque es la que necesita una menor infraestructura para su implementación. Para obtener más información sobre cómo hospedar servicios en aplicaciones administradas, consulte [hospedaje en una aplicación administrada](./feature-details/hosting-in-a-managed-application.md).
 
 El siguiente procedimiento muestra cómo implementar un servicio autohospedado en una aplicación de consola.
 
@@ -28,18 +28,18 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
 
 1. Cree una nueva aplicación de consola:
 
-   1. Abra Visual Studio y seleccione **New** > **proyecto** desde el **archivo** menú.
+   1. Abra Visual Studio y seleccione **nuevo** > **proyecto** en el menú **archivo** .
 
-   2. En el **plantillas instaladas** lista, seleccione **Visual C#** o **Visual Basic**y, a continuación, seleccione **Windows Desktop**.
+   2. En la lista **plantillas instaladas** , **Seleccione C# visual** o **Visual Basic**y, a continuación, seleccione **escritorio de Windows**.
 
-   3. Seleccione el **aplicación de consola** plantilla. Tipo `SelfHost` en el **nombre** cuadro y, a continuación, elija **Aceptar**.
+   3. Seleccione la plantilla **aplicación de consola** . Escriba `SelfHost` en el cuadro **nombre** y, a continuación, elija **Aceptar**.
 
-2. Haga clic en **SelfHost** en **el Explorador de soluciones** y seleccione **Agregar referencia**. Seleccione **System.ServiceModel** desde el **.NET** ficha y, a continuación, elija **Aceptar**.
+2. Haga clic con el botón secundario en **SelfHost** en **Explorador de soluciones** y seleccione **Agregar referencia**. Seleccione **System. ServiceModel** en la pestaña **.net** y, después, elija **Aceptar**.
 
     > [!TIP]
-    > Si el **el Explorador de soluciones** ventana no está visible, seleccione **el Explorador de soluciones** desde el **vista** menú.
+    > Si la ventana de **Explorador de soluciones** no está visible, seleccione **Explorador de soluciones** en el menú **Ver** .
 
-3. Haga doble clic en **Program.cs** o **Module1.vb** en **el Explorador de soluciones** para abrirlo en la ventana de código, si aún no está abierto. Agregue las siguientes instrucciones en la parte superior del archivo:
+3. Haga doble clic en **Program.CS** o **Module1. VB** en **Explorador de soluciones** para abrirlo en la ventana de código, si aún no está abierto. Agregue las siguientes instrucciones en la parte superior del archivo:
 
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
@@ -50,7 +50,7 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Para obtener más información acerca de cómo definir e implementar una interfaz de servicio, vea [Cómo: Definir un contrato de servicio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) y [Cómo: Implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Para obtener más información sobre cómo definir e implementar una interfaz de servicio, vea [Cómo: definir un contrato de servicio](how-to-define-a-wcf-service-contract.md) y [Cómo: implementar un contrato de servicio](how-to-implement-a-wcf-contract.md).
 
 5. Al principio del método `Main`, cree una instancia de la clase <xref:System.Uri> con la dirección base del servicio.
 
@@ -63,29 +63,29 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > En este ejemplo se usan puntos de conexión predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún extremo, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > En este ejemplo se usan puntos de conexión predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún extremo, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, vea [configuración simplificada](simplified-configuration.md) y [configuración simplificada para servicios WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-7. Presione **Ctrl**+**MAYÚS**+**B** para compilar la solución.
+7. Presione **Ctrl**+**Shift**+**B** para compilar la solución.
 
 ## <a name="test-the-service"></a>Probar el servicio
 
 1. Presione **Ctrl**+**F5** para ejecutar el servicio.
 
-2. Abra **cliente de prueba WCF**.
+2. Abra el **cliente de prueba WCF**.
 
     > [!TIP]
-    > Para abrir **cliente de prueba WCF**, abra el símbolo del sistema para desarrolladores para Visual Studio y ejecute **WcfTestClient.exe**.
+    > Para abrir el **cliente de prueba WCF**, abra símbolo del sistema para desarrolladores para Visual Studio y ejecute **WcfTestClient. exe**.
 
-3. Seleccione **Agregar servicio** desde el **archivo** menú.
+3. Seleccione **Agregar servicio** en el menú **archivo** .
 
-4. Tipo `http://localhost:8080/hello` en el cuadro de dirección y haga clic en **Aceptar**.
+4. Escriba `http://localhost:8080/hello` en el cuadro Dirección y haga clic en **Aceptar**.
 
     > [!TIP]
     > Asegúrese de que el servicio se está ejecutando; de lo contrario, este paso producirá un error. Si ha cambiado la dirección base en el código, use dicha dirección en este paso.
 
-5. Haga doble clic en **SayHello** bajo el **Mis proyectos de servicios** nodo. Escriba su nombre en el **valor** columna en el **solicitar** lista y haga clic en **Invoke**.
+5. Haga doble clic en **SayHello** en el nodo **mis proyectos de servicio** . Escriba su nombre en la columna **valor** de la lista **solicitud** y haga clic en **invocar**.
 
-   Aparece un mensaje de respuesta en el **respuesta** lista.
+   Aparece un mensaje de respuesta en la lista de **respuestas** .
 
 ## <a name="example"></a>Ejemplo
 
@@ -99,11 +99,11 @@ El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Cómo: Hospedar un servicio WCF en IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Probar internamente](../../../docs/framework/wcf/samples/self-host.md)
-- [Servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md)
-- [Cómo: Definir un contrato de servicio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Cómo: Implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Enlaces proporcionados por el sistema](../../../docs/framework/wcf/system-provided-bindings.md)
+- [Cómo: hospedar un servicio WCF en IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Probar internamente](./samples/self-host.md)
+- [Servicios de hospedaje](hosting-services.md)
+- [Cómo definir un contrato de servicios](how-to-define-a-wcf-service-contract.md)
+- [Cómo implementar un contrato de servicio](how-to-implement-a-wcf-contract.md)
+- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)
+- [Enlaces proporcionados por el sistema](system-provided-bindings.md)

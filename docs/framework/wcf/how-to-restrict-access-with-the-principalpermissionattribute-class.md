@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute
+title: Cómo restringir el acceso con la clase PrincipalPermissionAttribute
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93268be4b04ec6824ed7ecab070f28ddf40f8831
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951020"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320938"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute
-Controlar el acceso a los recursos en un equipo del dominio de Windows es una tarea de seguridad básica. Por ejemplo, solo ciertos usuarios deberían poder ver los datos confidenciales, como la información de la nómina. Este tema explica cómo restringir el acceso a un método exigiendo que el usuario pertenezca a un grupo predefinido. Para obtener un ejemplo de trabajo, vea el apartado sobre cómo autorizar el [acceso a las operaciones de servicio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Cómo restringir el acceso con la clase PrincipalPermissionAttribute
+Controlar el acceso a los recursos en un equipo del dominio de Windows es una tarea de seguridad básica. Por ejemplo, solo ciertos usuarios deberían poder ver los datos confidenciales, como la información de la nómina. Este tema explica cómo restringir el acceso a un método exigiendo que el usuario pertenezca a un grupo predefinido. Para obtener un ejemplo de trabajo, vea el apartado sobre cómo [autorizar el acceso a las operaciones de servicio](./samples/authorizing-access-to-service-operations.md).  
   
  La tarea está compuesta de dos procedimientos independientes. El primero crea el grupo y lo rellena con usuarios. El segundo aplica la clase <xref:System.Security.Permissions.PrincipalPermissionAttribute> para especificar el grupo.  
   
@@ -39,7 +39,7 @@ Controlar el acceso a los recursos en un equipo del dominio de Windows es una ta
   
 ### <a name="to-demand-user-membership"></a>Para exigir la pertenencia del usuario  
   
-1. Abra el archivo de código Windows Communication Foundation (WCF) que contiene el código de contrato de servicio implementado. Para obtener más información sobre la implementación de un contrato, consulte [implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Abra el archivo de código Windows Communication Foundation (WCF) que contiene el código de contrato de servicio implementado. Para obtener más información sobre la implementación de un contrato, consulte [implementación de contratos de servicio](implementing-service-contracts.md).  
   
 2. Aplique el atributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> a cada método que debe estar restringido a un grupo concreto. Establezca la propiedad <xref:System.Security.Permissions.SecurityAttribute.Action%2A> en <xref:System.Security.Permissions.SecurityAction.Demand> y la propiedad <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> en el nombre del grupo. Por ejemplo:  
   
@@ -52,7 +52,7 @@ Controlar el acceso a los recursos en un equipo del dominio de Windows es una ta
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Uso de un certificado para controlar el acceso a un método  
  También puede utilizar la clase `PrincipalPermissionAttribute` para controlar el acceso a un método si el tipo de credencial de cliente es un certificado. Para hacerlo, debe tener el asunto y la huella digital del certificado.  
   
- Para examinar un certificado para sus propiedades, consulte [cómo: Ver certificados con el complemento](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC. Para buscar el valor de huella digital [, consulte Cómo: Recupera la huella digital de un](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)certificado.  
+ Para examinar un certificado para sus propiedades, consulte [Cómo: ver certificados con el complemento MMC](./feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Para buscar el valor de huella digital, consulte [Cómo: recuperar la huella digital de un certificado](./feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 #### <a name="to-control-access-using-a-certificate"></a>Para controlar el acceso mediante un certificado  
   
@@ -89,6 +89,6 @@ Controlar el acceso a los recursos en un equipo del dominio de Windows es una ta
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [Autorización de acceso a operaciones de servicio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Autorización de acceso a operaciones de servicio](./samples/authorizing-access-to-service-operations.md)
+- [Información general sobre seguridad](./feature-details/security-overview.md)
+- [Implementación de contratos de servicio](implementing-service-contracts.md)
