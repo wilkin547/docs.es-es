@@ -1,0 +1,1419 @@
+- name: Guía de Visual Basic
+  href: index.md
+- name: Novedades de Visual Basic
+  href: getting-started/whats-new.md
+- name: Primeros pasos
+  href: getting-started/index.md
+  items:
+    - name: Cambios importantes de Visual Basic en Visual Studio
+      href: getting-started/breaking-changes-in-visual-studio.md
+    - name: Recursos adicionales para programadores de Visual Basic
+      href: getting-started/additional-resources.md
+- name: Desarrollo de aplicaciones
+  href: developing-apps/index.md
+  items:
+    - name: Programar en Visual Basic
+      href: developing-apps/programming/index.md
+      items:
+        - name: Acceso a los recursos del equipo
+          href: developing-apps/programming/computer-resources/index.md
+        - name: Registrar información de la aplicación
+          href: developing-apps/programming/log-info/index.md
+        - name: Acceso a los datos de usuario
+          href: developing-apps/programming/accessing-user-data.md
+        - name: Acceso a los formularios de las aplicaciones
+          href: developing-apps/programming/accessing-application-forms.md
+        - name: Acceso a los servicios web de las aplicaciones
+          href: developing-apps/programming/accessing-application-web-services.md
+          items:
+            - name: Procedimiento Llamada a un servicio web de forma asincrónica
+              href: developing-apps/programming/how-to-call-a-web-service-asynchronously.md
+        - name: Accessing Application Settings
+          href: developing-apps/programming/app-settings/index.md
+        - name: 'Procesar unidades, directorios y archivos'
+          href: developing-apps/programming/drives-directories-files/processing.md
+    - name: Desarrollo con My
+      href: developing-apps/development-with-my/index.md
+      items:
+        - name: 'Realización de tareas con My.Application, My.Computer y My.User'
+          href: developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md
+        - name: Instancias de objeto predeterminadas proporcionadas por My.Forms y My.WebServices
+          href: developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md
+        - name: Desarrollo rápido de aplicaciones con My.Resources y My.Settings
+          href: developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md
+        - name: Información general sobre el modelo de aplicaciones de Visual Basic
+          href: developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md
+        - name: Cómo My depende del tipo de proyecto
+          href: developing-apps/development-with-my/how-my-depends-on-project-type.md
+    - name: Acceso a datos
+      href: developing-apps/accessing-data.md
+    - name: Creación y uso de componentes
+      href: developing-apps/creating-and-using-components.md
+    - name: Fundamentos de las aplicaciones de Windows Forms
+      href: developing-apps/windows-forms/index.md
+    - name: Personalizar proyectos y ampliar My con Visual Basic
+      href: developing-apps/customizing-extending-my/index.md
+      items:
+        - name: Extensión del espacio de nombres de My
+          href: developing-apps/customizing-extending-my/extending-the-my-namespace.md
+        - name: Empaquetado e implementación de extensiones personalizadas de My
+          href: developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md
+        - name: Ampliar el modelo de la aplicación de Visual Basic
+          href: developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
+        - name: Personalización de los objetos disponibles en My
+          href: developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
+- name: Programar los conceptos
+  href: programming-guide/concepts/index.md
+  items:
+    - name: Programación asincrónica con Async y Await
+      href: programming-guide/concepts/async/index.md
+    - name: Atributos
+      href: programming-guide/concepts/attributes/index.md
+    - name: Información del llamador
+      href: programming-guide/concepts/caller-information.md
+    - name: Colecciones
+      href: programming-guide/concepts/collections.md
+    - name: Covarianza y contravarianza
+      href: programming-guide/concepts/covariance-contravariance/index.md
+    - name: Árboles de expresión
+      href: programming-guide/concepts/expression-trees/index.md
+    - name: Iterators
+      href: programming-guide/concepts/iterators.md
+    - name: Language-Integrated Query (LINQ)
+      href: programming-guide/concepts/linq/index.md
+    - name: Programación orientada a objetos
+      href: programming-guide/concepts/object-oriented-programming.md
+    - name: Reflexión
+      href: programming-guide/concepts/reflection.md
+    - name: Serialización
+      href: programming-guide/concepts/serialization/index.md
+- name: Convenciones de código y estructura de programas
+  href: programming-guide/program-structure/program-structure-and-code-conventions.md
+  items:
+    - name: Estructura de un programa
+      href: programming-guide/program-structure/structure-of-a-visual-basic-program.md
+    - name: Procedimiento principal
+      href: programming-guide/program-structure/main-procedure.md
+    - name: Instrucción Imports y referencias
+      href: programming-guide/program-structure/references-and-the-imports-statement.md
+    - name: Espacios de nombres
+      href: programming-guide/program-structure/namespaces.md
+    - name: Convenciones de nomenclatura
+      href: programming-guide/program-structure/naming-conventions.md
+    - name: Convenciones de código
+      href: programming-guide/program-structure/coding-conventions.md
+    - name: Compilación condicional
+      href: programming-guide/program-structure/conditional-compilation.md
+    - name: Procedimiento Interrupción y combinación de instrucciones en código
+      href: programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
+    - name: Procedimiento Contracción y ocultación de secciones de código
+      href: programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
+    - name: Procedimiento Instrucciones de etiquetas
+      href: programming-guide/program-structure/how-to-label-statements.md
+    - name: Caracteres especiales en el código
+      href: programming-guide/program-structure/special-characters-in-code.md
+    - name: Comentarios en código
+      href: programming-guide/program-structure/comments-in-code.md
+    - name: Palabras clave como nombres de elementos en el código
+      href: programming-guide/program-structure/keywords-as-element-names-in-code.md
+    - name: 'Me, My, MyBase y MyClass'
+      href: programming-guide/program-structure/me-my-mybase-and-myclass.md
+    - name: Limitaciones
+      href: programming-guide/program-structure/limitations.md
+- name: Características del lenguaje
+  href: programming-guide/language-features/index.md
+  items:
+    - name: Matrices
+      href: programming-guide/language-features/arrays/index.md
+    - name: Inicializadores de colección
+      href: programming-guide/language-features/collection-initializers/index.md
+    - name: Constantes y enumeraciones
+      href: programming-guide/language-features/constants-enums/index.md
+    - name: Flujo de control
+      href: programming-guide/language-features/control-flow/index.md
+    - name: Tipos de datos
+      href: programming-guide/language-features/data-types/index.md
+      items:
+        - name: Caracteres de tipo
+          href: programming-guide/language-features/data-types/type-characters.md
+        - name: Tipos de datos básicos
+          href: programming-guide/language-features/data-types/elementary-data-types.md
+          items:
+            - name: Tipos de datos numéricos
+              href: programming-guide/language-features/data-types/numeric-data-types.md
+            - name: Tipos de datos de caracteres
+              href: programming-guide/language-features/data-types/character-data-types.md
+            - name: Tipos de datos varios
+              href: programming-guide/language-features/data-types/miscellaneous-data-types.md
+        - name: Tipos de datos compuestos
+          href: programming-guide/language-features/data-types/composite-data-types.md
+          items:
+            - name: Procedimiento Inclusión de más de un valor en una variable
+              href: programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
+        - name: Tipos genéricos
+          href: programming-guide/language-features/data-types/generic-types.md
+          items:
+            - name: Procedimiento Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes
+              href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
+            - name: Procedimiento Uso de clases genéricas
+              href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
+        - name: Procedimientos genéricos
+          href: programming-guide/language-features/data-types/generic-procedures.md
+        - name: Tipos de valores que aceptan valores NULL
+          href: programming-guide/language-features/data-types/nullable-value-types.md
+        - name: Tipos de valor y tipos de referencia
+          href: programming-guide/language-features/data-types/value-types-and-reference-types.md
+        - name: Conversiones de tipos
+          href: programming-guide/language-features/data-types/type-conversions.md
+          items:
+            - name: Widening and Narrowing Conversions
+              href: programming-guide/language-features/data-types/widening-and-narrowing-conversions.md
+            - name: Conversiones implícitas y explícitas
+              href: programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
+            - name: Conversiones entre cadenas y otros tipos
+              href: programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
+            - name: Procedimiento Conversión de un objeto a otro tipo
+              href: programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
+            - name: Conversiones de matriz
+              href: programming-guide/language-features/data-types/array-conversions.md
+        - name: Estructuras
+          href: programming-guide/language-features/data-types/structures.md
+          items:
+            - name: Procedimiento Declaración de estructuras
+              href: programming-guide/language-features/data-types/how-to-declare-a-structure.md
+            - name: Variables de estructura
+              href: programming-guide/language-features/data-types/structure-variables.md
+            - name: Estructuras y otros elementos de programación
+              href: programming-guide/language-features/data-types/structures-and-other-programming-elements.md
+            - name: Estructuras y clases
+              href: programming-guide/language-features/data-types/structures-and-classes.md
+        - name: Tuplas
+          href: programming-guide/language-features/data-types/tuples.md
+        - name: Uso eficiente de los tipos de datos
+          href: programming-guide/language-features/data-types/efficient-use-of-data-types.md
+        - name: Solución de problemas de los tipos de datos
+          href: programming-guide/language-features/data-types/troubleshooting-data-types.md
+    - name: Elementos declarados
+      href: programming-guide/language-features/declared-elements/index.md
+    - name: Delegados
+      href: programming-guide/language-features/delegates/index.md
+    - name: Enlace en tiempo de compilación y en tiempo de ejecución
+      href: programming-guide/language-features/early-late-binding/index.md
+    - name: Tipos de errores
+      href: programming-guide/language-features/error-types.md
+    - name: Events
+      href: programming-guide/language-features/events/index.md
+    - name: Interfaces
+      href: programming-guide/language-features/interfaces/index.md
+      items:
+        - name: 'Tutorial: Creación e implementación de interfaces'
+          href: programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md
+    - name: LINQ
+      href: programming-guide/language-features/linq/index.md
+    - name: Objetos y clases
+      href: programming-guide/language-features/objects-and-classes/index.md
+    - name: Operadores y expresiones
+      href: programming-guide/language-features/operators-and-expressions/index.md
+    - name: Procedimientos
+      href: programming-guide/language-features/procedures/index.md
+    - name: Instrucciones
+      href: programming-guide/language-features/statements.md
+    - name: Cadenas
+      href: programming-guide/language-features/strings/index.md
+    - name: Variables
+      href: programming-guide/language-features/variables/index.md
+    - name: XML
+      href: programming-guide/language-features/xml/index.md
+- name: Interoperabilidad COM
+  href: programming-guide/com-interop/index.md
+  items:
+    - name: Introducción a la interoperabilidad COM
+      href: programming-guide/com-interop/introduction-to-com-interop.md
+    - name: Procedimiento Referencia de los objetos COM
+      href: programming-guide/com-interop/how-to-reference-com-objects.md
+    - name: Procedimiento Trabajo con controles ActiveX
+      href: programming-guide/com-interop/how-to-work-with-activex-controls.md
+    - name: 'Tutorial: Llamadas a las API de Windows'
+      href: programming-guide/com-interop/walkthrough-calling-windows-apis.md
+    - name: Procedimiento Llamadas a las API de Windows
+      href: programming-guide/com-interop/how-to-call-windows-apis.md
+    - name: Procedimiento Llamada una función de Windows que adopta tipos sin signo
+      href: programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
+    - name: 'Tutorial: Creación de objetos COM'
+      href: programming-guide/com-interop/walkthrough-creating-com-objects.md
+    - name: Solución de problemas de interoperabilidad
+      href: programming-guide/com-interop/troubleshooting-interoperability.md
+    - name: Interoperabilidad COM en aplicaciones .NET Framework
+      href: programming-guide/com-interop/com-interoperability-in-net-framework-applications.md
+    - name: 'Tutorial: Implementación de la herencia mediante objetos COM'
+      href: programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md
+- name: Referencia del lenguaje
+  href: language-reference/index.md
+  items:
+    - name: Configurar la versión del lenguaje
+      href: language-reference/configure-language-version.md
+    - name: Convenciones tipográficas y de código
+      href: language-reference/typographic-and-code-conventions.md
+    - name: Miembros de la biblioteca en tiempo de ejecución de Visual Basic
+      href: language-reference/runtime-library-members.md
+    - name: Palabras clave
+      href: language-reference/keywords/index.md
+      items:
+        - name: Resumen de las matrices
+          href: language-reference/keywords/arrays-summary.md
+        - name: Resumen de los objetos de colección
+          href: language-reference/keywords/collection-object-summary.md
+        - name: Resumen del flujo de control
+          href: language-reference/keywords/control-flow-summary.md
+        - name: Resumen de las conversiones
+          href: language-reference/keywords/conversion-summary.md
+        - name: Data Types Summary
+          href: language-reference/keywords/data-types-summary.md
+        - name: Resumen de fechas y horas
+          href: language-reference/keywords/dates-and-times-summary.md
+        - name: Resumen de las constantes y declaraciones
+          href: language-reference/keywords/declarations-and-constants-summary.md
+        - name: Resumen de archivos y directorios
+          href: language-reference/keywords/directories-and-files-summary.md
+        - name: Resumen de los errores
+          href: language-reference/keywords/errors-summary.md
+        - name: Resumen financiero
+          href: language-reference/keywords/financial-summary.md
+        - name: Resumen de información e interacción
+          href: language-reference/keywords/information-and-interaction-summary.md
+        - name: Resumen de entrada y salida
+          href: language-reference/keywords/input-and-output-summary.md
+        - name: Resumen de funciones matemáticas
+          href: language-reference/keywords/math-summary.md
+          items:
+            - name: Funciones matemáticas derivadas
+              href: language-reference/keywords/derived-math-functions.md
+        - name: Referencia de My
+          href: language-reference/keywords/my-reference.md
+        - name: Resumen de los operadores
+          href: language-reference/keywords/operators-summary.md
+        - name: Resumen del registro
+          href: language-reference/keywords/registry-summary.md
+        - name: Resumen de la manipulación de cadenas
+          href: language-reference/keywords/string-manipulation-summary.md
+    - name: Atributos
+      href: language-reference/attributes.md
+    - name: Constantes y enumeraciones
+      href: language-reference/constants-and-enumerations.md
+    - name: Resumen de los tipos de datos
+      href: language-reference/data-types/index.md
+      items:
+        - name: Tipo de datos Boolean
+          href: language-reference/data-types/boolean-data-type.md
+        - name: Tipo de datos Byte
+          href: language-reference/data-types/byte-data-type.md
+        - name: Tipo de datos Char
+          href: language-reference/data-types/char-data-type.md
+        - name: Tipo de datos Date
+          href: language-reference/data-types/date-data-type.md
+        - name: Tipo de datos Decimal
+          href: language-reference/data-types/decimal-data-type.md
+        - name: Tipo de datos Double
+          href: language-reference/data-types/double-data-type.md
+        - name: Tipo de datos Integer
+          href: language-reference/data-types/integer-data-type.md
+        - name: Tipo de datos Long
+          href: language-reference/data-types/long-data-type.md
+        - name: Object Data Type
+          href: language-reference/data-types/object-data-type.md
+        - name: Tipo de datos SByte
+          href: language-reference/data-types/sbyte-data-type.md
+        - name: Tipo de datos Short
+          href: language-reference/data-types/short-data-type.md
+        - name: Tipo de datos Single
+          href: language-reference/data-types/single-data-type.md
+        - name: String (Tipo de datos)
+          href: language-reference/data-types/string-data-type.md
+        - name: Tipo de datos UInteger
+          href: language-reference/data-types/uinteger-data-type.md
+        - name: Tipo de datos ULong
+          href: language-reference/data-types/ulong-data-type.md
+        - name: Tipo de datos definido por el usuario
+          href: language-reference/data-types/user-defined-data-type.md
+        - name: Tipo de datos UShort
+          href: language-reference/data-types/ushort-data-type.md
+    - name: Directivas
+      href: language-reference/directives/index.md
+      items:
+        - name: '#Directiva Const'
+          href: language-reference/directives/const-directive.md
+        - name: '#Directiva ExternalSource'
+          href: language-reference/directives/externalsource-directive.md
+        - name: '#Directivas If...Then...#Else'
+          href: language-reference/directives/if-then-else-directives.md
+        - name: '#Directiva Region'
+          href: language-reference/directives/region-directive.md
+    - name: Funciones
+      href: language-reference/functions/index.md
+      items:
+        - name: Funciones de conversión
+          href: language-reference/functions/conversion-functions.md
+        - name: Funciones matemáticas
+          href: language-reference/functions/math-functions.md
+        - name: Funciones de cadena
+          href: language-reference/functions/string-functions.md
+        - name: Type Conversion Functions
+          href: language-reference/functions/type-conversion-functions.md
+          items:
+            - name: Valores devueltos para la función CStr
+              href: language-reference/functions/return-values-for-the-cstr-function.md
+        - name: CType Function
+          href: language-reference/functions/ctype-function.md
+    - name: Modificadores
+      href: language-reference/modifiers/index.md
+      items:
+        - name: Ansi
+          href: language-reference/modifiers/ansi.md
+        - name: Ensamblado
+          href: language-reference/modifiers/assembly.md
+        - name: Async
+          href: language-reference/modifiers/async.md
+        - name: Automático
+          href: language-reference/modifiers/auto.md
+        - name: ByRef
+          href: language-reference/modifiers/byref.md
+        - name: ByVal
+          href: language-reference/modifiers/byval.md
+        - name: Default
+          href: language-reference/modifiers/default.md
+        - name: Friend
+          href: language-reference/modifiers/friend.md
+        - name: Modificador genérico In
+          href: language-reference/modifiers/in-generic-modifier.md
+        - name: Iterator
+          href: language-reference/modifiers/iterator.md
+        - name: Key
+          href: language-reference/modifiers/key.md
+        - name: Module
+          href: language-reference/modifiers/module-keyword.md
+        - name: MustInherit
+          href: language-reference/modifiers/mustinherit.md
+        - name: MustOverride
+          href: language-reference/modifiers/mustoverride.md
+        - name: Narrowing
+          href: language-reference/modifiers/narrowing.md
+        - name: NotInheritable
+          href: language-reference/modifiers/notinheritable.md
+        - name: NotOverridable
+          href: language-reference/modifiers/notoverridable.md
+        - name: Optional
+          href: language-reference/modifiers/optional.md
+        - name: Modificador genérico Out
+          href: language-reference/modifiers/out-generic-modifier.md
+        - name: Overloads
+          href: language-reference/modifiers/overloads.md
+        - name: Overridable
+          href: language-reference/modifiers/overridable.md
+        - name: Overrides
+          href: language-reference/modifiers/overrides.md
+        - name: ParamArray
+          href: language-reference/modifiers/paramarray.md
+        - name: Parcial
+          href: language-reference/modifiers/partial.md
+        - name: Private
+          href: language-reference/modifiers/private.md
+        - name: Private Protected
+          href: language-reference/modifiers/private-protected.md
+        - name: Protegido
+          href: language-reference/modifiers/protected.md
+        - name: Protected Friend
+          href: language-reference/modifiers/protected-friend.md
+        - name: Public
+          href: language-reference/modifiers/public.md
+        - name: ReadOnly
+          href: language-reference/modifiers/readonly.md
+        - name: Shadows
+          href: language-reference/modifiers/shadows.md
+        - name: Shared
+          href: language-reference/modifiers/shared.md
+        - name: Estático
+          href: language-reference/modifiers/static.md
+        - name: Unicode
+          href: language-reference/modifiers/unicode.md
+        - name: Widening
+          href: language-reference/modifiers/widening.md
+        - name: WithEvents
+          href: language-reference/modifiers/withevents.md
+        - name: WriteOnly
+          href: language-reference/modifiers/writeonly.md
+    - name: Módulos
+      href: language-reference/modules.md
+    - name: Nothing
+      href: language-reference/nothing.md
+    - name: de la empresa
+      href: language-reference/objects/index.md
+      items:
+        - name: My.Application (Objeto)
+          href: language-reference/objects/my-application-object.md
+          items:
+            - name: My.Application.Info (Objeto)
+              href: language-reference/objects/my-application-info-object.md
+            - name: My.Application.Log (objeto)
+              href: language-reference/objects/my-application-log-object.md
+        - name: My.Computer (Objeto)
+          href: language-reference/objects/my-computer-object.md
+          items:
+            - name: My.Computer.Audio (Objeto)
+              href: language-reference/objects/my-computer-audio-object.md
+            - name: My.Computer.Clipboard (Objeto)
+              href: language-reference/objects/my-computer-clipboard-object.md
+            - name: My.Computer.Clock (Objeto)
+              href: language-reference/objects/my-computer-clock-object.md
+            - name: My.Computer.FileSystem (Objeto)
+              href: language-reference/objects/my-computer-filesystem-object.md
+              items:
+                - name: My.Computer.FileSystem.SpecialDirectories (Objeto)
+                  href: language-reference/objects/my-computer-filesystem-specialdirectories-object.md
+            - name: My.Computer.Info (Objeto)
+              href: language-reference/objects/my-computer-info-object.md
+            - name: My.Computer.Keyboard (Objeto)
+              href: language-reference/objects/my-computer-keyboard-object.md
+            - name: My.Computer.Mouse (Objeto)
+              href: language-reference/objects/my-computer-mouse-object.md
+            - name: My.Computer.Network (Objeto)
+              href: language-reference/objects/my-computer-network-object.md
+            - name: My.Computer.Ports (Objeto)
+              href: language-reference/objects/my-computer-ports-object.md
+            - name: My.Computer.Registry (Objeto)
+              href: language-reference/objects/my-computer-registry-object.md
+        - name: My.Forms (Objeto)
+          href: language-reference/objects/my-forms-object.md
+        - name: My.Log (Objeto)
+          href: language-reference/objects/my-log-object.md
+        - name: My.Request (Objeto)
+          href: language-reference/objects/my-request-object.md
+        - name: My.Response (Objeto)
+          href: language-reference/objects/my-response-object.md
+        - name: My.Resources (Objeto)
+          href: language-reference/objects/my-resources-object.md
+        - name: My.Settings (Objeto)
+          href: language-reference/objects/my-settings-object.md
+        - name: My.User (Objeto)
+          href: language-reference/objects/my-user-object.md
+        - name: My.WebServices (Objeto)
+          href: language-reference/objects/my-webservices-object.md
+        - name: TextFieldParser Object
+          href: language-reference/objects/textfieldparser-object.md
+    - name: Operadores
+      href: language-reference/operators/index.md
+      items:
+        - name: Precedencia de operadores
+          href: language-reference/operators/operator-precedence.md
+        - name: Tipos de datos de los resultados de los operadores
+          href: language-reference/operators/data-types-of-operator-results.md
+        - name: Lista de operadores según funcionalidad
+          href: language-reference/operators/operators-listed-by-functionality.md
+          items:
+            - name: Operadores aritméticos
+              href: language-reference/operators/arithmetic-operators.md
+            - name: Operadores de asignación
+              href: language-reference/operators/assignment-operators.md
+            - name: Operadores de desplazamiento de bits
+              href: language-reference/operators/bit-shift-operators.md
+            - name: Operadores de comparación
+              href: language-reference/operators/comparison-operators.md
+            - name: Operadores de concatenación
+              href: language-reference/operators/concatenation-operators.md
+            - name: Operadores lógicos y bit a bit
+              href: language-reference/operators/logical-bitwise-operators.md
+            - name: Operadores varios
+              href: language-reference/operators/miscellaneous-operators.md
+        - name: Lista de operadores de Visual Basic
+          items:
+            - name: Operador &
+              href: language-reference/operators/concatenation-operator.md
+            - name: Operador &=
+              href: language-reference/operators/and-assignment-operator.md
+            - name: '* Operador'
+              href: language-reference/operators/multiplication-operator.md
+            - name: '*= (Operador)'
+              href: language-reference/operators/multiplication-assignment-operator.md
+            - name: + Operador
+              href: language-reference/operators/addition-operator.md
+            - name: += (Operador)
+              href: language-reference/operators/addition-assignment-operator.md
+            - name: = (Operador)
+              href: language-reference/operators/assignment-operator.md
+            - name: '- Operador'
+              href: language-reference/operators/subtraction-operator.md
+            - name: '-= (Operador)'
+              href: language-reference/operators/subtraction-assignment-operator.md
+            - name: Operador <
+              href: language-reference/operators/comparison-operators.md
+            - name: Operador <=
+              href: language-reference/operators/comparison-operators.md
+            - name: '> Operador'
+              href: language-reference/operators/comparison-operators.md
+            - name: '>= (Operador)'
+              href: language-reference/operators/comparison-operators.md
+            - name: Operador <<
+              href: language-reference/operators/left-shift-operator.md
+            - name: Operador <<=
+              href: language-reference/operators/left-shift-assignment-operator.md
+            - name: '>> Operador'
+              href: language-reference/operators/right-shift-operator.md
+            - name: '>>= (Operador)'
+              href: language-reference/operators/right-shift-assignment-operator.md
+            - name: / (Operador)
+              href: language-reference/operators/floating-point-division-operator.md
+            - name: /= (Operador)
+              href: language-reference/operators/floating-point-division-assignment-operator.md
+            - name: \ (Operador)
+              href: language-reference/operators/integer-division-operator.md
+            - name: Operador \=
+              href: language-reference/operators/integer-division-assignment-operator.md
+            - name: ^ (Operador)
+              href: language-reference/operators/exponentiation-operator.md
+            - name: ^= (Operador)
+              href: language-reference/operators/exponentiation-assignment-operator.md
+            - name: Operador ?()
+              href: language-reference/operators/null-conditional-operators.md
+            - name: '?. Operador'
+              href: language-reference/operators/null-conditional-operators.md
+            - name: Operador AddressOf
+              href: language-reference/operators/addressof-operator.md
+            - name: Operador And
+              href: language-reference/operators/and-operator.md
+            - name: Operador AndAlso
+              href: language-reference/operators/andalso-operator.md
+            - name: Await (Operador)
+              href: language-reference/operators/await-operator.md
+            - name: Operador DirectCast
+              href: language-reference/operators/directcast-operator.md
+            - name: Expresión Function
+              href: language-reference/operators/function-expression.md
+            - name: GetType Operator
+              href: language-reference/operators/gettype-operator.md
+            - name: Operador GetXmlNamespace
+              href: language-reference/operators/getxmlnamespace-operator.md
+            - name: Operador If
+              href: language-reference/operators/if-operator.md
+            - name: Operador Is
+              href: language-reference/operators/is-operator.md
+            - name: Operador IsFalse
+              href: language-reference/operators/isfalse-operator.md
+            - name: Operador IsNot
+              href: language-reference/operators/isnot-operator.md
+            - name: Operador IsTrue
+              href: language-reference/operators/istrue-operator.md
+            - name: Like (Operador)
+              href: language-reference/operators/like-operator.md
+            - name: Operador Mod
+              href: language-reference/operators/mod-operator.md
+            - name: New (Operador)
+              href: language-reference/operators/new-operator.md
+            - name: Operador Not
+              href: language-reference/operators/not-operator.md
+            - name: Operador Or
+              href: language-reference/operators/or-operator.md
+            - name: Operador OrElse
+              href: language-reference/operators/orelse-operator.md
+            - name: Expresión Sub
+              href: language-reference/operators/sub-expression.md
+            - name: Operador TryCast
+              href: language-reference/operators/trycast-operator.md
+            - name: Operador TypeOf
+              href: language-reference/operators/typeof-operator.md
+            - name: Operador Xor
+              href: language-reference/operators/xor-operator.md
+    - name: Propiedades
+      href: language-reference/properties.md
+    - name: Consultas
+      href: language-reference/queries/index.md
+      items:
+        - name: Aggregate Clause
+          href: language-reference/queries/aggregate-clause.md
+        - name: Cláusula Distinct
+          href: language-reference/queries/distinct-clause.md
+        - name: Cláusula Equals
+          href: language-reference/queries/equals-clause.md
+        - name: Cláusula From
+          href: language-reference/queries/from-clause.md
+        - name: Cláusula Group By
+          href: language-reference/queries/group-by-clause.md
+        - name: Cláusula Group Join
+          href: language-reference/queries/group-join-clause.md
+        - name: Cláusula Join
+          href: language-reference/queries/join-clause.md
+        - name: Cláusula Let
+          href: language-reference/queries/let-clause.md
+        - name: Cláusula Order By
+          href: language-reference/queries/order-by-clause.md
+        - name: Cláusula Select
+          href: language-reference/queries/select-clause.md
+        - name: Cláusula Skip
+          href: language-reference/queries/skip-clause.md
+        - name: Cláusula Skip While
+          href: language-reference/queries/skip-while-clause.md
+        - name: Cláusula Take
+          href: language-reference/queries/take-clause.md
+        - name: Cláusula Take While
+          href: language-reference/queries/take-while-clause.md
+        - name: Cláusula Where
+          href: language-reference/queries/where-clause.md
+    - name: Instrucciones
+      href: language-reference/statements/index.md
+      items:
+        - name: Instrucciones A-E
+          href: language-reference/statements/a-e-statements.md
+          items:
+            - name: AddHandler (Instrucción)
+              href: language-reference/statements/addhandler-statement.md
+            - name: Instrucción Call
+              href: language-reference/statements/call-statement.md
+            - name: Instrucción Class
+              href: language-reference/statements/class-statement.md
+            - name: Instrucción Const
+              href: language-reference/statements/const-statement.md
+            - name: Instrucción Continue
+              href: language-reference/statements/continue-statement.md
+            - name: Declare Statement
+              href: language-reference/statements/declare-statement.md
+            - name: Delegate (Instrucción)
+              href: language-reference/statements/delegate-statement.md
+            - name: Instrucción Dim
+              href: language-reference/statements/dim-statement.md
+            - name: Instrucción Do...Loop
+              href: language-reference/statements/do-loop-statement.md
+            - name: Instrucción Else
+              href: language-reference/statements/else-statement.md
+            - name: End (Instrucción)
+              href: language-reference/statements/end-statement.md
+            - name: Instrucción End <keyword>
+              href: language-reference/statements/end-keyword-statement.md
+            - name: Instrucción Enum
+              href: language-reference/statements/enum-statement.md
+            - name: Instrucción Erase
+              href: language-reference/statements/erase-statement.md
+            - name: Error (Instrucción)
+              href: language-reference/statements/error-statement.md
+            - name: Event (Instrucción)
+              href: language-reference/statements/event-statement.md
+            - name: Instrucción Exit
+              href: language-reference/statements/exit-statement.md
+        - name: Instrucciones F-P
+          href: language-reference/statements/f-p-statements.md
+          items:
+            - name: Instrucción For Each...Next
+              href: language-reference/statements/for-each-next-statement.md
+            - name: Instrucción For...Next
+              href: language-reference/statements/for-next-statement.md
+            - name: Instrucción Function
+              href: language-reference/statements/function-statement.md
+            - name: Get (Instrucción)
+              href: language-reference/statements/get-statement.md
+            - name: GoTo (Instrucción)
+              href: language-reference/statements/goto-statement.md
+            - name: Instrucción If...Then...Else
+              href: language-reference/statements/if-then-else-statement.md
+            - name: Implements (Instrucción)
+              href: language-reference/statements/implements-statement.md
+            - name: Instrucción Imports (Tipo y espacio de nombres de .NET)
+              href: language-reference/statements/imports-statement-net-namespace-and-type.md
+            - name: 'Imports (Instrucción, Espacio de nombres XML)'
+              href: language-reference/statements/imports-statement-xml-namespace.md
+            - name: Inherits Statement
+              href: language-reference/statements/inherits-statement.md
+            - name: Instrucción Interface
+              href: language-reference/statements/interface-statement.md
+            - name: Mid (Instrucción)
+              href: language-reference/statements/mid-statement.md
+            - name: Module (Instrucción)
+              href: language-reference/statements/module-statement.md
+            - name: Namespace (Instrucción)
+              href: language-reference/statements/namespace-statement.md
+            - name: Instrucción On Error
+              href: language-reference/statements/on-error-statement.md
+            - name: Operator Statement
+              href: language-reference/statements/operator-statement.md
+            - name: Instrucción Option <keyword>
+              href: language-reference/statements/option-keyword-statement.md
+            - name: Option Compare (Instrucción)
+              href: language-reference/statements/option-compare-statement.md
+            - name: Instrucción Option Explicit
+              href: language-reference/statements/option-explicit-statement.md
+            - name: Option Infer (instrucción)
+              href: language-reference/statements/option-infer-statement.md
+            - name: Option Strict Statement
+              href: language-reference/statements/option-strict-statement.md
+            - name: Property Statement
+              href: language-reference/statements/property-statement.md
+        - name: Instrucciones Q-Z
+          href: language-reference/statements/q-z-statements.md
+          items:
+            - name: RaiseEvent (Instrucción)
+              href: language-reference/statements/raiseevent-statement.md
+            - name: Instrucción ReDim
+              href: language-reference/statements/redim-statement.md
+            - name: Instrucción REM
+              href: language-reference/statements/rem-statement.md
+            - name: RemoveHandler (Instrucción)
+              href: language-reference/statements/removehandler-statement.md
+            - name: Resume (Instrucción)
+              href: language-reference/statements/resume-statement.md
+            - name: Instrucción Return
+              href: language-reference/statements/return-statement.md
+            - name: Instrucción Select...Case
+              href: language-reference/statements/select-case-statement.md
+            - name: Instrucción Set
+              href: language-reference/statements/set-statement.md
+            - name: Instrucción Stop
+              href: language-reference/statements/stop-statement.md
+            - name: Structure (Instrucción)
+              href: language-reference/statements/structure-statement.md
+            - name: Instrucción Sub
+              href: language-reference/statements/sub-statement.md
+            - name: SyncLock (Instrucción)
+              href: language-reference/statements/synclock-statement.md
+            - name: Then (Instrucción)
+              href: language-reference/statements/then-statement.md
+            - name: Throw (Instrucción)
+              href: language-reference/statements/throw-statement.md
+            - name: Instrucción Try...Catch...Finally
+              href: language-reference/statements/try-catch-finally-statement.md
+            - name: Instrucción Using
+              href: language-reference/statements/using-statement.md
+            - name: Instrucción While...End While
+              href: language-reference/statements/while-end-while-statement.md
+            - name: Instrucción With...End With
+              href: language-reference/statements/with-end-with-statement.md
+            - name: Instrucción Yield
+              href: language-reference/statements/yield-statement.md
+        - name: Cláusulas
+          href: language-reference/statements/clauses.md
+          items:
+            - name: Cláusula Alias
+              href: language-reference/statements/alias-clause.md
+            - name: Cláusula As
+              href: language-reference/statements/as-clause.md
+            - name: Cláusula Handles
+              href: language-reference/statements/handles-clause.md
+            - name: Cláusula Implements
+              href: language-reference/statements/implements-clause.md
+            - name: Cláusula In
+              href: language-reference/statements/in-clause.md
+            - name: Cláusula Into
+              href: language-reference/statements/into-clause.md
+            - name: Cláusula Of
+              href: language-reference/statements/of-clause.md
+        - name: Contextos de declaración y niveles de acceso predeterminados
+          href: language-reference/statements/declaration-contexts-and-default-access-levels.md
+        - name: Lista de atributos
+          href: language-reference/statements/attribute-list.md
+        - name: Lista de parámetros
+          href: language-reference/statements/parameter-list.md
+        - name: Type List
+          href: language-reference/statements/type-list.md
+    - name: Etiquetas de comentario XML
+      href: language-reference/xmldoc/index.md
+      items:
+        - name: <c>
+          href: language-reference/xmldoc/c.md
+        - name: <code>
+          href: language-reference/xmldoc/code.md
+        - name: <example>
+          href: language-reference/xmldoc/example.md
+        - name: <exception>
+          href: language-reference/xmldoc/exception.md
+        - name: <include>
+          href: language-reference/xmldoc/include.md
+        - name: <list>
+          href: language-reference/xmldoc/list.md
+        - name: <para>
+          href: language-reference/xmldoc/para.md
+        - name: <param>
+          href: language-reference/xmldoc/param.md
+        - name: <paramref>
+          href: language-reference/xmldoc/paramref.md
+        - name: <permission>
+          href: language-reference/xmldoc/permission.md
+        - name: <remarks>
+          href: language-reference/xmldoc/remarks.md
+        - name: <returns>
+          href: language-reference/xmldoc/returns.md
+        - name: <see>
+          href: language-reference/xmldoc/see.md
+        - name: <seealso>
+          href: language-reference/xmldoc/seealso.md
+        - name: <summary>
+          href: language-reference/xmldoc/summary.md
+        - name: <typeparam>
+          href: language-reference/xmldoc/typeparam.md
+        - name: <value>
+          href: language-reference/xmldoc/value.md
+    - name: Propiedades de eje XML
+      href: language-reference/xml-axis/index.md
+      items:
+        - name: XML Attribute Axis Property
+          href: language-reference/xml-axis/xml-attribute-axis-property.md
+        - name: XML Child Axis Property
+          href: language-reference/xml-axis/xml-child-axis-property.md
+        - name: XML Descendant Axis Property
+          href: language-reference/xml-axis/xml-descendant-axis-property.md
+        - name: Propiedad de indexador de extensión
+          href: language-reference/xml-axis/extension-indexer-property.md
+        - name: Propiedad de valor XML
+          href: language-reference/xml-axis/xml-value-property.md
+    - name: Literales XML
+      href: language-reference/xml-literals/index.md
+      items:
+        - name: Literal de elemento XML
+          href: language-reference/xml-literals/xml-element-literal.md
+        - name: Literal de documento XML
+          href: language-reference/xml-literals/xml-document-literal.md
+        - name: Literal de CDATA XML
+          href: language-reference/xml-literals/xml-cdata-literal.md
+        - name: Literal de comentario XML
+          href: language-reference/xml-literals/xml-comment-literal.md
+        - name: Literal de instrucción de procesamiento XML
+          href: language-reference/xml-literals/xml-processing-instruction-literal.md
+    - name: Mensajes de error
+      href: language-reference/error-messages/index.md
+      items:
+        - name: '''#ElseIf'' debe ir precedida de la instrucción ''#If'' o ''#ElseIf'' correspondiente'
+          href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
+        - name: 'Las instrucciones "#Region" y "#End Region" no son válidas en los cuerpos de método y operaciones lambda de varias líneas'
+          href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
+        - name: No se puede aplicar '<attribute>' porque el formato del GUID '<number>' no es correcto
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
+        - name: La clase '<classname>' no es compatible con CLS porque la interfaz '<interfacename>' que implementa tampoco lo es
+          href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
+        - name: '''<elementname>'' está obsoleto (Advertencia de Visual Basic)'
+          href: language-reference/error-messages/elementname-is-obsolete-visual-basic-warning.md
+        - name: '''<eventname>'' es un evento y no se le puede llamar directamente'
+          href: language-reference/error-messages/eventname-is-an-event-and-cannot-be-called-directly.md
+        - name: '''<expression>'' no se puede utilizar como restricción de tipo'
+          href: language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md
+        - name: '"<functionname>" no se declaró (error del compilador de Smart Device/Visual Basic)'
+          href: language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md
+        - name: '"<interfacename>.<membername>" ya se ha implementado mediante la clase base "<baseclassname>". Se supone que <type> se implementa de nuevo'
+          href: language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md
+        - name: '''<keyword>'' sólo es válida en un método de instancia'
+          href: language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md
+        - name: '''<membername>'' no puede exponer el tipo ''<typename>'' fuera del proyecto mediante <containertype> ''<containertypename>'''
+          href: language-reference/error-messages/membername-cannot-expose-type-typename-outside-the-project.md
+        - name: '''<membername>'' es ambiguo en las interfaces heredadas ''<interfacename1>'' y ''<interfacename2>'''
+          href: language-reference/error-messages/membername-is-ambiguous-across-the-inherited-interfaces.md
+        - name: <message> Este error también puede ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado "<assemblyname>"
+          href: language-reference/error-messages/message-this-error-could-also-be-due-to-mixing-a-file-reference.md
+        - name: '''<methodname>'' tiene varias definiciones con firmas idénticas'
+          href: language-reference/error-messages/methodname-has-multiple-definitions-with-identical-signatures.md
+        - name: '''<name>'' es ambiguo en el espacio de nombres ''<namespacename>'''
+          href: language-reference/error-messages/name-is-ambiguous-in-the-namespace-namespacename.md
+        - name: '''<name1>'' es ambiguo y se ha importado de los espacios de nombres o tipos ''<name2>'''
+          href: language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md
+        - name: '<proceduresignature1> no es compatible con CLS porque sobrecarga a <proceduresignature2>, que difiere de ella solo en la matriz de tipos de parámetro de matriz o el rango de los tipos de parámetro de matriz'
+          href: language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md
+        - name: <type1>"<typename>" debe implementar "<membername>" para la interfaz "<interfacename>"
+          href: language-reference/error-messages/type1-must-implement-membername-for-interface.md
+        - name: <type1>"<typename>" debe implementar "<methodname>" para la interfaz "<interfacename>"
+          href: language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md
+        - name: '''<typename>'' no puede heredar del <type> ''<basetypename>'' porque amplía el acceso del <type> fuera del ensamblado'
+          href: language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md
+        - name: '''<typename>'' es un tipo delegado'
+          href: language-reference/error-messages/typename-is-a-delegate-type.md
+        - name: '''<typename>'' es un tipo y no se puede usar como expresión'
+          href: language-reference/error-messages/typename-is-a-type-and-cannot-be-used-as-an-expression.md
+        - name: Un carácter de comilla doble no es un símbolo (token) de comentario válido para campos delimitados donde EscapeQuote está establecido en True
+          href: language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md
+        - name: Una llamada a una propiedad o un método no puede incluir una referencia a un objeto privado como un argumento o un valor de retorno
+          href: language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md
+        - name: Se creó una referencia al ensamblado de interoperabilidad '<assembly1>' incrustado debido a una referencia indirecta a dicho ensamblado desde el ensamblado '<assembly2>'
+          href: language-reference/error-messages/bc40059.md
+        - name: No se ha especificado un formulario de inicio
+          href: language-reference/error-messages/a-startup-form-has-not-been-specified.md
+        - name: Acceso de miembro compartido mediante una instancia; la expresión calificadora no se evaluará
+          href: language-reference/error-messages/bc42025.md
+        - name: El operando 'AddressOf' debe ser el nombre de un método (sin paréntesis)
+          href: language-reference/error-messages/bc30577.md
+        - name: Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única
+          href: language-reference/error-messages/an-unexpected-error-has-occurred.md
+        - name: El nombre de miembro de tipo anónimo sólo se puede inferir a partir de un nombre simple o completo sin argumentos
+          href: language-reference/error-messages/bc36556.md
+        - name: Argumento no opcional
+          href: language-reference/error-messages/argument-not-optional.md
+        - name: Los límites de matriz no pueden aparecer en los especificadores de tipo
+          href: language-reference/error-messages/bc30638.md
+        - name: Una matriz declarada como variable de control de bucle no se puede declarar con un tamaño inicial
+          href: language-reference/error-messages/bc32039.md
+        - name: Falta la expresión de subíndice de matriz
+          href: language-reference/error-messages/bc30306.md
+        - name: Las matrices declaradas como miembros de estructura no se pueden declarar con un tamaño inicial
+          href: language-reference/error-messages/bc31043.md
+        - name: '''As Any'' no se admite en instrucciones ''Declare'''
+          href: language-reference/error-messages/bc30828.md
+        - name: No se puede aplicar el atributo '<attributename>' más de una vez
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: Error de automatización
+          href: language-reference/error-messages/automation-error.md
+        - name: Valor de suma de comprobación incorrecto; no tiene dígitos hexadecimales o el número de dígitos hexadecimales es impar
+          href: language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md
+        - name: Convención de llamada a archivo DLL no válida
+          href: language-reference/error-messages/bad-dll-calling-convention.md
+        - name: Modo de archivo incorrecto
+          href: language-reference/error-messages/bad-file-mode.md
+        - name: Número o nombre de archivo incorrecto
+          href: language-reference/error-messages/bad-file-name-or-number.md
+        - name: Longitud de registro incorrecta
+          href: language-reference/error-messages/bad-record-length.md
+        - name: 'Como esta llamada no es "awaited", la ejecución del método actual continuará antes de que se complete la llamada.'
+          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
+        - name: No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo
+          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: No se puede crear el componente ActiveX
+          href: language-reference/error-messages/cannot-create-activex-component.md
+        - name: No se puede hacer referencia a '<name>' porque es miembro del campo de tipo de valor '<name>' de la clase '<classname>' que tiene 'System.MarshalByRefObject' como clase base
+          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+        - name: No se puede hacer referencia a un miembro de instancia de una clase desde un método compartido o un inicializador de método compartido sin una instancia explícita de la clase
+          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+        - name: No se puede crear el archivo temporal necesario
+          href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
+        - name: No se puede abrir '<filename>' para escritura
+          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+        - name: No se puede encontrar la clase '<classname>'
+          href: language-reference/error-messages/class-classname-cannot-be-found.md
+        - name: Esta clase no admite automatización o no admite la interfaz esperada
+          href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
+        - name: La instrucción 'Class' debe terminar con la instrucción 'End Class' correspondiente
+          href: language-reference/error-messages/class-statement-must-end-with-a-matching-end-class.md
+        - name: Formato del Portapapeles no válido
+          href: language-reference/error-messages/clipboard-format-is-not-valid.md
+        - name: La expresión constante no se puede representar en el tipo '<typename>'
+          href: language-reference/error-messages/constant-expression-not-representable-in-type-typename.md
+        - name: 'Las constantes deben ser de tipo intrínseco o enumerado; no pueden ser de tipo clase, estructura, parámetro de tipo ni matriz'
+          href: language-reference/error-messages/constants-must-be-of-an-intrinsic-or-enumerated-type.md
+        - name: El constructor '<name>' no se puede llamar a sí mismo
+          href: language-reference/error-messages/constructor-name-cannot-call-itself.md
+        - name: La acción de volver a copiar el valor del parámetro 'ByRef' '<parametername>' en el argumento coincidente restringe del tipo '<typename1>' al tipo '<typename2>'
+          href: language-reference/error-messages/copying-the-value-of-byref-parameter-back-to-the-matching-argument-narrows.md
+        - name: El modificador 'Custom' no es válido en eventos declarados sin tipos de delegado explícitos
+          href: language-reference/error-messages/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types.md
+        - name: Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos
+          href: language-reference/error-messages/data-type-s-of-the-type-parameter-s-cannot-be-inferred-from-these-arguments.md
+        - name: Se esperaba una declaración
+          href: language-reference/error-messages/declaration-expected.md
+        - name: 'La propiedad predeterminada ''<propertyname1>'' está en conflicto con la propiedad predeterminada ''<propertyname2>'' en la base ''<classname>'' y, por tanto, se debe declarar como ''Shadows'''
+          href: language-reference/error-messages/default-property-propertyname1-conflicts-with-default-property-propertyname2.md
+        - name: Hay un acceso de propiedad Default ambiguo entre los miembros <defaultpropertyname> heredados de la interfaz <interfacename1> y <defaultpropertyname> de la interfaz <interfacename2>
+          href: language-reference/error-messages/default-property-access-is-ambiguous.md
+        - name: 'La clase delegada ''<classname>'' no tiene ningún método Invoke y, por tanto, una expresión de este tipo no puede ser el destino de una llamada a método'
+          href: language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md
+        - name: Las clases derivadas no pueden provocar eventos de clase base
+          href: language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md
+        - name: Error de E/S del dispositivo
+          href: language-reference/error-messages/device-i-o-error.md
+        - name: Se debe llamar primero a la función 'Dir' con un argumento 'Pathname'
+          href: language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md
+        - name: Se esperaba el fin de instrucción
+          href: language-reference/error-messages/end-of-statement-expected.md
+        - name: 'Error al crear manifiesto del ensamblado: <error message>'
+          href: language-reference/error-messages/error-creating-assembly-manifest-error-message.md
+        - name: 'Error al crear recursos Win32: <error message>'
+          href: language-reference/error-messages/error-creating-win32-resources-error-message.md
+        - name: Error al cargar DLL
+          href: language-reference/error-messages/error-in-loading-dll.md
+        - name: 'Error al guardar el archivo de recursos temporal para Win32 ''<filename>'': <error message>'
+          href: language-reference/error-messages/error-saving-temporary-win32-resource-file-filename-error-message.md
+        - name: Se produjeron errores al compilar los esquemas XML del proyecto
+          href: language-reference/error-messages/errors-occurred-while-compiling-the-xml-schemas-in-the-project.md
+        - name: Se superó el tiempo de espera de evaluación de la expresión o instrucción
+          href: language-reference/error-messages/evaluation-of-expression-or-statement-timed-out.md
+        - name: El evento '<eventname1>' no puede implementar el evento '<eventname2>' en la interfaz '<interface>' porque sus tipos delegados '<delegate1>' y '<delegate2>' no coinciden
+          href: language-reference/error-messages/event-eventname1-cannot-implement-event-eventname2-on-interface.md
+        - name: Los eventos no se pueden declarar con un tipo delegado que tenga un tipo de valor devuelto
+          href: language-reference/error-messages/events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type.md
+        - name: Los métodos no compartidos no pueden controlar los eventos de variables WithEvents compartidas
+          href: language-reference/error-messages/events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods.md
+        - name: La expresión no genera un valor
+          href: language-reference/error-messages/expression-does-not-produce-a-value.md
+        - name: La expresión tiene el tipo '<typename>' que es un tipo restringido y no se puede utilizar para obtener acceso a miembros heredados de 'Object' o 'ValueType'
+          href: language-reference/error-messages/expression-has-the-type-typename-which-is-a-restricted-type.md
+        - name: 'La expresión es un valor y, por lo tanto, no puede ser destino de una asignación'
+          href: language-reference/error-messages/expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment.md
+        - name: No se puede consultar una expresión de tipo <type>
+          href: language-reference/error-messages/expression-of-type-type-is-not-queryable.md
+        - name: La expresión llama de forma recursiva a la propiedad contenedora '<propertyname>'
+          href: language-reference/error-messages/expression-recursively-calls-the-containing-property-propertyname.md
+        - name: Expresión demasiado compleja
+          href: language-reference/error-messages/expression-too-complex.md
+        - name: 'El atributo ''Extension'' sólo se puede aplicar a las declaraciones ''Module'', ''Sub'' o ''Function'''
+          href: language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md
+        - name: Archivo ya abierto
+          href: language-reference/error-messages/file-already-open.md
+        - name: Archivo demasiado grande para su lectura en una matriz de bytes
+          href: language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md
+        - name: No se encontró el nombre del archivo o de la clase durante la operación de Automation
+          href: language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md
+        - name: No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)
+          href: language-reference/error-messages/file-not-found-visual-basic-run-time-error.md
+        - name: El primer operando de una expresión 'If' binaria debe ser un tipo que acepte valores NULL o un tipo de referencia
+          href: language-reference/error-messages/first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type.md
+        - name: La primera instrucción de este 'Sub New' debe ser una llamada a 'MyBase.New' o 'MyClass.New' (constructor no accesible sin parámetros)
+          href: language-reference/error-messages/first-statement-of-this-sub-new-must-be-a-call-to-mybase-new-or-myclass-new.md
+        - name: 'La primera instrucción de este ''Sub New'' debe ser una llamada explícita a ''MyBase.New'' o a ''MyClass.New'' porque el constructor ''<constructorname>'' de la clase base ''<baseclassname>'' de ''<derivedclassname>'' está marcado como obsoleto: ''<errormessage>'''
+          href: language-reference/error-messages/first-statement-of-sub-new-must-be-explicit-call-to-mybase-new-or-myclass-new.md
+        - name: La instrucción 'For Each' en el tipo '<typename>' es ambigua porque el tipo implementa varias creaciones de instancias de 'System.Collections.Generic.IEnumerable(Of T)'
+          href: language-reference/error-messages/for-each-on-type-typename-is-ambiguous.md
+        - name: La referencia de ensamblado de confianza <reference> no es válida
+          href: language-reference/error-messages/friend-assembly-reference-reference-is-invalid.md
+        - name: La función '<procedurename>' no devuelve un valor en todas las rutas de acceso a código
+          href: language-reference/error-messages/function-procedurename-doesn-t-return-a-value-on-all-code-paths.md
+        - name: Se deshabilitó la evaluación de funciones porque se excedió el tiempo de espera de una evaluación de funciones anterior
+          href: language-reference/error-messages/function-evaluation-is-disabled.md
+        - name: Los parámetros genéricos utilizados como tipos de parámetros opcionales deben tener restricción de clase
+          href: language-reference/error-messages/generic-parameters-used-as-optional-parameter-types-must-be-class-constrained.md
+        - name: El descriptor de acceso 'Get' de la propiedad '<propertyname>' no está accesible
+          href: language-reference/error-messages/get-accessor-of-property-propertyname-is-not-accessible.md
+        - name: La cláusula Handles requiere una variable WithEvents definida en el tipo contenedor o en uno de sus tipos base
+          href: language-reference/error-messages/handles-clause-requires-a-withevents-variable-defined.md
+        - name: Se esperaba un identificador
+          href: language-reference/error-messages/identifier-expected.md
+        - name: El identificador es demasiado largo
+          href: language-reference/error-messages/identifier-is-too-long.md
+        - name: Se esperaba un inicializador
+          href: language-reference/error-messages/initializer-expected.md
+        - name: Se sobrepasó el final del archivo
+          href: language-reference/error-messages/input-past-end-of-file.md
+        - name: Se ha producido un error interno en <location>
+          href: language-reference/error-messages/internal-error-happened-at-location.md
+        - name: Conversión implícita de '<typename1>' a '<typename2>' al copiar de nuevo el valor del parámetro 'ByRef' '<parametername>' en el argumento correspondiente
+          href: language-reference/error-messages/implicit-conversion-from-typename1-to-typename2-in-copying.md
+        - name: '''Is'' requiere operandos que tienen tipos de referencia, pero este operando tiene el tipo de valor ''<typename>'''
+          href: language-reference/error-messages/is-requires-operands-that-have-reference-types.md
+        - name: 'El operando ''IsNot'' de tipo ''nombreDeTipo'' solo se puede comparar con ''Nothing'', porque ''nombreDeTipo'' es un tipo que acepta valores NULL'
+          href: language-reference/error-messages/isnot-operand-of-type-can-only-be-compared-to-nothing.md
+        - name: Las etiquetas que son números deben ir seguidas de dos puntos
+          href: language-reference/error-messages/labels-that-are-numbers-must-be-followed-by-colons.md
+        - name: La expresión lambda no se quitará de este controlador de eventos
+          href: language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md
+        - name: Las expresiones lambda no son válidas en la primera expresión de una instrucción 'Select Case'
+          href: language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md
+        - name: Resolución enlazada tempranamente; pueden producirse errores en tiempo de ejecución
+          href: language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md
+        - name: La resolución de sobrecarga enlazada tardíamente no se puede aplicar a '<procedurename>' porque la instancia de acceso es un tipo de interfaz
+          href: language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md
+        - name: '''.'' o ''!'' inicial sólo puede aparecer dentro de una instrucción ''With'''
+          href: language-reference/error-messages/leading-period-or-exclamation-point-can-only-appear-inside-a-with-statement.md
+        - name: La línea es demasiado larga
+          href: language-reference/error-messages/line-is-too-long.md
+        - name: Ya no se admiten instrucciones 'Line' (error del compilador de Visual Basic)
+          href: language-reference/error-messages/line-statements-are-no-longer-supported-visual-basic-compiler-error.md
+        - name: El método no tiene una firma compatible con el delegado
+          href: language-reference/error-messages/method-does-not-have-a-signature-compatible-with-the-delegate.md
+        - name: Los métodos de 'System.Nullable(Of T)' no se pueden utilizar como operandos del operador 'AddressOf'
+          href: language-reference/error-messages/methods-of-system-nullable-of-t-cannot-be-used-as-operands-of-the-addressof.md
+        - name: Las instrucciones 'Module' sólo pueden ocurrir en el nivel de archivo o de espacio de nombres
+          href: language-reference/error-messages/module-statements-can-occur-only-at-file-or-namespace-level.md
+        - name: El nombre <membername> no es compatible con CLS
+          href: language-reference/error-messages/name-membername-is-not-cls-compliant.md
+        - name: No se ha declarado el nombre '<name>'
+          href: language-reference/error-messages/name-name-is-not-declared.md
+        - name: El nombre <namespacename> del espacio de nombres raíz <fullnamespacename> no es compatible con CLS
+          href: language-reference/error-messages/name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant.md
+        - name: El espacio de nombres o tipo especificado en las importaciones '<qualifiedelementname>' no contiene miembros públicos o no se encuentra
+          href: language-reference/error-messages/namespace-or-type-specified-in-the-imports-qualifiedelementname.md
+        - name: El espacio de nombres o tipo especificado en las importaciones del proyecto '<qualifiedelementname>' no tiene miembros públicos o no se encuentra
+          href: language-reference/error-messages/namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname.md
+        - name: Se necesita un índice de matriz de propiedades
+          href: language-reference/error-messages/need-property-array-index.md
+        - name: La función anidada no tiene una signatura compatible con el delegado '<delegatename>'
+          href: language-reference/error-messages/nested-function-does-not-have-a-signature-that-is-compatible-with-delegate.md
+        - name: No se encontró ningún método 'Main' accesible con una firma apropiada en '<name>'
+          href: language-reference/error-messages/no-accessible-main-method-with-an-appropriate-signature-was-found-in-name.md
+        - name: <membername> no compatible con CLS no se permite en una interfaz compatible con CLS
+          href: language-reference/error-messages/non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface.md
+        - name: No se admite la inferencia de tipos que acepten valores NULL en este contexto
+          href: language-reference/error-messages/nullable-type-inference-is-not-supported-in-this-context.md
+        - name: El número de índices sobrepasa el número de dimensiones de la matriz indizada
+          href: language-reference/error-messages/number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array.md
+        - name: El objeto o la clase no admite el conjunto de eventos
+          href: language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md
+        - name: Se requiere un objeto
+          href: language-reference/error-messages/object-required.md
+        - name: Variable de objeto o de bloque With no establecida
+          href: language-reference/error-messages/object-variable-or-with-block-variable-not-set.md
+        - name: 'La declaración de un operador debe ser una de las siguientes: +,-,*,\,/,^, &, Like, Mod, And, Or, Xor, Not, <>, =, <>, =, CType, IsTrue, IsFalse'
+          href: language-reference/error-messages/operator-declaration-must-be-one-of.md
+        - name: Se esperaba 'Optional'
+          href: language-reference/error-messages/optional-expected.md
+        - name: Los parámetros opcionales deben especificar un valor predeterminado
+          href: language-reference/error-messages/optional-parameters-must-specify-a-default-value.md
+        - name: El ordinal no es válido
+          href: language-reference/error-messages/ordinal-is-not-valid.md
+        - name: Memoria insuficiente (error del compilador de Visual Basic)
+          href: language-reference/error-messages/out-of-memory-visual-basic-compiler-error.md
+        - name: Espacio de pila insuficiente
+          href: language-reference/error-messages/out-of-stack-space.md
+        - name: Espacio de cadena insuficiente
+          href: language-reference/error-messages/out-of-string-space.md
+        - name: Desbordamiento (Error de Visual Basic)
+          href: language-reference/error-messages/overflow-visual-basic-error.md
+        - name: Desbordamiento (Error en tiempo de ejecución de Visual Basic)
+          href: language-reference/error-messages/overflow-visual-basic-run-time-error.md
+        - name: No se encuentra la ruta de acceso
+          href: language-reference/error-messages/path-not-found.md
+        - name: Error de acceso a la ruta o al archivo
+          href: language-reference/error-messages/path-file-access-error.md
+        - name: Permiso denegado
+          href: language-reference/error-messages/permission-denied.md
+        - name: Argumento o llamada a procedimiento no válido
+          href: language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
+        - name: La propiedad '<propertyname>' no devuelve un valor en todas las rutas de acceso a código
+          href: language-reference/error-messages/property-propertyname-doesn-t-return-a-value-on-all-code-paths.md
+        - name: El índice de la matriz de propiedades no es válido
+          href: language-reference/error-messages/property-array-index-is-not-valid.md
+        - name: El procedimiento Let de la propiedad no está definido y el procedimiento Get no ha devuelto un objeto
+          href: language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md
+        - name: Propiedad no encontrada
+          href: language-reference/error-messages/property-not-found.md
+        - name: No se encuentra la propiedad ni el método
+          href: language-reference/error-messages/property-or-method-not-found.md
+        - name: 'La variable de rango <variable> oculta una variable en un bloque de inclusión, una variable de rango definida anteriormente o una variable declarada de forma implícita en una expresión de consulta'
+          href: language-reference/error-messages/range-variable-variable-hides-a-variable-in-an-enclosing-block.md
+        - name: El nombre de una variable de rango sólo se puede inferir a partir de un nombre simple o completo sin argumentos
+          href: language-reference/error-messages/range-variable-name-can-be-inferred.md
+        - name: 'Es necesaria una referencia al ensamblado ''<assemblyidentity>'' que contenga el tipo ''<typename>'', pero no se encontró una referencia adecuada debido a la ambigüedad entre los proyectos ''<projectname1>'' y ''<projectname2>'''
+          href: language-reference/error-messages/reference-required-to-assembly-containing-type-but-suitable-reference-not-found.md
+        - name: Es necesaria una referencia al ensamblado '<assemblyname>' que contenga la clase base '<classname>'
+          href: language-reference/error-messages/reference-required-to-assembly-assemblyname-containing-the-base-class-classname.md
+        - name: Operación solicitada no disponible (BC35000)
+          href: language-reference/error-messages/bc35000.md
+        - name: Reanudar sin error
+          href: language-reference/error-messages/resume-without-error.md
+        - name: El tipo de valor devuelto de la función '<procedurename>' no es compatible con CLS
+          href: language-reference/error-messages/return-type-of-function-procedurename-is-not-cls-compliant.md
+        - name: El descriptor de acceso 'Set' de la propiedad '<propertyname>' no está accesible
+          href: language-reference/error-messages/set-accessor-of-property-propertyname-is-not-accessible.md
+        - name: Algunas subclaves no se pueden eliminar
+          href: language-reference/error-messages/some-subkeys-cannot-be-deleted.md
+        - name: La instrucción no puede terminar un bloque fuera de una línea de la instrucción 'If'
+          href: language-reference/error-messages/statement-cannot-end-a-block-outside-of-a-line-if-statement.md
+        - name: La instrucción no es válida en un espacio de nombres
+          href: language-reference/error-messages/statement-is-not-valid-in-a-namespace.md
+        - name: Instrucción no válida dentro de un método o una expresión lambda de varias líneas
+          href: language-reference/error-messages/statement-is-not-valid-inside-a-method-multiline-lambda.md
+        - name: Las constantes de cadena deben terminar en comillas dobles
+          href: language-reference/error-messages/string-constants-must-end-with-a-double-quote.md
+        - name: La estructura '<structurename>' debe contener al menos una variable miembro de instancia o una declaración de evento de instancia que no esté marcada como 'Custom'
+          href: language-reference/error-messages/structure-structurename-must-contain.md
+        - name: No se encontró 'Sub Main' en '<name>'
+          href: language-reference/error-messages/sub-main-was-not-found-in-name.md
+        - name: Elemento Sub o Function no definido
+          href: language-reference/error-messages/sub-or-function-not-defined.md
+        - name: Subíndice fuera del rango
+          href: language-reference/error-messages/subscript-out-of-range.md
+        - name: TextFieldParser no puede finalizar la operación de lectura porque se ha superado el tamaño máximo de búfer
+          href: language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md
+        - name: El tipo de la variable '<variablename>' no se inferirá porque está enlazado a un campo en un ámbito de inclusión
+          href: language-reference/error-messages/the-type-for-variable-variablename-will-not-be-inferred.md
+        - name: Matriz fija o bloqueada temporalmente
+          href: language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md
+        - name: Esta clave ya está asociada con un elemento de esta colección
+          href: language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md
+        - name: Demasiados archivos
+          href: language-reference/error-messages/too-many-files.md
+        - name: El tipo '<typename>' no tiene ningún constructor
+          href: language-reference/error-messages/type-typename-has-no-constructors.md
+        - name: El tipo <typename> no es compatible con CLS
+          href: language-reference/error-messages/type-typename-is-not-cls-compliant.md
+        - name: No está definido el tipo '<typename>'
+          href: language-reference/error-messages/type-typename-is-not-defined.md
+        - name: No se pudieron inferir los argumentos de tipo a partir del delegado
+          href: language-reference/error-messages/type-arguments-could-not-be-inferred-from-the-delegate.md
+        - name: Error de coincidencia de tipos
+          href: language-reference/error-messages/type-mismatch.md
+        - name: No se puede inferir el tipo de '<variablename>' porque los límites del bucle y la variable step no se convierten en el mismo tipo
+          href: language-reference/error-messages/type-of-variablename-cannot-be-inferred.md
+        - name: El tipo de miembro '<membername>' no es compatible con CLS
+          href: language-reference/error-messages/type-of-member-membername-is-not-cls-compliant.md
+        - name: El tipo de valor opcional para el parámetro opcional <parametername> no es compatible con CLS
+          href: language-reference/error-messages/type-of-optional-value-for-optional-parameter-is-not-cls-compliant.md
+        - name: El tipo de parámetro '<parametername>' no es compatible con CLS
+          href: language-reference/error-messages/type-of-parameter-parametername-is-not-cls-compliant.md
+        - name: Los parámetros de tipo no se pueden utilizar como calificadores
+          href: language-reference/error-messages/type-parameters-cannot-be-used-as-qualifiers.md
+        - name: 'No se puede crear el ensamblado con nombre desde el archivo de clave <filename>: <error>'
+          href: language-reference/error-messages/unable-to-create-strong-named-assembly-from-key-file-filename-error.md
+        - name: 'No se puede incrustar el archivo de recursos ''<filename>'': <error message>'
+          href: language-reference/error-messages/unable-to-embed-resource-file-filename-error-message.md
+        - name: 'No se puede emitir el ensamblado: <error message>'
+          href: language-reference/error-messages/unable-to-emit-assembly-error-message.md
+        - name: No se encuentra el archivo '<filename>' necesario
+          href: language-reference/error-messages/unable-to-find-required-file-filename.md
+        - name: No se pueden obtener los nombres de los puertos serie a causa de un error interno del sistema
+          href: language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md
+        - name: 'No se puede vincular al archivo de recursos ''<filename>'': <error message>'
+          href: language-reference/error-messages/unable-to-link-to-resource-file-filename-error-message.md
+        - name: No se puede cargar información para la clase '<classname>'
+          href: language-reference/error-messages/unable-to-load-information-for-class-classname.md
+        - name: No se puede escribir el resultado en memoria
+          href: language-reference/error-messages/unable-to-write-output-to-memory.md
+        - name: No se puede escribir el archivo temporal porque la ruta de acceso temporal no está disponible
+          href: language-reference/error-messages/unable-to-write-temporary-file-because-temporary-path-is-not-available.md
+        - name: 'No se puede escribir en el archivo de resultados ''<filename>'': <error>'
+          href: language-reference/error-messages/unable-to-write-to-output-file-filename-error.md
+        - name: El tipo subyacente <typename> de Enum no es compatible con CLS
+          href: language-reference/error-messages/underlying-type-typename-of-enum-is-not-cls-compliant.md
+        - name: El uso de una variable de iteración en una expresión lambda puede producir resultados inesperados.
+          href: language-reference/error-messages/using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results.md
+        - name: Un valor de tipo '<typename1>' no se puede convertir a '<typename2>'
+          href: language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md
+        - name: Un valor de tipo '<typename1>' no se puede convertir a '<typename2>' (varias referencias de archivo)
+          href: language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md
+        - name: Un valor de tipo 'tipo1' no se puede convertir en 'tipo2'
+          href: language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md
+        - name: La variable '<variablename>' oculta una variable en un bloque de inclusión
+          href: language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md
+        - name: La variable '<variablename>' se utiliza antes de ser asignada a un valor
+          href: language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md
+        - name: La variable utiliza un tipo de Automation no compatible con Visual Basic
+          href: language-reference/error-messages/variable-uses-an-automation-type-not-supported.md
+        - name: Las propiedades del eje XML no admiten enlace en tiempo de ejecución
+          href: language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md
+        - name: La excepción del comentario XML debe tener un atributo 'cref'
+          href: language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md
+        - name: No se admiten referencias de entidad XML
+          href: language-reference/error-messages/xml-entity-references-are-not-supported.md
+        - name: No se admiten literales XML ni propiedades XML en código incrustado en ASP.NET
+          href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
+        - name: El identificador URI de espacio de nombres "<uri>" solo se puede enlazar a "xmlns"
+          href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
+- name: Referencia
+  href: reference/index.md
+  items:
+    - name: Compilador de línea de comandos
+      href: reference/command-line-compiler/index.md
+      items:
+        - name: Compilación desde la línea de comandos
+          href: reference/command-line-compiler/building-from-the-command-line.md
+          items:
+            - name: Procedimiento Invocación del compilador de la línea de comandos
+              href: reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
+            - name: Líneas de comandos de compilación de ejemplo
+              href: reference/command-line-compiler/sample-compilation-command-lines.md
+        - name: Opciones del compilador por orden alfabético
+          href: reference/command-line-compiler/compiler-options-listed-alphabetically.md
+          items:
+            - name: '@ (especificar archivo de respuesta)'
+              href: reference/command-line-compiler/specify-response-file.md
+            - name: '-addmodule'
+              href: reference/command-line-compiler/addmodule.md
+            - name: '-baseaddress'
+              href: reference/command-line-compiler/baseaddress.md
+            - name: '-bugreport'
+              href: reference/command-line-compiler/bugreport.md
+            - name: '-codepage'
+              href: reference/command-line-compiler/codepage.md
+            - name: '-debug'
+              href: reference/command-line-compiler/debug.md
+            - name: '-define'
+              href: reference/command-line-compiler/define.md
+            - name: '-delaysign'
+              href: reference/command-line-compiler/delaysign.md
+            - name: '-deterministic'
+              href: reference/command-line-compiler/deterministic.md
+            - name: '-doc'
+              href: reference/command-line-compiler/doc.md
+            - name: '-errorreport'
+              href: reference/command-line-compiler/errorreport.md
+            - name: '-filealign'
+              href: reference/command-line-compiler/filealign.md
+            - name: '-help, /?'
+              href: reference/command-line-compiler/help.md
+            - name: '-highentropyva'
+              href: reference/command-line-compiler/highentropyva.md
+            - name: '-imports'
+              href: reference/command-line-compiler/imports.md
+            - name: '-keycontainer'
+              href: reference/command-line-compiler/keycontainer.md
+            - name: '-keyfile'
+              href: reference/command-line-compiler/keyfile.md
+            - name: '-langversion'
+              href: reference/command-line-compiler/langversion.md
+            - name: '-libpath'
+              href: reference/command-line-compiler/libpath.md
+            - name: '-link'
+              href: reference/command-line-compiler/link.md
+            - name: '-linkresource'
+              href: reference/command-line-compiler/linkresource.md
+            - name: '-main'
+              href: reference/command-line-compiler/main.md
+            - name: '-moduleassemblyname'
+              href: reference/command-line-compiler/moduleassemblyname.md
+            - name: '-netcf'
+              href: reference/command-line-compiler/netcf.md
+            - name: '-noconfig'
+              href: reference/command-line-compiler/noconfig.md
+            - name: '-nologo'
+              href: reference/command-line-compiler/nologo.md
+            - name: '-nostdlib'
+              href: reference/command-line-compiler/nostdlib.md
+            - name: '-nowarn'
+              href: reference/command-line-compiler/nowarn.md
+            - name: '-nowin32manifest'
+              href: reference/command-line-compiler/nowin32manifest.md
+            - name: '-optimize'
+              href: reference/command-line-compiler/optimize.md
+            - name: '-optioncompare'
+              href: reference/command-line-compiler/optioncompare.md
+            - name: '-optionexplicit'
+              href: reference/command-line-compiler/optionexplicit.md
+            - name: '-optioninfer'
+              href: reference/command-line-compiler/optioninfer.md
+            - name: '-optionstrict'
+              href: reference/command-line-compiler/optionstrict.md
+            - name: '-out'
+              href: reference/command-line-compiler/out.md
+            - name: '-platform'
+              href: reference/command-line-compiler/platform.md
+            - name: '-quiet'
+              href: reference/command-line-compiler/quiet.md
+            - name: '-recurse'
+              href: reference/command-line-compiler/recurse.md
+            - name: '-reference'
+              href: reference/command-line-compiler/reference.md
+            - name: '-refonly'
+              href: reference/command-line-compiler/refonly-compiler-option.md
+            - name: '-refout'
+              href: reference/command-line-compiler/refout-compiler-option.md
+            - name: '-removeintchecks'
+              href: reference/command-line-compiler/removeintchecks.md
+            - name: '-resource'
+              href: reference/command-line-compiler/resource.md
+            - name: '-rootnamespace'
+              href: reference/command-line-compiler/rootnamespace.md
+            - name: '-sdkpath'
+              href: reference/command-line-compiler/sdkpath.md
+            - name: '-target'
+              href: reference/command-line-compiler/target.md
+            - name: '-subsystemversion'
+              href: reference/command-line-compiler/subsystemversion.md
+            - name: '-utf8output'
+              href: reference/command-line-compiler/utf8output.md
+            - name: '-vbruntime'
+              href: reference/command-line-compiler/vbruntime.md
+            - name: '-verbose'
+              href: reference/command-line-compiler/verbose.md
+            - name: '-warnaserror'
+              href: reference/command-line-compiler/warnaserror.md
+            - name: '-win32icon'
+              href: reference/command-line-compiler/win32icon.md
+            - name: '-win32manifest'
+              href: reference/command-line-compiler/win32manifest.md
+            - name: '-win32resource'
+              href: reference/command-line-compiler/win32resource.md
+        - name: Opciones del compilador por categoría
+          href: reference/command-line-compiler/compiler-options-listed-by-category.md
+    - name: Información de referencia de .NET Framework
+      href: reference/net-framework-reference-information.md
+    - name: Especificación del lenguaje
+      href: reference/language-specification/
+- name: Aplicaciones de ejemplo
+  href: sample-applications.md
+- name: Tutoriales
+  href: walkthroughs.md
