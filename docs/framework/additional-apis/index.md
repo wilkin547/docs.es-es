@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de clases y API adicionales
-ms.date: 01/29/2018
+ms.date: 10/09/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,22 +10,22 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053241"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395661"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de clases y API adicionales
 
 El .NET Framework evoluciona constantemente. Para mejorar el desarrollo multiplataforma e introducir nuevas funciones con antelación, se lanzan nuevas características fuera de banda (OOB). En este tema se muestran los proyectos OOB para los que ofrecemos documentación.  
   
-Además, algunas bibliotecas se orientan a plataformas o implementaciones específicas de .NET Framework. Por ejemplo, la <xref:System.Text.CodePagesEncodingProvider> clase hace que las codificaciones de páginas de códigos estén disponibles para las aplicaciones UWP desarrolladas mediante el .NET Framework. En este tema también se enumeran estas bibliotecas.  
+Además, algunas bibliotecas se orientan a plataformas o implementaciones específicas de .NET Framework. Por ejemplo, la clase <xref:System.Text.CodePagesEncodingProvider> hace que las codificaciones de páginas de códigos estén disponibles para las aplicaciones UWP desarrolladas mediante el .NET Framework. En este tema también se enumeran estas bibliotecas.  
   
 ## <a name="oob-projects"></a>Proyectos OOB
   
-| Proyecto | DESCRIPCIÓN |  
+| Proyecto | Descripción |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Ofrece colecciones que son seguras para subprocesos en las que se garantiza que no cambiará nunca su contenido. |
 | <xref:System.Net.Http.WinHttpHandler> | Ofrece un controlador de mensajes para <xref:System.Net.Http.HttpClient> basados en la interfaz de WinHTTP de Windows. |
@@ -34,32 +34,55 @@ Además, algunas bibliotecas se orientan a plataformas o implementaciones espec�
 
 ## <a name="platform-specific-libraries"></a>Bibliotecas específicas de plataforma
   
-| Proyecto | DESCRIPCIÓN |  
+| Proyecto | Descripción |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Extiende la <xref:System.Text.EncodingProvider> clase para que las codificaciones de páginas de códigos estén disponibles para las aplicaciones destinadas a la plataforma universal de Windows. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Extiende la clase <xref:System.Text.EncodingProvider> para que las codificaciones de páginas de códigos estén disponibles para las aplicaciones destinadas a la Plataforma universal de Windows. |  
   
 ## <a name="private-apis"></a>API privadas  
 
 Estas API admiten la infraestructura del producto y no están previstas ni se admiten para usarlas directamente en el código.  
   
-| Nombre de API |
-| -------- |
-| [System .net. Connection (clase)](connection.md) |
-| [Campo WriteList de System .net.\_Connection. m](m_writelist.md) |
-| [System .net. ConnectionGroup (clase)](connectiongroup.md) |
-| [Campo ConnectionList de System .net.\_ConnectionGroup. m](m_connectionlist.md) |
-| [System .net. CoreResponseData (clase)](coreresponsedata.md) |
-| [Campo ResponseHeaders de System .net.\_CoreResponseData. m](coreresponsedata_m_responseheaders.md) |
-| [Campo StatusCode de System .net.\_CoreResponseData. m](coreresponsedata_m_statuscode.md) |
-| [System .net. HttpWebRequest. \_Campo AutoRedirects](_autoredirects.md) |
-| [System .net. HttpWebRequest. \_Campo CoreResponse](httpwebrequest__coreresponse.md) |
-| [System .net. HttpWebRequest. \_HttpResponse (campo)](_httpresponse.md) |
-| [Campo ConnectionGroupList de System .net.\_ServicePoint. m](m_connectiongrouplist.md) |
-| [Campo ServicePointTable de System .net.\_ServicePointManager. s](s_servicepointtable.md) |
-| [Campo isDebuggerCheckDisabledForTestPurposes de System. Windows. Diagnostics\_. VisualDiagnostics. s](s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [Clase System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md) |
-| [Clase System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md) |
+* [Propiedad Microsoft. SqlServer. Server. SmiOrderProperty. Item](microsoft.sqlserver.server.smiorderproperty.item.md)
+* [System. Exception. PrepForRemoting (método)](system.exception.prepforremoting.md)
+* [Propiedad System. Data. SqlTypes. SqlChars. Stream](system.data.sqltypes.sqlchars.stream.md)
+* [Constructor System. Data. SqlTypes. SqlStreamChars](system.data.sqltypes.sqlstreamchars.-ctor.md)
+* [Propiedad System. Data. SqlTypes. SqlStreamChars. CanSeek](system.data.sqltypes.sqlstreamchars.canseek.md)
+* [Propiedad System. Data. SqlTypes. SqlStreamChars. IsNull](system.data.sqltypes.sqlstreamchars.isnull.md)
+* [Propiedad System. Data. SqlTypes. SqlStreamChars. length](system.data.sqltypes.sqlstreamchars.length.md)
+* [System. Data. SqlTypes. SqlStreamChars. Close (método)](system.data.sqltypes.sqlstreamchars.close.md)
+* [System. Data. SqlTypes. SqlStreamChars. Dispose (método)](system.data.sqltypes.sqlstreamchars.dispose.md)
+* [System. Data. SqlTypes. SqlStreamChars. Flush (método)](system.data.sqltypes.sqlstreamchars.flush.md)
+* [System. Data. SqlTypes. SqlStreamChars. Read (método)](system.data.sqltypes.sqlstreamchars.read.md)
+* [System. Data. SqlTypes. SqlStreamChars. Seek (método)](system.data.sqltypes.sqlstreamchars.seek.md)
+* [System. Data. SqlTypes. SqlStreamChars. SetLength (método)](system.data.sqltypes.sqlstreamchars.setlength.md)
+* [System. Data. SqlTypes. SqlStreamChars. Write (método)](system.data.sqltypes.sqlstreamchars.write.md)
+* [System .net. Connection (clase)](connection.md)
+* [Campo System .net. Connection. m @ no__t-1WriteList](m_writelist.md)
+* [System .net. ConnectionGroup (clase)](connectiongroup.md)
+* [Campo System .net. ConnectionGroup. m @ no__t-1ConnectionList](m_connectionlist.md)
+* [System .net. CoreResponseData (clase)](coreresponsedata.md)
+* [Campo System .net. CoreResponseData. m @ no__t-1ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [Campo System .net. CoreResponseData. m @ no__t-1StatusCode](coreresponsedata_m_statuscode.md)
+* [Campo System .net. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
+* [Campo System .net. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
+* [Campo System .net. HttpWebRequest. \_HttpResponse](_httpresponse.md)
+* [Campo System .net. ServicePoint. m @ no__t-1ConnectionGroupList](m_connectiongrouplist.md)
+* [Campo System .net. ServicePointManager. s @ no__t-1ServicePointTable](s_servicepointtable.md)
+* [System. Windows. Diagnostics. VisualDiagnostics. s @ no__t-1isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Clase System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
+* [Clase System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
+* [ADODB. Interfaz de conexión](adodb.connection.md)
+* [ADODB. Enumeración EventReason](adodb.eventreasonenum.md)
+* [ADODB. Enumeración EventStatus](adodb.eventstatusenum.md)
+* [dicha. Estructura DISPPARAMS](stdole.dispparams.md)
+* [dicha. Estructura EXCEPINFO](stdole.excepinfo.md)
+* [dicha. Propiedad IFont.Name](stdole.ifont.name.md)
+* [dicha. IFontDisp (interfaz)](stdole.ifontdisp.md)
+* [dicha. IPicture. Handle (propiedad)](stdole.ipicture.handle.md)
+* [dicha. IPictureDisp. Handle (propiedad)](stdole.ipicturedisp.handle.md)
+* [dicha. StdFont (interfaz)](stdole.stdfont.md)
+* [dicha. StdPicture (interfaz)](stdole.stdpicture.md)
   
 ## <a name="see-also"></a>Vea también
 
-- [.NET Framework y versiones fuera de banda](../get-started/the-net-framework-and-out-of-band-releases.md)
+* [.NET Framework y versiones fuera de banda](../get-started/the-net-framework-and-out-of-band-releases.md)

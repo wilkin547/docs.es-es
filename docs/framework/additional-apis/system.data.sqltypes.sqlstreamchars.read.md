@@ -1,5 +1,5 @@
 ---
-title: Método SqlStreamChars.Read (Char [], Int32, Int32) (System.Data.SqlTypes)
+title: Método SqlStreamChars. Read (Char [], Int32, Int32) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: df715f622f874b3c9297c421eab9f4c7504e696b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c8a1526e75fdc304022e74a7cc52506762489ea
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634317"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395750"
 ---
-# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars.Read(Char[], Int32, Int32) Method
+# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars. Read (Char [], Int32, Int32) (método)
 
-Cuando se invalida en una clase derivada, lee el siguiente conjunto de caracteres del flujo de entrada. El ensamblado que contiene este método tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso con SQL Server. Para otras bases de datos, utilice el mecanismo de hospedaje proporcionado por esa base de datos.
+Cuando se invalida en una clase derivada, lee el siguiente conjunto de caracteres del flujo de entrada. El ensamblado que contiene este método tiene una relación de confianza con SQLAccess. dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
 
 ```csharp
 public abstract int Read (char[] buffer, int offset, int count);
@@ -30,13 +30,13 @@ public abstract int Read (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>Parámetros
 
 `buffer`\
-Una matriz de caracteres para leer.
+Matriz de caracteres que se va a leer.
 
 `offset`\
-Un desplazamiento con respecto al origen.
+Desplazamiento relativo al origen.
 
 `count`\
-El número de caracteres que leer en la secuencia actual.
+Número de caracteres que se van a leer de la secuencia actual.
 
 ## <a name="returns"></a>Valores devueltos
 
@@ -46,14 +46,14 @@ Número total de caracteres leídos en el búfer.
 ## <a name="remarks"></a>Comentarios
 
 > [!WARNING]
-> El `SqlStreamChars.Read` método es privado y no está pensado para usarse directamente en el código.
+> El método `SqlStreamChars.Read` es privado y no está diseñado para usarse directamente en el código.
 >
-> Microsoft no admite el uso de este campo en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de este método en una aplicación de producción bajo ninguna circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
 **Espacio de nombres:** <xref:System.Data.SqlTypes>
 
-**Ensamblado:** System.Data (en System.Data.dll)
+**Ensamblado:** System. Data (en System. Data. dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

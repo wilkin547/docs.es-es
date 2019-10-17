@@ -3,14 +3,14 @@ title: Introducción a Azure Table Storage mediante F#
 description: Almacene datos estructurados en la nube mediante Azure Table Storage o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182603"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395206"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table Storage y el Table API de Azure Cosmos DB con F\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table Storage y el Azure Cosmos DB Table API mediante F @ no__t-0
 
 Azure Table Storage es un servicio que almacena datos de NoSQL estructurados en la nube. Table Storage es un almacén de claves y atributos con un diseño sin esquema. Dado que el almacenamiento de tabla no tiene esquemas, es fácil adaptar los datos a medida que evolucionen las necesidades de la aplicación. El acceso a los datos es rápido y rentable para todos los tipos de aplicaciones. Normalmente, el almacenamiento de tablas es significativamente menor que el de SQL tradicional para volúmenes de datos similares.
 
@@ -38,13 +38,13 @@ Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure 
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Creación de F# un script e F# Inicio interactivo
 
-Los ejemplos de este artículo se pueden usar en una F# aplicación o en un F# script. Para crear un F# script, cree un archivo con la `.fsx` extensión, por ejemplo `tables.fsx`, en el F# entorno de desarrollo.
+Los ejemplos de este artículo se pueden usar en una F# aplicación o en un F# script. Para crear un F# script, cree un archivo con la extensión `.fsx`, por ejemplo `tables.fsx`, en el F# entorno de desarrollo.
 
-A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar `WindowsAzure.Storage` el paquete y `WindowsAzure.Storage.dll` la referencia en el script `#r` mediante una directiva. Vuelva a `Microsoft.WindowsAzure.ConfigurationManager` hacerlo con el fin de obtener el espacio de nombres Microsoft. Azure.
+A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar el paquete `WindowsAzure.Storage` y haga referencia a `WindowsAzure.Storage.dll` en el script mediante una directiva `#r`. Vuelva a hacerlo para `Microsoft.WindowsAzure.ConfigurationManager` con el fin de obtener el espacio de nombres Microsoft. Azure.
 
 ### <a name="add-namespace-declarations"></a>Agregar declaraciones de espacio de nombres
 
-Agregue las siguientes `open` instrucciones a la parte superior `tables.fsx` del archivo:
+Agregue las siguientes instrucciones `open` al principio del archivo `tables.fsx`:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -54,7 +54,7 @@ Si se va a conectar a Azure Storage Table service, necesitará la cadena de cone
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Obtener la cadena de conexión de Azure Cosmos DB
 
-Si se va a conectar a Azure Cosmos DB, necesitará la cadena de conexión para este tutorial. Puede copiar la cadena de conexión desde el Azure Portal. En el Azure portal, en la cuenta de Cosmos dB, vaya a **configuración** > **cadena de conexión**y haga clic en el botón **copiar** para copiar la cadena de conexión principal. 
+Si se va a conectar a Azure Cosmos DB, necesitará la cadena de conexión para este tutorial. Puede copiar la cadena de conexión desde el Azure Portal. En el Azure Portal, en la cuenta de Cosmos DB, vaya a **configuración** > **cadena de conexión**y haga clic en el botón **copiar** para copiar la cadena de conexión principal. 
 
 En el tutorial, escriba la cadena de conexión en el script, como en el ejemplo siguiente:
 
@@ -66,7 +66,7 @@ En el caso de las aplicaciones reales, la mejor manera de mantener la cadena de 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-El uso de Azure Configuration Manager es opcional. También puede usar una API, como el tipo de `ConfigurationManager` .NET Framework.
+El uso de Azure Configuration Manager es opcional. También puede usar una API, como el tipo `ConfigurationManager` del .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizar la cadena de conexión
 
@@ -78,13 +78,13 @@ Esto devuelve un `CloudStorageAccount`.
 
 ### <a name="create-the-table-service-client"></a>Creación del cliente de Table service
 
-La `CloudTableClient` clase permite recuperar tablas y entidades en el almacenamiento de tablas. Esta es una forma de crear el cliente del servicio:
+La clase `CloudTableClient` permite recuperar tablas y entidades en el almacenamiento de tablas. Esta es una forma de crear el cliente del servicio:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
 Ahora está listo para escribir código que lee datos de y escribe datos en el almacenamiento de tablas.
 
-### <a name="create-a-table"></a>Creación de una tabla
+### <a name="create-a-table"></a>Crear una tabla
 
 En este ejemplo se muestra cómo crear una tabla si aún no existe:
 
@@ -96,11 +96,11 @@ Una entidad debe tener un tipo que herede de `TableEntity`. Puede extender `Tabl
 
 La clave de partición y de fila de una entidad identifica de forma única la entidad en la tabla. Las entidades con la misma clave de partición se pueden consultar más rápidamente que las que tienen claves de partición diferentes, pero el uso de claves de partición diversas permite una mayor escalabilidad de las operaciones paralelas.
 
-A continuación se muestra un ejemplo `Customer` de que `lastName` usa como clave de partición y `firstName` como clave de fila.
+A continuación se muestra un ejemplo de un `Customer` que usa el `lastName` como clave de partición y `firstName` como clave de fila.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-Ahora, `Customer` agregue a la tabla. Para ello, cree un `TableOperation` objeto que se ejecute en la tabla. En este caso, se crea una `Insert` operación.
+Ahora, agregue `Customer` a la tabla. Para ello, cree un `TableOperation` que se ejecute en la tabla. En este caso, se crea una operación `Insert`.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
@@ -119,7 +119,7 @@ Este es un código que combina dos inserciones en una operación por lotes:
 
 ### <a name="retrieve-all-entities-in-a-partition"></a>Recuperar todas las entidades de una partición
 
-Para consultar una tabla de todas las entidades de una partición, use `TableQuery` un objeto. Aquí, se filtran las entidades en las que "Smith" es la clave de partición.
+Para consultar una tabla de todas las entidades de una partición, use un objeto `TableQuery`. Aquí, se filtran las entidades en las que "Smith" es la clave de partición.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
@@ -139,7 +139,7 @@ Ahora imprime los resultados:
 
 ### <a name="retrieve-a-single-entity"></a>Recuperación de una sola entidad
 
-Puede escribir una consulta para recuperar una única entidad específica. Aquí, se usa `TableOperation` para especificar el cliente "Ben Smith". En lugar de una colección, se obtiene una `Customer`. La forma más rápida de recuperar una sola entidad de la Table service es especificar la clave de partición y la clave de fila en una consulta.
+Puede escribir una consulta para recuperar una única entidad específica. Aquí se usa un `TableOperation` para especificar el cliente "Ben Smith". En lugar de una colección, obtiene una `Customer`. La forma más rápida de recuperar una sola entidad de la Table service es especificar la clave de partición y la clave de fila en una consulta.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -149,7 +149,7 @@ Ahora imprime los resultados:
 
 ### <a name="replace-an-entity"></a>Reemplazar una entidad
 
-Para actualizar una entidad, recupere el Table Service, modifique el objeto entidad y, a continuación, guarde los cambios de nuevo en el Table Service `Replace` mediante una operación. Esto hace que la entidad se reemplace por completo en el servidor, a menos que la entidad del servidor haya cambiado desde que se recuperó, en cuyo caso se produce un error en la operación. Este error se debe a evitar que la aplicación sobrescriba los cambios de otros orígenes accidentalmente.
+Para actualizar una entidad, recupere el Table service, modifique el objeto entidad y, a continuación, guarde los cambios de nuevo en el Table service mediante una operación `Replace`. Esto hace que la entidad se reemplace por completo en el servidor, a menos que la entidad del servidor haya cambiado desde que se recuperó, en cuyo caso se produce un error en la operación. Este error se debe a evitar que la aplicación sobrescriba los cambios de otros orígenes accidentalmente.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
@@ -161,7 +161,7 @@ A veces, no se sabe si existe una entidad en la tabla. Y, si es así, los valore
 
 ### <a name="query-a-subset-of-entity-properties"></a>Consultar un subconjunto de propiedades de entidad
 
-Una consulta de tabla puede recuperar solo algunas propiedades de una entidad en lugar de todas ellas. Esta técnica, denominada proyección, puede mejorar el rendimiento de las consultas, especialmente en el caso de entidades de gran tamaño. En este caso, solo se devuelven `EntityResolver`direcciones de correo electrónico mediante `DynamicTableEntity` y. Tenga en cuenta que no se admite la proyección en el emulador de almacenamiento local, por lo que este código solo se ejecuta cuando se usa una cuenta en el Table service.
+Una consulta de tabla puede recuperar solo algunas propiedades de una entidad en lugar de todas ellas. Esta técnica, denominada proyección, puede mejorar el rendimiento de las consultas, especialmente en el caso de entidades de gran tamaño. En este caso, solo se devuelven direcciones de correo electrónico con `DynamicTableEntity` y `EntityResolver`. Tenga en cuenta que no se admite la proyección en el emulador de almacenamiento local, por lo que este código solo se ejecuta cuando se usa una cuenta en el Table service.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
@@ -196,4 +196,3 @@ Ahora que ha aprendido los aspectos básicos del almacenamiento de tablas, siga 
 - [Azure Storage proveedor de tipos](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog del equipo de Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Configurar cadenas de conexión](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
-- [Introducción con Azure Table Storage en .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

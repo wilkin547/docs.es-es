@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdaf6391ca5c19f073708d6258ad5775bec9824
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d64773aa0d35f2e97232576d145dfcba624812ec
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700731"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395530"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks (Método)
 
@@ -41,26 +41,25 @@ HRESULT GetCodeChunks (
 
 ## <a name="parameters"></a>Parámetros
 
- `cbufSize`  
- de Tamaño de la matriz `chunks`.
+`cbufSize`  
+de Tamaño de la matriz `chunks`.
 
- `pcnumChunks`  
- enuncia El número de fragmentos devueltos en la matriz `chunks`.
+`pcnumChunks`  
+enuncia El número de fragmentos devueltos en la matriz `chunks`.
 
- `chunks`  
- enuncia Una matriz de estructuras "CodeChunkInfo (", cada una de las cuales representa un único fragmento de código. Si el valor de `cbufSize` es 0, este parámetro puede ser null.
+`chunks`  
+enuncia Una matriz de estructuras "CodeChunkInfo (", cada una de las cuales representa un único fragmento de código. Si el valor de `cbufSize` es 0, este parámetro puede ser null.
 
 ## <a name="remarks"></a>Comentarios
 
- Los fragmentos de código nunca se superpondrán y seguirán el orden en el que se habrían concatenado mediante [ICorDebugCode:: getCode](icordebugcode-getcode-method.md). Un objeto de código de lenguaje intermedio de Microsoft (MSIL) de la .NET Framework versión 2,0 incluirá un único fragmento de código.
+Los fragmentos de código nunca se superpondrán y seguirán el orden en el que se habrían concatenado mediante [ICorDebugCode:: getCode](icordebugcode-getcode-method.md). Un objeto de código de lenguaje intermedio de Microsoft (MSIL) de la .NET Framework versión 2,0 incluirá un único fragmento de código.
 
 ## <a name="requirements"></a>Requisitos
 
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
- **Encabezado**: Cordebug. idl, Cordebug. h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
- **Biblioteca** CorGuids.lib
+**Biblioteca:** CorGuids.lib
 
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
