@@ -1,219 +1,389 @@
 ---
-title: Programación asincrónica
-description: Obtenga información sobre cómo F# programación asincrónica se logra a través de un modelo de programación de nivel de lenguaje que sea fácil de usar y el lenguaje natural.
-ms.date: 06/20/2016
-ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+title: Programación asincrónica enF#
+description: Obtenga información F# sobre cómo proporciona compatibilidad limpia para asincronía basándose en un modelo de programación de nivel de lenguaje derivado de conceptos básicos de la programación funcional.
+ms.date: 12/17/2018
+ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753593"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395789"
 ---
-# <a name="async-programming-in-f"></a><span data-ttu-id="fa2c2-103">Programación asincrónica en F\#</span><span class="sxs-lookup"><span data-stu-id="fa2c2-103">Async Programming in F\#</span></span>
+# <a name="async-programming-in-f"></a><span data-ttu-id="37ec4-103">Programación asincrónica en F @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="37ec4-103">Async programming in F\#</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="fa2c2-104">Se han descubierto algunas imprecisiones en este artículo.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-104">Some inaccuracies have been discovered in this article.</span></span>  <span data-ttu-id="fa2c2-105">Se está sobrescribiendo.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-105">It is being rewritten.</span></span>  <span data-ttu-id="fa2c2-106">Consulte [problema #666](https://github.com/dotnet/docs/issues/666) para obtener información acerca de los cambios.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-106">See [Issue #666](https://github.com/dotnet/docs/issues/666) to learn about the changes.</span></span>
+<span data-ttu-id="37ec4-104">La programación asincrónica es un mecanismo fundamental para las aplicaciones modernas por diversos motivos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-104">Asynchronous programming is a mechanism that is essential to modern applications for diverse reasons.</span></span> <span data-ttu-id="37ec4-105">Hay dos casos de uso principales en los que se encontrarán la mayoría de los desarrolladores:</span><span class="sxs-lookup"><span data-stu-id="37ec4-105">There are two primary use cases that most developers will encounter:</span></span>
 
-<span data-ttu-id="fa2c2-107">Programación de Async F# puede realizarse a través de un modelo de programación de nivel de lenguaje diseñado para ser fácil de usar y el lenguaje natural.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-107">Async programming in F# can be accomplished through a language-level programming model designed to be easy to use and natural to the language.</span></span>
+- <span data-ttu-id="37ec4-106">Presentar un proceso de servidor que pueda dar servicio a un número significativo de solicitudes entrantes simultáneas, al tiempo que se minimizan los recursos del sistema ocupados mientras el procesamiento de solicitudes espera entradas de sistemas o servicios externos a ese proceso.</span><span class="sxs-lookup"><span data-stu-id="37ec4-106">Presenting a server process that can service a significant number of concurrent incoming requests, while minimizing the system resources occupied while request processing awaits inputs from systems or services external to that process</span></span>
+- <span data-ttu-id="37ec4-107">Mantener una interfaz de usuario con capacidad de respuesta o un subproceso principal mientras progresa simultáneamente el trabajo en segundo plano</span><span class="sxs-lookup"><span data-stu-id="37ec4-107">Maintaining a responsive UI or main thread while concurrently progressing background work</span></span>
 
-<span data-ttu-id="fa2c2-108">El núcleo de la programación de async F# es `Async<'T>`, una representación de trabajo que puede activarse para ejecutar en segundo plano, donde `'T` se devuelve el tipo a través de especial `return` palabra clave o `unit` si el flujo de trabajo asincrónico no tiene ningún resultado para devolver.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-108">The core of async programming in F# is `Async<'T>`, a representation of work that can be triggered to run in the background, where `'T` is either the type returned via the special `return` keyword or `unit` if the async workflow has no result to return.</span></span>
+<span data-ttu-id="37ec4-108">Aunque el trabajo en segundo plano implica la utilización de varios subprocesos, es importante tener en cuenta los conceptos de asincronía y multithreading por separado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-108">Although background work often does involve the utilization of multiple threads, it's important to consider the concepts of asynchrony and multi-threading separately.</span></span> <span data-ttu-id="37ec4-109">De hecho, son aspectos independientes y uno no implica el otro.</span><span class="sxs-lookup"><span data-stu-id="37ec4-109">In fact, they are separate concerns, and one does not imply the other.</span></span> <span data-ttu-id="37ec4-110">Lo que se muestra en este artículo lo describe con más detalle.</span><span class="sxs-lookup"><span data-stu-id="37ec4-110">What follows in this article will describe this in more detail.</span></span>
 
-<span data-ttu-id="fa2c2-109">El concepto clave para comprender es que el tipo de una expresión de async es `Async<'T>`, que es simplemente un _especificación_ de trabajo se realice en un contexto asincrónico.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-109">The key concept to understand is that an async expression’s type is `Async<'T>`, which is merely a _specification_ of work to be done in an asynchronous context.</span></span> <span data-ttu-id="fa2c2-110">No se ejecuta hasta que lo inicie explícitamente con una de las funciones de iniciales (como `Async.RunSynchronously`).</span><span class="sxs-lookup"><span data-stu-id="fa2c2-110">It is not executed until you explicitly start it with one of the starting functions (such as `Async.RunSynchronously`).</span></span> <span data-ttu-id="fa2c2-111">Aunque se trata de una forma diferente de reflexionar sobre cómo realizar el trabajo termina siendo bastante sencillo en la práctica.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-111">Although this is a different way of thinking about doing work, it ends up being quite simple in practice.</span></span>
+## <a name="asynchrony-defined"></a><span data-ttu-id="37ec4-111">Asincronía definido</span><span class="sxs-lookup"><span data-stu-id="37ec4-111">Asynchrony defined</span></span>
 
-<span data-ttu-id="fa2c2-112">Por ejemplo, supongamos que desea descargar el código HTML de dotnetfoundation.org sin bloquear el subproceso principal.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-112">For example, say you wanted to download the HTML from dotnetfoundation.org without blocking the main thread.</span></span> <span data-ttu-id="fa2c2-113">Puede realizarlo siguiente:</span><span class="sxs-lookup"><span data-stu-id="fa2c2-113">You can accomplish it like this:</span></span>
+<span data-ttu-id="37ec4-112">El punto anterior, que asincronía es independiente del uso de varios subprocesos, merece la pena explicar un poco más.</span><span class="sxs-lookup"><span data-stu-id="37ec4-112">The previous point - that asynchrony is independent of the utilization of multiple threads - is worth explaining a bit further.</span></span> <span data-ttu-id="37ec4-113">Hay tres conceptos que a veces están relacionados, pero estrictamente independientes entre sí:</span><span class="sxs-lookup"><span data-stu-id="37ec4-113">There are three concepts that are sometimes related, but strictly independent of one another:</span></span>
 
-```fsharp
-open System
-open System.Net
+- <span data-ttu-id="37ec4-114">Simultaneidad Cuando se ejecutan varios cálculos en períodos de tiempo superpuestos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-114">Concurrency; when multiple computations execute in overlapping time periods.</span></span>
+- <span data-ttu-id="37ec4-115">Paralelismo cuando varios cálculos o varias partes de un único cálculo se ejecutan exactamente al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-115">Parallelism; when multiple computations or several parts of a single computation run at exactly the same time.</span></span>
+- <span data-ttu-id="37ec4-116">Asincronía Cuando uno o varios cálculos pueden ejecutarse por separado desde el flujo del programa principal.</span><span class="sxs-lookup"><span data-stu-id="37ec4-116">Asynchrony; when one or more computations can execute separately from the main program flow.</span></span>
 
-let fetchHtmlAsync url =
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
+<span data-ttu-id="37ec4-117">Los tres son conceptos ortogonales, pero se pueden reagrupar fácilmente, especialmente cuando se usan juntos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-117">All three are orthogonal concepts, but can be easily conflated, especially when they are used together.</span></span> <span data-ttu-id="37ec4-118">Por ejemplo, puede que necesite ejecutar varios cálculos asincrónicos en paralelo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-118">For example, you may need to execute multiple asynchronous computations in parallel.</span></span> <span data-ttu-id="37ec4-119">Esto no significa que el paralelismo o asincronía impliquen entre sí.</span><span class="sxs-lookup"><span data-stu-id="37ec4-119">This does not mean that parallelism or asynchrony imply one another.</span></span>
 
-        // Execution of fetchHtmlAsync won't continue until the result
-        // of AsyncDownloadString is bound.
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+<span data-ttu-id="37ec4-120">Si tiene en cuenta el etymology de la palabra "Asynchronous", hay dos partes implicadas:</span><span class="sxs-lookup"><span data-stu-id="37ec4-120">If you consider the etymology of the word "asynchronous", there are two pieces involved:</span></span>
 
-let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-printfn "%s" html
-```
+- <span data-ttu-id="37ec4-121">"a", que significa "no".</span><span class="sxs-lookup"><span data-stu-id="37ec4-121">"a", meaning "not".</span></span>
+- <span data-ttu-id="37ec4-122">"sincrónico", que significa "al mismo tiempo".</span><span class="sxs-lookup"><span data-stu-id="37ec4-122">"synchronous", meaning "at the same time".</span></span>
 
-<span data-ttu-id="fa2c2-114">Y listo.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-114">And that’s it!</span></span> <span data-ttu-id="fa2c2-115">Aparte del uso de `async`, `let!`, y `return`, esto es normal F# código.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-115">Aside from the use of `async`, `let!`, and `return`, this is just normal F# code.</span></span>
+<span data-ttu-id="37ec4-123">Al colocar estos dos términos juntos, verá que "asincrónico" significa "no al mismo tiempo".</span><span class="sxs-lookup"><span data-stu-id="37ec4-123">When you put these two terms together, you'll see that "asynchronous" means "not at the same time".</span></span> <span data-ttu-id="37ec4-124">Ya está.</span><span class="sxs-lookup"><span data-stu-id="37ec4-124">That's it!</span></span> <span data-ttu-id="37ec4-125">No hay ninguna implicación de simultaneidad o paralelismo en esta definición.</span><span class="sxs-lookup"><span data-stu-id="37ec4-125">There is no implication of concurrency or parallelism in this definition.</span></span> <span data-ttu-id="37ec4-126">Esto también se aplica en la práctica.</span><span class="sxs-lookup"><span data-stu-id="37ec4-126">This is also true in practice.</span></span>
 
-<span data-ttu-id="fa2c2-116">Hay algunas construcciones sintácticas que merece la pena tener en cuenta:</span><span class="sxs-lookup"><span data-stu-id="fa2c2-116">There are a few syntactical constructs which are worth noting:</span></span>
+<span data-ttu-id="37ec4-127">En términos prácticos, los cálculos asincrónicos en F# están programados para ejecutarse independientemente del flujo principal del programa.</span><span class="sxs-lookup"><span data-stu-id="37ec4-127">In practical terms, asynchronous computations in F# are scheduled to execute independently of the main program flow.</span></span> <span data-ttu-id="37ec4-128">Esto no implica la simultaneidad ni el paralelismo, ni implica que un cálculo siempre se produce en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="37ec4-128">This doesn't imply concurrency or parallelism, nor does it imply that a computation always happens in the background.</span></span> <span data-ttu-id="37ec4-129">De hecho, los cálculos asincrónicos pueden incluso ejecutarse sincrónicamente, dependiendo de la naturaleza del cálculo y del entorno en el que se ejecuta el cálculo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-129">In fact, asynchronous computations can even execute synchronously, depending on the nature of the computation and the environment the computation is executing in.</span></span>
 
-* <span data-ttu-id="fa2c2-117">`let!` enlaza el resultado de una expresión de async (que se ejecuta en otro contexto).</span><span class="sxs-lookup"><span data-stu-id="fa2c2-117">`let!` binds the result of an async expression (which runs on another context).</span></span>
-* <span data-ttu-id="fa2c2-118">`use!` funciona igual que `let!`, pero elimina sus recursos enlazados cuando sale del ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-118">`use!` works just like `let!`, but disposes its bound resources when it goes out of scope.</span></span>
-* <span data-ttu-id="fa2c2-119">`do!` se espera un flujo de trabajo asincrónico que no devuelve nada.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-119">`do!` will await an async workflow which doesn’t return anything.</span></span>
-* <span data-ttu-id="fa2c2-120">`return` simplemente devuelve un resultado de una expresión de async.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-120">`return` simply returns a result from an async expression.</span></span>
-* <span data-ttu-id="fa2c2-121">`return!` ejecuta otro flujo de trabajo asincrónico y devuelve su valor devuelto como resultado.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-121">`return!` executes another async workflow and returns its return value as a result.</span></span>
+<span data-ttu-id="37ec4-130">La principal ventaja que debe tener es que los cálculos asincrónicos son independientes del flujo principal del programa.</span><span class="sxs-lookup"><span data-stu-id="37ec4-130">The main takeaway you should have is that asynchronous computations are independent of the main program flow.</span></span> <span data-ttu-id="37ec4-131">Aunque hay pocas garantías sobre cuándo o cómo se ejecuta un cálculo asincrónico, existen algunos enfoques para orquestarlos y programarlos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-131">Although there are few guarantees about when or how an asynchronous computation executes, there are some approaches to orchestrating and scheduling them.</span></span> <span data-ttu-id="37ec4-132">En el resto de este artículo se exploran los F# conceptos básicos de asincronía y cómo usar los tipos, las funciones y las F#expresiones integradas en.</span><span class="sxs-lookup"><span data-stu-id="37ec4-132">The rest of this article explores core concepts for F# asynchrony and how to use the types, functions, and expressions built into F#.</span></span>
 
-<span data-ttu-id="fa2c2-122">Además, normal `let`, `use`, y `do` palabras clave pueden utilizarse junto con las versiones asincrónicas tal como haría en una función normal.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-122">Additionally, normal `let`, `use`, and `do` keywords can be used alongside the async versions just as they would in a normal function.</span></span>
+## <a name="core-concepts"></a><span data-ttu-id="37ec4-133">Conceptos básicos</span><span class="sxs-lookup"><span data-stu-id="37ec4-133">Core concepts</span></span>
 
-## <a name="how-to-start-async-code-in-f"></a><span data-ttu-id="fa2c2-123">Cómo iniciar el código asincrónico en F\#</span><span class="sxs-lookup"><span data-stu-id="fa2c2-123">How to start Async Code in F\#</span></span>
+<span data-ttu-id="37ec4-134">En F#, la programación asincrónica se centra en torno a tres conceptos básicos:</span><span class="sxs-lookup"><span data-stu-id="37ec4-134">In F#, asynchronous programming is centered around three core concepts:</span></span>
 
-<span data-ttu-id="fa2c2-124">Como se mencionó anteriormente, el código asincrónico es una especificación de trabajo se realice en otro contexto que se debe iniciar explícitamente.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-124">As mentioned earlier, async code is a specification of work to be done in another context which needs to be explicitly started.</span></span> <span data-ttu-id="fa2c2-125">Existen dos formas principales para lograr esto:</span><span class="sxs-lookup"><span data-stu-id="fa2c2-125">Here are two primary ways to accomplish this:</span></span>
+- <span data-ttu-id="37ec4-135">El tipo `Async<'T>`, que representa un cálculo asincrónico que admite composición.</span><span class="sxs-lookup"><span data-stu-id="37ec4-135">The `Async<'T>` type, which represents a composable asynchronous computation.</span></span>
+- <span data-ttu-id="37ec4-136">Las funciones del módulo `Async`, que permiten programar el trabajo asincrónico, componer cálculos asincrónicos y transformar resultados asincrónicos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-136">The `Async` module functions, which let you schedule asynchronous work, compose asynchronous computations, and transform asynchronous results.</span></span>
+- <span data-ttu-id="37ec4-137">La [expresión de cálculo](../../language-reference/computation-expressions.md)`async { }`, que proporciona una sintaxis adecuada para compilar y controlar los cálculos asincrónicos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-137">The `async { }` [computation expression](../../language-reference/computation-expressions.md), which provides a convenient syntax for building and controlling asynchronous computations.</span></span>
 
-1. <span data-ttu-id="fa2c2-126">`Async.RunSynchronously` iniciará un flujo de trabajo asincrónico en otro subproceso y espera su resultado.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-126">`Async.RunSynchronously` will start an async workflow on another thread and await its result.</span></span>
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let fetchHtmlAsync url =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            let! html = webClient.AsyncDownloadString(uri)
-            return html
-        }
-
-    // Execution will pause until fetchHtmlAsync finishes
-    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-
-    // you actually have the result from fetchHtmlAsync now!
-    printfn "%s" html
-    ```
-
-2. <span data-ttu-id="fa2c2-127">`Async.Start` iniciar un flujo de trabajo de async en otro subproceso y, le **no** espera su resultado.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-127">`Async.Start` will start an async workflow on another thread, and will **not** await its result.</span></span>
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let uploadDataAsync url data =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            webClient.UploadStringAsync(uri, data)
-        }
-
-    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
-
-    // Execution will continue after calling this!
-    Async.Start(workflow)
-
-    printfn "%s" "uploadDataAsync is running in the background..."
-    ```
-
-<span data-ttu-id="fa2c2-128">Hay otras maneras de iniciar un flujo de trabajo asincrónicos disponible para escenarios más específicos.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-128">There are other ways to start an async workflow available for more specific scenarios.</span></span> <span data-ttu-id="fa2c2-129">Se detallan [en la referencia de Async](https://msdn.microsoft.com/library/ee370232.aspx).</span><span class="sxs-lookup"><span data-stu-id="fa2c2-129">They are detailed [in the Async reference](https://msdn.microsoft.com/library/ee370232.aspx).</span></span>
-
-### <a name="a-note-on-threads"></a><span data-ttu-id="fa2c2-130">Una nota en subprocesos</span><span class="sxs-lookup"><span data-stu-id="fa2c2-130">A Note on Threads</span></span>
-
-<span data-ttu-id="fa2c2-131">La frase "en otro subproceso" esté mencionada anteriormente, pero es importante saber que **esto no significa que los flujos de trabajo asincrónicos son una fachada para multithreading**.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-131">The phrase "on another thread" is mentioned above, but it is important to know that **this does not mean that async workflows are a facade for multithreading**.</span></span> <span data-ttu-id="fa2c2-132">El flujo de trabajo realmente "salta" entre subprocesos, de préstamo de una pequeña cantidad de tiempo para realizar trabajo útil.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-132">The workflow actually "jumps" between threads, borrowing them for a small amount of time to do useful work.</span></span> <span data-ttu-id="fa2c2-133">Cuando un flujo de trabajo asincrónico está eficazmente "esperando" (por ejemplo, esperando una llamada de red devolver algo), se libera cualquier subproceso que se toma prestado en el momento hasta vaya realice trabajo útil en alguna otra cosa.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-133">When an async workflow is effectively "waiting" (for example, waiting for a network call to return something), any thread it was borrowing at the time is freed up to go do useful work on something else.</span></span> <span data-ttu-id="fa2c2-134">Esto permite flujos de trabajo asincrónicos para que usen el sistema que se ejecutan en forma más eficaz posible y hace que sea especialmente seguros para escenarios de E/S de gran volumen.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-134">This allows async workflows to utilize the system they run on as effectively as possible, and makes them especially strong for high-volume I/O scenarios.</span></span>
-
-## <a name="how-to-add-parallelism-to-async-code"></a><span data-ttu-id="fa2c2-135">Cómo agregar paralelismo a código asincrónico</span><span class="sxs-lookup"><span data-stu-id="fa2c2-135">How to Add Parallelism to Async Code</span></span>
-
-<span data-ttu-id="fa2c2-136">En ocasiones, es posible que necesita para realizar varias tareas asincrónicas en paralelo, recopilar sus resultados e interpretarlos de alguna manera.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-136">Sometimes you may need to perform multiple asynchronous jobs in parallel, collect their results, and interpret them in some way.</span></span> <span data-ttu-id="fa2c2-137">`Async.Parallel` permite realizar esto sin necesidad de usar la biblioteca TPL, lo que implicaría la necesidad de convertir `Task<'T>` y `Async<'T>` tipos.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-137">`Async.Parallel` allows you to do this without needing to use the Task Parallel Library, which would involve needing to coerce `Task<'T>` and `Async<'T>` types.</span></span>
-
-<span data-ttu-id="fa2c2-138">En el ejemplo siguiente, se usará `Async.Parallel` para descargar el código HTML de cuatro sitios más populares en paralelo, espere a que esas tareas se completen y, a continuación, imprima el código HTML que se descargó.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-138">The following example will use `Async.Parallel` to download the HTML from four popular sites in parallel, wait for those tasks to complete, and then print the HTML which was downloaded.</span></span>
+<span data-ttu-id="37ec4-138">Puede ver estos tres conceptos en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="37ec4-138">You can see these three concepts in the following example:</span></span>
 
 ```fsharp
 open System
-open System.Net
+open System.IO
 
-let urlList =
-    [ "https://www.microsoft.com"
-      "https://www.google.com"
-      "https://www.amazon.com"
-      "https://www.facebook.com" ]
-
-let fetchHtmlAsync url =
+let printTotalFileBytes path =
     async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let getHtmlList urls =
-    urls
-    |> Seq.map fetchHtmlAsync   // Build an Async<'T> for each site
-    |> Async.Parallel           // Returns an Async<'T []>
-    |> Async.RunSynchronously   // Wait for the result of the parallel work
+[<EntryPoint>]
+let main argv =
+    printTotalFileBytes "path-to-file.txt"
+    |> Async.RunSynchronously
 
-let htmlList = getHtmlList urlList
-
-// We now have the downloaded HTML for each site!
-for html in htmlList do
-    printfn "%s" html
+    Console.Read() |> ignore
+    0
 ```
 
-## <a name="important-info-and-advice"></a><span data-ttu-id="fa2c2-139">Consejos e información importante</span><span class="sxs-lookup"><span data-stu-id="fa2c2-139">Important Info and Advice</span></span>
+<span data-ttu-id="37ec4-139">En el ejemplo, la función `printTotalFileBytes` es de tipo `string -> Async<unit>`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-139">In the example, the `printTotalFileBytes` function is of type `string -> Async<unit>`.</span></span> <span data-ttu-id="37ec4-140">La llamada a la función no ejecuta realmente el cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-140">Calling the function does not actually execute the asynchronous computation.</span></span> <span data-ttu-id="37ec4-141">En su lugar, devuelve un `Async<unit>` que actúa como \* especificación del trabajo que se va a ejecutar de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="37ec4-141">Instead, it returns an `Async<unit>` that acts as a \*specification- of the work that is to execute asynchronously.</span></span> <span data-ttu-id="37ec4-142">Llamará a `Async.AwaitTask` en su cuerpo, que convertirá el resultado de <xref:System.IO.File.WriteAllBytesAsync%2A> a un tipo adecuado cuando se llame a.</span><span class="sxs-lookup"><span data-stu-id="37ec4-142">It will call `Async.AwaitTask` in its body, which will convert the result of <xref:System.IO.File.WriteAllBytesAsync%2A> to an appropriate type when it is called.</span></span>
 
-* <span data-ttu-id="fa2c2-140">Anexa "Async" al final de cualquier función que se va a consumir</span><span class="sxs-lookup"><span data-stu-id="fa2c2-140">Append "Async" to the end of any functions you’ll consume</span></span>
+<span data-ttu-id="37ec4-143">Otra línea importante es la llamada a `Async.RunSynchronously`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-143">Another important line is the call to `Async.RunSynchronously`.</span></span> <span data-ttu-id="37ec4-144">Esta es una de las funciones de inicio del módulo Async que debe llamar si desea ejecutar realmente un F# cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-144">This is one of the Async module starting functions that you'll need to call if you want to actually execute an F# asynchronous computation.</span></span>
 
- <span data-ttu-id="fa2c2-141">Aunque se trata de una convención de nomenclatura, lo facilitar las cosas como la detectabilidad de las API.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-141">Although this is just a naming convention, it does make things like API discoverability easier.</span></span> <span data-ttu-id="fa2c2-142">Especialmente si hay versiones sincrónicas y asincrónicas de la misma rutina, es una buena idea para indicar explícitamente que es asincrónico por medio del nombre.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-142">Particularly if there are synchronous and asynchronous versions of the same routine, it’s a good idea to explicitly state which is asynchronous via the name.</span></span>
+<span data-ttu-id="37ec4-145">Se trata de una diferencia fundamental con C#el estilo/VB de la programación `async`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-145">This is a fundamental difference with the C#/VB style of `async` programming.</span></span> <span data-ttu-id="37ec4-146">En F#, los cálculos asincrónicos se pueden considerar como **tareas en frío**.</span><span class="sxs-lookup"><span data-stu-id="37ec4-146">In F#, asynchronous computations can be thought of as **Cold tasks**.</span></span> <span data-ttu-id="37ec4-147">Deben iniciarse explícitamente para ejecutarse realmente.</span><span class="sxs-lookup"><span data-stu-id="37ec4-147">They must be explicitly started to actually execute.</span></span> <span data-ttu-id="37ec4-148">Esto tiene algunas ventajas, ya que permite combinar y secuenciar el trabajo asincrónico mucho más fácilmente que en C#/VB.</span><span class="sxs-lookup"><span data-stu-id="37ec4-148">This has some advantages, as it allows you to combine and sequence asynchronous work much more easily than in C#/VB.</span></span>
 
-* <span data-ttu-id="fa2c2-143">Escuchar al compilador.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-143">Listen to the compiler!</span></span>
+## <a name="combining-asynchronous-computations"></a><span data-ttu-id="37ec4-149">Combinar cálculos asincrónicos</span><span class="sxs-lookup"><span data-stu-id="37ec4-149">Combining asynchronous computations</span></span>
 
-<span data-ttu-id="fa2c2-144">F#del compilador es muy estricto, lo que casi imposible hacer algo problemáticos, como ejecutar "async" código de forma sincrónica.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-144">F#’s compiler is very strict, making it nearly impossible to do something troubling like run "async" code synchronously.</span></span> <span data-ttu-id="fa2c2-145">Si llega a través de una advertencia, que es un inicio de sesión que el código no ejecutará cómo cree que lo hará.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-145">If you come across a warning, that’s a sign that the code won’t execute how you think it will.</span></span> <span data-ttu-id="fa2c2-146">Si puede hacer que el compilador feliz, más probable es que se ejecutará el código según lo previsto.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-146">If you can make the compiler happy, your code will most likely execute as expected.</span></span>
-
-## <a name="for-the-cvb-programmer-looking-into-f"></a><span data-ttu-id="fa2c2-147">Para el C#programador/VB estudiando F\#</span><span class="sxs-lookup"><span data-stu-id="fa2c2-147">For the C#/VB Programmer Looking Into F\#</span></span>
-
-<span data-ttu-id="fa2c2-148">En esta sección se da por supuesto que está familiarizado con el modelo asincrónico en C#/VB.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-148">This section assumes you’re familiar with the async model in C#/VB.</span></span> <span data-ttu-id="fa2c2-149">Si no, [de programación asincrónica en C# ](../../../csharp/async.md) es un punto de partida.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-149">If you are not, [Async Programming in C#](../../../csharp/async.md) is a starting point.</span></span>
-
-<span data-ttu-id="fa2c2-150">Hay una diferencia fundamental entre el C#/VB async modelo y el F# modelo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-150">There is a fundamental difference between the C#/VB async model and the F# async model.</span></span>
-
-<span data-ttu-id="fa2c2-151">Cuando se llama a una función que devuelve un `Task` o `Task<'T>`, ese trabajo ya ha comenzado la ejecución.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-151">When you call a function which returns a `Task` or `Task<'T>`, that job has already begun execution.</span></span> <span data-ttu-id="fa2c2-152">El identificador devuelto representa un trabajo asincrónico está ya en ejecución.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-152">The handle returned represents an already-running asynchronous job.</span></span> <span data-ttu-id="fa2c2-153">En cambio, cuando se llama a una función asincrónica F#, `Async<'a>` devuelto representa un trabajo que será **genera** en algún momento.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-153">In contrast, when you call an async function in F#, the `Async<'a>` returned represents a job which will be **generated** at some point.</span></span> <span data-ttu-id="fa2c2-154">Descripción de este modelo es eficaz, porque permite trabajos asincrónicos en F# se pueden encadenar, realiza de forma condicional y se puede iniciar con un nivel de detalle más preciso de control.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-154">Understanding this model is powerful, because it allows for asynchronous jobs in F# to be chained together easier, performed conditionally, and be started with a finer grain of control.</span></span>
-
-<span data-ttu-id="fa2c2-155">Hay algunos otros las similitudes y diferencias cabe destacar.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-155">There are a few other similarities and differences worth noting.</span></span>
-
-### <a name="similarities"></a><span data-ttu-id="fa2c2-156">Similitudes</span><span class="sxs-lookup"><span data-stu-id="fa2c2-156">Similarities</span></span>
-
-* <span data-ttu-id="fa2c2-157">`let!`, `use!`, y `do!` son análogos a `await` al llamar a un trabajo asincrónico desde una `async{ }` bloque.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-157">`let!`, `use!`, and `do!` are analogous to `await` when calling an async job from within an `async{ }` block.</span></span>
-
-  <span data-ttu-id="fa2c2-158">Las tres palabras clave solo se pueden usar dentro de un `async { }` bloque, similar a cómo `await` solo puede invocarse dentro de un `async` método.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-158">The three keywords can only be used within an `async { }` block, similar to how `await` can only be invoked inside an `async` method.</span></span> <span data-ttu-id="fa2c2-159">En resumen, `let!` es para cuando desee capturar y utilizar un resultado, `use!` es el mismo pero algo cuyos recursos deben obtener limpiados tras su uso, y `do!` es para cuando desee esperar un flujo de trabajo asincrónico sin ningún valor devuelto al finalizar antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-159">In short, `let!` is for when you want to capture and use a result, `use!` is the same but for something whose resources should get cleaned after it’s used, and `do!` is for when you want to wait for an async workflow with no return value to finish before moving on.</span></span>
-
-* <span data-ttu-id="fa2c2-160">F#admite el paralelismo de datos de forma similar.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-160">F# supports data-parallelism in a similar way.</span></span>
-
-  <span data-ttu-id="fa2c2-161">Aunque funciona de forma muy distinta, `Async.Parallel` corresponde a `Task.WhenAll` en el caso de que los resultados de un conjunto de trabajos asincrónicos cuando se completan.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-161">Although it operates very differently, `Async.Parallel` corresponds to `Task.WhenAll` for the scenario of wanting the results of a set of async jobs when they all complete.</span></span>
-
-### <a name="differences"></a><span data-ttu-id="fa2c2-162">Diferencias</span><span class="sxs-lookup"><span data-stu-id="fa2c2-162">Differences</span></span>
-
-* <span data-ttu-id="fa2c2-163">Anidar `let!` no se permite, a diferencia de anidados `await`</span><span class="sxs-lookup"><span data-stu-id="fa2c2-163">Nested `let!` is not allowed, unlike nested `await`</span></span>
-
-  <span data-ttu-id="fa2c2-164">A diferencia de `await`, que se pueden anidar indefinidamente, `let!` no se puede y debe tener su resultado enlazados antes de usarlo dentro de otra `let!`, `do!`, o `use!`.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-164">Unlike `await`, which can be nested indefinitely, `let!` cannot and must have its result bound before using it inside of another `let!`, `do!`, or `use!`.</span></span>
-
-* <span data-ttu-id="fa2c2-165">Compatibilidad con la cancelación es más sencillo en F# que en C#/VB.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-165">Cancellation support is simpler in F# than in C#/VB.</span></span>
-
-  <span data-ttu-id="fa2c2-166">Admitir la cancelación de una tarea a mitad de camino su ejecución en C#/VB requiere comprobación el `IsCancellationRequested` propiedad o llamar a `ThrowIfCancellationRequested()` en un `CancellationToken` objeto que se pasa al método asincrónico.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-166">Supporting cancellation of a task midway through its execution in C#/VB requires checking the `IsCancellationRequested` property or calling `ThrowIfCancellationRequested()` on a `CancellationToken` object that’s passed into the async method.</span></span>
-
-<span data-ttu-id="fa2c2-167">En cambio, F# flujos de trabajo asincrónicos son cancelables de manera más natural.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-167">In contrast, F# async workflows are more naturally cancellable.</span></span> <span data-ttu-id="fa2c2-168">La cancelación es un proceso sencillo de tres pasos.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-168">Cancellation is a simple three-step process.</span></span>
-
-1. <span data-ttu-id="fa2c2-169">Cree un nuevo objeto `CancellationTokenSource`.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-169">Create a new `CancellationTokenSource`.</span></span>
-2. <span data-ttu-id="fa2c2-170">Pasarlo a una función inicial.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-170">Pass it into a starting function.</span></span>
-3. <span data-ttu-id="fa2c2-171">Llamar a `Cancel` en el token.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-171">Call `Cancel` on the token.</span></span>
-
-<span data-ttu-id="fa2c2-172">Ejemplo:</span><span class="sxs-lookup"><span data-stu-id="fa2c2-172">Example:</span></span>
+<span data-ttu-id="37ec4-150">Este es un ejemplo que se basa en el anterior mediante la combinación de cálculos:</span><span class="sxs-lookup"><span data-stu-id="37ec4-150">Here is an example that builds upon the previous one by combining computations:</span></span>
 
 ```fsharp
-open System.Threading
+open System
+open System.IO
 
-// Create a workflow which will loop forever.
-let workflow =
+let printTotalFileBytes path =
     async {
-        while true do
-            printfn "Working..."
-            do! Async.Sleep 1000
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let tokenSource = new CancellationTokenSource()
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Parallel
+    |> Async.Ignore
+    |> Async.RunSynchronously
 
-// Start the workflow in the background
-Async.Start (workflow, tokenSource.Token)
-
-// Executing the next line will stop the workflow
-tokenSource.Cancel()
+    0
 ```
 
-<span data-ttu-id="fa2c2-173">Y listo.</span><span class="sxs-lookup"><span data-stu-id="fa2c2-173">And that’s it!</span></span>
+<span data-ttu-id="37ec4-151">Como puede ver, la función `main` tiene bastantes llamadas más.</span><span class="sxs-lookup"><span data-stu-id="37ec4-151">As you can see, the `main` function has quite a few more calls made.</span></span> <span data-ttu-id="37ec4-152">Conceptualmente, hace lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="37ec4-152">Conceptually, it does the following:</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="fa2c2-174">Recursos adicionales:</span><span class="sxs-lookup"><span data-stu-id="fa2c2-174">Further resources:</span></span>
+1. <span data-ttu-id="37ec4-153">Transforme los argumentos de la línea de comandos en cálculos de `Async<unit>` con `Array.map`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-153">Transform the command-line arguments into `Async<unit>` computations with `Array.map`.</span></span>
+2. <span data-ttu-id="37ec4-154">Cree un `Async<'T[]>` que programe y ejecute los cálculos de `printTotalFileBytes` en paralelo cuando se ejecute.</span><span class="sxs-lookup"><span data-stu-id="37ec4-154">Create an `Async<'T[]>` that schedules and runs the `printTotalFileBytes` computations in parallel when it runs.</span></span>
+3. <span data-ttu-id="37ec4-155">Cree un `Async<unit>` que ejecutará el cálculo en paralelo y omitirá su resultado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-155">Create an `Async<unit>` that will run the parallel computation and ignore its result.</span></span>
+4. <span data-ttu-id="37ec4-156">Ejecute explícitamente el último cálculo con `Async.RunSynchronously` y bloquee hasta que se complete.</span><span class="sxs-lookup"><span data-stu-id="37ec4-156">Explicitly run the last computation with `Async.RunSynchronously` and block until it is completes.</span></span>
 
-* [<span data-ttu-id="fa2c2-175">Flujos de trabajo asincrónicos en MSDN</span><span class="sxs-lookup"><span data-stu-id="fa2c2-175">Async Workflows on MSDN</span></span>](https://msdn.microsoft.com/library/dd233250.aspx)
-* [<span data-ttu-id="fa2c2-176">Secuencias asincrónicas paraF#</span><span class="sxs-lookup"><span data-stu-id="fa2c2-176">Asynchronous Sequences for F#</span></span>](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-* [<span data-ttu-id="fa2c2-177">F#Utilidades de datos HTTP</span><span class="sxs-lookup"><span data-stu-id="fa2c2-177">F# Data HTTP Utilities</span></span>](https://fsharp.github.io/FSharp.Data/library/Http.html)
+<span data-ttu-id="37ec4-157">Cuando se ejecuta este programa, `printTotalFileBytes` se ejecuta en paralelo para cada argumento de la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-157">When this program runs, `printTotalFileBytes` runs in parallel for each command-line argument.</span></span> <span data-ttu-id="37ec4-158">Dado que los cálculos asincrónicos se ejecutan de forma independiente del flujo de programa, no hay ningún orden en el que impriman su información y terminen de ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="37ec4-158">Because asynchronous computations execute independently of program flow, there is no order in which they print their information and finish executing.</span></span> <span data-ttu-id="37ec4-159">Los cálculos se programarán en paralelo, pero no se garantiza su orden de ejecución.</span><span class="sxs-lookup"><span data-stu-id="37ec4-159">The computations will be scheduled in parallel, but their order of execution is not guaranteed.</span></span>
+
+## <a name="sequencing-asynchronous-computations"></a><span data-ttu-id="37ec4-160">Secuenciación asincrónica de cálculos</span><span class="sxs-lookup"><span data-stu-id="37ec4-160">Sequencing asynchronous computations</span></span>
+
+<span data-ttu-id="37ec4-161">Dado que `Async<'T>` es una especificación de trabajo en lugar de una tarea que ya se está ejecutando, puede realizar fácilmente transformaciones más complejas.</span><span class="sxs-lookup"><span data-stu-id="37ec4-161">Because `Async<'T>` is a specification of work rather than an already-running task, you can perform more intricate transformations easily.</span></span> <span data-ttu-id="37ec4-162">Este es un ejemplo que secuencia un conjunto de cálculos asincrónicos para que se ejecuten uno tras otro.</span><span class="sxs-lookup"><span data-stu-id="37ec4-162">Here is an example that sequences a set of Async computations so they execute one after another.</span></span>
+
+```fsharp
+let printTotalFileBytes path =
+    async {
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
+    }
+
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Sequential
+    |> Async.RunSynchronously
+    |> ignore
+```
+
+<span data-ttu-id="37ec4-163">Esto programará `printTotalFileBytes` para que se ejecute en el orden de los elementos de `argv` en lugar de programarlos en paralelo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-163">This will schedule `printTotalFileBytes` to execute in the order of the elements of `argv` rather than scheduling them in parallel.</span></span> <span data-ttu-id="37ec4-164">Dado que el siguiente elemento no se programará hasta que haya finalizado la ejecución del último cálculo, los cálculos se secuenciarán de modo que no se superpongan en su ejecución.</span><span class="sxs-lookup"><span data-stu-id="37ec4-164">Because the next item will not be scheduled until after the last computation has finished executing, the computations are sequenced such that there is no overlap in their execution.</span></span>
+
+## <a name="important-async-module-functions"></a><span data-ttu-id="37ec4-165">Funciones importantes del módulo Async</span><span class="sxs-lookup"><span data-stu-id="37ec4-165">Important Async module functions</span></span>
+
+<span data-ttu-id="37ec4-166">Al escribir código asincrónico en F# , normalmente interactuará con un marco que controla la programación de los cálculos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-166">When you write async code in F# you'll usually interact with a framework that handles scheduling of computations for you.</span></span> <span data-ttu-id="37ec4-167">Sin embargo, este no es siempre el caso, por lo que es conveniente conocer las distintas funciones de inicio para programar el trabajo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-167">However, this is not always the case, so it is good to learn the various starting functions to schedule asynchronous work.</span></span>
+
+<span data-ttu-id="37ec4-168">Dado F# que los cálculos asincrónicos son una _especificación_ de trabajo en lugar de una representación de trabajo que ya se está ejecutando, se deben iniciar explícitamente con una función de inicio.</span><span class="sxs-lookup"><span data-stu-id="37ec4-168">Because F# asynchronous computations are a _specification_ of work rather than a representation of work that is already executing, they must be explicitly started with a starting function.</span></span> <span data-ttu-id="37ec4-169">Hay muchas [funciones de inicio asincrónico](https://msdn.microsoft.com/library/ee370232.aspx) que son útiles en contextos diferentes.</span><span class="sxs-lookup"><span data-stu-id="37ec4-169">There are many [Async starting functions](https://msdn.microsoft.com/library/ee370232.aspx) that are helpful in different contexts.</span></span> <span data-ttu-id="37ec4-170">En la siguiente sección se describen algunas de las funciones de inicio más comunes.</span><span class="sxs-lookup"><span data-stu-id="37ec4-170">The following section describes some of the more common starting functions.</span></span>
+
+### <a name="asyncstartchild"></a><span data-ttu-id="37ec4-171">Async. Startchild (</span><span class="sxs-lookup"><span data-stu-id="37ec4-171">Async.StartChild</span></span>
+
+<span data-ttu-id="37ec4-172">Inicia un cálculo secundario dentro de un cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-172">Starts a child computation within an asynchronous computation.</span></span> <span data-ttu-id="37ec4-173">Esto permite ejecutar simultáneamente varios cálculos asincrónicos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-173">This allows multiple asynchronous computations to be executed concurrently.</span></span> <span data-ttu-id="37ec4-174">El cálculo secundario comparte un token de cancelación con el cálculo primario.</span><span class="sxs-lookup"><span data-stu-id="37ec4-174">The child computation shares a cancellation token with the parent computation.</span></span> <span data-ttu-id="37ec4-175">Si se cancela el cálculo primario, también se cancela el cálculo de los elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="37ec4-175">If the parent computation is canceled, the child computation is also canceled.</span></span>
+
+<span data-ttu-id="37ec4-176">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-176">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
+```
+
+<span data-ttu-id="37ec4-177">Cuándo usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-177">When to use:</span></span>
+
+- <span data-ttu-id="37ec4-178">Cuando se desea ejecutar varios cálculos asincrónicos simultáneamente en lugar de uno en uno, pero no se programan en paralelo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-178">When you want to execute multiple asynchronous computations concurrently rather than one at a time, but not have them scheduled in parallel.</span></span>
+- <span data-ttu-id="37ec4-179">Cuando desea asociar la duración de un cálculo secundario al de un cálculo primario.</span><span class="sxs-lookup"><span data-stu-id="37ec4-179">When you wish to tie the lifetime of a child computation to that of a parent computation.</span></span>
+
+<span data-ttu-id="37ec4-180">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-180">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-181">Iniciar varios cálculos con `Async.StartChild` no es lo mismo que programarlos en paralelo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-181">Starting multiple computations with `Async.StartChild` isn't the same as scheduling them in parallel.</span></span> <span data-ttu-id="37ec4-182">Si desea programar cálculos en paralelo, use `Async.Parallel`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-182">If you wish to schedule computations in parallel, use `Async.Parallel`.</span></span>
+- <span data-ttu-id="37ec4-183">Si se cancela un cálculo primario, se desencadenará la cancelación de todos los cálculos secundarios que se iniciaron.</span><span class="sxs-lookup"><span data-stu-id="37ec4-183">Canceling a parent computation will trigger cancellation of all child computations it started.</span></span>
+
+### <a name="asyncstartimmediate"></a><span data-ttu-id="37ec4-184">Async. StartImmediate (</span><span class="sxs-lookup"><span data-stu-id="37ec4-184">Async.StartImmediate</span></span>
+
+<span data-ttu-id="37ec4-185">Ejecuta un cálculo asincrónico y comienza inmediatamente en el subproceso actual del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-185">Runs an asynchronous computation, starting immediately on the current operating system thread.</span></span> <span data-ttu-id="37ec4-186">Esto resulta útil si necesita actualizar algo en el subproceso de llamada durante el cálculo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-186">This is helpful if you need to update something on the calling thread during the computation.</span></span> <span data-ttu-id="37ec4-187">Por ejemplo, si un cálculo asincrónico debe actualizar una interfaz de usuario (como actualizar una barra de progreso), se debe usar `Async.StartImmediate`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-187">For example, if an asynchronous computation must update a UI (such as updating a progress bar), then `Async.StartImmediate` should be used.</span></span>
+
+<span data-ttu-id="37ec4-188">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-188">Signature:</span></span>
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+<span data-ttu-id="37ec4-189">Cuándo usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-189">When to use:</span></span>
+
+- <span data-ttu-id="37ec4-190">Cuando es necesario actualizar algo en el subproceso que realiza la llamada en medio de un cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-190">When you need to update something on the calling thread in the middle of an asynchronous computation.</span></span>
+
+<span data-ttu-id="37ec4-191">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-191">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-192">El código del cálculo asincrónico se ejecutará en cualquier subproceso en el que se programe.</span><span class="sxs-lookup"><span data-stu-id="37ec4-192">Code in the asynchronous computation will run on whatever thread one happens to be scheduled on.</span></span> <span data-ttu-id="37ec4-193">Esto puede ser problemático si ese subproceso es sensiblemente confidencial, como un subproceso de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="37ec4-193">This can be problematic if that thread is in some way sensitive, such as a UI thread.</span></span> <span data-ttu-id="37ec4-194">En tales casos, es probable que `Async.StartImmediate` no sea adecuado para su uso.</span><span class="sxs-lookup"><span data-stu-id="37ec4-194">In such cases, `Async.StartImmediate` is likely inappropriate to use.</span></span>
+
+### <a name="asyncstartastask"></a><span data-ttu-id="37ec4-195">Async. Startastask (</span><span class="sxs-lookup"><span data-stu-id="37ec4-195">Async.StartAsTask</span></span>
+
+<span data-ttu-id="37ec4-196">Ejecuta un cálculo en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-196">Executes a computation in the thread pool.</span></span> <span data-ttu-id="37ec4-197">Devuelve un <xref:System.Threading.Tasks.Task%601> que se completará en el estado correspondiente una vez finalizado el cálculo (genera el resultado, produce la excepción o se cancela).</span><span class="sxs-lookup"><span data-stu-id="37ec4-197">Returns a <xref:System.Threading.Tasks.Task%601> that will be completed on the corresponding state once the computation terminates (produces the result, throws exception, or gets canceled).</span></span> <span data-ttu-id="37ec4-198">Si no se proporciona ningún token de cancelación, se usará el token de cancelación predeterminado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-198">If no cancellation token is provided, then the default cancellation token is used.</span></span>
+
+<span data-ttu-id="37ec4-199">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-199">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+```
+
+<span data-ttu-id="37ec4-200">Cuándo usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-200">When to use:</span></span>
+
+- <span data-ttu-id="37ec4-201">Cuando necesita llamar a una API de .NET que espera un <xref:System.Threading.Tasks.Task%601> para representar el resultado de un cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-201">When you need to call into a .NET API that expects a <xref:System.Threading.Tasks.Task%601> to represent the result of an asynchronous computation.</span></span>
+
+<span data-ttu-id="37ec4-202">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-202">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-203">Esta llamada asignará un objeto `Task` adicional, que puede aumentar la sobrecarga si se usa con frecuencia.</span><span class="sxs-lookup"><span data-stu-id="37ec4-203">This call will allocate an additional `Task` object, which can increase overhead if it is used often.</span></span>
+
+### <a name="asyncparallel"></a><span data-ttu-id="37ec4-204">Async. Parallel</span><span class="sxs-lookup"><span data-stu-id="37ec4-204">Async.Parallel</span></span>
+
+<span data-ttu-id="37ec4-205">Programa una secuencia de cálculos asincrónicos que se van a ejecutar en paralelo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-205">Schedules a sequence of asynchronous computations to be executed in parallel.</span></span> <span data-ttu-id="37ec4-206">El grado de paralelismo se puede optimizar o limitar opcionalmente especificando el parámetro `maxDegreesOfParallelism`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-206">The degree of parallelism can be optionally tuned/throttled by specifying the `maxDegreesOfParallelism` parameter.</span></span>
+
+<span data-ttu-id="37ec4-207">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-207">Signature:</span></span>
+
+```fsharp
+computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+```
+
+<span data-ttu-id="37ec4-208">Cuándo se debe usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-208">When to use it:</span></span>
+
+- <span data-ttu-id="37ec4-209">Si necesita ejecutar un conjunto de cálculos al mismo tiempo y no depende de su orden de ejecución.</span><span class="sxs-lookup"><span data-stu-id="37ec4-209">If you need to run a set of computations at the same time and have no reliance on their order of execution.</span></span>
+- <span data-ttu-id="37ec4-210">Si no necesita resultados de los cálculos programados en paralelo hasta que todos se hayan completado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-210">If you don't require results from computations scheduled in parallel until they have all completed.</span></span>
+
+<span data-ttu-id="37ec4-211">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-211">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-212">Solo se puede tener acceso a la matriz de valores resultante una vez finalizados todos los cálculos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-212">You can only access the resulting array of values once all computations have finished.</span></span>
+- <span data-ttu-id="37ec4-213">Los cálculos se ejecutarán sin embargo, terminarán de programarse.</span><span class="sxs-lookup"><span data-stu-id="37ec4-213">Computations will be run however they end up getting scheduled.</span></span> <span data-ttu-id="37ec4-214">Esto significa que no se puede confiar en su orden de ejecución.</span><span class="sxs-lookup"><span data-stu-id="37ec4-214">This means you cannot rely on their order of their execution.</span></span>
+
+### <a name="asyncsequential"></a><span data-ttu-id="37ec4-215">Async. Sequential</span><span class="sxs-lookup"><span data-stu-id="37ec4-215">Async.Sequential</span></span>
+
+<span data-ttu-id="37ec4-216">Programa una secuencia de cálculos asincrónicos que se van a ejecutar en el orden en que se pasan.</span><span class="sxs-lookup"><span data-stu-id="37ec4-216">Schedules a sequence of asynchronous computations to be executed in the order that they are passed.</span></span> <span data-ttu-id="37ec4-217">Se ejecutará el primer cálculo, después el siguiente, y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="37ec4-217">The first computation will be executed, then the next, and so on.</span></span> <span data-ttu-id="37ec4-218">No se ejecutarán cálculos en paralelo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-218">No computations will be executed in parallel.</span></span>
+
+<span data-ttu-id="37ec4-219">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-219">Signature:</span></span>
+
+```fsharp
+computations: seq<Async<'T>> -> Async<'T[]>
+```
+
+<span data-ttu-id="37ec4-220">Cuándo se debe usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-220">When to use it:</span></span>
+
+- <span data-ttu-id="37ec4-221">Si tiene que ejecutar varios cálculos en orden.</span><span class="sxs-lookup"><span data-stu-id="37ec4-221">If you need to execute multiple computations in order.</span></span>
+
+<span data-ttu-id="37ec4-222">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-222">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-223">Solo se puede tener acceso a la matriz de valores resultante una vez finalizados todos los cálculos.</span><span class="sxs-lookup"><span data-stu-id="37ec4-223">You can only access the resulting array of values once all computations have finished.</span></span>
+- <span data-ttu-id="37ec4-224">Los cálculos se ejecutarán en el orden en que se pasan a esta función, lo que puede significar que habrá más tiempo antes de que se devuelvan los resultados.</span><span class="sxs-lookup"><span data-stu-id="37ec4-224">Computations will be run in the order that they are passed to this function, which can mean that more time will elapse before the results are returned.</span></span>
+
+### <a name="asyncawaittask"></a><span data-ttu-id="37ec4-225">Async. Awaittask (</span><span class="sxs-lookup"><span data-stu-id="37ec4-225">Async.AwaitTask</span></span>
+
+<span data-ttu-id="37ec4-226">Devuelve un cálculo asincrónico que espera a que se complete el @no__t especificado-0 y devuelve su resultado como `Async<'T>`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-226">Returns an asynchronous computation that waits for the given <xref:System.Threading.Tasks.Task%601> to complete and returns its result as an `Async<'T>`</span></span>
+
+<span data-ttu-id="37ec4-227">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-227">Signature:</span></span>
+
+```fsharp
+task: Task<'T>  -> Async<'T>
+```
+
+<span data-ttu-id="37ec4-228">Cuándo usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-228">When to use:</span></span>
+
+- <span data-ttu-id="37ec4-229">Cuando se utiliza una API de .NET que devuelve un <xref:System.Threading.Tasks.Task%601> dentro de un F# cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-229">When you are consuming a .NET API that returns a <xref:System.Threading.Tasks.Task%601> within an F# asynchronous computation.</span></span>
+
+<span data-ttu-id="37ec4-230">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-230">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-231">Las excepciones se incluyen en <xref:System.AggregateException> después de la Convención de la biblioteca TPL, y esto es diferente de F# la forma en que Async normalmente expone excepciones.</span><span class="sxs-lookup"><span data-stu-id="37ec4-231">Exceptions are wrapped in <xref:System.AggregateException> following the convention of the Task Parallel Library, and this is different from how F# async generally surfaces exceptions.</span></span>
+
+### <a name="asynccatch"></a><span data-ttu-id="37ec4-232">Async. Catch</span><span class="sxs-lookup"><span data-stu-id="37ec4-232">Async.Catch</span></span>
+
+<span data-ttu-id="37ec4-233">Crea un cálculo asincrónico que ejecuta una determinada `Async<'T>` y devuelve un `Async<Choice<'T, exn>>`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-233">Creates an asynchronous computation that executes a given `Async<'T>`, returning an `Async<Choice<'T, exn>>`.</span></span> <span data-ttu-id="37ec4-234">Si el @no__t especificado-0 se completa correctamente, se devuelve un `Choice1Of2` con el valor resultante.</span><span class="sxs-lookup"><span data-stu-id="37ec4-234">If the given `Async<'T>` completes successfully, then a `Choice1Of2` is returned with the resultant value.</span></span> <span data-ttu-id="37ec4-235">Si se produce una excepción antes de que se complete, se devuelve un `Choice2of2` con la excepción generada.</span><span class="sxs-lookup"><span data-stu-id="37ec4-235">If an exception is thrown before it completes, then a `Choice2of2` is returned with the raised exception.</span></span> <span data-ttu-id="37ec4-236">Si se usa en un cálculo asincrónico que se compone de muchos cálculos y uno de esos cálculos produce una excepción, el cálculo de la englobación se detendrá por completo en su totalidad.</span><span class="sxs-lookup"><span data-stu-id="37ec4-236">If it is used on an asynchronous computation that is itself composed of many computations, and one of those computations throws an exception, the encompassing computation will be stopped entirely.</span></span>
+
+<span data-ttu-id="37ec4-237">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-237">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> -> Async<Choice<'T, exn>>
+```
+
+<span data-ttu-id="37ec4-238">Cuándo usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-238">When to use:</span></span>
+
+- <span data-ttu-id="37ec4-239">Cuando se realiza el trabajo asincrónico que puede producir un error con una excepción y se desea controlar esa excepción en el llamador.</span><span class="sxs-lookup"><span data-stu-id="37ec4-239">When you are performing asynchronous work that may fail with an exception and you want to handle that exception in the caller.</span></span>
+
+<span data-ttu-id="37ec4-240">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-240">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-241">Cuando se usan cálculos asincrónicos combinados o secuenciados, el cálculo de la englobación se detendrá por completo si uno de sus cálculos "internos" produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="37ec4-241">When using combined or sequenced asynchronous computations, the encompassing computation will fully stop if one of its "internal" computations throws an exception.</span></span>
+
+### <a name="asyncignore"></a><span data-ttu-id="37ec4-242">Async. ignore</span><span class="sxs-lookup"><span data-stu-id="37ec4-242">Async.Ignore</span></span>
+
+<span data-ttu-id="37ec4-243">Crea un cálculo asincrónico que ejecuta el cálculo especificado y omite su resultado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-243">Creates an asynchronous computation that runs the given computation and ignores its result.</span></span>
+
+<span data-ttu-id="37ec4-244">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-244">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> -> Async<unit>
+```
+
+<span data-ttu-id="37ec4-245">Cuándo usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-245">When to use:</span></span>
+
+- <span data-ttu-id="37ec4-246">Cuando tiene un cálculo asincrónico cuyo resultado no es necesario.</span><span class="sxs-lookup"><span data-stu-id="37ec4-246">When you have an asynchronous computation whose result is not needed.</span></span> <span data-ttu-id="37ec4-247">Esto es análogo al código `ignore` para código no asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-247">This is analogous to the `ignore` code for non-asynchronous code.</span></span>
+
+<span data-ttu-id="37ec4-248">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-248">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-249">Si debe utilizar esto porque desea usar `Async.Start` u otra función que requiera `Async<unit>`, considere la posibilidad de descartar el resultado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-249">If you must use this because you wish to use `Async.Start` or another function that requires `Async<unit>`, consider if discarding the result is okay to do.</span></span> <span data-ttu-id="37ec4-250">Por lo general, no se deben descartar los resultados solo para ajustarse a una firma de tipo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-250">Discarding results just to fit a type signature should not generally be done.</span></span>
+
+### <a name="asyncrunsynchronously"></a><span data-ttu-id="37ec4-251">Async. RunSynchronously</span><span class="sxs-lookup"><span data-stu-id="37ec4-251">Async.RunSynchronously</span></span>
+
+<span data-ttu-id="37ec4-252">Ejecuta un cálculo asincrónico y espera su resultado en el subproceso que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="37ec4-252">Runs an asynchronous computation and awaits its result on the calling thread.</span></span> <span data-ttu-id="37ec4-253">Esta llamada está bloqueando.</span><span class="sxs-lookup"><span data-stu-id="37ec4-253">This call is blocking.</span></span>
+
+<span data-ttu-id="37ec4-254">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-254">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+```
+
+<span data-ttu-id="37ec4-255">Cuándo se debe usar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-255">When to use it:</span></span>
+
+- <span data-ttu-id="37ec4-256">Si lo necesita, úselo solo una vez en una aplicación: en el punto de entrada de un archivo ejecutable.</span><span class="sxs-lookup"><span data-stu-id="37ec4-256">If you need it, use it only once in an application - at the entry point for an executable.</span></span>
+- <span data-ttu-id="37ec4-257">Cuando no le interesa el rendimiento y desea ejecutar un conjunto de otras operaciones asincrónicas a la vez.</span><span class="sxs-lookup"><span data-stu-id="37ec4-257">When you don't care about performance and want to execute a set of other asynchronous operations at once.</span></span>
+
+<span data-ttu-id="37ec4-258">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-258">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-259">La llamada a `Async.RunSynchronously` bloquea el subproceso que realiza la llamada hasta que se completa la ejecución.</span><span class="sxs-lookup"><span data-stu-id="37ec4-259">Calling `Async.RunSynchronously` blocks the calling thread until the execution completes.</span></span>
+
+### <a name="asyncstart"></a><span data-ttu-id="37ec4-260">Async. Start</span><span class="sxs-lookup"><span data-stu-id="37ec4-260">Async.Start</span></span>
+
+<span data-ttu-id="37ec4-261">Inicia un cálculo asincrónico en el grupo de subprocesos que devuelve `unit`.</span><span class="sxs-lookup"><span data-stu-id="37ec4-261">Starts an asynchronous computation in the thread pool that returns `unit`.</span></span> <span data-ttu-id="37ec4-262">No espera el resultado.</span><span class="sxs-lookup"><span data-stu-id="37ec4-262">Doesn't wait for its result.</span></span> <span data-ttu-id="37ec4-263">Los cálculos anidados iniciados con `Async.Start` se inician completamente independientemente del cálculo primario que los llamó.</span><span class="sxs-lookup"><span data-stu-id="37ec4-263">Nested computations started with `Async.Start` are started completely independently of the parent computation that called them.</span></span> <span data-ttu-id="37ec4-264">Su duración no está asociada a ningún cálculo primario.</span><span class="sxs-lookup"><span data-stu-id="37ec4-264">Their lifetime is not tied to any parent computation.</span></span> <span data-ttu-id="37ec4-265">Si se cancela el cálculo primario, no se cancelan los cálculos secundarios.</span><span class="sxs-lookup"><span data-stu-id="37ec4-265">If the parent computation is canceled, no child computations are cancelled.</span></span>
+
+<span data-ttu-id="37ec4-266">Signatura</span><span class="sxs-lookup"><span data-stu-id="37ec4-266">Signature:</span></span>
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+<span data-ttu-id="37ec4-267">Use solo cuando:</span><span class="sxs-lookup"><span data-stu-id="37ec4-267">Use only when:</span></span>
+
+- <span data-ttu-id="37ec4-268">Tiene un cálculo asincrónico que no produce un resultado ni requiere procesamiento de uno.</span><span class="sxs-lookup"><span data-stu-id="37ec4-268">You have an asynchronous computation that doesn't yield a result and/or require processing of one.</span></span>
+- <span data-ttu-id="37ec4-269">No es necesario saber cuándo se completa un cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-269">You don't need to know when an asynchronous computation completes.</span></span>
+- <span data-ttu-id="37ec4-270">No le importa en qué subproceso se ejecuta un cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-270">You don't care which thread an asynchronous computation runs on.</span></span>
+- <span data-ttu-id="37ec4-271">No es necesario tener en cuenta ni notificar las excepciones resultantes de la tarea.</span><span class="sxs-lookup"><span data-stu-id="37ec4-271">You don't have any need to be aware of or report exceptions resulting from the task.</span></span>
+
+<span data-ttu-id="37ec4-272">Qué debe ver:</span><span class="sxs-lookup"><span data-stu-id="37ec4-272">What to watch out for:</span></span>
+
+- <span data-ttu-id="37ec4-273">Las excepciones producidas por los cálculos iniciados con `Async.Start` no se propagan al autor de la llamada.</span><span class="sxs-lookup"><span data-stu-id="37ec4-273">Exceptions raised by computations started with `Async.Start` aren't propagated to the caller.</span></span> <span data-ttu-id="37ec4-274">La pila de llamadas se desenredará por completo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-274">The call stack will be completely unwound.</span></span>
+- <span data-ttu-id="37ec4-275">Cualquier trabajo con efecto (como llamar a `printfn`) iniciado con `Async.Start` no hará que el efecto se produzca en el subproceso principal de la ejecución de un programa.</span><span class="sxs-lookup"><span data-stu-id="37ec4-275">Any effectful work (such as calling `printfn`) started with `Async.Start` won't cause the effect to happen on the main thread of a program's execution.</span></span>
+
+## <a name="interoperating-with-net"></a><span data-ttu-id="37ec4-276">Interoperar con .NET</span><span class="sxs-lookup"><span data-stu-id="37ec4-276">Interoperating with .NET</span></span>
+
+<span data-ttu-id="37ec4-277">Puede estar trabajando con una biblioteca de .NET o C# código base que use la programación asincrónica de estilo [Async/Await](../../../standard/async.md).</span><span class="sxs-lookup"><span data-stu-id="37ec4-277">You may be working with a .NET library or C# codebase that uses [async/await](../../../standard/async.md)-style asynchronous programming.</span></span> <span data-ttu-id="37ec4-278">Dado C# que y la mayoría de las bibliotecas de .net usan los tipos <xref:System.Threading.Tasks.Task%601> y <xref:System.Threading.Tasks.Task> como abstracciones principales en lugar de `Async<'T>`, debe cruzar un límite entre estos dos enfoques a asincronía.</span><span class="sxs-lookup"><span data-stu-id="37ec4-278">Because C# and the majority of .NET libraries use the <xref:System.Threading.Tasks.Task%601> and <xref:System.Threading.Tasks.Task> types as their core abstractions rather than `Async<'T>`, you must cross a boundary between these two approaches to asynchrony.</span></span>
+
+### <a name="how-to-work-with-net-async-and-taskt"></a><span data-ttu-id="37ec4-279">Cómo trabajar con .NET Async y `Task<T>`</span><span class="sxs-lookup"><span data-stu-id="37ec4-279">How to work with .NET async and `Task<T>`</span></span>
+
+<span data-ttu-id="37ec4-280">Trabajar con las bibliotecas asincrónicas .NET y códigos base que usan <xref:System.Threading.Tasks.Task%601> (es decir, los cálculos asincrónicos que tienen valores devueltos) es sencillo y tiene compatibilidad F#integrada con.</span><span class="sxs-lookup"><span data-stu-id="37ec4-280">Working with .NET async libraries and codebases that use <xref:System.Threading.Tasks.Task%601> (that is, async computations that have return values) is straightforward and has built-in support with F#.</span></span>
+
+<span data-ttu-id="37ec4-281">Puede usar la función `Async.AwaitTask` para esperar un cálculo asincrónico de .NET:</span><span class="sxs-lookup"><span data-stu-id="37ec4-281">You can use the `Async.AwaitTask` function to await a .NET asynchronous computation:</span></span>
+
+```fsharp
+let getValueFromLibrary param =
+    async {
+        let! value = DotNetLibrary.GetValueAsync param |> Async.AwaitTask
+        return value
+    }
+```
+
+<span data-ttu-id="37ec4-282">Puede usar la función `Async.StartAsTask` para pasar un cálculo asincrónico a un llamador de .NET:</span><span class="sxs-lookup"><span data-stu-id="37ec4-282">You can use the `Async.StartAsTask` function to pass an asynchronous computation to a .NET caller:</span></span>
+
+```fsharp
+let computationForCaller param =
+    async {
+        let! result = getAsyncResult param
+        return result
+    } |> Async.StartAsTask
+```
+
+### <a name="how-to-work-with-net-async-and-task"></a><span data-ttu-id="37ec4-283">Cómo trabajar con .NET Async y `Task`</span><span class="sxs-lookup"><span data-stu-id="37ec4-283">How to work with .NET async and `Task`</span></span>
+
+<span data-ttu-id="37ec4-284">Para trabajar con las API que usan <xref:System.Threading.Tasks.Task> (es decir, los cálculos asincrónicos de .NET que no devuelven un valor), puede que tenga que agregar una función adicional que convertirá un `Async<'T>` a un <xref:System.Threading.Tasks.Task>:</span><span class="sxs-lookup"><span data-stu-id="37ec4-284">To work with APIs that use <xref:System.Threading.Tasks.Task> (that is, .NET async computations that do not return a value), you may need to add an additional function that will convert an `Async<'T>` to a <xref:System.Threading.Tasks.Task>:</span></span>
+
+```fsharp
+module Async =
+    // Async<unit> -> Task
+    let startTaskFromAsyncUnit (comp: Async<unit>) =
+        Async.StartAsTask comp :> Task
+```
+
+<span data-ttu-id="37ec4-285">Ya existe un `Async.AwaitTask` que acepta <xref:System.Threading.Tasks.Task> como entrada.</span><span class="sxs-lookup"><span data-stu-id="37ec4-285">There is already an `Async.AwaitTask` that accepts a <xref:System.Threading.Tasks.Task> as input.</span></span> <span data-ttu-id="37ec4-286">Con esta y la función `startTaskFromAsyncUnit` definida previamente, puede iniciar y esperar tipos <xref:System.Threading.Tasks.Task> desde un F# cálculo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="37ec4-286">With this and the previously defined `startTaskFromAsyncUnit` function, you can start and await <xref:System.Threading.Tasks.Task> types from an F# async computation.</span></span>
+
+## <a name="relationship-to-multithreading"></a><span data-ttu-id="37ec4-287">Relación con multithreading</span><span class="sxs-lookup"><span data-stu-id="37ec4-287">Relationship to multithreading</span></span>
+
+<span data-ttu-id="37ec4-288">Aunque los subprocesos se mencionan en este artículo, hay dos aspectos importantes que hay que recordar:</span><span class="sxs-lookup"><span data-stu-id="37ec4-288">Although threading is mentioned throughout this article, there are two important things to remember:</span></span>
+
+1. <span data-ttu-id="37ec4-289">No hay ninguna afinidad entre un cálculo asincrónico y un subproceso, a menos que se inicie explícitamente en el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="37ec4-289">There is no affinity between an asynchronous computation and a thread, unless explicitly started on the current thread.</span></span>
+1. <span data-ttu-id="37ec4-290">La programación asincrónica en F# no es una abstracción para multithreading.</span><span class="sxs-lookup"><span data-stu-id="37ec4-290">Asynchronous programming in F# is not an abstraction for multi-threading.</span></span>
+
+<span data-ttu-id="37ec4-291">Por ejemplo, un cálculo puede ejecutarse realmente en el subproceso del llamador, dependiendo de la naturaleza del trabajo.</span><span class="sxs-lookup"><span data-stu-id="37ec4-291">For example, a computation may actually run on its caller's thread, depending on the nature of the work.</span></span> <span data-ttu-id="37ec4-292">Un cálculo también podría "saltar" entre subprocesos, por lo que se le prestará una pequeña cantidad de tiempo para realizar un trabajo útil entre los períodos de "en espera" (por ejemplo, cuando una llamada de red está en tránsito).</span><span class="sxs-lookup"><span data-stu-id="37ec4-292">A computation could also "jump" between threads, borrowing them for a small amount of time to do useful work in between periods of "waiting" (such as when a network call is in transit).</span></span>
+
+<span data-ttu-id="37ec4-293">Aunque F# proporciona algunas funciones para iniciar un cálculo asincrónico en el subproceso actual (o explícitamente no en el subproceso actual), asincronía generalmente no está asociado a una estrategia de subprocesos determinada.</span><span class="sxs-lookup"><span data-stu-id="37ec4-293">Although F# provides some abilities to start an asynchronous computation on the current thread (or explicitly not on the current thread), asynchrony generally is not associated with a particular threading strategy.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="37ec4-294">Vea también</span><span class="sxs-lookup"><span data-stu-id="37ec4-294">See also</span></span>
+
+- [<span data-ttu-id="37ec4-295">El F# modelo de programación asincrónica</span><span class="sxs-lookup"><span data-stu-id="37ec4-295">The F# Asynchronous Programming Model</span></span>](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
+- [<span data-ttu-id="37ec4-296">Guía asincrónica de F# jet. com</span><span class="sxs-lookup"><span data-stu-id="37ec4-296">Jet.com's F# Async Guide</span></span>](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [<span data-ttu-id="37ec4-297">F#para la guía de programación asincrónica de diversión y beneficios</span><span class="sxs-lookup"><span data-stu-id="37ec4-297">F# for fun and profit's Asynchronous Programming guide</span></span>](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [<span data-ttu-id="37ec4-298">Async in C# y F#: trampas asincrónicas enC#</span><span class="sxs-lookup"><span data-stu-id="37ec4-298">Async in C# and F#: Asynchronous gotchas in C#</span></span>](http://tomasp.net/blog/csharp-async-gotchas.aspx/)
