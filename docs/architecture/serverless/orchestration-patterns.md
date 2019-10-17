@@ -4,12 +4,12 @@ description: PR de Azure durable Functions
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 18e13c5355490ef4a019ceda459114bdb6bfd539
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577408"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522639"
 ---
 # <a name="orchestration-patterns"></a>Patrones de orquestación
 
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-En el ejemplo de código anterior, `CallActivityAsync` la función es responsable de ejecutar una actividad determinada en una máquina virtual del centro de datos. Cuando se devuelve Await y se completa la tarea subyacente, la ejecución se registrará en la tabla de historial. El código de la función de orquestador puede hacer uso de cualquiera de las construcciones conocidas de la biblioteca TPL y las palabras clave Async/Await.
+En el ejemplo de código anterior, la función `CallActivityAsync` es responsable de ejecutar una actividad determinada en una máquina virtual del centro de datos. Cuando se devuelve Await y se completa la tarea subyacente, la ejecución se registrará en la tabla de historial. El código de la función de orquestador puede hacer uso de cualquiera de las construcciones conocidas de la biblioteca TPL y las palabras clave Async/Await.
 
-El código siguiente es un ejemplo simplificado de lo `ProcessPayment` que puede tener el método:
+El código siguiente es un ejemplo simplificado de lo que puede tener el método `ProcessPayment`:
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 En algunos casos, los flujos de trabajo pueden contener actividades que tardan mucho tiempo en completarse. Imagine un proceso que inicia la copia de seguridad de archivos multimedia en el almacenamiento de blobs. En función del tamaño y la cantidad de los archivos multimedia, este proceso de copia de seguridad puede tardar horas en completarse.
 
-En este escenario, la `DurableOrchestrationClient`capacidad de comprobar el estado de un flujo de trabajo en ejecución resulta útil. Al usar `HttpTrigger` para iniciar un flujo de trabajo, `CreateCheckStatusResponse` el método se puede utilizar para devolver una instancia `HttpResponseMessage`de. Esta respuesta proporciona al cliente un URI en la carga útil que se puede usar para comprobar el estado del proceso en ejecución.
+En este escenario, la capacidad de `DurableOrchestrationClient` para comprobar el estado de un flujo de trabajo en ejecución resulta útil. Cuando se usa un `HttpTrigger` para iniciar un flujo de trabajo, se puede usar el método `CreateCheckStatusResponse` para devolver una instancia de `HttpResponseMessage`. Esta respuesta proporciona al cliente un URI en la carga útil que se puede usar para comprobar el estado del proceso en ejecución.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -105,7 +105,7 @@ A medida que el proceso continúa, la respuesta de estado cambiará a **error** 
 
 ## <a name="monitoring"></a>Supervisión
 
-En el `TimerTrigger` caso de tareas periódicas simples, Azure Functions proporciona que se puede programar en función de una expresión cron. El temporizador funciona bien para tareas sencillas y de corta duración, pero puede haber escenarios en los que se necesite una programación más flexible. Este escenario es cuando el patrón de supervisión y el Durable Functions pueden ayudarle.
+En el caso de tareas periódicas simples, Azure Functions proporciona el `TimerTrigger` que se puede programar en función de una expresión CRON. El temporizador funciona bien para tareas sencillas y de corta duración, pero puede haber escenarios en los que se necesite una programación más flexible. Este escenario es cuando el patrón de supervisión y el Durable Functions pueden ayudarle.
 
 Durable Functions permite intervalos de programación flexibles, administración de la duración y la creación de varios procesos de supervisión desde una sola función de orquestación. Un caso de uso de esta funcionalidad podría ser crear monitores para los cambios de precios de las acciones que se completan una vez que se cumple un determinado umbral.
 
@@ -149,12 +149,12 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext`el `CreateTimer` método de establece la programación de la siguiente invocación del bucle para comprobar si hay cambios en los precios de las acciones. `DurableOrchestrationContext`también tiene una `CurrentUtcDateTime` propiedad para obtener el valor DateTime actual en UTC. Es mejor usar esta propiedad en lugar de `DateTime.UtcNow` porque se simula fácilmente para las pruebas.
+el método `CreateTimer` de `DurableOrchestrationContext` configura la programación de la siguiente invocación del bucle para comprobar si hay cambios en los precios de las acciones. `DurableOrchestrationContext` también tiene una propiedad `CurrentUtcDateTime` para obtener el valor DateTime actual en UTC. Es mejor usar esta propiedad en lugar de `DateTime.UtcNow` porque se simula con facilidad para pruebas.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Durable Functions de Azure](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Prueba unitaria en .NET Core y .NET Standard](../../core/testing/index.md)
+- [Durable Functions de Azure](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Prueba unitaria en .NET Core y .NET Standard](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
 >[Anterior](durable-azure-functions.md)

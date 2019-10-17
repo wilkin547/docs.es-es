@@ -4,12 +4,12 @@ description: Las funciones duraderas de Azure amplían el tiempo de ejecución d
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577518"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522856"
 ---
 # <a name="durable-azure-functions"></a>Funciones de Azure duraderas
 
@@ -27,7 +27,7 @@ Los flujos de trabajo con estado en Durable Functions se pueden dividir en dos c
 
 Las orquestaciones son únicas en comparación con otros estilos de operaciones desencadenadas en Azure Functions. Durable Functions permite la ejecución de funciones que pueden tardar horas o incluso días en completarse. Ese tipo de comportamiento viene con la necesidad de comprobar el estado de una orquestación en ejecución, finalizar de forma preventiva o enviar notificaciones de eventos externos.
 
-En estos casos, la extensión de durable Functions proporciona `DurableOrchestrationClient` la clase que permite interactuar con las funciones organizadas. Puede obtener acceso al cliente de orquestación mediante el `OrchestrationClientAttribute` enlace. Por `HttpTrigger` lo general, incluiría este atributo con otro tipo de desencadenador, como `ServiceBusTrigger`o. Una vez que se ha desencadenado la función de origen, se puede usar el cliente de orquestación para iniciar una función de orquestador.
+En estos casos, la extensión de Durable Functions proporciona la clase `DurableOrchestrationClient` que permite interactuar con funciones organizadas. Puede obtener acceso al cliente de orquestación mediante el enlace `OrchestrationClientAttribute`. Por lo general, incluiría este atributo con otro tipo de desencadenador, como `HttpTrigger` o `ServiceBusTrigger`. Una vez que se ha desencadenado la función de origen, se puede usar el cliente de orquestación para iniciar una función de orquestador.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Al anotar una función con OrchestrationTriggerAttribute en Azure Functions se marca esa función como una función de orquestador. Es responsable de administrar las distintas actividades que componen el flujo de trabajo con estado.
 
-Las funciones de orquestador no pueden hacer uso de enlaces distintos de OrchestrationTriggerAttribute. Este atributo solo se puede usar con un tipo de parámetro de DurableOrchestrationContext. No se puede usar ninguna otra entrada, ya que no se admite la deserialización de entradas en la signatura de la función. Para obtener las entradas proporcionadas por el cliente de orquestación\<,\> se debe usar el método GetInput T.
+Las funciones de orquestador no pueden hacer uso de enlaces distintos de OrchestrationTriggerAttribute. Este atributo solo se puede usar con un tipo de parámetro de DurableOrchestrationContext. No se puede usar ninguna otra entrada, ya que no se admite la deserialización de entradas en la signatura de la función. Para obtener las entradas proporcionadas por el cliente de orquestación, se debe usar el método GetInput @ no__t-0T @ no__t-1.
 
 Además, los tipos devueltos de las funciones de orquestación deben ser void, Task o un valor serializable de JSON.
 
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Se pueden iniciar y ejecutar varias instancias de una orquestación al mismo tiempo. Al llamar `StartNewAsync` al método `DurableOrchestrationClient` en, se inicia una nueva instancia de la orquestación. El método devuelve un `Task<string>` que se completa cuando se inicia la orquestación. Se produce una excepción `TimeoutException` de tipo si la orquestación no se ha iniciado en 30 segundos.
+Se pueden iniciar y ejecutar varias instancias de una orquestación al mismo tiempo. Al llamar al método `StartNewAsync` en el `DurableOrchestrationClient` se inicia una nueva instancia de la orquestación. El método devuelve un `Task<string>` que se completa cuando se inicia la orquestación. Se produce una excepción de tipo `TimeoutException` si la orquestación no se ha iniciado en un plazo de 30 segundos.
 
-La `Task<string>` completada `StartNewAsync` desde debe contener el identificador único de la instancia de orquestación. Este identificador de instancia se puede utilizar para invocar operaciones en esa orquestación específica. Se puede consultar la orquestación para obtener el estado o enviar notificaciones de eventos.
+La @no__t completada-0 de `StartNewAsync` debe contener el identificador único de la instancia de orquestación. Este identificador de instancia se puede utilizar para invocar operaciones en esa orquestación específica. Se puede consultar la orquestación para obtener el estado o enviar notificaciones de eventos.
 
 ### <a name="the-activity-functions"></a>Las funciones de actividad
 
 Las funciones de actividad son las operaciones discretas que se componen juntas dentro de una función de orquestación para crear el flujo de trabajo. Aquí es donde se realizará la mayor parte del trabajo real. Representan la lógica de negocios, los procesos de ejecución prolongada y las piezas del rompecabezas en una solución más grande.
 
-Se usa para anotar un parámetro de función de tipo `DurableActivityContext`. `ActivityTriggerAttribute` El uso de la anotación informa al tiempo de ejecución de que la función está diseñada para usarse como una función de actividad. Los valores `GetInput<T>` `DurableActivityContext` de entrada para las funciones de actividad se recuperan mediante el método del parámetro.
+El `ActivityTriggerAttribute` se usa para anotar un parámetro de función de tipo `DurableActivityContext`. El uso de la anotación informa al tiempo de ejecución de que la función está diseñada para usarse como una función de actividad. Los valores de entrada para las funciones de actividad se recuperan mediante el método `GetInput<T>` del parámetro `DurableActivityContext`.
 
 De forma similar a las funciones de orquestación, los tipos de valor devueltos de las funciones de actividad deben ser void, Task o un valor serializable de JSON.
 
-Las excepciones no controladas que se producen en las funciones de actividad se enviarán hasta la función de orquestador que realiza `TaskFailedException`la llamada y se presentarán como. En este momento, el error puede detectarse y registrarse en el orquestador, y se puede volver a intentar la actividad.
+Las excepciones no controladas que se producen en las funciones de actividad se enviarán hasta la función de orquestador que realiza la llamada y se presentarán como `TaskFailedException`. En este momento, el error puede detectarse y registrarse en el orquestador, y se puede volver a intentar la actividad.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,9 +96,9 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Enlaces para Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-* [Administrar instancias en Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Enlaces para Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Administrar instancias en Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[Anterior](event-grid.md)

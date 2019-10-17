@@ -4,12 +4,12 @@ description: Una guía para las distintas formas en que se implementan las arqui
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834339"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522729"
 ---
 # <a name="architecture-deployment-approaches"></a>Enfoques para la implementación de arquitecturas
 
@@ -19,38 +19,38 @@ Independientemente del enfoque de arquitectura utilizado para diseñar una aplic
 
 El [patrón de arquitectura de N niveles](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) es una arquitectura madura y simplemente hace referencia a las aplicaciones que separan diferentes capas lógicas en niveles físicos independientes. La arquitectura de n niveles es una implementación física de arquitectura de N capas. La implementación más común de esta arquitectura incluye:
 
-* Un nivel de presentación, por ejemplo, una aplicación Web.
-* Una API o un nivel de acceso a datos, como una API de REST.
-* Una capa de datos, como una base de datos SQL.
+- Un nivel de presentación, por ejemplo, una aplicación Web.
+- Una API o un nivel de acceso a datos, como una API de REST.
+- Una capa de datos, como una base de datos SQL.
 
 ![Arquitectura de N niveles](./media/n-tier-architecture.png)
 
 Las soluciones de N niveles tienen las siguientes características:
 
-* Los proyectos suelen estar alineados con los niveles.
-* Las pruebas se pueden abordar de manera diferente según el nivel.
-* Los niveles proporcionan capas de abstracción; por ejemplo, el nivel de presentación normalmente ignora los detalles de implementación de la capa de datos.
-* Normalmente, las capas solo interactúan con capas adyacentes.
-* Las versiones suelen administrarse en el proyecto y, por tanto, en el nivel. Un cambio de API simple puede requerir una nueva versión de todo el nivel intermedio.
+- Los proyectos suelen estar alineados con los niveles.
+- Las pruebas se pueden abordar de manera diferente según el nivel.
+- Los niveles proporcionan capas de abstracción; por ejemplo, el nivel de presentación normalmente ignora los detalles de implementación de la capa de datos.
+- Normalmente, las capas solo interactúan con capas adyacentes.
+- Las versiones suelen administrarse en el proyecto y, por tanto, en el nivel. Un cambio de API simple puede requerir una nueva versión de todo el nivel intermedio.
 
 Este enfoque proporciona varias ventajas, entre las que se incluyen:
 
-* Aislamiento de la base de datos (a menudo, el front-end no tiene acceso directo al back-end de la base de datos).
-* La reutilización de la API (por ejemplo, los clientes de aplicaciones Web, de escritorio y móviles pueden volver a usar las mismas API).
-* Capacidad de escalar horizontalmente niveles independientes entre sí.
-* Aislamiento de refactorización: un nivel puede refactorizarse sin afectar a otros niveles.
+- Aislamiento de la base de datos (a menudo, el front-end no tiene acceso directo al back-end de la base de datos).
+- La reutilización de la API (por ejemplo, los clientes de aplicaciones Web, de escritorio y móviles pueden volver a usar las mismas API).
+- Capacidad de escalar horizontalmente niveles independientes entre sí.
+- Aislamiento de refactorización: un nivel puede refactorizarse sin afectar a otros niveles.
 
 ## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>Local e infraestructura como servicio (IaaS)
 
 El enfoque tradicional para el hospedaje de aplicaciones requiere la compra de hardware y la administración de todas las instalaciones de software, incluido el sistema operativo. Originalmente, esto implicaba centros de datos caros y hardware físico. Los desafíos que se incluyen en el hardware físico operativo son muchos, entre los que se incluyen:
 
-* La necesidad de adquirir un exceso de escenarios de "Just-in-case" o de máxima demanda.
-* Proteger el acceso físico al hardware.
-* Responsabilidad del error de hardware (por ejemplo, un error de disco).
-* Ventilación.
-* Configuración de enrutadores y equilibradores de carga.
-* Redundancia de energía.
-* Protección del acceso a software.
+- La necesidad de adquirir un exceso de escenarios de "Just-in-case" o de máxima demanda.
+- Proteger el acceso físico al hardware.
+- Responsabilidad del error de hardware (por ejemplo, un error de disco).
+- Ventilación.
+- Configuración de enrutadores y equilibradores de carga.
+- Redundancia de energía.
+- Protección del acceso a software.
 
 ![Enfoque de IaaS](./media/iaas-approach.png)
 
@@ -68,10 +68,10 @@ Plataforma como servicio (PaaS) ofrece soluciones configuradas que los desarroll
 
 PaaS aborda los desafíos comunes a IaaS. PaaS permite al desarrollador centrarse en el código o el esquema de la base de datos en lugar de cómo se implementa. Entre las ventajas de PaaS se incluyen:
 
-* Pague por los modelos de uso que eliminan la sobrecarga de invertir en máquinas inactivas.
-* Implementación directa y mejoras de DevOps, integración continua (CI) y entrega continua (CD).
-* Actualizaciones automáticas, actualizaciones y revisiones de seguridad.
-* Escalado horizontal y escalado vertical (escala elástica) del botón de presión.
+- Pague por los modelos de uso que eliminan la sobrecarga de invertir en máquinas inactivas.
+- Implementación directa y mejoras de DevOps, integración continua (CI) y entrega continua (CD).
+- Actualizaciones automáticas, actualizaciones y revisiones de seguridad.
+- Escalado horizontal y escalado vertical (escala elástica) del botón de presión.
 
 La principal desventaja de PaaS solía ser el bloqueo del proveedor. Por ejemplo, algunos proveedores de PaaS solo admiten ASP.NET, node. js u otros lenguajes y plataformas específicos. Productos como Azure App Service han evolucionado para abordar varias plataformas y admiten una variedad de lenguajes y marcos para hospedar aplicaciones Web.
 
@@ -89,11 +89,11 @@ Los contenedores son una solución interesante que habilita las ventajas similar
 
 Las ventajas de los contenedores incluyen:
 
-* Ligeros y portátiles
-* Independiente, por lo que no es necesario instalar dependencias
-* Proporcionar un entorno coherente independientemente del host (se ejecuta exactamente igual en un equipo portátil que en un servidor en la nube)
-* Se puede aprovisionar rápidamente para el escalado horizontal
-* Se puede reiniciar rápidamente para recuperarse de un error
+- Ligeros y portátiles
+- Independiente, por lo que no es necesario instalar dependencias
+- Proporcionar un entorno coherente independientemente del host (se ejecuta exactamente igual en un equipo portátil que en un servidor en la nube)
+- Se puede aprovisionar rápidamente para el escalado horizontal
+- Se puede reiniciar rápidamente para recuperarse de un error
 
 Un contenedor se ejecuta en un host de contenedor (que, a su vez, se puede ejecutar en un equipo sin sistema operativo o en una máquina virtual). Se pueden ejecutar varios contenedores o instancias de los mismos contenedores en un solo host. En el caso de una conmutación por error y resistencia verdaderas, los contenedores se deben escalar entre los hosts.
 
@@ -125,10 +125,10 @@ En la ilustración siguiente se diagraman cuatro componentes sin servidor. Una s
 
 Entre las ventajas de sin servidor se incluyen:
 
-* **Alta densidad.** Muchas instancias del mismo código sin servidor se pueden ejecutar en el mismo host en comparación con los contenedores o las máquinas virtuales. Las instancias se escalan en varios hosts de escalabilidad horizontal y resistencia.
-* **Micro-facturación**. La mayoría de los proveedores sin servidor facturan en función de las ejecuciones sin servidor, lo que permite ahorrar costos masivos en ciertos escenarios.
-* **Escalado instantáneo**. Sin servidor se puede escalar para que coincidan con las cargas de trabajo de forma automática y rápida.
-* **Tiempo de comercialización más rápido** Los desarrolladores se centran en el código y se implementan directamente en la plataforma sin servidor. Los componentes se pueden liberar independientemente entre sí.
+- **Alta densidad.** Muchas instancias del mismo código sin servidor se pueden ejecutar en el mismo host en comparación con los contenedores o las máquinas virtuales. Las instancias se escalan en varios hosts de escalabilidad horizontal y resistencia.
+- **Micro-facturación.** La mayoría de los proveedores sin servidor facturan en función de las ejecuciones sin servidor, lo que permite ahorrar costos masivos en ciertos escenarios.
+- **Escalado instantáneo.** Sin servidor se puede escalar para que coincidan con las cargas de trabajo de forma automática y rápida.
+- **Tiempo de comercialización más rápido.** Los desarrolladores se centran en el código y se implementan directamente en la plataforma sin servidor. Los componentes se pueden liberar independientemente entre sí.
 
 Sin servidor se suele describir en el contexto de compute, pero también se puede aplicar a los datos. Por ejemplo, [Azure SQL](https://docs.microsoft.com/azure/sql-database) y [Cosmos dB](https://docs.microsoft.com/azure/cosmos-db) proporcionan bases de datos en la nube que no requieren la configuración de clústeres o máquinas host. Este libro se centra en el proceso sin servidor.
 
@@ -140,30 +140,30 @@ Hay una amplia gama de opciones disponibles para la arquitectura, incluido un en
 |---------|---------|---------|---------|----------|
 |**Escalar**|MEDIO       |Instancia |Aplicación      |Función  |
 |**Abstrae**|Hardware|Plataforma|Host de SO|Tiempo de ejecución   |
-|**Unitario** |MEDIO       |Proyecto  |Image    |Código      |
+|**Unitario** |MEDIO       |Proyecto  |Imagen    |Código      |
 |**Duración**|Partir|Días a meses|Minutos a días|Milisegundos hasta minutos|
 |**Resp**|Aplicaciones, dependencias, tiempo de ejecución y sistema operativo|Aplicaciones y dependencias|Aplicaciones, dependencias y tiempo de ejecución|Función
 
-* La **escala** hace referencia a la unidad que se usa para escalar la aplicación
-* Los **resúmenes** hacen referencia a la capa que la implementación abstrae.
-* La **unidad** hace referencia al ámbito de lo que se implementa
-* La **duración** hace referencia al tiempo de ejecución típico de una instancia específica
-* La **responsabilidad** se refiere a la sobrecarga para compilar, implementar y mantener la aplicación
+- La **escala** hace referencia a la unidad que se usa para escalar la aplicación
+- Los **resúmenes** hacen referencia a la capa que la implementación abstrae.
+- La **unidad** hace referencia al ámbito de lo que se implementa
+- La **duración** hace referencia al tiempo de ejecución típico de una instancia específica
+- La **responsabilidad** se refiere a la sobrecarga para compilar, implementar y mantener la aplicación
 
 El siguiente capítulo se centrará en la arquitectura sin servidor, en los casos de uso y en los patrones de diseño.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Guía de arquitectura de aplicaciones de Azure](https://docs.microsoft.com/azure/architecture/guide/)
-* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [SQL de Azure](https://docs.microsoft.com/azure/sql-database)
-* [Patrón de arquitectura de N niveles](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-* [Kubernetes en Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Microservicios](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-* [Arquitectura de referencia de N niveles de máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-* [Máquinas virtuales](https://docs.microsoft.com/azure/virtual-machines/)
-* [¿Qué es Docker?](../microservices/container-docker-introduction/docker-defined.md)
-* [Aplicación SaaS de Wingtip tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Guía de arquitectura de aplicaciones de Azure](https://docs.microsoft.com/azure/architecture/guide/)
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+- [SQL de Azure](https://docs.microsoft.com/azure/sql-database)
+- [Patrón de arquitectura de N niveles](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
+- [Kubernetes en Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+- [Microservicios](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+- [Arquitectura de referencia de N niveles de máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [Máquinas virtuales](https://docs.microsoft.com/azure/virtual-machines/)
+- [¿Qué es Docker?](../microservices/container-docker-introduction/docker-defined.md)
+- [Aplicación SaaS de Wingtip tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[Anterior](architecture-approaches.md)

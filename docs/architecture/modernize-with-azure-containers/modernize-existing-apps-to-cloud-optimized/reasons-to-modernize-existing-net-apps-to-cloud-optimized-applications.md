@@ -2,12 +2,12 @@
 title: Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318551"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522942"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 
@@ -21,7 +21,7 @@ La línea inferior es que cuando una organización crea y administra aplicacione
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Principios y principios de las aplicaciones optimizadas para la nube 
 
-Las mejoras en la nube se centran principalmente en cumplir dos objetivos: Reduzca los costos y mejore el crecimiento empresarial mejorando la agilidad. Estos objetivos se logran simplificando los procesos y reduciendo la fricción al lanzar y enviar aplicaciones.
+Las mejoras en la nube se centran principalmente en cumplir dos objetivos: reducir costos y mejorar el crecimiento empresarial mejorando la agilidad. Estos objetivos se logran simplificando los procesos y reduciendo la fricción al lanzar y enviar aplicaciones.
 
 La aplicación está optimizada para la nube si puede, de forma ágil, desarrollar la aplicación de forma autónoma desde otras aplicaciones locales y, a continuación, publicar, implementar, escalar automáticamente, supervisar y solucionar problemas de la aplicación en la nube.
 
@@ -41,7 +41,7 @@ En la lista siguiente se describen los principios principales o las prácticas r
 
 En la figura 4-2 se muestran los pilares opcionales principales de una aplicación optimizada para la nube. Cuanto mayor sea el número de pilares que implemente, readier su aplicación será correcta para satisfacer las expectativas de sus clientes.
 
-![Diagrama que nombra los pilares principales de una aplicación optimizada para la nube.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
+![Diagrama que nombra los pilares principales de una aplicación optimizada para la nube.](./media/main-pillars-cloud-optimized-application.png)
 
 **Figura 4-2.** Principales pilares de una aplicación optimizada para la nube
 

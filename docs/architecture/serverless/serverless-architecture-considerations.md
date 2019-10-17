@@ -4,12 +4,12 @@ description: Comprenda los desafíos de diseñar aplicaciones sin servidor, desd
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ecbffbbd435b4926608e4def519fdaddddab688d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577438"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522430"
 ---
 # <a name="serverless-architecture-considerations"></a>Consideraciones sobre la arquitectura sin servidor
 
@@ -21,9 +21,9 @@ Las funciones sin servidor, al igual que con los microservicios en general, no t
 
 Hay varias soluciones para adoptar el estado sin poner en peligro las ventajas de sin servidor. Algunas de las soluciones más populares son:
 
-* Usar un almacén de datos temporal o una caché distribuida, como Redis
-* Almacenar el estado en una base de datos, como SQL o CosmosDB
-* Controlar el estado a través de un motor de flujo de trabajo como durable Functions
+- Usar un almacén de datos temporal o una caché distribuida, como Redis
+- Almacenar el estado en una base de datos, como SQL o CosmosDB
+- Controlar el estado a través de un motor de flujo de trabajo como durable Functions
 
 La línea inferior es que debe tener en cuenta la necesidad de cualquier administración de Estados dentro de los procesos que está pensando en implementar sin servidor.
 
@@ -37,9 +37,9 @@ Hay algunas excepciones y soluciones. Una solución puede ser dividir el proceso
 
 Un posible problema con las implementaciones sin servidor es el tiempo de inicio. Para conservar recursos, muchos proveedores sin servidor crean la infraestructura "a petición". Cuando una función sin servidor se desencadena después de un período de tiempo, es posible que sea necesario crear o reiniciar los recursos para hospedar la función. En algunas situaciones, los inicios en frío pueden dar lugar a retrasos de varios segundos. El tiempo de inicio varía entre proveedores y niveles de servicio. Hay algunos enfoques para abordar el tiempo de inicio si es importante minimizar el éxito de la aplicación.
 
-* Algunos proveedores permiten a los usuarios pagar por los niveles de servicio que garantizan que la infraestructura esté "siempre activada".
-* Implemente un mecanismo Keep-Alive (haga ping en el punto de conexión para mantenerlo "activo").
-* Use la orquestación como Kubernetes con un enfoque de función en contenedor (el host ya se está ejecutando, por lo que la ejecución de nuevas instancias es sumamente rápida).
+- Algunos proveedores permiten a los usuarios pagar por los niveles de servicio que garantizan que la infraestructura esté "siempre activada".
+- Implemente un mecanismo Keep-Alive (haga ping en el punto de conexión para mantenerlo "activo").
+- Use la orquestación como Kubernetes con un enfoque de función en contenedor (el host ya se está ejecutando, por lo que la ejecución de nuevas instancias es sumamente rápida).
 
 ## <a name="database-updates-and-migrations"></a>Actualizaciones y migraciones de bases de datos
 
@@ -71,7 +71,7 @@ Una arquitectura sin servidor puede incluir funciones que dependen de otras func
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Administrar errores y proporcionar resistencia
 
-También es importante tener en cuenta el *patrón de*disyuntor: Si, por alguna razón, un servicio sigue produciendo errores, no es aconsejable llamar a ese servicio repetidamente. En su lugar, se llama a un servicio alternativo o se devuelve un mensaje hasta que se restablece el estado del servicio dependiente. La arquitectura sin servidor debe tener en cuenta la estrategia para resolver y administrar las dependencias entre servicios.
+También es importante tener en cuenta el *patrón*de disyuntor: Si, por alguna razón, un servicio sigue produciendo errores, no es aconsejable llamar a ese servicio repetidamente. En su lugar, se llama a un servicio alternativo o se devuelve un mensaje hasta que se restablece el estado del servicio dependiente. La arquitectura sin servidor debe tener en cuenta la estrategia para resolver y administrar las dependencias entre servicios.
 
 Para continuar con el patrón de disyuntor, los servicios deben ser tolerantes a errores y resistentes. La tolerancia a errores hace referencia a la capacidad de la aplicación de seguir ejecutándose incluso después de encontrar excepciones inesperadas o Estados no válidos. La tolerancia a errores suele ser una función del propio código y cómo se escribe para controlar las excepciones. La resistencia hace referencia al modo en que la aplicación se encuentra en recuperación ante errores. La plataforma sin servidor suele administrar la resistencia. La plataforma debe ser capaz de poner en marcha una nueva instancia de función sin servidor cuando se produce un error en la existente. La plataforma también debe ser lo suficientemente inteligente como para detener la marcha de nuevas instancias cuando se produce un error en cada nueva instancia.
 

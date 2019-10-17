@@ -4,12 +4,12 @@ description: Azure Event Grid es una solución sin servidor para la entrega y el
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577578"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522715"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -19,9 +19,9 @@ ms.locfileid: "69577578"
 
 Las principales características de Event Grid incluyen:
 
-* Enrutamiento de eventos totalmente administrado.
-* Entrega de eventos casi en tiempo real a escala.
-* Cobertura amplia tanto dentro como fuera de Azure.
+- Enrutamiento de eventos totalmente administrado.
+- Entrega de eventos casi en tiempo real a escala.
+- Cobertura amplia tanto dentro como fuera de Azure.
 
 ## <a name="scenarios"></a>Escenarios
 
@@ -43,7 +43,7 @@ Puede usar Event Grid para conectar la aplicación a otros servicios. Mediante l
 
 ![Aplicaciones sin servidor](./media/serverless-apps.png)
 
-Event Grid puede desencadenar Azure Functions, Logic Apps o su propio código personalizado. Una ventaja importante del uso de Event Grid es que utiliza un mecanismo de *extracción* para enviar mensajes cuando se producen eventos. La arquitectura de extracción utiliza menos recursos y escala mejor que los mecanismos de sondeo. El sondeo debe comprobar si hay actualizaciones a intervalos regulares.
+Event Grid puede desencadenar Azure Functions, Logic Apps o su propio código personalizado. Una ventaja importante del uso de Event Grid es que utiliza un mecanismo de *extracción* para enviar mensajes cuando se producen eventos. La arquitectura de extracción utiliza menos recursos y escala mejor que los mecanismos de *sondeo* . El sondeo debe comprobar si hay actualizaciones a intervalos regulares.
 
 ## <a name="event-grid-vs-other-azure-messaging-services"></a>Event Grid frente a otros servicios de mensajería de Azure
 
@@ -57,13 +57,13 @@ Para obtener una comparación más detallada, consulte comparación de los [serv
 
 Con Event Grid puede aprovechar las siguientes garantías de rendimiento:
 
-* Latencia de un extremo a otro en el percentil valores percentil.
-* 99,99% de disponibilidad.
-* 10 millones eventos por segundo por región.
-* 100 millones suscripciones por región.
-* 50: latencia de Ms Publisher.
-* reintento de 24 horas con el retroceso exponencial para la entrega garantizada en la ventana de 1 día.
-* Conmutación por error regional transparente.
+- Latencia de un extremo a otro en el percentil valores percentil.
+- 99,99% de disponibilidad.
+- 10 millones eventos por segundo por región.
+- 100 millones suscripciones por región.
+- 50: latencia de Ms Publisher.
+- reintento de 24 horas con el retroceso exponencial para la entrega garantizada en la ventana de 1 día.
+- Conmutación por error regional transparente.
 
 ## <a name="event-grid-schema"></a>Esquema de Event Grid
 
@@ -84,31 +84,31 @@ Event Grid usa un esquema estándar para ajustar los eventos personalizados. El 
 }]
 ```
 
-Todo lo relacionado con el mensaje es estándar `data` excepto la propiedad. Puede inspeccionar el mensaje y usar `eventType` y `dataVersion` para deserializar la parte personalizada de la carga útil.
+Todo lo relacionado con el mensaje es estándar excepto la propiedad `data`. Puede inspeccionar el mensaje y usar los `eventType` y `dataVersion` para deserializar la parte personalizada de la carga útil.
 
-## <a name="azure-resources"></a>Recursos de Azure
+## <a name="azure-resources"></a>recursos de Azure
 
 Una ventaja importante del uso de Event Grid son los mensajes automáticos que genera Azure. En Azure, los recursos se publican automáticamente en un *tema* que le permite suscribirse a varios eventos. En la tabla siguiente se enumeran los tipos de recursos, los tipos de mensajes y los eventos que están disponibles automáticamente.
 
-| Recurso de Azure | Tipo de evento | DESCRIPCIÓN |
+| Recurso de Azure | Tipo de evento. | Descripción |
 | -------------- | ---------- | ----------- |
-| Suscripción de Azure | Microsoft.Resources.ResourceWriteSuccess | Se genera cuando una operación de creación o actualización de recursos se realiza correctamente. |
-| | Microsoft.Resources.ResourceWriteFailure | Se genera cuando se produce un error en una operación de creación o actualización de recursos. |
-| | Microsoft.Resources.ResourceWriteCancel | Se genera cuando se cancela una operación de creación o actualización de recursos. |
-|  | Microsoft.Resources.ResourceDeleteSuccess | Se genera cuando una operación de eliminación de recursos se realiza correctamente. |
-|  | Microsoft.Resources.ResourceDeleteFailure | Se genera cuando se produce un error en una operación de eliminación de recursos. |
-| | Microsoft.Resources.ResourceDeleteCancel | Se genera cuando se cancela una operación de eliminación de recursos. Este evento se produce cuando se cancela una implementación de plantilla. |
-| Almacenamiento de blobs | Microsoft.Storage.BlobCreated | Se genera cuando se crea un BLOB. |
-| | Microsoft.Storage.BlobDeleted | Se genera cuando se elimina un BLOB. |
-| Centros de eventos | Microsoft.EventHub.CaptureFileCreated | Se genera cuando se crea un archivo de captura.
-| IoT Hub | Microsoft.Devices.DeviceCreated | Se publica cuando se registra un dispositivo en una instancia de IoT Hub. |
-| | Microsoft.Devices.DeviceDeleted | Se publica cuando se elimina un dispositivo de una instancia de IoT Hub. |
-| Grupos de recursos | Microsoft.Resources.ResourceWriteSuccess | Se genera cuando una operación de creación o actualización de recursos se realiza correctamente. |
-| | Microsoft.Resources.ResourceWriteFailure | Se genera cuando se produce un error en una operación de creación o actualización de recursos. |
-| | Microsoft.Resources.ResourceWriteCancel | Se genera cuando se cancela una operación de creación o actualización de recursos. |
-| | Microsoft.Resources.ResourceDeleteSuccess | Se genera cuando una operación de eliminación de recursos se realiza correctamente. |
-| | Microsoft.Resources.ResourceDeleteFailure | Se genera cuando se produce un error en una operación de eliminación de recursos. |
-| | Microsoft.Resources.ResourceDeleteCancel | Se genera cuando se cancela una operación de eliminación de recursos. Este evento se produce cuando se cancela una implementación de plantilla. |
+| Suscripción a Azure | Microsoft. Resources. ResourceWriteSuccess | Se genera cuando una operación de creación o actualización de recursos se realiza correctamente. |
+| | Microsoft. Resources. ResourceWriteFailure | Se genera cuando se produce un error en una operación de creación o actualización de recursos. |
+| | Microsoft. Resources. ResourceWriteCancel | Se genera cuando se cancela una operación de creación o actualización de recursos. |
+|  | Microsoft. Resources. ResourceDeleteSuccess | Se genera cuando una operación de eliminación de recursos se realiza correctamente. |
+|  | Microsoft. Resources. ResourceDeleteFailure | Se genera cuando se produce un error en una operación de eliminación de recursos. |
+| | Microsoft. Resources. ResourceDeleteCancel | Se genera cuando se cancela una operación de eliminación de recursos. Este evento se produce cuando se cancela una implementación de plantilla. |
+| Blob Storage | Microsoft. Storage. BlobCreated | Se genera cuando se crea un BLOB. |
+| | Microsoft. Storage. BlobDeleted | Se genera cuando se elimina un BLOB. |
+| Centros de eventos | Microsoft. EventHub. CaptureFileCreated | Se genera cuando se crea un archivo de captura.
+| IoT Hub | Microsoft. Devices. DeviceCreated | Se publica cuando se registra un dispositivo en una instancia de IoT Hub. |
+| | Microsoft. Devices. DeviceDeleted | Se publica cuando se elimina un dispositivo de una instancia de IoT Hub. |
+| Grupos de recursos | Microsoft. Resources. ResourceWriteSuccess | Se genera cuando una operación de creación o actualización de recursos se realiza correctamente. |
+| | Microsoft. Resources. ResourceWriteFailure | Se genera cuando se produce un error en una operación de creación o actualización de recursos. |
+| | Microsoft. Resources. ResourceWriteCancel | Se genera cuando se cancela una operación de creación o actualización de recursos. |
+| | Microsoft. Resources. ResourceDeleteSuccess | Se genera cuando una operación de eliminación de recursos se realiza correctamente. |
+| | Microsoft. Resources. ResourceDeleteFailure | Se genera cuando se produce un error en una operación de eliminación de recursos. |
+| | Microsoft. Resources. ResourceDeleteCancel | Se genera cuando se cancela una operación de eliminación de recursos. Este evento se produce cuando se cancela una implementación de plantilla. |
 
 Para obtener más información, vea [Azure Event Grid esquema de eventos](https://docs.microsoft.com/azure/event-grid/event-schema).
 
@@ -120,26 +120,26 @@ En este capítulo ha aprendido sobre la plataforma sin servidor de Azure que se 
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Planes de App Service](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-* [Application Insights](https://docs.microsoft.com/azure/application-insights)
-* [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure Lleve su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure Event Grid esquema de eventos](https://docs.microsoft.com/azure/event-grid/event-schema)
-* [Event Hubs de Azure](https://docs.microsoft.com/azure/event-hubs)
-* [Azure Functions documentación](https://docs.microsoft.com/azure/azure-functions)
-* [Conceptos de Azure Functions desencadenadores y enlaces](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-* [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-* [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-* [Table Storage de Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-* [Compare las funciones 1. x y 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
-* [Conexión a orígenes de datos locales con la puerta de enlace de datos local de Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-* [Cree su primera función en el Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-* [Cree su primera función mediante el CLI de Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-* [Creación de la primera función mediante Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-* [Lenguajes compatibles con funciones](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-* [Supervisar Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-* [Trabajar con Azure Functions Proxies](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
+- [Planes de App Service](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Application Insights](https://docs.microsoft.com/azure/application-insights)
+- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [Azure: traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/events/Connect/2017/E102)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure Event Grid esquema de eventos](https://docs.microsoft.com/azure/event-grid/event-schema)
+- [Event Hubs de Azure](https://docs.microsoft.com/azure/event-hubs)
+- [Azure Functions documentación](https://docs.microsoft.com/azure/azure-functions)
+- [Conceptos de Azure Functions desencadenadores y enlaces](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
+- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
+- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
+- [Table Storage de Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Compare las funciones 1. x y 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
+- [Conexión a orígenes de datos locales con la puerta de enlace de datos local de Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
+- [Cree su primera función en el Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
+- [Cree su primera función mediante el CLI de Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Creación de la primera función mediante Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [Lenguajes compatibles con funciones](https://docs.microsoft.com/azure/azure-functions/supported-languages)
+- [Supervisar Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Trabajar con Azure Functions Proxies](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[Anterior](logic-apps.md)

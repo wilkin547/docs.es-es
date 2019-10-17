@@ -4,12 +4,12 @@ description: Comprenda la variedad de escenarios admitidos por las arquitecturas
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577198"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522352"
 ---
 # <a name="serverless-design-examples"></a>Ejemplos de diseño sin servidor
 
@@ -77,16 +77,16 @@ Una puerta de enlace de API proporciona un único punto de entrada para los clie
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Desafíos y soluciones de la administración de datos distribuidos](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [Diseño de microservicios: identificación de los límites de microservicios](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [Patrón Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [Implementar el patrón de interruptor](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Service Bus](https://docs.microsoft.com/azure/service-bus)
-* [Trabajar con la compatibilidad con la fuente de cambios en Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Desafíos y soluciones de la administración de datos distribuidos](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [Diseño de microservicios: identificación de los límites de microservicios](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Patrón Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Implementar el patrón de interruptor](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Service Bus](https://docs.microsoft.com/azure/service-bus)
+- [Trabajar con la compatibilidad con la fuente de cambios en Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[Anterior](serverless-architecture-considerations.md)

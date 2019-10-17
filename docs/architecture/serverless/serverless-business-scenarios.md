@@ -4,12 +4,12 @@ description: Aprenda sin servidor con un enfoque práctico mediante el acceso a 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834296"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522392"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Escenarios y casos de uso empresariales sin servidor
 
@@ -27,7 +27,7 @@ Una aplicación de una sola página (SPA) independiente llama a una función sin
 
 ![Galería de imágenes automatizada](./media/automated-image-gallery.png)
 
-El repositorio completo y las instrucciones para compilar la aplicación lógica están disponibles aquí: [Adherencia de Event Grid](https://github.com/JeremyLikness/Event-Grid-Glue).
+El repositorio completo y las instrucciones para compilar la aplicación lógica están disponibles aquí: [glue de Event Grid](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Cliente móvil multiplataforma con Xamarin. Forms y Functions
 
@@ -55,7 +55,7 @@ La aplicación utiliza la característica de servidores proxy de Azure Functions
 
 El proxy proporciona un único punto de conexión de API que se actualiza para redistribuir las solicitudes individuales a medida que se mueven a funciones sin servidor.
 
-Puede ver un vídeo que recorre toda la migración: [Eleve y cambie con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102). Obtenga acceso al código de ejemplo: [Traiga su propia aplicación](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Puede ver un vídeo que recorre toda la migración: [levantar y cambiar con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102). Obtenga acceso al código de ejemplo: [traiga su propia aplicación](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analizar un archivo CSV e insertarlo en una base de datos
 
@@ -77,7 +77,7 @@ Después, puede crear un panel de Power BI para recopilar información sobre los
 
 ![Ejemplo de Power BI](./media/power-bi-example.png)
 
-El repositorio de acortador de vínculos completo con instrucciones está disponible aquí: [Acortador de URL sin servidor](https://github.com/jeremylikness/serverless-url-shortener). Puede leer sobre una versión simplificada aquí: [Azure Storage para aplicaciones .net sin servidor en minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+El repositorio de acortador de vínculos completo con instrucciones está disponible aquí: [acortador de URL sin servidor](https://github.com/jeremylikness/serverless-url-shortener). Puede leer sobre una versión simplificada aquí: [Azure Storage para aplicaciones .net sin servidor en minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Comprobar la Conectividad del dispositivo mediante un ping
 
@@ -87,15 +87,15 @@ Para obtener más información, consulte [Azure IOT Hub ping](https://azure.micr
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Azure Functions generador de mosaicos fotográficos](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Azure Storage para aplicaciones .NET sin servidor en minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [Traiga su propia aplicación](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [Laboratorio de importación de CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [Adherencia de Event Grid](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Implementación de una función de Azure sencilla con un cliente de Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [Elevación y desplazamiento con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [Acortador de URL sin servidor](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Functions generador de mosaicos fotográficos](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Storage para aplicaciones .NET sin servidor en minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [Traiga su propia aplicación](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [Laboratorio de importación de CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Adherencia de Event Grid](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Implementación de una función de Azure sencilla con un cliente de Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Elevación y desplazamiento con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Acortador de URL sin servidor](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[Anterior](orchestration-patterns.md)

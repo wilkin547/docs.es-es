@@ -1,11 +1,10 @@
 ---
-ms.openlocfilehash: ad6526311fce09e49fd42707ff568745188df221
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 349801b5c6d501566855120ce881818697fef9d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703602"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523797"
 ---
-
-> [!NOTE] 
+> [!NOTE]
 > Esta API es solo para uso interno. No está pensada para usarla desde código del desarrollador.

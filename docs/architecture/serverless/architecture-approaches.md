@@ -4,12 +4,12 @@ description: Introducción a los enfoques de arquitectura para la creación de a
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ee529abd1f6955d4f542464dd9a2380dd663571f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577808"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522900"
 ---
 # <a name="architecture-approaches"></a>Enfoques de arquitectura
 
@@ -33,13 +33,13 @@ El enfoque de monolítico tiene varias ventajas. A menudo es fácil extraer una 
 
 Desafortunadamente, el patrón de monolítico tiende a desglosar a escala. Las principales desventajas del enfoque de monolítico incluyen:
 
-* Es difícil trabajar en paralelo en la misma base de código.
-* Cualquier cambio, con independencia de lo trivial, requiere la implementación de una nueva versión de toda la aplicación.
-* La refactorización afecta potencialmente a toda la aplicación.
-* A menudo, la única solución que se debe escalar es crear varias copias de la monolítica que consumen muchos recursos.
-* A medida que se expandan sistemas o se adquieran otros sistemas, la integración puede ser difícil.
-* Puede ser difícil de probar debido a la necesidad de configurar todo el monolito.
-* La reutilización de código es desafiante y a menudo las demás aplicaciones acaban teniendo sus propias copias de código.
+- Es difícil trabajar en paralelo en la misma base de código.
+- Cualquier cambio, con independencia de lo trivial, requiere la implementación de una nueva versión de toda la aplicación.
+- La refactorización afecta potencialmente a toda la aplicación.
+- A menudo, la única solución que se debe escalar es crear varias copias de la monolítica que consumen muchos recursos.
+- A medida que se expandan sistemas o se adquieran otros sistemas, la integración puede ser difícil.
+- Puede ser difícil de probar debido a la necesidad de configurar todo el monolito.
+- La reutilización de código es desafiante y a menudo las demás aplicaciones acaban teniendo sus propias copias de código.
 
 Muchas empresas ven a la nube como una oportunidad para migrar aplicaciones monolíticas y, al mismo tiempo, refactorizarlas en patrones más fáciles de usar. Es habitual dividir las aplicaciones y los componentes individuales para que se mantengan, implementen y escalen por separado.
 
@@ -47,9 +47,9 @@ Muchas empresas ven a la nube como una oportunidad para migrar aplicaciones mono
 
 Lógica de aplicación de partición de aplicación de N niveles en capas específicas. Las capas más comunes incluyen:
 
-* Interfaz de usuario
-* Lógica de negocios
-* Acceso a datos
+- Interfaz de usuario
+- Lógica de negocios
+- Acceso a datos
 
 Otras capas pueden incluir middleware, procesamiento por lotes y API. Es importante tener en cuenta que las capas son lógicas. Aunque se desarrollan en aislamiento, se pueden implementar en la misma plataforma de destino.
 
@@ -57,9 +57,9 @@ Otras capas pueden incluir middleware, procesamiento por lotes y API. Es importa
 
 Hay varias ventajas en el enfoque de N niveles, entre las que se incluyen:
 
-* La refactorización está aislada en una capa.
-* Los equipos pueden compilar, probar, implementar y mantener capas independientes de forma independiente.
-* Las capas se pueden intercambiar, por ejemplo, la capa de datos puede tener acceso a varias bases de datos sin necesidad de realizar cambios en la capa de la interfaz de usuario.
+- La refactorización está aislada en una capa.
+- Los equipos pueden compilar, probar, implementar y mantener capas independientes de forma independiente.
+- Las capas se pueden intercambiar, por ejemplo, la capa de datos puede tener acceso a varias bases de datos sin necesidad de realizar cambios en la capa de la interfaz de usuario.
 
 Puede usarse sin servidor para implementar una o más capas.
 
@@ -67,13 +67,13 @@ Puede usarse sin servidor para implementar una o más capas.
 
 Las arquitecturas de **[microservicios](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** contienen características comunes que incluyen:
 
-* Las aplicaciones se componen de varios servicios pequeños.
-* Cada servicio se ejecuta en su propio proceso.
-* Los servicios están alineados en torno a los dominios empresariales.
-* Los servicios se comunican a través de API ligeras, normalmente con HTTP como transporte.
-* Los servicios se pueden implementar y actualizar de forma independiente.
-* Los servicios no dependen de un único almacén de datos.
-* El sistema se ha diseñado pensando en los errores y la aplicación puede seguir ejecutándose incluso cuando se produce un error en ciertos servicios.
+- Las aplicaciones se componen de varios servicios pequeños.
+- Cada servicio se ejecuta en su propio proceso.
+- Los servicios están alineados en torno a los dominios empresariales.
+- Los servicios se comunican a través de API ligeras, normalmente con HTTP como transporte.
+- Los servicios se pueden implementar y actualizar de forma independiente.
+- Los servicios no dependen de un único almacén de datos.
+- El sistema se ha diseñado pensando en los errores y la aplicación puede seguir ejecutándose incluso cuando se produce un error en ciertos servicios.
 
 Los microservicios no tienen que ser mutuamente excluyentes a otros enfoques de arquitectura. Por ejemplo, una arquitectura de N niveles puede usar microservicios para el nivel intermedio. También es posible implementar microservicios de varias maneras, desde directorios virtuales en hosts de IIS hasta contenedores. Las características de los microservicios hacen que sean especialmente ideales para implementaciones sin servidor.
 
@@ -81,18 +81,18 @@ Los microservicios no tienen que ser mutuamente excluyentes a otros enfoques de 
 
 Entre las ventajas de las arquitecturas de microservicios se incluyen:
 
-* La refactorización suele estar aislada en un único servicio.
-* Los servicios se pueden actualizar de forma independiente entre sí.
-* La resistencia y la elasticidad se pueden ajustar a las demandas de los servicios individuales.
-* El desarrollo puede realizarse en paralelo en diferentes equipos y plataformas.
-* Es más fácil escribir pruebas exhaustivas para servicios aislados.
+- La refactorización suele estar aislada en un único servicio.
+- Los servicios se pueden actualizar de forma independiente entre sí.
+- La resistencia y la elasticidad se pueden ajustar a las demandas de los servicios individuales.
+- El desarrollo puede realizarse en paralelo en diferentes equipos y plataformas.
+- Es más fácil escribir pruebas exhaustivas para servicios aislados.
 
 Los microservicios incluyen sus propios desafíos, entre los que se incluyen:
 
-* Determinar qué servicios están disponibles y cómo llamarlos.
-* Administrar el ciclo de vida de los servicios.
-* Comprender cómo se ajustan los servicios en la aplicación global.
-* Pruebas completas del sistema de las llamadas realizadas en servicios dispares.
+- Determinar qué servicios están disponibles y cómo llamarlos.
+- Administrar el ciclo de vida de los servicios.
+- Comprender cómo se ajustan los servicios en la aplicación global.
+- Pruebas completas del sistema de las llamadas realizadas en servicios dispares.
 
 En última instancia, hay soluciones que abordan todos estos desafíos, entre las que se incluyen las ventajas de sin servidor que se describen más adelante.
 

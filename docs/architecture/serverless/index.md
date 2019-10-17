@@ -4,12 +4,12 @@ description: Guía sobre la arquitectura sin servidor. Obtenga información sobr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70294932"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522850"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure
 
@@ -63,10 +63,10 @@ Participantes y revisores:
 
 La informática [sin servidor](https://azure.microsoft.com/solutions/serverless/) es la evolución de las plataformas de la nube en la línea del código nativo puro de la nube. Además, acerca a los desarrolladores a la lógica de negocios a la vez que los aísla de los problemas de infraestructura. Es un patrón que no implica el uso de "ningún servidor" sino de "menos servidor". El código sin servidor está orientado a eventos. El código se puede desencadenar con solicitudes web HTTP tradicionales, temporizadores o con el resultado de cargar un archivo. La infraestructura que hay detrás de la informática sin servidor permite realizar un escalado instantáneo con el fin de satisfacer las necesidades elásticas y ofrece una microfacturación para "pagar por lo que se usa" y no más. Para usar la informática sin servidor es necesario cambiar la forma de pensar y adoptar un nuevo enfoque para compilar aplicaciones, pero no es la solución adecuada para cada problema. Como desarrollador, debe decidir lo siguiente:
 
-* ¿Qué ventajas e inconvenientes tiene la informática sin servidor?
-* ¿Por qué debe plantearse el uso de la informática sin servidor para sus aplicaciones?
-* ¿Cómo puede compilar, probar, implementar y mantener el código sin servidor?
-* ¿En qué casos tiene sentido migrar el código a la informática sin servidor en las aplicaciones existente y cuál es la mejor forma de conseguir esa transformación?
+- ¿Qué ventajas e inconvenientes tiene la informática sin servidor?
+- ¿Por qué debe plantearse el uso de la informática sin servidor para sus aplicaciones?
+- ¿Cómo puede compilar, probar, implementar y mantener el código sin servidor?
+- ¿En qué casos tiene sentido migrar el código a la informática sin servidor en las aplicaciones existente y cuál es la mejor forma de conseguir esa transformación?
 
 ## <a name="about-this-guide"></a>Acerca de esta guía
 
@@ -82,31 +82,31 @@ La informática sin servidor es la culminación de varias iteraciones de platafo
 
 Antes de que se usara la nube, existía una frontera clara entre el desarrollo y las operaciones. Para implementar una aplicación era necesario responder a un sinfín de preguntas:
 
-* ¿Qué hardware hay que instalar?
-* ¿Cómo se protege el acceso físico a las máquinas?
-* ¿El centro de datos necesita un sistema de alimentación ininterrumpida, (SAI [UPS])?
-* ¿Dónde se envían las copias de seguridad del almacenamiento?
-* ¿Es necesaria una fuente de alimentación?
+- ¿Qué hardware hay que instalar?
+- ¿Cómo se protege el acceso físico a las máquinas?
+- ¿El centro de datos necesita un sistema de alimentación ininterrumpida, (SAI [UPS])?
+- ¿Dónde se envían las copias de seguridad del almacenamiento?
+- ¿Es necesaria una fuente de alimentación?
 
 La lista de interrogantes no terminaba aquí, y ello representaba una sobrecarga de grandes dimensiones. En muchas situaciones, los departamentos de TI se veían obligados a tratar con gran cantidad de residuos. Dichos residuos eran el resultado de una sobreasignación de servidores como máquinas de copias de seguridad para la recuperación ante desastres y de servidores en espera para permitir una escalabilidad horizontal. Afortunadamente, la implementación de la tecnología de virtualización (como [Hyper-V](/virtualization/hyper-v-on-windows/about/)) mediante máquinas virtuales (VM) dio un impulso a las infraestructuras como servicio (IaaS). Las infraestructuras virtualizadas permitían a las operaciones establecer como eje principal un conjunto estándar de servidores, lo que generaba entornos flexibles capaces de aprovisionar servidores únicos "bajo demanda". Sin embargo, lo más importante es que con la virtualización se sentaba la base para usar la nube con el fin de proporcionar máquinas virtuales "como servicio". Ello permitía a las empresas dejar de preocuparse por las fuentes de alimentación y las máquinas físicas. Por lo tanto, pudieron centrarse en el entorno virtual.
 
 Las infraestructuras como servicio todavía conllevan una gran sobrecarga porque el equipo de operaciones sigue siendo el responsable de diversas tareas. Estas tareas incluyen:
 
-* Copia de seguridad y revisión de servidores.
-* Instalación de paquetes.
-* Mantener actualizado el sistema operativo.
-* Supervisar la aplicación.
+- Copia de seguridad y revisión de servidores.
+- Instalación de paquetes.
+- Mantener actualizado el sistema operativo.
+- Supervisar la aplicación.
 
 La siguiente evolución redujo la sobrecarga proporcionando una plataforma como servicio (PaaS). Con dicha plataforma, el proveedor de nube controla los sistemas operativos, las revisiones de seguridad e, incluso, los paquetes necesarios para admitir una plataforma concreta. En lugar de compilar una VM, configurar después .NET Framework y mantener los servidores de Internet Information Services (IIS), los desarrolladores solo tienen que elegir una "destino de la plataforma", como una "aplicación web " o un "punto de conexión de API", e implementar el código directamente. Por lo tanto, los interrogantes relacionados con la infraestructura quedan reducidos a estos:
 
-* ¿Qué tamaños de servicio son necesarios?
-* ¿Cómo se escalan horizontalmente los servicios (añadir más servidores o nodos)?
-* ¿Cómo se escalan verticalmente los servicios (aumentar la capacidad de hospedar servidores o nodos)?
+- ¿Qué tamaños de servicio son necesarios?
+- ¿Cómo se escalan horizontalmente los servicios (añadir más servidores o nodos)?
+- ¿Cómo se escalan verticalmente los servicios (aumentar la capacidad de hospedar servidores o nodos)?
 
 La informática sin servidor reduce todavía más los servidores centrándose en el código orientado a eventos. En lugar de usar una plataforma, los desarrolladores pueden centrarse en un microservicio que tiene una función concreta. Estas son las dos preguntas clave para implementar el código sin servidor:
 
-* ¿Qué desencadena el código?
-* ¿Qué hace el código?
+- ¿Qué desencadena el código?
+- ¿Qué hace el código?
 
 Con la informática sin servidor, la infraestructura se reduce. En algunos casos, el desarrollador se puede olvidar totalmente del host. El desarrollador se centra en un desencadenador HTTP, independientemente de si se ejecuta o no una instancia de IIS, Kestrel, Apache u otro servidor web para administrar solicitudes web. El desencadenador proporciona la carga estándar y multiplataforma para la solicitud. La carga no solo simplifica el proceso de desarrollo, sino que facilita las pruebas y, en algunos casos, permite que el código sea pueda portar fácilmente entre plataformas.
 
@@ -118,16 +118,16 @@ En esta guía se pone un especial énfasis en los distintos enfoques de arquitec
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-* [Centro de arquitectura de Azure](https://docs.microsoft.com/azure/architecture/)
-* [Procedimientos recomendados para aplicaciones en la nube](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Centro de arquitectura de Azure](https://docs.microsoft.com/azure/architecture/)
+- [Procedimientos recomendados para aplicaciones en la nube](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Destinatarios de esta guía
 
 Esta guía está destinada a aquellos desarrolladores y arquitectos de soluciones que quieren compilar aplicaciones empresariales con .NET y que pueden usar componentes sin servidor en un entorno local o bien en la nube. Resulta útil para los desarrolladores, arquitectos y directores técnicos interesados por lo siguiente:
 
-* Conocer las ventajas e inconvenientes del desarrollo sin servidor.
-* Obtener información sobre cómo usar la arquitectura sin servidor.
-* Implementaciones de ejemplo sobre aplicaciones sin servidor
+- Conocer las ventajas e inconvenientes del desarrollo sin servidor.
+- Obtener información sobre cómo usar la arquitectura sin servidor.
+- Implementaciones de ejemplo sobre aplicaciones sin servidor
 
 ## <a name="how-to-use-the-guide"></a>Cómo usar esta guía
 
