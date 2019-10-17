@@ -1,7 +1,0 @@
-- name: Tipos de valor que aceptan valores NULL
-  href: index.md
-  items:
-    - name: Uso de tipos que admiten un valor NULL
-      href: using-nullable-types.md
-    - name: Identificación de tipos que admiten un valor NULL
-      href: how-to-identify-a-nullable-type.md

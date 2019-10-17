@@ -1,5 +1,0 @@
-- name: Cadenas
-  href: index.md
-  items:
-    - name: Procedimiento para determinar si una cadena representa un valor numérico
-      href: how-to-determine-whether-a-string-represents-a-numeric-value.md
