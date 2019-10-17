@@ -1,27 +1,27 @@
 ---
-title: Procedimiento para especificar un enlace de servicio en la configuración
+title: 'Cómo: Especificar un enlace de servicio en la configuración'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9790d3fb5fc20b3d2c6ce776070274ef0403732
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967155"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319869"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Procedimiento para especificar un enlace de servicio en la configuración
-En este ejemplo, se define un contrato `ICalculator` para un servicio de calculadora básico; el servicio se implementa en la clase `CalculatorService` y, después, su punto de conexión se configura en el archivo Web.config, donde se especifica que el servicio usa <xref:System.ServiceModel.BasicHttpBinding>. Para obtener una descripción de cómo configurar este servicio con código en lugar de una configuración, consulte [cómo: Especifique un enlace de servicio en](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)el código.  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Cómo: Especificar un enlace de servicio en la configuración
+En este ejemplo, se define un contrato `ICalculator` para un servicio de calculadora básico; el servicio se implementa en la clase `CalculatorService` y, después, su punto de conexión se configura en el archivo Web.config, donde se especifica que el servicio usa <xref:System.ServiceModel.BasicHttpBinding>. Para obtener una descripción de cómo configurar este servicio con código en lugar de una configuración, vea [Cómo: especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md).  
   
  Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
   
- Todos los pasos de configuración siguientes se pueden llevar a cabo mediante la [herramienta editor de configuración (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Todos los pasos de configuración siguientes se pueden llevar a cabo mediante la [herramienta editor de configuración (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Para la copia de origen de este ejemplo, consulte [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md).  
+ Para la copia de origen de este ejemplo, consulte [BasicBinding](./samples/basicbinding.md).  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Para especificar BasicHttpBinding para utilizarlo para configurar el servicio  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Para especificar BasicHttpBinding para utilizarlo para configurar el servicio  
   
 1. Defina un contrato de servicios para el tipo de servicio.  
   
@@ -79,9 +79,9 @@ En este ejemplo, se define un contrato `ICalculator` para un servicio de calcula
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Para modificar los valores predeterminados de las propiedades de enlace  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>Para modificar los valores predeterminados de las propiedades de enlace  
   
-1. Para modificar uno de los valores de propiedad predeterminados de <xref:System.ServiceModel.WSHttpBinding>, cree un nombre de configuración de enlace nuevo (en el `<binding name="Binding1">` [ \<elemento wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) y establezca los nuevos valores para los atributos del enlace en este enlace). Element. Por ejemplo, para cambiar los valores predeterminados de abrir y cerrar el tiempo de espera de 1 minuto a 2 minutos, agregue el siguiente al archivo de configuración.  
+1. Para modificar uno de los valores de propiedad predeterminados del <xref:System.ServiceModel.WSHttpBinding>, cree un nombre de configuración de enlace nuevo-`<binding name="Binding1">`-en el elemento de [> \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) y establezca los nuevos valores para los atributos del enlace en este elemento de enlace. Por ejemplo, para cambiar los valores predeterminados de abrir y cerrar el tiempo de espera de 1 minuto a 2 minutos, agregue el siguiente al archivo de configuración.  
   
     ```xml  
     <wsHttpBinding>  
@@ -94,5 +94,5 @@ En este ejemplo, se define un contrato `ICalculator` para un servicio de calcula
   
 ## <a name="see-also"></a>Vea también
 
-- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Especificación de una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)
+- [Especificación de una dirección de punto de conexión](specifying-an-endpoint-address.md)

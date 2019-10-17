@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8eca2ee1afec5662e40d4f43347c469bd538c066
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854332"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319494"
 ---
 # <a name="null-comparisons"></a>Comparaciones NULL
-Un valor `null` en el origen de datos indica que el valor es desconocido. En LINQ to Entities consultas, puede comprobar si hay valores NULL para que determinados cálculos o comparaciones solo se realicen en filas con datos válidos o no nulos. Sin embargo, la semántica de NULL de CLR puede diferir de la del origen de datos. La mayoría de las bases de datos utilizan una versión de lógica con tres valores para tratar las comparaciones de NULL. Es decir, una comparación con un valor NULL no se evalúa como `true` o `false`, se evalúa como `unknown`. A menudo ésta es una implementación de los valores NULL ANSI, pero este no es siempre el caso.  
+Un valor `null` en el origen de datos indica que el valor es desconocido. En LINQ to Entities consultas, puede comprobar si hay valores NULL para que determinados cálculos o comparaciones solo se realicen en filas con datos válidos o no nulos. Sin embargo, la semántica de NULL de CLR puede diferir de la del origen de datos. La mayoría de las bases de datos utilizan una versión de lógica con tres valores para tratar las comparaciones de NULL. Es decir, una comparación con un valor NULL no se evalúa como `true` o `false`, sino que se evalúa como @no__t 2. A menudo ésta es una implementación de los valores NULL ANSI, pero este no es siempre el caso.  
   
- De forma predeterminada en SQL Server, al comparar si un valor NULL es igual a un valor NULL, se devuelve un valor NULL. En el ejemplo siguiente, las filas donde `ShipDate` es NULL se excluyen del conjunto de resultados y la instrucción de Transact-SQL devolvería 0 filas.  
+ De forma predeterminada en SQL Server, al comparar si un valor NULL es igual a un valor NULL, se devuelve un valor NULL. En el ejemplo siguiente, las filas en las que `ShipDate` es NULL se excluyen del conjunto de resultados y la instrucción Transact-SQL devolvería 0 filas.  
   
-```  
+```sql  
 -- Find order details and orders with no ship date.  
 SELECT h.SalesOrderID  
 FROM Sales.SalesOrderHeader h  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Pasar colecciones NULL a funciones de agregado  
- En LINQ to Entities, cuando se pasa una colección que admite `IQueryable` a una función de agregado, las operaciones de agregado se realizan en la base de datos. Puede haber diferencias en los resultados de una consulta realizada en memoria y en una consulta realizada en la base de datos. Con una consulta en memoria, si no hay ninguna coincidencia, la consulta devuelve cero. En la base de datos, la misma consulta devuelve `null`. Si se `null` pasa un valor a una función de agregado de LINQ, se producirá una excepción. Para aceptar los `null` valores posibles, convierta los tipos y las propiedades de los tipos que reciben los resultados de la consulta a tipos que aceptan valores NULL.  
+ En LINQ to Entities, cuando se pasa una colección que admite `IQueryable` a una función de agregado, las operaciones de agregado se realizan en la base de datos. Puede haber diferencias en los resultados de una consulta realizada en memoria y en una consulta realizada en la base de datos. Con una consulta en memoria, si no hay ninguna coincidencia, la consulta devuelve cero. En la base de datos, la misma consulta devuelve `null`. Si se pasa un valor `null` a una función de agregado de LINQ, se producirá una excepción. Para aceptar los valores posibles de `null`, convierta los tipos y las propiedades de los tipos que reciben los resultados de la consulta a tipos que aceptan valores NULL.  
   
 ## <a name="see-also"></a>Vea también
 

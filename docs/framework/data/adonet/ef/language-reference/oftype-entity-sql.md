@@ -2,19 +2,19 @@
 title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: 36701a5e75e804ea541d242aaff243de0b24cec3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f1dd5ba92c7b1eaf7117c9732a78e04e5d5a317a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249792"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319454"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 Devuelve una colección de objetos de una expresión de consulta de un tipo específico.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
@@ -33,19 +33,19 @@ OFTYPE ( expression, [ONLY] test_type )
   
  Una expresión `OFTYPE` es una abreviatura de la expresión de consulta siguiente:  
   
-```  
+```sql  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
  Dado que Manager es un subtipo de Employee, la expresión siguiente produce una colección de jefes (managers) únicamente a partir de una colección de empleados (employees):  
   
-```  
+```sql  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
  También es posible convertir una colección utilizando el filtro de tipo:  
   
-```  
+```sql
 OfType(executives, NamespaceName.Manager)  
 ```  
   
@@ -62,7 +62,7 @@ OfType(executives, NamespaceName.Manager)
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa el operador OFTYPE para devolver una colección de objetos OnsiteCourse a partir de una colección de objetos Course. La consulta se basa en el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
- [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
+ [!code-sql[DP EntityServices Concepts#OFTYPE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#oftype)]  
   
 ## <a name="see-also"></a>Vea también
 

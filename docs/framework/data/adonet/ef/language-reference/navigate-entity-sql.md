@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 2c6c2ae4c593da1d5fe8cdf3015eb0e31e4b12b5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 09128a367a02e1f9b206a9cc068987166c76381b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249937"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319552"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 
@@ -15,19 +15,19 @@ Navega por la relación establecida entre entidades.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```sql
 navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 ```
 
 ## <a name="arguments"></a>Argumentos
 
-`instance-expression`Instancia de una entidad.
+`instance-expression` una instancia de una entidad.
 
-`relationship-type`El nombre de tipo de la relación, del archivo de lenguaje de definición de esquemas conceptuales (CSDL). Se califica como espacio \<de nombres >\<. `relationship-type` nombre del tipo de relación >.
+`relationship-type` el nombre de tipo de la relación, del archivo de lenguaje de definición de esquemas conceptuales (CSDL). El `relationship-type` está calificado como \<namespace >. \<relationship nombre de tipo >.
 
-`to`Final de la relación.
+`to` el final de la relación.
 
-`from`Principio de la relación.
+`from` inicio de la relación.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer era una relación de n:1, el tipo de resultado de la expresión Navigate\<es Ref Customer >.
+Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer era una relación de n:1, el tipo de resultado de la expresión Navigate es Ref @ no__t-0Customer >.
 
 Lo forma más simple de esta expresión es la siguiente:
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Del mismo modo, en una consulta de la forma siguiente, la expresión Navigate produciría una\<colección < orden de referencia > >.
+Del mismo modo, en una consulta de la forma siguiente, la expresión Navigate produciría una colección < Ref @ no__t-0Order > >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
@@ -72,13 +72,13 @@ El valor de instance-expression debe ser de tipo entidad/referencia.
 
 La consulta de Entity SQL siguiente utiliza el operador NAVIGATE para navegar por la relación establecida entre los tipos de entidad Address y SalesOrderHeader. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:
 
-1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.
+1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).
 
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :
 
- [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]
+ [!code-sql[DP EntityServices Concepts#NAVIGATE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#navigate)]
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
-- [Procedimientos: Navegar por las relaciones con el operador Navigate](navigate-entity-sql.md)
+- [Cómo: navegar por las relaciones con el operador Navigate](navigate-entity-sql.md)

@@ -2,19 +2,19 @@
 title: (Módulo) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: a30306539d45c3718d2e948e9717997bbe2104fa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4bbdbe53403cfec2568cfac320fc7ab1ad2725b0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250083"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319598"
 ---
 # <a name="modulo-entity-sql"></a>(Módulo) (Entity SQL)
 Devuelve el resto de una expresión dividida entre otra.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 dividend % divisor  
 ```  
   
@@ -31,11 +31,11 @@ dividend % divisor
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador aritmético % para devolver el resto de una expresión dividida entre otra. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
+1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
+ [!code-sql[DP EntityServices Concepts#MODULO](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#modulo)]  
   
 ## <a name="see-also"></a>Vea también
 

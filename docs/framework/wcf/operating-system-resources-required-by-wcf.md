@@ -2,22 +2,22 @@
 title: Recursos del sistema operativo necesarios para WCF
 ms.date: 03/30/2017
 ms.assetid: cdd9a331-53fe-4e0d-bdfe-782264aec5c9
-ms.openlocfilehash: 828d656370efd7638fa4cf367b84ee7b316b89bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9bd5ed7c2092720c6521d0f78185c3fbf9f94b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955225"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318942"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>Recursos del sistema operativo necesarios para WCF
-Windows Communication Foundation (WCF) depende de varios recursos proporcionados por el sistema operativo para la función. La tabla siguiente hace una lista de esos recursos.  
+Windows Communication Foundation (WCF) depende de varios recursos proporcionados por el sistema operativo para que funcionen. La tabla siguiente hace una lista de esos recursos.  
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|Microsoft DTC (Coordinador de transacciones distribuidas) |Requerido para admitir las transacciones de OleTx.|  
+|Microsoft DTC (Coordinador de transacciones distribuidas)|Requerido para admitir las transacciones de OleTx.|  
 |Internet Information Services (IIS)|Requerido si quiere usar IIS para hospedar su aplicación.|  
 |Servicio de activación de procesos de Windows (WAS)|Requerido si desea utilizar WAS para hospedar su aplicación.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Requisitos del sistema](../../../docs/framework/wcf/wcf-system-requirements.md)
+- [Requisitos del sistema](wcf-system-requirements.md)

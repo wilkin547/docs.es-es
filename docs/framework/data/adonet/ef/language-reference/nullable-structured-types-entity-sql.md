@@ -2,12 +2,12 @@
 title: Tipos estructurados que aceptan valores NULL [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249811"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319486"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Tipos estructurados que aceptan valores NULL [Entity SQL]
 Una instancia `null` de un tipo estructurado es una instancia que no existe. Es diferente de una instancia existente en la que todas las propiedades tienen valores `null`.  
@@ -28,46 +28,46 @@ Una instancia `null` de un tipo estructurado es una instancia que no existe. Es 
   
 - Dar forma a `null` como un tipo estructurado:  
   
-    ```  
+    ```sql  
     TREAT (NULL AS StructuredType)  
     ```  
   
 - Convertir un tipo base en un tipo derivado:  
   
-    ```  
+    ```sql  
     TREAT (BaseType AS DerivedType)  
     ```  
   
 - Unión externa en una condición falsa:  
   
-    ```  
+    ```sql  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      O bien  
   
-    ```  
+    ```sql  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      O bien  
   
-    ```  
+    ```sql  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
 - Desreferenciar `null`:  
   
-    ```  
+    ```sql  
     DEREF(NullRef)  
     ```  
   
 - Obtener ANYELEMENT de una colección vacía:  
   
-    ```  
+    ```sql  
     ANYELEMENT(EmptyCollection)  
     ```  
   

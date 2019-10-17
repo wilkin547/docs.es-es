@@ -2,19 +2,19 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb16fe0072066580bff36ac0879ff38217f1e34
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249247"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319374"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Crea registros anónimos con tipos asignados estructuralmente a partir de uno o varios valores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 ROW ( expression [ AS alias ] [,...] )  
 ```  
   
@@ -31,7 +31,7 @@ ROW ( expression [ AS alias ] [,...] )
 ## <a name="remarks"></a>Comentarios  
  Debe utilizar constructores ROW en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para crear registros anónimos escritos estructuralmente de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`.  
   
-```  
+```sql  
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
@@ -48,11 +48,11 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador ROW para construir registros anónimos escritos estructuralmente. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
+1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#ROW](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#row)]  
+ [!code-sql[DP EntityServices Concepts#ROW](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#row)]  
   
 ## <a name="see-also"></a>Vea también
 

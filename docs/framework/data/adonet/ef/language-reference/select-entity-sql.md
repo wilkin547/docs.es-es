@@ -2,22 +2,22 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4142dca604c0f6dd521f45a8cadd26b9574000f0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249214"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319364"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Especifica los elementos devueltos por una consulta.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
-or  
+-- or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Expresión del tipo:  
   
- `expr`como `identifier` &#124;`expr`  
+ `expr` como `identifier` &#124; `expr`  
   
  `expr`  
  Literal o expresión.  
@@ -49,20 +49,20 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
   
  La lista de una o más expresiones de consulta que siguen a la palabra clave SELECT se conoce como lista de selección o más formalmente como proyección. La forma más general de proyección es una expresión de consulta única. Si selecciona un miembro `member1` de una colección `collection1`, generará una nueva colección de todos los valores de `member1` para cada objeto de `collection1`, como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 SELECT collection1.member1 FROM collection1  
 ```  
   
  Por ejemplo, si `customers` es una colección de tipo `Customer` que tiene una propiedad `Name` que es de tipo `string`, la acción de seleccionar `Name` de `customers` producirá una colección de cadenas, como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 SELECT customers.Name FROM customers AS c  
 ```  
   
  También es posible utilizar la sintaxis de JOIN (FULL, INNER, LEFT, OUTER, ON y RIGHT). ON se requiere para combinaciones internas y no se permite para combinaciones cruzadas.  
   
 ## <a name="row-and-value-select-clauses"></a>Cláusulas de selección de fila y valor  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos variantes de la cláusula SELECT. La primera variante, selección de fila, se identifica mediante la palabra clave SELECT y se puede utilizar para especificar uno o más valores que se deben proyectar externamente. Dado que un contenedor de filas se agrega implícitamente encapsulando los valores devueltos, el resultado de la expresión de consulta siempre es un conjunto múltiple de filas.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos variantes de la cláusula SELECT. La primera variante, selección de fila, se identifica mediante la palabra clave SELECT y se puede utilizar para especificar uno o más valores que se deben proyectar. Dado que un contenedor de filas se agrega implícitamente alrededor de los valores devueltos, el resultado de la expresión de consulta siempre es un conjunto múltiple de filas.  
   
  Cada expresión de consulta en una selección de filas debe especificar un alias. Si no se especifica un alias,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno usando las reglas de generación de alias.  
   
@@ -70,7 +70,7 @@ SELECT customers.Name FROM customers AS c
   
  Una selección de fila siempre se puede expresar en términos de VALUE SELECT, como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 SELECT 1 AS a, "abc" AS b FROM C  
 SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
 ```  
@@ -81,24 +81,24 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ## <a name="differences-from-transact-sql"></a>Diferencias respecto de Transact-SQL  
  A diferencia de Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no admite el uso del argumento * en la cláusula SELECT.  En su lugar, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite que las consultas proyecten externamente registros completos haciendo referencia a los alias para la colección de la cláusula FROM, como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 SELECT * FROM T1, T2  
 ```  
   
- La expresión de consulta de Transact-SQL anterior se [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresa en de la siguiente manera.  
+ La expresión de consulta de Transact-SQL anterior se expresa en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de la siguiente manera.  
   
-```  
+```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador SELECT para especificar los elementos que ha de devolver una consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
+1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
+ [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
 ## <a name="see-also"></a>Vea también
 
