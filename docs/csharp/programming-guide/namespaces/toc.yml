@@ -1,7 +1,0 @@
-- name: Espacios de nombres
-  href: index.md
-  items:
-    - name: Uso de espacios de nombres
-      href: using-namespaces.md
-    - name: Uso del espacio de nombres My
-      href: how-to-use-the-my-namespace.md
