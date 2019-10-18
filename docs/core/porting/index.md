@@ -4,12 +4,12 @@ description: Comprenda el proceso de portabilidad y descubra herramientas que le
 author: cartermp
 ms.date: 09/13/2019
 ms.custom: seodec18
-ms.openlocfilehash: b6c02932b5d9c7ccc2743dd38dddf2904f9c24e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039660"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522989"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Realice la portabilidad de su código de .NET Framework a .NET Core.
 
@@ -41,9 +41,9 @@ Este es el proceso que se recomienda al portar un proyecto a .NET Core. Cada pas
 
 En la lista siguiente se muestran las herramientas que puede resultarle útiles durante el proceso de portabilidad:
 
-* .NET Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una herramienta que puede generar un informe de lo portátil que es su código entre .NET Framework y la plataforma .NET Core de destino. El informe contiene un desglose ensamblado por ensamblado del tipo y las API que faltan en la plataforma de .NET Core de destino. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md). Se recomienda ejecutar la herramienta Analizador de portabilidad de .NET antes de iniciar la portabilidad, ya que le ayudará a identificar los huecos en las API que faltan en una superficie pública de la plataforma .NET Core objetivo específica.
-* Analizador de API de .NET: un analizador Roslyn que descubre API de .NET Standard que emite <xref:System.PlatformNotSupportedException> en algunas plataformas, detecta llamadas a API en desuso y descubre algunos riesgos potenciales de compatibilidad para API de C# en distintas plataformas. Para más información, consulte [Analizador de API en .NET](../../standard/analyzers/api-analyzer.md). Este analizador es útil después de haber creado su proyecto de .NET Core para identificar diferencias en el comportamiento durante el tiempo de ejecución en varias plataformas.
-* Reverse Package Search: un [servicio web útil](https://packagesearch.azurewebsites.net) que le permite buscar un tipo y encontrar los paquetes que lo contienen.
+- .NET Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una herramienta que puede generar un informe de lo portátil que es su código entre .NET Framework y la plataforma .NET Core de destino. El informe contiene un desglose ensamblado por ensamblado del tipo y las API que faltan en la plataforma de .NET Core de destino. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md). Se recomienda ejecutar la herramienta Analizador de portabilidad de .NET antes de iniciar la portabilidad, ya que le ayudará a identificar los huecos en las API que faltan en una superficie pública de la plataforma .NET Core objetivo específica.
+- Analizador de API de .NET: un analizador Roslyn que descubre API de .NET Standard que emite <xref:System.PlatformNotSupportedException> en algunas plataformas, detecta llamadas a API en desuso y descubre algunos riesgos potenciales de compatibilidad para API de C# en distintas plataformas. Para más información, consulte [Analizador de API en .NET](../../standard/analyzers/api-analyzer.md). Este analizador es útil después de haber creado su proyecto de .NET Core para identificar diferencias en el comportamiento durante el tiempo de ejecución en varias plataformas.
+- Reverse Package Search: un [servicio web útil](https://packagesearch.azurewebsites.net) que le permite buscar un tipo y encontrar los paquetes que lo contienen.
 
 Además, puede intentar portar soluciones más pequeñas o proyectos individuales en el formato de archivo de proyecto de .NET Core con la herramienta [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
 
