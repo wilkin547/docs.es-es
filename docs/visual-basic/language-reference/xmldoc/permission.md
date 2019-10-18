@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 7333d4a4d051c157f6732224da0fffe4d7cd35ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 904d573514bf35b773d47321b7fd3b6a86e90262
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940834"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524702"
 ---
-# <a name="permission-visual-basic"></a>\<permiso > (Visual Basic)
+# <a name="permission-visual-basic"></a>\<permission > (Visual Basic)
 Especifica un permiso necesario para el miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,18 +23,18 @@ Especifica un permiso necesario para el miembro.
   
 ## <a name="parameters"></a>Parámetros  
  `member`  
- Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y traduce `member` al nombre de elemento canónico en la salida XML. Incluya `member` entre comillas ("").  
+ Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y traduce `member` al nombre de elemento canónico en la salida XML. Escriba `member` entre comillas ("").  
   
  `description`  
  Descripción del acceso al miembro.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `<permission>` etiqueta para documentar el acceso de un miembro. Use la <xref:System.Security.PermissionSet> clase para especificar el acceso a un miembro.  
+ Use la etiqueta `<permission>` para documentar el acceso de un miembro. Utilice la clase <xref:System.Security.PermissionSet> para especificar el acceso a un miembro.  
   
- Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
+ Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se usa el `<permission>` etiquetas para describir que el <xref:System.Security.Permissions.FileIOPermission> requerido por la `ReadFile` método.  
+ En este ejemplo se usa la etiqueta `<permission>` para describir que el método `ReadFile` requiere la <xref:System.Security.Permissions.FileIOPermission>.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

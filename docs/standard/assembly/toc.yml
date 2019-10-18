@@ -17,7 +17,9 @@
       href: file-format.md
     - name: Procedimiento para usar y depurar la descargabilidad de ensamblados en .NET Core
       href: unloadability.md
-    - name: Resolver cargas de ensamblado
+    - name: Ensamblados de referencia
+      href: reference-assemblies.md
+    - name: Resolución de cargas de ensamblado
       href: resolve-loads.md
     - name: Programación con ensamblados
       href: program.md
