@@ -1,44 +1,44 @@
 ---
-title: Procedimiento Crear documentación XML en Visual Basic
+title: 'Cómo: Crear documentación XML en Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: ff93a7bb2d8fdef68fc956d4c569ca5ad37afb2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5b317706e3e8e0c5958f5a3d0fd859d68600bc7a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054100"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524494"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a><span data-ttu-id="6895e-102">Procedimiento Crear documentación XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6895e-102">How to: Create XML Documentation in Visual Basic</span></span>
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a><span data-ttu-id="6cc92-102">Cómo: Crear documentación XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6cc92-102">How to: Create XML Documentation in Visual Basic</span></span>
 
-<span data-ttu-id="6895e-103">En este ejemplo se muestra cómo agregar comentarios de documentación XML al código.</span><span class="sxs-lookup"><span data-stu-id="6895e-103">This example shows how to add XML documentation comments to your code.</span></span>
+<span data-ttu-id="6cc92-103">En este ejemplo se muestra cómo agregar comentarios de documentación XML al código.</span><span class="sxs-lookup"><span data-stu-id="6cc92-103">This example shows how to add XML documentation comments to your code.</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a><span data-ttu-id="6895e-104">Para crear documentación XML para un tipo o miembro</span><span class="sxs-lookup"><span data-stu-id="6895e-104">To create XML documentation for a type or member</span></span>
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a><span data-ttu-id="6cc92-104">Para crear documentación XML para un tipo o miembro</span><span class="sxs-lookup"><span data-stu-id="6cc92-104">To create XML documentation for a type or member</span></span>
 
-1. <span data-ttu-id="6895e-105">En el **Editor de código**, coloque el cursor en la línea sobre el tipo o miembro para el que desea crear la documentación.</span><span class="sxs-lookup"><span data-stu-id="6895e-105">In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.</span></span>
+1. <span data-ttu-id="6cc92-105">En el **Editor de código**, coloque el cursor en la línea sobre el tipo o miembro para el que desea crear la documentación.</span><span class="sxs-lookup"><span data-stu-id="6cc92-105">In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.</span></span>
 
-2. <span data-ttu-id="6895e-106">Escriba `'''` (tres comillas simples).</span><span class="sxs-lookup"><span data-stu-id="6895e-106">Type `'''` (three single-quotation marks).</span></span>
+2. <span data-ttu-id="6cc92-106">Escriba `'''` (tres comillas simples).</span><span class="sxs-lookup"><span data-stu-id="6cc92-106">Type `'''` (three single-quotation marks).</span></span>
 
-    <span data-ttu-id="6895e-107">En el **Editor de código**se agrega un esqueleto XML para el tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="6895e-107">An XML skeleton for the type or member is added in the **Code Editor**.</span></span>
+    <span data-ttu-id="6cc92-107">En el **Editor de código**se agrega un esqueleto XML para el tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="6cc92-107">An XML skeleton for the type or member is added in the **Code Editor**.</span></span>
 
-3. <span data-ttu-id="6895e-108">Agregue información descriptiva entre las etiquetas adecuadas.</span><span class="sxs-lookup"><span data-stu-id="6895e-108">Add descriptive information between the appropriate tags.</span></span>
+3. <span data-ttu-id="6cc92-108">Agregue información descriptiva entre las etiquetas adecuadas.</span><span class="sxs-lookup"><span data-stu-id="6cc92-108">Add descriptive information between the appropriate tags.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="6895e-109">Si agrega líneas adicionales en el bloque de documentación XML, cada línea debe comenzar por `'''`.</span><span class="sxs-lookup"><span data-stu-id="6895e-109">If you add additional lines within the XML documentation block, each line must begin with `'''`.</span></span>
+    > <span data-ttu-id="6cc92-109">Si agrega líneas adicionales en el bloque de documentación XML, cada línea debe comenzar con `'''`.</span><span class="sxs-lookup"><span data-stu-id="6cc92-109">If you add additional lines within the XML documentation block, each line must begin with `'''`.</span></span>
 
-4. <span data-ttu-id="6895e-110">Agregue código adicional que use el tipo o el miembro con los nuevos comentarios de documentación XML.</span><span class="sxs-lookup"><span data-stu-id="6895e-110">Add additional code that uses the type or member with the new XML documentation comments.</span></span>
+4. <span data-ttu-id="6cc92-110">Agregue código adicional que use el tipo o el miembro con los nuevos comentarios de documentación XML.</span><span class="sxs-lookup"><span data-stu-id="6cc92-110">Add additional code that uses the type or member with the new XML documentation comments.</span></span>
 
-    <span data-ttu-id="6895e-111">IntelliSense muestra el texto de la \<etiqueta de > de resumen para el tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="6895e-111">IntelliSense displays the text from the \<summary> tag for the type or member.</span></span>
+    <span data-ttu-id="6cc92-111">IntelliSense muestra el texto de la etiqueta de > de \<summary para el tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="6cc92-111">IntelliSense displays the text from the \<summary> tag for the type or member.</span></span>
 
-5. <span data-ttu-id="6895e-112">Compile el código para generar un archivo XML que contenga los comentarios de documentación.</span><span class="sxs-lookup"><span data-stu-id="6895e-112">Compile the code to generate an XML file containing the documentation comments.</span></span> <span data-ttu-id="6895e-113">Para obtener más información, vea [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="6895e-113">For more information, see [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span></span>
+5. <span data-ttu-id="6cc92-112">Compile el código para generar un archivo XML que contenga los comentarios de documentación.</span><span class="sxs-lookup"><span data-stu-id="6cc92-112">Compile the code to generate an XML file containing the documentation comments.</span></span> <span data-ttu-id="6cc92-113">Para obtener más información, vea [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="6cc92-113">For more information, see [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6895e-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="6895e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6cc92-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="6cc92-114">See also</span></span>
 
-- [<span data-ttu-id="6895e-115">Documentar el código con XML</span><span class="sxs-lookup"><span data-stu-id="6895e-115">Documenting Your Code with XML</span></span>](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [<span data-ttu-id="6895e-116">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="6895e-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
-- [<span data-ttu-id="6895e-117">/doc</span><span class="sxs-lookup"><span data-stu-id="6895e-117">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [<span data-ttu-id="6cc92-115">Documentar el código con XML</span><span class="sxs-lookup"><span data-stu-id="6cc92-115">Documenting Your Code with XML</span></span>](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [<span data-ttu-id="6cc92-116">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="6cc92-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="6cc92-117">-doc</span><span class="sxs-lookup"><span data-stu-id="6cc92-117">-doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)
