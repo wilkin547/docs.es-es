@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 4e2f441863d6a8677593a257cdb2cc841634d47c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940925"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523922"
 ---
-# <a name="exception-visual-basic"></a>\<excepción > (Visual Basic)
-Especifica qué excepciones se pueden producir.  
+# <a name="exception-visual-basic"></a>\<exception > (Visual Basic)
+Especifica qué excepciones se pueden iniciar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,12 +29,12 @@ Especifica qué excepciones se pueden producir.
  Una descripción.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `<exception>` etiqueta para especificar qué excepciones se pueden producir. Esta etiqueta se aplica a una definición de método.  
+ Use la etiqueta `<exception>` para especificar qué excepciones se pueden iniciar. Esta etiqueta se aplica a una definición de método.  
   
- Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
+ Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se usa el `<exception>` etiquetas para describir una excepción que el `IntDivide` función puede producir.  
+ En este ejemplo se usa la etiqueta `<exception>` para describir una excepción que la función `IntDivide` puede iniciar.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

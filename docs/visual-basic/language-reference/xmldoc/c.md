@@ -5,15 +5,15 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938598"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523942"
 ---
 # <a name="c-visual-basic"></a>\<c > (Visual Basic)
-Indica que el texto dentro de una descripción es código.  
+Indica que el texto de una descripción es código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -28,12 +28,12 @@ Indica que el texto dentro de una descripción es código.
 |`text`|El texto que le gustaría indicar como código.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<c>` etiqueta ofrece una manera de indicar que el texto dentro de una descripción debe marcarse como código. Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) para indicar varias líneas como código.  
+ La etiqueta `<c>` proporciona una manera de indicar que el texto de una descripción debe marcarse como código. Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) para indicar varias líneas como código.  
   
- Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
+ Compile con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se usa el `<c>` etiqueta en la sección de resumen para indicar que `Counter` es el código.  
+ En este ejemplo se usa la etiqueta `<c>` de la sección Summary para indicar que `Counter` es code.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
