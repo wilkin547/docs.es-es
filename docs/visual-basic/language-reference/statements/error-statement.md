@@ -10,57 +10,57 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7b2adfe7f6b6ff5e89598cb318a90c51595ff6f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944454"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583379"
 ---
 # <a name="error-statement"></a>Error (Instrucción)
 Simula la aparición de un error.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Error errornumber  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `errornumber`  
- Necesario. Puede ser cualquier número de error válido.  
+ Requerido. Puede ser cualquier número de error válido.  
   
 ## <a name="remarks"></a>Comentarios  
- La `Error` instrucción se admite por compatibilidad con versiones anteriores. En el nuevo código, especialmente al crear objetos, utilice `Err` el método `Raise` del objeto para generar errores en tiempo de ejecución.  
+ La instrucción `Error` se admite por compatibilidad con versiones anteriores. En el nuevo código, especialmente al crear objetos, utilice el método `Raise` del objeto `Err` para generar errores en tiempo de ejecución.  
   
- Si `errornumber` se define, la `Error` instrucción llama al controlador de errores `Err` después de que se asignen los siguientes valores predeterminados a las propiedades del objeto:  
+ Si se define `errornumber`, la instrucción `Error` llama al controlador de errores después de que se asignen los siguientes valores predeterminados a las propiedades del objeto `Err`:  
   
-|Propiedad|Value|  
+|Propiedad.|Valor|  
 |--------------|-----------|  
-|`Number`|Valor especificado como argumento para `Error` la instrucción. Puede ser cualquier número de error válido.|  
+|`Number`|Valor especificado como argumento para `Error` instrucción. Puede ser cualquier número de error válido.|  
 |`Source`|Nombre del proyecto de Visual Basic actual.|  
-|`Description`|Expresión de cadena que corresponde al valor devuelto `Error` de la función para `Number`el especificado, si esta cadena existe. Si la cadena no existe, `Description` contiene una cadena de longitud cero ("").|  
+|`Description`|Expresión de cadena que corresponde al valor devuelto de la función `Error` para el `Number` especificado, si esta cadena existe. Si la cadena no existe, `Description` contiene una cadena de longitud cero ("").|  
 |`HelpFile`|La unidad, ruta de acceso y nombre de archivo completos del archivo de ayuda Visual Basic adecuado.|  
-|`HelpContext`|El identificador de contexto del archivo de ayuda Visual Basic adecuado para el error `Number` correspondiente a la propiedad.|  
+|`HelpContext`|El identificador de contexto del archivo de ayuda Visual Basic adecuado para el error correspondiente a la propiedad `Number`.|  
 |`LastDLLError`|Nulo.|  
   
- Si no existe ningún controlador de errores, o si no se habilita ninguno, se crea un mensaje de error `Err` y se muestra en las propiedades del objeto.  
+ Si no existe ningún controlador de errores, o si no se habilita ninguno, se crea un mensaje de error que se muestra en las propiedades del objeto `Err`.  
   
 > [!NOTE]
 > Algunas aplicaciones host de Visual Basic no pueden crear objetos. Consulte la documentación de la aplicación host para determinar si puede crear clases y objetos.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se `Error` utiliza la instrucción para generar el número de error 11.  
+ En este ejemplo se utiliza la instrucción `Error` para generar el número de error 11.  
   
-```  
+```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres**: [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Espacio de nombres:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembl** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Vea también
 

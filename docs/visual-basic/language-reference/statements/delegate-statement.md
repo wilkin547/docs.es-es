@@ -1,5 +1,5 @@
 ---
-title: Delegate (instrucción) (Visual Basic)
+title: Instrucción Delegate (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,41 +7,41 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638224"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583457"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
-Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que hace referencia a un `Shared` método de un tipo o a un método de instancia de un objeto. Cualquier procedimiento con parámetros y tipos devueltos de coincidencia puede utilizarse para crear una instancia de esta clase de delegado. Se invoca el procedimiento por medio de la instancia del delegado.  
+Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace referencia a un método `Shared` de un tipo o a un método de instancia de un objeto. Cualquier procedimiento con parámetros coincidentes y tipos de valor devueltos se puede utilizar para crear una instancia de esta clase de delegado. Posteriormente, el procedimiento se puede invocar mediante la instancia del delegado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] _  
 [ Shadows ] Delegate [ Sub | Function ] name [( Of typeparamlist )] [([ parameterlist ])] [ As type ]  
 ```  
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`attrlist`|Opcional. Lista de atributos que se aplican a este delegado. Los diversos atributos se separan con comas. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares ("`<`"y"`>`").|  
-|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al delegado. Puede ser uno de los siguientes:<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Cualquier código que puede tener acceso al elemento que declara al delegado puede acceder a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md). Sólo el código de la clase del delegado o una clase derivada puede acceder a él.<br />-   [Amigo](../../../visual-basic/language-reference/modifiers/friend.md). Sólo el código dentro del mismo ensamblado puede tener acceso al delegado.<br />- [Privada](../../../visual-basic/language-reference/modifiers/private.md). Sólo el código dentro del elemento que se declara al delegado puede acceder a él.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) solo código dentro de la clase del delegado, una clase derivada o el mismo ensamblado puede tener acceso el delegado. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) solo código dentro de la clase del delegado o en una clase derivada en el mismo ensamblado puede tener acceso el delegado. |  
-|`Shadows`|Opcional. Indica que este delegado vuelve a declarar y oculta un elemento de programación con el mismo nombre o el conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un `Private` elemento oculta o prevalece sobre un elemento de clase base, el código que no tiene permiso para tener acceso a la `Private` elemento tiene acceso al elemento de clase base en su lugar.|  
-|`Sub`|Opcional, pero cualquiera `Sub` o `Function` deben aparecer. Declara este procedimiento como un delegado `Sub` procedimiento que no devuelve un valor.|  
-|`Function`|Opcional, pero cualquiera `Sub` o `Function` deben aparecer. Declara este procedimiento como un delegado `Function` procedimiento que devuelve un valor.|  
-|`name`|Obligatorio. Nombre del tipo delegado. sigue las convenciones de nomenclatura estándares.|  
-|`typeparamlist`|Opcional. Lista de parámetros de tipo para este delegado. Varios parámetros de tipo están separados por comas. Opcionalmente, cada parámetro de tipo se puede declarar variante utilizando `In` y `Out` modificadores genéricos. Debe incluir el [lista tipo](../../../visual-basic/language-reference/statements/type-list.md) entre paréntesis e introdúzcalo con el `Of` palabra clave.|  
-|`parameterlist`|Opcional. Lista de parámetros que se pasan al procedimiento cuando se llama. Debe incluir el [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
-|`type`|Resulta necesario si se especifica un `Function` procedimiento. Tipo de datos del valor devuelto.|  
+|`attrlist`|Opcional. Lista de atributos que se aplican a este delegado. Los diversos atributos se separan con comas. Debe incluir la [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre corchetes angulares ("`<`" y "`>`").|  
+|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al delegado. Puede ser uno de los siguientes:<br /><br /> - [público](../../../visual-basic/language-reference/modifiers/public.md). Cualquier código que pueda tener acceso al elemento que declara el delegado puede tener acceso al mismo.<br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md). Solo el código dentro de la clase del delegado o de una clase derivada puede tener acceso al mismo.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Solo el código del mismo ensamblado puede tener acceso al delegado.<br />- [privado](../../../visual-basic/language-reference/modifiers/private.md). Solo el código dentro del elemento que declara el delegado puede tener acceso al mismo.<br /><br /> -  código solo[Friend protegido](../../language-reference/modifiers/protected-friend.md) dentro de la clase del delegado, una clase derivada o el mismo ensamblado puede tener acceso al delegado. <br />-  código[privado protegido](../../language-reference/modifiers/private-protected.md) solo dentro de la clase del delegado o en una clase derivada del mismo ensamblado puede tener acceso al delegado. |  
+|`Shadows`|Opcional. Indica que este delegado vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un elemento `Private` sombrea un elemento de clase base, el código que no tiene permiso para obtener acceso al elemento `Private` tiene acceso al elemento de clase base en su lugar.|  
+|`Sub`|Opcional, pero debe aparecer `Sub` o `Function`. Declara este procedimiento como un delegado `Sub` procedimiento que no devuelve un valor.|  
+|`Function`|Opcional, pero debe aparecer `Sub` o `Function`. Declara este procedimiento como un delegado `Function` procedimiento que devuelve un valor.|  
+|`name`|Requerido. Nombre del tipo de delegado; sigue las convenciones de nomenclatura de variables estándar.|  
+|`typeparamlist`|Opcional. Lista de parámetros de tipo para este delegado. Varios parámetros de tipo se separan mediante comas. Opcionalmente, cada parámetro de tipo se puede declarar como variante mediante el uso de `In` y `Out` modificadores genéricos. Debe incluir la [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md) entre paréntesis y presentarla con la palabra clave `Of`.|  
+|`parameterlist`|Opcional. Lista de parámetros que se pasan al procedimiento cuando se llama. Debe incluir la [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
+|`type`|Obligatorio si se especifica un procedimiento `Function`. Tipo de datos del valor devuelto.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `Delegate` instrucción define los tipos de parámetro y valor devuelto de una clase de delegado. Cualquier procedimiento con parámetros de coincidencia y tipos de valor devuelto puede utilizarse para crear una instancia de esta clase de delegado. El procedimiento a continuación, más adelante se puede invocar por medio de la instancia del delegado, mediante una llamada al delegado `Invoke` método.  
+ La instrucción `Delegate` define el parámetro y los tipos devueltos de una clase de delegado. Cualquier procedimiento con parámetros coincidentes y tipos de valor devueltos se puede utilizar para crear una instancia de esta clase de delegado. Posteriormente, el procedimiento se puede invocar mediante la instancia de delegado, llamando al método `Invoke` del delegado.  
   
- Los delegados se pueden declarar en el espacio de nombres, módulo, clase o estructura, pero no dentro de un procedimiento.  
+ Los delegados se pueden declarar en el nivel de espacio de nombres, módulo, clase o estructura, pero no dentro de un procedimiento.  
   
  Cada clase delegada define un constructor que se pasa la especificación de un método de objeto. Un argumento para un constructor delegado debe ser una referencia a un método o una expresión lambda.  
   
@@ -60,7 +60,7 @@ Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que
  Para obtener más información sobre los delegados, consulte [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el `Delegate` instrucción para declarar un delegado para operar en dos números y devuelve un número. El `DelegateTest` método toma una instancia de un delegado de este tipo y lo usa para operar en los pares de números.  
+ En el ejemplo siguiente se usa la instrucción `Delegate` para declarar un delegado para que opere con dos números y devolver un número. El método `DelegateTest` toma una instancia de un delegado de este tipo y lo usa para operar en pares de números.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
@@ -69,7 +69,7 @@ Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que
 - [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Cómo: Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

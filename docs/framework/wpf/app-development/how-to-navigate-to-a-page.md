@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Navegar a una página
+title: 'Cómo: navegar a una página'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25a0dbbc609c7b6f8f2878d2068e61e492a59c7e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966027"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582539"
 ---
-# <a name="how-to-navigate-to-a-page"></a>Procedimiento Navegar a una página
-En este ejemplo se muestran varias maneras en las que se puede navegar a una página desde <xref:System.Windows.Navigation.NavigationWindow>un.  
+# <a name="how-to-navigate-to-a-page"></a>Cómo: navegar a una página
+En este ejemplo se muestran varias maneras en las que se puede navegar a una página desde un <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Ejemplo  
- Es posible que un <xref:System.Windows.Navigation.NavigationWindow> navegue a una página mediante una de las siguientes acciones:  
+ Es posible que una <xref:System.Windows.Navigation.NavigationWindow> navegue hasta una página mediante una de las siguientes acciones:  
   
 - Propiedad <xref:System.Windows.Navigation.NavigationWindow.Source%2A>  
   
@@ -29,7 +29,7 @@ En este ejemplo se muestran varias maneras en las que se puede navegar a una pá
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
-> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]puede ser relativo o absoluto. Para obtener más información, vea [Empaquetar URI en WPF](pack-uris-in-wpf.md).  
+> Los identificadores uniformes de recursos (URI) pueden ser relativos o absolutos. Para obtener más información, vea [Empaquetar URI en WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>Vea también
 

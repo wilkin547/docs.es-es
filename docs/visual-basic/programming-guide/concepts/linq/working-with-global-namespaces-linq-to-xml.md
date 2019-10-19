@@ -2,15 +2,15 @@
 title: Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710378"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582359"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
-Una de las características clave de los literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante `Imports` la instrucción. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
+Una de las características clave de los literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante la instrucción `Imports`. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
   
  Esta capacidad es útil en dos situaciones. En primer lugar, los espacios de nombres declarados en los literales XML no se mantienen en expresiones incrustadas. La declaración de espacios de nombres globales reduce la cantidad de trabajo que tiene que realizar para usar expresiones incrustadas con espacios de nombres. En segundo lugar, debe declarar espacios de nombres globales para usar espacios de nombres con propiedades XML.  
   
@@ -134,7 +134,7 @@ Console.WriteLine(root.<Child>.Count())
   
  Este ejemplo indica que no hay elementos `Child`. Genera el siguiente resultado:  
   
-```  
+```console  
 0  
 ```  
   
@@ -156,7 +156,7 @@ End Module
   
  Este ejemplo indica que hay un elemento `Child`. Genera el siguiente resultado:  
   
-```  
+```console  
 1  
 ```  
   
@@ -193,7 +193,7 @@ End Module
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```console  
 http://www.adventure-works.com  
 ```  
   

@@ -26,29 +26,29 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: e8689820d13db173950f8df45431011968899bed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582902"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582083"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrucción ReDim (Visual Basic)
 Reasigna espacio de almacenamiento a una variable de matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |----------|----------------|  
 |`Preserve`|Opcional. Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
-|`name`|Obligatorio. Nombre de la variable de matriz. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Obligatorio. Lista de límites de cada dimensión de la matriz redefinida.|  
+|`name`|Requerido. Nombre de la variable de matriz. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Requerido. Lista de límites de cada dimensión de la matriz redefinida.|  
   
 ## <a name="remarks"></a>Comentarios  
  Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado. Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz. Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
@@ -59,19 +59,19 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Reglas  
   
-- **Varias Variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` para cada variable. Las variables se separan con comas.  
+- **Varias variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` de cada variable. Las variables se separan con comas.  
   
 - **Límites de matriz.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
   
      El número de dimensiones de `boundlist` debe coincidir con el número de dimensiones (rango) de la matriz original.  
   
-- **Tipos de datos.** La instrucción `ReDim` no puede cambiar el tipo de datos de una variable de matriz o de sus elementos.  
+- **Tipos de datos.** La instrucción `ReDim` no puede cambiar el tipo de datos de una variable de matriz o sus elementos.  
   
-- **Inicialización.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
+- **Inicial.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
   
-- **Rango.** La instrucción `ReDim` no puede cambiar el rango (el número de dimensiones) de la matriz.  
+- **Criterios.** La instrucción `ReDim` no puede cambiar el rango (número de dimensiones) de la matriz.  
   
-- **Cambio de tamaño con Preserve.** Si usa `Preserve`, puede cambiar el tamaño únicamente de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
+- **Cambio de tamaño con Preserve.** Si utiliza `Preserve`, solo podrá cambiar el tamaño de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
   
      Por ejemplo, si su matriz tiene solo una dimensión, puede cambiar el tamaño de esa dimensión y conservar todo el contenido de la matriz, ya que es la última y única dimensión. Sin embargo, si su matriz tiene dos o más dimensiones, puede cambiar solamente el tamaño de la última dimensión si utiliza `Preserve`.  
   
@@ -79,11 +79,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Comportamiento  
   
-- **Reemplazo de matriz.** `ReDim` Libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
+- **Reemplazo de matriz.** `ReDim` libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
   
 - **Inicialización sin Preserve.** Si no se especifica `Preserve`, `ReDim` inicializa los elementos de la nueva matriz utilizando el valor predeterminado para su tipo de datos.  
   
-- **Inicialización con Preserve.** Si se especifica `Preserve`, Visual Basic copia los elementos de la matriz existente en la nueva matriz.  
+- **Inicialización con Preserve.** Si especifica `Preserve`, Visual Basic copia los elementos de la matriz existente en la nueva matriz.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente aumenta el tamaño de la última dimensión de una matriz dinámica sin perder los datos existentes en la matriz y, a continuación, reduce el tamaño con pérdida de datos parcial. Por último, reduce el tamaño a su valor original y reinicializa todos los elementos de la matriz.  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  El tercer `ReDim` crea otra nueva matriz y quita otras cinco columnas del final de cada fila en cada capa. Esta vez no copia los elementos existentes. Esta instrucción revierte la matriz a su tamaño original. Dado que la instrucción no incluye el modificador `Preserve`, establece todos los elementos de matriz con sus valores predeterminados originales.  
   
- Para obtener ejemplos adicionales, consulte [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obtener más ejemplos, consulte [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Vea también
 

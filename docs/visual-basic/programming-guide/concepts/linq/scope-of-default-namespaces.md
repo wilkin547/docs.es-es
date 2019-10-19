@@ -2,12 +2,12 @@
 title: Ámbito de los espacios de nombres predeterminados en Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710356"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581882"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Ámbito de los espacios de nombres predeterminados en Visual Basic
 Los espacios de nombres predeterminados del árbol XML no se encuentran en el ámbito de las consultas. Si tiene código XML en un espacio de nombres predeterminado, debe declarar una variable <xref:System.Xml.Linq.XNamespace> y combinarla con el nombre local para convertirla en un nombre completo que se usará en la consulta.  
@@ -50,7 +50,7 @@ End Module
 ### <a name="comments"></a>Comentarios  
  Este ejemplo genera el siguiente resultado:  
   
-```  
+```console  
 Result set follows:  
 End of result set  
 ```  
@@ -91,7 +91,7 @@ End Module
 ### <a name="comments"></a>Comentarios  
  Este ejemplo genera el siguiente resultado:  
   
-```  
+```console  
 Result set follows:  
 1  
 2  

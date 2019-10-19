@@ -1,23 +1,23 @@
 ---
-title: Procedimiento Convertir un objeto a otro tipo en Visual Basic
+title: 'Cómo: Convertir un objeto en otro tipo en Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39083fc55d30e24c357ec162a15466f81655f4c8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600990"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582327"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Procedimiento Convertir un objeto a otro tipo en Visual Basic
-Convierte un `Object` variable a otro tipo de datos con una palabra clave de conversión como [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Cómo: Convertir un objeto en otro tipo en Visual Basic
+Para convertir una variable de `Object` en otro tipo de datos, use una palabra clave de conversión como [CType function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se convierte un `Object` variable a un `Integer` y un `String`.  
+ En el ejemplo siguiente se convierte una variable de `Object` en un `Integer` y un `String`.  
   
-```  
+```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
     Dim anInteger As Integer  
     Dim aString As String  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Si sabe que el contenido de un `Object` son variable de un tipo de datos determinado, es mejor convertir la variable a ese tipo de datos. Si se sigue usando el `Object` variable, se incurre en cualquiera *boxing* y *unboxing* (para un tipo de valor) o *enlace más tarde* (para un tipo de referencia). Estas operaciones toman tiempo de ejecución adicional y ralentizan el rendimiento.  
+ Si sabe que el contenido de una variable `Object` es de un tipo de datos determinado, es mejor convertir la variable a ese tipo de datos. Si continúa usando la variable `Object`, incurrirá en la *conversión boxing* y la conversión *unboxing* (para un tipo de valor) o en el *enlace en tiempo de ejecución* (para un tipo de referencia). Estas operaciones tienen un tiempo de ejecución adicional y hacen que el rendimiento sea más lento.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  

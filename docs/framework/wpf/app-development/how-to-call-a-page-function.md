@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Llamar a una función de página
+title: 'Cómo: Llamar a una función de página'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - page functions [WPF], calling
 - functions [WPF], calling
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
-ms.openlocfilehash: e7c7c5ef98feeb4c5557295d92a8b219d9799865
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f170977860a73d339f2d83bc43992e6e2bc4053f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364158"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582042"
 ---
-# <a name="how-to-call-a-page-function"></a>Procedimiento Llamar a una función de página
-En este ejemplo se muestra cómo llamar a una función de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página desde una página.  
+# <a name="how-to-call-a-page-function"></a>Cómo: Llamar a una función de página
+En este ejemplo se muestra cómo llamar a una función de página desde una página de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- Puede desplazarse a una función de página [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]mediante un, del mismo modo que cuando navega a una página. Esta implementación se muestra en el ejemplo siguiente.  
+ Puede desplazarse a una función de página mediante un identificador uniforme de recursos (URI), al igual que cuando se navega a una página. Esta implementación se muestra en el ejemplo siguiente.  
   
  [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  

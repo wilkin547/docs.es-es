@@ -1,5 +1,5 @@
 ---
-title: Option Compare (instrucción) (Visual Basic)
+title: Option Compare (instrucción Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583513"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581586"
 ---
 # <a name="option-compare-statement"></a>Option Compare (Instrucción)
 Declara el método de comparación predeterminado que se utiliza al comparar datos de cadena.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`Binary`|Opcional. Genera comparaciones de cadenas basadas en un criterio de ordenación que se deriva de las representaciones binarias internas de los caracteres.<br /><br /> Este tipo de comparación es especialmente útil si las cadenas pueden contener caracteres que no serán interpretados como texto. En este caso, no conviene desviar las comparaciones con equivalencias alfabéticas, como la no distinción entre mayúsculas y minúsculas.|  
 |`Text`|Opcional. Genera comparaciones de cadenas basadas en un criterio de ordenación de texto sin distinción entre mayúsculas y minúsculas, determinado por la configuración regional del sistema.<br /><br /> Este tipo de comparación es útil si las cadenas contienen todos los caracteres de texto y si desea compararlas teniendo en cuenta equivalencias alfabéticas, como la no distinción entre mayúsculas y minúsculas y las letras estrechamente relacionadas. Por ejemplo, tal vez le interese considerar que `A` y `a` son iguales, y que `Ä` y `ä` van antes que `B` y `b`.|  
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Cuando la instrucción Option Compare no está presente  
- Si el código fuente no contiene un `Option Compare` instrucción, el **Option Compare** en el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) se utiliza. Si usa el compilador de línea de comandos, la configuración especificada por el [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) se utiliza la opción del compilador.  
+ Si el código fuente no contiene una instrucción `Option Compare`, se usa el valor **Option Compare** en la [Página compilar, el diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Si usa el compilador de línea de comandos, se usa la configuración especificada por la opción del compilador [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) .  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. Haga clic en la pestaña **Compilar**.  
   
-3. Establezca el valor el **Option Compare** cuadro.  
+3. Establezca el valor en el cuadro **Option Compare** .  
   
- Cuando se crea un proyecto, el **Option Compare** en el **compilar** ficha se establece en el **Option Compare** en el **opciones** cuadro de diálogo. Para cambiar esta configuración, en el **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es **binario**.  
+ Al crear un proyecto, el valor **Option Compare** de la pestaña **compilar** se establece en el valor **Option Compare** del cuadro de diálogo **Opciones** . Para cambiar esta configuración, en el menú **herramientas** , haga clic en **Opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. La configuración predeterminada inicial en los **valores predeterminados de VB** es **binaria**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Cómo establecer Option Compare en la línea de comandos  
   
-- Incluir el [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) opción del compilador en el **vbc** comando.  
+- Incluya la opción del compilador [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) en el comando **VBC** .  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente utiliza la instrucción `Option Compare` para establecer la comparación binaria como método predeterminado de comparación de cadenas. Para utilizar este código, quite el comentario de la instrucción `Option Compare Binary` y colóquelo en la parte superior del archivo de origen.  

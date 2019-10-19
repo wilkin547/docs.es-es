@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638199"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583386"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase (Instrucción, Visual Basic)
-Se utiliza para liberar variables de matriz y desasignar la memoria utilizada para sus elementos.  
+Se usa para liberar las variables de matriz y desasignar la memoria usada para sus elementos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Erase arraylist  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `arraylist`  
- Obligatorio. Lista de variables de matriz debe borrarse. Las variables se separan con comas.  
+ Requerido. Lista de variables de matriz que se van a borrar. Las variables se separan con comas.  
   
 ## <a name="remarks"></a>Comentarios  
- El `Erase` instrucción sólo puede aparecer en el nivel de procedimiento. Esto significa que puede publicar matrices dentro de un procedimiento, pero no en el nivel de clase o módulo.  
+ La instrucción `Erase` solo puede aparecer en el nivel de procedimiento. Esto significa que puede liberar matrices dentro de un procedimiento, pero no en el nivel de clase o módulo.  
   
- El `Erase` instrucción es equivalente a asignar `Nothing` a cada variable de matriz.  
+ La instrucción `Erase` es equivalente a asignar `Nothing` a cada variable de matriz.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el `Erase` instrucción borrar dos matrices y liberar su memoria (1000 y 100 elementos de almacenamiento, respectivamente). El `ReDim` instrucción, a continuación, asigna una nueva instancia de matriz a la matriz tridimensional.  
+ En el ejemplo siguiente se usa la instrucción `Erase` para borrar dos matrices y liberar su memoria (elementos de almacenamiento 1000 y 100, respectivamente). A continuación, la instrucción `ReDim` asigna una nueva instancia de la matriz a la matriz tridimensional.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

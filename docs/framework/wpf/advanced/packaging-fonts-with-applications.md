@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 18a8037b6b4433a4a83860eae205174f3036d6e8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c90d554338da21a55f058fdf1ce27b8ee28e682b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005015"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580932"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
 En este tema se proporciona información general sobre cómo empaquetar fuentes con la aplicación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -88,12 +88,12 @@ En este tema se proporciona información general sobre cómo empaquetar fuentes 
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>Hacer referencia a elementos de recursos de fuentes desde el código  
- Para hacer referencia a elementos de recursos de fuentes desde el código, debe proporcionar una referencia de recurso de fuente de dos partes: el @no__t base-0; y la referencia de la ubicación de fuentes. Estos valores se usan como parámetros para el método <xref:System.Windows.Media.FontFamily.%23ctor%2A>. En el ejemplo de código siguiente se muestra cómo hacer referencia a los recursos de fuente de la aplicación en el subdirectorio del proyecto denominado `resources`.  
+ Para hacer referencia a elementos de recursos de fuentes desde el código, debe proporcionar una referencia de recurso de fuente de dos partes: el identificador uniforme de recursos (URI) base; y la referencia de la ubicación de fuentes. Estos valores se utilizan como parámetros para el método <xref:System.Windows.Media.FontFamily.%23ctor%2A>. En el ejemplo de código siguiente se muestra cómo hacer referencia a los recursos de fuente de la aplicación en el subdirectorio del proyecto denominado `resources`.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- El @no__t base-0 puede incluir el subdirectorio de la aplicación donde reside el recurso de fuente. En este caso, la referencia de ubicación de fuentes no necesitaría especificar un directorio, pero tendría que incluir un "`./`" inicial, que indica que el recurso de fuente está en el mismo directorio especificado por el @no__t de base-1. En el ejemplo de código siguiente se muestra una manera alternativa de hacer referencia al elemento de recursos de fuentes: es equivalente al ejemplo de código anterior.  
+ El identificador uniforme de recursos (URI) base puede incluir el subdirectorio de la aplicación donde reside el recurso de fuente. En este caso, la referencia de ubicación de fuentes no necesitaría especificar un directorio, pero tendría que incluir una "`./`" inicial, que indica que el recurso de fuente está en el mismo directorio especificado por el identificador uniforme de recursos (URI). En el ejemplo de código siguiente se muestra una manera alternativa de hacer referencia al elemento de recursos de fuentes: es equivalente al ejemplo de código anterior.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -156,15 +156,15 @@ En este tema se proporciona información general sobre cómo empaquetar fuentes 
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Limitaciones de uso de fuentes  
- En la lista siguiente se describen varias limitaciones en el empaquetado y el uso de fuentes en aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ En la lista siguiente se describen varias limitaciones en el empaquetado y el uso de fuentes en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones:  
   
 - **Bits de permisos de incrustación de fuentes:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no comprueban ni exigen ningún bit de permisos de incrustación de fuentes. Vea la sección [fuentes de Introduction_to_Packing](#introduction_to_packaging_fonts) para obtener más información.  
   
-- **Fuentes de sitio de origen:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no permiten una referencia de fuente a un @no__t de http o FTP-2.  
+- **Fuentes de sitio de origen:** las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no permiten una referencia de fuente a un identificador uniforme de recursos (URI) de http o FTP.  
   
-- **El URI absoluto que usa las aplicaciones Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no permite crear un objeto <xref:System.Windows.Media.FontFamily> mediante programación con "Pack:" como parte de la referencia absoluta [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] a una fuente. Por ejemplo, `"pack://application:,,,/resources/#Pericles Light"` es una referencia de fuente no válida.  
+- **URI absoluto mediante el Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones no le permiten crear un objeto <xref:System.Windows.Media.FontFamily> mediante programación usando "Pack:" como parte de la referencia absoluta del identificador uniforme de recursos (URI) a una fuente. Por ejemplo, `"pack://application:,,,/resources/#Pericles Light"` es una referencia de fuente no válida.  
   
-- **Incrustación de fuentes automática:** Durante el tiempo de diseño, no hay compatibilidad para buscar el uso de las aplicaciones de las fuentes e incrustar automáticamente las fuentes en los recursos de la aplicación.  
+- **Incrustación de fuentes automática:** durante el tiempo de diseño, no hay ninguna compatibilidad para buscar el uso de fuentes de la aplicación ni para incrustar fuentes automáticamente en los recursos de la aplicación.  
   
 - **Subconjuntos de fuentes:** las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admiten la creación de subconjuntos de fuentes para documentos no fijos.  
   
@@ -174,7 +174,7 @@ En este tema se proporciona información general sobre cómo empaquetar fuentes 
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- @no__t 0Microsoft: Vínculos, noticias y contactos @ no__t-0
+- [Tipografía de Microsoft: vínculos, noticias y contactos](https://docs.microsoft.com/typography/)
 - [Especificación OpenType](https://www.microsoft.com/typography/otspec/)
 - [Características de las fuentes OpenType](opentype-font-features.md)
 - [Paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md)

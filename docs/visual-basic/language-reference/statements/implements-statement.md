@@ -1,5 +1,5 @@
 ---
-title: Implements (instrucción) (Visual Basic)
+title: Implements (instrucción Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Implements
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 1f0c6b052ead303e0b43465dac2067422abc4ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 865e99aa0e27591d10fde1465047a2e6bf183bbf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637744"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581788"
 ---
 # <a name="implements-statement"></a>Implements (Instrucción)
-Especifica uno o más interfaces, o miembros de interfaz que deben implementarse en la clase o definición de la estructura en la que aparece.  
+Especifica una o más interfaces, o miembros de interfaz, que se deben implementar en la definición de clase o estructura en la que aparece.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb  
 Implements interfacename [, ...]  
--or-  
+' -or-  
 Implements interfacename.interfacemember [, ...]  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `interfacename`  
- Obligatorio. Una interfaz cuyas propiedades, procedimientos y eventos que se van a ser implementada por los miembros correspondientes en la clase o estructura.  
+ Requerido. Interfaz cuyas propiedades, procedimientos y eventos van a ser implementados por los miembros correspondientes de la clase o estructura.  
   
  `interfacemember`  
- Obligatorio. El miembro de una interfaz que se está implementando.  
+ Requerido. Miembro de una interfaz que se está implementando.  
   
 ## <a name="remarks"></a>Comentarios  
- Una interfaz es una colección de prototipos que representan los miembros (propiedades, procedimientos y eventos) que encapsula la interfaz. Interfaces contienen solo las declaraciones de miembros. las clases y estructuras implementan a estos miembros. Para más información, vea [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Una interfaz es una colección de prototipos que representan los miembros (propiedades, procedimientos y eventos) que la interfaz encapsula. Las interfaces contienen solo las declaraciones de los miembros; las clases y estructuras implementan estos miembros. Para obtener más información, vea [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- El `Implements` instrucción debe seguir inmediatamente el `Class` o `Structure` instrucción.  
+ La instrucción `Implements` debe seguir inmediatamente a la instrucción `Class` o `Structure`.  
   
- Cuando se implementa una interfaz, debe implementar todos los miembros declarados en la interfaz. Si se omite a cualquier miembro se considera un error de sintaxis. Para implementar un miembro individual, especifica el [implementa](../../../visual-basic/language-reference/statements/implements-clause.md) palabra clave (que son independientes de la `Implements` instrucción) cuando se declara el miembro de la clase o estructura. Para más información, vea [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Al implementar una interfaz, debe implementar todos los miembros declarados en la interfaz. Omitir cualquier miembro se considera un error de sintaxis. Para implementar un miembro individual, se especifica la palabra clave [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) (que es independiente de la instrucción `Implements`) cuando se declara el miembro en la clase o estructura. Para obtener más información, vea [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Pueden usar las clases [privada](../../../visual-basic/language-reference/modifiers/private.md) implementaciones de propiedades y procedimientos, pero estos miembros son accesibles por una instancia de la clase de implementación en una variable se declara como del tipo de la interfaz de la conversión.  
+ Las clases pueden utilizar implementaciones [privadas](../../../visual-basic/language-reference/modifiers/private.md) de propiedades y procedimientos, pero solo se puede tener acceso a estos miembros si se convierte una instancia de la clase de implementación en una variable declarada como del tipo de la interfaz.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo usar el `Implements` instrucción para implementar miembros de una interfaz. Define una interfaz denominada `ICustomerInfo` con un evento, una propiedad y un procedimiento. La clase `customerInfo` implementa todos los miembros definidos en la interfaz.  
+ En el ejemplo siguiente se muestra cómo utilizar la instrucción `Implements` para implementar miembros de una interfaz. Define una interfaz denominada `ICustomerInfo` con un evento, una propiedad y un procedimiento. La clase `customerInfo` implementa todos los miembros definidos en la interfaz.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Tenga en cuenta que la clase `customerInfo` usa el `Implements` instrucción en una línea de código fuente independiente para indicar que la clase implementa todos los miembros de la `ICustomerInfo` interfaz. A continuación, cada miembro de la clase usa el `Implements` palabra clave como parte de su declaración de miembro para indicar que implementa ese miembro de interfaz.  
+ Tenga en cuenta que la clase `customerInfo` usa la instrucción `Implements` en una línea de código fuente independiente para indicar que la clase implementa todos los miembros de la interfaz `ICustomerInfo`. Después, cada miembro de la clase usa la palabra clave `Implements` como parte de su declaración de miembro para indicar que implementa ese miembro de interfaz.  
   
 ## <a name="example"></a>Ejemplo  
- Los dos procedimientos siguientes muestran cómo podría utilizar la interfaz implementada en el ejemplo anterior. Para probar la implementación, agregue estos procedimientos para su proyecto y llame a la `testImplements` procedimiento.  
+ Los dos procedimientos siguientes muestran cómo podría usar la interfaz implementada en el ejemplo anterior. Para probar la implementación, agregue estos procedimientos al proyecto y llame al procedimiento `testImplements`.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   

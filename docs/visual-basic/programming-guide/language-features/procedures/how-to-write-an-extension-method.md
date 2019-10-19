@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Escribir un método de extensión (Visual Basic)
+title: 'Cómo: Escribir un método de extensión (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4671728330614f0f3da23fd90f5e635ddcf46578
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004616"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581159"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>Procedimiento Escribir un método de extensión (Visual Basic)
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Cómo: Escribir un método de extensión (Visual Basic)
 
 Los métodos de extensión permiten agregar métodos a una clase existente. Se puede llamar al método de extensión como si fuera una instancia de esa clase.
 
@@ -32,8 +32,8 @@ Los métodos de extensión permiten agregar métodos a una clase existente. Se p
     ```vb
     <Extension()>
     ```
- 
-   Tenga en cuenta que el atributo `Extension` solo se puede aplicar a un método (un procedimiento `Sub` o `Function`) en un [módulo](../../../language-reference/statements/module-statement.md)de Visual Basic. Si se aplica a un método en un `Class` o un `Structure`, el compilador de Visual Basic genera el error [BC36551](../../../misc/bc36551.md), "los métodos de extensión solo se pueden definir en módulos".
+
+    Tenga en cuenta que el atributo `Extension` solo se puede aplicar a un método (un `Sub` o un procedimiento `Function`) en un [módulo](../../../language-reference/statements/module-statement.md)de Visual Basic. Si se aplica a un método en un `Class` o un `Structure`, el compilador de Visual Basic genera el error [BC36551](../../../misc/bc36551.md), "los métodos de extensión solo se pueden definir en módulos".
 
 4. Declare el método de la manera habitual, salvo que el tipo del primer parámetro debe ser el tipo de datos que desea extender.
 
@@ -46,8 +46,8 @@ Los métodos de extensión permiten agregar métodos a una clase existente. Se p
 
 ## <a name="example"></a>Ejemplo
 
- En el ejemplo siguiente se declara un método de extensión en el módulo `StringExtensions`. Un segundo módulo, `Module1`, importa `StringExtensions` y llama al método. El método de extensión debe estar en el ámbito cuando se llama a. El método de extensión `PrintAndPunctuate` extiende la clase <xref:System.String> con un método que muestra la instancia de cadena seguida de una cadena de símbolos de puntuación enviados como parámetro.
-  
+En el ejemplo siguiente se declara un método de extensión en el módulo `StringExtensions`. Un segundo módulo, `Module1`, importa `StringExtensions` y llama al método. El método de extensión debe estar en el ámbito cuando se llama a. El método de extensión `PrintAndPunctuate` extiende la <xref:System.String> clase con un método que muestra la instancia de cadena seguida de una cadena de símbolos de puntuación enviados como parámetro.
+
 ```vb
 ' Declarations will typically be in a separate module.
 Imports System.Runtime.CompilerServices
@@ -68,23 +68,23 @@ End Module
 Imports ConsoleApplication2.StringExtensions
 
 Module Module1
-  
+
     Sub Main()
         Dim example = "Hello"
         example.PrintAndPunctuate("?")
         example.PrintAndPunctuate("!!!!")
     End Sub
-    
+
 End Module
 ```
-  
- Observe que el método se define con dos parámetros y se llama con solo uno. El primer parámetro, `aString`, en la definición del método se enlaza a `example`, la instancia de `String` que llama al método. El resultado del ejemplo es el siguiente:
-  
- ```console
- Hello?
- Hello!!!!
- ```
-  
+
+Observe que el método se define con dos parámetros y se llama con solo uno. El primer parámetro, `aString`, en la definición del método se enlaza a `example`, la instancia de `String` que llama al método. El resultado del ejemplo es el siguiente:
+
+```console
+Hello?
+Hello!!!!
+```
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>

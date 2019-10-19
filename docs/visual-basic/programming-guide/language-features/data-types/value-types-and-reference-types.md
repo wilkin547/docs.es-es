@@ -10,18 +10,18 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 466bb5386235917705344d35c5141c8bf779218d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504881"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582641"
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor y tipos de referencia
-Hay dos clases de tipos en Visual Basic: tipos de referencia y tipos de valor. Las variables de tipos de referencia almacenan referencias en sus datos (objetos), mientras que las variables de tipos de valor contienen directamente los datos. Con los tipos de referencia, dos variables pueden hacer referencia al mismo objeto y, por lo tanto, las operaciones en una variable pueden afectar al objeto al que hace referencia la otra variable. Con los tipos de valor, cada variable tiene su propia copia de los datos y no es posible que las operaciones en una variable afecten a la otra (excepto en el caso de los [modificador ByRef en parámetros](../../../language-reference/modifiers/byref.md)).
+Hay dos tipos de tipos en Visual Basic: tipos de referencia y tipos de valor. Las variables de tipos de referencia almacenan referencias en sus datos (objetos), mientras que las variables de tipos de valor contienen directamente los datos. Con los tipos de referencia, dos variables pueden hacer referencia al mismo objeto y, por lo tanto, las operaciones en una variable pueden afectar al objeto al que hace referencia la otra variable. Con los tipos de valor, cada variable tiene su propia copia de los datos y no es posible que las operaciones en una variable afecten a la otra (excepto en el caso del [modificador ByRef en parámetros](../../../language-reference/modifiers/byref.md)).
   
 ## <a name="value-types"></a>Tipos de valor  
- Un tipo de datos es un *tipo de valor* si almacena los datos en su propia asignación de memoria. Tipos de valor incluyen lo siguiente:  
+ Un tipo de datos es un *tipo de valor* si contiene los datos dentro de su propia asignación de memoria. Entre los tipos de valor se incluyen los siguientes:  
   
 - Todos los tipos de datos numéricos  
   
@@ -29,14 +29,14 @@ Hay dos clases de tipos en Visual Basic: tipos de referencia y tipos de valor. L
   
 - Todas las estructuras, incluso si sus miembros son tipos de referencia  
   
-- Las enumeraciones, ya que su tipo subyacente es siempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, o `ULong`  
+- Las enumeraciones, ya que su tipo subyacente siempre es `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger` o `ULong`  
   
- Cada estructura es un tipo de valor, aunque contenga a los miembros de tipo de referencia. Por este motivo, tipos de valor como `Char` y `Integer` se implementan las estructuras de .NET Framework.  
+ Cada estructura es un tipo de valor, incluso si contiene miembros de tipo de referencia. Por esta razón, las estructuras .NET Framework implementan tipos de valor como `Char` y `Integer`.  
   
- Puede declarar un tipo de valor mediante el uso de la palabra clave reservada de, por ejemplo, `Decimal`. También puede usar el `New` palabra clave para inicializar un tipo de valor. Esto es especialmente útil si el tipo tiene un constructor que toma parámetros. Un ejemplo de esto es el <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> constructor, que compila un nuevo `Decimal` valor de las partes proporcionadas.  
+ Puede declarar un tipo de valor mediante la palabra clave Reserved, por ejemplo, `Decimal`. También puede usar la palabra clave `New` para inicializar un tipo de valor. Esto es especialmente útil si el tipo tiene un constructor que toma parámetros. Un ejemplo de esto es el constructor de <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>, que crea un nuevo valor de `Decimal` a partir de los elementos proporcionados.  
   
 ## <a name="reference-types"></a>Tipos de referencia  
- Un *tipo de referencia* almacena una referencia a sus datos. Tipos de referencia incluyen lo siguiente:  
+ Un *tipo de referencia* almacena una referencia a sus datos. Entre los tipos de referencia se incluyen los siguientes:  
   
 - `String`  
   
@@ -48,29 +48,29 @@ Hay dos clases de tipos en Visual Basic: tipos de referencia y tipos de valor. L
   
  Una clase es un *tipo de referencia*. Tenga en cuenta que cada matriz es un tipo de referencia, incluso si sus miembros son tipos de valor.  
   
- Puesto que cada tipo de referencia representa una clase subyacente de .NET Framework, debe usar el [nuevo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palabra clave durante su inicialización. La instrucción siguiente inicializa una matriz.  
+ Puesto que cada tipo de referencia representa una clase de .NET Framework subyacente, debe usar la palabra clave [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) al inicializarla. La siguiente instrucción Inicializa una matriz.  
   
-```  
+```vb  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
-## <a name="elements-that-are-not-types"></a>Elementos que no son de tipos  
- Los siguientes elementos de programación no se consideran como tipos, porque no se puede especificar cualquiera de ellos como un tipo de datos para un elemento declarado:  
+## <a name="elements-that-are-not-types"></a>Elementos que no son tipos  
+ Los elementos de programación siguientes no se califican como tipos, ya que no se puede especificar ninguno de ellos como un tipo de datos para un elemento declarado:  
   
 - Espacios de nombres  
   
 - Módulos  
   
-- Eventos  
+- Events  
   
 - Propiedades y procedimientos  
   
-- Las variables, constantes y campos  
+- Variables, constantes y campos  
   
-## <a name="working-with-the-object-data-type"></a>Trabajar con el tipo de datos de objeto  
- Puede asignar un tipo de referencia o un tipo de valor a una variable de la `Object` tipo de datos. Un `Object` variable siempre contiene una referencia a los datos, nunca los propios datos. Sin embargo, si asigna un tipo de valor a un `Object` variable, se comporta como si contuviera sus propios datos. Para obtener más información, consulte [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+## <a name="working-with-the-object-data-type"></a>Trabajar con el tipo de datos Object  
+ Puede asignar un tipo de referencia o un tipo de valor a una variable del tipo de datos `Object`. Una variable `Object` siempre contiene una referencia a los datos, nunca los propios datos. Sin embargo, si asigna un tipo de valor a una variable `Object`, se comporta como si tuviera sus propios datos. Para obtener más información, vea [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Puede averiguar si un `Object` variable está actuando como un tipo de referencia o un tipo de valor pasándolo a la <xref:Microsoft.VisualBasic.Information.IsReference%2A> método en el <xref:Microsoft.VisualBasic.Information> clase de la <xref:Microsoft.VisualBasic?displayProperty=nameWithType> espacio de nombres. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Devuelve `True` si el contenido de la `Object` variable representa un tipo de referencia.  
+ Puede averiguar si una variable `Object` está actuando como un tipo de referencia o un tipo de valor pasándola al método <xref:Microsoft.VisualBasic.Information.IsReference%2A> de la clase <xref:Microsoft.VisualBasic.Information> del espacio de nombres <xref:Microsoft.VisualBasic?displayProperty=nameWithType>. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> devuelve `True` si el contenido de la variable `Object` representa un tipo de referencia.  
   
 ## <a name="see-also"></a>Vea también
 

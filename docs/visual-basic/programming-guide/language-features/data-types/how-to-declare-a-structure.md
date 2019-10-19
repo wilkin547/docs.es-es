@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Declarar una estructura (Visual Basic)
+title: 'Cómo: Declarar una estructura (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3090b5b8e53e5a5a990ae11c91464797bde9803
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906716"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582308"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>Procedimiento Declarar una estructura (Visual Basic)
-Comenzar una declaración structure con la [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md), y finaliza con el `End Structure` instrucción. Entre estas dos instrucciones debe declarar al menos una *elemento*. Los elementos pueden ser de cualquier tipo de datos, pero al menos uno debe ser una variable no compartida o un evento no compartido, no personalizado.  
+# <a name="how-to-declare-a-structure-visual-basic"></a>Cómo: Declarar una estructura (Visual Basic)
+Una declaración de estructura se inicia con la [instrucción Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)y finaliza con la instrucción `End Structure`. Entre estas dos instrucciones debe declarar al menos un *elemento*. Los elementos pueden ser de cualquier tipo de datos, pero al menos uno debe ser una variable no compartida o un evento no personalizado no compartido.  
   
- No se puede inicializar cualquiera de los elementos de estructura en la declaración de estructura. Cuando se declara una variable para que sea un tipo de estructura, asignar valores a los elementos mediante el acceso a ellos a través de la variable.  
+ No se puede inicializar ninguno de los elementos de la estructura en la declaración de la estructura. Cuando se declara una variable para que sea de un tipo de estructura, se asignan valores a los elementos accediendo a ellas a través de la variable.  
   
- Para obtener una explicación de las diferencias entre clases y estructuras, vea [estructuras y clases](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Para obtener una explicación de las diferencias entre las estructuras y las clases, vea [estructuras y clases](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Para fines de demostración, considere una situación donde desea realizar un seguimiento de nombre, extensión telefónica y salario del empleado. Una estructura le permite hacer esto en una única variable.  
+ Para fines de demostración, considere una situación en la que desea realizar un seguimiento del nombre de un empleado, la extensión de teléfono y el salario. Una estructura le permite hacer esto en una sola variable.  
   
 ### <a name="to-declare-a-structure"></a>Para declarar una estructura  
   
-1. Cree el comienzo y finalización de instrucciones para la estructura.  
+1. Cree las instrucciones de inicio y finalización de la estructura.  
   
-     Puede especificar el nivel de acceso de una estructura mediante la [pública](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), o [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave, o puede dejar de forma predeterminada `Public`.  
+     Puede especificar el nivel de acceso de una estructura mediante la palabra clave [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)o [Private](../../../../visual-basic/language-reference/modifiers/private.md) , o puede dejar que se `Public` de forma predeterminada.  
   
-    ```  
+    ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Agregar elementos al cuerpo de la estructura.  
+2. Agregue elementos al cuerpo de la estructura.  
   
-     Una estructura debe tener al menos un elemento. Debe declarar todos los elementos y especificar un nivel de acceso para él. Si usas el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sin palabras clave, valores predeterminados de la accesibilidad a `Public`.  
+     Una estructura debe tener al menos un elemento. Debe declarar cada elemento y especificar un nivel de acceso para él. Si usa la [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sin palabras clave, el valor predeterminado de accesibilidad es `Public`.  
   
-    ```  
+    ```vb  
     Private Structure employee  
         Public givenName As String  
         Public familyName As String  
@@ -51,16 +51,16 @@ Comenzar una declaración structure con la [Structure (instrucción)](../../../.
     End Structure  
     ```  
   
-     El `salary` campo en el ejemplo anterior es `Private`, lo que significa que no es accesible fuera de la estructura, incluso desde la clase contenedora. Sin embargo, el `giveRaise` procedimiento es `Public`, por lo que se puede llamar desde fuera de la estructura. De forma similar, puede elevar la `salaryReviewTime` evento desde fuera de la estructura.  
+     El campo `salary` del ejemplo anterior es `Private`, lo que significa que es inaccesible fuera de la estructura, incluso desde la clase contenedora. Sin embargo, el procedimiento `giveRaise` es `Public`, por lo que se puede llamar desde fuera de la estructura. Del mismo modo, puede generar el evento `salaryReviewTime` desde fuera de la estructura.  
   
-     Además de las variables, `Sub` procedimientos y eventos, también puede definir constantes, `Function` procedimientos y propiedades en una estructura. Puede designar como máximo una propiedad como el *propiedad predeterminada*, siempre que tarda al menos un argumento. Puede controlar un evento con un [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedimiento. Para obtener más información, vea [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     Además de las variables, los procedimientos de `Sub` y los eventos, también puede definir constantes, procedimientos de `Function` y propiedades en una estructura. Puede designar como máximo una propiedad como la *propiedad predeterminada*, siempre que tome al menos un argumento. Puede controlar un evento con un procedimiento [compartido](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`. Para obtener más información, vea [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Variables de estructura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
