@@ -7,32 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 04c94d3d32660d1a186a9bb377c49a53e1451be6
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512734"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582823"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>La cláusula Handles requiere una variable WithEvents definida en el tipo contenedor o en uno de sus tipos base
-No proporcionó una `WithEvents` variable en la `Handles` cláusula. La `Handles` palabra clave al final de una declaración de procedimiento hace que controle los eventos generados por una variable de `WithEvents` objeto declarada mediante la palabra clave.
-  
- **IDENTIFICADOR de error:** BC30506
+
+No proporcionó una variable `WithEvents` en la cláusula `Handles`. La palabra clave `Handles` al final de una declaración de procedimiento hace que controle los eventos generados por una variable de objeto declarada mediante la palabra clave `WithEvents`.
+
+**Identificador de error:** BC30506
 
 ## <a name="to-correct-this-error"></a>Para corregir este error
-  
-- Proporcione la variable `WithEvents` necesaria.
-  
+
+Proporcione la variable de `WithEvents` necesaria.
+
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, Visual Basic genera un error `BC30506` del compilador porque la palabra clave [WithEvents](../modifiers/withevents.md) no se utiliza <xref:System.Timers.Timer?displayProperty=nameWithType> en la definición de la instancia.
+En el ejemplo siguiente, Visual Basic genera `BC30506` de error del compilador porque la palabra clave [WithEvents](../modifiers/withevents.md) no se utiliza en la definición de la instancia de <xref:System.Timers.Timer?displayProperty=nameWithType>.
 
 ```vb
 Imports System.Timers
 
 Module Module1
     Private _timer1 As New Timer() With {.Interval = 1000, .Enabled = True}
-    
+
     Sub Main()
         Console.WriteLine("Press any key to start the timer...")
         Console.ReadKey()
@@ -46,7 +47,7 @@ Module Module1
 End Module
 ```
 
-En el ejemplo siguiente se compila correctamente porque la `_timer1` variable se define con la `WithEvents` palabra clave:
+El ejemplo siguiente se compila correctamente porque la variable `_timer1` se define con la palabra clave `WithEvents`:
 
 ```vb
 Imports System.Timers

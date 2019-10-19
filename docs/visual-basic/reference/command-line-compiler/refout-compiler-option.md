@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: f2cdd228d8ce1912abbbe888c29c42f29299ebba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788796"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582874"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -28,15 +28,16 @@ La opción **-refout** especifica una ruta de archivo donde el ensamblado de ref
 
 ## <a name="arguments"></a>Argumentos
 
- `filepath` La ruta de acceso y el nombre del ensamblado de referencia. Por lo general debe ser en una subcarpeta del ensamblado principal. La convención recomendada (que se usa por MSBuild) es colocar el ensamblado de referencia en una subcarpeta "ref/" con relación al ensamblado principal. Todas las carpetas de `filepath` debe existir; el compilador no los crea. 
+`filepath`  
+Ruta de acceso y nombre de archivo del ensamblado de referencia. Por lo general, debe estar en una subcarpeta del ensamblado principal. La convención recomendada (que se usa por MSBuild) es colocar el ensamblado de referencia en una subcarpeta "ref/" con relación al ensamblado principal. Todas las carpetas de `filepath` deben existir; el compilador no los crea.
 
 ## <a name="remarks"></a>Comentarios
 
-Visual Basic admite la `-refout` cambiar comenzando con la versión 15.3.
+Visual Basic admite el modificador de `-refout` a partir de la versión 15,3.
 
-Los ensamblados de referencia son solo metadatos de los ensamblados que contienen metadatos pero ningún código de implementación. Incluyen información de los tipos y miembros para todo excepto los tipos anónimos. Sus cuerpos de método se reemplazan con una sola `throw null` instrucción. La razón para usar `throw null` cuerpos de método (en lugar de usar ningún cuerpo) es para que PEVerify pueda ejecutar y pasar (, por tanto, validar la integridad de los metadatos).
+Los ensamblados de referencia son ensamblados de solo metadatos que contienen metadatos pero no código de implementación. Incluyen información de tipo y miembro para todo excepto los tipos anónimos. Sus cuerpos de método se reemplazan por una única instrucción `throw null`. El motivo por el que se usa `throw null` cuerpos de método (no en lugar de cuerpos) es para que PEVerify pueda ejecutarse y pasarse (con lo que se valida la integridad de los metadatos).
 
-Los ensamblados de referencia incluyen un nivel de ensamblado [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo. Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo). Debido a este atributo, los tiempos de ejecución no carga ensamblados de referencia para la ejecución (pero todavía se pueden cargar en un contexto de solo reflexión). Las herramientas que se reflejan en los ensamblados deben asegurarse de que cargan los ensamblados de referencia como de solo reflexión; en caso contrario, el runtime produce una <xref:System.BadImageFormatException>.
+Los ensamblados de referencia incluyen un atributo [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) de nivel de ensamblado. Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo). Debido a este atributo, los tiempos de ejecución rechazan la carga de ensamblados de referencia para su ejecución (pero todavía se pueden cargar en un contexto de solo reflexión). Las herramientas que reflejan en los ensamblados deben asegurarse de que cargan los ensamblados de referencia como solo reflexión. de lo contrario, el tiempo de ejecución produce una <xref:System.BadImageFormatException>.
 
 Las opciones `-refout` y [`-refonly`](refonly-compiler-option.md) son mutuamente excluyentes.
 
