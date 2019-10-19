@@ -7,37 +7,38 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: e8a8fb571fa65228f3a0acec1f902d21eb9bfe04
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 50d5a768393e90d28d150b451405e35e6f4c7953
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268308"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583042"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Especifica que una o más variables de miembro declaradas hacen referencia a una instancia de una clase que puede provocar eventos.  
-  
-## <a name="remarks"></a>Comentarios  
- Cuando una variable se define utilizando `WithEvents`, puede especificar mediante declaración que un método controla los eventos de la variable mediante el `Handles` palabra clave.  
-  
- Puede usar `WithEvents` sólo en el nivel de clase o módulo. Esto significa que el contexto de declaración de un `WithEvents` variable debe ser una clase o módulo y no puede ser un archivo de código fuente, el espacio de nombres, la estructura o el procedimiento.  
-  
- No puede usar `WithEvents` en un miembro de estructura.  
-  
- Puede declarar solo las variables individuales, no las matrices, con `WithEvents`.  
-  
-## <a name="rules"></a>Reglas  
-  
-- **Tipos de elemento.** Debe declarar `WithEvents` variables como variables de objeto para que puedan aceptar instancias de clase. Sin embargo, no se puede declarar como `Object`. Se debe declarar como la clase específica que puede provocar los eventos.  
-  
- El `WithEvents` modificador se puede usar en este contexto: [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)  
- 
+Especifica que una o varias variables de miembro declaradas hacen referencia a una instancia de una clase que puede generar eventos.
+
+## <a name="remarks"></a>Comentarios
+
+Cuando una variable se define utilizando `WithEvents`, puede especificar mediante declaración que un método controla los eventos de la variable mediante la palabra clave `Handles`.
+
+Solo se puede usar `WithEvents` en el nivel de clase o módulo. Esto significa que el contexto de la declaración de una variable `WithEvents` debe ser una clase o módulo y no puede ser un archivo de código fuente, un espacio de nombres, una estructura o un procedimiento.
+
+No se puede usar `WithEvents` en un miembro de estructura.
+
+Solo se pueden declarar variables individuales, no matrices, con `WithEvents`.
+
+## <a name="rules"></a>Reglas
+
+**Tipos de elemento.** Debe declarar `WithEvents` variables como variables de objeto para que puedan aceptar instancias de clase. Sin embargo, no puede declararlos como `Object`. Debe declararlos como la clase específica que puede provocar los eventos.
+
+El modificador `WithEvents` se puede usar en este contexto: [instrucción Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+
 ## <a name="example"></a>Ejemplo
 
-```VB
+```vb
 Dim WithEvents app As Application
 ```
-  
+
 ## <a name="see-also"></a>Vea también
 
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

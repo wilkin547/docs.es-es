@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Eliminar un recurso de sistema (Visual Basic)
+title: 'Cómo: Deshacerse de un recurso del sistema (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906742"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583142"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedimiento Eliminar un recurso de sistema (Visual Basic)
-Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso al que el código sale del bloque. Esto es útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria o que otros componentes que desee utilizar.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Cómo: Deshacerse de un recurso del sistema (Visual Basic)
+Puede usar un bloque `Using` para garantizar que el sistema desecha un recurso cuando el código sale del bloque. Esto resulta útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria, o que otros componentes también desean usar.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando lo esté utilizando el código  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando el código finaliza con ella  
   
-1. Asegúrese de incluir la correspondiente [instrucción Imports (tipo y Namespace. NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para la conexión de base de datos al principio del archivo de origen (en este caso, <xref:System.Data.SqlClient>).  
+1. Asegúrese de incluir la [instrucción Imports (espacio de nombres y tipo .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) adecuada para la conexión de base de datos al principio del archivo de código fuente (en este caso, <xref:System.Data.SqlClient>).  
   
-2. Crear un `Using` bloquear con el `Using` y `End Using` instrucciones. Dentro del bloque, coloque el código que se ocupa de la conexión de base de datos.  
+2. Cree un bloque `Using` con las instrucciones `Using` y `End Using`. Dentro del bloque, coloque el código que se ocupa de la conexión de base de datos.  
   
-3. Declare la conexión y cree una instancia de ella como parte de la `Using` instrucción.  
+3. Declare la conexión y cree una instancia de ella como parte de la instrucción `Using`.  
   
-    ```  
+    ```vb  
     ' Insert the following line at the beginning of your source file.  
     Imports System.Data.SqlClient  
     Public Sub AccessSql(ByVal s As String)  
@@ -38,11 +38,11 @@ Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso a
     End Sub  
     ```  
   
-     El sistema elimina el recurso independientemente de cómo salga del bloque, incluido el caso de una excepción no controlada.  
+     El sistema desecha el recurso independientemente de cómo salga del bloque, incluido el caso de una excepción no controlada.  
   
-     Tenga en cuenta que no se puede obtener acceso a `sqc` desde fuera de la `Using` block, porque su ámbito se limite al bloque.  
+     Tenga en cuenta que no puede tener acceso a `sqc` desde fuera del bloque de `Using`, porque su ámbito está limitado al bloque.  
   
-     Puede usar esta misma técnica en un recurso del sistema como un identificador de archivo o un contenedor COM. Usa un `Using` bloquear cuando para asegurarse de que desea que deje el recurso disponible para otros componentes una vez que haya salido el `Using` bloque.  
+     Puede usar esta misma técnica en un recurso del sistema, como un identificador de archivo o un contenedor COM. Use un bloque de `Using` cuando desee asegurarse de dejar el recurso disponible para otros componentes después de salir del bloque de `Using`.  
   
 ## <a name="see-also"></a>Vea también
 
