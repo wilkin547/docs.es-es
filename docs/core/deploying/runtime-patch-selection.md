@@ -4,12 +4,12 @@ description: Obtenga información sobre los cambios de dotnet publish para imple
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656302"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522086"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Puesta al día del runtime de implementación autocontenida
 
@@ -28,8 +28,8 @@ Las [implementaciones de aplicaciones autocontenidas](index.md) de .NET Core inc
 
 Ejecutar `restore` como parte de la operación `publish` puede no ser adecuado para su escenario. Para evitar `restore` durante `publish` al crear aplicaciones autocontenidas, haga lo siguiente:
 
-* Establezca la propiedad `RuntimeIdentifiers` en una lista separada por punto y coma de todos los [RID](../rid-catalog.md) que se van a publicar.
-* Establezca la propiedad `TargetLatestRuntimePatch` en `true`.
+- Establezca la propiedad `RuntimeIdentifiers` en una lista separada por punto y coma de todos los [RID](../rid-catalog.md) que se van a publicar.
+- Establezca la propiedad `TargetLatestRuntimePatch` en `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Argumento no-restore con opciones de dotnet publish
 

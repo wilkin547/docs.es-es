@@ -4,12 +4,12 @@ description: Información general sobre la herramienta dotnet-svcutil de WCF de 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117252"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522832"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Herramienta dotnet-svcutil de WCF para .NET Core
 
@@ -28,19 +28,19 @@ La herramienta **dotnet-svcutil** es una alternativa al proveedor de servicios c
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-* [SDK de .NET Core 2.1](https://dotnet.microsoft.com/download) o versiones posteriores
-* Su editor de código favorito
+- [SDK de .NET Core 2.1](https://dotnet.microsoft.com/download) o versiones posteriores
+- Su editor de código favorito
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-* [SDK de .NET Core 1.0.4](https://dotnet.microsoft.com/download) o versiones posteriores
-* Su editor de código favorito
+- [SDK de .NET Core 1.0.4](https://dotnet.microsoft.com/download) o versiones posteriores
+- Su editor de código favorito
 
 ---
 
 ## <a name="getting-started"></a>Introducción
 
-En el ejemplo siguiente se le guía por los pasos necesarios para agregar una referencia de servicio web a un proyecto web de .NET Core e invocar el servicio. Creará una aplicación web de .NET Core denominada _HelloSvcutil_ y agregará una referencia a un servicio web que implementa el siguiente contrato:
+En el ejemplo siguiente se le guía por los pasos necesarios para agregar una referencia de servicio web a un proyecto web de .NET Core e invocar el servicio. Creará una aplicación web de .NET Core denominada *HelloSvcutil* y agregará una referencia a un servicio web que implementa el siguiente contrato:
 
 ```csharp
 [ServiceContract]
@@ -177,8 +177,8 @@ Si tiene preguntas o comentarios, [abra un problema en GitHub](https://github.co
 
 ## <a name="release-notes"></a>Notas de la versión
 
-* Eche un vistazo a las [notas de la versión](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) para obtener información actualizada sobre la versión, incluidos los problemas conocidos.
+- Eche un vistazo a las [notas de la versión](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) para obtener información actualizada sobre la versión, incluidos los problemas conocidos.
 
 ## <a name="information"></a>Información
 
-* [Paquete NuGet svcutil dotnet](https://nuget.org/packages/dotnet-svcutil)
+- [Paquete NuGet svcutil dotnet](https://nuget.org/packages/dotnet-svcutil)

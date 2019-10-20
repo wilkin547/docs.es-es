@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo empaquetar, nombrar y versionar .N
 author: tmds
 ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250143"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393582"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 
@@ -72,7 +72,7 @@ Aunque hay un único host, la mayoría del resto de componentes está en directo
 
 - (3) **sdk/\<versión sdk>** : el SDK (también conocido como "las herramientas") es un conjunto de herramientas administradas que se usan para escribir y compilar aplicaciones y bibliotecas de .NET Core. El SDK incluye la interfaz de línea de comandos (CLI) de .NET Core, los compiladores de lenguajes administrados, MSBuild y las tareas y los destinos de compilación asociados, NuGet, nuevas plantillas de proyecto, etcétera.
 
-- (4) **sdk/NuGetFallbackFolder**: contiene una caché de paquetes NuGet que un SDK usa durante la operación de restauración, como cuando se ejecuta `dotnet restore` o `dotnet build /t:Restore`. Esta carpeta solo se usa antes de .NET Core 3.0. No se puede compilar desde el origen, porque contiene recursos binarios compilados previamente desde `nuget.org`.
+- (4) **sdk/NuGetFallbackFolder**: contiene una caché de paquetes NuGet que un SDK usa durante la operación de restauración, como cuando se ejecuta `dotnet restore` o `dotnet build`. Esta carpeta solo se usa antes de .NET Core 3.0. No se puede compilar desde el origen, porque contiene recursos binarios compilados previamente desde `nuget.org`.
 
 La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjunto de bibliotecas en una ubicación central para que las puedan usar diferentes aplicaciones.
 

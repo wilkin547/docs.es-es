@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2692a83ff351557889d4d573b6f7cddfe6739983
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929176"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523948"
 ---
 # <a name="voice-and-tone-guidelines"></a>Instrucciones de voz y tono
 
@@ -23,22 +23,28 @@ Puedes ver ejemplos de cada una de ellas conforme leas esta guía de estilo. Hem
 ## <a name="details-on-each-guideline"></a>Más información sobre cada directriz
 
 ### <a name="use-a-conversational-tone"></a>Utiliza un tono de conversación
+
 #### <a name="appropriate-style"></a>Estilo apropiado:
+
 Queremos que nuestra documentación tenga un tono de conversación. Debería dar la impresión de que estás teniendo una conversación con el autor conforme lees cualquiera de nuestros tutoriales o explicaciones.
 Para ti, la experiencia debe ser informal, con tono de conversación e informativa. Los lectores de deben sentir como si estuvieran escuchando al autor explicar los conceptos.
 
 #### <a name="inappropriate-style"></a>Estilo inapropiado:
-Es posible ver la diferencia entre un estilo de conversación y el estilo que se encuentra con tratamientos más académicos de temas técnicos. Estos recursos son muy útiles, pero los autores han escrito esos artículos en un estilo muy diferente al de nuestra documentación. Al leer una publicación académica, encontramos un tono muy diferente y un estilo de escritura muy distinto.
-Los lectores sienten que están leyendo un relato aburrido de un tema muy aburrido.  
 
-El primer párrafo anterior sigue nuestro estilo de conversación recomendado. El segundo tiene un estilo más académico. Es posible ver la diferencia inmediatamente. 
+Es posible ver la diferencia entre un estilo de conversación y el estilo que se encuentra con tratamientos más académicos de temas técnicos. Estos recursos son muy útiles, pero los autores han escrito esos artículos en un estilo muy diferente al de nuestra documentación. Al leer una publicación académica, encontramos un tono muy diferente y un estilo de escritura muy distinto.
+Los lectores sienten que están leyendo un relato aburrido de un tema muy aburrido.
+
+El primer párrafo anterior sigue nuestro estilo de conversación recomendado. El segundo tiene un estilo más académico. Es posible ver la diferencia inmediatamente.
 
 ### <a name="write-in-second-person"></a>Escribir en segunda persona
+
 #### <a name="appropriate-style"></a>Estilo apropiado:
+
 Debes escribir tus artículos como si hablaras directamente con el lector. Debes usar la segunda persona con frecuencia (que acabo de hacer en estas dos oraciones). La segunda persona no siempre significa el uso de la palabra 'tú'. Escribe directamente al lector. Escribe oraciones imperativas.
 Indica al lector lo que deseas que aprendan.
 
-#### <a name="inappropriate-style"></a>Estilo inapropiado: 
+#### <a name="inappropriate-style"></a>Estilo inapropiado:
+
 Un autor también podría optar por escribir en tercera persona. En este modelo, un autor debe buscar algunos pronombres o sustantivos para utilizar al hacer referencia al lector. A menudo, un lector puede encontrar que este estilo de tercera persona es menos atractivo y menos agradable a leer.
 
 El primer párrafo sigue nuestro estilo recomendado. El segundo usa la tercera persona. Escribe en segunda persona. Probablemente te resultará más fácil leerlo.
@@ -63,10 +69,12 @@ Estás llegando a un público internacional con tus artículos. Ten en cuenta qu
 
 Sin embargo, también escribes para profesionales técnicos. Se puede suponer que los lectores tienen conocimientos de programación y el vocabulario de términos de programación específico. Programación orientada a objetos, clase y objeto, función y método serán términos conocidos. Sin embargo, no todos los usuarios que leen los artículos tienen una carrera en informática. Probablemente deberás definir términos como 'idempotente' si los utilizas:
 
->El método Close() es idempotente, lo que significa que se puede llamar varias veces y el efecto es el mismo que si se llamase una vez.
+> El método Close() es idempotente, lo que significa que se puede llamar varias veces y el efecto es el mismo que si se llamase una vez.
 
 ### <a name="avoid-future-tense"></a>Evita el tiempo verbal futuro
+
 En ciertos idiomas distintos del inglés, el concepto del tiempo verbal futuro no es igual que en inglés. Usar el futuro puede hacer que sea más difícil leer los documentos. Además, cuando se usa el futuro, la pregunta obvia es "¿Cuándo?". Por lo tanto, si dices "Aprender PowerShell será bueno para ti", la pregunta obvia para el lector es "¿Cuándo será bueno?". En vez de eso, simplemente tienes que decir "Aprender PowerShell es bueno para ti".
 
 ### <a name="what-is-it---so-what"></a>¿Qué es? ¿Y qué?
-Siempre que presentes un concepto nuevo al lector, defínelo y solo entonces explica por qué es útil. Es importante que el lector entienda qué es algo antes de que pueda entender las ventajas que tiene. 
+
+Siempre que presentes un concepto nuevo al lector, defínelo y solo entonces explica por qué es útil. Es importante que el lector entienda qué es algo antes de que pueda entender las ventajas que tiene.

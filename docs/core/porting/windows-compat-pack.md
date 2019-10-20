@@ -4,12 +4,12 @@ description: Obtenga información sobre el paquete de compatibilidad de Windows 
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202563"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521282"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Uso del paquete de compatibilidad de Windows para trasladar código a .NET Core
 
@@ -25,23 +25,23 @@ El *paquete de compatibilidad de Windows* se proporciona mediante el paquete NuG
 
 Proporciona unas 20.000 API, incluidas API solo de Windows y API de varias plataformas de las siguientes áreas tecnológicas:
 
-* Páginas de códigos
-* CodeDom
-* Configuración
-* Servicios de directorio
-* Dibujo
-* ODBC
-* Permisos
-* Puertos
-* Listas de control de acceso (ACL) de Windows
-* Windows Communication Foundation (WCF)
-* Criptografía de Windows
-* Registro de eventos de Windows
-* Instrumental de administración de Windows (WMI)
-* Contadores de rendimiento de Windows
-* Registro de Windows
-* Memoria caché de tiempo de ejecución de Windows
-* servicios de Windows
+- Páginas de códigos
+- CodeDom
+- Configuración
+- Servicios de directorio
+- Dibujo
+- ODBC
+- Permisos
+- Puertos
+- Listas de control de acceso (ACL) de Windows
+- Windows Communication Foundation (WCF)
+- Criptografía de Windows
+- Registro de eventos de Windows
+- Instrumental de administración de Windows (WMI)
+- Contadores de rendimiento de Windows
+- Registro de Windows
+- Memoria caché de tiempo de ejecución de Windows
+- servicios de Windows
 
 Para más información, vea las [especificaciones del paquete de compatibilidad](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 

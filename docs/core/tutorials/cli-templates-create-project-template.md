@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926135"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318278"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Creación de una plantilla de proyecto
 
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>Prueba de la plantilla de proyecto
 
-Ahora que tiene instalada una plantilla de elemento, pruébela. Vaya a la carpeta _test/_ y cree una aplicación de consola con `dotnet new console`. Esto genera un proyecto de trabajo que puede probar fácilmente con el comando `dotnet run`.
+Ahora que tiene instalada una plantilla de elemento, pruébela. Vaya a la carpeta _test/_ y cree una aplicación de consola con `dotnet new consoleasync`. Esto genera un proyecto de trabajo que puede probar fácilmente con el comando `dotnet run`.
 
 ```console
 C:\test> dotnet new consoleasync

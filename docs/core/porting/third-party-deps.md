@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo analizar dependencias externas par
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904334"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521476"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Análisis de las dependencias para trasladar código a .NET Core
 
@@ -20,8 +20,8 @@ Para trasladar el código a .NET Core o .NET Standard, debe comprender las depen
 Si hace referencia a paquetes NuGet en el proyecto, debe comprobar si son compatibles con .NET Core.
 Hay dos maneras de hacerlo:
 
-* [A través de la aplicación NuGet Package Explorer](#analyze-nuget-packages-using-nuget-package-explorer)
-* [A través del sitio de nuget.org](#analyze-nuget-packages-using-nugetorg)
+- [A través de la aplicación NuGet Package Explorer](#analyze-nuget-packages-using-nuget-package-explorer)
+- [A través del sitio de nuget.org](#analyze-nuget-packages-using-nugetorg)
 
 Después de analizar los paquetes, si no son compatibles con .NET Core y solo se centran en .NET Framework, puede comprobar si el [modo de compatibilidad de .NET Framework](#net-framework-compatibility-mode) le puede ayudar con el proceso de portabilidad.
 

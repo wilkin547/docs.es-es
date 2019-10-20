@@ -2,18 +2,19 @@
 title: Arquitectura de las herramientas de la línea de comandos de .NET Core
 description: Obtenga información sobre las capas de herramientas de .NET Core y sobre lo que ha cambiado en versiones recientes.
 ms.date: 03/06/2017
-ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 05183a9edc26615e00d6383043fd10d8bec06f2b
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675698"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521310"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Introducción de alto nivel de los cambios en las herramientas de .NET Core
 
 En este documento se describen los cambios asociados con el traslado de *project.json* a MSBuild y al sistema del proyecto *csproj* con información sobre los cambios realizados en las capas de las herramientas de .NET Core y en la implementación de los comandos de la CLI. Estos cambios se han producido con la versión de .NET Core SDK 1.0 y Visual Studio 2017 de 7 de marzo de 2017 (vea el [anuncio](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)), pero se han implementado inicialmente con la versión de .NET Core SDK Preview 3.
 
 ## <a name="moving-away-from-projectjson"></a>Abandono de project.json
+
 El cambio más importante en las herramientas para .NET Core es ciertamente el [abandono de project.json en favor de csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) como sistema de proyectos. Las últimas versiones de las herramientas de línea de comandos no admiten archivos *project.json*. Esto significa que no puede utilizarse para compilar, ejecutar o publicar bibliotecas y aplicaciones basadas en project.json. Para poder utilizar esta versión de las herramientas, debe migrar los proyectos existentes o iniciar otros nuevos. 
 
 Como parte de este proceso, el motor de compilación personalizado que se desarrolló para compilar proyectos de project.json se ha reemplazado por un motor de compilación maduro y totalmente compatible llamado [MSBuild](https://github.com/Microsoft/msbuild). MSBuild es un motor conocido en la comunidad. NET, ya que ha sido una tecnología clave desde el primer lanzamiento de la plataforma. Por supuesto, como debe compilar aplicaciones .NET Core, MSBuild se ha trasladado a .NET Core y puede utilizarse en cualquier plataforma donde se ejecute .NET Core. Una de las promesas principales de .NET Core es una pila de desarrollo multiplataforma, y nos hemos asegurado de que esta transición no rompa esa promesa.
@@ -22,6 +23,7 @@ Como parte de este proceso, el motor de compilación personalizado que se desarr
 > Si no está familiarizado con MSBuild y quiere aprender más al respecto, puede empezar por leer el artículo [Conceptos de MSBuild](/visualstudio/msbuild/msbuild-concepts). 
 
 ## <a name="the-tooling-layers"></a>Las capas de herramientas
+
 Cuando nos alejamos del sistema de proyecto existente y pensamos en la compilación de modificadores del motor, la pregunta que surge de manera natural es: ¿cambiarán algunos de estos cambios la "disposición en capas" general del ecosistema completo de herramientas de .NET Core? ¿Hay nuevos bits y componentes?
 
 Comencemos con un repaso rápido de la disposición en capas de Preview 2, como se muestra en la siguiente imagen:
@@ -46,23 +48,27 @@ El componente de SDK compartido implica que la mayoría de los comandos de la CL
 
 Desde una perspectiva del uso, no cambia la forma de usar la CLI. La CLI sigue teniendo los comandos principales que existen en la versión Preview 2:
 
-* `new`
-* `restore`
-* `run` 
-* `build`
-* `publish`
-* `test`
-* `pack` 
+- `new`
+- `restore`
+- `run` 
+- `build`
+- `publish`
+- `test`
+- `pack` 
 
 Estos comandos todavía hacen lo que se espera que hagan (crear un nuevo proyecto, compilarlo, publicarlo, empaquetarlo, etc.). La mayoría de las opciones no varían y siguen ahí. Puede consultar las pantallas de ayuda de los comandos (mediante `dotnet <command> --help`) o la documentación de este sitio para familiarizarse con los cambios. 
 
 Desde una perspectiva de la ejecución, los comandos de la CLI tomarán sus parámetros y construirán una llamada a MSBuild "sin procesar" que establecerá las propiedades necesarias y ejecutará el destino deseado. Para ilustrar mejor esto, considere el siguiente comando: 
 
-   `dotnet publish -o pub -c Release`
+   ```dotnetcli
+   dotnet publish -o pub -c Release
+   ```
     
 Este comando está publicando una aplicación en una carpeta `pub` mediante la configuración de "Release". Internamente, este comando se traduce en la siguiente invocación de MSBuild: 
 
-   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
+   ```dotnetcli
+   dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
+   ```
 
 La excepción importante a esta regla son los comandos `new` y `run`, dado que no se han implementado como destinos de MSBuild.
 

@@ -2,12 +2,12 @@
 title: Comando dotnet-add reference
 description: El comando dotnet add reference constituye una opción práctica para agregar referencias entre proyectos.
 ms.date: 06/26/2019
-ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117779"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522767"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -39,43 +39,43 @@ El comando `dotnet add reference` constituye una opción práctica para agregar 
 
 ## <a name="arguments"></a>Argumentos
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   Especifica el archivo del proyecto. Si no se especifica, el comando busca uno en el directorio actual.
 
-* **`PROJECT_REFERENCES`**
+- **`PROJECT_REFERENCES`**
 
   Referencias entre proyectos (P2P) que se van a agregar. Especifique uno o más proyectos. [El patrón glob](https://en.wikipedia.org/wiki/Glob_(programming)) se admite en sistemas basados en Unix/Linux.
 
 ## <a name="options"></a>Opciones
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Imprime una corta ayuda para el comando.
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Agrega referencias de proyecto solo cuando apunta a un[marco](../../standard/frameworks.md) específico.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación). Disponible desde el SDK de .NET Core 3.0.
 
 ## <a name="examples"></a>Ejemplos
 
-* Agregar una referencia de proyecto:
+- Agregar una referencia de proyecto:
 
   ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-* Agregar varias referencias de proyecto al proyecto en el directorio actual:
+- Agregar varias referencias de proyecto al proyecto en el directorio actual:
 
   ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-* Agregar varias referencias de proyecto usando el patrón global en Linux/Unix:
+- Agregar varias referencias de proyecto usando el patrón global en Linux/Unix:
 
   ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
