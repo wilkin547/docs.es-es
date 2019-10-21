@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 508201fed57fce93b64691de55dce45780adc13c
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587750"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523356"
 ---
 # <a name="remarks-c-programming-guide"></a>\<remarks> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -30,7 +30,7 @@ ms.locfileid: "69587750"
 ## <a name="remarks"></a>Comentarios  
  La etiqueta \<remarks> se usa para agregar información sobre un tipo y complementa la información especificada con [\<summary>](./summary.md). Esta información se muestra en la ventana Examinador de objetos.  
   
- Compile con el parámetro [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
