@@ -14,12 +14,12 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970011"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583010"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -115,6 +115,7 @@ En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. P
 - [Formato de archivo de ensamblado .NET](file-format.md)
 - [Ensamblados de .NET](index.md)
 - [Ensamblados de confianza](friend.md)
-- [Procedimiento para cargar y descargar ensamblados](load-unload.md)
-- [Procedimiento para usar y depurar la descargabilidad de ensamblados en .NET Core](unloadability.md)
-- [Procedimiento para determinar si un archivo es un ensamblado](identify.md)
+- [Ensamblados de referencia](reference-assemblies.md)
+- [Cómo: para cargar y descargar ensamblados](load-unload.md)
+- [Cómo: para usar y depurar la descargabilidad de ensamblados en .NET Core](unloadability.md)
+- [Cómo: para determinar si un archivo es un ensamblado](identify.md)

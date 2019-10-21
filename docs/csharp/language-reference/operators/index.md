@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 766da517d247361f747591c3758e8610927866a9
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116094"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579198"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
 
@@ -63,8 +63,8 @@ En la tabla siguiente se muestran los operadores de C# desde la precedencia más
 
 Cuando los operadores tienen la misma prioridad, su asociatividad determina el orden en el que se realizan las operaciones:
 
-- Los operadores *asociativos a la izquierda* se evalúan, por orden, de izquierda a derecha. A excepción de los [operadores de asignación](assignment-operator.md) y el [operador de integración nula `??`](null-coalescing-operator.md), todos los operadores binarios son asociativos a la izquierda. Por ejemplo, `a + b - c` se evalúa como `(a + b) - c`.
-- Los operadores *asociativos a la derecha* se evalúan, por orden, de derecha a izquierda. Los operadores de asignación, el operador de integración nula `??` y el operador condicional de [ `?:`](conditional-operator.md) son asociativos a la derecha. Por ejemplo, `x = y = z` se evalúa como `x = (y = z)`.
+- Los operadores *asociativos a la izquierda* se evalúan, por orden, de izquierda a derecha. A excepción de los [operadores de asignación](assignment-operator.md) y el [operador de integración nula ](null-coalescing-operator.md), todos los operadores binarios son asociativos a la izquierda. Por ejemplo, `a + b - c` se evalúa como `(a + b) - c`.
+- Los operadores *asociativos a la derecha* se evalúan, por orden, de derecha a izquierda. Los operadores de asignación, el operador de integración nula y el operador condicional [ `?:`](conditional-operator.md) son asociativos a la derecha. Por ejemplo, `x = y = z` se evalúa como `x = (y = z)`.
 
 Use paréntesis, para cambiar el orden de evaluación impuesto por la asociatividad de los operadores:
 
@@ -85,7 +85,7 @@ Independientemente de la prioridad y la asociatividad de los operadores, los ope
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-Normalmente, se evalúan todos los operandos de un operador. Algunos operadores evalúan los operandos de forma condicional. Esto significa que el valor del primer operando de este tipo de operador define si se deben evaluar otros operandos, o bien qué operandos deben evaluarse. Estos operadores son los operadores lógicos condicionales [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) y [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), el [operador de integración nula `??`](null-coalescing-operator.md), los [operadores condicionales nulos `?.` y `?[]`](member-access-operators.md#null-conditional-operators--and-), así como el [operador condicional `?:`](conditional-operator.md). Para obtener más información, consulte la descripción de cada operador.
+Normalmente, se evalúan todos los operandos de un operador. Algunos operadores evalúan los operandos de forma condicional. Esto significa que el valor del primer operando de este tipo de operador define si se deben evaluar otros operandos, o bien qué operandos deben evaluarse. Estos operadores son los operadores lógicos condicionales [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) y [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), los [operadores de integración nula `??` y `??=`](null-coalescing-operator.md), los [operadores condicionales nulos `?.` y `?[]`](member-access-operators.md#null-conditional-operators--and-), así como el [operador condicional `?:`](conditional-operator.md). Para obtener más información, consulte la descripción de cada operador.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

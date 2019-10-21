@@ -106,6 +106,12 @@
               href: xpsdocumentwriter-writingcompleted-event-system-windows-xps.md
             - name: _WritingProgressChanged
               href: xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
+    - name: System.Xml
+      items:
+        - name: Clase XmlReader
+          items:
+            - name: Método XmlReader.CreateSqlReader
+              href: system.xml.xmlreader.createsqlreader.md
     - name: Espacio de nombres adodb
       items:
         - name: Interfaz de conexión
