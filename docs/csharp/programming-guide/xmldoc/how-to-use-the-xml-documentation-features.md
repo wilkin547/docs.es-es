@@ -1,19 +1,19 @@
 ---
-title: 'Procedimientos para: Usar las características de documentación XML: Guía de programación de C#'
+title: 'Procedimiento Usar las características de documentación XML: Guía de programación de C#'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834172"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523453"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Procedimientos para: Usar las características de documentación XML
+# <a name="how-to-use-the-xml-documentation-features"></a>Procedimiento Usar las características de documentación XML
 
 En el ejemplo siguiente se proporciona una introducción básica de un tipo que se ha documentado.
 
@@ -135,7 +135,7 @@ La documentación XML empieza con ///. Cuando se crea un proyecto, el asistente 
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [/doc (Opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (Opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Comentarios de documentación XML](./index.md)
 - [Procesador de documentación de DocFX](https://dotnet.github.io/docfx/)
 - [Procesador de documentación de Sandcastle](https://github.com/EWSoftware/SHFB)

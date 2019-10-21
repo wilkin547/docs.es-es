@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: aadb24c43d49acb3e71490efd156b14d9fc5f133
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0df6653171aa0366f555c39e4644f13b2b7384f9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587971"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523428"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -50,7 +50,7 @@ ms.locfileid: "69587971"
   
  Una lista o una tabla pueden tener tantos bloques \<item> como sean necesarios.  
   
- Compile con [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación a un archivo.  
+ Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  

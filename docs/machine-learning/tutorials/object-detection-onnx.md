@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332634"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318531"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -34,7 +34,7 @@ En este tutorial aprenderá a:
 - [Paquete NuGet de Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Paquete NuGet de Microsoft.ML.ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Paquete NuGet de Microsoft.ML.OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
-- [Modelo previamente entrenado de Tiny YOLOv2](https://github.com/onnx/models/tree/master/tiny_yolov2)
+- [Modelo previamente entrenado de Tiny YOLOv2](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)
 - [Netron](https://github.com/lutzroeder/netron) (opcional)
 
 ## <a name="onnx-object-detection-sample-overview"></a>Información general del ejemplo de detección de objetos de ONNX
@@ -707,7 +707,7 @@ Para ver las imágenes con rectángulos delimitadores, desplácese hasta el dire
 
 ¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para la detección de objetos al reutilizar un modelo de `ONNX` entrenado previamente en ML.NET.
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
@@ -720,4 +720,4 @@ En este tutorial ha aprendido a:
 
 Consulte el repositorio de GitHub con ejemplos de Machine Learning para explorar un ejemplo expandido de detección de objetos.
 > [!div class="nextstepaction"]
-> [Repositorio dotnet/machinelearning-samples de GitHub](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/DeepLearning_ObjectDetection_Onnx)
+> [Repositorio dotnet/machinelearning-samples de GitHub](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

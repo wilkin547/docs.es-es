@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 430270c170f2829d9bf9b90d258c948176b9c086
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587662"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523326"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -36,7 +36,7 @@ ms.locfileid: "69587662"
 ## <a name="remarks"></a>Comentarios  
  La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca en una sección Vea también. Use [\<see>](./see.md) para especificar un vínculo desde dentro del texto.  
   
- Compile con [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación a un archivo.  
+ Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
  Vea [\<summary>](./summary.md) para obtener un ejemplo del uso de \<seealso>.  

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275772"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579135"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -261,25 +261,36 @@ Puede explorar las técnicas de coincidencia de patrones en este [tutorial avanz
 Una **declaración using** es una declaración de variable precedida por la palabra clave `using`. Indica al compilador que la variable que se declara debe eliminarse al final del ámbito de inclusión. Por ejemplo, considere el siguiente código que escribe un archivo de texto:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 En el ejemplo anterior, el archivo se elimina cuando se alcanza la llave de cierre del método. Ese es el final del ámbito en el que se declara `file`. El código anterior es equivalente al siguiente código que usa las [instrucciones using](../language-reference/keywords/using-statement.md) clásicas:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 

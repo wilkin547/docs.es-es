@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 4d967d671b3a27698b457c80ff5a8f7031dc6bcb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 09577d931c6b1f571cd4112c788da38bab85bf42
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587411"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523279"
 ---
 # <a name="value-c-programming-guide"></a>\<value> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -29,7 +29,7 @@ ms.locfileid: "69587411"
 ## <a name="remarks"></a>Comentarios  
  La etiqueta \<value> le permite describir el valor que representa una propiedad. Tenga en cuenta que cuando agrega una propiedad mediante un asistente de código en el entorno de desarrollo .NET de Visual Studio, agregará una etiqueta [\<summary>](./summary.md) para la nueva propiedad. Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.  
   
- Compile con [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación a un archivo.  
+ Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#14)]  

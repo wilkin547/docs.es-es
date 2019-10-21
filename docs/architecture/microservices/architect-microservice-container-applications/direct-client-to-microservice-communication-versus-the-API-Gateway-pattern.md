@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834435"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522951"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -17,7 +17,7 @@ En una arquitectura de microservicios, cada microservicio expone un conjunto de 
 
 Un posible enfoque es usar una arquitectura de comunicación directa de cliente a microservicio. En este enfoque, una aplicación cliente puede realizar solicitudes directamente a algunos de los microservicios, tal como se muestra en la figura 4-12.
 
-![Diagrama que muestra la arquitectura de comunicación directa de cliente a microservicio.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![Diagrama que muestra la arquitectura de comunicación directa de cliente a microservicio.](./media/direct-client-to-microservice-communication.png)
 
 **Figura 4-12**. Uso de una arquitectura de comunicación directa de cliente a microservicio
 

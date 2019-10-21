@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924692"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520292"
 ---
 # <a name="extern-alias-c-reference"></a>alias externo (Referencia de C#)
 Es posible que deba hacer referencia a dos versiones de ensamblados que tienen los mismos nombres de tipo completos. Por ejemplo, es posible que tenga que usar dos o más versiones de un ensamblado en la misma aplicación. Mediante el uso de un alias de ensamblado externo, los espacios de nombres de cada ensamblado pueden ajustarse en espacios de nombres de nivel de raíz denominados por el alias, lo que permite que se usen en el mismo archivo.  
@@ -47,4 +47,4 @@ Es posible que deba hacer referencia a dos versiones de ensamblados que tienen l
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](./index.md)
 - [:: !](../operators/namespace-alias-qualifier.md)
-- [/reference (Opciones del compilador de C#)](../compiler-options/reference-compiler-option.md)
+- [-reference (Opciones del compilador de C#)](../compiler-options/reference-compiler-option.md)
