@@ -3,12 +3,12 @@ title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105647"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774076"
 ---
 # <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#
 
@@ -26,15 +26,15 @@ Para asegurarse de que las programas y las bibliotecas de C# pueden evolucionar 
 
 El programa "Hola mundo" tradicionalmente se usa para presentar un lenguaje de programación. En este caso, se usa C#:
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-Normalmente, los archivos de código fuente de C# tienen la extensión de archivo `.cs`. Suponiendo que el programa "Hola mundo" se almacena en el archivo `hello.cs`, el programa podría compilarse con la línea de comandos:
+Normalmente, los archivos de código fuente de C# tienen la extensión de archivo `.cs`. Suponiendo que el programa "Hola mundo" se almacena en el archivo *hello.cs*, podría compilarse con la línea de comandos,
 
 ```console
 csc hello.cs
 ```
 
-que genera un ensamblado ejecutable denominado hello.exe. La salida que genera la aplicación cuando se ejecuta es:
+lo que genera un ensamblado ejecutable denominado *hello.exe*. La salida que genera la aplicación cuando se ejecuta es:
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ La clase `Hello` declarada por el programa "Hola mundo" tiene un miembro único,
 
 La salida del programa la genera el método `WriteLine` de la clase `Console` en el espacio de nombres `System`. Esta clase la proporcionan las bibliotecas de clase estándar, a las que, de forma predeterminada, el compilador hace referencia automáticamente.
 
-Hay mucha más información sobre C#.  Los temas siguientes proporcionan introducciones a los elementos del lenguaje C#. Estas introducciones proporcionarán información básica sobre todos los elementos del lenguaje y ofrecerán los detalles necesarios para profundizar más en los elementos del lenguaje C#:
+Hay mucha más información sobre C#. Los temas siguientes proporcionan introducciones a los elementos del lenguaje C#. Estas introducciones proporcionarán información básica sobre todos los elementos del lenguaje y ofrecerán los detalles necesarios para profundizar más en los elementos del lenguaje C#:
 
 - [Estructura del programa](program-structure.md)
   - Conozca los principales conceptos organizativos del lenguaje C#: ***programas***, ***espacios de nombres***, ***tipos***, ***miembros*** y ***ensamblados***.

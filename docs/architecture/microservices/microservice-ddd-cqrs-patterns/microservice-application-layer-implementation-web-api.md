@@ -109,7 +109,7 @@ Al usar DI en .NET Core, es posible que le interese poder examinar un ensamblado
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **Matthew King. Registering services with Scrutor** \ (Registro de servicios con Scrutor)
+- **Matthew King. Registering services with Scrutor** (Registro de servicios con Scrutor) \
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** Repositorio de GitHub. \
@@ -164,7 +164,7 @@ El tipo de ámbito de la instancia determina cómo se comparte una instancia ent
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **Introduction to Dependency Injection in ASP.NET Core** \ (Introducción a la inserción de dependencias en ASP.NET Core)
+- **Introduction to Dependency Injection in ASP.NET Core** (Introducción a la inserción de dependencias en ASP.NET Core) \
   [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac.** Documentación oficial. \

@@ -4,12 +4,12 @@ description: Información general sobre las herramientas adicionales que puede i
 author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 75c74c16367bacf66fa2fb56d7666a07f7274aff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631968"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771965"
 ---
 # <a name="net-core-additional-tools-overview"></a>Herramientas adicionales de .NET Core
 
@@ -22,7 +22,7 @@ WCF (Windows Communication Foundation) Web Services Reference es un proveedor de
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Herramienta dotnet-svcutil de WCF](dotnet-svcutil-guide.md)
 
 La herramienta dotnet-svcutil de WCF (Windows Communication Foundation) es una herramienta de la CLI de .NET Core que recupera metadatos de un servicio web en una ubicación de red o de un archivo WSDL, y genera un archivo de origen compatible con .NET Core, definiendo una clase de proxy de WCF con métodos que pueden usarse para acceder a las operaciones del servicio web.
-La herramienta **dotnet-svcutil** es una alternativa al proveedor de servicios conectados de Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que se distribuyó por primera vez en la versión 15.5 de Visual Studio 2017. La herramienta **dotnet-svcutil**, como herramienta de la CLI de .NET Core, está disponible en las distintas plataformas de Linux, Mac OS y Windows.
+La herramienta **dotnet-svcutil** es una alternativa al proveedor de servicios conectados de Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que se distribuyó por primera vez en la versión 15.5 de Visual Studio 2017. La herramienta **dotnet-svcutil**, como herramienta de la CLI de .NET Core, está disponible en las distintas plataformas de Linux, Mac OS y Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Herramienta dotnet-svcutil.xmlserializer de WCF](dotnet-svcutil.xmlserializer-guide.md)
 

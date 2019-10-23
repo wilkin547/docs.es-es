@@ -47,7 +47,7 @@ DDD se beneficia de los microservicios al obtener límites reales en forma de mi
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Chris Richardson. Patrón: Database per service** \ (Patrón: base de datos por servicio)
+- **Chris Richardson. Patrón: Database per service** (Patrón: base de datos por servicio) \
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler. BoundedContext** \

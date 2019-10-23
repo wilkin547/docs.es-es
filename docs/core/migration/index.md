@@ -3,12 +3,12 @@ title: Migración de .NET Core desde project.json
 description: Aprenda a migrar un proyecto anterior de .NET Core con project.json.
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698916"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773908"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migración de proyectos de .NET Core desde project.json
 
@@ -40,7 +40,7 @@ Visual Studio migra automáticamente los proyectos seleccionados. Al migrar una 
 Los archivos que se migraron (*project.json*, *global.json*, *.xproj* y el archivo de solución) se mueven a una carpeta *Copia de seguridad*. El archivo de solución migrado se actualiza a Visual Studio 2017 o Visual Studio 2019 y no podrá abrir ese archivo de solución en Visual Studio 2015 ni en versiones anteriores. También se guarda y se abre automáticamente un archivo denominado *UpgradeLog.htm* que contiene un informe de migración.
 
 > [!IMPORTANT]
-> No puede migrar sus proyectos con Visual Studio 2015.
+> En la versión 16.3 de Visual Studio 2019 y versiones posteriores, no se puede cargar ni migrar un archivo *.xproj* . Además, Visual Studio 2015 no permite migrar un archivo *.xproj*. Si utiliza una de estas versiones de Visual Studio, instale una versión adecuada de Visual Studio o use la herramienta de migración de la línea de comandos que se indica a continuación.
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -49,17 +49,17 @@ En el escenario de la línea de comandos, puede usar el comando [`dotnet migrate
 Los archivos que se migraron (*project.json*, *global.json* y *.xproj*) se mueven a una carpeta *Copia de seguridad*.
 
 > [!NOTE]
-> Si se usa Visual Studio Code, el comando `dotnet migrate` no modifica archivos específicos de Visual Studio Code, como `tasks.json`. Estos archivos deben modificarse de forma manual.
-> Esto también sucede si se usa Project Ryder o cualquier editor o entorno de desarrollo integrado (IDE) que no sea Visual Studio.
+> Si se usa Visual Studio Code, el comando `dotnet migrate` no modifica archivos específicos de Visual Studio Code, como *tasks.json*. Estos archivos deben modificarse de forma manual.
+> Esto también sucede si se usa cualquier editor o entorno de desarrollo integrado (IDE) que no sea Visual Studio.
 
-Consulte [Una asignación entre propiedades project.json y csproj](../tools/project-json-to-csproj.md) para una comparación de los formatos project.json y csproj.
+Consulte [Una asignación entre propiedades project.json y csproj](../tools/project-json-to-csproj.md) para una comparación de los formatos *project.json* y *.csproj*.
 
-### <a name="common-issues"></a>Problemas comunes
+Si se produce un error que indica que
 
-- Si se produce un error que indica que no se encuentra ningún archivo que coincida con el comando dotnet-migrate:
+> no se encuentra ningún archivo que coincida con el comando dotnet-migrate,
 
-Ejecute `dotnet --version` para ver qué versión está usando. [`dotnet migrate`](../tools/dotnet-migrate.md) requiere .NET Core CLI RC3 o superior.
-Obtendrá este error si tiene un archivo *global.json* en el directorio actual o principal y la versión de `sdk` está establecida en una versión anterior.
+Ejecute `dotnet --version` para ver qué versión está usando. [`dotnet migrate`](../tools/dotnet-migrate.md) se presentó en la versión 1.0.0 del SDK de .NET Core y se quitó en la versión 3.0.100.
+Obtendrá este error si tiene un archivo *global.json* en el directorio actual o principal y la versión de `sdk` que especifica está fuera de este rango.
 
 ## <a name="migration-from-dnx-to-csproj"></a>Migración desde DNX a csproj
 

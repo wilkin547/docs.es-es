@@ -61,7 +61,7 @@ Puede empezar a programar la aplicación en .NET sin formato (normalmente en .NE
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Get started with Docker CE for Windows** \ (Introducción a Docker CE para Windows)
+- **Get started with Docker CE for Windows** (Introducción a Docker CE para Windows) \
   <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \

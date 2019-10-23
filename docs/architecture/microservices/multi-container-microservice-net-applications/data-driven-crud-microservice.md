@@ -289,13 +289,13 @@ Este mecanismo de control de versiones es sencillo y depende del servidor que en
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy** \ (Control de versiones simplificado de API web RESTful de ASP.NET Core)
+- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy** (Control de versiones simplificado de API web RESTful de ASP.NET Core) \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Control de versiones de una API web RESTful** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Versioning, Hypermedia, and REST** \ (Control de versiones, hipermedios y REST)
+- **Roy Fielding. Versioning, Hypermedia, and REST** (Control de versiones, hipermedios y REST) \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generación de metadatos de descripción de Swagger desde la API web de ASP.NET Core
