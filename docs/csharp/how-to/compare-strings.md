@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759877"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395455"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Cómo comparar cadenas en C\#
 
@@ -29,19 +29,19 @@ Cuando se comparan cadenas, se define un orden entre ellas. Las comparaciones se
 
 ## <a name="default-ordinal-comparisons"></a>Comparaciones de ordinales predeterminadas
 
-Las operaciones más habituales:
+De forma predeterminada, las operaciones más comunes:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> y <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>; es decir, los [operadores de igualdad`==` y `!=`](../language-reference/operators/equality-operators.md#string-equality), respectivamente,
 
-usan una comparación ordinal, una comparación con distinción entre mayúsculas y minúsculas y la referencia cultural actual. Los resultados se muestran en el ejemplo siguiente:
+realizan una comparación ordinal con distinción entre mayúsculas y minúsculas y, si es necesario, usan la referencia cultural actual. En el siguiente ejemplo se muestra que:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-La comparación de ordinales predeterminada no tiene en cuenta reglas lingüísticas cuando se comparan cadenas. Compara el valor binario de cada objeto <xref:System.Char> en dos cadenas. Como resultado, la comparación de ordinales predeterminada también distingue mayúsculas de minúsculas. 
+La comparación de ordinales predeterminada no tiene en cuenta reglas lingüísticas cuando se comparan cadenas. Compara el valor binario de cada objeto <xref:System.Char> en dos cadenas. Como resultado, la comparación de ordinales predeterminada también distingue mayúsculas de minúsculas.
 
-Tenga en cuenta que la prueba de igualdad con <xref:System.String.Equals%2A?displayProperty=nameWithType> y <xref:System.String.op_Equality%2A?displayProperty=nameWithType> es diferente de la comparación de cadenas que usa los métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> y <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mientras que las pruebas de igualdad realizan una comparación ordinal que distingue mayúsculas de minúsculas, el método de comparación realiza una comparación que distingue mayúsculas de minúsculas y entre referencias culturales usando la referencia cultural actual. Puesto que los métodos de comparación predeterminados suelen realizan diferentes tipos de comparaciones, le recomendamos que especifique claramente la intención de su código llamando a una sobrecarga que especifique explícitamente el tipo de comparación que se realizará.
+Tenga en cuenta que la prueba de igualdad con <xref:System.String.Equals%2A?displayProperty=nameWithType> y los operadores `==` y `!=` es diferente de la comparación de cadenas que usa los métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> y <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mientras que las pruebas de igualdad realizan una comparación ordinal que distingue mayúsculas de minúsculas, los métodos de comparación realizan una comparación que distingue mayúsculas de minúsculas y entre referencias culturales usando la referencia cultural actual. Puesto que los métodos de comparación predeterminados suelen realizan diferentes tipos de comparaciones, le recomendamos que especifique claramente la intención de su código llamando a una sobrecarga que especifique explícitamente el tipo de comparación que se realizará.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparaciones de ordinales sin distinción entre mayúsculas y minúsculas
 

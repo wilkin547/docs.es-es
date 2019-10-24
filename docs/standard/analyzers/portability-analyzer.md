@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar la herramienta Analizador de 
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a3979d792b4cfd1f7949a3c8e14c6f856e9e3e21
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054001"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320111"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -29,14 +29,14 @@ Una vez que haya convertido su proyecto para dirigirlo a su plataforma de destin
 
 Para empezar a usar el Analizador de portabilidad de .NET en Visual Studio, primero debe descargar e instalar la extensión desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Funciona en Visual Studio 2017 y versiones posteriores. Puede configurarlo en Visual Studio en **Analizar** > **Portability Analyzer Settings** (Configuración del Analizador de portabilidad) y seleccionando las plataformas de destino, que son las plataformas y versiones de .NET en las que desea evaluar las brechas de portabilidad en comparación con la plataforma y versión con la que se ha creado el ensamblado actual.
 
-![Captura de pantalla de la portabilidad](./media/portability-analyzer/portability-screenshot.png)
+![Captura de pantalla del analizador de portabilidad.](./media/portability-analyzer/portability-screenshot.png)
 
 También puede usar la aplicación de consola ApiPort, descárguela desde [el repositorio de ApiPort](https://aka.ms/apiportdownload). Puede usar la opción de comando `listTargets` para mostrar la lista de destinos disponible y elegir las plataformas de destino especificando la opción de comando `-t` o `--target`. 
 
 ### <a name="analyze-portability"></a>Análisis de portabilidad
 Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o .dll del proyecto.
 
-![Analizador de portabilidad desde el Explorador de soluciones](./media/portability-analyzer/portability-solution-explorer.png)
+![Captura de pantalla del analizador de portabilidad del Explorador de soluciones.](./media/portability-analyzer/portability-solution-explorer.png)
 
 También puede usar la [aplicación de consola ApiPort](https://aka.ms/apiportdownload). 
 
@@ -52,13 +52,13 @@ Solo las API que no son compatibles con una plataforma de destino aparecen en el
 
 #### <a name="portability-summary"></a>Resumen de portabilidad 
 
-![Resumen de portabilidad](./media/portability-analyzer/portabilitysummary.png)
+![Captura de pantalla del resumen de portabilidad.](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
 En la sección Resumen de portabilidad del informe se muestra el porcentaje de portabilidad para cada ensamblado incluido en la ejecución. En el ejemplo anterior, el 71,24 % de las API de .NET Framework utilizadas en la aplicación `svcutil` están disponibles en .NET Core + extensiones de la plataforma. Si ejecuta la herramienta Analizador de portabilidad de .NET en varios ensamblados, cada ensamblado debe tener una fila en el informe de Resumen de portabilidad.
 
 #### <a name="details"></a>Detalles
 
-![Detalles de portabilidad](./media/portability-analyzer/portabilitydetails.png)
+![Captura de pantalla de los detalles de portabilidad.](./media/portability-analyzer/api-catalog-portablility-details.png)
 
 La sección **Detalles** del informe enumera las API que faltan desde cualquiera de las **plataformas de destino** seleccionadas. 
 
@@ -70,7 +70,7 @@ La sección **Detalles** del informe enumera las API que faltan desde cualquiera
 
 #### <a name="missing-assemblies"></a>Ensamblados que faltan
 
-![Detalles de portabilidad](./media/portability-analyzer/missingassemblies.png)
+![Captura de pantalla de los ensamblados que faltan.](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
 Puede encontrar la sección Ensamblados que faltan en el informe. En él se indica que esta lista de ensamblados hace referencia a los ensamblados analizados y no analizados. Si se trata un ensamblado que posee, inclúyalo en la ejecución del analizador de portabilidad de API para que pueda obtener informe detallado de portabilidad a nivel de API. Si se trata de una biblioteca de terceros, busque si tienen la versión más reciente compatible con la plataforma de destino. Si es así, le recomendamos que migre a la versión más reciente. Finalmente, sería de esperar que esta lista incluya todos los ensamblados de terceros que dependen de la aplicación y confirmar que tienen una versión compatible con la plataforma de destino.  
 

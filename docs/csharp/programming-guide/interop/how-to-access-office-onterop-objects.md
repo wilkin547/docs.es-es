@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos para: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#: Guía de programación de C#'
+title: 'Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#: Guía de programación de C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834205"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523567"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedimientos para: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
 
 Visual C# tiene nuevas características que simplifican el acceso a objetos de la API de Office. Las nuevas características incluyen argumentos con nombre y opcionales, un nuevo tipo llamado `dynamic` y la capacidad de pasar argumentos a parámetros de referencia en los métodos COM como si fueran parámetros de valor.
 
@@ -41,7 +41,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 6. Escriba un nombre para el proyecto en el campo **Nombre**.
 
-7. Haga clic en **OK**.
+7. Haga clic en **Aceptar**.
 
      El proyecto nuevo aparece en el **Explorador de soluciones**.
 
@@ -49,9 +49,9 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.
 
-2. En la página de **Ensamblados**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Excel**.  Si no ve los ensamblados, asegúrese de que están instalados y que se muestran. Consulte [Configuración de los Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
+2. En la página de **Ensamblados**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Excel**.  Si no ve los ensamblados, asegúrese de que están instalados y que se muestran. Vea [Cómo: Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
-3. Haga clic en **OK**.
+3. Haga clic en **Aceptar**.
 
 ## <a name="to-add-necessary-using-directives"></a>Para agregar las directivas using necesarias
 
@@ -95,7 +95,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4, y versiones posteriores, convierte automáticamente el valor `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [/link](../../language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.
+     C# 4, y versiones posteriores, convierte automáticamente el valor `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [-link](../../language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.
 
 ## <a name="to-run-the-project"></a>Para ejecutar el proyecto
 
@@ -149,7 +149,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 3. Si no ve la ventana **Propiedades**, presione **F4**.
 
-4. Busque **Incrustar tipos de interoperabilidad** en la lista de propiedades y cambie su valor a **False**. Del mismo modo, se puede compilar mediante el uso de la opción del compilador [/reference](../../language-reference/compiler-options/reference-compiler-option.md) en lugar de [/link](../../language-reference/compiler-options/link-compiler-option.md) en un símbolo del sistema.
+4. Busque **Incrustar tipos de interoperabilidad** en la lista de propiedades y cambie su valor a **False**. Del mismo modo, se puede compilar mediante el uso de la opción del compilador [-reference](../../language-reference/compiler-options/reference-compiler-option.md) en lugar de [-link](../../language-reference/compiler-options/link-compiler-option.md) en un símbolo del sistema.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Para agregar formato adicional a la tabla
 
@@ -179,4 +179,4 @@ En el código siguiente se muestra el ejemplo completo.
 - [dynamic](../../language-reference/keywords/dynamic.md)
 - [Uso de tipo dinámico](../types/using-type-dynamic.md)
 - [Argumentos opcionales y con nombre](../classes-and-structs/named-and-optional-arguments.md)
-- [Uso de Usar argumentos opcionales y con nombre en la programación de Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

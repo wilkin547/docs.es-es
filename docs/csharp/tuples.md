@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105897"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319754"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C#
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 El método `Deconstruct` podría convertir el objeto `Person` `p` en una tupla que contiene dos cadenas, pero no se puede aplicar en el contexto de las pruebas de igualdad.
+
+## <a name="tuples-as-out-parameters"></a>Tuplas como parámetros de salida
+
+Las tuplas se pueden usar como parámetros de salida *en sí*. No se deben confundir con ninguna ambigüedad mencionada anteriormente en la sección [Deconstrucción](#deconstruction). En una llamada al método, solo necesita describir la forma de la tupla:
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+Como alternativa, puede usar una tupla [ _sin nombre_](#named-and-unnamed-tuples) y hacer referencia a sus campos como `Item1` y `Item2`:
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>Conclusión 
 

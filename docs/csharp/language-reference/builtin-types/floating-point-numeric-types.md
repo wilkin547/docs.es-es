@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos de punto flotante - referencia de C#
 description: Información general de los tipos de punto flotante integrados de C#
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002193"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579369"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de punto flotante (referencia de C#)
 
-Los **tipos de punto flotante** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#floating-point-literals). Todos los tipos de punto flotante también son tipos de valor. Todos los tipos de punto flotante numéricos admiten operadores [aritméticos](../operators/arithmetic-operators.md) [de comparación e igualdad](../operators/equality-operators.md).
+Los **tipos de punto flotante** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#real-literals). Todos los tipos de punto flotante también son tipos de valor. Todos los tipos de punto flotante numéricos admiten operadores [aritméticos](../operators/arithmetic-operators.md), [de comparación](../operators/comparison-operators.md) y de [igualdad](../operators/equality-operators.md).
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Características de los tipos de punto flotante
 
@@ -52,7 +52,7 @@ Como el tipo `decimal` tiene más precisión y un intervalo más reducido que `f
 
 Puede combinar tipos [enteros](integral-numeric-types.md) y tipos de punto flotante en una expresión. En este caso, los tipos enteros se convierten a tipos de punto flotante. La evaluación de la expresión se realiza según las reglas siguientes:
 
-- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double` o [bool](../keywords/bool.md) en comparaciones relacionales o de igualdad.
+- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double` o [bool](../keywords/bool.md) en comparaciones relacionales y de igualdad.
 - Si no hay ningún tipo `double` en la expresión, esta se evalúa como `float` o [bool](../keywords/bool.md) en comparaciones relacionales o de igualdad.
 
 Una expresión de punto flotante puede contener los siguientes conjuntos de valores:
@@ -66,23 +66,41 @@ Para obtener más información sobre estos valores, vea el estándar IEEE para a
 
 Puede usar [cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md) o [cadenas con formato numérico personalizado](../../../standard/base-types/custom-numeric-format-strings.md) para dar formato a un valor de punto flotante.
 
-## <a name="floating-point-literals"></a>Literales de punto flotante
+## <a name="real-literals"></a>Literales reales
 
-De forma predeterminada, un literal numérico de punto flotante a la derecha del operador de asignación se trata como `double`. Puede usar sufijos para convertir un literal de punto flotante o entero a un tipo específico:
+El tipo de un literal real viene determinado por su sufijo, como se indica a continuación:
 
-- El sufijo `d` o `D` convierte un literal en `double`.
-- El sufijo `f` o `F` convierte un literal en `float`.
-- El sufijo `m` o `M` convierte un literal en `decimal`.
+- El literal sin sufijo o con el sufijo `d` o `D` es del tipo `double`
+- El literal con el sufijo `f` o `F` es del tipo `float`
+- El literal con el sufijo `m` o `M` es del tipo `decimal`
 
-En los siguientes ejemplos se muestra cada sufijo:
+En el código siguiente se muestra un ejemplo de cada uno de ellos:
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
+```
+
+En el ejemplo anterior también se muestra el uso de `_` como un *separador de dígitos*, que se admite a partir de C# 7.0. Puede usar el separador de dígitos con todos los tipos de literales numéricos.
+
+También puede usar la notación científica; es decir, especificar una parte exponencial de un literal real, como se muestra en el ejemplo siguiente:
+
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
+
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
+
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
 ```
 
 ## <a name="conversions"></a>Conversiones
@@ -95,6 +113,14 @@ Para obtener más información sobre las conversiones numéricas implícitas, co
 
 Para obtener más información sobre las conversiones numéricas explícitas, consulte [Tabla de conversiones numéricas explícitas](../keywords/explicit-numeric-conversions-table.md).
 
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
+
+- [Tipos de punto flotante](~/_csharplang/spec/types.md#floating-point-types)
+- [El tipo decimal](~/_csharplang/spec/types.md#the-decimal-type)
+- [Literales reales](~/_csharplang/spec/lexical-structure.md#real-literals)
+
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
@@ -102,8 +128,6 @@ Para obtener más información sobre las conversiones numéricas explícitas, co
 - [Tabla de tipos integrados](../keywords/built-in-types-table.md)
 - [Valores numéricos en .NET](../../../standard/numerics.md)
 - [Conversiones de tipos](../../programming-guide/types/casting-and-type-conversions.md)
-- [Tabla de conversiones numéricas implícitas](../keywords/implicit-numeric-conversions-table.md)
-- [Tabla de conversiones numéricas explícitas](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)

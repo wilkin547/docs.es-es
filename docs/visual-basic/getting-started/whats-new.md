@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835249"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581967"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -26,34 +26,49 @@ Para las nuevas características, vea [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versiones anteriores
 
-Visual Basic 15.8 o Visual Studio 2017, versión 15.8. Para las nuevas características, consulte [Visual Basic 15.8](#visual-basic-158).
+Visual Basic 15.8 / Visual Studio 2017, versión 15.8  
+Para consultar las nuevas características, vea [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5 o Visual Studio 2017, versión 15.5. Para las nuevas características, consulte [Visual Basic 15.5](#visual-basic-155).
+Visual Basic 15.5 / Visual Studio 2017 versión 15.5  
+Para consultar las nuevas características, vea [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3 o Visual Studio 2017, versión 15.3. Para las nuevas características, consulte [Visual Basic 15.3](#visual-basic-153).
+Visual Basic 15.3 / Visual Studio 2017, versión 15.3  
+Para consultar las nuevas características, vea [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017 o Visual Studio 2017. Para conocer las nuevas características, consulte [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 2017 / Visual Studio 2017  
+Para consultar las nuevas características, vea [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic o Visual Studio 2015. Para las nuevas características, consulte [Visual Basic 14](#visual-basic-14).
+Visual Basic / Visual Studio 2015  
+Para consultar las nuevas características, vea [Visual Basic 14](#visual-basic-14).
 
-Visual Basic o Visual Studio 2013. Versiones preliminares de tecnología de .NET Compiler Platform ("Roslyn")
+Visual Basic / Visual Studio 2013  
+Vistas previas de tecnología de .NET Compiler Platform ("Roslyn")
 
-Visual Basic o Visual Studio 2012. Atributos de información de autor de llamada, palabras clave e iteradores de `Async` y `await`
+Visual Basic / Visual Studio 2012  
+palabras clave `Async` y `await`, iteradores, atributos de información de autor de llamada
 
-Visual Basic, Visual Studio 2010. Propiedades autoimplementadas, inicializadores de colección, continuación de línea implícita, dinámica, covarianza/contravarianza genérica, acceso de espacio de nombres global
+Visual Basic, Visual Studio 2010  
+Propiedades autoimplementadas, inicializadores de colección, continuación de línea implícita, dinámica, covarianza/contravarianza genérica, acceso de espacio de nombres global
 
-Visual Basic o Visual Studio 2008. Language Integrated Query (LINQ), literales XML, inferencia de tipo de variable local, inicializadores de objeto, tipos anónimos, métodos de extensión, inferencia de tipo de variable local `var`, expresiones lambda, operador `if`, métodos parciales, tipos de valor que aceptan valores null
+Visual Basic / Visual Studio 2008  
+Language Integrated Query (LINQ), literales XML, inferencia de tipo de variable local, inicializadores de objeto, tipos anónimos, métodos de extensión, inferencia de tipo de variable local `var`, expresiones lambda, operador `if`, métodos parciales, tipos de valor que aceptan valores null
 
-Visual Basic o Visual Studio 2005. El tipo `My` y los tipos de asistente (acceso a la aplicación, equipo, sistema de archivos, red)
+Visual Basic / Visual Studio 2005  
+El tipo `My` y los tipos del asistente (acceso a la aplicación, equipo, sistema de archivos, red)
 
-Visual Basic o Visual Studio .NET 2003. Operadores de desplazamiento de bits, declaración de variables de bucle
+Visual Basic / Visual Studio .NET 2003  
+Operadores de desplazamiento de bits, declaración de variable de bucle
 
-Visual Basic o Visual Studio .NET 2002. La primera versión de Visual Basic .NET
+Visual Basic / Visual Studio .NET 2002  
+La primera versión de Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
-Visual Basic 16.0 se centra en proporcionar más características del entorno de ejecución de Visual Basic (microsoft.visualbasic.dll) a .NET Core y es la primera versión de Visual Basic centrada en .NET Core. Muchas partes del entorno de ejecución de Visual Basic dependen de WinForms y se agregarán en una versión posterior de Visual Basic. 
 
-**Comentarios permitidos en más lugares dentro de las instrucciones** En Visual Basic 15.8 y versiones anteriores, solo se permiten comentarios en líneas en blanco, al final de una instrucción o en lugares específicos dentro de una instrucción donde se permita una continuación de línea implícita. A partir de Visual Basic 16.0, también se permiten comentarios después de las continuaciones de línea explícitas y dentro de una instrucción en una línea que comienza con un espacio seguido de un guion bajo.
+Visual Basic 16.0 se centra en proporcionar más características del entorno de ejecución de Visual Basic (microsoft.visualbasic.dll) a .NET Core y es la primera versión de Visual Basic centrada en .NET Core. Muchas partes del entorno de ejecución de Visual Basic dependen de WinForms y se agregarán en una versión posterior de Visual Basic.
+
+**Comentarios permitidos en más lugares dentro de las instrucciones**
+
+En Visual Basic 15.8 y versiones anteriores, solo se permiten comentarios en líneas en blanco, al final de una instrucción o en lugares específicos dentro de una instrucción donde se permita una continuación de línea implícita. A partir de Visual Basic 16.0, también se permiten comentarios después de las continuaciones de línea explícitas y dentro de una instrucción en una línea que comienza con un espacio seguido de un guion bajo.
 
 ```vb
 Public Sub Main()

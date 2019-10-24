@@ -2,12 +2,12 @@
 title: Aplicaciones monolíticas
 description: Descripción de los conceptos básicos para incluir en un contenedor aplicaciones monolíticas.
 ms.date: 02/15/2019
-ms.openlocfilehash: a67015452fb1245ef4b24a8dc50a4b33d3f9f32e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673602"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394723"
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
@@ -17,11 +17,11 @@ Para administrar este modelo, debe implementar un único contenedor para represe
 
 Al seguir el principio de que un contenedor realiza una sola acción y lo hace en un proceso, el patrón monolítico entra en conflicto. Puede incluir varios componentes, bibliotecas o capas internas en cada contenedor, como se muestra en la figura 4-1.
 
-![Una aplicación monolítica tiene todas o la mayoría de sus funcionalidades en un único proceso o contenedor y está formada por capas internas o bibliotecas.](./media/image1.png)
+![Diagrama que muestra una aplicación monolítica que se escala horizontalmente mediante la clonación de la aplicación.](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **Figura 4-1.** Ejemplo de arquitectura de aplicaciones monolíticas
 
-El inconveniente de este enfoque aparece cuando la aplicación aumenta y debe escalarse. Si se escala toda la aplicación, realmente no es un problema. Aun así, en la mayoría de los casos, solo unos pocos elementos de la aplicación son los puntos de obstrucción que deben escalarse, mientras que otros componentes se usan menos.
+Una aplicación monolítica tiene todas o la mayoría de sus funcionalidades en un único proceso o contenedor y está formada por capas internas o bibliotecas. El inconveniente de este enfoque aparece cuando la aplicación aumenta y debe escalarse. Si se escala toda la aplicación, realmente no es un problema. Aun así, en la mayoría de los casos, solo unos pocos elementos de la aplicación son los puntos de obstrucción que deben escalarse, mientras que otros componentes se usan menos.
 
 En el ejemplo típico de comercio electrónico, lo que probablemente necesite es escalar el componente de información del producto. Hay muchos más clientes que buscan productos de los que los compran. Más clientes usan la cesta en lugar de usar la canalización de pago. Menos clientes publican comentarios o consultan su historial de compras. Y es probable que solo cuente con un grupo reducido de empleados, en una única región, que tenga que administrar las campañas de contenido y marketing. Al escalar el diseño monolítico, todo el código se implementa varias veces.
 
@@ -31,7 +31,7 @@ El enfoque monolítico es habitual y muchas organizaciones realizan el desarroll
 
 Desde la perspectiva de la infraestructura, cada servidor puede ejecutar muchas aplicaciones dentro del mismo host y tener una proporción aceptable de eficacia en el uso de recursos, como se muestra en la figura 4-2.
 
-![Un solo host puede ejecutar varias aplicaciones en contenedores diferentes.](./media/image2.png)
+![Diagrama que muestra un host con varias aplicaciones en contenedores independientes.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **Figura 4-2.** Host que ejecuta varias aplicaciones o contenedores
 
@@ -43,9 +43,9 @@ También puede usar [Azure App Services](https://azure.microsoft.com/services/ap
 
 Puede implementar varias máquinas virtuales como hosts de Docker y ejecutar cualquier número de contenedores por máquina virtual. Después, puede administrar el escalado mediante Azure Load Balancer, como se muestra en la figura 4-3.
 
-![Una aplicación monolítica puede ampliarse de forma horizontal a hosts diferentes, donde cada uno de ellos ejecuta la aplicación en contenedores.](./media/image3.png)
+![Diagrama que muestra una aplicación monolítica escalada horizontalmente en hosts diferentes.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**Figura 4-3**. Varios hosts escalan horizontalmente aplicaciones o contenedores de Docker
+**Figura 4-3**. Varios hosts escalan horizontalmente una única aplicación de Docker
 
 Puede administrar la implementación de los propios hosts mediante técnicas de implementación tradicionales.
 
@@ -71,7 +71,7 @@ El uso de Azure App Service es intuitivo, por lo que puede empezar a trabajar r�
 
 Ahora, como se muestra en la figura 4-4, al usar Visual Studio 2017, la compatibilidad con contenedores en Azure App Service le ofrece la capacidad de incluir todo lo que quiera en el entorno de aplicación. Si agregó una dependencia en la aplicación porque la ejecuta en un contenedor, podrá incluir esas dependencias en la imagen de Docker o en el archivo Dockerfile.
 
-![Vista del asistente de Visual Studio para publicar en Azure App Service, con el selector del registro de contenedor resaltado.](./media/image4.png)
+![Captura de pantalla del cuadro de diálogo Crear servicio de aplicaciones que muestra una instancia de Container Registry.](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **Figura 4-4**. Publicación de un contenedor en Azure App Service desde aplicaciones o contenedores de Visual Studio
 

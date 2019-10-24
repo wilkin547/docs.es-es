@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567580"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320018"
 ---
 # <a name="net-framework-application-essentials"></a>Elementos esenciales de aplicaciones .NET Framework
 Esta sección de la documentación de .NET Framework proporciona información sobre las tareas básicas de desarrollo de aplicaciones en .NET Framework.  
@@ -54,8 +54,7 @@ Esta sección de la documentación de .NET Framework proporciona información so
  [Globalización y localización](../../docs/standard/globalization-localization/index.md)  
  Ofrece información para ayudarle a diseñar y desarrollar aplicaciones de uso internacional.  
   
- Accesibilidad  
- Proporciona información sobre UI Automation de Microsoft, un marco de accesibilidad que se ocupa de los requisitos de los productos de tecnología de ayuda y marcos de pruebas automatizadas al proporcionar acceso mediante programación a información acerca de la interfaz de usuario.  
+ [Accesibilidad](../../docs/framework/ui-automation/index.md) Proporciona información sobre la Automatización de la interfaz de usuario de Microsoft, un marco de accesibilidad que se ocupa de los requisitos de los productos de tecnología de ayuda y marcos de pruebas automatizadas al proporcionar acceso mediante programación a información acerca de la interfaz de usuario.  
   
  [Atributos](../../docs/standard/attributes/index.md)  
  Describe cómo puede utilizar atributos para personalizar los metadatos.  

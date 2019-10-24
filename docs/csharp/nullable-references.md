@@ -1,13 +1,13 @@
 ---
 title: Tipos de referencia que aceptan valores NULL
-description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
+description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8.0. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699959"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319061"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -35,13 +35,11 @@ string? name;
 
 Cualquier variable en la que `?` no esté junto al nombre de tipo es un **tipo de referencia que no acepta valores NULL**. Esto incluye todas las variables de tipo de referencia en el código existente en el momento en el que se habilita esta característica.
 
-El compilador usa el análisis estático para determinar si se sabe si una referencia que acepta valores NULL no tiene este tipo de valor. Si desreferencia una referencia que acepta valores NULL cuando esta puede ser NULL, el compilador genera una advertencia. Puede invalidar este comportamiento usando el **operador de limitación de advertencias de valores NULL** `!` después del nombre de una variable. Por ejemplo, si sabe que la variable `name` no es NULL, pero el compilador genera una advertencia, puede escribir el código siguiente para invalidar el análisis del compilador:
+El compilador usa el análisis estático para determinar si se sabe si una referencia que acepta valores NULL no tiene este tipo de valor. Si desreferencia una referencia que acepta valores NULL cuando esta puede ser NULL, el compilador genera una advertencia. Puede invalidar este comportamiento usando el [operador de limitación de advertencias de valores NULL](language-reference/operators/null-forgiving.md) `!` después del nombre de una variable. Por ejemplo, si sabe que la variable `name` no es NULL, pero el compilador genera una advertencia, puede escribir el código siguiente para invalidar el análisis del compilador:
 
 ```csharp
 name!.Length;
 ```
-
-Puede leer información detallada sobre este operador en la propuesta de especificación del [borrador de tipos de referencia que aceptan valores NULL](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator), en GitHub.
 
 ## <a name="nullability-of-types"></a>Nulabilidad de tipos
 
@@ -49,14 +47,14 @@ Cualquier tipo de referencia puede tener una de cuatro *nulabilidades*, que desc
 
 - *No acepta valores NULL*: no se pueden asignar valores NULL a las variables de este tipo. No es necesario comprobar si estas tienen un valor NULL antes de desreferenciarlas.
 - *Acepta valores NULL*: se pueden asignar valores NULL a las variables de este tipo. Si se desreferencian sin comprobar primero la existencia de valores `null`, se producirá una advertencia.
-- *Inconsciente*: este es el estado previo a la versión C# 8. Las variables de este tipo se pueden desreferenciar o asignar sin advertencias.
+- *Inconsciente*: este es el estado previo a C# 8.0. Las variables de este tipo se pueden desreferenciar o asignar sin advertencias.
 - *Desconocido*: este es generalmente el caso de los parámetros de tipo en los que las restricciones no indican al compilador que el tipo debe *aceptar valores NULL* o *no aceptar valores NULL*.
 
 La nulabilidad de un tipo en una declaración de variable se controla mediante el *contexto que acepta valores NULL* en el que se declara la variable.
 
 ## <a name="nullable-contexts"></a>Contextos que aceptan valores NULL
 
-Los contextos que aceptan valores NULL permiten un control preciso sobre cómo interpreta el compilador las variables de tipos de referencia. El **contexto de anotación que acepta valores NULL** de cualquier línea de código es `enabled` o `disabled`. Puede considerar que el compilador anterior al de C# 8 compilaba todo el código en un contexto que acepta valores NULL `disabled`: Cualquier tipo de referencia puede ser NULL. El **contexto de advertencia que acepta valores NULL** puede configurarse como `enabled` o `disabled`. Este contexto especifica las advertencias que genera el compilador usando el análisis de flujos.
+Los contextos que aceptan valores NULL permiten un control preciso sobre cómo interpreta el compilador las variables de tipos de referencia. El **contexto de anotación que acepta valores NULL** de cualquier línea de origen está habilitado o deshabilitado. Puede considerar que el compilador anterior al de C# 8.0 compilaba todo el código con el contexto que acepta valores NULL deshabilitado: cualquier tipo de referencia puede tener el valor NULL. El **contexto de advertencia que acepta valores NULL** también se puede habilitar o deshabilitar. Este contexto especifica las advertencias que genera el compilador usando el análisis de flujos.
 
 Tanto el contexto de anotación que acepta valores NULL como el contexto de advertencia que acepta valores NULL pueden establecerse para un proyecto con el elemento `Nullable` del archivo *.csproj*. Este elemento configura la forma en la que el compilador interpreta la nulabilidad de los tipos y las advertencias que se generan. Estos son los valores válidos:
 
@@ -81,7 +79,7 @@ También puede usar directivas para establecer los mismos contextos en cualquier
 - `#nullable enable annotations`: establezca el contexto de anotación que admite un valor NULL en **enabled**.
 - `#nullable restore annotations`: restaura el contexto de advertencia de anotación según la configuración del proyecto.
 
-Los contextos de advertencias y anotaciones que aceptan valores NULL predeterminados son `disabled`. Esta decisión implica que el código existente se compila sin cambios y sin generar ninguna advertencia nueva.
+De forma predeterminada, los contextos de advertencias y anotaciones que aceptan valores NULL están **deshabilitados**. Esto implica que el código existente se compila sin cambios y sin generar ninguna advertencia nueva.
 
 ## <a name="nullable-annotation-context"></a>Contexto de anotación que admite valores NULL
 
@@ -110,10 +108,10 @@ El contexto de advertencia que acepta valores NULL no es igual al contexto de an
 1. La variable se ha asignado definitivamente a un valor distinto a NULL.
 1. Se ha comprobado que la variable o la expresión no tiene un valor NULL antes de desreferenciarla.
 
-El compilador genera advertencias cuando se desreferencia una variable o expresión en un estado **quizás NULL** si el contexto de advertencia que acepta valores NULL es `enabled`. Además, se generan advertencias cuando se asigna una variable o expresión **quizás NULL** a un tipo de referencia que no acepta valores NULL en un contexto de anotación que acepta valores NULL `enabled`.
+El compilador genera advertencias cuando se desreferencia una variable o expresión en un estado **quizás NULL** si el contexto de advertencia que acepta valores NULL es está habilitado. Además, se generan advertencias cuando se asigna una variable o expresión **quizás NULL** a un tipo de referencia que no acepta valores NULL con un contexto de anotación que acepta valores NULL habilitado.
 
-## <a name="learn-more"></a>Más información
+## <a name="see-also"></a>Vea también
 
-- [Borrador de la especificación de referencias que aceptan valores NULL](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Borrador de especificación de tipos de referencia que aceptan valores NULL](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Tutorial de introducción a las referencias que no aceptan valores NULL](tutorials/nullable-reference-types.md)
 - [Migración de un código base existente a referencias que aceptan valores NULL](tutorials/upgrade-to-nullable-references.md)

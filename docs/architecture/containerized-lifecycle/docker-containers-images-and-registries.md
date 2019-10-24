@@ -2,12 +2,12 @@
 title: Contenedores, imágenes y registros de Docker
 description: Conozca el papel clave que, en general, desempeñan los registros en la forma de implementar aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673522"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394603"
 ---
 # <a name="docker-containers-images-and-registries"></a>Contenedores, imágenes y registros de Docker
 
@@ -19,9 +19,11 @@ Las imágenes se almacenan en un registro, que sirve como biblioteca de imágene
 
 En la figura 1-4 se muestra cómo se relacionan las imágenes y los registros de Docker con otros componentes. También se muestran las diversas ofertas de registro de los proveedores.
 
-![Taxonomía básica en Docker: el registro es como una estantería donde las imágenes se almacenan y están disponibles para extraerlas con el fin de compilar contenedores que ejecuten servicios o aplicaciones web. Hay registros de Docker privados a nivel local y en la nube pública. Docker Hub es que un registro público mantenido por Docker; junto con Docker Trusted Registry, una solución a nivel empresarial, Azure ofrece Azure Container Registry. AWS, Google y otros también tienen registros de contenedor.](./media/image4.png)
+![Diagrama que muestra la taxonomía básica en Docker.](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
 **Figura 1-4**. Taxonomía de términos de Docker y conceptos
+
+el registro es como una estantería donde las imágenes se almacenan y están disponibles para extraerlas con el fin de compilar contenedores que ejecuten servicios o aplicaciones web. Hay registros de Docker privados a nivel local y en la nube pública. Docker Hub es que un registro público mantenido por Docker; junto con Docker Trusted Registry, una solución a nivel empresarial, Azure ofrece Azure Container Registry. AWS, Google y otros también tienen registros de contenedor.
 
 Si coloca imágenes en un registro, puede almacenar bits de la aplicación estáticos e inmutables, con todas sus dependencias, a nivel de marco. Luego puede versionar e implementar imágenes en varios entornos y, por tanto, proporcionar una unidad de implementación coherente.
 

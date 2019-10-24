@@ -2,12 +2,12 @@
 title: Estado y datos en aplicaciones de Docker
 description: Conozca la opción disponible para guardar el estado en aplicaciones en contenedor.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673562"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394635"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
@@ -47,7 +47,7 @@ Los **montajes `tmpfs`** son carpetas virtuales que solo existen en la memoria d
 
 Tal como se muestra en la figura 4-5, los volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o de la máquina virtual. Sin embargo, los contenedores de Docker no pueden tener acceso a un volumen desde un servidor de host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos que se comparten entre contenedores que se ejecutan en otros hosts de Docker, aunque se podría lograr con un controlador de volumen que sea compatible con los hosts remotos.
 
-![Los volúmenes se pueden compartir entre contenedores, pero solo en el mismo host, a menos que use un controlador remoto compatible con hosts remotos. ](./media/image5.png)
+![Diagrama que muestra los volúmenes de Docker almacenados fuera de los contenedores.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Figura 4-5**. Volúmenes y orígenes de datos externos para aplicaciones basadas en contenedor
 

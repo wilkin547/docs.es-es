@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790064"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318974"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Procedimiento para determinar las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
 
@@ -29,7 +29,7 @@ En este artículo se muestra cómo determinar qué actualizaciones de seguridad 
 
 Las actualizaciones de seguridad y las revisiones instaladas para cada versión de .NET Framework instalada en un equipo se enumeran en el Registro de Windows. Puede utilizar el Editor del Registro (*regedit.exe*) para ver esta información.
 
-1. Abra el programa **regedit.exe**. En Windows 8 y versiones posteriores, haga clic en **Inicio** ![logotipo de Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") y, a continuación, seleccione **Ejecutar**. En el cuadro **Abrir**, escriba **regedit.exe** y seleccione **Aceptar**.
+1. Abra el programa **regedit.exe**. En Windows 8 y versiones posteriores, haga clic con el botón derecho en **Inicio** ![Captura de pantalla de la tecla del logotipo de Windows](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo") y seleccione **Ejecutar**. En el cuadro **Abrir**, escriba **regedit.exe** y seleccione **Aceptar**.
 
 2. En el Editor del Registro, abra la subclave siguiente:
 
