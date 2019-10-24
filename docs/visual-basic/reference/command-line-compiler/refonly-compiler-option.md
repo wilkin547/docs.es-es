@@ -7,37 +7,35 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788874"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775565"
 ---
-# <a name="-refonly-visual-basic"></a><span data-ttu-id="2ed21-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ed21-102">-refonly (Visual Basic)</span></span>
+# <a name="-refonly-visual-basic"></a><span data-ttu-id="bc2ef-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc2ef-102">-refonly (Visual Basic)</span></span>
 
-<span data-ttu-id="2ed21-103">El **- refonly** opción indica que la salida principal de la compilación debe ser un ensamblado de referencia en lugar de un ensamblado de implementación.</span><span class="sxs-lookup"><span data-stu-id="2ed21-103">The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly.</span></span> <span data-ttu-id="2ed21-104">El parámetro `-refonly` deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no pueden ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="2ed21-104">The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.</span></span>
+<span data-ttu-id="bc2ef-103">La opción **-refonly** indica que la salida principal de la compilación debe ser un ensamblado de referencia en lugar de un ensamblado de implementación.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-103">The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly.</span></span> <span data-ttu-id="bc2ef-104">El parámetro `-refonly` deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no pueden ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-104">The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.</span></span>
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
-## <a name="syntax"></a><span data-ttu-id="2ed21-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2ed21-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="bc2ef-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bc2ef-105">Syntax</span></span>
 
 ```console
 -refonly
 ```
 
-## <a name="remarks"></a><span data-ttu-id="2ed21-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2ed21-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="bc2ef-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="bc2ef-106">Remarks</span></span>
 
-<span data-ttu-id="2ed21-107">Visual Basic admite la `-refout` cambiar comenzando con la versión 15.3.</span><span class="sxs-lookup"><span data-stu-id="2ed21-107">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
+<span data-ttu-id="bc2ef-107">Visual Basic admite el modificador de `-refonly` a partir de la versión 15,3.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-107">Visual Basic supports the `-refonly` switch starting with version 15.3.</span></span>
 
-<span data-ttu-id="2ed21-108">Los ensamblados de referencia son solo metadatos de los ensamblados que contienen metadatos pero ningún código de implementación.</span><span class="sxs-lookup"><span data-stu-id="2ed21-108">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="2ed21-109">Incluyen información de los tipos y miembros para todo excepto los tipos anónimos.</span><span class="sxs-lookup"><span data-stu-id="2ed21-109">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="2ed21-110">El motivo de usar cuerpos `throw null` (en lugar de no usar ningún cuerpo) es que PEVerify pueda ejecutar y pasar (por lo tanto, validar la integridad de los metadatos).</span><span class="sxs-lookup"><span data-stu-id="2ed21-110">The reason for using `throw null` bodies (as opposed to no bodies) is so that PEVerify could run and pass (thus validating the completeness of the metadata).</span></span>
+<span data-ttu-id="bc2ef-108">Los ensamblados de referencia son un tipo especial de ensamblado que contiene solo la cantidad mínima de metadatos necesarios para representar la superficie de la API pública de la biblioteca.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-108">Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface.</span></span> <span data-ttu-id="bc2ef-109">Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación, pero excluyen todas las implementaciones de miembros y declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-109">They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract.</span></span> <span data-ttu-id="bc2ef-110">Para obtener más información, consulte [ensamblados de referencia](../../../standard/assembly/reference-assemblies.md) en .net Guide.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-110">For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.</span></span>
 
-<span data-ttu-id="2ed21-111">Los ensamblados de referencia incluyen un nivel de ensamblado [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo.</span><span class="sxs-lookup"><span data-stu-id="2ed21-111">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="2ed21-112">Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo).</span><span class="sxs-lookup"><span data-stu-id="2ed21-112">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="2ed21-113">Debido a este atributo, los tiempos de ejecución rechazarán cargar ensamblados de referencia para la ejecución (pero todavía se pueden cargar en un contexto de solo reflexión).</span><span class="sxs-lookup"><span data-stu-id="2ed21-113">Because of this attribute, runtimes will refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="2ed21-114">Las herramientas que se reflejan en los ensamblados deben asegurarse de que cargan los ensamblados de referencia como de solo reflexión; en caso contrario, el runtime produce una <xref:System.BadImageFormatException>.</span><span class="sxs-lookup"><span data-stu-id="2ed21-114">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
+<span data-ttu-id="bc2ef-111">Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente excluyentes.</span><span class="sxs-lookup"><span data-stu-id="bc2ef-111">The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.</span></span>
 
-<span data-ttu-id="2ed21-115">Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente excluyentes.</span><span class="sxs-lookup"><span data-stu-id="2ed21-115">The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc2ef-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="bc2ef-112">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2ed21-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ed21-116">See also</span></span>
-
-- [<span data-ttu-id="2ed21-117">/refout</span><span class="sxs-lookup"><span data-stu-id="2ed21-117">-refout</span></span>](refout-compiler-option.md)
-- [<span data-ttu-id="2ed21-118">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2ed21-118">Visual Basic Command-Line Compiler</span></span>](index.md)
-- [<span data-ttu-id="2ed21-119">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="2ed21-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
+- [<span data-ttu-id="bc2ef-113">/refout</span><span class="sxs-lookup"><span data-stu-id="bc2ef-113">-refout</span></span>](refout-compiler-option.md)
+- [<span data-ttu-id="bc2ef-114">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bc2ef-114">Visual Basic Command-Line Compiler</span></span>](index.md)
+- [<span data-ttu-id="bc2ef-115">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="bc2ef-115">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
