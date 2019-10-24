@@ -2,19 +2,22 @@
 title: Control de la reentrada en aplicaciones asincrónicas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352004"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775536"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Control de la reentrada en aplicaciones asincrónicas (Visual Basic)
 
 Cuando se incluye código asincrónico en una aplicación, hay que tener en cuenta (y posiblemente evitar) la reentrada, que significa volver a especificar una operación asincrónica antes de que finalice. Si no se identifican ni controlan las posibilidades de reentrada, pueden producirse resultados inesperados.
 
 > [!NOTE]
-> Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.
+> Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior.
+
+> [!NOTE]
+> La versión 1,2 de seguridad de la capa de transporte (TLS) es ahora la versión mínima que se usará en el desarrollo de la aplicación. Si su aplicación tiene como destino una versión de .NET Framework anterior a la 4,7, consulte el artículo siguiente para conocer las [prácticas recomendadas de seguridad de la capa de transporte (TLS) con el .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Reconocer la reentrada
 
@@ -94,7 +97,7 @@ La reentrada se puede controlar de varias maneras en función de lo que se desee
 
 Puede bloquear el botón **Start** mientras se ejecuta una operación si lo deshabilita en la parte superior del controlador de eventos `StartButton_Click`. A continuación, cuando finalice la operación, puede habilitar de nuevo el botón desde un bloque `Finally` de modo que los usuarios puedan volver a ejecutar la aplicación.
 
-El código siguiente muestra estos cambios marcados con asteriscos. Puede Agregar los cambios al código al final de este tema, o puede descargar la aplicación finalizada en @no__t ejemplos de 0Async: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es DisableStartButton.
+El código siguiente muestra estos cambios marcados con asteriscos. Puede agregar los cambios al código al final de este tema, o puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -136,7 +139,7 @@ Para configurar este escenario, haga los cambios siguientes en el código básic
         Dim cts As CancellationTokenSource
     ```
 
-2. En `StartButton_Click`, determine si una operación ya está en curso. Si el valor de `cts` es `Nothing`, no habrá ninguna operación activa. Si el valor no es `Nothing`, se cancela la operación que ya se está ejecutando.
+2. En `StartButton_Click`, determine si una operación ya está en curso. Si el valor de `cts` es `Nothing`, no habrá ninguna operación activa. Si el valor no está `Nothing`, se cancela la operación que ya se está ejecutando.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -513,7 +516,7 @@ La salida muestra los siguientes patrones.
   TOTAL bytes returned:  915908
   ```
 
-- La tarea `pendingWork` es `Nothing` al principio de @no__t 2 solo para el grupo A, que se inició primero. El grupo A todavía no ha completado una expresión await cuando alcanza `FinishOneGroupAsync`. Por lo tanto, el control no se ha devuelto a `AccessTheWebAsync`, y la primera asignación a `pendingWork` no se ha producido.
+- La tarea `pendingWork` se `Nothing` al principio de `FinishOneGroupAsync` solo para el grupo A, que se inició primero. El grupo A todavía no ha completado una expresión await cuando alcanza `FinishOneGroupAsync`. Por lo tanto, el control no se ha devuelto a `AccessTheWebAsync`, y la primera asignación a `pendingWork` no se ha producido.
 
 - Las dos líneas siguientes siempre aparecen juntas en la salida. El código no se interrumpa nunca entre el inicio de la operación de un grupo en de `StartButton_Click` y la asignación de una tarea del grupo a `pendingWork`.
 
@@ -561,7 +564,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 4. En la lista de tipos de proyecto, seleccione **Aplicación WPF**.
 
-5. Asigne el nombre `WebsiteDownloadWPF` al proyecto y después haga clic en el botón **Aceptar**.
+5. Asigne un nombre al proyecto `WebsiteDownloadWPF`, elija .NET Framework versión de 4,6 o superior y, a continuación, haga clic en el botón **Aceptar** .
 
      El proyecto nuevo aparece en el **Explorador de soluciones**.
 
@@ -589,7 +592,9 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
      En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un cuadro de texto y un botón.
 
-8. Agregue una referencia para <xref:System.Net.Http>.
+8. En **Explorador de soluciones**, haga clic con el botón derecho en **referencias** y seleccione **Agregar referencia**.
+
+     Agregue una referencia para <xref:System.Net.Http>, si aún no está seleccionada.
 
 9. En **Explorador de soluciones**, abra el menú contextual de MainWindow. Xaml. VB y, a continuación, elija **Ver código**.
 
@@ -603,6 +608,8 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
     Class MainWindow
 
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or System.Net.SecurityProtocolType.Tls12
+
             ' This line is commented out to make the results clearer in the output.
             'ResultsTextBox.Text = ""
 
@@ -677,5 +684,5 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Acceso a la web mediante Async y Await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [Visual Basic])
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

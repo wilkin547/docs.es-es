@@ -5,15 +5,15 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 58026ff84f1ff501bf767adebcfc01f7de5bf4a4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 203380bbe2b2828e159ee36d795b6cd4a24e2917
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005586"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775654"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que está marcado con la opción del compilador [/Platform: AnyCPU](../../../visual-basic/reference/command-line-compiler/platform.md) admite la selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.  
+Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que está marcado con la opción del compilador [-Platform: AnyCPU](../../../visual-basic/reference/command-line-compiler/platform.md) admite la selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.  
   
 ## <a name="syntax"></a>Sintaxis  
   

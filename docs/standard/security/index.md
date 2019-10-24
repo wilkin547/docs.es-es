@@ -11,38 +11,32 @@ helpviewer_keywords:
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c3c7eb20bb3368205dab4c7e03b6b80d09a2121
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860560"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775270"
 ---
 # <a name="security-in-net"></a>Seguridad en .NET
-Common language runtime y .NET proporcionan muchas clases y servicios útiles que permiten a los desarrolladores escribir código seguro fácilmente y permiten a los administradores del sistema personalizar los permisos concedidos al código, por lo que puede tener acceso a recursos protegidos. Además, el tiempo de ejecución y .NET proporcionan clases y servicios que facilitan el uso de criptografía y seguridad basada en funciones útiles.  
-  
-## <a name="in-this-section"></a>En esta sección  
 
- [Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)  
- Proporciona información general de las características de seguridad de Common Language Runtime. Esta sección está dirigida a desarrolladores y administradores de sistemas.  
-  
- [Seguridad basada en roles](../../../docs/standard/security/role-based-security.md)  
- Describe cómo interactuar en su código con la seguridad basada en roles. Esta sección es de interés para desarrolladores.  
-  
- [Modelo de criptografía](../../../docs/standard/security/cryptography-model.md)  
- Proporciona información general de servicios criptográficos proporcionados por. NET. Esta sección es de interés para desarrolladores.  
-  
- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)  
- Describe algunos de los procedimientos recomendados para crear aplicaciones confiables. NET. Esta sección es de interés para desarrolladores.  
-  
- [Instrucciones de programación segura para código sin administrar](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- Describe algunas de las prácticas recomendadas y problemas de seguridad al llamar a código no administrado.  
-  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)  
- Describe cómo implementar la identidad basada en notificaciones en sus aplicaciones.  
+El Common Language Runtime y .NET proporcionan muchas clases y servicios útiles que permiten a los desarrolladores escribir código seguro fácilmente y permitir a los administradores del sistema personalizar los permisos concedidos al código para que pueda acceder a los recursos protegidos. Además, el tiempo de ejecución y .NET proporcionan clases y servicios útiles que facilitan el uso de la criptografía y la seguridad basada en roles.
 
-[Cambios de seguridad](../../../docs/framework/security/security-changes.md) se describen cambios importantes en el sistema de seguridad de .NET Framework.
+## <a name="in-this-section"></a>En esta sección
 
-## <a name="related-sections"></a>Secciones relacionadas  
- [Guía de desarrollo](../../../docs/framework/development-guide.md)  
- Proporciona una guía para todas las áreas y tareas tecnológicas principales para el desarrollo de aplicaciones, como la creación, configuración, depuración, seguridad e implementación de la aplicación, e información sobre programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.
+- [Conceptos clave de seguridad](key-security-concepts.md)  
+Proporciona información general de las características de seguridad de Common Language Runtime. Esta sección está dirigida a desarrolladores y administradores de sistemas.
+
+- [Seguridad basada en roles](role-based-security.md)  
+Describe cómo interactuar en su código con la seguridad basada en roles. Esta sección es de interés para desarrolladores.
+
+- [Modelo de criptografía](cryptography-model.md)  
+Proporciona información general sobre los servicios criptográficos proporcionados por .NET. Esta sección es de interés para desarrolladores.
+
+- [Instrucciones de codificación segura](secure-coding-guidelines.md)  
+Describe algunas de las prácticas recomendadas para crear aplicaciones .NET confiables. Esta sección es de interés para desarrolladores.
+
+## <a name="related-sections"></a>Secciones relacionadas
+
+[Guía de desarrollo](../../framework/development-guide.md)  
+Proporciona una guía para todas las áreas y tareas tecnológicas principales para el desarrollo de aplicaciones, como la creación, configuración, depuración, seguridad e implementación de la aplicación, e información sobre programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.
