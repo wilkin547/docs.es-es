@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 741c36473d80b2581718d969a7037f6c81ff4bf5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005297"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775586"
 ---
 # <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede ejecutar el archivo de salida.  
@@ -24,7 +24,7 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`x86`|Compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.|  
 |`x64`|Compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.|  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Vea también
 
-- [/Target (Visual Basic)](target.md)
+- [-Target (Visual Basic)](target.md)
 - [Compilador de línea de comandos de Visual Basic](index.md)
 - [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

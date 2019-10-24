@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582874"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775546"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -35,9 +35,7 @@ Ruta de acceso y nombre de archivo del ensamblado de referencia. Por lo general,
 
 Visual Basic admite el modificador de `-refout` a partir de la versión 15,3.
 
-Los ensamblados de referencia son ensamblados de solo metadatos que contienen metadatos pero no código de implementación. Incluyen información de tipo y miembro para todo excepto los tipos anónimos. Sus cuerpos de método se reemplazan por una única instrucción `throw null`. El motivo por el que se usa `throw null` cuerpos de método (no en lugar de cuerpos) es para que PEVerify pueda ejecutarse y pasarse (con lo que se valida la integridad de los metadatos).
-
-Los ensamblados de referencia incluyen un atributo [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) de nivel de ensamblado. Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo). Debido a este atributo, los tiempos de ejecución rechazan la carga de ensamblados de referencia para su ejecución (pero todavía se pueden cargar en un contexto de solo reflexión). Las herramientas que reflejan en los ensamblados deben asegurarse de que cargan los ensamblados de referencia como solo reflexión. de lo contrario, el tiempo de ejecución produce una <xref:System.BadImageFormatException>.
+Los ensamblados de referencia son un tipo especial de ensamblado que contiene solo la cantidad mínima de metadatos necesarios para representar la superficie de la API pública de la biblioteca. Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación, pero excluyen todas las implementaciones de miembros y declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API. Para obtener más información, consulte [ensamblados de referencia](../../../standard/assembly/reference-assemblies.md) en .net Guide.
 
 Las opciones `-refout` y [`-refonly`](refonly-compiler-option.md) son mutuamente excluyentes.
 
