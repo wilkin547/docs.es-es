@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045227"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774299"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 
@@ -26,7 +26,7 @@ Los certificados los debe emitir una entidad de certificación, que suele ser un
 
 ## <a name="viewing-certificates"></a>Visualización de certificados
 
-Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). Para obtener más información, consulte [Cómo Ver certificados con el complemento](how-to-view-certificates-with-the-mmc-snap-in.md)MMC.
+Para trabajar con certificados, a menudo es necesario verlos y examinar sus propiedades. Esto se hace con facilidad con la herramienta de complemento Microsoft Management Console (MMC). Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Almacenes de certificados
 
@@ -57,13 +57,13 @@ Seleccionar dónde almacenar un certificado depende de cómo y cuándo se ejecut
 
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes
 
-Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio hospedado por Internet Information Services (IIS), el proceso ASP.NET se ejecuta en la cuenta ASP.NET. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso mediante la herramienta herramienta winhttpcertconfig. exe [, consulte Cómo: Cree certificados temporales para su uso durante](how-to-create-temporary-certificates-for-use-during-development.md)el desarrollo. Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).
+Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio hospedado por Internet Information Services (IIS), el proceso ASP.NET se ejecuta en la cuenta ASP.NET. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso con la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="chain-trust-and-certificate-authorities"></a>Confianza de cadena y entidades de certificación
 
 Los certificados se crean en una jerarquía en la que cada certificado individual se vincula a la CA que emite el certificado. Este vínculo va al certificado de la CA. A continuación, el certificado de la CA se vincula a la CA que emitió el certificado de la CA original. Este proceso se repite hasta que se llegue al certificado de la CA raíz. Se confía intrínsecamente en el certificado de la CA raíz.
 
-Los certificados digitales se usan para autenticar una entidad confiando en esta jerarquía, que también se denomina *cadena de confianza*. Puede ver la cadena de cualquier certificado mediante el complemento MMC si hace doble clic en cualquier certificado y, después, hace clic en la pestaña **Ruta de acceso de certificado**. Para obtener más información acerca de la importación de cadenas de certificados para [una entidad de certificación, consulte Cómo: Especifique la cadena de certificados de la entidad de certificación utilizada](specify-the-certificate-authority-chain-verify-signatures-wcf.md)para comprobar las firmas.
+Los certificados digitales se usan para autenticar una entidad confiando en esta jerarquía, que también se denomina *cadena de confianza*. Para ver la cadena de cualquier certificado mediante el complemento MMC, haga doble clic en cualquier certificado y, a continuación, haga clic en la pestaña **ruta de acceso del certificado** . Para obtener más información acerca de la importación de cadenas de certificados para una entidad de certificación, consulte [Cómo: especificar la cadena de certificados de la entidad de certificación utilizada para comprobar las firmas](specify-the-certificate-authority-chain-verify-signatures-wcf.md).
 
 > [!NOTE]
 > A cualquier emisor se le puede designar una entidad emisora raíz de confianza colocando el certificado del emisor en el almacén de certificados de la entidad emisora raíz de confianza.
@@ -72,7 +72,7 @@ Los certificados digitales se usan para autenticar una entidad confiando en esta
 
 Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.
 
-|Clase|Propiedad|
+|Clase|Propiedad.|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -105,7 +105,7 @@ El cmdlet New-SelfSignedCertificate de PowerShell crea certificados X. 509 y par
 
 3. Importe el certificado de la entidad emisora raíz en el almacén Entidades emisoras de certificados raíz de confianza.
 
-4. Para obtener instrucciones paso a paso, consulte [cómo: Cree certificados temporales para su uso durante](how-to-create-temporary-certificates-for-use-during-development.md)el desarrollo.
+4. Para obtener instrucciones paso a paso, vea [Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="which-certificate-to-use"></a>¿Qué certificado utilizar?
 
@@ -113,9 +113,9 @@ Las preguntas más comunes sobre certificados son qué certificados utilizar y p
 
 ### <a name="service-certificates"></a>Certificados de servicio
 
-Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) que se usa para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio es `http://www.contoso.com/endpoint/` , el campo **asunto** también debe contener el valor. `www.contoso.com`
+Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) que se usa para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio se `http://www.contoso.com/endpoint/`, el campo **asunto** también debe contener el valor `www.contoso.com`.
 
-Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Normalmente, la inicialización es "CN" para el nombre común, por ejemplo `CN = www.contoso.com`,. También es posible que el campo **Asunto** esté en blanco, en cuyo caso el campo **Nombre alternativo del firmante** puede contener el valor **Nombre DNS**.
+Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Normalmente, la inicialización es "CN" para el nombre común, por ejemplo, `CN = www.contoso.com`. También es posible que el campo **Asunto** esté en blanco, en cuyo caso el campo **Nombre alternativo del firmante** puede contener el valor **Nombre DNS**.
 
 También tenga en cuenta que el valor del campo **Propósitos planteados** del certificado debería incluir un valor adecuado, como "Autenticación del Servidor" o "Autenticación del cliente".
 
