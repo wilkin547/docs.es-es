@@ -5,23 +5,23 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 1bee64568ff92468e29226a395f7e5335387e256
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0767b2054697735c3f5190b6e30a2c80ea5288bc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945583"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775702"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilación condicional en Visual Basic
 En la *compilación condicional*, determinados bloques de código de un programa se compilan de forma selectiva mientras que otros se omiten.  
   
  Por ejemplo, puede que desee escribir instrucciones de depuración que comparen la velocidad de los distintos enfoques para la misma tarea de programación, o puede que desee localizar una aplicación para varios idiomas. Las instrucciones de compilación condicional están diseñadas para ejecutarse durante el tiempo de compilación, no en tiempo de ejecución.  
   
- Se denotan los bloques de código que se van a compilar condicionalmente con la `#If...Then...#Else` Directiva. Por ejemplo, para crear versiones en francés y en alemán de la misma aplicación desde el mismo código fuente, se insertan segmentos de código específicos de la `#If...Then` plataforma en las instrucciones usando las `FrenchVersion` constantes predefinidas y `GermanVersion`. En el ejemplo siguiente se muestra cómo:  
+ Se denotan los bloques de código que se van a compilar condicionalmente con la Directiva `#If...Then...#Else`. Por ejemplo, para crear versiones en francés y en alemán de la misma aplicación desde el mismo código fuente, se insertan segmentos de código específicos de la plataforma en `#If...Then` instrucciones usando las constantes predefinidas `FrenchVersion` y `GermanVersion`. En el ejemplo siguiente se muestra cómo:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- Si establece el valor de la `FrenchVersion` constante de compilación condicional en `True` en tiempo de compilación, se compila el código condicional de la versión en francés. Si establece el valor de la `GermanVersion` constante en, el compilador usa la versión en `True`alemán. Si no se establece `True`ninguno en, se ejecuta el código del último `Else` bloque.  
+ Si establece el valor de `FrenchVersion` constante de compilación condicional en `True` en tiempo de compilación, se compila el código condicional de la versión en francés. Si establece el valor de la constante `GermanVersion` en `True`, el compilador usa la versión en alemán. Si no se establece ninguno en `True`, se ejecuta el código del último bloque de `Else`.  
   
 > [!NOTE]
 > La finalización automática no funcionará al editar código y utilizar directivas de compilación condicional si el código no forma parte de la rama actual.  
@@ -41,7 +41,7 @@ En la *compilación condicional*, determinados bloques de código de un programa
 |---|---|  
 |**Diseñador de proyectos**|Público a todos los archivos del proyecto|  
 |Línea de comandos|Público a todos los archivos pasados al compilador de línea de comandos|  
-|`#Const`instrucción en el código|Privado del archivo en el que se declara|  
+|`#Const` instrucción en el código|Privado del archivo en el que se declara|  
   
 |Para establecer constantes en el diseñador de proyectos|  
 |---|  
@@ -49,7 +49,7 @@ En la *compilación condicional*, determinados bloques de código de un programa
   
 |Para establecer constantes en la línea de comandos|  
 |---|  
-|-Use el modificador **/d** para especificar constantes de compilación condicionales, como en el ejemplo siguiente:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     No es necesario ningún espacio entre el modificador **/d** y la primera constante. Para obtener más información, vea [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Las declaraciones de línea de comandos invalidan las declaraciones especificadas en el **Diseñador de proyectos**, pero no las borran. Los argumentos establecidos en el **Diseñador de proyectos** permanecen en vigor para las compilaciones posteriores.<br />     Al escribir constantes en el propio código, no hay ninguna regla estricta en cuanto a su ubicación, ya que su ámbito es todo el módulo en el que se declaran.|  
+|-Use el modificador **-d** para especificar constantes de compilación condicional, como en el ejemplo siguiente:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     No se requiere espacio entre el modificador **-d** y la primera constante. Para obtener más información, vea [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Las declaraciones de línea de comandos invalidan las declaraciones especificadas en el **Diseñador de proyectos**, pero no las borran. Los argumentos establecidos en el **Diseñador de proyectos** permanecen en vigor para las compilaciones posteriores.<br />     Al escribir constantes en el propio código, no hay ninguna regla estricta en cuanto a su ubicación, ya que su ámbito es todo el módulo en el que se declaran.|  
   
 |Para establecer constantes en el código|  
 |---|  
@@ -57,7 +57,7 @@ En la *compilación condicional*, determinados bloques de código de un programa
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|DESCRIPCIÓN|  
+|Title|Descripción|  
 |---|---|  
 |[Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Proporciona sugerencias para facilitar la lectura y el mantenimiento del código.|  
   
@@ -66,4 +66,4 @@ En la *compilación condicional*, determinados bloques de código de un programa
   
  [#If...Then...#Else (directivas)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+ [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

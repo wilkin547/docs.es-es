@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: c8e193a8cb4d4dbc7515c32139bad9dce8b48ed7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a9741f7a8283f8603e02dae5abea151c6ee5d75e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005624"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775671"
 ---
 # <a name="-errorreport"></a>-errorreport
 
@@ -40,14 +40,14 @@ En la tabla siguiente se resume el efecto de la opción `-errorreport`.
 
 El compilador envía datos que incluyen la pila en el momento del error, que normalmente incluye algún código fuente. Si `-errorreport` se usa con la opción [-bugreport (](../../../visual-basic/reference/command-line-compiler/bugreport.md) , se envía el archivo de código fuente completo.
 
-Esta opción se utiliza mejor con la opción [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , ya que permite a los ingenieros de Microsoft reproducir más fácilmente el error.
+Esta opción se utiliza mejor con la opción [-bugreport (](../../../visual-basic/reference/command-line-compiler/bugreport.md) , ya que permite a los ingenieros de Microsoft reproducir el error más fácilmente.
 
 > [!NOTE]
 > La opción `-errorreport` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente intenta compilar `T2.vb`, y si el compilador encuentra un error interno del compilador, le pedirá que envíe el informe de errores a Microsoft.
+El código siguiente intenta compilar `T2.vb` y, si el compilador encuentra un error interno del compilador, le pedirá que envíe el informe de errores a Microsoft.
 
 ```console
 vbc -errorreport:prompt t2.vb
