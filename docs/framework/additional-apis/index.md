@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579114"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847081"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de clases y API adicionales
 
@@ -57,18 +57,22 @@ Estas API admiten la infraestructura del producto y no están previstas ni se ad
 * [System. Data. SqlTypes. SqlStreamChars. SetLength (método)](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [System. Data. SqlTypes. SqlStreamChars. Write (método)](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .net. Connection (clase)](connection.md)
-* [Campo de \_WriteList System .net. Connection. m](m_writelist.md)
+* [System .net. Connection. m\_campo WriteList](m_writelist.md)
 * [System .net. ConnectionGroup (clase)](connectiongroup.md)
-* [Campo de \_ConnectionList System .net. ConnectionGroup. m](m_connectionlist.md)
+* [Campo System .net. ConnectionGroup. m\_ConnectionList](m_connectionlist.md)
+* [Propiedad System .net. ConnectStream. Connection](system.net.connectstream.connection.md)
 * [System .net. CoreResponseData (clase)](coreresponsedata.md)
-* [Campo de \_ResponseHeaders System .net. CoreResponseData. m](coreresponsedata_m_responseheaders.md)
-* [Campo de \_StatusCode System .net. CoreResponseData. m](coreresponsedata_m_statuscode.md)
-* [Campo System .net. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
-* [Campo System .net. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
-* [Campo System .net. HttpWebRequest. \_HttpResponse](_httpresponse.md)
-* [Campo de \_ConnectionGroupList System .net. ServicePoint. m](m_connectiongrouplist.md)
-* [Campo de \_ServicePointTable System .net. ServicePointManager. s](s_servicepointtable.md)
-* [Campo de \_isDebuggerCheckDisabledForTestPurposes System. Windows. Diagnostics. VisualDiagnostics. s](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Campo System .net. CoreResponseData. m\_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [System .net. CoreResponseData. m\_campo StatusCode](coreresponsedata_m_statuscode.md)
+* [Campo System .net. HttpWebRequest.\_AutoRedirects](_autoredirects.md)
+* [Campo System .net. HttpWebRequest.\_CoreResponse](httpwebrequest__coreresponse.md)
+* [Campo System .net. HttpWebRequest.\_HttpResponse](_httpresponse.md)
+* [Propiedad System .net. PooledStream. NetworkStream](system.net.pooledstream.networkstream.md)
+* [System .net. ServicePoint. m\_campo ConnectionGroupList](m_connectiongrouplist.md)
+* [System .net. ServicePointManager. s\_campo ServicePointTable](s_servicepointtable.md)
+* [Campo System .net. TlsStream. m_Worker](system.net.tlsstream.m_worker.md)
+* [Propiedad System .net. Security. SslState. SslProtocol](system.net.security.sslstate.sslprotocol.md)
+* [System. Windows. Diagnostics. VisualDiagnostics. s\_campo isDebuggerCheckDisabledForTestPurposes](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [Clase System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
 * [Clase System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
 * [System. Xml. XmlReader. CreateSqlReader (método)](system.xml.xmlreader.createsqlreader.md)

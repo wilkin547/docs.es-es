@@ -2,23 +2,23 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: b5ab3c3ad070499d686ea74b9fd459e89f380cfa
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397961"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846860"
 ---
-# <a name="issuedtoken"></a>\<issuedToken>
+# <a name="issuedtoken"></a>\<issuedToken >
 Especifica un token personalizado usado para autenticar un cliente en un servicio.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuedToken**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**comportamientos**](behaviors.md)\<\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors**](endpointbehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**comportamiento**](behavior-of-endpointbehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**clientCredentials**](clientcredentials.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedToken >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,9 +37,9 @@ Especifica un token personalizado usado para autenticar un cliente en un servici
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|`cacheIssuedTokens`|Atributo booleano opcional que especifica si los tokens están almacenados en memoria caché. El valor predeterminado es `true`.|  
+|`cacheIssuedTokens`|Atributo booleano opcional que especifica si los tokens están almacenados en memoria caché. De manera predeterminada, es `true`.|  
 |`defaultKeyEntropyMode`|Atributo de cadena opcional que especifica los valores aleatorios (entropías) que se usan para las operaciones del protocolo en enlace. Los valores incluyen `ClientEntropy`, `ServerEntropy` y `CombinedEntropy`. El valor predeterminado es `CombinedEntropy`. Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |`issuedTokenRenewalThresholdPercentage`|Atributo de entero opcional que especifica el porcentaje de un intervalo de tiempo válido (proporcionado por el emisor del token) que puede pasar antes de que se renueve un token. Los valores van de 0 a 100. El valor predeterminado es 60, que especifica el 60% de los pasos de tiempo antes de intentar una renovación.|  
 |`issuerChannelBehaviors`|Atributo opcional que especifica los comportamientos del canal que se va a usar al comunicar con el emisor.|  
@@ -48,21 +48,21 @@ Especifica un token personalizado usado para autenticar un cliente en un servici
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<localIssuer>](localissuer.md)|Especifica la dirección del emisor local del token y el enlace usado para comunicarse con el punto de conexión.|  
-|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|Especifica los comportamientos del punto de conexión que se va a usar al ponerse en contacto con un emisor local.|  
+|[\<localIssuer >](localissuer.md)|Especifica la dirección del emisor local del token y el enlace usado para comunicarse con el punto de conexión.|  
+|[\<issuerChannelBehaviors >](issuerchannelbehaviors-element.md)|Especifica los comportamientos del punto de conexión que se va a usar al ponerse en contacto con un emisor local.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales usadas para autenticar un cliente a un servicio.|  
+|[\<clientCredentials >](clientcredentials.md)|Especifica las credenciales usadas para autenticar un cliente a un servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un token emitido es un tipo de credencial personalizado usado, por ejemplo, al autenticar con un servicio de token seguro (STS) en un escenario aliado. De forma predeterminada, el token es un token de SAML. Para obtener más información, vea [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md). y [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md).  
+ Un token emitido es un tipo de credencial personalizado usado, por ejemplo, al autenticar con un servicio de token seguro (STS) en un escenario aliado. De forma predeterminada, el token es un token de SAML. Para obtener más información, vea [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md), y [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
- Esta sección contiene los elementos utilizados para configurar un emisor local de tokens, o los comportamientos utilizados con un servicio de token seguro. Para obtener instrucciones sobre cómo configurar un cliente para utilizar un emisor local, [consulte Cómo: Configurar un emisor](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)local.  
+ Esta sección contiene los elementos utilizados para configurar un emisor local de tokens, o los comportamientos utilizados con un servicio de token seguro. Para obtener instrucciones sobre cómo configurar un cliente para utilizar un emisor local, consulte [How to: Configure a local issuer](../../../wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -76,6 +76,6 @@ Especifica un token personalizado usado para autenticar un cliente en un servici
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Protección de clientes](../../../wcf/securing-clients.md)
-- [Cómo: Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear una directiva de publicador
+title: 'Cómo: Crear una directiva de publicador'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991196"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846831"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Procedimiento para crear una directiva de publicador
+# <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de edición con el ensamblado actualizado. El archivo de directiva de edición especifica la redirección de ensamblados y la configuración de base de código, y usa el mismo formato que un archivo de configuración de aplicación. El archivo de directiva de edición se compila en un ensamblado y se coloca en la caché global de ensamblados.
 
@@ -26,7 +26,7 @@ Hay tres pasos implicados en la creación de una directiva de edición:
 
 3. Agregue el ensamblado de directiva de edición a la caché global de ensamblados.
 
-El esquema de la Directiva de edición se describe en [redirigir versiones de ensamblado](redirect-assembly-versions.md). En el ejemplo siguiente se muestra un archivo de directiva de edición que redirige `myAssembly` una versión de a otra.
+El esquema de la Directiva de edición se describe en [redirigir versiones de ensamblado](redirect-assembly-versions.md). En el ejemplo siguiente se muestra un archivo de directiva de edición que redirige una versión de `myAssembly` a otra.
 
 ```xml
 <configuration>
@@ -63,7 +63,7 @@ En este comando:
 
 - El argumento *publisherPolicyAssemblyFile* es el nombre del ensamblado de directiva de edición que se obtiene de este comando. El nombre del archivo de ensamblado debe seguir el formato:
 
-  **directivas.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **directivas.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**
 
 - El argumento *keyPairFile* es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directiva de edición con el mismo par de claves.
 
@@ -72,13 +72,13 @@ En este comando:
   > [!NOTE]
   > La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0.
 
-La capacidad de establecer como destino una arquitectura de procesador específica está disponible a partir de .NET Framework 2.0. el siguiente comando crea un `policy.1.0.myAssembly` ensamblado de directiva de edición `pub.config`llamado desde un archivo de directiva de edición denominado, asigna un nombre seguro a ensamblado que usa el par de claves `sgKey.snk` en el archivo y especifica que el ensamblado tiene como destino la arquitectura de procesador x86.
+La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0. El siguiente comando crea un ensamblado de directiva de edición denominado `policy.1.0.myAssembly` a partir de un archivo de directiva de edición denominado `pub.config`, asigna un nombre seguro al ensamblado mediante el par de claves en el archivo `sgKey.snk` y especifica que el ensamblado tiene como destino el procesador x86. arquitectura.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-El ensamblado de directiva de edición debe coincidir con la arquitectura del procesador del ensamblado al que se aplica. Por lo tanto, si el ensamblado tiene <xref:System.Reflection.ProcessorArchitecture.MSIL>un <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> valor de, el ensamblado de directiva de edición para `/platform:anycpu`ese ensamblado debe crearse con. Debe proporcionar un ensamblado de directiva de edición independiente para cada ensamblado específico del procesador.
+El ensamblado de directiva de edición debe coincidir con la arquitectura del procesador del ensamblado al que se aplica. Por lo tanto, si el ensamblado tiene un valor <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> de <xref:System.Reflection.ProcessorArchitecture.MSIL>, se debe crear el ensamblado de directiva de edición para ese ensamblado con `/platform:anycpu`. Debe proporcionar un ensamblado de directiva de edición independiente para cada ensamblado específico del procesador.
 
 Una consecuencia de esta regla es que para cambiar la arquitectura del procesador de un ensamblado, debe cambiar el componente principal o secundario del número de versión, para que pueda proporcionar un nuevo ensamblado de directiva de edición con la arquitectura de procesador correcta. El ensamblado de directiva de edición anterior no puede atender el ensamblado cuando el ensamblado tiene una arquitectura de procesador diferente.
 
@@ -92,7 +92,7 @@ Use la [herramienta caché global de ensamblados (Gacutil. exe)](../tools/gacuti
 
 Escriba el siguiente comando en el símbolo del sistema:
 
-**gacutil /i** *publisherPolicyAssemblyFile*
+**Gacutil/I**  *publisherPolicyAssemblyFile*
 
 El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.
 
