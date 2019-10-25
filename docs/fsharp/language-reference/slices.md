@@ -2,16 +2,16 @@
 title: Segmentos (F#)
 description: Obtenga información sobre cómo usar los segmentos para F# los tipos de datos existentes y cómo definir sus propios segmentos para otros tipos de datos.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627145"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798907"
 ---
 # <a name="slices"></a>Segmentos
 
-En F#, un segmento es un subconjunto de un tipo de datos. Para poder tomar un segmento de un tipo de datos, el tipo de datos debe definir un `GetSlice` método o una extensión de [tipo](type-extensions.md) que esté en el ámbito. En este artículo se explica cómo tomar los segmentos F# de los tipos existentes y cómo definir los suyos propios.
+En F#, un segmento es un subconjunto de un tipo de datos. Para poder tomar un segmento de un tipo de datos, el tipo de datos debe definir un método `GetSlice` o en una [extensión de tipo](type-extensions.md) que esté en el ámbito. En este artículo se explica cómo tomar los segmentos F# de los tipos existentes y cómo definir los suyos propios.
 
 Los segmentos son similares a los [indizadores](./members/indexed-properties.md), pero en lugar de producir un valor único de la estructura de datos subyacente, producen varios.
 
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-La F# biblioteca principal no define `GetSlice`para las matrices 3D. Si desea segmentar esas u otras matrices de más dimensiones, debe definir el `GetSlice` miembro usted mismo.
+La F# biblioteca principal no define`GetSlice`para las matrices 3D. Si desea segmentar esas u otras matrices de más dimensiones, debe definir el miembro de `GetSlice`.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definir segmentos para otras estructuras de datos
 
 La F# biblioteca principal define los segmentos para un conjunto limitado de tipos. Si desea definir segmentos para más tipos de datos, puede hacerlo en la propia definición de tipo o en una extensión de tipo.
 
-Por ejemplo, aquí se muestra cómo podría definir los segmentos de <xref:System.ArraySegment%601> la clase para permitir una manipulación de datos adecuada:
+Por ejemplo, aquí se muestra cómo puede definir segmentos para la clase <xref:System.ArraySegment%601> para permitir una manipulación de datos adecuada:
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Usar la inclusión para evitar la conversión boxing si es necesario
 
-Si va a definir segmentos para un tipo que es realmente un struct, se recomienda que `inline` sea el `GetSlice` miembro. El F# compilador optimiza los argumentos opcionales, evitando las asignaciones de montón como resultado de la segmentación. Esto es muy importante para las construcciones de segmentación como, <xref:System.Span%601> por ejemplo, que no se pueden asignar en el montón.
+Si va a definir segmentos para un tipo que es realmente un struct, recomendamos que `inline` el miembro `GetSlice`. El F# compilador optimiza los argumentos opcionales, evitando las asignaciones de montón como resultado de la segmentación. Esto es muy importante para las construcciones de segmentación como <xref:System.Span%601> que no se pueden asignar en el montón.
 
 ```fsharp
 open System

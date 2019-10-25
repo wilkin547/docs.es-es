@@ -11,46 +11,46 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 36cf71529b1f81c27881638d788117222c37171d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0870f4b056658a22928769c369024cdda24f354
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955877"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799040"
 ---
 # <a name="new-operator-visual-basic"></a>New (Operador, Visual Basic)
-Introduce una `New` cláusula para crear una nueva instancia de objeto, especifica una restricción de constructor en un parámetro de tipo o `Sub` identifica un procedimiento como un constructor de clase.  
-  
-## <a name="remarks"></a>Comentarios  
- En una declaración o una instrucción de asignación `New` , una cláusula debe especificar una clase definida a partir de la cual se pueda crear la instancia. Esto significa que la clase debe exponer uno o más constructores a los que puede tener acceso el código de llamada.  
-  
- Puede utilizar una `New` cláusula en una instrucción de declaración o una instrucción de asignación. Cuando se ejecuta la instrucción, llama al constructor adecuado de la clase especificada, pasando los argumentos que ha proporcionado. En el siguiente ejemplo se muestra la creación de instancias `Customer` de una clase que tiene dos constructores, uno que no toma parámetros y otro que toma un parámetro de cadena.  
-  
- [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
-  
- Puesto que las matrices son clases `New` , pueden crear una nueva instancia de la matriz, como se muestra en los ejemplos siguientes.  
-  
- [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
-  
- El Common Language Runtime (CLR) produce un <xref:System.OutOfMemoryException> error si no hay memoria suficiente para crear la nueva instancia.  
-  
+
+Presenta una cláusula `New` para crear una nueva instancia de objeto, especifica una restricción de constructor en un parámetro de tipo o identifica un procedimiento `Sub` como un constructor de clase.
+
+## <a name="remarks"></a>Comentarios
+
+En una declaración o una instrucción de asignación, una cláusula `New` debe especificar una clase definida a partir de la cual se pueda crear la instancia. Esto significa que la clase debe exponer uno o más constructores a los que puede tener acceso el código de llamada.
+
+Puede usar una cláusula `New` en una instrucción de declaración o una instrucción de asignación. Cuando se ejecuta la instrucción, llama al constructor adecuado de la clase especificada, pasando los argumentos que ha proporcionado. En el siguiente ejemplo se muestra la creación de instancias de una clase `Customer` que tiene dos constructores, uno que no toma parámetros y otro que toma un parámetro de cadena:
+
+[!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
+
+Dado que las matrices son clases, `New` puede crear una nueva instancia de la matriz, como se muestra en el ejemplo siguiente:
+
+[!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
+
+El Common Language Runtime (CLR) produce un error de <xref:System.OutOfMemoryException> si no hay suficiente memoria para crear la nueva instancia.
+
 > [!NOTE]
-> La `New` palabra clave también se usa en las listas de parámetros de tipo para especificar que el tipo proporcionado debe exponer un constructor sin parámetros accesible. Para obtener más información sobre los parámetros de tipo y las restricciones, vea [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
-  
- Para crear un procedimiento de constructor para una clase, establezca el nombre de `Sub` un procedimiento en `New` la palabra clave. Para obtener más información, [consulte duración de los objetos: Cómo se crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)los objetos.  
-  
- La palabra clave `New` se puede usar en los siguientes contextos:  
-  
- [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
-  
- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+> La palabra clave `New` también se usa en las listas de parámetros de tipo para especificar que el tipo proporcionado debe exponer un constructor sin parámetros accesible. Para obtener más información sobre los parámetros de tipo y las restricciones, vea [Type List](../statements/type-list.md).
+
+Para crear un procedimiento de constructor para una clase, establezca el nombre de una `Sub` procedimiento en la palabra clave `New`. Para obtener más información, vea [duración del objeto: cómo se crean y destruyen los objetos](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+
+La palabra clave `New` se puede usar en los siguientes contextos:
+
+- [Dim (instrucción)](../statements/dim-statement.md)
+- [Of](../statements/of-clause.md)
+- [Sub (instrucción)](../statements/sub-statement.md)
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.OutOfMemoryException>
-- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
-- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Duración del objeto: Cómo se crean y destruyen los objetos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Palabras clave](../keywords/index.md)
+- [Lista de tipos](../statements/type-list.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Duración de los objetos: cómo se crean y destruyen](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

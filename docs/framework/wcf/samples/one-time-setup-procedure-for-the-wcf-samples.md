@@ -2,12 +2,12 @@
 title: Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 4fe77455c26393455c66c24c74691a335ad8cb1b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039177"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799030"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 
@@ -37,15 +37,15 @@ El directorio virtual **ServiceModelSamples** se utiliza para compilar y ejecuta
     ```
 
     > [!WARNING]
-    > La ejecución del `aspnet_regiis –i –enable` comando hará que el grupo de aplicaciones predeterminado [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]se ejecute con, lo que puede producir problemas de incompatibilidad con otras aplicaciones del mismo equipo.
+    > La ejecución del `aspnet_regiis –i –enable` de comandos hará que el grupo de aplicaciones predeterminado se ejecute con [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], lo que puede producir problemas de incompatibilidad con otras aplicaciones del mismo equipo.
 
 5. Siga las [instrucciones de Firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) para habilitar los puertos que se usan en los ejemplos.
 
-6. Compruebe el siguiente directorio predeterminado: \<InstallDrive>: **\WF_WCF_Samples**. Si se instalaron los ejemplos con anterioridad, este es el directorio predeterminado.
+6. Compruebe el siguiente directorio predeterminado: \<InstallDrive >: **\WF_WCF_Samples**. Si se instalaron los ejemplos con anterioridad, este es el directorio predeterminado.
 
-7. Si los ejemplos no están instalados, instálelos desde la ubicación de descarga de ejemplos para [Visual C# ](https://go.microsoft.com/fwlink/?LinkId=190939) o [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).
+7. Si los ejemplos no están instalados, instálelos desde la ubicación de descarga de [C#](https://go.microsoft.com/fwlink/?LinkId=190939)ejemplos de.
 
-8. Después de instalar los ejemplos, vaya a: \<InstallDrive>: **\WF_WCF_Samples\WCF\Setup\\**
+8. Después de instalar los ejemplos, vaya a: \<InstallDrive >: **\WF_WCF_Samples\WCF\Setup\\**
 
 9. Ejecute el archivo por lotes **Setupvroot. bat** . Se realizan estos pasos:
 
