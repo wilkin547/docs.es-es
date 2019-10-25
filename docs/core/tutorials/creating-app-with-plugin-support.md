@@ -3,26 +3,26 @@ title: Creación de una aplicación de .NET Core con complementos
 description: Obtenga información sobre cómo crear una aplicación .NET Core que admita complementos.
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.date: 10/16/2019
+ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250159"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579500"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
-En este tutorial se le enseñará a hacer lo siguiente:
+Este tutorial muestra cómo crear un contexto <xref:System.Runtime.Loader.AssemblyLoadContext> personalizado para cargar complementos. Se usa un elemento <xref:System.Runtime.Loader.AssemblyDependencyResolver> para resolver las dependencias del complemento. El tutorial aísla correctamente las dependencias del complemento de la aplicación host. Aprenderá a:
 
 - Estructurar un proyecto para admitir los complementos.
 - Crear un elemento <xref:System.Runtime.Loader.AssemblyLoadContext> personalizado para cargar cada complemento.
-- Usar el tipo `System.Runtime.Loader.AssemblyDependencyResolver` para permitir que los complementos tengan dependencias.
+- Usar el tipo <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> para permitir que los complementos tengan dependencias.
 - Crear complementos que se puedan implementar fácilmente con solo copiar los artefactos de compilación.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Instale [.NET Core 3.0](https://dotnet.microsoft.com/download) o una versión más reciente.
+- Instale el [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download) o una versión más reciente.
 
 ## <a name="create-the-application"></a>Crear la aplicación
 
@@ -189,7 +189,7 @@ Ahora la aplicación puede cargar correctamente y crear instancias de los comand
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-El tipo `PluginLoadContext` se deriva de <xref:System.Runtime.Loader.AssemblyLoadContext>. El tipo `AssemblyLoadContext` es un tipo especial en el tiempo de ejecución que permite a los desarrolladores aislar los ensamblados cargados en grupos diferentes para asegurarse de que las versiones de ensamblado no entren en conflicto. Además, un elemento `AssemblyLoadContext` personalizado puede elegir otras rutas de acceso desde las que cargar los ensamblados e invalidar el comportamiento predeterminado. El elemento `PluginLoadContext` usa una instancia del tipo `AssemblyDependencyResolver` que se introdujo en .NET Core 3.0 para resolver los nombres de ensamblado en rutas de acceso. El objeto `AssemblyDependencyResolver` se construye con la ruta de acceso a una biblioteca de clases .NET. Resuelve los ensamblados y las bibliotecas nativas en sus rutas de acceso relativas en función del archivo *deps.json* para la biblioteca de clases cuya ruta de acceso se haya pasado al constructor `AssemblyDependencyResolver`. El elemento `AssemblyLoadContext` personalizado permite que los complementos tengan sus propias dependencias y el elemento `AssemblyDependencyResolver` facilita la tarea de cargar correctamente las dependencias.
+El tipo `PluginLoadContext` se deriva de <xref:System.Runtime.Loader.AssemblyLoadContext>. El tipo `AssemblyLoadContext` es un tipo especial en el runtime que permite a los desarrolladores aislar los ensamblados cargados en grupos diferentes para asegurarse de que las versiones de ensamblado no entren en conflicto. Además, un elemento `AssemblyLoadContext` personalizado puede elegir otras rutas de acceso desde las que cargar los ensamblados e invalidar el comportamiento predeterminado. El elemento `PluginLoadContext` usa una instancia del tipo `AssemblyDependencyResolver` que se introdujo en .NET Core 3.0 para resolver los nombres de ensamblado en rutas de acceso. El objeto `AssemblyDependencyResolver` se construye con la ruta de acceso a una biblioteca de clases .NET. Resuelve los ensamblados y las bibliotecas nativas en sus rutas de acceso relativas en función del archivo *deps.json* para la biblioteca de clases cuya ruta de acceso se haya pasado al constructor `AssemblyDependencyResolver`. El elemento `AssemblyLoadContext` personalizado permite que los complementos tengan sus propias dependencias y el elemento `AssemblyDependencyResolver` facilita la tarea de cargar correctamente las dependencias.
 
 Ahora que el proyecto `AppWithPlugin` tiene el tipo `PluginLoadContext`, actualice el método `Program.LoadPlugin` con el cuerpo siguiente:
 
@@ -213,7 +213,7 @@ static Assembly LoadPlugin(string relativePath)
 
 Al usar una instancia de `PluginLoadContext` diferente para cada complemento, los complementos puede tener dependencias diferentes o incluso en conflicto sin ningún problema.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>Creación de un complemento simple sin dependencias
+## <a name="simple-plugin-with-no-dependencies"></a>Complemento simple sin dependencias
 
 En la carpeta raíz, siga estos pasos:
 
@@ -256,19 +256,19 @@ Entre las etiquetas `<Project>`, agregue los elementos siguientes:
 </ItemGroup>
 ```
 
-El elemento `<Private>false</Private>` es muy importante. Indica a MSBuild que no copie *PluginBase.dll* en el directorio de salida para HelloPlugin. Si el ensamblado *PluginBase.dll* está presente en el directorio de salida, `PluginLoadContext` encontrará el ensamblado y lo cargará cuando cargue el ensamblado *HelloPlugin.dll*. En este momento, el tipo `HelloPlugin.HelloCommand` implementará la interfaz `ICommand` de *PluginBase.dll* en el directorio de salida del proyecto `HelloPlugin`, no la interfaz `ICommand` que se carga en el contexto de carga predeterminado. Como el tiempo de ejecución considera que estos dos tipos son tipos diferentes de ensamblados distintos, el método `AppWithPlugin.Program.CreateCommands` no encontrará los comandos. Como resultado, los metadatos `<Private>false</Private>` son necesarios para la referencia al ensamblado que contiene las interfaces de complemento.
+El elemento `<Private>false</Private>` es importante. Indica a MSBuild que no copie *PluginBase.dll* en el directorio de salida para HelloPlugin. Si el ensamblado *PluginBase.dll* está presente en el directorio de salida, `PluginLoadContext` encontrará el ensamblado y lo cargará cuando cargue el ensamblado *HelloPlugin.dll*. En este momento, el tipo `HelloPlugin.HelloCommand` implementará la interfaz `ICommand` de *PluginBase.dll* en el directorio de salida del proyecto `HelloPlugin`, no la interfaz `ICommand` que se carga en el contexto de carga predeterminado. Como el runtime considera que estos dos tipos son tipos diferentes de ensamblados distintos, el método `AppWithPlugin.Program.CreateCommands` no encontrará los comandos. Como resultado, los metadatos `<Private>false</Private>` son necesarios para la referencia al ensamblado que contiene las interfaces de complemento.
 
 Ahora que se ha completado el proyecto `HelloPlugin`, se debe actualizar el proyecto `AppWithPlugin` para saber dónde se puede encontrar el complemento `HelloPlugin`. Después del comentario `// Paths to plugins to load`, agregue `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` como un elemento de la matriz `pluginPaths`.
 
-## <a name="create-a-plugin-with-library-dependencies"></a>Creación de un complemento con dependencias de biblioteca
+## <a name="plugin-with-library-dependencies"></a>Complemento con dependencias de biblioteca
 
-Casi todos los complementos son más complejos que un simple ejemplo "Hola mundo", y muchos tienen dependencias en otras bibliotecas. En los proyectos de complemento `JsonPlugin` y `OldJson` del ejemplo se muestran dos ejemplos de complementos con dependencias de paquetes NuGet en `Newtonsoft.Json`. Los propios archivos de proyecto no tienen información especial para las referencias del proyecto, y (después de agregar las rutas de acceso de complemento a la matriz `pluginPaths`) los complementos se ejecutan perfectamente, incluso en la misma ejecución de la aplicación AppWithPlugin. Pero estos proyectos no copian los ensamblados a los que se hace referencia en su directorio de salida, por lo que los ensamblados deben estar presentes en el equipo del usuario para que los complementos funcionen. Hay dos maneras de solucionar este problema. La primera opción consiste en usar el comando `dotnet publish` para publicar la biblioteca de clases. Como alternativa, si quiere poder usar la salida de `dotnet build` para el complemento, puede agregar la propiedad `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` entre las etiquetas `<PropertyGroup>` del archivo de proyecto del complemento. Vea el proyecto de complemento `XcopyablePlugin` para obtener un ejemplo.
+Casi todos los complementos son más complejos que un simple ejemplo "Hola mundo", y muchos tienen dependencias en otras bibliotecas. En los proyectos de complemento `JsonPlugin` y `OldJson` del ejemplo se muestran dos ejemplos de complementos con dependencias de paquetes NuGet en `Newtonsoft.Json`. Los propios archivos del proyecto no tienen información especial para las referencias del proyecto y, después de agregar las rutas de acceso de complemento a la matriz `pluginPaths`, los complementos se ejecutan perfectamente, incluso en la misma ejecución de la aplicación AppWithPlugin. Pero estos proyectos no copian los ensamblados a los que se hace referencia en su directorio de salida, por lo que los ensamblados deben estar presentes en la máquina del usuario para que los complementos funcionen. Hay dos maneras de solucionar este problema. La primera opción consiste en usar el comando `dotnet publish` para publicar la biblioteca de clases. Como alternativa, si quiere poder usar la salida de `dotnet build` para el complemento, puede agregar la propiedad `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` entre las etiquetas `<PropertyGroup>` del archivo de proyecto del complemento. Vea el proyecto de complemento `XcopyablePlugin` para obtener un ejemplo.
 
-## <a name="other-plugin-examples-in-the-sample"></a>Otros ejemplos de complemento en el ejemplo
+## <a name="other-examples-in-the-sample"></a>Otros ejemplos en la muestra
 
 Puede encontrar el código fuente completo para este tutorial en el [repositorio dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). El ejemplo completo incluye algunos otros ejemplos de comportamiento `AssemblyDependencyResolver`. Por ejemplo, el objeto `AssemblyDependencyResolver` también puede resolver las bibliotecas nativas, así como los ensamblados satélite localizados en paquetes NuGet. `UVPlugin` y `FrenchPlugin` en el repositorio de ejemplos demuestran estos escenarios.
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Procedimientos para hacer referencia a un ensamblado de interfaz de complemento definido en un paquete NuGet
+## <a name="reference-a-plugin-from-a-nuget-package"></a>Referencia a un complemento desde un paquete NuGet
 
 Supongamos que hay una aplicación A que tiene una interfaz de complemento definida en el paquete NuGet denominado `A.PluginBase`. ¿Cómo se hace referencia correctamente al paquete en el proyecto de complemento? Para las referencias de proyecto, el uso de los metadatos `<Private>false</Private>` en el elemento `ProjectReference` del archivo de proyecto ha impedido que el archivo DLL se copiara en la salida.
 

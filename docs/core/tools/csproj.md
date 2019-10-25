@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291237"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522791"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -33,11 +33,11 @@ Se hace una referencia implícita a los metapaquetes basándose en los marcos de
 
 Como se hace referencia implícitamente a los metapaquetes `Microsoft.NETCore.App` o `NETStandard.Library`, estos son los procedimientos recomendados:
 
-* Si el destino es .NET Core o .NET Standard, nunca incluya una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NETStandard.Library` mediante un elemento `<PackageReference>` en el archivo de proyecto.
-* Si necesita una versión concreta del runtime cuando el destino es .NET Core, debe usar la propiedad `<RuntimeFrameworkVersion>` del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete.
-  * Esto puede ocurrir si está usando [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) y necesita una versión de revisión específica del tiempo de ejecución de LTS 1.0.0, por ejemplo.
-* Si necesita una versión concreta del metapaquete `NETStandard.Library` cuando el destino es .NET Standard, puede usar la propiedad `<NetStandardImplicitPackageVersion>` y establecer la versión necesaria.
-* No agregue referencias a los metapaquetes `Microsoft.NETCore.App` y `NETStandard.Library` ni las actualice explícitamente en proyectos de .NET Framework. Si se necesita alguna versión de `NETStandard.Library` al usar un paquete NuGet basado en .NET Standard, NuGet instala automáticamente esa versión.
+- Si el destino es .NET Core o .NET Standard, nunca incluya una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NETStandard.Library` mediante un elemento `<PackageReference>` en el archivo de proyecto.
+- Si necesita una versión concreta del runtime cuando el destino es .NET Core, debe usar la propiedad `<RuntimeFrameworkVersion>` del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete.
+  - Esto puede ocurrir si está usando [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) y necesita una versión de revisión específica del tiempo de ejecución de LTS 1.0.0, por ejemplo.
+- Si necesita una versión concreta del metapaquete `NETStandard.Library` cuando el destino es .NET Standard, puede usar la propiedad `<NetStandardImplicitPackageVersion>` y establecer la versión necesaria.
+- No agregue referencias a los metapaquetes `Microsoft.NETCore.App` y `NETStandard.Library` ni las actualice explícitamente en proyectos de .NET Framework. Si se necesita alguna versión de `NETStandard.Library` al usar un paquete NuGet basado en .NET Standard, NuGet instala automáticamente esa versión.
 
 ## <a name="implicit-version-for-some-package-references"></a>Versión implícita para algunas referencias de paquete
 
@@ -59,8 +59,8 @@ Estas referencias a los metapaquetes de ASP.NET Core tienen un comportamiento l
 
 Si *se especifica* una versión, se trata como la versión *mínima* del marco de uso compartido de ASP.NET Core para las implementaciones dependientes del marco y como una versión *exacta* de las implementaciones autocontenidas. Esto puede deberse a las siguientes consecuencias:
 
-* Si la versión de ASP.NET Core instalada en el servidor es anterior a la versión especificada en PackageReference, no se iniciará el proceso de .NET Core. Por lo general, las actualizaciones del metapaquete están disponibles en NuGet.org antes de que se aparezcan en entornos de hospedaje como Azure. Actualizar la versión de PackageReference a ASP.NET Core podría provocar un error en una aplicación implementada.
-* Si la aplicación se implementa como una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd), es posible que no contenga las actualizaciones de seguridad más recientes a .NET Core. Cuando no se especifica una versión, el SDK puede incluir automáticamente la versión más reciente de ASP.NET Core en la implementación autocontenida.
+- Si la versión de ASP.NET Core instalada en el servidor es anterior a la versión especificada en PackageReference, no se iniciará el proceso de .NET Core. Por lo general, las actualizaciones del metapaquete están disponibles en NuGet.org antes de que se aparezcan en entornos de hospedaje como Azure. Actualizar la versión de PackageReference a ASP.NET Core podría provocar un error en una aplicación implementada.
+- Si la aplicación se implementa como una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd), es posible que no contenga las actualizaciones de seguridad más recientes a .NET Core. Cuando no se especifica una versión, el SDK puede incluir automáticamente la versión más reciente de ASP.NET Core en la implementación autocontenida.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusiones de compilación predeterminadas en proyectos .NET Core
 
@@ -160,19 +160,20 @@ El atributo `PrivateAssets` especifica qué recursos que pertenecen al paquete e
 
 Estos atributos pueden contener uno o varios de los siguientes elementos, separados por punto y coma `;` si aparece más de uno:
 
-* `Compile`: el contenido de la carpeta lib está disponible para compilación.
-* `Runtime`: el contenido de la carpeta runtime está distribuido.
-* `ContentFiles`: se usa el contenido de la carpeta *contentfiles*.
-* `Build`: se usan los archivos props/targets de la carpeta de compilación.
-* `Native`: el contenido de recursos nativos se copia en la carpeta de salida en tiempo de ejecución.
-* `Analyzers`: se usan los analizadores.
+- `Compile`: el contenido de la carpeta *lib* está disponible para compilación.
+- `Runtime`: el contenido de la carpeta *runtime* está distribuido.
+- `ContentFiles`: se usa el contenido de la carpeta *contentfiles*.
+- `Build`: se usan los archivos props/targets de la carpeta *build*.
+- `Native`: el contenido de recursos nativos se copia en la carpeta *output* en runtime.
+- `Analyzers`: se usan los analizadores.
 
 Como alternativa, el atributo puede contener:
 
-* `None`: no se usa ninguno de los recursos.
-* `All`: se usan todos los recursos.
+- `None`: no se usa ninguno de los recursos.
+- `All`: se usan todos los recursos.
 
 ### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
+
 Un elemento `<DotNetCliToolReference>` especifica la herramienta de la CLI que el usuario quiere restaurar en el contexto del proyecto. Es un sustituto del nodo `tools` de *project.json*.
 
 ```xml
@@ -224,7 +225,7 @@ En el ejemplo siguiente se especifican los elementos Fallback solo para el desti
 
 ## <a name="nuget-metadata-properties"></a>Propiedades de metadatos de NuGet
 
-Con el paso a MSBuild, hemos trasladado los metadatos de entrada que se usan cuando se empaqueta un paquete NuGet de archivos *project.json* a archivos *.csproj*. Las entradas son propiedades de MSBuild, por lo que deben ir dentro de un grupo `<PropertyGroup>`. La siguiente es la lista de propiedades que se utilizan como entradas para el proceso de empaquetado cuando se usa el comando `dotnet pack` o el destino de MSBuild `Pack` que es parte del SDK.
+Con el paso a MSBuild, hemos trasladado los metadatos de entrada que se usan cuando se empaqueta un paquete NuGet de archivos *project.json* a archivos *.csproj*. Las entradas son propiedades de MSBuild, por lo que deben ir dentro de un grupo `<PropertyGroup>`. La siguiente es la lista de propiedades que se utilizan como entradas para el proceso de empaquetado cuando se usa el comando `dotnet pack` o el destino de MSBuild `Pack`, que forma parte del SDK:
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -416,11 +417,11 @@ Cada atributo tiene una propiedad que controla su contenido y otra para deshabil
 
 Notas:
 
-* El comportamiento predeterminado de `AssemblyVersion` y `FileVersion` consiste en adoptar el valor de `$(Version)` sin sufijo. Por ejemplo, si `$(Version)` es `1.2.3-beta.4`, entonces el valor sería `1.2.3`.
-* El valor predeterminado de `InformationalVersion` es el de `$(Version)`.
-* `InformationalVersion` tiene `$(SourceRevisionId)` anexado si la propiedad está presente. Puede deshabilitarse mediante `IncludeSourceRevisionInInformationalVersion`.
-* Las propiedades `Copyright` y `Description` también se utilizan para metadatos de NuGet.
-* `Configuration` se comparte con todos los procesos de compilación y se establece mediante el parámetro `--configuration` de los comandos `dotnet`.
+- El comportamiento predeterminado de `AssemblyVersion` y `FileVersion` consiste en adoptar el valor de `$(Version)` sin sufijo. Por ejemplo, si `$(Version)` es `1.2.3-beta.4`, entonces el valor sería `1.2.3`.
+- El valor predeterminado de `InformationalVersion` es el de `$(Version)`.
+- `InformationalVersion` tiene `$(SourceRevisionId)` anexado si la propiedad está presente. Puede deshabilitarse mediante `IncludeSourceRevisionInInformationalVersion`.
+- Las propiedades `Copyright` y `Description` también se utilizan para metadatos de NuGet.
+- `Configuration` se comparte con todos los procesos de compilación y se establece mediante el parámetro `--configuration` de los comandos `dotnet`.
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

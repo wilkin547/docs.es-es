@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos enteros - Referencia de C#
 description: Obtenga información sobre el intervalo, el tamaño de almacenamiento y el uso de cada uno de los tipos numéricos enteros.
-ms.date: 06/25/2019
+ms.date: 10/18/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236076"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579194"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
-Los **tipos numéricos enteros** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#integral-literals). Todos los tipos enteros también son tipos de valor. Todos los tipos numéricos enteros admiten operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos bit a bit](../operators/bitwise-and-shift-operators.md), de [comparación e igualdad](../operators/equality-operators.md).
+Los **tipos numéricos enteros** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#integer-literals). Todos los tipos enteros también son tipos de valor. Todos los tipos numéricos enteros admiten operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos bit a bit](../operators/bitwise-and-shift-operators.md), de [comparación](../operators/comparison-operators.md) y de [igualdad](../operators/equality-operators.md).
 
 ## <a name="characteristics-of-the-integral-types"></a>Características de los tipos enteros
 
@@ -69,9 +69,15 @@ El valor predeterminado de cada tipo entero es cero, `0`. Cada uno de los tipos 
 
 Use la estructura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para representar un entero con signo sin límite superior ni inferior.
 
-## <a name="integral-literals"></a>Literales enteros
+## <a name="integer-literals"></a>Literales enteros
 
-Los literales enteros pueden especificarse como *literales decimales*, *literales hexadecimales* o *literales binarios*. A continuación se muestra un ejemplo de cada uno:
+Los literales enteros pueden ser
+
+- *decimales*: sin ningún prefijo
+- *hexadecimales*: con el prefijo de `0x` o `0X`
+- *binarios*: con el prefijo `0b` o `0B` (disponible en C# 7.0 y versiones posteriores)
+
+En el código siguiente se muestra un ejemplo de cada uno de ellos:
 
 ```csharp
 var decimalLiteral = 42;
@@ -79,38 +85,35 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-Los literales decimales no requieren ningún prefijo. El prefijo `x` o `X` significa un *literal hexadecimal*. El prefijo `b` o `B` significa un *literal binario*. La declaración de `binaryLiteral` muestra el uso de `_` como un *separador de dígitos*. El separador de dígitos también se puede usar con todos los literales numéricos. Los literales binarios y el separador de dígitos `_` se admiten a partir de C# 7.0.
+En el ejemplo anterior también se muestra el uso de `_` como un *separador de dígitos*, que se admite a partir de C# 7.0. Puede usar el separador de dígitos con todos los tipos de literales numéricos.
 
-### <a name="literal-suffixes"></a>Sufijos literales
+El tipo de un literal entero viene determinado por su sufijo, como se indica a continuación:
 
-El sufijo `l` o `L` especifica que el literal entero debe ser del tipo `long`. El sufijo `ul` o `UL` especifica el tipo `ulong`. Si el sufijo `L` se usa en un literal que es mayor de 9 223 372 036 854 775 807 (el valor máximo de `long`), el valor se convierte en el tipo `ulong`. Si el valor que representa un literal integral supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md). 
+- Si el literal no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor: `int`, `uint`, `long`, `ulong`.
+- Si un literal entero tiene el sufijo `U` o `u`, su tipo es el primero de los siguientes tipos en el que se puede representar su valor: `uint`, `ulong`.
+- Si un literal entero tiene el sufijo `L` o `l`, su tipo es el primero de los siguientes tipos en el que se puede representar su valor: `long`, `ulong`.
 
-> [!NOTE]
-> Puede usar la letra minúscula "l" como sufijo, aunque esto genera una advertencia del compilador porque la letra "l" se confunde fácilmente con el dígito "1". Use "L" para mayor claridad.
+  > [!NOTE]
+  > Puede usar la letra minúscula `l` como sufijo. Sin embargo, esto genera una advertencia del compilador porque la letra `l` se confunde fácilmente con el dígito `1`. Use `L` para mayor claridad.
 
-### <a name="type-of-an-integral-literal"></a>Tipo de un literal entero
+- Si el literal tiene como sufijo `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU` o `lu`, su tipo es `ulong`.
 
-Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor:
+Si el valor que representa un literal entero supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md).
 
-1. `int`
-1. `uint`
-1. `long`
-1. `ulong`
-
-Puede convertir un literal entero en un tipo con un rango menor que el valor predeterminado mediante una asignación o una conversión:
+El valor representado por un literal entero puede convertirse implícitamente en un tipo con un intervalo más pequeño que el tipo determinado del literal. Es posible cuando el valor está dentro del intervalo del tipo de destino:
 
 ```csharp
-byte byteVariable = 42; // type is byte
-var signedByte = (sbyte)42; // type is sbyte.
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-Puede convertir un literal entero en un tipo con un rango mayor que el valor predeterminado mediante una asignación, una conversión o un sufijo en el literal:
+Como se muestra en el ejemplo anterior, si el valor del literal no está dentro del intervalo del tipo de destino, se produce el error [CS0031](../../misc/cs0031.md) del compilador.
+
+También puede usar una conversión para convertir el valor representado por un literal entero al tipo que no sea el tipo determinado del literal:
 
 ```csharp
-var unsignedLong = 42UL;
-var longVariable = 42L;
-ulong anotherUnsignedLong = 42;
-var anotherLong = (long)42;
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
 ```
 
 ## <a name="conversions"></a>Conversiones
@@ -119,9 +122,15 @@ Hay una conversión implícita (llamada *conversión de ampliación*) entre los 
 
 Debe usar una conversión explícita para convertir un tipo entero en otro tipo entero cuando no se define una conversión implícita del tipo de origen en el tipo de destino. Esto se denomina *conversión de restricción*. El caso explícito es necesario porque la conversión puede producir pérdida de datos.
 
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para más información, vea las secciones siguientes de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
+
+- [Tipos enteros](~/_csharplang/spec/types.md#integral-types)
+- [Literales enteros](~/_csharplang/spec/lexical-structure.md#integer-literals)
+
 ## <a name="see-also"></a>Vea también
 
-- [Especificación del lenguaje C# - Tipos enteros](~/_csharplang/spec/types.md#integral-types)
 - [Referencia de C#](../index.md)
 - [Tipos de punto flotante](floating-point-numeric-types.md)
 - [Tabla de valores predeterminados](../keywords/default-values-table.md)

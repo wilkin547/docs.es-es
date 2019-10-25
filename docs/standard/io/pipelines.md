@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291696"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395931"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines en .NET
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291696"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>¿Qué problema resuelve System.IO.Pipelines?
+
 <!-- corner case doesn't MT (machine translate)   -->
 Las aplicaciones que analizan datos de streaming se componen de código reutilizable que cuenta con muchos flujos de código especializados e inusuales. El código reutilizable y especial del caso es complejo y difícil de mantener.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ Para solucionar los problemas anteriores, es necesario realizar los siguientes c
 
 * Almacenar en búfer los datos entrantes hasta que se encuentre una línea nueva.
 * Analizar todas las líneas devueltas en el búfer.
-* Es posible que la línea tenga un tamaño superior a 1 KB (1024 bytes). El código debe cambiar el tamaño del búfer de entrada hasta que se encuentra una línea completa.
+* Es posible que la línea tenga un tamaño superior a 1 KB (1024 bytes). El código debe cambiar el tamaño del búfer de entrada hasta que se encuentre el delimitador para ajustarse a la línea completa dentro del búfer.
 
   * Si se cambia el tamaño del búfer, se realizan más copias de búfer a medida que aparecen líneas más largas en la entrada.
   * Para reducir el espacio desaprovechado, compacte el búfer usado para las líneas de lectura.
@@ -97,7 +98,7 @@ En el segundo bucle, `PipeReader` consume los búferes que ha escrito `PipeWrite
 * Devuelve un elemento <xref:System.IO.Pipelines.ReadResult> que contiene dos fragmentos de información importantes:
 
   * Los datos que se han leído en forma de `ReadOnlySequence<byte>`.
-  * Un valor booleano `IsCompleted` que indica si se ha alcanzado el final de los datos (EOD). 
+  * Un valor booleano `IsCompleted` que indica si se ha alcanzado el final de los datos (EOD).
 
 Después de buscar el delimitador de final de línea (EOL) y analizar la línea ocurre lo siguiente:
 
@@ -304,7 +305,7 @@ Al escribir asistentes que lean el búfer, se debe copiar cualquier carga devuel
 
 ## <a name="pipewriter"></a>PipeWriter
 
-<xref:System.IO.Pipelines.PipeWriter> administra los búferes para escribir en nombre del autor de la llamada. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>` permite obtener acceso a los búferes para realizar escrituras sin necesidad de tener copias de búfer adicionales.
+<xref:System.IO.Pipelines.PipeWriter> administra los búferes para escribir en nombre del autor de la llamada. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` permite obtener acceso a los búferes para realizar escrituras sin necesidad de tener copias de búfer adicionales.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

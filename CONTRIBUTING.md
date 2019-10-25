@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955966"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315872"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -104,7 +104,7 @@ Hacemos la siguiente distinción para el código que existe en nuestro repositor
 Todo el código reside en el repositorio [dotnet/samples](https://github.com/dotnet/samples). Trabajamos hacia un modelo en el que la estructura de nuestra carpeta samples coincide con la estructura de nuestra carpeta docs. Los estándares que seguimos son:
 
 - La carpeta *snippets* de nivel superior contiene fragmentos de código para ejemplos pequeños y centrados.
-- Los ejemplos de referencia de API han estado en una carpeta que sigue este patrón: *snippets/\<idioma>/api/\<espacio de nombres>/\<nombre de la api>* .
+- Los ejemplos de referencia de API han estado en una carpeta que sigue este patrón: *snippets/\<idioma>/api/\<espacio de nombres>/\<nombre de la api>*.
 - Otras carpetas de nivel superior coinciden con las carpetas de nivel superior del repositorio *docs*. Por ejemplo, el repositorio de documentos incluye una carpeta *machine-learning/tutorials* y los ejemplos para tutoriales de aprendizaje automático se encuentran en la carpeta *samples/machine-learning/tutorials*.
 
 Además, todos los ejemplos de las carpetas *core* y *standard* se deben compilar y ejecutar en todas las plataformas compatibles con .NET Core. Nuestro sistema de compilación de CI aplicará esto. La carpeta *framework* de nivel superior contiene ejemplos que solo se compilan y validan en Windows.

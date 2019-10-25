@@ -3,12 +3,12 @@ title: Solución de problemas de uso de herramientas de .NET Core
 description: Descubra los problemas comunes que se producen al ejecutar herramientas de .NET Core y sus posibles soluciones.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332954"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318294"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solución de problemas de uso de herramientas de .NET Core
 
@@ -19,7 +19,7 @@ Es posible que surjan problemas al intentar instalar o ejecutar una herramienta 
 Cuando una herramienta de .NET Core no se ejecuta, lo más probable es que se haya producido uno de los siguientes problemas:
 
 * No se encontró el archivo ejecutable de la herramienta.
-* No se encontró la versión correcta del runtime de .NET Core. 
+* No se encontró la versión correcta del runtime de .NET Core.
 
 ### <a name="executable-file-not-found"></a>No se encontró el archivo ejecutable
 
@@ -58,18 +58,18 @@ El nombre del archivo ejecutable determina cómo se invoca la herramienta. En la
   * Si usa macOS 10.14 “Mojave” o versiones anteriores y ha instalado el SDK de .NET Core mediante el uso de archivos *.tar.gz* en lugar de *.pkg*.
   * Si ha instalado el SDK de .NET Core 3.0 y ha establecido la variable de entorno `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` en `false`.
   * Si ha instalado el SDK de .NET Core 2.2 o versiones anteriores y ha establecido la variable de entorno `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` en `true`.
-  
+
   Para obtener más información sobre las herramientas globales, vea [Información general sobre las herramientas globales de .NET Core](global-tools.md).
 
 * Herramientas locales
 
   Si intenta ejecutar una herramienta local, compruebe que hay un archivo de manifiesto denominado *dotnet-tools.json* en el directorio actual o en cualquiera de sus directorios principales. Este archivo también puede encontrarse en una carpeta denominada *.config* en cualquier lugar de la jerarquía de carpetas del proyecto, en lugar de en la carpeta raíz. Si *dotnet-tools.json* existe, ábralo y busque la herramienta que intenta ejecutar. Si el archivo no contiene una entrada para `"isRoot": true`, busque más arriba en la jerarquía de archivos otros archivos de manifiesto de la herramienta.
 
-    Si intenta ejecutar una herramienta de .NET Core que se instaló con una ruta de acceso especificada, debe incluir dicha ruta de acceso al usar la herramienta. Un ejemplo de uso de una herramienta instalada en una ruta de acceso de herramientas es:
+  Si intenta ejecutar una herramienta de .NET Core que se instaló con una ruta de acceso especificada, debe incluir dicha ruta de acceso al usar la herramienta. Un ejemplo de uso de una herramienta instalada en una ruta de acceso de herramientas es:
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>No se encontró el runtime
 
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 Si intenta instalar un paquete normal de NuGet que no es una herramienta de .NET Core, verá un error similar al siguiente:
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212: combinación de paquete de proyecto no válida para `<ToolName>`. El estilo de proyecto DotnetToolReference solo puede contener referencias de tipo DotnetTool.
 
 ### <a name="nuget-feed-cant-be-accessed"></a>No se puede acceder a la fuente NuGet
 
@@ -161,4 +161,5 @@ La instalación de la herramienta requiere acceso a la fuente NuGet que contiene
 Un motivo habitual de error es que el nombre de la herramienta no es correcto. Esto puede ocurrir cuando se produce un error de escritura, o porque la herramienta se ha movido o está en desuso. En el caso de las herramientas de NuGet.org, una manera de asegurarse de que tiene el nombre correcto es buscar la herramienta en NuGet.org y copiar el comando de instalación.
 
 ## <a name="see-also"></a>Vea también
+
 * [Información general sobre las herramientas globales de .NET Core](global-tools.md)

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216242"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522808"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -194,7 +194,7 @@ Haga lo siguiente para cada plataforma que sea destino de la aplicación:
   
 1. Seleccione la ubicación en la que Visual Studio publica la aplicación.
 
-   Si solo va a publicar en una plataforma, puede aceptar el valor predeterminado del cuadro de texto **Elegir una carpeta**; así, se publica la implementación dependiente del marco de trabajo de la aplicación en el directorio *\<project-directory>\bin\Release\netcoreapp2.1\publish\*.
+   Si solo se va a publicar en una plataforma, se puede aceptar el valor predeterminado del cuadro de texto **Elegir una carpeta**; así, se publica la implementación dependiente del marco de la aplicación en el directorio *\<directorio-del-proyecto>\bin\Release\netcoreapp2.1\publish*.
 
    Si va a publicar en más de una plataforma, anexe una cadena que identifique a la plataforma de destino. Por ejemplo, si anexa la cadena "linux" a la ruta de acceso de archivo, Visual Studio publica la implementación dependiente del marco de trabajo de la aplicación en el directorio *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux*.
 

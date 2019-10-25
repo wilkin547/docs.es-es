@@ -4,13 +4,13 @@ description: Versiones de macOS admitidas y dependencias de .NET Core para desar
 author: thraka
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 09/27/2019
-ms.openlocfilehash: 13eea0043be9cf5d5574d6b38f144853c22e8d07
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: 2d4fc0b37be08988440325db8b507124c36bf053
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591681"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318316"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Requisitos previos para .NET Core en macOS
 
@@ -45,6 +45,17 @@ Descargue e instale el SDK de .NET Core desde la página [Descargas de .NET Core
 Para obtener una lista de los problemas conocidos, vea [Problemas conocidos de .NET Core](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-known-issues.md).
 
 ---
+
+## <a name="libgdiplus"></a>libgdiplus
+
+Las aplicaciones .NET Core que usan el ensamblado *System.Drawing.Common* requieren la instalación de libgdiplus.
+
+Una manera fácil de obtener libgdiplus es usar el administrador de paquetes [Homebrew ("brew")](https://brew.sh/) para macOS. Después de instalar *brew*, instale libgdiplus mediante la ejecución de los comandos siguientes en un símbolo del sistema de Terminal (comando):
+
+```console
+brew update
+brew install libgdiplus
+```
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 

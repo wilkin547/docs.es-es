@@ -3,12 +3,12 @@ title: Introducción a Docker
 description: En este artículo se proporciona una introducción e información general para Docker en el contexto de una aplicación de .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799360"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522997"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
@@ -52,27 +52,27 @@ Microsoft ofrece imágenes que se adaptan a escenarios específicos. Por ejemplo
 
 Varios servicios de Azure admiten contenedores. Cree una imagen de Docker para la aplicación e impleméntela en alguno de los siguientes servicios:
 
-* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
+- [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Escale y organice contenedores de Linux mediante Kubernetes.
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Implemente aplicaciones web o API con contenedores de Linux en un entorno PaaS.
 
-* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Hospede el contenedor en la nube sin ningún servicio de administración de nivel superior.
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+ [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Ejecute trabajos de proceso repetitivos mediante contenedores.
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
-Migre las aplicaciones de .NET mediante lift-and-shift y modernícelas para los microservicios mediante contenedores de Windows Server.
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+Migre las aplicaciones de .NET mediante lift-and-shift y modernícelas a microservicios mediante contenedores de Windows Server.
 
-* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 Almacene y administre imágenes de contenedor en todos los tipos de implementaciones de Azure.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-docker-netcore-container.md).
-* [Obtenga información sobre cómo incluir una aplicación ASP.NET Core en contenedores.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-* [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
-* [Obtenga información sobre las herramientas de contenedor en Visual Studio](/visualstudio/containers/overview)
+- [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-docker-netcore-container.md).
+- [Obtenga información sobre cómo incluir una aplicación ASP.NET Core en contenedores.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
+- [Obtenga información sobre las herramientas de contenedor en Visual Studio](/visualstudio/containers/overview)

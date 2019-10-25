@@ -3,20 +3,20 @@ title: Requisitos previos para .NET Core en Linux
 description: Versiones de Linux admitidas y dependencias de .NET Core para desarrollar, implementar y ejecutar aplicaciones .NET Core en máquinas Linux.
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: 0e798e86fcf88a1b7a67f50c2301e10ad725fad8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591696"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521490"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Requisitos previos para .NET Core en Linux
 
 En este artículo se muestran las dependencias necesarias para desarrollar aplicaciones de .NET Core en Linux. Las versiones o distribuciones de Linux y las dependencias admitidas que aparecen a continuación se aplican a las dos formas de desarrollo de aplicaciones de .NET Core en Linux:
 
-* [Línea de comandos con su editor favorito](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [Línea de comandos con su editor favorito](tutorials/using-with-xplat-cli.md)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > El paquete del SDK de .NET Core no es necesario para entornos o servidores de producción. Solo se necesita el paquete del entorno de ejecución .NET Core para las aplicaciones que se implementan en entornos de producción. El entorno de ejecución .NET Core se implementa con aplicaciones como parte de una implementación independiente, aunque se debe implementar para aplicaciones implementadas por separado dependientes del marco. Para obtener más información sobre las implementaciones independientes y dependientes del marco, vea [Implementación de aplicaciones .NET Core](./deploying/index.md). Consulte también [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Aplicaciones independientes de Linux) para obtener instrucciones específicas.
@@ -112,41 +112,55 @@ Los siguientes están diseñados a modo de ejemplos. Los nombres y las versiones
 
 Las distribuciones de Ubuntu necesitan tener instaladas las siguientes bibliotecas:
 
-* liblttng-ust0
-* libcurl3 (para 14.x y 16.x)
-* libcurl4 (para 18.x)
-* libssl1.0.0
-* libkrb5-3
-* zlib1g
-* libicu52 (para 14.x)
-* libicu55 (para 16.x)
-* libicu57 (para 17.x)
-* libicu60 (para 18.x)
+- liblttng-ust0
+- libcurl3 (para 14.x y 16.x)
+- libcurl4 (para 18.x)
+- libssl1.0.0
+- libkrb5-3
+- zlib1g
+- libicu52 (para 14.x)
+- libicu55 (para 16.x)
+- libicu57 (para 17.x)
+- libicu60 (para 18.x)
 
 Para versiones anteriores a .NET Core 2.1, también se requieren las siguientes dependencias:
 
-* libunwind8
-* libuuid1
+- libunwind8
+- libuuid1
+
+En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.Drawing.Common*, también se necesita la dependencia siguiente:
+
+* libgdiplus (versión 6.0.1 o posteriores)
+
+> [!NOTE]
+> La mayoría de versiones de Ubuntu incluyen una versión anterior de libgdiplus. Puede instalar una versión reciente de libgdiplus al agregar el repositorio Mono al sistema. Para más información, consulte <https://www.mono-project.com/download/stable/>.
 
 ### <a name="centos-and-fedora"></a>CentOS y Fedora
 
 Las distribuciones de CentOS necesitan tener instaladas las siguientes bibliotecas:
 
-* lttng-ust
-* libcurl
-* openssl-libs
-* krb5-libs
-* libicu
-* zlib
+- lttng-ust
+- libcurl
+- openssl-libs
+- krb5-libs
+- libicu
+- zlib
 
 Usuarios de Fedora: si la versión de openssl >= 1.1, es necesario instalar compat-openssl10.
 
 Para versiones anteriores a .NET Core 2.1, también se requieren las siguientes dependencias:
 
-* libunwind
-* libuuid
+- libunwind
+- libuuid
 
 Para más información acerca de las dependencias, consulte [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Aplicaciones Linux autónomas).
+
+En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.Drawing.Common*, también se necesitará la dependencia siguiente:
+
+* libgdiplus (versión 6.0.1 o posteriores)
+
+> [!NOTE]
+> La mayoría de versiones de CentOS incluyen una versión anterior de libgdiplus. Puede instalar una versión reciente de libgdiplus al agregar el repositorio Mono al sistema. Para más información, consulte <https://www.mono-project.com/download/stable/>.
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>Instalación de las dependencias de .NET Core con los instaladores nativos
 
@@ -154,8 +168,8 @@ Los instaladores nativos de .NET Core están disponibles para las versiones o di
 
 En Linux, existen dos opciones de paquete de instalador:
 
-* Use un administrador de paquetes basado en fuentes, como apt-get para Ubuntu o yum para CentOS o RHEL.
-* Usar los propios paquetes, DEB o RPM.
+- Use un administrador de paquetes basado en fuentes, como apt-get para Ubuntu o yum para CentOS o RHEL.
+- Usar los propios paquetes, DEB o RPM.
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Instalaciones de scripting con el script del instalador de .NET Core
 
@@ -173,8 +187,8 @@ El script de Bash del instalador se usa en escenarios de automatización y en in
 
 Si tiene problemas con una instalación de .NET Core en una versión o distribución de Linux compatible, vea los siguientes temas para sus versiones o distribuciones instaladas:
 
-* [.NET Core 3.0 known issues](https://github.com/dotnet/core/tree/master/release-notes/3.0) (Problemas conocidos de .NET Core 3.0)
-* [.NET Core 2.2 known issues](https://github.com/dotnet/core/tree/master/release-notes/2.2) (Problemas conocidos de .NET Core 2.2)
-* [.NET Core 2.1 known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) (Problemas conocidos de .NET Core 2.1)
-* [.NET Core 1.1 known issues](https://github.com/dotnet/core/blob/master/release-notes/1.1) (Problemas conocidos de .NET Core 1.1)
-* [.NET Core 1.0 known issues](https://github.com/dotnet/core/blob/master/release-notes/1.0) (Problemas conocidos de .NET Core 1.0)
+- [.NET Core 3.0 known issues](https://github.com/dotnet/core/tree/master/release-notes/3.0) (Problemas conocidos de .NET Core 3.0)
+- [.NET Core 2.2 known issues](https://github.com/dotnet/core/tree/master/release-notes/2.2) (Problemas conocidos de .NET Core 2.2)
+- [.NET Core 2.1 known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) (Problemas conocidos de .NET Core 2.1)
+- [.NET Core 1.1 known issues](https://github.com/dotnet/core/blob/master/release-notes/1.1) (Problemas conocidos de .NET Core 1.1)
+- [.NET Core 1.0 known issues](https://github.com/dotnet/core/blob/master/release-notes/1.0) (Problemas conocidos de .NET Core 1.0)

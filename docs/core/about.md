@@ -2,12 +2,12 @@
 title: Sobre .NET Core
 description: Obtenga información sobre .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181923"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395175"
 ---
 # <a name="about-net-core"></a>Sobre .NET Core
 
@@ -113,7 +113,7 @@ Debido a que .NET Core admite la instalación en paralelo y el entorno de ejecuc
 
 ### <a name="comparison-with-mono"></a>Comparación con Mono
 
-[Mono](https://www.mono-project.com/) es la multiplataforma original de .NET. Comenzó como una alternativa de [código abierto]([open-source](https://github.com/mono/mono)) para .NET Framework y pasó a tener como objetivo los dispositivos móviles cuando los dispositivos iOS y Android se popularizaron. Se puede considerar un clon de la comunidad de .NET Framework. El equipo de proyecto de Mono se basó en los [estándares de .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos (en particular, ECMA 335) publicados por Microsoft para proporcionar una implementación compatible.
+[Mono](https://www.mono-project.com/) es la multiplataforma original de .NET. Empezó como una alternativa de [código abierto](https://github.com/mono/mono) para .NET Framework y pasó a tener como objetivo los dispositivos móviles cuando los dispositivos iOS y Android se popularizaron. Se puede considerar un clon de la comunidad de .NET Framework. El equipo de proyecto de Mono se basó en los [estándares de .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos (en particular, ECMA 335) publicados por Microsoft para proporcionar una implementación compatible.
 
 Las principales diferencias entre .NET Core y Mono:
 
