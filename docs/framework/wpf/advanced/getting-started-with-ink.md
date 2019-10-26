@@ -1,5 +1,5 @@
 ---
-title: Crear un objeto InkCanvas en una aplicación WPF en Visual Studio
+title: Creación de un InkCanvas en una aplicación de WPF en Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753008"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920249"
 ---
-# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="54bb9-102">Empezar a trabajar con entradas manuscritas en WPF</span><span class="sxs-lookup"><span data-stu-id="54bb9-102">Get Started with Ink in WPF</span></span>
+# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="de45b-102">Introducción a la entrada manuscrita en WPF</span><span class="sxs-lookup"><span data-stu-id="de45b-102">Get Started with Ink in WPF</span></span>
 
-<span data-ttu-id="54bb9-103">Windows Presentation Foundation (WPF) tiene una característica de tinta que facilita la tarea incorporar la entrada de lápiz digital en su aplicación.</span><span class="sxs-lookup"><span data-stu-id="54bb9-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
+<span data-ttu-id="de45b-103">Windows Presentation Foundation (WPF) tiene una característica de entrada manuscrita que facilita la incorporación de tinta digital a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="de45b-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="54bb9-104">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="54bb9-104">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="de45b-104">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="de45b-104">Prerequisites</span></span>
 
-<span data-ttu-id="54bb9-105">Para usar los ejemplos siguientes, en primer lugar instale [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span><span class="sxs-lookup"><span data-stu-id="54bb9-105">To use the following examples, first install [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span></span> <span data-ttu-id="54bb9-106">También ayuda a saber cómo escribir aplicaciones básicas de WPF.</span><span class="sxs-lookup"><span data-stu-id="54bb9-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="54bb9-107">Para obtener ayuda de introducción a WPF, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="54bb9-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
+<span data-ttu-id="de45b-105">Para usar los ejemplos siguientes, primero instale [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span><span class="sxs-lookup"><span data-stu-id="de45b-105">To use the following examples, first install [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019).</span></span> <span data-ttu-id="de45b-106">También ayuda a saber cómo escribir aplicaciones WPF básicas.</span><span class="sxs-lookup"><span data-stu-id="de45b-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="de45b-107">Para obtener ayuda para empezar a trabajar con WPF, vea [Tutorial: mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="de45b-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
 
-## <a name="quick-start"></a><span data-ttu-id="54bb9-108">Guía de inicio rápido</span><span class="sxs-lookup"><span data-stu-id="54bb9-108">Quick Start</span></span>
+## <a name="quick-start"></a><span data-ttu-id="de45b-108">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="de45b-108">Quick Start</span></span>
 
-<span data-ttu-id="54bb9-109">En esta sección le ayuda a escribir una aplicación WPF sencilla que recopila entradas de lápiz.</span><span class="sxs-lookup"><span data-stu-id="54bb9-109">This section helps you write a simple WPF application that collects ink.</span></span>
+<span data-ttu-id="de45b-109">Esta sección le ayuda a escribir una aplicación WPF sencilla que recopila entradas manuscritas.</span><span class="sxs-lookup"><span data-stu-id="de45b-109">This section helps you write a simple WPF application that collects ink.</span></span>
 
-### <a name="got-ink"></a><span data-ttu-id="54bb9-110">¿Tiene la entrada de lápiz?</span><span class="sxs-lookup"><span data-stu-id="54bb9-110">Got Ink?</span></span>
+### <a name="got-ink"></a><span data-ttu-id="de45b-110">¿Tiene tinta?</span><span class="sxs-lookup"><span data-stu-id="de45b-110">Got Ink?</span></span>
 
-<span data-ttu-id="54bb9-111">Para crear una aplicación WPF que admite la entrada de lápiz:</span><span class="sxs-lookup"><span data-stu-id="54bb9-111">To create a WPF app that supports ink:</span></span>
+<span data-ttu-id="de45b-111">Para crear una aplicación de WPF que admita la entrada de lápiz:</span><span class="sxs-lookup"><span data-stu-id="de45b-111">To create a WPF app that supports ink:</span></span>
 
-1. <span data-ttu-id="54bb9-112">Abra Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="54bb9-112">Open Visual Studio.</span></span>
+1. <span data-ttu-id="de45b-112">Abra Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="de45b-112">Open Visual Studio.</span></span>
 
-2. <span data-ttu-id="54bb9-113">Cree un nuevo **aplicación WPF**.</span><span class="sxs-lookup"><span data-stu-id="54bb9-113">Create a new **WPF App**.</span></span>
+2. <span data-ttu-id="de45b-113">Cree una nueva **aplicación WPF**.</span><span class="sxs-lookup"><span data-stu-id="de45b-113">Create a new **WPF App**.</span></span>
 
-   <span data-ttu-id="54bb9-114">En el **nuevo proyecto** cuadro de diálogo, expanda el **instalado** > **Visual C#** o **Visual Basic**  >   **Windows Desktop** categoría.</span><span class="sxs-lookup"><span data-stu-id="54bb9-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="54bb9-115">A continuación, seleccione el **aplicación de WPF (.NET Framework)** plantilla de aplicación.</span><span class="sxs-lookup"><span data-stu-id="54bb9-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="54bb9-116">Escriba un nombre y, a continuación, seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="54bb9-116">Enter a name, and then select **OK**.</span></span>
+   <span data-ttu-id="de45b-114">En el cuadro de diálogo **nuevo proyecto** , expanda la categoría **instalado** > **Visual C#**  o **Visual Basic** > **escritorio de Windows** .</span><span class="sxs-lookup"><span data-stu-id="de45b-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="de45b-115">A continuación, seleccione la plantilla aplicación de **WPF (.NET Framework)** .</span><span class="sxs-lookup"><span data-stu-id="de45b-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="de45b-116">Escriba un nombre y seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="de45b-116">Enter a name, and then select **OK**.</span></span>
 
-   <span data-ttu-id="54bb9-117">Visual Studio crea el proyecto, y *MainWindow.xaml* se abre en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="54bb9-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
+   <span data-ttu-id="de45b-117">Visual Studio crea el proyecto y *MainWindow. Xaml* se abre en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="de45b-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
 
-3. <span data-ttu-id="54bb9-118">Tipo `<InkCanvas/>` entre el `<Grid>` etiquetas.</span><span class="sxs-lookup"><span data-stu-id="54bb9-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
+3. <span data-ttu-id="de45b-118">Escriba `<InkCanvas/>` entre las etiquetas de `<Grid>`.</span><span class="sxs-lookup"><span data-stu-id="de45b-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
 
-   ![Diseñador XAML con la etiqueta a InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![Diseñador XAML con etiqueta InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. <span data-ttu-id="54bb9-120">Presione **F5** para iniciar la aplicación en el depurador.</span><span class="sxs-lookup"><span data-stu-id="54bb9-120">Press **F5** to launch your application in the debugger.</span></span>
+4. <span data-ttu-id="de45b-120">Presione **F5** para iniciar la aplicación en el depurador.</span><span class="sxs-lookup"><span data-stu-id="de45b-120">Press **F5** to launch your application in the debugger.</span></span>
 
-5. <span data-ttu-id="54bb9-121">Con un lápiz o un mouse, escribir **Hola mundo** en la ventana.</span><span class="sxs-lookup"><span data-stu-id="54bb9-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
+5. <span data-ttu-id="de45b-121">Con un lápiz o un mouse, escriba **Hello World** en la ventana.</span><span class="sxs-lookup"><span data-stu-id="de45b-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
 
-<span data-ttu-id="54bb9-122">Ha escrito el equivalente de tinta de una aplicación "hello world" con tan sólo 12 pulsaciones de teclas.</span><span class="sxs-lookup"><span data-stu-id="54bb9-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
+<span data-ttu-id="de45b-122">Ha escrito el equivalente de tinta de una aplicación "Hola mundo" con solo 12 pulsaciones de teclas.</span><span class="sxs-lookup"><span data-stu-id="de45b-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
 
-### <a name="spice-up-your-app"></a><span data-ttu-id="54bb9-123">Anime la aplicación</span><span class="sxs-lookup"><span data-stu-id="54bb9-123">Spice Up Your App</span></span>
+### <a name="spice-up-your-app"></a><span data-ttu-id="de45b-123">Enriquecer su aplicación</span><span class="sxs-lookup"><span data-stu-id="de45b-123">Spice Up Your App</span></span>
 
-<span data-ttu-id="54bb9-124">Vamos a sacar partido de algunas características de WPF.</span><span class="sxs-lookup"><span data-stu-id="54bb9-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="54bb9-125">Reemplace todo entre la apertura y cierre \<Ventana > etiquetas con el marcado siguiente:</span><span class="sxs-lookup"><span data-stu-id="54bb9-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
+<span data-ttu-id="de45b-124">Vamos a aprovechar algunas características de WPF.</span><span class="sxs-lookup"><span data-stu-id="de45b-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="de45b-125">Reemplace todo el código entre las etiquetas de apertura y cierre \<> por el marcado siguiente:</span><span class="sxs-lookup"><span data-stu-id="de45b-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
 
 ```xaml
 <Page>
@@ -68,49 +68,49 @@ ms.locfileid: "64753008"
 </Page>
 ```
 
-<span data-ttu-id="54bb9-126">Este XAML crea un fondo de pincel de degradado en la superficie de escritura a mano.</span><span class="sxs-lookup"><span data-stu-id="54bb9-126">This XAML creates a gradient brush background on your inking surface.</span></span>
+<span data-ttu-id="de45b-126">Este código XAML crea un fondo de pincel de degradado en la superficie de entrada manuscrita.</span><span class="sxs-lookup"><span data-stu-id="de45b-126">This XAML creates a gradient brush background on your inking surface.</span></span>
 
-![Colores de degradado en la superficie de la aplicación WPF de tinta](./media/getting-started-with-ink/gradient-colors.png)
+![Colores de degradado en la superficie de entrada manuscrita en la aplicación WPF](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="54bb9-128">Agregar código detrás del XAML</span><span class="sxs-lookup"><span data-stu-id="54bb9-128">Add Some Code Behind the XAML</span></span>
+### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="de45b-128">Agregar código detrás de XAML</span><span class="sxs-lookup"><span data-stu-id="de45b-128">Add Some Code Behind the XAML</span></span>
 
-<span data-ttu-id="54bb9-129">Aunque XAML hace muy fácil de diseñar la interfaz de usuario, debe agregar código para controlar los eventos de cualquier aplicación del mundo real.</span><span class="sxs-lookup"><span data-stu-id="54bb9-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="54bb9-130">Este es un ejemplo sencillo que amplía la tinta en respuesta a un secundario de un mouse.</span><span class="sxs-lookup"><span data-stu-id="54bb9-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
+<span data-ttu-id="de45b-129">Aunque XAML facilita enormemente el diseño de la interfaz de usuario, cualquier aplicación real necesita agregar código para controlar eventos.</span><span class="sxs-lookup"><span data-stu-id="de45b-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="de45b-130">Este es un ejemplo sencillo que acerca la tinta en respuesta a un clic con el botón secundario del mouse.</span><span class="sxs-lookup"><span data-stu-id="de45b-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
 
-1. <span data-ttu-id="54bb9-131">Establecer el `MouseRightButtonUp` controlador en el XAML:</span><span class="sxs-lookup"><span data-stu-id="54bb9-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
+1. <span data-ttu-id="de45b-131">Establezca el controlador de `MouseRightButtonUp` en el código XAML:</span><span class="sxs-lookup"><span data-stu-id="de45b-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. <span data-ttu-id="54bb9-132">En **el Explorador de soluciones**, expanda MainWindow.xaml y abra el archivo de código subyacente (MainWindow.xaml.cs o MainWindow.xaml.vb).</span><span class="sxs-lookup"><span data-stu-id="54bb9-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="54bb9-133">Agregue el siguiente código de controlador de eventos:</span><span class="sxs-lookup"><span data-stu-id="54bb9-133">Add the following event handler code:</span></span>
+1. <span data-ttu-id="de45b-132">En **Explorador de soluciones**, expanda MainWindow. XAML y abra el archivo de código subyacente (MainWindow.Xaml.cs o MainWindow. Xaml. VB).</span><span class="sxs-lookup"><span data-stu-id="de45b-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="de45b-133">Agregue el siguiente código de controlador de eventos:</span><span class="sxs-lookup"><span data-stu-id="de45b-133">Add the following event handler code:</span></span>
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. <span data-ttu-id="54bb9-134">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="54bb9-134">Run the application.</span></span> <span data-ttu-id="54bb9-135">Agregar algo de tinta y, a continuación, haga doble clic con el mouse o presione y mantenga equivalente de hacer con un lápiz óptico.</span><span class="sxs-lookup"><span data-stu-id="54bb9-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
+1. <span data-ttu-id="de45b-134">Ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="de45b-134">Run the application.</span></span> <span data-ttu-id="de45b-135">Agregue una entrada de lápiz y, a continuación, haga clic con el botón secundario del mouse o realice un equivalente de mantener presionado con un lápiz.</span><span class="sxs-lookup"><span data-stu-id="de45b-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
 
-   <span data-ttu-id="54bb9-136">La presentación acerca cada vez que haga clic con el botón secundario del mouse.</span><span class="sxs-lookup"><span data-stu-id="54bb9-136">The display zooms in each time you click with the right mouse button.</span></span>
+   <span data-ttu-id="de45b-136">La pantalla se acerca cada vez que se hace clic con el botón secundario del mouse.</span><span class="sxs-lookup"><span data-stu-id="de45b-136">The display zooms in each time you click with the right mouse button.</span></span>
 
-### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="54bb9-137">Usar código de procedimientos en lugar de XAML</span><span class="sxs-lookup"><span data-stu-id="54bb9-137">Use Procedural Code Instead of XAML</span></span>
+### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="de45b-137">Usar código de procedimientos en lugar de XAML</span><span class="sxs-lookup"><span data-stu-id="de45b-137">Use Procedural Code Instead of XAML</span></span>
 
-<span data-ttu-id="54bb9-138">Puede tener acceso a todas las características WPF del código de procedimientos.</span><span class="sxs-lookup"><span data-stu-id="54bb9-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="54bb9-139">Siga estos pasos para crear una aplicación "Hello Ink World" para WPF que no usa ningún XAML en absoluto.</span><span class="sxs-lookup"><span data-stu-id="54bb9-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
+<span data-ttu-id="de45b-138">Puede tener acceso a todas las características de WPF desde código de procedimientos.</span><span class="sxs-lookup"><span data-stu-id="de45b-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="de45b-139">Siga estos pasos para crear una aplicación "Hello Ink World" para WPF que no use ningún XAML.</span><span class="sxs-lookup"><span data-stu-id="de45b-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
 
-1. <span data-ttu-id="54bb9-140">Crear un nuevo proyecto de aplicación de consola en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="54bb9-140">Create a new console application project in Visual Studio.</span></span>
+1. <span data-ttu-id="de45b-140">Cree un nuevo proyecto de aplicación de consola en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="de45b-140">Create a new console application project in Visual Studio.</span></span>
 
-   <span data-ttu-id="54bb9-141">En el **nuevo proyecto** cuadro de diálogo, expanda el **instalado** > **Visual C#** o **Visual Basic**  >   **Windows Desktop** categoría.</span><span class="sxs-lookup"><span data-stu-id="54bb9-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="54bb9-142">A continuación, seleccione el **aplicación de consola (.NET Framework)** plantilla de aplicación.</span><span class="sxs-lookup"><span data-stu-id="54bb9-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="54bb9-143">Escriba un nombre y, a continuación, seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="54bb9-143">Enter a name, and then select **OK**.</span></span>
+   <span data-ttu-id="de45b-141">En el cuadro de diálogo **nuevo proyecto** , expanda la categoría **instalado** > **Visual C#**  o **Visual Basic** > **escritorio de Windows** .</span><span class="sxs-lookup"><span data-stu-id="de45b-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="de45b-142">A continuación, seleccione la plantilla aplicación de **consola (.NET Framework)** .</span><span class="sxs-lookup"><span data-stu-id="de45b-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="de45b-143">Escriba un nombre y seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="de45b-143">Enter a name, and then select **OK**.</span></span>
 
-1. <span data-ttu-id="54bb9-144">Pegue el código siguiente en el archivo Program.cs o Program.vb:</span><span class="sxs-lookup"><span data-stu-id="54bb9-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
+1. <span data-ttu-id="de45b-144">Pegue el código siguiente en el archivo Program.cs o Program. VB:</span><span class="sxs-lookup"><span data-stu-id="de45b-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. <span data-ttu-id="54bb9-145">Agregue referencias a los ensamblados PresentationCore, PresentationFramework y WindowsBase haciendo clic en **referencias** en **el Explorador de soluciones** y eligiendo **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="54bb9-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
+1. <span data-ttu-id="de45b-145">Agregue referencias a los ensamblados PresentationCore, PresentationFramework y WindowsBase; para ello, haga clic con el botón derecho en **referencias** en **Explorador de soluciones** y elija **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="de45b-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
 
    ![Administrador de referencias que muestra PresentationCore y PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. <span data-ttu-id="54bb9-147">Compile la aplicación presionando **F5**.</span><span class="sxs-lookup"><span data-stu-id="54bb9-147">Build the application by pressing **F5**.</span></span>
+1. <span data-ttu-id="de45b-147">Para compilar la aplicación, presione **F5**.</span><span class="sxs-lookup"><span data-stu-id="de45b-147">Build the application by pressing **F5**.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="54bb9-148">Vea también</span><span class="sxs-lookup"><span data-stu-id="54bb9-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de45b-148">Vea también</span><span class="sxs-lookup"><span data-stu-id="de45b-148">See also</span></span>
 
-- [<span data-ttu-id="54bb9-149">Entrada de lápiz digital</span><span class="sxs-lookup"><span data-stu-id="54bb9-149">Digital Ink</span></span>](digital-ink.md)
-- [<span data-ttu-id="54bb9-150">Recopilación de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="54bb9-150">Collecting Ink</span></span>](collecting-ink.md)
-- [<span data-ttu-id="54bb9-151">Reconocimiento de escritura a mano</span><span class="sxs-lookup"><span data-stu-id="54bb9-151">Handwriting Recognition</span></span>](handwriting-recognition.md)
-- [<span data-ttu-id="54bb9-152">Almacenamiento de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="54bb9-152">Storing Ink</span></span>](storing-ink.md)
+- [<span data-ttu-id="de45b-149">Entrada de lápiz digital</span><span class="sxs-lookup"><span data-stu-id="de45b-149">Digital Ink</span></span>](digital-ink.md)
+- [<span data-ttu-id="de45b-150">Recopilación de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="de45b-150">Collecting Ink</span></span>](collecting-ink.md)
+- [<span data-ttu-id="de45b-151">Reconocimiento de escritura a mano</span><span class="sxs-lookup"><span data-stu-id="de45b-151">Handwriting Recognition</span></span>](handwriting-recognition.md)
+- [<span data-ttu-id="de45b-152">Almacenamiento de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="de45b-152">Storing Ink</span></span>](storing-ink.md)
