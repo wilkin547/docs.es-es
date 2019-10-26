@@ -6,19 +6,19 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 497cd520731d9a0c96ed2b7cb35fa9f53ba25245
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053463"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920268"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Tutorial: Crear un botón mediante Microsoft Expression Blend
 
-Este tutorial le guiará por el proceso de creación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] de un botón personalizado mediante Microsoft Expression Blend.
+Este tutorial le guiará por el proceso de creación de un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] botón personalizado mediante Microsoft Expression Blend.
 
 > [!IMPORTANT]
-> Microsoft Expression Blend genera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y, a continuación, se compila para crear el programa ejecutable. Si prefiere trabajar con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] directamente, hay otro tutorial que crea la misma aplicación que esta usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] con Visual Studio en lugar de Blend. Para obtener más información [, vea crear un botón mediante XAML](walkthrough-create-a-button-by-using-xaml.md) .
+> Microsoft Expression Blend genera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que se compilan para crear el programa ejecutable. Si prefiere trabajar con XAML directamente, hay otro tutorial que crea la misma aplicación que esta con XAML con Visual Studio en lugar de Blend. Para obtener más información [, vea crear un botón mediante XAML](walkthrough-create-a-button-by-using-xaml.md) .
 
 En la ilustración siguiente se muestra el botón personalizado que creará.
 
@@ -38,13 +38,13 @@ En la primera parte de este tutorial, creará la apariencia personalizada del bo
 
 4. Seleccione **aplicación estándar (. exe)** .
 
-5. Asigne un nombre `CustomButton` al proyecto y haga clic en **Aceptar**.
+5. Asigne un nombre al proyecto `CustomButton` y presione **Aceptar**.
 
-En este momento tiene un proyecto en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] blanco. Puede presionar F5 para ejecutar la aplicación. Como cabría esperar, la aplicación solo se compone de una ventana en blanco. A continuación, se crea un rectángulo redondeado y se convierte en un botón.
+En este momento tiene un proyecto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en blanco. Puede presionar F5 para ejecutar la aplicación. Como cabría esperar, la aplicación solo se compone de una ventana en blanco. A continuación, se crea un rectángulo redondeado y se convierte en un botón.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Para convertir un rectángulo en un botón
 
-1. **Establezca la propiedad fondo de la ventana en negro:** Seleccione la ventana, haga clic en la **pestaña propiedades**y establezca <xref:System.Windows.Controls.Control.Background%2A> la propiedad `Black`en.
+1. **Establezca la propiedad fondo de la ventana en negro:** Seleccione la ventana, haga clic en la **pestaña propiedades**y establezca la propiedad <xref:System.Windows.Controls.Control.Background%2A> en `Black`.
 
     ![Cómo establecer el fondo de un botón en negro](./media/custom-button-blend-changebackground.png)
 
@@ -52,7 +52,7 @@ En este momento tiene un proyecto en [!INCLUDE[TLA2#tla_wpf](../../../../include
 
     ![Cómo dibujar un rectángulo](./media/custom-button-blend-drawrect.png)
 
-3. **Redondear las esquinas del rectángulo:** Arrastre los puntos de control del rectángulo o establezca directamente las <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> propiedades y. <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> Establezca los valores de <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> y <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> en 20.
+3. **Redondear las esquinas del rectángulo:** Arrastre los puntos de control del rectángulo o establezca directamente las propiedades <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> y <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>. Establezca los valores de <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> y <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> en 20.
 
     ![Cómo redondear las esquinas de un rectángulo](./media/custom-button-blend-roundcorners.png)
 
@@ -76,11 +76,11 @@ Ahora tiene un rectángulo que se ha cambiado a un botón. En esta sección, mod
 
     ![Cómo editar una plantilla](./media/custom-button-blend-edittemplate.jpg)
 
-    En el editor de plantillas, observe que el botón ahora está separado en <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Controls.ContentPresenter>y. <xref:System.Windows.Controls.ContentPresenter> Se utiliza para presentar el contenido dentro del botón (por ejemplo, la cadena "Button"). Ambos rectángulos y <xref:System.Windows.Controls.ContentPresenter> se colocan dentro de <xref:System.Windows.Controls.Grid>un.
+    En el editor de plantillas, observe que el botón ahora está separado en un <xref:System.Windows.Shapes.Rectangle> y en el <xref:System.Windows.Controls.ContentPresenter>. El <xref:System.Windows.Controls.ContentPresenter> se usa para presentar el contenido dentro del botón (por ejemplo, la cadena "Button"). Tanto el rectángulo como el <xref:System.Windows.Controls.ContentPresenter> se colocan dentro de un <xref:System.Windows.Controls.Grid>.
 
     ![Componentes de la presentación de un rectángulo](./media/custom-button-blend-templatepanel.png)
 
-2. **Cambie los nombres de los componentes de la plantilla:** Haga clic con el botón secundario en el rectángulo en el inventario <xref:System.Windows.Shapes.Rectangle> de la plantilla, cambie el nombre de "[Rectangle]" a "outerRectangle" y cambie "[ContentPresenter]" por "myContentPresenter".
+2. **Cambie los nombres de los componentes de la plantilla:** Haga clic con el botón secundario en el rectángulo en el inventario de plantillas, cambie el nombre de la <xref:System.Windows.Shapes.Rectangle> de "[Rectangle]" a "outerRectangle" y cambie "[ContentPresenter]" por "myContentPresenter".
 
     ![Cómo cambiar el nombre de un componente de una plantilla](./media/custom-button-blend-renamecomponents.png)
 
@@ -88,7 +88,7 @@ Ahora tiene un rectángulo que se ha cambiado a un botón. En esta sección, mod
 
     ![Cómo crear un rectángulo vacío](./media/custom-button-blend-changerectproperties.png)
 
-    A continuación, <xref:System.Windows.Shapes.Shape.Stroke%2A> establezca el valor de en el color de lo que vaya a ser la plantilla. Para ello, haga clic en el cuadro blanco pequeño situado junto a **Stroke**, seleccione **CustomExpression**y escriba "{background TemplateBinding}" en el cuadro de diálogo.
+    A continuación, establezca el <xref:System.Windows.Shapes.Shape.Stroke%2A> en el color de lo que sea la plantilla. Para ello, haga clic en el cuadro blanco pequeño situado junto a **Stroke**, seleccione **CustomExpression**y escriba "{background TemplateBinding}" en el cuadro de diálogo.
 
     ![Cómo establecer el uso del color de la plantilla](./media/custom-button-blend-templatestroke.png)
 
@@ -106,7 +106,7 @@ Ahora tiene un rectángulo que se ha cambiado a un botón. En esta sección, mod
 
     ![Cómo mover un botón encima de otro](./media/custom-button-blend-innerrectangle2.png)
 
-6. **Cambiar el aspecto de innerRectangle:** Establezca los <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>valores <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, y <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> en 20. Además, establezca <xref:System.Windows.Shapes.Shape.Fill%2A> en el fondo de la plantilla mediante la expresión personalizada "{background TemplateBinding}") y establézcalo <xref:System.Windows.Shapes.Shape.Stroke%2A> en "transparent". Observe <xref:System.Windows.Shapes.Shape.Fill%2A> que los valores de y <xref:System.Windows.Shapes.Shape.Stroke%2A> de **innerRectangle** son los opuestos a los de **outerRectangle**.
+6. **Cambiar el aspecto de innerRectangle:** Establezca los valores de <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>y <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> en 20. Además, establezca el <xref:System.Windows.Shapes.Shape.Fill%2A> en el fondo de la plantilla mediante la expresión personalizada "{background TemplateBinding}") y establezca <xref:System.Windows.Shapes.Shape.Stroke%2A> en "transparent". Tenga en cuenta que los valores para los <xref:System.Windows.Shapes.Shape.Fill%2A> y <xref:System.Windows.Shapes.Shape.Stroke%2A> de **innerRectangle** son los opuestos a los de **outerRectangle**.
 
     ![Cómo cambiar la apariencia de un rectángulo](./media/custom-button-blend-glassrectangleproperties1.png)
 
@@ -114,23 +114,23 @@ Ahora tiene un rectángulo que se ha cambiado a un botón. En esta sección, mod
 
 8. **Cambie la posición de glassCube si es necesario:** Si **glassCube** no está ya situado para que cubra todo el botón, arrástrelo a la posición.
 
-9. **Proporcione a glassCube una forma ligeramente diferente que outerRectangle:** Cambie las propiedades de **glassCube**. Para empezar, cambie las <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> propiedades <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> y a 10 y a 2.
+9. **Proporcione a glassCube una forma ligeramente diferente que outerRectangle:** Cambie las propiedades de **glassCube**. Para empezar, cambie las propiedades <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> y <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> a 10 y el <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> a 2.
 
     ![Configuración de la apariencia de glassCube](./media/custom-button-blend-glasscubeappearance.gif)
 
-10. **Haga que glassCube tenga el aspecto de cristal:** <xref:System.Windows.Shapes.Shape.Fill%2A> Establezca en una apariencia de vidrio con un degradado lineal que sea 75% opaco y alterne entre el color blanco y el transparente en 6 intervalos de aproximadamente espaciados uniformemente. Este es el conjunto de delimitadores de degradado:
+10. **Haga que glassCube tenga el aspecto de cristal:** Establezca el <xref:System.Windows.Shapes.Shape.Fill%2A> en un aspecto de vidrio con un degradado lineal que sea 75% opaco y alterne entre el color blanco y el transparente en 6 intervalos de aproximadamente espaciados uniformemente. Este es el conjunto de delimitadores de degradado:
 
-    - Detención de degradado 1: Blanco con valor alfa de 75%
+    - Detención de degradado 1: blanco con valor alfa de 75%
 
-    - Detención de degradado 2: Transparente
+    - Delimitador de degradado 2: transparente
 
-    - Detención de degradado 3: Blanco con valor alfa de 75%
+    - Detención de degradado 3: blanco con valor alfa de 75%
 
-    - Detención de degradado 4: Transparente
+    - Detención de degradado 4: transparente
 
-    - Detención de degradado 5: Blanco con valor alfa de 75%
+    - Detención de degradado 5: blanco con valor alfa de 75%
 
-    - Detención de degradado 6: Transparente
+    - Detención de degradado 6: transparente
 
     Esto crea un aspecto de cristal "ondulado".
 
@@ -148,48 +148,48 @@ En este punto, ha personalizado la presentación del botón mediante la edición
 
 1. **Cree un nuevo desencadenador de propiedad:** Con **glassCube** seleccionado, haga clic en **+ propiedad** en el panel **desencadenadores** (vea la figura que sigue al paso siguiente). Esto crea un desencadenador de propiedad con un desencadenador de propiedad predeterminado.
 
-2. **Convierta IsMouseOver en la propiedad utilizada por el desencadenador:** Cambie la propiedad a <xref:System.Windows.UIElement.IsMouseOver%2A>. Esto hace que el desencadenador de propiedad <xref:System.Windows.UIElement.IsMouseOver%2A> se active `true` cuando la propiedad es (cuando el usuario apunta al botón con el mouse).
+2. **Convierta IsMouseOver en la propiedad utilizada por el desencadenador:** Cambie la propiedad a <xref:System.Windows.UIElement.IsMouseOver%2A>. Esto hace que el desencadenador de propiedad se active cuando se `true` la propiedad <xref:System.Windows.UIElement.IsMouseOver%2A> (cuando el usuario señala el botón con el mouse).
 
     ![Cómo establecer un desencadenador en un propiedad](./media/custom-button-blend-ismousedoverpropertytrigger.png)
 
-3. **IsMouseOver desencadena la opacidad del 100% para glassCube:** Observe que la **grabación del desencadenador está activada** (vea la ilustración anterior). Esto significa que cualquier cambio que realice en los valores de propiedad de **glassCube** mientras la grabación está activado se convertirá en una acción <xref:System.Windows.UIElement.IsMouseOver%2A> que `true`tendrá lugar cuando sea. Durante la grabación, cambie <xref:System.Windows.UIElement.Opacity%2A> el de **glassCube** a 100%.
+3. **IsMouseOver desencadena la opacidad del 100% para glassCube:** Observe que la **grabación del desencadenador está activada** (vea la ilustración anterior). Esto significa que cualquier cambio que realice en los valores de propiedad de **glassCube** mientras la grabación está activado se convertirá en una acción que tiene lugar cuando se `true`<xref:System.Windows.UIElement.IsMouseOver%2A>. Durante la grabación, cambie el <xref:System.Windows.UIElement.Opacity%2A> de **glassCube** a 100%.
 
     ![Cómo establecer la opacidad de un botón](./media/custom-button-blend-ismousedoverpropertytrigger2.gif)
 
-    Ahora ha creado su primer desencadenador de propiedad. Observe que en el **Panel desencadenadores** del editor se ha registrado <xref:System.Windows.UIElement.Opacity%2A> el cambio a 100%.
+    Ahora ha creado su primer desencadenador de propiedad. Observe que en el **Panel desencadenadores** del editor se ha registrado el <xref:System.Windows.UIElement.Opacity%2A> que se va a cambiar a 100%.
 
     ![Panel "Desencadenadores"](./media/custom-button-blend-propertytriggerinfo.png)
 
     Presione F5 para ejecutar la aplicación y mueva el puntero del mouse sobre el botón y desactívelo. Debería ver que la capa de cristal aparece al pasar el puntero del mouse por encima del botón y desaparece cuando el puntero sale.
 
-4. **Los desencadenadores IsMouseOver cambian el valor del trazo:** Vamos a asociar algunas otras acciones con <xref:System.Windows.UIElement.IsMouseOver%2A> el desencadenador. Mientras continúa la grabación, cambie la selección de **glassCube** a **outerRectangle**. A continuación, <xref:System.Windows.Shapes.Shape.Stroke%2A> establezca el valor de de **outerRectangle** en la expresión personalizada de "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}". Esto establece <xref:System.Windows.Shapes.Shape.Stroke%2A> en el color de resaltado típico utilizado por los botones. Presione F5 para ver el efecto al pasar el puntero sobre el botón.
+4. Los **desencadenadores IsMouseOver cambian el valor del trazo:** Vamos a asociar algunas otras acciones con el desencadenador de <xref:System.Windows.UIElement.IsMouseOver%2A>. Mientras continúa la grabación, cambie la selección de **glassCube** a **outerRectangle**. A continuación, establezca el <xref:System.Windows.Shapes.Shape.Stroke%2A> de **outerRectangle** en la expresión personalizada de "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}". Esto establece el <xref:System.Windows.Shapes.Shape.Stroke%2A> en el color de resaltado típico utilizado por los botones. Presione F5 para ver el efecto al pasar el puntero sobre el botón.
 
     ![Cómo establecer el trazo en el color resaltado](./media/custom-button-blend-ismousedoverpropertytrigger3.png)
 
-5. **IsMouseOver desencadena texto borroso:** Vamos a asociar una acción más al <xref:System.Windows.UIElement.IsMouseOver%2A> desencadenador de propiedad. Haga que el contenido del botón parezca un poco borroso cuando aparezca el cristal sobre él. Para ello, podemos aplicar un desenfoque <xref:System.Windows.Media.Effects.BitmapEffect> <xref:System.Windows.Controls.ContentPresenter> a (**myContentPresenter**).
+5. **IsMouseOver desencadena texto borroso:** Vamos a asociar una acción más al desencadenador de la propiedad <xref:System.Windows.UIElement.IsMouseOver%2A>. Haga que el contenido del botón parezca un poco borroso cuando aparezca el cristal sobre él. Para ello, podemos aplicar un desenfoque <xref:System.Windows.Media.Effects.BitmapEffect> a la <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).
 
     ![Cómo difuminar el contenido de un botón](./media/custom-button-blend-propertytriggerwithbitmapeffect.png)
 
     > [!NOTE]
-    > Para devolver el **panel Propiedades** a lo que estaba antes de realizar la búsqueda <xref:System.Windows.Media.Effects.BitmapEffect>, borre el texto del cuadro de **búsqueda**.
+    > Para devolver el **panel Propiedades** a lo que estaba antes de que realizara la búsqueda <xref:System.Windows.Media.Effects.BitmapEffect>, borre el texto del **cuadro de búsqueda**.
 
-    En este punto, se ha usado un desencadenador de propiedad con varias acciones asociadas para crear el comportamiento de resaltado cuando el puntero del Mouse entra y sale del área de botón. Otro comportamiento típico de un botón es resaltar cuando tiene el foco (como después de hacer clic en él). Podemos agregar este comportamiento agregando otro desencadenador de propiedad para <xref:System.Windows.UIElement.IsFocused%2A> la propiedad.
+    En este punto, se ha usado un desencadenador de propiedad con varias acciones asociadas para crear el comportamiento de resaltado cuando el puntero del Mouse entra y sale del área de botón. Otro comportamiento típico de un botón es resaltar cuando tiene el foco (como después de hacer clic en él). Podemos agregar este comportamiento agregando otro desencadenador de propiedad para la propiedad <xref:System.Windows.UIElement.IsFocused%2A>.
 
-6. **Crear desencadenador de propiedad para IsFocused:** Con el mismo procedimiento que para <xref:System.Windows.UIElement.IsMouseOver%2A> (vea el primer paso de esta sección), cree otro desencadenador de propiedad <xref:System.Windows.UIElement.IsFocused%2A> para la propiedad. Mientras la **grabación del desencadenador está activada**, agregue las siguientes acciones al desencadenador:
+6. **Crear desencadenador de propiedad para IsFocused:** Con el mismo procedimiento que para <xref:System.Windows.UIElement.IsMouseOver%2A> (vea el primer paso de esta sección), cree otro desencadenador de propiedad para la propiedad <xref:System.Windows.UIElement.IsFocused%2A>. Mientras la **grabación del desencadenador está activada**, agregue las siguientes acciones al desencadenador:
 
-    - **glassCube** obtiene un <xref:System.Windows.UIElement.Opacity%2A> de 100%.
+    - **glassCube** obtiene un <xref:System.Windows.UIElement.Opacity%2A> del 100%.
 
-    - **outerRectangle** obtiene un <xref:System.Windows.Shapes.Shape.Stroke%2A> valor de expresión personalizado de "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}".
+    - **outerRectangle** obtiene un valor de expresión personalizada <xref:System.Windows.Shapes.Shape.Stroke%2A> de "{DynamicResource {x:Static SystemColors. HighlightBrushKey}}".
 
-Como paso final de este tutorial, agregaremos animaciones al botón. Los eventos desencadenarán estas animaciones, en concreto, los <xref:System.Windows.UIElement.MouseEnter> eventos y. <xref:System.Windows.Controls.Primitives.ButtonBase.Click>
+Como paso final de este tutorial, agregaremos animaciones al botón. Los eventos desencadenarán estas animaciones, en concreto, los eventos <xref:System.Windows.UIElement.MouseEnter> y <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
 ### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Para usar desencadenadores de eventos y animaciones para agregar interactividad
 
-1. **Cree un desencadenador de evento MouseEnter:** Agregue un nuevo desencadenador de eventos <xref:System.Windows.UIElement.MouseEnter> y seleccione como el evento que se va a usar en el desencadenador.
+1. **Cree un desencadenador de evento MouseEnter:** Agregue un nuevo desencadenador de eventos y seleccione <xref:System.Windows.UIElement.MouseEnter> como el evento que se va a usar en el desencadenador.
 
      ![Cómo crear un desencadenador del evento MouseEnter](./media/custom-button-blend-mouseovereventtrigger.png)
 
-2. **Cree una escala de tiempo de animación:** A continuación, asocie una escala de tiempo <xref:System.Windows.UIElement.MouseEnter> de animación al evento.
+2. **Cree una escala de tiempo de animación:** A continuación, asocie una escala de tiempo de animación al evento <xref:System.Windows.UIElement.MouseEnter>.
 
     ![Cómo agregar una escala de tiempo de animación a un evento](./media/custom-button-blend-mouseovereventtrigger2.png)
 
@@ -212,9 +212,9 @@ Como paso final de este tutorial, agregaremos animaciones al botón. Los eventos
 
 5. **Cree otro desencadenador de eventos y asocie una animación diferente con él:** Vamos a agregar una animación más. Use un procedimiento similar al que usó para crear la animación del desencadenador de evento anterior:
 
-    1. Cree un nuevo desencadenador de eventos <xref:System.Windows.Controls.Primitives.ButtonBase.Click> con el evento.
+    1. Cree un nuevo desencadenador de eventos mediante el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
-    2. Asociar una nueva escala de <xref:System.Windows.Controls.Primitives.ButtonBase.Click> tiempo al evento.
+    2. Asociar una nueva escala de tiempo al evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
 
         ![Cómo crear una nueva escala de tiempo](./media/custom-button-blend-clickeventtrigger1.png)
 
@@ -236,7 +236,7 @@ Ha completado un botón personalizado. Lo hizo mediante una plantilla de botón 
 
 Presione F5 para ejecutar la aplicación. Haga clic en los botones y observe cómo se comportan de la misma manera.
 
-Recuerde que mientras estaba personalizando la plantilla, <xref:System.Windows.Shapes.Shape.Fill%2A> establezca la propiedad de **innerRectangle** y la <xref:System.Windows.Shapes.Shape.Stroke%2A> propiedad **outerRectangle** en el fondo de la plantilla ({fondo de TemplateBinding}). Por este motivo, al establecer el color de fondo de los botones individuales, el fondo que establezca se utilizará para las propiedades correspondientes. Intente cambiar el fondo ahora. En la siguiente ilustración, se usan degradados diferentes. Por lo tanto, aunque una plantilla es útil para la personalización global de controles como Button, los controles con plantillas se pueden modificar para que tengan un aspecto diferente.
+Recuerde que mientras estaba personalizando la plantilla, establezca la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> de **innerRectangle** y la propiedad <xref:System.Windows.Shapes.Shape.Stroke%2A> **outerRectangle** en el fondo de la plantilla ({fondo de TemplateBinding}). Por este motivo, al establecer el color de fondo de los botones individuales, el fondo que establezca se utilizará para las propiedades correspondientes. Intente cambiar el fondo ahora. En la siguiente ilustración, se usan degradados diferentes. Por lo tanto, aunque una plantilla es útil para la personalización global de controles como Button, los controles con plantillas se pueden modificar para que tengan un aspecto diferente.
 
 ![Botones con la misma plantilla que buscan diferente](./media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")
 

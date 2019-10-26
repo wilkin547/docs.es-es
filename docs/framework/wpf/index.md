@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764548"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919368"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) en Visual Studio proporciona a los desarrolladores un modelo de programación unificado para crear aplicaciones de escritorio de línea de negocio en Windows.  
-  
- [Crear aplicaciones de escritorio con Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [Diseño de XAML en Visual Studio y Blend para Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [Obtener Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+Windows Presentation Foundation (WPF) proporciona a los desarrolladores un modelo de programación unificado para crear aplicaciones de escritorio de línea de negocio en Windows.
+
+- [Introducción a WPF](introduction-to-wpf.md)
+- [Introducción](getting-started/index.md)
+- [Desarrollo de aplicaciones](app-development/index.md)
+- [Avanzadas](advanced/index.md)
+- [Controles](controls/index.md)
+- [Data](data/index.md)
+- [Gráficos y multimedia](graphics-multimedia/index.md)
+- [Seguridad](security-wpf.md)
+- [Ejemplos de WPF](wpf-samples.md)
+- [Biblioteca de clases](class-library-wpf.md)

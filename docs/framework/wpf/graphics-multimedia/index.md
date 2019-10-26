@@ -12,22 +12,22 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: be8dcfce44347e8099e8cfa693bcee341514de2b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291443"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919987"
 ---
 # <a name="graphics-and-multimedia"></a>Gráficos y multimedia
 
 <a name="introduction"></a>
- @ no__t-2 proporciona compatibilidad con multimedia, gráficos vectoriales, animación y composición de contenido, lo que facilita a los desarrolladores la creación de interfaces de usuario y contenido interesantes. Con [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], se pueden crear gráficos vectoriales o animaciones complejas e integrar elementos multimedia en las aplicaciones.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad con multimedia, gráficos vectoriales, animación y composición de contenido, lo que facilita a los desarrolladores la creación de interfaces de usuario y contenido interesantes. Con Visual Studio, puede crear gráficos vectoriales o animaciones complejas e integrar los elementos multimedia en las aplicaciones.
 
 En este tema se presentan las características de gráficos, animaciones y elementos multimedia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], que le permiten agregar gráficos, efectos de transición, sonido y vídeo a las aplicaciones.
 
 > [!NOTE]
-> Se desaconseja totalmente el uso de tipos WPF en un servicio de Windows. Si intenta usar tipos WPF en un servicio de Windows, puede que el servicio no funcione como se espera.
+> Se recomienda encarecidamente no usar los tipos WPF en un servicio de Windows. Si intenta usar tipos WPF en un servicio de Windows, puede que el servicio no funcione como se espera.
 
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>
 
@@ -37,7 +37,7 @@ Se han efectuado varios cambios relacionados con los gráficos y animaciones.
 
 - Redondeo del diseño
 
-  Cuando el borde de un objeto queda en medio de un dispositivo de píxeles, el sistema de gráficos independiente de los ppp puede crear artefactos de representación tales como bordes borrosos o semitransparentes. Versiones anteriores de WPF incluían el ajuste de píxeles para ayudar a controlar este caso. Silverlight 2 introdujo el redondeo del diseño, que es otra manera de mover elementos para que los bordes queden dentro de límites de píxeles enteros. WPF admite ahora el redondeo del diseño con la propiedad adjunta <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> en <xref:System.Windows.FrameworkElement>.
+  Cuando el borde de un objeto queda en medio de un dispositivo de píxeles, el sistema de gráficos independiente de los ppp puede crear artefactos de representación tales como bordes borrosos o semitransparentes. Versiones anteriores de WPF incluían el ajuste de píxeles para ayudar a controlar este caso. Silverlight 2 introdujo el redondeo del diseño, que es otra manera de mover elementos para que los bordes queden dentro de límites de píxeles enteros. WPF admite ahora el redondeo del diseño con la <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> propiedad adjunta en <xref:System.Windows.FrameworkElement>.
 
 - Composición almacenada en caché
 
@@ -45,25 +45,25 @@ Se han efectuado varios cambios relacionados con los gráficos y animaciones.
 
 - Compatibilidad con el sombreador de píxeles 3
 
-  WPF 4 se basa en la compatibilidad con <xref:System.Windows.Media.Effects.ShaderEffect> introducida en WPF 3,5 SP1 al permitir que las aplicaciones escriban efectos mediante el sombreador de píxeles (PS) versión 3,0. El modelo de sombreador PS 3.0 es más sofisticado que el PS 2.0, lo que permite incluso crear más efectos en hardware compatible.
+  WPF 4 se basa en la compatibilidad de <xref:System.Windows.Media.Effects.ShaderEffect> introducida en WPF 3,5 SP1 al permitir que las aplicaciones escriban efectos mediante el sombreador de píxeles (PS) versión 3,0. El modelo de sombreador PS 3.0 es más sofisticado que el PS 2.0, lo que permite incluso crear más efectos en hardware compatible.
 
 - Funciones de aceleración
 
-  Puede mejorar las animaciones con funciones de aceleración que proporcionan mayor control sobre el comportamiento de las animaciones. Por ejemplo, puede aplicar un <xref:System.Windows.Media.Animation.ElasticEase> a una animación para dar a la animación un comportamiento elástico. Para obtener más información, consulte los tipos de aceleración en el espacio de nombres <xref:System.Windows.Media.Animation>.
+  Puede mejorar las animaciones con funciones de aceleración que proporcionan mayor control sobre el comportamiento de las animaciones. Por ejemplo, puede aplicar una <xref:System.Windows.Media.Animation.ElasticEase> a una animación para dar un comportamiento elástico a la animación. Para obtener más información, vea los tipos de aceleración en el espacio de nombres <xref:System.Windows.Media.Animation>.
 
 <a name="graphics_and_rendering"></a>
 
 ## <a name="graphics-and-rendering"></a>Gráficos y representación
 
-WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](graphics.md) (Gráficos). La representación de elementos gráficos se basa en la clase <xref:System.Windows.Media.Visual>. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, consulte [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).
+WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](graphics.md) (Gráficos). La representación de elementos gráficos se basa en la clase <xref:System.Windows.Media.Visual>. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, vea [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).
 
 ### <a name="2-d-shapes"></a>Formas 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona una biblioteca de formas 2D y dibujadas con vectores de uso frecuente, como rectángulos y elipses, que se muestran en la siguiente ilustración.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona una biblioteca de formas bidimensionales de uso frecuente, como rectángulos y elipses, que se muestra en la siguiente ilustración.
 
 ![Diagrama que muestra puntos suspensivos y rectángulos.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Estas formas intrínsecas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no son solo formas: son elementos programables que implementan muchas de las características que se esperan de los controles más comunes, entre los que se incluyen la entrada por mouse y teclado. En el ejemplo siguiente se muestra cómo controlar el evento <xref:System.Windows.UIElement.MouseUp> que se genera al hacer clic en un elemento <xref:System.Windows.Shapes.Ellipse>.
+Estas formas intrínsecas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no son solo formas: son elementos programables que implementan muchas de las características que se esperan de los controles más comunes, entre los que se incluyen la entrada por mouse y teclado. En el ejemplo siguiente se muestra cómo controlar el evento de <xref:System.Windows.UIElement.MouseUp> que se produce al hacer clic en un elemento <xref:System.Windows.Shapes.Ellipse>.
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ Para obtener más información, consulte [Información general sobre formas y di
 
 ### <a name="2-d-geometries"></a>Geometrías 2D
 
-Si las formas 2D que proporciona [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no son suficientes, puede usar la compatibilidad con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para las geometrías y las rutas de acceso para crear las suyas propias. En la ilustración siguiente se muestra cómo se pueden usar geometrías para crear formas, por ejemplo, un pincel de dibujo, y para recortar otros elementos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Cuando las formas 2D que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona no son suficientes, puede usar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] compatibilidad con las geometrías y las rutas de acceso para crear las suyas propias. En la ilustración siguiente se muestra cómo se pueden usar geometrías para crear formas, por ejemplo, un pincel de dibujo, y para recortar otros elementos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
 ![Captura de pantalla que muestra cómo se pueden usar las geometrías para crear formas.](./media/index/use-geometries-create-shapes.png)
 
@@ -119,7 +119,7 @@ Para obtener más información, consulte [Información general sobre pinceles de
 
 ## <a name="3-d-rendering"></a>Representación 3D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona un conjunto de capacidades de representación 3D que se integran con la compatibilidad con gráficos 2D en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para que pueda crear un diseño más interesante, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y visualización de datos. En un extremo del espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite representar imágenes 2D en las superficies de las formas 3D, que se muestran en la siguiente ilustración.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona un conjunto de capacidades de representación 3D que se integran con la compatibilidad con gráficos 2D en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para que pueda crear un diseño, un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]y una visualización de datos más interesantes. En un extremo del espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le permite representar imágenes 2D en las superficies de las formas 3D, que se muestran en la siguiente ilustración.
 
 ![Captura de pantalla de un ejemplo en el que se muestran formas 3D con texturas diferentes.](./media/index/visual-three-dimensional-shape.png)
 
