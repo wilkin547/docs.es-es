@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581725"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920360"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Archivos de recursos, contenido y datos de aplicaciones de WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplicaciones a menudo dependen de archivos que contienen datos no ejecutables, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imágenes, vídeo y audio. Windows Presentation Foundation (WPF) ofrece compatibilidad especial para configurar, identificar y usar estos tipos de archivos de datos, que se denominan archivos de datos de la aplicación. Esta compatibilidad gira en torno a un conjunto específico de tipos de archivo de datos de aplicación, entre los que se incluyen:  
@@ -68,7 +68,7 @@ ms.locfileid: "72581725"
 ```  
   
 > [!NOTE]
-> En [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], cree un archivo de recursos agregando un archivo a un proyecto y estableciendo su `Build Action` en `Resource`.  
+> En Visual Studio, puede crear un archivo de recursos agregando un archivo a un proyecto y estableciendo su `Build Action` en `Resource`.  
   
  Cuando se compila el proyecto, MSBuild compila el recurso en el ensamblado.  
   
@@ -109,12 +109,12 @@ ms.locfileid: "72581725"
 ```  
   
 > [!NOTE]
-> En [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], agregará un nuevo <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> o <xref:System.Windows.ResourceDictionary> a un proyecto, el `Build Action` para el archivo de marcado se establecerá de forma predeterminada en `Page`.  
+> En Visual Studio, agregará un nuevo <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>o <xref:System.Windows.ResourceDictionary> a un proyecto, el `Build Action` para el archivo de marcado se establecerá de forma predeterminada en `Page`.  
   
  Cuando se compila un proyecto con elementos de `Page`, los elementos de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se convierten al formato binario y se compilan en el ensamblado asociado. Por consiguiente, estos archivos se pueden utilizar de la misma forma que los archivos de recursos típicos.  
   
 > [!NOTE]
-> Si un archivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] está configurado como un elemento `Resource` y no tiene un archivo de código subyacente, el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sin formato se compila en un ensamblado en lugar de una versión binaria de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sin formato.  
+> Si un archivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] está configurado como un elemento `Resource` y no tiene un archivo de código subyacente, el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sin formato se compila en un ensamblado en lugar de una versión binaria de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]sin formato.  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>Archivos de contenido  
@@ -140,7 +140,7 @@ ms.locfileid: "72581725"
 ```  
   
 > [!NOTE]
-> En [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], cree un archivo de contenido agregando un archivo a un proyecto y estableciendo su `Build Action` en `Content` y establezca su `Copy to Output Directory` en `Copy always` (igual que `Always`) y `Copy if newer` (igual que `PreserveNewest`).  
+> En Visual Studio, se crea un archivo de contenido agregando un archivo a un proyecto y estableciendo su `Build Action` en `Content`y se establece su `Copy to Output Directory` en `Copy always` (igual que `Always`) y `Copy if newer` (igual que `PreserveNewest`).  
   
  Cuando se compila el proyecto, se compila un atributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> en los metadatos del ensamblado para cada archivo de contenido.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "72581725"
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Sin embargo, los esquemas file:/// y http:// requieren que la aplicación tenga plena confianza. Si la aplicación es una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] que se inició desde Internet o la intranet y solicita solo el conjunto de permisos que se permiten para las aplicaciones iniciadas desde esas ubicaciones, solo se pueden cargar archivos sueltos desde el sitio de origen de la aplicación (Inicio Ubicación). Estos archivos se denominan archivos *de sitio de origen* .  
+ Sin embargo, los esquemas file:/// y http:// requieren que la aplicación tenga plena confianza. Si la aplicación es una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] que se ha iniciado desde Internet o una intranet y solicita solo el conjunto de permisos que se permiten para las aplicaciones iniciadas desde esas ubicaciones, los archivos sueltos solo se pueden cargar desde el sitio de origen de la aplicación ( Ubicación de inicio). Estos archivos se denominan archivos *de sitio de origen* .  
   
  Los archivos del sitio de origen son la única opción para las aplicaciones de confianza parcial, aunque no se limitan a ese tipo de aplicaciones. Es posible que las aplicaciones de plena confianza aún necesiten cargar archivos de datos de aplicación que desconocen en tiempo de compilación; mientras que las aplicaciones de plena confianza pueden utilizar file:///, es probable que los archivos de datos de la aplicación se instalarán en la misma carpeta que el ensamblado de la aplicación, o en una subcarpeta de él. En este caso, es más sencillo usar la referencia del sitio de origen que file:///, ya que el uso de file:/// requiere que se determine la ruta de acceso completa del archivo.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "72581725"
 ```  
   
 > [!NOTE]
-> En [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], se crea un archivo de sitio de origen agregando un archivo a un proyecto y estableciendo su `Build Action` en `None`.  
+> En Visual Studio, puede crear un archivo de sitio de origen agregando un archivo a un proyecto y estableciendo su `Build Action` en `None`.  
   
  Cuando se compila el proyecto, MSBuild copia los archivos especificados en la carpeta de resultados de la compilación.  
   
