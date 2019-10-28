@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609952"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771720"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operadores de desplazamiento y bit a bit (referencia de C#)
 
@@ -158,7 +158,7 @@ Para obtener la lista completa de los operadores de C# ordenados por nivel de pr
 
 ## <a name="shift-count-of-the-shift-operators"></a>Recuento de desplazamiento de los operadores de desplazamiento
 
-En el caso de los operadores de desplazamiento `<<` y `>>`, el tipo del operando derecho debe ser [int](../builtin-types/integral-numeric-types.md) o un tipo que tenga una [conversión numérica implícita predefinida](../keywords/implicit-numeric-conversions-table.md) en `int`.
+En el caso de los operadores de desplazamiento `<<` y `>>`, el tipo del operando derecho debe ser [int](../builtin-types/integral-numeric-types.md) o un tipo que tenga una [conversión numérica implícita predefinida](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) en `int`.
 
 En el caso de las expresiones `x << count` y `x >> count`, el recuento de desplazamiento real depende del tipo de `x`, de esta forma:
 

@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
+  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850945"
+  ms.lasthandoff: 10/27/2019
+  ms.locfileid: "72966976"
 items:
 - durationInMinutes: 2
   content: >
@@ -54,7 +54,39 @@ items:
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: Incluir diferentes tipos de datos
   durationInMinutes: 5
-  content: "En el paso anterior, se ha usado una interpolación de cadena para insertar una cadena dentro de otra. Sin embargo, cada expresión de interpolación que forma parte de una expresión de cadena interpolada puede ser de cualquier tipo de datos. Vamos a incluir valores de distintas expresiones de tipos de datos en una cadena interpolada.\n\nEn el siguiente ejemplo, primero definimos una [tupla](../../tuples.md) que tiene `Name`, `Price` y `perPackage` miembros. Ejecute el código siguiente en la ventana interactiva:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nObserve que la expresión de interpolación `item.Price` de la cadena interpolada se resuelve en el texto \"1.99\" en la cadena de resultado. Esto se debe a que, cuando el tipo del resultado de la expresión no es una cadena, el resultado se resuelve en una cadena de la siguiente manera:\n\n- Si la expresión de interpolación se evalúa en `null`, se usa una cadena vacía (\"\", o <xref:System.String.Empty?displayProperty=nameWithType>).\n\n- Si la expresión de interpolación no se evalúa en `null`, se suele llamar al método `ToString` de la expresión de resultado. \n\nEn el resultado de este ejemplo, la fecha es demasiado precisa (el precio de \"eggplant\" no varía por segundos) y el valor del precio no indica una unidad de moneda. En el paso siguiente se aprende a corregir esos problemas al controlar el formato de representaciones de cadena de los resultados de la expresión.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    En el paso anterior, se ha usado una interpolación de cadena para insertar una cadena dentro de otra. Sin embargo, cada expresión de interpolación que forma parte de una expresión de cadena interpolada puede ser de cualquier tipo de datos. Vamos a incluir valores de distintas expresiones de tipos de datos en una cadena interpolada.
+
+
+    En el siguiente ejemplo, primero definimos una [tupla](../../tuples.md) que tiene `Name`, `Price` y `perPackage` miembros. Ejecute el código siguiente en la ventana interactiva:
+
+
+    ```csharp
+
+    var item = (Name: "eggplant", Price: 1.99m, perPackage: 3);
+
+    var date = DateTime.Now;
+
+    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+
+    ```
+
+
+    Observe que la expresión de interpolación `item.Price` de la cadena interpolada se resuelve en el texto "1.99" en la cadena de resultado. Esto se debe a que, cuando el tipo del resultado de la expresión no es una cadena, el resultado se resuelve en una cadena de la siguiente manera:
+
+
+    - Si la expresión de interpolación se evalúa en `null`, se usa una cadena vacía ("", o <xref:System.String.Empty?displayProperty=nameWithType>).
+
+
+    - Si la expresión de interpolación no se evalúa en `null`, se suele llamar al método `ToString` de la expresión de resultado.
+
+
+    En el resultado de este ejemplo, la fecha es demasiado precisa (el precio de "eggplant" no varía por segundos) y el valor del precio no indica una unidad de moneda. En el paso siguiente se aprende a corregir esos problemas al controlar el formato de representaciones de cadena de los resultados de la expresión.
+
+
+    > [!NOTE]
+
+    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: Control del formato de las expresiones de interpolación
   durationInMinutes: 5
   content: >
@@ -71,7 +103,7 @@ items:
     Especifique una cadena de formato al colocar dos puntos (":") después de la expresión de interpolación y la cadena de formato. "d" es una [cadena de formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa el formato de fecha corta. "C2" es una [cadena de formato numérica estándar](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa un número como un valor de moneda con dos dígitos después del separador decimal.
 
 
-    Una serie de tipos de las bibliotecas de .NET admiten un conjunto predefinido de cadenas de formato. Esto incluye todos los tipos numéricos y los tipos de fecha y hora. Para obtener una lista completa de los tipos que admiten cadenas de formato, vea [Dar formato a cadenas y tipos de biblioteca de clase .NET](../../../standard/base-types/formatting-types.md#stringRef) en el artículo [Aplicar formato a tipos de .NET](../../../standard/base-types/formatting-types.md).
+    Una serie de tipos de las bibliotecas de .NET admiten un conjunto predefinido de cadenas de formato. Esto incluye todos los tipos numéricos y los tipos de fecha y hora. Para obtener una lista completa de los tipos que admiten cadenas de formato, vea [Dar formato a cadenas y tipos de biblioteca de clase .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) en el artículo [Aplicar formato a tipos de .NET](../../../standard/base-types/formatting-types.md).
 
 
     Pruebe a modificar las cadenas de formato del ejemplo para ver cómo afectan al formato de fecha y hora y al valor numérico. Cambie "d" en `{date:d}` a "t" (para mostrar el formato de hora corta), "y" (para mostrar el año y el mes) y "yyyy" (para mostrar el año como un número de cuatro dígitos). Cambie "C2" en `{price:C2}` a "e" (para la notación exponencial) y "F3" (para un valor numérico con tres dígitos después del separador decimal).
@@ -125,7 +157,7 @@ items:
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ha completado el tutorial interactivo sobre interpolación de cadenas. Puede hacer clic en el vínculo **Números en C# ** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. La sección "Pasos siguientes" le lleva de vuelta a estos tutoriales.
+    Ha completado el tutorial interactivo sobre interpolación de cadenas. Puede visitar el [sitio .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando.
 
 
     Para más información, vea [Interpolación de cadenas](../../language-reference/tokens/interpolated.md).
