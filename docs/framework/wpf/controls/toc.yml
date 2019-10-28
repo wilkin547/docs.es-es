@@ -497,7 +497,7 @@
         - name: 'Tutoriales: Crear un botón animado personalizado'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Crear un botón mediante Microsoft Expression Blend
+            - name: Crear un botón mediante el uso de Blend
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
-            - name: Crear un botón mediante XAML
+            - name: Crear un botón mediante el uso de XAML
               href: walkthrough-create-a-button-by-using-xaml.md
