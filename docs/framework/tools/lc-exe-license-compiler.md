@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 2e66534cac1edcc6759321c3024effa4990faeda
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044495"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774204"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de licencias)
 El Compilador de licencias lee archivos de texto que contienen información sobre licencias y crea un archivo binario que se puede incrustar como recurso en un archivo ejecutable de Common Language Runtime.  
@@ -34,7 +34,7 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
   
 ```console
       lc /target:  
-targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [-outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   

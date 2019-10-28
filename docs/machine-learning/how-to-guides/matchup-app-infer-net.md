@@ -3,12 +3,12 @@ title: Creación de una aplicación de listas de enfrentamientos en juegos con I
 description: Descubra cómo usar la programación probabilística con Infer.NET para crear una aplicación de listas de enfrentamientos en juegos basada en una versión simplificada de TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957214"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774542"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística
 
@@ -24,7 +24,7 @@ La programación probabilística permite crear modelos estadísticos de los proc
 
   En esta guía paso a paso se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en MacOS, Windows o Linux.
 
-## <a name="create-your-app"></a>Creación de una aplicación
+## <a name="create-your-app"></a>Creación de la aplicación
 
 1. Abra un nuevo símbolo del sistema y ejecute los siguientes comandos:
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Diseño del modelo
 
-En el ejemplo se usan las partidas de tenis de mesa o futbolín jugadas en la oficina. Cuenta con los participantes y el resultado de cada partida.  Quiere deducir las habilidades del jugador a partir de estos datos. Suponga que cada jugador tiene una habilidad latente normalmente distribuida y su rendimiento en una partida determinada es una versión con ruido de esta habilidad. Los datos limitan el rendimiento del ganador para que sea mayor que el rendimiento del perdedor. Se trata de una versión simplificada del popular modelo de [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), que también admite equipos, dibujos y otras extensiones. Un [versión avanzada](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) de este modelo se utiliza para el emparejamiento en los títulos de juego más vendidos Halo y Gears of War.
+En el ejemplo se usan las partidas de tenis de mesa o futbolín jugadas en la oficina. Cuenta con los participantes y el resultado de cada partida.  Quiere deducir las habilidades del jugador a partir de estos datos. Suponga que cada jugador tiene una habilidad latente normalmente distribuida y su rendimiento en una partida determinada es una versión con ruido de esta habilidad. Los datos limitan el rendimiento del ganador para que sea mayor que el rendimiento del perdedor. Se trata de una versión simplificada del popular modelo de [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/), que también admite equipos, dibujos y otras extensiones. Un [versión avanzada](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) de este modelo se utiliza para el emparejamiento en los títulos de juego más vendidos Halo y Gears of War.
 
 Necesita enumerar las habilidades del jugador deducidas, junto con su desviación (la medida de incertidumbre en torno a las habilidades).
 
