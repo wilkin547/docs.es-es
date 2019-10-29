@@ -2,12 +2,12 @@
 title: Autenticación en SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794294"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040269"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 SQL Server admite dos modos de autenticación, el modo de autenticación de Windows y el modo mixto.  
@@ -19,10 +19,10 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > [!IMPORTANT]
 > Se recomienda utilizar la autenticación de Windows siempre que sea posible. Este modo de autenticación usa una serie de mensajes cifrados para autenticar usuarios en SQL Server. Cuando se usan SQL Server inicios de sesión, SQL Server los nombres de inicio de sesión y las contraseñas cifradas se transmiten a través de la red, lo que hace que sean menos seguros.  
   
- Con la autenticación de Windows, los usuarios ya registrados en Windows no tienen que iniciar sesión por separado en SQL Server. A continuación `SqlConnection.ConnectionString` se especifica la autenticación de Windows sin necesidad de que los usuarios proporcionen un nombre de usuario o una contraseña.  
+ Con la autenticación de Windows, los usuarios ya registrados en Windows no tienen que iniciar sesión por separado en SQL Server. En el siguiente `SqlConnection.ConnectionString` se especifica la autenticación de Windows sin necesidad de que los usuarios proporcionen un nombre de usuario o una contraseña.  
   
-```  
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
+```csharp  
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
 ```  
   
 > [!NOTE]
@@ -66,7 +66,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > [!IMPORTANT]
 > SQL Server se instala con un inicio de sesión de SQL Server denominado `sa` (como abreviatura de "system administrator", administrador de sistema). Asigne una contraseña segura al inicio de sesión `sa` y no use el inicio de sesión `sa` en la aplicación. El inicio de sesión `sa` se asigna al rol fijo de servidor `sysadmin`, que dispone de credenciales administrativas irrevocables en todo el servidor. Si un atacante obtiene acceso como administrador de sistema, los daños pueden ser incalculables. Todos los miembros del grupo `BUILTIN\Administrators` de Windows (el grupo de administradores locales) son miembros del rol `sysadmin` de forma predeterminada, pero se pueden quitar de este rol.  
   
- SQL Server proporciona mecanismos de directiva de contraseñas de Windows para los inicios de [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] sesión de SQL Server cuando se ejecuta en o versiones posteriores. Las directivas de complejidad de contraseñas están diseñadas para impedir ataques por fuerza bruta mediante el aumento del número de contraseñas posibles. SQL Server puede aplicar las mismas directivas de complejidad y expiración [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] que se usan en a las contraseñas que se usan dentro de SQL Server.  
+ SQL Server proporciona mecanismos de directiva de contraseñas de Windows para los inicios de sesión de SQL Server cuando se ejecuta en [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] o versiones posteriores. Las directivas de complejidad de contraseñas están diseñadas para impedir ataques por fuerza bruta mediante el aumento del número de contraseñas posibles. SQL Server puede aplicar las mismas directivas de complejidad y expiración que se usan en [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] a las contraseñas que se usan en SQL Server.  
   
 > [!IMPORTANT]
 > Cuando se utiliza la concatenación de cadenas de conexión a partir de la entrada de usuario, el sistema se hace vulnerable ante los ataques de inyección de cadenas de conexión. Utilice <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. Para obtener más información, vea [Generadores de cadenas de conexión](../connection-string-builders.md).  
@@ -74,7 +74,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Entidades](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe los inicios de sesión y otras entidades de seguridad en SQL Server.|  
   

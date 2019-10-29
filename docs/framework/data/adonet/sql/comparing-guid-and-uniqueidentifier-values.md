@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18f7ad8f6ef9cdf726bdf606ab108e2c5140aed7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878116"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040463"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Comparar valores GUID y uniqueidentifier
-El tipo de datos de identificador único global (GUID) de SQL Server viene representado por el tipo de datos `uniqueidentifier`, que almacena un valor binario de 16 bytes. Un GUID es un número binario que sirve principalmente como identificador, el cual que debe ser único en una red formada por varios equipos en muchos sitios. Los GUID se pueden generar con la llamada a la función NEWID de Transact-SQL, y se tiene la garantía de que son únicos en todo el mundo. Para obtener más información, consulte [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  
+El tipo de datos de identificador único global (GUID) de SQL Server viene representado por el tipo de datos `uniqueidentifier`, que almacena un valor binario de 16 bytes. Un GUID es un número binario que sirve principalmente como identificador, el cual que debe ser único en una red formada por varios equipos en muchos sitios. Los GUID se pueden generar con la llamada a la función NEWID de Transact-SQL, y se tiene la garantía de que son únicos en todo el mundo. Para obtener más información, vea [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  
   
 ## <a name="working-with-sqlguid-values"></a>Trabajo con valores SqlGuid  
  Como los valores GUID son largos y poco claros, no resultan significativos para los usuarios. Si utiliza GUID generados de forma aleatoria en valores de claves e inserta muchas filas, obtendrá E/S aleatoria en los índices, lo que puede afectar al rendimiento negativamente. Los GUID son también relativamente grandes si se comparan con otros tipos de datos. En general, se recomienda el uso de GUID solo en situaciones muy limitadas en las que no resulta adecuado ningún otro tipo de datos.  
   
 ### <a name="comparing-guid-values"></a>Comparación de valores GUID  
- Los operadores de comparación se pueden utilizar con valores `uniqueidentifier`. Sin embargo, al comparar los patrones de bits de los dos valores no se implementa el orden. Las únicas operaciones que se permiten en un `uniqueidentifier` valor son comparaciones (=, <>, \<, >, \<=, > =) y comprobaciones para NULL (IS NULL e IS NOT NULL). No se permite ninguna otra operación aritmética.  
+ Los operadores de comparación se pueden utilizar con valores `uniqueidentifier`. Sin embargo, al comparar los patrones de bits de los dos valores no se implementa el orden. Las únicas operaciones que se permiten con respecto a un valor de `uniqueidentifier` son las comparaciones (=, < >, \<, >, \<=, > =) y la comprobación de NULL (IS NULL y IS NOT NULL). No se permite ninguna otra operación aritmética.  
   
  Tanto <xref:System.Guid> como <xref:System.Data.SqlTypes.SqlGuid> tienen un método `CompareTo` para comparar diferentes valores GUID. Sin embargo, `System.Guid.CompareTo` y `SqlTypes.SqlGuid.CompareTo` se implementan de forma distinta. <xref:System.Data.SqlTypes.SqlGuid> implementa `CompareTo` mediante el comportamiento de SQL Server, en el que los últimos seis bytes de un valor son los más significativos. <xref:System.Guid> evalúa los 16 bytes. En el siguiente ejemplo se muestra esta diferencia conductual. La primera sección del código muestra valores <xref:System.Guid> sin ordenar; la segunda sección muestra los valores <xref:System.Guid> ordenados y la tercera sección muestra los valores <xref:System.Data.SqlTypes.SqlGuid> ordenados. El resultado se muestra debajo del listado de código.  
   
@@ -28,7 +28,7 @@ El tipo de datos de identificador único global (GUID) de SQL Server viene repre
   
  Este ejemplo produce los siguientes resultados.  
   
-```  
+```output  
 Unsorted Guids:  
 3aaaaaaa-bbbb-cccc-dddd-2eeeeeeeeeee  
 2aaaaaaa-bbbb-cccc-dddd-1eeeeeeeeeee  

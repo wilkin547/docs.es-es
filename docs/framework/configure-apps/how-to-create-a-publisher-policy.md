@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846831"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040187"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 
@@ -55,26 +55,28 @@ Use [Assembly Linker (al. exe)](../tools/al-exe-assembly-linker.md) para crear e
 
 Escriba el siguiente comando en el símbolo del sistema:
 
-**al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/Platform:** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 En este comando:
 
-- El argumento *publisherPolicyFile* es el nombre del archivo de directiva de edición.
+- El `publisherPolicyFile` argumento es el nombre del archivo de directiva de edición.
 
-- El argumento *publisherPolicyAssemblyFile* es el nombre del ensamblado de directiva de edición que se obtiene de este comando. El nombre del archivo de ensamblado debe seguir el formato:
+- El `publisherPolicyAssemblyFile` argumento es el nombre del ensamblado de directiva de edición que se obtiene de este comando. El nombre del archivo de ensamblado debe seguir el formato:
 
-  **directivas.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**
+  ' Policy. majorNumber. minorNumber. mainAssemblyName. dll '
 
-- El argumento *keyPairFile* es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directiva de edición con el mismo par de claves.
+- El `keyPairFile` argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directiva de edición con el mismo par de claves.
 
-- El argumento *processorArchitecture* identifica la plataforma de destino de un ensamblado específico del procesador.
+- El argumento `processorArchitecture` identifica la plataforma de destino de un ensamblado específico del procesador.
 
   > [!NOTE]
   > La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0.
 
 La capacidad de dirigirse a una arquitectura de procesador específica está disponible a partir de .NET Framework 2,0. El siguiente comando crea un ensamblado de directiva de edición denominado `policy.1.0.myAssembly` a partir de un archivo de directiva de edición denominado `pub.config`, asigna un nombre seguro al ensamblado mediante el par de claves en el archivo `sgKey.snk` y especifica que el ensamblado tiene como destino el procesador x86. arquitectura.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ Use la [herramienta caché global de ensamblados (Gacutil. exe)](../tools/gacuti
 
 Escriba el siguiente comando en el símbolo del sistema:
 
-**Gacutil/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

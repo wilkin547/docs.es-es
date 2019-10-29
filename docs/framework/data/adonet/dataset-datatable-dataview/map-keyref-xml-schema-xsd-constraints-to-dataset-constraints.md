@@ -2,25 +2,25 @@
 title: Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: b5ffe69886b08903feab4373b1cd5c5244b3b3b9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 93f766003326fd41357581196015fd58c71d7508
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784514"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040368"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
-El elemento **keyref** permite establecer vínculos entre los elementos de un documento. Esto es similar a una relación de clave externa en una base de datos relacional. Si un esquema especifica el elemento **keyref** , el elemento se convierte durante el proceso de asignación de esquemas en una restricción de clave externa correspondiente en las columnas de <xref:System.Data.DataSet>las tablas de. De forma predeterminada, el elemento **keyref** genera también una relación, con las propiedades **ParentTable**, **ChildTable**, **ParentColumn**y **ChildColumn** especificadas en la relación.  
+El elemento **keyref** permite establecer vínculos entre los elementos de un documento. Esto es similar a una relación de clave externa en una base de datos relacional. Si un esquema especifica el elemento **keyref** , el elemento se convierte durante el proceso de asignación de esquemas en una restricción de clave externa correspondiente en las columnas de las tablas de la <xref:System.Data.DataSet>. De forma predeterminada, el elemento **keyref** genera también una relación, con las propiedades **ParentTable**, **ChildTable**, **ParentColumn**y **ChildColumn** especificadas en la relación.  
   
  En la tabla siguiente se describen los atributos **msdata** que puede especificar en el elemento **keyref** .  
   
-|Nombre del atributo|DESCRIPCIÓN|  
+|Nombre del atributo|Descripción|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Si **ConstraintOnly = "true"** se especifica en el elemento **keyref** del esquema, se crea una restricción, pero no se crea ninguna relación. Si no se especifica este atributo (o se establece en **false**), tanto la restricción como la relación se crean en el **conjunto de DataSet**.|  
-|**msdata:ConstraintName**|Si se especifica el atributo **ConstraintName** , su valor se utiliza como nombre de la restricción. De lo contrario, el atributo **Name** del elemento **keyref** del esquema proporciona el nombre de la restricción en el **conjunto**de elementos.|  
-|**msdata:UpdateRule**|Si el atributo **UpdateRule** se especifica en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **UpdateRule** del **conjunto**de elementos. En caso contrario, la propiedad **UpdateRule** está establecida en **Cascade**.|  
-|**msdata:DeleteRule**|Si el atributo **DeleteRule** se especifica en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **DeleteRule** del **conjunto**de elementos. De lo contrario, la propiedad **DeleteRule** se establece como **Cascade**.|  
-|**msdata:AcceptRejectRule**|Si se especifica el atributo **AcceptRejectRule** en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **AcceptRejectRule** en el **conjunto**de elementos. En caso contrario, la propiedad **AcceptRejectRule** está establecida en **None**.|  
+|**msdata: ConstraintOnly**|Si **ConstraintOnly = "true"** se especifica en el elemento **keyref** del esquema, se crea una restricción, pero no se crea ninguna relación. Si no se especifica este atributo (o se establece en **false**), tanto la restricción como la relación se crean en el **conjunto de DataSet**.|  
+|**msdata: ConstraintName**|Si se especifica el atributo **ConstraintName** , su valor se utiliza como nombre de la restricción. De lo contrario, el atributo **Name** del elemento **keyref** del esquema proporciona el nombre de la restricción en el **conjunto**de elementos.|  
+|**msdata: UpdateRule**|Si el atributo **UpdateRule** se especifica en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **UpdateRule** del **conjunto**de elementos. En caso contrario, la propiedad **UpdateRule** está establecida en **Cascade**.|  
+|**msdata: DeleteRule**|Si el atributo **DeleteRule** se especifica en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **DeleteRule** del **conjunto**de elementos. De lo contrario, la propiedad **DeleteRule** se establece como **Cascade**.|  
+|**msdata: AcceptRejectRule**|Si se especifica el atributo **AcceptRejectRule** en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **AcceptRejectRule** en el **conjunto**de elementos. En caso contrario, la propiedad **AcceptRejectRule** está establecida en **None**.|  
   
  El ejemplo siguiente contiene un esquema que especifica las relaciones de **clave** y **keyref** entre el elemento secundario **OrderNumber** del elemento **Order** y el elemento secundario **OrderNo** de **OrderDetail** . Element.  
   
@@ -68,7 +68,7 @@ El elemento **keyref** permite establecer vínculos entre los elementos de un do
   
  El proceso de asignación del esquema del lenguaje de definición de esquemas XML (XSD) genera el siguiente **conjunto** de elementos con dos tablas:  
   
-```  
+```text  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
@@ -77,9 +77,9 @@ Order(OrderNumber, EmpNumber)
   
 - Una restricción UNIQUE en la tabla **Order** .  
   
-    ```  
+    ```text
               Table: Order  
-    Columns: OrderNumber   
+    Columns: OrderNumber
     ConstraintName: OrderNumberKey  
     Type: UniqueConstraint  
     IsPrimaryKey: False  
@@ -87,7 +87,7 @@ Order(OrderNumber, EmpNumber)
   
 - Una relación entre las tablas **Order** y **OrderDetail** . La propiedad **Nested** se establece en **false** porque los dos elementos no están anidados en el esquema.  
   
-    ```  
+    ```text
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -100,13 +100,13 @@ Order(OrderNumber, EmpNumber)
   
 - Una restricción FOREIGN KEY en la tabla **OrderDetail** .  
   
-    ```  
+    ```text  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
-    Columns: OrderNo   
+    Columns: OrderNo
     RelatedTable: Order  
-    RelatedColumns: OrderNumber   
+    RelatedColumns: OrderNumber
     ```  
   
 ## <a name="see-also"></a>Vea también

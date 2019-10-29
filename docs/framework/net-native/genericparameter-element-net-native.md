@@ -1,17 +1,17 @@
 ---
-title: <GenericParameter>Elemento (.NET Native)
+title: Elemento <GenericParameter> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf2b06b14252f152c1eece6f9c0d317482a24b27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049748"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039515"
 ---
-# <a name="genericparameter-element-net-native"></a>\<Elemento > GenericParameter (.NET Native)
+# <a name="genericparameter-element-net-native"></a>\<elemento > GenericParameter (.NET Native)
 Aplica la directiva al tipo de parámetro de un método o tipo genérico.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -27,7 +27,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
                   XmlSerializer="policy_type"  
                   MarshalObject="policy_type"  
                   MarshalDelegate="policy_type"  
-                  MarshalStructure="policy_type"  
+                  MarshalStructure="policy_type" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -35,7 +35,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Nombre del parámetro genérico. Por ejemplo, en el delegado genérico <xref:System.Func%603>, el valor del atributo `Name` es "TResult" para aplicar la directiva en tiempo de ejecución al valor devuelto del delegado.|  
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|  
@@ -51,13 +51,13 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*generic_parameter_name*|Atributo necesario. Nombre del parámetro de tipo genérico. Por ejemplo, en el delegado genérico <xref:System.Func%603>, un valor *generic_parameter_name* de "TResult" aplica la directiva en tiempo de ejecución al valor devuelto del delegado.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -66,7 +66,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un tipo determinado, como una clase o una estructura.|  
@@ -89,7 +89,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 ## <a name="see-also"></a>Vea también
 
 - [Elemento \<Method>](method-element-net-native.md)
-- [\<Tipo > elemento](type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<tipo > elemento](type-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

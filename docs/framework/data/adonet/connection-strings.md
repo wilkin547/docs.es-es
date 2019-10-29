@@ -2,22 +2,22 @@
 title: Cadenas de conexión de ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784908"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040136"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadenas de conexión de ADO.NET
 
-Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. El proveedor de datos recibe la cadena de conexión como el valor <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> de la propiedad. El proveedor analiza la cadena de conexión y garantiza que la sintaxis es correcta y que se admiten las palabras clave. A continuación <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> , el método pasa los parámetros de conexión analizados al origen de datos. El origen de datos realiza una validación adicional y establece una conexión.
+Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. El proveedor de datos recibe la cadena de conexión como el valor de la propiedad <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType>. El proveedor analiza la cadena de conexión y garantiza que la sintaxis es correcta y que se admiten las palabras clave. A continuación, el método <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> pasa los parámetros de conexión analizados al origen de datos. El origen de datos realiza una validación adicional y establece una conexión.
 
 ## <a name="connection-string-syntax"></a>Sintaxis de cadena de conexión
 
 Una cadena de conexión es una lista delimitada por signos de punto y coma de pares de parámetros de clave-valor:
 
-```
+```csharp
 keyword1=value; keyword2=value;
 ```
 
@@ -25,35 +25,35 @@ Las palabras clave no distinguen mayúsculas de minúsculas. Sin embargo, los va
 
 Si un valor contiene el punto y coma, [caracteres de control Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)o espacios en blanco iniciales o finales, debe incluirse entre comillas simples o dobles. Por ejemplo:
 
-```
+```csharp
 Keyword=" whitespace  ";
 Keyword='special;character';
 ```
 
 Es posible que el carácter envolvente no se encuentre dentro del valor que contiene. Por lo tanto, un valor que contenga comillas simples solo se puede incluir entre comillas dobles y viceversa:
 
-```
+```csharp
 Keyword='double"quotation;mark';
 Keyword="single'quotation;mark";
 ```
 
 También puede escapar el carácter envolvente con dos de ellos juntos:
 
-```
+```csharp
 Keyword="double""quotation";
 Keyword='single''quotation';
 ```
 
 Las comillas, así como el signo igual, no requieren caracteres de escape, por lo que las siguientes cadenas de conexión son válidas:
 
-```
+```csharp
 Keyword=no "escaping" 'required';
 Keyword=a=b=c
 ```
 
-Puesto que cada valor se lee hasta el punto y coma siguiente o el final de la cadena, el valor del último `a=b=c`ejemplo es y el punto y coma final es opcional.
+Puesto que cada valor se lee hasta el punto y coma siguiente o el final de la cadena, el valor del último ejemplo es `a=b=c`y el punto y coma final es opcional.
 
-Todas las cadenas de conexión comparten la misma sintaxis básica que se ha descrito anteriormente. Sin embargo, el conjunto de palabras clave reconocidas depende del proveedor y ha evolucionado a lo largo de los años desde API anteriores, como *ODBC*. El proveedor de datos de *.NET Framework* para`SqlClient` *SQL Server* () admite muchas palabras clave de API anteriores, pero suele ser más flexible y acepta sinónimos para muchas de las palabras clave de cadena de conexión comunes.
+Todas las cadenas de conexión comparten la misma sintaxis básica que se ha descrito anteriormente. Sin embargo, el conjunto de palabras clave reconocidas depende del proveedor y ha evolucionado a lo largo de los años desde API anteriores, como *ODBC*. El proveedor de datos de *.NET Framework* para *SQL Server* (`SqlClient`) admite muchas palabras clave de API anteriores, pero suele ser más flexible y acepta sinónimos para muchas de las palabras clave de cadena de conexión comunes.
 
 Los errores tipográficos pueden producir errores. Por ejemplo, `Integrated Security=true` es válido, pero `IntegratedSecurity=true` produce un error.
 
@@ -67,10 +67,10 @@ Muestra cómo usar las clases `ConnectionStringBuilder` para construir cadenas d
 [Cadenas de conexión y archivos de configuración](connection-strings-and-configuration-files.md)\
 Muestra cómo almacenar y recuperar cadenas de conexión en archivos de configuración.
 
-[Sintaxis de cadena de conexión](connection-string-syntax.md)\
+\ de [Sintaxis de cadena de conexión](connection-string-syntax.md)
 Describe cómo configurar cadenas de conexión específicas de proveedor para `SqlClient`, `OracleClient`, `OleDb` y `Odbc`.
 
-[Protección de la información de conexión](protecting-connection-information.md)\
+[Proteger la información de conexión](protecting-connection-information.md)\
 Muestra técnicas de protección de la información utilizada para conectarse a un origen de datos.
 
 ## <a name="see-also"></a>Vea también

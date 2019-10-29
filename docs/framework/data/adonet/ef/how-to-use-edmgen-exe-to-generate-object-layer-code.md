@@ -1,26 +1,26 @@
 ---
-title: Procedimiento para usar EdmGen.exe para generar código de capa de objeto
+title: 'Cómo: Usar EdmGen.exe para generar código de capa de objeto'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: b85bacff093c268cd35dca2ede36e6ceb74ca4d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9182f815a502488f955f64f6c19aad7865d0c7c6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251404"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039982"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Procedimiento para usar EdmGen.exe para generar código de capa de objeto
+# <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Cómo: Usar EdmGen.exe para generar código de capa de objeto
 En este tema se muestra cómo usar la herramienta [generador de EDM (EdmGen. exe)](edm-generator-edmgen-exe.md) para generar código de nivel de objeto basado en el archivo. CSDL.  
   
 ### <a name="to-generate-object-layer-code-for-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>Para generar código del nivel de objeto para el modelo School en un proyecto de Visual Basic utilizando EdmGen.exe  
   
 1. Cree la base de datos School. Para obtener más información, vea [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
-2. Genere el modelo School u obtenga el archivo School.csdl. Para obtener más información, consulte [Cómo Use EdmGen. exe para generar los archivos](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de asignación y de modelo.  
+2. Genere el modelo School u obtenga el archivo School.csdl. Para obtener más información, vea [Cómo: usar EdmGen. exe para generar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
 3. En el símbolo del sistema, ejecute el comando siguiente sin los saltos de línea:  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:EntityClassGeneration   
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.vb /language:VB  
     ```  
@@ -29,11 +29,11 @@ En este tema se muestra cómo usar la herramienta [generador de EDM (EdmGen. exe
   
 1. Cree la base de datos School. Para obtener más información, vea [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
-2. Genere el modelo School u obtenga el archivo School.csdl. Para obtener más información, consulte [Cómo Use EdmGen. exe para generar los archivos](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de asignación y de modelo.  
+2. Genere el modelo School u obtenga el archivo School.csdl. Para obtener más información, vea [Cómo: usar EdmGen. exe para generar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
 3. En el símbolo del sistema, ejecute el comando siguiente sin los saltos de línea:  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:EntityClassGeneration   
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.cs /language:CSharp  
     ```  
@@ -41,7 +41,7 @@ En este tema se muestra cómo usar la herramienta [generador de EDM (EdmGen. exe
 ## <a name="see-also"></a>Vea también
 
 - [Modelado y asignación](modeling-and-mapping.md)
-- [Cómo: Configurar manualmente un proyecto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [Cómo: configurar manualmente un proyecto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Herramientas de Entity Data Model de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Cómo: Generar previamente vistas para mejorar el rendimiento de las consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [Procedimientos: Usar EdmGen. exe para generar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+- [Cómo: generar previamente vistas para mejorar el rendimiento de las consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Uso de EdmGen.exe para generar los archivos de asignación y de modelo](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)

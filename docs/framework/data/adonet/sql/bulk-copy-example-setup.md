@@ -2,12 +2,12 @@
 title: Configuración de ejemplos de copia masiva
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794422"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040251"
 ---
 # <a name="bulk-copy-example-setup"></a>Configuración de ejemplos de copia masiva
 La clase <xref:System.Data.SqlClient.SqlBulkCopy> sólo se puede utilizar para escribir datos en tablas SQL Server. Los ejemplos de código que se muestran en este tema usan el SQL Server base de datos de ejemplo, **AdventureWorks**. Con el fin de evitar modificar las tablas existentes, los ejemplos de código escriben datos en tablas que primero deberá crear.  
@@ -22,7 +22,7 @@ La clase <xref:System.Data.SqlClient.SqlBulkCopy> sólo se puede utilizar para e
 ## <a name="table-setup"></a>Configuración de las tablas  
  Para crear las tablas necesarias para que los ejemplos de código de funcionen correctamente, debe ejecutar las siguientes instrucciones Transact-SQL en una base de datos SQL Server.  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   

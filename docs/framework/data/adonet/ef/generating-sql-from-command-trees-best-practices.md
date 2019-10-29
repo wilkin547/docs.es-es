@@ -2,12 +2,12 @@
 title: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855002"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039998"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generar SQL a partir de árboles de comandos: procedimientos recomendados
 
@@ -31,7 +31,7 @@ Una posible traducción de un árbol de comandos de consulta en una instrucción
 
 Como ejemplo, observe el siguiente árbol de comandos de consulta:
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ Un caso de agregación de varios nodos en una única instrucción SELECT de SQL 
 
 Las combinaciones del lateral izquierdo (combinaciones que aparecen como elemento secundario izquierdo de otra combinación) se pueden reducir más fácilmente a una instrucción SELECT de SQL única. Por ejemplo, observe el siguiente árbol de comandos de consulta:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 Sin embargo, las combinaciones no situadas en el lateral izquierdo no se pueden reducir fácilmente y no debe intentar llevar a cabo esta acción. Por ejemplo, las combinaciones del siguiente árbol de comandos de consulta:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,7 +145,7 @@ Las expresiones se pueden reutilizar en el árbol de comandos de consulta pasado
 
 ## <a name="mapping-primitive-types"></a>Asignar tipos primitivos
 
-Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Además, evite la asignación a tipos que no se pueden usar para muchas operaciones, como los tipos de blob `ntext` (por ejemplo, en SQL Server).
+Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Además, evite la asignación a tipos que no se pueden usar para muchas operaciones, como los tipos de BLOB (por ejemplo, `ntext` en SQL Server).
 
 ## <a name="see-also"></a>Vea también
 

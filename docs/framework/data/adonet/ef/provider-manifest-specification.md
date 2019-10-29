@@ -2,12 +2,12 @@
 title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854504"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040486"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -54,14 +54,14 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
   
  Puede escribir un archivo XML que tenga dos secciones:  
   
-- Una lista de tipos de proveedor expresada en términos de EDM y definir la asignación para ambas direcciones: De EDM a proveedor y de proveedor a EDM.  
+- Una lista de tipos de proveedor expresada en términos de EDM y defina la asignación para ambas direcciones: EDM a proveedor y proveedor a EDM.  
   
 - Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Detectabilidad del manifiesto del proveedor  
  Varios tipos de componente utilizan indirectamente el manifiesto en Servicios de entidad (por ejemplo Tools o Query), pero los metadatos lo aprovechan de forma más directa con el uso del cargador de metadatos del almacén de datos.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;AC5A&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Sin embargo, un proveedor determinado puede admitir almacenes diferentes o distintas versiones del mismo almacén. Por consiguiente, un proveedor debe notificar un manifiesto distinto para cada almacén de datos compatible.  
   
@@ -77,13 +77,13 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
 ## <a name="provider-manifest-programming-model"></a>Modelo de programación del manifiesto del proveedor  
  Los proveedores se derivan de <xref:System.Data.Common.DbXmlEnabledProviderManifest>, lo que les permite especificar sus manifiestos mediante declaración. La siguiente ilustración muestra la jerarquía de clases de un proveedor:  
   
- ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![Ninguno](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>API de detectabilidad  
  El cargador Metadatos de almacenamiento (StoreItemCollection) carga el manifiesto de proveedor, bien mediante una conexión al almacén de datos o utilizando un token de manifiesto del proveedor.  
   
 #### <a name="using-a-data-store-connection"></a>Utilizar una conexión al almacén de datos  
- Cuando la conexión del almacén de datos está disponible <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> , llame a para devolver el token que se <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> pasa al método, <xref:System.Data.Common.DbProviderManifest>que devuelve. Este método delega en la implementación del proveedor de `GetDbProviderManifestToken`.  
+ Cuando la conexión del almacén de datos esté disponible, llame a <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> para devolver el token que se pasa al método <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>, que devuelve <xref:System.Data.Common.DbProviderManifest>. Este método delega en la implementación del proveedor de `GetDbProviderManifestToken`.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Usar un token de manifiesto del proveedor  
  En el caso del escenario sin conexión, el token se toma de la representación SSDL. El SSDL le permite especificar un ProviderManifestToken (vea el [elemento Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) para obtener más información). Por ejemplo, si no se puede abrir una conexión, SSDL tiene un token de manifiesto del proveedor que especifica información sobre el manifiesto.  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -248,36 +248,36 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Para expresar esta información de tipos en el manifiesto del proveedor, cada declaración de TypeInformation debe definir distintas descripciones de facetas para cada Type:  
   
-|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|DESCRIPCIÓN|  
+|Nombre de atributo|Tipo de datos|Requerido|Default Value|Descripción|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|NOMBRE|string|Sí|N/D|El nombre del tipo de datos específico del proveedor|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Sí|N/D|Nombre de tipo EDM|  
+|Name|String|Sí|no disponible|El nombre del tipo de datos específico del proveedor|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Sí|no disponible|Nombre de tipo EDM|  
   
 ###### <a name="function-node"></a>Nodo Function  
  Cada nodo Function define una función única disponible a través del proveedor.  
   
-|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|DESCRIPCIÓN|  
+|Nombre de atributo|Tipo de datos|Requerido|Default Value|Descripción|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|NOMBRE|string|Sí|N/D|Identificador/nombre de la función|  
-|ReturnType|string|Sin|Void|El tipo de valor devuelto EDM de la función|  
-|Agregar|Boolean|Sin|False|True si la función es una función de agregado|  
-|BuiltIn|Boolean|Sin|True|True si la función está integrada en el almacén de datos|  
-|StoreFunctionName|string|Sin|\<Nombre >|Nombre de la función en el almacén de datos.  Permite un nivel de redirección de nombres de función.|  
-|NiladicFunction|Boolean|Sin|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
-|ParameterType<br /><br /> Semántica|ParameterSemantics|Sin|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> - ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|Name|String|Sí|no disponible|Identificador/nombre de la función|  
+|ReturnType|String|No|Void|El tipo de valor devuelto EDM de la función|  
+|Agregar|Booleano|No|False|True si la función es una función de agregado|  
+|BuiltIn|Booleano|No|True|True si la función está integrada en el almacén de datos|  
+|StoreFunctionName|String|No|Nombre del \<|Nombre de la función en el almacén de datos.  Permite un nivel de redirección de nombres de función.|  
+|NiladicFunction|Booleano|No|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
+|ParameterType<br /><br /> Semántica|ParameterSemantics|No|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> - ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **Nodo parámetros**  
   
  Cada función tiene una colección de uno o más nodos Parameter.  
   
-|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|DESCRIPCIÓN|  
+|Nombre de atributo|Tipo de datos|Requerido|Default Value|Descripción|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|NOMBRE|string|Sí|N/D|Identificador/nombre del parámetro.|  
-|Type|string|Sí|N/D|El tipo EDM del parámetro.|  
-|Mode|Parámetro<br /><br /> Direction|Sí|N/D|Dirección del parámetro:<br /><br /> -en<br />-out<br />-Inout|  
+|Name|String|Sí|no disponible|Identificador/nombre del parámetro.|  
+|Type|String|Sí|no disponible|El tipo EDM del parámetro.|  
+|Modo|Parámetro<br /><br /> Dirección|Sí|no disponible|Dirección del parámetro:<br /><br /> -en<br />-out<br />-Inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo Namespace  
- Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: Server. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
+ Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: SqlServer. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
   
 ## <a name="see-also"></a>Vea también
 

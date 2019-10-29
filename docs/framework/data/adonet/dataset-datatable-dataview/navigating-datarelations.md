@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784364"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040347"
 ---
 # <a name="navigating-datarelations"></a>Navegar por objetos DataRelation
-Una de las principales funciones de una <xref:System.Data.DataRelation> es permitir la navegación de una <xref:System.Data.DataTable> a otra dentro de un <xref:System.Data.DataSet>. Esto permite recuperar todos <xref:System.Data.DataRow> los objetos relacionados en un **objeto DataTable** cuando se proporciona una única **DataRow** desde un **DataTable**relacionado. Por ejemplo, después de establecer una **DataRelation** entre una tabla de clientes y una tabla de pedidos, puede recuperar todas las filas de pedidos de una fila de cliente determinada mediante **GetChildRows**.  
+Una de las principales funciones de una <xref:System.Data.DataRelation> es permitir la navegación de una <xref:System.Data.DataTable> a otra dentro de un <xref:System.Data.DataSet>. Esto permite recuperar todos los objetos de <xref:System.Data.DataRow> relacionados en un **objeto DataTable** cuando se proporciona una única **DataRow** desde un **DataTable**relacionado. Por ejemplo, después de establecer una **DataRelation** entre una tabla de clientes y una tabla de pedidos, puede recuperar todas las filas de pedidos de una fila de cliente determinada mediante **GetChildRows**.  
   
  En el ejemplo de código siguiente se crea una **DataRelation** entre la tabla **Customers** y la tabla **Orders** de un **DataSet** y se devuelven todos los pedidos de cada cliente.  
   
@@ -24,11 +24,11 @@ Una de las principales funciones de una <xref:System.Data.DataRelation> es permi
   
  El ejemplo expandido también devuelve los valores de las tablas **OrderDetails** y **Products** . La tabla **Orders** está relacionada con la tabla **OrderDetails** mediante **OrderID** para determinar, para cada pedido de cliente, qué productos y cantidades se han pedido. Dado que la tabla **OrderDetails** solo contiene el **ProductID** de un producto pedido, **OrderDetails** se relaciona con los **productos** que usan **ProductID** para devolver el **NombreProducto**. En esta relación, la tabla **Products** es el elemento primario y la tabla **Order Details** es el elemento secundario. Como resultado, al recorrer en iteración la tabla **OrderDetails** , se llama a **GetParentRow** para recuperar el valor **ProductName** relacionado.  
   
- Tenga en cuenta que cuando se crea la **DataRelation** para las tablas **Customers** y **Orders** , no se especifica ningún valor para la marca **createConstraints** (el valor predeterminado es **true**). Se supone que todas las filas de la tabla **Orders** tienen un valor **CustomerID** que existe en la tabla primaria **Customers** . Si existe un **CustomerID** en la tabla **Orders** que no existe en la tabla <xref:System.Data.ForeignKeyConstraint> customers, se produce una excepción.  
+ Tenga en cuenta que cuando se crea la **DataRelation** para las tablas **Customers** y **Orders** , no se especifica ningún valor para la marca **createConstraints** (el valor predeterminado es **true**). Se supone que todas las filas de la tabla **Orders** tienen un valor **CustomerID** que existe en la tabla primaria **Customers** . Si existe un **CustomerID** en la tabla **Orders** que no existe en la tabla **Customers** , una <xref:System.Data.ForeignKeyConstraint> provoca que se produzca una excepción.  
   
  Cuando la columna secundaria pueda contener valores que no contenga la columna primaria, establezca el marcador **createConstraints** en **false** al agregar la **DataRelation**. En el ejemplo, el marcador **createConstraints** se establece en **false** para la **DataRelation** entre la tabla **Orders** y la tabla **OrderDetails** . Esto permite que la aplicación devuelva todos los registros de la tabla **OrderDetails** y solo un subconjunto de registros de la tabla **Orders** sin generar una excepción en tiempo de ejecución. El ejemplo ampliado genera el resultado con el siguiente formato.  
   
-```  
+```output  
 Customer ID: NORTS  
   Order ID: 10517  
         Order Date: 4/24/1997 12:00:00 AM  

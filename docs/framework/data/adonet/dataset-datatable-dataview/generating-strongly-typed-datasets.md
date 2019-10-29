@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833988"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040088"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generar conjuntos de datos fuertemente tipados
 Dado un esquema XML que cumple con el estándar del lenguaje de definición de esquemas XML (XSD), puede generar un <xref:System.Data.DataSet> fuertemente tipado mediante la herramienta XSD. exe proporcionada con el kit de desarrollo de software (SDK) de Windows.  
@@ -19,15 +19,15 @@ Dado un esquema XML que cumple con el estándar del lenguaje de definición de e
   
  En el código siguiente se muestra la sintaxis para generar un **conjunto** de elementos mediante esta herramienta.  
   
-```  
+```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- En esta sintaxis, la Directiva `/d` indica a la herramienta que genere un **DataSet**y el `/l:` indica a la herramienta qué lenguaje usar (por ejemplo, C# o Visual Basic .net). La Directiva opcional `/eld` especifica que puede usar LINQ to DataSet para realizar consultas en el **conjunto de DataSet generado.** Esta opción se utiliza cuando también se especifica la opción `/d`. Para obtener más información, vea [consultar conjuntos de datos con tipo](../querying-typed-datasets.md). La Directiva opcional `/n:` indica a la herramienta que también genere un espacio de nombres para el **conjunto de DataSet** llamado **XSDSchema. Namespace**. El resultado del comando es XSDSchemaFileName.cs, que se puede compilar y utilizar en una aplicación de ADO.NET. El código generado puede compilarse como una biblioteca o un módulo.  
+ En esta sintaxis, la Directiva `/d` indica a la herramienta que genere un **DataSet**y el `/l:` indica a la herramienta qué lenguaje usar (por ejemplo, C# o Visual Basic .net). La Directiva de `/eld` opcional Especifica que puede usar LINQ to DataSet para realizar consultas en el **conjunto** de los conjuntos de los generados. Esta opción se utiliza cuando también se especifica la opción `/d`. Para obtener más información, vea [consultar conjuntos de datos con tipo](../querying-typed-datasets.md). La Directiva de `/n:` opcional indica a la herramienta que también genere un espacio de nombres para el **conjunto de DataSet** llamado **XSDSchema. Namespace**. El resultado del comando es XSDSchemaFileName.cs, que se puede compilar y utilizar en una aplicación de ADO.NET. El código generado puede compilarse como una biblioteca o un módulo.  
   
  En el siguiente código se muestra la sintaxis para compilar el código generado como una biblioteca mediante el compilador de C# (csc.exe).  
   
-```  
+```console  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   

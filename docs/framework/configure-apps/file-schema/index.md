@@ -21,64 +21,85 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: c3b5518b4b86c2e6f47825d552f49579c5ac0a6d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921021"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039161"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de los archivos de configuración de .NET Framework
 
 Los archivos de configuración son archivos XML estándar que se pueden utilizar para cambiar configuraciones y establecer directivas para las aplicaciones. El esquema de configuración de .NET Framework se compone de elementos que se pueden usar en los archivos de configuración para controlar el comportamiento de las aplicaciones. La tabla de contenido de esta sección refleja la jerarquía de esquema para el inicio, el tiempo de ejecución, la red y otros tipos de valores de configuración.
 
-Para obtener información sobre los tipos, el formato y la ubicación de los archivos de configuración, vea el artículo [Configuring Apps](../index.md) (Configurar aplicaciones). Familiarícese con XML para editar los archivos de configuración directamente.
+Para obtener información sobre los tipos, el formato y la ubicación de los archivos de configuración, vea [Configurar aplicaciones](../index.md). Familiarícese con XML para editar los archivos de configuración directamente.
 
 > [!IMPORTANT]
 > En los atributos y etiquetas XML de los archivos de configuración se distingue entre mayúsculas y minúsculas.
 
 ## <a name="in-this-section"></a>En esta sección
 
-[ **\<configuration>** Element](configuration-element.md) (Elemento <configuration>): describe el elemento `<configuration>`, que es el elemento de nivel superior de todos los archivos de configuración.
+[ **\<elemento > de configuración** ](configuration-element.md)\
+Elemento de nivel superior para todos los archivos de configuración.
 
-[ **\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md) (Elemento <assemblyBinding>): especifica la directiva de enlace del ensamblado en el nivel de configuración.
+[ **\<elemento > assemblyBinding** ](assemblybinding-element-for-configuration.md)\
+Especifica la directiva de enlace del ensamblado en el nivel de configuración.
 
-[ **\<linkedConfiguration>** Element](linkedconfiguration-element.md) (Elemento <linkedConfiguration>): especifica un archivo de configuración para incluirlo.
+[ **\<elemento > linkedConfiguration** ](linkedconfiguration-element.md)\
+Especifica un archivo de configuración para incluirlo.
 
-[Startup Settings Schema](./startup/index.md) (Esquema de la configuración de inicio): describe los elementos que especifican la versión de Common Language Runtime que se va a usar.
+\ del [esquema de configuración de inicio](./startup/index.md)
+Elementos que especifican la versión de Common Language Runtime que se va a usar.
 
-[Runtime Settings Schema](./runtime/index.md) (Esquema de la configuración del tiempo de ejecución): describe los elementos que configuran el enlace del ensamblado y el comportamiento del tiempo de ejecución.
+[Esquema de configuración de tiempo de ejecución](./runtime/index.md)\
+Elementos que configuran el enlace de ensamblado y el comportamiento en tiempo de ejecución.
 
-[Network Settings Schema](./network/index.md) (Esquema de la configuración de red): describe los elementos que especifican cómo se conecta .NET Framework a Internet.
+[Esquema de la configuración de red](./network/index.md)\
+Elementos que especifican cómo se conecta el .NET Framework a Internet.
 
-[Cryptography Settings Schema](./cryptography/index.md) (Esquema de la configuración de criptografía): describe los elementos que asignan nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.
+\ de [esquema de configuración de criptografía](./cryptography/index.md)
+Elementos que asignan nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.
 
-[Configuration Sections Schema](configuration-sections-schema.md) (Esquema de secciones de configuración): describe los elementos necesarios para crear y usar las secciones de configuración de valores personalizados.
+\ de [esquema de secciones de configuración](configuration-sections-schema.md)
+Elementos usados para crear y usar secciones de configuración para la configuración personalizada.
 
-[Trace and Debug Settings Schema](./trace-debug/index.md) (Esquema de la configuración de seguimiento y depuración): describe los elementos que especifican los modificadores y agentes de escucha de seguimiento.
+[Esquema de configuración de seguimiento y Depuración](./trace-debug/index.md)\
+Elementos que especifican modificadores y agentes de escucha de seguimiento.
 
-[Compiler and Language Provider Settings Schema](./compiler/index.md) (Esquema de configuración de compilador y proveedor de lenguaje): describe los elementos que especifican la configuración del compilador para los proveedores de lenguaje disponibles.
+[Esquema de configuración de proveedor de lenguaje y Compilador](./compiler/index.md)\
+Elementos que especifican la configuración del compilador para los proveedores de lenguaje disponibles.
 
-[Application Settings Schema](application-settings-schema.md) (Esquema de la configuración de la aplicación): describe los elementos que permiten que una aplicación de formularios Windows Forms o ASP.NET almacene y recupere los valores del ámbito de usuario y del ámbito de aplicación.
+\ del [esquema de configuración](application-settings-schema.md) de la aplicación
+Elementos que permiten a una aplicación Windows Forms o ASP.NET almacenar y recuperar valores de ámbito de aplicación y de ámbito de usuario.
 
-[App Settings Schema](./appsettings/index.md) (Esquema de configuración de aplicaciones): contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación.
+\ del [esquema de configuración](./appsettings/index.md) de la aplicación
+Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación.
 
-[Web Settings Schema](./web/index.md) (Esquema de configuración web): describe todos los elementos del esquema de configuración web, que incluye elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Se usa en los archivos *Aspnet.config*.
+\ del [esquema de configuración Web](./web/index.md)
+Elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Se usa en los archivos *Aspnet.config*.
 
-[Windows Forms Configuration Schema](winforms/index.md) (Esquema de configuración de Windows Forms): todos los elementos de la sección de configuración de aplicaciones de Windows Forms, incluidas personalizaciones como la compatibilidad con varios monitores y valores altos de PPP.
+[Windows Forms esquema de configuración](winforms/index.md)\
+Todos los elementos de la sección de configuración de la aplicación Windows Forms, que incluye personalizaciones como la compatibilidad con varios monitores y con un alto valor de PPP.
 
-[WCF Configuration Schema](./wcf/index.md) (Esquema de configuración de WCF): todos los elementos que permiten configurar el servicio WCF y las aplicaciones cliente.
+\ del [esquema de configuración de WCF](./wcf/index.md)
+Todos los elementos que le permiten configurar el servicio WCF y las aplicaciones cliente.
 
-[WCF Directive Syntax](./wcf-directive/index.md) (Sintaxis de directivas WCF): describe la directiva `@ServiceHost`, que define atributos específicos de página usados por el compilador .svc.
+[Sintaxis de directivas WCF](./wcf-directive/index.md)\
+Describe la Directiva de `@ServiceHost`, que define los atributos específicos de la página utilizados por el compilador. SVC.
 
-[WIF Configuration Schema](windows-identity-foundation/index.md) (Esquema de configuración de WIF): todos los elementos del esquema de configuración de Windows Identity Foundation (WIF).
+[Esquema de configuración de WIF](windows-identity-foundation/index.md)\
+Todos los elementos del esquema de configuración de Windows Identity Foundation (WIF).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Remoting Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) (Esquema de configuración de la comunicación remota): describe los elementos que configuran las aplicaciones cliente y servidor que implementan la comunicación remota.
+\ del [esquema de configuración de comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))
+Describe los elementos que configuran las aplicaciones cliente y servidor que implementa la comunicación remota.
 
-[ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) (Esquema de configuración de ASP.NET): describe los elementos que controlan el comportamiento de las aplicaciones web ASP.NET.
+\ del [esquema de configuración de ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))
+Describe los elementos que controlan el comportamiento de las aplicaciones web ASP.NET.
 
-[Web Services Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) (Esquema de configuración de los servicios Web): describe los elementos que controlan el comportamiento de los servicios web ASP.NET y sus clientes.
+[Esquema de configuración de servicios Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
+Describe los elementos que controlan el comportamiento de servicios Web de ASP.NET y sus clientes.
 
-[Configuring .NET Framework Apps](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) (Configurar aplicaciones de .NET Framework): describe cómo configurar la seguridad, el enlace del ensamblado y la comunicación remota de .NET Framework.
+[Configurar aplicaciones de .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
+Describe cómo configurar la seguridad, el enlace del ensamblado y la comunicación remota de .NET Framework.

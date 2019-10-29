@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920200"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040826"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Tutorial: Hospedar un control ActiveX en WPF
-Para habilitar la interacción mejorada con los exploradores, puede usar los controles ActiveX de Microsoft en la aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo puede hospedar el [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como un control en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Para habilitar la interacción mejorada con los exploradores, puede usar los controles ActiveX de Microsoft en la aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo puede hospedar el Media Player de Microsoft Windows como un control en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
  Las tareas ilustradas en este tutorial incluyen:
 
@@ -31,7 +31,7 @@ Para habilitar la interacción mejorada con los exploradores, puede usar los con
 ## <a name="prerequisites"></a>Requisitos previos
  Necesita los componentes siguientes para completar este tutorial:
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] instala en el equipo en el que está instalado Visual Studio.
+- Microsoft Windows Media Player instalado en el equipo donde está instalado Visual Studio.
 
 - Visual Studio 2010.
 

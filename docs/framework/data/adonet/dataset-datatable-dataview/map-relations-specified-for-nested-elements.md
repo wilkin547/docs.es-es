@@ -2,12 +2,12 @@
 title: Asignar relaciones especificadas para elementos anidados
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 138fbbc3ccaa90096a15fa87544e5c29f66beb08
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786086"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040057"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Asignar relaciones especificadas para elementos anidados
 Un esquema puede incluir una anotación **msdata: Relationship** para especificar explícitamente la asignación entre dos elementos cualesquiera del esquema. Los dos elementos especificados en **msdata: Relationship** se pueden anidar en el esquema, pero no tienen que ser. El proceso de asignación usa **msdata: Relationship** en el esquema para generar la relación de clave principal y clave externa entre las dos columnas.  
@@ -56,14 +56,14 @@ Un esquema puede incluir una anotación **msdata: Relationship** para especifica
   
 - Un **pedido** y una tabla **OrderDetail** .  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
 - Una relación entre las tablas **Order** y **OrderDetail** . La propiedad **Nested** de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  

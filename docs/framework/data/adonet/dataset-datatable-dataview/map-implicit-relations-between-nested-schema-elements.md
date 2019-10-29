@@ -2,12 +2,12 @@
 title: Asignar relaciones implícitas entre elementos de esquema anidados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784441"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040385"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Asignar relaciones implícitas entre elementos de esquema anidados
 Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos complejos anidados dentro de otros. En este caso, el proceso de asignación aplica la asignación predeterminada y crea lo siguiente en el <xref:System.Data.DataSet>:  
@@ -58,14 +58,14 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 - Un **pedido** y una tabla **OrderDetail** .  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
 - Una restricción UNIQUE en la tabla **Order** . Tenga en cuenta que la propiedad **IsPrimaryKey** está establecida en **true**.  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -75,7 +75,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 - Una restricción FOREIGN KEY en la tabla **OrderDetail** .  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -86,7 +86,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 - Una relación entre las tablas **Order** y **OrderDetail** . La propiedad **Nested** de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  

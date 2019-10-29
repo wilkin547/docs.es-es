@@ -2,19 +2,19 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251230"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039912"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Convierte una expresión de un tipo de datos a otro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```csharp
 CAST ( expression AS data_type )  
 ```  
   
@@ -31,7 +31,7 @@ CAST ( expression AS data_type )
 ## <a name="remarks"></a>Comentarios  
  La expresión de conversión tiene una semántica similar a la expresión CONVERT de Transact-SQL. La expresión de conversión se utiliza para convertir un valor de un tipo en un valor de otro tipo.  
   
-```  
+```csharp
 CAST( e as T )  
 ```  
   
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>Ejemplo  
  La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador CAST para convertir una expresión de un tipo de datos a otro. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
+1. Siga el procedimiento descrito en [Cómo: ejecutar una consulta que devuelve resultados PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   

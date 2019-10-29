@@ -2,18 +2,18 @@
 title: Arquitectura y diseño
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35fbc39db23a2b08ab926e122d2f1eb1806a369b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251715"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040023"
 ---
 # <a name="architecture-and-design"></a>Arquitectura y diseño
 
 El módulo de generación de SQL del [proveedor de ejemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) se implementa como visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.
 
-Los nodos del árbol se procesan de abajo arriba. En primer lugar, se genera una estructura intermedia: Instrucción sqlselectstatement o SqlBuilder, ambos implementando ISqlFragment. A continuación, la instrucción SQL de la cadena se genera a partir de esa estructura. Hay dos motivos para la estructura intermedia:
+Los nodos del árbol se procesan de abajo arriba. Primero se genera una estructura intermedia, SqlSelectStatement o SqlBuilder, que implementan ISqlFragment. A continuación, la instrucción SQL de la cadena se genera a partir de esa estructura. Hay dos motivos para la estructura intermedia:
 
 - Lógicamente, una instrucción SQL SELECT se rellena de manera desordenada. Los nodos que participan en la cláusula FROM se visitan antes que los nodos que participan en las cláusulas WHERE, GROUP BY y ORDER BY.
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-Instrucción sqlselectstatement representa una instrucción SQL SELECT canónica de la forma "SELECT... DE.. DÓNDE... AGRUPAR POR... ORDER BY ".
+Instrucción sqlselectstatement representa una instrucción SQL SELECT canónica de la forma "SELECT... De.. DÓNDE... AGRUPAR POR... ORDER BY ".
 
 Cada una de las cláusulas de SQL está representada por un objeto StringBuilder. Además, realiza un seguimiento de si se ha especificado Distinct y si la instrucción se encuentra en el nivel más alto. Si la instrucción no se encuentra en el nivel más alto, la cláusula ORDER BY se omite, a menos que la instrucción también tenga una cláusula TOP.
 
@@ -229,13 +229,13 @@ La redirección de los alias de entrada se logra con la tabla de símbolos.
 
 Para explicar el redireccionamiento de los alias de entrada, consulte el primer ejemplo de [generación de SQL a partir de árboles de comandos: procedimientos recomendados](generating-sql-from-command-trees-best-practices.md).  En él, "a" necesita redirigirse a "b" en la proyección.
 
-Cuando se crea un objeto SqlSelectStatement, la extensión que representa la entrada al nodo se coloca en la propiedad From del objeto SqlSelectStatement. Un símbolo (\<symbol_b >) se crea basándose en el nombre del enlace de entrada ("b") para representar esa extensión y " \<as" + symbol_b > se anexa a la cláusula FROM.  El símbolo también se agrega a la propiedad FromExtents.
+Cuando se crea un objeto SqlSelectStatement, la extensión que representa la entrada al nodo se coloca en la propiedad From del objeto SqlSelectStatement. Se crea un símbolo (\<symbol_b >) basándose en el nombre del enlace de entrada ("b") para representar esa extensión y "AS" + \<symbol_b > se anexa a la cláusula FROM.  El símbolo también se agrega a la propiedad FromExtents.
 
-El símbolo también se agrega a la tabla de símbolos para vincularle el nombre del enlace de entrada ("b \<", symbol_b >).
+El símbolo también se agrega a la tabla de símbolos para vincularle el nombre del enlace de entrada ("b", \<symbol_b >).
 
-Si un nodo posterior vuelve a utilizar esa instrucción SqlSelectStatement, agrega una entrada a la tabla de símbolos para vincular su nombre de enlace de entrada a ese símbolo. En nuestro ejemplo, el DbProjectExpression con el nombre de enlace de entrada de "a" reutilizaría instrucción sqlselectstatement y agregaría (" \< a", symbol_b >) a la tabla.
+Si un nodo posterior vuelve a utilizar esa instrucción SqlSelectStatement, agrega una entrada a la tabla de símbolos para vincular su nombre de enlace de entrada a ese símbolo. En nuestro ejemplo, el DbProjectExpression con el nombre de enlace de entrada de "a" reutilizaría instrucción sqlselectstatement y agregaría ("a" \< symbol_b >) a la tabla.
 
-Cuando las expresiones hacen referencia al nombre de enlace de entrada del nodo que está reutilizando la instrucción SqlSelectStatement, esa referencia se resuelve usando la tabla de símbolos como el símbolo redirigido correcto. Cuando "a" de "a. x" se resuelve al visitar el DbVariableReferenceExpression que representa "a", se resolverá en \<el símbolo symbol_b >.
+Cuando las expresiones hacen referencia al nombre de enlace de entrada del nodo que está reutilizando la instrucción SqlSelectStatement, esa referencia se resuelve usando la tabla de símbolos como el símbolo redirigido correcto. Cuando "a" de "a. x" se resuelve al visitar el DbVariableReferenceExpression que representa "a", se resolverá en el símbolo \<symbol_b >.
 
 ### <a name="join-alias-flattening"></a>Eliminación de la información de estructura jerárquica de los alias de combinación
 
@@ -243,7 +243,7 @@ La eliminación de la información de estructura jerárquica de los alias de com
 
 ### <a name="column-name-and-extent-alias-renaming"></a>Cambio de nombre de una columna y de un alias de extensión
 
-El problema del nombre de la columna y el cambio de nombre del alias de extensión se aborda mediante símbolos que solo se sustituyen por alias en la segunda fase de la generación descrita en la sección titulada segunda fase de la generación de SQL: Generar el comando de cadena.
+El problema del cambio de nombre de una columna y de un alias de extensión se resuelve utilizando símbolos que solo se sustituyen por alias en la segunda fase de la generación, como se describe en la sección titulada Segunda fase de la generación de SQL: Generar el comando String.
 
 ## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Primera fase de la generación de SQL: Visitar el árbol de expresión
 
@@ -345,7 +345,7 @@ El método VisitSetOpExpression procesa las operaciones set DbUnionAllExpression
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-Donde \<leftSqlSelectStatement > y \<rightSqlSelectStatement > se obtienen instrucciones sqlselectstatement visitando cada una de las entradas y \<setOp > es la operación correspondiente (Union All, por ejemplo).
+Donde \<leftSqlSelectStatement > y \<> rightSqlSelectStatement se obtienen instrucciones sqlselectstatement mediante la visita de cada una de las entradas y \<setOp > es la operación correspondiente (UNION ALL, por ejemplo).
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -375,9 +375,9 @@ Cuando DbNewInstanceExpression tiene un tipo de valor devuelto de colección, y 
 
 - Si DbNewInstanceExpression tiene DbElementExpression como único argumento, se traduce como:
 
-    ```
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
-    ```
+```sql
+NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+```
 
 Si DbNewInstanceExpression no tiene ningún argumento (representa una tabla vacía), DbNewInstanceExpression se traduce como:
 
@@ -409,9 +409,9 @@ El método que visita DbElementExpression solamente se invoca para visitar una e
 
 ### <a name="dbquantifierexpression"></a>DbQuantifierExpression
 
-En función del tipo de expresión (Any u All), la expresión DbQuantifierExpression se traduce como:
+Dependiendo del tipo de expresión (any o All), DbQuantifierExpression se traduce como:
 
-```
+```sql
 Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))
 ```
@@ -420,7 +420,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 
 En algunos casos, es posible contraer la traducción de DbNotExpression con su expresión de entrada. Por ejemplo:
 
-```
+```sql
 Not(IsNull(a)) =>  "a IS NOT NULL"
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
 ```
@@ -431,11 +431,11 @@ El motivo por el que se contrae por segunda vez es porque el proveedor introdujo
 
 DbIsEmptyExpression se traduce como:
 
-```
+```sql
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de la generación de SQL: Generar el comando de cadena
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de la generación de SQL: Generar el comando String
 
 Al generar un comando SQL string, el objeto SqlSelectStatement genera los alias reales de los símbolos, lo que resuelve el problema del cambio de nombre de la columna y del alias de extensión.
 
@@ -443,7 +443,7 @@ El cambio de nombre del alias de extensión se produce al escribir el objeto Sql
 
 El cambio de nombre de una columna se produce cuando se escribe un objeto Symbol en una cadena. AddDefaultColumns en la primera fase ha determinado si debe cambiarse el nombre de un determinado símbolo de columna. En la segunda fase, el cambio de nombre solamente se produce tras asegurarse de que el nombre generado no estará en conflicto con ninguno de los nombres utilizados en AllColumnNames
 
-Para generar nombres únicos tanto para los alias de extensión como para las columnas \<, use existing_name > _n, donde n es el alias más pequeño que todavía no se ha usado. La lista global de todos los alias aumenta la necesidad de realizar cambios de nombre en cascada.
+Para generar nombres únicos tanto para los alias de extensión como para las columnas, use \<existing_name > _n, donde n es el alias más pequeño que todavía no se ha usado. La lista global de todos los alias aumenta la necesidad de realizar cambios de nombre en cascada.
 
 ## <a name="see-also"></a>Vea también
 

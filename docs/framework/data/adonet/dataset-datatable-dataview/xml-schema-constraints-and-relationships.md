@@ -2,12 +2,12 @@
 title: Restricciones y relaciones del esquema XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784191"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040029"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Restricciones y relaciones del esquema XML
 En un esquema del lenguaje de definición de esquemas XML (XSD), puede especificar las restricciones (Unique, Key y keyref) y las relaciones (mediante la anotación **msdata: Relationship** ). En este tema se explica cómo se interpretan las restricciones y relaciones especificadas en un esquema XML para generar el <xref:System.Data.DataSet>.  
@@ -61,7 +61,7 @@ En un esquema del lenguaje de definición de esquemas XML (XSD), puede especific
   
  El **DataSet** que se genera durante el proceso de asignación del esquema XML incluye las tablas **Order** y **OrderDetail** . Además, el **conjunto** de elementos incluye relaciones y restricciones. En el siguiente ejemplo se muestran estas relaciones y restricciones. Tenga en cuenta que el esquema no especifica la anotación **msdata: Relationship** ; en su lugar, se usan las restricciones Key y keyref para generar la relación.  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ En un esquema del lenguaje de definición de esquemas XML (XSD), puede especific
   
  El **conjunto** de resultados resultante del proceso de asignación de esquemas XML incluye dos tablas:  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  El **DataSet** también incluye las dos relaciones (una basada en la anotación **msdata: Relationship** y la otra basándose en las restricciones Key y keyref) y varias restricciones. En el siguiente ejemplo se muestran las relaciones y restricciones.  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

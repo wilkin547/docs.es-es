@@ -2,12 +2,12 @@
 title: Personalizar permisos con suplantación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782472"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040448"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizar permisos con suplantación en SQL Server
 Muchas aplicaciones utilizan procedimientos almacenados para obtener acceso a los datos, sirviéndose del encadenamiento de propiedad para restringir el acceso a tablas base. Se pueden conceder permisos EXECUTE en procedimientos almacenados revocando o denegando permisos en las tablas base. SQL Server no comprueba los permisos del llamador si el procedimiento almacenado y las tablas tienen el mismo propietario. No obstante, el encadenamiento de propiedad no funciona si los objetos tienen distintos propietarios o en el caso de SQL dinámico.  
@@ -17,7 +17,7 @@ Muchas aplicaciones utilizan procedimientos almacenados para obtener acceso a lo
 ## <a name="context-switching-with-the-execute-as-statement"></a>Cambio de contexto con la instrucción EXECUTE AS  
  La instrucción Transact-SQL EXECUTE AS permite cambiar el contexto de ejecución de una instrucción mediante la suplantación de otro inicio de sesión o usuario de la base de datos. Esta técnica es útil para probar consultas y procedimientos como otro usuario.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
@@ -36,7 +36,7 @@ EXECUTE AS USER = 'userName';
   
 1. Crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión. Este no es un requisito, pero ayuda a la hora de asignar permisos.  
   
-```  
+```sql
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
@@ -44,7 +44,7 @@ CREATE USER proxyUser WITHOUT LOGIN
   
 2. Agregar la cláusula EXECUTE AS al procedimiento almacenado o a la función definida por el usuario.  
   
-```  
+```sql
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Utilizar EXECUTE AS con REVERT  
  Se puede utilizar la instrucción Transact-SQL REVERT para revertir al contexto de ejecución original.  
   
- La cláusula opcional, with no Revert cookie = @variableName, permite volver a cambiar el contexto de ejecución al autor de la llamada @variableName si la variable contiene el valor correcto. Con ello podrá volver a cambiar el contexto de ejecución al llamador en entornos donde se utiliza la agrupación de conexiones. Dado que el valor @variableName de solo lo conoce el llamador de la instrucción EXECUTE as, el llamador puede garantizar que el usuario final no puede cambiar el contexto de ejecución que invoca la aplicación. Cuando se cierra la conexión, se devuelve al grupo. Para obtener más información sobre la agrupación de conexiones en ADO.NET, vea [SQL Server agrupación de conexiones (ADO.net)](../sql-server-connection-pooling.md).  
+ La cláusula opcional, sin Revert COOKIE = @variableName, permite volver a cambiar el contexto de ejecución al autor de la llamada si la variable @variableName contiene el valor correcto. Con ello podrá volver a cambiar el contexto de ejecución al llamador en entornos donde se utiliza la agrupación de conexiones. Dado que el valor de @variableName solo lo conoce el llamador de la instrucción EXECUTe AS, el llamador puede garantizar que el usuario final no puede cambiar el contexto de ejecución que invoca la aplicación. Cuando se cierra la conexión, se devuelve al grupo. Para obtener más información sobre la agrupación de conexiones en ADO.NET, vea [SQL Server agrupación de conexiones (ADO.net)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Especificar el contexto de ejecución  
  Además de especificar un usuario, EXECUTE AS se puede utilizar también con cualquiera de las palabras clave siguientes.  

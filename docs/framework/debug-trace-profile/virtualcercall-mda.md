@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 561655f1d3de6efcac79c89907602cbf51bd3ff8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8784d6980d3edb1bbdd7b39a81e7e33bfec81242
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052234"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039610"
 ---
 # <a name="virtualcercall-mda"></a>MDA de virtualCERCall
 El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa como una advertencia que indica que un sitio de llamada dentro de un gráfico de llamadas de región de ejecución restringida (CER) hace referencia a un destino virtual, es decir, una llamada virtual a un método virtual no final o una llamada mediante una interfaz. El Common Language Runtime (CLR) no puede predecir el método de destino de estas llamadas solo con el lenguaje intermedio y el análisis de metadatos. Como resultado, el árbol de llamadas no se puede preparar como parte del gráfico de CER y las anulaciones de subprocesos de ese subárbol no se pueden bloquear automáticamente. Este MDA advierte de los casos en los que es posible que se tenga que ampliar una CER mediante llamadas explícitas al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una vez que la información adicional necesaria para calcular el destino de la llamada se conoce en tiempo de ejecución.  
@@ -24,7 +24,7 @@ El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa c
 ## <a name="symptoms"></a>Síntomas  
  Las CER que no se ejecutan cuando se anula un subproceso o se descarga un dominio de aplicación.  
   
-## <a name="cause"></a>Causa  
+## <a name="cause"></a>Motivo  
  Una CER contiene una llamada a un método virtual que no se puede preparar automáticamente.  
   
 ## <a name="resolution"></a>Resolución  
@@ -51,7 +51,7 @@ declaringType name="VirtualCERCall+MyClass"
 ```xml  
 <mdaConfig>  
   <assistants>  
-    < VirtualCERCall />  
+    <VirtualCERCall />  
   </assistants>  
 </mdaConfig>  
 ```  

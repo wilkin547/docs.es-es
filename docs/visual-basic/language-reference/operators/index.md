@@ -4,45 +4,34 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: e295d492c8c2e5cbd69f295e83f44b63c74ca553
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2a9fb5343c4e07fa28d87bc991beea4c390b042
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013574"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035590"
 ---
 # <a name="operators-visual-basic"></a>Operadores (Visual Basic)
+
 ## <a name="in-this-section"></a>En esta sección
 
- [Prioridad de operador en Visual Basic](operator-precedence.md)  
-  
- [Operadores enumerados por funcionalidad](operators-listed-by-functionality.md)  
-  
- [Tipos de datos de resultados de operador](data-types-of-operator-results.md)  
-  
- [DirectCast (operador)](directcast-operator.md)  
-  
- [TryCast (operador)](trycast-operator.md)  
-  
- [New (operador)](new-operator.md)  
+- [Precedencia de operadores en Visual Basic](operator-precedence.md)
+- [Operadores enumerados por funcionalidad](operators-listed-by-functionality.md)
+- [Tipos de datos de resultados de operador](data-types-of-operator-results.md)
+- [DirectCast (operador)](directcast-operator.md)
+- [TryCast (operador)](trycast-operator.md)
+- [Operador Name](nameof.md)
+- [New (operador)](new-operator.md)
+- [Operadores condicionales null](null-conditional-operators.md)
+- [Operadores aritméticos](arithmetic-operators.md)
+- [Operadores de asignación](assignment-operators.md)
+- [Operadores de desplazamiento de bits](bit-shift-operators.md)
+- [Operadores de comparación](comparison-operators.md)
+- [Operadores de concatenación](concatenation-operators.md)
+- [Operadores lógicos y bit a bit](logical-bitwise-operators.md)
+- [Operadores varios](miscellaneous-operators.md)
 
- [Operadores condicionales null](null-conditional-operators.md)
+## <a name="related-sections"></a>Secciones relacionadas
 
- [Operadores aritméticos](arithmetic-operators.md)  
-  
- [Operadores de asignación](assignment-operators.md)  
-  
- [Operadores de desplazamiento](bit-shift-operators.md)  
-  
- [Operadores de comparación](comparison-operators.md)  
-  
- [Operadores de concatenación](concatenation-operators.md)  
-  
- [Operadores lógicos y bit a bit](logical-bitwise-operators.md)  
-  
- [Operadores varios](miscellaneous-operators.md)  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)
+- [Referencia del lenguaje Visual Basic](../index.md)
+- [Visual Basic](../../index.md)

@@ -2,12 +2,12 @@
 title: Generar SQL de modificación
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854296"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039898"
 ---
 # <a name="modification-sql-generation"></a>Generar SQL de modificación
 
@@ -62,9 +62,7 @@ El valor de Returning especifica una proyección de resultados que se van a devo
 
 SetClauses especifica la lista de cláusulas de inserción o actualización que definen la operación de inserción o actualización.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+Los elementos de la lista se especifican como tipo DbModificationClause, que especifica una sola cláusula en una operación de modificación de inserción o actualización. DbSetClause hereda de DbModificationClause y especifica la cláusula en una operación de modificación que establece el valor de una propiedad. A partir de la versión 3,5 del .NET Framework, todos los elementos de SetClauses son del tipo SetClause.
 
 Property especifica la propiedad que se debe actualizar. Siempre es DbPropertyExpression en DbVariableReferenceExpression, que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.
 
@@ -94,7 +92,7 @@ En el [Entity Framework proveedor de ejemplo](https://code.msdn.microsoft.com/wi
 
 El módulo de generación de SQL de modificación del proveedor de ejemplo (situado en el archivo SQL Generation\DmlSqlGenerator.cs) toma un árbol DbModificationCommandTree como entrada y genera una única instrucción SQL de modificación posiblemente seguida por una instrucción SELECT para devolver un lector si se especifica en DbModificationCommandTree. Observe que la base de datos de SQL Server de destino afecta a la forma de los comandos generados.
 
-### <a name="helper-classes-expressiontranslator"></a>Clases auxiliares: ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>clases del asistente: ExpressionTranslator
 
 ExpressionTranslator actúa como un traductor ligero común para todas las propiedades del árbol de comandos de modificación de tipo DbExpression. Únicamente admite la traducción de los tipos de expresión a los que están restringidas las propiedades del árbol de comandos de modificación y se genera con las restricciones determinadas en mente.
 
@@ -116,7 +114,7 @@ Dado que la instancia de DbPropertyExpression siempre representa la tabla de ent
 
 Para una implementación DbInsertCommandTree determinada en el proveedor de ejemplo, el comando de inserción generado sigue una de las dos plantillas de inserción siguientes.
 
-La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL. El elemento de predicado "\@ @ROWCOUNT > 0" es true si se insertó una fila. El elemento de predicado "keyMemberI &#124; = keyValueI SCOPE_IDENTITY ()" toma la forma "keyMemberI = SCOPE_IDENTITY ()" solo si keyMemberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor de identidad insertado en una identidad ( columna generada por el almacén).
+La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL. El elemento de predicado "\@@ROWCOUNT > 0" es true si se insertó una fila. El elemento de predicado "keyMemberI &#124; = keyValueI SCOPE_IDENTITY ()" toma la forma "keyMemberI = SCOPE_IDENTITY ()" solo si keyMemberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor de identidad insertado en una identidad ( columna generada por el almacén).
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Este código genera el siguiente árbol de comandos, que se pasa al proveedor:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Este código de usuario genera el siguiente árbol de comandos, que se pasa al proveedor:
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Este código de usuario genera el siguiente árbol de comandos, que se pasa al proveedor.
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

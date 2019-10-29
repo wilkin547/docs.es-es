@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920030"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040862"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] independientes proporcionan sus propias ventanas mediante el uso de la clase <xref:System.Windows.Window>. En este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
@@ -442,7 +442,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Estilo de ventana no rectangular  
- También hay situaciones en las que los estilos de borde que <xref:System.Windows.Window.WindowStyle%2A> permite tener no son suficientes. Por ejemplo, puede que desee crear una aplicación con un borde no rectangular, como [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] utiliza.  
+ También hay situaciones en las que los estilos de borde que <xref:System.Windows.Window.WindowStyle%2A> permite tener no son suficientes. Por ejemplo, puede que desee crear una aplicación con un borde no rectangular, como Microsoft Windows Media Player usa.  
   
  Por ejemplo, considere la ventana burbuja de voz que se muestra en la ilustración siguiente:  
   

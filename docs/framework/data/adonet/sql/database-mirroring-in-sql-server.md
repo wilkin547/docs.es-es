@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782430"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040440"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejo de la base de datos en SQL Server
 La creación de reflejo de base de datos de SQL Server permite mantener una copia, o reflejo, de una base de datos de SQL Server en un servidor en modo de espera. El reflejo garantiza que en todo momento existen dos copias distintas de los datos, lo que proporciona una alta disponibilidad y una completa redundancia de datos. El proveedor de datos .NET para SQL Server ofrece compatibilidad implícita con la creación de reflejo de base de datos; de modo que el desarrollador no tiene que realizar ninguna acción ni escribir ningún código una vez que se ha configurado para una base de datos de SQL Server. Además, el objeto <xref:System.Data.SqlClient.SqlConnection> admite un modo de conexión explícita que permita proporcionar el nombre de un servidor asociado de conmutación por error en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -26,7 +26,7 @@ La creación de reflejo de base de datos de SQL Server permite mantener una copi
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Especificación del asociado de conmutación por error en la cadena de conexión  
  Si proporciona el nombre de un servidor asociado de conmutación por error en la cadena de conexión, el cliente intenta una conexión al asociado de conmutación por error de forma transparente si la base de datos principal no está disponible cuando la aplicación cliente se conecta por primera vez.  
   
-```  
+```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   
@@ -59,7 +59,7 @@ string activeServer = connection.DataSource;
 ## <a name="database-mirroring-resources"></a>Recursos de reflejos de base de datos  
  Para obtener documentación conceptual e información sobre la configuración, implementación y administración de la creación de reflejo, vea los siguientes recursos en SQL Server documentación de.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Creación de reflejo de la base de datos](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
   
