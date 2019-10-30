@@ -30,6 +30,8 @@
         - name: Películas recomendadas (factorización matricial)
           href: tutorials/movie-recommendation.md
         - name: Clasificación de imágenes (transferencia de aprendizaje)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: Clasificar imágenes (composición de modelos)
           href: tutorials/image-classification.md
         - name: Análisis de ventas de productos (detección de anomalías)
           href: tutorials/sales-anomaly-detection.md
@@ -65,9 +67,9 @@
   items:
     - name: API
       items:
-        - name: Carga de datos
+        - name: Cargar los datos
           href: how-to-guides/load-data-ml-net.md
-        - name: Preparación de los datos
+        - name: Preparar los datos
           href: how-to-guides/prepare-data-ml-net.md
         - name: 'Entrenamiento, evaluación y explicación del modelo'
           items:
@@ -93,9 +95,11 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: Herramientas
       items:
+        - name: Carga de datos en el generador de modelos
+          href: how-to-guides/load-data-model-builder.md
         - name: Instalación de un generador de modelos
           href: how-to-guides/install-model-builder.md
-        - name: Instalación de la CLI de Azure
+        - name: Instalación de la CLI
           href: how-to-guides/install-ml-net-cli.md
         - name: Uso de la API de ML automatizado
           href: how-to-guides/how-to-use-the-automl-api.md
@@ -109,7 +113,7 @@
           href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
     - name: Herramientas
       items:
-        - name: Referencia sobre la CLI
+        - name: Referencia de la CLI
           href: reference/ml-net-cli-reference.md
         - name: Referencia de API de ML.NET AutoML
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'

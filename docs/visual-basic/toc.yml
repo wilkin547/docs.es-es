@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Longitud de registro incorrecta
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Como esta llamada no es "awaited", la ejecución del método actual continuará antes de que se complete la llamada.'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'Dado que no se esperaba esta llamada, la ejecución del método actual continuará antes de que se complete la llamada.'
+          href: language-reference/error-messages/bc42358.md
+        - name: No se puede convertir el tipo anónimo en un árbol de expresión porque una propiedad del tipo se usa para inicializar otra propiedad.
+          href: language-reference/error-messages/bc36548.md
         - name: No se puede crear el componente ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: No se puede hacer referencia a '<name>' porque es miembro del campo de tipo de valor '<name>' de la clase '<classname>' que tiene 'System.MarshalByRefObject' como clase base
