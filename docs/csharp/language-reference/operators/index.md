@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579198"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039014"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
 
@@ -85,7 +85,7 @@ Independientemente de la prioridad y la asociatividad de los operadores, los ope
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-Normalmente, se evalúan todos los operandos de un operador. Algunos operadores evalúan los operandos de forma condicional. Esto significa que el valor del primer operando de este tipo de operador define si se deben evaluar otros operandos, o bien qué operandos deben evaluarse. Estos operadores son los operadores lógicos condicionales [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) y [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), los [operadores de integración nula `??` y `??=`](null-coalescing-operator.md), los [operadores condicionales nulos `?.` y `?[]`](member-access-operators.md#null-conditional-operators--and-), así como el [operador condicional `?:`](conditional-operator.md). Para obtener más información, consulte la descripción de cada operador.
+Normalmente, se evalúan todos los operandos de un operador. Sin embargo, algunos operadores evalúan los operandos de forma condicional. Esto significa que el valor del operando situado más a la izquierda de este tipo de operador define si se deben evaluar otros operandos, o bien qué operandos deben evaluarse. Estos operadores son los operadores lógicos condicionales [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) y [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), los [operadores de integración nula `??` y `??=`](null-coalescing-operator.md), los [operadores condicionales nulos `?.` y `?[]`](member-access-operators.md#null-conditional-operators--and-), así como el [operador condicional `?:`](conditional-operator.md). Para más información, consulte la descripción de cada operador.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

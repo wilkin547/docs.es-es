@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053278"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039344"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
-Una interfaz contiene las definiciones de un grupo de funcionalidades relacionadas que una [clase](../../language-reference/keywords/class.md) o una [estructura](../../language-reference/keywords/struct.md) pueden implementar.
+Una interfaz contiene las definiciones de un grupo de funcionalidades relacionadas que una [clase](../../language-reference/keywords/class.md) o una [estructura](../../language-reference/keywords/struct.md) no abstracta deben implementar.
   
 Mediante las interfaces puede incluir, por ejemplo, un comportamiento de varios orígenes en una clase. Esta capacidad es importante en C# porque el lenguaje no admite la herencia múltiple de clases. Además, debe usar una interfaz si desea simular la herencia de estructuras, porque no pueden heredar de otra estructura o clase.  
   

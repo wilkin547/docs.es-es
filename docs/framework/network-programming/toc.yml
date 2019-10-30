@@ -145,7 +145,7 @@
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
             - name: Procedimiento para establecer en una aplicación una directiva de caché predeterminada de duración definida
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
-            - name: Procedimiento para personalizar una directiva de caché de duración definida
+            - name: 'Procedimientos: Personalización de una directiva de caché de duración definida'
               href: how-to-customize-a-time-based-cache-policy.md
             - name: Procedimiento para establecer una directiva de caché para una solicitud
               href: how-to-set-cache-policy-for-a-request.md
