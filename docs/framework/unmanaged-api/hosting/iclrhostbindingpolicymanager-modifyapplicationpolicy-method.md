@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5323538447e083a0c727e43261dd68337182b9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141079"
 ---
-# <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a><span data-ttu-id="be25d-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy (Método)</span><span class="sxs-lookup"><span data-stu-id="be25d-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Method</span></span>
-<span data-ttu-id="be25d-103">Modifica la directiva de enlace para el ensamblado especificado y crea una nueva versión de la directiva.</span><span class="sxs-lookup"><span data-stu-id="be25d-103">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>  
+# <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a><span data-ttu-id="8f648-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy (Método)</span><span class="sxs-lookup"><span data-stu-id="8f648-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Method</span></span>
+<span data-ttu-id="8f648-103">Modifica la Directiva de enlace para el ensamblado especificado y crea una nueva versión de la Directiva.</span><span class="sxs-lookup"><span data-stu-id="8f648-103">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be25d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be25d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f648-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8f648-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT  ModifyApplicationPolicy (  
@@ -41,53 +39,53 @@ HRESULT  ModifyApplicationPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be25d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="be25d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f648-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8f648-105">Parameters</span></span>  
  `pwzSourceAssemblyIdentity`  
- <span data-ttu-id="be25d-106">[in] La identidad del ensamblado que se va a modificar.</span><span class="sxs-lookup"><span data-stu-id="be25d-106">[in] The identity of the assembly to modify.</span></span>  
+ <span data-ttu-id="8f648-106">de La identidad del ensamblado que se va a modificar.</span><span class="sxs-lookup"><span data-stu-id="8f648-106">[in] The identity of the assembly to modify.</span></span>  
   
  `pwzTargetAssemblyIdentity`  
- <span data-ttu-id="be25d-107">[in] La nueva identidad del ensamblado modificado.</span><span class="sxs-lookup"><span data-stu-id="be25d-107">[in] The new identity of the modified assembly.</span></span>  
+ <span data-ttu-id="8f648-107">de Nueva identidad del ensamblado modificado.</span><span class="sxs-lookup"><span data-stu-id="8f648-107">[in] The new identity of the modified assembly.</span></span>  
   
  `pbApplicationPolicy`  
- <span data-ttu-id="be25d-108">[in] Un puntero a un búfer que contiene los datos de la directiva de enlace del ensamblado que se va a modificar.</span><span class="sxs-lookup"><span data-stu-id="be25d-108">[in] A pointer to a buffer that contains the binding policy data for the assembly to modify.</span></span>  
+ <span data-ttu-id="8f648-108">de Puntero a un búfer que contiene los datos de la Directiva de enlace del ensamblado que se va a modificar.</span><span class="sxs-lookup"><span data-stu-id="8f648-108">[in] A pointer to a buffer that contains the binding policy data for the assembly to modify.</span></span>  
   
  `cbAppPolicySize`  
- <span data-ttu-id="be25d-109">[in] El tamaño de la directiva de enlace que se debe reemplazar.</span><span class="sxs-lookup"><span data-stu-id="be25d-109">[in] The size of the binding policy to be replaced.</span></span>  
+ <span data-ttu-id="8f648-109">de Tamaño de la Directiva de enlace que se va a reemplazar.</span><span class="sxs-lookup"><span data-stu-id="8f648-109">[in] The size of the binding policy to be replaced.</span></span>  
   
  `dwPolicyModifyFlags`  
- <span data-ttu-id="be25d-110">[in] Una combinación OR lógica de [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) valores, que indica el control de la redirección.</span><span class="sxs-lookup"><span data-stu-id="be25d-110">[in] A logical OR combination of [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) values, indicating control of redirection.</span></span>  
+ <span data-ttu-id="8f648-110">de Una combinación lógica o lógica de valores de [ehostbindingpolicymodifyflags (](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) , que indica el control de la redirección.</span><span class="sxs-lookup"><span data-stu-id="8f648-110">[in] A logical OR combination of [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) values, indicating control of redirection.</span></span>  
   
  `pbNewApplicationPolicy`  
- <span data-ttu-id="be25d-111">[out] Un puntero a un búfer que contiene los nuevos datos de la directiva de enlace.</span><span class="sxs-lookup"><span data-stu-id="be25d-111">[out] A pointer to a buffer that contains the new binding policy data.</span></span>  
+ <span data-ttu-id="8f648-111">enuncia Un puntero a un búfer que contiene los nuevos datos de la Directiva de enlace.</span><span class="sxs-lookup"><span data-stu-id="8f648-111">[out] A pointer to a buffer that contains the new binding policy data.</span></span>  
   
  `pcbNewAppPolicySize`  
- <span data-ttu-id="be25d-112">[in, out] Un puntero al tamaño del búfer de nueva directiva de enlace.</span><span class="sxs-lookup"><span data-stu-id="be25d-112">[in, out] A pointer to the size of the new binding policy buffer.</span></span>  
+ <span data-ttu-id="8f648-112">[in, out] Puntero al tamaño del nuevo búfer de directiva de enlace.</span><span class="sxs-lookup"><span data-stu-id="8f648-112">[in, out] A pointer to the size of the new binding policy buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="be25d-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="be25d-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8f648-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="8f648-113">Return Value</span></span>  
   
-|<span data-ttu-id="be25d-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="be25d-114">HRESULT</span></span>|<span data-ttu-id="be25d-115">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="be25d-115">Description</span></span>|  
+|<span data-ttu-id="8f648-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8f648-114">HRESULT</span></span>|<span data-ttu-id="8f648-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="8f648-115">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="be25d-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="be25d-116">S_OK</span></span>|<span data-ttu-id="be25d-117">La directiva se modificó correctamente.</span><span class="sxs-lookup"><span data-stu-id="be25d-117">The policy was modified successfully.</span></span>|  
-|<span data-ttu-id="be25d-118">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="be25d-118">E_INVALIDARG</span></span>|<span data-ttu-id="be25d-119">`pwzSourceAssemblyIdentity` o `pwzTargetAssemblyIdentity` era una referencia nula.</span><span class="sxs-lookup"><span data-stu-id="be25d-119">`pwzSourceAssemblyIdentity` or `pwzTargetAssemblyIdentity` was a null reference.</span></span>|  
-|<span data-ttu-id="be25d-120">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="be25d-120">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="be25d-121">`pbNewApplicationPolicy` es demasiado pequeño.</span><span class="sxs-lookup"><span data-stu-id="be25d-121">`pbNewApplicationPolicy` is too small.</span></span>|  
-|<span data-ttu-id="be25d-122">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="be25d-122">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="be25d-123">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="be25d-123">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="be25d-124">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="be25d-124">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="be25d-125">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="be25d-125">The call timed out.</span></span>|  
-|<span data-ttu-id="be25d-126">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="be25d-126">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="be25d-127">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="be25d-127">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="be25d-128">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="be25d-128">HOST_E_ABANDONED</span></span>|<span data-ttu-id="be25d-129">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="be25d-129">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="be25d-130">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="be25d-130">E_FAIL</span></span>|<span data-ttu-id="be25d-131">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="be25d-131">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="be25d-132">Después de un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="be25d-132">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="be25d-133">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="be25d-133">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="8f648-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="8f648-116">S_OK</span></span>|<span data-ttu-id="8f648-117">La Directiva se modificó correctamente.</span><span class="sxs-lookup"><span data-stu-id="8f648-117">The policy was modified successfully.</span></span>|  
+|<span data-ttu-id="8f648-118">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="8f648-118">E_INVALIDARG</span></span>|<span data-ttu-id="8f648-119">`pwzSourceAssemblyIdentity` o `pwzTargetAssemblyIdentity` era una referencia nula.</span><span class="sxs-lookup"><span data-stu-id="8f648-119">`pwzSourceAssemblyIdentity` or `pwzTargetAssemblyIdentity` was a null reference.</span></span>|  
+|<span data-ttu-id="8f648-120">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="8f648-120">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="8f648-121">`pbNewApplicationPolicy` es demasiado pequeño.</span><span class="sxs-lookup"><span data-stu-id="8f648-121">`pbNewApplicationPolicy` is too small.</span></span>|  
+|<span data-ttu-id="8f648-122">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8f648-122">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8f648-123">El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="8f648-123">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="8f648-124">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8f648-124">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8f648-125">Se agotó el tiempo de espera de la llamada.</span><span class="sxs-lookup"><span data-stu-id="8f648-125">The call timed out.</span></span>|  
+|<span data-ttu-id="8f648-126">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8f648-126">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8f648-127">El autor de la llamada no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="8f648-127">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="8f648-128">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8f648-128">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8f648-129">Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.</span><span class="sxs-lookup"><span data-stu-id="8f648-129">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="8f648-130">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8f648-130">E_FAIL</span></span>|<span data-ttu-id="8f648-131">Se produjo un error grave desconocido.</span><span class="sxs-lookup"><span data-stu-id="8f648-131">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8f648-132">Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso.</span><span class="sxs-lookup"><span data-stu-id="8f648-132">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8f648-133">Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="8f648-133">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="be25d-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="be25d-134">Remarks</span></span>  
- <span data-ttu-id="be25d-135">El `ModifyApplicationPolicy` método se puede llamar dos veces.</span><span class="sxs-lookup"><span data-stu-id="be25d-135">The `ModifyApplicationPolicy` method can be called twice.</span></span> <span data-ttu-id="be25d-136">La primera llamada debe proporcionar un valor null para el `pbNewApplicationPolicy` parámetro.</span><span class="sxs-lookup"><span data-stu-id="be25d-136">The first call should supply a null value for the `pbNewApplicationPolicy` parameter.</span></span> <span data-ttu-id="be25d-137">Esta llamada devolverá el valor necesario para `pcbNewAppPolicySize`.</span><span class="sxs-lookup"><span data-stu-id="be25d-137">This call will return with the necessary value for `pcbNewAppPolicySize`.</span></span> <span data-ttu-id="be25d-138">La segunda llamada debe proporcionar este valor para `pcbNewAppPolicySize`y señale a un búfer de ese tamaño para `pbNewApplicationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="be25d-138">The second call should supply this value for `pcbNewAppPolicySize`, and point to a buffer of that size for `pbNewApplicationPolicy`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8f648-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8f648-134">Remarks</span></span>  
+ <span data-ttu-id="8f648-135">Se puede llamar al método `ModifyApplicationPolicy` dos veces.</span><span class="sxs-lookup"><span data-stu-id="8f648-135">The `ModifyApplicationPolicy` method can be called twice.</span></span> <span data-ttu-id="8f648-136">La primera llamada debe proporcionar un valor null para el parámetro `pbNewApplicationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="8f648-136">The first call should supply a null value for the `pbNewApplicationPolicy` parameter.</span></span> <span data-ttu-id="8f648-137">Esta llamada devolverá con el valor necesario para `pcbNewAppPolicySize`.</span><span class="sxs-lookup"><span data-stu-id="8f648-137">This call will return with the necessary value for `pcbNewAppPolicySize`.</span></span> <span data-ttu-id="8f648-138">La segunda llamada debe proporcionar este valor para `pcbNewAppPolicySize`y apuntar a un búfer de ese tamaño para `pbNewApplicationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="8f648-138">The second call should supply this value for `pcbNewAppPolicySize`, and point to a buffer of that size for `pbNewApplicationPolicy`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be25d-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be25d-139">Requirements</span></span>  
- <span data-ttu-id="be25d-140">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be25d-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f648-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8f648-139">Requirements</span></span>  
+ <span data-ttu-id="8f648-140">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f648-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be25d-141">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="be25d-141">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8f648-141">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="8f648-141">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="be25d-142">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="be25d-142">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8f648-142">**Biblioteca:** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="8f648-142">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="be25d-143">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be25d-143">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8f648-143">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f648-143">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be25d-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="be25d-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f648-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f648-144">See also</span></span>
 
-- [<span data-ttu-id="be25d-145">ICLRHostBindingPolicyManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="be25d-145">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [<span data-ttu-id="8f648-145">ICLRHostBindingPolicyManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8f648-145">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 958968fb1a84b598b0c3e92151fbad58fc5e79d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738749"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122892"
 ---
-# <a name="iclrdatatargetgetmachinetype-method"></a><span data-ttu-id="5782e-102">ICLRDataTarget::GetMachineType (Método)</span><span class="sxs-lookup"><span data-stu-id="5782e-102">ICLRDataTarget::GetMachineType Method</span></span>
-<span data-ttu-id="5782e-103">Obtiene el identificador para el tipo de conjunto de instrucciones que se está usando el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="5782e-103">Gets the identifier for the kind of instruction set that the target process is using.</span></span>  
+# <a name="iclrdatatargetgetmachinetype-method"></a><span data-ttu-id="923c8-102">ICLRDataTarget::GetMachineType (Método)</span><span class="sxs-lookup"><span data-stu-id="923c8-102">ICLRDataTarget::GetMachineType Method</span></span>
+<span data-ttu-id="923c8-103">Obtiene el identificador del tipo de conjunto de instrucciones que está usando el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="923c8-103">Gets the identifier for the kind of instruction set that the target process is using.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5782e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5782e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="923c8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="923c8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMachineType (  
@@ -35,19 +33,19 @@ HRESULT GetMachineType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5782e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5782e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="923c8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="923c8-105">Parameters</span></span>  
  `machineType`  
- <span data-ttu-id="5782e-106">[out] Está utilizando un puntero a un valor que indica que el conjunto de instrucciones que el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="5782e-106">[out] A pointer to a value that indicates the instruction set that the target process is using.</span></span> <span data-ttu-id="5782e-107">El valor devuelto `machineType` es una de las constantes IMAGE_FILE_MACHINE, que se definen en el archivo de encabezado WinNT.h.</span><span class="sxs-lookup"><span data-stu-id="5782e-107">The returned `machineType` is one of the IMAGE_FILE_MACHINE constants, which are defined in the WinNT.h header file.</span></span>  
+ <span data-ttu-id="923c8-106">enuncia Un puntero a un valor que indica el conjunto de instrucciones que está usando el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="923c8-106">[out] A pointer to a value that indicates the instruction set that the target process is using.</span></span> <span data-ttu-id="923c8-107">El `machineType` devuelto es una de las constantes IMAGE_FILE_MACHINE, que se definen en el archivo de encabezado Winnt. h.</span><span class="sxs-lookup"><span data-stu-id="923c8-107">The returned `machineType` is one of the IMAGE_FILE_MACHINE constants, which are defined in the WinNT.h header file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5782e-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5782e-108">Requirements</span></span>  
- <span data-ttu-id="5782e-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5782e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="923c8-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="923c8-108">Requirements</span></span>  
+ <span data-ttu-id="923c8-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="923c8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5782e-110">**Encabezado**: ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="5782e-110">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="923c8-110">**Encabezado:** ClrData. idl, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="923c8-110">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="5782e-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5782e-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="923c8-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="923c8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5782e-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5782e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="923c8-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="923c8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5782e-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="5782e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="923c8-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="923c8-113">See also</span></span>
 
-- [<span data-ttu-id="5782e-114">ICLRDataTarget (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5782e-114">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="923c8-114">ICLRDataTarget (interfaz)</span><span class="sxs-lookup"><span data-stu-id="923c8-114">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

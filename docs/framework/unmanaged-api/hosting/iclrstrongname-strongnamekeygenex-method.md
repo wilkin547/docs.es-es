@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: acbf401ac2abb5ded151a48017a8a977cd0f4b71
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135020"
 ---
-# <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="c8b5d-102">ICLRStrongName::StrongNameKeyGenEx (Método)</span><span class="sxs-lookup"><span data-stu-id="c8b5d-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
-<span data-ttu-id="c8b5d-103">Genera un nuevo par de claves pública y privada con el tamaño de clave especificado para su uso de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
+# <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="c3124-102">ICLRStrongName::StrongNameKeyGenEx (Método)</span><span class="sxs-lookup"><span data-stu-id="c3124-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
+<span data-ttu-id="c3124-103">Genera un nuevo par de claves pública y privada con el tamaño de clave especificado para el uso de nombres seguros.</span><span class="sxs-lookup"><span data-stu-id="c3124-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8b5d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c8b5d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3124-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c3124-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameKeyGenEx (  
@@ -39,44 +37,44 @@ HRESULT StrongNameKeyGenEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8b5d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c8b5d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3124-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c3124-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="c8b5d-106">[in] El nombre del contenedor de claves solicitado.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-106">[in] The requested key container name.</span></span> <span data-ttu-id="c8b5d-107">`wszKeyContainer` debe ser una cadena vacía o null para generar un nombre temporal.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="c3124-106">de Nombre del contenedor de claves solicitado.</span><span class="sxs-lookup"><span data-stu-id="c3124-106">[in] The requested key container name.</span></span> <span data-ttu-id="c3124-107">`wszKeyContainer` debe ser una cadena no vacía o null para generar un nombre temporal.</span><span class="sxs-lookup"><span data-stu-id="c3124-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="c8b5d-108">[in] Un valor que especifica si se debe abandonar la clave registrada.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="c8b5d-109">Se admiten los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="c8b5d-109">The following values are supported:</span></span>  
+ <span data-ttu-id="c3124-108">de Valor que especifica si se debe dejar la clave registrada.</span><span class="sxs-lookup"><span data-stu-id="c3124-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="c3124-109">Se admiten los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="c3124-109">The following values are supported:</span></span>  
   
-- <span data-ttu-id="c8b5d-110">0 x 00000000: se usa cuando `wszKeyContainer` es nulo para generar un nombre de contenedor de claves temporal.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+- <span data-ttu-id="c3124-110">0x00000000: se usa cuando `wszKeyContainer` es null para generar un nombre de contenedor de claves temporal.</span><span class="sxs-lookup"><span data-stu-id="c3124-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
-- <span data-ttu-id="c8b5d-111">0 x 00000001 (`SN_LEAVE_KEY`): Especifica que se debe registrar la clave izquierda.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+- <span data-ttu-id="c3124-111">0x00000001 (`SN_LEAVE_KEY`): especifica que la clave se debe dejar registrada.</span><span class="sxs-lookup"><span data-stu-id="c3124-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `dwKeySize`  
- <span data-ttu-id="c8b5d-112">[in] El tamaño solicitado de la clave en bits.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-112">[in] The requested size of the key, in bits.</span></span>  
+ <span data-ttu-id="c3124-112">de Tamaño solicitado de la clave, en bits.</span><span class="sxs-lookup"><span data-stu-id="c3124-112">[in] The requested size of the key, in bits.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="c8b5d-113">[out] El par de claves pública y privada devuelto.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-113">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="c3124-113">enuncia Par de claves pública y privada devuelta.</span><span class="sxs-lookup"><span data-stu-id="c3124-113">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="c8b5d-114">[out] El tamaño, en bytes, de `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-114">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="c3124-114">enuncia Tamaño, en bytes, de `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="c3124-114">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c8b5d-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c8b5d-115">Return Value</span></span>  
- <span data-ttu-id="c8b5d-116">`S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="c8b5d-116">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c3124-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c3124-115">Return Value</span></span>  
+ <span data-ttu-id="c3124-116">`S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).</span><span class="sxs-lookup"><span data-stu-id="c3124-116">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c8b5d-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c8b5d-117">Remarks</span></span>  
- <span data-ttu-id="c8b5d-118">Las versiones 1.0 y 1.1 de .NET Framework requieren una `dwKeySize` de 1024 bits para firmar un ensamblado con un nombre seguro; versión 2.0 agrega compatibilidad para las claves de 2048 bits.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-118">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3124-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c3124-117">Remarks</span></span>  
+ <span data-ttu-id="c3124-118">Las versiones .NET Framework 1,0 y 1,1 requieren un `dwKeySize` de 1024 bits para firmar un ensamblado con un nombre seguro. la versión 2,0 agrega compatibilidad con claves de 2048 bits.</span><span class="sxs-lookup"><span data-stu-id="c3124-118">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
   
- <span data-ttu-id="c8b5d-119">Después de recupera la clave, debe llamar a la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método para liberar la memoria asignada.</span><span class="sxs-lookup"><span data-stu-id="c8b5d-119">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="c3124-119">Una vez recuperada la clave, debe llamar al método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) para liberar la memoria asignada.</span><span class="sxs-lookup"><span data-stu-id="c3124-119">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8b5d-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c8b5d-120">Requirements</span></span>  
- <span data-ttu-id="c8b5d-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8b5d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3124-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c3124-120">Requirements</span></span>  
+ <span data-ttu-id="c3124-121">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3124-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8b5d-122">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c8b5d-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="c3124-122">**Encabezado:** Metahost. h</span><span class="sxs-lookup"><span data-stu-id="c3124-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="c8b5d-123">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c8b5d-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c3124-123">**Biblioteca:** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c3124-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c8b5d-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8b5d-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c3124-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3124-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8b5d-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8b5d-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3124-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="c3124-125">See also</span></span>
 
-- [<span data-ttu-id="c8b5d-126">StrongNameKeyGen (método)</span><span class="sxs-lookup"><span data-stu-id="c8b5d-126">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [<span data-ttu-id="c8b5d-127">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c8b5d-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="c3124-126">StrongNameKeyGen (método)</span><span class="sxs-lookup"><span data-stu-id="c3124-126">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
+- [<span data-ttu-id="c3124-127">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c3124-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

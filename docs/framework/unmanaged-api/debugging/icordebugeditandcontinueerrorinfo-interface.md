@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6ae0204c-6bb2-4bda-b13e-94507203bc68
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f19b6107d6da19f9799655fa86fc58b95df330d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6d6a2bf006d5efdc862dc7d5800694709ea3d3e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996081"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120686"
 ---
-# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="8e4d4-102">ICorDebugEditAndContinueErrorInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8e4d4-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
-<span data-ttu-id="8e4d4-103">`ICorDebugEditAndContinueErrorInfo` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="8e4d4-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="8e4d4-104">No utilice esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="8e4d4-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="3796e-102">ICorDebugEditAndContinueErrorInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="3796e-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
+<span data-ttu-id="3796e-103">`ICorDebugEditAndContinueErrorInfo` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="3796e-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="3796e-104">No utilice esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="3796e-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e4d4-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="8e4d4-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3796e-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="3796e-105">See also</span></span>
 
-- [<span data-ttu-id="8e4d4-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="8e4d4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3796e-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="3796e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

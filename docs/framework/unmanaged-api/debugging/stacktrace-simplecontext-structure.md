@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139130"
 ---
-# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="be68c-102">StackTrace_SimpleContext (Estructura)</span><span class="sxs-lookup"><span data-stu-id="be68c-102">StackTrace_SimpleContext Structure</span></span>
-<span data-ttu-id="be68c-103">Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.</span><span class="sxs-lookup"><span data-stu-id="be68c-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
+# <a name="stacktrace_simplecontext-structure"></a><span data-ttu-id="be84e-102">StackTrace_SimpleContext (Estructura)</span><span class="sxs-lookup"><span data-stu-id="be84e-102">StackTrace_SimpleContext Structure</span></span>
+<span data-ttu-id="be84e-103">Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.</span><span class="sxs-lookup"><span data-stu-id="be84e-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be68c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be68c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be84e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be84e-104">Syntax</span></span>  
   
 ```cpp  
 struct StackTrace_SimpleContext  
@@ -38,25 +36,25 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="be68c-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="be68c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="be84e-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="be84e-105">Members</span></span>  
   
-|<span data-ttu-id="be68c-106">Member</span><span class="sxs-lookup"><span data-stu-id="be68c-106">Member</span></span>|<span data-ttu-id="be68c-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="be68c-107">Description</span></span>|  
+|<span data-ttu-id="be84e-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="be84e-106">Member</span></span>|<span data-ttu-id="be84e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="be84e-107">Description</span></span>|  
 |------------|-----------------|  
-|`StackOffset`|<span data-ttu-id="be68c-108">El puntero de pila o el puntero de pila (ESP) en x86 plataformas.</span><span class="sxs-lookup"><span data-stu-id="be68c-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
-|`FrameOffset`|<span data-ttu-id="be68c-109">Desplazamiento del marco o registro EBP en x86 plataformas.</span><span class="sxs-lookup"><span data-stu-id="be68c-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
-|`InstructionOffset`|<span data-ttu-id="be68c-110">El puntero de instrucción o el puntero de instrucción (EIP) en x86 plataformas.</span><span class="sxs-lookup"><span data-stu-id="be68c-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
+|`StackOffset`|<span data-ttu-id="be84e-108">El puntero de pila o el puntero de pila Enter (ESP) en las plataformas x86.</span><span class="sxs-lookup"><span data-stu-id="be84e-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
+|`FrameOffset`|<span data-ttu-id="be84e-109">El desplazamiento del marco o el registro EBP en las plataformas x86.</span><span class="sxs-lookup"><span data-stu-id="be84e-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
+|`InstructionOffset`|<span data-ttu-id="be84e-110">El puntero de instrucción o el puntero de instrucción Enter (EIP) en las plataformas x86.</span><span class="sxs-lookup"><span data-stu-id="be84e-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="be68c-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="be68c-111">Remarks</span></span>  
- <span data-ttu-id="be68c-112">Dado que las funciones de seguimiento de pila normalmente necesitan devolver la dirección, desplazamiento de trama y dirección de la pila, también puede usar el `SimpleContext` estructura en lugar de un gran `CONTEXT` estructura.</span><span class="sxs-lookup"><span data-stu-id="be68c-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be84e-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="be84e-111">Remarks</span></span>  
+ <span data-ttu-id="be84e-112">Dado que las funciones de seguimiento de pila normalmente solo necesitan devolver la dirección, el desplazamiento del marco y la dirección de la pila, opcionalmente puede utilizar la estructura de `SimpleContext` en lugar de una estructura de `CONTEXT` grande.</span><span class="sxs-lookup"><span data-stu-id="be84e-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be68c-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be68c-113">Requirements</span></span>  
- <span data-ttu-id="be68c-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be68c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be84e-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be84e-113">Requirements</span></span>  
+ <span data-ttu-id="be84e-114">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be84e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be68c-115">**Encabezado**: SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="be68c-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="be84e-115">**Encabezado:** SOS_Stacktrace. h</span><span class="sxs-lookup"><span data-stu-id="be84e-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="be68c-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be68c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="be84e-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be84e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be68c-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="be68c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be84e-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="be84e-117">See also</span></span>
 
-- [<span data-ttu-id="be68c-118">Estructuras de depuración</span><span class="sxs-lookup"><span data-stu-id="be68c-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="be68c-119">Depuración</span><span class="sxs-lookup"><span data-stu-id="be68c-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="be84e-118">Estructuras de depuración</span><span class="sxs-lookup"><span data-stu-id="be84e-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="be84e-119">Depuración</span><span class="sxs-lookup"><span data-stu-id="be84e-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,19 +2,17 @@
 title: Método ICorDebugProcess6::MarkDebuggerAttached
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c818b196f3252138f2a9c601b04f1d7a6727bc6b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48bab20a71144b28f24951556eb36210d7b6aebf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123429"
 ---
-# <a name="icordebugprocess6markdebuggerattached-method"></a><span data-ttu-id="fa6a3-102">Método ICorDebugProcess6::MarkDebuggerAttached</span><span class="sxs-lookup"><span data-stu-id="fa6a3-102">ICorDebugProcess6::MarkDebuggerAttached Method</span></span>
-<span data-ttu-id="fa6a3-103">Cambia el estado interno del código que se está depurando para que el método <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> de la biblioteca de clases .NET Framework devuelva `true`.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-103">Changes the internal state of the debugee so that the <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> method in the .NET Framework Class Library returns `true`.</span></span>  
+# <a name="icordebugprocess6markdebuggerattached-method"></a><span data-ttu-id="cfb0e-102">Método ICorDebugProcess6::MarkDebuggerAttached</span><span class="sxs-lookup"><span data-stu-id="cfb0e-102">ICorDebugProcess6::MarkDebuggerAttached Method</span></span>
+<span data-ttu-id="cfb0e-103">Cambia el estado interno del código que se está depurando para que el método <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> de la biblioteca de clases .NET Framework devuelva `true`.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-103">Changes the internal state of the debugee so that the <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> method in the .NET Framework Class Library returns `true`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa6a3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fa6a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfb0e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cfb0e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkDebuggerAttached(  
@@ -22,34 +20,34 @@ HRESULT MarkDebuggerAttached(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fa6a3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fa6a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfb0e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cfb0e-105">Parameters</span></span>  
  `fIsAttached`  
- <span data-ttu-id="fa6a3-106">`true` si el método <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> debe indicar que hay un depurador asociado; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-106">`true` if the <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> method should indicate that a debugger is attached; `false` otherwise.</span></span>  
+ <span data-ttu-id="cfb0e-106">`true` si el método <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> debe indicar que hay un depurador asociado; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-106">`true` if the <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> method should indicate that a debugger is attached; `false` otherwise.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fa6a3-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="fa6a3-107">Return Value</span></span>  
- <span data-ttu-id="fa6a3-108">El método puede devolver los valores enumerados en la siguiente tabla.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-108">The method can return the values listed in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cfb0e-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="cfb0e-107">Return Value</span></span>  
+ <span data-ttu-id="cfb0e-108">El método puede devolver los valores enumerados en la siguiente tabla.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-108">The method can return the values listed in the following table.</span></span>  
   
-|<span data-ttu-id="fa6a3-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="fa6a3-109">Return value</span></span>|<span data-ttu-id="fa6a3-110">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="fa6a3-110">Description</span></span>|  
+|<span data-ttu-id="cfb0e-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="cfb0e-109">Return value</span></span>|<span data-ttu-id="cfb0e-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="cfb0e-110">Description</span></span>|  
 |------------------|-----------------|  
-|`S_OK`|<span data-ttu-id="fa6a3-111">El código que se va a depurar se ha actualizado correctamente.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-111">The debuggee was successfully updated.</span></span>|  
-|`CORDBG_E_MODULE_NOT_LOADED`|<span data-ttu-id="fa6a3-112">El ensamblado que contiene el método <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> no está cargado, o hay algún otro error (como metadatos que faltan) que está impidiendo que se reconozca.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-112">The assembly that contains the <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> method is not loaded, or some other error, such as missing metadata, is preventing it from being recognized.</span></span><br /><br /> <span data-ttu-id="fa6a3-113">Este error es habitual y no tiene repercusión alguna.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-113">This error is common and benign.</span></span> <span data-ttu-id="fa6a3-114">Deberá llamar al método de nuevo cuando se carguen más ensamblados.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-114">You should call the method again when additional assemblies load.</span></span>|  
-|<span data-ttu-id="fa6a3-115">Otros valores de error de `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-115">Other failing `HRESULT` values.</span></span>|<span data-ttu-id="fa6a3-116">Otros valores probablemente indiquen que el depurador o los componentes del compilador no funcionan correctamente.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-116">Other values likely indicate misbehaving debugger or compiler components.</span></span>|  
+|`S_OK`|<span data-ttu-id="cfb0e-111">El código que se va a depurar se ha actualizado correctamente.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-111">The debuggee was successfully updated.</span></span>|  
+|`CORDBG_E_MODULE_NOT_LOADED`|<span data-ttu-id="cfb0e-112">El ensamblado que contiene el método <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> no está cargado, o hay algún otro error (como metadatos que faltan) que está impidiendo que se reconozca.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-112">The assembly that contains the <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> method is not loaded, or some other error, such as missing metadata, is preventing it from being recognized.</span></span><br /><br /> <span data-ttu-id="cfb0e-113">Este error es habitual y no tiene repercusión alguna.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-113">This error is common and benign.</span></span> <span data-ttu-id="cfb0e-114">Deberá llamar al método de nuevo cuando se carguen más ensamblados.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-114">You should call the method again when additional assemblies load.</span></span>|  
+|<span data-ttu-id="cfb0e-115">Otros valores de error de `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-115">Other failing `HRESULT` values.</span></span>|<span data-ttu-id="cfb0e-116">Otros valores probablemente indiquen que el depurador o los componentes del compilador no funcionan correctamente.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-116">Other values likely indicate misbehaving debugger or compiler components.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fa6a3-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fa6a3-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cfb0e-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cfb0e-117">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="fa6a3-118">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="fa6a3-118">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="cfb0e-118">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="cfb0e-118">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa6a3-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fa6a3-119">Requirements</span></span>  
- <span data-ttu-id="fa6a3-120">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa6a3-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfb0e-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cfb0e-119">Requirements</span></span>  
+ <span data-ttu-id="cfb0e-120">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cfb0e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa6a3-121">**Encabezado**: Cordebug. idl, Cordebug. h</span><span class="sxs-lookup"><span data-stu-id="fa6a3-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cfb0e-121">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cfb0e-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fa6a3-122">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa6a3-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cfb0e-122">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cfb0e-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fa6a3-123">**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa6a3-123">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="cfb0e-123">**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfb0e-123">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa6a3-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="fa6a3-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfb0e-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="cfb0e-124">See also</span></span>
 
-- [<span data-ttu-id="fa6a3-125">ICorDebugProcess6 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="fa6a3-125">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [<span data-ttu-id="fa6a3-126">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="fa6a3-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="cfb0e-125">ICorDebugProcess6 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cfb0e-125">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
+- [<span data-ttu-id="cfb0e-126">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="cfb0e-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

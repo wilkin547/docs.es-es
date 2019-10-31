@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754920"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137793"
 ---
-# <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="be4dc-102">ICorDebugFunction2::SetJMCStatus (Método)</span><span class="sxs-lookup"><span data-stu-id="be4dc-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
-<span data-ttu-id="be4dc-103">Marca la función representada por este ICorDebugFunction2 solo mi código para la ejecución paso a paso.</span><span class="sxs-lookup"><span data-stu-id="be4dc-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
+# <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="30984-102">ICorDebugFunction2::SetJMCStatus (Método)</span><span class="sxs-lookup"><span data-stu-id="30984-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
+<span data-ttu-id="30984-103">Marca la función representada por este ICorDebugFunction2 para Solo mi código Stepping.</span><span class="sxs-lookup"><span data-stu-id="30984-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be4dc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be4dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30984-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="30984-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetJMCStatus (  
@@ -35,25 +33,25 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be4dc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="be4dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30984-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="30984-105">Parameters</span></span>  
  `bIsJustMyCode`  
- <span data-ttu-id="be4dc-106">[in] Establecido en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false`.</span><span class="sxs-lookup"><span data-stu-id="be4dc-106">[in] Set to `true` to mark the function as user code; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="30984-106">de Establezca en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false`.</span><span class="sxs-lookup"><span data-stu-id="30984-106">[in] Set to `true` to mark the function as user code; otherwise, set to `false`.</span></span>  
   
-## <a name="return-values"></a><span data-ttu-id="be4dc-107">Valores devueltos</span><span class="sxs-lookup"><span data-stu-id="be4dc-107">Return Values</span></span>  
+## <a name="return-values"></a><span data-ttu-id="30984-107">Valores devueltos</span><span class="sxs-lookup"><span data-stu-id="30984-107">Return Values</span></span>  
   
-|<span data-ttu-id="be4dc-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="be4dc-108">HRESULT</span></span>|<span data-ttu-id="be4dc-109">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="be4dc-109">Description</span></span>|  
+|<span data-ttu-id="30984-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30984-108">HRESULT</span></span>|<span data-ttu-id="30984-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="30984-109">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="be4dc-110">La función se ha marcado correctamente.</span><span class="sxs-lookup"><span data-stu-id="be4dc-110">The function was successfully marked.</span></span>|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|<span data-ttu-id="be4dc-111">La función no se pudieron marcar como código de usuario porque no se pueden depurar.</span><span class="sxs-lookup"><span data-stu-id="be4dc-111">The function could not be marked as user code because it cannot be debugged.</span></span>|  
+|`S_OK`|<span data-ttu-id="30984-110">La función se marcó correctamente.</span><span class="sxs-lookup"><span data-stu-id="30984-110">The function was successfully marked.</span></span>|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|<span data-ttu-id="30984-111">No se pudo marcar la función como código de usuario porque no se puede depurar.</span><span class="sxs-lookup"><span data-stu-id="30984-111">The function could not be marked as user code because it cannot be debugged.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="be4dc-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="be4dc-112">Remarks</span></span>  
- <span data-ttu-id="be4dc-113">Un motor paso a paso solo mi código omitirá el código de no usuario.</span><span class="sxs-lookup"><span data-stu-id="be4dc-113">A Just My Code stepper will skip non-user code.</span></span> <span data-ttu-id="be4dc-114">Código de usuario debe ser un subconjunto del código depurable.</span><span class="sxs-lookup"><span data-stu-id="be4dc-114">User code must be a subset of debuggable code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30984-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="30984-112">Remarks</span></span>  
+ <span data-ttu-id="30984-113">Una Solo mi código stepper omitirá el código que no es de usuario.</span><span class="sxs-lookup"><span data-stu-id="30984-113">A Just My Code stepper will skip non-user code.</span></span> <span data-ttu-id="30984-114">El código de usuario debe ser un subconjunto del código depurable.</span><span class="sxs-lookup"><span data-stu-id="30984-114">User code must be a subset of debuggable code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be4dc-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="be4dc-115">Requirements</span></span>  
- <span data-ttu-id="be4dc-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be4dc-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30984-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="30984-115">Requirements</span></span>  
+ <span data-ttu-id="30984-116">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30984-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be4dc-117">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be4dc-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="30984-117">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30984-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="be4dc-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be4dc-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30984-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30984-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="be4dc-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be4dc-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="30984-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30984-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

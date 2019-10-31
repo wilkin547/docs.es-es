@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137455"
 ---
-# <a name="icordebugmanagedcallback2exception-method"></a><span data-ttu-id="b58a7-102">ICorDebugManagedCallback2::Exception (Método)</span><span class="sxs-lookup"><span data-stu-id="b58a7-102">ICorDebugManagedCallback2::Exception Method</span></span>
-<span data-ttu-id="b58a7-103">Notifica al depurador que se ha iniciado una búsqueda de un controlador de excepciones.</span><span class="sxs-lookup"><span data-stu-id="b58a7-103">Notifies the debugger that a search for an exception handler has started.</span></span>  
+# <a name="icordebugmanagedcallback2exception-method"></a><span data-ttu-id="71825-102">ICorDebugManagedCallback2::Exception (Método)</span><span class="sxs-lookup"><span data-stu-id="71825-102">ICorDebugManagedCallback2::Exception Method</span></span>
+<span data-ttu-id="71825-103">Notifica al depurador que se ha iniciado una búsqueda de un controlador de excepciones.</span><span class="sxs-lookup"><span data-stu-id="71825-103">Notifies the debugger that a search for an exception handler has started.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b58a7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b58a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71825-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="71825-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Exception (  
@@ -40,49 +38,49 @@ HRESULT Exception (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b58a7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b58a7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71825-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="71825-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="b58a7-106">[in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se produjo la excepción.</span><span class="sxs-lookup"><span data-stu-id="b58a7-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="71825-106">de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se produjo la excepción.</span><span class="sxs-lookup"><span data-stu-id="71825-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread on which the exception was thrown.</span></span>  
   
  `pThread`  
- <span data-ttu-id="b58a7-107">[in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se produjo la excepción.</span><span class="sxs-lookup"><span data-stu-id="b58a7-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="71825-107">de Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se produjo la excepción.</span><span class="sxs-lookup"><span data-stu-id="71825-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the exception was thrown.</span></span>  
   
  `pFrame`  
- <span data-ttu-id="b58a7-108">[in] Un puntero a un objeto ICorDebugFrame que representa un marco, según lo determinado por la `dwEventType` parámetro.</span><span class="sxs-lookup"><span data-stu-id="b58a7-108">[in] A pointer to an ICorDebugFrame object that represents a frame, as determined by the `dwEventType` parameter.</span></span> <span data-ttu-id="b58a7-109">Para obtener más información, vea la tabla en la sección Comentarios.</span><span class="sxs-lookup"><span data-stu-id="b58a7-109">For more information, see the table in the Remarks section.</span></span>  
+ <span data-ttu-id="71825-108">de Un puntero a un objeto ICorDebugFrame que representa un marco, determinado por el parámetro `dwEventType`.</span><span class="sxs-lookup"><span data-stu-id="71825-108">[in] A pointer to an ICorDebugFrame object that represents a frame, as determined by the `dwEventType` parameter.</span></span> <span data-ttu-id="71825-109">Para obtener más información, vea la tabla de la sección Comentarios.</span><span class="sxs-lookup"><span data-stu-id="71825-109">For more information, see the table in the Remarks section.</span></span>  
   
  `nOffset`  
- <span data-ttu-id="b58a7-110">[in] Un entero que especifica un desplazamiento, según lo determinado por la `dwEventType` parámetro.</span><span class="sxs-lookup"><span data-stu-id="b58a7-110">[in] An integer that specifies an offset, as determined by the `dwEventType` parameter.</span></span> <span data-ttu-id="b58a7-111">Para obtener más información, vea la tabla en la sección Comentarios.</span><span class="sxs-lookup"><span data-stu-id="b58a7-111">For more information, see the table in the Remarks section.</span></span>  
+ <span data-ttu-id="71825-110">de Un entero que especifica un desplazamiento, según lo determinado por el parámetro `dwEventType`.</span><span class="sxs-lookup"><span data-stu-id="71825-110">[in] An integer that specifies an offset, as determined by the `dwEventType` parameter.</span></span> <span data-ttu-id="71825-111">Para obtener más información, vea la tabla de la sección Comentarios.</span><span class="sxs-lookup"><span data-stu-id="71825-111">For more information, see the table in the Remarks section.</span></span>  
   
  `dwEventType`  
- <span data-ttu-id="b58a7-112">[in] Un valor de la enumeración CorDebugExceptionCallbackType que especifica el tipo de devolución de llamada de esta excepción.</span><span class="sxs-lookup"><span data-stu-id="b58a7-112">[in] A value of the CorDebugExceptionCallbackType enumeration that specifies the type of this exception callback.</span></span>  
+ <span data-ttu-id="71825-112">de Valor de la enumeración Cordebugexceptioncallbacktype (que especifica el tipo de esta devolución de llamada de excepción.</span><span class="sxs-lookup"><span data-stu-id="71825-112">[in] A value of the CorDebugExceptionCallbackType enumeration that specifies the type of this exception callback.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="b58a7-113">[in] Un valor de la [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeración que especifica información adicional sobre la excepción</span><span class="sxs-lookup"><span data-stu-id="b58a7-113">[in] A value of the [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeration that specifies additional information about the exception</span></span>  
+ <span data-ttu-id="71825-113">de Un valor de la enumeración [cordebugexceptionflags (](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) que especifica información adicional sobre la excepción.</span><span class="sxs-lookup"><span data-stu-id="71825-113">[in] A value of the [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeration that specifies additional information about the exception</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b58a7-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b58a7-114">Remarks</span></span>  
- <span data-ttu-id="b58a7-115">El `Exception` devolución de llamada se llama en varios puntos durante la fase de búsqueda del proceso de control de excepciones.</span><span class="sxs-lookup"><span data-stu-id="b58a7-115">The `Exception` callback is called at various points during the search phase of the exception-handling process.</span></span> <span data-ttu-id="b58a7-116">Es decir, puede llamar más de una vez mientras desenredar una excepción.</span><span class="sxs-lookup"><span data-stu-id="b58a7-116">That is, it can be called more than once while unwinding an exception.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="71825-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="71825-114">Remarks</span></span>  
+ <span data-ttu-id="71825-115">La devolución de llamada de `Exception` se llama en varios puntos durante la fase de búsqueda del proceso de control de excepciones.</span><span class="sxs-lookup"><span data-stu-id="71825-115">The `Exception` callback is called at various points during the search phase of the exception-handling process.</span></span> <span data-ttu-id="71825-116">Es decir, se puede llamar más de una vez al desenredar una excepción.</span><span class="sxs-lookup"><span data-stu-id="71825-116">That is, it can be called more than once while unwinding an exception.</span></span>  
   
- <span data-ttu-id="b58a7-117">La excepción que se está procesando se puede recuperar desde el objeto ICorDebugThread al que hace referencia el `pThread` parámetro.</span><span class="sxs-lookup"><span data-stu-id="b58a7-117">The exception being processed can be retrieved from the ICorDebugThread object referenced by the `pThread` parameter.</span></span>  
+ <span data-ttu-id="71825-117">La excepción que se está procesando se puede recuperar desde el objeto ICorDebugThread al que hace referencia el parámetro `pThread`.</span><span class="sxs-lookup"><span data-stu-id="71825-117">The exception being processed can be retrieved from the ICorDebugThread object referenced by the `pThread` parameter.</span></span>  
   
- <span data-ttu-id="b58a7-118">El marco determinado y el desplazamiento se determinan por la `dwEventType` parámetro como sigue:</span><span class="sxs-lookup"><span data-stu-id="b58a7-118">The particular frame and offset are determined by the `dwEventType` parameter as follows:</span></span>  
+ <span data-ttu-id="71825-118">El determinado marco y desplazamiento vienen determinados por el parámetro `dwEventType` como se indica a continuación:</span><span class="sxs-lookup"><span data-stu-id="71825-118">The particular frame and offset are determined by the `dwEventType` parameter as follows:</span></span>  
   
-|<span data-ttu-id="b58a7-119">Valor de `dwEventType`</span><span class="sxs-lookup"><span data-stu-id="b58a7-119">Value of `dwEventType`</span></span>|<span data-ttu-id="b58a7-120">Valor de `pFrame`</span><span class="sxs-lookup"><span data-stu-id="b58a7-120">Value of `pFrame`</span></span>|<span data-ttu-id="b58a7-121">Valor de `nOffset`</span><span class="sxs-lookup"><span data-stu-id="b58a7-121">Value of `nOffset`</span></span>|  
+|<span data-ttu-id="71825-119">Valor de `dwEventType`</span><span class="sxs-lookup"><span data-stu-id="71825-119">Value of `dwEventType`</span></span>|<span data-ttu-id="71825-120">Valor de `pFrame`</span><span class="sxs-lookup"><span data-stu-id="71825-120">Value of `pFrame`</span></span>|<span data-ttu-id="71825-121">Valor de `nOffset`</span><span class="sxs-lookup"><span data-stu-id="71825-121">Value of `nOffset`</span></span>|  
 |----------------------------|-----------------------|------------------------|  
-|<span data-ttu-id="b58a7-122">DEBUG_EXCEPTION_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="b58a7-122">DEBUG_EXCEPTION_FIRST_CHANCE</span></span>|<span data-ttu-id="b58a7-123">El marco que produjo la excepción.</span><span class="sxs-lookup"><span data-stu-id="b58a7-123">The frame that threw the exception.</span></span>|<span data-ttu-id="b58a7-124">El puntero de instrucción en el marco.</span><span class="sxs-lookup"><span data-stu-id="b58a7-124">The instruction pointer in the frame.</span></span>|  
-|<span data-ttu-id="b58a7-125">DEBUG_EXCEPTION_USER_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="b58a7-125">DEBUG_EXCEPTION_USER_FIRST_CHANCE</span></span>|<span data-ttu-id="b58a7-126">El marco de código de usuario más cercano al punto de la excepción generada.</span><span class="sxs-lookup"><span data-stu-id="b58a7-126">The user-code frame closest to the point of the thrown exception.</span></span>|<span data-ttu-id="b58a7-127">El puntero de instrucción en el marco.</span><span class="sxs-lookup"><span data-stu-id="b58a7-127">The instruction pointer in the frame.</span></span>|  
-|<span data-ttu-id="b58a7-128">DEBUG_EXCEPTION_CATCH_HANDLER_FOUND</span><span class="sxs-lookup"><span data-stu-id="b58a7-128">DEBUG_EXCEPTION_CATCH_HANDLER_FOUND</span></span>|<span data-ttu-id="b58a7-129">El marco que contiene el controlador catch.</span><span class="sxs-lookup"><span data-stu-id="b58a7-129">The frame that contains the catch handler.</span></span>|<span data-ttu-id="b58a7-130">El desplazamiento de lenguaje intermedio (MSIL) de Microsoft del principio de que el controlador catch.</span><span class="sxs-lookup"><span data-stu-id="b58a7-130">The Microsoft intermediate language (MSIL) offset of the beginning of the catch handler.</span></span>|  
-|<span data-ttu-id="b58a7-131">DEBUG_EXCEPTION_UNHANDLED</span><span class="sxs-lookup"><span data-stu-id="b58a7-131">DEBUG_EXCEPTION_UNHANDLED</span></span>|<span data-ttu-id="b58a7-132">NULL</span><span class="sxs-lookup"><span data-stu-id="b58a7-132">NULL</span></span>|<span data-ttu-id="b58a7-133">Sin definir.</span><span class="sxs-lookup"><span data-stu-id="b58a7-133">Undefined.</span></span>|  
+|<span data-ttu-id="71825-122">DEBUG_EXCEPTION_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="71825-122">DEBUG_EXCEPTION_FIRST_CHANCE</span></span>|<span data-ttu-id="71825-123">Marco que produjo la excepción.</span><span class="sxs-lookup"><span data-stu-id="71825-123">The frame that threw the exception.</span></span>|<span data-ttu-id="71825-124">Puntero de instrucción en el marco.</span><span class="sxs-lookup"><span data-stu-id="71825-124">The instruction pointer in the frame.</span></span>|  
+|<span data-ttu-id="71825-125">DEBUG_EXCEPTION_USER_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="71825-125">DEBUG_EXCEPTION_USER_FIRST_CHANCE</span></span>|<span data-ttu-id="71825-126">Marco de código de usuario más cercano al punto de la excepción iniciada.</span><span class="sxs-lookup"><span data-stu-id="71825-126">The user-code frame closest to the point of the thrown exception.</span></span>|<span data-ttu-id="71825-127">Puntero de instrucción en el marco.</span><span class="sxs-lookup"><span data-stu-id="71825-127">The instruction pointer in the frame.</span></span>|  
+|<span data-ttu-id="71825-128">DEBUG_EXCEPTION_CATCH_HANDLER_FOUND</span><span class="sxs-lookup"><span data-stu-id="71825-128">DEBUG_EXCEPTION_CATCH_HANDLER_FOUND</span></span>|<span data-ttu-id="71825-129">Marco que contiene el controlador Catch.</span><span class="sxs-lookup"><span data-stu-id="71825-129">The frame that contains the catch handler.</span></span>|<span data-ttu-id="71825-130">Desplazamiento del lenguaje intermedio de Microsoft (MSIL) del principio del controlador Catch.</span><span class="sxs-lookup"><span data-stu-id="71825-130">The Microsoft intermediate language (MSIL) offset of the beginning of the catch handler.</span></span>|  
+|<span data-ttu-id="71825-131">DEBUG_EXCEPTION_UNHANDLED</span><span class="sxs-lookup"><span data-stu-id="71825-131">DEBUG_EXCEPTION_UNHANDLED</span></span>|<span data-ttu-id="71825-132">NULL</span><span class="sxs-lookup"><span data-stu-id="71825-132">NULL</span></span>|<span data-ttu-id="71825-133">Indefinido.</span><span class="sxs-lookup"><span data-stu-id="71825-133">Undefined.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b58a7-134">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b58a7-134">Requirements</span></span>  
- <span data-ttu-id="b58a7-135">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b58a7-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71825-134">Requisitos</span><span class="sxs-lookup"><span data-stu-id="71825-134">Requirements</span></span>  
+ <span data-ttu-id="71825-135">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71825-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b58a7-136">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b58a7-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="71825-136">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="71825-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b58a7-137">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b58a7-137">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="71825-137">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71825-137">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b58a7-138">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b58a7-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="71825-138">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71825-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b58a7-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="b58a7-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71825-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="71825-139">See also</span></span>
 
-- [<span data-ttu-id="b58a7-140">ICorDebugManagedCallback2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b58a7-140">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="b58a7-141">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b58a7-141">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="71825-140">ICorDebugManagedCallback2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="71825-140">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="71825-141">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="71825-141">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
