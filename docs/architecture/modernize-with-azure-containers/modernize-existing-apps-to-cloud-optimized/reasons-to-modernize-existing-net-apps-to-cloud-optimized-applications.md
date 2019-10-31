@@ -2,12 +2,12 @@
 title: Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093629"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 
@@ -19,7 +19,7 @@ La necesidad de una innovación empresarial continua inserciones a los equipos d
 
 La línea inferior es que cuando una organización crea y administra aplicaciones que están optimizadas para la nube, puede poner en marcha soluciones en manos de clientes y aportar nuevas ideas al mercado cuando sean relevantes.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Principios y principios de las aplicaciones optimizadas para la nube 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Principios y principios de las aplicaciones optimizadas para la nube
 
 Las mejoras en la nube se centran principalmente en cumplir dos objetivos: reducir costos y mejorar el crecimiento empresarial mejorando la agilidad. Estos objetivos se logran simplificando los procesos y reduciendo la fricción al lanzar y enviar aplicaciones.
 

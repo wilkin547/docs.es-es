@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Implementación de aplicaciones .NET existentes como contenedores de Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318645"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089556"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
@@ -93,15 +93,15 @@ Al agregar el nombre de la imagen al archivo Dockerfile, puede seleccionar el si
 
 > | **Etiqueta** | **Sistema y versión** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x en Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x con personalización ASP.NET adicional, en Windows Server Core |
+> | **Microsoft/dotnet-Framework: 4. x-windowsservercore** | .NET Framework 4. x en Windows Server Core |
+> | **Microsoft/ASPNET: 4. x-windowsservercore** | .NET Framework 4. x con personalización ASP.NET adicional, en Windows Server Core |
 
 Para .NET Core (multiplataforma para Linux y Windows), las etiquetas tendrían el aspecto siguiente:
 
 > | **Etiqueta** | **Sistema y versión**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Tiempo de ejecución de .NET Core 2,0: solo en Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2,0 Runtime solo en Windows nano Server |
+> | **Microsoft/dotnet: 2.0.0-Runtime** | Tiempo de ejecución de .NET Core 2,0: solo en Linux |
+> | **Microsoft/dotnet: 2.0.0-Runtime-nanoserver** | .NET Core 2,0 Runtime solo en Windows nano Server |
 
 ### <a name="multi-arch-images"></a>Imágenes de múltiples sistemas
 
@@ -113,9 +113,9 @@ En el caso de las imágenes de .NET Framework, ya que el .NET Framework tradicio
 
 Como los contenedores de Linux, los contenedores de Windows Server se administran mediante el motor de Docker. A diferencia de los contenedores de Linux, los contenedores de Windows incluyen dos tipos diferentes de contenedores o tiempos de ejecución: los contenedores de Windows Server y el aislamiento de Hyper-V.
 
-**Contenedores de Windows Server**: Proporciona aislamiento de aplicaciones a través de la tecnología de aislamiento de procesos y espacios de nombres. Un contenedor de Windows Server comparte un kernel con el host de contenedor y todos los contenedores que se ejecutan en el host. Estos contenedores no proporcionan un límite de seguridad hostil y no se deben usar para aislar el código que no es de confianza. Debido al espacio compartido del kernel, estos contenedores requieren la misma versión y configuración de kernel.
+**Contenedores de Windows Server**: proporcionan aislamiento de aplicaciones a través de la tecnología de aislamiento de procesos y espacios de nombres. Un contenedor de Windows Server comparte un kernel con el host de contenedor y todos los contenedores que se ejecutan en el host. Estos contenedores no proporcionan un límite de seguridad hostil y no se deben usar para aislar el código que no es de confianza. Debido al espacio compartido del kernel, estos contenedores requieren la misma versión y configuración de kernel.
 
-**Aislamiento de Hyper-V**: Amplía el aislamiento proporcionado por los contenedores de Windows Server mediante la ejecución de cada contenedor en una máquina virtual altamente optimizada. En esta configuración, el kernel del host de contenedor no se comparte con otros contenedores en el mismo host. Estos contenedores están diseñados para el hospedaje de varios inquilinos hostiles, con las mismas garantías de seguridad de una máquina virtual. Dado que estos contenedores no comparten el kernel con el host u otros contenedores en el host, pueden ejecutar kernels con diferentes versiones y configuraciones (con versiones compatibles). Por ejemplo, todos los contenedores de Windows en Windows 10 usan el aislamiento de Hyper-V para usar la configuración y la versión del kernel de Windows Server.
+**Aislamiento de Hyper-V**: amplía el aislamiento proporcionado por los contenedores de Windows Server mediante la ejecución de cada contenedor en una máquina virtual altamente optimizada. En esta configuración, el kernel del host de contenedor no se comparte con otros contenedores en el mismo host. Estos contenedores están diseñados para el hospedaje de varios inquilinos hostiles, con las mismas garantías de seguridad de una máquina virtual. Dado que estos contenedores no comparten el kernel con el host u otros contenedores en el host, pueden ejecutar kernels con diferentes versiones y configuraciones (con versiones compatibles). Por ejemplo, todos los contenedores de Windows en Windows 10 usan el aislamiento de Hyper-V para usar la configuración y la versión del kernel de Windows Server.
 
 Ejecutar un contenedor en Windows con o sin el aislamiento de Hyper-V es una decisión en tiempo de ejecución. Puede optar por crear el contenedor con el aislamiento de Hyper-V inicialmente y, en tiempo de ejecución, elegir ejecutarlo como un contenedor de Windows Server.
 
@@ -129,7 +129,7 @@ Ejecutar un contenedor en Windows con o sin el aislamiento de Hyper-V es una dec
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- @no__t 0Infographic: Microsoft y containers @ no__t-0
+- **Infografía: Microsoft y contenedores**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -154,11 +154,11 @@ Los productos de Azure que admiten contenedores que están al mismo tiempo y que
 
 - **Azure App Service**
 - **Azure Kubernetes Service (AKS y ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 A continuación, Azure Container Registry es un registro de contenedor de alto escalable hospedado en Azure que puede usar desde todos los productos anteriores al registrar e implementar imágenes de contenedor personalizadas.
 
-Además, desde los contenedores, puede consumir otros servicios administrados en Azure como Azure SQL Database, Azure Redis cache, Azure Cosmos DB, etc. Además, hay soluciones y plataformas de terceros disponibles en Azure Marketplace, como Cloud Foundry y OpenShift, donde también puede usar contenedores en Azure. 
+Además, desde los contenedores, puede consumir otros servicios administrados en Azure como Azure SQL Database, Azure Redis cache, Azure Cosmos DB, etc. Además, hay soluciones y plataformas de terceros disponibles en Azure Marketplace, como Cloud Foundry y OpenShift, donde también puede usar contenedores en Azure.
 
 En las secciones siguientes, puede explorar las recomendaciones de Microsoft sobre Cuándo usar cada uno de estos productos y soluciones de Azure de forma específica al dirigirse a contenedores de Windows.
 
