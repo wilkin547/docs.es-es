@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: eb62f98c5d548fe3583d3422eb7b6020a82c296a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 856b65d3b2217dbe5d53ecda00723b47247d80a4
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606485"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773851"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (Opciones del compilador de C#)
 
@@ -26,17 +26,7 @@ La opción **-refonly** indica que un ensamblado de referencia debe mostrarse en
 
 ## <a name="remarks"></a>Comentarios
 
-Los ensamblados de solo metadatos tienen sus cuerpos de métodos reemplazados por un cuerpo `throw null` único, pero incluyen todos los miembros excepto los tipos anónimos. El motivo de usar cuerpos `throw null` (en lugar de no usar ningún cuerpo) es que PEVerify pueda ejecutar y pasar (por lo tanto, validar la integridad de los metadatos).
-
-Los ensamblados de referencia incluyen un atributo `ReferenceAssembly` de nivel de ensamblado. Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo). Debido a este atributo, los tiempos de ejecución rechazarán cargar ensamblados de referencia para su ejecución (pero todavía pueden cargarse en modo de solo reflexión). Las herramientas que se reflejan en ensamblados necesitan asegurarse de que cargan ensamblados de referencia en el modo de solo reflexión, de otro modo, recibirán un error typeload del runtime.
-
-Los ensamblados de referencia también quitan los metadatos (miembros privados) de los ensamblados de solo metadatos:
-
-- Un ensamblado de referencia solo tiene referencias para lo que necesita en la superficie de la API. El ensamblado real puede tener referencias adicionales relacionadas con las implementaciones específicas. Por ejemplo, el ensamblado de referencia de `class C { private void M() { dynamic d = 1; ... } }` no hace referencia a ningún tipo necesario para `dynamic`.
-- Los miembros de función privados (métodos, propiedades y eventos) se quitan en los casos donde su retirada no afecta a la compilación de manera visible. Si no hay ningún atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, haga lo mismo para los miembros de función internos.
-- Pero todos los tipos (incluidos los tipos anidados o privados) se conservan en los ensamblados de referencia. Se conservan todos los atributos (incluso los internos).
-- Se conservan todos los métodos virtuales. Se mantienen las implementaciones explícitas de interfaces. Se conservan los eventos y propiedades que se han implementado explícitamente, ya que sus descriptores de acceso son virtuales (y por lo tanto se conservan).
-- Se conservan todos los campos de un struct. (Es un candidato para el refinamiento posterior de C#-7.1)
+Los ensamblados de referencia son un tipo especial de ensamblado que contiene solo la cantidad mínima de metadatos necesarios para representar la superficie de la API pública de la biblioteca. Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación, pero excluyen todas las implementaciones de miembros y las declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API. Para obtener más información, consulte [Ensamblados de referencia](../../../standard/assembly/reference-assemblies.md) en la Guía de .NET.
 
 Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente excluyentes.
 

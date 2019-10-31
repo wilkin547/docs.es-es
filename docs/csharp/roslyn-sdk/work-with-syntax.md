@@ -3,12 +3,12 @@ title: Usar el modelo de sintaxis del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción de los tipos que se usan para entender y manipular nodos de sintaxis.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353304"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774100"
 ---
 # <a name="work-with-syntax"></a>Trabajar con sintaxis
 
@@ -19,31 +19,31 @@ El **árbol de sintaxis** es una estructura de datos fundamental expuesta por la
 
 ## <a name="syntax-trees"></a>Árboles de sintaxis
 
-Los árboles de sintaxis son la estructura principal usada para la compilación, el análisis de código, los enlaces, la refactorización, las características de IDE y la generación de código. Ninguna parte del código fuente se entiende sin que primero se haya identificado y clasificado en alguno de los elementos de lenguaje estructural conocidos. 
+Los árboles de sintaxis son la estructura principal usada para la compilación, el análisis de código, los enlaces, la refactorización, las características de IDE y la generación de código. Ninguna parte del código fuente se entiende sin que primero se haya identificado y clasificado en alguno de los elementos de lenguaje estructural conocidos.
 
-Los árboles de sintaxis tienen tres atributos clave. El primer atributo es que los árboles de sintaxis contienen toda la información de origen con plena fidelidad. Esto significa que el árbol de sintaxis contiene cada fragmento de información del texto de origen, cada construcción gramatical, cada token léxico y todo lo demás, incluidos los espacios en blanco, los comentarios y las directivas de preprocesador. Por ejemplo, cada literal mencionado en el origen se representa exactamente como se ha escrito. Los árboles de sintaxis también representan errores del código fuente cuando el programa está incompleto o tiene un formato incorrecto mediante la representación de tokens omitidos o que faltan en el árbol de sintaxis.  
+Los árboles de sintaxis tienen tres atributos clave. El primer atributo es que los árboles de sintaxis contienen toda la información de origen con plena fidelidad. Esto significa que el árbol de sintaxis contiene cada fragmento de información del texto de origen, cada construcción gramatical, cada token léxico y todo lo demás, incluidos los espacios en blanco, los comentarios y las directivas de preprocesador. Por ejemplo, cada literal mencionado en el origen se representa exactamente como se ha escrito. Los árboles de sintaxis también representan errores del código fuente cuando el programa está incompleto o tiene un formato incorrecto mediante la representación de tokens omitidos o que faltan en el árbol de sintaxis.
 
-Esto habilita el segundo atributo de los árboles de sintaxis. Un árbol de sintaxis obtenido del analizador puede generar el texto exacto a partir del que se ha analizado. Es posible obtener la representación de texto del subárbol cuya raíz está en ese nodo desde cualquier nodo de sintaxis. Esto significa que los árboles de sintaxis se pueden usar como una manera de crear y editar texto de origen. Al crear un árbol, implícitamente se ha creado el texto equivalente, mientras que al editar un árbol de sintaxis o crear uno nuevo a partir de los cambios en uno existente, se ha editado realmente el texto. 
+Esto habilita el segundo atributo de los árboles de sintaxis. Un árbol de sintaxis obtenido del analizador puede generar el texto exacto a partir del que se ha analizado. Es posible obtener la representación de texto del subárbol cuya raíz está en ese nodo desde cualquier nodo de sintaxis. Esto significa que los árboles de sintaxis se pueden usar como una manera de crear y editar texto de origen. Al crear un árbol, implícitamente se ha creado el texto equivalente, mientras que al editar un árbol de sintaxis o crear uno nuevo a partir de los cambios en uno existente, se ha editado realmente el texto.
 
 El tercer atributo de los árboles de sintaxis es que son inmutables y seguros para subprocesos.  Esto significa que una vez obtenido un árbol, es una instantánea del estado actual del código y nunca cambia. Esto permite que varios usuarios interactúen con el mismo árbol de sintaxis a la vez en distintos subprocesos sin que se produzca ningún bloqueo ni duplicación. Dado que los árboles son inmutables y no permiten ninguna modificación directa, los métodos de fábrica ayudan a crear y modificar los árboles de sintaxis mediante la creación de instantáneas adicionales del árbol. Los árboles son eficaces en su forma de volver a usar nodos subyacentes, así que es posible volver a crear una nueva versión rápidamente y con poca memoria adicional.
 
-Un árbol de sintaxis es literalmente una estructura de datos de árbol donde los elementos estructurales no terminales son primarios con respecto a otros elementos. Cada árbol de sintaxis se compone de nodos, tokens y curiosidades.  
+Un árbol de sintaxis es literalmente una estructura de datos de árbol donde los elementos estructurales no terminales son primarios con respecto a otros elementos. Cada árbol de sintaxis se compone de nodos, tokens y curiosidades.
 
 ## <a name="syntax-nodes"></a>Nodos de sintaxis
 
-Los nodos de sintaxis son uno de los elementos principales de los árboles de sintaxis. Estos nodos representan construcciones sintácticas como declaraciones, instrucciones, cláusulas y expresiones. Cada categoría de nodos de sintaxis se representa mediante una clase independiente derivada de <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. El conjunto de clases de nodos no es extensible. 
+Los nodos de sintaxis son uno de los elementos principales de los árboles de sintaxis. Estos nodos representan construcciones sintácticas como declaraciones, instrucciones, cláusulas y expresiones. Cada categoría de nodos de sintaxis se representa mediante una clase independiente derivada de <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. El conjunto de clases de nodos no es extensible.
 
-Todos los nodos de sintaxis son nodos no terminales del árbol de sintaxis, lo que significa que siempre tienen otros nodos y tokens como elementos secundarios. Como elemento secundario de otro nodo, cada nodo tiene un nodo principal al que se puede acceder mediante la propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType>. Dado que los nodos y los árboles son inmutables, el elemento principal de un nodo nunca cambia. La raíz del árbol tiene un elemento principal nulo.  
+Todos los nodos de sintaxis son nodos no terminales del árbol de sintaxis, lo que significa que siempre tienen otros nodos y tokens como elementos secundarios. Como elemento secundario de otro nodo, cada nodo tiene un nodo principal al que se puede acceder mediante la propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType>. Dado que los nodos y los árboles son inmutables, el elemento principal de un nodo nunca cambia. La raíz del árbol tiene un elemento principal nulo.
 
-Cada nodo tiene un método <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> que devuelve una lista de nodos secundarios en orden secuencial según su posición en el texto de origen. Esta lista no contiene tokens. Cada nodo también tiene métodos para examinar descendientes, como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> o <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>, que representan una lista de todos los nodos, tokens o curiosidades que existen en el subárbol cuya raíz está en ese nodo.  
+Cada nodo tiene un método <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> que devuelve una lista de nodos secundarios en orden secuencial según su posición en el texto de origen. Esta lista no contiene tokens. Cada nodo también tiene métodos para examinar descendientes, como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> o <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>, que representan una lista de todos los nodos, tokens o curiosidades que existen en el subárbol cuya raíz está en ese nodo.
 
 Además, cada subclase de nodos de sintaxis expone los mismos elementos secundarios mediante propiedades fuertemente tipadas. Por ejemplo, una clase de nodos <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tiene tres propiedades adicionales específicas de los operadores binarios: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> y <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. El tipo de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> y <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> es <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>, y el tipo de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> es <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
-Algunos nodos de sintaxis tienen elementos secundarios opcionales. Por ejemplo, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> tiene un elemento opcional <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>. Si el elemento secundario no está presente, la propiedad devuelve null. 
+Algunos nodos de sintaxis tienen elementos secundarios opcionales. Por ejemplo, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> tiene un elemento opcional <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>. Si el elemento secundario no está presente, la propiedad devuelve null.
 
 ## <a name="syntax-tokens"></a>Tokens de sintaxis
 
-Los tokens de sintaxis son los terminales de la gramática del lenguaje y representan los fragmentos sintácticos más pequeños del código. Nunca son elementos principales de otros nodos o tokens. Los tokens de sintaxis constan de palabras clave, identificadores, literales y signos de puntuación. 
+Los tokens de sintaxis son los terminales de la gramática del lenguaje y representan los fragmentos sintácticos más pequeños del código. Nunca son elementos principales de otros nodos o tokens. Los tokens de sintaxis constan de palabras clave, identificadores, literales y signos de puntuación.
 
 Por eficacia, el tipo <xref:Microsoft.CodeAnalysis.SyntaxToken> es un tipo de valor CLR. Por tanto, a diferencia de los nodos de sintaxis, solo hay una estructura para todos los tipos de tokens con una mezcla de propiedades que tienen significado según el tipo de token que se va a representar.
 
@@ -65,13 +65,13 @@ A diferencia de los nodos y los tokens de sintaxis, las curiosidades de sintaxis
 
 Cada nodo, token o curiosidad conoce su posición dentro del texto de origen y el número de caracteres del que se compone. Una posición de texto se representa como un entero de 32 bits, que es un índice `char` de base cero. Un objeto <xref:Microsoft.CodeAnalysis.Text.TextSpan> es la posición inicial y un recuento de caracteres, ambos representados como enteros. Si <xref:Microsoft.CodeAnalysis.Text.TextSpan> tiene una longitud cero, hace referencia a una ubicación entre dos caracteres.
 
-Cada nodo tiene dos propiedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Cada nodo tiene dos propiedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> y <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> es el intervalo de texto desde el principio del primer token del subárbol del nodo al final del último token. Este intervalo no incluye ninguna curiosidad inicial ni final.
 
 La propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> es el intervalo de texto que incluye el intervalo normal del nodo, así como el intervalo de cualquier curiosidad inicial o final.
 
-Por ejemplo: 
+Por ejemplo:
 
 ``` csharp
       if (x > 3)
@@ -87,7 +87,7 @@ El nodo de la instrucción dentro del bloque tiene un intervalo indicado por las
 
 Cada nodo, token o curiosidad tiene una propiedad <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, de tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica el elemento de sintaxis exacto representado. Este valor se puede convertir en una enumeración específica del lenguaje; cada lenguaje, C# o VB, tiene una sola enumeración `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> y <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que enumera todos los posibles nodos, tokens y curiosidades de la gramática. Dicha conversión se puede realizar automáticamente. Para ello, es necesario acceder a los métodos de extensión <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
-La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite anular fácilmente la ambigüedad de los tipos de nodos de sintaxis que comparten la misma clase de nodos. En el caso de los tokens y las curiosidades, esta propiedad es la única manera de distinguir un tipo de elemento de otro. 
+La propiedad <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite anular fácilmente la ambigüedad de los tipos de nodos de sintaxis que comparten la misma clase de nodos. En el caso de los tokens y las curiosidades, esta propiedad es la única manera de distinguir un tipo de elemento de otro.
 
 Por ejemplo, una sola clase <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tiene <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> y <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> como elementos secundarios. La propiedad <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> distingue si es un tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> o <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> de nodo de sintaxis.
 

@@ -3,12 +3,12 @@ title: Cómo usar la API de ML automatizada de ML.NET
 description: La API de ML automatizada de ML.NET automatiza el proceso de compilación de modelos y genera un modelo listo para la implementación. Descubra las opciones que puede usar para configurar tareas de aprendizaje automático.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332717"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774552"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Cómo usar la API de aprendizaje automático automatizada de ML.NET
 
@@ -17,7 +17,7 @@ El aprendizaje automático automatizado (AutoML) automatiza el proceso de aplica
 > [!NOTE]
 > Este tema hace referencia a la API de aprendizaje automático de ML.NET, que actualmente se encuentra en versión preliminar. El material puede estar sujetos a cambios.
 
-## <a name="load-data"></a>Cargar los datos
+## <a name="load-data"></a>Carga de datos
 
 El aprendizaje automático automatizado admite la carga de un conjunto de datos en un [IDataView](xref:Microsoft.ML.IDataView). Los datos pueden estar en forma de archivos de valores separados por tabulaciones (TSV) y archivos de valores separados por comas (CSV).
 
@@ -89,7 +89,7 @@ Estos son algunos ejemplos:
     ```
 
 1. La configuración `CacheDirectory` es un puntero a un directorio donde se guardarán todos los modelos entrenados durante la tarea de AutoML. Si `CacheDirectory` se establece en null, los modelos se mantendrán en memoria en lugar de que se escriban en el disco.
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -116,7 +116,7 @@ La métrica de optimización, tal como se muestra en el ejemplo anterior, determ
 
 |[Clasificación binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Clasificación multiclase](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regresión](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|Exactitud| LogLoss | RSquared
+|Precisión| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
 |AreaUnderRocCurve | MacroAccuracy | MeanSquaredError
 |F1Score | MicroAccuracy | RootMeanSquaredError
@@ -125,10 +125,10 @@ La métrica de optimización, tal como se muestra en el ejemplo anterior, determ
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>Caracterización y procesamiento previo de datos
+## <a name="data-pre-processing-and-featurization"></a>Preprocesamiento de datos y caracterización
 
 > [!NOTE]
-> La columna de características solo admitía los tipos de [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) y [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
+> La columna de características solo admitía los tipos de <xref:System.Boolean>, <xref:System.Single> y <xref:System.String>.
 
 El procesamiento previo de datos se produce de forma predeterminada y los pasos siguientes se realizan automáticamente:
 
@@ -141,9 +141,9 @@ El procesamiento previo de datos se produce de forma predeterminada y los pasos 
     Rellene las celdas del valor ausente con el valor predeterminado para el tipo de datos. Anexe las características del indicador con el mismo número de ranuras que la columna de entrada. El valor de las características del indicador anexado es `1` si falta el valor de la columna de entrada y, en caso contrario, `0`.
 
 1. Generar características adicionales
-    
+
     Para las características de texto: Características de bolsa de palabras mediante unigramas y gramas de tres caracteres.
-    
+
     Para características categóricas: La codificación "One-hot" para características de baja cardinalidad y la codificación de hash "One-hot" para características categóricas de alta cardinalidad.
 
 1. Transformaciones y codificaciones
@@ -191,7 +191,7 @@ Explore otras sobrecargas para `Execute()` si desea pasar datos de validación, 
 AutoML proporciona un método de ejecución de experimentos sobrecargados que permite proporcionar datos de entrenamiento. Internamente, ML automatizado divide los datos en divisiones de validación de entrenamiento.
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>Conjunto de datos de validación personalizada
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 Use el conjunto de datos de validación personalizada si la división aleatoria no es aceptable, como suele ser el caso con los datos de serie temporal. Puede especificar su propio conjunto de datos de validación. El modelo se evaluará en el conjunto de datos de validación especificado, en lugar de uno o varios conjuntos de datos aleatorios.
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>Explorar métricas de modelo

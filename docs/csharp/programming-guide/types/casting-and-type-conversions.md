@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588428"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774112"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 
@@ -30,7 +30,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversiones implícitas**: no se requiere ninguna sintaxis especial porque la conversión tiene seguridad de tipos y no se perderá ningún dato. Los ejemplos incluyen conversiones de tipos enteros más pequeños a más grandes, y conversiones de clases derivadas a clases base.  
   
-- **Conversiones explícitas**: las conversiones explícitas requieren un operador de conversión. La conversión es necesaria si es posible que se pierda información en la conversión, o cuando es posible que la conversión no sea correcta por otros motivos.  Entre los ejemplos típicos están la conversión numérica a un tipo que tiene menos precisión o un intervalo más pequeño, y la conversión de una instancia de clase base a una clase derivada.  
+- **Conversiones explícitas**: las conversiones explícitas requieren el [operador de conversión `()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). La conversión es necesaria si es posible que se pierda información en la conversión, o cuando es posible que la conversión no sea correcta por otros motivos. Entre los ejemplos típicos están la conversión numérica a un tipo que tiene menos precisión o un intervalo más pequeño, y la conversión de una instancia de clase base a una clase derivada.  
   
 - **Conversiones definidas por el usuario**: las conversiones definidas por el usuario se realizan por medio de métodos especiales que se pueden definir para habilitar las conversiones explícitas e implícitas entre tipos personalizados que no tienen una relación de clase base-clase derivada. Para obtener más información, vea [Operadores de conversión definidos por el usuario](../../language-reference/operators/user-defined-conversion-operators.md).  
   
@@ -42,7 +42,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Para obtener una lista completa de todas las conversiones numéricas implícitas, vea [Tabla de conversiones numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Para obtener una lista completa de las conversiones numéricas implícitas, consulte la sección [Conversiones numéricas implícitas](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) del artículo [Conversiones numéricas integradas](../../language-reference/builtin-types/numeric-conversions.md).
   
  Para los tipos de referencia, siempre existe una conversión implícita desde una clase a cualquiera de sus interfaces o clases base directas o indirectas. No se necesita ninguna sintaxis especial porque una clase derivada siempre contiene a todos los miembros de una clase base.  
   
@@ -57,7 +57,7 @@ Base b = d; // Always OK.
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- Para obtener una lista de las conversiones numéricas explícitas permitidas, vea [Tabla de conversiones numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Para obtener una lista completa de las conversiones numéricas explícitas admitidas, consulte la sección [Conversiones numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) del artículo [Conversiones numéricas integradas](../../language-reference/builtin-types/numeric-conversions.md).
   
  Para los tipos de referencia, se requiere una conversión explícita si es necesario convertir de un tipo base a un tipo derivado:  
   

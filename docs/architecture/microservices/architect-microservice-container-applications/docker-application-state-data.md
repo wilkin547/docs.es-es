@@ -2,18 +2,18 @@
 title: Estado y datos en aplicaciones de Docker
 description: Administración de estado y datos en aplicaciones de Docker. Las instancias de microservicios son prescindibles, pero LOS DATOS NO, aquí se explica cómo controlarlos con microservicios.
 ms.date: 09/20/2018
-ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834425"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771441"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
 En la mayoría de los casos, un contenedor se puede considerar como una instancia de un proceso. Un proceso no mantiene un estado persistente. Si bien un contenedor puede escribir en su almacenamiento local, suponer que una instancia permanecerá indefinidamente sería como suponer que una sola ubicación en memoria será duradera. Debe suponer que las imágenes de contenedor, como los procesos, tienen varias instancias o finalmente se terminarán. Si se administran con un orquestador de contenedores, debe suponer que podrían desplazarse de un nodo o máquina virtual a otro.
 
-Las soluciones siguientes se usan para administrar datos persistentes en aplicaciones de Docker:
+Las soluciones siguientes se usan para administrar datos en aplicaciones de Docker:
 
 Desde el host de Docker, como [volúmenes de Docker](https://docs.docker.com/engine/admin/volumes/):
 
@@ -31,9 +31,9 @@ Desde el almacenamiento remoto:
 
 Desde el contenedor de Docker:
 
-> Docker ofrece una característica denominada el *sistema de archivos de superposición*. Esto implementa una tarea de copia en escritura que almacena información actualizada en el sistema de archivos raíz del contenedor. Esa información se combina con la imagen original en la que se basa el contenedor. Si se elimina el contenedor del sistema, estos cambios se pierden. Por tanto, si bien es posible guardar el estado de un contenedor dentro de su almacenamiento local, diseñar un sistema sobre esta base entraría en conflicto con la idea del diseño del contenedor, que de manera predeterminada es sin estado.
->
-> Pero los volúmenes de Docker introducidos previamente ahora son la mejor manera de controlar los datos locales de Docker. Si necesita obtener más información sobre el almacenamiento en contenedores, consulte [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver/) (Controladores de almacenamiento de Docker) y [About storage drivers](https://docs.docker.com/storage/storagedriver/) (Sobre los controladores de almacenamiento).
+- **Superposición del sistema de archivos**. Esta característica de Docker implementa una tarea de copia en escritura que almacena información actualizada en el sistema de archivos raíz del contenedor. Esa información se coloca "encima" de la imagen original en la que se basa el contenedor. Si se elimina el contenedor del sistema, estos cambios se pierden. Por tanto, si bien es posible guardar el estado de un contenedor dentro de su almacenamiento local, diseñar un sistema sobre esta base entraría en conflicto con la idea del diseño del contenedor, que de manera predeterminada es sin estado.
+
+Sin embargo, el uso de los volúmenes de Docker es ahora la mejor manera de controlar datos locales en Docker. Si necesita obtener más información sobre el almacenamiento en contenedores, consulte [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver/) (Controladores de almacenamiento de Docker) y [About storage drivers](https://docs.docker.com/storage/storagedriver/) (Sobre los controladores de almacenamiento).
 
 Los siguientes puntos proporcionan más información sobre estas opciones:
 
@@ -43,7 +43,7 @@ Los volúmenes pueden tener nombre o ser anónimos (predeterminado). Los volúme
 
 Los **montajes de enlace** están disponibles desde hace mucho tiempo y permiten la asignación de cualquier carpeta a un punto de montaje en un contenedor. Los montajes de enlace tienen más limitaciones que los volúmenes y algunos problemas de seguridad importantes, por lo que los volúmenes son la opción recomendada.
 
-Los **montajes tmpfs** son básicamente carpetas virtuales que solo existen en la memoria del host y nunca se escriben en el sistema de archivos. Son rápidos y seguros, pero usan memoria y solo están diseñados para datos no persistentes.
+Los **montajes tmpfs** son básicamente carpetas virtuales que solo existen en la memoria del host y nunca se escriben en el sistema de archivos. Son rápidos y seguros, pero usan memoria y solo están diseñados para datos temporales y no persistentes.
 
 Tal como se muestra en la figura 4-5, los volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o de la máquina virtual. Pero los contenedores de Docker no pueden acceder a un volumen desde un servidor de host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos que se comparten entre contenedores que se ejecutan en otros hosts de Docker, aunque se podría lograr con un controlador de volumen que sea compatible con los hosts remotos.
 

@@ -2,12 +2,12 @@
 title: Creación de un microservicio CRUD sencillo controlado por datos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre la creación de un microservicio CRUD sencillo (controlado por datos) en el contexto de una aplicación de microservicios.
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039914"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771207"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 
@@ -43,7 +43,7 @@ Para implementar un microservicio CRUD sencillo con .NET Core y Visual Studio, p
 
 Después de crear el proyecto, puede implementar los controladores MVC como lo haría en cualquier otro proyecto de API Web, mediante la API de Entity Framework u otra API. En un nuevo proyecto de API Web, puede ver que la única dependencia que tiene de ese microservicio es el mismo ASP.NET Core. Internamente, dentro de la dependencia *Microsoft.AspNetCore.All*, hace referencia a Entity Framework y a muchos otros paquetes NuGet de .NET Core, como se muestra en la Figura 6-7.
 
-![El proyecto de API incluye referencias al paquete NuGet Microsoft.AspNetCore.App, que incluye referencias a todos los paquetes esenciales. También podría incluir otros paquetes.](./media/image8.png)
+![El proyecto de API incluye referencias al paquete NuGet Microsoft.AspNetCore.App, que incluye referencias a todos los paquetes fundamentales. También podría incluir otros paquetes.](./media/image8.png)
 
 **Figura 6-7**. Dependencias en un microservicio API Web de CRUD sencillo
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;

@@ -5,33 +5,33 @@ author: pkulikov
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: e360cf2418e2003f9f40628c714e9e8ebd7c3e40
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b3bd6c2bea62359e8dd0840475afecc13bba37e4
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698556"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774477"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Clasificación de flores de iris mediante la agrupación en clústeres k-means con ML.NET
 
 En este tutorial se muestra cómo usar ML.NET para crear un [modelo de agrupación en clústeres](../resources/tasks.md#clustering) para el [conjunto de datos de flores de iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 > [!div class="checklist"]
 >
-> - Entender el problema
+> - Comprender el problema
 > - Seleccionar la tarea de aprendizaje automático adecuada
-> - Preparar los datos
+> - Preparación de los datos
 > - Cargar y transformar los datos
 > - Elegir un algoritmo de aprendizaje
-> - Entrenar el modelo
+> - Entrenamiento del modelo
 > - Usar el modelo para las predicciones
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+- [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
-## <a name="understand-the-problem"></a>Entender el problema
+## <a name="understand-the-problem"></a>Comprender el problema
 
 Este problema consiste en dividir el conjunto de flores de iris en grupos diferentes según las características de la flor. Esas características son la longitud y el ancho del sépalo, y la longitud y ancho del pétalo. Para este tutorial, se supone que el tipo de cada flor es desconocido. Le interesa conocer la estructura de un conjunto de datos a partir de las características y predecir cómo se ajusta una instancia de datos a esta estructura.
 
@@ -51,7 +51,7 @@ Como no se sabe a qué grupo pertenece cada flor, seleccione la tarea de [aprend
 
     En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete, seleccione la pestaña **Examinar**, busque **Microsoft.ML**, seleccione el paquete **v1.0.0** en la lista de paquetes y seleccione el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
 
-## <a name="prepare-the-data"></a>Preparar los datos
+## <a name="prepare-the-data"></a>Preparación de los datos
 
 1. Descargue el conjunto de datos [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) y guárdelo en la carpeta *Datos* que ha creado en el paso anterior. Para obtener más información sobre el conjunto de datos de iris, vea la página de Wikipedia [Conjunto de datos de flor de Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) y la página [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris) (Conjunto de datos Iris), que es el origen del conjunto de datos.
 
@@ -71,7 +71,7 @@ Para el ejemplo de agrupación en clústeres, en este tutorial se ignora la últ
 
 Cree clases para los datos de entrada y las predicciones:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *IrisData.cs*. A continuación, seleccione el botón **Agregar**.
 1. Agregue la directiva `using` siguiente al archivo nuevo:
 
@@ -133,19 +133,19 @@ Para este tutorial, la canalización de aprendizaje de la tarea de agrupación e
 - concatenar las columnas cargadas en una columna **Características**, que usa un instructor de agrupación en clústeres;
 - usar un instructor <xref:Microsoft.ML.Trainers.KMeansTrainer> para entrenar el modelo mediante el algoritmo de agrupación en clústeres k-means++.
 
-Agregue el código siguiente al método `Main`:
+Agregue el siguiente código al método `Main`:
 
 [!code-csharp[Create pipeline](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreatePipeline)]
 
 En el código se especifica que el conjunto de datos se debe dividir en tres clústeres.
 
-## <a name="train-the-model"></a>Entrenar el modelo
+## <a name="train-the-model"></a>Entrenamiento del modelo
 
 Los pasos que se agregaron en las secciones anteriores prepararon la canalización para el aprendizaje, pero no se ha ejecutado ninguno. Agregue la línea siguiente al método `Main` para realizar la carga de datos y el entrenamiento del modelo:
 
 [!code-csharp[Train the model](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#TrainModel)]
 
-### <a name="save-the-model"></a>Guardado del modelo
+### <a name="save-the-model"></a>Guardar el modelo
 
 En este punto, tiene un modelo que se puede integrar en cualquiera de las aplicaciones de .NET nuevas o existentes. Para guardar el modelo en un archivo .zip, agregue el código siguiente al método `Main`:
 
@@ -157,14 +157,14 @@ Para realizar predicciones, use la clase <xref:Microsoft.ML.PredictionEngine%602
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
 
 Cree la clase `TestIrisData` para guardar las instancias de datos de prueba:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *TestIrisData.cs*. A continuación, seleccione el botón **Agregar**.
 1. Modifique la clase para que sea estática, como en el ejemplo siguiente:
 
@@ -185,19 +185,19 @@ Cluster: 2
 Distances: 11.69127 0.02159119 25.59896
 ```
 
-¡Enhorabuena! Ha creado correctamente un modelo de aprendizaje automático para la agrupación en clústeres de iris y lo ha usado para realizar predicciones. Puede encontrar el código fuente de este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) de GitHub.
+Felicidades. Ha creado correctamente un modelo de aprendizaje automático para la agrupación en clústeres de iris y lo ha usado para realizar predicciones. Puede encontrar el código fuente de este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) de GitHub.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha aprendido a:
+En este tutorial aprendió lo siguiente:
 > [!div class="checklist"]
 >
-> - Entender el problema
+> - Comprender el problema
 > - Seleccionar la tarea de aprendizaje automático adecuada
-> - Preparar los datos
+> - Preparación de los datos
 > - Cargar y transformar los datos
 > - Elegir un algoritmo de aprendizaje
-> - Entrenar el modelo
+> - Entrenamiento del modelo
 > - Usar el modelo para las predicciones
 
 Visite nuestro repositorio de GitHub para obtener más información y encontrar más ejemplos.

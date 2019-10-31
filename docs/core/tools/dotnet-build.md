@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
-ms.date: 10/07/2019
-ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.date: 10/14/2019
+ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522783"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846819"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -32,9 +32,17 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>DESCRIPCIÓN
 
-El comando `dotnet build` crea el proyecto y sus dependencias en un conjunto de archivos binarios. Los archivos binarios incluyen el código del proyecto en archivos de lenguaje intermedio (IL) con una extensión *.dll* y los archivos de símbolos usados para la depuración con una extensión *.pdb*. Se genera un archivo JSON de dependencias ( *.deps.json*) que incluye las dependencias de la aplicación. Se genera un archivo *.runtimeconfig.json*, que especifica el tiempo de ejecución compartido y su versión de la aplicación.
+El comando `dotnet build` crea el proyecto y sus dependencias en un conjunto de archivos binarios. Los archivos binarios incluyen el código del proyecto en archivos de lenguaje intermedio (IL) con una extensión *.dll*.  Según el tipo de proyecto y la configuración, se pueden incluir otros archivos, como los siguientes:
 
-Si el proyecto tiene dependencias de terceros, como bibliotecas de NuGet, estas se resuelven desde la caché de NuGet y no están disponibles en la salida compilada del proyecto. Teniendo eso en cuenta, el producto de `dotnet build` no está listo para transferirse a otra máquina para ejecutarse. Esto contrasta con el comportamiento de .NET Framework en el que al compilar un proyecto ejecutable (una aplicación) se genera ese ejecutable en cualquier máquina donde esté instalado .NET. Para tener una experiencia similar con .NET Core, es necesario usar el comando [dotnet publish](dotnet-publish.md). Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).
+- Un archivo ejecutable que se pueda usar para ejecutar la aplicación, si el tipo de proyecto es un archivo ejecutable que tiene como destino .NET Core 3.0 o versiones posteriores.
+- Archivos de símbolos usados para la depuración con una extensión *.pdb*.
+- Un archivo *.deps.json*, que muestra las dependencias de la aplicación o la biblioteca.
+- Un archivo *.runtimeconfig.json*, que especifica el runtime compartido y su versión de una aplicación.
+- Otras bibliotecas de las que depende el proyecto (a través de referencias de proyecto o referencias de paquetes NuGet).
+
+En el caso de los proyectos ejecutables que tienen como destino versiones anteriores a .NET Core 3.0, las dependencias de biblioteca de NuGet normalmente no se copian en la carpeta de salida.  Se resuelven desde la carpeta de paquetes globales NuGet en tiempo de ejecución. Teniendo eso en cuenta, el producto de `dotnet build` no está listo para transferirse a otra máquina para ejecutarse. Para crear una versión de la aplicación que se pueda implementar, se debe publicar (por ejemplo, con el comando [dotnet publish](dotnet-publish.md)). Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).
+
+En el caso de los proyectos ejecutables que tienen como destino .NET Core 3.0 y versiones posteriores, las dependencias de biblioteca se copian en la carpeta de salida. Esto significa que, si no hay ninguna otra lógica específica de la publicación (como los proyectos web), se debería poder implementar la salida de la compilación.
 
 La compilación requiere el archivo *project.assets.json*, que muestra las dependencias de la aplicación. El archivo se crea cuando se ejecuta [`dotnet restore`](dotnet-restore.md). Sin el archivo de recursos en su lugar, las herramientas no pueden resolver los ensamblados de referencia, lo que se traduce en errores. Con el SDK de .NET Core 1.x, era necesario ejecutar de forma explícita `dotnet restore` antes de ejecutar `dotnet build`. A partir del SDK de .NET Core 2.0, `dotnet restore` se ejecuta implícitamente al ejecutar `dotnet build`. Si quiere deshabilitar la restauración implícita cuando se ejecuta el comando de compilación, puede usar la opción `--no-restore`.
 
@@ -48,7 +56,7 @@ Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputTyp
 </PropertyGroup>
 ```
 
-Para generar una biblioteca, omita la propiedad `<OutputType>`. La principal diferencia en la salida compilada es que la DLL de IL para una biblioteca no contiene puntos de entrada y no se puede ejecutar.
+Para generar una biblioteca, omita la propiedad `<OutputType>` o cambie su valor a `Library`. La DLL de IL para una biblioteca no contiene puntos de entrada y no se puede ejecutar.
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -56,7 +64,7 @@ Para generar una biblioteca, omita la propiedad `<OutputType>`. La principal di
 
 Además de sus opciones, el comando `dotnet build` acepta opciones de MSBuild, como `-p` para establecer propiedades o `-l` para definir un registrador. Para obtener más información sobre estas opciones, vea la [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). O también puede usar el comando [dotnet msbuild](dotnet-msbuild.md).
 
-La ejecución de `dotnet build` es equivalente a `dotnet msbuild -restore -target:Build`.
+Ejecutar `dotnet build` es equivalente a ejecutar `dotnet msbuild -restore`; sin embargo, el nivel de detalle predeterminado de la salida es distinto.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -104,7 +112,7 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Directorio donde se colocan los archivos binarios compilados. También debe definir `--framework` cuando se especifica esta opción. Si no se especifica la ruta de acceso predeterminada es `./bin/<configuration>/<framework>/`.
+  Directorio donde se colocan los archivos binarios compilados. Si no se especifica la ruta de acceso predeterminada es `./bin/<configuration>/<framework>/`.  En el caso de los proyectos con varias plataformas de destino (a través de la propiedad `TargetFrameworks`), también debe definir `--framework` al especificar esta opción.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 

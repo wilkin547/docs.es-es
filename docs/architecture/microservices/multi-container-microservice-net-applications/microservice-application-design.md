@@ -2,12 +2,12 @@
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039811"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772059"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -65,7 +65,7 @@ Para que pueda centrarse en la arquitectura y las tecnologías en lugar de pensa
 
 La aplicación consta de varios subsistemas, incluidos varios front-end de interfaz de usuario de tienda (una aplicación web y una aplicación móvil nativa), junto con los microservicios de back-end y los contenedores para todas las operaciones necesarias del lado servidor con varias puertas de enlace de API como puntos de entrada consolidados a los microservicios internos. En la figura 6-1 se muestra la arquitectura de la aplicación de referencia.
 
-![Los clientes móviles y de SPA se comunican con puntos de conexión de puerta de enlace de API única, que después se comunican con los microservicios. Los clientes web tradicionales se comunican con el microservicio MVC, que se comunica con microservicios](./media/image1.png)
+![Los clientes móviles y de SPA se comunican con puntos de conexión de puerta de enlace de API única, que después se comunican con los microservicios. Los clientes web tradicionales se comunican con el microservicio MVC, que se comunica con los microservicios.](./media/image1.png)
 
 **Figura 6-1**. La arquitectura de aplicación de referencia de eShopOnContainers para el entorno de desarrollo
 
@@ -96,7 +96,7 @@ Por tanto, las unidades de implementación de los microservicios (e incluso de l
 
 Una solución basada en microservicios como esta tiene muchas ventajas:
 
-**Cada microservicio es relativamente pequeño, fácil de administrar y desarrollar**. De manera específica:
+**Cada microservicio es relativamente pequeño, fácil de administrar y desarrollar**. Concretamente:
 
 - Es fácil para los desarrolladores entender y empezar a trabajar rápidamente con buena productividad.
 

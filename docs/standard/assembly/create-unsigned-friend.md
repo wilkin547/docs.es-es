@@ -1,24 +1,24 @@
 ---
-title: Procedimiento para crear ensamblados de confianza sin firmar
+title: 'Procedimientos para: para crear ensamblados de confianza sin firmar'
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9d5699f772dba994b10408d15422faa3c5931f45
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991682"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774340"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>Procedimiento para crear ensamblados de confianza sin firmar
+# <a name="how-to-create-unsigned-friend-assemblies"></a>Procedimientos para: para crear ensamblados de confianza sin firmar
 
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.
 
 ## <a name="create-an-assembly-and-a-friend-assembly"></a>Creación de un ensamblado y un ensamblado de confianza
 
-1. Abra un símbolo del sistema.
+1. Abra el símbolo del sistema.
 
 2. Cree un archivo de C# o de Visual Basic denominado *friend_unsigned_A* que contenga el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar *friend_unsigned_B* como un ensamblado de confianza.
 
@@ -136,7 +136,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   El nombre del ensamblado que genera el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida ( *.exe* o *.dll*) mediante la opción `/out` del compilador. Para obtener más información, vea [-out (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+   El nombre del ensamblado que genera el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida ( *.exe* o *.dll*) mediante la opción `-out` del compilador. Para obtener más información, consulte [-out (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 6. Ejecute el archivo *friend_unsigned_B.exe*.
 
@@ -151,6 +151,6 @@ Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.Inte
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Ensamblados de .NET](index.md)
 - [Ensamblados de confianza](friend.md)
-- [Cómo: Crear ensamblados de confianza firmados](create-signed-friend.md)
+- [Uso de Crear ensamblados de confianza firmados](create-signed-friend.md)
 - [Guía de programación de C#](../../csharp/programming-guide/index.md)
 - [Conceptos de programación (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

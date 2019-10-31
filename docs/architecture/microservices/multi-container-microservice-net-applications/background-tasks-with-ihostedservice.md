@@ -2,12 +2,12 @@
 title: Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las nuevas opciones para usar IHostedService y BackgroundService para implementar tareas en segundo plano en microservicios de .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318682"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770121"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -15,7 +15,7 @@ Las tareas en segundo plano y los trabajos programados son algo que quizá tenga
 
 Desde un punto de vista genérico, en .NET Core este tipo de tareas se llaman *Servicios hospedados*, puesto que son servicios o lógica que se hospedan en el host, la aplicación o el microservicio. Observe que, en este caso, el servicio hospedado simplemente significa una clase con la lógica de la tarea de segundo plano.
 
-Desde la versión 2.0 de .NET Core, el marco proporciona una nueva interfaz denominada <xref:Microsoft.Extensions.Hosting.IHostedService> que le ayuda a implementar fácilmente servicios hospedados. La idea básica es que pueda registrar varias tareas en segundo plano (servicios hospedados), que se ejecutan en segundo plano mientras se ejecuta el host o host web, como se muestra en la imagen 6-26.
+Desde la versión 2.0 de .NET Core, el marco proporciona una nueva interfaz denominada <xref:Microsoft.Extensions.Hosting.IHostedService> que le ayuda a implementar fácilmente servicios hospedados. La idea básica es que pueda registrar varias tareas en segundo plano (servicios hospedados), que se ejecutan en segundo plano mientras se ejecuta el host o host web, tal como se muestra en la imagen 6-26.
 
 ![ASP.NET Core 1.x y 2.x son compatibles con IWebHost para procesos en segundo plano en las aplicaciones web, .NET Core 2.1 es compatible con IHost para procesos en segundo plano con aplicaciones de consola normales.](./media/image26.png)
 
@@ -45,7 +45,7 @@ SignalR es un ejemplo de un artefacto con servicios hospedados, pero también pu
 
 Básicamente, puede descargar cualquiera de esas acciones a una tarea en segundo plano basada en IHostedService.
 
-La manera de agregar uno o varios `IHostedServices` en su `WebHost` o `Host` es registrándolos mediante DI estándar (inserción de dependencias) en `WebHost` de ASP.NET Core (o en `Host` en .NET Core 2.1 y superior). Básicamente, tiene que registrar los servicios hospedados dentro del conocido método `ConfigureServices()` de la clase `Startup`, como se muestra en el código siguiente de un WebHost de ASP.NET típico.
+La forma de agregar uno o varios elementos `IHostedServices` en `WebHost` o `Host` es registrarlos a través del método de extensión <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> en un elemento `WebHost` de ASP.NET Core (o en un elemento `Host` en .NET Core 2.1 y versiones posteriores). Básicamente, tiene que registrar los servicios hospedados dentro del conocido método `ConfigureServices()` de la clase `Startup`, como se muestra en el código siguiente de un WebHost de ASP.NET típico.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -53,9 +53,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     //Other DI registrations;
 
     // Register Hosted Services
-    services.AddSingleton<IHostedService, GracePeriodManagerService>();
-    services.AddSingleton<IHostedService, MyHostedServiceB>();
-    services.AddSingleton<IHostedService, MyHostedServiceC>();
+    services.AddHostedService<GracePeriodManagerService>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -232,19 +232,19 @@ En la siguiente ilustración se muestra un resumen visual de las clases y las in
 
 Es importante tener en cuenta que la forma de implementar su ASP.NET Core `WebHost` o .NET Core `Host` puede afectar a la solución final. Por ejemplo, si implementa su `WebHost` en IIS o en un servicio de Azure App Service normal, el host se puede cerrar debido a reciclajes del grupo de aplicaciones. Pero si va a implementar el host como un contenedor en un orquestador como Kubernetes o Service Fabric, puede controlar el número garantizado de instancias activas del host. Además, podría considerar otros métodos en la nube pensados especialmente para estos escenarios, como Azure Functions. Por último, si necesita que el servicio se ejecute todo el tiempo y se implemente en Windows Server, podría usar un servicio de Windows.
 
-Pero incluso para un `WebHost` implementado en un grupo de aplicaciones, hay escenarios, como el relleno o el vaciado de la memoria caché de la aplicación, en los que sería también aplicable.
+Pero incluso para un elemento `WebHost` implementado en un grupo de aplicaciones, hay escenarios, como el relleno o el vaciado de la memoria caché de la aplicación, en los que sería también aplicable.
 
 La interfaz `IHostedService` proporciona una manera cómoda de iniciar tareas en segundo plano en una aplicación web de ASP.NET (en .NET Core 2.0) o en cualquier proceso o host (a partir de .NET Core 2.1 con `IHost`). La principal ventaja es la oportunidad de obtener con la cancelación correcta un código de limpieza de sus tareas en segundo plano cuando se está cerrando el propio host.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0** (Creación de una tarea programada en ASP.NET Core/Standard 2.0)  
+- **Creación de una tarea programada en ASP.NET Core/Standard 2.0**
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementing IHostedService in ASP.NET Core 2.0** (Implementación de IHostedService en ASP.NET Core 2.0)  
+- **Implementación de IHostedService en ASP.NET Core 2.0**
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **Ejemplo de GenericHost mediante ASP.NET Core 2.1**  
+- **Ejemplo de GenericHost mediante ASP.NET Core 2.1**
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

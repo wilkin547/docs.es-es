@@ -2,12 +2,12 @@
 title: Controlar la reentrada en aplicaciones asincrónicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204300"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772036"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
 
@@ -29,6 +29,9 @@ Cuando se incluye código asincrónico en una aplicación, hay que tener en cuen
 
 > [!NOTE]
 > Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.
+
+> [!NOTE]
+> La versión 1.2 de Seguridad de la capa de transporte (TLS) es ahora la versión mínima que se usará en el desarrollo de la aplicación. Si la aplicación tiene como destino una versión de .NET Framework anterior a la 4.7, consulte el artículo siguiente para obtener [Prácticas recomendadas de Seguridad de la capa de transporte (TLS) con .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Reconocer la reentrada
 
@@ -581,7 +584,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
 4. En la lista de tipos de proyecto, seleccione **Aplicación WPF**.
 
-5. Asigne el nombre `WebsiteDownloadWPF` al proyecto y después haga clic en el botón **Aceptar**.
+5. Asigne un nombre al proyecto `WebsiteDownloadWPF`, elija la versión 4.6 de .NET Framework o una posterior y, después, haga clic en el botón **Aceptar**.
 
      El proyecto nuevo aparece en el **Explorador de soluciones**.
 
@@ -609,7 +612,9 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
      En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un cuadro de texto y un botón.
 
-8. Agregue una referencia para <xref:System.Net.Http>.
+8. En el **Explorador de soluciones**, haga clic con el botón derecho en **Referencias** y seleccione **Agregar referencia**.
+
+     Agregue una referencia para <xref:System.Net.Http>, si aún no está seleccionada.
 
 9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después elija **Ver código**.
 
@@ -641,6 +646,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
         {
             public MainWindow()
             {
+                System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
                 InitializeComponent();
             }
 

@@ -2,18 +2,17 @@
 title: Tecnologías de .NET Framework no disponibles en .NET Core
 description: Más información sobre las tecnologías de .NET Framework no disponibles en .NET Core
 author: cartermp
-ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660596"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846806"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologías de .NET Framework no disponibles en .NET Core
 
-Varias tecnologías disponibles para las bibliotecas de .NET Framework no están disponibles para su uso con .NET Core, por ejemplo, dominios de aplicaciones, comunicación remota, seguridad de acceso del código (CAS) y transparencia de seguridad. Si las bibliotecas se basan en una o varias de estas tecnologías, considere los enfoques alternativos que se describen a continuación. Para más información sobre la compatibilidad con la API, el equipo de CoreFX mantiene una [lista de cambios de comportamiento/interrupciones de compatibilidad y API desusadas/heredadas](https://github.com/dotnet/corefx/wiki/ApiCompat) en GitHub.
+Varias tecnologías disponibles para las bibliotecas de .NET Framework no están disponibles para su uso con .NET Core, por ejemplo, dominios de aplicaciones, comunicación remota, seguridad de acceso del código (CAS) y transparencia de seguridad. Si las bibliotecas se basan en una o varias de estas tecnologías, considere los enfoques alternativos que se describen a continuación. Para obtener más información sobre la compatibilidad de API, consulte el artículo [Cambios importantes en .NET Core](../compatibility/breaking-changes.md).
 
 El hecho de que una API o tecnología no estén implementadas actualmente no implica que sea incompatible deliberadamente. Primero debe buscar en los repositorios de GitHub para .NET Core para ver si un problema determinado que tiene se debe al diseño, pero si no se encuentra este indicador, registre un problema en el [repositorio de problemas dotnet/corefx](https://github.com/dotnet/corefx/issues) en GitHub para solicitar tecnologías y API específicas. [Las solicitudes de portabilidad de los problemas](https://github.com/dotnet/corefx/labels/port-to-core) se marcan con la etiqueta `port-to-core`.
 

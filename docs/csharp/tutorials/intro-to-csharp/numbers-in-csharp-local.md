@@ -3,12 +3,12 @@ title: 'Números en C#: tutorial de introducción a C#'
 description: Obtenga información sobre C# mediante la exploración de tipos numéricos, sus propiedades y métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834101"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774024"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números enteros y de punto flotante en C\#
 
@@ -231,7 +231,7 @@ La respuesta es un número negativo muy grande porque un desbordamiento "se ajus
 
 Hay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Veámoslo a continuación.
 
-Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Asígnele el nombre `TestLimits`.
+Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Denomínelo `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Operaciones con el tipo double
 
@@ -320,8 +320,6 @@ Ha completado el inicio rápido "Números en C#". Puede continuar con la guía d
 
 Puede obtener más información sobre los números en C# en los temas siguientes:
 
-- [Tipos enteros](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Tabla de tipos de punto flotante](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [Tabla de tipos integrados](../../language-reference/keywords/built-in-types-table.md)
-- [Tabla de conversiones numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabla de conversiones numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tipos numéricos integrales](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Tipos numéricos de punto flotante](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [Conversiones numéricas integradas](../../language-reference/builtin-types/numeric-conversions.md)

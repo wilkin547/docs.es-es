@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el empaquetado con NuGet para bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895214"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775313"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -84,7 +84,7 @@ Los paquetes NuGet con un sufijo de versión se consideran de [versión prelimin
 > [!NOTE]
 > Un paquete estable no puede depender de un paquete de versión preliminar. Debe crear su propia versión preliminar de paquete o depender de una versión estable anterior.
 
-![Dependencia de paquete de versión preliminar NuGet](./media/nuget/nuget-prerelease-package.png "NuGet pre-release package dependency")
+![Dependencia del paquete NuGet de versión preliminar](./media/nuget/nuget-prerelease-package.png "Dependencia del paquete NuGet de versión preliminar")
 
 **✔️ DEBE** publicar un paquete de versión preliminar cuando pruebe, obtenga una vista previa o experimente.
 
@@ -99,7 +99,7 @@ NuGet.org hospeda su propio [repositorio del servidor de símbolos](/nuget/creat
 > [!IMPORTANT]
 > El servidor de símbolos de NuGet.org solo es compatible con los nuevos [archivos de símbolos portátiles](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) creados por los proyectos de estilo SDK.
 >
-> Para usar el servidor de símbolos NuGet.org al depurar una biblioteca de .NET, los desarrolladores deben tener Visual Studio 2017 15.9 o posterior.
+> Para usar el servidor de símbolos NuGet.org al depurar una biblioteca de .NET, los desarrolladores deben tener la versión 15.9 de Visual Studio 2017 o una posterior.
 
 Una alternativa a la creación de un paquete de símbolos es insertar los archivos de símbolos en el paquete NuGet principal. El paquete NuGet principal será mayor, pero los archivos de símbolo insertados implican que los desarrolladores no tendrán que configurar el servidor de símbolos de NuGet.org. Si va a crear el paquete NuGet mediante un proyecto de estilo SDK, puede insertar archivos de símbolos estableciendo la propiedad `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 

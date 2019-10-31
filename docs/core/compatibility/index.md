@@ -1,15 +1,13 @@
 ---
 title: Evaluación de los cambios importantes en .NET Core
 description: Conozca las formas en que .NET Core intenta mantener la compatibilidad para los desarrolladores en todas las versiones de .NET.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "67736558"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089344"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Evaluación de los cambios importantes en .NET Core
 
@@ -145,9 +143,9 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
   
   - Interrumpe la [compatibilidad del origen](categories.md#source-compatibility) cuando los desarrolladores utilizan los [argumentos con nombre](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
-- **❌ Cambio de un valor devuelto `ref` para un valor devuelto `ref readonly`**
+- **❌ Cambio de un valor `ref` devuelto a un valor `ref readonly` devuelto**
 
-- **✔️ Cambio de un valor devuelto `ref readonly` a un `ref` en una interfaz o método virtual**
+- **❌ Cambio de un valor `ref readonly` devuelto a un valor `ref` en una interfaz o método virtual**
 
 - **❌ Adición o eliminación del tipo [abstract](../../csharp/language-reference/keywords/abstract.md) de un miembro**
 
@@ -176,7 +174,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
 - **❌ Adición de un constructor a una clase que antes no tenía constructores sin agregar el constructor sin parámetros**
 
-- **❌️ Adición de [readonly](../../csharp/language-reference/keywords/readonly.md) a un campo**
+- **❌ Adición de [readonly](../../csharp/language-reference/keywords/readonly.md) a un campo**
 
 - **❌ Reducción de la visibilidad de un miembro**
 
@@ -213,11 +211,11 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
   Tenga en cuenta que mientras que el rango de valores que se pueden pasar al método o que se devuelven por el miembro puede expandirse, el parámetro o tipo de miembro no pueden. Por ejemplo, mientras que los valores pasados a un método pueden expandirse de 0-124 a 0-255, el tipo de parámetro no puede cambiar de <xref:System.Byte> a <xref:System.Int32>.
 
-- **✔️ Aumento del intervalo de valores aceptados para una propiedad o parámetro si el miembro es [virtual](../../csharp/language-reference/keywords/virtual.md)**
+- **❌ Aumento del intervalo de valores aceptados para una propiedad o parámetro si el miembro es [virtual](../../csharp/language-reference/keywords/virtual.md)**
 
    Este cambio interrumpe los miembros invalidados existentes, que no funcionarán correctamente para la gama extendida de valores.
 
-- **✔️ Disminución del intervalo de valores aceptados para una propiedad o parámetro**
+- **❌ Disminución del intervalo de valores aceptados para una propiedad o parámetro**
 
 - **❌ Aumento del intervalo de valores devueltos para una propiedad, un campo, un valor devuelto o el parámetro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
@@ -266,7 +264,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
 - **✔️ Cambio del valor de un atributo que *no* es observable**
 
-- **✔️ Cambio del valor de un atributo que *es* observable**
+- **❌ Cambio del valor de un atributo que *es* observable**
 
 - **❓ Eliminación de un atributo**
 
@@ -276,7 +274,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
 - **✔️ Admisión de una operación en una plataforma que antes no era posible**
 
-- **❌ No admitir o requerir ahora un Service Pack específico para una operación que antes estaba admitida en una plataforma**.
+- **❌ No admitir o requerir ahora un Service Pack específico para una operación que antes estaba admitida en una plataforma.**
 
 ## <a name="internal-implementation-changes"></a>Cambios de implementación internos
 
@@ -302,7 +300,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
 - **✔️ Adición de [params](../../csharp/language-reference/keywords/params.md) a un parámetro**
 
-- **❌ Cambio de un tipo [struct](../../csharp/language-reference/keywords/struct.md) a un [clase](../../csharp/language-reference/keywords/class.md) y viceversa**
+- **❌ Cambio de un tipo [struct](../../csharp/language-reference/keywords/struct.md) a un tipo [class](../../csharp/language-reference/keywords/class.md) y viceversa**
 
 - **❌ Adición de la palabra clave [checked](../../csharp/language-reference/keywords/virtual.md) a un bloque de código**
 

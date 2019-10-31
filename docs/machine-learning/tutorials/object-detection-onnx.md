@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318531"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774448"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -19,10 +19,10 @@ Aprenda a usar en ML.NET un modelo ONNX previamente entrenado para detectar obje
 
 Entrenar un modelo de detección de objetos desde cero requiere establecer millones de parámetros, una enorme cantidad de datos de aprendizaje etiquetados y una gran cantidad de recursos informáticos (cientos de horas de GPU). El uso de un modelo entrenado previamente le permite abreviar el proceso de entrenamiento.
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 > [!div class="checklist"]
 >
-> - Entender el problema
+> - Comprender el problema
 > - Conocer qué es ONNX y cómo funciona con ML.NET
 > - Entender el modelo
 > - Volver a usar el modelo entrenado previamente
@@ -30,7 +30,7 @@ En este tutorial aprenderá a:
 
 ## <a name="pre-requisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+- [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 - [Paquete NuGet de Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Paquete NuGet de Microsoft.ML.ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Paquete NuGet de Microsoft.ML.OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
@@ -454,7 +454,7 @@ Estupendo. Ahora es el momento de usar este código junto con el modelo para la 
 
 Al igual que con el procesamiento posterior, hay algunos pasos en el procedimiento de puntuación. Para ayudarlo con esto, agregue al proyecto una clase que contendrá la lógica de puntuación.
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *OnnxModelScorer.cs*. A continuación, seleccione el botón **Agregar**.
 
     El archivo *OnnxModelScorer.cs* se abre en el editor de código. Agregue la instrucción `using` siguiente al principio del archivo *OnnxModelScorer.cs*:
@@ -665,9 +665,9 @@ Después de la instrucción try-catch, agregue lógica adicional para indicar qu
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-Ya está.
+Eso es todo.
 
-## <a name="results"></a>Resultados
+## <a name="results"></a>Results
 
 Después de seguir los pasos anteriores, ejecute la aplicación de consola (Ctrl + F5). Los resultados deberían ser similares a la salida siguiente. Es posible que vea advertencias o mensajes de procesamiento, si bien se han quitado de los resultados siguientes para mayor claridad.
 
@@ -705,14 +705,14 @@ Para ver las imágenes con rectángulos delimitadores, desplácese hasta el dire
 
 ![Imagen procesada de ejemplo de un comedor](./media/object-detection-onnx/image3.jpg)
 
-¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para la detección de objetos al reutilizar un modelo de `ONNX` entrenado previamente en ML.NET.
+Felicidades. Ha creado correctamente un modelo de Machine Learning para la detección de objetos al reutilizar un modelo de `ONNX` entrenado previamente en ML.NET.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
 
-En este tutorial ha aprendido a:
+En este tutorial aprendió lo siguiente:
 > [!div class="checklist"]
 >
-> - Entender el problema
+> - Comprender el problema
 > - Conocer qué es ONNX y cómo funciona con ML.NET
 > - Entender el modelo
 > - Volver a usar el modelo entrenado previamente

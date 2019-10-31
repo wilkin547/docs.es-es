@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos enteros - Referencia de C#
 description: Obtenga información sobre el intervalo, el tamaño de almacenamiento y el uso de cada uno de los tipos numéricos enteros.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579194"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773868"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
@@ -100,7 +100,7 @@ El tipo de un literal entero viene determinado por su sufijo, como se indica a c
 
 Si el valor que representa un literal entero supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md).
 
-El valor representado por un literal entero puede convertirse implícitamente en un tipo con un intervalo más pequeño que el tipo determinado del literal. Es posible cuando el valor está dentro del intervalo del tipo de destino:
+Si el tipo determinado de un literal entero es `int` y el valor está dentro del rango del tipo de destino, el valor que representa el literal se puede convertir implícitamente en `sbyte`, `byte`, `short`, `ushort`, `uint` o `ulong`:
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversiones
 
-Hay una conversión implícita (llamada *conversión de ampliación*) entre los dos tipos enteros donde el tipo de destino puede almacenar todos los valores del tipo de origen. Por ejemplo, hay una conversión implícita de `int` a `long` porque el rango de valores de `int` es un subconjunto apropiado de `long`. Hay conversiones implícitas de un tipo entero sin signo más pequeño en un tipo entero con signo de mayor tamaño. También hay una conversión implícita de cualquier tipo entero en cualquier tipo de punto flotante.  No hay ninguna conversión implícita de ningún tipo entero con signo en ningún tipo entero sin signo.
-
-Debe usar una conversión explícita para convertir un tipo entero en otro tipo entero cuando no se define una conversión implícita del tipo de origen en el tipo de destino. Esto se denomina *conversión de restricción*. El caso explícito es necesario porque la conversión puede producir pérdida de datos.
+Puede convertir un tipo numérico entero en cualquier otro tipo numérico entero. Si el tipo de destino puede almacenar todos los valores del tipo de origen, la conversión es implícita. De lo contrario, se necesita usar el [operador de conversión `()`](../operators/type-testing-and-cast.md#cast-operator-) para invocar una conversión explícita. Para obtener más información, consulte [Conversiones numéricas integradas](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -132,8 +130,7 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Tipos de punto flotante](floating-point-numeric-types.md)
-- [Tabla de valores predeterminados](../keywords/default-values-table.md)
-- [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
 - [Tabla de tipos integrados](../keywords/built-in-types-table.md)
+- [Tipos de punto flotante](floating-point-numeric-types.md)
+- [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
 - [Valores numéricos en .NET](../../../standard/numerics.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921805"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774178"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Desbordamientos
 
- Las expresiones numéricas pueden producir desbordamientos si el valor es mayor que el valor máximo del tipo del valor. Para obtener más información, vea [Checked y Unchecked (Referencia de C#)](../../language-reference/keywords/checked-and-unchecked.md) y [Tabla de conversiones numéricas explícitas (Referencia de C#)](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Las expresiones numéricas pueden producir desbordamientos si el valor es mayor que el valor máximo del tipo del valor. Para obtener más información, consulte las secciones [Comprobadas y no comprobadas](../../language-reference/keywords/checked-and-unchecked.md) y [Conversiones numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) del artículo [Conversiones numéricas integradas](../../language-reference/builtin-types/numeric-conversions.md).
   
 ## <a name="operator-precedence-and-associativity"></a>Prioridad y asociatividad de los operadores
 

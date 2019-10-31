@@ -4,18 +4,18 @@ description: Aprenda a crear una aplicación de detección de anomalías para lo
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929056"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774442"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detección de anomalías en ventas de productos con ML.NET
 
 Aprenda a crear una aplicación de detección de anomalías para los datos de ventas de productos. En este tutorial se va a crear una aplicación de consola de .NET Core mediante C# en Visual Studio.
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 > [!div class="checklist"]
 >
 > * Carga de los datos
@@ -28,7 +28,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+* [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
 * [El conjunto de datos product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -125,7 +125,7 @@ Los datos de ML.NET se representan como una [clase IDataView](xref:Microsoft.ML.
 
 ## <a name="time-series-anomaly-detection"></a>Detección de anomalías en una serie temporal
 
-La detección de anomalías marca comportamientos o eventos inesperados o poco habituales. Proporciona pistas sobre dónde buscar problemas y ayuda a responder la pregunta "¿es extraño esto?".
+La detección de anomalías marca eventos o comportamientos inesperados o poco habituales. Proporciona pistas sobre dónde buscar problemas y ayuda a responder la pregunta "¿es extraño esto?".
 
 ![Es extraño esto](./media/sales-anomaly-detection/anomalydetection.png)
 
@@ -367,11 +367,11 @@ Alert   Score   P-Value Martingale value
 0       651.90  0.14    0.09
 ```
 
-¡Enhorabuena! Ya ha creado correctamente los modelos de aprendizaje automático para detectar anomalías de picos y puntos de cambio en los datos de ventas.
+Felicidades. Ya ha creado correctamente los modelos de aprendizaje automático para detectar anomalías de picos y puntos de cambio en los datos de ventas.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
 
-En este tutorial ha aprendido a:
+En este tutorial aprendió lo siguiente:
 > [!div class="checklist"]
 >
 > * Carga de los datos

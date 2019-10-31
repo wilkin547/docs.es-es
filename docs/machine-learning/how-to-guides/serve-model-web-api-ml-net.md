@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179390"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774519"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Implementación de un modelo en una ASP.NET Core Web API
 
@@ -21,7 +21,7 @@ Aprenda cómo publicar un modelo de Machine Learning de ML.NET entrenado previam
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+- [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 - PowerShell.
 - Modelo previamente entrenado. Use el [tutorial de análisis de sentimiento de ML.NET](../tutorials/sentiment-analysis.md) para generar su propio modelo o descargue este [modelo de Machine Learning de análisis de sentimiento entrenado previamente](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip).
 
@@ -62,9 +62,9 @@ Debe crear algunas clases para los datos de entrada y las predicciones. Agregue 
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Quite la definición de clase existente y agregue el código siguiente al archivo **SentimentData.cs**:
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ Debe crear algunas clases para los datos de entrada y las predicciones. Agregue 
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Quite la definición de clase existente y agregue el código siguiente al archivo *SentimentPrediction.cs*:
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,7 +99,7 @@ Debe crear algunas clases para los datos de entrada y las predicciones. Agregue 
     }
     ```
 
-    `SentimentPrediction` hereda de `SentimentData`. Así resulta más fácil ver los datos originales en la propiedad `SentimentText` junto con la salida generada por el modelo. 
+    `SentimentPrediction` hereda de `SentimentData`. Así resulta más fácil ver los datos originales en la propiedad `SentimentText` junto con la salida generada por el modelo.
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Registro de PredictionEngine para usarlo en la aplicación
 
@@ -130,22 +130,22 @@ En el vínculo siguiente se proporciona más información si quiere aprender sob
     }
     ```
 
-En un nivel alto, este código inicializa los objetos y servicios de manera automática para su uso más adelante cuando lo solicite la aplicación en lugar de tener que hacerlo manualmente. 
+En un nivel alto, este código inicializa los objetos y servicios de manera automática para su uso más adelante cuando lo solicite la aplicación en lugar de tener que hacerlo manualmente.
 
-Los modelos de Machine Learning no son estáticos. A medida que haya nuevos datos de entrenamiento disponibles, el modelo se vuelve a entrenar y a implementar. Una manera de obtener la versión más reciente del modelo en la aplicación es volver a implementar toda la aplicación. Sin embargo, esto implica un tiempo de inactividad de la aplicación. El servicio `PredictionEnginePool` proporciona un mecanismo para volver a cargar un modelo actualizado sin dejar inactiva su aplicación. 
+Los modelos de Machine Learning no son estáticos. A medida que haya nuevos datos de entrenamiento disponibles, el modelo se vuelve a entrenar y a implementar. Una manera de obtener la versión más reciente del modelo en la aplicación es volver a implementar toda la aplicación. Sin embargo, esto implica un tiempo de inactividad de la aplicación. El servicio `PredictionEnginePool` proporciona un mecanismo para volver a cargar un modelo actualizado sin dejar inactiva su aplicación.
 
 Establezca el parámetro `watchForChanges` en `true` y el `PredictionEnginePool` inicia un [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) que escucha las notificaciones de cambios en el sistema de archivos y genera eventos cuando se produce un cambio en el archivo. Este solicita al `PredictionEnginePool` que vuelva a cargar automáticamente el modelo.
 
-El modelo se identifica mediante el parámetro `modelName`, por lo que se puede volver a cargar más de un modelo por aplicación tras el cambio. 
+El modelo se identifica mediante el parámetro `modelName`, por lo que se puede volver a cargar más de un modelo por aplicación tras el cambio.
 
 > [!TIP]
 > Como alternativa, puede usar el método `FromUri` al trabajar con modelos almacenados de manera remota. En lugar de ver si hay eventos modificados de archivo, `FromUri` sondea la ubicación remota en busca de cambios. El intervalo de sondeo predeterminado es de 5 minutos. Puede aumentar o disminuir el intervalo de sondeo en función de los requisitos de la aplicación. En el ejemplo de código siguiente, `PredictionEnginePool` sondea el modelo almacenado en el URI especificado cada minuto.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ Para procesar las solicitudes HTTP entrantes, cree un controlador.
     ```
 
     Quite la definición de clase existente y agregue el código siguiente al archivo *PredictController.cs*:
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -207,12 +207,12 @@ Una vez que todo está configurado, es momento de probar la aplicación.
     ```
 
     Si se realiza correctamente, la salida debería ser similar al texto siguiente:
-    
+
     ```powershell
     Negative
     ```
 
-¡Enhorabuena! Publicó correctamente el modelo para realizar predicciones en Internet mediante una ASP.NET Core Web API.
+Felicidades. Publicó correctamente el modelo para realizar predicciones en Internet mediante una ASP.NET Core Web API.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

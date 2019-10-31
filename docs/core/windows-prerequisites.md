@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591673"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771953"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Requisitos previos para .NET Core en Windows
 
@@ -51,7 +51,7 @@ Para vínculos de descarga y más información, vaya a [Descargas de .NET](https
 > Además de KB2999226, asegúrese de que también tiene instalada [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Si no tiene instalada esta actualización, verá un error similar al siguiente al iniciar una aplicación de .NET Core: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Requisitos previos para desarrollar aplicaciones de .NET Core con Visual Studio
-    
+
 Aunque puede usar cualquier editor para desarrollar aplicaciones de .NET Core con el SDK de .NET Core, Visual Studio 2017 y las versiones posteriores proporcionan un entorno de desarrollo integrado para las aplicaciones de .NET Core en Windows.
 
 <a name="vs-mapping"></a>
@@ -86,7 +86,7 @@ En la siguiente imagen se muestra la carga de trabajo **Desarrollo multiplatafor
 
 ![Captura de pantalla de la instalación de Visual Studio 2019 con la carga de trabajo “Desarrollo multiplataforma de .NET Core” seleccionada](./media/windows-prerequisites/vs-2019-workloads.jpg)
 
-Visual Studio 2019 16.3 usa el SDK de .NET Core 3.0 de manera predeterminada una vez que se instala cualquiera de estas cargas de trabajo.
+La versión 16.3 de Visual Studio 2019 usa el SDK de .NET Core 3.0 de manera predeterminada una vez que se instala cualquiera de estas cargas de trabajo.
 
 Si quiere que sus proyectos existentes usen el runtime de .NET Core más reciente, redestine cada uno de los proyectos de .NET Core existentes a .NET Core 3.0 según las instrucciones siguientes:
 
@@ -111,7 +111,7 @@ Para desarrollar aplicaciones .NET Core en Visual Studio 2017 con el SDK de .NET
 ![Captura de pantalla de la instalación de Visual Studio 2017 con la carga de trabajo "Desarrollo multiplataforma de .NET Core" seleccionada](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
 Una vez instalado el conjunto de herramientas **Desarrollo multiplataforma de .NET Core**, Visual Studio habitualmente instala una versión anterior del SDK de .NET Core.
-Por ejemplo, Visual Studio 2017 15.9 usa el SDK de .NET Core 2.1 de manera predeterminada una vez que se instala la carga de trabajo.
+Por ejemplo, la versión 15.9 de Visual Studio 2017 usa el SDK de .NET Core 2.1 de manera predeterminada una vez que se instala la carga de trabajo.
 
 Para actualizar Visual Studio para que use el SDK de .NET Core 2.2:
 

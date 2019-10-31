@@ -2,12 +2,12 @@
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249746"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771115"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -181,7 +181,7 @@ El patrón de comandos está intrínsecamente relacionado con el patrón CQRS qu
 
 Como se muestra en la figura 7-24, el patrón se basa en la aceptación de comandos del lado cliente, su procesamiento según las reglas del modelo de dominio y, por último, la conservación de los estados con transacciones.
 
-![Vista superior del lado de escritura en CQRS: La aplicación de interfaz de usuario envía un comando a través de la API que llega a un elemento CommandHandler, que depende del modelo de dominio y de la infraestructura para actualizar la base de datos.](./media/image21.png)
+![Vista superior del lado de escritura en CQRS: La aplicación de interfaz de usuario envía un comando a través de la API que llega a un elemento CommandHandler, el cual depende del modelo de dominio y de la infraestructura para actualizar la base de datos.](./media/image21.png)
 
 **Figura 7-24.** Vista general de los comandos o el "lado transaccional" en un patrón CQRS
 

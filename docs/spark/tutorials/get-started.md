@@ -4,12 +4,12 @@ description: Sepa cómo ejecutar una aplicación .NET para Apache Spark con .NET
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250322"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774378"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -44,9 +44,9 @@ Antes de empezar, asegúrese de que puede ejecutar `dotnet`, `java`, `mvn` y `sp
     * Use el comando de PowerShell `java -version` para comprobar la instalación.
 
 4. Instale [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi).
-    * Descargue [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip).
-    * Extraiga en un directorio local. Por ejemplo: `c:\bin\apache-maven-3.6.0\`.
-    * Agregue Apache Maven a la [variable de entorno PATH](https://www.java.com/en/download/help/path.xml). Si extrajo en `c:\bin\apache-maven-3.6.0\`, habría que agregar `c:\bin\apache-maven-3.6.0\bin` a PATH.
+    * Descargue [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip).
+    * Extraiga en un directorio local. Por ejemplo: `c:\bin\apache-maven-3.6.2\`.
+    * Agregue Apache Maven a la [variable de entorno PATH](https://www.java.com/en/download/help/path.xml). Si extrajo en `c:\bin\apache-maven-3.6.2\`, habría que agregar `c:\bin\apache-maven-3.6.2\bin` a PATH.
     * Use el comando de PowerShell `mvn -version` para comprobar la instalación.
 
 5. Instale [Apache Spark 2.3+](https://spark.apache.org/downloads.html). Apache Spark 2.4+ no se admite.

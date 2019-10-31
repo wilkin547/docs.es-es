@@ -5,12 +5,12 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 93b2e1a433b5d5b9694257d4d12e47d9107f4cd7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117022"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771923"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Prueba de la salida publicada con vstest dotnet
 
@@ -34,7 +34,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Nota: Si la aplicación tiene como destino un marco distinto de `netcoreapp` todavía puede ejecutar el comando `dotnet vstest` si pasa el marco de destino con una marca de marco. Por ejemplo: `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. En Visual Studio 2017 Update 5, se detecta automáticamente el marco deseado.
+> Nota: Si la aplicación tiene como destino un marco distinto de `netcoreapp`, todavía puede ejecutar el comando `dotnet vstest` si se pasa el marco de destino con una marca de marco. Por ejemplo: `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. En Visual Studio 2017 Update 5 y versiones posteriores, se detecta automáticamente el marco deseado.
 
 ## <a name="see-also"></a>Vea también
 

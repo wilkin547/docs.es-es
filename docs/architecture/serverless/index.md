@@ -4,12 +4,12 @@ description: Guía sobre la arquitectura sin servidor. Obtenga información sobr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093546"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure
 
@@ -43,17 +43,17 @@ El resto de marcas y logotipos pertenece a sus respectivos propietarios.
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , promotor sénior de desarrollo en la nube, APEX, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , promotor de la nube sénior, Microsoft Corp.
 
 Colaborador:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , promotor de desarrollo en la nube II, APEX, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)** , promotor de la nube sénior, Microsoft Corp.
 
 Editores:
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , desarrollador de contenido senior, APEX, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)** , desarrollador de contenido sénior, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , desarrollador de contenido senior, APEX, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)** , desarrolladora de contenido sénior, Microsoft Corp.
 
 Participantes y revisores:
 

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579135"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960827"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -28,7 +28,7 @@ C# 8.0 agrega las siguientes características y mejoras al lenguaje C#:
 - [Índices y rangos](#indices-and-ranges)
 - [Asignación de uso combinado de NULL](#null-coalescing-assignment)
 - [Tipos construidos no administrados](#unmanaged-constructed-types)
-- [stackalloc en expresiones anidadas](#stackalloc-in-nested-expressions)
+- [Stackalloc en expresiones anidadas](#stackalloc-in-nested-expressions)
 - [Mejora de las cadenas textuales interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
 En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
@@ -40,7 +40,7 @@ En el resto de este artículo se describen brevemente estas características. Cu
 
 ## <a name="readonly-members"></a>Miembros de solo lectura
 
-Puede aplicar el modificador `readonly` a cualquier miembro de un struct. Indica que el miembro no modifica el estado. Resulta más pormenorizado que aplicar el modificador `readonly` a una declaración `struct`.  Tenga en cuenta el siguiente struct mutable:
+Puede aplicar el modificador `readonly` a los miembros de una estructura. Indica que el miembro no modifica el estado. Resulta más pormenorizado que aplicar el modificador `readonly` a una declaración `struct`.  Tenga en cuenta el siguiente struct mutable:
 
 ```csharp
 public struct Point
@@ -54,7 +54,7 @@ public struct Point
 }
 ```
 
-Al igual que la mayoría de los structs, el método `ToString()` no modifica el estado. Para indicar eso, podría agregar el modificador `readonly` a la declaración de `ToString()`:
+Al igual que la mayoría de las estructuras, el método `ToString()` no modifica el estado. Para indicar eso, podría agregar el modificador `readonly` a la declaración de `ToString()`:
 
 ```csharp
 public readonly override string ToString() =>
@@ -73,7 +73,9 @@ El compilador le advierte cuando es necesario crear una copia defensiva.  La pro
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Tenga en cuenta que el modificador `readonly` es necesario en una propiedad de solo lectura. El compilador no supone que los descriptores de acceso `get` no modifiquen el estado; debe declarar `readonly` explícitamente. El compilador aplica la regla de que los miembros `readonly` no modifican el estado. El siguiente método no se compilará a menos que quite el modificador `readonly`:
+Tenga en cuenta que el modificador `readonly` es necesario en una propiedad de solo lectura. El compilador no presupone que los descriptores de acceso `get` no modifican el estado; debe declarar `readonly` explícitamente. Las propiedades implementadas automáticamente son una excepción; el compilador tratará todos los captadores implementados automáticamente como de solo lectura, por lo que aquí no es necesario agregar el modificador `readonly` a las propiedades `X` y `Y`.
+
+El compilador aplica la regla por la que los miembros `readonly` no modifican el estado. El método siguiente no se compilará a menos que se quite el modificador `readonly`:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -83,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Esta característica permite especificar la intención del diseño para que el compilador pueda aplicarla, y realizar optimizaciones basadas en dicha intención.
+Esta característica permite especificar la intención del diseño para que el compilador pueda aplicarla, y realizar optimizaciones basadas en dicha intención. Puede obtener más información sobre los miembros de solo lectura en el artículo de referencia de lenguaje en [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples).
 
 ## <a name="default-interface-methods"></a>Métodos de interfaz predeterminados
 
@@ -345,7 +347,7 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Estructuras ref descartables
 
-Un elemento `struct` declarado con el modificador `ref` no puede implementar ninguna interfaz y, por tanto, no puede implementar <xref:System.IDisposable>. Por lo tanto, para permitir que se elimine un elemento `ref struct`, debe tener un método `void Dispose()` accesible. Esto también se aplica a las declaraciones `readonly ref struct`.
+Un elemento `struct` declarado con el modificador `ref` no puede implementar ninguna interfaz y, por tanto, no puede implementar <xref:System.IDisposable>. Por lo tanto, para permitir que se elimine un elemento `ref struct`, debe tener un método `void Dispose()` accesible. Esta característica también se aplica a las declaraciones `readonly ref struct`.
 
 ## <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -402,7 +404,7 @@ Esta compatibilidad con lenguajes se basa en dos nuevos tipos y dos nuevos opera
 
 Comencemos con las reglas de índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence.Length - n`.
 
-Un rango especifica el *inicio* y el *final* de un intervalo. El inicio del intervalo es inclusivo, pero su final es exclusivo, lo que significa que el *inicio* se incluye en el intervalo, pero el *final* no. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo.
+Un rango especifica el *inicio* y el *final* de un intervalo. El inicio del rango es inclusivo, pero su final es exclusivo, lo que significa que el *inicio* se incluye en el rango, pero el *final* no. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo.
 
 Veamos algunos ejemplos. Tenga en cuenta la siguiente matriz, anotada con su índice desde el principio y desde el final:
 
@@ -429,7 +431,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-El siguiente código crea un subrango con las palabras "quick", "brown" y "fox". Va de `words[1]` a `words[3]`. El elemento `words[4]` no está en el rango.
+El siguiente código crea un subrango con las palabras "quick", "brown" y "fox". Va de `words[1]` a `words[3]`. El elemento `words[4]` no se encuentra en el intervalo.
 
 ```csharp
 var quickBrownFox = words[1..4];
@@ -485,7 +487,7 @@ Para obtener más información, consulte [Operadores ?? y ??](../language-refere
 
 ## <a name="unmanaged-constructed-types"></a>Tipos construidos no administrados
 
-En C# 7.3 y versiones anteriores, un tipo construido (un tipo que incluye al menos un argumento de tipo) no puede ser un [tipo no administrado](../language-reference/builtin-types/unmanaged-types.md). A partir de C# 8.0, un tipo de valor construido no está administrado si solo contiene campos de tipos no administrados.
+En C# 7.3 y versiones anteriores, un tipo construido (es decir, un tipo que incluye al menos un argumento de tipo) no puede ser un [tipo no administrado](../language-reference/builtin-types/unmanaged-types.md). A partir de C# 8.0, un tipo de valor construido no está administrado si solo contiene campos de tipos no administrados.
 
 Por ejemplo, dada la siguiente definición del tipo genérico `Coords<T>`:
 
@@ -510,7 +512,7 @@ Span<Coords<int>> coordinates = stackalloc[]
 
 Para más información, consulte [Tipos no administrados](../language-reference/builtin-types/unmanaged-types.md).
 
-## <a name="stackalloc-in-nested-expressions"></a>stackalloc en expresiones anidadas
+## <a name="stackalloc-in-nested-expressions"></a>Stackalloc en expresiones anidadas
 
 A partir de C# 8.0, si el resultado de una expresión [stackalloc](../language-reference/operators/stackalloc.md) es del tipo <xref:System.Span%601?displayProperty=nameWithType> o <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, puede usar la expresión `stackalloc` en otras expresiones:
 

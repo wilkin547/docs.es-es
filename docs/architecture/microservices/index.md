@@ -2,12 +2,12 @@
 title: Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Los microservicios son servicios modulares que se pueden implementar de forma independiente. Los contenedores de Docker (para Linux y Windows) simplifican la implementación y las pruebas mediante la unión de un servicio y sus dependencias en una sola unidad que, después, se ejecuta en un entorno aislado.
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089909"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor
 
@@ -15,16 +15,16 @@ ms.locfileid: "70848864"
 
 **EDICIÓN v2.2**: actualizada a ASP.NET Core 2.2
 
-Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker. 
+Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker.
 
 Para que sea más fácil empezar a trabajar, la guía se centra en una aplicación de referencia en contenedor y basada en microservicios que puede explorar. La aplicación de referencia está disponible en el repositorio de GitHub [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
 ## <a name="action-links"></a>Vínculos de acción
 
-- Descargue este libro electrónico en el formato que prefiera: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- Descargue este libro electrónico en el formato que prefiera (solo disponible en inglés): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - Clone o bifurque la aplicación de referencia [eShopOnContainers en GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
- 
+
 - Vea el [vídeo de introducción en Channel 9](https://aka.ms/microservices-video)
 
 - Conozca la [arquitectura de microservicios](https://aka.ms/MicroservicesArchitecture) inmediatamente
@@ -47,7 +47,7 @@ Una vez que haya estudiado esta guía, el siguiente paso que debería dar es obt
 
 ## <a name="version"></a>Versión
 
-Esta guía se ha revisado para tratar la versión **.NET Core 2.2**, además de muchas actualizaciones adicionales relacionadas con la misma “oleada” de tecnologías (es decir, tecnologías de Azure y tecnologías adicionales de terceros) que coincidan en el tiempo con .NET Core 2.2. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **2.2**. 
+Esta guía se ha revisado para tratar la versión **.NET Core 2.2**, además de muchas actualizaciones adicionales relacionadas con la misma “oleada” de tecnologías (es decir, tecnologías de Azure y tecnologías adicionales de terceros) que coincidan en el tiempo con .NET Core 2.2. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **2.2**.
 
 ## <a name="what-this-guide-does-not-cover"></a>Aspectos no tratados en esta guía
 
@@ -72,7 +72,7 @@ La segunda parte de la guía comienza con la sección [Proceso de desarrollo de 
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Aplicación de referencia relacionada de microservicios y basada en contenedor: eShopOnContainers
 
-La aplicación eShopOnContainers es una aplicación de referencia de código abierto para .NET Core y microservicios que está diseñada para implementarse mediante contenedores de Docker. La aplicación consta de varios subsistemas, incluidos varios front-end de interfaz de usuario de almacén electrónico (una aplicación web de MVC, una SPA web y una aplicación móvil nativa). También incluye microservicios y contenedores de back-end para todas las operaciones del lado servidor necesarias. 
+La aplicación eShopOnContainers es una aplicación de referencia de código abierto para .NET Core y microservicios que está diseñada para implementarse mediante contenedores de Docker. La aplicación consta de varios subsistemas, incluidos varios front-end de interfaz de usuario de almacén electrónico (una aplicación web de MVC, una SPA web y una aplicación móvil nativa). También incluye microservicios y contenedores de back-end para todas las operaciones del lado servidor necesarias.
 
 El propósito de la aplicación es presentar patrones arquitectónicos. **NO SE TRATA DE UNA PLANTILLA LISTA PARA PRODUCCIÓN** para iniciar aplicaciones del mundo real. De hecho, la aplicación se encuentra en un estado beta permanente, ya que también se usa para probar nuevas tecnologías potencialmente interesantes a medida que aparecen.
 

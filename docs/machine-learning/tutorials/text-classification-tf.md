@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 417abb5052df95c8496d97894d3e11d2956d7a1a
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700942"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774397"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -19,7 +19,7 @@ En este tutorial se muestra cómo usar un modelo de TensorFlow previamente entre
 
 El modelo de TensorFlow que se usa en este tutorial se entrenó con reseñas de películas procedentes de la base de datos de IMDB. Cuando haya terminado de desarrollar la aplicación, podrá proporcionar el texto de la reseña de la película y la aplicación le indicará si la reseña tiene una opinión positiva o negativa.
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 > [!div class="checklist"]
 >
 > * Carga de un modelo de TensorFlow entrenado previamente
@@ -30,11 +30,11 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+* [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
-## <a name="setup"></a>Programa de instalación
+## <a name="setup"></a>Configuración
 
-### <a name="create-the-application"></a>Crear la aplicación
+### <a name="create-the-application"></a>Creación de la aplicación
 
 1. Cree una **aplicación de consola de .NET Core** denominada "TextClassificationTF".
 
@@ -81,14 +81,14 @@ Las reseñas de películas son texto de forma libre. La aplicación convierte el
 
 La primera consiste en dividir el texto en palabras independientes y usar el archivo de asignación proporcionado para asignar cada palabra a una codificación de enteros. El resultado de esta transformación es una matriz de enteros de longitud variable cuya longitud corresponde al número de palabras de la oración.
 
-|Propiedad.| Valor|Tipo|
+|Propiedad| Valor|type|
 |-------------|-----------------------|------|
 |ReviewText|Esta película es realmente buena|cadena|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 
 El tamaño de la matriz de características de longitud variable se cambia a una longitud fija de 600. Esta es la longitud que espera el modelo de TensorFlow.
 
-|Propiedad.| Valor|Tipo|
+|Propiedad| Valor|type|
 |-------------|-----------------------|------|
 |ReviewText|Esta película es realmente buena|cadena|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
@@ -132,7 +132,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
 1. Cree un diccionario para codificar palabras como enteros mediante el método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) para cargar los datos de asignación de un archivo, como se aprecia en la tabla siguiente:
 
-    |Palabra     |Índice    |
+    |Word     |Índice    |
     |---------|---------|
     |niños     |  362    |
     |want     |  181    |
@@ -211,7 +211,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite realizar una predicción en una única instancia de datos. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) no es seguro para subprocesos. Es aceptable usarlo en entornos de un solo subproceso o prototipo. Para mejorar el rendimiento y la seguridad para subprocesos en entornos de producción, use el servicio `PredictionEnginePool`, que crea un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos de [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para su uso en toda la aplicación. Consulte esta guía sobre cómo [usar `PredictionEnginePool` en una API web de ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
     > [!NOTE]
     > La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
@@ -226,7 +226,7 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
 1. La función [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) realiza una predicción sobre una sola fila de datos:
 
-    |Propiedad.| Valor|Tipo|
+    |Propiedad| Valor|type|
     |-------------|-----------------------|------|
     |Predicción|[0.5459937, 0.454006255]|float[]|
 
@@ -238,9 +238,9 @@ La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para to
 
     [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
 
-## <a name="results"></a>Resultados
+## <a name="results"></a>Results
 
-Compile y ejecute su aplicación.
+Compile y ejecute la aplicación.
 
 Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Estos mensajes se han quitado de los resultados siguientes para mayor claridad.
 
@@ -249,11 +249,11 @@ Number of classes: 2
 Is sentiment/review positive ? Yes
 ```
 
-¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para clasificar y predecir la opinión de los mensajes reutilizando un modelo de `TensorFlow` entrenado previamente en ML.NET.
+Felicidades. Ha creado correctamente un modelo de Machine Learning para clasificar y predecir la opinión de los mensajes reutilizando un modelo de `TensorFlow` entrenado previamente en ML.NET.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-En este tutorial ha aprendido a:
+En este tutorial aprendió lo siguiente:
 > [!div class="checklist"]
 >
 > * Carga de un modelo de TensorFlow entrenado previamente

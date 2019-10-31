@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306327"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774564"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Cómo instalar el Generador de modelos de ML.NET
 
@@ -21,7 +21,7 @@ Obtenga información sobre cómo instalar el Generador de modelos de ML.NET para
 
 ## <a name="pre-requisites"></a>Requisitos previos
 
-- Visual Studio 2017 15.9.12 o posterior / Visual Studio 2019
+- Visual Studio 2017, versión 15.9.12 o una posterior/Visual Studio 2019
 - .NET Core 2.1 o SDK posterior
 
 ## <a name="limitations"></a>Limitaciones
@@ -31,9 +31,9 @@ Obtenga información sobre cómo instalar el Generador de modelos de ML.NET para
 - SQL Server tiene un límite de 100 000 filas para el entrenamiento
 - No admite Microsoft SQL Server Data Tools para Visual Studio 2017
 
-## <a name="install"></a>Instalar
+## <a name="install"></a>Instalación
 
-El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketplace o desde el propio Visual Studio. 
+El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketplace o desde el propio Visual Studio.
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
 
@@ -66,7 +66,7 @@ El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketpl
 
 1. Siga las indicaciones para completar la instalación.
 
-## <a name="uninstall"></a>Desinstalar
+## <a name="uninstall"></a>Desinstalación
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -94,6 +94,6 @@ El Generador de modelos de ML.NET se puede instalar desde Visual Studio Marketpl
 
 1. Siga las indicaciones para completar la desinstalación.
 
-## <a name="upgrade"></a>Actualización:
+## <a name="upgrade"></a>Actualizar
 
 El proceso de actualización es similar al proceso de instalación. Descargue la versión más reciente desde Visual Studio Marketplace o use el Administrador de extensiones de Visual Studio.

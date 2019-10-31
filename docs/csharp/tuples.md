@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319754"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774055"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C#
 
@@ -77,7 +77,7 @@ Para cualquier campo en el que no se proporcione un nombre explícito, se proyec
 
 Hay dos condiciones donde los nombres de campo de candidato no se proyectan en el campo de la tupla:
 
-1. Cuando el nombre del candidato es un nombre de tupla reservado. Entre los ejemplos se incluyen `Item3`, `ToString` o `Rest`.
+1. Cuando el nombre del candidato es un nombre de tupla reservado. Los ejemplos incluyen `Item3`, `ToString` o `Rest`.
 1. Cuando el nombre del candidato es un duplicado de otro nombre de campo de tupla, ya sea explícita o implícita.
 
 Estas condiciones evitan la ambigüedad. Estos nombres podrían causar una ambigüedad si se usan como nombres de campo para un campo de una tupla. Ninguna de estas condiciones causan errores en tiempo de compilación. En su lugar, los elementos sin nombres proyectados no tienen nombres semánticos proyectados para ellos.  Los ejemplos siguientes explican estas condiciones:

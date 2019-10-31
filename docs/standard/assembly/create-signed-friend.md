@@ -1,23 +1,23 @@
 ---
-title: Procedimiento para crear ensamblados de confianza firmados
+title: 'Procedimientos para: para crear ensamblados de confianza firmados'
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 52ecfbae11c7be125d0e60a0fce6a05182e2db9e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523887"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774363"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a>Procedimiento para crear ensamblados de confianza firmados
+# <a name="how-to-create-signed-friend-assemblies"></a>Procedimientos para: para crear ensamblados de confianza firmados
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>Creación de un ensamblado firmado y un ensamblado de confianza  
   
-1. Abra un símbolo del sistema.  
+1. Abra el símbolo del sistema.  
   
 2. Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (herramienta de nombre seguro)](../../framework/tools/sn-exe-strong-name-tool.md).  
   
@@ -117,7 +117,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
    
-   El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida ( *.exe* o *.dll*) mediante la opción `/out` del compilador. Para obtener más información, vea [-out (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
+   El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida ( *.exe* o *.dll*) mediante la opción `-out` del compilador. Para obtener más información, consulte [-out (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) o [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
    
 7. Ejecute el archivo *friend_signed_B.exe*.  
    
@@ -131,7 +131,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Ensamblados de .NET](index.md)
 - [Ensamblados de confianza](friend.md)
-- [Cómo: Crear ensamblados de confianza sin firmar](create-unsigned-friend.md)
+- [Uso de Crear ensamblados de confianza sin firmar](create-unsigned-friend.md)
 - [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (herramienta de nombre seguro)](../../framework/tools/sn-exe-strong-name-tool.md)

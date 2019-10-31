@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4f805c638df9e60160c27fa08995ce393e59d007
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321278"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774529"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implementación de un modelo en Azure Functions
 
@@ -21,7 +21,7 @@ Aprenda cómo implementar un modelo de Machine Learning de ML.NET previamente en
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2017 15.6 o versión posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" y el "desarrollo de Azure" instalados.
+- [Visual Studio 2017, versión 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" y el "desarrollo de Azure" instalados.
 - Paquete NuGet Microsoft.NET.Sdk.Functions, versión 1.0.28 y posterior.
 - [Herramientas de Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
@@ -60,7 +60,7 @@ Aprenda cómo implementar un modelo de Machine Learning de ML.NET previamente en
 
 Cree una clase para predecir sentimientos. Agregue una nueva clase a su proyecto:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
 
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Función de Azure** y cambie el campo **Nombre** a *AnalyzeSentiment.cs*. A continuación, seleccione el botón **Agregar**.
 
@@ -112,7 +112,7 @@ Para hacer una sola predicción, debe crear un [`PredictionEngine`](xref:Microso
 
 En el vínculo siguiente se proporciona más información si quiere aprender más sobre la [inserción de dependencias](https://en.wikipedia.org/wiki/Dependency_injection).
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *Startup.cs*. A continuación, seleccione el botón **Agregar**.
 
     Se abre el archivo *Startup.cs* en el editor de código. Agregue la instrucción using siguiente en la parte superior del archivo *Startup.cs*:
@@ -151,12 +151,12 @@ El modelo se identifica mediante el parámetro `modelName`, por lo que se puede 
 
 > [!TIP]
 > Como alternativa, puede usar el método `FromUri` al trabajar con modelos almacenados de manera remota. En lugar de ver si hay eventos modificados de archivo, `FromUri` sondea la ubicación remota en busca de cambios. El intervalo de sondeo predeterminado es de 5 minutos. Puede aumentar o disminuir el intervalo de sondeo en función de los requisitos de la aplicación. En el ejemplo de código siguiente, `PredictionEnginePool` sondea el modelo almacenado en el URI especificado cada minuto.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -201,7 +201,7 @@ Cuando se ejecuta el método `Run`, los datos entrantes de la solicitud HTTP se 
 
 Ahora que está todo configurado, es momento de probar la aplicación:
 
-1. Ejecutar la aplicación
+1. Ejecución de la aplicación
 1. Abra PowerShell y escriba el código en el símbolo del sistema, donde PORT es el puerto en que se ejecuta la aplicación. Por lo general, se trata del puerto 7071.
 
     ```powershell
@@ -214,7 +214,7 @@ Ahora que está todo configurado, es momento de probar la aplicación:
     Negative
     ```
 
-¡Enhorabuena! Publicó correctamente el modelo para realizar predicciones en Internet mediante una función de Azure.
+Felicidades. Publicó correctamente el modelo para realizar predicciones en Internet mediante una función de Azure.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

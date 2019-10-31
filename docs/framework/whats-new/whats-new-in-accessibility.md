@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cfea1d5ee19d9fb61094b60e0175ddfd2f120494
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774284"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novedades de accesibilidad en .NET Framework
 
@@ -24,7 +24,7 @@ ms.locfileid: "71053722"
 
 Puede configurar la aplicación para que opte por recibir características de accesibilidad si su destino es .NET Framework 4.7 o una versión anterior, pero se ejecuta en .NET Framework 4.7.1 o una versión posterior. También la puede configurar para que use características heredadas (en vez de aprovechar las ventajas de las características de accesibilidad) si su destino es .NET Framework 4.7.1 o una versión posterior. Cada versión de .NET Framework que incluya características de accesibilidad cuenta con un modificador de accesibilidad específico de la versión correspondiente, que se agrega al elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) en la sección [`<runtime>`](../configure-apps/file-schema/runtime/index.md) del archivo de configuración de la aplicación. Estos son los modificadores admitidos:
 
-|Versión|Modificador|
+|Versión|Switch|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -474,7 +474,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Contraste alto**
 
-A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en diversos controles de WPF. Ahora son visibles cuando el tema <xref:System.Windows.SystemParameters.HighContrast%2A> está establecido. Se incluyen los siguientes:
+A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en diversos controles de WPF. Ahora son visibles cuando el tema <xref:System.Windows.SystemParameters.HighContrast%2A> está establecido. Entre ellas se incluyen las siguientes:
 
 - Control <xref:System.Windows.Controls.Expander>
 
@@ -628,7 +628,7 @@ A partir de .NET Framework 4.7.1, Windows Forms incluye:
 
 ### <a name="aspnet-web-controls"></a>Controles web ASP.NET
 
-A partir de .NET Framework 4.7.1 y Visual Studio 2017 15.3, ASP.NET mejora el funcionamiento de los controles web ASP.NET con la tecnología de accesibilidad en Visual Studio. Los cambios son los siguientes:
+A partir de .NET Framework 4.7.1 y la versión 15.3 de Visual Studio 2017, ASP.NET mejora el funcionamiento de los controles web ASP.NET con la tecnología de accesibilidad en Visual Studio. Los cambios son los siguientes:
 
 - Cambios para implementar patrones de accesibilidad de interfaz de usuario que faltan en los controles, como el cuadro de diálogo **Agregar campo** en el **Asistente para vistas de detalles** o el cuadro de diálogo **Configurar ListView** del **Asistente de ListView**.
 

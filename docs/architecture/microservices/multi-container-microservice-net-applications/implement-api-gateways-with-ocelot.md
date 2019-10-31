@@ -2,12 +2,12 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676192"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771183"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -390,7 +390,7 @@ En el diagrama siguiente, también se puede ver cómo funcionan los servicios de
 
 Al ampliar más el área empresarial "Shopping" de la imagen siguiente, se puede ver que al usar los servicios agregadores de las puertas de enlace de API se reduce el intercambio de mensajes entre las aplicaciones cliente y los microservicios.
 
-![Ampliación de la arquitectura de eShopOnContainers, en la que se muestran los servicios de agregador, y en la que se "construye" una respuesta que "combina" la respuesta de varios microservicios para reducir el intercambio de mensajes con el cliente final.](./media/image38.png)
+![Acercar la arquitectura de eShopOnContainers, en la que se muestran los servicios de agregador y en la que se "construye" una respuesta que "combina" la respuesta de varios microservicios para reducir el intercambio de mensajes con el cliente final.](./media/image38.png)
 
 **Figura 6-38**. Visión ampliada de los servicios de agregador
 
