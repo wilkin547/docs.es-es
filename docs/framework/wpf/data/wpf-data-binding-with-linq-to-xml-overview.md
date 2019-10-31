@@ -2,12 +2,12 @@
 title: Enlace de datos de WPF con LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139808"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197394"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Información general sobre el enlace de datos de WPF con LINQ to XML
 
@@ -36,7 +36,7 @@ El enlace de datos en WPF permite a un elemento de interfaz de usuario asociar u
 |Origen de enlace|Objeto de origen para uno o más valores que se proporcionan al elemento de la IU para la presentación. WPF admite automáticamente los siguientes tipos como orígenes de enlace: objetos CLR, objetos de datos ADO.NET, datos XML (de consultas XPath o LINQ to XML) u otro <xref:System.Windows.DependencyObject>.|
 |Ruta de acceso de origen|Propiedad del origen de enlace que se resuelve en valor o conjunto de valores que debe enlazar.|
 
-Una propiedad de dependencia es un concepto específico de WPF que representa una propiedad calculada dinámicamente de un elemento de IU. Por ejemplo, las propiedades de dependencia suelen presentar valores predeterminados o valores proporcionados por un elemento primario. Estas propiedades especiales están asistidas por instancias de la clase <xref:System.Windows.DependencyProperty> (y no campos como en las propiedades estándar). Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+Una propiedad de dependencia es un concepto específico de WPF que representa una propiedad calculada dinámicamente de un elemento de IU. Por ejemplo, las propiedades de dependencia suelen presentar valores predeterminados o valores proporcionados por un elemento primario. Estas propiedades especiales están asistidas por instancias de la clase <xref:System.Windows.DependencyProperty> (y no campos como en las propiedades estándar). Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md).
 
 ### <a name="dynamic-data-binding-in-wpf"></a>Enlace de datos dinámicos en WPF
 
@@ -89,6 +89,6 @@ Para implementar el enlace dinámico en WPF, se usarán las propiedades dinámic
 
 - [Enlace de datos WPF con LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Propiedades dinámicas de LINQ to XML](linq-to-xml-dynamic-properties.md)
-- [XAML en WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [XAML en WPF](../advanced/xaml-in-wpf.md)
 - [Enlace de datos (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
 - [Uso del marcado de flujo de trabajo](https://go.microsoft.com/fwlink/?LinkId=98685)

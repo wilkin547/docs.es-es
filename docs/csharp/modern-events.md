@@ -3,12 +3,12 @@ title: Patrón de eventos actualizado de .NET Core
 description: Obtenga información sobre cómo el patrón de eventos de .NET Core permite la flexibilidad con la compatibilidad con versiones anteriores y cómo implementar un procesamiento de eventos seguro con suscriptores asincrónicos.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751788"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798883"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Patrón de eventos actualizado de .NET Core
 
@@ -71,7 +71,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-En primer lugar, observe que el controlador está marcado como un controlador asincrónico. Dado que se va a asignar a un tipo de delegado de controlador de eventos, tendrá un tipo de valor devuelto void. Esto significa que debe seguir el patrón que se muestra en el controlador y no debe permitir que se produzca ninguna excepción fuera del contexto del controlador asincrónico. Como no devuelve una tarea, no hay ninguna tarea que pueda notificar el error entrando en el estado de error. Dado que el método es asincrónico, no puede producir la excepción. (El método de llamada ha continuado con la ejecución porque es `async`). El comportamiento real en tiempo de ejecución se definirá de forma diferente para diferentes entornos. Puede finalizar el subproceso, finalizar el programa o dejar el programa en un estado indeterminado. Ninguno de estos resultados es bueno.
+En primer lugar, observe que el controlador está marcado como un controlador asincrónico. Dado que se va a asignar a un tipo de delegado de controlador de eventos, tendrá un tipo de valor devuelto void. Esto significa que debe seguir el patrón que se muestra en el controlador y no debe permitir que se produzca ninguna excepción fuera del contexto del controlador asincrónico. Como no devuelve una tarea, no hay ninguna tarea que pueda notificar el error entrando en el estado de error. Dado que el método es asincrónico, no puede producir la excepción. (El método de llamada ha continuado con la ejecución porque es `async`). El comportamiento real en tiempo de ejecución se definirá de forma diferente para diferentes entornos. Se puede terminar el subproceso o el proceso que posee el subproceso, o dejar el proceso en un estado indeterminado. Todas estas salidas potenciales son altamente no deseables.
 
 Por eso debe encapsular la instrucción await para la tarea asincrónica en su propio bloque try. Si esto genera una tarea con error, puede registrar el error. Si se produce un error del que no se puede recuperar la aplicación, puede salir del programa de forma rápida y correctamente.
 

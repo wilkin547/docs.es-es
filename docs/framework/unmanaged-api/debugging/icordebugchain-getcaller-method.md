@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192132"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller (Método)
-Obtiene la cadena que llamó esta cadena.  
+Obtiene la cadena que llamó a esta cadena.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parámetros  
  `ppChain`  
- [out] Un puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada.  
+ enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada.  
   
- Si esta cadena se llamó espontáneamente (como sería el caso si esta cadena o el depurador de inicializa la pila de llamadas), `ppChain` será null.  
+ Si se llamó a esta cadena espontáneamente (como sería el caso si esta cadena o el depurador inicializara la pila de llamadas), `ppChain` será null.  
   
 ## <a name="remarks"></a>Comentarios  
- La cadena de llamada puede ser en un subproceso diferente, si se calculan las referencias de la llamada a través de subprocesos.  
+ La cadena de llamada puede estar en un subproceso diferente, si se serializó la llamada entre subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

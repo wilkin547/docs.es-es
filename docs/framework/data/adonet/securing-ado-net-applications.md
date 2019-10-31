@@ -2,12 +2,12 @@
 title: Proteger aplicaciones de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795060"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196720"
 ---
 # <a name="securing-adonet-applications"></a>Proteger aplicaciones de ADO.NET
 Para escribir una aplicación de ADO.NET segura es necesario algo más que evitar los errores de codificación más comunes, como no validar los datos proporcionados por el usuario. Una aplicación que tiene acceso a datos tiene muchos puntos débiles potenciales que un agresor puede aprovechar para obtener, manipular o destruir datos confidenciales. Por eso es importante comprender todos los aspectos de la seguridad, desde el proceso de modelo de amenazas durante la fase de diseño de su aplicación hasta la implementación y el posterior mantenimiento.  
@@ -48,7 +48,7 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
  [Recursos para crear aplicaciones seguras](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Proporciona vínculos a temas para crear aplicaciones seguras.  
   
- [Bibliografía sobre seguridad](/visualstudio/ide/security-bibliography)  
+ [Bibliografía sobre seguridad](/visualstudio/ide/securing-applications)  
  Proporciona vínculos a recursos externos disponibles en línea e impresos.  
   
 ## <a name="see-also"></a>Vea también

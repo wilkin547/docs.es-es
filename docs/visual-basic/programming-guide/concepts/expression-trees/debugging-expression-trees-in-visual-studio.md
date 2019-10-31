@@ -2,12 +2,12 @@
 title: Depurar árboles de expresión en Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 51579c74ecbebbfb7da8bf20bef7592980ec437c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b27ab41f3c3d9bd488fd0f7aaa5010f2997946de
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320370"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198272"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Depurar árboles de expresión en Visual Studio (Visual Basic)
 Se puede analizar la estructura y el contenido de los árboles de expresión cuando se depuran las aplicaciones. Para obtener una introducción rápida a la estructura del árbol de expresión, puede usar la propiedad `DebugView`, que representa los árboles de expresión [con una sintaxis especial](debugview-syntax.md). Observe que `DebugView` solo está disponible en modo de depuración.  
@@ -22,7 +22,7 @@ Como alternativa, puede instalar y usar [un visualizador personalizado](https://
 
 - [Readable Expressions](https://github.com/agileobjects/ReadableExpressions) ([licencia MIT](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), disponible en [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)), representa el árbol de expresión como código de C#:
 
-  ![Captura de pantalla del visualizador de expresiones legibles.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
+  ![Captura de pantalla del visualizador Readable Expressions.](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
 - El [visualizador de árbol de expresión](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([licencia MIT](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)) proporciona una vista gráfica del árbol de expresión, sus propiedades y los objetos relacionados. y pueden representar el árbol de expresión utilizando Visual Basic código:
 
@@ -41,6 +41,6 @@ Como alternativa, puede instalar y usar [un visualizador personalizado](https://
 ## <a name="see-also"></a>Vea también
 
 - [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Depurar en Visual Studio](/visualstudio/debugger/debugger-feature-tour)
 - [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data) (Crear visualizadores personalizados)
 - [Sintaxis `DebugView`](debugview-syntax.md)

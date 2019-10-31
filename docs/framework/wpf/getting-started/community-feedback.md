@@ -1,5 +1,5 @@
 ---
-title: Comentarios de la Comunidad WPF
+title: Comentarios de la comunidad de WPF
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053148"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196998"
 ---
-# <a name="wpf-community-feedback"></a>Comentarios de la Comunidad WPF
+# <a name="wpf-community-feedback"></a>Comentarios de la comunidad de WPF
 
-Microsoft ofrece una amplia gama de recursos de la Comunidad para que pueda conocer, analizar y proporcionar comentarios sobre Windows Presentation Foundation (WPF). Estos recursos incluyen foros y [Comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/) sitio. Cada recurso de comunidad proporciona un conjunto diferente de ventajas. Estas ventajas se describen aquí, así como un conjunto de procedimientos recomendados para asegurarse la mejor respuesta de la Comunidad y Microsoft en particular.
+Microsoft ofrece una amplia variedad de recursos de la comunidad para que pueda obtener información acerca de los Windows Presentation Foundation (WPF) y proporcionar comentarios sobre ellos. Estos recursos incluyen foros y el sitio de la [comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/) . Cada recurso de comunidad proporciona un conjunto diferente de ventajas. Estas ventajas se describen aquí, así como un conjunto de prácticas recomendadas para usar cada una de ellas para garantizar la mejor respuesta de la comunidad en gran medida y en Microsoft en particular.
 
 > [!NOTE]
-> No use la sección de comentarios en la parte inferior de cada página para enviar comentarios sobre el producto. Estos vínculos son solo para comentarios sobre la documentación.
+> No utilice la sección de comentarios que se encuentra en la parte inferior de cada página para enviar comentarios sobre el producto. Estos vínculos son solo para comentarios sobre la documentación.
 
 ## <a name="forums"></a>Foros
 
-El [foro de WPF](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) es el recurso principal de la Comunidad para debatir y resolver problemas. Los foros facilitan el debate y la resolución de problemas al ofrecer un conjunto completo de características de compatibilidad que incluyen:
+El [Foro de WPF](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) es el recurso de la comunidad principal para tratar y resolver problemas. Los foros facilitan el debate y la resolución de problemas al ofrecer un conjunto completo de características de compatibilidad que incluyen:
 
 - Búsqueda.
 - Seguimiento de debates.
@@ -33,43 +33,43 @@ El [foro de WPF](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf
 - Implicación de los profesionales más valiosos (MVP) y de la comunidad.
 - Supervisión para asegurarse de que las publicaciones se responden en el menor tiempo posible.
 
-Otra opción para formular preguntas a la Comunidad sobre WPF es [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf).
+Otra opción para hacer preguntas a la comunidad sobre WPF es [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf).
 
-### <a name="forum-best-practices"></a>Prácticas recomendadas de foro
+### <a name="forum-best-practices"></a>Prácticas recomendadas del Foro
 
-Gracias a las siguientes mejores prácticas para resolver problemas publicados en el foro WPF en el menor tiempo posible. Estos procedimientos se aplican a todos los foros.
+El uso de los procedimientos recomendados siguientes ayuda a solucionar los problemas publicados en el foro de WPF en el tiempo más rápido posible. Estos procedimientos se aplican a todos los foros.
 
 #### <a name="search-existing-posts"></a>Buscar publicaciones existentes
 
 Algunos problemas se producen con tanta frecuencia que otras personas ya se han enfrentado antes a ellos. Por consiguiente, puede resolver el problema rápidamente, o puede agregar su entrada a una discusión existente.
 
-#### <a name="use-meaningful-titles"></a>Utilizar títulos significativos
+#### <a name="use-meaningful-titles"></a>Usar títulos significativos
 
-Los títulos concisos y significativos mejoran la detectabilidad de sus publicaciones. También facilitan para otros miembros de comunidad del foro WPF determinar si puede resolver el problema.
+Los títulos concisos y significativos mejoran la detectabilidad de las publicaciones. También facilitan que otros miembros de la comunidad del Foro de WPF determinen si pueden resolver el problema.
 
-#### <a name="include-appropriate-content"></a>Incluir contenido adecuado
+#### <a name="include-appropriate-content"></a>Incluir el contenido adecuado
 
-Describa el problema y cómo ha intentado resolverlo. Si es posible, incluya fragmentos de código adicionales o el ejemplo más sencillo posible que muestre el problema. Todos estos detalles contribuyen a aumentar las posibilidades de que su pregunta se responda rápidamente.
+Describa el problema y cómo ha intentado trabajar con él. Si es posible, incluya fragmentos de código adicionales o el ejemplo más sencillo posible que muestre el problema. Todos estos detalles contribuyen a aumentar las posibilidades de que su pregunta se responda rápidamente.
 
 ## <a name="visual-studio-developer-community"></a>Comunidad de desarrolladores de Visual Studio
 
-A veces los problemas pueden ser difíciles de resolver o irresolubles. Tales situaciones se presentan debido a errores de tecnología, dificultades para aplicar la tecnología a escenarios determinados o a la falta de compatibilidad con escenarios concretos. Esta información es importante para Microsoft y puede proporcionarse a través de la [Comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/) sitio.
+A veces los problemas pueden ser difíciles de resolver o irresolubles. Tales situaciones se presentan debido a errores de tecnología, dificultades para aplicar la tecnología a escenarios determinados o a la falta de compatibilidad con escenarios concretos. Esta información es importante para Microsoft y puede proporcionarse a través del sitio de la [comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/) .
 
-Elementos publicados en el centro de comentarios del producto de WPF se enrutan a la base de datos de errores internos del equipo WPF. Por lo tanto, es la manera más confiable para recibir sus comentarios al propietario de la característica WPF. Además, puede validar y realizar un seguimiento de los errores y sugerencias, así como votarlo, lo que ayuda al equipo WPF a priorizar los problemas.
+Los elementos que se publican en el centro de comentarios del producto de WPF se enrutan a la base de datos de errores interna del equipo de WPF. Por lo tanto, es la forma más confiable de obtener sus comentarios sobre el propietario de la característica de WPF. Además, puede validar y realizar un seguimiento de las sugerencias y los errores, así como votar sobre ellos, lo que ayuda al equipo de WPF a priorizar los problemas.
 
-### <a name="developer-community-best-practices"></a>Procedimientos recomendados de comunidad para desarrolladores
+### <a name="developer-community-best-practices"></a>Prácticas recomendadas de la comunidad de desarrolladores
 
-Al registrar en la Comunidad de desarrolladores de Visual Studio, Buscar envíos existentes, proporcionar un título significativo y contenido adecuado son importantes procedimientos recomendados, tal como aparecen en su publicación en el foro WPF. A continuación se muestran los procedimientos recomendados adicionales que también debería emplear.
+Al publicar en la comunidad de desarrolladores de Visual Studio, la búsqueda de publicaciones existentes, que proporcionan un título significativo y el contenido adecuado, son procedimientos recomendados importantes, al igual que para la publicación en el foro de WPF. A continuación se muestran los procedimientos recomendados adicionales que también debería emplear.
 
 #### <a name="search-existing-posts"></a>Buscar publicaciones existentes
 
-Algunos problemas se producen con tanta frecuencia que otras personas ya se han enfrentado antes a ellos. Por lo tanto, puede resolver el problema rápidamente, o puede agregar la entrada a un problema existente.
+Algunos problemas se producen con tanta frecuencia que otras personas ya se han enfrentado antes a ellos. Por lo tanto, puede resolver el problema rápidamente o puede Agregar la entrada a un problema existente.
 
-#### <a name="use-meaningful-titles"></a>Utilizar títulos significativos
+#### <a name="use-meaningful-titles"></a>Usar títulos significativos
 
-Los títulos concisos y significativos aumentan la posibilidad de que el problema se dirija al equipo de WPF más adecuado en la cantidad de tiempo más corta. Esto es especialmente importante para una tecnología como WPF, que contiene muchas características interrelacionadas.
+Los títulos concisos y significativos aumentan la probabilidad de que el problema se dirija al equipo de WPF más adecuado en el menor tiempo posible. Esto es especialmente importante para una tecnología como WPF, que contiene muchas características interrelacionadas.
 
-#### <a name="describe-how-to-reproduce-your-bug"></a>Describe cómo reproducir el error
+#### <a name="describe-how-to-reproduce-your-bug"></a>Describir cómo reproducir el error
 
 Al publicar sobre un error, es importante incluir lo siguiente cuando corresponda:
 
@@ -82,11 +82,11 @@ Al publicar sobre un error, es importante incluir lo siguiente cuando correspond
 
  Si el error está relacionado con la instalación o configuración, adjunte los registros de instalación pertinentes y las instantáneas (archivos prefijados con "dd_" que se encuentran en la carpeta %temp%).
 
- En el caso de problemas de compilación, adjunte los registros de compilación. El sistema puede configurarse para de MSBuild admite el registro con diferentes niveles de detalle con el modificador/v: desde la línea de comandos o configurando el nivel adecuado de un entorno de desarrollo integrado (IDE), como Visual Studio.
+ En el caso de problemas de compilación, adjunte los registros de compilación. El sistema MSBuild puede configurarse para admitir el registro con varios niveles de detalle mediante el uso del modificador/v: desde la línea de comandos o configurando el nivel adecuado desde un entorno de desarrollo integrado (IDE) como Visual Studio.
 
 #### <a name="provide-environment-information"></a>Proporcionar información de entorno
 
-La información general puede resultar útil para agregar contexto a su publicación. En particular, mencione la plataforma del sistema operativo, la familia de procesadores y la arquitectura, por ejemplo, "Windows 10 versión 1709, Intel (r) Xeon (r), x64".
+La información general puede resultar útil para agregar contexto a su publicación. En concreto, mencione la plataforma de sistema operativo, la familia de procesadores y la arquitectura, como "Windows 10 versión 1709, Intel (R) Xeon (R), x64".
 
 Si el problema que está publicando está relacionado con la representación, también debe incluir detalles de tarjeta y del controlador de gráficos, si es posible. Esta información es importante porque WPF es un marco de presentación.
 
@@ -95,15 +95,15 @@ Si el problema que está publicando está relacionado con la representación, ta
 Los errores pueden pertenecer a las herramientas utilizadas para desarrollar y compilar las aplicaciones y los tipos de aplicaciones que se va a compilar. Por lo tanto, puede ser útil especificar:
 
 - El tipo de aplicación que está creando, como:
-  - Aplicación (*.exe*) o una biblioteca (*.dll*)
-  - Aplicación de explorador Extensible Application Markup Language (XAML) (XBAP)
-  - Aplicación de XAML flexible
-  - Aplicaciones independientes instalado
-  - Aplicaciones independientes implementadas por ClickOnce
+  - Aplicación ( *. exe*) o biblioteca ( *. dll*)
+  - Aplicación de explorador de lenguaje XAML (XAML) (XBAP)
+  - Aplicación XAML floja
+  - Aplicaciones instaladas de forma independiente
+  - Aplicaciones implementadas con ClickOnce independientes
 - La herramienta de desarrollo, como:
   - MSBuild
-  - Expression Graphic Designer
-  - Expression Interactive Designer
+  - Diseñador gráfico de expresiones
+  - Diseñador interactivo de expresiones
   - Programa para la mejora
 - La configuración de soluciones, como:
   - Una solución
@@ -112,12 +112,12 @@ Los errores pueden pertenecer a las herramientas utilizadas para desarrollar y c
 - Si la aplicación tiene recursos neutrales o específicos del idioma. Por ejemplo, ¿especificó la propiedad del proyecto `UICulture` o metadatos localizables para los tipos `Application`, `Page` y `Resource`?
 - Si utilizó la configuración neutral de idioma en el archivo AssemblyInfo.cs o AssemblyInfo.vb.
 
-#### <a name="provide-scenario-and-impact-information"></a>Proporcionar información de escenario y del impacto
+#### <a name="provide-scenario-and-impact-information"></a>Proporcionar información sobre el escenario y el impacto
 
-Proporciona información sobre el escenario que manifiesta el error y su impacto. Esta información es muy importante para el equipo de WPF cuando decide si, cuándo y cómo se debe corregir un problema, o si se puede utilizar una solución alternativa aceptable en su lugar.
+Proporcione información sobre el escenario que manifiesta el error y su impacto. Esta información es muy importante para el equipo de WPF cuando decide, Cuándo y cómo se debe corregir un problema, o si en su lugar se puede usar una solución alternativa aceptable.
 
-Normalmente, los escenarios de pérdida de datos y bloqueo son de alto impacto y, por lo tanto, los más fáciles para establecer prioridades. Sin embargo, algunos errores solo aparecen en escenarios poco comunes, que también pueden ser los escenarios principales en algunos casos. Proporcionar contexto relacionado con el escenario y el impacto ayuda al equipo WPF a tomar la decisión correcta.
+Normalmente, los escenarios de pérdida de datos y bloqueo son de alto impacto y, por lo tanto, los más fáciles para establecer prioridades. Sin embargo, algunos errores solo aparecen en escenarios poco comunes, que también pueden ser los escenarios principales en algunos casos. Proporcionar el contexto alrededor del escenario y el impacto ayuda al equipo de WPF a tomar la decisión adecuada.
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo notificar un problema con Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+- [Cómo notificar un problema con Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

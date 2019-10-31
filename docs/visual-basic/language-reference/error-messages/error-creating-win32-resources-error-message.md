@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f0d74e4ac141d383a595bf86ca9b5cd7bee4c0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803342"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191945"
 ---
 # <a name="error-creating-win32-resources-error-message"></a>Error al crear recursos Win32: \<mensaje de error >
-El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al crear un recurso en memoria. Esto podría deberse a un problema con el entorno o a que el equipo tiene poca memoria.  
+El compilador Visual Basic llama a Assembly Linker (al. exe, también conocido como ALink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al crear un recurso en memoria. Esto podría deberse a un problema con el entorno o a que el equipo tiene poca memoria.  
   
  **Identificador de error:** BC30136  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Para obtener más información y consejos.  
+1. Examine el mensaje de error citado y consulte el tema [al. exe](../../../framework/tools/al-exe-assembly-linker.md). para obtener una explicación más detallada y consejos.  
   
 2. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Hable con nosotros](/visualstudio/ide/feedback-options)

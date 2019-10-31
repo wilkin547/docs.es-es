@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: ef1fd4fa94d2fe225077d8b7ed0e04fa29843e7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1abb420c997afbc69a652502801d91043eb48757
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622630"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197257"
 ---
-# <a name="unable-to-find-required-file-filename"></a>No se puede encontrar el archivo requerido '\<filename >'
+# <a name="unable-to-find-required-file-filename"></a>No se puede encontrar el archivo necesario '\<nombreDeArchivo > '
 Falta un archivo requerido por Visual Studio o está dañado.  
   
  **Identificador de error:** BC30655  
@@ -25,4 +25,4 @@ Falta un archivo requerido por Visual Studio o está dañado.
   
 ## <a name="see-also"></a>Vea también
 
-- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+- [Hable con nosotros](/visualstudio/ide/feedback-options)

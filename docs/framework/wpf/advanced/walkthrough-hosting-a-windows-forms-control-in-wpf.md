@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hospedar un control de formularios Windows Forms en WPF'
+title: 'Tutorial: Hospedar un control de Windows Forms en WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: af5a0d58e789e609a25aa828493a3b0722cc83e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cd01126e22927151f3c7fb08726c006c710dd34
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605474"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197927"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Tutorial: Hospedar un control de formularios Windows Forms en WPF
+# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Tutorial: Hospedar un control de Windows Forms en WPF
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona numerosos controles con un conjunto de características enriquecidas. Sin embargo, es posible que a veces desea utilizar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] a los controles de su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] páginas. Por ejemplo, puede tener una inversión sustancial en existente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles, o bien puede tener un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control que ofrece una funcionalidad única.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona numerosos controles con un conjunto de características enriquecidas. Sin embargo, a veces es posible que desee usar controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] en las páginas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por ejemplo, puede tener una inversión sustancial en los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] existentes o puede tener un control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] que proporcione una funcionalidad única.
 
-En este tutorial se muestra cómo hospedar un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página mediante código.
+En este tutorial se muestra cómo hospedar un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mediante el uso de código.
 
-Para obtener una lista de código completo de las tareas mostradas en este tutorial, vea [hospedar un Control de Windows Forms en WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057).
+Para obtener una lista de código completa de las tareas que se muestran en este tutorial, vea [hospedar un control de Windows Forms en el ejemplo de WPF](https://go.microsoft.com/fwlink/?LinkID=160057).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -30,7 +30,7 @@ Necesita Visual Studio para completar este tutorial.
 
 ### <a name="to-host-the-maskedtextbox-control"></a>Para hospedar el control MaskedTextBox
 
-1. Cree un proyecto de aplicación WPF denominado `HostingWfInWpf`.
+1. Cree un proyecto de aplicación de WPF denominado `HostingWfInWpf`.
 
 2. Agregue referencias a los ensamblados siguientes.
 
@@ -38,24 +38,24 @@ Necesita Visual Studio para completar este tutorial.
 
     - System.Windows.Forms
 
-3. Abra MainWindow.xaml en el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+3. Abra MainWindow. XAML en el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4. Nombre de la <xref:System.Windows.Controls.Grid> elemento `grid1`.
+4. Asigne al elemento <xref:System.Windows.Controls.Grid> el nombre `grid1`.
 
      [!code-xaml[HostingWfInWPF#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml#1)]
 
-5. En la vista Diseño o la vista XAML, seleccione el <xref:System.Windows.Window> elemento.
+5. En Vista de diseño o en la vista XAML, seleccione el elemento <xref:System.Windows.Window>.
 
-6. En la ventana Propiedades, haga clic en el **eventos** ficha.
+6. En el ventana Propiedades, haga clic en la pestaña **eventos** .
 
-7. Haga doble clic en el <xref:System.Windows.FrameworkElement.Loaded> eventos.
+7. Haga doble clic en el evento <xref:System.Windows.FrameworkElement.Loaded>.
 
-8. Inserte el código siguiente para controlar el <xref:System.Windows.FrameworkElement.Loaded> eventos.
+8. Inserte el código siguiente para controlar el evento <xref:System.Windows.FrameworkElement.Loaded>.
 
      [!code-csharp[HostingWfInWPF#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#10)]
      [!code-vb[HostingWfInWPF#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#10)]
 
-9. En la parte superior del archivo, agregue el siguiente `Imports` o `using` instrucción.
+9. En la parte superior del archivo, agregue la siguiente `Imports` o `using` instrucción.
 
      [!code-csharp[HostingWfInWPF#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#11)]
      [!code-vb[HostingWfInWPF#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#11)]
@@ -66,9 +66,9 @@ Necesita Visual Studio para completar este tutorial.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Tutorial: Hospedar un Control de Windows Forms en WPF mediante XAML](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
-- [Tutorial: Hospedar un Control compuesto de Windows Forms en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Diseño de XAML en Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [Tutorial: Hospedar un control de formularios Windows Forms en WPF mediante XAML](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
+- [Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Controles de Windows Forms y controles equivalentes de WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
 - [Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057) (Ejemplo de cómo hospedar un control de Windows Forms en WPF)

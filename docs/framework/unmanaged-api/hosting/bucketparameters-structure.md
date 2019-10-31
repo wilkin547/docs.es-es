@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195956"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters (Estructura)
-Almacena el nombre de tipo de un evento y los parámetros de la excepción actual que está asociado con el evento.  
+Almacena el nombre de tipo de un evento y los parámetros de la excepción actual que está asociada al evento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +36,16 @@ typedef struct _BucketParameters {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`fInited`|`true`, si el resto de esta estructura es válido; en caso contrario, `false`.|  
+|`fInited`|`true`, si el resto de esta estructura es válido; de lo contrario, `false`.|  
 |`pszEventTypeName`|Nombre del tipo de evento.|  
-|`pszParams`|Una matriz de cadenas, cada uno de los cuales especifica un parámetro para la excepción actual asociado al evento.|  
+|`pszParams`|Matriz de cadenas, cada una de las cuales especifica un parámetro para la excepción actual asociada al evento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.idl  
+ **Encabezado:** MSCorEE. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

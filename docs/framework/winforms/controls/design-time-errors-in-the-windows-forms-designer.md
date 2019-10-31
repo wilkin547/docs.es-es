@@ -11,16 +11,16 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 3e2366513183337c3c5dd05ff45f8a6f724deaae
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0d7fb0d5a98400b3b3eb78e3b93b274e23119497
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988442"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197396"
 ---
 # <a name="windows-forms-designer-error-page"></a>Diseñador de Windows Forms página de error
 
-Si el Diseñador de Windows Forms no se puede cargar debido a un error en el código, en un componente de terceros o en otro lugar, verá una página de error en lugar del diseñador. Esta página de error no implica necesariamente un error en el diseñador. El error puede encontrarse en cualquier lugar de la página de código \<subyacente que se denomine >. Designer.cs. Los errores aparecen en barras amarillas contraíble con un vínculo para saltar a la ubicación del error en la página de códigos.
+Si el Diseñador de Windows Forms no se puede cargar debido a un error en el código, en un componente de terceros o en otro lugar, verá una página de error en lugar del diseñador. Esta página de error no implica necesariamente un error en el diseñador. El error puede encontrarse en cualquier lugar de la página de código subyacente que se denomine \<nombre del > del formulario. Designer.cs. Los errores aparecen en barras amarillas contraíble con un vínculo para saltar a la ubicación del error en la página de códigos.
 
 ![Diseñador de Windows Forms página de error](media/windows-forms-designer-error-page-collapsed.png)
 
@@ -49,23 +49,23 @@ Haga clic en el vínculo **Buscar en MSDN foros sobre las publicaciones relacion
 
 En esta sección se enumeran algunos de los errores que pueden producirse.
 
-### <a name="identifier-name-is-not-a-valid-identifier"></a>'\<Identifier name > ' no es un identificador válido
+### <a name="identifier-name-is-not-a-valid-identifier"></a>'\<nombre de identificador > ' no es un identificador válido
 
 Este error indica que un campo, un método, un evento o un objeto tienen un nombre incorrecto.
 
-### <a name="name-already-exists-in-project-name"></a>'\<name > ' ya existe en '\<nombre de proyecto > '
+### <a name="name-already-exists-in-project-name"></a>'\<nombre > ' ya existe en '\<nombre de proyecto > '
 
-Mensaje de error: "\<' nombre > ' ya existe en\<' nombre de proyecto > '. Escriba un nombre único. "
+Mensaje de error: "'\<nombre > ' ya existe en '\<nombre del proyecto > '. Escriba un nombre único. "
 
 Ha especificado un nombre para un formulario heredado que ya existe en el proyecto. Para corregir este error, asigne un nombre único al formulario heredado.
 
-### <a name="toolbox-tab-name-is-not-a-toolbox-category"></a>'\<El nombre de la pestaña del cuadro de herramientas > ' no es una categoría de cuadro de herramientas
+### <a name="toolbox-tab-name-is-not-a-toolbox-category"></a>'\<nombre de la pestaña del cuadro de herramientas > ' no es una categoría de cuadro de herramientas
 
 Un diseñador de terceros ha intentado tener acceso a una pestaña en el cuadro de herramientas que no existe. Póngase en contacto con el proveedor del componente.
 
 ### <a name="a-requested-language-parser-is-not-installed"></a>Un analizador de lenguaje solicitado no está instalado
 
-Mensaje de error: "Un analizador de lenguaje solicitado no está instalado. El nombre del analizador de lenguaje{0}es ' '.
+Mensaje de error: "un analizador de lenguaje solicitado no está instalado. El nombre del analizador de lenguaje es '{0}'.
 
 Visual Studio intentó cargar un diseñador que está registrado para el tipo de archivo pero no pudo. Lo más probable es que se deba a un error que se produjo durante la instalación. Póngase en contacto con el proveedor del idioma que está usando para corregirlo.
 
@@ -75,13 +75,13 @@ Se trata de un problema con un componente de terceros. Póngase en contacto con 
 
 ### <a name="an-exception-occurred-while-trying-to-create-an-instance-of-object-name"></a>Se produjo una excepción al intentar crear una instancia de '\<nombre de objeto > '
 
-Mensaje de error: "Se produjo una excepción al intentar crear una instancia de '\<nombre de objeto > '. La excepción era "\<cadena\>de excepción".
+Mensaje de error: "se produjo una excepción al intentar crear una instancia de '\<nombre de objeto > '. La excepción era "\<cadena de excepción\>".
 
 Un diseñador de terceros solicitó que Visual Studio creara un objeto, pero el objeto producía un error. Póngase en contacto con el proveedor del componente.
 
-### <a name="another-editor-has-document-name-open-in-an-incompatible-mode"></a>Otro editor tiene abierto\<' nombre del documento > ' en un modo no compatible
+### <a name="another-editor-has-document-name-open-in-an-incompatible-mode"></a>Otro editor tiene abierto '\<nombre de documento > ' en un modo no compatible
 
-Mensaje de error: "Otro editor tiene abierto\<' nombre del documento > ' en un modo no compatible. Cierre el editor y vuelva a intentar esta operación ".
+Mensaje de error: "otro editor tiene '\<nombre de documento > ' abierto en un modo no compatible. Cierre el editor y vuelva a intentar esta operación ".
 
 Este error se produce si intenta abrir un archivo que ya está abierto en otro editor. Se muestra el editor que ya tiene abierto el archivo. Para corregir este error, cierre el editor que tiene abierto el archivo y vuelva a intentarlo.
 
@@ -91,17 +91,17 @@ Cierre y vuelva a abrir el diseñador para que los cambios surtan efecto. Normal
 
 ### <a name="another-editor-has-the-file-open-in-an-incompatible-mode"></a>Otro editor tiene abierto el archivo en modo incompatible
 
-Mensaje de error: "Otro editor tiene abierto el archivo en un modo no compatible. Cierre el editor y vuelva a intentar esta operación ".
+Mensaje de error: "otro editor tiene abierto el archivo en un modo no compatible. Cierre el editor y vuelva a intentar esta operación ".
 
-Este mensaje es similar a "otro editor tiene '\<nombre del documento > ' abierto en un modo no compatible", pero Visual Studio no puede determinar el nombre de archivo. Para corregir este error, cierre el editor que tiene abierto el archivo y vuelva a intentarlo.
+Este mensaje es similar a "otro editor tiene '\<nombre de documento > ' abrir en un modo no compatible ', pero Visual Studio no puede determinar el nombre de archivo. Para corregir este error, cierre el editor que tiene abierto el archivo y vuelva a intentarlo.
 
-### <a name="array-rank-rank-in-array-is-too-high"></a>El rango de\<matriz ' Rank in array > ' es demasiado alto
+### <a name="array-rank-rank-in-array-is-too-high"></a>El rango de la matriz '\<rango en la matriz > ' es demasiado alto
 
 Visual Studio solo admite matrices de una sola dimensión en el bloque de código analizado por el diseñador. Las matrices multidimensionales son válidas fuera de esta área.
 
-### <a name="assembly-assembly-name-could-not-be-opened"></a>No se\<pudo abrir el ensamblado ' Assembly name > '
+### <a name="assembly-assembly-name-could-not-be-opened"></a>No se pudo abrir el ensamblado '\<nombre de ensamblado > '
 
-Mensaje de error: "No se\<pudo abrir el nombre de ensamblado ' Assembly ' > '. Compruebe que el archivo todavía existe. "
+Mensaje de error: "Assembly '\<nombre de ensamblado > ' no se pudo abrir. Compruebe que el archivo todavía existe. "
 
 Este mensaje de error se produce cuando intenta abrir un archivo que no se puede abrir. Compruebe que el archivo existe y es un ensamblado válido.
 
@@ -113,7 +113,7 @@ Se trata de un problema con un componente de terceros. Póngase en contacto con 
 
 Visual Studio realizó una llamada al cuadro de herramientas, que no estaba disponible. Si ve este error, si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="cannot-bind-an-event-handler-to-the-event-name-event-because-it-is-read-only"></a>No se puede enlazar un controlador de\<eventos al evento ' Event name > ' porque es de solo lectura
+### <a name="cannot-bind-an-event-handler-to-the-event-name-event-because-it-is-read-only"></a>No se puede enlazar un controlador de eventos al evento '\<nombre de evento > ' porque es de solo lectura
 
 Este error suele surgir cuando se intenta conectar un evento a un control que se hereda de una clase base. Si la variable miembro del control es privada, Visual Studio no puede conectar el evento al método. Los controles heredados de forma privada no pueden tener otros eventos enlazados a ellos.
 
@@ -121,51 +121,51 @@ Este error suele surgir cuando se intenta conectar un evento a un control que se
 
 Visual Studio ha intentado agregar un controlador de eventos a un componente que no tiene una variable miembro en el diseñador. Póngase en contacto con el proveedor del componente.
 
-### <a name="cannot-name-the-object-name-because-it-is-already-named-name"></a>No se puede asignar el\<nombre al objeto ' nombre > ' porque ya\<tiene el nombre ' nombre > '.
+### <a name="cannot-name-the-object-name-because-it-is-already-named-name"></a>No se puede asignar un nombre al objeto '\<nombre > ' porque ya está denominado '\<nombre > '
 
 Se trata de un error interno en el serializador de Visual Studio. Indica que el serializador ha intentado asignar un nombre a un objeto dos veces, lo que no se admite. Si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="cannot-remove-or-destroy-inherited-component-component-name"></a>No se puede quitar ni destruir el\<componente heredado ' nombre de componente > '
+### <a name="cannot-remove-or-destroy-inherited-component-component-name"></a>No se puede quitar ni destruir el componente heredado '\<nombre de componente > '
 
 Los controles heredados están bajo la propiedad de su clase heredada. Los cambios en el control heredado deben realizarse en la clase desde la que se origina el control. Por lo tanto, no se puede cambiar el nombre ni destruirlo.
 
-### <a name="category-toolbox-tab-name-does-not-have-a-tool-for-class-class-name"></a>La categoría\<' nombre de pestaña del cuadro de herramientas > ' no tiene una\<herramienta para la clase ' nombre de clase > '
+### <a name="category-toolbox-tab-name-does-not-have-a-tool-for-class-class-name"></a>La categoría '\<nombre de la pestaña del cuadro de herramientas > ' no tiene una herramienta para la clase '\<nombre de clase > '
 
 El diseñador ha intentado hacer referencia a una clase en una pestaña determinada del cuadro de herramientas, pero la clase no existe. Póngase en contacto con el proveedor del componente.
 
-### <a name="class-class-name-has-no-matching-constructor"></a>La clase\<' nombre de clase > ' no tiene ningún constructor coincidente
+### <a name="class-class-name-has-no-matching-constructor"></a>La clase '\<nombre de clase > ' no tiene ningún constructor coincidente
 
 Un diseñador de terceros pidió a Visual Studio que creara un objeto con parámetros concretos en el constructor que no existe. Póngase en contacto con el proveedor del componente.
 
-### <a name="code-generation-for-property-property-name-failed"></a>No se pudo generar el\<código para la propiedad ' nombre de propiedad > '
+### <a name="code-generation-for-property-property-name-failed"></a>No se pudo generar el código para la propiedad '\<nombre de propiedad > '
 
 Se trata de un contenedor genérico para un error. La cadena de error que acompaña a este mensaje proporcionará más detalles sobre el mensaje de error y un vínculo a un tema de ayuda más específico. Para corregir este error, solucione el error especificado en el mensaje de error anexado a este error.
 
-### <a name="component-component-name-did-not-call-containeradd-in-its-constructor"></a>El componente\<' nombre de componente > ' no ha llamado a container. Add () en su constructor
+### <a name="component-component-name-did-not-call-containeradd-in-its-constructor"></a>El componente '\<nombre de componente > ' no ha llamado a container. Add () en su constructor
 
 Se trata de un error en el componente que acaba de cargar o colocar en el formulario. Indica que el componente no se agregó a su control contenedor (ya sea otro control o formulario). El diseñador seguirá funcionando, pero puede haber problemas con el componente en tiempo de ejecución.
 
-Para corregir el error, póngase en contacto con el proveedor del componente. O bien, si es un componente creado, llame `IContainer.Add` al método en el constructor del componente.
+Para corregir el error, póngase en contacto con el proveedor del componente. O bien, si es un componente que creó, llame al método `IContainer.Add` en el constructor del componente.
 
 ### <a name="component-name-cannot-be-empty"></a>El nombre del componente no puede estar vacío
 
 Este error se produce al intentar cambiar el nombre de un componente a un valor vacío.
 
-### <a name="could-not-access-the-variable-variable-name-because-it-has-not-been-initialized-yet"></a>No se pudo obtener acceso a\<la variable ' nombre de variable > ' porque aún no se ha inicializado
+### <a name="could-not-access-the-variable-variable-name-because-it-has-not-been-initialized-yet"></a>No se pudo obtener acceso a la variable '\<nombre de variable > ' porque aún no se ha inicializado
 
 Este error puede producirse debido a dos escenarios. Un proveedor de componentes de terceros tiene un problema con un control o componente que han distribuido, o el código que ha escrito tiene dependencias recursivas entre los componentes.
 
 Para corregir este error, asegúrese de que el código no tiene una dependencia recursiva. Si no tiene estos problemas, tenga en cuenta el texto exacto del mensaje de error y póngase en contacto con el proveedor del componente.
 
-### <a name="could-not-find-type-type-name"></a>No se pudo encontrar el\<tipo ' nombre de tipo > '
+### <a name="could-not-find-type-type-name"></a>No se pudo encontrar el tipo '\<nombre de tipo > '
 
-Mensaje de error: "No se pudo encontrar el\<tipo ' nombre de tipo > '. Asegúrese de que se hace referencia al ensamblado que contiene este tipo. Si este tipo forma parte del proyecto de desarrollo, asegúrese de que el proyecto se ha creado correctamente. "
+Mensaje de error: "no se pudo encontrar el tipo '\<nombre de tipo > '. Asegúrese de que se hace referencia al ensamblado que contiene este tipo. Si este tipo forma parte del proyecto de desarrollo, asegúrese de que el proyecto se ha creado correctamente. "
 
 Este error se produjo porque no se encontró una referencia. Asegúrese de que se hace referencia al tipo indicado en el mensaje de error y que también se hace referencia a los ensamblados que requiere el tipo. A menudo, el problema es que no se ha creado un control de la solución. Para compilar, seleccione **compilar solución** en el menú **compilar** . En caso contrario, si el control ya se ha compilado, agregue una referencia manualmente en el menú contextual de la carpeta **referencias** o **dependencias** en explorador de soluciones.
 
-### <a name="could-not-load-type-type-name"></a>No se pudo cargar el\<tipo ' nombre de tipo > '
+### <a name="could-not-load-type-type-name"></a>No se pudo cargar el tipo '\<nombre de tipo > '
 
-Mensaje de error: "No se pudo cargar el\<tipo ' nombre de tipo > '. Asegúrese de que el ensamblado que contiene este tipo se agrega a las referencias del proyecto ".
+Mensaje de error: "no se pudo cargar el tipo '\<nombre de tipo > '. Asegúrese de que el ensamblado que contiene este tipo se agrega a las referencias del proyecto ".
 
 Visual Studio intentó conectar un método de control de eventos y no encontró uno o más tipos de parámetros para el método. Esto suele deberse a que falta una referencia. Para corregir este error, agregue la referencia que contiene el tipo al proyecto e inténtelo de nuevo.
 
@@ -177,11 +177,11 @@ Las plantillas para los formularios heredados en Visual Studio no están disponi
 
 Visual Studio ha intentado crear un controlador de eventos, pero hay algún problema con el tipo de evento. Esto puede ocurrir si el evento se creó mediante un lenguaje no conforme a CLS. Póngase en contacto con el proveedor del componente.
 
-### <a name="duplicate-declaration-of-member-member-name"></a>Declaración duplicada del miembro\<' nombre de miembro > '
+### <a name="duplicate-declaration-of-member-member-name"></a>Declaración duplicada del miembro '\<nombre de miembro > '
 
-Este error se produce porque una variable miembro se ha declarado dos veces (por ejemplo, se declaran dos controles denominados `Button1` en el código). Los nombres deben ser únicos en los formularios heredados. Además, los nombres no pueden diferir solo en caso.
+Este error se produce porque una variable miembro se ha declarado dos veces (por ejemplo, dos controles denominados `Button1` se declaran en el código). Los nombres deben ser únicos en los formularios heredados. Además, los nombres no pueden diferir solo en caso.
 
-### <a name="error-reading-resources-from-the-resource-file-for-the-culture-culture-name"></a>Error al leer los recursos del archivo de recursos para la\<referencia cultural ' nombre de referencia cultural > '
+### <a name="error-reading-resources-from-the-resource-file-for-the-culture-culture-name"></a>Error al leer los recursos del archivo de recursos para la referencia cultural '\<Culture name > '
 
 Este error puede producirse si hay un archivo. resx incorrecto en el proyecto.
 
@@ -191,7 +191,7 @@ Para corregir este error:
 2. Cargue el archivo. resx en el editor XML; para ello, haga clic con el botón secundario en el archivo. resx y elija **abrir**.
 3. Edite el archivo. resx manualmente para solucionar los errores.
 
-### <a name="error-reading-resources-from-the-resource-file-for-the-default-culture-culture-name"></a>Error al leer los recursos del archivo de recursos de la referencia\<cultural predeterminada ' nombre de referencia cultural > '
+### <a name="error-reading-resources-from-the-resource-file-for-the-default-culture-culture-name"></a>Error al leer los recursos del archivo de recursos para la referencia cultural predeterminada '\<Culture name > '
 
 Este error puede producirse si hay un archivo. resx incorrecto en el proyecto para la referencia cultural predeterminada.
 
@@ -201,41 +201,41 @@ Para corregir este error:
 2. Cargue el archivo. resx en el editor XML; para ello, haga clic con el botón secundario en el archivo. resx y elija **abrir**.
 3. Edite el archivo. resx manualmente para solucionar los errores.
 
-### <a name="failed-to-parse-method-method-name"></a>No se pudo analizar el\<método ' nombre de método > '
+### <a name="failed-to-parse-method-method-name"></a>No se pudo analizar el método '\<nombre de método > '
 
-Mensaje de error: "No se pudo analizar el\<método ' nombre de método > '. El analizador ha detectado el siguiente error:\<' cadena de error > '. Busque posibles errores en el Lista de tareas.
+Mensaje de error: "no se pudo analizar el método '\<el nombre del método > '. El analizador ha detectado el siguiente error: '\<cadena de error > '. Busque posibles errores en el Lista de tareas.
 
 Se trata de un mensaje de error general para los problemas que surgen durante el análisis. Estos errores suelen deberse a errores de sintaxis. Vea el Lista de tareas para ver mensajes específicos relacionados con el error.
 
-### <a name="invalid-component-name-component-name"></a>Nombre de componente no válido\<: ' nombre de componente > '
+### <a name="invalid-component-name-component-name"></a>Nombre de componente no válido: '\<nombre de componente > '
 
 Ha intentado cambiar el nombre de un componente por un valor no válido para ese idioma. Para corregir este error, asigne al componente el nombre de modo que cumpla las reglas de nomenclatura para ese idioma.
 
 ### <a name="the-type-class-name-is-made-of-several-partial-classes-in-the-same-file"></a>El tipo '\<nombre de clase > ' se compone de varias clases parciales en el mismo archivo
 
-Al definir una clase en varios archivos mediante la palabra clave [partial](/dotnet/csharp/language-reference/keywords/partial-type) , solo puede tener una definición parcial en cada archivo.
+Al definir una clase en varios archivos mediante la palabra clave [partial](../../../csharp/language-reference/keywords/partial-type.md) , solo puede tener una definición parcial en cada archivo.
 
 Para corregir este error, quite todas las definiciones parciales de la clase, excepto una, del archivo.
 
-### <a name="the-assembly-assembly-name-could-not-be-found"></a>No se encontró\<el ensamblado ' Assembly name > '
+### <a name="the-assembly-assembly-name-could-not-be-found"></a>No se encontró el ensamblado '\<nombre de ensamblado > '
 
-Mensaje de error: "No se pudo\<encontrar el ensamblado ' nombre de ensamblado > '. Asegúrese de que se hace referencia al ensamblado. Si el ensamblado forma parte del proyecto de desarrollo actual, asegúrese de que se ha compilado el proyecto ".
+Mensaje de error: "no se encontró el ensamblado '\<nombre de ensamblado > '. Asegúrese de que se hace referencia al ensamblado. Si el ensamblado forma parte del proyecto de desarrollo actual, asegúrese de que se ha compilado el proyecto ".
 
-Este error es similar a "no se pudo\<encontrar el tipo ' nombre de tipo > ', pero este error suele producirse debido a un atributo de metadatos. Para corregir este error, compruebe que se hace referencia a todos los ensamblados utilizados por los atributos.
+Este error es similar a "el tipo '\<nombre de tipo > ' no se encontró ', pero este error suele producirse debido a un atributo de metadatos. Para corregir este error, compruebe que se hace referencia a todos los ensamblados utilizados por los atributos.
 
 ### <a name="the-assembly-name-assembly-name-is-invalid"></a>El nombre de ensamblado '\<nombre de ensamblado > ' no es válido
 
 Un componente ha solicitado un ensamblado determinado, pero el nombre proporcionado por el componente no es un nombre de ensamblado válido. Póngase en contacto con el proveedor del componente.
 
-### <a name="the-base-class-class-name-cannot-be-designed"></a>No se puede diseñar\<la clase base ' nombre de clase > '
+### <a name="the-base-class-class-name-cannot-be-designed"></a>No se puede diseñar la clase base '\<nombre de clase > '
 
 Visual Studio cargó la clase, pero la clase no se puede diseñar porque el implementador de la clase no proporcionó un diseñador. Si la clase admite un diseñador, asegúrese de que no hay ningún problema que pueda causar problemas al mostrarlo en un diseñador, como errores del compilador. Además, asegúrese de que todas las referencias a la clase sean correctas y de que todos los nombres de clase estén escritos correctamente. De lo contrario, si la clase no está diseñada, edítela en la vista Código.
 
-### <a name="the-base-class-class-name-could-not-be-loaded"></a>No se pudo cargar\<la clase base ' nombre de clase > '
+### <a name="the-base-class-class-name-could-not-be-loaded"></a>No se pudo cargar la clase base '\<nombre de clase > '
 
 No se hace referencia a la clase en el proyecto, por lo que Visual Studio no puede cargarla. Para corregir este error, agregue una referencia a la clase en el proyecto y cierre y vuelva a abrir la ventana Diseñador de Windows Forms.
 
-### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>La clase '\<nombre de clase > ' no se puede diseñar en esta versión de Visual Studio
+### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>No se puede diseñar la clase '\<nombre de clase > ' en esta versión de Visual Studio
 
 El diseñador de este control o componente no admite los mismos tipos que Visual Studio. Póngase en contacto con el proveedor del componente.
 
@@ -255,13 +255,13 @@ Este error se produce cuando el archivo del editor está marcado como de solo le
 
 Este error se produce cuando Visual Studio no puede encontrar una clase base que satisfaga los requisitos del diseñador. Los formularios y controles deben derivar de una clase base que admita diseñadores. Si va a derivar de un formulario o control heredado, asegúrese de que se ha compilado el proyecto.
 
-### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>El diseñador de la clase base\<' nombre de clase > ' no está instalado
+### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>El diseñador de la clase base '\<nombre de clase > ' no está instalado
 
 Visual Studio no pudo cargar el diseñador para la clase. Si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
 ### <a name="the-designer-must-create-an-instance-of-type-type-name-but-it-cant-because-the-type-is-declared-as-abstract"></a>El diseñador debe crear una instancia de tipo '\<nombre de tipo > ', pero no puede porque el tipo se declara como abstracto.
 
-Este error se produjo porque la clase base del objeto que se pasa al diseñador es [abstracta](/dotnet/csharp/language-reference/keywords/abstract), lo que no está permitido.
+Este error se produjo porque la clase base del objeto que se pasa al diseñador es [abstracta](../../../csharp/language-reference/keywords/abstract.md), lo que no está permitido.
 
 ### <a name="the-file-could-not-be-loaded-in-the-designer"></a>No se puede cargar el archivo en el diseñador
 
@@ -269,25 +269,25 @@ La clase base de este archivo no admite ningún diseñador. Como solución alter
 
 ### <a name="the-language-for-this-file-does-not-support-the-necessary-code-parsing-and-generation-services"></a>El lenguaje de este archivo no admite los servicios de análisis y generación de código necesarios
 
-Mensaje de error: "El lenguaje de este archivo no admite los servicios de análisis y generación de código necesarios. Asegúrese de que el archivo que está abriendo es miembro de un proyecto y, a continuación, intente abrir el archivo de nuevo. "
+Mensaje de error: "el idioma de este archivo no admite los servicios de análisis y generación de código necesarios. Asegúrese de que el archivo que está abriendo es miembro de un proyecto y, a continuación, intente abrir el archivo de nuevo. "
 
 Lo más probable es que este error se deba a la apertura de un archivo que se encuentra en un proyecto que no admite diseñadores.
 
-### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>La clase del analizador de\<lenguaje ' nombre de clase > ' no está implementada correctamente
+### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>La clase del analizador de lenguaje '\<nombre de clase > ' no se ha implementado correctamente
 
-Mensaje de error: "La clase del analizador de\<lenguaje ' > ' no se ha implementado correctamente. Póngase en contacto con el proveedor para obtener un módulo de analizador actualizado. "
+Mensaje de error: "la clase del analizador de lenguaje '\<nombre de clase > ' no se ha implementado correctamente. Póngase en contacto con el proveedor para obtener un módulo de analizador actualizado. "
 
 El lenguaje en uso ha registrado una clase de diseñador que no se deriva de la clase base correcta. Póngase en contacto con el proveedor del idioma que está usando.
 
-### <a name="the-name-name-is-already-used-by-another-object"></a>Otro objeto ya\<utiliza el nombre ' name > '
+### <a name="the-name-name-is-already-used-by-another-object"></a>El nombre '\<nombre > ' ya lo está usando otro objeto
 
 Se trata de un error interno en el serializador de Visual Studio. Si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>El objeto '\<Object name > ' no implementa la interfaz IComponent
+### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>El objeto '\<nombre de objeto > ' no implementa la interfaz IComponent
 
-Visual Studio intentó crear un componente, pero el objeto creado no implementa la <xref:System.ComponentModel.IComponent> interfaz. Póngase en contacto con el proveedor del componente para obtener una corrección.
+Visual Studio intentó crear un componente, pero el objeto creado no implementa la interfaz <xref:System.ComponentModel.IComponent>. Póngase en contacto con el proveedor del componente para obtener una corrección.
 
-### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>El objeto '\<nombre de objeto > ' devolvió null para la\<propiedad ' nombre de propiedad > ' pero esto no está permitido
+### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>El objeto '\<nombre de objeto > ' devolvió null para la propiedad '\<nombre de propiedad ' > ' pero esto no está permitido
 
 Hay algunas propiedades de .NET que siempre deben devolver un objeto. Por ejemplo, la colección de **controles** de un formulario siempre debe devolver un objeto, incluso cuando no hay controles en él.
 
@@ -299,17 +299,17 @@ Un objeto de datos ofrecido por el serializador no es una instancia de un tipo q
 
 ### <a name="the-service-service-name-is-required-but-could-not-be-located"></a>El servicio '\<nombre de servicio > ' es obligatorio, pero no se encontró
 
-Mensaje de error: "El nombre del\<servicio ' > ' es obligatorio, pero no se encontró. Puede haber un problema con la instalación de Visual Studio ".
+Mensaje de error: "el servicio '\<nombre de servicio > ' es obligatorio, pero no se encontró. Puede haber un problema con la instalación de Visual Studio ".
 
 Un servicio requerido por Visual Studio no está disponible. Si intenta cargar un proyecto que no admite ese diseñador, use el editor de código para realizar los cambios necesarios. De lo contrario, si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="the-service-instance-must-derive-from-or-implement-interface-name"></a>La instancia de servicio debe derivar de o\<implementar ' interface name > '
+### <a name="the-service-instance-must-derive-from-or-implement-interface-name"></a>La instancia de servicio debe derivar de o implementar '\<nombre de interfaz > '
 
 Este error indica que un componente o diseñador de componentes ha llamado al método **AddService** , que requiere una interfaz y un objeto, pero el objeto especificado no implementa la interfaz especificada. Póngase en contacto con el proveedor del componente.
 
 ### <a name="the-text-in-the-code-window-could-not-be-modified"></a>El texto de la ventana de código no puede modificarse
 
-Mensaje de error: "No se pudo modificar el texto de la ventana de código. Compruebe que el archivo no sea de solo lectura y que haya suficiente espacio en disco. "
+Mensaje de error: "no se pudo modificar el texto de la ventana de código. Compruebe que el archivo no sea de solo lectura y que haya suficiente espacio en disco. "
 
 Este error se produce cuando Visual Studio no puede editar un archivo debido a problemas de espacio en disco o de memoria, o el archivo está marcado como de solo lectura.
 
@@ -317,21 +317,21 @@ Este error se produce cuando Visual Studio no puede editar un archivo debido a p
 
 Si ve este error, si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="the-toolbox-item-for-component-name-could-not-be-retrieved-from-the-toolbox"></a>No se pudo recuperar el\<elemento del cuadro de herramientas de ' nombre de componente > ' del cuadro de herramientas
+### <a name="the-toolbox-item-for-component-name-could-not-be-retrieved-from-the-toolbox"></a>No se pudo recuperar el elemento del cuadro de herramientas para '\<nombre de componente > ' del cuadro de herramientas
 
-Mensaje de error: "No se pudo recuperar el\<elemento del cuadro de herramientas de ' nombre de componente > ' del cuadro de herramientas. Asegúrese de que el ensamblado que contiene el elemento del cuadro de herramientas está correctamente instalado. El elemento del cuadro de herramientas ha generado \<el siguiente error: cadena de error > ".
+Mensaje de error: "no se pudo recuperar el elemento del cuadro de herramientas para '\<nombre de componente > ' en el cuadro de herramientas. Asegúrese de que el ensamblado que contiene el elemento del cuadro de herramientas está correctamente instalado. El elemento del cuadro de herramientas ha generado el siguiente error: \<cadena de error > ".
 
 El componente en cuestión produjo una excepción cuando Visual Studio tuvo acceso a ella. Póngase en contacto con el proveedor del componente.
 
-### <a name="the-toolbox-item-for-toolbox-item-name-could-not-be-retrieved-from-the-toolbox"></a>No se pudo recuperar el\<elemento del cuadro de herramientas para ' cuadro de herramientas nombre de elemento > ' del cuadro de herramientas
+### <a name="the-toolbox-item-for-toolbox-item-name-could-not-be-retrieved-from-the-toolbox"></a>No se pudo recuperar el elemento del cuadro de herramientas para '\<nombre de elemento del cuadro de herramientas > ' en el cuadro de herramientas
 
-Mensaje de error: "El elemento del cuadro de\<herramientas para ' cuadro de herramientas nombre de elemento > ' no se pudo recuperar del cuadro de herramientas. Intente quitar el elemento del cuadro de herramientas y volver a agregarlo. "
+Mensaje de error: "no se pudo recuperar el elemento del cuadro de herramientas para '\<nombre de elemento del cuadro de herramientas > ' en el cuadro de herramientas. Intente quitar el elemento del cuadro de herramientas y volver a agregarlo. "
 
 Este error se produce si los datos del elemento del cuadro de herramientas se dañan o la versión del componente ha cambiado. Intente quitar el elemento del cuadro de herramientas y volver a agregarlo.
 
-### <a name="the-type-type-name-could-not-be-found"></a>No se encontró\<el tipo ' nombre de tipo > '
+### <a name="the-type-type-name-could-not-be-found"></a>No se encontró el tipo '\<nombre de tipo > '
 
-Mensaje de error: "No se pudo\<encontrar el tipo ' nombre de tipo > '. Asegúrese de que se hace referencia al ensamblado que contiene el tipo. Si el ensamblado forma parte del proyecto de desarrollo actual, asegúrese de que se ha compilado el proyecto ".
+Mensaje de error: "no se encontró el tipo '\<nombre de tipo > '. Asegúrese de que se hace referencia al ensamblado que contiene el tipo. Si el ensamblado forma parte del proyecto de desarrollo actual, asegúrese de que se ha compilado el proyecto ".
 
 Al cargar el diseñador, Visual Studio no encontró un tipo. Asegúrese de que se hace referencia al ensamblado que contiene el tipo. Si el ensamblado forma parte del proyecto de desarrollo actual, asegúrese de que se ha compilado el proyecto.
 
@@ -343,17 +343,17 @@ Visual Studio intentó tener acceso a los recursos necesarios desde el subproces
 
 El código fuente tiene una referencia a una variable, como **button1**, que no se ha declarado o asignado. Si no se ha asignado la variable, este mensaje aparece como una advertencia, no como un error.
 
-### <a name="there-is-already-a-command-handler-for-the-menu-command-menu-command-name"></a>Ya existe un controlador de comandos para el comando de menú\<' menú ' nombre de comando > '
+### <a name="there-is-already-a-command-handler-for-the-menu-command-menu-command-name"></a>Ya existe un controlador de comandos para el comando de menú '\<nombre de comando de menú > '
 
 Este error se produce si un diseñador de terceros agrega un comando que ya tiene un controlador a la tabla de comandos. Póngase en contacto con el proveedor del componente.
 
 ### <a name="there-is-already-a-component-named-component-name"></a>Ya existe un componente denominado '\<nombre de componente > '
 
-Mensaje de error: "Ya hay un componente denominado '\<nombre de componente > '. Los componentes deben tener nombres únicos y los nombres no deben distinguir entre mayúsculas y minúsculas. Un nombre tampoco puede entrar en conflicto con el nombre de cualquier componente de una clase heredada ".
+Mensaje de error: "ya existe un componente denominado '\<nombre de componente > '. Los componentes deben tener nombres únicos y los nombres no deben distinguir entre mayúsculas y minúsculas. Un nombre tampoco puede entrar en conflicto con el nombre de cualquier componente de una clase heredada ".
 
 Este mensaje de error se produce cuando se ha producido un cambio en el nombre de un componente en el ventana Propiedades. Para corregir este error, asegúrese de que todos los nombres de componente son únicos, no distinguen mayúsculas de minúsculas y no entran en conflicto con los nombres de los componentes de las clases heredadas.
 
-### <a name="there-is-already-a-toolbox-item-creator-registered-for-the-format-format-name"></a>Ya hay un creador de elementos de cuadro de herramientas registrado para\<el formato ' nombre de formato > '
+### <a name="there-is-already-a-toolbox-item-creator-registered-for-the-format-format-name"></a>Ya hay un creador de elementos de cuadro de herramientas registrado para el formato '\<nombre de formato > '
 
 Un componente de terceros realizó una devolución de llamada a un elemento en una pestaña del cuadro de herramientas, pero el elemento ya contenía una devolución de llamada. Póngase en contacto con el proveedor del componente.
 
@@ -361,29 +361,29 @@ Un componente de terceros realizó una devolución de llamada a un elemento en u
 
 Este mensaje es similar a "el lenguaje de este archivo no admite los servicios de análisis y generación de código necesarios", pero este mensaje implica un problema de registro interno. Si ve este error, si ve este error, registre un problema mediante el uso de [notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="type-type-name-does-not-have-a-constructor-with-parameters-of-types-parameter-type-names"></a>El tipo\<' type\>name ' no tiene un constructor con parámetros de tipos '\<Parameter Type names > '
+### <a name="type-type-name-does-not-have-a-constructor-with-parameters-of-types-parameter-type-names"></a>El tipo '\<nombre de tipo\>' no tiene un constructor con parámetros de tipos '\<nombres de tipo de parámetro > '
 
-Visual Studio no encontró un [constructor](/dotnet/csharp/programming-guide/classes-and-structs/constructors) que tuviera parámetros coincidentes. Esto puede ser el resultado de proporcionar un constructor con tipos distintos de los necesarios. Por ejemplo, un constructor de **puntos** puede tomar dos enteros. Si proporcionó Float, se genera este error.
+Visual Studio no encontró un [constructor](../../../csharp/programming-guide/classes-and-structs/constructors.md) que tuviera parámetros coincidentes. Esto puede ser el resultado de proporcionar un constructor con tipos distintos de los necesarios. Por ejemplo, un constructor de **puntos** puede tomar dos enteros. Si proporcionó Float, se genera este error.
 
 Para corregir este error, use un constructor diferente o convierta explícitamente los tipos de parámetro de modo que coincidan con los proporcionados por el constructor.
 
-### <a name="unable-to-add-reference-reference-name-to-the-current-application"></a>No se puede Agregar la\<referencia ' nombre de referencia > ' a la aplicación actual
+### <a name="unable-to-add-reference-reference-name-to-the-current-application"></a>No se puede Agregar la referencia '\<nombre de referencia > ' a la aplicación actual
 
-Mensaje de error: "No se puede Agregar la\<referencia ' nombre de referencia > ' a la aplicación actual. Compruebe que ya no se hace referencia\<a una versión diferente de ' nombre de referencia > '. "
+Mensaje de error: "no se puede Agregar la referencia '\<nombre de referencia > ' a la aplicación actual. Compruebe que ya no se hace referencia a una versión diferente de '\<nombre de referencia > '.
 
 Visual Studio no puede Agregar una referencia. Para corregir este error, compruebe que todavía no se hace referencia a una versión diferente de la referencia.
 
 ### <a name="unable-to-check-out-the-current-file"></a>No se puede desproteger el archivo actual
 
-Mensaje de error: "No se puede desproteger el archivo actual. Es posible que el archivo esté bloqueado o que sea necesario desproteger el archivo manualmente ".
+Mensaje de error: "no se puede desproteger el archivo actual. Es posible que el archivo esté bloqueado o que sea necesario desproteger el archivo manualmente ".
 
 Este error se produce cuando se cambia un archivo protegido actualmente en el control de código fuente. Normalmente, Visual Studio muestra el cuadro de diálogo de desprotección de archivos para que el usuario pueda desproteger el archivo. Esta vez, el archivo no se desprotegió, quizás debido a un conflicto de combinación durante la desprotección. Para corregir este error, asegúrese de que el archivo no esté bloqueado y, a continuación, intente desproteger el archivo manualmente.
 
-### <a name="unable-to-find-page-named-options-dialog-box-tab-name"></a>No se puede encontrar la página\<con el nombre ' opciones de la pestaña del cuadro de diálogo > '
+### <a name="unable-to-find-page-named-options-dialog-box-tab-name"></a>No se puede encontrar la página con el nombre "\<opciones de la pestaña del cuadro de diálogo >"
 
 Este error se produce cuando un diseñador de componentes solicita acceso a una página del cuadro de diálogo Opciones con un nombre que no existe. Póngase en contacto con el proveedor del componente.
 
-### <a name="unable-to-find-property-property-name-on-page-options-dialog-box-tab-name"></a>No se puede encontrar la\<propiedad ' nombre de propiedad > '\<en la página ' opciones ' nombre de pestaña del cuadro de diálogo > '
+### <a name="unable-to-find-property-property-name-on-page-options-dialog-box-tab-name"></a>No se encuentra la propiedad '\<nombre de propiedad > ' en la página '\<opciones de la pestaña del cuadro de diálogo > '
 
 Este error se produce cuando un diseñador de componentes solicita acceso a un valor determinado en una página del cuadro de diálogo Opciones, pero ese valor no existe. Póngase en contacto con el proveedor del componente.
 
@@ -395,9 +395,9 @@ Visual Studio cargó la clase, pero el diseñador de esa clase no se pudo cargar
 
 Se trata de un problema con un componente de terceros. Póngase en contacto con el proveedor del componente.
 
-### <a name="visual-studio-is-unable-to-open-document-name-in-design-view"></a>Visual Studio no puede abrir '\<nombre del documento > ' en vista de diseño
+### <a name="visual-studio-is-unable-to-open-document-name-in-design-view"></a>Visual Studio no puede abrir '\<nombre de documento > ' en Vista de diseño
 
-Mensaje de error: "Visual Studio no puede abrir '\<nombre del documento > ' en vista de diseño. No hay ningún analizador instalado para el tipo de archivo ".
+Mensaje de error: "Visual Studio no puede abrir '\<nombre de documento > ' en Vista de diseño. No hay ningún analizador instalado para el tipo de archivo ".
 
 Este error indica que el idioma del proyecto no es compatible con un diseñador y se produce cuando se intenta abrir un archivo en el cuadro de diálogo Abrir archivo o en Explorador de soluciones. En su lugar, edite el archivo en la vista de código.
 

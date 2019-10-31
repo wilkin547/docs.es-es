@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8679181d720d9550cf60034a7cf1809b79198e83
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040826"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197889"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Tutorial: Hospedar un control ActiveX en WPF
 Para habilitar la interacción mejorada con los exploradores, puede usar los controles ActiveX de Microsoft en la aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo puede hospedar el Media Player de Microsoft Windows como un control en una página de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -109,6 +109,6 @@ Visual Studio genera automáticamente una clase contenedora <xref:System.Windows
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Diseño de XAML en Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

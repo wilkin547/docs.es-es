@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43935829d11a925d4a3389149f5c316df15f06bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02066d3923714e66bf287f1435b7854280c97cb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195825"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore (Método)
-Crea un [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) objeto de common language runtime (CLR) que se usará como un semáforo para los eventos de espera.  
+Crea un objeto [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) para el Common Language Runtime (CLR) que se va a usar como semáforo para los eventos de espera.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,35 +37,35 @@ HRESULT CreateSemaphore (
   
 ## <a name="parameters"></a>Parámetros  
  `dwInitial`  
- [in] El recuento inicial de `ppSemaphore`.  
+ de Recuento inicial de `ppSemaphore`.  
   
  `dwMax`  
- [in] El número máximo de `ppSemaphore`.  
+ de Recuento máximo de `ppSemaphore`.  
   
  `ppSemaphore`  
- [out] Un puntero a la dirección de un `IHostSemaphore` de instancia, o null si no se pudo crear el semáforo.  
+ enuncia Puntero a la dirección de una instancia de `IHostSemaphore`, o null si no se pudo crear el semáforo.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`CreateSemaphore` devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear el objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateSemaphore` refleja la función de Win32 que tiene el mismo nombre. El `dwInitial` y `dwMax` parámetros usan la misma semántica para el recuento del semáforo como Win32 `lInitialCount` y `lMaximumCount` parámetros, respectivamente. `dwInitial` debe estar entre cero y `dwMax`, ambos inclusive. `dwMax` Debe ser mayor que cero.  
+ `CreateSemaphore` refleja la función de Win32 que tiene el mismo nombre. Los parámetros `dwInitial` y `dwMax` usan la misma semántica para el recuento de semáforos que los parámetros `lInitialCount` y `lMaximumCount` de Win32, respectivamente. `dwInitial` debe estar entre cero y `dwMax`, ambos inclusive. `dwMax` debe ser mayor que cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

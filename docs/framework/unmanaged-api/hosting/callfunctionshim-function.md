@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192094"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim (Función)
-Realiza una llamada a la función que tiene el nombre especificado y los parámetros de la biblioteca especificada.  
+Realiza una llamada a la función que tiene el nombre y los parámetros especificados en la biblioteca especificada.  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,29 +41,29 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>Parámetros  
  `szDllName`  
- [in] El nombre de la biblioteca que contiene la función.  
+ de Nombre de la biblioteca que contiene la función.  
   
  `szFunctionName`  
- [in] El nombre de la función.  
+ de Nombre de la función.  
   
  `lpvArgument1`  
- [in] El primer argumento para pasar a la función.  
+ de Primer argumento que se va a pasar a la función.  
   
  `lpvArgument2`  
- [in] El segundo argumento para pasar a la función.  
+ de Segundo argumento que se va a pasar a la función.  
   
  `szVersion`  
- [in] La versión de la biblioteca que contiene la función.  
+ de Versión de la biblioteca que contiene la función.  
   
  `pvReserved`  
- [in] Reservado para uso futuro. Pasar cero en este parámetro.  
+ de Reservado para uso futuro. Pase cero en este parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

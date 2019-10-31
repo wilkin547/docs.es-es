@@ -5,15 +5,15 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 5142fb9f4b5cd49bb35b58fdd92e4fb84b8ecc03
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 71322955c9583ac6d045370df7a95b69176f35e3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593058"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198062"
 ---
 # <a name="reference-visual-basic"></a>Referencia (Visual Basic)
-Esta sección proporciona vínculos a información de referencia sobre diversos aspectos de programación en Visual Basic.  
+En esta sección se proporcionan vínculos a información de referencia sobre diversos aspectos de la programación de Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Referencia del lenguaje Visual Basic](../../visual-basic/language-reference/index.md)  
@@ -30,10 +30,10 @@ Esta sección proporciona vínculos a información de referencia sobre diversos 
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Elementos generales de la interfaz de usuario (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contiene temas para cuadros de diálogo y ventanas que se usan en Visual Studio.  
+ Contiene temas sobre los cuadros de diálogo y las ventanas que se usan en Visual Studio.  
   
  [Herramientas XML en Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Proporciona vínculos a temas sobre diferentes herramientas XML disponibles en Visual Studio.  
+ Proporciona vínculos a temas sobre diversas herramientas XML disponibles en Visual Studio.  
   
- [Referencia de automatización y extensibilidad](/visualstudio/extensibility/extensibility-in-visual-studio)  
- Proporciona vínculos a temas que tratan sobre la automatización y extensibilidad de Visual Studio, para componentes compartidos y específicos del idioma.
+ [Referencia de automatización y extensibilidad](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
+ Proporciona vínculos a temas que describen la automatización y extensibilidad en Visual Studio, tanto para componentes compartidos como para componentes específicos del lenguaje.

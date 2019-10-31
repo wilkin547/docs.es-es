@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Acceso a la web mediante Async y Await (Visual Basic)'
+title: 'Tutorial: Acceso a web usando Async y Await (C# y Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: feaa1e298cda852492e020a5fa81845fb887f102
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351904"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197029"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a la web mediante Async y Await (Visual Basic)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a web usando Async y Await (C# y Visual Basic)
 
 Puede escribir programas asincrónicos de manera más fácil e intuitiva usando las características async/await. Puede escribir código asincrónico parecido al código sincrónico y dejar que el compilador gestione las difíciles funciones de devolución de llamada y continuaciones que normalmente implica el código asincrónico.
 
@@ -17,7 +17,7 @@ Para obtener más información sobre la característica Async, consulte [program
 
 Este tutorial comienza con una aplicación sincrónica de Windows Presentation Foundation (WPF) que suma el número de bytes de una lista de sitios web. A continuación, el tutorial convierte la aplicación en una solución asincrónica mediante el uso de las características nuevas.
 
-Si no desea compilar las aplicaciones por su cuenta, puede descargar "ejemplo de Async: Obtener acceso al tutorial web (C# y Visual Basic) "desde [ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
+Si no quiere compilar las aplicaciones por su cuenta, puede descargar "Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)" (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]) de [Muestras de código para desarrollador](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
 
 En este tutorial, se realizarán las siguientes tareas:
 
@@ -81,7 +81,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 6. Coloque el cuadro de texto y el botón de manera que ambos aparezcan en la ventana **MainWindow**.
 
-    Para obtener más información sobre el Diseñador XAML de WPF, consulte [Crear una IU con el Diseñador XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).
+    Para obtener más información sobre el Diseñador XAML de WPF, consulte [Crear una IU con el Diseñador XAML](/visualstudio/xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio).
 
 ## <a name="add-a-reference"></a>Agregar una referencia
 
@@ -103,7 +103,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 1. En **Explorador de soluciones**, abra el menú contextual de MainWindow. Xaml. VB y, a continuación, elija **Ver código**.
 
-2. Agregue las siguientes `Imports` instrucciones en la parte superior del archivo de código si aún no están presentes.
+2. Agregue las siguientes instrucciones de `Imports` en la parte superior del archivo de código si aún no están presentes.
 
     ```vb
     Imports System.Net.Http
@@ -113,7 +113,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 ## <a name="create-a-synchronous-application"></a>Crear una aplicación sincrónica
 
-1. En la ventana de diseño, MainWindow. XAML, haga doble clic en el botón **Inicio** para `startButton_Click` crear el controlador de eventos en MainWindow. Xaml. VB.
+1. En la ventana de diseño, MainWindow. XAML, haga doble clic en el botón **Inicio** para crear el controlador de eventos `startButton_Click` en MainWindow. Xaml. VB.
 
 2. En MainWindow. Xaml. VB, copie el código siguiente en el cuerpo de `startButton_Click`:
 
@@ -135,7 +135,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
     - `DisplayResults`, que muestra el número de bytes de la matriz de bytes de cada dirección URL.
 
-    Copie los cuatro métodos siguientes y péguelos en el `startButton_Click` controlador de eventos en MainWindow. Xaml. VB:
+    Copie los cuatro métodos siguientes y péguelos en el controlador de eventos `startButton_Click` en MainWindow. Xaml. VB:
 
     ```vb
     Private Sub SumPageSizes()
@@ -238,7 +238,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>Convertir GetURLContents en un método asincrónico
 
-1. Para convertir la solución sincrónica en una solución asincrónica, el mejor lugar para comenzar es porque las llamadas `GetURLContents` <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> al método y al <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> método son el lugar en el que la aplicación tiene acceso a la Web. .NET Framework facilita la conversión proporcionando versiones asincrónicas de ambos métodos.
+1. Para convertir la solución sincrónica en una solución asincrónica, el mejor lugar para comenzar es `GetURLContents` porque las llamadas al método <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> y al método <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> son donde la aplicación accede a la Web. .NET Framework facilita la conversión proporcionando versiones asincrónicas de ambos métodos.
 
     Para obtener más información sobre los modelos que se usan en `GetURLContents`, vea <xref:System.Net.WebRequest>.
 
@@ -253,7 +253,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 2. `GetResponseAsync` devuelve <xref:System.Threading.Tasks.Task%601>. En este caso, la *variable de devolución de tarea*, `TResult`, tiene un tipo <xref:System.Net.WebResponse>. La tarea es una promesa para generar un objeto `WebResponse` real después de que se descarguen los datos solicitados y la tarea se ejecute hasta completarse.
 
-    Para recuperar el `WebResponse` valor de la tarea, aplique un operador [Await](../../../../visual-basic/language-reference/operators/await-operator.md) a la llamada a `GetResponseAsync`, como se muestra en el código siguiente.
+    Para recuperar el valor `WebResponse` de la tarea, aplique un operador [Await](../../../../visual-basic/language-reference/operators/await-operator.md) a la llamada a `GetResponseAsync`, como se muestra en el código siguiente.
 
     ```vb
     Using response As WebResponse = Await webReq.GetResponseAsync()
@@ -268,9 +268,9 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
     Using response As WebResponse = Await responseTask
     ```
 
-    La llamada a `webReq.GetResponseAsync` devuelve `Task(Of WebResponse)` o `Task<WebResponse>`. A continuación `Await` , se aplica un operador a la tarea para `WebResponse` recuperar el valor.
+    La llamada a `webReq.GetResponseAsync` devuelve `Task(Of WebResponse)` o `Task<WebResponse>`. A continuación, se aplica un operador `Await` a la tarea para recuperar el valor de `WebResponse`.
 
-    Si el método asincrónico debe realizar un trabajo que no depende de la finalización de la tarea, el método puede continuar con ese trabajo entre estas dos instrucciones, después de la llamada al método asincrónico y antes de que se aplique el operador await. Para obtener ejemplos, vea [Cómo: Realice varias solicitudes web en paralelo mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) y [cómo: Amplíe el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+    Si el método asincrónico debe realizar un trabajo que no depende de la finalización de la tarea, el método puede continuar con ese trabajo entre estas dos instrucciones, después de la llamada al método asincrónico y antes de que se aplique el operador await. Para obtener ejemplos, vea [Cómo: hacer varias solicitudes web en paralelo mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) y [Cómo: ampliar el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 3. Dado que ha agregado el operador `Await` en el paso anterior, se produce un error del compilador. El operador solo se puede usar en métodos marcados con el modificador [Async](../../../../visual-basic/language-reference/modifiers/async.md) . Omita el error mientras repita los pasos de conversión para reemplazar la llamada a `CopyTo` con una llamada a `CopyToAsync`.
 
@@ -293,13 +293,13 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
         Await copyTask
         ```
 
-4. Lo único que queda por hacer en `GetURLContents` es ajustar la firma del método. Puede usar el `Await` operador solo en métodos marcados con el modificador [Async](../../../../visual-basic/language-reference/modifiers/async.md) . Agregue el modificador para marcar el método como *método asincrónico*, como se muestra en el código siguiente.
+4. Lo único que queda por hacer en `GetURLContents` es ajustar la firma del método. Solo puede utilizar el operador `Await` en métodos marcados con el modificador [Async](../../../../visual-basic/language-reference/modifiers/async.md) . Agregue el modificador para marcar el método como *método asincrónico*, como se muestra en el código siguiente.
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()
     ```
 
-5. El tipo de valor devuelto de un método asincrónico <xref:System.Threading.Tasks.Task>solo <xref:System.Threading.Tasks.Task%601>puede ser,. En Visual Basic, el método debe ser `Function`, que devuelve `Task` o `Task(Of T)`, o el método debe ser `Sub`. Normalmente, un `Sub` método solo se usa en un controlador de eventos Async, `Sub` donde es obligatorio. En otros casos, se usa `Task(T)` si el método completado tiene una instrucción [Return](../../../../visual-basic/language-reference/statements/return-statement.md) que devuelve un valor de tipo T, y se usa `Task` si el método completado no devuelve un valor significativo.
+5. El tipo de valor devuelto de un método asincrónico solo se puede <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. En Visual Basic, el método debe ser `Function`, que devuelve `Task` o `Task(Of T)`, o el método debe ser `Sub`. Normalmente, un método `Sub` se usa solo en un controlador de eventos Async, donde se requiere `Sub`. En otros casos, se usa `Task(T)` si el método completado tiene una instrucción [Return](../../../../visual-basic/language-reference/statements/return-statement.md) que devuelve un valor de tipo t, y se usa `Task` si el método completado no devuelve un valor significativo.
 
     Para obtener más información, vea [tipos de valor devueltos Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
@@ -346,7 +346,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
     - Agregue "Async" al nombre del método.
 
-    - Esta vez no hay ninguna variable de devolución de tarea, T, porque `SumPageSizesAsync` no devuelve un valor para T. (El método no tiene ninguna instrucción `Return`). Sin embargo, el método debe devolver `Task` para admitir await. Por lo tanto, cambie el tipo `Sub` de `Function`método de a. El tipo de valor devuelto de la función es `Task`.
+    - No hay ninguna variable de devolución de tarea, T, esta vez porque `SumPageSizesAsync` no devuelve un valor para T. (el método no tiene ninguna instrucción `Return`). Sin embargo, el método debe devolver una `Task` para que sea Await. Por lo tanto, cambie el tipo de método de `Sub` a `Function`. El tipo de valor devuelto de la función es `Task`.
 
     En el código siguiente se muestran estos cambios.
 
@@ -397,7 +397,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click
     ```
 
-    Normalmente, no se cambian los nombres de los controladores de eventos. El tipo de valor devuelto `Task` no se cambia a porque los `Sub` controladores de eventos deben ser procedimientos en Visual Basic.
+    Normalmente, no se cambian los nombres de los controladores de eventos. El tipo de valor devuelto no se cambia a `Task` porque los controladores de eventos deben ser `Sub` procedimientos en Visual Basic.
 
     Así se completa la conversión del proyecto de procesamiento sincrónico a asincrónico.
 
@@ -413,9 +413,9 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 ## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>Reemplazar el método GetURLContentsAsync por un método .NET Framework
 
-1. El .NET Framework proporciona muchos métodos asincrónicos que puede usar. Uno de ellos, el <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> método, hace exactamente lo que necesita para este tutorial. Se puede usar en lugar del método `GetURLContentsAsync` que creó en un procedimiento anterior.
+1. El .NET Framework proporciona muchos métodos asincrónicos que puede usar. Uno de ellos, el método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType>, hace exactamente lo que necesita para este tutorial. Se puede usar en lugar del método `GetURLContentsAsync` que creó en un procedimiento anterior.
 
-    El primer paso es crear un <xref:System.Net.Http.HttpClient> objeto en el `SumPageSizesAsync` método. Agregue la siguiente declaración al principio del método.
+    El primer paso es crear un objeto <xref:System.Net.Http.HttpClient> en el método `SumPageSizesAsync`. Agregue la siguiente declaración al principio del método.
 
     ```vb
     ' Declare an HttpClient object and increase the buffer size. The
@@ -438,7 +438,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente es el ejemplo completo de la solución asincrónica convertida que usa el `GetURLContentsAsync` método asincrónico. Observe que es muy parecida a la solución sincrónica original.
+El siguiente es el ejemplo completo de la solución asincrónica convertida que usa el método de `GetURLContentsAsync` asincrónico. Observe que es muy parecida a la solución sincrónica original.
 
 ```vb
 ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -660,11 +660,11 @@ End Class
 
 ## <a name="see-also"></a>Vea también
 
-- [Async Sample: Acceso al tutorial web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await (operador)](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
 - [Task-based Asynchronous Programming (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847) (Programación asincrónica basada en tareas [TAP])
-- [Cómo: Extienda el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Cómo: Hacer varias solicitudes web en paralelo mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Ampliación del tutorial de Async mediante Task.WhenAll [Visual Basic])
+- [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Realización de solicitudes web en paralelo mediante Async y Await [Visual Basic])

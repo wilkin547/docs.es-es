@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744985"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196340"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee (Método)
-Obtiene la cadena que se llamó por esta cadena.  
+Obtiene la cadena a la que llamó esta cadena.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parámetros  
  `ppChain`  
- [out] Un puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada. Si esta cadena se está ejecutando (es decir, si esta cadena no está esperando devolver una cadena de llamada), `ppChain` será null.  
+ enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena a la que se ha llamado. Si esta cadena se está ejecutando actualmente (es decir, si esta cadena no está esperando a que devuelva una cadena llamada), `ppChain` será null.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta cadena esperará la cadena de llamada devolver antes de que reanuda la ejecución. La cadena de llamada puede estar en otro subproceso en el caso de las llamadas de cálculo de referencias entre subprocesos.  
+ Esta cadena esperará a que se devuelva la cadena llamada antes de reanudar la ejecución. La cadena llamada puede estar en otro subproceso en el caso de las llamadas de serialización entre subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
