@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para configurar el seguimiento de la red
+title: 'Procedimientos para: para configurar el seguimiento de la red'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,95 +11,103 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: dc9b6b5399063026c0bbe5735964ed42a21168fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 98854fa0dff8d4cfb1d67d5864751ab01a21150b
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048365"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920298"
 ---
-# <a name="how-to-configure-network-tracing"></a><span data-ttu-id="9af21-102">Procedimiento para configurar el seguimiento de la red</span><span class="sxs-lookup"><span data-stu-id="9af21-102">How to: Configure Network Tracing</span></span>
-<span data-ttu-id="9af21-103">El archivo de configuración de la aplicación o equipo contiene la configuración que determina el formato y el contenido del seguimiento de red.</span><span class="sxs-lookup"><span data-stu-id="9af21-103">The application or computer configuration file holds the settings that determine the format and content of network traces.</span></span> <span data-ttu-id="9af21-104">Antes de realizar este procedimiento, asegúrese de que el seguimiento está habilitado.</span><span class="sxs-lookup"><span data-stu-id="9af21-104">Before performing this procedure, be sure tracing is enabled.</span></span> <span data-ttu-id="9af21-105">Para obtener información sobre cómo habilitar el seguimiento de red, vea [Enabling Network Tracing](enabling-network-tracing.md) (Habilitar el seguimiento de red).</span><span class="sxs-lookup"><span data-stu-id="9af21-105">For information about enabling tracing, see [Enabling Network Tracing](enabling-network-tracing.md).</span></span>  
-  
- <span data-ttu-id="9af21-106">El archivo de configuración del equipo, machine.config, se almacena en la carpeta %Windir%\Microsoft.NET\Framework en el directorio donde se instaló Windows.</span><span class="sxs-lookup"><span data-stu-id="9af21-106">The computer configuration file, machine.config, is stored in the %Windir%\Microsoft.NET\Framework folder in the directory where Windows was installed.</span></span> <span data-ttu-id="9af21-107">Hay un archivo machine.config distinto en las carpetas de %Windir%\Microsoft.NET\Framework por cada versión de .NET Framework que haya instalada en el equipo (por ejemplo, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config o C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).</span><span class="sxs-lookup"><span data-stu-id="9af21-107">There is a separate machine.config file in the folders under %Windir%\Microsoft.NET\Framework for each version of the .NET Framework installed on the computer (for example, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config or C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).</span></span>  
-  
- <span data-ttu-id="9af21-108">Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.</span><span class="sxs-lookup"><span data-stu-id="9af21-108">These settings can also be made in the configuration file for the application, which has precedence over the computer configuration file.</span></span>  
-  
-### <a name="to-configure-network-tracing"></a><span data-ttu-id="9af21-109">Para configurar el seguimiento de la red</span><span class="sxs-lookup"><span data-stu-id="9af21-109">To configure network tracing</span></span>  
-  
-- <span data-ttu-id="9af21-110">Agregue las siguientes líneas al archivo de configuración correspondiente.</span><span class="sxs-lookup"><span data-stu-id="9af21-110">Add the following lines to the appropriate configuration file.</span></span> <span data-ttu-id="9af21-111">Los valores y las opciones de estos valores se describen en las tablas siguientes.</span><span class="sxs-lookup"><span data-stu-id="9af21-111">The values and options for these settings are described in the tables below.</span></span>  
-  
-    ```xml  
-    <configuration>  
-      <system.diagnostics>  
-        <sources>  
-          <source name="System.Net" tracemode="includehex" maxdatasize="1024">  
-            <listeners>  
-              <add name="System.Net"/>  
-            </listeners>  
-          </source>  
-          <source name="System.Net.Cache">  
-            <listeners>  
-              <add name="System.Net"/>  
-            </listeners>  
-          </source>  
-          <source name="System.Net.Http">  
-            <listeners>  
-              <add name="System.Net"/>  
-            </listeners>  
-          </source>  
-          <source name="System.Net.Sockets">  
-            <listeners>  
-              <add name="System.Net"/>  
-            </listeners>  
-          </source>  
-          <source name="System.Net.WebSockets">  
-            <listeners>  
-              <add name="System.Net"/>  
-            </listeners>  
-          </source>  
-        </sources>  
-        <switches>  
-          <add name="System.Net" value="Verbose"/>  
-          <add name="System.Net.Cache" value="Verbose"/>  
-          <add name="System.Net.Http" value="Verbose"/>  
-          <add name="System.Net.Sockets" value="Verbose"/>  
-          <add name="System.Net.WebSockets" value="Verbose"/>  
-        </switches>  
-        <sharedListeners>  
-          <add name="System.Net"  
-            type="System.Diagnostics.TextWriterTraceListener"  
-            initializeData="network.log"
-            traceOutputOptions="ProcessId, DateTime" 
-          />  
-        </sharedListeners>  
-        <trace autoflush="true"/>  
-      </system.diagnostics>  
-    </configuration>  
-    ```  
-  
- <span data-ttu-id="9af21-112">Al agregar un nombre al bloque `<switches>`, el resultado del seguimiento incluye información de algunos métodos relacionados con el nombre.</span><span class="sxs-lookup"><span data-stu-id="9af21-112">When you add a name to the `<switches>` block, the trace output includes information from some methods related to the name.</span></span> <span data-ttu-id="9af21-113">En la siguiente tabla se describe el resultado.</span><span class="sxs-lookup"><span data-stu-id="9af21-113">The following table describes the output.</span></span>  
-  
-|<span data-ttu-id="9af21-114">nombre</span><span class="sxs-lookup"><span data-stu-id="9af21-114">Name</span></span>|<span data-ttu-id="9af21-115">Resultado de</span><span class="sxs-lookup"><span data-stu-id="9af21-115">Output from</span></span>|  
-|----------|-----------------|  
-|`System.Net.Sockets`|<span data-ttu-id="9af21-116">Algunos métodos públicos de las clases <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient> y <xref:System.Net.Dns></span><span class="sxs-lookup"><span data-stu-id="9af21-116">Some public methods of the <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>, and <xref:System.Net.Dns> classes</span></span>|  
-|`System.Net`|<span data-ttu-id="9af21-117">Algunos métodos públicos de las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest> y <xref:System.Net.FtpWebResponse>, e información de depuración de SSL (certificados no válidos, lista de emisores que faltan y errores del certificado cliente).</span><span class="sxs-lookup"><span data-stu-id="9af21-117">Some public methods of the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>, and <xref:System.Net.FtpWebResponse> classes, and SSL debug information (invalid certificates, missing issuers list, and client certificate errors.)</span></span>|  
-|`System.Net.HttpListener`|<span data-ttu-id="9af21-118">Algunos métodos públicos de las clases <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest> y <xref:System.Net.HttpListenerResponse>.</span><span class="sxs-lookup"><span data-stu-id="9af21-118">Some public methods of the <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>, and <xref:System.Net.HttpListenerResponse> classes.</span></span>|  
-|`System.Net.Cache`|<span data-ttu-id="9af21-119">Algunos métodos privados e internos de `System.Net.Cache`.</span><span class="sxs-lookup"><span data-stu-id="9af21-119">Some private and internal methods in `System.Net.Cache`.</span></span>|  
-|`System.Net.Http`|<span data-ttu-id="9af21-120">Algunos métodos públicos de las clases <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler> y <xref:System.Net.Http.WebRequestHandler>.</span><span class="sxs-lookup"><span data-stu-id="9af21-120">Some public methods of the  <xref:System.Net.Http.HttpClient>,  <xref:System.Net.Http.DelegatingHandler>,  <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>,  <xref:System.Net.Http.MessageProcessingHandler>, and  <xref:System.Net.Http.WebRequestHandler> classes.</span></span>|  
-|`System.Net.WebSockets.WebSocket`|<span data-ttu-id="9af21-121">Algunos métodos públicos de las clases <xref:System.Net.WebSockets.ClientWebSocket> y <xref:System.Net.WebSockets.WebSocket>.</span><span class="sxs-lookup"><span data-stu-id="9af21-121">Some public methods of the <xref:System.Net.WebSockets.ClientWebSocket> and <xref:System.Net.WebSockets.WebSocket> classes.</span></span>|  
-  
- <span data-ttu-id="9af21-122">Los atributos mostrados en la tabla siguiente configuran el resultado de la traza.</span><span class="sxs-lookup"><span data-stu-id="9af21-122">The attributes listed in the following table configure trace output.</span></span>  
-  
-|<span data-ttu-id="9af21-123">Nombre del atributo</span><span class="sxs-lookup"><span data-stu-id="9af21-123">Attribute name</span></span>|<span data-ttu-id="9af21-124">Valor del atributo</span><span class="sxs-lookup"><span data-stu-id="9af21-124">Attribute value</span></span>|  
-|--------------------|---------------------|  
-|`Value`|<span data-ttu-id="9af21-125">El atributo <xref:System.String> es obligatorio.</span><span class="sxs-lookup"><span data-stu-id="9af21-125">Required <xref:System.String> attribute.</span></span> <span data-ttu-id="9af21-126">Establece el nivel de detalle del resultado.</span><span class="sxs-lookup"><span data-stu-id="9af21-126">Sets the verbosity of the output.</span></span> <span data-ttu-id="9af21-127">Los valores permitidos son `Critical`, `Error`, `Verbose`, `Warning` y `Information`.</span><span class="sxs-lookup"><span data-stu-id="9af21-127">Legitimate values are `Critical`, `Error`, `Verbose`, `Warning`, and `Information`.</span></span><br /><br /> <span data-ttu-id="9af21-128">Este atributo debe establecerse en el elemento \<add name> del elemento \<switches> como se muestra en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9af21-128">This attribute must be set on the \<add name> element of the \<switches> element as shown in the example.</span></span> <span data-ttu-id="9af21-129">Se produce una excepción si este atributo se establece en el elemento \<source>.</span><span class="sxs-lookup"><span data-stu-id="9af21-129">An exception is thrown if this attribute is set on the \<source> element.</span></span>|  
-|`maxdatasize`|<span data-ttu-id="9af21-130">Atributo <xref:System.Int32> opcional.</span><span class="sxs-lookup"><span data-stu-id="9af21-130">Optional <xref:System.Int32> attribute.</span></span> <span data-ttu-id="9af21-131">Establece el número máximo de bytes de datos de red incluidos en cada seguimiento de línea.</span><span class="sxs-lookup"><span data-stu-id="9af21-131">Sets the maximum number of bytes of network data included in each line trace.</span></span> <span data-ttu-id="9af21-132">El valor predeterminado es 1024.</span><span class="sxs-lookup"><span data-stu-id="9af21-132">The default value is 1024.</span></span><br /><br /> <span data-ttu-id="9af21-133">Este atributo debe establecerse en el elemento \<source> como se muestra en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9af21-133">This attribute must be set on the \<source> element as shown in the example.</span></span> <span data-ttu-id="9af21-134">Se produce una excepción si este atributo se establece en un elemento bajo el elemento \<switches>.</span><span class="sxs-lookup"><span data-stu-id="9af21-134">An exception is thrown if this attribute is set on an element under the \<switches> element.</span></span>|  
-|`Tracemode`|<span data-ttu-id="9af21-135">Atributo <xref:System.String> opcional.</span><span class="sxs-lookup"><span data-stu-id="9af21-135">Optional <xref:System.String> attribute.</span></span> <span data-ttu-id="9af21-136">Establezca este atributo en `includehex` para mostrar el seguimiento del protocolo en formato hexadecimal y de texto.</span><span class="sxs-lookup"><span data-stu-id="9af21-136">Set to `includehex` to show protocol traces in hexadecimal and text format.</span></span> <span data-ttu-id="9af21-137">Establezca este atributo en `protocolonly` para mostrar solo texto.</span><span class="sxs-lookup"><span data-stu-id="9af21-137">Set to `protocolonly` to show only text.</span></span> <span data-ttu-id="9af21-138">El valor predeterminado es `includehex`.</span><span class="sxs-lookup"><span data-stu-id="9af21-138">The default value is `includehex`.</span></span><br /><br /> <span data-ttu-id="9af21-139">Este atributo debe establecerse en el elemento \<switches> como se muestra en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9af21-139">This attribute must be set on the \<switches> element as shown in the example.</span></span> <span data-ttu-id="9af21-140">Se produce una excepción si este atributo se establece en un elemento bajo el elemento \<source>.</span><span class="sxs-lookup"><span data-stu-id="9af21-140">An exception is thrown if this attribute is set on an element under the \<source> element.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="9af21-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="9af21-141">See also</span></span>
+# <a name="how-to-configure-network-tracing"></a><span data-ttu-id="ce823-102">Procedimientos para: configurar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="ce823-102">How to: Configure network tracing</span></span>
 
-- [<span data-ttu-id="9af21-142">Interpretación del seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="9af21-142">Interpreting Network Tracing</span></span>](interpreting-network-tracing.md)
-- [<span data-ttu-id="9af21-143">Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="9af21-143">Network Tracing in the .NET Framework</span></span>](network-tracing.md)
-- [<span data-ttu-id="9af21-144">Habilitar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="9af21-144">Enabling Network Tracing</span></span>](enabling-network-tracing.md)
-- [<span data-ttu-id="9af21-145">Seguimiento e instrumentación de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="9af21-145">Tracing and Instrumenting Applications</span></span>](../debug-trace-profile/tracing-and-instrumenting-applications.md)
+<span data-ttu-id="ce823-103">El archivo de configuración de la aplicación o equipo contiene la configuración que determina el formato y el contenido del seguimiento de red.</span><span class="sxs-lookup"><span data-stu-id="ce823-103">The application or computer configuration file holds the settings that determine the format and content of network traces.</span></span> <span data-ttu-id="ce823-104">Antes de realizar este procedimiento, asegúrese de que el seguimiento está habilitado.</span><span class="sxs-lookup"><span data-stu-id="ce823-104">Before performing this procedure, be sure tracing is enabled.</span></span> <span data-ttu-id="ce823-105">Para obtener más información, consulte [Habilitación de seguimiento de red](enabling-network-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="ce823-105">For more information, see [Enable network tracing](enabling-network-tracing.md).</span></span>
+
+<span data-ttu-id="ce823-106">El archivo de configuración del equipo, machine.config, se almacena en la carpeta %windir%\Microsoft.NET\Framework.</span><span class="sxs-lookup"><span data-stu-id="ce823-106">The computer configuration file, machine.config, is stored in the %windir%\Microsoft.NET\Framework folder.</span></span> <span data-ttu-id="ce823-107">Hay un archivo machine.config independiente en las carpetas en %Windir%\Microsoft.NET\Framework para cada versión de .NET Framework instalada en el equipo, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="ce823-107">There is a separate machine.config file in the folders under %windir%\Microsoft.NET\Framework for each version of the .NET Framework installed on the computer, for example:</span></span>
+
+- <span data-ttu-id="ce823-108">C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Config\machine.config</span><span class="sxs-lookup"><span data-stu-id="ce823-108">C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Config\machine.config</span></span>
+- <span data-ttu-id="ce823-109">C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config</span><span class="sxs-lookup"><span data-stu-id="ce823-109">C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config</span></span>
+  
+<span data-ttu-id="ce823-110">Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.</span><span class="sxs-lookup"><span data-stu-id="ce823-110">These settings can also be made in the configuration file for the application, which has precedence over the computer configuration file.</span></span>  
+  
+## <a name="configure-network-tracing"></a><span data-ttu-id="ce823-111">Configuración del seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="ce823-111">Configure network tracing</span></span>  
+  
+<span data-ttu-id="ce823-112">Para configurar el seguimiento de red, agregue las líneas siguientes al archivo de configuración adecuado.</span><span class="sxs-lookup"><span data-stu-id="ce823-112">To configure network tracing, add the following lines to the appropriate configuration file.</span></span> <span data-ttu-id="ce823-113">Los valores y las opciones de estos valores se describen en las tablas siguientes.</span><span class="sxs-lookup"><span data-stu-id="ce823-113">The values and options for these settings are described in the tables below.</span></span>  
+  
+```xml  
+<configuration>  
+  <system.diagnostics>  
+    <sources>  
+      <source name="System.Net" tracemode="includehex" maxdatasize="1024">  
+        <listeners>  
+          <add name="System.Net"/>  
+        </listeners>  
+      </source>  
+      <source name="System.Net.Cache">  
+        <listeners>  
+          <add name="System.Net"/>  
+        </listeners>  
+      </source>  
+      <source name="System.Net.Http">  
+        <listeners>  
+          <add name="System.Net"/>  
+        </listeners>  
+      </source>  
+      <source name="System.Net.Sockets">  
+        <listeners>  
+          <add name="System.Net"/>  
+        </listeners>  
+      </source>  
+      <source name="System.Net.WebSockets">  
+        <listeners>  
+          <add name="System.Net"/>  
+        </listeners>  
+      </source>  
+   </sources> 
+    <switches>
+      <add name="System.Net" value="Verbose"/>
+      <add name="System.Net.Cache" value="Verbose"/>  
+      <add name="System.Net.Http" value="Verbose"/>  
+      <add name="System.Net.Sockets" value="Verbose"/>  
+      <add name="System.Net.WebSockets" value="Verbose"/>  
+    </switches>  
+    <sharedListeners>  
+      <add name="System.Net"  
+        type="System.Diagnostics.TextWriterTraceListener"  
+        initializeData="network.log"
+        traceOutputOptions="ProcessId, DateTime" 
+      />  
+    </sharedListeners>  
+    <trace autoflush="true"/>  
+  </system.diagnostics>  
+</configuration>  
+```  
+
+### <a name="trace-output-from-methods"></a><span data-ttu-id="ce823-114">Resultado de seguimiento de los métodos</span><span class="sxs-lookup"><span data-stu-id="ce823-114">Trace output from methods</span></span>
+
+<span data-ttu-id="ce823-115">Al agregar un nombre al bloque `<switches>`, el resultado del seguimiento incluye información de algunos métodos relacionados con el nombre.</span><span class="sxs-lookup"><span data-stu-id="ce823-115">When you add a name to the `<switches>` block, the trace output includes information from some methods related to the name.</span></span> <span data-ttu-id="ce823-116">En la tabla siguiente se describe el resultado:</span><span class="sxs-lookup"><span data-stu-id="ce823-116">The following table describes the output:</span></span>
+  
+|<span data-ttu-id="ce823-117">NOMBRE</span><span class="sxs-lookup"><span data-stu-id="ce823-117">Name</span></span>|<span data-ttu-id="ce823-118">Resultado de</span><span class="sxs-lookup"><span data-stu-id="ce823-118">Output from</span></span>|  
+|----------|-----------------|  
+|`System.Net.Sockets`|<span data-ttu-id="ce823-119">Algunos métodos públicos de las clases <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient> y <xref:System.Net.Dns>.</span><span class="sxs-lookup"><span data-stu-id="ce823-119">Some public methods of the <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>, and <xref:System.Net.Dns> classes.</span></span>|  
+|`System.Net`|<span data-ttu-id="ce823-120">Algunos métodos públicos de las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest> y <xref:System.Net.FtpWebResponse>, e información de depuración de SSL (certificados no válidos, lista de emisores que faltan y errores del certificado cliente).</span><span class="sxs-lookup"><span data-stu-id="ce823-120">Some public methods of the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>, and <xref:System.Net.FtpWebResponse> classes, and SSL debug information (invalid certificates, missing issuers list, and client certificate errors).</span></span>|  
+|`System.Net.HttpListener`|<span data-ttu-id="ce823-121">Algunos métodos públicos de las clases <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest> y <xref:System.Net.HttpListenerResponse>.</span><span class="sxs-lookup"><span data-stu-id="ce823-121">Some public methods of the <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>, and <xref:System.Net.HttpListenerResponse> classes.</span></span>|  
+|`System.Net.Cache`|<span data-ttu-id="ce823-122">Algunos métodos privados e internos de `System.Net.Cache`.</span><span class="sxs-lookup"><span data-stu-id="ce823-122">Some private and internal methods in `System.Net.Cache`.</span></span>|  
+|`System.Net.Http`|<span data-ttu-id="ce823-123">Algunos métodos públicos de las clases <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler> y <xref:System.Net.Http.WebRequestHandler>.</span><span class="sxs-lookup"><span data-stu-id="ce823-123">Some public methods of the  <xref:System.Net.Http.HttpClient>,  <xref:System.Net.Http.DelegatingHandler>,  <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>,  <xref:System.Net.Http.MessageProcessingHandler>, and  <xref:System.Net.Http.WebRequestHandler> classes.</span></span>|  
+|`System.Net.WebSockets.WebSocket`|<span data-ttu-id="ce823-124">Algunos métodos públicos de las clases <xref:System.Net.WebSockets.ClientWebSocket> y <xref:System.Net.WebSockets.WebSocket>.</span><span class="sxs-lookup"><span data-stu-id="ce823-124">Some public methods of the <xref:System.Net.WebSockets.ClientWebSocket> and <xref:System.Net.WebSockets.WebSocket> classes.</span></span>|  
+
+### <a name="trace-output-attributes"></a><span data-ttu-id="ce823-125">Atributos de resultado de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ce823-125">Trace output attributes</span></span>
+
+<span data-ttu-id="ce823-126">Los atributos mostrados en la tabla siguiente configuran el resultado de seguimiento:</span><span class="sxs-lookup"><span data-stu-id="ce823-126">The attributes listed in the following table configure trace output:</span></span>
+  
+|<span data-ttu-id="ce823-127">Nombre del atributo</span><span class="sxs-lookup"><span data-stu-id="ce823-127">Attribute name</span></span>|<span data-ttu-id="ce823-128">Valor del atributo</span><span class="sxs-lookup"><span data-stu-id="ce823-128">Attribute value</span></span>|  
+|--------------------|---------------------|  
+|`value`|<span data-ttu-id="ce823-129">El atributo <xref:System.String> es obligatorio.</span><span class="sxs-lookup"><span data-stu-id="ce823-129">Required <xref:System.String> attribute.</span></span> <span data-ttu-id="ce823-130">Establece el nivel de detalle del resultado.</span><span class="sxs-lookup"><span data-stu-id="ce823-130">Sets the verbosity of the output.</span></span> <span data-ttu-id="ce823-131">Los valores permitidos son `Critical`, `Error`, `Verbose`, `Warning` y `Information`.</span><span class="sxs-lookup"><span data-stu-id="ce823-131">Legitimate values are `Critical`, `Error`, `Verbose`, `Warning`, and `Information`.</span></span><br /><br /><span data-ttu-id="ce823-132">Este atributo debe establecerse en el elemento **add** del elemento **switches**.</span><span class="sxs-lookup"><span data-stu-id="ce823-132">This attribute must be set on the **add** element of the **switches** element.</span></span> <span data-ttu-id="ce823-133">Si este atributo se establece en el elemento **source**, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="ce823-133">An exception is thrown if this attribute is set on the **source** element.</span></span><br/><br/><span data-ttu-id="ce823-134">Ejemplo: `<add name="System.Net" value="Verbose"/>`</span><span class="sxs-lookup"><span data-stu-id="ce823-134">Example: `<add name="System.Net" value="Verbose"/>`</span></span>|
+|`maxdatasize`|<span data-ttu-id="ce823-135">Atributo <xref:System.Int32> opcional.</span><span class="sxs-lookup"><span data-stu-id="ce823-135">Optional <xref:System.Int32> attribute.</span></span> <span data-ttu-id="ce823-136">Establece el número máximo de bytes de datos de red incluidos en cada seguimiento de línea.</span><span class="sxs-lookup"><span data-stu-id="ce823-136">Sets the maximum number of bytes of network data included in each line trace.</span></span> <span data-ttu-id="ce823-137">El valor predeterminado es 1024.</span><span class="sxs-lookup"><span data-stu-id="ce823-137">The default value is 1024.</span></span><br /><br /><span data-ttu-id="ce823-138">Este atributo debe establecerse en el elemento **source**.</span><span class="sxs-lookup"><span data-stu-id="ce823-138">This attribute must be set on the **source** element.</span></span> <span data-ttu-id="ce823-139">Si este atributo se establece en un elemento que está en el elemento **switches**, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="ce823-139">An exception is thrown if this attribute is set on an element under the **switches** element.</span></span><br/><br/><span data-ttu-id="ce823-140">Ejemplo: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`</span><span class="sxs-lookup"><span data-stu-id="ce823-140">Example: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`</span></span>|
+|`tracemode`|<span data-ttu-id="ce823-141">Atributo <xref:System.String> opcional.</span><span class="sxs-lookup"><span data-stu-id="ce823-141">Optional <xref:System.String> attribute.</span></span> <span data-ttu-id="ce823-142">Establezca este atributo en `includehex` para mostrar el seguimiento del protocolo en formato hexadecimal y de texto.</span><span class="sxs-lookup"><span data-stu-id="ce823-142">Set to `includehex` to show protocol traces in hexadecimal and text format.</span></span> <span data-ttu-id="ce823-143">Establezca este atributo en `protocolonly` para mostrar solo texto.</span><span class="sxs-lookup"><span data-stu-id="ce823-143">Set to `protocolonly` to show only text.</span></span> <span data-ttu-id="ce823-144">El valor predeterminado es `includehex`.</span><span class="sxs-lookup"><span data-stu-id="ce823-144">The default value is `includehex`.</span></span><br /><br /><span data-ttu-id="ce823-145">Este atributo debe establecerse en el elemento **source**.</span><span class="sxs-lookup"><span data-stu-id="ce823-145">This attribute must be set on the **source** element.</span></span> <span data-ttu-id="ce823-146">Si este atributo se establece en un elemento que está en el elemento **switches**, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="ce823-146">An exception is thrown if this attribute is set on an element under the **switches** element.</span></span><br/><br/><span data-ttu-id="ce823-147">Ejemplo: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`</span><span class="sxs-lookup"><span data-stu-id="ce823-147">Example: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`</span></span>|
+  
+## <a name="see-also"></a><span data-ttu-id="ce823-148">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce823-148">See also</span></span>
+
+- [<span data-ttu-id="ce823-149">Interpretación del seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="ce823-149">Interpreting Network Tracing</span></span>](interpreting-network-tracing.md)
+- [<span data-ttu-id="ce823-150">Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="ce823-150">Network Tracing in the .NET Framework</span></span>](network-tracing.md)
+- [<span data-ttu-id="ce823-151">Habilitar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="ce823-151">Enabling Network Tracing</span></span>](enabling-network-tracing.md)
+- [<span data-ttu-id="ce823-152">Seguimiento e instrumentación de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="ce823-152">Tracing and Instrumenting Applications</span></span>](../debug-trace-profile/tracing-and-instrumenting-applications.md)

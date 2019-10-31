@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Bifurcaciones y bucles en C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
-  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72291375"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774014"
 items:
 - durationInMinutes: 1
   content: >
@@ -421,12 +421,8 @@ items:
     Puede obtener más información sobre los números en C# en los temas siguientes:
 
 
-    - [Tipos enteros](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [Tipos numéricos integrales](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [Tabla de tipos de punto flotante](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [Tipos numéricos de punto flotante](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [Tabla de tipos integrados](../../language-reference/keywords/built-in-types-table.md)
-
-    - [Tabla de conversiones numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [Tabla de conversiones numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [Conversiones numéricas integradas](../../language-reference/builtin-types/numeric-conversions.md)

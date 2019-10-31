@@ -1,32 +1,36 @@
 ---
-title: Procedimiento para iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)
-ms.date: 07/20/2015
+title: 'Cómo: iniciar una aplicación y enviarle pulsaciones de teclas: Visual Basic'
+ms.date: 10/23/2019
 helpviewer_keywords:
 - keystrokes, sending
 - Shell command example [Visual Basic]
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: 9519fd85177d5d2adf97b54652c19330954edadf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815971"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919392"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a><span data-ttu-id="ab150-102">Procedimiento para iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab150-102">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>
-<span data-ttu-id="ab150-103">En el siguiente ejemplo se usa la función `Shell` para iniciar la aplicación calculadora y, después, multiplicar dos números enviando pulsaciones de teclas mediante el método `My.Computer.Keyboard.SendKeys`.</span><span class="sxs-lookup"><span data-stu-id="ab150-103">This example uses the `Shell` function to start the calculator application and then multiplies two numbers by sending keystrokes using the `My.Computer.Keyboard.SendKeys` method.</span></span>  
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a><span data-ttu-id="bb2b5-102">Cómo: iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb2b5-102">How to: start an application and send it keystrokes (Visual Basic)</span></span>
+
+<span data-ttu-id="bb2b5-103">En este ejemplo se usa el método <xref:Microsoft.VisualBasic.Interaction.Shell%2A> para iniciar la aplicación de Bloc de notas y, después, se imprime una frase mediante el envío de pulsaciones de teclas con el método [My.Computer.Keyboard.SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A).</span><span class="sxs-lookup"><span data-stu-id="bb2b5-103">This example uses the <xref:Microsoft.VisualBasic.Interaction.Shell%2A> method to start the Notepad application and then prints a sentence by sending keystrokes using the [My.Computer.Keyboard.SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) method.</span></span>
+
+## <a name="example"></a><span data-ttu-id="bb2b5-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb2b5-104">Example</span></span>
+
+[!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]
+
+## <a name="robust-programming"></a><span data-ttu-id="bb2b5-105">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="bb2b5-105">Robust programming</span></span>
+
+<span data-ttu-id="bb2b5-106">Si no se encuentra una aplicación con el identificador de proceso solicitado, se generará una excepción <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="bb2b5-106">An <xref:System.ArgumentException> exception is raised if an application with the requested process identifier cannot be found.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ab150-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ab150-104">Example</span></span>  
- [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]  
-  
-## <a name="robust-programming"></a><span data-ttu-id="ab150-105">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="ab150-105">Robust Programming</span></span>  
- <span data-ttu-id="ab150-106">Si no se encuentra una aplicación con el identificador de proceso solicitado, se producirá una excepción <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="ab150-106">A <xref:System.ArgumentException> exception is raised if an application with the requested process identifier cannot be found.</span></span>  
-  
-## <a name="net-framework-security"></a><span data-ttu-id="ab150-107">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ab150-107">.NET Framework Security</span></span>  
- <span data-ttu-id="ab150-108">La llamada a la función `Shell` requiere plena confianza (clase <xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="ab150-108">The call to the `Shell` function requires full trust (<xref:System.Security.SecurityException> class).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ab150-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab150-109">See also</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="bb2b5-107">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bb2b5-107">.NET Framework Security</span></span>
+
+<span data-ttu-id="bb2b5-108">La llamada a la función `Shell` requiere plena confianza (clase <xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="bb2b5-108">The call to the `Shell` function requires full trust (<xref:System.Security.SecurityException> class).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bb2b5-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="bb2b5-109">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>

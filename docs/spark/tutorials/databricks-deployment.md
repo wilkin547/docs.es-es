@@ -4,175 +4,225 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583521"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72961069"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="d293f-103">Implementación de una aplicación de .NET para Apache Spark en Databricks</span><span class="sxs-lookup"><span data-stu-id="d293f-103">Deploy a .NET for Apache Spark application to Databricks</span></span>
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="1cab8-103">Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks</span><span class="sxs-lookup"><span data-stu-id="1cab8-103">Tutorial: Deploy a .NET for Apache Spark application to Databricks</span></span>
 
-<span data-ttu-id="d293f-104">En este tutorial aprenderá a implementar una aplicación de .NET para Apache Spark en Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Databricks.</span></span>
+<span data-ttu-id="1cab8-104">En este tutorial se enseña cómo implementar la aplicación en la nube a través de Azure Databricks, una plataforma de análisis basada en Apache Spark que ofrece una configuración de un clic, simplifica los flujos de trabajo y ofrece un área de trabajo interactivo que permite la colaboración.</span><span class="sxs-lookup"><span data-stu-id="1cab8-104">This tutorial teaches you how to deploy your app to the cloud through Azure Databricks, an Apache Spark-based analytics platform with one-click setup, streamlined workflows, and interactive workspace that enables collaboration.</span></span>
 
-<span data-ttu-id="d293f-105">En este tutorial aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="d293f-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="1cab8-105">En este tutorial aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="1cab8-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
->
-> * <span data-ttu-id="d293f-106">Preparar Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="d293f-106">Prepare Microsoft.Spark.Worker</span></span>
-> * <span data-ttu-id="d293f-107">Publicar la aplicación de .NET para Spark</span><span class="sxs-lookup"><span data-stu-id="d293f-107">Publish your Spark .NET app</span></span>
-> * <span data-ttu-id="d293f-108">Implementar una aplicación en Databricks</span><span class="sxs-lookup"><span data-stu-id="d293f-108">Deploy your app to Databricks</span></span>
-> * <span data-ttu-id="d293f-109">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="d293f-109">Run your app</span></span>
+> <span data-ttu-id="1cab8-106">Crear un área de trabajo de Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-106">Create an Azure Databricks workspace.</span></span>
+> <span data-ttu-id="1cab8-107">Publicar la aplicación de .NET para Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="1cab8-107">Publish your .NET for Apache Spark app.</span></span>
+> <span data-ttu-id="1cab8-108">Crear un trabajo y un clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="1cab8-108">Create a Spark job and Spark cluster.</span></span>
+> <span data-ttu-id="1cab8-109">Ejecutar la aplicación en el clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="1cab8-109">Run your app on the Spark cluster.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="d293f-110">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="d293f-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="1cab8-110">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="1cab8-110">Prerequisites</span></span>
 
-<span data-ttu-id="d293f-111">Antes de empezar, haga lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="d293f-111">Before you start, do the following:</span></span>
+<span data-ttu-id="1cab8-111">Antes de empezar, haga las tareas siguientes:</span><span class="sxs-lookup"><span data-stu-id="1cab8-111">Before you start, do the following tasks:</span></span>
 
-* <span data-ttu-id="d293f-112">Descargue la [CLI de Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span><span class="sxs-lookup"><span data-stu-id="d293f-112">Download the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span></span>
-* <span data-ttu-id="d293f-113">Descargue [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="d293f-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="d293f-114">Es un script de aplicación auxiliar que usaremos más adelante para copiar archivos dependientes de .NET para Apache Spark en los nodos de trabajo del clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="d293f-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
+* <span data-ttu-id="1cab8-112">Si no tiene una cuenta de Azure, cree una [cuenta gratuita](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="1cab8-112">If you don't have an Azure account, create a [free account](https://azure.microsoft.com/free/).</span></span>
+* <span data-ttu-id="1cab8-113">Inicie sesión en [Azure Portal](https://portal.azure.com/).</span><span class="sxs-lookup"><span data-stu-id="1cab8-113">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
+* <span data-ttu-id="1cab8-114">Complete el tutorial [.NET para Apache Spark: comenzar en 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro).</span><span class="sxs-lookup"><span data-stu-id="1cab8-114">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
 
-## <a name="prepare-worker-dependencies"></a><span data-ttu-id="d293f-115">Preparación de las dependencias de trabajo</span><span class="sxs-lookup"><span data-stu-id="d293f-115">Prepare worker dependencies</span></span>
+## <a name="create-an-azure-databricks-workspace"></a><span data-ttu-id="1cab8-115">Creación de un área de trabajo de Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="1cab8-115">Create an Azure Databricks workspace</span></span>
 
-<span data-ttu-id="d293f-116">**Microsoft.Spark.Worker** es un componente back-end que reside en los nodos de trabajo individuales del clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="d293f-116">**Microsoft.Spark.Worker** is a back-end component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="d293f-117">Si quiere ejecutar una función definida por el usuario (UDF) de C#, Spark necesita saber cómo iniciar .NET CLR para ejecutar la UDF.</span><span class="sxs-lookup"><span data-stu-id="d293f-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="d293f-118">**Microsoft.Spark.Worker** pone a disposición de Spark una colección de clases que habilitan esta funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="d293f-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
+> [!Note]
+> <span data-ttu-id="1cab8-116">Este tutorial no puede llevarse a cabo mediante una **suscripción de evaluación gratuita de Azure**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-116">This tutorial cannot be carried out using **Azure Free Trial Subscription**.</span></span>
+> <span data-ttu-id="1cab8-117">Si tiene una cuenta gratuita, vaya a su perfil y cambiar la suscripción a **pago por uso**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-117">If you have a free account, go to your profile and change your subscription to **pay-as-you-go**.</span></span> <span data-ttu-id="1cab8-118">Para más información consulte el sitio de [cuentas gratuitas de Azure](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="1cab8-118">For more information, see [Azure free account](https://azure.microsoft.com/free/).</span></span> <span data-ttu-id="1cab8-119">Después, [quite el límite de gasto](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit) y [solicite un aumento de la cuota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) para las vCPU de su región.</span><span class="sxs-lookup"><span data-stu-id="1cab8-119">Then, [remove the spending limit](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), and [request a quota increase](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) for vCPUs in your region.</span></span> <span data-ttu-id="1cab8-120">Cuando crea su área de trabajo de Azure Databricks, puede seleccionar el plan de tarifa de la **Trial (Premium - 14-Days Free DBUs)** para que el área de trabajo acceda a las DBU Premium de Azure Databricks gratis durante 14 días.</span><span class="sxs-lookup"><span data-stu-id="1cab8-120">When you create your Azure Databricks workspace, you can select the **Trial (Premium - 14-Days Free DBUs)** pricing tier to give the workspace access to free Premium Azure Databricks DBUs for 14 days.</span></span>
 
-1. <span data-ttu-id="d293f-119">Seleccione una versión netcoreapp de Linux de [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) para implementarla en el clúster.</span><span class="sxs-lookup"><span data-stu-id="d293f-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
+<span data-ttu-id="1cab8-121">En esta sección, creará un área de trabajo de Azure Databricks mediante Azure Portal.</span><span class="sxs-lookup"><span data-stu-id="1cab8-121">In this section, you create an Azure Databricks workspace using the Azure portal.</span></span>
 
-   <span data-ttu-id="d293f-120">Por ejemplo, si quiere que `.NET for Apache Spark v0.1.0` use `netcoreapp2.1`, tendría que descargar [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span><span class="sxs-lookup"><span data-stu-id="d293f-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
+1. <span data-ttu-id="1cab8-122">En Azure Portal, seleccione **Crear un recurso** > **Análisis** > **Azure Databricks**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-122">In the Azure portal, select **Create a resource** > **Analytics** > **Azure Databricks**.</span></span>
 
-2. <span data-ttu-id="d293f-121">Cargue `Microsoft.Spark.Worker.<release>.tar.gz` e [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en un sistema de archivos distribuido (por ejemplo, DBFS) al que el clúster tenga acceso.</span><span class="sxs-lookup"><span data-stu-id="d293f-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (for example, DBFS) that your cluster has access to.</span></span>
+   ![Creación de un recurso de Azure Databricks en Azure Portal](./media/databricks-deployment/create-databricks-resource.png)
 
-## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="d293f-122">Preparación de la aplicación de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="d293f-122">Prepare your .NET for Apache Spark app</span></span>
+2. <span data-ttu-id="1cab8-124">En **Azure Databricks Service**, proporcione los valores para crear un área de trabajo de Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-124">Under **Azure Databricks Service**, provide the values to create a Databricks workspace.</span></span>
+    
+    |<span data-ttu-id="1cab8-125">Propiedad.</span><span class="sxs-lookup"><span data-stu-id="1cab8-125">Property</span></span>  |<span data-ttu-id="1cab8-126">Descripción</span><span class="sxs-lookup"><span data-stu-id="1cab8-126">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="1cab8-127">**Workspace name** (Nombre del área de trabajo)</span><span class="sxs-lookup"><span data-stu-id="1cab8-127">**Workspace name**</span></span>     | <span data-ttu-id="1cab8-128">Proporcione un nombre para el área de trabajo de Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-128">Provide a name for your Databricks workspace.</span></span>        |
+    |<span data-ttu-id="1cab8-129">**Suscripción**</span><span class="sxs-lookup"><span data-stu-id="1cab8-129">**Subscription**</span></span>     | <span data-ttu-id="1cab8-130">En el cuadro desplegable, seleccione la suscripción de Azure.</span><span class="sxs-lookup"><span data-stu-id="1cab8-130">From the drop-down, select your Azure subscription.</span></span>        |
+    |<span data-ttu-id="1cab8-131">**Grupos de recursos**</span><span class="sxs-lookup"><span data-stu-id="1cab8-131">**Resource group**</span></span>     | <span data-ttu-id="1cab8-132">Especifique si desea crear un nuevo grupo de recursos o utilizar uno existente.</span><span class="sxs-lookup"><span data-stu-id="1cab8-132">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="1cab8-133">Un grupo de recursos es un contenedor que almacena los recursos relacionados con una solución de Azure.</span><span class="sxs-lookup"><span data-stu-id="1cab8-133">A resource group is a container that holds related resources for an Azure solution.</span></span> <span data-ttu-id="1cab8-134">Para más información, consulte [Información general del grupo de recursos de Azure](/azure/azure-databricks/azure-resource-manager/resource-group-overview).</span><span class="sxs-lookup"><span data-stu-id="1cab8-134">For more information, see [Azure Resource Group overview](/azure/azure-databricks/azure-resource-manager/resource-group-overview).</span></span> |
+    |<span data-ttu-id="1cab8-135">**Ubicación**</span><span class="sxs-lookup"><span data-stu-id="1cab8-135">**Location**</span></span>     | <span data-ttu-id="1cab8-136">Seleccione su región preferida.</span><span class="sxs-lookup"><span data-stu-id="1cab8-136">Select your preferred region.</span></span> <span data-ttu-id="1cab8-137">Para obtener información sobre las regiones disponibles, consulte [Servicios de Azure disponibles por región](https://azure.microsoft.com/regions/services/).</span><span class="sxs-lookup"><span data-stu-id="1cab8-137">For information about available regions, see [Azure services available by region](https://azure.microsoft.com/regions/services/).</span></span>        |
+    |<span data-ttu-id="1cab8-138">**Plan de tarifa**</span><span class="sxs-lookup"><span data-stu-id="1cab8-138">**Pricing Tier**</span></span>     |  <span data-ttu-id="1cab8-139">Elija entre **Estándar**, **Premium** o **Evaluación gratuita**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-139">Choose between **Standard**, **Premium**, or **Trial**.</span></span> <span data-ttu-id="1cab8-140">Para más información sobre estos planes, consulte la [página de precios de Databricks](https://azure.microsoft.com/pricing/details/databricks/).</span><span class="sxs-lookup"><span data-stu-id="1cab8-140">For more information on these tiers, see [Databricks pricing page](https://azure.microsoft.com/pricing/details/databricks/).</span></span>       |
+    |<span data-ttu-id="1cab8-141">**Virtual Network**</span><span class="sxs-lookup"><span data-stu-id="1cab8-141">**Virtual Network**</span></span>     |   <span data-ttu-id="1cab8-142">No</span><span class="sxs-lookup"><span data-stu-id="1cab8-142">No</span></span>       |
 
-1. <span data-ttu-id="d293f-123">Siga el tutorial de [introducción](get-started.md) para crear la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d293f-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
+3. <span data-ttu-id="1cab8-143">Seleccione **Crear**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-143">Select **Create**.</span></span> <span data-ttu-id="1cab8-144">Se tarda unos minutos en crear el área de trabajo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-144">The workspace creation takes a few minutes.</span></span> <span data-ttu-id="1cab8-145">Durante la creación del área de trabajo, puede ver el estado de implementación en **Notificaciones**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-145">During workspace creation, you can view the deployment status in **Notifications**.</span></span>
 
-2. <span data-ttu-id="d293f-124">Publique la aplicación de .NET para Spark como independiente.</span><span class="sxs-lookup"><span data-stu-id="d293f-124">Publish your Spark .NET app as self-contained.</span></span>
+## <a name="install-azure-databricks-tools"></a><span data-ttu-id="1cab8-146">Instalación de las herramientas de Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="1cab8-146">Install Azure Databricks tools</span></span>
 
-   <span data-ttu-id="d293f-125">Puede ejecutar el siguiente comando en Linux.</span><span class="sxs-lookup"><span data-stu-id="d293f-125">You can run the following command on Linux.</span></span>
+<span data-ttu-id="1cab8-147">Puede usar la **CLI de Databricks** para conectarse a los clústeres de Azure Databricks y cargar archivos en ellos desde la máquina local.</span><span class="sxs-lookup"><span data-stu-id="1cab8-147">You can use the **Databricks CLI** to connect to Azure Databricks clusters and upload files to them from your local machine.</span></span> <span data-ttu-id="1cab8-148">Los clústeres de Databricks tienen acceso a archivos a través del DBFS (Sistema de archivos de Databricks).</span><span class="sxs-lookup"><span data-stu-id="1cab8-148">Databricks clusters access files through DBFS (Databricks File System).</span></span> 
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
-   ```
+1. <span data-ttu-id="1cab8-149">La CLI de Databricks requiere Python 3.6 o una versión posterior.</span><span class="sxs-lookup"><span data-stu-id="1cab8-149">The Databricks CLI requires Python 3.6 or above.</span></span> <span data-ttu-id="1cab8-150">Si ya tiene Python instalado, puede omitir este paso.</span><span class="sxs-lookup"><span data-stu-id="1cab8-150">If you already have Python installed, you can skip this step.</span></span>
+ 
+   <span data-ttu-id="1cab8-151">**Para Windows**:</span><span class="sxs-lookup"><span data-stu-id="1cab8-151">**For Windows:**</span></span>
 
-3. <span data-ttu-id="d293f-126">Genere `<your app>.zip` para los archivos publicados.</span><span class="sxs-lookup"><span data-stu-id="d293f-126">Produce `<your app>.zip` for the published files.</span></span>
+   [<span data-ttu-id="1cab8-152">Descargar Python para Windows</span><span class="sxs-lookup"><span data-stu-id="1cab8-152">Download Python for Windows</span></span>](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
 
-   <span data-ttu-id="d293f-127">Puede ejecutar el siguiente comando en Linux usando `zip`.</span><span class="sxs-lookup"><span data-stu-id="d293f-127">You can run the following command on Linux using `zip`.</span></span>
-
-   ```bash
-   zip -r <your app>.zip .
-   ```
-
-4. <span data-ttu-id="d293f-128">Cargue lo siguiente en un sistema de archivos distribuido (por ejemplo, DBFS) al que el clúster tenga acceso:</span><span class="sxs-lookup"><span data-stu-id="d293f-128">Upload the following to a distributed file system (for example, DBFS) that your cluster has access to:</span></span>
-
-   * <span data-ttu-id="d293f-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Este archivo jar se incluye como parte del paquete NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/), y se encuentra en el directorio de salida de creación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d293f-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
-   * `<your app>.zip`
-   * <span data-ttu-id="d293f-130">Los archivos (como los archivos de dependencias o los datos comunes accesibles para todos los trabajos) o los ensamblados (como los archivos DLL que contienen las bibliotecas o las funciones definidas por el usuario de las que depende la aplicación) se colocarán en el directorio de trabajo de cada ejecutor.</span><span class="sxs-lookup"><span data-stu-id="d293f-130">Files (like dependency files or common data accessible to every worker) or assemblies (like DLLs that contain your user-defined functions or libraries that your app depends on) to be placed in the working directory of each executor.</span></span>
-
-## <a name="deploy-to-databricks"></a><span data-ttu-id="d293f-131">Implementación en Databricks</span><span class="sxs-lookup"><span data-stu-id="d293f-131">Deploy to Databricks</span></span>
-
-<span data-ttu-id="d293f-132">[Databricks](https://databricks.com) es una plataforma que permite el procesamiento de macrodatos en la nube mediante Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="d293f-132">[Databricks](https://databricks.com) is a platform that provides cloud-based big data processing using Apache Spark.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="d293f-133">[Azure Databricks](https://azure.microsoft.com/services/databricks/) y [AWS Databricks](https://databricks.com/aws) se basan en Linux.</span><span class="sxs-lookup"><span data-stu-id="d293f-133">[Azure Databricks](https://azure.microsoft.com/services/databricks/) and [AWS Databricks](https://databricks.com/aws) are Linux-based.</span></span> <span data-ttu-id="d293f-134">Por lo tanto, si está interesado en implementar la aplicación en Databricks, asegúrese de que la aplicación es compatible con .NET Standard y, asimismo, de que usa el [compilador de .NET Core](https://dotnet.microsoft.com/download) para compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d293f-134">Therefore, if you are interested in deploying your app to Databricks, make sure your app is .NET Standard compatible and that you use [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
-
-<span data-ttu-id="d293f-135">Databricks permite enviar las aplicaciones de .NET para Apache Spark a un clúster activo existente, o bien crear un clúster cada vez que un trabajo se inicie.</span><span class="sxs-lookup"><span data-stu-id="d293f-135">Databricks allows you to submit .NET for Apache Spark apps to an existing active cluster or create a new cluster every time you launch a job.</span></span> <span data-ttu-id="d293f-136">Esto requiere instalar **Microsoft.Spark.Worker** antes de enviar la aplicación de .NET para Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="d293f-136">This requires the **Microsoft.Spark.Worker** to be installed before you submit a .NET for Apache Spark app.</span></span>
-
-### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="d293f-137">Implementación de Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="d293f-137">Deploy Microsoft.Spark.Worker</span></span>
-
-<span data-ttu-id="d293f-138">Este paso solo es necesario realizarlo una vez en un clúster.</span><span class="sxs-lookup"><span data-stu-id="d293f-138">This step is only required once for a cluster.</span></span>
-
-1. <span data-ttu-id="d293f-139">Descargue [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) e [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="d293f-139">Download [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) onto your local machine.</span></span>
-
-2. <span data-ttu-id="d293f-140">Modifique **db-init.sh** para que apunte a la versión de **Microsoft.Spark.Worker** que quiera descargar e instalar en el clúster.</span><span class="sxs-lookup"><span data-stu-id="d293f-140">Modify **db-init.sh** to point to the **Microsoft.Spark.Worker** release you want to download and install on your cluster.</span></span>
-
-3. <span data-ttu-id="d293f-141">Instale la [CLI de Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span><span class="sxs-lookup"><span data-stu-id="d293f-141">Install the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span></span>
-
-4. <span data-ttu-id="d293f-142">[Configure los detalles de autenticación](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) de la CLI de Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-142">[Setup authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) details for the Databricks CLI.</span></span>
-
-5. <span data-ttu-id="d293f-143">Cargue los archivos en el clúster de Databricks mediante el siguiente comando:</span><span class="sxs-lookup"><span data-stu-id="d293f-143">Upload the files to your Databricks cluster using the following command:</span></span>
+   <span data-ttu-id="1cab8-153">**Para Linux:** Python viene preinstalado en la mayoría de las distribuciones de Linux.</span><span class="sxs-lookup"><span data-stu-id="1cab8-153">**For Linux:** Python comes preinstalled on most Linux distributions.</span></span> <span data-ttu-id="1cab8-154">Ejecute el comando siguiente para ver la versión que se ha instalado:</span><span class="sxs-lookup"><span data-stu-id="1cab8-154">Run the following command to see which version you have installed:</span></span>
 
    ```bash
-   cd <path-to-db-init-and-install-worker>
+   python3 --version
+   ```
+
+2. <span data-ttu-id="1cab8-155">Use pip para instalar la CLI de Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-155">Use pip to install the Databricks CLI.</span></span> <span data-ttu-id="1cab8-156">Python 3.4 y las versiones posteriores incluyen pip de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="1cab8-156">Python 3.4 and later include pip by default.</span></span> <span data-ttu-id="1cab8-157">Use pip3 para Python 3.</span><span class="sxs-lookup"><span data-stu-id="1cab8-157">Use pip3 for Python 3.</span></span> <span data-ttu-id="1cab8-158">Ejecute el siguiente comando:</span><span class="sxs-lookup"><span data-stu-id="1cab8-158">Run the following command:</span></span>
+
+   ```bash
+   pip3 install databricks-cli
+   ```
+
+3. <span data-ttu-id="1cab8-159">Una vez instalada la CLI de Databricks, abra un símbolo del sistema nuevo y ejecute el comando `databricks`.</span><span class="sxs-lookup"><span data-stu-id="1cab8-159">Once you've installed the Databricks CLI, open a new command prompt and run the command `databricks`.</span></span> <span data-ttu-id="1cab8-160">Si recibe un aviso **"databricks" no se reconoce como un error de comando interno o externo**, asegúrese de que ha abierto un símbolo del sistema nuevo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-160">If you receive a **'databricks' is not recognized as an internal or external command error**, make sure you opened a new command prompt.</span></span>
+
+## <a name="set-up-azure-databricks"></a><span data-ttu-id="1cab8-161">Configuración de Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="1cab8-161">Set up Azure Databricks</span></span>
+
+<span data-ttu-id="1cab8-162">Ahora que tiene la CLI de Databricks instalada, debe configurar los detalles de autenticación.</span><span class="sxs-lookup"><span data-stu-id="1cab8-162">Now that you have the Databricks CLI installed, you need to set up authentication details.</span></span>
+
+1. <span data-ttu-id="1cab8-163">Ejecute el comando `databricks configure --token` de la CLI de Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-163">Run the Databricks CLI command `databricks configure --token`.</span></span>
+
+2. <span data-ttu-id="1cab8-164">Después de ejecutar el comando de configuración, se le pedirá que escriba un host.</span><span class="sxs-lookup"><span data-stu-id="1cab8-164">After running the configure command, you are prompted to enter a host.</span></span> <span data-ttu-id="1cab8-165">La dirección URL del host usa el formato: **https://<\Ubicación>.azuredatabricks.net**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-165">Your host URL uses the format: **https://<\Location>.azuredatabricks.net**.</span></span> <span data-ttu-id="1cab8-166">Por ejemplo, si ha seleccionado **eastus2** durante la creación del Servicio de Azure Databricks, el host sería **https://eastus2.azuredatabricks.net** .</span><span class="sxs-lookup"><span data-stu-id="1cab8-166">For instance, if you selected **eastus2** during Azure Databricks Service creation, the host would be **https://eastus2.azuredatabricks.net**.</span></span>
+
+3. <span data-ttu-id="1cab8-167">Después de escribir el host, se le pedirá que escriba un token.</span><span class="sxs-lookup"><span data-stu-id="1cab8-167">After entering your host, you are prompted to enter a token.</span></span> <span data-ttu-id="1cab8-168">En Azure Portal, seleccione **Iniciar área de trabajo** para iniciar el área de trabajo de Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-168">In the Azure portal, select **Launch Workspace** to launch your Azure Databricks workspace.</span></span>
+
+   ![Inicio del área de trabajo de Azure Databricks](./media/databricks-deployment/launch-databricks-workspace.png)
+
+4. <span data-ttu-id="1cab8-170">En la página principal del área de trabajo, seleccione **Configuración de usuario**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-170">On the home page of your workspace, select **User Settings**.</span></span>
+
+   ![Configuración de usuario en el área de trabajo de Azure Databricks](./media/databricks-deployment/databricks-user-settings.png)
+
+5. <span data-ttu-id="1cab8-172">En la página Configuración de usuario se puede generar un nuevo token.</span><span class="sxs-lookup"><span data-stu-id="1cab8-172">On the User Settings page, you can generate a new token.</span></span> <span data-ttu-id="1cab8-173">Copie el token generado y péguelo de nuevo en el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="1cab8-173">Copy the generated token and paste it back into your command prompt.</span></span>
+
+   ![Generación de un token de acceso nuevo en el área de trabajo de Azure Databricks](./media/databricks-deployment/generate-token.png)
+
+<span data-ttu-id="1cab8-175">Ahora debería poder acceder a cualquier clúster de Azure Databricks que cree y cargar archivos en el DBFS.</span><span class="sxs-lookup"><span data-stu-id="1cab8-175">You should now be able to access any Azure Databricks clusters you create and upload files to the DBFS.</span></span>
+
+## <a name="download-worker-dependencies"></a><span data-ttu-id="1cab8-176">Descarga de las dependencias de trabajo</span><span class="sxs-lookup"><span data-stu-id="1cab8-176">Download worker dependencies</span></span>
+
+1. <span data-ttu-id="1cab8-177">Microsoft.Spark.Worker ayuda a Apache Spark a ejecutar la aplicación, como cualquier función definida por el usuario (UDF) que se haya escrito.</span><span class="sxs-lookup"><span data-stu-id="1cab8-177">Microsoft.Spark.Worker helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="1cab8-178">Descargue [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span><span class="sxs-lookup"><span data-stu-id="1cab8-178">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span></span>
+
+2. <span data-ttu-id="1cab8-179">*install-worker.sh* es un script que permite copiar archivos dependientes de .NET para Apache Spark en los nodos del clúster.</span><span class="sxs-lookup"><span data-stu-id="1cab8-179">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span> 
+
+   <span data-ttu-id="1cab8-180">Cree un nuevo archivo llamado **install-worker.sh** en el equipo local y pegue el [contenido de install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) que se encuentra en GitHub.</span><span class="sxs-lookup"><span data-stu-id="1cab8-180">Create a new file named **install-worker.sh** on your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span> 
+
+3. <span data-ttu-id="1cab8-181">*db-init.sh* es un script que instala las dependencias en el clúster de Spark de Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-181">The *db-init.sh* is a script that installs dependencies onto your Databricks Spark cluster.</span></span>
+
+   <span data-ttu-id="1cab8-182">Cree un nuevo archivo llamado **db-init.sh** en el equipo local y pegue el [contenido de db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) que se encuentra en GitHub.</span><span class="sxs-lookup"><span data-stu-id="1cab8-182">Create a new file named **db-init.sh** on your local computer, and paste the [db-init.sh contents](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) located on GitHub.</span></span> 
+   
+   <span data-ttu-id="1cab8-183">En el archivo que se acaba de crear, establezca la variable `DOTNET_SPARK_RELEASE` en `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span><span class="sxs-lookup"><span data-stu-id="1cab8-183">In the file you just created, set the `DOTNET_SPARK_RELEASE` variable to `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span></span> <span data-ttu-id="1cab8-184">Deje el resto del archivo *db-init.sh* tal cual.</span><span class="sxs-lookup"><span data-stu-id="1cab8-184">Leave the rest of the *db-init.sh* file as-is.</span></span>
+
+> [!Note]
+> <span data-ttu-id="1cab8-185">Si usa Windows, compruebe que los fines de línea de los scripts *install-worker.sh* y *db-init.sh* son de estilo Unix (LF).</span><span class="sxs-lookup"><span data-stu-id="1cab8-185">If you are using Windows, verify that the line-endings in your *install-worker.sh* and *db-init.sh* scripts are Unix-style (LF).</span></span> <span data-ttu-id="1cab8-186">Se pueden cambiar los fines de línea a través de los editores de texto como Notepad++ y Atom.</span><span class="sxs-lookup"><span data-stu-id="1cab8-186">You can change line endings through text editors like Notepad++ and Atom.</span></span>
+
+## <a name="publish-your-app"></a><span data-ttu-id="1cab8-187">Publicar la aplicación</span><span class="sxs-lookup"><span data-stu-id="1cab8-187">Publish your app</span></span>
+
+<span data-ttu-id="1cab8-188">Luego, publique la aplicación *mySparkApp* creada en el tutorial [.NET para Apache Spark: comenzar en 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) para asegurarse de que el clúster de Spark tiene acceso a todos los archivos que necesita para ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="1cab8-188">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial to ensure your Spark cluster has access to all the files it needs to run your app.</span></span> 
+
+1. <span data-ttu-id="1cab8-189">Para publicar *mySparkApp*, ejecute los comandos siguientes:</span><span class="sxs-lookup"><span data-stu-id="1cab8-189">Run the following commands to publish the *mySparkApp*:</span></span>
+
+   <span data-ttu-id="1cab8-190">**En Windows:**</span><span class="sxs-lookup"><span data-stu-id="1cab8-190">**On Windows:**</span></span>
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   ```
+
+   <span data-ttu-id="1cab8-191">**En Linux:**</span><span class="sxs-lookup"><span data-stu-id="1cab8-191">**On Linux:**</span></span>
+
+   ```bash
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   ```
+
+2. <span data-ttu-id="1cab8-192">Realice las tareas siguientes para comprimir los archivos de la aplicación publicados para que pueda cargarlos fácilmente en el clúster de Spark de Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-192">Do the following tasks to zip your published app files so that you can easily upload them to your Databricks Spark cluster.</span></span>
+
+   <span data-ttu-id="1cab8-193">**En Windows:**</span><span class="sxs-lookup"><span data-stu-id="1cab8-193">**On Windows:**</span></span>
+
+   <span data-ttu-id="1cab8-194">Vaya a mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64.</span><span class="sxs-lookup"><span data-stu-id="1cab8-194">Navigate to mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64.</span></span> <span data-ttu-id="1cab8-195">Luego, haga clic con el botón derecho en la carpeta **Publicar** y seleccione **Enviar a > Carpeta comprimida (en zip)** .</span><span class="sxs-lookup"><span data-stu-id="1cab8-195">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="1cab8-196">Asigne el nombre **publish.zip** a la carpeta nueva.</span><span class="sxs-lookup"><span data-stu-id="1cab8-196">Name the new folder **publish.zip**.</span></span>
+
+   <span data-ttu-id="1cab8-197">**En Linux, ejecute el comando siguiente:**</span><span class="sxs-lookup"><span data-stu-id="1cab8-197">**On Linux, run the following command:**</span></span>
+
+   ```bash
+   zip -r publish.zip .
+   ```
+
+## <a name="upload-files"></a><span data-ttu-id="1cab8-198">Carga de archivos</span><span class="sxs-lookup"><span data-stu-id="1cab8-198">Upload files</span></span>
+
+<span data-ttu-id="1cab8-199">En esta sección, se cargan varios archivos en el DBFS con el fin de que el clúster tenga todo lo necesario para ejecutar la aplicación en la nube.</span><span class="sxs-lookup"><span data-stu-id="1cab8-199">In this section, you upload several files to DBFS so that your cluster has everything it needs to run your app in the cloud.</span></span> <span data-ttu-id="1cab8-200">Cada vez que cargue un archivo en el DBFS, asegúrese de que está en el directorio en el que se encuentra el archivo en el equipo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-200">Each time you upload a file to the DBFS, make sure you are in the directory where that file is located on your computer.</span></span>
+
+1. <span data-ttu-id="1cab8-201">Ejecute los siguientes comandos para cargar *db-init.sh*, *install-worker.sh* y *Microsoft.Spark.Worker* en DBFS:</span><span class="sxs-lookup"><span data-stu-id="1cab8-201">Run the following commands to upload the *db-init.sh*, *install-worker.sh*, and *Microsoft.Spark.Worker* to DBFS:</span></span>
+
+   ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-6. <span data-ttu-id="d293f-144">Acceda al área de trabajo de Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-144">Go to your Databricks workspace.</span></span> <span data-ttu-id="d293f-145">Seleccione  **Clústeres** en el menú de la izquierda y, después, seleccione **Crear clúster**.</span><span class="sxs-lookup"><span data-stu-id="d293f-145">Select **Clusters** from the left-side menu, and then select **Create Cluster**.</span></span>
+2. <span data-ttu-id="1cab8-202">Ejecute los comandos siguientes para cargar los archivos restantes que el clúster necesitará para ejecutar la aplicación: la carpeta de publicación comprimida, *Input.txt* y *microsoft-spark-2.4.x-0.3.0.jar*.</span><span class="sxs-lookup"><span data-stu-id="1cab8-202">Run the following commands to upload the remaining files your cluster will need to run your app: the zipped publish folder, *input.txt*, and *microsoft-spark-2.4.x-0.3.0.jar*.</span></span> 
 
-7. <span data-ttu-id="d293f-146">Después de configurar el clúster correctamente, defina el **script Init** y cree el clúster.</span><span class="sxs-lookup"><span data-stu-id="d293f-146">After configuring the cluster appropriately, set the **Init Script** and create the cluster.</span></span>
+   ```console
+   cd mySparkApp 
+   databricks fs cp input.txt dbfs:/input.txt
+   
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   ```
 
-   ![Imagen de acción de script](./media/databricks-deployment/deployment-databricks-init-script.png)
+## <a name="create-a-job"></a><span data-ttu-id="1cab8-203">Creación de un trabajo</span><span class="sxs-lookup"><span data-stu-id="1cab8-203">Create a job</span></span>
 
-## <a name="run-your-app"></a><span data-ttu-id="d293f-148">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="d293f-148">Run your app</span></span>
+<span data-ttu-id="1cab8-204">La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecuta **spark-submit**, que es el comando que se usa para ejecutar .NET para trabajos de Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="1cab8-204">Your app runs on Azure Databricks through a job that runs **spark-submit**, which is the command you use to run .NET for Apache Spark jobs.</span></span>
 
-<span data-ttu-id="d293f-149">Puede usar `set JAR` o `spark-submit` para enviar el trabajo a Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-149">You can use `set JAR` or `spark-submit` to submit your job to Databricks.</span></span>
+1. <span data-ttu-id="1cab8-205">En el área de trabajo de Azure Databricks, seleccione el icono de **Trabajos** y luego **+ Crear trabajo**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-205">In your Azure Databricks Workspace, select the **Jobs** icon and then **+ Create Job**.</span></span> 
 
-### <a name="use-set-jar"></a><span data-ttu-id="d293f-150">Uso de Set JAR</span><span class="sxs-lookup"><span data-stu-id="d293f-150">Use Set JAR</span></span>
+   ![Creación de un trabajo de Azure Databricks](./media/databricks-deployment/create-job.png)
 
-<span data-ttu-id="d293f-151">[Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) permite enviar un trabajo a un clúster activo existente.</span><span class="sxs-lookup"><span data-stu-id="d293f-151">[Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) allows you to submit a job to an existing active cluster.</span></span>
+2. <span data-ttu-id="1cab8-207">Elija un título para el trabajo y luego seleccione **Configurar spark-submit**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-207">Choose a title for your job, and then select **Configure spark-submit**.</span></span>
 
-#### <a name="one-time-setup"></a><span data-ttu-id="d293f-152">Instalación única</span><span class="sxs-lookup"><span data-stu-id="d293f-152">One-time setup</span></span>
+   ![Configuración de spark-submit para el trabajo de Databricks](./media/databricks-deployment/configure-spark-submit.png)
 
-1. <span data-ttu-id="d293f-153">Vaya al clúster de Databricks y seleccione **Trabajos** en el menú de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="d293f-153">Go to your Databricks cluster and select **Jobs** from the left-side menu.</span></span> <span data-ttu-id="d293f-154">Después, seleccione **Set JAR**.</span><span class="sxs-lookup"><span data-stu-id="d293f-154">Then select **Set JAR**.</span></span>
+3. <span data-ttu-id="1cab8-209">Pegue los parámetros siguientes en la configuración del trabajo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-209">Paste the following parameters in the job configuration.</span></span> <span data-ttu-id="1cab8-210">Después, seleccione **Confirmar**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-210">Then, select **Confirm**.</span></span>
 
-2. <span data-ttu-id="d293f-155">Cargue el archivo `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` adecuado.</span><span class="sxs-lookup"><span data-stu-id="d293f-155">Upload the appropriate `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` file.</span></span>
+   ```
+   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ```
 
-3. <span data-ttu-id="d293f-156">Establezca los parámetros de forma adecuada.</span><span class="sxs-lookup"><span data-stu-id="d293f-156">Set the parameters appropriately.</span></span>
+## <a name="create-a-cluster"></a><span data-ttu-id="1cab8-211">Creación de un clúster</span><span class="sxs-lookup"><span data-stu-id="1cab8-211">Create a cluster</span></span>
 
-   | <span data-ttu-id="d293f-157">Parámetro</span><span class="sxs-lookup"><span data-stu-id="d293f-157">Parameter</span></span>   | <span data-ttu-id="d293f-158">Valor</span><span class="sxs-lookup"><span data-stu-id="d293f-158">Value</span></span>                                                |
-   |-------------|------------------------------------------------------|
-   | <span data-ttu-id="d293f-159">Clase Main</span><span class="sxs-lookup"><span data-stu-id="d293f-159">Main Class</span></span>  | <span data-ttu-id="d293f-160">org.apache.spark.deploy.dotnet.DotnetRunner</span><span class="sxs-lookup"><span data-stu-id="d293f-160">org.apache.spark.deploy.dotnet.DotnetRunner</span></span>          |
-   | <span data-ttu-id="d293f-161">Argumentos</span><span class="sxs-lookup"><span data-stu-id="d293f-161">Arguments</span></span>   | <span data-ttu-id="d293f-162">/dbfs/apps/\<nombre-de-aplicación>.zip \<clase-principal-de-aplicación></span><span class="sxs-lookup"><span data-stu-id="d293f-162">/dbfs/apps/\<your-app-name>.zip \<your-app-main-class></span></span> |
+1. <span data-ttu-id="1cab8-212">Vaya a su trabajo y seleccione **Editar** para configurar el clúster del trabajo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-212">Navigate to your job and select **Edit** to configure your job's cluster.</span></span>
 
-4. <span data-ttu-id="d293f-163">Configure el **clúster** para que apunte al clúster existente para el que creó el **script Init** en la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="d293f-163">Configure the **Cluster** to point to the existing cluster you created the **Init Script** for in the previous section.</span></span>
+2. <span data-ttu-id="1cab8-213">Establezca el clúster en **Spark 2.4.1**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-213">Set your cluster to **Spark 2.4.1**.</span></span> <span data-ttu-id="1cab8-214">Luego, seleccione **Opciones avanzadas** > **Scripts Init**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-214">Then, select **Advanced Options** > **Init Scripts**.</span></span> <span data-ttu-id="1cab8-215">Escriba la ruta de acceso del script Init como `dbfs:/spark-dotnet/db-init.sh`.</span><span class="sxs-lookup"><span data-stu-id="1cab8-215">Set Init Script Path as `dbfs:/spark-dotnet/db-init.sh`.</span></span> 
 
-#### <a name="publish-and-run-your-app"></a><span data-ttu-id="d293f-164">Publicación y ejecución de la aplicación</span><span class="sxs-lookup"><span data-stu-id="d293f-164">Publish and run your app</span></span>
+   ![Configuración de un clúster de Spark en Azure Databricks](./media/databricks-deployment/cluster-config.png)
 
-1. <span data-ttu-id="d293f-165">Use la [CLI de Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) para cargar la aplicación en el clúster de Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-165">Use the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) to upload your application to your Databricks cluster.</span></span>
+3. <span data-ttu-id="1cab8-217">Seleccione **Confirmar** para confirmar la configuración del clúster.</span><span class="sxs-lookup"><span data-stu-id="1cab8-217">Select **Confirm** to confirm your cluster settings.</span></span>
 
-    ```bash
-    cd <path-to-your-app-publish-directory>
-    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-    ```
+## <a name="run-your-app"></a><span data-ttu-id="1cab8-218">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="1cab8-218">Run your app</span></span>
 
-2. <span data-ttu-id="d293f-166">Este paso solo es necesario si los ensamblados de la aplicación (por ejemplo, los archivos DLL que contienen funciones definidas por el usuario junto con sus dependencias) deben colocarse en el directorio de trabajo de cada **Microsoft.Spark.Worker**.</span><span class="sxs-lookup"><span data-stu-id="d293f-166">This step is only required if your app assemblies (for example, DLLs that contain user-defined functions along with their dependencies) need to be placed in the working directory of each **Microsoft.Spark.Worker**.</span></span>
+1. <span data-ttu-id="1cab8-219">Vaya a su trabajo y seleccione **Ejecutar ahora** para ejecutar el trabajo en el clúster de Spark recientemente configurado.</span><span class="sxs-lookup"><span data-stu-id="1cab8-219">Navigate to your job and select **Run Now** to run your job on your newly configured Spark cluster.</span></span>
 
-   * <span data-ttu-id="d293f-167">Carga de los ensamblados de la aplicación en el clúster de Databricks</span><span class="sxs-lookup"><span data-stu-id="d293f-167">Upload your application assemblies to your Databricks cluster</span></span>
+2. <span data-ttu-id="1cab8-220">La creación del clúster del trabajo tarda unos minutos.</span><span class="sxs-lookup"><span data-stu-id="1cab8-220">It takes a few minutes for the job's cluster to create.</span></span> <span data-ttu-id="1cab8-221">Una vez creado, se enviará el trabajo y podrá ver el resultado.</span><span class="sxs-lookup"><span data-stu-id="1cab8-221">Once it is created, your job will be submitted, and you can view the output.</span></span>
 
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <assembly>.dll dbfs:/apps/dependencies
-      ```
+3. <span data-ttu-id="1cab8-222">Seleccione **Clústeres** en el menú de la izquierda y, después, el nombre y la ejecución del trabajo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-222">Select **Clusters** from the left menu, and then the name and run of your job.</span></span> 
 
-   * <span data-ttu-id="d293f-168">Quite la marca de comentario y modifique la sección de dependencias de la aplicación en [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) para que apunte a la ruta de acceso de las dependencias de la aplicación y cargue en el clúster de Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-168">Uncomment and modify the app dependencies section in [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) to point to your app dependencies path and upload to your Databricks cluster.</span></span>
+4. <span data-ttu-id="1cab8-223">Seleccione **Registros de controladores** para ver la salida del trabajo.</span><span class="sxs-lookup"><span data-stu-id="1cab8-223">Select **Driver Logs** to view the output of your job.</span></span> <span data-ttu-id="1cab8-224">Cuando la aplicación termine de ejecutarse, verá la misma tabla de recuento de palabras de la ejecución local de introducción escrita en la consola de salida estándar.</span><span class="sxs-lookup"><span data-stu-id="1cab8-224">When your app finishes executing, you see the same word count table from the getting started local run written to the standard output console.</span></span>
 
-      ```bash
-      cd <path-to-db-init-and-install-worker>
-      databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
-      ```
+   ![Tabla de salida del trabajo de Azure Databricks](./media/databricks-deployment/table-output.png)
 
-   * <span data-ttu-id="d293f-169">Reinicie el clúster.</span><span class="sxs-lookup"><span data-stu-id="d293f-169">Restart your cluster.</span></span>
+   <span data-ttu-id="1cab8-226">Enhorabuena, ha ejecutado su primera aplicación de .NET para Apache Spark en la nube.</span><span class="sxs-lookup"><span data-stu-id="1cab8-226">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
 
-3. <span data-ttu-id="d293f-170">Vaya al clúster de Databricks en el área de trabajo de Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-170">Go to your Databricks cluster in your Databricks workspace.</span></span> <span data-ttu-id="d293f-171">En **Trabajos**, seleccione el trabajo y, después, seleccione **Ejecutar ahora** para ejecutar el trabajo.</span><span class="sxs-lookup"><span data-stu-id="d293f-171">Under **Jobs**, select your job and then select **Run Now** to run your job.</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="1cab8-227">Limpiar los recursos</span><span class="sxs-lookup"><span data-stu-id="1cab8-227">Clean up resources</span></span>
 
-### <a name="use-spark-submit"></a><span data-ttu-id="d293f-172">Uso de spark-submit</span><span class="sxs-lookup"><span data-stu-id="d293f-172">Use spark-submit</span></span>
+<span data-ttu-id="1cab8-228">Si ya no necesita el área de trabajo de Databricks, puede eliminar el recurso Azure Databricks en Azure Portal.</span><span class="sxs-lookup"><span data-stu-id="1cab8-228">If you no longer need the Databricks workspace, you can delete your Azure Databricks resource in the Azure portal.</span></span> <span data-ttu-id="1cab8-229">También puede seleccionar el nombre del grupo de recursos para abrir la página del grupo de recursos y, a continuación, seleccionar **Eliminar grupo de recursos**.</span><span class="sxs-lookup"><span data-stu-id="1cab8-229">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span>
 
-<span data-ttu-id="d293f-173">El comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) permite enviar un trabajo a un clúster nuevo.</span><span class="sxs-lookup"><span data-stu-id="d293f-173">The [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command allows you to submit a job to a new cluster.</span></span>
+## <a name="next-steps"></a><span data-ttu-id="1cab8-230">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="1cab8-230">Next steps</span></span>
 
-1. <span data-ttu-id="d293f-174">[Cree un trabajo](https://docs.databricks.com/user-guide/jobs.html) y seleccione **Configurar spark-submit**.</span><span class="sxs-lookup"><span data-stu-id="d293f-174">[Create a Job](https://docs.databricks.com/user-guide/jobs.html) and select **Configure spark-submit**.</span></span>
-
-2. <span data-ttu-id="d293f-175">Configure `spark-submit` con los siguientes parámetros:</span><span class="sxs-lookup"><span data-stu-id="d293f-175">Configure `spark-submit` with the following parameters:</span></span>
-
-    ```bash
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-    ```
-
-3. <span data-ttu-id="d293f-176">Vaya al clúster de Databricks en el área de trabajo de Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-176">Go to your Databricks cluster in your Databricks workspace.</span></span> <span data-ttu-id="d293f-177">En **Trabajos**, seleccione el trabajo y, después, seleccione **Ejecutar ahora** para ejecutar el trabajo.</span><span class="sxs-lookup"><span data-stu-id="d293f-177">Under **Jobs**, select your job and then select **Run Now** to run your job.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="d293f-178">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="d293f-178">Next steps</span></span>
-
-<span data-ttu-id="d293f-179">En este tutorial ha implementado una aplicación de .NET para Apache Spark en Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-179">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="d293f-180">Para más información sobre Databricks, prosiga con la documentación de Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="d293f-180">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
+<span data-ttu-id="1cab8-231">En este tutorial ha implementado una aplicación de .NET para Apache Spark en Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-231">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="1cab8-232">Para más información sobre Databricks, prosiga con la documentación de Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="1cab8-232">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="d293f-181">Documentación de Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="d293f-181">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
+> [<span data-ttu-id="1cab8-233">Documentación de Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="1cab8-233">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
