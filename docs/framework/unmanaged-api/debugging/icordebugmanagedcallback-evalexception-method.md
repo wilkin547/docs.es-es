@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbf12612bb432f8935d08bdeac0bbcb471c38c54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70ae72968c3411a6732b09c0afe3d82931410cb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130814"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException (Método)
 Notifica al depurador que una evaluación ha finalizado con una excepción no controlada.  
@@ -39,18 +37,18 @@ HRESULT EvalException (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en el que ha finalizado la evaluación.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en el que finalizó la evaluación.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que ha finalizado la evaluación.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso en el que finalizó la evaluación.  
   
  `pEval`  
- [in] Un puntero a un objeto ICorDebugEval que representa el código que realiza la evaluación.  
+ de Un puntero a un objeto ICorDebugEval que representa el código que llevó a cabo la evaluación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

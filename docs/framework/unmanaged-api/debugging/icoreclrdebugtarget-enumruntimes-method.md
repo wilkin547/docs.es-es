@@ -17,14 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08f34822099468b8c52f1d7ea2c665205f1b6c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2579bed9ae432a2b9460c421c6ee5bdc40d1e149
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121830"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes (Método)
 Enumera los Common Language Runtime(CLR) del proceso especificado que se están ejecutando en un equipo remoto.  
@@ -41,13 +39,13 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>Parámetros  
  `dwInternalProcessID`  
- [in] Identificador de proceso interno del proceso para el que desea enumerar los tiempos de ejecución. Se trata de `m_dwInternalID` de las correspondientes [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
+ [in] Identificador de proceso interno del proceso para el que desea enumerar los tiempos de ejecución. Se `m_dwInternalID`rá desde el [coreclrdebugprocinfo (](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)correspondiente.  
   
  `pcRuntimes`  
  [out] Número de tiempos de ejecución que se devuelve en `ppRuntimes`. Este valor puede ser 0 (cero).  
   
  `ppRuntimes`  
- [out] Una matriz de [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) estructuras que representan los tiempos de ejecución cargan en el proceso de destino remoto.  
+ enuncia Matriz de estructuras [coreclrdebugruntimeinfo (](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) que representan los tiempos de ejecución cargados en el proceso de destino remoto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
@@ -63,16 +61,16 @@ HRESULT EnumRuntimes (
  Otros errores.  
   
 ## <a name="remarks"></a>Comentarios  
- Para liberar la memoria asignada por este método, llame a la [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) método.  
+ Para liberar la memoria asignada por este método, llame al método [ICoreClrDebugTarget:: FreeMemory (](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versiones de .NET framework:** 3.5 SP1  
+ **.NET Framework versiones:** 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

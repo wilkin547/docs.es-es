@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
+title: 'Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130131"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión
 La información sobre los tipos genéricos se obtiene de la misma manera que la información sobre otros tipos: mediante el examen de un objeto <xref:System.Type> que representa el tipo genérico. La diferencia principal es que un tipo genérico tiene una lista de objetos <xref:System.Type> que representan sus parámetros de tipo genérico. En el primer procedimiento de esta sección se examinan tipos genéricos.  
   
  Puede crear un objeto <xref:System.Type> que representa un tipo construido. Para ello, se enlazan los argumentos de tipo a los parámetros de tipo de una definición de tipo genérico. En el segundo procedimiento se muestra cómo hacerlo.  

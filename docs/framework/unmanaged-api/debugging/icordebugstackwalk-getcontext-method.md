@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760917"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131852"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext (Método)
-Devuelve el contexto para el fotograma actual en el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
+Devuelve el contexto del marco actual del objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,36 +36,36 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>Parámetros  
  `contextFlags`  
- [in] Marcas que indican el contenido solicitado del búfer de contexto (se definen en WinNT.h).  
+ de Marcas que indican el contenido solicitado del búfer de contexto (definido en Winnt. h).  
   
  `contextBufSize`  
- [in] El tamaño asignado del búfer de contexto.  
+ de Tamaño asignado del búfer de contexto.  
   
  `contextSize`  
- [out] El tamaño real del contexto. Este valor debe ser menor o igual que el tamaño del búfer de contexto.  
+ enuncia Tamaño real del contexto. Este valor debe ser menor o igual que el tamaño del búfer de contexto.  
   
  `contextBuf`  
- [out] El búfer de contexto.  
+ enuncia Búfer de contexto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El contexto del marco actual se devolvió correctamente.|  
 |E_FAIL|No se pudo devolver el contexto.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|El búfer de contexto es demasiado pequeño.|  
-|CORDBG_E_PAST_END_OF_STACK|El puntero de marco ya está al final de la pila; por lo tanto, no puede tener acceso a ningún marco adicional.|  
+|HRESULT_FROM_WIN32 (BÚFER DE ERROR_INSUFFICIENT)|El búfer de contexto es demasiado pequeño.|  
+|CORDBG_E_PAST_END_OF_STACK|El puntero de marco ya está al final de la pila; por lo tanto, no se puede tener acceso a ningún fotograma adicional.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- Porque desenredo restaura solo un subconjunto de los registros, como los registros no volátiles, el contexto puede no coincidir exactamente con el estado del registro en el momento de la llamada.  
+ Dado que el desenredado solo restaura un subconjunto de los registros, como los registros no volátiles, es posible que el contexto no coincida exactamente con el estado del registro en el momento de la llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

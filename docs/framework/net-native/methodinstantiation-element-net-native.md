@@ -1,17 +1,15 @@
 ---
-title: <MethodInstantiation>Elemento (.NET Native)
+title: Elemento <MethodInstantiation> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2c0354853e4725ba3e673fb9142c4a7a85d2121
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128326"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<Elemento > MethodInstantiation (.NET Native)
+# <a name="methodinstantiation-element-net-native"></a>\<elemento > MethodInstantiation (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un método genérico construido.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,7 +27,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un método genérico
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del método.|  
 |`Signature`|General|Atributo opcional. Especifica los parámetros con nombre del método. Cuando hay varios parámetros con nombre, se separan mediante coma. El atributo `Signature` se usa para diferenciar los métodos sobrecargados.|  
@@ -39,25 +37,25 @@ Aplica la directiva de reflexión en tiempo de ejecución a un método genérico
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_name*|El nombre del método. El tipo del método se define mediante el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Signature (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_signature*|Especifica los parámetros con nombre del método. Si hay varios parámetros, se separan mediante comas.|  
   
 ## <a name="arguments-attribute"></a>Arguments (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_arguments*|Especifica los argumentos de tipo genérico. Si hay varios argumentos, se separan mediante coma. Cada argumento debe contener el nombre de tipo completo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se aplica a este tipo de directiva para el método. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -66,7 +64,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un método genérico
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
@@ -76,7 +74,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un método genérico
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
 - [Elemento \<Method>](method-element-net-native.md)

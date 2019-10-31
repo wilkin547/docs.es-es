@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a0764cb212a95412a4dcf9455b7648ee863951e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd588fa85ff8aaa396a8d0e52a738ada46c2a9b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128608"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc (Método)
-Actúa como un contenedor lógico para la función de Win32 correspondiente. La implementación de Win32 de `VirtualAlloc` reserva o confirma una región de páginas en el espacio de direcciones virtuales del proceso que realiza la llamada.  
+Actúa como un contenedor lógico para la función de Win32 correspondiente. La implementación de Win32 de `VirtualAlloc` reserva o confirma una región de páginas en el espacio de direcciones virtuales del proceso de llamada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,46 +40,46 @@ HRESULT VirtualAlloc (
   
 ## <a name="parameters"></a>Parámetros  
  `pAddress`  
- [in] Un puntero a la dirección inicial de la región para asignar.  
+ de Puntero a la dirección inicial de la región que se va a asignar.  
   
  `dwSize`  
- [in] El tamaño, en bytes, de la región.  
+ de Tamaño, en bytes, de la región.  
   
  `flAllocationType`  
- [in] El tipo de asignación de memoria.  
+ de Tipo de asignación de memoria.  
   
  `flProtect`  
- [in] Protección de memoria para la región de páginas asignadas.  
+ de Protección de memoria para la región de páginas que se va a asignar.  
   
  `dwCriticalLevel`  
- [in] Un [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) valor que indica el impacto de un error de asignación.  
+ de Un valor [ememorycriticallevel (](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) que indica el impacto de un error de asignación.  
   
  `ppMem`  
- [out] Puntero a la dirección inicial de la memoria asignada, o null si no se pudo satisfacer la solicitud.  
+ enuncia Puntero a la dirección inicial de la memoria asignada, o null si no se puede satisfacer la solicitud.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|No había suficiente memoria disponible para completar la solicitud de asignación|  
+|S_OK|`VirtualAlloc` devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la solicitud de asignación|  
   
 ## <a name="remarks"></a>Comentarios  
- Reservar una región en el espacio de direcciones del proceso mediante una llamada a `VirtualAlloc`. El `pAddress` parámetro contiene la dirección del principio del bloque de memoria que desee. Este parámetro normalmente se establece en null. El sistema operativo mantiene un registro de los intervalos de direcciones libres disponibles para su proceso. Un `pAddress` valor null indica al sistema que reserve la región dondequiera que considere adecuada. Como alternativa, puede proporcionar una dirección de inicio específica para el bloque de memoria. En ambos casos, el parámetro de salida `ppMem` se devuelve como un puntero a la memoria asignada. La propia función devuelve un valor HRESULT.  
+ Para reservar una región en el espacio de direcciones del proceso, llame a `VirtualAlloc`. El parámetro `pAddress` contiene la dirección inicial del bloque de memoria que desee. Normalmente, este parámetro se establece en NULL. El sistema operativo mantiene un registro de los intervalos de direcciones libres disponibles para el proceso. Un valor de `pAddress` null indica al sistema que Reserve la región donde sea adecuado. Como alternativa, puede proporcionar una dirección de inicio específica para el bloque de memoria. En ambos casos, se devuelve el parámetro de salida `ppMem` como un puntero a la memoria asignada. La propia función devuelve un valor HRESULT.  
   
- Win32 `VirtualAlloc` función no tiene un `ppMem` parámetro y devuelve el puntero a la memoria asignada en su lugar. Para obtener más información, consulte la documentación de la plataforma de Windows.  
+ La función `VirtualAlloc` de Win32 no tiene un parámetro `ppMem` y devuelve el puntero a la memoria asignada en su lugar. Para obtener más información, vea la documentación de la plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

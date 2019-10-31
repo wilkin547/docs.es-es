@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c3ced50457519d62be44712386bdabce176c44e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e044b1a2ad777868e33cd64bc8d09a9b76d547aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130668"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete (Método)
 Notifica al depurador que se ha completado un paso.  
@@ -40,24 +38,24 @@ HRESULT StepComplete (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se ha completado el paso.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se ha completado el paso.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se ha completado el paso.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se ha completado el paso.  
   
  `pStepper`  
- [in] Un puntero a un objeto ICorDebugStepper que representa el paso de ejecución de código.  
+ de Un puntero a un objeto ICorDebugStepper que representa el paso en la ejecución del código.  
   
  `reason`  
- [in] Un valor de la enumeración CorDebugStepReason que indica el resultado de un paso individual.  
+ de Un valor de la enumeración CorDebugStepReason (que indica el resultado de un paso individual.  
   
 ## <a name="remarks"></a>Comentarios  
- El componente puede utilizarse para continuar pasando si lo desea, a menos que se termina la depuración.  
+ Se puede usar el stepper para continuar con la ejecución paso a paso, a menos que se termine la depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

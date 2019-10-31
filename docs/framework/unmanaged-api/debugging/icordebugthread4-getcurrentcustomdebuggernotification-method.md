@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902777"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122445"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>ICorDebugThread4::GetCurrentCustomDebuggerNotification (Método)
 
-Obtiene la actual [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) objeto en el subproceso actual.
+Obtiene el objeto [ICorDebugManagedCallback3 (:: customnotification (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) actual en el subproceso actual.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,17 +37,17 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>Parámetros
 
 `ppNotificationObject`\
-[out] Un puntero a la actual `ICorDebugManagedCallback3::CustomNotification` objeto en el subproceso actual.
+enuncia Puntero al objeto `ICorDebugManagedCallback3::CustomNotification` actual en el subproceso actual.
 
 ## <a name="remarks"></a>Comentarios
 
-El valor de `ppNotificationObject` es null si no se llama al método desde un `ICorDebugManagedCallback3::CustomNotification` devolución de llamada, o si no existe ningún objeto de notificación actual.
+El valor de `ppNotificationObject` es NULL si no se llama al método desde dentro de una devolución de llamada de `ICorDebugManagedCallback3::CustomNotification` o si no existe ningún objeto de notificación actual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a460ac730db85dfa8d4a8ee6949a168bc228193d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631389"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123209"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
@@ -43,7 +41,7 @@ En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a
   
  El contenedor RCW consume las interfaces enumeradas en la siguiente tabla, expuestas por el objeto que encapsula.  
   
-|Interfaz|DESCRIPCIÓN|  
+|Interfaz|Descripción|  
 |---------------|-----------------|  
 |**IDispatch**|Para el enlace en tiempo de ejecución a objetos COM mediante reflexión.|  
 |**IErrorInfo**|Proporciona una descripción textual del error, su origen, un archivo de ayuda, contexto de ayuda y el GUID de la interfaz que definió el error (siempre **GUID_NULL** para las clases. NET).|  
@@ -52,7 +50,7 @@ En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a
   
  Opcionalmente, el contenedor RCW consume las interfaces enumeradas en la siguiente tabla, expuestas por el objeto que encapsula.  
   
-|Interfaz|DESCRIPCIÓN|  
+|Interfaz|Descripción|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|El contenedor RCW convierte los objetos que exponen el estilo de evento de punto de conexión en eventos basados en delegado.|  
 |**IDispatchEx** (solo .NET Framework) |Si la clase implementa **IDispatchEx**, el contenedor RCW implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch**, permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|  

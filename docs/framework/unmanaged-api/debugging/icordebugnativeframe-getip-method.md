@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137336"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP (Método)
-Obtiene el código nativo desplazar ubicación a la que está establecido actualmente el puntero de instrucción.  
+Obtiene la ubicación de desplazamiento del código nativo en la que está establecido actualmente el puntero de instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parámetros  
  `pnOffset`  
- [out] Un puntero a la ubicación de desplazamiento en el código nativo.  
+ enuncia Puntero a la ubicación de desplazamiento en el código nativo.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el marco de pila es representado por esta instancia de "ICorDebugNativeFrame" está activo, el desplazamiento es la dirección de la siguiente instrucción que se ejecutará. Si este marco de pila no está activo, el desplazamiento es la dirección de la siguiente instrucción que se ejecutará cuando se reactiva el marco de pila.  
+ Si el marco de pila representado por este "ICorDebugNativeFrame" está activo, el desplazamiento es la dirección de la siguiente instrucción que se va a ejecutar. Si este marco de pila no está activo, el desplazamiento es la dirección de la siguiente instrucción que se va a ejecutar cuando se reactive el marco de pila.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129668"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences (Método)
-Obtiene un enumerador para todos los objetos que se van a recopilar los elementos no utilizados en un proceso.  
+Obtiene un enumerador para todos los objetos que se van a recopilar de elementos no utilizados en un proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>Parámetros  
  `enumerateWeakReferences`  
- [in] Un valor booleano que indica si las referencias débiles son también van a enumerar. Si `enumerateWeakReferences` es `true`, el `ppEnum` enumerador incluye referencias fuertes y las referencias débiles. Si `enumerateWeakReferences` es `false`, el enumerador incluye solo las referencias fuertes.  
+ de Valor booleano que indica si también se deben enumerar las referencias débiles. Si `enumerateWeakReferences` es `true`, el enumerador de `ppEnum` incluye referencias fuertes y referencias débiles. Si `enumerateWeakReferences` es `false`, el enumerador incluye solo referencias seguras.  
   
  `ppEnum`  
- [out] Un puntero a la dirección de un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos de recopilar los elementos no utilizados.  
+ enuncia Puntero a la dirección de un [icordebuggcreferenceenum (](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos que se van a recolectar como elemento no utilizado.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método proporciona una manera de determinar la cadena completa de raíz para cualquier objeto administrado en un proceso y se puede usar para determinar por qué un objeto todavía está activo.  
+ Este método proporciona una manera de determinar la cadena de raíz completa de cualquier objeto administrado en un proceso y se puede usar para determinar por qué un objeto sigue estando activo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

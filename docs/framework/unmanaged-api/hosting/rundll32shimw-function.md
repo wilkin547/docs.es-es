@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781161"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141506"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW (Función)
 Ejecuta el comando especificado.  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,23 +39,23 @@ HRESULT RunDll32ShimW (
   
 ## <a name="parameters"></a>Parámetros  
  `hwnd`  
- [in] Identificador de una ventana en la que se mostrará la salida del comando.  
+ de Identificador de una ventana en la que se mostrará el resultado del comando.  
   
  `hinst`  
- [in] Identificador de la biblioteca que contiene el comando.  
+ de Identificador de la biblioteca que contiene el comando.  
   
  `lpszCmdLine`  
- [in] Una cadena que especifica el comando que se ejecutará.  
+ de Cadena que especifica el comando que se va a ejecutar.  
   
  `nCmdShow`  
- [in] Un entero que especifica el modo de presentación para la ventana de salida.  
+ de Un entero que especifica el modo de presentación de la ventana de salida.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121306"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList (Método)
 Proporciona una lista ordenada de subprocesos que se ponen en cola en el evento que está asociado a un bloqueo de monitor.  
@@ -37,12 +35,12 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="parameters"></a>Parámetros  
  `ppThreadEnum`  
- [out] El enumerador ICorDebugThreadEnum que proporciona la lista ordenada de subprocesos.  
+ enuncia El enumerador ICorDebugThreadEnum (que proporciona la lista ordenada de subprocesos.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|La lista no está vacía.|  
 |S_FALSE|La lista está vacía.|  
@@ -50,20 +48,20 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- El primer subproceso en la lista es el primer subproceso que se lanzó la siguiente llamada a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. El subproceso de la lista siguiente se libera en la siguiente llamada y así sucesivamente.  
+ El primer subproceso de la lista es el primer subproceso publicado por la siguiente llamada a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. El siguiente subproceso de la lista se libera en la llamada siguiente, y así sucesivamente.  
   
- Si la lista no está vacía, este método devuelve S_OK. Si la lista está vacía, el método devuelve S_FALSE; en este caso, la enumeración es aún válida, aunque está vacía.  
+ Si la lista no está vacía, este método devuelve S_OK. Si la lista está vacía, el método devuelve S_FALSE; en este caso, la enumeración sigue siendo válida, aunque está vacía.  
   
- En cualquier caso, la interfaz de enumeración es utilizable solo para el tiempo que dure el estado sincronizado actual. Sin embargo, las interfaces del subproceso dispensadas de él son válidas hasta que sale del subproceso.  
+ En cualquier caso, la interfaz de enumeración solo se puede usar para la duración del estado sincronizado actual. Sin embargo, las interfaces del subproceso dispensadas de él son válidas hasta que se cierra el subproceso.  
   
  Si `ppThreadEnum` no es un puntero válido, el resultado es indefinido.  
   
- Si se produce un error que no se puede determinar que, si los hay, subprocesos están esperando a que el monitor, el método devuelve un HRESULT que indica un error.  
+ Si se produce un error de modo que no se pueda determinar qué subprocesos están esperando, si hay alguno, el monitor, el método devuelve un valor HRESULT que indica un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

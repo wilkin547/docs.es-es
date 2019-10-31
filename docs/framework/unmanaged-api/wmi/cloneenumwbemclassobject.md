@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d2442161aaa83693a33f9efc230c09b8c4426e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128734"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Función CloneEnumWbemClassObject
 Realiza una copia lógica de un enumerador conservando su posición actual en una enumeración.
@@ -68,7 +66,7 @@ de La contraseña. Vea la función [ConnectServerWmi](connectserverwmi.md) para 
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
@@ -89,9 +87,9 @@ Si se produce un error en la llamada de función, puede obtener información de 
 Para obtener un ejemplo, vea el método [IEnumWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
 
 ## <a name="requirements"></a>Requisitos
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
- **Encabezado**: WMINet_Utils.idl
+ **Encabezado:** WMINet_Utils. idl
 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128708"
 ---
 # <a name="compareto-function"></a>Función CompareTo
 
@@ -52,17 +50,17 @@ de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn
 de Combinación bit a bit de las marcas que especifican las características del objeto que se deben tener en cuenta para la comparación. Vea la sección [comentarios](#remarks) para obtener más información.
 
 `pCompareTo`\
-de Objeto para la comparación. `pCompareTo`debe ser una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) válida; no puede ser `null`.
+de Objeto para la comparación. `pCompareTo` debe ser una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) válida; no se puede `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Se realizó una segunda `BeginEnumeration` llamada a sin una llamada intermedia a. [`EndEnumeration`](endenumeration.md) |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Se realizó una segunda llamada a `BeginEnumeration` sin una llamada intermedia a [`EndEnumeration`](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Los objetos son diferentes. |
 | `WBEM_S_SAME` | 0 | Los objetos son los mismos en función de las marcas de comparación. |
@@ -73,7 +71,7 @@ Esta función contiene una llamada al método [IWbemClassObject:: CompareTo](/wi
 
 Las marcas que se pueden pasar como `lEnumFlags` argumento se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código. Puede especificar las características individuales implicadas en la comparación especificando una combinación bit a bit de las marcas siguientes:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Omita el origen (el servidor y el espacio de nombres del que proceden). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Omitir todos los calificadores (incluidos **clave** y **dinámico**) |
@@ -84,15 +82,15 @@ Las marcas que se pueden pasar como `lEnumFlags` argumento se definen en el arch
 
 O bien, puede especificar una única marca compuesta como se indica a continuación:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Tenga en cuenta todas las características de la comparación. |
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

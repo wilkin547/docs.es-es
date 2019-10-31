@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
+title: 'Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123665"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  
   
 - Las aplicaciones COM deben tener un manifiesto de aplicación de estilo Win32 para identificar el componente administrado.  
@@ -105,7 +103,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 4. Identifique cada clase del ensamblado. Use el elemento `<clrClass>` para identificar cada clase del ensamblado administrado de manera única. El elemento, que es un subelemento del elemento `<assembly>`, tiene los atributos que se describen en la tabla siguiente.  
   
-    |Atributo|DESCRIPCIÓN|Obligatorio|  
+    |Atributo|Descripción|Requerido|  
     |---------------|-----------------|--------------|  
     |`clsid`|El identificador que especifica la clase que ha de ser activada.|Sí|  
     |`description`|Cadena que informa al usuario sobre el componente. De manera predeterminada, es una cadena vacía.|No|  

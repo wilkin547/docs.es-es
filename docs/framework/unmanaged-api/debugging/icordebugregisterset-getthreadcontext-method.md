@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747181"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127153"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext (Método)
 Obtiene el contexto del subproceso actual.  
@@ -39,20 +37,20 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parámetros  
  `contextSize`  
- [in] El tamaño, en bytes, de la `context` matriz.  
+ de Tamaño, en bytes, de la matriz de `context`.  
   
  `context`  
- [in, out] Una matriz de bytes que componen el Win32 `CONTEXT` estructura para la plataforma actual.  
+ [in, out] Matriz de bytes que componen la estructura de `CONTEXT` Win32 para la plataforma actual.  
   
 ## <a name="remarks"></a>Comentarios  
- El depurador debe llamar a esta función en lugar de Win32 `GetThreadContext` funcione, porque el subproceso puede encontrarse en un estado de "secuestro" donde su contexto cambió temporalmente. Los datos devueltos son Win32 `CONTEXT` estructura para la plataforma actual.  
+ El depurador debe llamar a esta función en lugar de a la función `GetThreadContext` de Win32, porque el subproceso puede estar en un estado "secuestrado" donde su contexto ha cambiado temporalmente. Los datos devueltos son una estructura de `CONTEXT` Win32 para la plataforma actual.  
   
- Para los marcos no hoja, los clientes deberían comprobar qué registros son válidos mediante el uso de [GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ En el caso de los marcos no hoja, los clientes deben comprobar qué registros son válidos mediante [ICorDebugRegisterSet:: getregistersavailable (](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

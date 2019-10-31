@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d080145ac63882e04412b44c34d040a75746243
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8cfc9cdf6580a002f6ac15080012a9e8c63be20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767526"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129647"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap (Método)
-Obtiene un enumerador para los objetos del montón administrado.  
+Obtiene un enumerador para los objetos en el montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT EnumerateHeap(
   
 ## <a name="parameters"></a>Parámetros  
  `ppObject`  
- [out] Un puntero a la dirección de un [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) objeto de interfaz que es un enumerador para los objetos que residen en el montón administrado.  
+ enuncia Puntero a la dirección de un objeto de interfaz [icordebugheapenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) que es un enumerador para los objetos que residen en el montón administrado.  
   
 ## <a name="remarks"></a>Comentarios  
- Antes de llamar a la `ICorDebugProcess5::EnumerateHeap` método, debe llamar a la [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método y examinar el valor de la `areGCStructuresValid` campo devuelto del [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) objeto para asegurarse de que el montón de elementos no utilizados en su estado actual es enumerable. Además, el `ICorDebugProcess5::EnumerateHeap` devuelve `E_FAIL` si adjuntar demasiado pronto en la duración del proceso, antes de la memoria para el montón administrado está asignado.  
+ Antes de llamar al método `ICorDebugProcess5::EnumerateHeap`, debe llamar al método [ICorDebugProcess5:: getgcheapinformation (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) y examinar el valor del campo `areGCStructuresValid` del objeto [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) devuelto para asegurarse de que el montón de recolección de elementos no utilizados en su el estado actual es Enumerable. Además, el `ICorDebugProcess5::EnumerateHeap` devuelve `E_FAIL` si se adjunta demasiado pronto en la duración del proceso, antes de que se asigne la memoria para el montón administrado.  
   
- El [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) objeto de interfaz es un enumerador estándar que se deriva de la interfaz ICorDebugEnum que le permite enumerar [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objetos. Este método rellena el [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) objeto de colección con [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que proporcionan información sobre todos los objetos. También puede incluir la colección [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que proporcionan información acerca de los objetos que no se ha modificado por cualquier objeto pero aún no se han recopilado por el recolector de elementos no utilizados.  
+ El objeto de interfaz [icordebugheapenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) es un enumerador estándar derivado de la interfaz ICorDebugEnum que le permite enumerar objetos [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) . Este método rellena el objeto de colección [icordebugheapenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) con instancias [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) que proporcionan información acerca de todos los objetos. La colección también puede incluir instancias de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) que proporcionan información sobre los objetos que no están raíz de ningún objeto pero que el recolector de elementos no utilizados aún no ha recopilado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

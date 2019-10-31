@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130767"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread (Método)
-Notifica al depurador que ha salido de un subproceso que se estaba ejecutando código administrado.  
+Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT ExitThread (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado.  
   
  `thread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.  
   
 ## <a name="remarks"></a>Comentarios  
- Una vez el `ExitThread` se desencadena la devolución de llamada, el subproceso ya no aparecerá en las enumeraciones de subproceso.  
+ Una vez que se activa la devolución de llamada de `ExitThread`, el subproceso ya no aparecerá en las enumeraciones de subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

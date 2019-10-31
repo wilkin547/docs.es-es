@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123067"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly (Función)
 Obtiene un valor que indica si el ensamblado especificado está administrado.  
@@ -51,14 +49,14 @@ HRESULT IsFrameworkAssembly (
  [in] Tamaño de `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Comentarios  
- El `pwzAssemblyReference` parámetro es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.  
+ El parámetro `pwzAssemblyReference` es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.  
   
- Si este ensamblado forma parte del .NET Framework, el `pbIsFrameworkAssembly` parámetro contendrá un valor booleano de `true`.  
+ Si este ensamblado forma parte del .NET Framework, el parámetro `pbIsFrameworkAssembly` contendrá un valor booleano de `true`.  
   
- Si el ensamblado con nombre no forma parte de la .NET Framework, o `pwzAssemblyReference` si el parámetro no es un ensamblado, `pbIsFrameworkAssembly` contendrá un valor `false`booleano de.  
+ Si el ensamblado con nombre no forma parte de la .NET Framework, o si el parámetro `pwzAssemblyReference` no tiene un nombre de ensamblado, `pbIsFrameworkAssembly` contendrá un valor booleano de `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Vea también
 

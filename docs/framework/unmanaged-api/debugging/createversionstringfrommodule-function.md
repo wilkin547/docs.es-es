@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132083"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule (Función)
 Crea una cadena de versión a partir de una ruta de acceso de Common Language Runtime (CLR) en un proceso de destino.  
@@ -74,15 +72,15 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` no hace referencia a un proceso válido, u otro error.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función acepta un proceso de CLR que se identifica mediante `pidDebuggee` y una ruta de acceso de cadena especificada por `szModuleName`. La cadena de versión se devuelve en el búfer al que `pBuffer` apunta. Esta cadena es opaca para el usuario de la función; es decir, no tiene ningún significado intrínseco en la propia cadena de versión. Se usa únicamente en el contexto de esta función y el [CreateDebuggingInterfaceFromVersion (función)](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
+ Esta función acepta un proceso de CLR que se identifica mediante `pidDebuggee` y una ruta de acceso de cadena especificada por `szModuleName`. La cadena de versión se devuelve en el búfer al que `pBuffer` apunta. Esta cadena es opaca para el usuario de la función; es decir, no tiene ningún significado intrínseco en la propia cadena de versión. Se usa únicamente en el contexto de esta función y de la [función CreateDebuggingInterfaceFromVersion (](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
   
  Se debe llamar dos veces a esta función. Cuando la llame por primera vez, pase NULL tanto para `pBuffer` como para `cchBuffer`. Al hacerlo, el tamaño del búfer necesario para `pBuffer` se devuelve en `pdwLength`. Después puede llamar a la función una segunda vez y pasar el búfer en `pBuffer` y su tamaño en `cchBuffer`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** dbgshim.h  
+ **Encabezado:** dbgshim. h  
   
- **Biblioteca:** dbgshim.dll  
+ **Biblioteca:** dbgshim. dll  
   
- **Versiones de .NET framework:** 3.5 SP1
+ **.NET Framework versiones:** 3,5 SP1

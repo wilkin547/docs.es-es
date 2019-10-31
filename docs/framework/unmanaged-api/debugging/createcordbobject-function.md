@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ab86277956469e558d20cea81174a7fdcc0020b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d21e0d3d0370ec7c1b223be29099f6b99822463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739327"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132106"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject (Función)
-Crea una interfaz de depurador ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) que proporciona la funcionalidad para crear instancias de una sesión de depuración administrada en un proceso remoto.  
+Crea una interfaz de depurador ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) que proporciona funcionalidad para crear instancias de una sesión de depuración administrada en un proceso remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Versión de depuración del proceso de destino. Este parámetro debe ser CorDebugVersion_2_0 para la depuración remota.  
   
  `ppCordb`  
- [out] Puntero a un puntero a un objeto que se convertirá a un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaz y devuelve.  
+ enuncia Puntero a un puntero a un objeto que se convertirá en una interfaz [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) y se devolverá.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
@@ -58,13 +56,13 @@ HRESULT CordbCreateObject (
  Otros errores.  
   
 ## <a name="remarks"></a>Comentarios  
- El [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfaz que se devuelve en `ppCordb` es la interfaz de depuración de nivel superior para todos los servicios de depuración administrada.  
+ La interfaz [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) que se devuelve en `ppCordb` es la interfaz de depuración de nivel superior para todos los servicios de depuración administrados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versiones de .NET framework:** 3.5 SP1
+ **.NET Framework versiones:** 3,5 SP1

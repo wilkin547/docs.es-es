@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37a7d8fa4439d52db3cddfff22ac6580b19af58a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128916"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException (Método)
-Borra la excepción no administrada actual del subproceso especificado.  
+Borra la excepción no administrada actual en el subproceso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,17 +33,17 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
 ## <a name="parameters"></a>Parámetros  
  `threadID`  
- [in] El identificador del subproceso en el que se borrará la excepción no administrada actual.  
+ de IDENTIFICADOR del subproceso en el que se borrará la excepción no administrada actual.  
   
 ## <a name="remarks"></a>Comentarios  
- Llame a este método antes de llamar a [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) cuando un subproceso ha notificado una excepción no administrada que se debe omitir el depurador. Esto borrará los eventos de fuera de banda (OOB) en el subproceso y pendientes en banda (IB). Se borran automáticamente todos los puntos de interrupción OOB y excepciones de paso a paso.  
+ Llame a este método antes de llamar a [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) cuando un subproceso haya comunicado una excepción no administrada que el código depurado debe omitir. Esto borrará los eventos en banda (IB) y fuera de banda (OOB) pendientes en el subproceso determinado. Todos los puntos de interrupción de OOB y las excepciones de un solo paso se borran automáticamente.  
   
- Use [Icordebugthread2](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) interceptar actual excepción en un subproceso administrado.  
+ Use [ICorDebugThread2:: interceptcurrentexception (](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) para interceptar la excepción administrada actual en un subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

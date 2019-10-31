@@ -2,14 +2,12 @@
 title: Medir la mejora del inicio con .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128351"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medir la mejora del inicio con .NET Native
 .NET Native mejora significativamente el tiempo de inicio de las aplicaciones. Esta mejora es especialmente palpable en los dispositivos portátiles de baja potencia y con aplicaciones complejas. Este tema sirve de introducción a la instrumentación básica necesaria para medir esta mejora de inicio.  
@@ -47,7 +45,7 @@ ms.locfileid: "70927065"
   
 - Cuando la aplicación ha terminado de sincronizar nuevos casos.  
   
- Instrumentar una aplicación es sencillo: Simplemente llame al método adecuado en la clase derivada. Usando `AppEventSource` del ejemplo anterior, una aplicación se puede instrumentar del siguiente modo:  
+ Instrumentar una aplicación es sencillo: basta con llamar al método apropiado en la clase derivada. Usando `AppEventSource` del ejemplo anterior, una aplicación se puede instrumentar del siguiente modo:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   

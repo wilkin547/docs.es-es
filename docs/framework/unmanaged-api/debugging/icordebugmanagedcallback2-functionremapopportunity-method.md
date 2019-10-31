@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 24f058ff11a1155aa53a1d1f222ff1230c1c23e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760987"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131488"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity (Método)
-Notifica al depurador que la ejecución de código ha alcanzado un punto de secuencia en una versión anterior de una función modificada.  
+Notifica al depurador que la ejecución del código ha alcanzado un punto de secuencia en una versión anterior de una función editada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,29 +39,29 @@ HRESULT FunctionRemapOpportunity (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la función modificada.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la función editada.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se encontró el punto de interrupción de reasignación.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se encontró el punto de interrupción de reasignación.  
   
  `pOldFunction`  
- [in] Un puntero a un objeto ICorDebugFunction que representa la versión de la función que se está ejecutando actualmente en el subproceso.  
+ de Un puntero a un objeto ICorDebugFunction que representa la versión de la función que se está ejecutando actualmente en el subproceso.  
   
  `pNewFunction`  
- [in] Un puntero a un objeto ICorDebugFunction que representa la versión más reciente de la función.  
+ de Un puntero a un objeto ICorDebugFunction que representa la versión más reciente de la función.  
   
  `oldILOffset`  
- [in] El desplazamiento de lenguaje intermedio (MSIL) de Microsoft del puntero de instrucción en la versión anterior de la función.  
+ de Desplazamiento del lenguaje intermedio de Microsoft (MSIL) del puntero de instrucción en la versión anterior de la función.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta devolución de llamada da la oportunidad de reasignar el puntero de instrucción al lugar adecuado en la nueva versión de la función especificada mediante una llamada al depurador el [Icordebugilframe2](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) método. Si el depurador no llama a `RemapFunction` antes de llamar a la [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) método, el tiempo de ejecución se seguirán ejecutando el código anterior y se activará otro `FunctionRemapOpportunity` devolución de llamada en el siguiente punto de secuencia.  
+ Esta devolución de llamada proporciona al depurador una oportunidad para reasignar el puntero de instrucción a su lugar adecuado en la nueva versión de la función especificada llamando al método [ICorDebugILFrame2:: remapfunction (](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) . Si el depurador no llama a `RemapFunction` antes de llamar al método [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , el motor en tiempo de ejecución seguirá ejecutando el código anterior y activará otra devolución de llamada `FunctionRemapOpportunity` en el siguiente punto de secuencia.  
   
- Esta devolución de llamada se invocará para cada marco que se está ejecutando una versión anterior de la función especificada hasta que el depurador devuelve S_OK.  
+ Esta devolución de llamada se invocará para cada fotograma que ejecute una versión anterior de la función especificada hasta que el depurador devuelva S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

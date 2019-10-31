@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87ce7c5b-fd82-453e-bf55-c8a32150b183
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 701d578a1d3af941923d68ddc0cb7c97dd0ca8ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c3b0331cc4d987070b2d04beb621c4966a27cb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129839"
 ---
 # <a name="icordebugmdagetflags-method"></a>ICorDebugMDA::GetFlags (Método)
-Obtiene los marcadores asociados con el Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtiene las marcas asociadas al Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetFlags (
   
 ## <a name="parameters"></a>Parámetros  
  `pFlags`  
- [in] Una combinación bit a bit de los [CorDebugMDAFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) valores de enumeración que especifican los valores de las marcas para este MDA.  
+ de Combinación bit a bit de los valores de enumeración de [CorDebugMDAFlags (](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) que especifican los valores de las marcas para este MDA.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

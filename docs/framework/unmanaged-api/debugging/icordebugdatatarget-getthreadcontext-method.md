@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122024"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext (Método)
 Devuelve el contexto del subproceso actual para el subproceso especificado.  
@@ -39,24 +37,24 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parámetros  
  `dwThreadID`  
- [in] El identificador del subproceso cuyo contexto es va a recuperar. El identificador está definido por el sistema operativo.  
+ de Identificador del subproceso cuyo contexto se va a recuperar. El identificador está definido por el sistema operativo.  
   
  `contextFlags`  
- [in] Una combinación bit a bit de marcas de depende de la plataforma que indican qué partes del contexto deben leerse.  
+ de Combinación bit a bit de las marcas dependientes de la plataforma que indican qué partes del contexto se deben leer.  
   
  `contextSize`  
  [in] Tamaño de `pContext`.  
   
  `pContext`  
- [out] El búfer donde se almacenará el contexto del subproceso.  
+ enuncia Búfer donde se almacenará el contexto del subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- En las plataformas Windows, `pContext` debe ser un `CONTEXT` estructura (definida en WinNT.h) que sea adecuada para el tipo de equipo especificado por el [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método. `contextFlags` debe tener los mismos valores que el `ContextFlags` campo de la `CONTEXT` estructura. El `CONTEXT` estructura es específico del procesador; consulte el archivo WinNT.h para obtener más información.  
+ En las plataformas de Windows, `pContext` debe ser una estructura de `CONTEXT` (definida en Winnt. h) que sea adecuada para el tipo de equipo especificado por el método [ICorDebugDataTarget:: GetPlatform (](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . `contextFlags` deben tener los mismos valores que el campo `ContextFlags` de la estructura `CONTEXT`. La estructura de `CONTEXT` es específica del procesador; Consulte el archivo winnt. h para obtener más información.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

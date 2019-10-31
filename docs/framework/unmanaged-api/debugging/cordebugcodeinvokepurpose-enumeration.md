@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b5de58caeeac5ae85402e91a1402958e68336bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f037a28f0417f5607cd5b5637da4ca62e34e0edb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967586"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132265"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>Enumeración CorDebugCodeInvokePurpose
 Explica los motivos por los que una función exportada llama a código administrado.  
@@ -36,7 +34,7 @@ typedef enum CorDebugCodeInvokePurpose
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`CODE_INVOKE_PURPOSE_NONE`|Ninguno o desconocido.|  
 |`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|El código administrado ejecutará cualquier punto de entrada administrado, como una PInvoke inversa. Cualquier otro propósito más detallado es desconocido para el tiempo de ejecución.|  
@@ -50,11 +48,11 @@ typedef enum CorDebugCodeInvokePurpose
 > Esta enumeración está pensada solo para su uso en escenarios de depuración .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

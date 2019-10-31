@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 017a7ba5-aaaf-44e2-9cbe-ceebef259df0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3e50538bde8fe3509b49e3dbcb031875e6863e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796832"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127117"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem (Método)
 Obtiene una referencia a un nuevo objeto [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
@@ -47,18 +45,18 @@ HRESULT CreateAssemblyCacheItem (
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- [in] Reservado para extensibilidad futura. `pvReserved`debe ser una referencia nula.  
+ [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
  `ppAsmItem`  
- enuncia Puntero devuelto `IAssemblyCacheItem` .  
+ enuncia Puntero `IAssemblyCacheItem` devuelto.  
   
  `pszAssemblyName`  
- [in, Optional] Pares no canónicos separados por `name=value` comas.  
+ [in, Optional] Pares de `name=value` no canónicos separados por comas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

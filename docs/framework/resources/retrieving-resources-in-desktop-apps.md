@@ -18,14 +18,12 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4c44bdb4be4c90c20cd6bdb56db6cd3380535c7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3c14e251b6ca88fb864952c3411b5ea0c46da302
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129940"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  
@@ -40,7 +38,7 @@ Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Frame
   
  El Administrador de recursos usa el proceso de reserva de recursos para controlar la forma en que la aplicación recupera los recursos específicos de referencia cultural. Para obtener más información, consulte la sección "El proceso de reserva de recursos" de [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md). Para obtener información sobre cómo crear una instancia de un objeto <xref:System.Resources.ResourceManager> , consulte la sección "Instantiating a ResourceManager Object" (Crear una instancia de un objeto ResourceManager) del tema de la clase <xref:System.Resources.ResourceManager> .  
   
-### <a name="retrieving-string-data-an-example"></a>Recuperación de datos de cadena: Un ejemplo  
+### <a name="retrieving-string-data-an-example"></a>Ejemplo de recuperación de datos de cadena  
  En el ejemplo siguiente se llama al método <xref:System.Resources.ResourceManager.GetString%28System.String%29> para recuperar los recursos de cadena de la referencia cultural de interfaz de usuario actual. Incluye un recurso de cadena neutro para la referencia cultural de inglés (Estados Unidos) y recursos localizados para las referencias culturales de ruso (Rusia) y de francés (Francia). El siguiente recurso de inglés (Estados Unidos) está en un archivo denominado Strings.txt:  
   
 ```text
@@ -81,7 +79,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Si la referencia cultural de interfaz de usuario actual es el español (España), tenga en cuenta que en el ejemplo se muestran los recursos del idioma inglés, ya que los recursos del idioma español no están disponibles y el inglés es la referencia cultural predeterminada del ejemplo.  
   
-### <a name="retrieving-object-data-two-examples"></a>Recuperación de datos de objeto: dos ejemplos  
+### <a name="retrieving-object-data-two-examples"></a>Dos ejemplos de recuperación de datos de objeto  
  Puede usar los métodos <xref:System.Resources.ResourceManager.GetObject%2A> y <xref:System.Resources.ResourceManager.GetStream%2A> para recuperar datos de objeto. Se incluyen los tipos de datos primitivos, los objetos serializables y los objetos que se almacenan en formato binario (como las imágenes).  
   
  En el ejemplo siguiente se usa el método <xref:System.Resources.ResourceManager.GetStream%28System.String%29> para recuperar un mapa de bits que se emplea en la ventana de inicio de una aplicación. El siguiente código fuente del archivo CreateResources.cs (para C#) o CreateResources.vb (para Visual Basic) genera un archivo .resx que contiene la imagen serializada. En este caso, la imagen se carga desde un archivo denominado SplashScreen.jpg; puede modificar el nombre del archivo para sustituir su propia imagen.  
@@ -89,7 +87,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
  [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
- El siguiente código recupera el recurso y muestra la imagen en un control <xref:System.Windows.Forms.PictureBox> .  
+ El siguiente código recupera el recurso y muestra la imagen en un control <xref:System.Windows.Forms.PictureBox>.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
  [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
@@ -105,7 +103,7 @@ resgen AppResources.resx
 csc GetStream.cs -resource:AppResources.resources  
 ```  
   
- En el siguiente ejemplo se usa el método <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> para deserializar un objeto personalizado. El ejemplo incluye un archivo de código fuente denominado UIElements.cs (UIElements.vb en el caso de Visual Basic) que define la siguiente estructura, denominada `PersonTable`. Esta estructura está pensada para usarse con una rutina de visualización general de tabla en la que se muestren los nombres localizados de las columnas de la tabla. Tenga en cuenta que la estructura `PersonTable` está marcada con el atributo <xref:System.SerializableAttribute> .  
+ En el siguiente ejemplo se usa el método <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> para deserializar un objeto personalizado. El ejemplo incluye un archivo de código fuente denominado UIElements.cs (UIElements.vb en el caso de Visual Basic) que define la siguiente estructura, denominada `PersonTable`. Esta estructura está pensada para usarse con una rutina de visualización general de tabla en la que se muestren los nombres localizados de las columnas de la tabla. Tenga en cuenta que la estructura `PersonTable` está marcada con el atributo <xref:System.SerializableAttribute>.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
  [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
@@ -138,7 +136,7 @@ GetObject.exe
   
  El atributo <xref:System.Resources.SatelliteContractVersionAttribute> proporciona compatibilidad de versiones para un ensamblado principal. Al especificar este atributo en el ensamblado principal de una aplicación, puede actualizar y volver a implementar un ensamblado principal sin tener que actualizar sus ensamblados satélite. Una vez actualizado el ensamblado principal, incremente el número de versión del ensamblado principal sin modificar el número de versión del contrato satélite. Cuando el Administrador de recursos recupere los recursos solicitados, cargará la versión del ensamblado satélite especificada por este atributo.  
   
- Los ensamblados de directiva de edición ofrecen compatibilidad de las versiones de los ensamblados satélite. Puede actualizar y volver a implementar un ensamblado satélite sin tener que actualizar el ensamblado principal. Después de actualizar un ensamblado satélite, incremente su número de versión y distribúyalo con un ensamblado de directiva de edición. En el ensamblado de directiva de edición, especifique que el nuevo ensamblado satélite es compatible con su versión anterior. El Administrador de recursos usará el atributo <xref:System.Resources.SatelliteContractVersionAttribute> para determinar la versión del ensamblado satélite, pero el cargador de ensamblados se enlazará con la versión del ensamblado satélite especificada por la directiva de edición. Para obtener más información sobre los ensamblados de directiva de edición, consulte [How to: Create a Publisher Policy](../configure-apps/how-to-create-a-publisher-policy.md)(Cómo crear una directiva de edición).  
+ Los ensamblados de directiva de edición ofrecen compatibilidad de las versiones de los ensamblados satélite. Puede actualizar y volver a implementar un ensamblado satélite sin tener que actualizar el ensamblado principal. Después de actualizar un ensamblado satélite, incremente su número de versión y distribúyalo con un ensamblado de directiva de edición. En el ensamblado de directiva de edición, especifique que el nuevo ensamblado satélite es compatible con su versión anterior. El Administrador de recursos usará el atributo <xref:System.Resources.SatelliteContractVersionAttribute> para determinar la versión del ensamblado satélite, pero el cargador de ensamblados se enlazará con la versión del ensamblado satélite especificada por la directiva de edición. Para más información sobre los ensamblados de directiva del publicador, consulte [Cómo crear un archivo de directiva de edición](../configure-apps/how-to-create-a-publisher-policy.md).  
   
  Para habilitar la compatibilidad completa de versiones de ensamblados, se recomienda implementar ensamblados con nombres seguros en la [caché global de ensamblados](../app-domains/gac.md) e implementar los ensamblados que no tengan nombres seguros en el directorio de la aplicación. Si quiere implementar ensamblados con nombres seguros en el directorio de la aplicación, no podrá aumentar el número de versión de un ensamblado satélite al actualizar el ensamblado. En lugar de ello, debe llevar a cabo una actualización local en la que deberá reemplazar el código existente por el código actualizado y conservar el mismo número de versión. Por ejemplo, si quiere actualizar la versión 1.0.0.0 de un ensamblado satélite con el nombre de ensamblado especificado por completo "MyApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a", sobrescríbalo con el archivo actualizado myApp.resources.dll que se ha compilado con el mismo nombre de ensamblado especificado por completo "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a". Tenga en cuenta que el uso de actualizaciones locales en los archivos del ensamblado satélite dificulta que una aplicación pueda determinar con exactitud la versión de un ensamblado satélite.  
   

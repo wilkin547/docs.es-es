@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5d676e0fad33ca994b2e5bcd7adf269e306cb55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e9846234f8217b822860c2400a54a91a651a0a56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129825"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId (Método)
-Obtiene el identificador del subproceso del sistema operativo (SO) en el que el Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) se está ejecutando.  
+Obtiene el identificador del subproceso del sistema operativo (SO) en el que se ejecuta el Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetOSThreadId (
   
 ## <a name="parameters"></a>Parámetros  
  `pOsTid`  
- [out] Un puntero al identificador de subproceso del sistema operativo.  
+ enuncia Puntero al identificador del subproceso del sistema operativo.  
   
 ## <a name="remarks"></a>Comentarios  
- El subproceso de sistema operativo se usa en lugar de un ICorDebugThread para permitir situaciones en que se desencadena un MDA en un subproceso nativo o en un subproceso administrado que aún no ha entrado código administrado.  
+ El subproceso del sistema operativo se usa en lugar de una expresión ICorDebugThread para permitir situaciones en las que se desencadena un MDA en un subproceso nativo o en un subproceso administrado que todavía no ha entrado en código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

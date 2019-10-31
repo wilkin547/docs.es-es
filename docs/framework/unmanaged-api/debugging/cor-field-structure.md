@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274060"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132357"
 ---
 # <a name="cor_field-structure"></a>COR_FIELD (Estructura)
 Proporciona información sobre un campo en un objeto.  
@@ -41,7 +39,7 @@ typedef struct COR_FIELD{
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`token`|Un `mdFieldDef` token que se puede utilizar para obtener información de campo.|  
+|`token`|Un token de `mdFieldDef` que se puede utilizar para obtener información de campo.|  
 |`offset`|Desplazamiento, en bytes, para los datos de campo del objeto.|  
 |`id`|Valor de [COR_TYPEID](cor-typeid-structure.md) que identifica el tipo de este campo.|  
 |`fieldType`|Un valor de enumeración CorElementType que indica el tipo del campo.|  
@@ -49,11 +47,11 @@ typedef struct COR_FIELD{
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

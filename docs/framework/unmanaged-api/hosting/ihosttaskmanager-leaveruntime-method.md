@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ac1c18d094deca50d461ef9ff0933a4f87176e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132993"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime (Método)
 Notifica al host que la tarea que se está ejecutando actualmente está a punto de abandonar el Common Language Runtime (CLR) y especificar código no administrado.  
@@ -44,9 +42,9 @@ HRESULT LeaveRuntime (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`se devolvió correctamente.|  
+|S_OK|`LeaveRuntime` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -55,9 +53,9 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación solicitada.|  
   
 ## <a name="remarks"></a>Comentarios  
- Las secuencias de llamadas a y desde código no administrado se pueden anidar. Por ejemplo, en la lista siguiente se describe una situación hipotética en la que la secuencia `LeaveRuntime`de llamadas a, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), y `IHostTaskManager::EnterRuntime` permite al host Identifique las capas anidadas.  
+ Las secuencias de llamadas a y desde código no administrado se pueden anidar. Por ejemplo, en la lista siguiente se describe una situación hipotética en la que la secuencia de llamadas a `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)y `IHostTaskManager::EnterRuntime` permite al host identificar el capas anidadas.  
   
-|.|Llamada al método correspondiente|  
+|Acción|Llamada al método correspondiente|  
 |------------|-------------------------------|  
 |Un ejecutable de Visual Basic administrado llama a una función no administrada escrita en C mediante la invocación de plataforma.|`IHostTaskManager::LeaveRuntime`|  
 |La función de C no administrada llama a un método en un archivo DLL C#administrado escrito en.|`IHostTaskManager::ReverseEnterRuntime`|  
@@ -67,11 +65,11 @@ HRESULT LeaveRuntime (
 |La primera función no administrada devuelve la ejecución al programa Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131746"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity (Interfaz)
-Actúa como un enumerador para una colección `IReferenceIdentity` de objetos.  
+Actúa como un enumerador para una colección de objetos `IReferenceIdentity`.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Obtiene un puntero de interfaz a un `IEnumReferenceIdentity` nuevo que contiene los mismos miembros que `IEnumReferenceIdentity`este.|  
-|`IEnumReferenceIdentity::Next`|Obtiene el número especificado de `IReferenceIdentity` objetos, empezando en la posición actual.|  
+|`IEnumReferenceIdentity::Clone`|Obtiene un puntero de interfaz a un nuevo `IEnumReferenceIdentity` que contiene los mismos miembros que este `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Next`|Obtiene el número especificado de objetos `IReferenceIdentity`, comenzando en la posición actual.|  
 |`IEnumReferenceIdentity::Reset`|Mueve el puntero de instrucción al principio de este `IEnumReferenceIdentity`.|  
 |`IEnumReferenceIdentity::Skip`|Mueve el puntero de instrucción hacia delante el número especificado de elementos, comenzando en la posición actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation. h  
+ **Encabezado:** Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

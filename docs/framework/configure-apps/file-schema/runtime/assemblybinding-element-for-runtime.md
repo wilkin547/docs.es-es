@@ -8,21 +8,19 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118130"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > elemento para \<tiempo de ejecución >
+# <a name="assemblybinding-element-for-runtime"></a>\<elemento de > assemblyBinding para \<Runtime >
 Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +35,23 @@ Contiene información sobre la redirección de versiones de ensamblado y las ubi
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |**xmlns**|Atributo necesario.<br /><br /> Especifica el espacio de nombres XML necesario para el enlace de ensamblados. Utilice la cadena "urn: schemas-microsoft-v1" como valor.|  
 |**appliesTo**|Especifica la versión en tiempo de ejecución a la que se aplica la redirección del ensamblado de .NET Framework. Este atributo opcional usa un número de versión de .NET Framework para indicar a qué versión se aplica. Si no se especifica ningún atributo **appliesTo**, el elemento **\<assemblyBinding>** se aplica a todas las versiones de .NET Framework. El atributo **appliesTo** se incorporó en .NET Framework versión 1,1; se omite en la versión 1,0 de .NET Framework. Esto significa que se aplican todos los elementos **\<assemblyBinding>** cuando se usa la versión 1.0 de .NET Framework, aunque se especifique un atributo **appliesTo**.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Encapsula la directiva de enlace y la ubicación de un ensamblado. Use una  **\<** etiqueta de > de dependentAssembly para cada ensamblado.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Encapsula la directiva de enlace y la ubicación de un ensamblado. Use una\<la etiqueta de **> dependentAssembly** para cada ensamblado.|  
 |[\<probing>](probing-element.md)|Especifica los subdirectorios en los que busca Common Language Runtime cuando se cargan los ensamblados.|  
 |[\<publisherPolicy>](publisherpolicy-element.md)|Especifica si el tiempo de ejecución aplica la directiva de editor.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cuando se utiliza un nombre parcial.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  

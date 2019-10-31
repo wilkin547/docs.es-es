@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131898"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName (Método)
 Devuelve el nombre de dominio completo o la dirección IPv4 del equipo de destino de depuración remota. IPV6 no se admite en este momento.  
@@ -55,16 +53,16 @@ HRESULT GetHostName (
  No se puede devolver el nombre de host o la dirección IP.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método lo implementa el programador del depurador. Debe seguir el paradigma de varias llamadas: En la primera llamada, el llamador pasa null a `cchHostName` y `szHostName`, y `pcchHostName` devuelve el tamaño del búfer necesario. En la segunda llamada, el tamaño devuelto previamente se pasa en `cchHostName`, y un búfer del tamaño adecuado se pasa en `szHostName`.  
+ Este método lo implementa el programador del depurador. Debe seguir el paradigma de llamada múltiple: en la primera llamada, el llamador pasa null a `cchHostName` y `szHostName`, y `pcchHostName` devuelve el tamaño del búfer necesario. En la segunda llamada, el tamaño devuelto previamente se pasa en `cchHostName`, y un búfer del tamaño adecuado se pasa en `szHostName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl  
+ **Encabezado:** Cordebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** 3.5 SP1  
+ **.NET Framework versiones:** 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

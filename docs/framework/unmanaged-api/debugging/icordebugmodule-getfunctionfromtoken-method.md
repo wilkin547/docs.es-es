@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 547986633172d6f5e6549ad2048833dc9fb0cef3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb966a918c63b4fbc00dcf52819b9384427dfdaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763470"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129589"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken (Método)
 Obtiene la función especificada por el token de metadatos.  
@@ -38,18 +36,18 @@ HRESULT GetFunctionFromToken(
   
 ## <a name="parameters"></a>Parámetros  
  `methodDef`  
- [in] Un `mdMethodDef` token de metadatos que hace referencia a los metadatos de la función.  
+ de Un token de metadatos de `mdMethodDef` que hace referencia a los metadatos de la función.  
   
  `ppFunction`  
- [out] Un puntero a la dirección de un objeto de interfaz ICorDebugFunction que representa la función.  
+ enuncia Puntero a la dirección de un objeto de interfaz ICorDebugFunction que representa la función.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetFunctionFromToken` método devuelve un valor de HRESULT CORDBG_E_FUNCTION_NOT_IL si el valor pasado en `methodDef` no hace referencia a un método de lenguaje intermedio (MSIL) de Microsoft.  
+ El método `GetFunctionFromToken` devuelve un valor HRESULT de CORDBG_E_FUNCTION_NOT_IL si el valor pasado en `methodDef` no hace referencia a un método de lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -12,14 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995558"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131094"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses (Método)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -43,15 +41,15 @@ HRESULT GetEHClauses(
  [out] Número de cláusulas para las cuales se escribe información en la matriz `clauses`.  
   
  clauses  
- [out] Una matriz de [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objetos que contienen información sobre las cláusulas definidas para este IL. de control de excepciones.  
+ enuncia Matriz de objetos [cordebugehclause (](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) que contienen información sobre las cláusulas de control de excepciones definidas para este Il.  
   
 ## <a name="remarks"></a>Comentarios  
- Si `cClauses` es 0 y `pcClauses` no es**null**, `pcClauses` se establece en el número de cláusulas de control de excepciones disponible. Si `cClauses` no es cero, representa la capacidad de almacenamiento de la matriz `clauses`. Cuando el método vuelve, `clauses` contiene un máximo de elementos `cClauses` y `pcClauses` se establece en el número de cláusulas escritas realmente en la matriz `clauses`.  
+ Si `cClauses` es 0 y `pcClauses` no es**null**, `pcClauses` se establece en el número de cláusulas de control de excepciones disponibles. Si `cClauses` no es cero, representa la capacidad de almacenamiento de la matriz `clauses`. Cuando el método vuelve, `clauses` contiene un máximo de elementos `cClauses` y `pcClauses` se establece en el número de cláusulas escritas realmente en la matriz `clauses`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

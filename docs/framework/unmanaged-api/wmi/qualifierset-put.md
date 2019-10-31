@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798271"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120234"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put función)
 
@@ -53,12 +51,12 @@ de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/n
 de Nombre del calificador que se va a escribir.
 
 `pVal`\
-de Un puntero a un válido `VARIANT` que contiene el calificador que se va a escribir. Este parámetro no puede `null`ser.
+de Puntero a una `VARIANT` válida que contiene el calificador que se va a escribir. Este parámetro no se puede `null`.
 
 `lFlavor`\
 de Una de las constantes siguientes que define los tipos de calificador deseados para este calificador. El valor predeterminado es `WBEM_FLAVOR_OVERRIDABLE` (0).
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | El calificador se puede invalidar en una clase o instancia derivada. **Este es el valor predeterminado.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | El calificador se propaga a las instancias. |
@@ -70,12 +68,12 @@ de Una de las constantes siguientes que define los tipos de calificador deseados
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Se produjo un intento no válido de especificar el calificador de **clave** en una propiedad que no puede ser una clave. Las claves se especifican en la definición de clase para un objeto y no se pueden modificar en cada instancia. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | El `pVal` parámetro no es de un tipo de calificador válido. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | No es posible llamar `QualifierSet_Put` al método en el calificador porque el objeto propietario no permite invalidaciones. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | El parámetro `pVal` no es de un tipo de calificador válido. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | No es posible llamar al método `QualifierSet_Put` en el calificador porque el objeto propietario no permite invalidaciones. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 
 ## <a name="remarks"></a>Comentarios
@@ -84,9 +82,9 @@ Esta función contiene una llamada al método [IWbemQualifierSet::P UT](/windows
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

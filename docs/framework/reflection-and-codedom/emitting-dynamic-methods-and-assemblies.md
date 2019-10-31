@@ -7,14 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8e2b9aeb8c632efcbf8c506da4da7c6e7b408e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046086"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130234"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitir métodos y ensamblados dinámicos
 
@@ -36,20 +34,20 @@ La emisión de la reflexión permite lo siguiente:
   
 Además de los tipos administrados del espacio de nombres <xref:System.Reflection.Emit>, hay interfaces de metadatos no administradas que se describen en la documentación de referencia [Interfaces de metadatos](../unmanaged-api/metadata/metadata-interfaces.md). La emisión de reflexión administrada proporciona una comprobación más estricta de los errores semánticos y un mayor nivel de abstracción de los metadatos que las interfaces de metadatos no administradas.  
   
-Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)". La documentación está disponible en línea en [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](https://go.microsoft.com/fwlink/?LinkId=116487).  
+Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente la sección II sobre la definición y la semántica de los metadatos y la partición III sobre el conjunto de instrucciones de CIL. La documentación está disponible en línea en [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](https://go.microsoft.com/fwlink/?LinkId=116487).  
   
 ## <a name="in-this-section"></a>En esta sección
   
 [Problemas de seguridad de la emisión de la reflexión](security-issues-in-reflection-emit.md)  
 Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  
 
-[Cómo: Definición y ejecución de métodos dinámicos](how-to-define-and-execute-dynamic-methods.md)   
+[Cómo: Definir y ejecutar métodos dinámicos](how-to-define-and-execute-dynamic-methods.md)   
 Muestra cómo ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase.
 
-[Cómo: Definir un tipo genérico con emisión de la reflexión](how-to-define-a-generic-type-with-reflection-emit.md)   
+[Cómo: Definir un tipo genérico con emisión de reflexión](how-to-define-a-generic-type-with-reflection-emit.md)   
 Muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, interfaz y especiales a los parámetros de tipo y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.
 
-[Cómo: Definición un método genérico con emisión de la reflexión](how-to-define-a-generic-method-with-reflection-emit.md)   
+[Cómo: Definir un método genérico con emisión de reflexión](how-to-define-a-generic-method-with-reflection-emit.md)   
 Muestra cómo crear, emitir e invocar un método genérico simple.
 
 [Ensamblados recopilables para la generación dinámica de tipos](collectible-assemblies.md)   

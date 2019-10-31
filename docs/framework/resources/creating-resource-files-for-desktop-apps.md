@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045679"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129976"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creación de archivos de recursos para aplicaciones .NET
 
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  Si el archivo de texto contiene instancias duplicadas de *name*, el [Generador de archivos de recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) muestra una advertencia y omite el segundo nombre.
 
- *value* no puede contener caracteres de nueva línea, pero se pueden usar caracteres de escape del estilo del lenguaje C, como `\n` para representar una línea nueva y `\t` para representar una tabulación. También se puede incluir un carácter de barra diagonal inversa si se añade el carácter de escape (por ejemplo, "\\\\"). Además, se admite el uso de una cadena vacía.
+ el *valor* no puede contener caracteres de nueva línea, pero puede usar caracteres de escape de estilo de lenguaje C como `\n` para representar una línea nueva y `\t` para representar una tabulación. También puede incluir un carácter de barra diagonal inversa si se trata de un carácter de escape (por ejemplo, "\\\\"). Además, se admite el uso de una cadena vacía.
 
  Debe guardar los recursos en formato de archivo de texto utilizando la codificación UTF-8 o UTF-16 con el orden de bytes little endian o big endian. Pero el [Generador de archivos de recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), que convierte un archivo .txt en un archivo .resources, trata los archivos como UTF-8 de forma predeterminada. Si desea que Resgen.exe reconozca un archivo codificado con UTF-16, es preciso incluir una marca de orden de bytes Unicode (U+FEFF) al principio del archivo.
 

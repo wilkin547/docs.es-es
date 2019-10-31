@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88f31ae29efee9b353c2dcc679724db73da5444e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 794a39f1e2c4a93a34ae39641519c79fd4c4e79e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969420"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131222"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx (Función)
 Permite a los hosts no administrados cargar Common Language Runtime (CLR) en un proceso. Las funciones [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) y `CorBindToRuntimeEx` realizan la misma operación, pero la función `CorBindToRuntimeEx` permite establecer marcas para especificar el comportamiento de CLR.  
@@ -70,7 +68,7 @@ HRESULT CorBindToRuntimeEx (
  `pwszBuildFlavor`  
  [in] Cadena que especifica si se debe cargar la compilación de CLR para servidor o para estación de trabajo. Los valores válidos son `svr` y `wks`. La compilación para servidor está optimizada para aprovechar las ventajas que aportan varios procesadores al realizar recolecciones de elementos no utilizados, mientras que la compilación para estación de trabajo está optimizada para aplicaciones cliente que se ejecutan en equipos con un solo procesador.  
   
- Si `pwszBuildFlavor` está establecido en null, se carga la compilación de la estación de trabajo. Cuando se ejecuta en un equipo de un solo procesador, siempre se carga la compilación de la `pwszBuildFlavor` estación de trabajo `svr`, incluso si se establece en. Sin embargo, `pwszBuildFlavor` si se establece `svr` en y se especifica la recolección de elementos no utilizados simultánea ( `startupFlags` vea la descripción del parámetro), se cargará la compilación del servidor.  
+ Si `pwszBuildFlavor` se establece en null, se carga la compilación de la estación de trabajo. Cuando se ejecuta en un equipo de un solo procesador, se carga siempre la compilación de la estación de trabajo, incluso si `pwszBuildFlavor` está establecido en `svr`. Sin embargo, si se establece `pwszBuildFlavor` en `svr` y se especifica la recolección de elementos no utilizados simultánea (vea la descripción del parámetro `startupFlags`), se cargará la compilación del servidor.  
   
  `startupFlags`  
  de Combinación de valores de la enumeración [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) . Estos marcadores controlan la recolección de elementos no utilizados simultánea, el código neutral respecto al dominio y el comportamiento del parámetro `pwszVersion`. Si no se establece ninguna marca, el valor predeterminado es un dominio único. Valores válidos son:  
@@ -104,7 +102,7 @@ HRESULT CorBindToRuntimeEx (
  Para obtener descripciones de estas marcas, vea la enumeración [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
   
  `rclsid`  
- de De la coclase que implementa la interfaz [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost.](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) `CLSID` Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ de `CLSID` de la coclase que implementa la interfaz [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  [in] `IID` de la interfaz solicitada de `rclsid`. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
@@ -124,18 +122,18 @@ HRESULT CorBindToRuntimeEx (
   
 2. Si se cambia el modo predeterminado del proceso al modo de compatibilidad de la versión 1, donde el objeto <xref:System.Security.Principal.WindowsIdentity> no fluye por ningún punto asincrónico, independientemente de los valores de <xref:System.Threading.ExecutionContext> en el subproceso actual. La manera de cambiar el modo predeterminado depende de si se usa un archivo ejecutable administrado o una interfaz de hospedaje no administrada para cargar CLR:  
   
-    1. Para los ejecutables administrados, debe `enabled` establecer el atributo [ \<](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) del elemento > de `true`legacyImpersonationPolicy en.  
+    1. Para los ejecutables administrados, debe establecer el atributo `enabled` del elemento [\<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) en `true`.  
   
     2. Para las interfaces de hospedaje no administradas, se establece la marca `STARTUP_LEGACY_IMPERSONATION` en el parámetro `startupFlags` al llamar a la función `CorBindToRuntimeEx`.  
   
      El modo de compatibilidad de la versión 1 se aplica a todo el proceso y a todos los dominios de aplicación del proceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

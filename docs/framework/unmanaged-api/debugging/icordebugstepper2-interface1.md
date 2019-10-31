@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugStepper2
+title: ICorDebugStepper2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d86f4bbec8971d164966298734388f0744a2d41c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 28ec18864158641a337ebdea189080ba4247a7c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120518"
 ---
-# <a name="icordebugstepper2-interface"></a>Interfaz ICorDebugStepper2
+# <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 (Interfaz)
 Proporciona compatibilidad con la depuración solo mi código (JMC).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[SetJMC (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Establece un valor que especifica si esta ICorDebugStepper solo se realiza a través del código creado por el desarrollador de una aplicación.|  
   
@@ -38,11 +36,11 @@ Proporciona compatibilidad con la depuración solo mi código (JMC).
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

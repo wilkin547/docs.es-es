@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Instalar un ensamblado en la caché global de ensamblados
+title: Instalación de un ensamblado en la caché global de ensamblados
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119802"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedimiento Instalar un ensamblado en la caché global de ensamblados
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Instalación de un ensamblado en la caché global de ensamblados
 
 La caché global de ensamblados (GAC) almacena los ensamblados que comparten varias aplicaciones. Puede instalar un ensamblado en la [caché global de ensamblados](gac.md) con uno de los componentes siguientes: 
 
@@ -26,13 +24,13 @@ La caché global de ensamblados (GAC) almacena los ensamblados que comparten var
 - [Herramienta de la caché global de ensamblados](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> Solamente puede instalar ensamblados con nombre seguro en la caché global de ensamblados. Para obtener información sobre cómo crear un ensamblado de este tipo, vea [Procedimientos para Firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).
+> Solamente puede instalar ensamblados con nombre seguro en la caché global de ensamblados. Para obtener información sobre cómo crear un ensamblado con nombre seguro, vea [Cómo: firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).
 
 ## <a name="windows-installer"></a>Windows Installer
 
 [Windows Installer](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), el motor de instalación de Windows, es la manera recomendada para agregar ensamblados a la caché global de ensamblados. Windows Installer proporciona el recuento de referencias de los ensamblados de la caché global de ensamblados, además de otras ventajas. Para crear un paquete de instalación para Windows Installer, use la [extensión del conjunto de herramientas de WiX para Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
 
-## <a name="global-assembly-cache-tool"></a>Herramienta de la caché global de ensamblados
+## <a name="global-assembly-cache-tool"></a>Caché global de ensamblados (herramienta)
 
 Puede usar la [utilidad de la caché global de ensamblados (gacutil.exe) de .NET](../tools/gacutil-exe-gac-tool.md) para agregar ensamblados a la caché global de ensamblados y ver el contenido de esa caché.
 
@@ -61,6 +59,6 @@ gacutil -i hello.dll
 ## <a name="see-also"></a>Vea también
 
 - [Trabajar con ensamblados y la memoria caché global de ensamblados](working-with-assemblies-and-the-gac.md)
-- [Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](how-to-remove-an-assembly-from-the-gac.md)
+- [Cómo: quitar un ensamblado de la caché global de ensamblados](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil.exe (herramienta de la caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md)
-- [Cómo: Firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md)
+- [Cómo: firmar un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md)

@@ -14,42 +14,40 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 518248651de6d8afdf25692c5f48da52b11eb0f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47c6dd9045636bcfbe07c909fec3fda515d28ee8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124527"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 (Interfaz)
-Proporciona toda la funcionalidad de la [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfaz; además, proporciona métodos que permiten las anulaciones de subprocesos para que se retrasa en el subproceso actual.  
+Proporciona toda la funcionalidad de la interfaz [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ; Además, proporciona métodos que permiten que las anulaciones de subprocesos se retrasen en el subproceso actual.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[BeginPreventAsyncAbort (método)](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Subproceso nuevo retrasos anular las solicitudes en el subproceso actual.|  
-|[EndPreventAsyncAbort (método)](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Permite nuevas o pendiente de solicitudes de anulación de subproceso como resultado en el subproceso se anula en el subproceso actual.|  
+|[BeginPreventAsyncAbort (método)](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Retrasa nuevas solicitudes de anulación de subprocesos en el subproceso actual.|  
+|[EndPreventAsyncAbort (método)](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Permite que las solicitudes de anulación de subprocesos nuevas o pendientes produzcan anulaciones de subprocesos en el subproceso actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ICLRTask2` interfaz hereda el `ICLRTask` interfaz y agrega los métodos que permiten al host retrasar las anulaciones de subproceso, para proteger una región de código que no debe sufrir un error. Una llamada a `BeginPreventAsyncAbort` incrementa el contador de anulaciones de subprocesos con retraso para el subproceso actual y llamar al método `EndPreventAsyncAbort` disminuye lo. Las llamadas a `BeginPreventAsyncAbort` y `EndPreventAsyncAbort` se pueden anidar. Siempre que el contador es mayor que cero, se retrasan las anulaciones de subproceso del subproceso actual.  
+ La interfaz de `ICLRTask2` hereda la interfaz de `ICLRTask` y agrega métodos que permiten al host retrasar las anulaciones de subprocesos, para proteger una región de código que no se debe producir un error. La llamada a `BeginPreventAsyncAbort` incrementa el contador Delay-Thread-Abort para el subproceso actual y la llamada a `EndPreventAsyncAbort` lo reduce. Las llamadas a `BeginPreventAsyncAbort` y `EndPreventAsyncAbort` se pueden anidar. Siempre que el contador sea mayor que cero, se retrasarán las anulaciones de subproceso para el subproceso actual.  
   
- Si las llamadas a `BeginPreventAsyncAbort` y `EndPreventAsyncAbort` están emparejados no, es posible obtener acceso a un estado en que el subproceso no se puede entregar anulaciones al subproceso actual.  
+ Si las llamadas a `BeginPreventAsyncAbort` y `EndPreventAsyncAbort` no están emparejadas, es posible llegar a un estado en el que no se puedan entregar las anulaciones de subprocesos al subproceso actual.  
   
- No se respeta el retraso de un subproceso que se anula a sí mismo.  
+ No se respeta el retraso de un subproceso que se anule.  
   
- La funcionalidad que se expone mediante esta característica se usa internamente por la máquina virtual (VM). Uso inadecuado de estos métodos puede provocar un comportamiento no especificado en la máquina virtual. Por ejemplo, al llamar a `EndPreventAsyncAbort` sin llamar primero a `BeginPreventAsyncAbort` podría establecer el contador a cero cuando la máquina virtual ha incrementado previamente. De forma similar, no se comprueba el contador interno de desbordamiento. Si supera el límite de entero dado que se incrementa en el host y la máquina virtual, el comportamiento resultante no está especificado.  
+ La funcionalidad que expone esta característica se usa internamente en la máquina virtual (VM). El uso incorrecto de estos métodos puede provocar un comportamiento no especificado en la máquina virtual. Por ejemplo, la llamada a `EndPreventAsyncAbort` sin llamar primero a `BeginPreventAsyncAbort` podría establecer el contador en cero cuando la máquina virtual lo ha incrementado previamente. Del mismo modo, no se comprueba el desbordamiento del contador interno. Si supera su límite entero porque lo incrementa el host y la máquina virtual, el comportamiento resultante no se especifica.  
   
- Para obtener información acerca de los miembros que hereda de `ICLRTask` y sobre otros usos de esta interfaz, vea el [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfaz.  
+ Para obtener información sobre los miembros heredados de `ICLRTask` y sobre los otros usos de esta interfaz, vea la interfaz [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

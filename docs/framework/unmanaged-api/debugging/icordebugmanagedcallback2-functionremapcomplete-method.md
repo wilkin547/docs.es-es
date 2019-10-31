@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9920627ed193e9741d65fddfc54f325cb1d3758c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e048d03e54d4f97cd45935906ea4e4744468db9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131528"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete (Método)
-Notifica al depurador que la ejecución de código ha cambiado a una nueva versión de una función modificada.  
+Notifica al depurador que la ejecución del código ha cambiado a una nueva versión de una función editada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +37,21 @@ HRESULT FunctionRemapComplete (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la función modificada.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la función editada.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se encontró el punto de interrupción de reasignación.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se encontró el punto de interrupción de reasignación.  
   
  `pFunction`  
- [in] Un puntero a un objeto ICorDebugFunction que representa la versión de la función que se están ejecutando actualmente en el subproceso.  
+ de Un puntero a un objeto ICorDebugFunction que representa la versión de la función que se está ejecutando actualmente en el subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta devolución de llamada da la oportunidad para volver a crear los steppers que existían previamente el depurador.  
+ Esta devolución de llamada proporciona al depurador una oportunidad para volver a crear los steppers que ya existían.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

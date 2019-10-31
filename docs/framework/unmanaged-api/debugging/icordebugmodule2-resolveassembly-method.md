@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994830"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125306"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly (Método)
 
@@ -40,20 +38,20 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Parámetros
 
 `tkAssemblyRef`\
-[in] Un `mdToken` valor al que hace referencia al ensamblado.
+de Valor `mdToken` que hace referencia al ensamblado.
 
 `ppAssembly`\
-[out] Un puntero a la dirección de un objeto ICorDebugAssembly que representa el ensamblado.
+enuncia Puntero a la dirección de un objeto ICorDebugAssembly que representa el ensamblado.
 
 ## <a name="remarks"></a>Comentarios
 
-Si el ensamblado no se ha cargado cuando `ResolveAssembly` se denomina un HRESULT se devuelve el valor CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
+Si el ensamblado aún no se ha cargado cuando se llama a `ResolveAssembly`, se devuelve un valor HRESULT de CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 

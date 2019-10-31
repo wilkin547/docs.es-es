@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53042e722809a6574396648529c677d749154716
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737358"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132736"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain (Método)
-Obtiene un puntero de interfaz al dominio de aplicación que contiene esta `ICorDebugAssembly` instancia.  
+Obtiene un puntero de interfaz al dominio de aplicación que contiene esta instancia de `ICorDebugAssembly`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>Parámetros  
  `ppAppDomain`  
- [out] Un puntero a la dirección de una interfaz ICorDebugAppDomain que representa el dominio de aplicación.  
+ enuncia Puntero a la dirección de una interfaz ICorDebugAppDomain que representa el dominio de aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
- Si este ensamblado es el ensamblado del sistema, `GetAppDomain` devuelve null.  
+ Si este ensamblado es el ensamblado del sistema, `GetAppDomain` devuelve NULL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -2,19 +2,17 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset (Método)
 ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 923c85a9dff11753a338fcfd3673d3590fca607a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b108c8c87d3afdbfacb569ab501274e5c45c2e2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940132"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129187"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset (Método)
-Establece el IL de desplazamiento para el controlador catch generado por el compilador que encapsula un método asincrónico.  
+Establece el desplazamiento IL para el controlador Catch generado por el compilador que ajusta un método asincrónico.  
   
- Se usa el desplazamiento IL de catch generado por el depurador para controlar la captura como si fuera código de no usuario, aunque puede ocurrir en un método de código de usuario. En concreto, se utiliza en respuesta a un **CatchHandlerFound** eventos de excepción.  
+ El depurador usa el desplazamiento IL de la instrucción Catch generada para controlar la detección como si fuera un código que no es de usuario, aunque podría producirse en un método de código de usuario. En concreto, se utiliza en respuesta a un evento de excepción **CatchHandlerFound** .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,7 +30,7 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
  Devuelve `HRESULT`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

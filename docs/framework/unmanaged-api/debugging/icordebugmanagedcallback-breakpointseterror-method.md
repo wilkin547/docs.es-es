@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3ef4b284676608363281e04087f6435dcb1ef74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759841"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122570"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError (Método)
-Notifica al depurador que common language runtime no pudo enlazar con precisión un punto de interrupción que estableció antes de una función que se compilan just-in-time (JIT).  
+Notifica al depurador que el Common Language Runtime no pudo enlazar con precisión un punto de interrupción establecido antes de que una función se compilara Just-in-Time (JIT).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,24 +38,24 @@ HRESULT BreakpointSetError (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el punto de interrupción sin enlazar.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el punto de interrupción sin enlazar.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso que contiene el punto de interrupción sin enlazar.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso que contiene el punto de interrupción sin enlazar.  
   
  `pBreakpoint`  
- [in] Un puntero a un objeto ICorDebugBreakpoint que representa el punto de interrupción sin enlazar.  
+ de Un puntero a un objeto ICorDebugBreakpoint que representa el punto de interrupción sin enlazar.  
   
  `dwError`  
- [in] Un entero que indica el error.  
+ de Entero que indica el error.  
   
 ## <a name="remarks"></a>Comentarios  
- Nunca se alcanzará el punto de interrupción determinado. El depurador debe desactivar y enlazarlo.  
+ Nunca se alcanzará el punto de interrupción dado. El depurador debe desactivarlo y volver a enlazarlo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

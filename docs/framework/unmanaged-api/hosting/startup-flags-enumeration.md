@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916230"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141456"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS (Enumeración)
 Contiene valores que indican el comportamiento de inicio de Common Language Runtime (CLR). De manera predeterminada, la recolección de elementos no utilizados es no simultánea y solo se carga la biblioteca de clases base en el área neutral con respecto al dominio.  
@@ -55,9 +53,9 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Especifica que se debería utilizar la recolección de elementos no utilizados simultánea. Si el llamador solicita la compilación para servidor y la recolección de elementos no utilizados simultánea en un equipo con un solo procesador, se ejecuta, en su lugar, la versión para estación de trabajo y la recolección no simultánea de elementos no utilizados. **Nota:**  No se admite la recolección de elementos no utilizados simultánea en aplicaciones en las que se ejecuta el emulador WOW64 x86 en sistemas de 64 bits y que implementan la arquitectura Intel Itanium (denominada anteriormente IA-64). Para obtener más información sobre el uso de WOW64 en sistemas Windows de 64 bits, vea [ejecutar aplicaciones de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_CONCURRENT_GC`|Especifica que se debería utilizar la recolección de elementos no utilizados simultánea. Si el llamador solicita la compilación para servidor y la recolección de elementos no utilizados simultánea en un equipo con un solo procesador, se ejecuta, en su lugar, la versión para estación de trabajo y la recolección no simultánea de elementos no utilizados. **Nota:**  No se admite la recolección de elementos no utilizados simultánea en aplicaciones que ejecutan el emulador WOW64 x86 en sistemas de 64 bits que implementan la arquitectura Intel Itanium (denominada anteriormente IA-64). Para obtener más información sobre el uso de WOW64 en sistemas Windows de 64 bits, vea [ejecutar aplicaciones de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Especifica que se producirá la optimización del cargador.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Especifica que ningún ensamblado se carga como neutral con respecto al dominio.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Especifica que todos los ensamblados se cargan como neutrales con respecto al dominio.|  
@@ -72,14 +70,14 @@ typedef enum {
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Especifica que las suplantaciones administradas y las suplantaciones logradas a través de la invocación de plataforma fluirán por puntos asincrónicos. De forma predeterminada, solo las suplantaciones administradas fluirán por puntos asincrónicos.|  
 |`STARTUP_TRIM_GC_COMMIT`|Especifica que la recolección de elementos no utilizados usará el espacio menos confirmado cuando quede poca memoria del sistema. Vea `gcTrimCommitOnLowMemory` en [optimización para el hospedaje web compartido](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
 |`STARTUP_ETW`|Especifica que el seguimiento de eventos para Windows (ETW) está habilitado para los eventos de Common Language Runtime. A partir de Windows Vista, el seguimiento de eventos siempre está habilitado, por lo que esta marca no tiene ningún efecto. Consulte [control del registro de .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Especifica que la supervisión de recursos de dominio de aplicación está habilitada. Vea el <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> elemento Property y [ \<appDomainResourceMonitoring >](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ARM`|Especifica que la supervisión de recursos de dominio de aplicación está habilitada. Vea la propiedad <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> y [\<elemento de > appDomainResourceMonitoring](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

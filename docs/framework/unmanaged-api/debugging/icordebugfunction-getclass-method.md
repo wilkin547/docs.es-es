@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124030"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass (Método)
-Obtiene un objeto ICorDebugClass que representa la clase de de que esta función es un miembro.  
+Obtiene un objeto ICorDebugClass que representa la clase de la que es miembro esta función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parámetros  
  `ppClass`  
- [out] Un puntero a la dirección de la `ICorDebugClass` objeto que representa la clase, o null, si esta función no es un miembro de una clase.  
+ enuncia Puntero a la dirección del objeto `ICorDebugClass` que representa la clase, o null si esta función no es un miembro de una clase.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7bd983a41307a4244b5426b8f6b997569cd631e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb257a3d84d5022b9ae13c89a34572485d3033b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126946"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback (Método)
-Ejecuta la función especificada dentro de un apartamento.  
+Ejecuta la función especificada dentro de un contenedor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT _stdcall DoCallback(
   
 ## <a name="parameters"></a>Parámetros  
  `pFunc`  
- [in] Un puntero a la función que se ejecuta en el apartamento.  
+ de Puntero a la función que se va a ejecutar dentro del apartamento.  
   
  `pData`  
- [in] Un puntero al argumento de la función.  
+ de Puntero al argumento de la función.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

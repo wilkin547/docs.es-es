@@ -14,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: cd6a3982-6ed3-4909-808d-a66055e813e0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf6bc73683a6c37ceaaffc635a58803b71c3b6cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2902744b6af3c7b2bd4def73b04807ce3333a8a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131887"
 ---
 # <a name="icordebugruntimeunwindableframe-interface"></a>ICorDebugRuntimeUnwindableFrame (Interfaz)
 Proporciona compatibilidad para métodos no administrados que necesitan que Common Language Runtime (CLR) desenrede un marco.  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugRuntimeUnwindableFrame` es una versión especializada de ICorDebugFrame (interfaz). Se utiliza métodos no administrados que necesitan que el runtime desenrede un marco en la pila actual. Convenciones de desenredado existentes no funcionarán, dado que no usan código compilado JIT. Cuando el depurador ve un marco que no, debe usar el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) método desenredar, pero debe realizar la inspección. Cuando el depurador recibe un `ICorDebugRuntimeUnwindableFrame`, puede llamar a la [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) método para recuperar el contexto del marco.  
+ `ICorDebugRuntimeUnwindableFrame` es una versión especializada de la interfaz ICorDebugFrame. Lo usan los métodos no administrados que requieren que el Runtime desenrede un marco en la pila actual. Las convenciones de desenredado existentes no funcionan, ya que no utilizan código compilado JIT. Cuando el depurador ve un marco que no se pueda desenredar, debe utilizar el método [ICorDebugStackWalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) para desenredarlo, pero debe realizar la inspección. Cuando el depurador recibe un `ICorDebugRuntimeUnwindableFrame`, puede llamar al método [ICorDebugStackWalk:: getContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) para recuperar el contexto del marco.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

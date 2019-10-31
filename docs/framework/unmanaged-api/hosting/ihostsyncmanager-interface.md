@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 200da8b87b52a29c2b075d1e06929031d3f588b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02a59b8ef63f7e866e419db4e3232da7eec19558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132629"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager (Interfaz)
-Proporciona métodos que permiten a common language runtime (CLR) para crear a las primitivas de sincronización llamando al host en lugar de usar las funciones de sincronización de Win32.  
+Proporciona métodos que permiten al Common Language Runtime (CLR) crear primitivas de sincronización llamando al host en lugar de usar las funciones de sincronización de Win32.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -32,23 +30,23 @@ Proporciona métodos que permiten a common language runtime (CLR) para crear a l
 |------------|-----------------|  
 |[CreateAutoEvent (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createautoevent-method.md)|Crea un objeto de evento de restablecimiento automático.|  
 |[CreateCrst (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrst-method.md)|Crea un objeto de sección crítica para la sincronización.|  
-|[CreateCrstWithSpinCount (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrstwithspincount-method.md)|Crea un objeto de sección crítica con recuento de rotación para la sincronización.|  
+|[CreateCrstWithSpinCount (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrstwithspincount-method.md)|Crea un objeto de sección crítica con el recuento de giros para la sincronización.|  
 |[CreateManualEvent (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmanualevent-method.md)|Crea un objeto de evento de restablecimiento manual.|  
 |[CreateMonitorEvent (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)|Crea un objeto de evento de restablecimiento automático supervisado.|  
 |[CreateRWLockReaderEvent (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createrwlockreaderevent-method.md)|Crea un objeto de evento de restablecimiento manual para la implementación de un bloqueo de lector.|  
 |[CreateRWLockWriterEvent (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createrwlockwriterevent-method.md)|Crea un objeto de evento de restablecimiento automático para la implementación de un bloqueo de escritor.|  
-|[CreateSemaphore (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|Crea un [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) objeto CLR que se usará como un semáforo para los eventos de espera.|  
-|[SetCLRSyncManager (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|Establece el [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) instancia asociada con el actual `IHostSyncManager` instancia.|  
+|[CreateSemaphore (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|Crea un objeto [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) para que el CLR lo use como semáforo para los eventos de espera.|  
+|[SetCLRSyncManager (método)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|Establece la instancia de [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) que se va a asociar a la instancia de `IHostSyncManager` actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- El CLR detecta la implementación del host de `IHostSyncManager` mediante una llamada a la [IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md) método con un `IID` de IID_IHostSyncManager.  
+ CLR detecta la implementación del host de `IHostSyncManager` llamando al método [IHostControl:: GetHostManager (](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md) con una `IID` de IID_IHostSyncManager.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

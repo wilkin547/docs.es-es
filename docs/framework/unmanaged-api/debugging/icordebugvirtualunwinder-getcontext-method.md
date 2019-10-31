@@ -1,17 +1,15 @@
 ---
-title: ICorDebugVirtualUnwinder::GetContext (método)
+title: 'ICorDebugVirtualUnwinder:: GetContext (método)'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6a8be489ff2a99bb9da393577514b2442d50db8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ce54bfd01abb8bd4efd5e46eff1ef831a9f0c8fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967955"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121898"
 ---
-# <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder::GetContext (método)
+# <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext (método)
 Obtiene el contexto actual de este responsable del desenredado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +40,7 @@ HRESULT GetContext(
  Cualquier valor HRESULT de error recibido por mscordbi es irrecuperable y hará que las API ICorDebug devuelvan `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Comentarios  
- Establezca el valor inicial del `contextBuf` argumento en el búfer de contexto devuelto mediante una llamada al método [ICorDebugStackWalk:: getContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
+ Establezca el valor inicial del argumento `contextBuf` en el búfer de contexto devuelto mediante una llamada al método [ICorDebugStackWalk:: getContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -50,11 +48,11 @@ HRESULT GetContext(
  Dado que es posible que el desenredado solo restaure un subconjunto de los registros, por ejemplo, solo los registros no volátiles, puede que el contexto no coincida exactamente con el estado del registro en el momento de la llamada al método real.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

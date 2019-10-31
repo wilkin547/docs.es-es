@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744645"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131874"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget (Interfaz)
 Proporciona métodos que permiten a los desarrolladores depurar aplicaciones basadas en Silverlight en el entorno de Common Language Runtime (CLR).  
@@ -43,7 +41,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[ICorDebugRemoteTarget::GetHostName (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Devuelve el nombre de host o la dirección IP de un equipo remoto.|  
   
@@ -51,13 +49,13 @@ interface ICorDebugRemoteTarget  : IUnknown
  No se admite la depuración en modo mixto (es decir, código administrado y nativo) en Windows 95, Windows 98 o Windows ME, ni en plataformas que no sean x86 (como IA-64 y AMD64).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl  
+ **Encabezado:** Cordebug. idl  
   
- **Biblioteca:** : CorGuids.lib  
+ **Biblioteca:** : CorGuids. lib  
   
- **Versiones de .NET framework:** 3.5 SP1  
+ **.NET Framework versiones:** 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

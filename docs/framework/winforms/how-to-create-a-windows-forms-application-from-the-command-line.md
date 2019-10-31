@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Creación de una aplicación Windows Forms desde la línea de comandos
+title: 'Cómo: crear una aplicación de Windows Forms desde la línea de comandos'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -9,29 +9,27 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834810"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127245"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procedimiento Creación de una aplicación Windows Forms desde la línea de comandos
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Cómo: crear una aplicación de Windows Forms desde la línea de comandos
 
-Los procedimientos siguientes describen los pasos básicos que debe seguir para crear y ejecutar una aplicación de Windows Forms desde la línea de comandos. Visual Studio es altamente compatible con estos procedimientos.  Consulte [también Tutorial: Hospedar un control de Windows Forms](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)en WPF.
+Los procedimientos siguientes describen los pasos básicos que debe seguir para crear y ejecutar una aplicación de Windows Forms desde la línea de comandos. Visual Studio es altamente compatible con estos procedimientos.  Vea también [Tutorial: hospedar un control de Windows Forms en WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
 ## <a name="procedure"></a>Procedimiento  
   
 #### <a name="to-create-the-form"></a>Para crear el formulario  
   
-1. En un archivo de código vacío, escriba las siguientes instrucciones `Imports` o `using`:  
+1. En un archivo de código vacío, escriba las instrucciones `Imports` o `using` siguientes:  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. Declare una clase llamada `Form1` que herede de la clase de formulario:
+2. Declare una clase denominada `Form1` que herede de la clase de formulario:
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
@@ -45,9 +43,9 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
   
 4. Agregue un método `Main` a la clase.
   
-    1. <xref:System.STAThreadAttribute> Aplique C# al métodoparaespecificarquelaaplicaciónWindowsFormsesuncontenedoruniproceso.`Main` (El atributo no es necesario en Visual Basic, ya que las aplicaciones de Windows Forms desarrolladas con Visual Basic usan de forma predeterminada un modelo de apartamento de un solo subproceso).  
+    1. Aplique el <xref:System.STAThreadAttribute> al método C# `Main` para especificar que la aplicación Windows Forms es un contenedor uniproceso. (El atributo no es necesario en Visual Basic, ya que las aplicaciones de Windows Forms desarrolladas con Visual Basic usan de forma predeterminada un modelo de apartamento de un solo subproceso).  
   
-    2. Llame <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> a para aplicar estilos de sistema operativo a la aplicación.  
+    2. Llame a <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> para aplicar estilos de sistema operativo a la aplicación.  
   
     3. Cree una instancia del formulario y ejecútela.  
   
@@ -60,13 +58,13 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
   
 2. Compile el formulario.  
   
-    - Si usa C#, escriba:`csc form1.cs`  
+    - Si usa C#, escriba: `csc form1.cs`  
   
          `-or-`  
   
-    - Si está utilizando Visual Basic, escriba:`vbc form1.vb`  
+    - Si está utilizando Visual Basic, escriba: `vbc form1.vb`  
   
-3. En el símbolo del sistema, escriba:`Form1.exe`  
+3. En el símbolo del sistema, escriba: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Agregar un control y controlar un evento
 

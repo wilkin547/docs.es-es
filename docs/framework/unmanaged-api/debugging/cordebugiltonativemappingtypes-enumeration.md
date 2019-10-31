@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132826"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes (Enumeración)
-Indica si un determinado intervalo de instrucciones nativas, representada por una instancia de la estructura COR_DEBUG_IL_TO_NATIVE_MAP, corresponde a una región de código especial.  
+Indica si un determinado intervalo de instrucciones nativas, representado por una instancia de la estructura COR_DEBUG_IL_TO_NATIVE_MAP, corresponde a una región de código especial.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +36,16 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`NO_MAPPING`|El intervalo de instrucciones nativas no corresponde a cualquier región de código especial.|  
+|`NO_MAPPING`|El intervalo de instrucciones nativas no se corresponde con ninguna región de código especial.|  
 |`PROLOG`|El intervalo de instrucciones nativas corresponde al prólogo.|  
 |`EPILOG`|El intervalo de instrucciones nativas corresponde al epílogo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

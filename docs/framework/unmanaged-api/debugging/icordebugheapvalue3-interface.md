@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 24747ccea37707a474d8fff7844ee07301b8194a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b062faffc22e444bd4d3b4a0c67f2a08d7af3560
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914886"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131109"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 (Interfaz)
 Expone las propiedades de bloqueo de monitor de objetos. Esta interfaz extiende las interfaces ICorDebugHeapValue e Icordebugheapvalue2 (.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[GetThreadOwningMonitorLock (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.|  
 |[GetMonitorEventWaitList (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Proporciona una lista ordenada de subprocesos que se ponen en cola en el evento que está asociado a un bloqueo de monitor.|  
@@ -39,11 +37,11 @@ Expone las propiedades de bloqueo de monitor de objetos. Esta interfaz extiende 
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc91ff0676fcec5d614f9d6fa4850eb2c81086b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d8efccde56d8d37a75b1d9bbec706411c6b1f45
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779494"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134783"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding (Método)
-Notifica al host que el tiempo de ejecución es reanudar subprocesos después de una recolección de elementos u otra suspensión.  
+Notifica al host que el Runtime está reanudando los subprocesos después de una recolección de elementos no utilizados u otra suspensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>Parámetros  
  `Generation`  
- [in] La generación en el que se ha realizado una recolección de elementos.  
+ de La generación en la que se ha realizado la recolección de elementos no utilizados.  
   
 ## <a name="remarks"></a>Comentarios  
- No volver a programar los subprocesos durante la `SuspensionEnding` devolución de llamada.  
+ No vuelva a programar ningún subproceso durante la devolución de llamada de `SuspensionEnding`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

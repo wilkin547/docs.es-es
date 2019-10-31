@@ -1,17 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetAddress (método)
+title: 'ICorDebugStaticFieldSymbol:: GetAddress (método)'
 ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d41b99d7410333cb6a22443271c1fcbc41c3594
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65761e48491b2a4c81ccd05b17d8723f71f52e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131793"
 ---
-# <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress (método)
+# <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol:: GetAddress (método)
 Obtiene la dirección de un campo estático.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,11 +30,11 @@ HRESULT GetAddress(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

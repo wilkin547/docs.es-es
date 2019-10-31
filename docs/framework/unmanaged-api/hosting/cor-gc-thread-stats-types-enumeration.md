@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63275aaa7ed1f63c4f100845d2cbe9e93fcd0bcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131253"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a>COR_GC_THREAD_STATS_TYPES (enumeración)
-Indica las estadísticas de la colección de elementos no utilizados para un subproceso.  
+# <a name="cor_gc_thread_stats_types-enumeration"></a>COR_GC_THREAD_STATS_TYPES (enumeración)
+Indica las estadísticas de recolección de elementos no utilizados de un subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,14 +34,14 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|El subproceso tiene bytes que se han promovido en la recolección de elementos más reciente.|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|El subproceso tiene bytes que se promovieron en la recolección de elementos no utilizados más reciente.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost.idl, GCHost.h  
+ **Encabezado:** GCHost. idl, GCHost. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

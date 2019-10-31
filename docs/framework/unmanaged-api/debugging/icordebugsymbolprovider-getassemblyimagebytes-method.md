@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetAssemblyImageBytes (método)
+title: 'ICorDebugSymbolProvider:: Getassemblyimagebytes ((método)'
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf6e707b6176ccd205785aafa6c5a1adf0a3fc78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3184ba116704df8945b53766e62435a4252eaa11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138935"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes (método)
+# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider:: Getassemblyimagebytes ((método)
 Lee datos de un ensamblado combinado a partir de una dirección virtual relativa (RVA) del ensamblado combinado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,11 +38,11 @@ HRESULT GetAssemblyImageBytes(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

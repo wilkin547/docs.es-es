@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275f62c8211f71f067d310dd4b3af2ddb11e93d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da69d4bff0f17eb607dda45fb7dbafea8c59f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128768"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended (Método)
-Obtiene un valor que indica si el subproceso especificado se ha suspendido porque el depurador detener este proceso.  
+Obtiene un valor que indica si el subproceso especificado se ha suspendido como resultado de que el depurador detenga este proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ HRESULT IsOSSuspended(
   
 ## <a name="parameters"></a>Parámetros  
  `threadID`  
- [in] El identificador del subproceso en cuestión.  
+ de IDENTIFICADOR del subproceso en cuestión.  
   
  `pbSuspended`  
- [out] Un puntero a un valor booleano que es `true` si el subproceso especificado se ha suspendido; de lo contrario *`pbSuspended` es `false`.  
+ enuncia Un puntero a un valor booleano que es `true` si se ha suspendido el subproceso especificado; de lo contrario, *`pbSuspended` es `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando el subproceso especificado se ha suspendido porque el depurador detener este proceso, el recuento de suspensiones de Win32 del subproceso especificado se incrementa en uno. La interfaz de usuario (UI) de depurador que desee tener en cuenta esta información si muestra el sistema operativo (SO) suspende el recuento del subproceso para el usuario.  
+ Cuando el subproceso especificado se ha suspendido como resultado de que el depurador detenga este proceso, el recuento de suspensión de Win32 del subproceso especificado se incrementa en uno. Es posible que la interfaz de usuario (UI) del depurador desee tener en cuenta esta información si muestra el recuento de suspensiones del sistema operativo (SO) del subproceso al usuario.  
   
- El `IsOSSuspended` método tiene sentido sólo en el contexto de depuración no administrada. Durante la depuración administrada, los subprocesos son forma cooperativa suspendida en lugar del sistema operativo suspendido.  
+ El método `IsOSSuspended` solo tiene sentido en el contexto de la depuración no administrada. Durante la depuración administrada, los subprocesos se suspenden de forma cooperativa en lugar de suspender el sistema operativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

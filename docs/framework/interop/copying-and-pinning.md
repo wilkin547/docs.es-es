@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750513"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123641"
 ---
 # <a name="copying-and-pinning"></a>Copiar y fijar
 
@@ -33,7 +31,7 @@ Anclar bloquea temporalmente los datos en su ubicación de memoria actual, lo qu
 Las clases [que pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) con formato tienen una distribución (con formato) y representación común de datos fijas tanto en la memoria administrada como no administrada. Cuando estos tipos requieren serialización, se pasa directamente un puntero al objeto en el montón al destinatario de la llamada. El destinatario de la llamada puede cambiar el contenido de la ubicación de memoria a la que hace referencia el puntero.
 
 > [!NOTE]
-> El destinatario puede cambiar el contenido de la memoria si el parámetro está marcado como Out o In/Out. En cambio, el destinatario debe evitar cambiar el contenido cuando el parámetro se establece para serializarse como In, que es el valor predeterminado para tipos que pueden transferirse en bloque de bits. Modificar un objeto In genera problemas cuando se exporta la misma clase a una biblioteca de tipos y se usa para realizar llamadas entre contenedores.
+> El destinatario puede cambiar el contenido de la memoria si el parámetro está marcado como out o in/out. Por el contrario, el destinatario debe evitar cambiar el contenido cuando el parámetro se establece para calcular las referencias como en, que es el valor predeterminado para los tipos que se pueden representar como bits/bytes. Modificar un objeto In genera problemas cuando se exporta la misma clase a una biblioteca de tipos y se usa para realizar llamadas entre contenedores.
 
 ## <a name="formatted-non-blittable-classes"></a>Clases que no pueden transferirse en bloque de bits con formato
 

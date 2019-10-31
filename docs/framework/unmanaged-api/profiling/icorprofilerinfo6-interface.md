@@ -8,30 +8,28 @@ api_location:
 api_type:
 - COM
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: febe130b4d61b6179aeab3bfcd63891c38b13fbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1d31012662964132f8b65f030a062ae39ded56e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041124"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130366"
 ---
 # <a name="icorprofilerinfo6-interface"></a>Interfaz ICorProfilerInfo6
-[Compatible con .NET Framework 4.6 y versiones posteriores]  
+[Se admite en el .NET Framework 4,6 y versiones posteriores]  
   
- Una subclase de [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) que proporciona un enumerador para todos los métodos que se definen en un determinado módulo NGen y en línea un método determinado.  
+ Una subclase de [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) que proporciona un enumerador para todos los métodos que se definen en un módulo Ngen determinado e insertan un método determinado.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|Devuelve un enumerador para todos los métodos que pertenecen a un módulo NGen determinado y que se alinean en el cuerpo de un método determinado.|  
+|[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|Devuelve un enumerador para todos los métodos que pertenecen a un módulo NGen determinado y que están insertados en el cuerpo de un método determinado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   

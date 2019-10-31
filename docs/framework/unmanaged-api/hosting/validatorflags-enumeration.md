@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 61aafb8dc99bb908fc603945ff6ea74054f812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776522"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141422"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags (Enumeración)
-Contiene valores que indican el tipo de validación que se debe realizar en una llamada a la [ICLRValidator](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) método.  
+Contiene valores que indican el tipo de validación que se debe realizar en una llamada al método [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +38,20 @@ enum ValidatorFlags {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|Especifica que solo el lenguaje intermedio de Microsoft (MSIL) en el archivo ejecutable se debe validar.|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Especifica que sólo el formato del archivo ejecutable se debe validar.|  
-|`VALIDATOR_EXTRA_VERBOSE`|Especifica que deben realizarse y notifican en todos los tipos de validación.|  
+|`VALIDATOR_CHECK_ILONLY`|Especifica que solo se debe validar el lenguaje intermedio de Microsoft (MSIL) del archivo ejecutable.|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Especifica que solo se debe validar el formato del archivo ejecutable.|  
+|`VALIDATOR_EXTRA_VERBOSE`|Especifica que se deben realizar y informar de todos los tipos de validación.|  
 |`VALIDATOR_NOCHECK_PEFORMAT`|Especifica que no se debe validar el formato del archivo ejecutable.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Especifica que los mensajes de error de validación deben incluir las líneas de código fuente que generan un error de validación. Este valor de campo no es válido en la versión 2.0 de .NET Framework.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Especifica que los mensajes de error de validación deben incluir las líneas de código fuente que provocan errores de validación. Este valor de campo no es válido en la versión .NET Framework 2,0.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: IValidator.idl, IValidator.h  
+ **Encabezado:** IValidator. idl, IValidator. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

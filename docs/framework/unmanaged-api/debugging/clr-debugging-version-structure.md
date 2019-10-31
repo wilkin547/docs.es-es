@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 651b916a0e3ca178432094428611f9bcc8f0fd17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274085"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132415"
 ---
 # <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION (Estructura)
 Define la versión de producto de Common Language Runtime (CLR) con fines de depuración.  
@@ -50,14 +48,14 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wRevision`|El número de revisión.|  
   
 ## <a name="remarks"></a>Comentarios  
- La `CLR_DEBUGGING_VERSION` estructura es la misma que la estructura COR_VERSION, sin embargo, `CLR_DEBUGGING_VERSION` la estructura proporciona un campo de versión de`wStructVersion`la estructura adicional (). Actualmente, este campo debe establecerse en cero.  
+ La estructura `CLR_DEBUGGING_VERSION` es igual que la estructura COR_VERSION, sin embargo, la estructura `CLR_DEBUGGING_VERSION` proporciona un campo de versión de estructura adicional (`wStructVersion`). Actualmente, este campo debe establecerse en cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl  
+ **Encabezado:** Cordebug. idl  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132747"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop (Enumeración)
 Especifica el tipo de código no asignado que puede hacer que la ejecución paso a paso desencadene una detención de la ejecución del código.  
@@ -42,23 +40,23 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`STOP_NONE`|No se detenga en cualquier tipo de código no asignado.|  
-|`STOP_PROLOG`|Detenga en código de prólogo.|  
-|`STOP_EPILOG`|Detener en el código de epílogo.|  
-|`STOP_NO_MAPPING_INFO`|Detener en el código que no tiene ninguna información de asignación.|  
-|`STOP_OTHER_UNMAPPED`|Detenga en código no asignado que no caben en el prólogo, epílogo, no hay información de asignación o categoría no administrado.|  
-|`STOP_UNMANAGED`|Detenga en código no administrado. Este valor solo es válido con depuración de interoperabilidad.|  
-|`STOP_ALL`|Detener en todos los tipos de código no asignado.|  
+|`STOP_NONE`|No se detenga en ningún tipo de código sin asignar.|  
+|`STOP_PROLOG`|Detenga el código de prólogo.|  
+|`STOP_EPILOG`|Detenga el código de epílogo.|  
+|`STOP_NO_MAPPING_INFO`|Detenga el código que no tenga información de asignación.|  
+|`STOP_OTHER_UNMAPPED`|Detenga en el código no asignado que no se ajuste a la categoría prólogo, epílogo, sin asignación-información o no administrada.|  
+|`STOP_UNMANAGED`|Detenga el código no administrado. Este valor solo es válido con la depuración de interoperabilidad.|  
+|`STOP_ALL`|Detenga en todos los tipos de código sin asignar.|  
   
 ## <a name="remarks"></a>Comentarios  
- Use la [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) método para establecer las marcas que especifican el código no asignado en el que se detendrá el motor paso a paso.  
+ Use el método [ICorDebugStepper:: setunmappedstopmask (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) para establecer las marcas que especifican el código no asignado en el que se detendrá el stepper.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

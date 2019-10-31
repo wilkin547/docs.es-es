@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130027"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
 
@@ -128,7 +126,7 @@ Use la barra diagonal inversa (\\) como carácter de escape para separar los tok
 |\\*|Tipo de puntero.|
 |\\[|Delimitador de dimensión de matriz.|
 |\\]|Delimitador de dimensión de matriz.|
-|\\.|Use la barra diagonal inversa delante de un punto únicamente si el punto se usa en una especificación de matriz. Los puntos de NamespaceSpec no llevan barra diagonal inversa.|
+|\\Operador|Use la barra diagonal inversa delante de un punto únicamente si el punto se usa en una especificación de matriz. Los puntos de NamespaceSpec no llevan barra diagonal inversa.|
 |\\\|Barra diagonal inversa cuando es necesaria como cadena literal.|
 
 Tenga en cuenta que los espacios son relevantes en todos los componentes de TypeSpec, salvo en AssemblyNameSpec. En AssemblyNameSpec, los espacios delante del separador "," son relevantes, pero los espacios detrás del separador "," se omiten.
@@ -145,7 +143,7 @@ La información mínima necesaria en una especificación de nombre de ensamblado
 
 |Nombre de la propiedad|Descripción|Valores permitidos|
 |-------------------|-----------------|----------------------|
-|**Versión**|Número de versión del ensamblado|*Major.Minor.Build.Revision*, donde *Major*, *Minor*, *Build* y *Revision* son números enteros entre 0 y 65535, ambos incluidos.|
+|**Version**|Número de versión del ensamblado|*Major.Minor.Build.Revision*, donde *Major*, *Minor*, *Build* y *Revision* son números enteros entre 0 y 65535, ambos incluidos.|
 |**PublicKey**|Clave pública completa|Valor de cadena de la clave pública completa en formato hexadecimal. Especifique una referencia nula (**Nothing** en Visual Basic) para indicar explícitamente un ensamblado privado.|
 |**PublicKeyToken**|Token de clave pública (hash de 8 bytes de la clave pública completa)|Valor de cadena del token de clave pública en formato hexadecimal. Especifique una referencia nula (**Nothing** en Visual Basic) para indicar explícitamente un ensamblado privado.|
 |**Referencia cultural**|Referencia cultural del ensamblado|Referencia cultural del ensamblado en formato RFC-1766, o "neutral" para los ensamblados independientes del lenguaje (no satélite).|

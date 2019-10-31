@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e709acce-6a17-4346-b38a-467dba567358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0dfc7da632a5e56f0f6ab6ed55d1e722f49c7e88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d28f6eab5390194a4089cbbaf1f586c3f53a7db5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740297"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132253"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags (Enumeración)
-Proporciona opciones de depuración adicionales que pueden usarse en una llamada a la [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) método.  
+Proporciona opciones de depuración adicionales que se pueden usar en una llamada al método [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,14 +34,14 @@ typedef enum CorDebugCreateProcessFlags {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`DEBUG_NO_SPECIAL_OPTIONS`|Se establece ninguna opción especial.|  
+|`DEBUG_NO_SPECIAL_OPTIONS`|No se establece ninguna opción especial.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

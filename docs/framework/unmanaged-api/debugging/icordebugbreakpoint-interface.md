@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugBreakpoint
+title: ICorDebugBreakpoint (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpoint
@@ -14,40 +14,38 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 608c2cea79c20a43d65fcbf37ba13242fa465100
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122798"
 ---
-# <a name="icordebugbreakpoint-interface"></a>Interfaz ICorDebugBreakpoint
+# <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint (Interfaz)
 
 Representa un punto de interrupción en una función o un punto de inspección en un valor.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[Activate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Establece el estado activo de este `ICorDebugBreakpoint`.|  
 |[IsActive (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Obtiene un valor que indica si este `ICorDebugBreakpoint` está activo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los puntos de interrupción no admiten directamente las expresiones condicionales. Si se desea esta funcionalidad, un depurador debe implementarla en la `ICorDebugBreakpoint`parte superior de.  
+ Los puntos de interrupción no admiten directamente las expresiones condicionales. Si se desea esta funcionalidad, un depurador debe implementarla encima de `ICorDebugBreakpoint`.  
   
- La interfaz ICorDebugFunctionBreakpoint se `ICorDebugBreakpoint` extiende para admitir puntos de interrupción dentro de las funciones.  
+ La interfaz ICorDebugFunctionBreakpoint extiende `ICorDebugBreakpoint` para admitir puntos de interrupción dentro de las funciones.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

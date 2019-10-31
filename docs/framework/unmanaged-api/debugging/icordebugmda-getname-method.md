@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca5d96e51c3809c6652d1a1fd75b80efb0b34222
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761915"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128041"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName (Método)
-Obtiene una cadena que contiene el nombre del Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtiene una cadena que contiene el nombre del Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,18 +41,18 @@ HRESULT GetName (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [out] Un puntero a la longitud del nombre.  
+ enuncia Puntero a la longitud del nombre.  
   
  `szName`  
- [out] Matriz en la que se va a almacenar el nombre.  
+ enuncia Matriz en la que se va a almacenar el nombre.  
   
 ## <a name="remarks"></a>Comentarios  
- Los nombres de MDA son valores únicos. El `GetName` método es una alternativa cómoda de rendimiento para obtener la secuencia XML y extraer el nombre de la secuencia en función del esquema.  
+ Los nombres de MDA son valores únicos. El método `GetName` es una alternativa de rendimiento adecuada para obtener la secuencia XML y extraer el nombre de la secuencia basada en el esquema.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

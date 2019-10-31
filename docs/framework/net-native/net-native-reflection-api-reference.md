@@ -2,14 +2,12 @@
 title: Referencia de la API de reflexión de .NET nativo
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c1fbef46231fed3af0d335e9396b301fe503254
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049388"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128219"
 ---
 # <a name="net-native-reflection-api-reference"></a>Referencia de la API de reflexión de .NET nativo
 .NET Native incluye tres nuevos tipos de excepción: [System. Runtime. CompilerServices. MissingInteropDataException](missinginteropdataexception-class-net-native.md), [System. Reflection. MissingMetadataException](missingmetadataexception-class-net-native.md)y [System. Reflection. MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Tenga en cuenta lo siguiente acerca de los tres tipos de excepción:  
@@ -25,12 +23,12 @@ ms.locfileid: "71049388"
 - [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para los métodos.  
   
 > [!NOTE]
-> Esta referencia documenta tres tipos de excepciones que son exclusivos de .NET Native. Para obtener documentación de referencia de la API de reflexión de .NET Framework <xref:System.Reflection>Core <xref:System.Reflection.Context> , <xref:System.Reflection.Emit> vea los espacios de nombres y. Para la documentación de referencia de la API de interoperabilidad de .NET Framework, consulte <xref:System.Runtime.InteropServices>.  
+> Esta referencia documenta tres tipos de excepciones que son exclusivos de .NET Native. Para obtener documentación de referencia de la API de reflexión de .NET Framework Core, vea los espacios de nombres <xref:System.Reflection>, <xref:System.Reflection.Context> y <xref:System.Reflection.Emit>. Para la documentación de referencia de la API de interoperabilidad de .NET Framework, consulte <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>Espacio de nombres System.Reflection  
  El espacio de nombres <xref:System.Reflection> contiene los tipos principales utilizados para la reflexión en .NET Framework. Por .NET Native, también incluye dos nuevos tipos de excepción:  
   
-|Clase|DESCRIPCIÓN|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|Excepción que se genera al utilizar reflexión para recuperar metadatos que no están presentes.|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|Excepción que se genera cuando hay disponibles metadatos para un tipo o un miembro de tipo, pero su implementación se ha quitado.|  
@@ -40,7 +38,7 @@ ms.locfileid: "71049388"
 ## <a name="systemruntimecompilerservices-namespace"></a>Espacio de nombres System.Runtime.CompilerServices  
  El espacio de nombres <xref:System.Runtime.CompilerServices> incluye tipos que diseñan los compiladores de lenguaje para el usuario. Por .NET Native, también incluye un nuevo tipo de excepción:  
   
-|Clase|DESCRIPCIÓN|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|Excepción que se genera cuando se llama a un método de cálculo de referencias manual, pero el análisis estático no encuentra metadatos para un tipo de análisis o no existen en un archivo de directivas en tiempo de ejecución.|  
   

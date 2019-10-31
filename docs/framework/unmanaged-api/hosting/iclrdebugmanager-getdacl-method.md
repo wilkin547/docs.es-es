@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7115e920-aaff-440a-824e-39497139c6f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b19d6e43783211698ae2e68868aff87c91cc3e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a18e1efd246b0d6895d18ae0e7089a78703eae0e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773145"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129429"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>ICLRDebugManager::GetDacl (Método)
 Este método no se implementa.  
@@ -37,20 +35,20 @@ HRESULT GetDacl (
   
 ## <a name="parameters"></a>Parámetros  
  `ppacl`  
- [out] Un puntero de interfaz a la lista de Control de acceso (ACL).  
+ enuncia Puntero de interfaz a la lista de Access Control (ACL).  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|E_NOTIMPL|No se implementa el método.|  
+|E_NOTIMPL|No se ha implementado el método.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

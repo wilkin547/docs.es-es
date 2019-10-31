@@ -13,17 +13,15 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cfd7c835cdc4b53c753d714216d1745eb0b80c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37919be2d0ebd7d243615bc5845b0781ac13e574
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129312"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain (Método)
-Establece las propiedades que se utilizará para inicializar el dominio de aplicación predeterminado.  
+Establece las propiedades que se usarán para inicializar el dominio de aplicación predeterminado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,31 +35,31 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
 ## <a name="parameters"></a>Parámetros  
  `nProperties`  
- [in] El número de entradas en `pwszPropertyNames` y `pwszPropertyValues`.  
+ de Número de entradas de `pwszPropertyNames` y `pwszPropertyValues`.  
   
  `pwszPropertyNames`  
- [in] Una matriz de nombres de propiedad, o null si no hay ninguna propiedad. Actualmente, el nombre de la única propiedad que es reconocido por este método es "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
+ de Una matriz de nombres de propiedad, o null si no hay propiedades. Actualmente, el único nombre de propiedad que reconoce este método es "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
   
  `pwszPropertyValues`  
- [in] Una matriz de valores de propiedad, o null si no hay ninguna propiedad.  
+ de Una matriz de valores de propiedad o null si no hay propiedades.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` incluye un nombre de propiedad que no se reconoce este método.|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` incluye un nombre de propiedad que este método no reconoce.|  
   
 ## <a name="remarks"></a>Comentarios  
- El valor de propiedad de "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" es una lista de ensamblados que tienen el atributo conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) con el <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> marca, que se van a estar visibles para los llamadores de confianza parcial en la aplicación predeterminada dominio.  
+ El valor de propiedad para "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" es una lista de ensamblados que tienen el atributo de <xref:System.Security.AllowPartiallyTrustedCallersAttribute> condicional (APTCA) con la marca <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType>, que se van a hacer visibles para los llamadores de confianza parcial en el dominio de aplicación predeterminado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

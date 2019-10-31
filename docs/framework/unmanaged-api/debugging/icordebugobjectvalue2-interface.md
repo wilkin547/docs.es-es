@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugObjectValue2
+title: ICorDebugObjectValue2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14c701f4e1aeed887598e4f17e600a03de4cf078
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129731"
 ---
-# <a name="icordebugobjectvalue2-interface"></a>Interfaz ICorDebugObjectValue2
+# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 (Interfaz)
 
 Extiende la interfaz "ICorDebugObjectValue" para admitir la herencia y las invalidaciones.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`todavía no se ha implementado.|  
+|[GetVirtualMethodAndType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` aún no se ha implementado.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -39,11 +37,11 @@ Extiende la interfaz "ICorDebugObjectValue" para admitir la herencia y las inval
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

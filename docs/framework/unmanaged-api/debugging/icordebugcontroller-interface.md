@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugController
+title: ICorDebugController (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugController
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2a083f46f24d6f3f24c63dd2415b85f975cfa29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f991c12ea7786d6146b5731848ca5ad3a37e21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125372"
 ---
-# <a name="icordebugcontroller-interface"></a>Interfaz ICorDebugController
+# <a name="icordebugcontroller-interface"></a>ICorDebugController (Interfaz)
 
 Representa un ámbito, <xref:System.Diagnostics.Process> o <xref:System.AppDomain>, en el que se puede controlar el contexto de ejecución de código.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|Este método está obsoleto.|  
 |`ICorDebugController::CommitChanges`|Este método está obsoleto.|  
@@ -43,17 +41,17 @@ Representa un ámbito, <xref:System.Diagnostics.Process> o <xref:System.AppDomai
 |[Terminate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|Finaliza el proceso con el código de salida especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si `ICorDebugController` controla un proceso, el ámbito incluye todos los subprocesos del proceso. Si `ICorDebugController` está controlando un dominio de aplicación, el ámbito incluye solo los subprocesos de ese dominio de aplicación concreto.  
+ Si `ICorDebugController` controla un proceso, el ámbito incluye todos los subprocesos del proceso. Si `ICorDebugController` está controlando un dominio de aplicación, el ámbito solo incluye los subprocesos de ese dominio de aplicación concreto.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

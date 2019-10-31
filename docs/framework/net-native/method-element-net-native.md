@@ -1,17 +1,15 @@
 ---
-title: <Method>Elemento (.NET Native)
+title: Elemento <Method> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d741f51abf02f4bfda2b007efd4c859027e54d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128336"
 ---
-# <a name="method-element-net-native"></a>\<Elemento > del método (.NET Native)
+# <a name="method-element-net-native"></a>\<el elemento > del método (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -28,7 +26,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del método.|  
 |`Signature`|General|Atributo opcional. Especifica la signatura del método. Si hay varios parámetros, se separan mediante comas. Por ejemplo, el elemento `<Method>` siguiente define la política del método <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29>.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Si el atributo no está presente, la directiva de tiempo de ejecución se aplica a todas las sobrecargas del método.|  
@@ -37,25 +35,25 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_name*|El nombre del método. El tipo del método se define mediante el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Signature (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_signature*|Los tipos de parámetros que constituyen la signatura del método. Si hay varios parámetros, se separan por comas; por ejemplo, `"System.String,System.Int32,System.Int32)"`. Los nombres de tipo de parámetro deben ser completos.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Parameter>](parameter-element-net-native.md)|Aplica la directiva al tipo del argumento que se pasa a un método.|  
 |[\<GenericParameter>](genericparameter-element-net-native.md)|Aplica la directiva al tipo de parámetro de un método o tipo genérico.|  
@@ -64,7 +62,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
@@ -147,7 +145,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un constructor o mé
   
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
 - [Elemento \<MethodInstantiation>](methodinstantiation-element-net-native.md)

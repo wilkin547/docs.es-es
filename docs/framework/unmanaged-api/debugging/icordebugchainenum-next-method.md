@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125809"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next (Método)
 Obtiene el número especificado de instancias de ICorDebugChain de la enumeración, comenzando en la posición actual.  
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de `ICorDebugChain` instancias va a recuperar.  
+ de Número de instancias de `ICorDebugChain` que se van a recuperar.  
   
  `chains`  
- [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugChain` objeto que representa una cadena.  
+ enuncia Matriz de punteros, cada uno de los cuales apunta a un `ICorDebugChain` objeto que representa una cadena.  
   
  `pceltFetched`  
- [out] Un puntero al número de `ICorDebugChain` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de instancias de `ICorDebugChain` devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

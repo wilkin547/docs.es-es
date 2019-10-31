@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abbfd21736d220f1cba029235c71a85bf3048ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 456a79ec290964df8e9f74fc6ca19ef9aabe1230
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130676"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange (Método)
-Notifica al depurador que se ha cambiado el nombre de un dominio de aplicación o un subproceso.  
+Notifica al depurador que ha cambiado el nombre de un dominio de aplicación o un subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,15 +36,15 @@ HRESULT NameChange (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que tuvo un cambio de nombre o que contiene el subproceso que tuvo un cambio de nombre.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que tenía un cambio de nombre o que contiene el subproceso que tenía un cambio de nombre.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso que tuvo un cambio de nombre.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso cuyo nombre ha cambiado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

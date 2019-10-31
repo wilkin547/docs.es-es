@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: bbc0881c-6a59-41a0-b5ee-2f3d1b71684c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd79299dcfdb03b703c2cab214ba448631daa6f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3afefdc3d704044184ea20d061eb9449458b5060
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129577"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a>ICorDebugModule::GetGlobalVariableValue (Método)
 Obtiene el valor de la variable global especificada.  
@@ -38,15 +36,15 @@ HRESULT GetGlobalVariableValue(
   
 ## <a name="parameters"></a>Parámetros  
  `fieldDef`  
- [in] Un `mdFieldDef` símbolo (token) que hace referencia a los metadatos que describen la variable global.  
+ de `mdFieldDef` token que hace referencia a los metadatos que describen la variable global.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un objeto ICorDebugValue que representa el valor de la variable global especificada.  
+ enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor de la variable global especificada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

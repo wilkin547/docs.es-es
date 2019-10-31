@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8176d732-c25c-4520-811d-e3310f339947
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 739670fb84eb0145fd8bf8073f453518487c38b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 22ec34c82d0f8e550dfc8941f2c048ebed6cf1d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749577"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133036"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>IHostTaskManager::GetStackGuarantee (Método)
-Obtiene la cantidad de espacio de pila que se garantiza que estarán disponibles después de que finalice una operación de la pila, pero antes del cierre de un proceso.  
+Obtiene la cantidad de espacio de pila que se garantiza que está disponible después de que se complete una operación de pila, pero antes del cierre de un proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,14 +35,14 @@ HRESULT GetStackGuarantee(
   
 ## <a name="parameters"></a>Parámetros  
  `pGuarantee`  
- [out] Un puntero al número de bytes que están disponibles.  
+ enuncia Puntero al número de bytes que están disponibles.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8c0644dc247225c510e1c84254417551b490416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132763"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform (Enumeración)
-Proporciona valores de plataforma de destino que se usan por el [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método.  
+Proporciona valores de plataforma de destino utilizados por el método [ICorDebugDataTarget:: GetPlatform (](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,20 +41,20 @@ typedef enum CorDebugPlatform
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |CORDB_PLATFORM_WINDOWS_X86|La plataforma de destino es Windows ejecutándose en hardware Intel x86.|  
 |CORDB_PLATFORM_WINDOWS_AMD64|La plataforma de destino es Windows de 64 bits ejecutándose en hardware AMD64 o Intel EM64T.|  
 |CORDB_PLATFORM_WINDOWS_IA64|La plataforma de destino es Windows de 32 bits ejecutándose en hardware IA-64.|  
 |CORDB_PLATFORM_MAC_PPC|La plataforma de destino es el sistema operativo Macintosh que se ejecuta en hardware PowerPC.|  
-|CORDB_PLATFORM_MAC_X86|La plataforma de destino es el sistema operativo Macintosh ejecutándose en hardware Intel x86.|  
-|CORDB_PLATFORM_WINDOWS_ARM|La plataforma de destino es el sistema operativo Macintosh que se ejecutan en hardware Windows ARM.|  
-|CORDB_PLATFORM_MAC_AMD64|La plataforma de destino es el sistema operativo Macintosh ejecutándose en hardware AMD64.|  
+|CORDB_PLATFORM_MAC_X86|La plataforma de destino es el sistema operativo Macintosh que se ejecuta en hardware Intel x86.|  
+|CORDB_PLATFORM_WINDOWS_ARM|La plataforma de destino es el sistema operativo Macintosh que se ejecuta en hardware ARM de Windows.|  
+|CORDB_PLATFORM_MAC_AMD64|La plataforma de destino es el sistema operativo Macintosh que se ejecuta en hardware AMD64.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

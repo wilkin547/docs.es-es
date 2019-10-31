@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131213"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories (Enumeración)
-Describe las categorías de funciones que puede bloquear el host que se ejecutan en el código de confianza parcial.  
+Describe las categorías de funciones de las que el host puede bloquear la ejecución en código de confianza parcial.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,31 +44,31 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`eAll`|Especifica que todos los administrados de las clases y miembros que están cubiertos por otro `EApiCategories` campos podrá ejecutarse en el código de confianza parcial.|  
-|`eExternalProcessMgmt`|Especifica que las clases administradas y los miembros que permiten la creación, manipulación y destrucción de procesos externos podrá ejecutarse en el código de confianza parcial.|  
-|`eExternalThreading`|Especifica que las clases administradas y los miembros que permiten la creación, manipulación y destrucción de subprocesos externos podrá ejecutarse en el código de confianza parcial.|  
-|`eMayLeakOnAbort`|Especifica que se bloquean los tipos administrados y miembros que pueden provocar pérdidas de memoria en la anulación se ejecuten en el código de confianza parcial.|  
-|`eNoCategory`|Especifica que no hay categorías de código administrado se bloqueó su ejecución en código de confianza parcial.|  
-|`eSecurityInfrastructure`|Especifica que debe bloquearse la infraestructura de seguridad de common language runtime (CLR) usando código de confianza parcial.|  
-|`eSelfAffectingProcessMgmt`|Especifica que las clases administradas y miembros cuyas características pueden afectar al proceso hospedado podrá ejecutarse en el código de confianza parcial.|  
-|`eSelfAffectingThreading`|Especifica que las clases administradas y miembros cuyas características pueden afectar a los subprocesos del proceso hospedado podrá ejecutarse en el código de confianza parcial.|  
-|`eSharedState`|Especifica que las clases administradas y los miembros que exponen el estado compartido podrá ejecutarse en el código de confianza parcial.|  
-|`eSynchronization`|Especifica que los miembros que permitir que el código de usuario mantener los bloqueos y las clases en tiempo de ejecución de lenguaje comunes podrá ejecutarse en el código de confianza parcial.|  
-|`eUI`|Especifica que las clases administradas y los miembros que permiten o requieren la interacción humana podrá ejecutarse en el código de confianza parcial.|  
+|`eAll`|Especifica que se bloquee la ejecución de todas las clases y miembros administrados que están incluidos en otros campos de `EApiCategories` en código de confianza parcial.|  
+|`eExternalProcessMgmt`|Especifica que se bloquee la ejecución de las clases y los miembros administrados que permiten la creación, manipulación y destrucción de procesos externos en código de confianza parcial.|  
+|`eExternalThreading`|Especifica que las clases administradas y los miembros que permiten la creación, manipulación y destrucción de subprocesos externos no se pueden ejecutar en código de confianza parcial.|  
+|`eMayLeakOnAbort`|Especifica que los tipos y miembros administrados que podrían perder memoria al anularse no se ejecuten en código de confianza parcial.|  
+|`eNoCategory`|Especifica que no se bloquee ninguna categoría de código administrado en código de confianza parcial.|  
+|`eSecurityInfrastructure`|Especifica que no se puede usar la infraestructura de seguridad de Common Language Runtime (CLR) en el código de confianza parcial.|  
+|`eSelfAffectingProcessMgmt`|Especifica que las clases administradas y los miembros cuyas funciones pueden afectar al proceso hospedado no pueden ejecutarse en código de confianza parcial.|  
+|`eSelfAffectingThreading`|Especifica que las clases administradas y los miembros cuyas funciones pueden afectar a los subprocesos del proceso hospedado no pueden ejecutarse en código de confianza parcial.|  
+|`eSharedState`|Especifica que se bloquee la ejecución de las clases administradas y los miembros que exponen el estado compartido en código de confianza parcial.|  
+|`eSynchronization`|Especifica que Common Language Runtime clases y miembros que permiten que el código de usuario mantenga bloqueos no se ejecuten en código de confianza parcial.|  
+|`eUI`|Especifica que las clases administradas y los miembros que permiten o requieren la interacción humana no se pueden ejecutar en código de confianza parcial.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) método toma un parámetro de tipo `EApiCategories`.  
+ El método [ICLRHostProtectionManager:: setprotectedcategories (](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) toma un parámetro de tipo `EApiCategories`.  
   
- El `EApiCategories` enumeración y el `SetProtectedCategories` método están relacionados directamente a los recursos administrados <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> clase. Se usa la clase administrada con el <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> enumeración, cuyos valores se corresponden directamente con el `EApiCategories` valores para marcar los tipos administrados y miembros que exponen funciones correspondientes a las categorías descritas por `EApiCategories`.  
+ La enumeración `EApiCategories` y el método `SetProtectedCategories` se relacionan directamente con la clase <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> administrada. La clase administrada se usa con la enumeración <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>, cuyos valores se corresponden directamente con los valores `EApiCategories`, para marcar los tipos administrados y los miembros que exponen las funciones correspondientes a las categorías descritas por `EApiCategories`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8a74304-1cb2-4977-a21d-e1af48c563ff
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f823f660efee2d53bc1f6fa50d8878f496417379
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 208d5d2e3ca571a1c23a9322c05e784bd2238d61
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124699"
 ---
 # <a name="icordebugenumgetcount-method"></a>ICorDebugEnum::GetCount (Método)
 Obtiene el número de elementos de la enumeración.  
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parámetros  
  `pcelt`  
- [out] Un puntero al número de elementos de la enumeración.  
+ enuncia Puntero al número de elementos de la enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

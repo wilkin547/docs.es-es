@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f0eff35dbe0058398d2d1c851ef85effa9cd28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765161"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122421"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException (Método)
-Indica si el subproceso ha tenido una excepción no controlada.  
+Indica si el subproceso ha tenido alguna vez una excepción no controlada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +35,23 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parámetros  
  `ppBlockingObjectEnum`  
- [out] Un puntero a la dirección de una enumeración ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estructuras.  
+ enuncia Puntero a la dirección de una enumeración ordenada de estructuras [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El subproceso ha tenido una excepción no controlada desde su creación.|  
 |S_FALSE|El subproceso nunca ha tenido una excepción no controlada.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este método indica si el subproceso ha tenido una excepción no controlada. Cuando se desencadena la devolución de llamada de excepción no controlada o adjuntar de JIT nativa se inicia, se garantiza que este método devuelve S_OK. No hay ninguna garantía de que el [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método devolverá la excepción no controlada sin embargo, si el proceso no se ha continuado después de obtener la devolución de llamada de excepción no controlada o tras nativo de adjuntos JIT. Además, es posible (aunque improbable) tener más de un subproceso con una excepción no controlada al tiempo JIT-attach nativo se desencadena. En tal caso, no hay ninguna manera de determinar qué excepción desencadenó el JIT-attach.  
+ Este método indica si el subproceso ha tenido alguna vez una excepción no controlada. En el momento en que se desencadena la devolución de llamada de excepción no controlada o se inicia la Asociación JIT nativa, se garantiza que este método devuelve S_OK. No hay ninguna garantía de que el método [ICorDebugThread. GetCurrentException (](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) devuelva la excepción no controlada. sin embargo, si el proceso aún no se ha continuado después de obtener la devolución de llamada de excepción no controlada o después de la Asociación JIT nativa. Además, es posible (aunque improbable) tener más de un subproceso con una excepción no controlada en el momento en que se desencadena la Asociación JIT nativa. En tal caso, no hay ninguna manera de determinar qué excepción desencadenó la Asociación JIT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

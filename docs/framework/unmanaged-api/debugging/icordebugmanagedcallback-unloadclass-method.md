@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a59b18-ce9a-41f4-b23b-4dd6753d6d36
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 629a4850d47940633c8c69a7e464cfae315b3c56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2550320494b9ba43947c3176788042f5c2e6ad5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761247"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130632"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>ICorDebugManagedCallback::UnloadClass (Método)
 Notifica al depurador que se está descargando una clase.  
@@ -38,18 +36,18 @@ HRESULT UnloadClass (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la clase.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la clase.  
   
  `c`  
- [in] Un puntero a un objeto ICorDebugClass que representa la clase.  
+ de Un puntero a un objeto ICorDebugClass que representa la clase.  
   
 ## <a name="remarks"></a>Comentarios  
  No se debe hacer referencia a la clase después de esta llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eed83cbc983d59e99b3a42e667e9e126316c263
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139532"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread (Método)
-Recupera el número de bloqueos que mantiene el subproceso actual.  
+Recupera el número de bloqueos que contiene el subproceso actual.  
   
  Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
   
@@ -39,16 +37,16 @@ HRESULT LocksHeldByLogicalThread(
   
 ## <a name="parameters"></a>Parámetros  
  `pCount`  
- [out] Un puntero al número de bloqueos que mantiene el subproceso actual.  
+ enuncia Puntero al número de bloqueos que el subproceso actual contiene.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET framework:** 1.0, 1.1  
+ **.NET Framework versiones:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vea también
 

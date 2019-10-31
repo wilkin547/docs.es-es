@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetVersion (método)
+title: 'ICorDebugMergedAssemblyRecord:: GetVersion (método)'
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d9133ab1b7d3985d3a383bb36dcbea315548c00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129770"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion (método)
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord:: GetVersion (método)
 Obtiene información de la versión del ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,11 +43,11 @@ HRESULT GetVersion(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

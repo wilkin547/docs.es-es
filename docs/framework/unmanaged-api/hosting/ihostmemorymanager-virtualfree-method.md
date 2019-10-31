@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a60d954cf4331d46a4667afba1e9dee0d214f0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b53c0bb38922ae8de048c131807eb32f97423d6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128591"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree (Método)
-Actúa como un contenedor lógico para la función de Win32 correspondiente. La implementación de Win32 de `VirtualFree` libera, anula el registro, o si libera y anula una región de páginas dentro del espacio de direcciones virtuales del proceso que realiza la llamada.  
+Actúa como un contenedor lógico para la función de Win32 correspondiente. La implementación de Win32 de `VirtualFree` libera, anula la confirmación o libera y anula la confirmación de una región de páginas dentro del espacio de direcciones virtuales del proceso de llamada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,37 +37,37 @@ HRESULT VirtualFree (
   
 ## <a name="parameters"></a>Parámetros  
  `lpAddress`  
- [in] Un puntero a la dirección base de las páginas de memoria virtual que se va a liberar.  
+ de Puntero a la dirección base de las páginas de memoria virtual que se van a liberar.  
   
  `dwSize`  
- [in] El tamaño, en bytes, de la región que se va a liberar.  
+ de Tamaño, en bytes, de la región que se va a liberar.  
   
  `dwFreeType`  
- [in] El tipo de operación de liberación.  
+ de Tipo de operación de liberación.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|Se ha intentado para liberar memoria que no se ha asignado a través del host.|  
+|S_OK|`VirtualFree` devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_INVALIDOPERATION|Se intentó liberar memoria que no se asignó a través del host.|  
   
 ## <a name="remarks"></a>Comentarios  
- `VirtualFree` libera las páginas de memoria virtual asociadas con el `lpAddress` parámetro a través de una llamada anterior a la [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) función. Intenta liberar memoria que no se ha asignado a través del host debe devolver HOST_E_INVALIDOPERATION.  
+ `VirtualFree` libera las páginas de memoria virtual asociadas al parámetro `lpAddress` a través de una llamada anterior a la función [IHostMemoryManager:: VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) . Los intentos de liberar memoria que no se asignaron a través del host deben devolver HOST_E_INVALIDOPERATION.  
   
- La semántica es idéntica a la de la implementación de Win32 de `VirtualFree`. Para obtener más información, consulte la documentación de la plataforma de Windows.  
+ La semántica es idéntica a la de la implementación de Win32 de `VirtualFree`. Para obtener más información, vea la documentación de la plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

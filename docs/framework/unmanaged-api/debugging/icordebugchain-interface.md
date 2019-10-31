@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugChain
+title: ICorDebugChain (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93ada40bd88e53cd06f5e8d8136b2d527d7741e6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf3567e4ae188f88ad3a2df157cffab3f597ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125796"
 ---
-# <a name="icordebugchain-interface"></a>Interfaz ICorDebugChain
+# <a name="icordebugchain-interface"></a>ICorDebugChain (Interfaz)
 
 Representa un segmento de una pila de llamadas física o lógica.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[EnumerateFrames (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|Obtiene un enumerador que contiene todos los marcos de pila administrados de la cadena, empezando por el fotograma más reciente.|  
 |[GetActiveFrame (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|Obtiene el marco activo (es decir, el más reciente) de la cadena.|  
@@ -45,17 +43,17 @@ Representa un segmento de una pila de llamadas física o lógica.
 |[IsManaged (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|Obtiene un valor que indica si esta cadena ejecuta código administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los marcos de pila de una cadena ocupan el espacio de pila contiguo y comparten el mismo subproceso y contexto. Una cadena puede representar cadenas de código administradas o no administradas. Una instancia `ICorDebugChain` vacía representa una cadena de código no administrada.  
+ Los marcos de pila de una cadena ocupan el espacio de pila contiguo y comparten el mismo subproceso y contexto. Una cadena puede representar cadenas de código administradas o no administradas. Una instancia de `ICorDebugChain` vacía representa una cadena de código no administrada.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

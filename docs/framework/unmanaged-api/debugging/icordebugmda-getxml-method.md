@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129807"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML (Método)
-Obtiene la secuencia XML completa asociada con el Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtiene la secuencia XML completa asociada al Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,18 +41,18 @@ HRESULT GetXML (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [out] Un puntero a la longitud de la secuencia XML.  
+ enuncia Puntero a la longitud de la secuencia XML.  
   
  `szName`  
- [out] Matriz en la que se va a almacenar la secuencia XML. La matriz puede estar vacía.  
+ enuncia Matriz en la que se va a almacenar la secuencia XML. La matriz puede estar vacía.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetXML` método potencialmente puede afectar al rendimiento, dependiendo del tamaño de la secuencia XML asociada.  
+ El método `GetXML` puede afectar al rendimiento, dependiendo del tamaño de la secuencia XML asociada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

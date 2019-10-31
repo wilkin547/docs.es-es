@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125672"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode (Método)
-Obtiene todo el código para la función especificada, con formato de desensamblado. Este método está desusado en .NET Framework versión 2.0. Use [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) en su lugar.  
+Obtiene todo el código para la función especificada, con formato de desensamblado. Este método está en desuso en la versión .NET Framework 2,0. Use [ICorDebugCode2:: getcodechunks (](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parámetros  
  `startOffset`  
- [in] El desplazamiento del principio de la función.  
+ de Desplazamiento del principio de la función.  
   
  `endOffset`  
- [in] El desplazamiento del final de la función.  
+ de Desplazamiento del final de la función.  
   
  `cBufferAlloc`  
- [in] El tamaño de la `buffer` de matriz en que se devolverá el código.  
+ de Tamaño de la matriz de `buffer` en la que se devolverá el código.  
   
  `buffer`  
- [out] La matriz en la que se devolverá el código.  
+ enuncia Matriz en la que se devolverá el código.  
   
  `pcBufferSize`  
- [out] Devuelve el número de bytes.  
+ enuncia Número de bytes devueltos.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el código la función se ha dividido en varios fragmentos, se concatenan en orden creciente de desplazamiento nativo. No se comprueban los límites de la instrucción.  
+ Si el código de la función se ha dividido en varios fragmentos, se concatenan en orden de desplazamiento nativo creciente. Los límites de la instrucción no se comprueban.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** 1.1, 1.0  
+ **.NET Framework versiones:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vea también
 

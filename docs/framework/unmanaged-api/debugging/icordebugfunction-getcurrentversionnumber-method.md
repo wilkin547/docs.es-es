@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be66e0e2c9aff788d1003878891b8d64d6353500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0530ba742a739003bfa33079ad75cb1e6f5f5e59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124018"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber (Método)
 Obtiene el número de versión de la edición más reciente realizada en la función representada por este objeto ICorDebugFunction.  
@@ -37,15 +35,15 @@ HRESULT GetCurrentVersionNumber (
   
 ## <a name="parameters"></a>Parámetros  
  `pnCurrentVersion`  
- [out] Un puntero a un valor entero que es el número de versión de la edición más reciente realizada en esta función.  
+ enuncia Un puntero a un valor entero que es el número de versión de la edición más reciente realizada a esta función.  
   
 ## <a name="remarks"></a>Comentarios  
- El número de versión de la edición más reciente realizada en esta función puede ser mayor que el número de versión de la propia función. Usar el [Icordebugfunction2](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) método o la [ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) método para recuperar el número de versión de la función.  
+ El número de versión de la última edición realizada a esta función puede ser mayor que el número de versión de la propia función. Use el método [ICorDebugFunction2:: GetVersionNumber (](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) o el método [ICorDebugCode:: GetVersionNumber (](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) para recuperar el número de versión de la función.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

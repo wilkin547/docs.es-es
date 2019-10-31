@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d7432771a7d8eee9cea10f883dd3bd91f5ffb74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761390"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130694"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch (Método)
-Notifica al depurador que un subproceso de common language runtime (CLR) administrado ha llamado a un método el <xref:System.Diagnostics.Switch> clase para crear, modificar o eliminar un conmutador de depuración y seguimiento.  
+Notifica al depurador que un subproceso administrado Common Language Runtime (CLR) ha llamado a un método en la clase <xref:System.Diagnostics.Switch> para crear, modificar o eliminar un modificador de depuración o traza.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,27 +39,27 @@ HRESULT LogSwitch (
   
 ## <a name="parameters"></a>Parámetros  
  `PAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado que crea, modifica o elimina un conmutador de depuración y seguimiento.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado que creó, modificó o eliminó un modificador de depuración/seguimiento.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.  
   
  `lLevel`  
- [in] Un valor que indica el nivel de gravedad del mensaje descriptivo que se escribió en el registro de eventos.  
+ de Valor que indica el nivel de gravedad del mensaje descriptivo que se escribió en el registro de eventos.  
   
  `ulReason`  
- [in] Un valor de la [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeración que indica la operación se realiza en el conmutador de depuración y seguimiento.  
+ de Un valor de la enumeración [logswitchcallreason (](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) que indica la operación realizada en el modificador de depuración/seguimiento.  
   
  `pLogSwitchName`  
- [in] Un puntero al nombre del conmutador de depuración y seguimiento.  
+ de Puntero al nombre del modificador de depuración/seguimiento.  
   
  `pParentName`  
- [in] Un puntero al nombre del elemento primario del conmutador de depuración y seguimiento.  
+ de Puntero al nombre del elemento primario del modificador de depuración/seguimiento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

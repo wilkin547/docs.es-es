@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para asignar resultados HRESULT y excepciones
+title: 'Cómo: Asignar resultados HRESULT y excepciones'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123878"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Procedimiento para asignar resultados HRESULT y excepciones
+# <a name="how-to-map-hresults-and-exceptions"></a>Cómo: Asignar resultados HRESULT y excepciones
 Los métodos COM informan de errores devolviendo valores HRESULT; los métodos de .NET informan de ellos iniciando excepciones. El tiempo de ejecución controla la transición entre los dos. Cada clase de excepción de .NET Framework se asigna a un valor HRESULT.  
   
  Las clases de excepción definidas por el usuario pueden especificar el valor HRESULT que sea necesario. Estas clases de excepción pueden cambiar dinámicamente el valor HRESULT que se devuelve cuando se genera la excepción si se establece el campo **HResult** en el objeto de excepción. Se proporciona información adicional sobre la excepción al cliente a través de la interfaz **IErrorInfo**, que se implementa en el objeto .NET en el proceso no administrado.  
@@ -136,7 +134,7 @@ CMyClass::MethodThatThrows
 |**HelpLink**|Si **IErrorInfo->HelpContext** es distinto de cero, la cadena se forma concatenando **IErrorInfo->GetHelpFile** y "#" e **IErrorInfo->GetHelpContext**. En caso contrario, se devuelve la cadena desde **IErrorInfo->GetHelpFile**.|  
 |**InnerException**|Siempre una referencia nula (**Nothing** en Visual Basic).|  
 |**Mensaje**|Cadena devuelta desde **IErrorInfo->GetDescription**.|  
-|**Origen**|Cadena devuelta desde **IErrorInfo->GetSource**.|  
+|**Source**|Cadena devuelta desde **IErrorInfo->GetSource**.|  
 |**StackTrace**|Seguimiento de la pila.|  
 |**TargetSite**|El nombre del método que devolvió el valor HRESULT con error.|  
   

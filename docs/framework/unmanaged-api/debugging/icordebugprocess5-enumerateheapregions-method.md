@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1edba68-9c36-4f69-be9f-678ce0b33480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf9340977c55c54b9a4683115000293d1c98dfcf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab4da3fcf43731587dae6f3a8e82ea48c5ee1ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129645"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>ICorDebugProcess5::EnumerateHeapRegions (Método)
 Obtiene un enumerador para los intervalos de memoria del montón administrado.  
@@ -37,19 +35,19 @@ HRESULT EnumerateHeapRegions(
   
 ## <a name="parameters"></a>Parámetros  
  `ppRegions`  
- [out] Un puntero a la dirección de un [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de interfaz que es un enumerador para los intervalos de memoria en la que residen los objetos del montón administrado.  
+ enuncia Puntero a la dirección de un objeto de interfaz [icordebugheapsegmentenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) que es un enumerador para los intervalos de memoria en los que residen los objetos en el montón administrado.  
   
 ## <a name="remarks"></a>Comentarios  
- Antes de llamar a la `ICorDebugProcess5::EnumerateHeapRegions` método, debe llamar a la [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) método y examinar el valor de la `areGCStructuresValid` campo devuelto del [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) objeto para asegurarse de que el montón de elementos no utilizados en su estado actual es enumerable. Además, el `ICorDebugProcess5::EnumerateHeapRegions` devuelve del método `E_FAIL` si adjunta demasiado al principio de la duración del proceso, se crean regiones antes que la memoria.  
+ Antes de llamar al método `ICorDebugProcess5::EnumerateHeapRegions`, debe llamar al método [ICorDebugProcess5:: getgcheapinformation (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) y examinar el valor del campo `areGCStructuresValid` del objeto [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) devuelto para asegurarse de que el montón de recolección de elementos no utilizados en su el estado actual es Enumerable. Además, el método `ICorDebugProcess5::EnumerateHeapRegions` devuelve `E_FAIL` si se adjunta demasiado pronto en la duración del proceso, antes de que se creen regiones de memoria.  
   
- Se garantiza que este método para enumerar todas las regiones de memoria que pueden contener objetos administrados, pero no garantiza que los objetos administrados residen realmente en esas regiones. El [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de colección puede incluir áreas de memoria reservada o vacío.  
+ Se garantiza que este método enumera todas las regiones de memoria que pueden contener objetos administrados, pero no garantiza que los objetos administrados residen realmente en esas regiones. El objeto de colección [icordebugheapsegmentenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) puede incluir regiones de memoria vacías o reservadas.  
   
- El [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de interfaz es un enumerador estándar que se deriva de la interfaz ICorDebugEnum que le permite enumerar [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) objetos. Cada [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) objeto proporciona información sobre el intervalo de memoria de un segmento determinado, junto con la generación de los objetos de ese segmento.  
+ El objeto de interfaz [icordebugheapsegmentenum (](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) es un enumerador estándar derivado de la interfaz ICorDebugEnum que le permite enumerar objetos [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) . Cada objeto [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) proporciona información sobre el intervalo de memoria de un segmento determinado, junto con la generación de los objetos en ese segmento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

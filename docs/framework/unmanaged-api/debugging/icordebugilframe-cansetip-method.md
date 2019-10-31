@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16caf02f-c71e-486c-90b0-f0e54357d8f0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75b28dafae2861a2d33363f95a46bf1abf4cda35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57d83d1f301cbfd43f8f553d9aef4beb3baf95f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756581"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131084"
 ---
 # <a name="icordebugilframecansetip-method"></a>ICorDebugILFrame::CanSetIP (Método)
-Obtiene un valor HRESULT que indica si es seguro establecer el puntero de instrucción en la ubicación de desplazamiento especificada en el código de lenguaje intermedio de Microsoft (MSIL).  
+Obtiene un valor HRESULT que indica si es seguro establecer el puntero de instrucción en la ubicación de desplazamiento especificada en el código del lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT CanSetIP (
   
 ## <a name="parameters"></a>Parámetros  
  `nOffset`  
- [in] El valor deseado para el puntero de instrucción.  
+ de La configuración deseada para el puntero de instrucción.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `CanSetIP` método antes de llamar a la [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) método. Si `CanSetIP` devuelve un valor HRESULT distinto de S_OK, todavía se puede llamar `ICorDebugILFrame::SetIP`, pero no hay ninguna garantía de que el depurador continuará la ejecución correcta y segura del código que se está depurando.  
+ Utilice el método `CanSetIP` antes de llamar al método [ICorDebugILFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) . Si `CanSetIP` devuelve un valor HRESULT distinto de S_OK, todavía puede invocar `ICorDebugILFrame::SetIP`, pero no hay ninguna garantía de que el depurador siga la ejecución segura y correcta del código que se está depurando.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, [Cordebug], h  
+ **Encabezado:** Cordebug. idl, Cordebug, h  
   
  **Biblioteca:** CorGuids.lib  
   

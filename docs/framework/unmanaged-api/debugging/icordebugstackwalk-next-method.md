@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131828"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next (Método)
-Mueve el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto al marco siguiente.  
+Mueve el objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) al siguiente fotograma.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,22 +34,22 @@ HRESULT Next();
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El tiempo de ejecución se desenreda correctamente al marco siguiente (vea comentarios).|  
-|E_FAIL|El `ICorDebugStackWalk` no se pudo avanzar el objeto.|  
-|CORDBG_S_AT_END_OF_STACK|Se alcanzó el final de la pila como resultado de este desenredo.|  
-|CORDBG_E_PAST_END_OF_STACK|El puntero de marco ya está al final de la pila; por lo tanto, no puede tener acceso a ningún marco adicional.|  
+|S_OK|El tiempo de ejecución se desenrollará correctamente en el siguiente fotograma (vea la sección comentarios).|  
+|E_FAIL|No se pudo modificar el objeto de `ICorDebugStackWalk`.|  
+|CORDBG_S_AT_END_OF_STACK|Se alcanzó el final de la pila como resultado de este desenredado.|  
+|CORDBG_E_PAST_END_OF_STACK|El puntero de marco ya está al final de la pila; por lo tanto, no se puede tener acceso a ningún fotograma adicional.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- El `Next` método avances el `ICorDebugStackWalk` objeto al marco de llamada solo si el runtime puede desenredar el marco actual. En caso contrario, el objeto avanza al siguiente fotograma que el tiempo de ejecución es capaz de desenredo.  
+ El método `Next` desplaza el objeto `ICorDebugStackWalk` al marco que realiza la llamada solo si el tiempo de ejecución puede desenredar el fotograma actual. De lo contrario, el objeto avanza hasta el siguiente fotograma que el runtime puede desenredar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

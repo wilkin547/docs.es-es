@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f618f6779f6931785bba18f70fb1ac9baf46753
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137191"
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion (Método)
 
-Obtiene el número de versión de common language runtime (CLR) que se está ejecutando en este proceso.
+Obtiene el número de versión del Common Language Runtime (CLR) que se ejecuta en este proceso.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,17 +37,17 @@ HRESULT GetVersion (
 ## <a name="parameters"></a>Parámetros
 
 `version`\
-[out] Un puntero a un COR_VERSION (estructura) que almacena el número de versión del tiempo de ejecución.
+enuncia Puntero a una estructura COR_VERSION que almacena el número de versión del Runtime.
 
 ## <a name="remarks"></a>Comentarios
 
-El `GetVersion` método devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.
+El método `GetVersion` devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 

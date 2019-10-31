@@ -6,33 +6,31 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ff6032f2cdbd4a5f294198fe3bf71862c67528
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 43b401885bb4de69a06496874f11cec6cdf04b22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490247"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126971"
 ---
 # <a name="hosting-interfaces"></a>Interfaces de hospedaje
-Esta sección describen las interfaces que no administrada de hosts pueden usar para integrar common language runtime (CLR) en sus aplicaciones.  
+En esta sección se describen las interfaces que los hosts no administrados pueden utilizar para integrar el Common Language Runtime (CLR) en sus aplicaciones.  
   
- Las interfaces de hospedaje de .NET Framework versión 2.0 sustituyen a las interfaces de la versión 1.0 y 1.1 de .NET Framework. Hay diferencias significativas entre los dos conjuntos de interfaces. Combinación de ellos podría provocar un comportamiento inesperado y no se recomienda.  
+ Las interfaces de hospedaje de .NET Framework versión 2,0 reemplazan a las interfaces de la versión 1,0 y 1,1 de .NET Framework. Existen diferencias importantes entre los dos conjuntos de interfaces. La combinación de ellos podría provocar un comportamiento inesperado y no se recomienda.  
   
- Las versiones de .NET Framework 3.0 y 3.5 usan las interfaces de hospedaje de .NET Framework versión 2.0 y no presentan las características de hospedaje.  
+ Las versiones .NET Framework 3,0 y 3,5 utilizan las interfaces de hospedaje de .NET Framework versión 2,0 y no presentan ninguna característica de hospedaje.  
   
- Las interfaces de hospedaje de .NET Framework 4 reemplazan las interfaces de .NET Framework 2.0.
+ Las interfaces de hospedaje de .NET Framework 4 reemplazan a las interfaces de .NET Framework 2,0.
   
 ## <a name="in-this-section"></a>En esta sección  
  [Coclases e interfaces de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- Describe las interfaces de hospedaje que se introdujeron en las versiones 1.0 y 1.1 de .NET Framework.  
+ Describe las interfaces de hospedaje introducidas en las .NET Framework versiones 1,0 y 1,1.  
   
  [Interfaces de hospedaje de CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- Describe las interfaces de hospedaje que se introdujo en la versión 2.0 de .NET Framework.  
+ Describe las interfaces de hospedaje introducidas en la .NET Framework versión 2,0.  
   
  [Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Describe las interfaces de hospedaje que se introdujo en .NET Framework 4.  
+ Describe las interfaces de hospedaje introducidas en el .NET Framework 4.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Coclases para el hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

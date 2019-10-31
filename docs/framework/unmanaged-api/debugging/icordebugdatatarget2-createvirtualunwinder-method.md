@@ -2,14 +2,12 @@
 title: Método ICorDebugDataTarget2::CreateVirtualUnwinder
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5445fb223e34aa82d4b93032bb059093978f6bd1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f9a9038bd0d268e09d8518fa50534a9959b456de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122184"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Método ICorDebugDataTarget2::CreateVirtualUnwinder
 Crea un nuevo desenredador de pila que inicia el desenredo desde un contexto inicial (que no tiene por qué ser la hoja de un subproceso).  
@@ -43,7 +41,7 @@ HRESULT CreateVirtualUnwinder(
  [out] Puntero a la dirección de un objeto de la interfaz ICorDebugVirtualUnwinder.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si se realiza correctamente. Cualquier otro `HRESULT` indica un error. Cualquier error `HRESULT` recibido por mscordbi se considera fatal y hace que los métodos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) devuelvan `CORDBG_E_DATA_TARGET_ERROR`.  
+ `S_OK` si se realiza correctamente. Cualquier otro `HRESULT` indica un error. Cualquier `HRESULT` errónea recibida por mscordbi se considera fatal y hace que los métodos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) devuelvan `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -51,11 +49,11 @@ HRESULT CreateVirtualUnwinder(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

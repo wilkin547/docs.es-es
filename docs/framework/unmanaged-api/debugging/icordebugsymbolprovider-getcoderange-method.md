@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetCodeRange (método)
+title: 'ICorDebugSymbolProvider:: Getcoderange ((método)'
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 18fd8fdf9bcfa20b686ad1f04cd8dcc3b1c26de2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84bf545fedf3a6c7915d94fd0c2630268585b6eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964638"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138919"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange (método)
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider:: Getcoderange ((método)
 Obtiene el tamaño y la dirección de inicio del método a partir de una dirección virtual relativa (RVA) en un método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,11 +38,11 @@ HRESULT GetCodeRange(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

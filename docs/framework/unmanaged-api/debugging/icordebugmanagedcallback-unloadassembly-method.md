@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761299"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130650"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly (Método)
-Notifica al depurador que se ha descargado un ensamblado de common language runtime.  
+Notifica al depurador que se ha descargado un ensamblado de Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contenía el ensamblado.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el ensamblado.  
   
  `pAssembly`  
- [in] Un puntero a un objeto ICorDebugAssembly que representa el ensamblado.  
+ de Un puntero a un objeto ICorDebugAssembly que representa el ensamblado.  
   
 ## <a name="remarks"></a>Comentarios  
- El ensamblado no debe utilizarse después de esta devolución de llamada.  
+ El ensamblado no se debe utilizar después de esta devolución de llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

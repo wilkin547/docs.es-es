@@ -7,21 +7,21 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a64db49b521651ccff8b928720fe3273f8600b68
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119266"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<elemento > appSettings para \<la configuración >
+# <a name="appsettings-element-for-configuration"></a>\<elemento > appSettings para la configuración de \<
 
 Contiene la configuración de la aplicación personalizada. Se trata de una sección de configuración predefinida proporcionada por el .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,19 +33,19 @@ Contiene la configuración de la aplicación personalizada. Se trata de una secc
 
 ## <a name="attribute"></a>Atributo
 
-|           | DESCRIPCIÓN |
+|           | Descripción |
 | --------- | ----------- |
-| **file**  | Atributo opcional.<br><br>Especifica una ruta de acceso relativa a un archivo externo que contiene opciones de configuración de la aplicación personalizadas. El archivo especificado contiene el mismo tipo de configuración que se especifica en los  **\<elementos Add >** ,  **\<Remove >** y  **\<Clear >** y usa el mismo formato de par clave-valor que los elementos.<br><br>La ruta de acceso especificada es relativa al archivo de configuración principal. En el caso de una aplicación Windows Forms, esta es la carpeta binaria (por ejemplo, */bin/Debug*), no la ubicación del archivo de configuración de la aplicación. En el caso de las aplicaciones de formularios Web Forms, la ruta de acceso es relativa a la raíz de la aplicación, donde se encuentra el archivo *Web. config* .<br><br>Tenga en cuenta que el tiempo de ejecución omite el atributo si no se puede encontrar el archivo especificado. |
+| **file**  | Atributo opcional.<br><br>Especifica una ruta de acceso relativa a un archivo externo que contiene opciones de configuración de la aplicación personalizadas. El archivo especificado contiene el mismo tipo de configuración que se especifica en el **\<agregar >** , **\<quitar >** y **\<borrar** elementos de > y usa el mismo formato de par clave-valor que los elementos.<br><br>La ruta de acceso especificada es relativa al archivo de configuración principal. En el caso de una aplicación Windows Forms, esta es la carpeta binaria (por ejemplo, */bin/Debug*), no la ubicación del archivo de configuración de la aplicación. En el caso de las aplicaciones de formularios Web Forms, la ruta de acceso es relativa a la raíz de la aplicación, donde se encuentra el archivo *Web. config* .<br><br>Tenga en cuenta que el tiempo de ejecución omite el atributo si no se puede encontrar el archivo especificado. |
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | DESCRIPCIÓN |
+|     | Descripción |
 | --- | ----------- |
-| [elemento  **Configuration\<>** ](../configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
+| [ **> de configuración de\<** Element](../configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-|     | DESCRIPCIÓN |
+|     | Descripción |
 | --- | ----------- |
 | [ **\<add>** ](add-element-for-appsettings.md) | Agrega una configuración de aplicación personalizada. |
 | [ **\<clear>** ](clear-element-for-appsettings.md) | Borra todos los valores de configuración de la aplicación definidos previamente. |
@@ -53,11 +53,11 @@ Contiene la configuración de la aplicación personalizada. Se trata de una secc
 
 ## <a name="remarks"></a>Comentarios
 
-El elemento > appSettings almacena información de configuración de la aplicación personalizada, como cadenas de conexión de base de datos, rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación.  **\<** Se tiene acceso a los pares clave-valor especificados en el <xref:System.Configuration.ConfigurationSettings>  **\<elemento > appSettings** en el código mediante la clase.
+El elemento **\<appSettings >** almacena información de configuración de la aplicación personalizada, como cadenas de conexión de base de datos, rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. Se tiene acceso a los pares clave-valor especificados en el elemento **\<appSettings >** en el código mediante la clase <xref:System.Configuration.ConfigurationSettings>.
 
-Puede usar el atributo **File** en el  **\<elemento > appSettings** de los archivos *Web. config* y de configuración de la aplicación. Este atributo especifica un archivo de configuración que proporciona una configuración adicional o reemplaza la configuración especificada en el  **\<elemento > appSettings** . El atributo de **archivo** se puede utilizar en escenarios de desarrollo del equipo de control de código fuente, como cuando un usuario desea invalidar la configuración del proyecto especificada en un archivo de configuración de la aplicación.
+Puede usar el atributo **File** en el elemento **\<appSettings >** de los archivos *Web. config* y de configuración de la aplicación. Este atributo especifica un archivo de configuración que proporciona una configuración adicional o reemplaza la configuración especificada en el elemento **\<appSettings >** . El atributo de **archivo** se puede utilizar en escenarios de desarrollo del equipo de control de código fuente, como cuando un usuario desea invalidar la configuración del proyecto especificada en un archivo de configuración de la aplicación.
 
-Los archivos de configuración especificados por el atributo **File** deben tener un nodo raíz de  **\<appSettings >** en lugar de  **\<> de configuración**.
+Los archivos de configuración especificados por el atributo **File** deben tener un nodo raíz de **\<appSettings >** en lugar de **\<> de configuración**.
 
 ## <a name="example"></a>Ejemplo
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d23b2371e7cc3c9d1e91af061c19b4fb0dbc69e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9600573a0a730cee10247d5644d587e75856cdd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779692"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141181"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy (Método)
-Evalúa la directiva de enlace en nombre del host.  
+Evalúa la Directiva de enlace en nombre del host.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,45 +40,45 @@ HRESULT EvaluatePolicy (
   
 ## <a name="parameters"></a>Parámetros  
  `pwzReferenceIdentity`  
- [in] Una referencia al ensamblado antes de la evaluación de directivas.  
+ de Referencia al ensamblado antes de la evaluación de la Directiva.  
   
  `pbApplicationPolicy`  
- [in] Un puntero a un búfer que contiene los datos de la directiva.  
+ de Un puntero a un búfer que contiene los datos de la Directiva.  
   
  `cbAppPolicySize`  
- [in] El tamaño de la `pbApplicationPolicy` búfer.  
+ de Tamaño del búfer de `pbApplicationPolicy`.  
   
  `pwzPostPolicyReferenceIdentity`  
- [out] Una referencia al ensamblado después de la evaluación de los nuevos datos de directiva.  
+ enuncia Referencia al ensamblado después de la evaluación de los nuevos datos de la Directiva.  
   
  `pcchPostPolicyReferenceIdentity`  
- [in, out] Un puntero al tamaño del búfer de referencia de identidad de ensamblado después de la evaluación de los nuevos datos de directiva.  
+ [in, out] Puntero al tamaño del búfer de referencia de identidad del ensamblado después de la evaluación de los datos de la nueva Directiva.  
   
  `pdwPoliciesApplied`  
- [out] Un puntero a una combinación OR lógico de [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) valores, que indica qué directivas se han aplicado.  
+ enuncia Puntero a una combinación lógica o de valores de [ebindpolicylevels (](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) , que indica qué directivas se han aplicado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|La evaluación finalizada correctamente.|  
-|E_INVALIDARG|Ya sea `pwzReferenceIdentity` o `pbApplicationPolicy` es una referencia nula.|  
+|S_OK|La evaluación se completó correctamente.|  
+|E_INVALIDARG|`pwzReferenceIdentity` o `pbApplicationPolicy` es una referencia nula.|  
 |ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` es demasiado pequeño.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Después de un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `EvaluatePolicy` método permite al host influir en la directiva de enlace para mantener el ensamblado de host específico de los requisitos de control de versiones. El propio motor de directiva permanece dentro del CLR.  
+ El método `EvaluatePolicy` permite que el host influya en la Directiva de enlace para mantener los requisitos de control de versiones de ensamblado específicos del host. El propio motor de directivas permanece dentro de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

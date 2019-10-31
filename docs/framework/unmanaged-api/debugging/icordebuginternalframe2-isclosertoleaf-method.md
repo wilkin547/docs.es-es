@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0e72d15ab4ca9b4468efb2a671022f30bfb3cc6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759949"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122662"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf (Método)
-Comprueba si el `this` marco interno está más cerca de la hoja que el objeto ICorDebugFrame especificado.  
+Comprueba si el marco interno `this` está más próximo a la hoja que el objeto ICorDebugFrame especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,27 +34,27 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>Parámetros  
  `pFrameToCompare`  
- [in] Un puntero a la comparación `ICorDebugFrame` objeto.  
+ de Puntero al objeto de `ICorDebugFrame` de comparación.  
   
  `pIsCloser`  
- [out] `true` si el `this` marco interno está más cerca de la hoja que el intervalo especificado por `pFrameToCompare`; en caso contrario, `false`.  
+ [out] `true` si el marco interno de `this` está más próximo a la hoja que el marco especificado por `pFrameToCompare`; de lo contrario, `false`.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|La comparación se realizó correctamente.|  
 |E_FAIL|No se pudo realizar la comparación.|  
 |E_INVALIDARG|`pFrameToCompare` o `pIsCloser` es null.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IsCloserToLeaf` puede utilizarse para implementar una directiva para una intercalación de los marcos internos con otros marcos de la pila.  
+ `IsCloserToLeaf` se puede usar para implementar una directiva para intercalar Marcos internos con otros marcos en la pila.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

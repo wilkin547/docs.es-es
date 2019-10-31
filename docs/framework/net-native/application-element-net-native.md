@@ -1,17 +1,15 @@
 ---
-title: <Application>Elemento (.NET Native)
+title: Elemento <Application> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049932"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128520"
 ---
-# <a name="application-element-net-native"></a>\<Elemento Application > (.NET Native)
+# <a name="application-element-net-native"></a>Elemento Application > de \<(.NET Native)
 Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución y aplica la directiva de reflexión en tiempo de ejecución a todos los elementos de programa en una aplicación.  
   
  Elemento \<Directives>  
@@ -37,7 +35,7 @@ Elemento \<Application> (rd.xml)
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|  
 |`Browse`|Reflexión|Atributo opcional. Controla la consulta para obtener información acerca de los tipos o la enumeración de los tipos, pero no permite el acceso dinámico en tiempo de ejecución.|  
@@ -52,13 +50,13 @@ Elemento \<Application> (rd.xml)
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración de esta directiva que se aplica a los tipos en la aplicación. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Assembly>](assembly-element-net-native.md)|Aplica la directiva a todos los tipos en un ensamblado determinado.|  
 |[\<Namespace>](namespace-element-net-native.md)|Aplica la directiva a todos los tipos en un espacio de nombres determinado.|  
@@ -72,7 +70,7 @@ Elemento \<Application> (rd.xml)
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|Elemento raíz de un archivo de directivas en tiempo de ejecución.|  
   
@@ -87,7 +85,7 @@ Elemento \<Application> (rd.xml)
   
 ## <a name="see-also"></a>Vea también
 
-- [\<Elemento > de la biblioteca](library-element-net-native.md)
-- [\<Directivas > elemento](directives-element-net-native.md)
+- [Elemento > de biblioteca \<](library-element-net-native.md)
+- [\<directivas > elemento](directives-element-net-native.md)
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])

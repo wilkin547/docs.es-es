@@ -12,14 +12,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130259"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
 La reflexión facilita la infraestructura que utilizan los compiladores de lenguaje para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. Visual Basic le permite usar el enlace en tiempo de ejecución implícito en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
@@ -66,11 +64,11 @@ End Module
   
  **BindToMethod** devuelve el <xref:System.Reflection.MethodBase> que se va a invocar o una referencia nula (**Nothing** en Visual Basic) si la invocación no es posible. No es necesario que el valor devuelto de **MethodBase** sea uno de los contenidos en el parámetro *match*, aunque esto es lo habitual.  
   
- Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, consulta <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, vea <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  El conjunto de miembros disponibles está integrado por los miembros definidos en el tipo o en cualquier tipo base. Si se especifica <xref:System.Reflection.BindingFlags>, se devolverán en el conjunto miembros de cualquier tipo de accesibilidad. Si no se especifica **BindingFlags.NonPublic**, el enlazador deberá imponer reglas de accesibilidad. Cuando especifique la marca de enlace **Public** o **NonPublic**, también debe especificar la marca de enlace **Instance** o **Static**. En caso contrario, no se devolverá ningún miembro.  
   
- Si solo hay un miembro con el nombre especificado, no es necesaria la devolución de la llamada y el enlace se realiza en dicho método. En el caso 1 del ejemplo de código se ilustra este punto: solo hay disponible un método **PrintBob** y, por tanto, no es necesaria la devolución de la llamada.  
+ Si solo hay un miembro con el nombre especificado, no es necesaria la devolución de la llamada y el enlace se realiza en dicho método. En el caso 1 del ejemplo de código se ilustra este punto: solo hay disponible un método **PrintBob** y, por lo tanto, no es necesaria la devolución de la llamada.  
   
  Si hay más de un miembro en el conjunto disponible, todos estos métodos se pasan a **BindToMethod**, que selecciona el método apropiado y lo devuelve. En el caso 2 del ejemplo de código, hay dos métodos denominados **PrintValue**. Mediante una llamada a **BindToMethod**, se selecciona el método apropiado.  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122674"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress (Método)
-Devuelve la dirección de pila del marco interno.  
+Devuelve la dirección de la pila del marco interno.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,24 +33,24 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>Parámetros  
  `pAddress`  
- [out] Puntero a la `CORDB_ADDRESS` para el marco interno.  
+ enuncia Puntero a la `CORDB_ADDRESS` para el marco interno.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|La dirección del marco interno se devolvió correctamente.|  
 |E_FAIL|No se pudo devolver la dirección del marco interno.|  
 |E_INVALIDARG|El valor de `pAddress` es `null`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El valor devuelto en `pAddress` puede usarse para determinar la ubicación del marco interno en relación con otros marcos de la pila. Incluso en equipos basados en IA-64, el marco interno se encuentra en la pila solo y no hay ningún puntero correspondiente a un almacén de respaldo.  
+ El valor devuelto en `pAddress` se puede usar para determinar la ubicación del marco interno con respecto a otros marcos de la pila. Incluso en equipos basados en IA-64, el marco interno solo vive en la pila y no hay ningún puntero correspondiente a la memoria auxiliar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

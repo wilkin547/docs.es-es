@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81c3eec9b33f51bd30cf8724eaf010d7cd0b6cd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760931"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131840"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame (Método)
-Obtiene el marco actual el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
+Obtiene el marco actual del objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,28 +33,28 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="parameters"></a>Parámetros  
  `pFrame`  
- [in] Un puntero a la dirección del objeto de marco creado que representa el fotograma actual en la pila.  
+ de Puntero a la dirección del objeto de marco creado que representa el marco actual en la pila.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El tiempo de ejecución devolvió el marco actual.|  
+|S_OK|El tiempo de ejecución devolvió correctamente el marco actual.|  
 |E_FAIL|No se devolvió el marco actual.|  
 |S_FALSE|El marco actual es un marco de pila nativo.|  
 |E_INVALIDARG|`pFrame` es null.|  
-|CORDBG_E_PAST_END_OF_STACK|El puntero de marco ya está al final de la pila; por lo tanto, no puede tener acceso a ningún marco adicional.|  
+|CORDBG_E_PAST_END_OF_STACK|El puntero de marco ya está al final de la pila; por lo tanto, no se puede tener acceso a ningún fotograma adicional.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugStackWalk` Devuelve solo los marcos de pila real. Use la [Icordebugthread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) método para devolver los marcos internos. (Los marcos internos son estructuras de datos que se insertan en la pila, el tiempo de ejecución para almacenar datos temporales).  
+ `ICorDebugStackWalk` solo devuelve marcos de pila reales. Use el método [ICorDebugThread3:: GetActiveInternalFrames (](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) para devolver Marcos internos. (Los marcos internos son estructuras de datos insertadas en la pila por el motor en tiempo de ejecución para almacenar datos temporales).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

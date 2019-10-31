@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ec40de7fe9e12315987e65e48f1727f5d5b80ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6c74a6c371ababb21bfda9b8dd2910d6a7881e6a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125538"
 ---
 # <a name="icordebugcode4-interface"></a>Interfaz ICorDebugCode4
 Proporciona un método que permite a un depurador enumerar las variables locales y los argumentos de una función.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[EnumerateVariableHomes (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Obtiene un enumerador para las variables locales y los argumentos de una función.|  
   
@@ -38,11 +36,11 @@ Proporciona un método que permite a un depurador enumerar las variables locales
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   

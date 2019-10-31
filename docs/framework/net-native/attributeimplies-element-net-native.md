@@ -1,17 +1,15 @@
 ---
-title: <AttributeImplies>Elemento (.NET Native)
+title: Elemento <AttributeImplies> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128480"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<Elemento > AttributeImplies (.NET Native)
+# <a name="attributeimplies-element-net-native"></a>\<elemento > AttributeImplies (.NET Native)
 Define la directiva para los elementos de código a los que se les aplica el atributo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,7 +32,7 @@ Define la directiva para los elementos de código a los que se les aplica el atr
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|  
 |`Browse`|Reflexión|Atributo opcional. Controla la consulta para obtener información sobre los elementos de programa, pero no permite el acceso en tiempo de ejecución.|  
@@ -49,7 +47,7 @@ Define la directiva para los elementos de código a los que se les aplica el atr
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -58,7 +56,7 @@ Define la directiva para los elementos de código a los que se les aplica el atr
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
   
@@ -69,7 +67,7 @@ Define la directiva para los elementos de código a los que se les aplica el atr
   
 ## <a name="see-also"></a>Vea también
 
-- [\<Tipo > elemento](type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<tipo > elemento](type-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)

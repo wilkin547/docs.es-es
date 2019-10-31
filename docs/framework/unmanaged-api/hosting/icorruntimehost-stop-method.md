@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca51b87e7afc8e9e48d541a32b3bd60a19a5ff70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5fcf8bc861b2ef0b8ea9f5a5e46585564cc26615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127702"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop (Método)
 Detiene la ejecución de código en tiempo de ejecución para el proceso actual.  
@@ -35,7 +33,7 @@ HRESULT Stop ();
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|La operación se realizó correctamente.|  
 |S_FALSE|No se pudo completar la operación.|  
@@ -43,17 +41,17 @@ HRESULT Stop ();
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Normalmente no es necesario llamar `Stop` al método, porque el código deja de ejecutarse cuando finaliza el proceso.  
+ Normalmente no es necesario llamar al método `Stop`, porque el código deja de ejecutarse cuando finaliza el proceso.  
   
 > [!NOTE]
-> Después de una llamada `Stop`a, CLR no se puede reinicializar en el mismo proceso.  
+> Después de una llamada a `Stop`, CLR no se puede reinicializar en el mismo proceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **.NET Framework versiones:** 1,0, 1,1  
   
