@@ -2,12 +2,12 @@
 title: Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 description: Descubra las ofertas de Microsoft compatibles con el ciclo de vida de aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094464"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 
@@ -43,7 +43,7 @@ La plataforma y las herramientas de Microsoft para aplicaciones de Docker en con
 
   - **Azure Portal** Si usa orquestadores de código abierto, Azure Kubernetes Service (AKS), Service Fabric y otros orquestadores le ayudarán a configurar y mantener los entornos de Docker. Si usa Azure Service Fabric, la herramienta Service Fabric Explorer permite visualizar y configurar el clúster.
 
-  - **Herramientas de Docker** Puede administrar las aplicaciones de contenedor con herramientas conocidas. No es necesario cambiar sus prácticas de administración de Docker existentes para mover cargas de trabajo de contenedor a la nube. Use las herramientas de administración de aplicaciones con las que ya está familiarizado y conéctelas a través de los puntos de conexión de API para el orquestador de su elección. También puede usar otras herramientas de terceros para administrar las aplicaciones de Docker, como Docker Datacenter o las herramientas de Docker para la CLI. 
+  - **Herramientas de Docker** Puede administrar las aplicaciones de contenedor con herramientas conocidas. No es necesario cambiar sus prácticas de administración de Docker existentes para mover cargas de trabajo de contenedor a la nube. Use las herramientas de administración de aplicaciones con las que ya está familiarizado y conéctelas a través de los puntos de conexión de API para el orquestador de su elección. También puede usar otras herramientas de terceros para administrar las aplicaciones de Docker, como Docker Datacenter o las herramientas de Docker para la CLI.
 
     Incluso si está familiarizado con los comandos de Linux, puede administrar las aplicaciones de contenedor mediante Microsoft Windows y PowerShell con una línea de comandos del subsistema de Linux y los productos (Docker, Kubernetes, etc.) que los clientes ejecutan en esta funcionalidad del subsistema de Linux. Más adelante en este libro obtendrá más información sobre el uso de estas herramientas en el subsistema de Linux con su sistema operativo favorito de Microsoft Windows.
 

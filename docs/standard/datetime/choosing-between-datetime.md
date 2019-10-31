@@ -13,14 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132575"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo
 
@@ -40,7 +38,7 @@ Las aplicaciones de .NET que usan la información de fecha y hora son muy divers
 
 - Realizar operaciones aritméticas de fecha y hora, posiblemente con un resultado que identifica de forma exclusiva e inequívoca un único punto en el tiempo.
 
-.NET incluye los tipos <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> y <xref:System.TimeZoneInfo>, que se pueden usar para compilar aplicaciones que funcionen con fechas y horas.
+.NET incluye los tipos <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>y <xref:System.TimeZoneInfo>, que se pueden usar para compilar aplicaciones que funcionen con fechas y horas.
 
 > [!NOTE]
 > En este tema no se explica <xref:System.TimeZone> porque su funcionalidad está incorporada casi por completo en la clase <xref:System.TimeZoneInfo>. Siempre que sea posible, utilice la clase <xref:System.TimeZoneInfo> en lugar de la clase <xref:System.TimeZone>.
@@ -98,9 +96,9 @@ La estructura <xref:System.TimeSpan> representa un intervalo de tiempo. Sus dos 
 
 - Reflejar el intervalo de tiempo entre dos valores de fecha y hora. Por ejemplo, restar un valor <xref:System.DateTime> de otro devuelve un valor <xref:System.TimeSpan> .
 
-- Medir el tiempo transcurrido. Por ejemplo, la propiedad <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> devuelve un valor <xref:System.TimeSpan> que refleja el intervalo de tiempo que ha transcurrido desde la llamada a uno de los métodos <xref:System.Diagnostics.Stopwatch> que comienza a medir el tiempo transcurrido.
+- Medir el tiempo transcurrido. Por ejemplo, la propiedad <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> devuelve un valor <xref:System.TimeSpan> que refleja el intervalo de tiempo que ha transcurrido desde la llamada a uno de los métodos <xref:System.Diagnostics.Stopwatch> que empieza a medir el tiempo transcurrido.
 
-También se puede usar un valor <xref:System.TimeSpan> como reemplazo de un valor <xref:System.DateTime> cuando ese valor refleja una hora sin referencia a un día determinado. Este uso es similar a las propiedades <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> y <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, que devuelven un valor de @no__t 2 que representa el tiempo sin referencia a una fecha. Por ejemplo, la estructura <xref:System.TimeSpan> puede usarse para reflejar la hora diaria de apertura o cierre de una tienda, o puede usarse para representar la hora en que se produce cualquier evento habitual.
+También se puede utilizar un valor <xref:System.TimeSpan> como reemplazo de un valor <xref:System.DateTime> cuando ese valor refleja una hora sin referencia a un día determinado. Este uso es similar a las propiedades <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> y <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, que devuelven un valor <xref:System.TimeSpan> que representa el tiempo sin referencia a una fecha. Por ejemplo, la estructura <xref:System.TimeSpan> puede usarse para reflejar la hora diaria de apertura o cierre de una tienda, o puede usarse para representar la hora en que se produce cualquier evento habitual.
 
 En el ejemplo siguiente se define una estructura `StoreInfo` que incluye objetos <xref:System.TimeSpan> para las horas de apertura y cierre de la tienda, así como un objeto <xref:System.TimeZoneInfo> que representa la zona horaria de la tienda. La estructura también incluye dos métodos, `IsOpenNow` e `IsOpenAt`, que indican si la tienda está abierta en el momento especificado por el usuario, quien se supone que está en la zona horaria local.
 
@@ -114,7 +112,7 @@ La estructura `StoreInfo` puede usarla un código de cliente como este.
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo (clase)
 
-La clase <xref:System.TimeZoneInfo> representa cualquiera de las zonas horarias del mundo y permite la conversión de cualquier fecha y hora de una zona horaria a su equivalente de otra zona horaria. La clase <xref:System.TimeZoneInfo> permite trabajar con valores de fecha y hora de forma que cada uno de esos valores identifique de forma inequívoca un único punto en el tiempo. La clase <xref:System.TimeZoneInfo> también es extensible. Aunque depende de la información de zona horaria proporcionada para los sistemas Windows y definida en el Registro, admite la creación de zonas horarias personalizadas. También admite la serialización y deserialización de la información de zona horaria.
+La clase <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. La clase <xref:System.TimeZoneInfo> permite trabajar con valores de fecha y hora de forma que cada uno de esos valores identifique de forma inequívoca un único punto en el tiempo. La clase <xref:System.TimeZoneInfo> también es extensible. Aunque depende de la información de zona horaria proporcionada para los sistemas Windows y definida en el Registro, admite la creación de zonas horarias personalizadas. También admite la serialización y deserialización de la información de zona horaria.
 
 En algunos casos, si desea aprovechar al máximo la clase <xref:System.TimeZoneInfo> puede que tenga que desarrollar aún más. Si los valores de fecha y hora no están estrechamente acoplados a las zonas horarias a las que pertenecen, se requiere trabajo adicional. A menos que la aplicación proporcione algún mecanismo para vincular una fecha y hora con su zona horaria asociada, es fácil que un determinado valor de fecha y hora se desasocie de su zona horaria. Un método para vincular esta información es definir una clase o estructura que contenga el valor de fecha y hora, y su objeto de zona horaria asociada.
 
