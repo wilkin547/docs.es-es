@@ -10,23 +10,21 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115842"
 ---
-# <a name="publisherpolicy-element"></a>\<publisherPolicy >, elemento
+# <a name="publisherpolicy-element"></a>\<elemento > publisherPolicy
 Especifica si el tiempo de ejecución aplica la directiva de editor.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de dependentAssembly**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> publisherPolicy**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherPolicy >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,15 +37,15 @@ Especifica si el tiempo de ejecución aplica la directiva de editor.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`apply`|Especifica si se debe aplicar la Directiva de edición.|  
   
 ## <a name="apply-attribute"></a>aplicar atributo  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|`yes`|Aplica la Directiva de edición. Esta es la configuración predeterminada.|  
+|`yes`|Aplica la Directiva de edición. Ésta es la configuración predeterminada.|  
 |`no`|No aplica la Directiva de edición.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -56,22 +54,22 @@ Ninguno.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `<dependentAssembly>` elemento para cada ensamblado.|  
+|`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un elemento `<dependentAssembly>` para cada ensamblado.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando un proveedor de componentes publica una nueva versión de un ensamblado, el proveedor puede incluir una directiva de edición para que las aplicaciones que usan la versión anterior utilicen ahora la nueva versión. Para especificar si se va a aplicar la Directiva de edición para un ensamblado determinado, coloque el  **\<elemento > de publisherPolicy** en el  **\<elemento de > dependentAssembly** .  
+ Cuando un proveedor de componentes publica una nueva versión de un ensamblado, el proveedor puede incluir una directiva de edición para que las aplicaciones que usan la versión anterior utilicen ahora la nueva versión. Para especificar si se va a aplicar la Directiva de edición para un ensamblado determinado, coloque el elemento **\<publisherPolicy >** en el elemento **\<dependentAssembly >** .  
   
  La configuración predeterminada para el atributo **aplicar** es **sí**. Al establecer el atributo **Apply** en **no** , se reemplaza cualquier configuración anterior de **sí** para un ensamblado.  
   
- Se requiere permiso para que una aplicación ignore explícitamente la Directiva de edición mediante el [ \<elemento publisherPolicy Apply = "no"/>](publisherpolicy-element.md) del archivo de configuración de la aplicación. El permiso se concede estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca <xref:System.Security.Permissions.SecurityPermission>en. Para obtener más información, vea [permisos de seguridad de redirección de enlace de ensamblados](../../assembly-binding-redirection-security-permission.md).  
+ El permiso es necesario para que una aplicación ignore explícitamente la Directiva de edición mediante el elemento [\<publisherPolicy Apply = "no"/>](publisherpolicy-element.md) en el archivo de configuración de la aplicación. El permiso se concede estableciendo la marca de <xref:System.Security.Permissions.SecurityPermissionFlag> en el <xref:System.Security.Permissions.SecurityPermission>. Para obtener más información, vea [permisos de seguridad de redirección de enlace de ensamblados](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se desactiva la Directiva de edición para `myAssembly`el ensamblado,.  
+ En el siguiente ejemplo se desactiva la Directiva de edición para el ensamblado, `myAssembly`.  
   
 ```xml  
 <configuration>  

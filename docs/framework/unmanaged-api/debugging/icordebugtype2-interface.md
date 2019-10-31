@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2f2c1e4c95c61eab4c9da6103d4ac479b4bbdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936053"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110214"
 ---
 # <a name="icordebugtype2-interface"></a>Interfaz ICorDebugType2
 Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un tipo base o un tipo complejo (definido por el usuario).  
@@ -55,11 +53,11 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe45322808a0a756b31f27f9f5c1549ece348e11
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79f24b3ccacd84037042a883d3a034bb7b4d200a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770118"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092087"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale (Método)
-Notifica a common language runtime (CLR) que el host ha modificado el valor de identificador de configuración regional (que se asigna a la referencia cultural geográfica y el idioma) en la tarea está ejecutando actualmente.  
+Notifica a la Common Language Runtime (CLR) que el host ha modificado el valor del identificador de configuración regional (que se asigna a la referencia cultural geográfica y al idioma) de la tarea que se está ejecutando actualmente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,28 +35,28 @@ HRESULT SetLocale (
   
 ## <a name="parameters"></a>Parámetros  
  `lcid`  
- [in] El valor de identificador de configuración regional que se asigna a la cultura geográfica recién asignado y el idioma.  
+ de Valor del identificador de configuración regional que se asigna a la referencia cultural geográfica y al idioma recién asignados.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- `SetLocale` proporciona al host una oportunidad de ejecutarse los mecanismos que sean necesarios para la sincronización de configuraciones regionales.  
+ `SetLocale` proporciona al host una oportunidad para ejecutar cualquier mecanismo que pueda tener para la sincronización de configuraciones regionales.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

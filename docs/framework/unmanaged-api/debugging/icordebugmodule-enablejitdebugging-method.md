@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aeb6ed448539db2720fee0d42cfcc344fd3bbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da532ee1b5909a68bedbb9e6f6c96333e88002a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109724"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging (Método)
-Controla si el compilador de just-in-time (JIT) conserva la información de depuración para los métodos de este módulo.  
+Controla si el compilador Just-in-Time (JIT) conserva la información de depuración de los métodos de este módulo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT EnableJITDebugging(
   
 ## <a name="parameters"></a>Parámetros  
  `bTrackJITInfo`  
- [in] Establezca este valor en `true` para permitir que el compilador JIT conservar la información de asignación entre la versión de lenguaje intermedio (MSIL) de Microsoft y la versión de compilación JIT de cada método en este módulo.  
+ de Establezca este valor en `true` para permitir que el compilador JIT conserve la información de asignación entre la versión del lenguaje intermedio de Microsoft (MSIL) y la versión compilada con JIT de cada método de este módulo.  
   
  `bAllowJitOpts`  
- [in] Establezca este valor en `true` para permitir que el compilador JIT generar el código con ciertas optimizaciones específicas de JIT para la depuración.  
+ de Establezca este valor en `true` para permitir que el compilador JIT genere código con ciertas optimizaciones específicas de JIT para la depuración.  
   
 ## <a name="remarks"></a>Comentarios  
- Depuración JIT está habilitada de forma predeterminada para todos los módulos que se cargan cuando el depurador está activo. Mediante programación, habilitar o deshabilitar a la configuración reemplaza la configuración global.  
+ La depuración JIT está habilitada de forma predeterminada para todos los módulos que se cargan cuando el depurador está activo. La habilitación o deshabilitación de la configuración mediante programación invalida la configuración global.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

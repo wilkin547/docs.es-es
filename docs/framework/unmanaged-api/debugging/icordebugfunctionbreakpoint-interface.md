@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugFunctionBreakpoint
+title: ICorDebugFunctionBreakpoint (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed09b4f9be71c7f85714b9ee26d45018410fda42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7876cd932558ad95dab7adac3c91a6f23ca647c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134656"
 ---
-# <a name="icordebugfunctionbreakpoint-interface"></a>Interfaz ICorDebugFunctionBreakpoint
+# <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint (Interfaz)
 
 Extiende la interfaz ICorDebugBreakpoint para admitir puntos de interrupción dentro de las funciones.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[GetFunction (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Obtiene un puntero de interfaz a una ICorDebugFunction que hace referencia a la función en la que se establece el punto de interrupción.|  
 |[GetOffset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|Obtiene el desplazamiento del punto de interrupción dentro de la función.|  
@@ -40,11 +38,11 @@ Extiende la interfaz ICorDebugBreakpoint para admitir puntos de interrupción de
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113348"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request (Método)
-Llamado por los servicios de acceso a datos de common language runtime (CLR) para solicitar una operación, como se define en la implementación.  
+Llamado por los servicios de acceso a datos de Common Language Runtime (CLR) para solicitar una operación, tal y como se define en la implementación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,29 +41,29 @@ HRESULT Request (
   
 ## <a name="parameters"></a>Parámetros  
  `reqCode`  
- [in] Definido por el usuario.  
+ de Definido por el usuario.  
   
  `inBufferSize`  
- [in] El tamaño del búfer de entrada, que se usa para la solicitud entrante.  
+ de Tamaño del búfer de entrada, que se usa para la solicitud entrante.  
   
  `inBuffer`  
- [in] Un búfer que contiene la solicitud.  
+ de Búfer que contiene la solicitud.  
   
  `outBufferSize`  
- [in] El tamaño del búfer de salida, que se usa para la respuesta.  
+ de Tamaño del búfer de salida, que se usa para la respuesta.  
   
  `outBuffer`  
- [out] Un búfer que contiene la respuesta.  
+ enuncia Búfer que contiene la respuesta.  
   
 ## <a name="remarks"></a>Comentarios  
- El `Request` método facilita la adición de operaciones personalizadas no especificadas. Es decir, este método proporciona extensibilidad sin necesidad de revisión de la definición de interfaz.  
+ El método `Request` facilita la adición de operaciones personalizadas no especificadas. Es decir, este método proporciona extensibilidad sin necesidad de revisar la definición de la interfaz.  
   
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

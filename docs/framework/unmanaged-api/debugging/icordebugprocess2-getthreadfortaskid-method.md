@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c85040a31966a92ead6ca4786f62852f17923056
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11acf997b2efd74bc8394d830f36d3acbd1eef56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137209"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID (Método)
-Obtiene el subproceso en que se ejecuta la tarea con el identificador especificado.  
+Obtiene el subproceso en el que se está ejecutando la tarea con el identificador especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT GetThreadForTaskID (
   
 ## <a name="parameters"></a>Parámetros  
  `taskid`  
- [in] El identificador de la tarea.  
+ de Identificador de la tarea.  
   
  `ppThread`  
- [out] Un puntero a la dirección de un objeto ICorDebugThread2 que representa el subproceso que se va a recuperar.  
+ enuncia Puntero a la dirección de un objeto ICorDebugThread2 que representa el subproceso que se va a recuperar.  
   
 ## <a name="remarks"></a>Comentarios  
- El host puede establecer el identificador de la tarea mediante la [SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) método.  
+ El host puede establecer el identificador de tarea mediante el método [ICLRTask:: settaskidentifier (](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

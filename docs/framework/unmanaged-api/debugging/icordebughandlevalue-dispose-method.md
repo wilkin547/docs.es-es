@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1542811-0a7f-4235-bcfd-b24370d6f24b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d21703aa911b5222fff71282e6da26aa5c0e2853
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 957035591090fb5a6a615662c4840ff16509ee20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138505"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose (Método)
 Libera el identificador al que hace referencia este objeto ICorDebugHandleValue sin liberar explícitamente el puntero de interfaz.  
@@ -34,9 +32,9 @@ HRESULT Dispose ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

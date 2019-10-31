@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6245e2ae-5cc2-43ff-8cc1-71953d12113a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 37b644227a6085352bed682f0ddd7c3455b54895
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e88fa543eca39c14962f0dbbe8053829713401c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137578"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask (Método)
-Establece un valor que especifica los tipos de código que se ejecutar paso a paso.  
+Establece un valor que especifica los tipos de código a los que se va a recorrer.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT SetInterceptMask (
   
 ## <a name="parameters"></a>Parámetros  
  `mask`  
- [in] Una combinación de valores de la enumeración CorDebugIntercept que especifica los tipos de código.  
+ de Combinación de valores de la enumeración Cordebugintercept (que especifica los tipos de código.  
   
 ## <a name="remarks"></a>Comentarios  
- Si se establece el bit de un interceptor, el motor paso a paso se completará cuando se encuentra el tipo especificado de interceptar el código. Si el bit está desactivado, se omitirá el código de intercepción.  
+ Si se establece el bit de un interceptor, el stepper se completará cuando se encuentre el tipo de código de interceptación especificado. Si el bit está desactivado, se omitirá el código de intercepción.  
   
- El `SetInterceptMask` método puede tener interacciones imprevistas con [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (desde el punto de vista del usuario). Por ejemplo, si solo está visible (es decir, no interna) parte del código de inicialización de clase carece de información de asignación y STOP_NO_MAPPING_INFO no está establecido (consulte la [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) método y el CorDebugUnmappedStop (enumeración)), el motor paso a paso le guiará a través de la inicialización de clase. De forma predeterminada, solo el valor INTERCEPT_NONE de la `CorDebugIntercept` se usará la enumeración.  
+ El método `SetInterceptMask` puede tener interacciones imprevistas con [ICorDebugStepper:: setunmappedstopmask (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (desde el punto de vista del usuario). Por ejemplo, si la única parte visible (es decir, no interna) del código de inicialización de clase no tiene información de asignación y STOP_NO_MAPPING_INFO no está establecido (vea el método [ICorDebugStepper:: setunmappedstopmask (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) y cordebugunmappedstop ( enumeración), el stepper desplazará la inicialización de la clase. De forma predeterminada, solo se utilizará el valor INTERCEPT_NONE de la enumeración `CorDebugIntercept`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

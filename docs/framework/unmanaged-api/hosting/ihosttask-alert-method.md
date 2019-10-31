@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75b3fc0b1dde35e743e699d22c5766cab4cf0faf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2fc1d6c45eb72410ccfa1071064aa1a31ae46e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964716"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121406"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert (Método)
 Solicita que el host reactive la tarea representada por la instancia actual de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) , por lo que se puede anular la tarea.  
@@ -35,7 +33,7 @@ HRESULT Alert ();
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
@@ -45,17 +43,17 @@ HRESULT Alert ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- CLR llama `Alert` al método cuando <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se llama desde el código de usuario, o cuando <xref:System.AppDomain> se cierra el asociado <xref:System.Threading.Thread> a la actual. El host debe volver inmediatamente, porque la llamada se realiza de forma asincrónica. Si el host no puede avisar inmediatamente de la tarea, se debe reactivar la próxima vez que entre en un estado en el que se pueda avisar.  
+ CLR llama al método `Alert` cuando se llama a <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> desde el código de usuario o cuando se cierra el <xref:System.AppDomain> asociado al <xref:System.Threading.Thread> actual. El host debe volver inmediatamente, porque la llamada se realiza de forma asincrónica. Si el host no puede avisar inmediatamente de la tarea, se debe reactivar la próxima vez que entre en un estado en el que se pueda avisar.  
   
 > [!NOTE]
-> `Alert`afecta solo a las tareas a las que el tiempo de ejecución ha pasado un valor [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) de WAIT_ALERTABLE a métodos como [join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
+> `Alert` solo afecta a las tareas en las que el tiempo de ejecución ha pasado un valor [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) de WAIT_ALERTABLE a métodos como [join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

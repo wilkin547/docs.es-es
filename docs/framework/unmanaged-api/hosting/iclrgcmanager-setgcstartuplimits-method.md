@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29311f00f5ac4b61380b57cdd9fda07ec7de1b23
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f9d6c4f01b01944c885190f90e2195c3a308490a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141208"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits (Método)
 Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados.  
   
 > [!IMPORTANT]
-> A partir del .NET Framework 4,5, puede establecer el tamaño del segmento y el tamaño máximo de la generación 0 `DWORD` en valores mayores que mediante el método [iclrgcmanager2 (:: setgcstartuplimitsex (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) .  
+> A partir del .NET Framework 4,5, puede establecer el tamaño del segmento y el tamaño máximo de la generación 0 en valores mayores que `DWORD` mediante el método [iclrgcmanager2 (:: setgcstartuplimitsex (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,9 +50,9 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits`se devolvió correctamente.|  
+|S_OK|`SetGCStartupLimits` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -62,14 +60,14 @@ HRESULT SetGCStartupLimits (
 |E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores que `SetGCStartupLimits` establece solo se pueden especificar una vez. Las llamadas posteriores `SetGCStartupLimits` a se omiten.  
+ Los valores que establece `SetGCStartupLimits` se pueden especificar solo una vez. Las llamadas posteriores a `SetGCStartupLimits` se omiten.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

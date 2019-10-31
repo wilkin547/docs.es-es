@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134418"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum (Interfaz)
-Representa un enumerador para una matriz `IAssemblyName` de objetos.  
+Representa un enumerador para una matriz de objetos `IAssemblyName`.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[Clone (método)](iassemblyenum-clone-method.md)|Crea una copia superficial de este `IAssemblyEnum` objeto.|  
-|[GetNextAssembly (método)](iassemblyenum-getnextassembly-method.md)|Obtiene un puntero al siguiente `IAssemblyName` contenido en este `IAssemblyEnum` objeto.|  
-|[Reset (método)](iassemblyenum-reset-method.md)|Restablece `IAssemblyEnum` el objeto a su posición inicial.|  
+|[Clone (método)](iassemblyenum-clone-method.md)|Crea una copia superficial de este objeto `IAssemblyEnum`.|  
+|[GetNextAssembly (método)](iassemblyenum-getnextassembly-method.md)|Obtiene un puntero al `IAssemblyName` siguiente contenido en este objeto `IAssemblyEnum`.|  
+|[Reset (método)](iassemblyenum-reset-method.md)|Restablece este objeto `IAssemblyEnum` a su posición inicial.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

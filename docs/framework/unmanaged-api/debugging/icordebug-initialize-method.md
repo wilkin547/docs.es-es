@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134079"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize (Método)
 Inicializa el objeto `ICorDebug`.  
@@ -34,12 +32,12 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El depurador debe llamar a `Initialize` durante la creación de servicios de tiempo para inicializar la depuración. Este método debe llamarse antes que cualquier otro método en `ICorDebug` se llama.  
+ El depurador debe llamar a `Initialize` en el momento de la creación para inicializar los servicios de depuración. Se debe llamar a este método antes de llamar a cualquier otro método en `ICorDebug`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

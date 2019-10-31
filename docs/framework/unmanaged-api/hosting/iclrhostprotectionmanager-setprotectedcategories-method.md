@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fa21dc7b-5da7-440b-b59e-9180e5181f9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f6dc1254261197583f2369587a61b5e179d760b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e3f2429462b4454e87690d98ad9fb446574add91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779640"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141041"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories (Método)
-Especifica qué categorías de tipos y miembros administrados deben bloquear su ejecución en el código de confianza parcial.  
+Especifica qué categorías de tipos administrados y miembros deben bloquearse para que no se ejecuten en código de confianza parcial.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,28 +35,28 @@ HRESULT SetProtectedCategories (
   
 ## <a name="parameters"></a>Parámetros  
  `categories`  
- [in] Una combinación de [EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md) valores, que indica qué categorías de tipos y miembros administrados deben bloquear su ejecución en el código de confianza parcial.  
+ de Una combinación de valores de [EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md) , que indica en qué categorías de tipos y miembros administrados se debe bloquear la ejecución en código de confianza parcial.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetProtectedCategories` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Después de un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetProtectedCategories` devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cada `EApiCategories` valor hace referencia a una lista de tipos y miembros administrados. El `EApiCategories` enumeración y el `SetProtectedCategories` método están relacionados directamente a los recursos administrados <xref:System.Security.Permissions.HostProtectionAttribute> (clase), que se usa para marcar los tipos administrados y miembros que exponen funciones correspondientes a las categorías descritas por `EApiCategories`. Para obtener más información, consulte <xref:System.Security.Permissions.HostProtectionAttribute> y <xref:System.Security.Permissions.HostProtectionResource> enumeración, que se corresponde directamente con `EApiCategories`.  
+ Cada valor de `EApiCategories` hace referencia a una lista de miembros y tipos administrados. La enumeración `EApiCategories` y el método `SetProtectedCategories` se relacionan directamente con la clase <xref:System.Security.Permissions.HostProtectionAttribute> administrada, que se usa para marcar los tipos administrados y los miembros que exponen las funciones correspondientes a las categorías descritas por `EApiCategories`. Para obtener más información, vea <xref:System.Security.Permissions.HostProtectionAttribute> y la enumeración <xref:System.Security.Permissions.HostProtectionResource>, que se corresponde directamente con `EApiCategories`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

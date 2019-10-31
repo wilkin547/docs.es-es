@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108009"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB (Estructura)
-Contiene información sobre un solo atributo en un ensamblado y consta de tres `DWORD`. Cada `DWORD` es un desplazamiento en un búfer de caracteres generado por `CurrentIntoBuffer` el método de la interfaz [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+Contiene información sobre un solo atributo en un ensamblado y consta de tres `DWORD`s. Cada `DWORD` es un desplazamiento en un búfer de caracteres generado por el método `CurrentIntoBuffer` de la interfaz [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,22 +38,22 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`ofsNamespace`|Primer desplazamiento en el búfer de caracteres. Este desplazamiento no va seguido del espacio de nombres del atributo, sino de una serie de caracteres null. Por lo tanto, no se utiliza.|  
 |`ofsName`|Segundo desplazamiento en el búfer de caracteres. Esta ubicación marca el inicio del nombre del atributo.|  
 |`ofsValue`|Tercer desplazamiento en el búfer de caracteres. Esta ubicación marca el inicio del valor del atributo.|  
   
-## <a name="sample"></a>Muestra  
- En el ejemplo siguiente se muestran varios pasos básicos, que finalmente dan como resultado `IDENTITY_ATTRIBUTE_BLOB` una estructura rellenada:  
+## <a name="sample"></a>Ejemplo  
+ En el ejemplo siguiente se muestran varios pasos básicos, que finalmente dan como resultado una estructura `IDENTITY_ATTRIBUTE_BLOB` rellena:  
   
 1. Obtenga un [IReferenceIdentity](ireferenceidentity-interface.md) para el ensamblado.  
   
-2. Llame al `IReferenceIdentity::EnumAttributes` método y obtenga un [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
+2. Llame al método `IReferenceIdentity::EnumAttributes` y obtenga un [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Cree un búfer de caracteres y conviértalo en una `IDENTITY_ATTRIBUTE_BLOB` estructura.  
+3. Cree un búfer de caracteres y conviértalo en una estructura `IDENTITY_ATTRIBUTE_BLOB`.  
   
-4. Llame al `CurrentIntoBuffer` método de la `IEnumIDENTITY_ATTRIBUTE` interfaz. Este método copia los atributos `Namespace`, `Name`y `Value` en el búfer de caracteres. Los tres desplazamientos de esas cadenas estarán disponibles en la `IDENTITY_ATTRIBUTE_BLOB` estructura.  
+4. Llame al método `CurrentIntoBuffer` de la interfaz `IEnumIDENTITY_ATTRIBUTE`. Este método copia los atributos `Namespace`, `Name`y `Value` en el búfer de caracteres. Los tres desplazamientos de esas cadenas estarán disponibles en la estructura `IDENTITY_ATTRIBUTE_BLOB`.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,9 +220,9 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
-### <a name="sample-output"></a>Salida de ejemplo  
+### <a name="sample-output"></a>Resultados de ejemplo  
  Culture = neutral  
   
  nombre = sistema  
@@ -236,9 +234,9 @@ Exit:
  Versión = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation. h  
+ **Encabezado:** Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

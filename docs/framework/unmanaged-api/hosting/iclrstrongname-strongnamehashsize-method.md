@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 058ff84ad9d56ce1ce2defd50c20ce50e1d791a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8db3b1854e334cef4d91d21eb5f666ba2e88fc2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135063"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize (Método)
 Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  
@@ -38,20 +36,20 @@ HRESULT StrongNameHashSize (
   
 ## <a name="parameters"></a>Parámetros  
  `ulHashAlg`  
- [in] El algoritmo hash utilizado para calcular el tamaño del búfer.  
+ de Algoritmo hash que se usa para calcular el tamaño del búfer.  
   
  `pcbSize`  
- [out] El tamaño del búfer devuelto, en bytes.  
+ enuncia Tamaño de búfer devuelto, en bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

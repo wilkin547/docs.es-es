@@ -4,14 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3dd667f681e9b6749f33d6ccfd91035477c56030
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113996"
 ---
 # <a name="marshaling-data-with-com-interop"></a>serialización de datos con la interoperabilidad COM
 La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde código administrado y para exponer objetos administrados en COM. La compatibilidad con el cálculo de referencias de datos desde y hacia COM es exhaustiva y el comportamiento de serialización casi siempre es correcto.  
@@ -25,7 +23,7 @@ La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde 
  Las secciones siguientes se vinculan a los temas que describen los procesos para personalizar los contenedores de interoperabilidad si puede (o debe) suministrar información adicional sobre tipos al contador al serializador.  
   
 ## <a name="in-this-section"></a>En esta sección  
-[Cómo: Crear contenedores de forma manual](how-to-create-wrappers-manually.md)   
+[Creación manual de contenedores](how-to-create-wrappers-manually.md)   
 Describe cómo crear manualmente un contenedor COM en código fuente administrado. 
  
  [Cómo: Migrar código administrado DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  

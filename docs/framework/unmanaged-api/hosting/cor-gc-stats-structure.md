@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 12c00ed009e0e57436a71aed256b07a58ba68a32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138349"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS (Estructura)
 Proporciona estadísticas sobre el mecanismo de recolección de elementos no utilizados del Common Language Runtime (CLR).  
@@ -46,7 +44,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`Flags`|Indica qué valores de campo deben calcularse y devolverse.|  
 |`ExplicitGCCount`|Indica el número de recolecciones de elementos no utilizados forzadas por la solicitud externa.|  
@@ -61,9 +59,9 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|Tamaño, en kilobytes, de los objetos promovidos de la generación de uno a la generación dos.|  
   
 ## <a name="remarks"></a>Comentarios  
- El método [ICLRGCManager:: getstats (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) requiere que `Flags` el campo de `COR_GC_STATS` la estructura se establezca en uno o más valores de la enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar qué estadísticas se van a establecer.  
+ El método [ICLRGCManager:: getstats (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) requiere que el campo `Flags` de la estructura `COR_GC_STATS` se establezca en uno o más valores de la enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar qué estadísticas se van a establecer.  
   
- En la tabla siguiente se asignan las estadísticas proporcionadas por esta estructura a los dos `COR_GC_COUNTS` valores `COR_GC_MEMORYUSAGE`de enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) , y.  
+ En la tabla siguiente se asignan las estadísticas proporcionadas por esta estructura a los dos valores de enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) , `COR_GC_COUNTS` y `COR_GC_MEMORYUSAGE`.  
   
 |Especificado por COR_GC_COUNTS|Especificado por COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
@@ -78,11 +76,11 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost.idl  
+ **Encabezado:** GCHost. idl  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

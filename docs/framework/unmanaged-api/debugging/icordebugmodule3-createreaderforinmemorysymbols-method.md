@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764010"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137312"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols (Método)
 Crea un lector de símbolos de depuración para un módulo dinámico.  
@@ -37,10 +35,10 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>Parámetros  
  riid  
- [in] IID de la interfaz COM para devolver. Normalmente, esto es un [interfaz ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ de IID de la interfaz COM que se va a devolver. Normalmente, se trata de una [interfaz ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
   
  ppObj  
- [out] Puntero a un puntero a la interfaz devuelta.  
+ enuncia Puntero a un puntero a la interfaz devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
@@ -50,26 +48,26 @@ HRESULT CreateReaderForInMemorySymbols (
  El módulo no es un módulo dinámico o en memoria.  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- Símbolos no se hayan especificado por la aplicación o todavía no están disponibles.  
+ La aplicación no ha proporcionado símbolos o no están disponibles todavía.  
   
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede crear el lector.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método también puede ser utilizado para crear un objeto de lector de símbolos para los módulos (no dinámicos) en memoria, pero solo después de que los símbolos primero están disponibles (indicado por el [UpdateModuleSymbols (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) devolución de llamada).  
+ Este método también se puede usar para crear un objeto de lector de símbolos para los módulos en memoria (no dinámicos), pero solo después de que los símbolos estén disponibles por primera vez (indicados por la devolución de llamada del [método updatemodulesymbols (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) ).  
   
- Este método devuelve una nueva instancia de lector cada vez que se llama (como [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Por lo tanto, el depurador debe almacenar en caché el resultado y solicitar una nueva instancia solo cuando pueden haber cambiado los datos subyacentes (es decir, cuando un [LoadClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) se recibe la devolución de llamada).  
+ Este método devuelve una nueva instancia de lector cada vez que se llama (por ejemplo, [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Por consiguiente, el depurador debe almacenar en caché el resultado y solicitar una nueva instancia solo cuando los datos subyacentes puedan haber cambiado (es decir, cuando se recibe una devolución de llamada del [método loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) ).  
   
- Módulos dinámicos no tiene ningún símbolo disponible hasta que se ha cargado el primer tipo (tal y como indica la [LoadClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) devolución de llamada).  
+ Los módulos dinámicos no tienen ningún símbolo disponible hasta que se carga el primer tipo (como indica la devolución de llamada del [método loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) ).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** 4.5, 4, 3.5 SP1  
+ **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

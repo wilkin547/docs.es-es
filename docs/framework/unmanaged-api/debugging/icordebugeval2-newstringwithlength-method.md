@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754429"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084782"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength (Método)
 Crea una cadena de la longitud especificada, con el contenido especificado.  
@@ -38,20 +36,20 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>Parámetros  
  `string`  
- [in] Un puntero al valor de cadena.  
+ de Puntero al valor de cadena.  
   
  `uiLength`  
- [in] Longitud de la cadena.  
+ de Longitud de la cadena.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la cadena del iniciales carácter nulo debe estar en la cadena administrada, el llamador de la `NewStringWithLength` método debe asegurarse de que la longitud de la cadena incluye el carácter nulo final.  
+ Si se espera que el carácter nulo final de la cadena esté en la cadena administrada, el llamador del método `NewStringWithLength` debe asegurarse de que la longitud de la cadena incluye el carácter nulo final.  
   
  La cadena siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

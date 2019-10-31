@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de5a6d38d43c20ce52f609ef6514a1f28022416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105919"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo (Estructura)
-Almacena el tipo de desbordamiento que se ha producido e información sobre la excepción que se produjo debido a desbordamiento.  
+Almacena el tipo de desbordamiento que se ha producido y la información sobre la excepción que se produjo debido al desbordamiento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ typedef struct _StackOverflowInfo {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`soType`|Un valor de la [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) enumeración que especifica el tipo de desbordamiento.|  
-|`pExceptionInfo`|Un puntero a Win32 `EXCEPTION_POINTERS` objeto, que contiene un registro de excepciones con una descripción independiente del equipo de una excepción y un registro de contexto con una descripción de la máquina dependiente del contexto del procesador en el momento de la excepción.|  
+|`soType`|Valor de la enumeración [StackOverflowType (](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) que especifica el tipo de desbordamiento.|  
+|`pExceptionInfo`|Un puntero a un objeto de `EXCEPTION_POINTERS` de Win32, que contiene un registro de excepción con una descripción independiente del equipo de una excepción y un registro de contexto con una descripción dependiente del equipo del contexto del procesador en el momento de la excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un `StackOverflowInfo` objeto se pasa a la [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) método para `Event_StackOverflow` eventos.  
+ Se pasa un objeto `StackOverflowInfo` al método [IActionOnCLREvent:: onEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) para eventos de `Event_StackOverflow`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.idl  
+ **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

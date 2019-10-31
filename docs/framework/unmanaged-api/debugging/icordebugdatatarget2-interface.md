@@ -2,21 +2,19 @@
 title: Interfaz ICorDebugDataTarget2
 ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ea68474a1ee3a856b2e9393ff67d44f40a471c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c59752949ca29cbd0ed5a34ec7aeb3d98b6f9b6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911437"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136495"
 ---
 # <a name="icordebugdatatarget2-interface"></a>Interfaz ICorDebugDataTarget2
 Extiende lógicamente la interfaz [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[CreateVirtualUnwinder (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-createvirtualunwinder-method.md)|Crea un nuevo desenredador de pila que inicia el desenredo desde un contexto inicial (que no tiene por qué ser la hoja de un subproceso).|  
 |[EnumerateThreadIDs (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-enumeratethreadids-method.md)|Devuelve una lista de identificadores de subprocesos activos.|  
@@ -30,11 +28,11 @@ Extiende lógicamente la interfaz [ICorDebugDataTarget](../../../../docs/framewo
 > Esta interfaz solo está disponible con .NET Native. Si implementa esta interfaz para escenarios de ICorDebug fuera de .NET Native, Common Language Runtime ignorará esta interfaz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

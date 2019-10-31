@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739099"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134138"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack (función)
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_función GetManagedExcepStack
 Dada una dirección de objeto de excepción administrado, devuelve una versión de cadena del seguimiento de pila que contiene.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>Parámetros  
  `Client`  
- [in] El cliente que se está depurando.  
+ de Cliente que se está depurando.  
   
  `StackObjAddr`  
- [in] Un puntero de objeto administrado, derivado de <xref:System.Exception>.  
+ de Puntero a objeto administrado, derivado de <xref:System.Exception>.  
   
  szStackString  
- [out] La cadena devuelta.  
+ enuncia La cadena devuelta.  
   
  `cbString`  
- [out] El número de caracteres disponibles en el búfer de cadena.  
+ enuncia Número de caracteres disponibles en el búfer de cadena.  
   
 ## <a name="remarks"></a>Comentarios  
- Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor 0xa0 y un código de error de 0 x 1000.  
+ Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor de instalación de 0XA0 y un código de error de 0x1000.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: SOS_Stacktrace.h  
+ **Encabezado:** SOS_Stacktrace. h  
   
- **Versión de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versión de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

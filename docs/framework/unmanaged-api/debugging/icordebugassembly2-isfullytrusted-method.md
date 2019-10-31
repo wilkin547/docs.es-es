@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bef51fe9df0f85659603c637f11ed4e856c8e01a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133953"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted (Método)
-Obtiene un valor que indica si el ensamblado se ha concedido confianza completa por el sistema de seguridad en tiempo de ejecución.  
+Obtiene un valor que indica si el sistema de seguridad en tiempo de ejecución ha concedido plena confianza al ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT IsFullyTrusted(
   
 ## <a name="parameters"></a>Parámetros  
  `pbFullyTrusted`  
- [out] `true` si se ha concedido al ensamblado plena confianza por el sistema de seguridad en tiempo de ejecución; en caso contrario, `false`.  
+ [out] `true` si el sistema de seguridad en tiempo de ejecución ha concedido plena confianza al ensamblado; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método devuelve un HRESULT de CORDBG_E_NOTREADY si la directiva de seguridad para el ensamblado aún no se ha resuelta, es decir, si no hay código en el ensamblado se ha ejecutado todavía.  
+ Este método devuelve un valor HRESULT de CORDBG_E_NOTREADY si la Directiva de seguridad para el ensamblado aún no se ha resuelto, es decir, si no se ha ejecutado todavía ningún código en el ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

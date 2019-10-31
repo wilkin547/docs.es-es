@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 610e792d-98ef-411f-90b0-5b9a3813f547
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15c421471704ffc085da2af6ac74350bd099fdb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134358"
 ---
 # <a name="iassemblynamefinalize-method"></a>IAssemblyName::Finalize (Método)
 Permite a este objeto de [IAssemblyName](iassemblyname-interface.md) liberar recursos y realizar otras operaciones de limpieza antes de que se llame a su destructor.  
@@ -34,9 +32,9 @@ HRESULT Finalize ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

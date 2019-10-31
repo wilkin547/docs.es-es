@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c28ff84b08802246d587bfa130ae5915177932ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140257"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType (Método)
 Obtiene un puntero de interfaz a un objeto "ICorDebugType" que representa el <xref:System.Type> de este valor.  
@@ -37,15 +35,15 @@ HRESULT GetExactType (
   
 ## <a name="parameters"></a>Parámetros  
  `ppType`  
- [out] Un puntero a la dirección de un `ICorDebugType` objeto que representa el <xref:System.Type> del valor representado por este objeto "ICorDebugValue2".  
+ enuncia Puntero a la dirección de un objeto `ICorDebugType` que representa el <xref:System.Type> del valor representado por este objeto "ICorDebugValue2".  
   
 ## <a name="remarks"></a>Comentarios  
- El con elementos genéricos `GetExactType` método reemplaza a ambos el [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) y [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) métodos, cada uno de los que devuelven información sobre el tipo de valor .  
+ El método `GetExactType` compatible con genéricos reemplaza a los métodos [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) y [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) , cada uno de los cuales devuelve información sobre el tipo de un valor.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

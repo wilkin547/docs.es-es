@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugILFrame
+title: ICorDebugILFrame (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a40436fcf1485c5d08d175b0396af2b6870c19a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01c247f838f66d1a77831755126a5a1f56870c1e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095142"
 ---
-# <a name="icordebugilframe-interface"></a>Interfaz ICorDebugILFrame
+# <a name="icordebugilframe-interface"></a>ICorDebugILFrame (Interfaz)
 
 Representa un marco de pila del código del lenguaje intermedio de Microsoft (MSIL). Esta interfaz es una subclase de la interfaz ICorDebugFrame.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[CanSetIP (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-cansetip-method.md)|Obtiene un valor que indica si es seguro establecer el puntero de instrucción en la ubicación de desplazamiento especificada.|  
 |[EnumerateArguments (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratearguments-method.md)|Obtiene un enumerador para los argumentos de este marco.|  
@@ -42,17 +40,17 @@ Representa un marco de pila del código del lenguaje intermedio de Microsoft (MS
 |[SetIP (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)|Establece el puntero de instrucción en la ubicación de desplazamiento especificada en el código MSIL.|  
   
 ## <a name="remarks"></a>Comentarios  
- La `ICorDebugILFrame` interfaz es una interfaz de ICorDebugFrame especializada. Se usa para los marcos de código MSIL o para los marcos compilados Just-in-Time (JIT). Los marcos compilados con JIT implementan la `ICorDebugILFrame` interfaz y la interfaz ICorDebugNativeFrame.  
+ La interfaz de `ICorDebugILFrame` es una interfaz de ICorDebugFrame especializada. Se usa para los marcos de código MSIL o para los marcos compilados Just-in-Time (JIT). Los marcos compilados JIT implementan tanto la interfaz `ICorDebugILFrame` como la interfaz ICorDebugNativeFrame.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

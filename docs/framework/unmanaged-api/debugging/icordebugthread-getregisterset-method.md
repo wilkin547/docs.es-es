@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b9b6260-98ac-4cfd-88e5-5d7614f94a0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8769293364c111754f4bfe9360a0dca93c0ba13c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c62bd73b693322bd679b07b46e3549e1cfc8a56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770607"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133398"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>ICorDebugThread::GetRegisterSet (Método)
-Obtiene un puntero de interfaz al conjunto de registros que está asociado a la parte activa de este objeto ICorDebugThread.  
+Obtiene un puntero de interfaz al conjunto de registros asociado a la parte activa de este objeto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parámetros  
  `ppRegisters`  
- [out] Un puntero a la dirección de un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) establece el objeto de interfaz que representa el registro para la parte activa de este subproceso.  
+ enuncia Puntero a la dirección de un objeto [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interface que representa el conjunto de registros para la parte activa de este subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

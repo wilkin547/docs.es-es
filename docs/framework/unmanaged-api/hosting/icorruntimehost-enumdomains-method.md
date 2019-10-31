@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96b74995-0cde-4876-b6df-7fc164e6a5d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 545af69e06e7ea4262450025e9cb0d6529f99ad4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5a1642f968228c5815732ecd470cb8f02a0eb83
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139585"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains (Método)
 Obtiene un enumerador para los dominios en el proceso actual.  
@@ -37,25 +35,25 @@ HRESULT EnumDomains (
   
 ## <a name="parameters"></a>Parámetros  
  `hEnum`  
- [out] Un enumerador para los dominios.  
+ enuncia Un enumerador para los dominios.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|La operación fue correcta.|  
+|S_OK|La operación se realizó correctamente.|  
 |S_FALSE|No se pudo completar la operación.|  
-|E_FAIL|Se ha producido un error catastrófico desconocido. Si el método devuelve E_FAIL, common language runtime (CLR) ya no es utilizable en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, el Common Language Runtime (CLR) ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versión de .NET framework:** 1.0, 1.1  
+ **Versión de .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vea también
 

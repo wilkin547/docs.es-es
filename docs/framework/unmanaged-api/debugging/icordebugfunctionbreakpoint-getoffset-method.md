@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e619eae4-3ac3-4c37-bba4-55e59989b9cb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67e71002a78023ad6e8ef89c7a57d484a65aaeb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0e4bfb3f7adb0242456dfc3a4703ca56f118476
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138164"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>ICorDebugFunctionBreakpoint::GetOffset (Método)
 Obtiene el desplazamiento del punto de interrupción dentro de la función.  
@@ -37,12 +35,12 @@ HRESULT GetOffset (
   
 ## <a name="parameters"></a>Parámetros  
  `pnOffset`  
- [out] Un puntero al desplazamiento del punto de interrupción.  
+ enuncia Puntero al desplazamiento del punto de interrupción.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

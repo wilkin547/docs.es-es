@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107532"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi función)
 Devuelve un enumerador para todas las clases que cumplan los criterios de selección especificados.
@@ -48,12 +46,12 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parámetros
 
 `strSuperclass`\
-de Si no `null` es o está en blanco, especifica el nombre de una clase primaria; el enumerador devuelve solo las subclases de esta clase. Si es o `null` está en blanco `lFlags` y es WBEM_FLAG_SHALLOW, solo devuelve clases de nivel superior (clases sin clase primaria). Si es o `null` está en blanco `lFlags` y `WBEM_FLAG_DEEP`es, devuelve todas las clases del espacio de nombres.
+de Si no se `null` o está en blanco, especifica el nombre de una clase primaria; el enumerador devuelve solo las subclases de esta clase. Si está `null` o en blanco y `lFlags` es WBEM_FLAG_SHALLOW, solo devuelve clases de nivel superior (clases sin clase primaria). Si está `null` o en blanco y `lFlags` es `WBEM_FLAG_DEEP`, devuelve todas las clases del espacio de nombres.
 
 `lFlags`\
 de Combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, la función recupera los calificadores modificados almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no se establece, la función solo recupera los calificadores almacenados en el espacio de nombres inmediato. |
 | `WBEM_FLAG_DEEP` | 0 | La enumeración incluye todas las subclases de la jerarquía, pero no esta clase. |
@@ -62,7 +60,7 @@ de Combinación de marcas que afectan al comportamiento de esta función. Los si
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de solo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten que las llamadas se [clonen](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserva los punteros a objetos en la enumeración hasta que se liberan. |
 
-Las marcas recomendadas `WBEM_FLAG_RETURN_IMMEDIATELY` son `WBEM_FLAG_FORWARD_ONLY` y para obtener el mejor rendimiento.
+Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_ONLY` para obtener el mejor rendimiento.
 
 `pCtx`\
 de Normalmente, este valor es `null`. De lo contrario, es un puntero a una instancia de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que puede ser utilizada por el proveedor que proporciona las clases solicitadas.
@@ -92,7 +90,7 @@ de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connects
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que la función puede devolver. |
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
@@ -111,9 +109,9 @@ Si se produce un error en la llamada de función, puede obtener información de 
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

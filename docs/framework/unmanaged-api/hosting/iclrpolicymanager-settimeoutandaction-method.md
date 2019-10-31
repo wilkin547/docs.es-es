@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120dbfdc463a7441cce8ca7d87561998a8e28eda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a58664a7dc81059214246b53cf967b50cd61063
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916951"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140741"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction (Método)
 Establece un valor de tiempo de espera para la operación especificada y especifica la acción de la Directiva que debe realizar el Common Language Runtime (CLR) cuando se produce la operación.  
@@ -39,7 +37,7 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="parameters"></a>Parámetros  
  `operation`  
- de Uno de los valores de [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) , que indica la operación para la que se va a `action`establecer el tiempo de espera y la Directiva. Se admiten los siguientes valores:  
+ de Uno de los valores de [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) , que indica la operación para la que se va a establecer el tiempo de espera y la Directiva `action`. Se admiten los siguientes valores:  
   
 - OPR_AppDomainUnload  
   
@@ -50,35 +48,35 @@ HRESULT SetTimeoutAndAction (
 - OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- de Nuevo valor de tiempo de espera, en milisegundos. Un valor de infinito hace `operation` que nunca agote el tiempo de espera.  
+ de Nuevo valor de tiempo de espera, en milisegundos. Un valor de Infinite hace que `operation` nunca agote el tiempo de espera.  
   
  `action`  
- de Uno de los valores de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) , que indica la acción de la Directiva que el `operation` CLR debe realizar cuando se produce.  
+ de Uno de los valores de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) , que indica la acción de la Directiva que el CLR debe realizar cuando se produce `operation`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction`se devolvió correctamente.|  
+|S_OK|`SetTimeoutAndAction` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|E_INVALIDARG|No se puede establecer un tiempo de espera `operation`para el especificado o se proporcionó un `action`valor no válido para.|  
+|E_INVALIDARG|No se puede establecer un tiempo de espera para el `operation`especificado o se proporcionó un valor no válido para `action`.|  
   
 ## <a name="remarks"></a>Comentarios  
- `SetTimeoutAndAction`encapsula las capacidades de los métodos [ICLRPolicyManager:: setTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) y [ICLRPolicyManager:: SetActionOnTimeout (](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) , y se puede llamar en lugar de llamadas secuenciales a estos dos métodos.  
+ `SetTimeoutAndAction` encapsula las capacidades de los métodos [ICLRPolicyManager:: setTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) y [ICLRPolicyManager:: SetActionOnTimeout (](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) , y se puede llamar en lugar de llamadas secuenciales a estos dos métodos.  
   
 > [!IMPORTANT]
 > No todos los valores de acción de Directiva se pueden especificar como el comportamiento de tiempo de espera para las operaciones CLR. Vea las secciones comentarios de los temas de estos dos métodos para ver los valores válidos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -88,4 +86,4 @@ HRESULT SetTimeoutAndAction (
 - [EPolicyAction (enumeración)](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
 - [ICLRPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
 - [SetActionOnTimeout (método)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)
-- [ICLRPolicyManager::SetTimeoutAndAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)
+- [ICLRPolicyManager:: SetTimeoutAndAction (](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)

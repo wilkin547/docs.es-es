@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1db72c44b53b5abff9aee35094abc1e0e577fad4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e54027806cef07fad4740c3bf5226fd26c72570
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795377"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108776"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum (Función)
 Obtiene un puntero a una instancia de [IAssemblyEnum](iassemblyenum-interface.md) que puede enumerar los objetos del ensamblado con la [IAssemblyName](iassemblyname-interface.md)especificada.  
@@ -42,29 +40,29 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>Parámetros  
  `pEnum`  
- enuncia Puntero a una ubicación de memoria que contiene el `IAssemblyEnum` puntero solicitado.  
+ enuncia Puntero a una ubicación de memoria que contiene el puntero `IAssemblyEnum` solicitado.  
   
  `pUnkReserved`  
- [in] Reservado para extensibilidad futura. `pUnkReserved`debe ser una referencia nula.  
+ [in] Reservado para extensibilidad futura. `pUnkReserved` debe ser una referencia nula.  
   
  `pName`  
- de `IAssemblyName` Del ensamblado solicitado. Este nombre se utiliza para filtrar la enumeración. Puede ser null para enumerar todos los ensamblados en la caché global de ensamblados.  
+ de `IAssemblyName` del ensamblado solicitado. Este nombre se utiliza para filtrar la enumeración. Puede ser null para enumerar todos los ensamblados en la caché global de ensamblados.  
   
  `dwFlags`  
  de Marcas para modificar el comportamiento del enumerador. Este parámetro contiene exactamente un bit de la enumeración [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) .  
   
  `pvReserved`  
- [in] Reservado para extensibilidad futura. `pvReserved`debe ser una referencia nula.  
+ [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
 ## <a name="remarks"></a>Comentarios  
- El `dwFlags` parámetro contiene exactamente un bit de la `ASM_CACHE_FLAGS` enumeración.  
+ El parámetro `dwFlags` contiene exactamente un bit de la enumeración `ASM_CACHE_FLAGS`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

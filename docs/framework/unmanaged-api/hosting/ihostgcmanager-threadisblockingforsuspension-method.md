@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb78026f875c18a557951108518c9280f5eb567d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb807a6a344c49baeedfa88aef989a9cb2ec8a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133917"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension (Método)
 Notifica al host que el subproceso del que se realizó la llamada al método está a punto de bloquearse para una recolección de elementos no utilizados.  
@@ -35,9 +33,9 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`se devolvió correctamente.|  
+|S_OK|`ThreadIsBlockingForSuspension` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -45,17 +43,17 @@ HRESULT ThreadIsBlockingForSuspension ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- El CLR normalmente llama al `ThreadIsBlockForSuspension` método como preparación para una recolección de elementos no utilizados, para dar al host una oportunidad de volver a programar el subproceso para las tareas no administradas.  
+ Normalmente, CLR llama al método `ThreadIsBlockForSuspension` como preparación para una recolección de elementos no utilizados, para dar al host la oportunidad de volver a programar el subproceso para las tareas no administradas.  
   
 > [!IMPORTANT]
-> El host puede volver a programar las tareas solo después de `ThreadIsBlockingForSuspension`una llamada a. Una vez que el Runtime llama a [SuspensionStarting (](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), el host no debe volver a programar una tarea.  
+> El host puede volver a programar las tareas solo después de una llamada a `ThreadIsBlockingForSuspension`. Una vez que el Runtime llama a [SuspensionStarting (](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), el host no debe volver a programar una tarea.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136929"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess (Función)
 Cierra el proceso no administrado actual.  
@@ -47,14 +45,14 @@ void STDMETHODCALLTYPE CorExitProcess (
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
-> A partir de la .NET Framework 4 `CorExitProcess` , sale de cada tiempo de ejecución iniciado en el proceso, no solo el Runtime al que se han enlazado las API heredadas.  
+> A partir de la .NET Framework 4, `CorExitProcess` sale de cada tiempo de ejecución iniciado en el proceso, no solo el Runtime al que se han enlazado las API heredadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

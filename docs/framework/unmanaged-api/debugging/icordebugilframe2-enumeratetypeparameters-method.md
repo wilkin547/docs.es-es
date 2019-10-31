@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2e53bfb46579cc51b7ad88ef7de2b9f8d2f9390
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095122"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters (Método)
-Obtiene un objeto ICorDebugTypeEnum que contiene el <xref:System.Type> parámetros de este marco.  
+Obtiene un objeto ICorDebugTypeEnum que contiene los parámetros de <xref:System.Type> de este marco.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +35,19 @@ HRESULT EnumerateTypeParameters (
   
 ## <a name="parameters"></a>Parámetros  
  `ppTyParEnum`  
- Un puntero a la dirección de un objeto de interfaz ICorDebugTypeEnum que permite la enumeración de los parámetros de tipo.  
+ Puntero a la dirección de un objeto de interfaz ICorDebugTypeEnum que permite la enumeración de los parámetros de tipo.  
   
- La lista de parámetros de tipo incluye los parámetros de tipo clase (si existe) seguidos de los parámetros de tipo de método (si existe).  
+ La lista de parámetros de tipo incluye los parámetros de tipo de clase (si existen) seguidos de los parámetros de tipo de método (si existen).  
   
 ## <a name="remarks"></a>Comentarios  
- Use la [Imetadataimport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) método para determinar cuántos parámetros de tipo de clase y método esta lista contiene de parámetros de tipo.  
+ Use el método [IMetaDataImport2:: enumgenericparams (](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) para determinar cuántos parámetros de tipo de clase y parámetros de tipo de método contiene esta lista.  
   
  Los parámetros de tipo no están siempre disponibles.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

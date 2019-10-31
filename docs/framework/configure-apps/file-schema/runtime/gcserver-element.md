@@ -8,21 +8,19 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa03179df1cd2595b4be428106dd3ec10b309317
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 98ecc7069df20a92492e9a6276a0d88331ccc0bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116668"
 ---
-# <a name="gcserver-element"></a>\<gcServer >, elemento
+# <a name="gcserver-element"></a>\<elemento > gcServer
 Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +34,13 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`enabled`|Atributo necesario.<br /><br /> Especifica si Common Language Runtime ejecuta la recolección de elementos no utilizados de servidor.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`false`|No ejecuta la recolección de elementos no utilizados de servidor. Este es el valor predeterminado.|  
 |`true`|Ejecuta la recolección de elementos no utilizados de servidor.|  
@@ -52,7 +50,7 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
@@ -65,7 +63,7 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
  Este elemento se puede usar solo en el archivo de configuración de la aplicación; se omite si se encuentra en el archivo de configuración del equipo.  
   
 > [!NOTE]
-> En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea `<gcServer>` , establezca `true` el elemento en y el [ \<elemento > de gcConcurrent](gcconcurrent-element.md) en. `false`  
+> En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea, establezca el elemento `<gcServer>` en `true` y el [elemento\<gcConcurrent >](gcconcurrent-element.md) en `false`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se habilita la recolección de elementos no utilizados de servidor.  

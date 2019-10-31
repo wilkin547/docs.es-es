@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738368"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111245"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata (Método)
-Llamado por los servicios de acceso a datos de common language runtime (CLR) para recuperar los metadatos de una imagen.  
+Lo llama el servicio de acceso a datos de Common Language Runtime (CLR) para recuperar los metadatos de una imagen.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,39 +44,39 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>Parámetros  
  `imagePath`  
- [in] Una cadena que especifica la ruta de acceso del archivo de imagen.  
+ de Cadena que especifica la ruta de acceso del archivo de imagen.  
   
  `imageTimestamp`  
- [in] La marca de tiempo del archivo de imagen.  
+ de Marca de tiempo del archivo de imagen.  
   
  `imageSize`  
- [in] El tamaño del archivo de imagen.  
+ de Tamaño del archivo de imagen.  
   
  `mvid`  
- [in] El identificador único global de la imagen.  
+ de Identificador único global de la imagen.  
   
  `mdRva`  
- [in] La virtual dirección relativa (RVA) de los metadatos. La dirección es relativa a la dirección base de imagen.  
+ de La dirección virtual relativa (RVA) de los metadatos. La dirección es relativa a la dirección base de la imagen.  
   
  `flags`  
- [in] Reservado para uso futuro.  
+ de Reservado para uso futuro.  
   
  `bufferSize`  
- [in] El tamaño del búfer en el que se va a colocar los metadatos.  
+ de Tamaño del búfer en el que se colocan los metadatos.  
   
  `buffer`  
- [out] El búfer en el que se va a colocar los metadatos.  
+ enuncia Búfer en el que se colocan los metadatos.  
   
  `dataSize`  
- [out] El tamaño de los metadatos que se devuelven.  
+ enuncia Tamaño de los metadatos que se devuelven.  
   
 ## <a name="remarks"></a>Comentarios  
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

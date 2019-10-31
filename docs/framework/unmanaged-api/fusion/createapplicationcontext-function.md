@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e188fe80e770481aac02244a2c105639e4da19e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108890"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext (Función)
 Esta función admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
@@ -43,11 +41,11 @@ HRESULT CreateApplicationContext (
  enuncia Un puntero a un contexto de la aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca** Se incluye como un recurso en Fusion. dll  
+ **Biblioteca:** Se incluye como un recurso en Fusion. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0014bb66-590c-486c-9ade-f2133905cd99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 141e6e303933c46a85adf08339856f8964b21f4e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 34b5f3bd5908d3833a2223b078f8d796234641be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134450"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone (Método)
 Crea una copia superficial de este objeto [IAssemblyEnum](iassemblyenum-interface.md) .  
@@ -40,9 +38,9 @@ HRESULT Clone (
  enuncia Puntero a la copia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

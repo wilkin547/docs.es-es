@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d245afe2d34c06a5bb9ca39b1c0dd4924fadada
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 107644270dbc9b14912dac9b97fc716aaeba7f4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911251"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133217"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool (Interfaz)
 Proporciona métodos para tener acceso al grupo de subprocesos.  
@@ -31,7 +29,7 @@ Proporciona métodos para tener acceso al grupo de subprocesos.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[CorRegisterWaitForSingleObject (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado para uso interno.|  
 |[CorUnregisterWait (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Reservado para uso interno.|  
@@ -46,11 +44,11 @@ Proporciona métodos para tener acceso al grupo de subprocesos.
 |[CorGetAvailableThreads (método)](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Reservado para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

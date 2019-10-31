@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12787382686cc056c157ed7a6e8e4984ab93588f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55e331ff4e6ada73dc92bb2e880f555887639714
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088789"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next (Método)
-Obtiene el número especificado de dominios de aplicación de la colección, empezando en la posición actual del cursor.  
+Obtiene el número especificado de dominios de aplicación de la colección, comenzando en la posición actual del cursor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de dominios de aplicación va a recuperar.  
+ de El número de dominios de aplicación que se van a recuperar.  
   
  `values`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugAppDomain que representa un dominio de aplicación.  
+ enuncia Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugAppDomain que representa un dominio de aplicación.  
   
  `pceltFetched`  
- [out] Un puntero al número de dominios de aplicación realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de dominios de aplicación devueltos realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

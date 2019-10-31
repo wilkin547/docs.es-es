@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b12ba5ad5c85643d1f4c91585cf7abca210d22bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52bfe669d3b078657916554255a11cecfc07d484
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085088"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult (Método)
 Obtiene los resultados de esta evaluación.  
@@ -37,17 +35,17 @@ HRESULT GetResult (
   
 ## <a name="parameters"></a>Parámetros  
  `ppResult`  
- [out] Puntero a la dirección de un objeto ICorDebugValue que representa los resultados de esta evaluación, si la evaluación se completa con normalidad.  
+ enuncia Puntero a la dirección de un objeto ICorDebugValue que representa los resultados de esta evaluación, si la evaluación se completa con normalidad.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetResult` método es válido solo una vez completada la evaluación.  
+ El método `GetResult` es válido solo después de que se complete la evaluación.  
   
- Si la evaluación se completa con normalidad, `ppResult` especifica los resultados. Si finaliza con una excepción, el resultado es la excepción. Si la evaluación fue para un nuevo objeto, el resultado es la referencia al nuevo objeto.  
+ Si la evaluación se completa normalmente, `ppResult` especifica los resultados. Si finaliza con una excepción, el resultado es la excepción que se produce. Si la evaluación era para un nuevo objeto, el resultado es la referencia al nuevo objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

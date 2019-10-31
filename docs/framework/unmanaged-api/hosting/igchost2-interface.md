@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21ce9cbd007858c0f39e12622eff819154ab83f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43c16415c91521194e0d88be84dd176c3fdadad1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134836"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 (Interfaz)
 Proporciona métodos para obtener información sobre el sistema de recolección de elementos no utilizados y para controlar algunos aspectos de la recolección de elementos no utilizados.  
@@ -31,16 +29,16 @@ Proporciona métodos para obtener información sobre el sistema de recolección 
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx (método)](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Establece el tamaño del segmento y el tamaño máximo de la generación 0. Habilita la generación 0 y los tamaños de `DWORD`segmento mayores que.|  
+|[SetGCStartupLimitsEx (método)](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Establece el tamaño del segmento y el tamaño máximo de la generación 0. Habilita la generación 0 y los tamaños de segmento mayores que `DWORD`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost. idl, GCHost. h  
+ **Encabezado:** GCHost. idl, GCHost. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

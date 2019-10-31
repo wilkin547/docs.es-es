@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401cb41d8231e78b8657513e1a755a50814e463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137403"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread (Método)
-Notifica al depurador que inicia un subproceso ejecuta código administrado.  
+Notifica al depurador que un subproceso ha empezado a ejecutar código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT CreateThread (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso.  
   
  `thread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- El subproceso se colocará en la primera instrucción de código administrado que se ejecutará.  
+ El subproceso se colocará en la primera instrucción de código administrado que se va a ejecutar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

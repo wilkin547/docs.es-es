@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 550d25e995bdfe010fb1aa664a7c9882a775f4d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757162"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096393"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild (Método)
 Determina si el marco actual es un marco secundario.  
@@ -35,26 +33,26 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="parameters"></a>Parámetros  
  `pIsChild`  
- [out] Un valor booleano que especifica si el marco actual es un marco secundario.  
+ enuncia Valor booleano que especifica si el marco actual es un marco secundario.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El estado del secundario se devolvió correctamente.|  
-|E_FAIL|No se pudo devolver el estado del elemento secundario.|  
+|S_OK|El estado secundario se devolvió correctamente.|  
+|E_FAIL|No se pudo devolver el estado secundario.|  
 |E_INVALIDARG|`pIsChild` es null.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- El `IsChild` devuelve del método `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco. Si este es el caso, utilice el [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) método para comprobar si un marco es su elemento primario.  
+ El método `IsChild` devuelve `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco. Si este es el caso, use el método [ismatchingparentframe (](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) para comprobar si un marco es su elemento primario.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

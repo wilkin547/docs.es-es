@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921281"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119203"
 ---
 # <a name="remove-element-for-appsettings"></a>\<quitar > elemento para \<appSettings >
 
@@ -22,7 +22,7 @@ Quita la configuración de la aplicación personalizada.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<quitar >**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,23 +34,23 @@ Quita la configuración de la aplicación personalizada.
 
 ### <a name="attribute"></a>Atributo
 
-|         | DESCRIPCIÓN |
+|         | Descripción |
 | ------- | ----------- |
 | **key** | Atributo necesario.<br><br>Especifica el nombre de la clave que se va a quitar. |
 
 ### <a name="parent-element"></a>Elemento primario
 
-|     | DESCRIPCIÓN |
+|     | Descripción |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo quitar un valor de configuración `ApplicationName`personalizado para:
+En el ejemplo siguiente se muestra cómo quitar un valor de configuración personalizado para `ApplicationName`:
 
 ```xml
 <appSettings>

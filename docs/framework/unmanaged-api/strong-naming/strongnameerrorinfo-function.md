@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dd83fc6a7f553b54cc2acd5e9a93d8d58747d75a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141705"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo (Función)
 Obtiene el último código de error generado por una de las funciones de nombres seguros.  
@@ -42,13 +40,13 @@ HRESULT StrongNameErrorInfo ();
  El último código de error COM establecido por una de las funciones de nombre seguro.  
   
 ## <a name="remarks"></a>Comentarios  
- La mayoría de los métodos de nombre seguro devuelven un simple `true` o `false` una indicación de finalización correcta. Utilice la `StrongNameErrorInfo` función para recuperar un valor HRESULT que especifica el último error generado por las funciones de nombre seguro.  
+ La mayoría de los métodos de nombre seguro devuelven un `true` simple o `false` indicación de la finalización correcta. Utilice la función `StrongNameErrorInfo` para recuperar un valor HRESULT que especifica el último error generado por las funciones de nombre seguro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798509"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102454"
 ---
 # <a name="getobjecttext-function"></a>Función GetObjectText
 Devuelve una representación textual del objeto en la sintaxis de Managed Object Format (MOF).
@@ -48,16 +46,16 @@ de Este parámetro no se utiliza.
 de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
-de Normalmente 0. Si `WBEM_FLAG_NO_FLAVORS` se especifica (o 0x1), los calificadores se incluyen sin información de propagación o de tipo.
+de Normalmente 0. Si se especifica `WBEM_FLAG_NO_FLAVORS` (o 0x1), los calificadores se incluyen sin la información de propagación o de tipo.
 
 `pstrObjectText`   
-enuncia Puntero a una `null` entrada. En la devolución, una recién `BSTR` asignada que contiene una representación de la sintaxis MOF del objeto.  
+enuncia Puntero a un `null` en la entrada. En la devolución, una `BSTR` recién asignada que contiene una representación de la sintaxis MOF del objeto.  
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
@@ -73,14 +71,14 @@ El texto MOF devuelto no contiene toda la información sobre el objeto, sino sol
 El algoritmo siguiente se usa para reconstruir el texto de los parámetros de un método:
 
 1. Los parámetros se reordenan en el orden de sus valores de identificador.
-1. Los parámetros que se especifican `[out]` como `[in]` y se combinan en un único parámetro.
+1. Los parámetros que se especifican como `[in]` y `[out]` se combinan en un único parámetro.
  
-`pstrObjectText`debe ser un puntero a `null` cuando se llama a la función; no debe apuntar a una cadena que sea válida antes de la llamada al método, ya que el puntero no se desasignará.
+`pstrObjectText` debe ser un puntero a una `null` cuando se llama a la función; no debe apuntar a una cadena que sea válida antes de la llamada al método, ya que el puntero no se desasignará.
 
 ## <a name="requirements"></a>Requisitos  
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

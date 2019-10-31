@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f09a8974dc1e8cb20185975c42c1cb3ad86a5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 49f89f7d36e74b1fa5921230d7dc6d271d4c0883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134630"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum (Interfaz)
 Proporciona un enumerador para los objetos que se recolectarán como elementos no utilizados.  
@@ -30,25 +28,25 @@ Proporciona un enumerador para los objetos que se recolectarán como elementos n
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|Obtiene el número especificado de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instancias que contienen información sobre los objetos que se pueden recolectar.|  
+|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|Obtiene el número especificado de instancias de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) que contienen información sobre los objetos que se van a recolectar como elemento no utilizado.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ICorDebugGCReferenceEnum` interfaz implementa la interfaz "ICorDebugEnum".  
+ La interfaz de `ICorDebugGCReferenceEnum` implementa la interfaz "ICorDebugEnum".  
   
- Un `ICorDebugGCReferenceEnum` instancia se rellena con [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instancias mediante una llamada a la [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) método. [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) se pueden enumerar objetos mediante una llamada a la [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) método.  
+ Una instancia de `ICorDebugGCReferenceEnum` se rellena con instancias de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) llamando al método [ICorDebugProcess5:: enumerategcreferences (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) . Los objetos [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) se pueden enumerar llamando al método [ICorDebugGCReference:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) .  
   
- El [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objetos de la colección que se rellena mediante este método representan tres tipos de objetos:  
+ Los objetos [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) de la colección rellenados por este método representan tres tipos de objetos:  
   
-- Objetos de todas las pilas administradas. Esto incluye referencias activas en código administrado, así como los objetos creados por common language runtime.  
+- Objetos de todas las pilas administradas. Esto incluye las referencias dinámicas en código administrado, así como los objetos creados por el Common Language Runtime.  
   
-- Objetos de la tabla de identificadores. Esto incluye las referencias fuertes (`HNDTYPE_STRONG` y `HNDTYPE_REFCOUNT`) y las variables estáticas en un módulo.  
+- Objetos de la tabla de identificadores. Esto incluye referencias fuertes (`HNDTYPE_STRONG` y `HNDTYPE_REFCOUNT`) y variables estáticas en un módulo.  
   
-- Objetos de la cola del finalizador. La cola del finalizador raíces objetos hasta que se ha ejecutado el finalizador.  
+- Objetos de la cola del finalizador. Los objetos raíces de la cola del finalizador hasta que se haya ejecutado el finalizador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

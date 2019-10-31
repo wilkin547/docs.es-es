@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7312a50137ab8a5c066d5e140a1742ee1918b44
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90474a61b16d65565889bd69ef75616804d8bc60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140888"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding (Método)
-Devuelve una interfaz que representa un tiempo de ejecución a la que la directiva de activación heredada se ha enlazado, por ejemplo, mediante el uso de la `useLegacyV2RuntimeActivationPolicy` atributo el [ \<Inicio > elemento](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) entrada del archivo de configuración mediante el uso directo de la API de activación heredadas o llamando a la [ICLRRuntimeInfo:: Bindaslegacyv2runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) método.  
+Devuelve una interfaz que representa un tiempo de ejecución en el que se ha enlazado la Directiva de activación heredada, por ejemplo, mediante el uso del atributo `useLegacyV2RuntimeActivationPolicy` en la entrada\<archivo de configuración del [elemento > de inicio](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) , mediante el uso directo de las API de activación heredadas, o bien llamando al método [ICLRRuntimeInfo:: BindAsLegacyV2Runtime (](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
 ## <a name="parameters"></a>Parámetros  
  `riid`  
- [in] El único valor válido para este parámetro es de Required.Currently `IID_ICLRRuntimeInfo`.  
+ de Requerido. Actualmente, el único valor válido para este parámetro es `IID_ICLRRuntimeInfo`.  
   
  `ppUnk`  
- [out] Obligatorio. Cuando este método finaliza, contiene un puntero a la [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaz que representa un tiempo de ejecución que se ha enlazado a la directiva de activación heredada.  
+ [out] Obligatorio. Cuando este método finaliza, contiene un puntero a la interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) que representa un tiempo de ejecución que se ha enlazado a la Directiva de activación heredada.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente y devolvió un tiempo de ejecución que se enlazó a la directiva de activación heredada.|  
 |S_FALSE|El método se completó correctamente, pero un tiempo de ejecución heredado no se enlazó.|  
@@ -54,11 +52,11 @@ HRESULT QueryLegacyV2RuntimeBinding (
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

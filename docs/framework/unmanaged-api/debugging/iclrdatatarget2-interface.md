@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 94249397-861b-4294-a538-cf01466a66d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d21bced214242866c47f40f392593f3f51cda02f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f0f4331302e56a90b4aefd657e07981994022ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112312"
 ---
 # <a name="iclrdatatarget2-interface"></a>ICLRDataTarget2 (Interfaz)
-Una subclase de [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) que se usa la capa de servicios de acceso a datos para manipular las áreas de memoria virtual en el proceso de destino.  
+Una subclase de [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) utilizada por el nivel de servicios de acceso a datos para manipular regiones de memoria virtual en el proceso de destino.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -37,9 +35,9 @@ Una subclase de [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugg
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria. Puede que el destino no admita la modificación de sus áreas de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6edee34c8560c989040475fee4a35c6bd2ddb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6506b11d97490f796486729dbeb612e47762b60a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697997"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111434"
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging (Interfaz)
 Proporciona métodos que controlan la carga y descarga de módulos para depuración.  
@@ -30,16 +28,16 @@ Proporciona métodos que controlan la carga y descarga de módulos para depuraci
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[OpenVirtualProcess (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|Obtiene la interfaz "ICorDebugProcess" que corresponde a un módulo de runtime (CLR) de lenguaje común cargado en el proceso.|  
-|[CanUnloadNow (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|Determina si una biblioteca que se proporcionó mediante un [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interfaz todavía está en uso o se puede descargar.|  
+|[OpenVirtualProcess (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|Obtiene la interfaz "ICorDebugProcess" que corresponde a un módulo de Common Language Runtime (CLR) cargado en el proceso.|  
+|[CanUnloadNow (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|Determina si una biblioteca proporcionada por una interfaz [ICLRDebuggingLibraryProvider (](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) todavía está en uso o se puede descargar.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede obtener una instancia de la `ICLRDebugging` interfaz mediante el uso de la [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) función.  
+ Puede obtener una instancia de la interfaz `ICLRDebugging` mediante la función [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

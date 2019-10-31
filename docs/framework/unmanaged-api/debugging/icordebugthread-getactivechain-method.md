@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133553"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain (Método)
 Obtiene un puntero de interfaz a la cadena de pila activa (más reciente) en este objeto ICorDebugThread.  
@@ -37,15 +35,15 @@ HRESULT GetActiveChain (
   
 ## <a name="parameters"></a>Parámetros  
  `ppChain`  
- [out] Un puntero a la dirección de un objeto ICorDebugChain que representa la cadena de la pila.  
+ enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena de pila.  
   
 ## <a name="remarks"></a>Comentarios  
- El `ppChain` parámetro es null si ninguna cadena de la pila está activa actualmente.  
+ El parámetro `ppChain` es NULL si no hay ninguna cadena de pila activa actualmente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

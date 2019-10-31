@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
+title: 'Cómo: Quitar un ensamblado de la memoria caché global de ensamblados'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119851"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Cómo: Quitar un ensamblado de la memoria caché global de ensamblados
 
 Hay dos formas de quitar un ensamblado de la caché global de ensamblados (GAC):
 
@@ -55,5 +53,5 @@ En la aplicación **Programas y características** del **Panel de Control**, sel
 ## <a name="see-also"></a>Vea también
 
 - [Trabajar con ensamblados y la memoria caché global de ensamblados](working-with-assemblies-and-the-gac.md)
-- [Cómo: Instalar un ensamblado en la caché global de ensamblados](install-assembly-into-gac.md)
+- [Instalar un ensamblado en la memoria caché global de ensamblados](install-assembly-into-gac.md)
 - [Gacutil.exe (Herramienta Caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md)

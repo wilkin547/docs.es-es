@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9a0a6c-d592-4fb7-86ed-62684da3b0e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a409bda8861701e68d3ea1a956a4c35ce88ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb5cda11a2466496a4b3981e8185cbb7130f66f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122893"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID (Método)
-Obtiene el identificador de sistema operativo para el subproceso actual.  
+Obtiene el identificador del sistema operativo para el subproceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetCurrentThreadID (
   
 ## <a name="parameters"></a>Parámetros  
  `threadID`  
- [out] Un puntero al identificador del sistema operativo del subproceso actual para el proceso de destino.  
+ enuncia Puntero al identificador del sistema operativo del subproceso actual para el proceso de destino.  
   
 ## <a name="remarks"></a>Comentarios  
- Si no hay ningún subproceso actual durante el proceso de destino, el `GetCurrentThreadID` método puede producir un error.  
+ Si no hay ningún subproceso actual para el proceso de destino, se puede producir un error en el método `GetCurrentThreadID`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

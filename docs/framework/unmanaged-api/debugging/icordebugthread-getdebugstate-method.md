@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0baabbb736365b138d1754e68070207b4310bf57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f054f8f2bd7c322e722a1e17290ba6fbad9e37b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133518"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState (Método)
 Obtiene el estado de depuración actual de este objeto ICorDebugThread.  
@@ -37,15 +35,15 @@ HRESULT GetDebugState (
   
 ## <a name="parameters"></a>Parámetros  
  `pState`  
- [out] Un puntero a una combinación bit a bit de valores de enumeración CorDebugThreadState que describe el estado de depuración actual de este subproceso.  
+ enuncia Un puntero a una combinación bit a bit de valores de enumeración de CorDebugThreadState (que describe el estado de depuración actual de este subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- Si actualmente se detiene el proceso, `pState` representa el estado de depuración que existiría para este subproceso si el proceso se puede continuar, no el estado actual real de este subproceso.  
+ Si el proceso está detenido actualmente, `pState` representa el estado de depuración que existirá para este subproceso si el proceso tuviera que continuar, no el estado actual real de este subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

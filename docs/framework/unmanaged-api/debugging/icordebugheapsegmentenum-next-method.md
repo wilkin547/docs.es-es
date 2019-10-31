@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31e75a11ec94614b1b9d7bd16acce447a494cdec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 897fb56cacb51e98cf8f1778c3529617decb5ecb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138441"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next (Método)
-Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de las regiones de memoria del montón administrado.  
+Obtiene el número especificado de instancias de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) que contienen información sobre las regiones de memoria del montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +36,20 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parámetros  
  celt  
- [in] El número de segmentos que va a recuperar.  
+ de Número de segmentos que se van a recuperar.  
   
  segmentos  
- [out] Una matriz de punteros, cada uno de los cuales señala a un [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objeto que proporciona información acerca de una región de memoria del montón administrado.  
+ enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) que proporciona información sobre una región de memoria en el montón administrado.  
   
  pceltFetched  
- [out] Un puntero al número de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) los objetos devueltos realmente en `segments`. Este valor puede ser `null` si `celt` es 1.  
+ enuncia Puntero al número de objetos [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) realmente devueltos en `segments`. Este valor puede ser `null` si `celt` es 1.  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

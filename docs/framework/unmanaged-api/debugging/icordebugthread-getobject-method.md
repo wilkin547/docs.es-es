@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3695f150797e6a59a2fb1d58c99f233a35d687ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5cb95fb7cf70dbf7616e9bc59ebf44de090de883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771837"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133433"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject (Método)
-Obtiene un puntero de interfaz para el subproceso de common language runtime (CLR).  
+Obtiene un puntero de interfaz al subproceso de Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Parámetros  
  `ppObject`  
- [out] Un puntero a la dirección de un objeto de interfaz ICorDebugValue que representa el subproceso de CLR.  
+ enuncia Puntero a la dirección de un objeto de interfaz ICorDebugValue que representa el subproceso de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e834042c5e00709fcb2198c1496a8a630841d069
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134814"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx (Método)
-Establece el tamaño del segmento y el tamaño máximo para la generación 0.  
+Establece el tamaño del segmento y el tamaño máximo de la generación 0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +36,20 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Parámetros  
  `SegmentSize`  
- [in] El tamaño del segmento utilizado por el sistema de recopilación de elementos no utilizados.  
+ de Tamaño del segmento utilizado por el sistema de recolección de elementos no utilizados.  
   
  `MaxGen0Size`  
- [in] El tamaño máximo para la generación 0.  
+ de Tamaño máximo de la generación 0.  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores que `SetGCStartupLimitsEx` se pueden especificar conjuntos antes de iniciar el host. No se puede cambiar estos valores más adelante.  
+ Los valores que `SetGCStartupLimitsEx` establece solo se pueden especificar antes de que se inicie el host. Estos valores no se pueden cambiar más adelante.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost.idl, GCHost.h  
+ **Encabezado:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

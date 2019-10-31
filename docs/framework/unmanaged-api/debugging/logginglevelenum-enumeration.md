@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752584"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139204"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum (Enumeración)
 Indica el nivel de gravedad de un mensaje descriptivo que se escribe en el registro de eventos cuando un subproceso administrado registra un evento.  
@@ -48,7 +46,7 @@ typedef enum LoggingLevelEnum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`LTraceLevel0`|El mensaje es un nivel de seguimiento 0.|  
 |`LTraceLevel1`|El mensaje es un nivel de seguimiento 1.|  
@@ -65,12 +63,12 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|El mensaje es un nivel de pánico.|  
   
 ## <a name="remarks"></a>Comentarios  
- Common language runtime (CLR) llama a la [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) método para notificar al depurador que un subproceso administrado ha iniciado sesión un evento. El CLR pasa un valor de la `LoggingLevelEnum` enumeración para indicar el nivel de gravedad del mensaje que el subproceso administrado se escribió en el registro de eventos.  
+ El Common Language Runtime (CLR) llama al método [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) para notificar al depurador que un subproceso administrado ha registrado un evento. El CLR pasa un valor de la enumeración `LoggingLevelEnum` para indicar el nivel de gravedad del mensaje que el subproceso administrado escribió en el registro de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

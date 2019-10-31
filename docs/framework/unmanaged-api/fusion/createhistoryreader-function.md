@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795368"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108610"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader (Función)
 Crea un lector del historial para el archivo especificado.  
@@ -45,15 +43,15 @@ HRESULT CreateHistoryReader (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los códigos de error COM estándar, tal y como se define en WinError. h, además de los valores descritos en la tabla siguiente.  
   
-|Código devuelto|DESCRIPCIÓN|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|Indica que el método se completó correctamente.|  
-|E_INVALIDARG|Indica que `wzFilePath` o `ppHistoryReader` están establecidos en una referencia nula.|  
+|E_INVALIDARG|Indica que `wzFilePath` o `ppHistoryReader` se han establecido en una referencia nula.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Biblioteca** Fusion. dll  
+ **Biblioteca:** Fusion. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

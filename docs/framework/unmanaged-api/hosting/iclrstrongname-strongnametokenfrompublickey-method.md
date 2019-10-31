@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7962ce88-7e86-4a6f-8298-621b01ffc3c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17947526513bd1fbe3cb093e8ecaa7ed67983a7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f37cd6ef85985784303aeb976776b03fbc74dec3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759169"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092532"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>ICLRStrongName::StrongNameTokenFromPublicKey (Método)
 Obtiene un token que representa una clave pública. Un token de nombre seguro es la forma abreviada de una clave pública.  
@@ -40,29 +38,29 @@ HRESULT StrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Parámetros  
  `pbPublicKeyBlob`  
- [in] Una estructura de tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
+ de Estructura de tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
   
  `cbPublicKeyBlob`  
- [in] El tamaño, en bytes, de `pbPublicKeyBlob`.  
+ de Tamaño, en bytes, de `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] Pasa el token de nombre seguro correspondiente a la clave `pbPublicKeyBlob`. Common language runtime asigna la memoria en el que se va a devolver el token. El llamador debe liberar esta memoria utilizando la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método.  
+ enuncia El token de nombre seguro correspondiente a la clave pasada `pbPublicKeyBlob`. El Common Language Runtime asigna la memoria en la que se va a devolver el token. El llamador debe liberar esta memoria mediante el método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbStrongNameToken`  
- [out] El tamaño, en bytes, del token de nombre seguro devuelto.  
+ enuncia Tamaño, en bytes, del token de nombre seguro devuelto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="remarks"></a>Comentarios  
- Un token de nombre seguro es la forma abreviada de una clave pública que se utiliza para ahorrar espacio al almacenar la información de clave en los metadatos. En concreto, los tokens de nombre seguro se usan en las referencias de ensamblado para hacer referencia al ensamblado dependiente.  
+ Un token de nombre seguro es la forma abreviada de una clave pública que se usa para ahorrar espacio al almacenar información de clave en los metadatos. En concreto, se usan tokens de nombre seguro en las referencias de ensamblado para hacer referencia al ensamblado dependiente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en mscoree.dll  
+ **Biblioteca:** Se incluye como recurso en Mscoree. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

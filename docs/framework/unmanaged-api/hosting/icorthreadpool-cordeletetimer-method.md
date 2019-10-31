@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74847c35-7ca1-466a-b750-b25e7b03d100
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39142449ac7e03c629a834568ef469adffbf8dae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42108f8b51954466a94d735ab9c4e49567b307e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133286"
 ---
 # <a name="icorthreadpoolcordeletetimer-method"></a>ICorThreadpool::CorDeleteTimer (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -38,11 +36,11 @@ HRESULT CorDeleteTimer (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

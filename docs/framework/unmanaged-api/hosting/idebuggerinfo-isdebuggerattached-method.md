@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f381cc687b4c28dd58a02aea8cf931f569cf9611
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cbd6fa5f7935a57799d695c3ebb617d856e6dbd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133176"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>IDebuggerInfo::IsDebuggerAttached (Método)
 Obtiene un valor que indica si un depurador administrado está asociado a este proceso.  
@@ -37,14 +35,14 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="parameters"></a>Parámetros  
  `pbAttached`  
- [out] Un puntero a un valor que es `true` si un depurador administrado está asociado al proceso; de lo contrario, `false`.  
+ enuncia Puntero a un valor que se `true` si hay un depurador administrado asociado al proceso. de lo contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

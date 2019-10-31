@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 734dc4d1-0a76-4736-b5ac-cb4253b3dd49
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d269414346d8dcf4212fb5ee546cf22228cdd2b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b473466aefc06dc83526e65f8ee9e37703ba9e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134961"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification (Método)
-Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según las marcas especificadas.  
+Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba en función de las marcas especificadas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,37 +37,37 @@ HRESULT StrongNameSignatureVerification (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] La ruta de acceso al archivo ejecutable portable (.dll o .exe) del ensamblado comprobar.  
+ de Ruta de acceso al archivo portable ejecutable (. dll o. exe) para que lo compruebe el ensamblado.  
   
  `dwInFlags`  
- [in] Marcas para modificar el comportamiento de comprobación. Se admiten los siguientes valores:  
+ de Marcas para modificar el comportamiento de la comprobación. Se admiten los siguientes valores:  
   
-- `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.  
+- `SN_INFLAG_FORCE_VER` (0x00000001): fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
   
-- `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera vez que se comprueba el manifiesto.  
+- `SN_INFLAG_INSTALL` (0x00000002): especifica que es la primera vez que se comprueba el manifiesto.  
   
-- `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004): especifica que la memoria caché permitirá el acceso solo a los usuarios que tengan privilegios administrativos.  
   
-- `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.  
+- `SN_INFLAG_USER_ACCESS` (0x00000008): especifica que el ensamblado solo será accesible para el usuario actual.  
   
-- `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010): especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
   
-- `SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.  
+- `SN_INFLAG_RUNTIME` (0x80000000): reservado para la depuración interna.  
   
  `pdwOutFlags`  
- [out] Marcas que indican si se ha comprobado la firma de nombre seguro. Se admite el siguiente valor:  
+ enuncia Marcas que indican si se ha comprobado la firma de nombre seguro. Se admite el siguiente valor:  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

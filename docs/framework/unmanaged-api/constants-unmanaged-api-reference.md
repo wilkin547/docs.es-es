@@ -6,14 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], constants
 - unmanaged API reference [.NET Framework], constants
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b91f2a749557f94a68f1929d649824719160d9ee
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 88dfdfcaee4a53e9b3c6e4b7e8187c8bfd5eaa13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099617"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Constantes (Referencia de la API no administrada)
 En este tema se describen las constantes de tipo de lenguaje, proveedor de lenguaje y tipo de documento que se definen en CorSym. idl.  
@@ -21,7 +19,7 @@ En este tema se describen las constantes de tipo de lenguaje, proveedor de lengu
 ## <a name="language-type-constants"></a>Constantes de tipo de lenguaje  
  En la tabla siguiente se muestran las constantes de tipo de lenguaje, que representan los GUID que identifican los lenguajes de programación.  
   
-|Símbolo|DESCRIPCIÓN|  
+|Símbolo|Descripción|  
 |------------|-----------------|  
 |CorSym_LanguageType_C|Indica el lenguaje C.|  
 |CorSym_LanguageType_CPlusPlus|Indica el C++ idioma.|  
@@ -38,14 +36,14 @@ En este tema se describen las constantes de tipo de lenguaje, proveedor de lengu
 ## <a name="language-vendor-constants"></a>Constantes de proveedor de lenguaje  
  En la tabla siguiente se muestran las constantes de proveedor de lenguaje, que representan los GUID que identifican a los proveedores de lenguaje de programación.  
   
-|Símbolo|DESCRIPCIÓN|  
+|Símbolo|Descripción|  
 |------------|-----------------|  
 |CorSym_LanguageVendor_Microsoft|Indica Microsoft.|  
   
 ## <a name="document-type-constants"></a>Constantes de tipo de documento  
  En la tabla siguiente se muestran las constantes de tipo de documento, que representan los GUID que identifican los tipos de documento.  
   
-|Símbolo|DESCRIPCIÓN|  
+|Símbolo|Descripción|  
 |------------|-----------------|  
 |CorSym_DocumentType_Text|Indica un documento de texto.|  
 |CorSym_DocumentType_MC|Indica un documento que no es de texto.|  

@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugValueBreakpoint
+title: ICorDebugValueBreakpoint (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueBreakpoint
@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f77268e069d322d0f491f78b154cf63b691e3e38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140188"
 ---
-# <a name="icordebugvaluebreakpoint-interface"></a>Interfaz ICorDebugValueBreakpoint
+# <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint (Interfaz)
 Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores específicos.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[GetValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa el valor del objeto en el que se establece el punto de interrupción.|  
   
@@ -38,11 +36,11 @@ Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores espe
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

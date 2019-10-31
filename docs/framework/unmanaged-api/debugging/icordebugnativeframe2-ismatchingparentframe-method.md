@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e215cf4f6d6c3cfde3fa723ecae67aa77e189917
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757059"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096199"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame (Método)
-Determina si el marco especificado es el elemento primario del fotograma actual.  
+Determina si el marco especificado es el elemento primario del marco actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,29 +35,29 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 ## <a name="parameters"></a>Parámetros  
  `pPotentialParentFrame`  
- [in] Un puntero al objeto de marco que se va a evaluar para el estado del elemento primario.  
+ de Puntero al objeto de marco que se desea evaluar para el estado primario.  
   
  `pIsParent`  
- [out] `true` si `pPotentialParentFrame` es elemento primario del fotograma actual; en caso contrario, `false`.  
+ [out] `true` si `pPotentialParentFrame` es el elemento primario del marco actual; de lo contrario, `false`.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El estado del primario se devolvió correctamente.|  
-|E_FAIL|No se pudo devolver el estado del elemento primario.|  
+|S_OK|El estado primario se devolvió correctamente.|  
+|E_FAIL|No se pudo devolver el estado primario.|  
 |E_INVALIDARG|`pPotentialParentFrame` o `pIsParent` es null.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- `IsMatchingParentFrame` Devuelve `true` si el objeto de marco se pasa al método es el elemento primario del objeto de marco en el que se llamó al método. Si llama al método en un marco que no es un elemento secundario del marco especificado, devuelve un error.  
+ `IsMatchingParentFrame` devuelve `true` si el objeto de marco que se pasa al método es el elemento primario del objeto de marco en el que se llamó al método. Si llama al método en un marco que no es un elemento secundario del marco especificado, devuelve un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

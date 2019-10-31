@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769765"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136551"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels (Enumeración)
-Proporciona marcas para especificar el nivel en el que se va a aplicar o modificar la directiva de ensamblado.  
+Proporciona marcas para especificar el nivel en el que se va a aplicar o modificar la Directiva de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,26 +41,26 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|Especifica que debe aplicarse la directiva en el nivel de administrador.|  
-|`ePolicyLevelApp`|Especifica que debe aplicarse la directiva en el nivel de aplicación.|  
-|`ePolicyLevelHost`|Especifica que debe aplicarse la directiva a nivel de host.|  
-|`ePolicyLevelNone`|No especifica ningún indicador de nivel de directiva.|  
-|`ePolicyLevelPublisher`|Especifica que debe aplicarse la directiva en el nivel de publicador.|  
-|`ePolicyLevelRetargetable`|Especifica que Directiva debe aplicarse en niveles variables.|  
-|`ePolicyPortability`|Especifica que Directiva debe admitir la portabilidad entre las implementaciones de un ensamblado de .NET Framework. Consulte la [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) elemento del archivo de configuración.|  
-|`ePolicyUnifiedToCLR`|Especifica que la directiva debe unificarse para que el de common language runtime (CLR).|  
+|`ePolicyLevelAdmin`|Especifica que debe aplicarse la Directiva en el nivel de administrador.|  
+|`ePolicyLevelApp`|Especifica que la Directiva debe aplicarse en el nivel de aplicación.|  
+|`ePolicyLevelHost`|Especifica que debe aplicarse la Directiva en el nivel de host.|  
+|`ePolicyLevelNone`|No especifica ninguna marca de nivel de directiva.|  
+|`ePolicyLevelPublisher`|Especifica que debe aplicarse la Directiva en el nivel de publicador.|  
+|`ePolicyLevelRetargetable`|Especifica que la Directiva debe ser aplicable en los niveles variables.|  
+|`ePolicyPortability`|Especifica que la Directiva debe admitir la portabilidad entre las implementaciones de un ensamblado de .NET Framework. Vea el elemento [\<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) archivo de configuración.|  
+|`ePolicyUnifiedToCLR`|Especifica que la Directiva se debe unificar con la del Common Language Runtime (CLR).|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta enumeración se pasa a los métodos de la [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfaz para especificar los cambios en la directiva de aplicación.  
+ Esta enumeración se pasa a los métodos de la interfaz [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) para especificar cambios en la Directiva de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

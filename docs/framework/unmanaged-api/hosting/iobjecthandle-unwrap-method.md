@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc5bed553ac54eb708beae23f5c29cbedcb2b4e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be488ebe663169cabc5b569335dfc784fdf30556
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102692"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap (Método)
 Desencapsula un objeto de cálculo de referencias por valor desde el direccionamiento indirecto.  
@@ -37,13 +35,13 @@ HRESULT Unwrap (
   
 ## <a name="parameters"></a>Parámetros  
  `ppv`  
- [out] Un puntero al objeto que se debe desencapsular.  
+ enuncia Puntero al objeto que se va a desempaquetar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

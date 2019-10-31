@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139167"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a>puntero a la función PFN_CLRDataCreateInstance
-Señala una función que crea un objeto de interfaz para el elemento de destino especificado.  
+# <a name="pfn_clrdatacreateinstance-function-pointer"></a>puntero a la función PFN_CLRDataCreateInstance
+Apunta a una función que crea un objeto de interfaz para el elemento de destino especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +36,21 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="parameters"></a>Parámetros  
  `iid`  
- [in] El identificador de la interfaz de creación de instancias.  
+ de Identificador de la interfaz de la que se va a crear una instancia.  
   
  `target`  
- [in] Un puntero a un usuario implementa [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) objeto que representa el elemento de destino para el que se va a crear el objeto de interfaz.  
+ de Un puntero a un objeto [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) implementado por el usuario que representa el elemento de destino para el que se va a crear el objeto de interfaz.  
   
  `iface`  
- [out] Un puntero a la dirección del objeto de interfaz devuelto.  
+ enuncia Puntero a la dirección del objeto de interfaz devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- La `ICLRDataTarget` objeto es implementado por el sistema de escritura de la aplicación de depuración. La implementación depende del tipo de elemento de destino que se va a representar. El elemento de destino puede ser un proceso, volcado de memoria, equipo remoto y así sucesivamente.  
+ El escritor de la aplicación de depuración implementa el objeto `ICLRDataTarget`. La implementación depende del tipo de elemento de destino que se está representando. El elemento de destino puede ser un proceso, un volcado de memoria, una máquina remota, etc.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl  
+ **Encabezado:** ClrData. idl  
   
  **Biblioteca:** CorGuids.lib  
   

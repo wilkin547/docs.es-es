@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110310"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName (Método)
 Obtiene el nombre del dominio de aplicación.  
@@ -43,18 +41,18 @@ HRESULT GetName (
  [in] Tamaño de la matriz `szName`. Establezca este valor en cero para poner este método en modo de consulta.  
   
  `pcchName`  
- [out] Un puntero al tamaño del nombre o el número de caracteres devueltos realmente en `szName`. En el modo de consulta, este valor permite al llamador saber el tamaño del búfer para asignar el nombre.  
+ enuncia Puntero al tamaño del nombre o número de caracteres devueltos realmente en `szName`. En el modo de consulta, este valor permite que el autor de la llamada sepa el tamaño de un búfer que se va a asignar al nombre.  
   
  `szName`  
- [out] Una matriz que almacena el nombre del dominio de aplicación.  
+ enuncia Matriz que almacena el nombre del dominio de aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
- Llama un depurador el `GetName` método una vez para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para llenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como *el modo de consulta*.  
+ Un depurador llama una vez al método `GetName` para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para rellenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como modo de *consulta*.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109487"
 ---
 # <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS (Enumeración)
 Indica el origen de un ensamblado representado por [IAssemblyCacheItem](iassemblycacheitem-interface.md) en la caché global de ensamblados.  
@@ -40,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`ASM_CACHE_ZAP`|Enumera la memoria caché de ensamblados precompilados mediante Ngen. exe.|  
 |`ASM_CACHE_GAC`|Enumera la caché global de ensamblados.|  
@@ -49,11 +47,11 @@ typedef enum {
 |`ASM_CACHE_ROOT_EX`|Indica que la función [GetCachePath (](getcachepath-function.md) debe devolver la ruta de acceso a la caché global de ensamblados para la versión 4 de CLR. Solo es significativo en el contexto de una llamada a [GetCachePath (](getcachepath-function.md).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
