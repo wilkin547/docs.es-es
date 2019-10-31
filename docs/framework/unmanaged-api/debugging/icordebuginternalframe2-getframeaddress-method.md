@@ -15,51 +15,49 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122674"
 ---
-# <a name="icordebuginternalframe2getframeaddress-method"></a><span data-ttu-id="06c29-102">ICorDebugInternalFrame2::GetFrameAddress (Método)</span><span class="sxs-lookup"><span data-stu-id="06c29-102">ICorDebugInternalFrame2::GetFrameAddress Method</span></span>
-<span data-ttu-id="06c29-103">Devuelve la dirección de pila del marco interno.</span><span class="sxs-lookup"><span data-stu-id="06c29-103">Returns the stack address of the internal frame.</span></span>  
+# <a name="icordebuginternalframe2getframeaddress-method"></a><span data-ttu-id="31822-102">ICorDebugInternalFrame2::GetFrameAddress (Método)</span><span class="sxs-lookup"><span data-stu-id="31822-102">ICorDebugInternalFrame2::GetFrameAddress Method</span></span>
+<span data-ttu-id="31822-103">Devuelve la dirección de la pila del marco interno.</span><span class="sxs-lookup"><span data-stu-id="31822-103">Returns the stack address of the internal frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06c29-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="06c29-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="31822-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="31822-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="06c29-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="06c29-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="31822-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="31822-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="06c29-106">[out] Puntero a la `CORDB_ADDRESS` para el marco interno.</span><span class="sxs-lookup"><span data-stu-id="06c29-106">[out] Pointer to the `CORDB_ADDRESS` for the internal frame.</span></span>  
+ <span data-ttu-id="31822-106">enuncia Puntero a la `CORDB_ADDRESS` para el marco interno.</span><span class="sxs-lookup"><span data-stu-id="31822-106">[out] Pointer to the `CORDB_ADDRESS` for the internal frame.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="06c29-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="06c29-107">Return Value</span></span>  
- <span data-ttu-id="06c29-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="06c29-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="31822-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="31822-107">Return Value</span></span>  
+ <span data-ttu-id="31822-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="31822-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="06c29-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="06c29-109">HRESULT</span></span>|<span data-ttu-id="06c29-110">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="06c29-110">Description</span></span>|  
+|<span data-ttu-id="31822-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="31822-109">HRESULT</span></span>|<span data-ttu-id="31822-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="31822-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="06c29-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="06c29-111">S_OK</span></span>|<span data-ttu-id="06c29-112">La dirección del marco interno se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="06c29-112">The address of the internal frame was successfully returned.</span></span>|  
-|<span data-ttu-id="06c29-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="06c29-113">E_FAIL</span></span>|<span data-ttu-id="06c29-114">No se pudo devolver la dirección del marco interno.</span><span class="sxs-lookup"><span data-stu-id="06c29-114">The address of the internal frame could not be returned.</span></span>|  
-|<span data-ttu-id="06c29-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="06c29-115">E_INVALIDARG</span></span>|<span data-ttu-id="06c29-116">El valor de `pAddress` es `null`.</span><span class="sxs-lookup"><span data-stu-id="06c29-116">`pAddress` is `null`.</span></span>|  
+|<span data-ttu-id="31822-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="31822-111">S_OK</span></span>|<span data-ttu-id="31822-112">La dirección del marco interno se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="31822-112">The address of the internal frame was successfully returned.</span></span>|  
+|<span data-ttu-id="31822-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="31822-113">E_FAIL</span></span>|<span data-ttu-id="31822-114">No se pudo devolver la dirección del marco interno.</span><span class="sxs-lookup"><span data-stu-id="31822-114">The address of the internal frame could not be returned.</span></span>|  
+|<span data-ttu-id="31822-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="31822-115">E_INVALIDARG</span></span>|<span data-ttu-id="31822-116">El valor de `pAddress` es `null`.</span><span class="sxs-lookup"><span data-stu-id="31822-116">`pAddress` is `null`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="06c29-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="06c29-117">Remarks</span></span>  
- <span data-ttu-id="06c29-118">El valor devuelto en `pAddress` puede usarse para determinar la ubicación del marco interno en relación con otros marcos de la pila.</span><span class="sxs-lookup"><span data-stu-id="06c29-118">The value returned in `pAddress` can be used to determine the location of the internal frame relative to other frames on the stack.</span></span> <span data-ttu-id="06c29-119">Incluso en equipos basados en IA-64, el marco interno se encuentra en la pila solo y no hay ningún puntero correspondiente a un almacén de respaldo.</span><span class="sxs-lookup"><span data-stu-id="06c29-119">Even on IA-64-based computers, the internal frame lives on the stack only, and there is no corresponding pointer to a backing store.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="31822-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="31822-117">Remarks</span></span>  
+ <span data-ttu-id="31822-118">El valor devuelto en `pAddress` se puede usar para determinar la ubicación del marco interno con respecto a otros marcos de la pila.</span><span class="sxs-lookup"><span data-stu-id="31822-118">The value returned in `pAddress` can be used to determine the location of the internal frame relative to other frames on the stack.</span></span> <span data-ttu-id="31822-119">Incluso en equipos basados en IA-64, el marco interno solo vive en la pila y no hay ningún puntero correspondiente a la memoria auxiliar.</span><span class="sxs-lookup"><span data-stu-id="31822-119">Even on IA-64-based computers, the internal frame lives on the stack only, and there is no corresponding pointer to a backing store.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06c29-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="06c29-120">Requirements</span></span>  
- <span data-ttu-id="06c29-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06c29-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="31822-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="31822-120">Requirements</span></span>  
+ <span data-ttu-id="31822-121">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="31822-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06c29-122">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06c29-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="31822-122">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="31822-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="06c29-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06c29-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="31822-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="31822-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="06c29-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06c29-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="31822-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31822-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06c29-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="06c29-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31822-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="31822-125">See also</span></span>
 
-- [<span data-ttu-id="06c29-126">ICorDebugInternalFrame2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="06c29-126">ICorDebugInternalFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [<span data-ttu-id="06c29-127">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="06c29-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="06c29-128">Depuración</span><span class="sxs-lookup"><span data-stu-id="06c29-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="31822-126">ICorDebugInternalFrame2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="31822-126">ICorDebugInternalFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [<span data-ttu-id="31822-127">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="31822-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="31822-128">Depuración</span><span class="sxs-lookup"><span data-stu-id="31822-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
