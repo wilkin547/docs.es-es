@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122046"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx (Función)
-Convierte un valor HRESULT a un mensaje de error adecuado para la referencia cultural especificada.  
+Convierte un valor HRESULT en un mensaje de error adecuado para la referencia cultural especificada.  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,40 +41,40 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>Parámetros  
  `lcid`  
- [in] Un identificador de referencia cultural. Se pasa -1 `lcid` para usar la referencia cultural predeterminada.  
+ de Identificador de referencia cultural. Pass-1 para que `lcid` utilice la referencia cultural predeterminada.  
   
  `iResourceID`  
- [in] Un HRESULT.  
+ de Un valor HRESULT.  
   
  `szBuffer`  
- [out] Un búfer que contiene el mensaje de error tras completarse correctamente.  
+ enuncia Un búfer que contiene el mensaje de error tras una finalización correcta.  
   
  `iMax`  
- [in] El tamaño del búfer de mensaje de error.  
+ de Tamaño del búfer del mensaje de error.  
   
  `bQuiet`  
- [in] Pasa por alto.  
+ de Tendrán.  
   
  `pcwchUsed`  
- [out] Un puntero a la longitud del mensaje de error.  
+ enuncia Puntero a la longitud del mensaje de error.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error COM estándar, tal como se define en WinError.h, además de los valores siguientes.  
+ Este método devuelve los códigos de error COM estándar, tal y como se define en WinError. h, además de los valores siguientes.  
   
-|Código devuelto|DESCRIPCIÓN|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`szBuffer` es null, o `iMax` es cero (0).|  
+|E_INVALIDARG|`szBuffer` es null o `iMax` es cero (0).|  
   
 ## <a name="remarks"></a>Comentarios  
  Si el método no se completa correctamente, `szBuffer` contiene una cadena vacía.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

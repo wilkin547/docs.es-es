@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fb566ff2e5e2b0bcb096cead243ed65a904a914
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8377ead42c752d8ebe9813d9e00662b94339f8a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137240"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint (Método)
-Quita establecida previamente un punto de interrupción en la dirección indicada.  
+Quita un punto de interrupción establecido previamente en la dirección especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +35,19 @@ HRESULT ClearUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [in] Un `CORDB_ADDRESS` valor que especifica la dirección en la que se estableció el punto de interrupción.  
+ de `CORDB_ADDRESS` valor que especifica la dirección en la que se estableció el punto de interrupción.  
   
 ## <a name="remarks"></a>Comentarios  
- El punto de interrupción especificado se habría establecido previamente mediante una llamada anterior a [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ El punto de interrupción especificado se habría establecido previamente mediante una llamada anterior a [ICorDebugProcess2:: SetUnmanagedBreakpoint (](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- El `ClearUnmanagedBreakpoint` puede llamarse al método mientras se está ejecutando el proceso que se está depurando.  
+ Se puede llamar al método `ClearUnmanagedBreakpoint` mientras se está ejecutando el proceso que se está depurando.  
   
- El `ClearUnmanagedBreakpoint` método devuelve un código de error si el depurador se adjunta en modo de solo administrados o si no existe ningún punto de interrupción en la dirección especificada.  
+ El método `ClearUnmanagedBreakpoint` devuelve un código de error si el depurador está asociado en modo de solo administración o si no existe ningún punto de interrupción en la dirección especificada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -10,14 +10,12 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec23e0f272852088987fcc74767d3645778eab45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: da3a100bd552eaa3233642b006e0265adbcac1ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132211"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>Enumeración CorDebugDecodeEventFlagsWindows
 Proporciona información extra sobre los eventos de depuración en la plataforma Windows.  
@@ -32,22 +30,22 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|Indica que el evento de depuración es una primera excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
- El método [método icordebugprocess6::D ecodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) incluye un `dwFlags` parámetro que proporciona información adicional sobre un evento de depuración y cuyo valor depende de la arquitectura de destino. La enumeración `CorDebugDecodeEventFlagsWindows` se puede usar con eventos de depuración en la plataforma Windows.  
+ El método [método icordebugprocess6::D ecodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) incluye un parámetro de `dwFlags` que proporciona información adicional sobre un evento de depuración y cuyo valor depende de la arquitectura de destino. La enumeración `CorDebugDecodeEventFlagsWindows` se puede usar con eventos de depuración en la plataforma Windows.  
   
 > [!NOTE]
 > Esta enumeración está pensada solo para su uso en escenarios de depuración .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

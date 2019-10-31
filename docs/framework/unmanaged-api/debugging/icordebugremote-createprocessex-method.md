@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05384af8201fae8cf81650d38c99a5c44e6bd16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744778"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131296"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx (Método)
 Inicia un proceso en un equipo remoto en el depurador.  
@@ -49,62 +47,62 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parámetros  
  `pRemoteTarget`  
- [in] Puntero a un [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Se usa para determinar el equipo remoto en el que se iniciará el proceso.  
+ de Puntero a una [interfaz ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Se utiliza para determinar el equipo remoto en el que se va a iniciar el proceso.  
   
  `lpApplicationName`  
- [in] Puntero a una cadena terminada en null que especifica el módulo que va a ejecutar el proceso iniciado. El módulo se ejecuta en el contexto de seguridad del proceso que realiza la llamada.  
+ de Puntero a una cadena terminada en null que especifica el módulo que va a ser ejecutado por el proceso iniciado. El módulo se ejecuta en el contexto de seguridad del proceso de llamada.  
   
  `lpCommandLine`  
- [in] Puntero a una cadena terminada en null que especifica la línea de comandos que va a ejecutar el proceso iniciado.  
+ de Puntero a una cadena terminada en null que especifica la línea de comandos que va a ejecutar el proceso iniciado.  
   
  `lpProcessAttributes`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `lpThreadAttributes`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `bInheritHandles`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `dwCreationFlags`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `lpEnvironment`  
- [in] Puntero a un bloque de entorno para el nuevo proceso.  
+ de Puntero a un bloque de entorno para el nuevo proceso.  
   
  `lpCurrentDirectory`  
- [in] Puntero a una cadena terminada en null que especifica la ruta de acceso completa al directorio actual para el proceso. Si este parámetro es null, el nuevo proceso tendrá la misma unidad actual y el directorio que el proceso que realiza la llamada.  
+ de Puntero a una cadena terminada en null que especifica la ruta de acceso completa al directorio actual para el proceso. Si este parámetro es null, el nuevo proceso tendrá la misma unidad actual y el mismo directorio que el proceso que realiza la llamada.  
   
  `lpStartupInfo`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `lpProcessInformation`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `debuggingFlags`  
- [in] No se utiliza para la depuración remota.  
+ de No se usa para la depuración remota.  
   
  `ppProcess`  
- [out] Un puntero a la dirección de un objeto "ICorDebugProcess (interfaz)" que representa el proceso.  
+ enuncia Puntero a la dirección de un objeto "ICorDebugProcess interface" que representa el proceso.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
- Se inició correctamente el proceso en el equipo remoto y devuelve un "ICorDebugProcess (interfaz)" para la depuración.  
+ Inició correctamente el proceso en el equipo remoto y devolvió una "ICorDebugProcess interface" para la depuración.  
   
  E_FAIL (u otros códigos devueltos de E_)  
- No se puede iniciar el proceso en el equipo remoto y devolver una "interfaz ICorDebugProcess" para la depuración.  
+ No se puede iniciar el proceso en el equipo remoto y devolver una "ICorDebugProcess interface" para la depuración.  
   
 ## <a name="remarks"></a>Comentarios  
- No se admite la depuración en modo mixto en Silverlight.  
+ En Silverlight no se admite la depuración en modo mixto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl  
+ **Encabezado:** Cordebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** 4.5, 4, 3.5 SP1  
+ **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

@@ -21,14 +21,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130061"
 ---
 # <a name="reflection-in-net"></a>Reflexión en .NET
 
@@ -79,7 +77,7 @@ Estas clases en tiempo de ejecución son `internal` (`Friend` en Visual Basic). 
 |[Reflection and Generic Types](reflection-and-generic-types.md) (Reflexión y tipos genéricos)|Explica cómo la reflexión controla los parámetros de tipo y los argumentos de tipo de tipos genéricos y métodos genéricos.|  
 |[Consideraciones de seguridad sobre la reflexión](security-considerations-for-reflection.md)|Describe las reglas que determinan hasta qué punto se puede usar la reflexión para detectar la información sobre tipos y acceder a los tipos.|  
 |[Cargar y usar tipos dinámicamente](dynamically-loading-and-using-types.md)|Describe la interfaz de enlace personalizado de reflexión que admite enlace de tiempo de ejecución.|  
-|[Cómo: Cargar ensamblados en el contexto de solo reflexión](how-to-load-assemblies-into-the-reflection-only-context.md)|Describe el contexto de carga de solo reflexión. Muestra cómo cargar un ensamblado, cómo probar el contexto y cómo examinar los atributos aplicados a un ensamblado en el contexto de solo reflexión.|  
+|[Cargar ensamblados en el contexto de solo reflexión](how-to-load-assemblies-into-the-reflection-only-context.md)|Describe el contexto de carga de solo reflexión. Muestra cómo cargar un ensamblado, cómo probar el contexto y cómo examinar los atributos aplicados a un ensamblado en el contexto de solo reflexión.|  
 |[Acceso a atributos personalizados](accessing-custom-attributes.md)|Muestra cómo usar la reflexión para consultar la existencia de atributos y sus valores.|  
 |[Especificar nombres de tipo completos](specifying-fully-qualified-type-names.md)|Describe el formato de nombres de tipo completos en términos del formulario Backus-Naur (BNF) así como la sintaxis necesaria para especificar caracteres especiales, nombres de ensamblados, punteros, referencias y matrices.|  
 |[Cómo: Enlazar un delegado mediante la reflexión](how-to-hook-up-a-delegate-using-reflection.md)|Explica cómo crear un delegado para un método y enlazar el delegado a un evento. Explica cómo crear un método de control de eventos en tiempo de ejecución mediante <xref:System.Reflection.Emit.DynamicMethod>.|  

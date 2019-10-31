@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetStaticFieldSymbols (método)
+title: 'ICorDebugSymbolProvider:: Getstaticfieldsymbols ((método)'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bd3442adf58250a423438666ec1092bab61958b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c4211a60786016e25cc3e3419804817b57ab64e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138805"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols (método)
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider:: Getstaticfieldsymbols ((método)
 Obtiene los símbolos de campo estáticos que corresponden a una firma Typespec.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,11 +46,11 @@ HRESULT GetStaticFieldSymbols(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

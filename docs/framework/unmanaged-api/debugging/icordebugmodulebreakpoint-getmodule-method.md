@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 728b9fd287a23fd1933032906ff6a47b35285b4b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6f9d8cd79ac4107817d19fc0632aeaee287d253a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097013"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>ICorDebugModuleBreakpoint::GetModule (Método)
 Obtiene un puntero de interfaz a un "ICorDebugModule" que hace referencia al módulo en el que se establece este punto de interrupción.  
@@ -37,12 +35,12 @@ HRESULT GetModule (
   
 ## <a name="parameters"></a>Parámetros  
  `ppModule`  
- [out] Un puntero a la dirección de un `ICorDebugModule` interfaz que hace referencia al módulo en el que se establece el punto de interrupción.  
+ enuncia Puntero a la dirección de una interfaz `ICorDebugModule` que hace referencia al módulo en el que se establece el punto de interrupción.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

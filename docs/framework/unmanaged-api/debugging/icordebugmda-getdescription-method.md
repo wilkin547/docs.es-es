@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da57ecf0c153d902322798e1927c995a34cb93d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761987"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131449"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription (Método)
-Obtiene una cadena que contiene la descripción del Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtiene una cadena que contiene la descripción del Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,21 +38,21 @@ HRESULT GetDescription (
   
 ## <a name="parameters"></a>Parámetros  
  `cchName`  
- [in] El tamaño del búfer de cadena que almacenará la descripción.  
+ de Tamaño del búfer de cadena que almacenará la descripción.  
   
  `pcchName`  
- [out] Un puntero al número de bytes devuelto en el búfer de cadena.  
+ enuncia Puntero al número de bytes devuelto en el búfer de cadena.  
   
  `szName`  
- [out] Un búfer de cadena que contiene la descripción del MDA.  
+ enuncia Búfer de cadena que contiene la descripción del MDA.  
   
 ## <a name="remarks"></a>Comentarios  
- La cadena puede ser de longitud cero.  
+ La longitud de la cadena puede ser cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

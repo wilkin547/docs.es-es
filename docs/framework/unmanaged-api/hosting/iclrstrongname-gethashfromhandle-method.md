@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8f6878d714704370c3f43451c9995a7c5adb5d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 19d4518b7ec125df717b2f901bbd92cbd1b659bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748141"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135161"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle (Método)
-Genera un hash del contenido del archivo que tiene el identificador de archivo especificado, utilizando el algoritmo hash especificado.  
+Genera un hash sobre el contenido del archivo que tiene el identificador de archivo especificado, utilizando el algoritmo hash especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,29 +40,29 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>Parámetros  
  `hFile`  
- [in] El identificador del archivo que se aplica un algoritmo hash.  
+ de Identificador del archivo al que se va a aplicar un algoritmo hash.  
   
  `piHashAlg`  
- [in, out] Una constante que especifica el algoritmo hash. Usar cero para el algoritmo predeterminado.  
+ [in, out] Constante que especifica el algoritmo hash. Use cero para el algoritmo predeterminado.  
   
  `pbHash`  
- [out] El búfer hash devuelto.  
+ enuncia Búfer hash devuelto.  
   
  `cchHash`  
- [in] El tamaño máximo solicitado de `pbHash`.  
+ de Tamaño máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] El tamaño, en bytes, del devuelto `pbHash`.  
+ enuncia Tamaño, en bytes, del `pbHash`devuelto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

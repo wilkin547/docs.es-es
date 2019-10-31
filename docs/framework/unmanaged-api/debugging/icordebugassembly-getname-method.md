@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127170"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName (Método)
-Obtiene el nombre del ensamblado que esto `ICorDebugAssembly` representa la instancia.  
+Obtiene el nombre del ensamblado que esta instancia de `ICorDebugAssembly` representa.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,18 +40,18 @@ HRESULT GetName (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [out] Un puntero a un entero que especifica la longitud del nombre real.  
+ enuncia Puntero a un entero que especifica la longitud real del nombre.  
   
  `szName`  
- [out] Una matriz que almacena el nombre.  
+ enuncia Matriz que almacena el nombre.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetName` método devuelve la ruta de acceso y el nombre completo del ensamblado.  
+ El método `GetName` devuelve la ruta de acceso completa y el nombre de archivo del ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

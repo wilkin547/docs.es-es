@@ -1,17 +1,15 @@
 ---
-title: <Parameter>Elemento (.NET Native)
+title: Elemento <Parameter> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128199"
 ---
-# <a name="parameter-element-net-native"></a>\<Elemento Parameter > (.NET Native)
+# <a name="parameter-element-net-native"></a>\<elemento > Parameter (.NET Native)
 Aplica la directiva de reflexión al tipo del argumento que se pasa a un método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +33,7 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Nombre del parámetro. Por ejemplo, para la signatura del método `String.CompareTo(Object value)`, el valor del atributo `Name` es "value".|  
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|  
@@ -51,13 +49,13 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*parameter_name*|Nombre del parámetro de método al que se aplica la directiva. Por ejemplo, para la signatura del método `String.CompareTo(Object value)`, el valor del atributo `Name` es "value".|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -66,7 +64,7 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
   
@@ -76,6 +74,6 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
 ## <a name="see-also"></a>Vea también
 
 - [Elemento \<Method>](method-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

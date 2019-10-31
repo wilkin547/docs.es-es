@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c26a2df3f73af5ebd1f8b735d7662bb23ba4228
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134163"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual (Método)
-Lee datos desde la dirección de memoria virtual especificada en el búfer especificado.  
+Lee datos de la dirección de memoria virtual especificada en el búfer especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,21 +39,21 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [in] CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
+ de CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
   
  `buffer`  
- [out] Un puntero a un búfer que recibe los datos.  
+ enuncia Un puntero a un búfer que recibe los datos.  
   
  `bytesRequested`  
- [in] La longitud del búfer.  
+ de Longitud del búfer.  
   
  `bytesRead`  
- [out] Devuelve un puntero al número de bytes.  
+ enuncia Puntero al número de bytes devueltos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

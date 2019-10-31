@@ -2,14 +2,12 @@
 title: Introducción a .NET Native
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de887f73a5cc3968dda7e0e4dd14493883485d2b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128410"
 ---
 # <a name="getting-started-with-net-native"></a>Introducción a .NET Native
 
@@ -28,7 +26,7 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
 
 <a name="Step1"></a>
 
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Paso 1: Desarrollo y prueba de compilaciones de depuración de la aplicación para UWP
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Paso 1: desarrollar y probar compilaciones de depuración de la aplicación de UWP
 
 Tanto si va a desarrollar una nueva aplicación o migrar una ya existente, el procedimiento es el mismo para cualquier aplicación de Windows.
 
@@ -45,7 +43,7 @@ De forma predeterminada, las compilaciones de depuración se compilan JIT para h
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Paso 2: Controle el uso de reflexión y serialización adicionales
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Paso 2: Administrar el uso de reflexión y serialización adicionales
 
 Se agrega de forma automática un archivo de directivas en tiempo de ejecución, Default.rd.xml, al proyecto cuando lo crea. Si desarrolla en C#, se encuentra en la carpeta **Propiedades** de su proyecto. Si desarrolla en Visual Basic, se encuentra en la carpeta **Mi proyecto** de su proyecto.
 
@@ -60,7 +58,7 @@ Existen dos categorías de serializadores y ambas pueden requerir entradas extra
 
 - Serializadores no basados en la reflexión. Los serializadores de la biblioteca de clases .NET Framework, como las clases <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>y <xref:System.Xml.Serialization.XmlSerializer> , no usan reflexión. Sin embargo, requieren que el código se genere en función del objeto que se va a serializar o deserializar.  Para más información, consulte la sección "Serializadores de Microsoft" en [Serialization and Metadata](serialization-and-metadata.md).
 
-- Serializadores de terceros. Las bibliotecas de serialización de terceros, la más común de las cuales es el serializador JSON Newtonsoft, suelen basarse en la reflexión y requieren \*entradas en el archivo. Rd. XML para admitir la serialización y deserialización de objetos. Para más información, vea la sección "Serializadores de terceros" en [Serialization and Metadata](serialization-and-metadata.md).
+- Serializadores de terceros. Las bibliotecas de serialización de terceros, la más común de las cuales es el serializador JSON Newtonsoft, suelen basarse en la reflexión y requieren entradas en el archivo \*. Rd. XML para admitir la serialización y deserialización de objetos. Para más información, vea la sección "Serializadores de terceros" en [Serialization and Metadata](serialization-and-metadata.md).
 
 **Métodos basados en la reflexión**
 
@@ -79,11 +77,11 @@ Para obtener más información, consulta [APIs That Rely on Reflection](apis-tha
 
 <a name="Step3"></a>
 
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Paso 3: Implementar y probar las compilaciones de versión de la aplicación
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Paso 3: implementar y probar las compilaciones de lanzamiento de la aplicación
 
-Después de actualizar el archivo de directivas en tiempo de ejecución, puede recompilar e implementar compilaciones de depuración de la aplicación. Los archivos binarios de .NET Native están en el subdirectorio ILC.out del directorio especificado en el cuadro de texto **Ruta de acceso de los resultados de la compilación** del cuadro de diálogo **Propiedades** del proyecto (pestaña **Compilar** ). Los archivos binarios que no estén en esta carpeta no se han compilado con .NET Native. Pruebe la aplicación exhaustivamente y pruebe todos los escenarios, incluidos los escenarios de error, en cada una de las plataformas de destino.
+Después de actualizar el archivo de directivas en tiempo de ejecución, puede recompilar e implementar compilaciones de depuración de la aplicación. Los archivos binarios de .NET Native se colocan en el subdirectorio ILC. out del directorio especificado en el cuadro de texto **ruta de acceso** de los resultados de compilación del cuadro de diálogo **propiedades** del proyecto, pestaña **compilar** . los archivos binarios que no están en esta carpeta no se han compilado con .NET Native. Pruebe la aplicación exhaustivamente y pruebe todos los escenarios, incluidos los escenarios de error, en cada una de las plataformas de destino.
 
-Si la aplicación no funciona correctamente (especialmente en los casos en los que produce excepciones [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingInteropDataException](missinginteropdataexception-class-net-native.md) en tiempo de ejecución), siga las instrucciones de la sección [siguiente, paso 4: Resuelva manualmente los metadatos](#Step4)que faltan. Habilitar las primeras excepciones puede ayudarle a encontrar estos errores.
+Si la aplicación no funciona correctamente (en especial, en los casos donde se generen excepciones [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingInteropDataException](missinginteropdataexception-class-net-native.md) en tiempo de ejecución), siga las instrucciones de la siguiente sección, [Paso 4: Resolver manualmente los metadatos que faltan](#Step4). Habilitar las primeras excepciones puede ayudarle a encontrar estos errores.
 
 Cuando haya probado y depurado las compilaciones de depuración de la aplicación y esté seguro de que ha eliminado las excepciones [MissingMetadataException](missingmetadataexception-class-net-native.md) y [MissingInteropDataException](missinginteropdataexception-class-net-native.md) , debe probar la aplicación como una aplicación optimizada de .net Native. Para ello, cambie la configuración del proyecto activo de **Depurar** a **Liberar**.
 
@@ -117,18 +115,18 @@ Considere las siguientes cuestiones si se trata de una excepción de metadatos q
 
 Si desea ver algunos ejemplos específicos de control de excepciones y otros problemas que se producen al probar la aplicación, consulte:
 
-- [Ejemplo: Controlar excepciones al enlazar datos](example-handling-exceptions-when-binding-data.md)
+- [Ejemplo: control de excepciones al enlazar datos](example-handling-exceptions-when-binding-data.md)
 
-- [Ejemplo: Solución de problemas de programación dinámica](example-troubleshooting-dynamic-programming.md)
+- [Ejemplo: solucionar problemas de programación dinámica](example-troubleshooting-dynamic-programming.md)
 
 - [Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET](runtime-exceptions-in-net-native-apps.md)
 
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Instalación y configuración de .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native and Compilation](net-native-and-compilation.md) (.NET Native y compilación)
-- [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)
+- [Reflexión y .NET Native](reflection-and-net-native.md)
 - [APIs That Rely on Reflection](apis-that-rely-on-reflection.md) (API basadas en Reflection)
 - [Serialización y metadatos](serialization-and-metadata.md)
-- [Migrar la aplicación de la Tienda Windows a .NET Native](migrating-your-windows-store-app-to-net-native.md)
+- [Migrar la aplicación de la Tienda Windows a .NET Native](migrating-your-windows-store-app-to-net-native.md)

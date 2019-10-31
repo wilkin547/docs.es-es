@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123845"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged (Método)
 Obtiene un valor que indica si esta cadena ejecuta código administrado.  
@@ -37,12 +35,12 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Parámetros  
  `pManaged`  
- [out] `true` si esta cadena ejecuta código administrado; en caso contrario, `false`.  
+ [out] `true` si esta cadena ejecuta código administrado; de lo contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b842f44711d38a996b9d710dbe8bd369d30c5443
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051882"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123715"
 ---
 # <a name="calling-a-dll-function"></a>Llamar a una función DLL
 Aunque llamar a funciones DLL no administradas es prácticamente idéntico a llamar a otro código administrado, hay diferencias que pueden hacer que las funciones DLL parezcan confusas al principio. En esta sección se presentan temas que describen algunos de los problemas inusuales relacionados con las llamadas.  

@@ -2,21 +2,19 @@
 title: <EnableAmPmParseAdjustment> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252631"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117367"
 ---
-# <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment >, elemento
+# <a name="enableampmparseadjustment-element"></a>\<elemento > EnableAmPmParseAdjustment
 Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado de reglas para analizar las cadenas de fecha que contienen un día, un mes, una hora y un designador AM/PM.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,13 +27,13 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`enabled`|Atributo necesario.<br /><br /> Especifica si los métodos de análisis de fecha y hora usan un conjunto ajustado de reglas para analizar las cadenas de fecha que contienen solo un día, un mes, una hora y un designador AM/PM.|  
   
 ### <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|Los métodos de análisis de fecha y hora no usan reglas ajustadas para analizar cadenas de fecha que contengan solo un día, un mes, una hora y un designador AM/PM.|  
 |1|Los métodos de análisis de fecha y hora usan reglas ajustadas para analizar las cadenas de fecha que contienen solo un día, un mes, una hora y el designador AM/PM.|  
@@ -45,13 +43,13 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<EnableAmPmParseAdjustment>` elemento controla el modo en que los siguientes métodos analizan una cadena de fecha que contiene un día y un mes numéricos seguidos de una hora y un designador AM/PM (por ejemplo, "4/10 6 AM"):  
+ El elemento `<EnableAmPmParseAdjustment>` controla el modo en que los siguientes métodos analizan una cadena de fecha que contiene un día y un mes numéricos seguidos de una hora y un designador AM/PM (por ejemplo, "4/10 6 AM"):  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,7 +63,7 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
  No se ven afectados otros patrones.  
   
- El `<EnableAmPmParseAdjustment>` elemento no tiene ningún efecto en <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>los <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>métodos <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>,, <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> y.  
+ El elemento `<EnableAmPmParseAdjustment>` no tiene ningún efecto en los métodos <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>y <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 > En .NET Core y .NET Native, las reglas de análisis de AM/PM ajustadas están habilitadas de forma predeterminada.  
@@ -74,14 +72,14 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
  Si está habilitada la regla de ajuste de análisis, el método de análisis interpreta el día y el mes como pertenecientes al año actual e interpreta la hora como la hora del reloj de 12 horas.  
   
- En la tabla siguiente se muestra la diferencia en <xref:System.DateTime> el valor cuando <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> el método se utiliza para analizar la cadena "" 4/10 6 AM "con `<EnableAmPmParseAdjustment>` la propiedad `enabled` del elemento establecida en" 0 "o" 1 ". Supone que la fecha de hoy es el 5 de enero de 2017 y muestra la fecha como si estuviera formateada con la cadena de formato "G" de la referencia cultural especificada.  
+ En la tabla siguiente se muestra la diferencia en el valor <xref:System.DateTime> cuando el método <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> se utiliza para analizar la cadena "" 4/10 6 AM "con la propiedad `enabled` del elemento `<EnableAmPmParseAdjustment>` establecida en" 0 "o" 1 ". Supone que la fecha de hoy es el 5 de enero de 2017 y muestra la fecha como si estuviera formateada con la cadena de formato "G" de la referencia cultural especificada.  
   
-|Nombre de referencia cultural|enabled="0"|habilitado = "1"|  
+|Nombre de referencia cultural|habilitado = "0"|habilitado = "1"|  
 |------------------|------------------|------------------|  
 |en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Vea también
 
-- [\<Elemento > en tiempo de ejecución](runtime-element.md)
+- [Elemento > en tiempo de ejecución de \<](runtime-element.md)
 - [Elemento \<configuration>](../configuration-element.md)

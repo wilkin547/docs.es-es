@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugThreadEnum
+title: ICorDebugThreadEnum (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThreadEnum
@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b7e5b0a9f4166923a559eb3886aa0f9cabbcd72
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6969c23bcf3ea19bf6e404996d477f669f0eee5b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122406"
 ---
-# <a name="icordebugthreadenum-interface"></a>Interfaz ICorDebugThreadEnum
+# <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum (Interfaz)
 Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugThread.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtiene el número especificado de `ICorDebugThread` instancias de la enumeración, comenzando en la posición actual.|  
+|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtiene el número especificado de instancias de `ICorDebugThread` de la enumeración, comenzando en la posición actual.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -38,11 +36,11 @@ Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugThread.
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

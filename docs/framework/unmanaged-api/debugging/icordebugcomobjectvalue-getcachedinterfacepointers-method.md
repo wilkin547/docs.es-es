@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdbec0101de269b3d5b09e750d552c993a0198ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748482"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125513"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers (Método)
-Obtiene los punteros de interfaz sin formato almacenados en caché en el contenedor invocable en tiempo de ejecución actual (RCW).  
+Obtiene los punteros de interfaz sin formato almacenados en memoria caché en el contenedor RCW (Runtime Callable wrapper) actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +35,23 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Parámetros  
  `bIInspectableOnly`  
- [in] Un valor que indica si el método devolverá solo las interfaces de Windows en tiempo de ejecución (`IInspectable` interfaces) o todas las interfaces COM que se almacenan en caché por el contenedor invocable en tiempo de ejecución (RCW).  
+ de Valor que indica si el método devolverá solo Windows Runtime interfaces (interfaces`IInspectable`) o todas las interfaces COM almacenadas en caché por el contenedor RCW (Runtime Callable wrapper).  
   
  `celt`  
- [in] El número de objetos cuyas direcciones se van a recuperar.  
+ de El número de objetos cuyas direcciones se van a recuperar.  
   
  `pceltFetched`  
- [out] Un puntero al número de `CORDB_ADDRESS` valores devueltos realmente en `ptrs`.  
+ enuncia Puntero al número de valores `CORDB_ADDRESS` realmente devueltos en `ptrs`.  
   
  `ptrs`  
- Un puntero a la dirección inicial de una matriz de `CORDB_ADDRESS` valores que contienen las direcciones de almacenar en caché los objetos de interfaz.  
+ Puntero a la dirección de inicio de una matriz de valores de `CORDB_ADDRESS` que contienen las direcciones de los objetos de interfaz almacenados en memoria caché.  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14b10b94f66a6b5434befeac1cd9562cb8a0f27f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130704"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage (Método)
-Notifica al depurador que un subproceso de common language runtime (CLR) administrado ha llamado a un método el <xref:System.Diagnostics.EventLog> clase para registrar un evento.  
+Notifica al depurador que un subproceso administrado Common Language Runtime (CLR) ha llamado a un método en la clase <xref:System.Diagnostics.EventLog> para registrar un evento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,24 +39,24 @@ HRESULT LogMessage (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado que registró el evento.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado que registró el evento.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso administrado.  
   
  `lLevel`  
- [in] Un valor de la [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeración que indica el nivel de gravedad del mensaje descriptivo que se escribió en el registro de eventos.  
+ de Un valor de la enumeración [LoggingLevelEnum (](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) que indica el nivel de gravedad del mensaje descriptivo que se escribió en el registro de eventos.  
   
  `pLogSwitchName`  
- [in] Un puntero al nombre del modificador de seguimiento.  
+ de Puntero al nombre del modificador de seguimiento.  
   
  `pMessage`  
- [in] Un puntero al mensaje que se escribió en el registro de eventos.  
+ de Un puntero al mensaje que se escribió en el registro de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

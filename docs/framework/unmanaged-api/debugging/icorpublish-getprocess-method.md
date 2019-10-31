@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2dcdaed34044122dd2a61c9e0b5bb02f8cc0d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774277"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121786"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess (Método)
-Obtiene un [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instancia que representa el proceso con el identificador especificado.  
+Obtiene una instancia de [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) que representa el proceso con el identificador especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>Parámetros  
  `pid`  
- [in] El identificador del proceso.  
+ de Identificador del proceso.  
   
  `ppProcess`  
- [out] Un puntero a la dirección de un `ICorPublishProcess` instancia que representa el proceso.  
+ enuncia Puntero a la dirección de una instancia de `ICorPublishProcess` que representa el proceso.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetProcess` se produce un error si el proceso no existe o no es un proceso administrado que se puede depurar por el usuario actual.  
+ `GetProcess` produce un error si el proceso no existe o no es un proceso administrado que el usuario actual puede depurar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 284a74823b01305f8c6e025f70bb9209c8607b7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137075"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType (Método)
 Obtiene el tipo primitivo de este objeto "ICorDebugValue".  
@@ -37,17 +35,17 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Parámetros  
  `pType`  
- [out] Un puntero a un valor de la enumeración "CorElementType" que indica el tipo de valor.  
+ enuncia Un puntero a un valor de la enumeración "CorElementType" que indica el tipo del valor.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el objeto es un tipo complejo de tiempo de ejecución, ese tipo se puede examinar a través de las subclases adecuadas de la `ICorDebugValue` interfaz. Por ejemplo, "ICorDebugObjectValue", que hereda de `ICorDebugValue`, representa un tipo complejo.  
+ Si el objeto es un tipo complejo en tiempo de ejecución, ese tipo se puede examinar en las subclases adecuadas de la interfaz `ICorDebugValue`. Por ejemplo, "ICorDebugObjectValue", que hereda de `ICorDebugValue`, representa un tipo complejo.  
   
- El `GetType` y [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) métodos cada devuelven información sobre el tipo de valor. Ambos son reemplazados por los con elementos genéricos [Icordebugvalue2](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) método.  
+ Los métodos `GetType` e [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) devuelven información sobre el tipo de un valor. Ambos se sustituyen por el método [ICorDebugValue2:: GetExactType (](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) compatible con genéricos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

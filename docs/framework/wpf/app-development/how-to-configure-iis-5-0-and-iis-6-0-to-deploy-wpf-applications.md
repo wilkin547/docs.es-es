@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
+title: 'Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611504"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124424"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Procedimiento Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
 
-Puede implementar una [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación desde la mayoría de los servidores Web, siempre y cuando estén configurados con los tipos MIME (Extensiones multipropósito de correo Internet) adecuados. De forma predeterminada, Microsoft Internet Information Services (IIS) 7,0 se configura con estos tipos MIME, pero Microsoft Internet Information Services (IIS) 5,0 y Microsoft Internet Information Services (IIS) 6,0 no.
+Puede implementar una aplicación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] desde la mayoría de los servidores Web, siempre y cuando estén configurados con los tipos MIME (Extensiones multipropósito de correo Internet) adecuados. De forma predeterminada, Microsoft Internet Information Services (IIS) 7,0 se configura con estos tipos MIME, pero Microsoft Internet Information Services (IIS) 5,0 y Microsoft Internet Information Services (IIS) 6,0 no.
 
-En este tema se describe cómo configurar Microsoft Internet Information Services (IIS) 5,0 y Microsoft Internet Information Services (IIS) 6,0 para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementar aplicaciones de.
+En este tema se describe cómo configurar Microsoft Internet Information Services (IIS) 5,0 y Microsoft Internet Information Services (IIS) 6,0 para implementar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones.
 
 > [!NOTE]
 > Puede comprobar la cadena *UserAgent* en el registro para determinar si un sistema tiene .NET Framework instalado. Para obtener más información y un script que examina la cadena *UserAgent* para determinar si .NET Framework está instalado en un sistema, consulte [detectar si el .NET Framework 3,0 está instalado](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -51,7 +51,7 @@ Debe ajustar el valor de la expiración del contenido a 1 minuto. En el procedim
 
 Debe registrar varios tipos MIME y extensiones de archivo para que el explorador del sistema del cliente pueda cargar el controlador correcto. Debe agregar los tipos siguientes:
 
-|Extensión|Tipo MIME|
+|Comprobación de actualización|Tipo MIME|
 |---------------|---------------|
 |.manifest|application/manifest|
 |.xaml|application/xaml+xml|
@@ -63,7 +63,7 @@ Debe registrar varios tipos MIME y extensiones de archivo para que el explorador
 > [!NOTE]
 > No es necesario registrar los tipos MIME o las extensiones de archivo en los sistemas cliente. Se registran automáticamente al instalar Microsoft .NET Framework.
 
-El siguiente ejemplo de Microsoft Visual Basic Scripting Edition (VBScript) agrega automáticamente los tipos MIME necesarios a IIS. Para usar el script, copie el código en un archivo .vbs de su servidor. Después, ejecute el script mediante la ejecución del archivo desde la línea de comandos o haga doble clic en él desde [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+El siguiente ejemplo de Microsoft Visual Basic Scripting Edition (VBScript) agrega automáticamente los tipos MIME necesarios a IIS. Para usar el script, copie el código en un archivo .vbs de su servidor. A continuación, ejecute el archivo desde la línea de comandos o haga doble clic en el archivo en el explorador de Microsoft Windows para ejecutar el script.
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7bce241d10051e4c6be94cdfa40de23773fb0bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4133145c7bea1fb3c018d809b9fea3de38270619
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127455"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet función)
 
@@ -49,16 +47,16 @@ de Este parámetro no se utiliza.
 de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethod`\
-de Nombre de la propiedad. `wszProperty`debe apuntar a un `LPCWSTR`válido.
+de Nombre de la propiedad. `wszProperty` debe apuntar a un `LPCWSTR`válido.
 
 `ppQualSet`\
-enuncia Recibe el puntero de interfaz que permite el acceso a los calificadores de la propiedad. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se establece en apuntar `null`a.
+enuncia Recibe el puntero de interfaz que permite el acceso a los calificadores de la propiedad. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se establece para que apunte a `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
@@ -75,13 +73,13 @@ Solo se admite una llamada a esta función si el objeto actual es una definició
 
 Dado que cada método puede tener sus propios calificadores, el [puntero IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite al llamador agregar, editar o eliminar estos calificadores.
 
-Dado que las propiedades del sistema no tienen calificadores, `WBEM_E_SYSTEM_PROPERTY` la función devuelve si intenta obtener un puntero [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) para una propiedad del sistema.
+Dado que las propiedades del sistema no tienen calificadores, la función devuelve `WBEM_E_SYSTEM_PROPERTY` si intenta obtener un puntero [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) para una propiedad del sistema.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

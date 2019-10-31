@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798340"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127297"
 ---
 # <a name="qualifierset_delete-function"></a>QualifierSet_Delete función)
 Elimina un calificador específico por el nombre.  
@@ -53,7 +51,7 @@ de Nombre del calificador que se va a eliminar.
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | El parámetro `wszName` no es válido. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | No se pudo eliminar este calificador. |
@@ -65,12 +63,12 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemQualifierSet::D iminar](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-Debido a las reglas de propagación del calificador, un calificador determinado se puede haber heredado de otro objeto y simplemente se ha invalidado en la clase o instancia actual. En este caso, el `QualifierSet_Delete` método restablece el calificador a su valor heredado original. En este caso, la función devuelve el código `WBEM_S_RESET_TO_DEFAULT`de estado.
+Debido a las reglas de propagación del calificador, un calificador determinado se puede haber heredado de otro objeto y simplemente se ha invalidado en la clase o instancia actual. En este caso, el método `QualifierSet_Delete` restablece el calificador a su valor heredado original. En este caso, la función devuelve el código de estado `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

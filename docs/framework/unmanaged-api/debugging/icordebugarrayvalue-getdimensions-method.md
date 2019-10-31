@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088508"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions (Método)
-Obtiene el número de elementos en cada dimensión de esta matriz.  
+Obtiene el número de elementos de cada dimensión de esta matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,17 +37,17 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>Parámetros  
  `cdim`  
- [in] El número de dimensiones de este objeto ICorDebugArrayValue.  
+ de Número de dimensiones de este objeto ICorDebugArrayValue.  
   
- Este valor también es el tamaño de la `dims` matriz porque su tamaño es igual al número de dimensiones de la `ICorDebugArrayValue` objeto.  
+ Este valor también es el tamaño de la matriz de `dims` porque su tamaño es igual al número de dimensiones del objeto `ICorDebugArrayValue`.  
   
  `dims`  
- [out] Una matriz de enteros, cada uno de los cuales especifica el número de elementos de una dimensión en este `ICorDebugArrayValue` objeto.  
+ enuncia Matriz de enteros, cada uno de los cuales especifica el número de elementos de una dimensión en este objeto `ICorDebugArrayValue`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

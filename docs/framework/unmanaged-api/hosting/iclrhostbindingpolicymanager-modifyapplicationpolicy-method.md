@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5323538447e083a0c727e43261dd68337182b9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141079"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy (Método)
-Modifica la directiva de enlace para el ensamblado especificado y crea una nueva versión de la directiva.  
+Modifica la Directiva de enlace para el ensamblado especificado y crea una nueva versión de la Directiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,48 +41,48 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="parameters"></a>Parámetros  
  `pwzSourceAssemblyIdentity`  
- [in] La identidad del ensamblado que se va a modificar.  
+ de La identidad del ensamblado que se va a modificar.  
   
  `pwzTargetAssemblyIdentity`  
- [in] La nueva identidad del ensamblado modificado.  
+ de Nueva identidad del ensamblado modificado.  
   
  `pbApplicationPolicy`  
- [in] Un puntero a un búfer que contiene los datos de la directiva de enlace del ensamblado que se va a modificar.  
+ de Puntero a un búfer que contiene los datos de la Directiva de enlace del ensamblado que se va a modificar.  
   
  `cbAppPolicySize`  
- [in] El tamaño de la directiva de enlace que se debe reemplazar.  
+ de Tamaño de la Directiva de enlace que se va a reemplazar.  
   
  `dwPolicyModifyFlags`  
- [in] Una combinación OR lógica de [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) valores, que indica el control de la redirección.  
+ de Una combinación lógica o lógica de valores de [ehostbindingpolicymodifyflags (](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) , que indica el control de la redirección.  
   
  `pbNewApplicationPolicy`  
- [out] Un puntero a un búfer que contiene los nuevos datos de la directiva de enlace.  
+ enuncia Un puntero a un búfer que contiene los nuevos datos de la Directiva de enlace.  
   
  `pcbNewAppPolicySize`  
- [in, out] Un puntero al tamaño del búfer de nueva directiva de enlace.  
+ [in, out] Puntero al tamaño del nuevo búfer de directiva de enlace.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|La directiva se modificó correctamente.|  
+|S_OK|La Directiva se modificó correctamente.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` o `pwzTargetAssemblyIdentity` era una referencia nula.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` es demasiado pequeño.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Después de un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Una vez que un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ModifyApplicationPolicy` método se puede llamar dos veces. La primera llamada debe proporcionar un valor null para el `pbNewApplicationPolicy` parámetro. Esta llamada devolverá el valor necesario para `pcbNewAppPolicySize`. La segunda llamada debe proporcionar este valor para `pcbNewAppPolicySize`y señale a un búfer de ese tamaño para `pbNewApplicationPolicy`.  
+ Se puede llamar al método `ModifyApplicationPolicy` dos veces. La primera llamada debe proporcionar un valor null para el parámetro `pbNewApplicationPolicy`. Esta llamada devolverá con el valor necesario para `pcbNewAppPolicySize`. La segunda llamada debe proporcionar este valor para `pcbNewAppPolicySize`y apuntar a un búfer de ese tamaño para `pbNewApplicationPolicy`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

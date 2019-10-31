@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ec29aa748c437199434fa1394e1a00c82154447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139390"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub (Método)
-Obtiene un valor que indica si es una dirección dentro de un código auxiliar que provocará una transición a código administrado.  
+Obtiene un valor que indica si una dirección está dentro de un código auxiliar que producirá una transición a código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [in] Un `CORDB_ADDRESS` valor que especifica la dirección en cuestión.  
+ de Un valor `CORDB_ADDRESS` que especifica la dirección en cuestión.  
   
  `pbTransitionStub`  
- [out] Un puntero a un valor booleano que es `true` si la dirección especificada está dentro de un código auxiliar que provocará una transición a código administrado; en caso contrario *`pbTransitionStub` es `false`.  
+ enuncia Un puntero a un valor booleano que es `true` si la dirección especificada está dentro de un código auxiliar que producirá una transición a código administrado. de lo contrario, *`pbTransitionStub` es `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- El `IsTransitionStub` método puede utilizarse por código no administrado de ejecución paso a paso para decidir cuándo se debe devolver el control de ejecución paso a paso para el componente administrado.  
+ El código de paso no administrado puede utilizar el método `IsTransitionStub` para decidir cuándo devolver el control de versiones al stepper administrado.  
   
- También puede códigos auxiliares de transición de identidad echando un vistazo a la información en el archivo portable ejecutable (PE).  
+ También puede identificar los códigos auxiliares de transición examinando la información del archivo portable ejecutable (PE).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

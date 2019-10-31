@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629938"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085159"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction (Método)
 
 Configura una llamada a la función especificada.
 
-Este método está obsoleto en .NET Framework versión 2.0. Use [ICorDebugEval2:: CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) en su lugar.
+Este método está obsoleto en la .NET Framework versión 2,0. Use [ICorDebugEval2:: CallParameterizedFunction (](icordebugeval2-callparameterizedfunction-method.md) en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,27 +41,27 @@ HRESULT CallFunction (
 ## <a name="parameters"></a>Parámetros
 
 `pFunction`\
-[in] Puntero a un objeto ICorDebugFunction que especifica la función debe llamarse.
+de Puntero a un objeto ICorDebugFunction que especifica la función a la que se va a llamar.
 
 `nArgs`\
-[in] El número de argumentos de la función.
+de El número de argumentos de la función.
 
 `ppArgs`\
-[in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que especifica un argumento que se pasará a la función.
+de Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que especifica un argumento que se va a pasar a la función.
 
 ## <a name="remarks"></a>Comentarios
 
-Si la función es virtual, `CallFunction` llevará a cabo distribución virtual. Si la función está en un dominio de aplicación diferente, se producirá una transición siempre y cuando todos los argumentos son también en ese dominio de aplicación.
+Si la función es virtual, `CallFunction` realizará el envío virtual. Si la función está en un dominio de aplicación diferente, se producirá una transición siempre y cuando todos los argumentos estén también en ese dominio de aplicación.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .NET framework:** 1.1, 1.0
+**.NET Framework versiones:** 1,1, 1,0
 
 ## <a name="see-also"></a>Vea también
 

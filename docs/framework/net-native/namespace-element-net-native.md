@@ -1,17 +1,15 @@
 ---
-title: <Namespace>Elemento (.NET Native)
+title: Elemento <Namespace> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049427"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128259"
 ---
-# <a name="namespace-element-net-native"></a>\<Elemento namespace > (.NET Native)
+# <a name="namespace-element-net-native"></a>\<espacio de nombres > elemento (.NET Native)
 Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio de nombres especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +33,7 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del espacio de nombres.|  
 |`Activate`|Reflexión|Atributo opcional. Controla el acceso en tiempo de ejecución a los constructores para permitir la activación de instancias.|  
@@ -51,19 +49,19 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*namespace_name*|El espacio de nombres. Si \<Namespace> es un elemento secundario de un elemento [\<Application>](application-element-net-native.md), [\<Library>](library-element-net-native.md) o [\<Assembly>](assembly-element-net-native.md), *namespace_name* debe ser un nombre de espacio de nombres completo. Si \<Namespace> es un elemento secundario de otro elemento \<Namespace>, *namespace_name* debe ser un nombre de espacio de nombres relativo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|La configuración que se aplica a este tipo de directiva para todos los tipos del espacio de nombres. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`<Namespace>`|Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un espacio de nombres primario.|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo.|  
@@ -71,7 +69,7 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El elemento [\<Application>](application-element-net-native.md) puede tener cero, uno o más elementos [\<Assembly>](assembly-element-net-native.md).|  
 |[\<Assembly>](assembly-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un ensamblado especificado.|  
@@ -86,5 +84,5 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
 ## <a name="see-also"></a>Vea también
 
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

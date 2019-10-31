@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4af3d73a4c45654d1d40ef2fbf44a0e2b3e1bf32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a55b43f3629cebb0ba1d3a7ac1802126874418d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913712"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122114"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask (Método)
 Notifica al host que debe desactivar la tarea actual.  
@@ -41,9 +39,9 @@ HRESULT SwitchToTask (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask`se devolvió correctamente.|  
+|S_OK|`SwitchToTask` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -54,14 +52,14 @@ HRESULT SwitchToTask (
  El host puede cambiar en otra tarea según sea necesario o si es necesario.  
   
 > [!NOTE]
-> `SwitchToTask`no especifica a qué tarea debe cambiar el host; especifica solo la tarea de la que debe cambiar.  
+> `SwitchToTask` no especifica a qué tarea debe cambiar el host; especifica solo la tarea de la que debe cambiar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

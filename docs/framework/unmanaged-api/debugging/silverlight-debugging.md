@@ -5,14 +5,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7af03197a43976c47b7ddc30346d622e6b97207
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139145"
 ---
 # <a name="silverlight-debugging"></a>Depuración en Silverlight
 En los temas de esta sección describen el entorno y las interfaces que Common Language Runtime (CLR) proporciona para admitir la depuración de aplicaciones basadas en Silverlight que se ejecutan en el sistema operativo Windows, o en la plataforma Macintosh.  
@@ -22,7 +20,7 @@ En los temas de esta sección describen el entorno y las interfaces que Common L
  Proporciona un mecanismo para enumerar los CLR de un proceso.  
   
  [CloseCLREnumeration (Función)](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- Cierra los eventos de inicio continuo de CLR válidos ubicados en una matriz de identificadores devueltos por la [EnumerateCLRs (función)](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)y libera la memoria para las matrices de ruta de acceso de identificadores y cadenas.  
+ Cierra los eventos válidos continue-startup de CLR que se encuentran en una matriz de identificadores devueltos por la [función enumerateclrs (](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)y libera la memoria para las matrices de rutas de acceso de identificador y de cadena.  
   
  [CreateCoreClrDebugTarget (Función)](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  Crea una conexión a un destino remoto para la enumeración de procesos y tiempos de ejecución.  
@@ -33,8 +31,8 @@ En los temas de esta sección describen el entorno y las interfaces que Common L
  [CreateVersionStringFromModule (Función)](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)  
  Crea una cadena de versión a partir de una ruta de acceso de CLR en un proceso de destino.  
   
- [CreateDebuggingInterfaceFromVersion (Función)](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- Acepta una cadena de versión CLR devuelto desde [CreateVersionStringFromModule (función)](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)de función y devuelve una interfaz de depurador correspondiente.  
+ [CreateDebuggingInterfaceFromVersion (función)](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
+ Acepta una cadena de versión de CLR devuelta por la función de [función createversionstringfrommodule (](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)y devuelve una interfaz de depurador correspondiente.  
   
  [CoreClrDebugProcInfo (estructura)](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  Representa un proceso que se ejecuta en un equipo remoto.  

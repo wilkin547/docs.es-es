@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489e240af3f26e82f2459ac4b4dbd944639f78fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127448"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet función)
 Recupera el calificador establecido para una instancia o una definición de clase.
@@ -53,7 +51,7 @@ enuncia Recibe el puntero de interfaz que permite el acceso a los calificadores 
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
@@ -68,9 +66,9 @@ Esta función contiene una llamada al método [IWbemClassObject:: GetQualifierSe
 El [puntero IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite al autor de la llamada agregar, editar o eliminar estos calificadores. Tales calificadores agregados, editados o eliminados se aplican a la definición de clase o instancia completa.
 
 ## <a name="requirements"></a>Requisitos  
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

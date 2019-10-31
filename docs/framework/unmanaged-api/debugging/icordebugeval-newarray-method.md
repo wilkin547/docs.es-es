@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9597d05e46c2d41ab1f24a073c028561e944fb59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca0844e4d2b1cad65266d58c6cda74de203d1758
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137658"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray (Método)
-Asigna una nueva matriz del tipo de elemento especificado y las dimensiones.  
+Asigna una nueva matriz del tipo de elemento y las dimensiones especificadas.  
   
- Este método está obsoleto en .NET Framework versión 2.0. Use [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) en su lugar.  
+ Este método está obsoleto en la .NET Framework versión 2,0. Use [ICorDebugEval2:: NewParameterizedArray (](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,28 +41,28 @@ HRESULT NewArray (
   
 ## <a name="parameters"></a>Parámetros  
  `elementType`  
- [in] Un valor de la enumeración CorElementType que especifica el tipo de elemento de la matriz.  
+ de Un valor de la enumeración CorElementType que especifica el tipo de elemento de la matriz.  
   
  `pElementClass`  
- [in] Un puntero a un objeto ICorDebugClass que especifica la clase del elemento. Este valor puede ser null si el tipo de elemento es un tipo primitivo.  
+ de Un puntero a un objeto ICorDebugClass que especifica la clase del elemento. Este valor puede ser null si el tipo de elemento es un tipo primitivo.  
   
  `rank`  
- [in] El número de dimensiones de la matriz. En .NET Framework 2.0, este valor debe ser 1.  
+ de Número de dimensiones de la matriz. En el .NET Framework 2,0, este valor debe ser 1.  
   
  `dims`  
- [in] El tamaño, en bytes, de cada dimensión de la matriz.  
+ de Tamaño, en bytes, de cada dimensión de la matriz.  
   
  `lowBounds`  
- [in] Opcional. El límite inferior de cada dimensión de la matriz. Si este valor se omite, se asume un límite inferior de cero para cada dimensión.  
+ [in] Opcional. Límite inferior de cada dimensión de la matriz. Si se omite este valor, se supone un límite inferior de cero para cada dimensión.  
   
 ## <a name="remarks"></a>Comentarios  
  La matriz siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** 1.1, 1.0
+ **.NET Framework versiones:** 1,1, 1,0

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107355"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey función)
 Garantiza que la clave de cliente cuenta con la seguridad adecuada.  
@@ -41,9 +39,9 @@ Si la función se ejecuta correctamente, el valor devuelto es `ERROR_SUCCESS` (0
 Si se produce un error en la función, el valor devuelto es un código de error distinto de cero definido en *WinError. h*.
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.def  
+ **Encabezado:** WMINet_Utils. def  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

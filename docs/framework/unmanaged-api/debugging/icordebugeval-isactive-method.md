@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be7dde136c5bc26148468d3d8031426b17f44292
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd10af53d7803964ed6e699ce5328aa8a860216c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753118"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085019"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive (Método)
-Obtiene un valor que indica si este objeto ICorDebugEval está ejecutando actualmente.  
+Obtiene un valor que indica si este objeto ICorDebugEval se está ejecutando actualmente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>Parámetros  
  `pbActive`  
- [out] Puntero a un valor que indica si esta evaluación está activa.  
+ enuncia Puntero a un valor que indica si esta evaluación está activa.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

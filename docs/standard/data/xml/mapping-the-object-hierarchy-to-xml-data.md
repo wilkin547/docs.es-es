@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042567"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124247"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Asignar la jerarquía de objetos a datos XML
 Cuando un documento XML está en la memoria, la representación conceptual es un árbol. Al programar, hay una jerarquía de objetos para tener acceso a los nodos del árbol. En el ejemplo siguiente se muestra cómo se convierte el contenido XML en nodos.  
@@ -32,7 +30,7 @@ Cuando un documento XML está en la memoria, la representación conceptual es un
   
  La entrada se representa en la memoria como el siguiente árbol de nodos con la propiedad de tipo de nodo asignada:  
   
- ![Ejemplo de árbol de nodos](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![árbol de nodos de ejemplo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Representación de árbol de nodo de libro y título  
   
  El elemento `book` se convierte en un objeto **XmlElement**, el siguiente elemento, `title`, también se convierte en un objeto **XmlElement**, mientras que el contenido del elemento se convierte en un objeto **XmlText**. Al observar los métodos y las propiedades del objeto **XmlElement**, estos difieren de los disponibles en un objeto **XmlText**. Por tanto, es fundamental saber en qué tipo de nodo se convierte el marcado XML, puesto que determina las acciones que se pueden realizar.  
@@ -178,7 +176,7 @@ public class Sample
   
  La salida del ejemplo revela la asignación de los datos a los tipos de nodo.  
   
- **Salida**  
+ **Resultado**  
   
 ```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
@@ -186,7 +184,7 @@ public class Sample
   
  Si se toma una línea de la entrada cada vez y se utiliza la salida generada por el código, se puede utilizar la tabla siguiente para analizar qué prueba de nodo genera qué línea de salida y, por tanto, se puede comprender en qué tipo de nodo se convierten los datos XML.  
   
-|Entrada|Salida|Prueba de tipo de nodo|  
+|Entrada|Resultados|Prueba de tipo de nodo|  
 |-----------|------------|--------------------|  
 |\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
 |\<!-- Este es un ejemplo de documento XML -->|\<!--Este es un ejemplo de documento XML -->|XmlNodeType.Comment|  

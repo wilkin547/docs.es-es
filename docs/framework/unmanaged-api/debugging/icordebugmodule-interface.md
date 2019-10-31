@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugModule
+title: ICorDebugModule (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dce4f5859568c1288610e171286a5919dc8b19b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 971d6a6a2157c48dcb9105e9f523b1f077098479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129483"
 ---
-# <a name="icordebugmodule-interface"></a>Interfaz ICorDebugModule
+# <a name="icordebugmodule-interface"></a>ICorDebugModule (Interfaz)
 
 Representa un módulo de Common Language Runtime (CLR), que es un archivo ejecutable o una biblioteca de vínculos dinámicos (DLL).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[CreateBreakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|Sin implementar.|  
 |[EnableClassLoadCallbacks (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|Determina si se llama a las devoluciones de llamada [ICorDebugManagedCallback:: loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) y [ICorDebugManagedCallback:: UnloadClass (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) para este módulo.|  
@@ -37,7 +35,7 @@ Representa un módulo de Common Language Runtime (CLR), que es un archivo ejecut
 |[GetAssembly (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Obtiene el ensamblado contenedor de este módulo.|  
 |[GetBaseAddress (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|Obtiene la dirección base del módulo.|  
 |[GetClassFromToken (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)|Obtiene el ICorDebugClass de los metadatos.|  
-|[GetEditAndContinueSnapshot (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|En desuso.|  
+|[GetEditAndContinueSnapshot (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|Desusado.|  
 |[GetFunctionFromRVA (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromrva-method.md)|Sin implementar.|  
 |[GetFunctionFromToken (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromtoken-method.md)|Obtiene la función especificada por el token de metadatos.|  
 |[GetGlobalVariableValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getglobalvariablevalue-method.md)|Obtiene un objeto de valor para la variable global especificada.|  
@@ -55,11 +53,11 @@ Representa un módulo de Common Language Runtime (CLR), que es un archivo ejecut
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

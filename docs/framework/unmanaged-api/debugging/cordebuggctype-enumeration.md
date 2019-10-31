@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740034"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132185"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType (Enumeración)
 Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.  
@@ -39,17 +37,17 @@ typedef enum CorDebugGCType {
   
 ## <a name="members"></a>Miembros  
   
-|Nombre de miembro|DESCRIPCIÓN|  
+|Nombre de miembro|Descripción|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|El recolector de elementos no utilizados se ejecuta en una estación de trabajo.|  
-|`CorDebugServerGC`|El recolector de elementos no utilizados se ejecuta en un servidor.|  
+|`CorDebugWorkstationGC`|El recolector de elementos no utilizados se está ejecutando en una estación de trabajo.|  
+|`CorDebugServerGC`|El recolector de elementos no utilizados se está ejecutando en un servidor.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

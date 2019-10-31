@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee3a0c27d350dec8e9f3e9448174d978c7d50e81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad3a357a98cb5ed28a34e4076b5e145903ceaf91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103500"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged (Método)
-Obtiene un valor que indica si el proceso que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) se sabe que tienen código administrado.  
+Obtiene un valor que indica si se sabe que el proceso al que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) tiene código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Parámetros  
  `pbManaged`  
- [out] Un puntero a un valor booleano que indica si el proceso tiene código administrado. El valor es `true` si el proceso tiene código administrado; en caso contrario, `false`.  
+ enuncia Un puntero a un valor booleano que indica si el proceso tiene código administrado. El valor es `true` si el proceso tiene código administrado; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Desde la versión actual de `ICorPublishProcess` permite el acceso solo a los procesos que haya código administrado, `IsManaged` siempre devuelve `true`.  
+ Dado que la versión actual de `ICorPublishProcess` permite el acceso únicamente a los procesos que tienen código administrado, `IsManaged` siempre devuelve `true`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

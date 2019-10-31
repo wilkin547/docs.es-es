@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95a00e8646589e7897636c1698b7c2647cd233fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771801"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133592"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper (Método)
-Crea un objeto ICorDebugStepper que permite recorrer el marco activo de esta instancia de ICorDebugThread.  
+Crea un objeto ICorDebugStepper que permite recorrer en iteración el marco activo de esta expresión ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parámetros  
  `ppStepper`  
- [out] Un puntero a la dirección de un `ICorDebugStepper` objeto que permite recorrer el fotograma activo de este subproceso.  
+ enuncia Puntero a la dirección de un objeto `ICorDebugStepper` que permite recorrer en iteración el marco activo de este subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
  El marco activo puede ser código no administrado.  
   
- El `ICorDebugStepper` interfaz se debe usar para realizar el recorrido en Sí.  
+ La interfaz de `ICorDebugStepper` debe usarse para realizar la ejecución de paso real.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

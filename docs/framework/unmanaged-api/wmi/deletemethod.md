@@ -14,14 +14,12 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db360584dacf250be2f35e5e6666f8332b39a8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120646"
 ---
 # <a name="deletemethod-function"></a>Función DeleteMethod
 Elimina el método especificado de una definición de clase CIM.
@@ -47,13 +45,13 @@ de Este parámetro no se utiliza.
 de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`  
-de Nombre del método que se va a quitar de la tabla de clases. `wszName`debe ser un puntero a un válido `LPCWSTR`.
+de Nombre del método que se va a quitar de la tabla de clases. `wszName` debe ser un puntero a una `LPCWSTR`válida.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria para completar la operación. |
@@ -66,9 +64,9 @@ Esta función contiene una llamada al método [IWbemClassObject::D eletemethod](
 No se admite la eliminación de métodos para punteros [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que apunten a las instancias CIM.
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

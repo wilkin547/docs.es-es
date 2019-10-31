@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d83f9c0b187ad8b2955bc12ff168e0c4f26b909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d5582b7a3df16db58ea0ed001dcbffcdcaab79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122459"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects (Método)
-Proporciona una enumeración ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estructuras que proporcionen información de bloqueo de subprocesos.  
+Proporciona una enumeración ordenada de las estructuras [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) que proporcionan información de bloqueo de subprocesos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,23 +34,23 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parámetros  
  `ppBlockingObjectEnum`  
- [out] Un puntero a una enumeración ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estructuras.  
+ enuncia Puntero a una enumeración ordenada de estructuras [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
 ## <a name="remarks"></a>Comentarios  
- El primer elemento de la enumeración devuelta corresponde a la primera estructura que está bloqueando el subproceso. El segundo elemento corresponde a un elemento de bloqueo que se produjo al ejecutar una llamada a procedimientos asincrónicos (APC) cuando se bloquea en la primera y así sucesivamente.  
+ El primer elemento de la enumeración devuelta corresponde a la primera estructura que está bloqueando el subproceso. El segundo elemento corresponde a un elemento de bloqueo que se encuentra mientras se ejecuta una llamada a procedimiento asincrónico (APC) cuando se bloquea en el primero, y así sucesivamente.  
   
- La enumeración es válida solo durante el tiempo que dure el estado sincronizado actual.  
+ La enumeración solo es válida para la duración del estado sincronizado actual.  
   
- Debe llamar a este método mientras el depurador está en un estado sincronizado.  
+ Se debe llamar a este método mientras el código depurado esté en un estado sincronizado.  
   
  Si `ppBlockingObjectEnum` no es un puntero válido, el resultado es indefinido.  
   
- Si un subproceso está bloqueado y no se puede determinar el error, el método devuelve un HRESULT que indica un error; en caso contrario, devuelve S_OK.  
+ Si un subproceso está bloqueado y no se puede determinar el error, el método devuelve un valor HRESULT que indica un error. de lo contrario, Devuelve S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae0f48c-4ede-4256-9251-a7fc85a229dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36a33b74a692761d772a888ce918aa28a2d92678
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c1d7db8aacaf81d47abd4a9cd972b44f56a3bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137520"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut (Método)
-Hace que este ICorDebugStepper paso a paso a través del subproceso que la contiene y que finalice cuando el marco actual devuelve el control al marco que realiza la llamada.  
+Hace que este objeto ICorDebugStepper tenga un solo paso a través de su subproceso contenedor y que se complete cuando el fotograma actual devuelva el control al marco que realiza la llamada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,16 +32,16 @@ HRESULT StepOut ();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Un `StepOut` operación se completará después de devolverse con normalidad desde el fotograma actual en el marco que realiza la llamada.  
+ Una operación de `StepOut` se completará después de devolver normalmente del marco actual al marco que realiza la llamada.  
   
- Si `StepOut` se llama cuando en código no administrado, el paso finalizará cuando el marco actual se devuelve al código administrado que lo llamó.  
+ Si se llama a `StepOut` en el código no administrado, el paso se completará cuando el fotograma actual vuelva al código administrado que lo llamó.  
   
- En la versión 2.0 de .NET Framework, no utilice `StepOut` con el STOP_UNMANAGED marca conjunto porque se producirá un error. (Use [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) establecer marcas para la ejecución paso a paso.) Los depuradores de interoperabilidad deben salir del código nativo a sí mismos.  
+ En la versión .NET Framework 2,0, no use `StepOut` con la marca STOP_UNMANAGED establecida porque se producirá un error. (Use [ICorDebugStepper:: setunmappedstopmask (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) para establecer marcas para la ejecución paso a paso). Los depuradores de interoperabilidad deben salir del código nativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

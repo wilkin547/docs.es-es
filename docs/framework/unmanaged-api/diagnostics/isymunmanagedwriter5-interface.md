@@ -2,17 +2,15 @@
 title: ISymUnmanagedWriter5 (Interfaz)
 ms.date: 03/30/2017
 ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6ed8c6e61c558a4bc9e3f92d559615ac93ecff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18371b6aefb002f5adf27d43f85194c6c35f6ef5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121638"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5 (Interfaz)
-ISymUnmanagedWriter5 (interfaz).  
+Interfaz ISymUnmanagedWriter5.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -25,12 +23,12 @@ ISymUnmanagedWriter5 (interfaz).
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CloseMapTokensToSourceSpans (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|Cerrar la sección de datos personalizado especial para información sobre la asignación de intervalo de origen de token. Después de cerrar, no se puede agregar ninguna información de asignación.|  
-|[MapTokenToSourceSpan (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-maptokentosourcespan-method.md)|Asignaciones que abarcan el token de metadatos especificado a la línea de origen especificado en el archivo de origen especificado.<br /><br /> Debe llamarse entre las llamadas a [OpenMapTokensToSourceSpans (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) y [CloseMapTokensToSourceSpans (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md).|  
-|[OpenMapTokensToSourceSpans (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|Abra una sección especial de datos personalizados para emitir la información de asignación de intervalo de origen de token en. Apertura de esta sección cuando un método ya está abierto, o viceversa, es un error.|  
+|[CloseMapTokensToSourceSpans (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|Cierre la sección datos personalizados especiales para obtener información sobre la asignación de intervalos de token a origen. Una vez cerrado, no se puede agregar más información de asignación.|  
+|[MapTokenToSourceSpan (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-maptokentosourcespan-method.md)|Asigna el token de metadatos especificado al intervalo de la línea de código fuente especificado en el archivo de código fuente especificado.<br /><br /> Se debe llamar entre las llamadas al [método openmaptokenstosourcespans (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) y al [método closemaptokenstosourcespans (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md).|  
+|[OpenMapTokensToSourceSpans (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|Abra una sección especial de datos personalizados para emitir información de asignación de intervalos de token a origen en. Abrir esta sección cuando un método ya está abierto, o viceversa, es un error.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

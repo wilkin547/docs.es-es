@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edd70dd4cfc2e26b30ee0deec79b7d126d1f76a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cceafc8358ce2b0eafa62a3855c4eb1e96adae11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113312"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext (Método)
-Establece el contexto actual del subproceso especificado en el proceso de destino. Este método llama a los servicios de acceso de datos de common language runtime (CLR).  
+Establece el contexto actual del subproceso especificado en el proceso de destino. Los servicios de acceso a datos de Common Language Runtime (CLR) llaman a este método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,23 +38,23 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>Parámetros  
  `threadID`  
- [in] El identificador del sistema operativo de un subproceso del proceso de destino.  
+ de Identificador del sistema operativo de un subproceso en el proceso de destino.  
   
  `contextSize`  
- [in] El tamaño del contexto.  
+ de Tamaño del contexto.  
   
  `context`  
- [in] Puntero a un búfer que contiene el contexto.  
+ de Puntero a un búfer que contiene el contexto.  
   
- Los datos en el `context` búfer estará en el formato de Win32 `CONTEXT` estructura. El contexto especifica los datos de registro específicas del procesador, por lo que la definición de Win32 `CONTEXT` estructura depende de la arquitectura del procesador. Consulte el archivo de encabezado WinNT.h para la definición de Win32 `CONTEXT` estructura.  
+ Los datos del búfer de `context` estarán en el formato de la estructura de `CONTEXT` de Win32. El contexto especifica datos de registro específicos del procesador, por lo que la definición de la estructura de `CONTEXT` de Win32 depende de la arquitectura del procesador. Consulte el archivo de encabezado Winnt. h para ver la definición de la estructura de `CONTEXT` de Win32.  
   
 ## <a name="remarks"></a>Comentarios  
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

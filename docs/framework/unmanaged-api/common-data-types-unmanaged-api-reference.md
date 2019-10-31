@@ -2,24 +2,22 @@
 title: Tipos de datos comunes (Referencia de la API no administrada)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132448"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de datos comunes (Referencia de la API no administrada)
 En este tema se enumeran los tipos de datos que usan las API no administradas de .NET Framework y que se definen mediante instrucciones `typedef` de C/C++. Normalmente, estos tipos de datos son alias de tipos de datos primitivos de C/C++. Normalmente, los valores de estos tipos de datos son opacos; es decir, son devueltos por una función o un método determinados para que se puedan pasar a otras funciones o métodos sin modificar.  
   
-|Tipo de datos|Definición|Definido en|DESCRIPCIÓN|  
+|Tipo de datos|de esquema JSON|Definido en|Descripción|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Identificador de un dominio de aplicación.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Identificador de un ensamblado.|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Identificador de una clase administrada.|  
-|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|Una dirección de memoria de 64 bits.|
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|Clrdata. h|Una dirección de memoria de 64 bits.|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|No disponible|Una dirección de memoria de 64 bits.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Identificador de conexión de un subproceso que se conecta a una instancia de Microsoft SQL Server.|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|Identificador del contexto asociado a un subproceso administrado determinado.|  

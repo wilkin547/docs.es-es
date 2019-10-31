@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 270360a8950197eca14e02a60554659e5ac7b91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099076"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT (Estructura)
 Proporciona información sobre un objeto del montón administrado.  
@@ -45,22 +43,22 @@ typedef struct _COR_HEAPOBJECT {
 |`type`|Un token de [COR_TYPEID](cor-typeid-structure.md) que representa el tipo del objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `COR_HEAPOBJECT`las instancias pueden recuperarse mediante la enumeración de un objeto de interfaz [icordebugheapenum (](icordebugheapenum-interface.md) que se rellena llamando al método [ICorDebugProcess5:: enumerateheap (](icordebugprocess5-enumerateheap-method.md) .  
+ `COR_HEAPOBJECT` instancias se pueden recuperar enumerando un objeto de interfaz [icordebugheapenum (](icordebugheapenum-interface.md) que se rellena llamando al método [ICorDebugProcess5:: enumerateheap (](icordebugprocess5-enumerateheap-method.md) .  
   
- Una `COR_HEAPOBJECT` instancia de proporciona información sobre un objeto activo en el montón administrado o sobre un objeto que no está raíz de ningún objeto pero que el recolector de elementos no utilizados aún no ha recopilado.  
+ Una instancia de `COR_HEAPOBJECT` proporciona información sobre un objeto activo en el montón administrado o sobre un objeto que no está raíz de ningún objeto pero que el recolector de elementos no utilizados aún no ha recopilado.  
   
- Para mejorar el rendimiento, `COR_HEAPOBJECT.address` el campo es `CORDB_ADDRESS` un valor en lugar del valor de la interfaz ICorDebugValue usado en gran parte de la API de depuración. Para obtener un objeto ICorDebugValue para una dirección de objeto determinada, puede pasar el `CORDB_ADDRESS` valor al método [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
+ Para mejorar el rendimiento, el campo `COR_HEAPOBJECT.address` es un valor `CORDB_ADDRESS` en lugar del valor de la interfaz ICorDebugValue usado en gran parte de la API de depuración. Para obtener un objeto ICorDebugValue para una dirección de objeto determinada, puede pasar el valor `CORDB_ADDRESS` al método [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
   
- Para mejorar el rendimiento, `COR_HEAPOBJECT.type` el campo es `COR_TYPEID` un valor en lugar del valor de la interfaz ICorDebugType usado en gran parte de la API de depuración. Para obtener un objeto ICorDebugType para un identificador de tipo determinado, puede pasar el `COR_TYPEID` valor al método [ICorDebugProcess5:: gettypefortypeid (](icordebugprocess5-gettypefortypeid-method.md) .  
+ Para mejorar el rendimiento, el campo `COR_HEAPOBJECT.type` es un valor `COR_TYPEID` en lugar del valor de la interfaz ICorDebugType usado en gran parte de la API de depuración. Para obtener un objeto ICorDebugType para un identificador de tipo determinado, puede pasar el valor de `COR_TYPEID` al método [ICorDebugProcess5:: gettypefortypeid (](icordebugprocess5-gettypefortypeid-method.md) .  
   
- La `COR_HEAPOBJECT` estructura incluye una interfaz com con recuento de referencias. Si recupera una `COR_HEAPOBJECT` instancia del enumerador mediante una llamada al método [icordebugheapenum (:: Next](icordebugheapenum-next-method.md) , debe liberar posteriormente la referencia.  
+ La estructura de `COR_HEAPOBJECT` incluye una interfaz COM con recuento de referencias. Si recupera una instancia de `COR_HEAPOBJECT` del enumerador mediante una llamada al método [icordebugheapenum (:: Next](icordebugheapenum-next-method.md) , debe liberar la referencia posteriormente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

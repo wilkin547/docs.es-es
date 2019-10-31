@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23f248625753c15a4798ea69a1eb3b377b79f95d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a862dd3f6a9c10c6b3a5a0bb41208d351c4ca9f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747753"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125693"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus (Método)
 Para cada método de la clase, establece un valor que indica si el método es código definido por el usuario.  
@@ -37,17 +35,17 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parámetros  
  `bIsJustMyCode`  
- [in] Establecido en `true` para indicar que el método está definido por el usuario de código; de lo contrario, establézcalo en `false`.  
+ de Se establece en `true` para indicar que el método es código definido por el usuario; de lo contrario, establézcalo en `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Un motor paso a paso solo mi código (JMC) omitirá el código no definido por el usuario. Código definido por el usuario debe ser un subconjunto del código depurable.  
+ Un stepper de solo mi código (JMC) omitirá el código no definido por el usuario. El código definido por el usuario debe ser un subconjunto del código depurable.  
   
- `SetJMCStatus` Devuelve un valor HRESULT de S_FALSE si no se establezca el valor de cualquier método, incluso si establece correctamente el valor para todos los demás métodos.  
+ `SetJMCStatus` devuelve un valor HRESULT de S_FALSE si no puede establecer el valor para ningún método, aunque establezca correctamente el valor de todos los demás métodos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

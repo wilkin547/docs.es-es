@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796605"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134349"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName (Método)
 Obtiene el nombre simple y sin cifrar del ensamblado al que hace referencia este objeto de [IAssemblyName](iassemblyname-interface.md) .  
@@ -44,9 +42,9 @@ HRESULT GetName (
  enuncia Búfer que contiene el nombre del ensamblado al que se hace referencia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

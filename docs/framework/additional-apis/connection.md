@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c50f673e77ef384ccf33803e14d60c322b6c0365
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a305b28a34a70112cc80c33b11f30ab02213f0c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300975"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120064"
 ---
 # <a name="connection-class"></a>Clase Connection
 
-El `Connection` las respuestas del servidor de clase analiza, poniendo en cola solicitudes y las solicitudes de la canalización.
+La clase `Connection` analiza las respuestas del servidor, las solicitudes de cola y las solicitudes de canalización.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> La `Connection` clase es interna y no está pensada para usarse directamente en el código.
+> La clase `Connection` es interna y no está diseñada para usarse directamente en el código.
 > 
-> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
 **Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System. dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

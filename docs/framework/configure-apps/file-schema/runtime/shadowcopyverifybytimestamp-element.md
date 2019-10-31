@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79d44ff255b1fc12efc6e8488eeab231b9276b90
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 160f14c856735e1ceac8635506aea52454faea43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115726"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>Elemento \<shadowCopyVerifyByTimestamp>
 Especifica si la copia sombra usa el comportamiento de inicio predeterminado introducido en el .NET Framework 4, o revierte al comportamiento de inicio de versiones anteriores de la .NET Framework.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> shadowCopyVerifyByTimestamp**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<shadowCopyVerifyByTimestamp >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,23 +30,23 @@ Especifica si la copia sombra usa el comportamiento de inicio predeterminado int
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |enabled|Atributo necesario.<br /><br /> Especifica si los dominios de aplicación que usan la copia sombra comparan las marcas de tiempo de ensamblado al iniciarse, para determinar si se ha actualizado un ensamblado antes de copiar las instantáneas del ensamblado.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |true|En el inicio, copia solo los ensamblados que se han actualizado desde que se copiaron por última vez en el directorio de instantáneas. Este es el valor predeterminado para el .NET Framework 4.|  
-|false|Revierte al comportamiento de inicio de las versiones anteriores del .NET Framework, que era copiar todos los archivos en el inicio.|  
+|False|Revierte al comportamiento de inicio de las versiones anteriores del .NET Framework, que era copiar todos los archivos en el inicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  

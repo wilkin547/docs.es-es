@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112735"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual (Método)
-Escribe datos desde el búfer especificado en la dirección de memoria virtual especificada.  
+Escribe datos del búfer especificado en la dirección de memoria virtual especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,21 +39,21 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [in] CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
+ de CLRDATA_ADDRESS que almacena la dirección de memoria virtual.  
   
  `buffer`  
- [in] Un puntero a un búfer que almacena los datos que se va a escribir.  
+ de Puntero a un búfer que almacena los datos que se van a escribir.  
   
  `bytesRequested`  
- [in] El número de bytes que se escribirán.  
+ de Número de bytes que se van a escribir.  
   
  `bytesWritten`  
- [out] Un puntero al número real de bytes que se escribieron.  
+ enuncia Puntero al número real de bytes que se escribieron.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3031cf2d9509f94b50c386b44e6d9e5d9ee5509c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dbc042143e68dc962eb21b2bf741cbaefc1977e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768233"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122353"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter (Método)
-Obtiene un puntero de interfaz a una instancia de ICorDebugType que representa la primera <xref:System.Type> parámetro del tipo representado por este `ICorDebugType`.  
+Obtiene un puntero de interfaz a una ICorDebugType que representa el primer <xref:System.Type> parámetro del tipo representado por este `ICorDebugType`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetFirstTypeParameter (
   
 ## <a name="parameters"></a>Parámetros  
  `value`  
- [out] Un puntero a la dirección de un `ICorDebugType` objeto que representa el primer parámetro.  
+ enuncia Puntero a la dirección de un objeto `ICorDebugType` que representa el primer parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetFirstTypeParameter` se puede llamar en casos donde la información adicional sobre el tipo implica, como máximo, un parámetro de tipo. En concreto, se puede usar si el tipo es un ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR, tal y como indica la [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) método.  
+ se puede llamar a `GetFirstTypeParameter` en casos en los que la información adicional sobre el tipo implique, como máximo, un parámetro de tipo. En concreto, se puede utilizar si el tipo es ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR, tal y como se indica en el método [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

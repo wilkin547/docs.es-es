@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d3fd88a2c1ac90f823b23d8d2bcb5b177a625c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109012"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult (Enumeración)
 Indica la equivalencia de dos identidades de ensamblado, según lo determinado por la función [CompareAssemblyIdentity (](compareassemblyidentity-function.md) .  
@@ -47,7 +45,7 @@ typedef enum _tagAssemblyComparisonResult {
   
 ## <a name="members"></a>Miembros  
   
-|Nombre de miembro|DESCRIPCIÓN|  
+|Nombre de miembro|Descripción|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|Indica que todos los campos de ensamblado de la comparación coinciden.|  
 |`ACR_EquivalentFXUnified`|Indica que los ensamblados se consideran equivalentes según la unificación de la versión de Common Language Runtime (CLR) de los números de versión de ensamblado en la .NET Framework versión 2,0.|  
@@ -63,11 +61,11 @@ typedef enum _tagAssemblyComparisonResult {
 |`ACR_Unknown`|Indica que no se conoce el motivo de la no equivalencia.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

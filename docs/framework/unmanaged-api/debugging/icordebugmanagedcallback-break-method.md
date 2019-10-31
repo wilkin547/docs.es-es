@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632365"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122584"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break (Método)
 
-Notifica al depurador cuando un <xref:System.Reflection.Emit.OpCodes.Break> se ejecuta la instrucción en la secuencia de código.
+Notifica al depurador cuando se ejecuta una instrucción <xref:System.Reflection.Emit.OpCodes.Break> en la secuencia de código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,16 +38,16 @@ HRESULT Break (
 ## <a name="parameters"></a>Parámetros
 
 `pAppDomain`\
-[in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la instrucción break.
+de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la instrucción break.
 
 `thread`\
-[in] Un puntero a un objeto ICorDebugThread que representa el subproceso que contiene la instrucción break.
+de Un puntero a un objeto ICorDebugThread que representa el subproceso que contiene la instrucción break.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 

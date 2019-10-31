@@ -18,21 +18,19 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 669e147f9c7b4ba901ade38f1ab8b41163c4f125
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151756"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114025"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
 Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener campos, propiedades y eventos, además de métodos estáticos y no estáticos. Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
   
  En la tabla siguiente se enumeran las opciones de serialización para clases, estructuras y uniones, se describe su uso y se proporciona un vínculo al ejemplo de invocación de la plataforma correspondiente.  
   
-|Tipo|Descripción|Ejemplo|  
+|Type|Descripción|Ejemplo|  
 |----------|-----------------|------------|  
 |Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|SysTime (ejemplo)|  
 |Estructura por valor.|Pasa las estructuras como parámetros In.|Ejemplo Structs|  

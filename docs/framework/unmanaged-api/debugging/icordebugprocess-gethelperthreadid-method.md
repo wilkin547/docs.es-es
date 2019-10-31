@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad62b267eb0c49ff8fbefeb45b523c21edc705fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d38a59b23d47cbaf57dc21e121d56530a514d354
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128862"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID (Método)
-Obtiene el identificador de subproceso del sistema operativo (SO) del subproceso auxiliar interno del depurador.  
+Obtiene el identificador del subproceso del sistema operativo (SO) del subproceso auxiliar interno del depurador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,19 +35,19 @@ HRESULT GetHelperThreadID (
   
 ## <a name="parameters"></a>Parámetros  
  `pThreadID`  
- [out] Id. de subproceso auxiliar interno del depurador de subproceso de un puntero al sistema operativo.  
+ enuncia Puntero al identificador de subproceso del sistema operativo del subproceso auxiliar interno del depurador.  
   
 ## <a name="remarks"></a>Comentarios  
- Durante la depuración administrada y no administrados, es responsabilidad del depurador para asegurarse de que el subproceso con el identificador especificado sigue ejecutándose si se produce un punto de interrupción colocado por el depurador. Un depurador que también desee ocultar este subproceso del usuario. Si no hay ningún subproceso auxiliar existe en el proceso todavía, el `GetHelperThreadID` método devuelve cero en *`pThreadID`.  
+ Durante la depuración administrada y no administrada, es responsabilidad del depurador asegurarse de que el subproceso con el identificador especificado permanece en ejecución si llega a un punto de interrupción colocado por el depurador. Un depurador también puede querer ocultar este subproceso al usuario. Si aún no existe ningún subproceso auxiliar en el proceso, el método `GetHelperThreadID` devuelve cero en *`pThreadID`.  
   
- No se almacena en caché el identificador de subproceso del subproceso de aplicación auxiliar, ya que puede cambiar con el tiempo. Debe volver a consultar el identificador de subproceso en cada evento de detención.  
+ No se puede almacenar en caché el identificador del subproceso auxiliar, ya que puede cambiar con el tiempo. Debe volver a consultar el identificador del subproceso en cada evento de detención.  
   
- El identificador de subproceso del subproceso auxiliar del depurador será correcto en cada no administrado [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventos, lo que permite a un depurador determinar el identificador de subproceso de su subproceso auxiliar y ocultarla del usuario. Un subproceso que se identifica como un subproceso auxiliar durante no administradas `ICorDebugManagedCallback::CreateThread` evento nunca ejecutará el código de usuario administrado.  
+ El identificador de subproceso del subproceso auxiliar del depurador será correcto en cada evento [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) no administrado, lo que permite que un depurador determine el identificador de subproceso de su subproceso auxiliar y lo oculte del usuario. Un subproceso que se identifica como un subproceso auxiliar durante un evento de `ICorDebugManagedCallback::CreateThread` no administrado nunca ejecutará código de usuario administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl. CorDebug.h  
+ **Encabezado:** Cordebug. idl. Cordebug. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugGenericValue
+title: ICorDebugGenericValue (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugGenericValue
@@ -14,28 +14,26 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138570"
 ---
-# <a name="icordebuggenericvalue-interface"></a>Interfaz ICorDebugGenericValue
+# <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue (Interfaz)
 
 Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfaz proporciona métodos Get y Set para el valor.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[GetValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Copia el valor en el búfer especificado.|  
 |[SetValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Copia un nuevo valor del búfer especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugGenericValue`es una subinterfaz porque no es remota.  
+ `ICorDebugGenericValue` es una subinterfaz porque no es remota.  
   
  En el caso de los tipos de referencia, el valor es la referencia en lugar del contenido de la referencia.  
   
@@ -45,11 +43,11 @@ Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfa
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

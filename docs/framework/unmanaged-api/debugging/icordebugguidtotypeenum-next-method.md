@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f334b4a28b0573fa938c2fda340c0c03175ff18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138514"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next (Método)
-Obtiene el número especificado de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instancias que se asignan los GUID para escribir información.  
+Obtiene el número especificado de instancias de [cordebugguidtotypemapping (](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) que asignan los GUID a la información de tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +37,20 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de objetos de asignación del tipo de GUID va a recuperar.  
+ de El número de objetos de asignación de GUID a tipo que se van a recuperar.  
   
  `values`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) objeto que asigna un GUID en tiempo de ejecución de Windows a su objeto ICorDebugType correspondiente.  
+ enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [cordebugguidtotypemapping (](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) que asigna un GUID Windows Runtime a su objeto ICorDebugType correspondiente.  
   
  `pceltFetched`  
- [out] Un puntero al número de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) los objetos devueltos realmente en `values`.  
+ enuncia Puntero al número de objetos [cordebugguidtotypemapping (](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) realmente devueltos en `values`.  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Windows en tiempo de ejecución  
+ **Plataformas:** Windows Runtime  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

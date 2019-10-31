@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fdfe33c5b488d8f464001a86233124d4e7df0ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0fbc462283ef1577de8100e60fd09caa53db539
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779071"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131914"
 ---
-# <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES (enumeración)
-Especifica las estadísticas que se registren para la recolección.  
+# <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES (enumeración)
+Especifica las estadísticas que se van a registrar para una recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,19 +34,19 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Esta enumeración especifica las estadísticas que en el [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estructura que se va a establecer [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método.  
+ Esta enumeración especifica qué estadísticas de la estructura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) se van a establecer mediante el método [ICLRGCManager:: getstats (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) .  
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|Registra el número de recolecciones de elementos no utilizados realizadas para cada generación.|  
-|`COR_GC_MEMORYUSAGE`|Registros memoria elementos no utilizados y el uso de las estadísticas de tamaño.|  
+|`COR_GC_MEMORYUSAGE`|Registra las estadísticas de uso de memoria y de tamaño de recolección de elementos no utilizados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost.idl, GCHost.h  
+ **Encabezado:** GCHost. idl, GCHost. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

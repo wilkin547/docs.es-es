@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5efc83152763c5ef8b65a1fad33460c5354c0dc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772423"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110063"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next (Método)
-Obtiene el número de instancias de "ICorDebugType" especificado por `celt` de la enumeración, comenzando en la posición actual.  
+Obtiene el número de instancias de "ICorDebugType" especificadas por `celt` de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de `ICorDebugType` instancias va a recuperar.  
+ de Número de instancias de `ICorDebugType` que se van a recuperar.  
   
  `values`  
- [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugType` objeto.  
+ enuncia Matriz de punteros, cada uno de los cuales señala a un objeto `ICorDebugType`.  
   
  `pceltFetched`  
- [out] Puntero al número de `ICorDebugType` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de instancias de `ICorDebugType` devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a43d5e15c02a97ff10a6a5afd439cadebb6b33d2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109214"
 ---
 # <a name="assembly_info-structure"></a>ASSEMBLY_INFO (Estructura)
 Contiene información acerca de un ensamblado registrado en la caché global de ensamblados.  
@@ -40,18 +38,18 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Tamaño de la estructura, en bytes. Este campo está reservado para extensibilidad futura.|  
-|`dwAssemblyFlags`|Marcas que indican los detalles de la instalación del ensamblado. Se admiten los siguientes valores:<br /><br /> : El valor de ASSEMBLYINFO_FLAG_INSTALLED, que indica que el ensamblado está instalado. La versión actual de .NET Framework siempre establece `dwAssemblyFlags` en este valor.<br />: El valor de ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, que indica que el ensamblado es un residente de carga. La versión actual de la .NET Framework nunca establece `dwAssemblyFlags` en este valor.|  
+|`dwAssemblyFlags`|Marcas que indican los detalles de la instalación del ensamblado. Se admiten los siguientes valores:<br /><br /> : El valor de ASSEMBLYINFO_FLAG_INSTALLED, que indica que el ensamblado está instalado. La versión actual del .NET Framework siempre establece `dwAssemblyFlags` en este valor.<br />: El valor de ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, que indica que el ensamblado es un residente de carga. La versión actual del .NET Framework nunca establece `dwAssemblyFlags` en este valor.|  
 |`uliAssemblySizeInKB`|Tamaño total, en kilobytes, de los archivos que contiene el ensamblado.|  
 |`pszCurrentAssemblyPathBuf`|Un puntero a un búfer de cadena que contiene la ruta de acceso actual al archivo de manifiesto. La ruta de acceso debe terminar con un carácter nulo.|  
-|`cchBuf`|El número de caracteres anchos, incluido el terminador null `pszCurrentAssemblyPathBuf` , que contiene.|  
+|`cchBuf`|El número de caracteres anchos, incluido el terminador null, que `pszCurrentAssemblyPathBuf` contiene.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

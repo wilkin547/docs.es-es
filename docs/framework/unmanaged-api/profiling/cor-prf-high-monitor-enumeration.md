@@ -2,19 +2,17 @@
 title: COR_PRF_HIGH_MONITOR (Enumeración)
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc66ef1eb5048d2c708a615a99ea363d29540f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03fa33e0e2b4175d9f82bc6021731d58805da258
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123995"
 ---
-# <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR (Enumeración)
+# <a name="cor_prf_high_monitor-enumeration"></a>COR_PRF_HIGH_MONITOR (Enumeración)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
   
- Proporciona marcas, además de los que se encuentran en el [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeración que el generador de perfiles puede especificar para el [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) método cuando se está cargando.  
+ Proporciona marcas además de las que se encuentran en la enumeración [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) que el generador de perfiles puede especificar al método [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) cuando se está cargando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,31 +38,31 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`COR_PRF_HIGH_MONITOR_NONE`|No se establecen marcas.|  
-|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Los controles de la [icorprofilercallback6:: Getassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) devolución de llamada para agregar referencias de ensamblado durante el rastreo de cierre de referencias de ensamblado CLR.|  
-|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Los controles de la [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) devolución de llamada para las actualizaciones de la secuencia de símbolos asociada a un módulo en memoria.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Los controles de la [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) devolución de llamada para indicar cuando un método dinámico ha sido elementos no utilizados se recopilan y se descargan. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
-|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 y versiones posteriores: Deshabilita [en capas compilación](../../../core/whats-new/dotnet-core-3-0.md) para los generadores de perfiles.|
-|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 y versiones posteriores: Proporciona una ligera en comparación con opción de generación de perfiles de GC [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Solo controla la [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), y [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) devoluciones de llamada. A diferencia de la `COR_PRF_MONITOR_GC` marca, `COR_PRF_HIGH_BASIC_GC` no deshabilitar la recolección de elementos no utilizados simultánea.|
-|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 y versiones posteriores: Habilita la [MovedReferences](icorprofilercallback-movedreferences-method.md) y [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) devoluciones de llamada para solo GC con compactación.|
-|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 y versiones posteriores: Similar a [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), pero se proporciona información sobre las asignaciones de objetos para el gran montón de objetos (LOH) solo.|
-|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que requieren imágenes mejoradas para el perfil. Se corresponde con el `COR_PRF_REQUIRE_PROFILE_IMAGE` marca en el [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeración.|  
+|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Controla la devolución de llamada [ICorProfilerCallback6:: GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) para agregar referencias de ensamblado durante el recorrido de cierre de referencia de ensamblado de CLR.|  
+|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Controla la devolución de llamada [ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) para las actualizaciones de la secuencia de símbolos asociada a un módulo en memoria.|  
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Controla la devolución de llamada [ICorProfilerCallback9::D ynamicmethodunloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) para indicar cuándo se ha recolectado y descargado un método dinámico. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|Solo .NET Core 3,0 y versiones posteriores: deshabilita la [compilación en capas](../../../core/whats-new/dotnet-core-3-0.md) para los perfiles.|
+|`COR_PRF_HIGH_BASIC_GC`|Solo .NET Core 3,0 y versiones posteriores: proporciona una opción de generación de perfiles de GC ligera en comparación con [`COR_PRF_MONITOR_GC`](cor-prf-monitor-enumeration.md). Controla solo las devoluciones de llamada [garbagecollectionstarted (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [garbagecollectionfinished (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)y [getgenerationbounds (](icorprofilerinfo2-getgenerationbounds-method.md) . A diferencia de la marca de `COR_PRF_MONITOR_GC`, `COR_PRF_HIGH_BASIC_GC` no deshabilita la recolección de elementos no utilizados simultánea.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|Solo .NET Core 3,0 y versiones posteriores: habilita las devoluciones de llamada [MovedReferences](icorprofilercallback-movedreferences-method.md) y [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md) para compactar solo GC.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|Solo .NET Core 3,0 y versiones posteriores: similar a [`COR_PRF_MONITOR_OBJECT_ALLOCATED`](cor-prf-monitor-enumeration.md), pero proporciona información sobre las asignaciones de objetos solo para el montón de objetos grandes (montón).|
+|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que requieren imágenes mejoradas para el perfil. Se corresponde con la marca `COR_PRF_REQUIRE_PROFILE_IMAGE` en la enumeración [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) .|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que se pueden establecer después de que el generador de perfiles se asocie a una aplicación en ejecución.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que se pueden establecer solo durante la inicialización. Al intentar cambiar cualquiera de estas marcas en otro lugar se genera un valor `HRESULT` que indica error.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `COR_PRF_HIGH_MONITOR` marcas se usan con el `pdwEventsHigh` parámetro de la [icorprofilerinfo5:: Geteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) y [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) métodos.  
+ Las marcas de `COR_PRF_HIGH_MONITOR` se usan con el parámetro `pdwEventsHigh` de los métodos [ICorProfilerInfo5:: GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) y [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) .  
   
-A partir de .NET Framework 4.6.1, el valor de la `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` cambia de 0 a `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0 x 00000002). A partir de .NET Framework 4.7.2, puede cambiar su valor desde `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` a `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
+A partir de la .NET Framework 4.6.1, el valor de la `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` cambiar de 0 a `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). A partir de la .NET Framework 4.7.2, su valor cambió de `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` a `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
 
-`COR_PRF_HIGH_MONITOR_IMMUTABLE` debe ser una máscara de bits que representa todos los marcadores que solo pueden establecerse durante la inicialización. Al intentar cambiar cualquiera de estas marcas en otro lugar da como resultado un error `HRESULT`.
+`COR_PRF_HIGH_MONITOR_IMMUTABLE` está diseñada para ser una máscara de máscara que representa todas las marcas que solo se pueden establecer durante la inicialización. Al intentar cambiar cualquiera de estas marcas en otro lugar, se produce un error `HRESULT`.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

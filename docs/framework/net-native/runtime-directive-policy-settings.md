@@ -2,14 +2,12 @@
 title: Configuración de directiva de la directiva en tiempo de ejecución
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128162"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configuración de directiva de la directiva en tiempo de ejecución
 
@@ -34,7 +32,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
 
   En la siguiente tabla se recogen los tipos de directivas de reflexión y los elementos de programa con los que se pueden usar.
 
-  |Elemento|Activar|Explorar|Dinámica|
+  |Elemento|Activar|Explorar|Dinámico|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✓|✓|✓|
   |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
@@ -117,7 +115,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
 
 Cada tipo de directiva se puede establecer en uno de los valores incluidos en la siguiente tabla. Tenga en cuenta que los elementos que representan miembros de tipo admiten un conjunto diferente de opciones de directiva que otros elementos.
 
-|Configuración de directiva|DESCRIPCIÓN|Elementos `Assembly`, `Namespace`, `Type` y `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` y `Property`|
+|Configuración de directiva|Descripción|Elementos `Assembly`, `Namespace`, `Type` y `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` y `Property`|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|Habilita la directiva para todos los tipos y miembros que la cadena de herramientas de .NET Native no elimina.|✓||
 |`Auto`|Especifica que se debe usar la directiva predeterminada para el tipo de directiva de ese elemento de programa. Esto es exactamente lo mismo que omitir una directiva para ese tipo de directiva. `Auto` se suele usar para indicar que la directiva se hereda de un elemento primario.|✓|✓|
@@ -132,5 +130,5 @@ Cada tipo de directiva se puede establecer en uno de los valores incluidos en la
 
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)

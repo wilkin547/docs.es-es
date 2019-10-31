@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06e583d6-d88a-4ff5-bb95-5c48618a461c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d78208c180638e9048ae39664b8ce8f57be90da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8df4e1df7836f340bb04fc47d1ca55e0fb7c9f0e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745172"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122764"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive (Método)
 Obtiene un valor que indica si este `ICorDebugBreakpoint` está activo.  
@@ -37,12 +35,12 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>Parámetros  
  `pbActive`  
- [out] `true` si este punto de interrupción está activo; en caso contrario, `false`.  
+ [out] `true` si este punto de interrupción está activo; de lo contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65ac35e254368b53ac2751e84be7dfe052fa0b53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a55ae265230c4da3cc0a19b06a7597be8661beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103246"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer (Método)
 Obtiene la representación de cadena de este objeto administrado.  
@@ -37,17 +35,17 @@ HRESULT GetSerializedBuffer (
   
 ## <a name="parameters"></a>Parámetros  
  `pBSTR`  
- [out] Un puntero a una cadena que es el objeto serializado.  
+ enuncia Puntero a una cadena que es el objeto serializado.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetSerializedBuffer` método serializa el objeto, por lo que se pueden calcular las referencias al cliente.  
+ El método `GetSerializedBuffer` serializa el objeto para que se puedan calcular las referencias del cliente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390a2c64508bf407296d318a47bfd2972b7ef9d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d623893bd77e46832b0bd823ed60c23e4eee29ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133541"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame (Método)
 Obtiene un puntero de interfaz al marco activo (más reciente) en este objeto ICorDebugThread.  
@@ -37,15 +35,15 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parámetros  
  `ppFrame`  
- [out] Un puntero a la dirección de un objeto de interfaz ICorDebugFrame que representa un marco.  
+ enuncia Puntero a la dirección de un objeto de interfaz ICorDebugFrame que representa un marco.  
   
 ## <a name="remarks"></a>Comentarios  
- El `ppFrame` parámetro es nulo si ningún marco está activo actualmente.  
+ El parámetro `ppFrame` es NULL si no hay ningún fotograma activo actualmente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

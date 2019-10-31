@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94d8fbf4d93bbfbaaeb7c1268004aada22b9b7df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d6caa02333229bcd49f4c6ccf8b93265181a0b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768912"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137089"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize (Método)
 Obtiene el tamaño, en bytes, de este objeto "ICorDebugValue".  
@@ -37,17 +35,17 @@ HRESULT GetSize (
   
 ## <a name="parameters"></a>Parámetros  
  `pSize`  
- [out] El tamaño, en bytes, de este objeto de valor.  
+ enuncia Tamaño, en bytes, de este objeto de valor.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo de valor es un tipo de referencia, este método devuelve el tamaño del puntero en lugar del tamaño del objeto.  
+ Si el tipo del valor es un tipo de referencia, este método devuelve el tamaño del puntero en lugar del tamaño del objeto.  
   
- El `ICorDebugValue::GetSize` devuelve del método `COR_E_OVERFLOW` para objetos que son mayores de 4 GB en plataformas de 64 bits. Use la [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) método en su lugar para los objetos que son mayores de 4 GB.  
+ El método `ICorDebugValue::GetSize` devuelve `COR_E_OVERFLOW` para objetos mayores de 4 GB en plataformas de 64 bits. Use el método [icordebugvalue3 (:: getsize64 (](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) en lugar de los objetos mayores de 4 GB.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

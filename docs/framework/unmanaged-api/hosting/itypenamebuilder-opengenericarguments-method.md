@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4da94508-30da-41f4-8bf9-ce88bdf96fd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79ce021773355a54d683a8350cfe5ade13b3ce6e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 145892d2d4c8df96f2ba62b2dbe414ebd1445d1e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757682"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125223"
 ---
 # <a name="itypenamebuilderopengenericarguments-method"></a>ITypeNameBuilder::OpenGenericArguments (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -34,11 +32,11 @@ HRESULT OpenGenericArguments ( );
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

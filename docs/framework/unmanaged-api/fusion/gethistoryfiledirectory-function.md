@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1aabfad14ee2eb35916bbf115631602276cd1fc3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109892"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory (Función)
 Recupera la ruta de acceso del directorio del historial de la aplicación.  
@@ -45,20 +43,20 @@ HRESULT GetHistoryFileDirectory (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los códigos de error COM estándar, tal y como se define en el archivo WinError. h, además de los valores siguientes.  
   
-|Código devuelto|DESCRIPCIÓN|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`wzDir`o `pdwSize` es null, o la cadena de versión es incorrecta.|  
+|E_INVALIDARG|`wzDir` o `pdwSize` es null, o la cadena de versión es incorrecta.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si se completa correctamente, `pdwSize` el argumento se establece en la longitud de la cadena de ruta de acceso.  
+ Si se completa correctamente, el argumento `pdwSize` se establece en la longitud de la cadena de ruta de acceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca** Fusion. dll y mscorwks. dll. Use Fusion. dll en lugar de mscorwks. dll para asegurarse de que tiene como destino la versión correcta del .NET Framework.  
+ **Biblioteca:** Fusion. dll y mscorwks. dll. Use Fusion. dll en lugar de mscorwks. dll para asegurarse de que tiene como destino la versión correcta del .NET Framework.  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135204"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob (Método)
 Obtiene un hash del ensamblado en la dirección de memoria especificada mediante un algoritmo hash concreto.  
@@ -42,32 +40,32 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>Parámetros  
  `pbBlob`  
- [in] Un puntero a la dirección del bloque de memoria para un algoritmo hash.  
+ de Puntero a la dirección del bloque de memoria al que se va a aplicar un algoritmo hash.  
   
  `cchBlob`  
- [in] La longitud, en bytes, del bloque de memoria.  
+ de La longitud, en bytes, del bloque de memoria.  
   
  `piHashAlg`  
- [in, out] Una constante que especifica el algoritmo hash. Usar cero para el algoritmo predeterminado.  
+ [in, out] Constante que especifica el algoritmo hash. Use cero para el algoritmo predeterminado.  
   
  `pbHash`  
- [out] El búfer hash devuelto.  
+ enuncia Búfer hash devuelto.  
   
  `cchHash`  
- [in] El tamaño máximo solicitado de `pbHash`.  
+ de Tamaño máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] El tamaño, en bytes, del devuelto `pbHash`.  
+ enuncia Tamaño, en bytes, del `pbHash`devuelto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

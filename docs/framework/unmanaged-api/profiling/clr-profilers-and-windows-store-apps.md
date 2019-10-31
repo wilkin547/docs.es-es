@@ -12,14 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140386"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -114,7 +112,7 @@ Por lo general, las aplicaciones de la tienda Windows solo pueden tener acceso a
 
 ### <a name="startup-load"></a>Carga de inicio
 
-Normalmente, en una aplicación de escritorio, la interfaz de usuario del generador de perfiles solicita una carga de inicio de la DLL del generador de perfiles mediante la inicialización de un bloque de entorno que contiene las variables de entorno de la API de generación de perfiles de CLR necesarias (es decir, `COR_PROFILER`, `COR_ENABLE_PROFILING` y `COR_PROFILER_PATH`) y, a continuación, crear un nuevo proceso con ese bloque de entorno. Lo mismo se aplica a las aplicaciones de la tienda Windows, pero los mecanismos son diferentes.
+Normalmente, en una aplicación de escritorio, la interfaz de usuario del generador de perfiles solicita una carga de inicio de la DLL del generador de perfiles mediante la inicialización de un bloque de entorno que contiene las variables de entorno de la API de generación de perfiles de CLR necesarias (es decir, `COR_PROFILER`, `COR_ENABLE_PROFILING`y `COR_PROFILER_PATH`) y, a continuación, crear un nuevo proceso con ese bloque de entorno. Lo mismo se aplica a las aplicaciones de la tienda Windows, pero los mecanismos son diferentes.
 
 **No ejecutar con privilegios elevados**
 
@@ -137,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Especificar el bloque de entorno personalizado**
 
-Una nueva interfaz COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), le permite personalizar el comportamiento de ejecución de una aplicación de la tienda Windows para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), le permite pasar un bloque de entorno a la aplicación de la tienda Windows cuando se inicia, junto con otros efectos útiles como la deshabilitación de la suspensión automática del proceso. El bloque de entorno es importante porque es donde debe especificar las variables de entorno (`COR_PROFILER`, `COR_ENABLE_PROFILING` y `COR_PROFILER_PATH)`) que usa CLR para cargar el archivo DLL del generador de perfiles.
+Una nueva interfaz COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), le permite personalizar el comportamiento de ejecución de una aplicación de la tienda Windows para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), le permite pasar un bloque de entorno a la aplicación de la tienda Windows cuando se inicia, junto con otros efectos útiles como la deshabilitación de la suspensión automática del proceso. El bloque de entorno es importante porque es donde debe especificar las variables de entorno (`COR_PROFILER`, `COR_ENABLE_PROFILING`y `COR_PROFILER_PATH)`) que usa CLR para cargar el archivo DLL del generador de perfiles.
 
 Tenga en cuenta el fragmento de código siguiente:
 
@@ -287,7 +285,7 @@ Pero, por supuesto, los archivos siguen en, aunque de forma más limitada. Tambi
 
 La mayoría de los datos probablemente pasarán entre la DLL del generador de perfiles y la interfaz de usuario del generador de perfiles a través de archivos. La clave consiste en elegir una ubicación de archivo que el archivo DLL del generador de perfiles (en el contexto de una aplicación de la tienda Windows) y la interfaz de usuario del generador de perfiles tengan acceso de lectura y escritura a. Por ejemplo, la ruta de acceso de la carpeta temporal es una ubicación a la que pueden acceder tanto a la DLL del generador de perfiles como a la interfaz de usuario del generador de perfiles, pero ningún otro paquete de la aplicación de la tienda Windows puede acceder a él (con lo que se protege cualquier información que se registre desde otros paquetes de aplicaciones
 
-La interfaz de usuario del generador de perfiles y la DLL del generador de perfiles pueden determinar esta ruta de acceso de forma independiente La interfaz de usuario del generador de perfiles, cuando recorre en iteración todos los paquetes instalados para el usuario actual (vea el código de ejemplo anterior), obtiene acceso a la clase `PackageId`, desde la que la ruta de acceso de la carpeta temporal se puede derivar con código similar a este fragmento de código. (Como siempre, la comprobación de errores se omite por motivos de brevedad).
+La interfaz de usuario del generador de perfiles y la DLL del generador de perfiles pueden determinar esta ruta de acceso de forma independiente La interfaz de usuario del generador de perfiles, cuando recorre en iteración todos los paquetes instalados para el usuario actual (vea el código de ejemplo anterior), obtiene acceso a la clase `PackageId`, desde la que se puede derivar la ruta de acceso de la carpeta temporal con código similar a este fragmento de código. (Como siempre, la comprobación de errores se omite por motivos de brevedad).
 
 ```csharp
 // C# code for the Profiler UI.
@@ -298,7 +296,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Mientras tanto, la DLL del generador de perfiles puede hacer básicamente lo mismo, aunque puede llegar más fácilmente a la clase <xref:Windows.Storage.ApplicationData> mediante la propiedad [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
+Mientras tanto, el archivo DLL del generador de perfiles puede hacer básicamente lo mismo, aunque puede obtener más fácilmente la clase <xref:Windows.Storage.ApplicationData> mediante la propiedad [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
 
 **Comunicación a través de eventos**
 
@@ -384,7 +382,7 @@ Para entender las consecuencias de esto, es importante comprender las diferencia
 
 El punto relevante es que las llamadas realizadas en los subprocesos creados por el generador de perfiles siempre se consideran sincrónicas, incluso si esas llamadas se realizan desde fuera de una implementación de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) del archivo DLL del generador de perfiles. Como mínimo, que solía ser el caso. Ahora que CLR ha convertido el subproceso del generador de perfiles en un subproceso administrado debido a su llamada al [método forcegc (](icorprofilerinfo-forcegc-method.md), ese subproceso ya no se considera el subproceso del generador de perfiles. Como tal, el CLR exige una definición más rigurosa de lo que se refiere como sincrónico para ese subproceso, es decir, que una llamada se debe originar desde dentro de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) de la dll del generador de perfiles para calificarse como sincrónica.
 
-¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas realizadas normalmente en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), tendrá problemas . Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Consulte la entrada de blog @no__t el recorrido de la pila de 0Profiler: Aspectos básicos y más allá de @ no__t-0 para más información).
+¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas realizadas normalmente en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), tendrá problemas . Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) ).
 
 Por lo tanto, se recomienda que todos los subprocesos que crea el archivo DLL del generador de perfiles para llamar al [método forcegc (](icorprofilerinfo-forcegc-method.md) se deben usar *únicamente* con el fin de desencadenar GC y después responder a las devoluciones de llamada GC. No debe llamar a la API de generación de perfiles para realizar otras tareas, como el muestreo o desasociación de la pila.
 

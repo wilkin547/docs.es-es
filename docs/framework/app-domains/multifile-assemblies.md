@@ -10,14 +10,12 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 8ffb0482ebd01a056d9ffd80a74ec0332e1b8dff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119794"
 ---
 # <a name="multifile-assemblies"></a>Ensamblados de múltiples archivos
 
@@ -43,5 +41,5 @@ Una vez creado el ensamblado, puede firmar el archivo que contiene el manifiesto
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Compilar un ensamblado de varios archivos](build-multifile-assembly.md)
+- [Cómo: compilar un ensamblado de un solo archivo](build-multifile-assembly.md)
 - [Programación con ensamblados](../../standard/assembly/program.md)

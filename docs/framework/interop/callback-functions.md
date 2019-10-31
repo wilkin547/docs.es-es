@@ -5,14 +5,12 @@ helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0fbf6df93e3ef9ee6380ed35f98018d157599e2a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123745"
 ---
 # <a name="callback-functions"></a>Funciones de devolución de llamada
 Una función de devolución de llamada es código dentro de una aplicación administrada que ayuda a una función DLL no administrada a completar una tarea. Las llamadas a una función de devolución de llamada pasan indirectamente desde una aplicación administrada, a través de una función DLL, y de nuevo a la implementación administrada. Algunas de las muchas funciones DLL que se llaman con la invocación de plataforma requieren una función de devolución de llamada en código administrado para ejecutarse correctamente.  

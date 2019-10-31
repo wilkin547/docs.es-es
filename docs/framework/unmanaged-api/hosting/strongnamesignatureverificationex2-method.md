@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768266"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141413"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 (Método)
-Comprueba la firma de un ensamblado con nombre seguro y proporciona una asignación de la clave ECMA a una clave de real.  
+Comprueba la firma de un ensamblado con nombre seguro y proporciona una asignación de la clave ECMA a una clave real.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,29 +38,29 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] La ruta de acceso al archivo ejecutable portable (.dll o .exe) del ensamblado que debe comprobarse.  
+ de Ruta de acceso al archivo portable ejecutable (. exe o. dll) del ensamblado que se va a comprobar.  
   
  `fForceVerification`  
- [in] `true` para realizar la comprobación, incluso si es necesario reemplazar la configuración del registro; en caso contrario, `false`.  
+ [in] `true` para realizar la comprobación, incluso si es necesario invalidar la configuración del registro; de lo contrario, `false`.  
   
  `pbEcmaPublicKey`  
- [in] Un puntero a la asignación de la clave pública de ECMA a la clave real que se usa para la comprobación.  
+ de Un puntero a la asignación de la clave pública ECMA a la clave real que se usa para la comprobación.  
   
  `cbEcmaPublicKey`  
- [in] La longitud de la clave pública real de ECMA.  
+ de La longitud de la clave pública ECMA real.  
   
  `pfWasVerified`  
- [out] `true` si la firma de nombre seguro se ha comprobado; en caso contrario, `false`. Este parámetro también se establece en `false` si la comprobación se realizó correctamente debido a la configuración del registro.  
+ [out] `true` si se ha comprobado la firma de nombre seguro; de lo contrario, `false`. Este parámetro también se establece en `false` si la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si la comprobación se realizó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si la comprobación se realizó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

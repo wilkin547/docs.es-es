@@ -5,21 +5,19 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3dd3105e573d40ae234ba7e122f20566911124d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b04ef53d6e9c3d954b0925ea8634b3d220b36af7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116573"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence >, elemento
-Especifica si el tiempo de <xref:System.Security.Policy.Publisher> ejecución crea evidencia para la seguridad de acceso del código (CAS).  
+# <a name="generatepublisherevidence-element"></a>\<elemento > generatePublisherEvidence
+Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publisher> evidencia para la seguridad de acceso del código (CAS).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,23 +31,23 @@ Especifica si el tiempo de <xref:System.Security.Policy.Publisher> ejecución cr
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si el tiempo de <xref:System.Security.Policy.Publisher> ejecución crea evidencia.|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publisher> evidencia.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|`false`|No crea <xref:System.Security.Policy.Publisher> ninguna evidencia.|  
-|`true`|Crea <xref:System.Security.Policy.Publisher> una evidencia. Este es el valor predeterminado.|  
+|`false`|No crea <xref:System.Security.Policy.Publisher> evidencia.|  
+|`true`|Crea <xref:System.Security.Policy.Publisher> evidencia. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
@@ -59,16 +57,16 @@ Especifica si el tiempo de <xref:System.Security.Policy.Publisher> ejecución cr
 > [!NOTE]
 > En el .NET Framework 4 y versiones posteriores, este elemento no tiene ningún efecto en los tiempos de carga de ensamblados. Para obtener más información, consulte la sección "simplificación de la Directiva de seguridad" en [cambios de seguridad](../../../security/security-changes.md).  
   
- El Common Language Runtime (CLR) intenta comprobar la firma Authenticode en el momento de la carga <xref:System.Security.Policy.Publisher> para crear una evidencia para el ensamblado. Sin embargo, de forma predeterminada, la mayoría de <xref:System.Security.Policy.Publisher> las aplicaciones no necesitan evidencia. La <xref:System.Security.Policy.PublisherMembershipCondition>Directiva CAS estándar no se basa en. Debe evitar el costo de inicio innecesario asociado con la comprobación de la firma del publicador, a menos que la aplicación se ejecute en un equipo con una directiva de CA personalizada o <xref:System.Security.Permissions.PublisherIdentityPermission> que pretenda satisfacer las demandas de en un entorno de confianza parcial. (Las peticiones de permisos de identidad siempre se realizan correctamente en un entorno de plena confianza).  
+ El Common Language Runtime (CLR) intenta comprobar la firma Authenticode en el momento de la carga para crear <xref:System.Security.Policy.Publisher> evidencia para el ensamblado. Sin embargo, de forma predeterminada, la mayoría de las aplicaciones no necesitan <xref:System.Security.Policy.Publisher> evidencia. La Directiva CAS estándar no se basa en el <xref:System.Security.Policy.PublisherMembershipCondition>. Debe evitar el costo de inicio innecesario asociado con la comprobación de la firma del publicador, a menos que la aplicación se ejecute en un equipo con una directiva de CA personalizada o que pretenda satisfacer las demandas de <xref:System.Security.Permissions.PublisherIdentityPermission> en un entorno de confianza parcial. (Las peticiones de permisos de identidad siempre se realizan correctamente en un entorno de plena confianza).  
   
 > [!NOTE]
-> Se recomienda que los servicios utilicen `<generatePublisherEvidence>` el elemento para mejorar el rendimiento de inicio.  El uso de este elemento también puede ayudar a evitar retrasos que pueden provocar un tiempo de espera y la cancelación del inicio del servicio.  
+> Se recomienda que los servicios utilicen el elemento `<generatePublisherEvidence>` para mejorar el rendimiento de inicio.  El uso de este elemento también puede ayudar a evitar retrasos que pueden provocar un tiempo de espera y la cancelación del inicio del servicio.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
  Este elemento solo se puede usar en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar `<generatePublisherEvidence>` el elemento para deshabilitar la comprobación de la Directiva de publicador CAS para una aplicación.  
+ En el ejemplo siguiente se muestra cómo utilizar el elemento `<generatePublisherEvidence>` para deshabilitar la comprobación de la Directiva de publicador CAS para una aplicación.  
   
 ```xml  
 <configuration>  

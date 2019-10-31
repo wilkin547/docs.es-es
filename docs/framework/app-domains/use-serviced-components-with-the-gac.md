@@ -7,14 +7,12 @@ helpviewer_keywords:
 - serviced components, global assembly cache
 - global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4edc675e0348f06114b8162022f1d9420e0cec52
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99627cb14088f037c58bfa1eec72bd4f88d06011
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119771"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Utilizar componentes con servicio junto con la memoria caché global de ensamblados
 Los componentes con servicio (componentes COM+ de código administrado) deben colocarse en la caché global de ensamblados. En algunos escenarios, Common Language Runtime y los Servicios COM+ pueden controlar los componentes con servicio que no están en la caché global de ensamblados; en otros escenarios no pueden. Estos escenarios ilustran lo siguiente:  

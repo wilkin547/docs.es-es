@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 77c88786befb92960f4cfa4a960cbfc624318b26
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138973"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString (Método)
-Obtiene la cadena al que hace referencia este ICorDebugStringValue.  
+Obtiene la cadena a la que hace referencia este ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,15 +41,15 @@ HRESULT GetString (
  [in] Tamaño de la matriz `szString`.  
   
  `pcchString`  
- [out] Un puntero al número de caracteres devuelto en el `szString` matriz.  
+ enuncia Puntero al número de caracteres devueltos en la matriz de `szString`.  
   
  `szString`  
- [out] Una matriz que almacena la cadena recuperada.  
+ enuncia Matriz que almacena la cadena recuperada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

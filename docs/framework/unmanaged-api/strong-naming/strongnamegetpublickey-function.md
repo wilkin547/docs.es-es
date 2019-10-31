@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae87ebd0b8225f14ca029fac80528d47f5a866cf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 966a2a628f30f1999688da7b6ba435c1d6cb830c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094662"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey (Función)
 Obtiene la clave pública de un par de claves pública y privada. El par de claves se puede proporcionar como un nombre de contenedor de claves dentro de un proveedor de servicios criptográficos (CSP) o como una colección de bytes sin procesar.  
@@ -50,31 +48,31 @@ BOOLEAN StrongNameGetPublicKey (
  Las claves deben ser claves de firma de Rivest-Shamir-Adleman (RSA) de 1024 bits. En este momento no se admite ningún otro tipo de clave.  
   
  `pbKeyBlob`  
- de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor `szKeyContainer` de claves especificado por contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `szKeyContainer` contiene el par de claves.  
   
  `cbKeyBlob`  
  de Tamaño, en bytes, de `pbKeyBlob`.  
   
  `ppbPublicKeyBlob`  
- enuncia El BLOB de clave pública devuelto. El `ppbPublicKeyBlob` Common Language Runtime asigna el parámetro y se devuelve al autor de la llamada. El autor de la llamada debe liberar la memoria mediante la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
+ enuncia El BLOB de clave pública devuelto. El Common Language Runtime asigna el parámetro `ppbPublicKeyBlob` y se devuelve al autor de la llamada. El autor de la llamada debe liberar la memoria mediante la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbPublicKeyBlob`  
  enuncia Tamaño del BLOB de clave pública devuelto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  La clave pública está contenida en una estructura [PublicKeyBlob](publickeyblob-structure.md) .  
   
- Si la `StrongNameGetPublicKey` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameGetPublicKey` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

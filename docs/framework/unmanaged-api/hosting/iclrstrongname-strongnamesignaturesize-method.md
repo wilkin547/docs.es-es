@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 76d4f93a-5e25-4399-abcc-a1389549481d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8bf6d69f8490f05532df3e164107760c2b574e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f6865c3d6dffa3b551d4e5e0636b1e386be8baa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755007"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134986"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize (Método)
-Devuelve el tamaño de la firma de nombre seguro. Este método se utiliza normalmente los compiladores para determinar la cantidad de espacio que se reserva en el archivo al crear un ensamblado con firma retrasada.  
+Devuelve el tamaño de la firma de nombre seguro. Normalmente, los compiladores usan este método para determinar la cantidad de espacio que se reservará en el archivo al crear un ensamblado con firma retrasada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,23 +37,23 @@ HRESULT StrongNameSignatureSize (
   
 ## <a name="parameters"></a>Parámetros  
  `pbPublicKeyBlob`  
- [in] Una estructura de tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
+ de Estructura de tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
   
  `cbPublicKeyBlob`  
- [in] El tamaño, en bytes, de `pbPublicKeyBlob`.  
+ de Tamaño, en bytes, de `pbPublicKeyBlob`.  
   
  `pcbSize`  
- [in] El número de bytes necesarios para almacenar la firma de nombre seguro.  
+ de Número de bytes necesarios para almacenar la firma de nombre seguro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

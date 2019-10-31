@@ -10,17 +10,15 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df113a2839b0f2651e15f4029d86cc5efc171c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6591f7d7b632bcdbdabb1633f7431d79da7ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111811"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 (Interfaz)
-Una subclase de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) que proporciona acceso a información de excepción.  
+Subclase de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) que proporciona acceso a la información de la excepción.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -34,9 +32,9 @@ Una subclase de [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debug
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria. Puede que el destino no admita la modificación de sus áreas de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

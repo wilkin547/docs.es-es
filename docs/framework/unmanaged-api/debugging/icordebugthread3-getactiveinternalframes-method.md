@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58aaf0445fe42d083c12541056cb362f9a994944
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124348"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames (Método)
-Devuelve una matriz de marcos internos ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objetos) en la pila.  
+Devuelve una matriz de Marcos internos (objetos[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) ) en la pila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,38 +39,38 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>Parámetros  
  `cInternalFrames`  
- [in] El número de marcos internos esperados en `ppInternalFrames`.  
+ de Número de fotogramas internos esperados en `ppInternalFrames`.  
   
  `pcInternalFrames`  
- [out] Un puntero a un `ULONG32` que contiene el número de marcos internos de la pila.  
+ enuncia Puntero a una `ULONG32` que contiene el número de Marcos internos de la pila.  
   
  `ppInternalFrames`  
- [in, out] Un puntero a la dirección de una matriz de marcos internos de la pila.  
+ [in, out] Puntero a la dirección de una matriz de Marcos internos de la pila.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objeto se creó correctamente.|  
-|E_INVALIDARG|`cInternalFrames` no es cero y `ppInternalFrames` es `null`, o `pcInternalFrames` es `null`.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` es menor que el recuento de tramas internos.|  
+|S_OK|El objeto [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) se ha creado correctamente.|  
+|E_INVALIDARG|`cInternalFrames` no es cero y `ppInternalFrames` es `null`o `pcInternalFrames` es `null`.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` es menor que el número de Marcos internos.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- Los marcos internos son estructuras de datos que se insertan en la pila, el tiempo de ejecución para almacenar datos temporales.  
+ Los marcos internos son estructuras de datos insertadas en la pila por el motor en tiempo de ejecución para almacenar datos temporales.  
   
- Cuando llama `GetActiveInternalFrames`, debe establecer el `cInternalFrames` parámetro en 0 (cero) y el `ppInternalFrames` parámetro en null. Cuando `GetActiveInternalFrames` devuelve en primer lugar, `pcInternalFrames` contiene el número de marcos internos de la pila.  
+ Cuando llame por primera vez a `GetActiveInternalFrames`, debe establecer el parámetro `cInternalFrames` en 0 (cero) y el parámetro `ppInternalFrames` en NULL. Cuando `GetActiveInternalFrames` devuelve primero, `pcInternalFrames` contiene el recuento de los marcos internos en la pila.  
   
- `GetActiveInternalFrames` a continuación, se debe llamar una segunda vez. Debe pasar el número apropiado (`pcInternalFrames`) en el `cInternalFrames` parámetro, y especifique un puntero a una matriz de tamaño adecuado en `ppInternalFrames`.  
+ a continuación, se debe llamar a `GetActiveInternalFrames` por segunda vez. Debe pasar el recuento adecuado (`pcInternalFrames`) en el parámetro `cInternalFrames` y especificar un puntero a una matriz de tamaño adecuado en `ppInternalFrames`.  
   
- Use la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) marcos de pila del método para devolver real.  
+ Use el método [ICorDebugStackWalk:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) para devolver los marcos de pila reales.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795358"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108716"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject (Función)
 Obtiene un puntero de interfaz a una instancia de [IAssemblyName](iassemblyname-interface.md) que representa la identidad única del ensamblado con el nombre especificado.  
@@ -41,23 +39,23 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>Parámetros  
  `ppAssemblyNameObj`  
- enuncia Devuelto `IAssemblyName`.  
+ enuncia El `IAssemblyName`devuelto.  
   
  `szAssemblyName`  
- de Nombre del ensamblado para el que se va a crear `IAssemblyName` la nueva instancia.  
+ de Nombre del ensamblado para el que se va a crear la nueva instancia de `IAssemblyName`.  
   
  `dwFlags`  
  de Marcas que se van a pasar al constructor de objetos.  
   
  `pvReserved`  
- [in] Reservado para extensibilidad futura. `pvReserved`debe ser una referencia nula.  
+ [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 78402e5e099815fe309618e692285de91b8b29f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752209"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124237"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort (Método)
-Anula el cálculo de que este objeto ICorDebugEval está realizando actualmente.  
+Anula el cálculo que este objeto ICorDebugEval está realizando actualmente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +32,12 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Si la evaluación está anidada y no es lo más reciente, la `Abort` método puede producir un error.  
+ Si la evaluación está anidada y no es la más reciente, puede producirse un error en el método `Abort`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

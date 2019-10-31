@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5031a5d3-2564-412a-9007-e36d4631308a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6bfde8a934da857e580c603bd1c0115a04a4070
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e49bf6a7db9edb9e5ae489cc0655eea54406643d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137881"
 ---
 # <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule (Método)
 Obtiene el módulo en el que se define esta función.  
@@ -37,12 +35,12 @@ HRESULT GetModule (
   
 ## <a name="parameters"></a>Parámetros  
  `ppModule`  
- [out] Un puntero a la dirección de un objeto ICorDebugModule que representa el módulo en el que se define esta función.  
+ enuncia Puntero a la dirección de un objeto ICorDebugModule que representa el módulo en el que se define esta función.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

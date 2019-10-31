@@ -5,21 +5,19 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252208"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114919"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks >, elemento
+# <a name="usesmallinternalthreadstacks-element"></a>\<elemento > UseSmallInternalThreadStacks
 Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especificando tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar de usar el tamaño de pila predeterminado para esos subprocesos.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,23 +30,23 @@ Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especifi
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |enabled|Atributo necesario.<br /><br /> Especifica si se debe solicitar que CLR use tamaños de pila explícitos en lugar del tamaño de pila predeterminado cuando crea determinados subprocesos que usa internamente. Los tamaños de pila explícitos son menores que el tamaño de pila predeterminado de 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |true|Solicitar tamaños de pila explícitos.|  
-|false|Use el tamaño de pila predeterminado. Este es el valor predeterminado para el .NET Framework 4.|  
+|False|Use el tamaño de pila predeterminado. Este es el valor predeterminado para el .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  

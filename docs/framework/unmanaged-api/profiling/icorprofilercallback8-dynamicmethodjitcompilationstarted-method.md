@@ -1,5 +1,5 @@
 ---
-title: Método ICorProfilerCallback8::DynamicMethodJITCompilationStarted
+title: ICorProfilerCallback8::D método ynamicMethodJITCompilationStarted
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a60f074ce0081df07a61d0b832d542c8873776f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1eaf29e1c93f352facde4af2ee57910783d82e5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136461"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>Método ICorProfilerCallback8::DynamicMethodJITCompilationStarted
-[Se admite en .NET Framework 4.7 y versiones posteriores]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D método ynamicMethodJITCompilationStarted
+[Se admite en el .NET Framework 4,7 y versiones posteriores]  
   
-Notifica al generador de perfiles cada vez que se ha iniciado la compilación JIT de un método dinámico.  
+Notifica al generador de perfiles cada vez que se inicia la compilación JIT de un método dinámico.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,30 +33,30 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 ## <a name="parameters"></a>Parámetros  
 [in] `functionId`  
-El identificador de la función en memoria para que JIT se inicia la compilación.   
+Identificador de la función en memoria para la que se inicia la compilación JIT.   
 
 [in] `fIsSafeToBlock`   
-`true` para indicar que el bloqueo puede causar el tiempo de ejecución esperar el subproceso de llamada devolver desde esta devolución de llamada; `false` para indicar que la de bloqueo no afectará al funcionamiento del tiempo de ejecución.  
+`true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.  
 
 [in] `pILHeader`    
-Un puntero al primer byte del encabezado de IL del método.   
+Puntero al primer byte del encabezado IL del método.   
 
 [in] `cbILHeader`    
-El número de bytes en el encabezado de IL. 
+Número de bytes del encabezado IL. 
 
 ## <a name="remarks"></a>Comentarios  
 
-Esta devolución de llamada se desencadena cada vez que un método dinámico está compilado JIT. Esto incluye diversos métodos LCG y código auxiliar de IL. Su objetivo es proporcionar los escritores del generador de perfiles con la suficiente información para identificar el método compilado a los usuarios.
+Esta devolución de llamada se desencadena cada vez que se compila un método dinámico. Esto incluye varios códigos auxiliares de IL y métodos LCG. Su objetivo es proporcionar a los escritores de Profiler información suficiente para identificar el método compilado para los usuarios.
 
 > [!NOTE]
-> `functionId` los valores no se puede usar para resolver a sus tokens de metadatos, porque los métodos dinámicos no tienen ningún metadato.
+> `functionId` valores no se pueden usar para resolver sus tokens de metadatos, porque los métodos dinámicos no tienen metadatos.
 
-El `pILHeader` puntero solo es válido durante la devolución de llamada.
+El puntero `pILHeader` solo es válido durante la devolución de llamada.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5e7b12d-835a-4e86-ae2f-d658d4f1c67c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0bc65cdeada059f6e9b41dc8eb4d7589a232143d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc7d99d0ddb443cba227b7bad0cd53edb94c9101
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138538"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType (Método)
-Obtiene un valor que indica el tipo de identificador hace referencia este objeto ICorDebugHandleValue.  
+Obtiene un valor que indica el tipo de identificador al que hace referencia este objeto ICorDebugHandleValue.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetHandleType (
   
 ## <a name="parameters"></a>Parámetros  
  `pType`  
- [out] Un puntero a un valor de la enumeración CorDebugHandleType que indica el tipo de este identificador.  
+ enuncia Un puntero a un valor de la enumeración CorDebugHandleType (que indica el tipo de este identificador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

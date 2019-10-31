@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd7f4c-19f2-4ede-875e-603773e8c128
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 47647bf0460507b4c88b47bf87bfcc3bf620aecc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137218"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle (Método)
 Obtiene un puntero de referencia al objeto administrado especificado que tiene un identificador de recolección de elementos no utilizados.  
@@ -38,7 +36,7 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>Parámetros  
  `handle`  
- de Un puntero a un objeto administrado que tiene un identificador de recolección de elementos no utilizados. Este valor es un <xref:System.IntPtr> objeto y se puede recuperar <xref:System.Runtime.InteropServices.GCHandle> de para el objeto administrado.  
+ de Un puntero a un objeto administrado que tiene un identificador de recolección de elementos no utilizados. Este valor es un objeto de <xref:System.IntPtr> y se puede recuperar del <xref:System.Runtime.InteropServices.GCHandle> para el objeto administrado.  
   
  `pOutValue`  
  enuncia Puntero a la dirección de un objeto ICorDebugReferenceValue que representa una referencia al objeto administrado especificado.  
@@ -49,13 +47,13 @@ HRESULT GetReferenceValueFromGCHandle (
  La referencia devuelta se comporta como una referencia normal. Está deshabilitada cuando la ejecución del código continúa después de un punto de interrupción. La duración del objeto de destino no se ve afectada por la duración del valor de referencia.  
   
 > [!NOTE]
-> El `GetReferenceValueFromGCHandle` método no valida el identificador. Por consiguiente, `GetReferenceValueFromGCHandle` el método puede dañar potencialmente el depurador y el código que se está depurando si se pasa un identificador no válido.  
+> El método `GetReferenceValueFromGCHandle` no valida el identificador. Por lo tanto, el método `GetReferenceValueFromGCHandle` podría dañar el depurador y el código que se está depurando si se pasa un identificador no válido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

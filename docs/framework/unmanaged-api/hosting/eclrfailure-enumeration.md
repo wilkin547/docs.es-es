@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769656"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131122"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure (Enumeración)
-Describe el conjunto de errores para el que un host puede establecer acciones de directiva.  
+Describe el conjunto de errores para los que un host puede establecer acciones de directiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,25 +40,25 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región no crítica del código.|  
-|`FAIL_CriticalResource`|Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región crítica del código.|  
-|`FAIL_FatalRuntime`|Common language runtime (CLR) ya no es capaz de ejecutar código administrado en el proceso. Aquí en adelante, las llamadas a las funciones de hospedaje devuelven un valor HRESULT de HOST_E_CLRNOTAVAILABLE.|  
-|`FAIL_OrphanedLock`|Un subproceso no pudo liberar un bloqueo al volver de un <xref:System.AppDomain> objeto. El host no puede establecer este error para hacer que un subproceso se anule.|  
+|`FAIL_NonCriticalResource`|Se produjo un error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región de código que no es crítica.|  
+|`FAIL_CriticalResource`|Se produjo un error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región crítica de código.|  
+|`FAIL_FatalRuntime`|El Common Language Runtime (CLR) ya no puede ejecutar código administrado en el proceso. En adelante, las llamadas a las funciones de hospedaje devuelven un valor HRESULT de HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_OrphanedLock`|Un subproceso no pudo liberar un bloqueo al devolver un objeto <xref:System.AppDomain>. El host no puede establecer este error para hacer que un subproceso se anule.|  
 |`FAIL_StackOverflow`|Se ha producido un desbordamiento de pila.|  
-|`FAIL_AccessViolation`|Se intentó leer o escribir en la memoria protegida. No se admite en .NET Framework 4.|  
-|`FAIL_CodeContract`|Se ha producido un error de contrato de código. Consulte [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_AccessViolation`|Se intentó leer o escribir en la memoria protegida. No se admite en el .NET Framework 4.|  
+|`FAIL_CodeContract`|Error de contrato de código. Vea [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Comentarios  
- Consulte la [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) método para obtener una lista de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valores el host puede utilizar para especificar las acciones de directiva para las condiciones de error. Para obtener más información acerca de las regiones que no son críticas y de código, vea [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Vea el método [ICLRPolicyManager:: setactiononfailure (](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) para obtener una lista de los valores de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) que el host puede usar para especificar las acciones de directiva para las condiciones de error. Para obtener más información sobre las regiones críticas y no críticas de código, vea [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

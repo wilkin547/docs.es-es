@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046121"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130272"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Información general acerca de Dynamic Language Runtime
 
@@ -98,4 +96,4 @@ DLR usa enlazadores en los sitios de llamada para comunicarse no solo con .NET F
 - [Common Language Runtime](../../standard/clr.md)
 - [Árboles de expresión (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Árboles de expresión (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Tutorial: Crear y usar objetos dinámicos](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Walkthrough: Creating and Using Dynamic Objects](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md) (Tutorial: Crear y usar objetos dinámicos [C# y Visual Basic])

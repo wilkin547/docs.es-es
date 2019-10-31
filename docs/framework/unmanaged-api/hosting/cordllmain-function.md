@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755660"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136974"
 ---
-# <a name="cordllmain-function"></a>\_Función CorDllMain
+# <a name="_cordllmain-function"></a>\_función CorDllMain
 
-Inicializa common language runtime (CLR), busca el punto de entrada administrado en el encabezado CLR del ensamblado DLL y comienza la ejecución.  
+Inicializa el Common Language Runtime (CLR), busca el punto de entrada administrado en el encabezado CLR del ensamblado de DLL y comienza la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,33 +37,33 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>Parámetros  
  `hInst`  
- [in] El identificador de instancia del módulo cargado.  
+ de Identificador de instancia del módulo cargado.  
   
  `dwReason`  
- [in] Indica por qué se llama a la función de punto de entrada DLL. Este parámetro puede ser uno de los siguientes valores: DLL\_PROCESS_ATTACH, DLL\_subprocesos\_ATTACH, DLL\_subprocesos\_adjuntar o DLL\_proceso\_DETACH. Para obtener descripciones de estos valores, vea el `DllMain` documentación de Platform SDK.  
+ de Indica por qué se llama a la función de punto de entrada del archivo DLL. Este parámetro puede ser uno de los siguientes valores: DLL\_PROCESS_ATTACH, DLL\_subproceso\_adjuntar, DLL\_subproceso\_adjuntar o DLL\_procesar\_desasociar. Para obtener descripciones de estos valores, consulte la documentación de `DllMain` en el SDK de la plataforma.  
   
  `lpReserved`  
- [in] Sin usar.  
+ de Sin usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve `true` para el éxito y `false` si se produce un error.  
+ Este método devuelve `true` para Success y `false` si se produce un error.  
   
 ## <a name="remarks"></a>Comentarios  
- El cargador del sistema operativo llama a esta función para los ensamblados DLL. Para los ensamblados ejecutables, el cargador llama a la [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) funcione en su lugar.  
+ El cargador del sistema operativo llama a esta función para los ensamblados DLL. En el caso de los ensamblados ejecutables, el cargador llama a la función [\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) en su lugar.  
   
  El cargador del sistema operativo llama a este método independientemente del punto de entrada especificado en el archivo DLL.  
   
-El `_CorDllMain` función se llama directamente mediante el cargador del sistema operativo.
+El cargador del sistema operativo llama directamente a la función `_CorDllMain`.
   
- Para obtener más información, vea la sección de comentarios en el [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tema.  
+ Para obtener más información, vea la sección Comentarios del tema [\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
 
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

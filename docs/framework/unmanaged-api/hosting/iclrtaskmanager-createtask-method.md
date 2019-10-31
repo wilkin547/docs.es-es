@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcb78dd5374ff97f23d7dfea63fe33fa96836958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124541"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask (Método)
 Solicita explícitamente que el Common Language Runtime (CLR) cree una nueva tarea.  
@@ -41,7 +39,7 @@ HRESULT CreateTask (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
@@ -52,19 +50,19 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para asignar el recurso solicitado.|  
   
 ## <a name="remarks"></a>Comentarios  
- CLR crea una nueva tarea automáticamente durante la inicialización, cuando el código de usuario crea un subproceso mediante <xref:System.Threading> los tipos del espacio de nombres o cuando aumenta el tamaño del grupo de subprocesos. También crea tareas cuando el código no administrado realiza una llamada a una función administrada.  
+ CLR crea una nueva tarea automáticamente tras la inicialización, cuando el código de usuario crea un subproceso mediante los tipos del espacio de nombres <xref:System.Threading>, o cuando aumenta el tamaño del grupo de subprocesos. También crea tareas cuando el código no administrado realiza una llamada a una función administrada.  
   
- `CreateTask`permite al host realizar una solicitud explícita de que CLR cree una nueva tarea. Por ejemplo, el host puede invocar este método para preinicializar las estructuras de datos.  
+ `CreateTask` permite al host realizar una solicitud explícita de que CLR cree una nueva tarea. Por ejemplo, el host puede invocar este método para preinicializar las estructuras de datos.  
   
 > [!IMPORTANT]
 > La nueva tarea se devuelve en un estado suspendido y permanece suspendida hasta que el host llama explícitamente a [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

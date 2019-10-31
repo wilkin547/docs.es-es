@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127662"
 ---
 # <a name="delete-function"></a>Función Delete
 
@@ -48,13 +46,13 @@ de Este parámetro no se utiliza.
 de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-de Nombre de la propiedad que se va a eliminar. `wszName`debe ser un puntero a un válido `LPCWSTR`.
+de Nombre de la propiedad que se va a eliminar. `wszName` debe ser un puntero a una `LPCWSTR`válida.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | No se puede eliminar la propiedad. |
@@ -72,9 +70,9 @@ Esta función contiene una llamada al método [IWbemClassObject::D iminar](/wind
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

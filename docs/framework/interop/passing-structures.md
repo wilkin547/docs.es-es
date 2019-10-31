@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eef52827bfe36977c9c4c844f4f431e7404adc97
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8fde48f0697d986c5fc7f6d7059b6b45a6af1488
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124978"
 ---
 # <a name="passing-structures"></a>Pasar estructuras
 Muchas funciones no administradas esperan que el usuario pase, como parámetro de la función, miembros de estructuras (tipos definidos por el usuario en Visual Basic) o miembros de clases definidos en código administrado. Al pasar estructuras o clases al código no administrado mediante la invocación de plataforma, debe proporcionarse información adicional para mantener la distribución y alineación originales. En este tema se presenta el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que se utiliza para definir tipos con formato. Para estructuras y clases administradas, se puede seleccionar entre varios comportamientos de distribución previsibles que proporciona la enumeración **LayoutKind**.  

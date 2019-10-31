@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136922"
 ---
-# <a name="corimageunloading-function"></a>_CorImageUnloading (Función)
-Notifica al cargador cuándo se descargan las imágenes de módulo administrado.  
+# <a name="_corimageunloading-function"></a>_CorImageUnloading (Función)
+Notifica al cargador cuando se descargan las imágenes del módulo administrado.  
   
  Esta función no está implementada. Si se llama, devuelve E_NOTIMPL.  
   
@@ -38,14 +36,14 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Parámetros  
  `ImageBase`  
- [in] Un puntero a la ubicación inicial de la imagen para descargar.  
+ de Puntero a la ubicación inicial de la imagen que se va a descargar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

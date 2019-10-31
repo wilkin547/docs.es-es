@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e99346ecca651346b46c220a5e427cbc7f4c4697
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799101"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095007"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob (Función)
 Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada.  
@@ -46,20 +44,20 @@ BOOLEAN StrongNameGetBlob (
  de Búfer en el que se va a cargar el archivo ejecutable.  
   
  `pcbBlob`  
- [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Después de la devolución, el tamaño real, en bytes `pbBlob`, de.  
+ [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la `StrongNameGetBlob` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameGetBlob` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

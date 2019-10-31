@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a2badf8f164abd1bbb8892ec5db28f7cf39f5c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135040"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall (Método)
 Importa un par de claves pública y privada a un contenedor.  
@@ -39,26 +37,26 @@ HRESULT StrongNameKeyInstall (
   
 ## <a name="parameters"></a>Parámetros  
  `wszKeyContainer`  
- [in] Nombre del contenedor de claves. `wszKeyContainer` debe ser una cadena no vacía.  
+ de Nombre del contenedor de claves. `wszKeyContainer` debe ser una cadena no vacía.  
   
  `pbKeyBlob`  
- [in] El par de claves binario.  
+ de Par de claves binarias.  
   
  `cbKeyBlob`  
- [in] El tamaño, en bytes, de `pbKeyBlob`.  
+ de Tamaño, en bytes, de `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="remarks"></a>Comentarios  
- Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) método para eliminar el contenedor de claves.  
+ Use el método [ICLRStrongName:: StrongNameKeyDelete (](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) para eliminar el contenedor de claves.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

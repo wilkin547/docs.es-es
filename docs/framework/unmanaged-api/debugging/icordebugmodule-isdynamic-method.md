@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db5d07d2b9a295a5cd21b4d4af954503b8bd7a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5774b40178ce0d7c2ef5d063a37b9011fc2630df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763660"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127951"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic (Método)
 Obtiene un valor que indica si este módulo es dinámico.  
@@ -37,15 +35,15 @@ HRESULT IsDynamic(
   
 ## <a name="parameters"></a>Parámetros  
  `pDynamic`  
- [out] `true` si este módulo es dinámico; en caso contrario, `false`.  
+ [out] `true` si este módulo es dinámico; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Un módulo dinámico puede agregar nuevas clases y eliminar las clases existentes, incluso después de que se ha cargado el módulo. El [loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) y [UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) devoluciones de llamada de informan al depurador cuando se han agregado o eliminado una clase.  
+ Un módulo dinámico puede agregar nuevas clases y eliminar clases existentes incluso después de que se haya cargado el módulo. Las devoluciones de llamada [ICorDebugManagedCallback:: loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) y [ICorDebugManagedCallback:: UnloadClass (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) informan al depurador cuando se ha agregado o eliminado una clase.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

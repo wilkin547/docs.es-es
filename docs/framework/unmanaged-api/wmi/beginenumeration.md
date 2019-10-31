@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e467234a45ae702a5b77a5f0fa8b75d4ff03c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124128"
 ---
 # <a name="beginenumeration-function"></a>Función BeginEnumeration
 Vuelve a establecer un enumerador al principio de la enumeración.  
@@ -53,10 +51,10 @@ de Combinación bit a bit de las marcas o valores descritos en la sección [come
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | La combinación de marcas en `lEnumFlags` no es válida o se ha especificado un argumento no válido. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Se realizó una segunda `BeginEnumeration` llamada a sin una llamada intermedia a. [`EndEnumeration`](endenumeration.md) |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | La combinación de marcas de `lEnumFlags` no es válida o se ha especificado un argumento no válido. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Se realizó una segunda llamada a `BeginEnumeration` sin una llamada intermedia a [`EndEnumeration`](endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para iniciar una nueva enumeración. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
@@ -68,39 +66,39 @@ Las marcas que se pueden pasar como `lEnumFlags` argumento se definen en el arch
 
 **Grupo 1**
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Incluye propiedades que solo constituyen la clave. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Incluye propiedades que son solo referencias de objeto. |
 
 **Grupo 2**
 
-Constante  |Valor  |DESCRIPCIÓN  |
+Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limite la enumeración solo a las propiedades del sistema. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Incluye propiedades locales y propagadas, pero excluye propiedades del sistema de la enumeración. |
 
 Para las clases:
 
-Constante  |Value  |DESCRIPCIÓN  |
+Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limite la enumeración a propiedades invalidadas en la definición de clase. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limite la enumeración a las propiedades invalidadas en la definición de clase actual y a las nuevas propiedades definidas en la clase. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Máscara (en lugar de una marca) que se va a `lEnumFlags` aplicar a un valor para `WBEM_FLAG_CLASS_OVERRIDES_ONLY` comprobar `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` si se ha establecido o. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Máscara (en lugar de una marca) que se va a aplicar a un valor de `lEnumFlags` para comprobar si se ha establecido `WBEM_FLAG_CLASS_OVERRIDES_ONLY` o `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`. |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite la enumeración a las propiedades que se definen o modifican en la propia clase. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite la enumeración a las propiedades que se heredan de las clases base. |
 
 Para las instancias:
 
-Constante  |Valor  |DESCRIPCIÓN  |
+Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite la enumeración a las propiedades que se definen o modifican en la propia clase. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite la enumeración a las propiedades que se heredan de las clases base. |
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

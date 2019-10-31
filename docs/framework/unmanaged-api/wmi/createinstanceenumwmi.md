@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798908"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130400"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi función)
 
@@ -49,12 +47,12 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>Parámetros
 
 `strFilter`\
-de Nombre de la clase para la que se desean instancias. Este parámetro no puede `null`ser.
+de Nombre de la clase para la que se desean instancias. Este parámetro no se puede `null`.
 
 `lFlags`\
 de Combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, la función recupera los calificadores modificados almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no se establece, la función solo recupera los calificadores almacenados en el espacio de nombres inmediato. |
 | `WBEM_FLAG_DEEP` | 0 | La enumeración incluye esta y todas las subclases de la jerarquía. |
@@ -63,7 +61,7 @@ de Combinación de marcas que afectan al comportamiento de esta función. Los si
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de solo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten que las llamadas se [clonen](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserva los punteros a objetos en la enumeración hasta que se liberan. |
 
-Las marcas recomendadas `WBEM_FLAG_RETURN_IMMEDIATELY` son `WBEM_FLAG_FORWARD_ONLY` y para obtener el mejor rendimiento.
+Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_ONLY` para obtener el mejor rendimiento.
 
 `pCtx`\
 de Normalmente, este valor es `null`. De lo contrario, es un puntero a una instancia de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que puede ser utilizada por el proveedor que proporciona las instancias solicitadas.
@@ -93,7 +91,7 @@ de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connects
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver las instancias de la clase especificada. |
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
@@ -114,9 +112,9 @@ Si se produce un error en la llamada de función, puede obtener información de 
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

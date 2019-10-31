@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e45f49d17a5b71abfb58ff8c0126abad49322c5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f33225eae4b62f2d5f0793212ae7dcc70e97f508
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737583"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088531"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount (Método)
 Obtiene el número total de elementos de la matriz.  
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parámetros  
  `pnCount`  
- [out] Un puntero al número total de elementos de la matriz.  
+ enuncia Puntero al número total de elementos de la matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

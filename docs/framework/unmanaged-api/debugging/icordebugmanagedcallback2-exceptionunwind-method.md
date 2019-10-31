@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 875125185e9af74b85a833d04539403f81badf8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fa317e1217ac0a9ca46bfeb312446534b1fca63a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761511"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131565"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind (Método)
 Proporciona una notificación de estado durante el proceso de desenredo de excepciones.  
@@ -40,26 +38,26 @@ HRESULT ExceptionUnwind (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se produjo la excepción.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se produjo la excepción.  
   
  `pThread`  
- [in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se produjo la excepción.  
+ de Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se produjo la excepción.  
   
  `dwEventType`  
- [in] Un valor de la enumeración CorDebugExceptionUnwindCallbackType que especifica el evento que está siendo señalado por la devolución de llamada durante la fase de desenredo.  
+ de Un valor de la enumeración CorDebugExceptionUnwindCallbackType (que especifica el evento que la devolución de llamada señala durante la fase de desenredado.  
   
  `dwFlags`  
- [in] Un valor de la [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeración que especifica información adicional sobre la excepción.  
+ de Un valor de la enumeración [cordebugexceptionflags (](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) que especifica información adicional sobre la excepción.  
   
 ## <a name="remarks"></a>Comentarios  
- `ExceptionUnwind` se llama en varios puntos durante la fase de desenredo del proceso de control de excepciones. `ExceptionUnwind` puede llamarse varias veces mientras se desenreda una excepción.  
+ se llama a `ExceptionUnwind` en varios puntos durante la fase de desenredado del proceso de control de excepciones. `ExceptionUnwind` se puede llamar más de una vez al desenredar una sola excepción.  
   
- Si `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, el puntero de instrucción estará en el marco de hoja del subproceso, desde el punto de secuencia anterior (puede ser varias instrucciones antes) la instrucción que produjeron la excepción.  
+ Si `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, el puntero de instrucción estará en el marco hoja del subproceso, en el punto de secuencia antes (puede haber varias instrucciones antes) de la instrucción que condujo a la excepción.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

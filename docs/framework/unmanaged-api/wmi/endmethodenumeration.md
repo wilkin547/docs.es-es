@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 174cf76d4b0ddf07e67e02bff20a983dca08819a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132020"
 ---
 # <a name="endmethodenumeration-function"></a>Función EndMethodEnumeration
 Finaliza una secuencia de enumeración iniciada con una llamada a la [función BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -49,7 +47,7 @@ de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Se ha producido un error interno. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
@@ -58,12 +56,12 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) .
 
-El autor de la llamada comienza la secuencia de enumeración mediante la [función BeginMethodEnumeration](beginmethodenumeration.md)y, a continuación, llama `WBEM_S_NO_MORE_DATA`a la [función NextMethod](nextmethod.md )hasta que el método devuelve. Opcionalmente, el llamador finaliza la secuencia mediante `EndMethodEnumeration`una llamada a. El autor de la llamada puede finalizar la enumeración `EndMethodEnumeration` al principio llamando a en cualquier momento.
+El autor de la llamada comienza la secuencia de enumeración mediante la [función BeginMethodEnumeration](beginmethodenumeration.md)y, a continuación, llama a la [función NextMethod](nextmethod.md )hasta que el método devuelve `WBEM_S_NO_MORE_DATA`. Opcionalmente, el llamador finaliza la secuencia llamando a `EndMethodEnumeration`. El autor de la llamada puede finalizar la enumeración pronto llamando a `EndMethodEnumeration` en cualquier momento.
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121560"
 ---
 # <a name="runtime-profiling"></a>Generar perfiles en tiempo de ejecución
 La generación de perfiles es un método de recopilación de datos de rendimiento en cualquier escenario de desarrollo o implementación. Esta sección está dirigida a los desarrolladores y administradores del sistema que quieren recopilar información sobre el rendimiento de la aplicación.  
@@ -42,11 +40,11 @@ La generación de perfiles es un método de recopilación de datos de rendimient
   
 6. En el cuadro de lista **Instancias del objeto seleccionado**, haga clic en **\<Todas las instancias>** para especificar que quiere supervisar el contador de rendimiento para Common Language Runtime globalmente (es decir, en todo el sistema).  
   
-     -o bien-  
+     o bien  
   
      En el cuadro de lista **Instancias del objeto seleccionado** , haga clic en el nombre de una aplicación para supervisar el contador de rendimiento de dicha aplicación.  
   
-     Para diferenciar varias versiones del runtime, o para eliminar la ambigüedad de varias aplicaciones con el mismo nombre, también debe modificar una clave del Registro. Para obtener más información, consulta [Contadores de rendimiento y aplicaciones en paralelo en proceso](performance-counters-and-in-process-side-by-side-applications.md).  
+     Para diferenciar varias versiones del runtime, o para eliminar la ambigüedad de varias aplicaciones con el mismo nombre, también debe modificar una clave del Registro. Para obtener más información, consulta [Performance Counters and In-Process Side-By-Side Applications](performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
 > Cuando se instalan nuevos contadores de rendimiento mientras se ejecuta la consola de rendimiento, detenga y reinicie la consola de rendimiento para que los nuevos contadores sean visibles.  
@@ -59,7 +57,7 @@ La generación de perfiles es un método de recopilación de datos de rendimient
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lectura y creación de contadores de rendimiento mediante programación  
  El .NET Framework proporciona clases que puede usar para tener acceso mediante programación a la misma información de rendimiento que está disponible en la consola de rendimiento. También puede usar estas clases para crear contadores de rendimiento personalizados. En la tabla siguiente se describen algunas de las clases de supervisión de rendimiento que se proporcionan en el .NET Framework.  
   
-|Clase|DESCRIPCIÓN|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Representa un componente de contador de rendimiento de Windows NT. Use esta clase para leer contadores personalizados o predefinidos existentes y publicar datos de rendimiento (de escritura) en contadores personalizados.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Ofrece varios métodos para interactuar con contadores y categorías de contadores en el equipo.|  

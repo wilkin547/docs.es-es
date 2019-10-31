@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798646"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130450"
 ---
 # <a name="execnotificationquerywmi-function"></a>Función ExecNotificationQueryWmi
 
@@ -53,12 +51,12 @@ HRESULT ExecNotificationQueryWmi (
 de Cadena con el lenguaje de consulta válido compatible con la administración de Windows. Debe ser "WQL", el acrónimo de lenguaje de consulta de WMI.
 
 `strQuery`\
-de Texto de la consulta. Este parámetro no puede `null`ser.
+de Texto de la consulta. Este parámetro no se puede `null`.
 
 `lFlags`\
 de Combinación de las dos marcas siguientes que afectan al comportamiento de esta función. Estos valores se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código.
 
-| Constante | Valor  | DESCRIPCIÓN  |
+| Constante | Valor  | Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca produce una llamada semisincrónica. Si no se establece esta marca, se produce un error en la llamada. Esto se debe a que los eventos se reciben continuamente, lo que significa que el usuario debe sondear el enumerador devuelto. El bloqueo de esta llamada indefinidamente hace que sea imposible. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de solo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten que las llamadas se [clonen](clone.md). |
@@ -91,14 +89,14 @@ de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connects
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que la función puede devolver. |
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | La consulta especifica una clase que no existe. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Se ha solicitado demasiada precisión en la entrega de eventos. Se debe especificar una tolerancia de sondeo mayor. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | La consulta solicita más información de la que puede proporcionar la administración de Windows. `HRESULT` Se devuelve cuando una consulta de evento produce una solicitud para sondear todos los objetos de un espacio de nombres. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | La consulta solicita más información de la que puede proporcionar la administración de Windows. Este `HRESULT` se devuelve cuando una consulta de evento produce una solicitud para sondear todos los objetos de un espacio de nombres. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | La consulta tenía un error de sintaxis. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | No se admite el lenguaje de consulta solicitado. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | La consulta es demasiado compleja. |
@@ -112,17 +110,17 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) .
 
-Una vez que la función devuelve un resultado, el llamador `ppEnum` pasa periódicamente el objeto devuelto a la función [siguiente](next.md) para ver si hay algún evento disponible.
+Una vez que la función devuelve, el llamador pasa periódicamente el objeto `ppEnum` devuelto a la función [siguiente](next.md) para ver si hay algún evento disponible.
 
-Hay límites en el número de `AND` palabras clave y `OR` que se pueden usar en las consultas WQL. Un gran número de palabras clave WQL usadas en una consulta compleja puede hacer que WMI `WBEM_E_QUOTA_VIOLATION` devuelva el código de error (o `HRESULT` 0x8004106c) como un valor. El límite de palabras clave de WQL depende de la complejidad de la consulta.
+Hay límites en el número de palabras clave `AND` y `OR` que se pueden usar en las consultas WQL. Un gran número de palabras clave WQL usadas en una consulta compleja puede hacer que WMI devuelva el código de error `WBEM_E_QUOTA_VIOLATION` (o 0x8004106c) como un valor `HRESULT`. El límite de palabras clave de WQL depende de la complejidad de la consulta.
 
 Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la función [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

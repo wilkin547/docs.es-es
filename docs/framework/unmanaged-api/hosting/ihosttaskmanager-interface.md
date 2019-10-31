@@ -14,50 +14,48 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da30e75bf4a58e66bb0dd8210368b162cf14c3f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 470e2ac06f433dc12d66f6cac97337a6de1d8183
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133021"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager (Interfaz)
-Proporciona métodos que permiten a common language runtime (CLR) para trabajar con tareas a través del host en lugar de usar las funciones de fibras o subprocesos de sistema operativo estándar.  
+Proporciona métodos que permiten al Common Language Runtime (CLR) trabajar con tareas a través del host en lugar de usar las funciones de fibra o de subprocesos estándar del sistema operativo.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[BeginDelayAbort (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Notifica al host que el código administrado está entrando en un período en el que no se debe anular la tarea actual.|  
-|[BeginThreadAffinity (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Notifica al host que el código administrado está entrando en un período en el que la tarea actual no se mueve a otro subproceso del sistema operativo.|  
-|[CallNeedsHostHook (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Permite especificar si common language runtime puede alinear la llamada especificada a una función no administrada al host.|  
+|[BeginDelayAbort (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Notifica al host que el código administrado está entrando en un período en el que la tarea actual no se debe anular.|  
+|[BeginThreadAffinity (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Notifica al host que el código administrado está entrando en un período en el que la tarea actual no se debe pasar a otro subproceso del sistema operativo.|  
+|[CallNeedsHostHook (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Permite al host especificar si el Common Language Runtime puede alinear la llamada especificada a una función no administrada.|  
 |[CreateTask (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|Solicita que el host cree una nueva tarea.|  
-|[EndDelayAbort (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Notifica al host que el código administrado está saliendo del período en el que no se debe anular la tarea actual, siguiendo una llamada anterior a `BeginDelayAbort`.|  
-|[EndThreadAffinity (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Notifica al host que el código administrado está saliendo del período en el que la tarea actual no se mueve a otro subproceso del sistema operativo, siguiendo una llamada anterior a `BeginThreadAffinity`.|  
-|[EnterRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Notifica al host que una llamada a un método no administrado, como una plataforma de invocación de método, devuelve el control de ejecución al CLR.|  
-|[GetCurrentTask (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Obtiene un puntero de interfaz a la tarea que se está ejecutando actualmente en el subproceso de sistema operativo desde el que se realiza esta llamada.|  
-|[GetStackGuarantee (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Obtiene la cantidad de espacio de pila que se garantiza que estarán disponibles después de que finalice una operación de la pila, pero antes del cierre de un proceso.|  
-|[LeaveRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Notifica al host que el código administrado se está a punto de realizar una llamada a una función no administrada.|  
-|[ReverseEnterRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|Notifica al host que se está realizando una llamada en common language runtime (CLR) de código no administrado.|  
-|[ReverseLeaveRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Notifica al host que el control está dejando el CLR y escribir una función no administrada que a su vez, se ha llamado desde código administrado.|  
-|[SetCLRTaskManager (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Proporciona el host con un puntero de interfaz a un [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) instancia implementada por CLR.|  
+|[EndDelayAbort (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Notifica al host que el código administrado está saliendo del período en el que la tarea actual no se debe anular, siguiendo una llamada anterior a `BeginDelayAbort`.|  
+|[EndThreadAffinity (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Notifica al host que el código administrado está saliendo del período en el que la tarea actual no se debe pasar a otro subproceso del sistema operativo, siguiendo una llamada anterior a `BeginThreadAffinity`.|  
+|[EnterRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Notifica al host que una llamada a un método no administrado, como un método de invocación de plataforma, devuelve el control de la ejecución a CLR.|  
+|[GetCurrentTask (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Obtiene un puntero de interfaz a la tarea que se está ejecutando actualmente en el subproceso del sistema operativo desde el que se realiza esta llamada.|  
+|[GetStackGuarantee (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Obtiene la cantidad de espacio de pila que se garantiza que está disponible después de que se complete una operación de pila, pero antes del cierre de un proceso.|  
+|[LeaveRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Notifica al host que el código administrado está a punto de hacer una llamada a una función no administrada.|  
+|[ReverseEnterRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|Notifica al host que se está realizando una llamada en el Common Language Runtime (CLR) desde el código no administrado.|  
+|[ReverseLeaveRuntime (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Notifica al host que el control está saliendo del CLR y entra en una función no administrada que, a su vez, se llama desde el código administrado.|  
+|[SetCLRTaskManager (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Proporciona al host un puntero de interfaz a una instancia de [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) implementada por CLR.|  
 |[SetLocale (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|Notifica al host que CLR ha cambiado la configuración regional en la tarea actual.|  
 |[SetStackGuarantee (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|Reservado para uso interno.|  
-|[SetUILocale (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|Notifica al host que se ha cambiado la configuración regional de interfaz de usuario en la tarea actual.|  
-|[Sleep (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|Notifica al host que la tarea actual se va a suspender.|  
+|[SetUILocale (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|Notifica al host que se ha cambiado la configuración regional de la interfaz de usuario en la tarea actual.|  
+|[Sleep (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|Notifica al host que la tarea actual va a entrar en suspensión.|  
 |[SwitchToTask (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Notifica al host que debe desactivar la tarea actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IHostTaskManager` permite que el CLR crear y administrar tareas, para proporcionar enlaces para el host para realizar una acción cuando el control se transfiere de administrado a código no administrado y viceversa y para especificar determinadas acciones el host puede y no puede tomar durante la ejecución de código.  
+ `IHostTaskManager` permite que CLR cree y administre tareas, para proporcionar enlaces para que el host tome medidas cuando el control se transfiere del código administrado al código no administrado y viceversa, y para especificar ciertas acciones que el host puede y no puede realizar durante la ejecución del código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

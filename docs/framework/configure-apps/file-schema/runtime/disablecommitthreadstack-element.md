@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2fa32d64f3ce440981c5f26d731051a118ed9254
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8aefb8a20d6a95c5b8062d0c03dcb28a3557ca3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117472"
 ---
-# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack >, elemento
+# <a name="disablecommitthreadstack-element"></a>\<elemento > disableCommitThreadStack
 Especifica si se confirma la pila de subprocesos completa cuando se inicia un subproceso.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +33,13 @@ Especifica si se confirma la pila de subprocesos completa cuando se inicia un su
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |enabled|Atributo necesario.<br /><br /> Especifica si la confirmación de la pila de subprocesos completa cuando se inicia el subproceso (comportamiento predeterminado) está deshabilitada.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|No deshabilite el comportamiento predeterminado de Common Language Runtime, que consiste en confirmar la pila de subprocesos completa cuando se inicia un subproceso.|  
 |1|Deshabilite el comportamiento predeterminado de Common Language Runtime, que consiste en confirmar la pila de subprocesos completa cuando se inicia un subproceso.|  
@@ -51,7 +49,7 @@ Especifica si se confirma la pila de subprocesos completa cuando se inicia un su
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  

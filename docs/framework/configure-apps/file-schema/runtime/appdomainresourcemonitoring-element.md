@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252820"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118254"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring >, elemento
+# <a name="appdomainresourcemonitoring-element"></a>\<elemento > appDomainResourceMonitoring
 Indica el runtime para recopilar estadísticas de todos los dominios de aplicación en el proceso mientras dura este.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,13 +31,13 @@ Indica el runtime para recopilar estadísticas de todos los dominios de aplicaci
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`enabled`|Atributo necesario.<br /><br /> Especifica si el Runtime recopila estadísticas para la supervisión de recursos del dominio de aplicación.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`true`|Se recopilan las estadísticas para la supervisión de recursos del dominio de aplicación.|  
 |`false`|No se recopilan las estadísticas de supervisión de recursos del dominio de aplicación.|  
@@ -49,7 +47,7 @@ Indica el runtime para recopilar estadísticas de todos los dominios de aplicaci
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
@@ -57,7 +55,7 @@ Indica el runtime para recopilar estadísticas de todos los dominios de aplicaci
 ## <a name="remarks"></a>Comentarios  
  La supervisión de recursos del dominio de aplicación está disponible a través de la clase de dominio de aplicación administrada, la interfaz [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) de hospedaje y el seguimiento de eventos para Windows (ETW). Cuando se habilita la supervisión, se recopilan estadísticas para todos los dominios de aplicación del proceso durante la vida del proceso.  
   
- Para habilitar la supervisión desde código administrado, utilice <xref:System.AppDomain.MonitoringIsEnabled%2A> la propiedad.  
+ Para habilitar la supervisión desde código administrado, utilice la propiedad <xref:System.AppDomain.MonitoringIsEnabled%2A>.  
   
  Este elemento de configuración solo está disponible en el .NET Framework 4 y versiones posteriores.  
   

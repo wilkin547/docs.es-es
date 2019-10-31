@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1425d48bb18d4161a1c96239b76b8315ae258705
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738553"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112780"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue (Método)
-Establece un valor en el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino. Este método llama a los servicios de acceso de datos de common language runtime (CLR).  
+Establece un valor en el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino. Los servicios de acceso a datos de Common Language Runtime (CLR) llaman a este método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +37,21 @@ HRESULT SetTLSValue (
   
 ## <a name="parameters"></a>Parámetros  
  `threadID`  
- [in] El identificador del sistema operativo de un subproceso del proceso de destino.  
+ de Identificador del sistema operativo de un subproceso en el proceso de destino.  
   
  `index`  
- [in] El índice de la ubicación. Este valor debe ser un índice válido en el almacén local del subproceso especificado.  
+ de Índice de la ubicación. Este valor debe ser un índice válido en el almacén local del subproceso especificado.  
   
  `value`  
- [in] Un `CLRDATA_ADDRESS` valor que especifica el valor se debe colocar en la ubicación especificada de TLS.  
+ de `CLRDATA_ADDRESS` valor que especifica el valor que se va a colocar en la ubicación TLS determinada.  
   
 ## <a name="remarks"></a>Comentarios  
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

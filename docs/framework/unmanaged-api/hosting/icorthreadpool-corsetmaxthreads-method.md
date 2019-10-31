@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a846238-df4e-4060-ba3b-5173f6a51e85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 233a2a6ca00e289911b45006d10e541e8c13971e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0183ed0f1556afb660ead042dd0d26a63ef75dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133225"
 ---
 # <a name="icorthreadpoolcorsetmaxthreads-method"></a>ICorThreadpool::CorSetMaxThreads (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -37,11 +35,11 @@ HRESULT CorSetMaxThreads (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

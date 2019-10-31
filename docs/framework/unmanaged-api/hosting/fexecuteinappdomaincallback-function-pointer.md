@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760241"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138181"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>puntero a la función FExecuteInAppDomainCallback
-Señala una función que se llama mediante common language runtime (CLR) para ejecutar código administrado.  
+Apunta a una función a la que llama el Common Language Runtime (CLR) para ejecutar código administrado.  
   
- Este puntero de función ha quedado obsoleto en .NET Framework 4.  
+ Este puntero de función ha quedado en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +36,16 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>Parámetros  
  `cookie`  
- [in] Puntero a la memoria asignada por el llamador opaco que contiene el código administrado que se ejecutará.  
+ de Puntero a la memoria opaca asignada por el llamador que contiene el código administrado que se va a ejecutar.  
   
- La asignación y duración de esta memoria se controlan por el llamador (es decir, el CLR). Esto no es memoria del montón administrado de CLR.  
+ El autor de la llamada (es decir, el CLR) controla la asignación y la duración de esta memoria. Esto no es la memoria del montón administrado de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

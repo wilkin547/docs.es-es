@@ -10,21 +10,19 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5b45ea4b30677d17e72685b16c19f9192c8c144
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117496"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures >, elemento
+# <a name="disablecachingbindingfailures-element"></a>\<elemento > disableCachingBindingFailures
 Especifica si se va a deshabilitar el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +35,13 @@ Especifica si se va a deshabilitar el almacenamiento en caché de errores de enl
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |enabled|Atributo necesario.<br /><br /> Especifica si se va a deshabilitar el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|No deshabilite el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado. Este es el comportamiento de enlace predeterminado a partir de la versión .NET Framework 2,0.|  
 |1|Deshabilite el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado. Esta configuración revierte al comportamiento de enlace de la .NET Framework versión 1,1.|  
@@ -53,13 +51,13 @@ Especifica si se va a deshabilitar el almacenamiento en caché de errores de enl
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de la versión 2,0 de .NET Framework, el comportamiento predeterminado para cargar ensamblados es almacenar en caché todos los errores de enlace y carga. Es decir, si se produce un error al intentar cargar un ensamblado, las solicitudes posteriores para cargar el mismo ensamblado producen un error inmediatamente, sin ningún intento de buscar el ensamblado. Este elemento deshabilita el comportamiento predeterminado para los errores de enlace que se producen porque no se pudo encontrar el ensamblado en la ruta de acceso de sondeo. Se producen <xref:System.IO.FileNotFoundException>estos errores.  
+ A partir de la versión 2,0 de .NET Framework, el comportamiento predeterminado para cargar ensamblados es almacenar en caché todos los errores de enlace y carga. Es decir, si se produce un error al intentar cargar un ensamblado, las solicitudes posteriores para cargar el mismo ensamblado producen un error inmediatamente, sin ningún intento de buscar el ensamblado. Este elemento deshabilita el comportamiento predeterminado para los errores de enlace que se producen porque no se pudo encontrar el ensamblado en la ruta de acceso de sondeo. Estos errores producen <xref:System.IO.FileNotFoundException>.  
   
  Algunos errores de enlace y carga no se ven afectados por este elemento y siempre se almacenan en caché. Estos errores se producen porque se encontró el ensamblado, pero no se pudo cargar. Inician <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. La lista siguiente incluye algunos ejemplos de estos errores.  
   

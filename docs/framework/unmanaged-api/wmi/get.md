@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798593"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120320"
 ---
 # <a name="get-function"></a>Función Get
 
@@ -58,25 +56,25 @@ de Nombre de la propiedad.
 [in] Reservado. Este parámetro debe ser 0.
 
 `pVal`\
-enuncia Si la función se devuelve correctamente, contiene el valor de `wszName` la propiedad. El `pval` argumento tiene asignado el tipo y el valor correctos para el calificador.
+enuncia Si la función se devuelve correctamente, contiene el valor de la propiedad `wszName`. Al argumento `pval` se le asigna el tipo y el valor correctos para el calificador.
 
 `pvtType`\
-enuncia Si la función se devuelve correctamente, contiene una [constante de tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica el tipo de propiedad. Su valor también puede ser `null`. 
+enuncia Si la función se devuelve correctamente, contiene una [constante de tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica el tipo de propiedad. Su valor también se puede `null`. 
 
 `plFlavor`\
-enuncia Si la función se devuelve correctamente, recibe información sobre el origen de la propiedad. Su valor puede ser `null`, o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el archivo de encabezado *WbemCli. h* : 
+enuncia Si la función se devuelve correctamente, recibe información sobre el origen de la propiedad. Su valor puede ser `null`o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el archivo de encabezado *WbemCli. h* : 
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La propiedad es una propiedad estándar del sistema. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. <br> Para una instancia de: La instancia de no ha modificado la propiedad, mientras se hereda de la clase primaria.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: La propiedad pertenece a la clase derivada. <br> Para una instancia de: La instancia de modifica la propiedad; es decir, se ha proporcionado un valor o se ha agregado o modificado un calificador. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: la propiedad se hereda de la clase primaria. <br> Para una instancia: la propiedad, mientras que se hereda de la clase primaria, no ha sido modificada por la instancia de.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: la propiedad pertenece a la clase derivada. <br> Para una instancia de: la propiedad es modificada por la instancia de; es decir, se ha proporcionado un valor o se ha agregado o modificado un calificador. |
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |
@@ -88,15 +86,15 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemClassObject:: get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) .
 
-La `Get` función también puede devolver propiedades del sistema.
+La función `Get` también puede devolver propiedades del sistema.
 
-El `pVal` argumento tiene asignado el tipo y el valor correctos para el calificador y la función [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) de com.
+Al argumento `pVal` se le asigna el tipo y el valor correctos para el calificador y la función [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) de com.
 
 ## <a name="requirements"></a>Requisitos
 
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
- **Encabezado**: WMINet_Utils.idl
+ **Encabezado:** WMINet_Utils. idl
 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

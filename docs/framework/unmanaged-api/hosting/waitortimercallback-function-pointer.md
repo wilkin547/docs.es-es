@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092038"
 ---
 # <a name="waitortimercallback-function-pointer"></a>puntero a la función WAITORTIMERCALLBACK
-Señala a una función que notifica al host que un identificador de una espera (<xref:System.Threading.WaitHandle>) se ha señalado o tiempo de espera.  
+Señala a una función que notifica al host que un identificador de espera (<xref:System.Threading.WaitHandle>) se ha señalado o ha agotado el tiempo de espera.  
   
- Este puntero de función ha quedado obsoleto en .NET Framework 4.  
+ Este puntero de función ha quedado en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +37,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Parámetros  
  `lpParameter`  
- [in] Un puntero a un objeto que contiene la información definida por el host.  
+ de Un puntero a un objeto que contiene información definida por el host.  
   
  `TimerOrWaitFired`  
- [in] `true` si el identificador de espera agotado, o `false` si estaba señalado.  
+ [in] `true` si el identificador de espera ha agotado el tiempo de espera o `false` si se ha señalado.  
   
 ## <a name="remarks"></a>Comentarios  
- La función a la que `WAITORTIMERCALLBACK` puntos es una función de devolución de llamada y debe ser implementada por el sistema de escritura de la aplicación de hospedaje.  
+ Función a la que `WAITORTIMERCALLBACK` puntos es una función de devolución de llamada y debe ser implementada por el escritor de la aplicación de hospedaje.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

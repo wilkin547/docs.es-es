@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740103"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132170"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame (Estructura)
 Representa información del marco de pila de un objeto de excepción.  
@@ -39,20 +37,20 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`pModule`|Un puntero al objeto ICorDebugModule del marco actual.|  
+|`pModule`|Puntero al objeto ICorDebugModule para el marco actual.|  
 |`ip`|El valor del puntero de instrucción (EIP/RIP) para el marco actual.|  
-|`methodDef`|El token de método para el marco actual.|  
-|`isLastForeignExceptionFrame`|Un valor que indica si el marco es el último en una excepción externa.|  
+|`methodDef`|El token del método para el marco actual.|  
+|`isLastForeignExceptionFrame`|Valor que indica si el marco es el último fotograma en una excepción externa.|  
   
 ## <a name="remarks"></a>Comentarios  
- El llamador debe liberar el puntero al objeto ICorDebugModule una vez que ya no está en uso.  
+ El llamador debe liberar el puntero al objeto ICorDebugModule una vez que ya no esté en uso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

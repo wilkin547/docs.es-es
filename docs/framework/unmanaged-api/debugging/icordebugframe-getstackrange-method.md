@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9f58e66286f5e3e169507efd2f87ce10e9d323b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124081"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange (Método)
 Obtiene el intervalo de direcciones absolutas de este marco de pila.  
@@ -38,18 +36,18 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parámetros  
  `pStart`  
- [out] Un puntero a un `CORDB_ADDRESS` que especifica la dirección inicial del marco de pila representado por este `ICorDebugFrame` objeto.  
+ enuncia Puntero a un `CORDB_ADDRESS` que especifica la dirección inicial del marco de pila representado por este objeto `ICorDebugFrame`.  
   
  `pEnd`  
- [out] Un puntero a un `CORDB_ADDRESS` que especifica la dirección final del marco de pila representado por este `ICorDebugFrame` objeto.  
+ enuncia Puntero a un `CORDB_ADDRESS` que especifica la dirección final del marco de pila representado por este objeto `ICorDebugFrame`.  
   
 ## <a name="remarks"></a>Comentarios  
- El intervalo de direcciones de la pila es útil para juntar los seguimientos de pila intercalados recopilados de varios motores de depuración. El intervalo numérico no proporciona información sobre el contenido del marco de pila. Es significativo únicamente para la comparación de las ubicaciones del marco de pila.  
+ El intervalo de direcciones de la pila es útil para juntar juntos los seguimientos de la pila intercalados recopilados de varios motores de depuración. El intervalo numérico no proporciona información sobre el contenido del marco de pila. Solo es significativo para la comparación de las ubicaciones de los marcos de pila.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugObjectEnum
+title: ICorDebugObjectEnum (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1faa78150659b4397cd4174583b607e1f7841b8f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b77d5859986c90d6ef61c02547014d0bec354106
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943360"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096138"
 ---
-# <a name="icordebugobjectenum-interface"></a>Interfaz ICorDebugObjectEnum
+# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum (Interfaz)
 
 Implementa los métodos ICorDebugEnum y enumera las matrices de objetos por sus direcciones virtuales relativas (RVA).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Obtiene las RVA del número especificado de objetos de la enumeración, comenzando en la posición actual.|  
   
@@ -39,11 +37,11 @@ Implementa los métodos ICorDebugEnum y enumera las matrices de objetos por sus 
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

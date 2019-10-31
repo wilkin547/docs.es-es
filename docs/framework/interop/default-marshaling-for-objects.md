@@ -8,14 +8,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2c6e8a013d6486ec55723b91d6bfb6b838c9be5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044166"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123592"
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 
@@ -273,7 +271,7 @@ Al serializar una variante en un objeto, el tipo y, a veces, el valor de la vari
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
+|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Tipo de valor de conversión boxing correspondiente.|
 |**VT_VARIANT**|No se admite.|
@@ -295,7 +293,7 @@ Variantes pasadas por valor y por referencia
 
 **Comportamiento predeterminado para la serialización de objetos y variantes por referencia**
 
-Para propagar los cambios de vuelta al autor de la llamada, los parámetros deben pasarse por referencia. Por ejemplo, puede usar la palabra clave **ref** de C# (o **ByRef** en código administrado de Visual Basic) para pasar parámetros por referencia. En COM, los parámetros de referencia se pasan con un puntero como una **variante \***.
+Para propagar los cambios de vuelta al autor de la llamada, los parámetros deben pasarse por referencia. Por ejemplo, puede usar la palabra clave **ref** de C# (o **ByRef** en código administrado de Visual Basic) para pasar parámetros por referencia. En COM, los parámetros de referencia se pasan con un puntero como una **variante \*** .
 
 - Cuando se pasa un objeto a COM por referencia, el serializador crea una variante y copia el contenido de la referencia de objeto en la variante antes de que se realice la llamada. La variante se pasa a la función no administrada, donde el usuario tiene libertad para cambiar el contenido de la variante. En la devolución de la llamada, los cambios realizados en la variante en el lado no administrado se propagan al objeto original. Si el tipo de la variante difiere del tipo de la variante que se pasa a la llamada, los cambios se propagan a un objeto de un tipo diferente. Es decir, el tipo del objeto pasado en la llamada puede diferir del tipo del objeto devuelto de la llamada.
 
@@ -314,11 +312,11 @@ En la tabla siguiente se resumen las reglas de propagación para variantes y obj
 
 |De|En|Los cambios se propagan|
 |----------|--------|-----------------------------|
-|**Variante**  *v*|**Objeto**  *o*|Nunca|
-|**Objeto**  *o*|**Variante**  *v*|Nunca|
+|**Variante**  *v*|**Objeto**  *o*|Never|
+|**Objeto**  *o*|**Variante**  *v*|Never|
 |**Variante**   ***\****  *pv*|**Objeto de ref**  *o*|Siempre|
 |**Objeto de ref**  *o*|**Variante**   ***\****  *pv*|Siempre|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Nunca|
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Never|
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de ref**  *o*|Solo si el tipo no ha cambiado.|
 
 ## <a name="see-also"></a>Vea también

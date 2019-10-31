@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737570"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088490"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement (Método)
-Obtiene el valor del elemento de matriz determinado.  
+Obtiene el valor del elemento de la matriz especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,22 +38,22 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parámetros  
  `cdim`  
- [in] El número de dimensiones de esta `ICorDebugArrayValue` objeto.  
+ de Número de dimensiones de este objeto `ICorDebugArrayValue`.  
   
- Este valor también es el tamaño de la `indices` matriz porque su tamaño es igual al número de dimensiones de la `ICorDebugArrayValue` objeto.  
+ Este valor también es el tamaño de la matriz de `indices` porque su tamaño es igual al número de dimensiones del objeto `ICorDebugArrayValue`.  
   
  `indices`  
- [in] Una matriz de valores de índice, cada uno de los cuales especifica una posición dentro de una dimensión de la `ICorDebugArrayValue` objeto.  
+ de Matriz de valores de índice, cada uno de los cuales especifica una posición dentro de una dimensión del objeto `ICorDebugArrayValue`.  
   
  Este valor no debe ser null.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento especificado.  
+ enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

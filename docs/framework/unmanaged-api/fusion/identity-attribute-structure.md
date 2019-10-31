@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107981"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE (Estructura)
 Contiene información de atributos de metadatos sobre una instancia de [IDefinitionIdentity](idefinitionidentity-interface.md) .  
@@ -38,21 +36,21 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`pszNamespace`|Un puntero a una cadena de caracteres terminada en null que contiene el espacio de nombres en el que se encuentra el atributo.|  
 |`pszName`|Puntero a una cadena de caracteres terminada en null que contiene el nombre del atributo.|  
 |`pszValue`|Puntero a una cadena de caracteres terminada en null que contiene el valor del atributo.|  
   
 ## <a name="remarks"></a>Comentarios  
- La `IDENTITY_ATTRIBUTE` estructura contiene tres punteros a cadenas de caracteres terminadas en NULL. Estas tres cadenas describen un atributo.  
+ La estructura `IDENTITY_ATTRIBUTE` contiene tres punteros a cadenas de caracteres terminadas en NULL. Estas tres cadenas describen un atributo.  
   
- Una instancia de una `IDENTITY_ATTRIBUTE` estructura está asociada a una instancia de una estructura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . La `IDENTITY_ATTRIBUTE` estructura contiene las cadenas reales y la estructura correspondiente `IDENTITY_ATTRIBUTE_BLOB` muestra los desplazamientos a las tres cadenas enumeradas en `IDENTITY_ATTRIBUTE` la estructura.  
+ Una instancia de una estructura de `IDENTITY_ATTRIBUTE` está asociada a una instancia de una estructura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . La estructura `IDENTITY_ATTRIBUTE` contiene las cadenas reales y la estructura `IDENTITY_ATTRIBUTE_BLOB` correspondiente muestra los desplazamientos a las tres cadenas enumeradas en la estructura `IDENTITY_ATTRIBUTE`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation. h  
+ **Encabezado:** Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

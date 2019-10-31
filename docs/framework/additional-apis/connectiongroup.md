@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1064c15fc6fc1416f9c2b3a7aac51ef30d78ca7a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5a9041ab75836b4239d492987e94c9104133e9bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300917"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120033"
 ---
 # <a name="connectiongroup-class"></a>Clase ConnectionGroup
 
-El `ConnectionGroup` clase agrupa una lista de conexiones dentro de la <xref:System.Net.ServicePoint> contexto y se usa para mantener el contexto para los recursos de red (por ejemplo, servidores proxy y los clientes independientes).
+La clase `ConnectionGroup` agrupa una lista de conexiones dentro del contexto de <xref:System.Net.ServicePoint> y se usa para mantener el contexto de los recursos de red (por ejemplo, servidores proxy y clientes independientes).
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -30,14 +30,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> La `ConnectionGroup` clase es interna y no está pensada para usarse directamente en el código.
+> La clase `ConnectionGroup` es interna y no está diseñada para usarse directamente en el código.
 > 
-> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
 **Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System. dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

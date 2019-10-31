@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21fc34add4038d25d60e4728847e0d84914a14e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e12882e53d1aa2120ab5c4b6793d7f2e34be76eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132159"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo (Estructura)
 Representa un proceso que se ejecuta en un equipo remoto.  
@@ -40,17 +38,17 @@ struct  CoreClrDebugProcInfo {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`m_dwPID`|Identificador del proceso asignado por el sistema operativo.|  
 |`m_dwInternalID`|Identificador del proceso asignado por el proxy de depuración remota que se ejecuta en el equipo de destino. Este identificador se recicla con menos frecuencia que el identificador del sistema operativo.|  
 |`m_wszName`|Línea de comandos del proceso. Este miembro puede truncarse.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versiones de .NET framework:** 3.5 SP1
+ **.NET Framework versiones:** 3,5 SP1

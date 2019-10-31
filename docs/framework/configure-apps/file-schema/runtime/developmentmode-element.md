@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117634"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode >, elemento
+# <a name="developmentmode-element"></a>\<elemento > developmentMode
 Especifica si el runtime busca ensamblados en los directorios especificados por la variable de entorno DEVPATH.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +34,13 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |**developerInstallation**|Especifica si el runtime busca ensamblados en los directorios especificados por la variable de entorno DEVPATH.|  
   
 ## <a name="developerinstallation-attribute"></a>Atributo developerInstallation  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**true**|Busca los ensamblados en los directorios especificados por la variable de entorno DEVPATH.|  
 |**false**|No busca ensamblados en los directorios especificados por la variable de entorno DEVPATH. Este es el valor predeterminado|  
@@ -52,7 +50,7 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
@@ -75,4 +73,4 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Procedimientos: Buscar ensamblados mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Cómo: Buscar ensamblados mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

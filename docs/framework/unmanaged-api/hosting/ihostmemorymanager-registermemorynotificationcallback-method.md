@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 34701642a9e76ec52141e00fe9dde92878faccd2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4400fab27ed82e540230ce4196844285e8e37d16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128632"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback (Método)
 Registra un puntero a una función de devolución de llamada que invoca el host para notificar a la Common Language Runtime (CLR) de la carga de memoria actual en el equipo.  
@@ -41,9 +39,9 @@ HRESULT RegisterMemoryNotificationCallback (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`RegisterMemoryNotificationCallback`se devolvió correctamente.|  
+|S_OK|`RegisterMemoryNotificationCallback` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -51,17 +49,17 @@ HRESULT RegisterMemoryNotificationCallback (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Dado que `ICLRMemoryNotificationCallback` la interfaz define solo un método ([ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)), y `pCallback` dado que es un puntero `ICLRMemoryNotificationCallback` a una instancia proporcionada por CLR, el registro es eficaz para la propia función de devolución de llamada. El host invoca `OnMemoryNotification` para informar de las condiciones de presión de memoria, en lugar de `CreateMemoryResourceNotification` utilizar la función estándar de Win32. Para obtener más información, vea la documentación de la plataforma Windows.  
+ Dado que la interfaz de `ICLRMemoryNotificationCallback` solamente define un método ([ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)) y porque `pCallback` es un puntero a una instancia de `ICLRMemoryNotificationCallback` proporcionada por CLR, el registro es eficaz para la devolución de llamada. propia función. El host invoca `OnMemoryNotification` para informar de las condiciones de presión de memoria, en lugar de usar la función de `CreateMemoryResourceNotification` de Win32 estándar. Para obtener más información, vea la documentación de la plataforma Windows.  
   
 > [!NOTE]
-> Las llamadas `OnMemoryNotification` a no se bloquean nunca. Siempre devuelven inmediatamente.  
+> Las llamadas a `OnMemoryNotification` no se bloquean nunca. Siempre devuelven inmediatamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

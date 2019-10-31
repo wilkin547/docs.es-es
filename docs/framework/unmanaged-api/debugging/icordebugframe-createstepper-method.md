@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd105a5cbdb857aaa902e60968ff1d94473259b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea2b24d37f56a5cb9e6b3dea0d666c8acc719dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754241"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091033"
 ---
 # <a name="icordebugframecreatestepper-method"></a>ICorDebugFrame::CreateStepper (Método)
-Obtiene un motor paso a paso que permite al depurador realizar operaciones de ejecución paso a paso en relación con este ICorDebugFrame.  
+Obtiene un stepper que permite al depurador realizar operaciones de ejecución de paso en relación con este ICorDebugFrame.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parámetros  
  `ppStepper`  
- [out] Un puntero a la dirección de un objeto ICorDebugStepper que permite al depurador realizar operaciones de ejecución paso a paso en relación con el marco actual.  
+ enuncia Puntero a la dirección de un objeto ICorDebugStepper que permite al depurador realizar operaciones de ejecución de paso en relación con el marco actual.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el marco no está activo, el objeto de motor paso a paso normalmente tendrá que volver al fotograma antes de que finalice el paso.  
+ Si el marco no está activo, el objeto stepper normalmente tendrá que volver al marco antes de que se complete el paso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

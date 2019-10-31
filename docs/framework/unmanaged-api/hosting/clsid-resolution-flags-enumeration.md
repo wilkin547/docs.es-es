@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779129"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136997"
 ---
-# <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS (Enumeración)
-Contiene valores que indican el modo en que common language runtime (CLR) debe resolver un `CLSID`.  
+# <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS (Enumeración)
+Contiene valores que indican cómo el Common Language Runtime (CLR) debe resolver un `CLSID`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Indica el comportamiento predeterminado.|  
-|`CLSID_RESOLUTION_REGISTERED`|Indica que el tiempo de ejecución busca en el registro y aplica la directiva de correcciones de compatibilidad.|  
+|`CLSID_RESOLUTION_REGISTERED`|Indica que el tiempo de ejecución busca en el registro y aplica la Directiva de correcciones de compatibilidad.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

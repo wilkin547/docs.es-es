@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d3f6eec-d772-401f-a028-1a2ecdc31e95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 804aa4a6508713b2d6f2d154fc47e09638994468
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 61563488bff682cc7a417296c3db8eb7e7cf965a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139319"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>ICorDebugReferenceValue::SetValue (Método)
-Establece la dirección de memoria especificada. Es decir, este método establece ICorDebugReferenceValue para que apunte a un objeto.  
+Establece la dirección de memoria especificada. Es decir, este método establece este ICorDebugReferenceValue para que apunte a un objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT SetValue (
   
 ## <a name="parameters"></a>Parámetros  
  `value`  
- [in] Un `CORDB_ADDRESS` valor que especifica la dirección del objeto al que `ICorDebugReferenceValue` puntos.  
+ de `CORDB_ADDRESS` valor que especifica la dirección del objeto al que señala este `ICorDebugReferenceValue`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 536d2357-1b97-49e0-a10c-c860aed74e6e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a59476728280e42f45c416b614e6a721efaf26c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f3cf3db5df610e57a957147f0ab79121679e00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765248"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138698"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>ICorDebugThread2::InterceptCurrentException (Método)
 Permite a un depurador interceptar la excepción actual en este subproceso.  
@@ -37,15 +35,15 @@ HRESULT InterceptCurrentException (
   
 ## <a name="parameters"></a>Parámetros  
  `pFrame`  
- [in] Un puntero a un ICorDebugFrame que representa el marco de pila activo.  
+ de Puntero a un ICorDebugFrame que representa el marco de pila activo.  
   
 ## <a name="remarks"></a>Comentarios  
- El `InterceptCurrentException` método puede llamarse entre una devolución de llamada de excepción ([ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) o [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) y la llamada asociada a [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
+ Se puede llamar al método `InterceptCurrentException` entre una devolución de llamada de excepción ([ICorDebugManagedCallback:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) o [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) y la llamada asociada a [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

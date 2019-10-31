@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097265"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag (Enumeración)
 Indica si el contexto procede del marco activo (u hoja) en la pila o si se ha calculado mediante desenredo de otro marco.  
@@ -38,18 +36,18 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|SET_CONTEXT_FLAG_ACTIVE_FRAME|El contexto es el contexto del subproceso activo.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|El contexto se ha calculado mediante desenredo de otro marco.|  
+|SET_CONTEXT_FLAG_ACTIVE_FRAME|El contexto es el contexto activo del subproceso.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|El contexto se ha calculado desenredando de otro marco.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CorDebugSetContextFlag` Proporciona valores que se usan por el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) método.  
+ `CorDebugSetContextFlag` proporciona valores que usa el método [ICorDebugStackWalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

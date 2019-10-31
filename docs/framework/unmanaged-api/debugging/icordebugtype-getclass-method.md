@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122364"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass (Método)
-Obtiene un puntero de interfaz a ICorDebugClass que representa el tipo genérico sin instancias.  
+Obtiene un puntero de interfaz a un ICorDebugClass que representa el tipo genérico sin instancias.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parámetros  
  `ppClass`  
- [out] Un puntero a la dirección de un `ICorDebugClass` interfaz que representa el tipo genérico sin instancias.  
+ enuncia Puntero a la dirección de una interfaz `ICorDebugClass` que representa el tipo genérico sin instancias.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetClass` se puede llamar sólo bajo ciertas condiciones. Llame a [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) antes de llamar a `GetClass`. Si `ICorDebugType::GetType` devuelve un valor CorElementType ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, `GetClass` se puede llamar para obtener el tipo sin instancias de un tipo genérico.  
+ solo se puede llamar a `GetClass` en determinadas condiciones. Llame a [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) antes de llamar a `GetClass`. Si `ICorDebugType::GetType` devuelve un valor de CorElementType que es ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, se puede llamar a `GetClass` para obtener el tipo sin instancia para un tipo genérico.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

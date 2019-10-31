@@ -2,20 +2,18 @@
 title: .NET Native y compilación
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128243"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native y compilación
 
 Las aplicaciones de Windows 8.1 y del escritorio de Windows destinadas a.NET Framework se escriben en un lenguaje de programación determinado y se compilan en lenguaje intermedio (IL). En runtime, el compilador Just-In-Time (JIT) es el responsable de compilar el IL en código nativo para la máquina local antes de que un método se ejecute por primera vez. En cambio, la cadena de herramientas de .NET Native convierte código fuente en código nativo en tiempo de compilación. En este tema se compara .NET Native con otras tecnologías de compilación disponibles para las aplicaciones de .NET Framework. Asimismo, también se proporciona información general práctica sobre el modo en que .NET Native genera código nativo que sirve para comprender por qué las excepciones que se producen en el código compilado con .NET Native no se producen en código compilado JIT.
 
-## <a name="net-native-generating-native-binaries"></a>.NET Native: Generar archivos binarios nativos
+## <a name="net-native-generating-native-binaries"></a>.NET Native: generación de archivos binarios nativos
 
 Una aplicación que está destinada a .NET Framework y no se compila mediante la cadena de herramientas de .NET Native se compone del ensamblado de aplicación, que incluye lo siguiente:
 
@@ -108,5 +106,5 @@ El [generador de imágenes nativas](../tools/ngen-exe-native-image-generator.md)
 
 - [Metadatos y componentes autodescriptivos](../../standard/metadata-and-self-describing-components.md)
 - [Dentro de .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)
+- [Reflexión y .NET Native](reflection-and-net-native.md)
 - [Solución de problemas generales de .NET Native](net-native-general-troubleshooting.md)

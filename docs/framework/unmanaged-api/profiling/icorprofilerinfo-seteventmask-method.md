@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44bc0f56-32fa-491e-a62d-52fc96d48125
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e11628f9c20160899f37e62472547eaa98ea60b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b79668130570dc69a580fbf7da4dc122389d9ef0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136696"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>ICorProfilerInfo::SetEventMask (Método)
 Establece un valor que especifica los tipos de eventos para los que el generador de perfiles quiere recibir notificaciones desde Common Language Runtime (CLR).  
@@ -41,14 +39,14 @@ HRESULT SetEventMask(
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
-> Debe llamar al método [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) en lugar de a este método. Aunque el `SetEventMask` método se sigue admitiendo, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) proporciona funcionalidad adicional.  
+> Debe llamar al método [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) en lugar de a este método. Aunque el método de `SetEventMask` se sigue admitiendo, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) proporciona funcionalidad adicional.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Corprof. idl, Corprof. h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

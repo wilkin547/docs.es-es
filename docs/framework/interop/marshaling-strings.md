@@ -11,14 +11,12 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124378"
 ---
 # <a name="marshaling-strings"></a>Serialización de cadenas
 La invocación de plataforma copia los parámetros de cadena y los convierte del formato de .NET Framework (Unicode) al formato no administrado (ANSI), si es necesario. Dado que las cadenas administradas son inmutables, la invocación de plataforma no las vuelve a copiar desde la memoria no administrada a la memoria administrada cuando finaliza la función.  
@@ -30,16 +28,17 @@ La invocación de plataforma copia los parámetros de cadena y los convierte del
 |Por valor.|Pasa las cadenas como parámetros In.|[MsgBox](msgbox-sample.md)|  
 |Como resultado.|Devuelve las cadenas desde código no administrado.|[Cadenas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
 |Por referencia.|Pasa estructuras como parámetros In/Out mediante <xref:System.Text.StringBuilder>.|[Búferes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
-|En una estructura por valor.|Pasa las cadenas en una estructura que es un parámetro In.|[Structs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
-|En una estructura por referencia **(char\*)**.|Pasa las cadenas en una estructura que es un parámetro In/Out. La función no administrada espera un puntero a un búfer de caracteres y el tamaño del búfer es un miembro de la estructura.|[Cadenas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|En una estructura por referencia **(char[])**.|Pasa las cadenas en una estructura que es un parámetro In/Out. La función no administrada espera un búfer de caracteres insertado.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
-|En una clase por valor **(char\*)**.|Pasa las cadenas en una clase (una clase es un parámetro In/Out). La función no administrada espera un puntero a un búfer de caracteres.|[OpenFileDlg](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
-|En una clase por valor **(char[])**.|Pasa las cadenas en una clase (una clase es un parámetro In/Out). La función no administrada espera un búfer de caracteres insertado.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|En una estructura por valor.|Pasa las cadenas en una estructura que es un parámetro In.|[Estructuras](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
+|En una estructura por referencia **(char\*)** .|Pasa las cadenas en una estructura que es un parámetro In/Out. La función no administrada espera un puntero a un búfer de caracteres y el tamaño del búfer es un miembro de la estructura.|[Cadenas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
+|En una estructura por referencia **(char[])** .|Pasa las cadenas en una estructura que es un parámetro In/Out. La función no administrada espera un búfer de caracteres insertado.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
+|En una clase por valor **(char\*)** .|Pasa las cadenas en una clase (una clase es un parámetro In/Out). La función no administrada espera un puntero a un búfer de caracteres.|[OpenFileDlg](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w5tyztk9(v=vs.100))|  
+|En una clase por valor **(char[])** .|Pasa las cadenas en una clase (una clase es un parámetro In/Out). La función no administrada espera un búfer de caracteres insertado.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
 |Como una matriz de cadenas por valor.|Crea una matriz de cadenas que se pasa por valor.|[Matrices](marshaling-different-types-of-arrays.md)|  
 |Como una matriz de estructuras que contienen cadenas por valor.|Crea una matriz de estructuras que contienen cadenas y la matriz se pasa por valor.|[Matrices](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Vea también
 
+- [Serialización predeterminada para cadenas](default-marshaling-for-strings.md)
 - [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)
 - [Serialización de clases, estructuras y uniones](marshaling-classes-structures-and-unions.md)
 - [Serialización de tipos diferentes de matrices](marshaling-different-types-of-arrays.md)

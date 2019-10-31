@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4434f5d0eaa45c9cfcbadb20b29564f0643a2dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084805"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor (Método)
 Crea una instancia de un nuevo objeto de tipo parametrizado de la clase especificada sin intentar llamar a un método de constructor.  
@@ -39,21 +37,21 @@ HRESULT NewParameterizedObjectNoConstructor (
   
 ## <a name="parameters"></a>Parámetros  
  `pClass`  
- [in] Un puntero a un objeto ICorDebugClass que representa la clase del objeto que se creará una instancia.  
+ de Un puntero a un objeto ICorDebugClass que representa la clase del objeto del que se va a crear una instancia.  
   
  `nTypeArgs`  
- [in] El número de argumentos de tipo pasados.  
+ de El número de argumentos de tipo pasados.  
   
  `ppTypeArgs`  
- [in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto que se crea una instancia.  
+ de Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto del que se crea una instancia.  
   
 ## <a name="remarks"></a>Comentarios  
- El `NewParameterizedObjectNoConstructor` método se producirá un error si un número incorrecto de argumentos de tipo o se pasan los tipos de argumentos de tipo incorrectos.  
+ Se producirá un error en el método `NewParameterizedObjectNoConstructor` si se pasa un número incorrecto de argumentos de tipo o los tipos de argumentos de tipo incorrectos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

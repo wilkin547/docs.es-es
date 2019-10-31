@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137386"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap (Método)
 Este método está en desuso. Notifica al depurador que se ha enviado un evento de reasignación al entorno de desarrollo integrado (IDE).  
@@ -39,12 +37,12 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `EditAndContinueRemap` se llama al método cuando se intentó realizar la ejecución del código en una versión anterior de una función actualizada. Las llamadas en tiempo de ejecución de lenguaje común el `EditAndContinueRemap` método envíe un evento de reasignación al IDE.  
+ Se llama al método `EditAndContinueRemap` cuando se ha intentado ejecutar el código en una versión anterior de una función actualizada. El Common Language Runtime llama al método `EditAndContinueRemap` para enviar un evento de reasignación al IDE.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134470"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream (Método)
 
@@ -59,13 +57,13 @@ de Marcas específicas del formato definidas en Fusion. idl.
 enuncia Puntero a la dirección de la instancia de [IStream](/windows/desktop/api/objidl/nn-objidl-istream) devuelta.
 
 `puliMaxSize`\
-[in, Optional] Tamaño máximo de la secuencia a `ppIStream`la que hace referencia.
+[in, Optional] Tamaño máximo de la secuencia a la que hace referencia `ppIStream`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: Fusion. h
+**Encabezado:** Fusion. h
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e2fc054e42c34b13051e2125f8e18adc3029633
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7923008eecb9011bead685fbbb7f05f81f12329b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138579"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue (Método)
 Copia el valor de este genérico en el búfer especificado.  
@@ -37,12 +35,12 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Parámetros  
  `pTo`  
- [out] Un puntero al valor representado por este objeto ICorDebugGenericValue. El valor puede ser un tipo simple o un tipo de referencia (es decir, un puntero).  
+ enuncia Puntero al valor representado por este objeto ICorDebugGenericValue. El valor puede ser un tipo simple o un tipo de referencia (es decir, un puntero).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

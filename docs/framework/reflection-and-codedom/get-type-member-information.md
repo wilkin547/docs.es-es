@@ -1,24 +1,22 @@
 ---
-title: Procedimiento para obtener información sobre tipos y miembros mediante la reflexión
+title: 'Cómo: obtener información sobre tipos y miembros mediante la reflexión'
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
 - types [.NET Framework], obtaining member information from
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: da71845ea276267220636cfd661465ea02b2b50d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972862"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130215"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Procedimiento para obtener información sobre tipos y miembros mediante la reflexión
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Cómo: obtener información sobre tipos y miembros mediante la reflexión
 El espacio de nombres <xref:System.Reflection> contiene muchos métodos para obtener información sobre los tipos y sus miembros. En este artículo se muestra uno de estos métodos, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Para obtener más información, vea [Reflexión en .NET](reflection.md).
   
 ## <a name="example"></a>Ejemplo

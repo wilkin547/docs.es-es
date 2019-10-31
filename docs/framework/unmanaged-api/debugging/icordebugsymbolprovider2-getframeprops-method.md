@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2::GetFrameProps (método)
+title: 'Icordebugsymbolprovider2 (:: Getframeprops ((método)'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c22e9c58a203c13611298e1956a6951d8ca7e8b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133640"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2::GetFrameProps (método)
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>Icordebugsymbolprovider2 (:: Getframeprops ((método)
 Devuelve la dirección virtual relativa de inicio de método de un método y el marco primario a partir de una dirección virtual relativa de código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,11 +38,11 @@ HRESULT GetFrameProps(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

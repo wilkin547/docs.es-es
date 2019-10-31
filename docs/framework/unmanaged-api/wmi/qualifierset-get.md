@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127273"
 ---
 # <a name="qualifierset_get-function"></a>QualifierSet_Get función)
 Obtiene el calificador con nombre especificado.  
@@ -56,16 +54,16 @@ de Nombre del calificador cuyo valor se solicita.
 [in] Reservado. Este parámetro debe ser 0.
 
 `pVal`   
-enuncia Cuando se realiza correctamente, el tipo y el valor correctos para el calificador. Si se produce un error en `VARIANT` la función, `pVal` el señalado por no se modifica. Si este parámetro es `null`, se omite el parámetro.
+enuncia Cuando se realiza correctamente, el tipo y el valor correctos para el calificador. Si se produce un error en la función, el `VARIANT` al que apunta `pVal` no se modifica. Si este parámetro es `null`, se omite el parámetro.
 
 `plFlavor`   
-enuncia Un puntero a un LONG que recibe los bits de sabor del calificador para el calificador solicitado. Si no se desea información de tipo, este parámetro puede `null`ser. 
+enuncia Un puntero a un LONG que recibe los bits de sabor del calificador para el calificador solicitado. Si no se desea información de tipo, este parámetro se puede `null`. 
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | El calificador especificado no existe. |
@@ -76,9 +74,9 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 Esta función contiene una llamada al método [IWbemQualifierSet:: get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

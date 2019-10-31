@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a4b47ee-02f6-4a98-864e-a6f11ca3f2d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71058a1ff82335b2a341904805d06738e662c296
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b9eca3f2f0267870866874ea27dc65812795f41
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798862"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121133"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly (Función)
 Crea un token de nombre seguro desde el archivo de ensamblado especificado.  
@@ -49,21 +47,21 @@ BOOLEAN StrongNameTokenFromAssembly (
  enuncia Tamaño, en bytes, del token de nombre seguro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  Un token de nombre seguro es la forma abreviada de una clave pública. El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado. El token es una parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.  
   
  Una vez creado el token, debe llamar a la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) para liberar la memoria asignada.  
   
- Si la `StrongNameTokenFromAssembly` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameTokenFromAssembly` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en Mscoree. dll  
+ **Biblioteca:** Se incluye como recurso en Mscoree. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

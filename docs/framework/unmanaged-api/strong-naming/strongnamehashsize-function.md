@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 738c98d7-a60c-45fe-a296-220af05e6991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 53384a5aa7f8d11f868057f892f7b60aac2e9f02
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c656f73748faf8be7124be65f3ed455f2d5fd07a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105185"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize (Función)
 Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  
@@ -45,17 +43,17 @@ BOOLEAN StrongNameHashSize (
  enuncia Tamaño de búfer devuelto, en bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la `StrongNameHashSize` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameHashSize` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4cfdaeb1bc298c10cbae01c946ffb867cef21d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088414"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition (Método)
-Obtiene el elemento en la posición dada, tratando la matriz como una matriz unidimensional de base cero.  
+Obtiene el elemento en la posición especificada y trata la matriz como una matriz unidimensional de base cero.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT GetElementAtPosition (
   
 ## <a name="parameters"></a>Parámetros  
  `nPosition`  
- [in] La posición del elemento que se va a recuperar.  
+ de Posición del elemento que se va a recuperar.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento.  
+ enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento.  
   
 ## <a name="remarks"></a>Comentarios  
- El diseño de una matriz multidimensional sigue el estilo de C++ del diseño de matriz.  
+ El diseño de una matriz de varias dimensiones sigue el C++ estilo del diseño de la matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

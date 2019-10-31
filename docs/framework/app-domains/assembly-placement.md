@@ -7,14 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], placement
 - assemblies [.NET Framework], location
 ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6281a0f68fa0ce81b4763d8d0e8f17b47771d2ff
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5eb7b5c35bb40d5a58390ccbd4619cbed4e06c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119955"
 ---
 # <a name="assembly-placement"></a>Colocación de ensamblados
 En la mayoría de las aplicaciones .NET Framework, los ensamblados que componen una aplicación se colocan en el directorio de la aplicación, en un subdirectorio de este último o en la caché global de ensamblados (si el ensamblado está compartido). Para reemplazar la ubicación en la que Common Language Runtime busca un ensamblado, use el [elemento \<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) en un archivo de configuración. Si el ensamblado no tiene un nombre seguro, la ubicación especificada mediante el [elemento \<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) se limita al directorio de la aplicación o a un subdirectorio de este. Si el ensamblado tiene un nombre seguro, el [elemento \<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) puede especificar cualquier ubicación en el equipo o en una red.  

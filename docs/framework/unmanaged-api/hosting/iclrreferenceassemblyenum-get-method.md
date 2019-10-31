@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a69e32d418478071f9b99a391e6bef9095d6f4ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8f479443e168c3fc7c627c3227e59f1e8b54f0e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120503"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get (Método)
 Obtiene la identidad del ensamblado en el índice proporcionado.  
@@ -39,36 +37,36 @@ HRESULT Get (
   
 ## <a name="parameters"></a>Parámetros  
  `dwIndex`  
- [in] Índice de base cero de la identidad del ensamblado para devolver.  
+ de Índice de base cero de la identidad del ensamblado que se va a devolver.  
   
  `pwzBuffer`  
- [out] Un búfer que contiene los datos de identidad de ensamblado.  
+ enuncia Búfer que contiene los datos de identidad del ensamblado.  
   
  `pcchBufferSize`  
- [in, out] El tamaño de la `pwzBuffer` búfer.  
+ [in, out] Tamaño del búfer de `pwzBuffer`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Get` se devolvió correctamente.|  
+|S_OK|`Get` devolvió correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` es demasiado pequeño.|  
-|ERROR_NO_MORE_ITEMS|La enumeración no contiene ningún elemento más.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Si el método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|ERROR_NO_MORE_ITEMS|La enumeración no contiene más elementos.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- `Get` Normalmente, se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer`y establece `pcchBufferSize` en el tamaño adecuado para `pwzBuffer`. La segunda llamada proporciona un tamaño adecuado `pwzBuffer`y contiene los datos de identidad de ensamblado canónico tras la finalización.  
+ normalmente se llama a `Get` dos veces. La primera llamada proporciona un valor null para `pwzBuffer`y establece `pcchBufferSize` en el tamaño adecuado para `pwzBuffer`. La segunda llamada proporciona un `pwzBuffer`con un tamaño adecuado y contiene los datos de identidad del ensamblado canónico al finalizar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

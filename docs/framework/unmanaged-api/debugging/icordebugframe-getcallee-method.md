@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10a5247632f242a4b4e0d33cf7fa7233d1b1e13b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b83dec65e1dd4fc610be3190e8126e6d9d38a6e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754203"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121221"
 ---
 # <a name="icordebugframegetcallee-method"></a>ICorDebugFrame::GetCallee (Método)
-Obtiene un puntero al objeto ICorDebugFrame en la cadena actual que llama este marco.  
+Obtiene un puntero al objeto ICorDebugFrame en la cadena actual a la que este marco llamó.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parámetros  
  `ppFrame`  
- [out] Un puntero a la dirección de un `ICorDebugFrame` objeto que representa el marco de la llamada. Este valor es null si el marco que realiza la llamada es el más interno de la cadena actual.  
+ enuncia Puntero a la dirección de un objeto `ICorDebugFrame` que representa el marco al que se ha llamado. Este valor es NULL si el marco de llamada es el marco más interno de la cadena actual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

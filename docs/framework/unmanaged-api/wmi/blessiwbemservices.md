@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138780"
 ---
 # <a name="blessiwbemservices-function"></a>Función BlessIWbemServices
 Indica si las credenciales de usuario permiten el acceso a la clase [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) especificada.   
@@ -50,7 +48,7 @@ de Puntero al objeto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwb
 de El nombre de usuario.
 
 `strPassword`\
-de La contraseña asociada `strUser`a.
+de Contraseña asociada a `strUser`.
 
 `strAuthority`\
 de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connectserverwmi.md) para obtener más información.
@@ -65,7 +63,7 @@ de Nivel de autorización.
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WinError. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o varios argumentos no son válidos. |
 | `E_POINTER` | 0x80004003 | El valor de `pIWbemServices` es `null`. | 
@@ -75,9 +73,9 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 ## <a name="requirements"></a>Requisitos  
 
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

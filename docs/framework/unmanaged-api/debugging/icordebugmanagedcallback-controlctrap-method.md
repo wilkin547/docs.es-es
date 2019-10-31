@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759792"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137425"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap (Método)
-Notifica al depurador que se captura CTRL+C en el proceso que se está depurando.  
+Notifica al depurador que se ha capturado CTRL + C en el proceso que se está depurando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +35,22 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>Parámetros  
  `pProcess`  
- [in] Un puntero a un objeto ICorDebugProcess que representa el proceso en el que se captura la CTRL + C.  
+ de Un puntero a un objeto ICorDebugProcess que representa el proceso en el que se intercepta CTRL + C.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El depurador controlará la captura de CTRL+C.|  
-|S_FALSE|El depurador no controlará la captura de CTRL+C.|  
+|S_OK|El depurador controlará la captura CTRL + C.|  
+|S_FALSE|El depurador no controlará la captura CTRL + C.|  
   
 ## <a name="remarks"></a>Comentarios  
  Todos los dominios de aplicación dentro del proceso se detienen para esta devolución de llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Campo HttpWebRequest._AutoRedirects
+title: Campo HttpWebRequest. _AutoRedirects
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dde9cdeeca1cc8cca13322747d625b505e7f453
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 82acb409f09826d70f8f050c932ab4aebc4fd172
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120093"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest. \_AutoRedirects campo
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_campo AutoRedirects
 
-`HttpWebRequest._AutoRedirects` es un <xref:System.Int32> que refleja el número de redireccionamientos realizados para este <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects` es una <xref:System.Int32> que refleja el número de redirecciones realizadas para este <xref:System.Net.HttpWebRequest>.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> El `HttpWebRequest._AutoRedirects` campo es interno y no está pensado para usarse directamente en el código.
+> El campo `HttpWebRequest._AutoRedirects` es interno y no está diseñado para usarse directamente en el código.
 > 
-> Microsoft no admite el uso de este campo en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de este campo en una aplicación de producción en cualquier circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
 **Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System. dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

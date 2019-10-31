@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 958968fb1a84b598b0c3e92151fbad58fc5e79d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738749"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122892"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType (Método)
-Obtiene el identificador para el tipo de conjunto de instrucciones que se está usando el proceso de destino.  
+Obtiene el identificador del tipo de conjunto de instrucciones que está usando el proceso de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>Parámetros  
  `machineType`  
- [out] Está utilizando un puntero a un valor que indica que el conjunto de instrucciones que el proceso de destino. El valor devuelto `machineType` es una de las constantes IMAGE_FILE_MACHINE, que se definen en el archivo de encabezado WinNT.h.  
+ enuncia Un puntero a un valor que indica el conjunto de instrucciones que está usando el proceso de destino. El `machineType` devuelto es una de las constantes IMAGE_FILE_MACHINE, que se definen en el archivo de encabezado Winnt. h.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

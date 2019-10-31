@@ -15,18 +15,16 @@ helpviewer_keywords:
 - adjustment rule [.NET Framework]
 - time zones [.NET Framework], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64fce738556fa68c54f5f7d7dcba79fc30d03bbe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 83fa7609c9500bc51581b7b20db3992b4265488b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131600"
 ---
 # <a name="time-zone-overview"></a>Información general sobre zonas horarias
 
-La <xref:System.TimeZoneInfo> clase simplifica la creación de aplicaciones que tienen en cuenta la zona horaria. La <xref:System.TimeZone> clase permite trabajar con la zona horaria local y la hora universal coordinada (UTC). La <xref:System.TimeZoneInfo> clase admite ambas zonas y cualquier zona horaria sobre la que la información está predefinida en el registro. También puede utilizar <xref:System.TimeZoneInfo> para definir zonas horarias personalizadas en las que el sistema no tiene información.
+La clase <xref:System.TimeZoneInfo> simplifica la creación de aplicaciones que tengan en cuenta la zona horaria. La clase <xref:System.TimeZone> permite trabajar con la zona horaria local y la hora universal coordinada (UTC). La clase <xref:System.TimeZoneInfo> admite ambas zonas y cualquier zona horaria sobre la que la información está predefinida en el registro. También puede utilizar <xref:System.TimeZoneInfo> para definir zonas horarias personalizadas en las que el sistema no tiene información.
 
 ## <a name="time-zone-essentials"></a>Aspectos básicos de la zona horaria
 
@@ -42,7 +40,7 @@ Para las zonas horarias que admiten reglas de ajuste, el cambio de horario de ve
 
 En la tabla siguiente se definen los términos usados comúnmente al trabajar con zonas horarias y desarrollar aplicaciones basadas en la zona horaria.
 
-| Término            | Definición |
+| Término            | de esquema JSON |
 | --------------- | ---------- |
 | Regla de ajuste | Una regla que define cuándo se produce la transición desde el horario estándar hacia el horario de verano y desde el horario de verano hacia el horario estándar. Cada regla de ajuste tiene una fecha de inicio y de finalización que define cuándo se ha implementado la regla (por ejemplo, la regla de ajuste está establecida entre el 1 de enero de 1986 y el 31 de diciembre de 2006), una diferencia (la cantidad de tiempo que la hora estándar cambia como consecuencia de la aplicación de TH e información de ajuste) e información sobre la fecha y hora específicas que las transiciones deben producir durante el período de ajuste. Las transiciones pueden seguir una regla fija o una regla flotante. |
 | Hora ambigua  | Una hora que se puede asignar a dos horas diferentes en una sola zona horaria. Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar. Por ejemplo, si se produce esta transición en un día determinado a las 2:00 A.M. y hace que la hora cambie a la 1:00 A.M., cualquier intervalo de tiempo entre la 1:00 A.M. y la 1:59:99 A.M. se puede interpretar como correspondiente a la hora estándar o correspondiente al horario de verano. |
@@ -53,23 +51,23 @@ En la tabla siguiente se definen los términos usados comúnmente al trabajar co
 
 ## <a name="time-zones-and-the-timezoneinfo-class"></a>Zonas horarias y la clase TimeZoneInfo
 
-En .net, un <xref:System.TimeZoneInfo> objeto representa una zona horaria. La <xref:System.TimeZoneInfo> clase incluye un <xref:System.TimeZoneInfo.GetAdjustmentRules%2A> método que devuelve una matriz de <xref:System.TimeZoneInfo.AdjustmentRule> objetos. Cada elemento de esta matriz proporciona información sobre la transición hacia y desde el horario de verano durante un período de tiempo determinado. (En el caso de las zonas horarias que no admiten el horario de verano, el método devuelve una matriz vacía). Cada <xref:System.TimeZoneInfo.AdjustmentRule> objeto tiene un <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> y una <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> propiedad que define la fecha y hora concretas de la transición hacia y desde el horario de verano. La <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> propiedad indica si esa transición es fija o flotante.
+En .NET, un objeto <xref:System.TimeZoneInfo> representa una zona horaria. La clase <xref:System.TimeZoneInfo> incluye un método <xref:System.TimeZoneInfo.GetAdjustmentRules%2A> que devuelve una matriz de objetos <xref:System.TimeZoneInfo.AdjustmentRule>. Cada elemento de esta matriz proporciona información sobre la transición hacia y desde el horario de verano durante un período de tiempo determinado. (En el caso de las zonas horarias que no admiten el horario de verano, el método devuelve una matriz vacía). Cada <xref:System.TimeZoneInfo.AdjustmentRule> objeto tiene una <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> y una propiedad <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> que define la fecha y hora determinadas de la transición hacia y desde el horario de verano. La propiedad <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> indica si esa transición es fija o flotante.
 
 .NET se basa en la información de zona horaria proporcionada por el sistema operativo Windows y almacenada en el registro. Debido al número de zonas horarias de la tierra, no todas las zonas horarias existentes se representan en el registro. Además, dado que el registro es una estructura dinámica, se pueden agregar o quitar zonas horarias predefinidas. Por último, el registro no contiene necesariamente datos históricos de zona horaria. Por ejemplo, en Windows XP el registro contiene datos sobre un solo conjunto de ajustes de zona horaria. Windows Vista admite los datos dinámicos de zona horaria, lo que significa que una sola zona horaria puede tener varias reglas de ajuste que se aplican a intervalos específicos de años. Sin embargo, la mayoría de las zonas horarias definidas en el registro de Windows Vista y admiten el horario de verano tienen solo una o dos reglas de ajuste predefinidas.
 
-La dependencia de la <xref:System.TimeZoneInfo> clase en el registro significa que una aplicación que tiene en cuenta la zona horaria no puede estar seguro de que se ha definido una zona horaria determinada en el registro. Por tanto, el intento de crear instancias de una zona horaria concreta (excepto la zona horaria local o la zona horaria que representa la hora UTC) debe usar el control de excepciones. También debe proporcionar algún método para permitir que la aplicación continúe si no se pueden <xref:System.TimeZoneInfo> crear instancias de un objeto necesario desde el registro.
+La dependencia de la clase <xref:System.TimeZoneInfo> en el registro significa que una aplicación que tenga en cuenta la zona horaria no puede estar seguro de que se ha definido una zona horaria determinada en el registro. Por tanto, el intento de crear instancias de una zona horaria concreta (excepto la zona horaria local o la zona horaria que representa la hora UTC) debe usar el control de excepciones. También debe proporcionar algún método para permitir que la aplicación continúe si no se pueden crear instancias de un objeto <xref:System.TimeZoneInfo> necesario desde el registro.
 
-Para controlar la ausencia de una zona horaria necesaria, la <xref:System.TimeZoneInfo> clase incluye un <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método, que puede usar para crear zonas horarias personalizadas que no se encuentran en el registro. Para obtener más información sobre cómo crear una zona horaria [personalizada, consulte Cómo: Cree zonas horarias sin reglas](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) de [ajuste y cómo: Cree zonas horarias con reglas](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)de ajuste. Además, puede utilizar el <xref:System.TimeZoneInfo.ToSerializedString%2A> método para convertir una zona horaria recién creada en una cadena y guardarla en un almacén de datos (como una base de datos, un archivo de texto, el registro o un recurso de aplicación). Después, puede utilizar el <xref:System.TimeZoneInfo.FromSerializedString%2A> método para volver a convertir esta cadena en <xref:System.TimeZoneInfo> un objeto. Para obtener más detalles, vea [Cómo: Guardar zonas horarias en un recurso](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) incrustado y [cómo: Restaure las zonas horarias de](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)un recurso incrustado.
+Para controlar la ausencia de una zona horaria necesaria, la clase <xref:System.TimeZoneInfo> incluye un método <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>, que puede usar para crear zonas horarias personalizadas que no se encuentran en el registro. Para obtener más información sobre cómo crear una zona horaria personalizada, consulte [Cómo: crear zonas horarias sin reglas de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) y [Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Además, puede utilizar el método <xref:System.TimeZoneInfo.ToSerializedString%2A> para convertir una zona horaria recién creada en una cadena y guardarla en un almacén de datos (como una base de datos, un archivo de texto, el registro o un recurso de aplicación). A continuación, puede utilizar el método <xref:System.TimeZoneInfo.FromSerializedString%2A> para volver a convertir esta cadena en un objeto <xref:System.TimeZoneInfo>. Para obtener más información, consulte [Cómo: guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: restaurar zonas horarias desde un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
-Dado que cada zona horaria se caracteriza por un desplazamiento desde la hora UTC base, así como por un desplazamiento desde la hora UTC que refleja las reglas de ajuste existentes, la hora de una zona horaria se puede convertir fácilmente en la hora de otra zona horaria. Para este propósito, el <xref:System.TimeZoneInfo> objeto incluye varios métodos de conversión, entre los que se incluyen:
+Dado que cada zona horaria se caracteriza por un desplazamiento desde la hora UTC base, así como por un desplazamiento desde la hora UTC que refleja las reglas de ajuste existentes, la hora de una zona horaria se puede convertir fácilmente en la hora de otra zona horaria. Para este propósito, el objeto <xref:System.TimeZoneInfo> incluye varios métodos de conversión, entre los que se incluyen:
 
 - <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>, que convierte la hora UTC a la hora de una zona horaria designada.
 
-- <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>, que convierte la hora de una zona horaria designada en una hora UTC.
+- <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>, que convierte la hora de una zona horaria designada en UTC.
 
 - <xref:System.TimeZoneInfo.ConvertTime%2A>, que convierte la hora de una zona horaria designada en la hora de otra zona horaria designada.
 
-- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>, que usa identificadores de zona horaria (en lugar <xref:System.TimeZoneInfo> de objetos) como parámetros para convertir la hora de una zona horaria designada en la hora de otra zona horaria designada.
+- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>, que usa identificadores de zona horaria (en lugar de objetos <xref:System.TimeZoneInfo>) como parámetros para convertir la hora de una zona horaria designada en la hora de otra zona horaria designada.
 
 Para obtener más información sobre cómo convertir horas entre zonas horarias, consulte [Convertir horas entre zonas horarias](../../../docs/standard/datetime/converting-between-time-zones.md).
 

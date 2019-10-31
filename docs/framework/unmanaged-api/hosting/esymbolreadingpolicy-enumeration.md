@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4dc6c80d-b694-480b-a378-d5b18420ce17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45b6b8593331801dd237d0a730afbd5a6a714bbf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 786ff6895383fc18dcfedb26fab344f80f04c1df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774181"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138207"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy (Enumeración)
-Contiene valores que establecen la directiva para leer los archivos de programa (PDB) de la base de datos.  
+Contiene valores que establecen la Directiva para leer archivos de base de datos de programa (PDB).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +36,21 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`eSymbolReadingAlways`|Especifica que el depurador siempre debe leer los archivos PDB.|  
-|`eSymbolReadingFullTrustOnly`|Especifica que el depurador debe leer sólo los archivos PDB asociados a ensamblados de plena confianza.|  
-|`eSymbolReadingNever`|Especifica que el depurador nunca debe leer los archivos PDB.|  
+|`eSymbolReadingFullTrustOnly`|Especifica que el depurador debe leer solo los archivos PDB asociados a los ensamblados de plena confianza.|  
+|`eSymbolReadingNever`|Especifica que el depurador nunca debe leer archivos PDB.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ESymbolReadingPolicy` enumeración se utiliza con el [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) método.  
+ La enumeración `ESymbolReadingPolicy` se usa con el método [ICLRDebugManager:: SetSymbolReadingPolicy (](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

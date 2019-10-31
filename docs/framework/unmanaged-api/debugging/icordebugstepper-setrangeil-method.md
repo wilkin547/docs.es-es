@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 610225708bf990850fce73d6d7ff66c556e24e5d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88270cb73515cc1a671bfb3fb5c479697ad7b359
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760592"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137543"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL (Método)
-Establece un valor que especifica si las llamadas a [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) pasar un argumento código MSIL (lenguaje) del método que se está ejecutando paso intermedio de valores que son relativos al código nativo o en relación con Microsoft a través de.  
+Establece un valor que especifica si las llamadas a [ICorDebugStepper:: steprange (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) pasan valores de argumento relativos al código nativo o al código del lenguaje intermedio de Microsoft (MSIL) del método que se está ejecutando paso a paso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT SetRangeIL (
   
 ## <a name="parameters"></a>Parámetros  
  `bIL`  
- [in] Establecido en `true` para especificar que los intervalos son relativos al código MSIL. Establecido en `false` para especificar que los intervalos son relativos al código nativo. El valor predeterminado es `true`.  
+ de Establezca en `true` para especificar que los intervalos son relativos al código MSIL. Establezca en `false` para especificar que los intervalos son relativos al código nativo. El valor predeterminado es `true`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

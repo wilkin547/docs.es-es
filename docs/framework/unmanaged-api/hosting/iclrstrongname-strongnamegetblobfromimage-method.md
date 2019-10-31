@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f5a2ec8-e776-4fd8-bda6-937b6834575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e13f0ebbdc4e5fe3974208f91ab57f86dd29c910
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad3b151165eb233bd3a4a78d8f4d612a696b7e93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748015"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135096"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage (Método)
 Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada.  
@@ -40,26 +38,26 @@ HRESULT StrongNameGetBlobFromImage (
   
 ## <a name="parameters"></a>Parámetros  
  `pbBase`  
- [in] La dirección de memoria del manifiesto del ensamblado asignado.  
+ de Dirección de memoria del manifiesto del ensamblado asignado.  
   
  `dwLength`  
- [in] El tamaño, en bytes, de la imagen en `pbBase`.  
+ de Tamaño, en bytes, de la imagen en `pbBase`.  
   
  `pbBlob`  
- [in] Un búfer que contiene la representación binaria de la imagen.  
+ de Búfer que va a contener la representación binaria de la imagen.  
   
  `pcbBlob`  
- [in, out] El solicita el tamaño máximo, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
+ [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

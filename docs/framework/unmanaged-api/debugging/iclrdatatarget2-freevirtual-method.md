@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112324"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual (Método)
-Llamado por los servicios de acceso a datos de common language runtime (CLR) para liberar memoria previamente asignada en el espacio de direcciones del proceso de destino.  
+Lo llaman los servicios de acceso a datos de Common Language Runtime (CLR) para liberar memoria que se asignó previamente en el espacio de direcciones del proceso de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,23 +37,23 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>Parámetros  
  `addr`  
- [in] Un `CLRDATA_ADDRESS` valor que especifica la dirección inicial de la memoria que se va a liberar.  
+ de `CLRDATA_ADDRESS` valor que especifica la dirección inicial de la memoria que se va a liberar.  
   
  `size`  
- [in] El tamaño, en bytes, de la memoria que se va a liberar.  
+ de Tamaño, en bytes, de la memoria que se va a liberar.  
   
  `typeFlags`  
- [in] Marcas que controlan la liberación de memoria. Consulte Win32 `VirtualFree` función.  
+ de Marcas que controlan la liberación de memoria. Vea la función `VirtualFree` de Win32.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FreeVirtual` método actúa como un contenedor lógico para Win32 `VirtualFree` función.  
+ El método `FreeVirtual` actúa como contenedor lógico para la función de `VirtualFree` de Win32.  
   
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

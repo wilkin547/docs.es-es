@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b411a51a5640a924d3eeae5d52102a842966d3fa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134995"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -53,7 +51,7 @@ HRESULT StrongNameSignatureGenerationEx (
  Si `pbKeyBlob` no es null, se supone que el par de claves está incluido en el objeto binario grande (BLOB) de clave.  
   
  `pbKeyBlob`  
- de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor `wszKeyContainer` de claves especificado por contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `wszKeyContainer` contiene el par de claves.  
   
  `cbKeyBlob`  
  de Tamaño, en bytes, de `pbKeyBlob`.  
@@ -69,28 +67,28 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  de Uno o varios de los siguientes valores:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001): vuelve a calcular todos los valores hash para los módulos vinculados.  
+- `SN_SIGN_ALL_FILES` (0x00000001): vuelve a calcular todos los valores hash para los módulos vinculados.  
   
-- `SN_TEST_SIGN`(0x00000002): prueba-firma del ensamblado.  
+- `SN_TEST_SIGN` (0x00000002): prueba-firma del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
+ `S_OK` si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para una lista).  
   
 ## <a name="remarks"></a>Comentarios  
- Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
+ Especifique NULL en `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
  La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
   
- Si `SN_SIGN_ALL_FILES` se especifica, pero no se incluye una clave pública `pbKeyBlob` (y `wszFilePath` son NULL), se vuelven a calcular los valores hash de los módulos vinculados, pero no se vuelve a firmar el ensamblado.  
+ Si se especifica `SN_SIGN_ALL_FILES` pero no se incluye una clave pública (tanto `pbKeyBlob` como `wszFilePath` son NULL), se vuelven a calcular los valores hash de los módulos vinculados, pero no se vuelve a firmar el ensamblado.  
   
- Si `SN_TEST_SIGN` se especifica, el encabezado Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
+ Si se especifica `SN_TEST_SIGN`, el encabezado de Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Metahost. h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

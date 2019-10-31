@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768063"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136982"
 ---
-# <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS (Estructura)
-Contiene estadísticas por subproceso que pertenecen a la recolección de elementos.  
+# <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS (Estructura)
+Contiene estadísticas por subproceso relativas a la recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ typedef struct _COR_GC_THREAD_STATS {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`PerThreadAllocation`|El número de bytes de memoria asignada en el subproceso que está asociado con el actual `COR_GC_THREAD_STATS` instancia. Este número se pone a cero cada vez que se produce una recolección de generación de cero.|  
-|`Flags`|El número de bytes promueve a una generación superior recolección las más recientes.|  
+|`PerThreadAllocation`|Número de bytes de memoria asignados en el subproceso asociado a la instancia de `COR_GC_THREAD_STATS` actual. Este número se borra a cero cada vez que se produce una recolección de elementos no utilizados de generación cero.|  
+|`Flags`|Número de bytes promocionados a una generación superior en la recolección de elementos no utilizados más reciente.|  
   
 ## <a name="remarks"></a>Comentarios  
- [ICLRTask:: GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) toma un parámetro de salida de tipo `COR_GC_THREAD_STATS`.  
+ [ICLRTask:: getmemstats (](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) toma un parámetro de salida de tipo `COR_GC_THREAD_STATS`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost.idl  
+ **Encabezado:** GCHost. idl  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

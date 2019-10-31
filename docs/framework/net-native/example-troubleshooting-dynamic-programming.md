@@ -2,14 +2,12 @@
 title: 'Ejemplo: solucionar problemas de programación dinámica'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128439"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: solucionar problemas de programación dinámica
 > [!NOTE]
@@ -50,7 +48,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  En este caso, agregar una directiva de tiempo de ejecución para `App.Core.ViewModels` ha resuelto el problema. La causa principal ha sido una llamada de la API al método <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> que ha devuelto **NULL**, y la aplicación ha omitido el problema de forma silenciosa hasta que se ha producido un bloqueo.  
   
- En la programación dinámica, una buena práctica al usar las API de reflexión en .net Native es <xref:System.Type.GetType%2A?displayProperty=nameWithType> usar las sobrecargas que producen una excepción en caso de error.  
+ En la programación dinámica, una buena práctica al usar las API de reflexión en .NET Native es usar las sobrecargas de <xref:System.Type.GetType%2A?displayProperty=nameWithType> que producen una excepción en caso de error.  
   
 ## <a name="is-this-an-isolated-case"></a>¿Es un caso aislado?  
  También pueden surgir otros problemas al utilizar `App.Core.ViewModels`.  Debe decidir si merece la pena identificar y corregir cada excepción debida a la falta de metadatos, o ahorrar tiempo y agregar directivas para una clase más grande de tipos.  Aquí, agregar metadatos `dynamic` para `App.Core.ViewModels` podría ser el mejor método si el aumento de tamaño resultante del archivo binario de salida no supone un problema.  
@@ -61,4 +59,4 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="see-also"></a>Vea también
 
 - [Introducción](getting-started-with-net-native.md)
-- [Ejemplo: Controlar excepciones al enlazar datos](example-handling-exceptions-when-binding-data.md)
+- [Ejemplo: control de excepciones al enlazar datos](example-handling-exceptions-when-binding-data.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f309b5f-5556-4f1e-b1dd-4fe97fc81d01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6029ac8c9ab988efa78bbfaf0843154ac656671
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac7601f89c125cecbfbd212118420a800f495742
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096809"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet (Método)
 Obtiene el conjunto de registros para este marco de pila.  
@@ -37,12 +35,12 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parámetros  
  `ppRegisters`  
- [out] Un puntero a la dirección de un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) establece el objeto que representa el registro para este marco de pila.  
+ enuncia Puntero a la dirección de un objeto [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) que representa el conjunto de registros para este marco de pila.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

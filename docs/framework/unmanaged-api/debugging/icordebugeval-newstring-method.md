@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137642"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString (Método)
-Asigna una nueva instancia de la cadena con el contenido especificado.  
+Asigna una nueva instancia de cadena con el contenido especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT NewString (
   
 ## <a name="parameters"></a>Parámetros  
  `string`  
- [in] Puntero al contenido de la cadena.  
+ de Puntero al contenido de la cadena.  
   
 ## <a name="remarks"></a>Comentarios  
  La cadena siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

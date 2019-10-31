@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122951"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent (Función)
 Crea o abre un identificador de evento al que apuntará cualquier Common Language Runtime (CLR) que se cargue en el proceso de destino especificado.  
@@ -61,10 +59,10 @@ HRESULT GetStartupNotificationEvent
  El evento se señala antes de que el CLR que lo señaló ejecute ningún código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** dbgshim.h  
+ **Encabezado:** dbgshim. h  
   
- **Biblioteca:** dbgshim.dll  
+ **Biblioteca:** dbgshim. dll  
   
- **Versiones de .NET framework:** 3.5 SP1
+ **.NET Framework versiones:** 3,5 SP1

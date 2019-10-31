@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
+title: 'Icordebugsymbolprovider2 (:: Getgenericdictionaryinfo ((método)'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133631"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Icordebugsymbolprovider2 (:: Getgenericdictionaryinfo ((método)
 
 Recupera una asignación de diccionario genérico.
 
@@ -26,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parámetros
 
 `ppMemoryBuffer`\
-[out] Un puntero a la dirección de un [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) objeto que contiene la asignación de diccionario genérico. Vea la sección Comentarios para obtener más información.
+enuncia Un puntero a la dirección de un objeto [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) que contiene la asignación de diccionario genérico. Vea la sección Comentarios para obtener más información.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -35,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
 
 La asignación se compone de dos secciones de nivel superior:
 
-- Un [directory](#Directory) que contiene las direcciones virtuales relativas (RVA) de todos los diccionarios incluidos en esta asignación.
+- Un [directorio](#Directory) que contiene las direcciones virtuales relativas (RVA) de todos los diccionarios incluidos en esta asignación.
 
-- Una alineación de bytes [montón](#Heap) que contiene información de la creación de instancias de objeto. Se inicia inmediatamente después de la última entrada de directorio.
+- [Montón](#Heap) alineado en bytes que contiene información sobre la creación de instancias de objetos. Se inicia inmediatamente después de la última entrada de directorio.
 
 <a name="Directory"></a>
 
@@ -47,13 +45,13 @@ Cada entrada del directorio hace referencia a un desplazamiento dentro del mont�
 
 La parte del directorio de la asignación del diccionario genérico tiene la estructura siguiente:
 
-- Los primeros cuatro bytes contienen el número de entradas del diccionario (es decir, el número de direcciones virtuales relativas en el diccionario). Nos referiremos a este valor como *N*. Si se establece el bit alto, las entradas se ordenan por la dirección virtual relativa en orden ascendente.
+- Los primeros cuatro bytes contienen el número de entradas del diccionario (es decir, el número de direcciones virtuales relativas en el diccionario). Haremos referencia a este valor como *N*. Si se establece el bit alto, las entradas se ordenan por dirección virtual relativa en orden ascendente.
 
-- El *N* siguen las entradas de directorio. Cada entrada consta de 8 bytes, en dos segmentos de 4 bytes:
+- Las *N* entradas de directorio siguen. Cada entrada consta de 8 bytes, en dos segmentos de 4 bytes:
 
-  - Bytes 0-3: RVA; dirección virtual relativa del diccionario.
+  - Bytes de 0 a 3: RVA; dirección virtual relativa del diccionario.
 
-  - Bytes 4-7: Desplazamiento; un desplazamiento relativo al inicio del montón.
+  - Bytes de 4 a 7: desplazamiento; un desplazamiento relativo al inicio del montón.
 
 <a name="Heap"></a>
 
@@ -71,17 +69,17 @@ El formato de cada elemento de información sobre la creación de instancias en 
 
 - La longitud de este elemento de información sobre la creación de instancias en bytes, en el formato de metadatos ECMA comprimido. El valor excluye esta información de longitud.
 
-- El número de tipos de creación de instancias genérica, o *T*, en formato de metadatos ECMA comprimido.
+- El número de tipos de creación de instancias genéricos, o *T*, en formato de metadatos ECMA comprimido.
 
-- *T* tipos, cada uno representado en el formato de firma del tipo ECMA.
+- Tipos *T* , cada uno representado en el formato de firma de tipo ECMA.
 
 Incluir la longitud de cada elemento del montón permite la ordenación simple de la sección del directorio sin afectar al montón.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 

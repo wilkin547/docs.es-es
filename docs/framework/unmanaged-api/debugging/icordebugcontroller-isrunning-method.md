@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99dbe5c5da5b8c169e34aa29afca507cc6624f0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f24c07a654dc2345cb65226463573576a6fb3658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748791"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125340"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning (Método)
 Obtiene un valor que indica si los subprocesos del proceso se están ejecutando libremente.  
@@ -37,12 +35,12 @@ HRESULT IsRunning (
   
 ## <a name="parameters"></a>Parámetros  
  `pbRunning`  
- [out] Un puntero a un valor que es `true` si se ejecutan los subprocesos del proceso libremente; en caso contrario, `false`.  
+ enuncia Un puntero a un valor que se `true` si los subprocesos del proceso se están ejecutando libremente; de lo contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

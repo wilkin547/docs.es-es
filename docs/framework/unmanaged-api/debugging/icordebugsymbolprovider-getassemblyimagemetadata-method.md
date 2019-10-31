@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetAssemblyImageMetadata (método)
+title: 'ICorDebugSymbolProvider:: Getassemblyimagemetadata ((método)'
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad86c42d0f23de25fe0e5b9123a0dba3695d8d64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb08df3b594e0c34dfe4ca791983b0c111239b23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138913"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider::GetAssemblyImageMetadata (método)
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider:: Getassemblyimagemetadata ((método)
 Devuelve los metadatos desde un ensamblado combinado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,11 +30,11 @@ HRESULT GetAssemblyImageMetadata(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

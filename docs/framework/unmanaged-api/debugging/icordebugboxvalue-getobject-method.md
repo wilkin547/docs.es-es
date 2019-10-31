@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a867a5b-bf94-493f-a4f5-b28685cf5325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30038d383e78c23715b844df0bee7c1124885a69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 475cc6c688262f318aa7f844b975ad69fa80bbe9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122821"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject (Método)
-Obtiene el valor con conversión boxing.  
+Obtiene el valor de la conversión boxing.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Parámetros  
  `ppObject`  
- [out] Un puntero a la dirección de un objeto ICorDebugObjectValue que representa el valor con conversión boxing.  
+ enuncia Puntero a la dirección de un objeto ICorDebugObjectValue que representa el valor de la conversión boxing.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

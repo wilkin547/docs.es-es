@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132064"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue (Método)
-Obtiene un puntero de interfaz a un objeto ICorDebugValue que contiene el valor del campo estático al que hace referencia el campo especificado de token en el marco de pila especificado.  
+Obtiene un puntero de interfaz a un objeto ICorDebugValue que contiene el valor del campo estático al que hace referencia el token de campo especificado en el marco de pila especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,28 +37,28 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Parámetros  
  `fieldDef`  
- [in] Un `mdFieldDef` símbolo (token) que especifica el campo estático.  
+ de Un `mdFieldDef` token que especifica el campo estático.  
   
  `pFrame`  
- [in] Un puntero a un ICorDebugFrame que representa el marco de pila.  
+ de Un puntero a un ICorDebugFrame que representa el marco de pila.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un `ICorDebugValue` que contiene el valor del campo estático.  
+ enuncia Puntero a la dirección de una `ICorDebugValue` que contiene el valor del campo estático.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetStaticFieldValue` método se puede usar sólo si el tipo es ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, tal y como indica la [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) método.  
+ El método `GetStaticFieldValue` solo se puede usar si el tipo es ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, tal y como se indica en el método [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) .  
   
- Para tipos no genéricos, la operación se realiza por `GetStaticFieldValue` es idéntico a llamar a [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) en el objeto ICorDebugClass devuelto por [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ En el caso de los tipos no genéricos, la operación realizada por `GetStaticFieldValue` es idéntica a llamar a [ICorDebugClass:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) en el objeto ICorDebugClass que devuelve [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
   
- Para tipos genéricos, un valor de campo estático será relativa a una instancia determinada. También, si el campo estático, posiblemente, podría ser relativo a un subproceso, un contexto o un dominio de aplicación, a continuación, el marco de pila ayudará al depurador determinar el valor adecuado.  
+ En el caso de los tipos genéricos, un valor de campo estático será relativo a una instancia determinada. Además, si el campo estático podría ser relacionado con un subproceso, un contexto o un dominio de aplicación, el marco de pila ayudará al depurador a determinar el valor adecuado.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetStaticFieldValue` puede usarse solo cuando una llamada a `ICorDebugType::GetType` devuelve un valor de ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE.  
+ `GetStaticFieldValue` solo se puede usar cuando una llamada a `ICorDebugType::GetType` devuelve un valor de ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

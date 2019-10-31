@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b199d3226ec391fadc356b5efacdbf10a3e25adf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4134062be93a2fc5e76949d465a7b5822556b408
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128902"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages (Método)
-Habilita y deshabilita la transmisión de mensajes de registro en el depurador.  
+Habilita y deshabilita la transmisión de mensajes de registro al depurador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +33,15 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
   
 ## <a name="parameters"></a>Parámetros  
  `fOnOff`  
- [in] `true` permite la transmisión de mensajes de registro; `false` deshabilita la transmisión.  
+ [in] `true` habilita la transmisión de mensajes de registro; `false` deshabilita la transmisión.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método es válido solo después de la [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) se produce la devolución de llamada.  
+ Este método es válido solo después de que se produzca la devolución de llamada [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

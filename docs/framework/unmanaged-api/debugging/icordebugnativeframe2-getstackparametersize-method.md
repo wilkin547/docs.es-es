@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dd9760c347bbc23f3e8225c1ff748c6b7b8bfe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757203"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096537"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize (Método)
-Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas operativos.  
+Devuelve el tamaño acumulado de los parámetros de la pila en los sistemas operativos x86.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,27 +33,27 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
 ## <a name="parameters"></a>Parámetros  
  `pSize`  
- [out] Un puntero al tamaño acumulado de los parámetros en la pila.  
+ enuncia Puntero al tamaño acumulado de los parámetros de la pila.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|El tamaño de pila se devolvió correctamente.|  
-|S_FALSE|`GetStackParameterSize` se llamó en una plataforma que no sean x86.|  
-|E_FAIL|`The size of the parameters could not be returned`|  
+|S_OK|El tamaño de la pila se devolvió correctamente.|  
+|S_FALSE|se llamó a `GetStackParameterSize` en una plataforma distinta de x86.|  
+|E_FAIL|`The size of the parameters could not be returned`Operador|  
 |E_INVALIDARG|`pSize` es `null`.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- El [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) métodos no ajustan el puntero de pila para los parámetros que se insertan en la pila. En su lugar, puede usar el valor devuelto por `GetStackParameterSize` para ajustar el puntero de pila para inicializar un desenredador nativo, que ajusta los parámetros.  
+ Los métodos [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) no ajustan el puntero de pila para los parámetros que se insertan en la pila. En su lugar, puede usar el valor devuelto por `GetStackParameterSize` para ajustar el puntero de la pila y, de este modo, inicializar un desenredado nativo, que se ajusta para los parámetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

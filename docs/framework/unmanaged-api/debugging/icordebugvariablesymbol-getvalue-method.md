@@ -1,17 +1,15 @@
 ---
-title: ICorDebugVariableSymbol::GetValue (método)
+title: 'ICorDebugVariableSymbol:: GetValue (método)'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120960"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue (método)
+# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue (método)
 Obtiene el valor de una variable como una matriz de bytes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -52,11 +50,11 @@ HRESULT GetValue(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

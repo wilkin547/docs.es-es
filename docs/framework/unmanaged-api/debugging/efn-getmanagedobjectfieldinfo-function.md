@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123012"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo (función)
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_función GetManagedObjectFieldInfo
 Obtiene el desplazamiento desde el inicio de un objeto hasta un campo y el valor del campo, a partir del puntero de objeto y nombre de campo especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `Client`  
- [in] Un puntero al cliente de depuración.  
+ de Puntero al cliente de depuración.  
   
  `objAddr`  
- [in] Un puntero de objeto administrado.  
+ de Puntero de objeto administrado.  
   
  szFieldName  
- [in] Un puntero de objeto administrado por el nombre de campo.  
+ de Puntero de objeto administrado al nombre del campo.  
   
  `pValue`  
- [out] El valor del campo. Este parámetro puede ser NULL.  
+ enuncia Valor del campo. Este parámetro puede ser NULL.  
   
  `pOffset`  
- [out] El desplazamiento desde `objAddr` al campo. Este parámetro puede ser NULL.  
+ enuncia Desplazamiento desde `objAddr` al campo. Este parámetro puede ser NULL.  
   
 ## <a name="remarks"></a>Comentarios  
  Si el desplazamiento es 0, no se escribe ningún desplazamiento.  
   
- Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor 0xa0 y un código de error de 0 x 1000.  
+ Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor de instalación de 0XA0 y un código de error de 0x1000.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: SOS_Stacktrace.h  
+ **Encabezado:** SOS_Stacktrace. h  
   
- **Versión de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versión de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 

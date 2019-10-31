@@ -2,14 +2,12 @@
 title: Método de ICorDebugLoadedModule::GetBaseAddress
 ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85748106edb34b98f975a40bcc2617401536e271
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8af814ff2eaaf3ae6dae9031c13bf37ea0c1236b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122657"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>Método de ICorDebugLoadedModule::GetBaseAddress
 Obtiene la dirección base del módulo cargado.  
@@ -32,11 +30,11 @@ HRESULT GetBaseAddress(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

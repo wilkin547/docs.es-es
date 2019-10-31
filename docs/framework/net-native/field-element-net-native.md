@@ -1,17 +1,15 @@
 ---
-title: <Field>Elemento (.NET Native)
+title: Elemento <Field> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049777"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128420"
 ---
-# <a name="field-element-net-native"></a>\<Elemento Field > (.NET Native)
+# <a name="field-element-net-native"></a>\<elemento > Field (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un campo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -28,7 +26,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Tipo de atributo|DESCRIPCIÓN|  
+|Atributo|Tipo de atributo|Descripción|  
 |---------------|--------------------|-----------------|  
 |`Name`|General|Atributo necesario. Especifica el nombre del campo.|  
 |`Browse`|Reflexión|Atributo opcional. Controla la consulta para obtener información sobre el campo o para enumerar el campo, pero no habilita ningún acceso dinámico en tiempo de ejecución.|  
@@ -37,13 +35,13 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Value|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_name*|Nombre de campo. El tipo del campo está definido por el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|La configuración que se aplica a este tipo de política para el campo. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -52,7 +50,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
@@ -63,5 +61,5 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
 ## <a name="see-also"></a>Vea también
 
 - [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](runtime-directive-elements.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 - [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)

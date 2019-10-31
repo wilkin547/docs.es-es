@@ -10,14 +10,12 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 765d4344553a6e65b930a7bf586a41144d220fc6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051829"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123622"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Crear una clase para contener funciones de archivos DLL
 Encapsular una función DLL que se usa con frecuencia en una clase administrada es un enfoque efectivo para encapsular la funcionalidad de la plataforma. Aunque no es obligatorio hacerlo en todos los casos, proporcionar un contenedor de clases es cómodo porque la definición de funciones DLL puede ser compleja y propensa a errores. Si está programando en Visual Basic o C#, debe declarar las funciones DLL dentro de una clase o módulo de Visual Basic.  

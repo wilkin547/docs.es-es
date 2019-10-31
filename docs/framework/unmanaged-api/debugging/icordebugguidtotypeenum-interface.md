@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: aa32b12b-05fc-4ea8-a904-adae25034269
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22cd08154268bdf1e819a0ec0067b05a81d60b22
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: da921644c4d967efb0d88060ada0332c5eb63965
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138530"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum (Interfaz)
-Proporciona un enumerador que define la asignación entre un conjunto de GUID y sus tipos correspondientes, que se representan mediante instancias de ICorDebugType. Esta interfaz hereda los métodos de ICorDebugEnum (interfaz).  
+Proporciona un enumerador que define la asignación entre un conjunto de GUID y sus tipos correspondientes, que están representados por instancias de ICorDebugType. Esta interfaz hereda los métodos de la interfaz ICorDebugEnum.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorDebugGuidToTypeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md)|Obtiene el número especificado de [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) instancias que se asignan los GUID para escribir información.|  
+|[Icordebugguidtotypeenum (:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md)|Obtiene el número especificado de instancias de [cordebugguidtotypemapping (](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) que asignan los GUID a la información de tipo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un `ICorDebugGuidToTypeEnum` el objeto de interfaz se puede recuperar mediante una llamada a la [Icordebugappdomain3](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) método. Un depurador puede llamar a esta interfaz [siguiente](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md) método para recuperar [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) los objetos que representan las asignaciones de representaciones de tipos en tiempo de ejecución de Windows administradas se cargan en el dominio de aplicación utilizado para la llamada a la [Icordebugappdomain3](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) método.  
+ Un objeto de interfaz de `ICorDebugGuidToTypeEnum` se puede recuperar llamando al método [ICorDebugAppDomain3:: getcachedwinrttypes (](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) . Un depurador puede llamar al [siguiente](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md) método de la interfaz para recuperar objetos [cordebugguidtotypemapping (](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) que representan asignaciones de representaciones administradas de Windows Runtime tipos cargados en el dominio de aplicación que se usa para la llamada a [. Método ICorDebugAppDomain3:: Getcachedwinrttypes (](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Windows en tiempo de ejecución  
+ **Plataformas:** Windows Runtime  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

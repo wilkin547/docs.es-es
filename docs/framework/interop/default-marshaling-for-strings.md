@@ -8,14 +8,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
-ms.translationtype: HT
+ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452388"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123545"
 ---
 # <a name="default-marshaling-for-strings"></a>Cálculo de referencias predeterminado para cadenas
 
@@ -232,7 +230,7 @@ End Structure
 
 En algunas circunstancias, se debe pasar un búfer de caracteres de longitud fija a código no administrado para su manipulación. En este caso no basta con pasar una cadena porque el destinatario no puede modificar el contenido del búfer que se pasa. Aunque la cadena se pase por referencia, no hay ninguna manera de inicializar el búfer con un tamaño determinado.
 
-La solución consiste en pasar un búfer <xref:System.Text.StringBuilder> como argumento en lugar de un <xref:System.String>. El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`. También puede inicializarse con una longitud fija. Por ejemplo, si inicializa un búfer `StringBuilder` con una capacidad de `N`, el contador de referencias proporcionará un búfer con un tamaño de (`N`+ 1) caracteres. + 1 tiene en cuenta el hecho de que la cadena no administrada tiene un terminador NULL mientras que `StringBuilder` no.
+La solución consiste en pasar un búfer <xref:System.Text.StringBuilder> como argumento en lugar de un <xref:System.String>. El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`. También puede inicializarse con una longitud fija. Por ejemplo, si inicializa un búfer `StringBuilder` con una capacidad de `N`, el contador de referencias proporcionará un búfer con un tamaño de (`N`+ 1) caracteres. \+ 1 tiene en cuenta el hecho de que la cadena no administrada tiene un terminador NULL mientras que `StringBuilder` no.
 
 Por ejemplo, la función de API [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) de Windows (que se define en *winuser.h*) requiere que el autor de llamada pase un búfer de caracteres de longitud fija en el que la función escribe el texto de la ventana. `LpString` apunta a un búfer asignado por el llamador de tamaño `nMaxCount`. Se espera que el llamador asigne el búfer y establezca el argumento `nMaxCount` en el tamaño del búfer asignado. En el ejemplo siguiente se muestra la declaración de la función `GetWindowText`, tal y como se define en *winuser.h*.
 

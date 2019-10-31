@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c6ea58eca5ac635893a24b57ade261e04a69721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130432"
 ---
 # <a name="execquerywmi-function"></a>Función ExecQueryWmi
 
@@ -53,22 +51,22 @@ HRESULT ExecQueryWmi (
 de Cadena con el lenguaje de consulta válido compatible con la administración de Windows. Debe ser "WQL", el acrónimo de lenguaje de consulta de WMI.
 
 `strQuery`\
-de Texto de la consulta. Este parámetro no puede `null`ser.
+de Texto de la consulta. Este parámetro no se puede `null`.
 
 `lFlags`\
 de Combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-| Constante | Value  | DESCRIPCIÓN  |
+| Constante | Valor  | Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, la función recupera los calificadores modificados almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no se establece, la función solo recupera los calificadores almacenados en el espacio de nombres inmediato. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca produce una llamada semisincrónica. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de solo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten que las llamadas se [clonen](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserva los punteros a objetos en la enumeración hasta que se liberan. |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Garantiza que los objetos devueltos tienen suficiente información en ellos, de modo que las propiedades del sistema, como **__PATH**, **__RELPATH**y `null` **__SERVER**, no lo son. |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Garantiza que los objetos devueltos tienen suficiente información en ellos, de modo que las propiedades del sistema, como **__PATH**, **__RELPATH**y **__SERVER**, no se `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Esta marca se utiliza para la prototipo. No ejecuta la consulta y, en su lugar, devuelve un objeto que es similar a un objeto de resultado típico. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Provoca el acceso directo al proveedor para la clase especificada, sin tener en cuenta su clase primaria o cualquier subclase. |
 
-Las marcas recomendadas `WBEM_FLAG_RETURN_IMMEDIATELY` son `WBEM_FLAG_FORWARD_ONLY` y para obtener el mejor rendimiento.
+Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_ONLY` para obtener el mejor rendimiento.
 
 `pCtx`\
 de Normalmente, este valor es `null`. De lo contrario, es un puntero a una instancia de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que puede ser utilizada por el proveedor que proporciona las clases solicitadas.
@@ -98,7 +96,7 @@ de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connects
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que la función puede devolver. |
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
@@ -116,17 +114,17 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemServices:: ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) .
 
-Esta función procesa la consulta especificada en el `strQuery` parámetro y crea un enumerador a través del que el llamador puede tener acceso a los resultados de la consulta. El enumerador es un puntero a una interfaz [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) ; los resultados de la consulta son instancias de objetos de clase que se ponen a disposición a través de la interfaz [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+Esta función procesa la consulta especificada en el parámetro `strQuery` y crea un enumerador a través del que el llamador puede tener acceso a los resultados de la consulta. El enumerador es un puntero a una interfaz [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) ; los resultados de la consulta son instancias de objetos de clase que se ponen a disposición a través de la interfaz [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Hay límites en el número de `AND` palabras clave y `OR` que se pueden usar en las consultas WQL. Un gran número de palabras clave WQL usadas en una consulta compleja puede hacer que WMI `WBEM_E_QUOTA_VIOLATION` devuelva el código de error (o `HRESULT` 0x8004106c) como un valor. El límite de palabras clave de WQL depende de la complejidad de la consulta.
+Hay límites en el número de palabras clave `AND` y `OR` que se pueden usar en las consultas WQL. Un gran número de palabras clave WQL usadas en una consulta compleja puede hacer que WMI devuelva el código de error `WBEM_E_QUOTA_VIOLATION` (o 0x8004106c) como un valor `HRESULT`. El límite de palabras clave de WQL depende de la complejidad de la consulta.
 
 Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la función [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

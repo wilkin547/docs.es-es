@@ -2,14 +2,12 @@
 title: API basada en la reflexión
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049975"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128539"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basada en la reflexión
 En algunos casos, el uso de la reflexión en el código no es obvio y, por tanto, la cadena de herramientas de .NET Native no conserva los metadatos necesarios en tiempo de ejecución. En este tema se abordan algunas de las API comunes o patrones de programación habituales que no se consideran parte de la API de reflexión, pero que hacen uso de la reflexión para ejecutarse correctamente. Si los usa en su código fuente, puede agregar información sobre ellos en el archivo de directivas en tiempo de ejecución (.rd.xml) para que las llamadas a estas API no generen una excepción [MissingMetadataException](missingmetadataexception-class-net-native.md) u otra excepción en tiempo de ejecución.  
@@ -93,4 +91,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>Vea también
 
 - [Introducción](getting-started-with-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])

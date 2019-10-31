@@ -9,22 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252591"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116811"
 ---
-# <a name="gcconcurrent-element"></a>\<gcConcurrent >, elemento
+# <a name="gcconcurrent-element"></a>\<elemento > gcConcurrent
 
 Especifica si Common Language Runtime ejecuta la recolección de elementos no utilizados en un subproceso independiente.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent >**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,13 +37,13 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|DESCRIPCIÓN|
+|Atributo|Descripción|
 |---------------|-----------------|
 |`enabled`|Atributo necesario.<br /><br /> Especifica si CLR ejecuta la recolección de elementos no utilizados simultáneamente.|
 
 ## <a name="enabled-attribute"></a>atributo Enabled
 
-|Value|DESCRIPCIÓN|
+|Valor|Descripción|
 |-----------|-----------------|
 |`false`|No ejecuta la recolección de elementos no utilizados simultáneamente.|
 |`true`|Ejecuta la recolección de elementos no utilizados simultáneamente. Este es el valor predeterminado.|
@@ -56,14 +54,14 @@ Ninguno.
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|DESCRIPCIÓN|
+|Elemento|Descripción|
 |-------------|-----------------|
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|
 
 ## <a name="remarks"></a>Comentarios
 
-Antes de .NET Framework 4, la recolección de elementos no utilizados de estación de trabajo permitía la recolección de elementos no utilizados  simultánea, que se realizaba en segundo plano en un subproceso independiente. En .NET Framework 4, la recolección de elementos no utilizados simultánea se reemplazó por GC, que también realiza la recolección de elementos no utilizados en segundo plano en un subproceso independiente. A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor se puede realizar en segundo plano. El `<gcConcurrent>` elemento controla si el motor en tiempo de ejecución realiza la recolección de elementos no utilizados simultánea o en segundo plano, si está disponible, o si realiza la recolección de elementos no utilizados en primer plano.
+Antes de .NET Framework 4, la recolección de elementos no utilizados de estación de trabajo permitía la recolección de elementos no utilizados  simultánea, que se realizaba en segundo plano en un subproceso independiente. En .NET Framework 4, la recolección de elementos no utilizados simultánea se reemplazó por GC, que también realiza la recolección de elementos no utilizados en segundo plano en un subproceso independiente. A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor se puede realizar en segundo plano. El elemento `<gcConcurrent>` controla si el motor en tiempo de ejecución realiza la recolección de elementos no utilizados simultánea o en segundo plano, si está disponible, o si realiza la recolección de elementos no utilizados en primer plano.
 
 ### <a name="to-disable-background-garbage-collection"></a>Para deshabilitar la recolección de elementos no utilizados en segundo plano
 
@@ -80,7 +78,7 @@ De forma predeterminada, CLR usa la recolección de elementos no utilizados simu
 </configuration>
 ```
 
- Si hay un `<gcConcurrentSetting>` valor en el archivo de configuración del equipo, define el valor predeterminado para todas las aplicaciones .NET Framework. El archivo de configuración del equipo reemplaza el archivo de configuración de la aplicación.
+ Si hay un valor `<gcConcurrentSetting>` en el archivo de configuración del equipo, define el valor predeterminado para todas las aplicaciones .NET Framework. El archivo de configuración del equipo reemplaza el archivo de configuración de la aplicación.
 
  Para obtener más información sobre la recolección de elementos no utilizados simultánea y en segundo plano, consulte la sección sobre la recolección de elementos no utilizados [simultánea](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) en el artículo [fundamentos de la recolección de elementos no utilizados](../../../../standard/garbage-collection/fundamentals.md) .
 

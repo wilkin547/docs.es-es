@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045698"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129962"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 
@@ -88,7 +86,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Para obtener una lista completa de las opciones disponibles con Al.exe, vea [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
   
-## <a name="satellite-assemblies-an-example"></a>Ensamblados satélite: Un ejemplo  
+## <a name="satellite-assemblies-an-example"></a>Ejemplo de ensamblados satélite  
  A continuación se incluye un ejemplo sencillo de "Hola a todos" que muestra un cuadro de mensaje con un saludo localizado. El ejemplo incluye recursos para las referencias culturales de inglés (Estados Unidos), francés (Francia) y ruso (Rusia), y su referencia cultural de reserva es inglés. Para crear este ejemplo, haga lo siguiente:  
   
 1. Cree un archivo de recursos denominado Greeting.resx o Greeting.txt para que contenga el recurso para la referencia cultural predeterminada. Almacene una sola cadena denominada `HelloString` cuyo valor sea "Hola a todos" en este archivo.
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Instalar un ensamblado satélite en la caché global de ensamblados
 
-Cuando el tiempo de ejecución busca recursos en el proceso de reserva de recursos, busca primero en la [caché global de ensamblados](../app-domains/gac.md). (Para obtener más información, vea la sección sobre el proceso de reserva de recursos del tema [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos)). En cuanto se firma un ensamblado satélite con un nombre seguro, puede instalarse en la caché global de ensamblados mediante la [herramienta Caché global de ensamblados (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
+Cuando el tiempo de ejecución busca recursos en el proceso de reserva de recursos, busca primero en la [caché global de ensamblados](../app-domains/gac.md). (Para obtener más información, vea la sección "proceso de reserva de recursos" del tema [empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md) ). En cuanto se firma un ensamblado satélite con un nombre seguro, puede instalarse en la caché global de ensamblados mediante el [herramienta de caché global de ensamblados (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md).
 
 El siguiente comando de Gacutil.exe instala StringLibrary.resources.dll en la caché global de ensamblados:
 
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 La opción **/i** especifica que Gacutil.exe debe instalar el ensamblado especificado en la caché global de ensamblados. Una vez que se ha instalado el ensamblado satélite en la caché, los recursos que contiene están disponibles para todas las aplicaciones que están diseñadas para usar el ensamblado satélite.
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Recursos en la caché global de ensamblados: Un ejemplo
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Ejemplo de recursos en la caché global de ensamblados
 
 En el ejemplo siguiente se usa un método en una biblioteca de clases de .NET Framework para extraer y devolver un saludo localizado de un archivo de recursos. La biblioteca y sus recursos están registrados en la caché global de ensamblados. El ejemplo incluye recursos para las referencias culturales de inglés (Estados Unidos), francés (Francia), ruso (Rusia) e inglés. El inglés es la referencia cultural predeterminada y sus recursos están almacenados en el ensamblado principal. En el ejemplo inicialmente se retrasa la firma de la biblioteca y sus ensamblados satélite con una clave pública y, después, se vuelven a firmar con un par de claves pública y privada. Para crear este ejemplo, haga lo siguiente:
 

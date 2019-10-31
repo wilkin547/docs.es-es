@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139130"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext (Estructura)
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext (Estructura)
 Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,19 +38,19 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`StackOffset`|El puntero de pila o el puntero de pila (ESP) en x86 plataformas.|  
-|`FrameOffset`|Desplazamiento del marco o registro EBP en x86 plataformas.|  
-|`InstructionOffset`|El puntero de instrucción o el puntero de instrucción (EIP) en x86 plataformas.|  
+|`StackOffset`|El puntero de pila o el puntero de pila Enter (ESP) en las plataformas x86.|  
+|`FrameOffset`|El desplazamiento del marco o el registro EBP en las plataformas x86.|  
+|`InstructionOffset`|El puntero de instrucción o el puntero de instrucción Enter (EIP) en las plataformas x86.|  
   
 ## <a name="remarks"></a>Comentarios  
- Dado que las funciones de seguimiento de pila normalmente necesitan devolver la dirección, desplazamiento de trama y dirección de la pila, también puede usar el `SimpleContext` estructura en lugar de un gran `CONTEXT` estructura.  
+ Dado que las funciones de seguimiento de pila normalmente solo necesitan devolver la dirección, el desplazamiento del marco y la dirección de la pila, opcionalmente puede utilizar la estructura de `SimpleContext` en lugar de una estructura de `CONTEXT` grande.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: SOS_Stacktrace.h  
+ **Encabezado:** SOS_Stacktrace. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

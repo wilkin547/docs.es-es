@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b5f9b41e-7301-429c-911f-21d5422292b3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 864a8a4dd9f96da2fd0e0025848a910b4f8b0a70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9277fe2c241ce4f502339de826dccd08a2ce8055
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126957"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent (Interfaz)
-Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) método, que realiza las devoluciones de llamada de eventos que se han registrado mediante el uso de una llamada a la [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) método.  
+Proporciona el método [IActionOnCLREvent:: onEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) , que realiza las devoluciones de llamada en eventos que se han registrado mediante una llamada al método [ICLROnEventManager:: RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) .  
   
 ## <a name="methods"></a>Métodos  
   
@@ -33,11 +31,11 @@ Proporciona el [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanage
 |[OnEvent (método)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Realiza una devolución de llamada para un evento registrado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

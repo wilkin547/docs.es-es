@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: c2ec2748-e9ae-4e1b-80db-6fcec5cb81a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e6bc57fb470a5c12549bb5f9445ecf1551425a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107838"
 ---
 # <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE (Interfaz)
 Actúa como un enumerador para los atributos del objeto de código en el ámbito actual.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Obtiene un puntero de interfaz a un `IEnumIDENTITY_ATTRIBUTE` nuevo que contiene los mismos miembros que `IEnumIDENTITY_ATTRIBUTE`este.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|Obtiene un puntero de interfaz a un nuevo `IEnumIDENTITY_ATTRIBUTE` que contiene los mismos miembros que este `IEnumIDENTITY_ATTRIBUTE`.|  
 |`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Escribe los datos contenidos en los elementos de este `IEnumIDENTITY_ATTRIBUTE` en el búfer de datos especificado.|  
 |`IEnumIDENTITY_ATTRIBUTE::Next`|Obtiene el número especificado de atributos, comenzando en la posición actual.|  
 |`IEnumIDENTITY_ATTRIBUTE::Reset`|Mueve el puntero de instrucción al principio de este `IEnumIDENTITY_ATTRIBUTE`.|  
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|Mueve el puntero de instrucción hacia delante el número especificado de elementos, comenzando en la posición actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Isolation. h  
+ **Encabezado:** Isolation. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

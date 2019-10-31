@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <appDomainManagerAssembly> element
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 083e3ba21dcd196eacfe3d9fd649c211da9dc125
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7ba52cdf0102af05954509a11fa90e9b8a337876
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118318"
 ---
-# <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly >, elemento
+# <a name="appdomainmanagerassembly-element"></a>\<elemento > appDomainManagerAssembly
 Especifica el ensamblado que proporciona el administrador de dominios de aplicación para el dominio de aplicación predeterminado en el proceso.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerAssembly>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerAssembly >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,7 +31,7 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`value`|Atributo necesario. Especifica el nombre para mostrar del ensamblado que proporciona el administrador del dominio de aplicación para el dominio de aplicación predeterminado en el proceso.|  
   
@@ -42,26 +40,26 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para especificar el tipo del administrador del dominio de aplicación, debe especificar este elemento y el elemento [ \<> de appDomainManagerType](appdomainmanagertype-element.md) . Si no se especifica ninguno de estos elementos, se omite el otro.  
+ Para especificar el tipo del administrador del dominio de aplicación, debe especificar este elemento y el [\<appDomainManagerType >](appdomainmanagertype-element.md) elemento. Si no se especifica ninguno de estos elementos, se omite el otro.  
   
- Cuando se carga el dominio de aplicación predeterminado <xref:System.TypeLoadException> , se produce si el ensamblado especificado no existe o si el ensamblado no contiene el tipo especificado por el [ \<elemento > appDomainManagerType](appdomainmanagertype-element.md) ; y se produce un error en el proceso. iniciales. Si se encuentra el ensamblado pero la información de la versión no coincide <xref:System.IO.FileLoadException> , se produce una excepción.  
+ Cuando se carga el dominio de aplicación predeterminado, se produce <xref:System.TypeLoadException> si el ensamblado especificado no existe o si el ensamblado no contiene el tipo especificado por el elemento de [> de\<appDomainManagerType](appdomainmanagertype-element.md) . y el proceso no se inicia. Si se encuentra el ensamblado pero la información de la versión no coincide, se produce una <xref:System.IO.FileLoadException>.  
   
- Al especificar el tipo de administrador de dominio de aplicación para el dominio de aplicación predeterminado, otros dominios de aplicación creados desde el dominio de aplicación predeterminado heredan el tipo de administrador de dominio de aplicación. Use las <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> propiedades <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> y para especificar un tipo de administrador de dominio de aplicación diferente para un nuevo dominio de aplicación.  
+ Al especificar el tipo de administrador de dominio de aplicación para el dominio de aplicación predeterminado, otros dominios de aplicación creados desde el dominio de aplicación predeterminado heredan el tipo de administrador de dominio de aplicación. Use las propiedades <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> y <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> para especificar un tipo de administrador de dominio de aplicación diferente para un nuevo dominio de aplicación.  
   
- La especificación del tipo de administrador de dominio de aplicación requiere que la aplicación tenga plena confianza. (Por ejemplo, una aplicación que se ejecuta en el escritorio tiene plena confianza). Si la aplicación no tiene plena confianza, se produce <xref:System.TypeLoadException> una excepción.  
+ La especificación del tipo de administrador de dominio de aplicación requiere que la aplicación tenga plena confianza. (Por ejemplo, una aplicación que se ejecuta en el escritorio tiene plena confianza). Si la aplicación no tiene plena confianza, se produce una <xref:System.TypeLoadException>.  
   
- Para obtener el formato del nombre para mostrar del ensamblado <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> , vea la propiedad.  
+ Para obtener el formato del nombre para mostrar del ensamblado, vea la propiedad <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
   
  Este elemento de configuración solo está disponible en el .NET Framework 4 y versiones posteriores.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo especificar que el administrador del dominio de aplicación para el dominio de aplicación predeterminado de `MyMgr` un proceso es el tipo del ensamblado.`AdMgrExample`  
+ En el ejemplo siguiente se muestra cómo especificar que el administrador del dominio de aplicación para el dominio de aplicación predeterminado de un proceso es el tipo de `MyMgr` del ensamblado `AdMgrExample`.  
   
 ```xml  
 <configuration>  
@@ -77,7 +75,7 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType >, elemento](appdomainmanagertype-element.md)
+- [\<elemento > appDomainManagerType](appdomainmanagertype-element.md)
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
 - [SetAppDomainManagerType (método)](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

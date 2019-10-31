@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16f56809b4db159c71b06b3bb9d969f8a8f8fc54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090822"
 ---
-# <a name="malloctype-enumeration"></a>MALLOC_TYPE (enumeración)
-Contiene valores que especifican las características de la memoria que se está asignando.  
+# <a name="malloc_type-enumeration"></a>MALLOC_TYPE (enumeración)
+Contiene valores que especifican las características de la memoria que se va a asignar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`MALLOC_EXECUTABLE`|La memoria asignada puede contener un archivo ejecutable.|  
-|`MALLOC_THREADSAFE`|La memoria asignada es segura para subprocesos. Es decir, la memoria puede obtenerse mediante varios subprocesos sin ninguna sincronización.<br /><br /> Si no se establece esta marca, se deben serializar las llamadas en el objeto.|  
+|`MALLOC_THREADSAFE`|La memoria asignada es segura para subprocesos. Es decir, se puede tener acceso a la memoria por parte de varios subprocesos sin ninguna sincronización.<br /><br /> Si no se establece esta marca, se deben serializar las llamadas en el objeto.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

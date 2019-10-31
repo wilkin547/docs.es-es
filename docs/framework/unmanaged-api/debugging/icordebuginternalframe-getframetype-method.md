@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760045"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122711"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType (Método)
 Obtiene el tipo de este marco interno.  
@@ -37,15 +35,15 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Parámetros  
  `pType`  
- [out] Un puntero a un valor de la enumeración CorDebugInternalFrameType que indica el tipo de marco interno representado por este `ICorDebugInternalFrame` objeto.  
+ enuncia Un puntero a un valor de la enumeración CorDebugInternalFrameType (que indica el tipo de marco interno representado por este objeto `ICorDebugInternalFrame`.  
   
 ## <a name="remarks"></a>Comentarios  
- El tipo de marco interno nunca será STUBFRAME_NONE. Los depuradores deberían omitir correctamente los tipos de marco interno no reconocido.  
+ El tipo de marco interno nunca será STUBFRAME_NONE. Los depuradores deben omitir correctamente los tipos de Marcos internos no reconocidos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

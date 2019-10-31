@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed7436ff73fa9cc19790859581930875f39e499e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a45061b6a3105565fdbb36173731b3c3dfe5aa4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746285"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137289"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue (Método)
-Obtiene el valor de un argumento o variable local que se almacena en los dos registros especificados para este marco nativo.  
+Obtiene el valor de un argumento o una variable local que se almacena en los dos registros especificados para este marco nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,27 +39,27 @@ HRESULT GetLocalDoubleRegisterValue (
   
 ## <a name="parameters"></a>Parámetros  
  `highWordReg`  
- [in] Un valor de la enumeración "CorDebugRegister" que especifica el registro que contiene los bytes más significativos del valor.  
+ de Un valor de la enumeración "CorDebugRegister (" que especifica el registro que contiene la palabra alta del valor.  
   
  `lowWordReg`  
- [in] Un valor de la `CorDebugRegister` enumeración que especifica el registro que contiene los bytes menos significativos del valor.  
+ de Un valor de la enumeración `CorDebugRegister` que especifica el registro que contiene la palabra baja del valor.  
   
  `cbSigBlob`  
- [in] Un entero que especifica el tamaño de la firma de metadatos binaria que hace referencia el `pvSigBlob` parámetro.  
+ de Un entero que especifica el tamaño de la firma de metadatos binarios a la que hace referencia el parámetro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Un `PCCOR_SIGNATURE` valor al que apunta a la firma de metadatos binaria del tipo de valor.  
+ de Un valor `PCCOR_SIGNATURE` que apunta a la firma de metadatos binarios del tipo del valor.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un objeto de "ICorDebugValue" que representa el valor recuperado que se almacena en los registros especificados.  
+ enuncia Puntero a la dirección de un objeto "ICorDebugValue" que representa el valor recuperado que se almacena en los registros especificados.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetLocalDoubleRegisterValue` método puede utilizarse en un marco nativo o en un just-in-time (JIT)-marco compilado.  
+ El método `GetLocalDoubleRegisterValue` se puede utilizar en un marco nativo o en un marco compilado Just-in-Time (JIT).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

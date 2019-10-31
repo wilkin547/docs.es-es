@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70aaf32b9da751b49571ab98a95e432b7f84caa9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130637"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule (Método)
-Notifica al depurador que se ha descargado un módulo de common language runtime (DLL).  
+Notifica al depurador que se ha descargado un módulo de Common Language Runtime (DLL).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT UnloadModule (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el módulo.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contenía el módulo.  
   
  `pModule`  
- [in] Un puntero a un objeto ICorDebugModule que representa el módulo.  
+ de Un puntero a un objeto ICorDebugModule que representa el módulo.  
   
 ## <a name="remarks"></a>Comentarios  
- El módulo no debe utilizarse después de esta llamada.  
+ El módulo no debe usarse después de esta llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

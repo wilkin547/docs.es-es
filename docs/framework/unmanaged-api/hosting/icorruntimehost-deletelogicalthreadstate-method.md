@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34ffc4a6-6553-43df-9b43-779effb67e2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 19c836808943c15f0bf44f5da68fdc06691b4998
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4598e3588cbcb6f5e6911709692152969071cd5b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139601"
 ---
 # <a name="icorruntimehostdeletelogicalthreadstate-method"></a>ICorRuntimeHost::DeleteLogicalThreadState (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -34,13 +32,13 @@ HRESULT DeleteLogicalThreadState ( );
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versiones de .NET framework:** 1.0, 1.1  
+ **.NET Framework versiones:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vea también
 

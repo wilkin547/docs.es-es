@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ea4947582e4e8bfdb6873a90c5284e9ae9d8a62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c6def32c63e3557a4de72baf7b1c3e67feb4891
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136527"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager (Función)
-Obtiene un puntero a una interfaz que permite que common language runtime (CLR) para administrar las identidades.  
+Obtiene un puntero a una interfaz que permite al Common Language Runtime (CLR) administrar las identidades.  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +37,20 @@ STDAPI GetCLRIdentityManager(
   
 ## <a name="parameters"></a>Parámetros  
  `riid`  
- [in] Un `REFIID` (un identificador de interfaz) que especifica la interfaz que desea obtener. Este valor debe ser IID_ICLRAssemblyIdentityManager o IID_ICLRHostBindingPolicyManager.  
+ de `REFIID` (identificador de interfaz) que especifica la interfaz que se va a obtener. Este valor debe ser IID_ICLRAssemblyIdentityManager o IID_ICLRHostBindingPolicyManager.  
   
  `ppManager`  
- [out] Un puntero a la dirección de uno de ellos un [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) o un [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) objeto.  
+ enuncia Puntero a la dirección de un objeto [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) o [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) .  
   
 ## <a name="remarks"></a>Comentarios  
- Llame a la [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) función para obtener un puntero a la `GetCLRIdentityManager` función.  
+ Llame a la función [GetRealProcAddress (](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) para obtener un puntero a la función `GetCLRIdentityManager`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

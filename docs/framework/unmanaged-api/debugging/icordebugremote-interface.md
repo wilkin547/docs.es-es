@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fbed34f53ff43ca7887a58b3c879eaa74703da3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744747"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131263"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote (Interfaz)
 Proporciona la capacidad de iniciar o de adjuntar un depurador administrado a un proceso remoto de destino.  
@@ -60,22 +58,22 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[ICorDebugRemote::CreateProcessEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Crea un proceso en un equipo remoto para la depuración administrada.|  
 |[ICorDebugRemote::DebugActiveProcessEx (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia un proceso en un equipo remoto en el depurador.|  
   
 ## <a name="remarks"></a>Comentarios  
- Actualmente, esta funcionalidad solo se admite para la depuración de un destino de la aplicación basada en Silverlight que se ejecuta en un equipo remoto de Macintosh.  
+ Actualmente, esta funcionalidad solo se admite para depurar un destino de aplicación basado en Silverlight que se ejecute en un equipo remoto de Macintosh.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** 4.5, 4, 3.5 SP1  
+ **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

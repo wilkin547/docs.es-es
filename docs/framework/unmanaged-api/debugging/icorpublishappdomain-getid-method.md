@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1a557191c5649f2ed87cf4f4dfdb4167133e597
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33a72d9aea09f808d42d1a17a7ec5640d20d7c79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774257"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140372"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID (Método)
 Obtiene el identificador único para este [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -37,15 +35,15 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>Parámetros  
  `puId`  
- [out] Un puntero al identificador del dominio de aplicación.  
+ enuncia Puntero al identificador del dominio de aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
- El identificador es único solo en el ámbito del proceso que lo contiene.  
+ El identificador es único solo en el ámbito del proceso contenedor.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -5,21 +5,19 @@ helpviewer_keywords:
 - etwEnable element
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 14cea171a4a25e148ea32f75a8ef09b83a4ec8ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117392"
 ---
-# <a name="etwenable-element"></a>\<etwEnable >, elemento
+# <a name="etwenable-element"></a>\<elemento > etwEnable
 Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para los eventos de Common Language Runtime.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> etwEnabled**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,23 +30,23 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |enabled|Atributo necesario.<br /><br /> Especifica si ETW debe estar habilitado.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |true|Habilitar ETW. Este es el valor predeterminado para las versiones de Windows a partir de los sistemas operativos Windows Vista y Windows Server 2008.|  
-|false|Deshabilitar ETW. Este es el valor predeterminado para versiones anteriores de Windows.|  
+|False|Deshabilitar ETW. Este es el valor predeterminado para versiones anteriores de Windows.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  

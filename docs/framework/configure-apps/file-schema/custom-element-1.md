@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118832"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizado para SingleTagSectionHandler
 
-Define la configuración de una sección de configuración personalizada que está definida \<por una sección > elemento y <xref:System.Configuration.SingleTagSectionHandler> utiliza la clase.
+Define la configuración de una sección de configuración personalizada que se define mediante una \<sección > elemento y utiliza la clase <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,21 +34,21 @@ Los atributos y los valores de atributo son definidos por el usuario.
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | DESCRIPCIÓN |
+|     | Descripción |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
 
 ## <a name="remarks"></a>Comentarios
 
-**El\<elemento sectionName >** es un elemento personalizado definido por una [ **\<sección >** ](section-element.md) etiqueta en el [ **\<elemento > configSections**](configsections-element-for-configuration.md) . El sistema de configuración devuelve <xref:System.Collections.IDictionary> un objeto cuando se <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>llama a.
+El elemento **\<sectionName >** es un elemento personalizado definido por una [**sección de\<** ](section-element.md) etiqueta del elemento\<[**configSections >** ](configsections-element-for-configuration.md) . El sistema de configuración devuelve un objeto <xref:System.Collections.IDictionary> cuando se llama a <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se declara un elemento personalizado denominado  **\<sampleSection >** que contiene los valores leídos por la <xref:System.Configuration.SingleTagSectionHandler> clase:
+En el ejemplo siguiente se declara un elemento personalizado denominado **\<> sampleSection** que contiene la configuración leída por la clase <xref:System.Configuration.SingleTagSectionHandler>:
 
 ```xml
 <configuration>

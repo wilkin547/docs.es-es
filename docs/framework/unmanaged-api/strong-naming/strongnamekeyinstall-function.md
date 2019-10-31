@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798997"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125197"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall (Función)
 
@@ -42,7 +40,7 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Parámetros
 
 `wszKeyContainer`\
-de Nombre del contenedor de claves. `wszKeyContainer`debe ser una cadena no vacía.
+de Nombre del contenedor de claves. `wszKeyContainer` debe ser una cadena no vacía.
 
 `pbKeyBlob`\
 de Par de claves binarias.
@@ -52,21 +50,21 @@ de Tamaño, en bytes, de `pbKeyBlob`.
 
 ## <a name="return-value"></a>Valor devuelto
 
-`true`Cuando se complete correctamente; en caso `false`contrario,.
+`true` cuando se complete correctamente; de lo contrario, `false`.
 
 ## <a name="remarks"></a>Comentarios
 
 Use la función [StrongNameKeyDelete (](strongnamekeydelete-function.md) para eliminar el contenedor de claves.
 
-Si la `StrongNameKeyInstall` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
+Si la función `StrongNameKeyInstall` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: StrongName. h
+**Encabezado:** StrongName. h
 
-**Biblioteca** Se incluye como recurso en MsCorEE. dll
+**Biblioteca:** Se incluye como recurso en MsCorEE. dll
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

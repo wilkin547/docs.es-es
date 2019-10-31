@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f9dc3f87ce727076d561923fe35495bbfe4419e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1d796c6ef5f707f865a60023899d3b451c2085b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768129"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131954"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance (Función)
-Proporciona una de tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+Proporciona una de las tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,32 +37,32 @@ HRESULT CLRCreateInstance(
   
 ## <a name="parameters"></a>Parámetros  
  `clsid`  
- [in] Uno de tres identificadores de clase: Argumentos CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy o CLSID_CLRDebugging.  
+ de Uno de los tres identificadores de clase: los, CLSID_CLRMetaHostPolicy o CLSID_CLRDebugging.  
   
  `riid`  
- [in] Uno de tres identificadores de interfaz (IID): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy o IID_ICLRDebugging.  
+ de Uno de los tres identificadores de interfaz (IID): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy o IID_ICLRDebugging.  
   
  `ppInterface`  
- [out] Uno de tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ enuncia Una de las tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppInterface` es null.|  
   
 ## <a name="remarks"></a>Comentarios  
- La siguiente tabla muestra las combinaciones admitidas de `clsid` y `riid`.  
+ En la tabla siguiente se muestran las combinaciones admitidas para `clsid` y `riid`.  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|CLSID_CLRMetaHost|IID_ICLRMetaHost|  
+|Los|IID_ICLRMetaHost|  
 |CLSID_CLRMetaHostPolicy|IID_ICLRMetaHostPolicy|  
 |CLSID_CLRDebugging|IID_ICLRDebugging|  
   
- El código siguiente muestra cómo usar `CLRCreateInstance` para obtener las tres interfaces:  
+ En el código siguiente se muestra cómo usar `CLRCreateInstance` para obtener las tres interfaces:  
   
 ```cpp  
 #include <metahost.h>  
@@ -83,11 +81,11 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

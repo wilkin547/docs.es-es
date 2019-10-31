@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0922545-c2cf-40c8-9ef6-ca033563e682
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d964a5a77569762ff4fd69e419324a377b820d97
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e49dd95cf5d78c0a0f4fa075126eca19dea2693
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768947"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138718"
 ---
 # <a name="icordebugthread2getvolatileosthreadid-method"></a>ICorDebugThread2::GetVolatileOSThreadID (Método)
 Obtiene el identificador del subproceso del sistema operativo para este ICorDebugThread2.  
@@ -37,12 +35,12 @@ HRESULT GetVolatileOSThreadID (
   
 ## <a name="parameters"></a>Parámetros  
  `pdwTid`  
- [out] El identificador del subproceso del sistema operativo para este subproceso.  
+ enuncia Identificador del subproceso del sistema operativo para este subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

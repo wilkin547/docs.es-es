@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039437"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123084"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Compatibilidad de UI Automation para el tipo de control ListItem
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039437"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Depende|Si el elemento se puede manipular para mostrar u ocultar información, se debe implementar este patrón de control.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Si se puede editar el elemento, se debe implementar este patrón de control. Los cambios realizados al control de elemento de lista provocarán cambios en los valores de <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>y <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|Si se admite la navegación espacial de un elemento a otro dentro del contenedor de lista y el contenedor está organizado en filas y columnas, se debe implementar el patrón de control de elemento de cuadrícula.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Depende|Si el elemento tiene un comando que se puede ejecutar en él, independiente de la selección, se debe implementar este patrón. Se trata normalmente de una acción asociada a hacer doble clic en el control de elemento de lista. Algunos ejemplos serían el inicio de un documento desde [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]o la reproducción de un archivo de música en Microsoft Windows Media Player.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Depende|Si el elemento tiene un comando que se puede ejecutar en él, independiente de la selección, se debe implementar este patrón. Se trata normalmente de una acción asociada a hacer doble clic en el control de elemento de lista. Algunos ejemplos serían el inicio de un documento desde el explorador de Microsoft Windows o la reproducción de un archivo de música en Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754920"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137793"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus (Método)
-Marca la función representada por este ICorDebugFunction2 solo mi código para la ejecución paso a paso.  
+Marca la función representada por este ICorDebugFunction2 para Solo mi código Stepping.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +35,22 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parámetros  
  `bIsJustMyCode`  
- [in] Establecido en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false`.  
+ de Establezca en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false`.  
   
 ## <a name="return-values"></a>Valores devueltos  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|La función se ha marcado correctamente.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|La función no se pudieron marcar como código de usuario porque no se pueden depurar.|  
+|`S_OK`|La función se marcó correctamente.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|No se pudo marcar la función como código de usuario porque no se puede depurar.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un motor paso a paso solo mi código omitirá el código de no usuario. Código de usuario debe ser un subconjunto del código depurable.  
+ Una Solo mi código stepper omitirá el código que no es de usuario. El código de usuario debe ser un subconjunto del código depurable.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

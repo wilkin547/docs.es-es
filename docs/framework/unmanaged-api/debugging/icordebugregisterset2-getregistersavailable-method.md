@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744907"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131368"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable (Método)
 Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.  
@@ -41,23 +39,23 @@ HRESULT GetRegistersAvailable (
  [in] Tamaño de la matriz `availableRegChunks`.  
   
  `availableRegChunks`  
- [out] Una matriz de bytes, cada bit de los cuales corresponde a un registro. Si un registro está disponible, se establece el bit correspondiente del registro.  
+ enuncia Matriz de bytes, cada bit de la que corresponde a un registro. Si hay un registro disponible, se establece el bit correspondiente del registro.  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores de la enumeración CorDebugRegister especifican los registros de microprocesadores diferentes. Los cinco bits superiores de cada valor son el índice en el `availableRegChunks` matriz de bytes. Los tres bits inferiores de cada valor identifica la posición de bit dentro del byte indizado. Dado un `CorDebugRegister` valor que especifica un registro determinado, la posición del registro de la máscara se determina como sigue:  
+ Los valores de la enumeración CorDebugRegister (especifican los registros de distintos microprocesadores. Los cinco bits superiores de cada valor son el índice de la matriz `availableRegChunks` de bytes. Los tres bits inferiores de cada valor identifican la posición de bit dentro del byte indexado. Dado un valor `CorDebugRegister` que especifica un registro determinado, la posición del registro en la máscara se determina de la manera siguiente:  
   
-1. Extraiga el índice necesario para tener acceso al byte correcto en el `availableRegChunks` matriz:  
+1. Extraiga el índice necesario para tener acceso al byte correcto en la matriz de `availableRegChunks`:  
   
-     `CorDebugRegister` valor >> 3  
+     valor `CorDebugRegister` > > 3  
   
-2. Extraiga la posición de bit dentro del byte indizado, donde bits cero es el bit menos significativo:  
+2. Extrae la posición de bit en el byte indizado, donde el bit cero es el bit menos significativo:  
   
      `CorDebugRegister` valor & 7  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

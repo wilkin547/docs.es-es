@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097930"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult (Enumeración)
 Proporciona información detallada sobre cómo se obtuvo el valor del puntero de instrucción (IP).  
@@ -41,22 +39,22 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|El código nativo está en el prólogo, por lo que el valor de la dirección IP es 0.|  
 |`MAPPING_EPILOG`|El código nativo está en un epílogo, por lo que el valor de la dirección IP es la dirección de la última instrucción del método.|  
-|`MAPPING_NO_INFO`|No hay información de asignación está disponible para el método, por lo que el valor de la dirección IP es 0.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Aunque no hay información de asignación para el método, no se puede asignar la dirección actual al código de lenguaje intermedio (MSIL) de Microsoft. El valor de la dirección IP es 0.|  
-|`MAPPING_EXACT`|El método se asigna exactamente a código MSIL o interpreta el marco, por lo que el valor de la dirección IP es preciso.|  
+|`MAPPING_NO_INFO`|No hay información de asignación disponible para el método, por lo que el valor de la dirección IP es 0.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Aunque hay información de asignación para el método, la dirección actual no se puede asignar al código del lenguaje intermedio de Microsoft (MSIL). El valor de la dirección IP es 0.|  
+|`MAPPING_EXACT`|El método se asigna exactamente al código MSIL o el marco se ha interpretado, por lo que el valor de la dirección IP es preciso.|  
 |`MAPPING_APPROXIMATE`|El método se ha asignado correctamente, pero el valor de la dirección IP puede ser aproximado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede usar el [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) método para obtener el valor del puntero de instrucción.  
+ Puede usar el método [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) para obtener el valor del puntero de instrucción.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

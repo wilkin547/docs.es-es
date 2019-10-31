@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87e318c4f2367e8c66910978f4a9c89f36c95632
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36eeb7ed4f80979ef2edb930e65963a1db0c894f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134901"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats (Método)
-Obtiene las estadísticas por subproceso para la recolección.  
+Obtiene las estadísticas por subproceso para la recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT GetThreadStats (
   
 ## <a name="parameters"></a>Parámetros  
  `pFiberCookie`  
- [in] Un puntero a una cookie de fibra que especifica el subproceso que se va a recuperar las estadísticas.  
+ de Puntero a una cookie de fibra que especifica el subproceso para el que se van a recuperar las estadísticas.  
   
  `pStats`  
- [in, out] Un puntero a un [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) estructura que contiene las estadísticas de la colección de elementos no utilizados para el subproceso especificado.  
+ [in, out] Puntero a una estructura [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) que contiene las estadísticas de recolección de elementos no utilizados para el subproceso especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: GCHost.idl, GCHost.h  
+ **Encabezado:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

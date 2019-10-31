@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274153"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132379"
 ---
 # <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION (Estructura)
 Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. El método [ICorDebugThread2:: GetActiveFunctions (](icordebugthread2-getactivefunctions-method.md) usa esta estructura.  
@@ -42,18 +40,18 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`pAppDomain`|Puntero al propietario del dominio de aplicación del `ilOffset` campo.|  
-|`pModule`|Puntero al propietario del módulo del `ilOffset` campo.|  
-|`pFunction`|Puntero al propietario de la función del `ilOffset` campo.|  
+|`pAppDomain`|Puntero al propietario del dominio de aplicación del campo `ilOffset`.|  
+|`pModule`|Puntero al propietario del módulo del campo `ilOffset`.|  
+|`pFunction`|Puntero al propietario de la función del campo de `ilOffset`.|  
 |`ilOffset`|Desplazamiento del lenguaje intermedio de Microsoft (MSIL) del marco.|  
 |`flags`|Reservado para extensibilidad futura.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl  
+ **Encabezado:** Cordebug. idl  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

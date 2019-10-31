@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30097ff0cd92253897a366a5a18f305eddb06b5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 683c2853ea2ed43e61eb666ec56619cb58cde273
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763519"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129493"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken (Método)
-Obtiene el token para la entrada de tabla para este módulo.  
+Obtiene el token para la entrada de la tabla para este módulo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>Parámetros  
  `pToken`  
- [out] Un puntero a la `mdModule` símbolo (token) que hace referencia a los metadatos del módulo.  
+ enuncia Puntero al token de `mdModule` que hace referencia a los metadatos del módulo.  
   
 ## <a name="remarks"></a>Comentarios  
- El token se puede pasar a la [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), y [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaces de importación de metadatos.  
+ El token se puede pasar a las interfaces de importación de metadatos [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)y [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

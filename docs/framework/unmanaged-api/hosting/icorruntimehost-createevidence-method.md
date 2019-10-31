@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 429ce0510162b3256cdf58f4820b04dd80243e29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139632"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence (Método)
-Obtiene un puntero de interfaz de tipo <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, que permite al host crear la evidencia de seguridad para pasar a la [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) o [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) método.  
+Obtiene un puntero de interfaz de tipo <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, que permite al host crear la evidencia de seguridad que se va a pasar al método [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) o [createdomainex (](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,28 +35,28 @@ HRESULT CreateEvidence (
   
 ## <a name="parameters"></a>Parámetros  
  `pEvidence`  
- [out] Un puntero de interfaz a un <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instancia utilizada para crear la evidencia de seguridad. Este puntero es de tipo `IUnknown`, por lo que normalmente deben llamar los llamadores `QueryInterface` en esta interfaz para obtener un puntero a un <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
+ enuncia Puntero de interfaz a una instancia de <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> utilizada para crear la evidencia de seguridad. Este puntero tiene tipo `IUnknown`, por lo que los llamadores normalmente deben llamar a `QueryInterface` en esta interfaz para obtener un puntero a un <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|La operación fue correcta.|  
+|S_OK|La operación se realizó correctamente.|  
 |S_FALSE|No se pudo completar la operación.|  
-|E_FAIL|Se ha producido un error catastrófico desconocido. Si el método devuelve E_FAIL, common language runtime (CLR) ya no es utilizable en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, el Common Language Runtime (CLR) ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este método devuelve una colección vacía que no se pueden rellenar desde código nativo. Debe usar el <xref:System.Security.Policy.Evidence> método en su lugar.  
+ Este método devuelve una colección vacía que no se puede rellenar desde código nativo. En su lugar, debe usar el método <xref:System.Security.Policy.Evidence>.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versión de .NET framework:** 1.0, 1.1  
+ **Versión de .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vea también
 

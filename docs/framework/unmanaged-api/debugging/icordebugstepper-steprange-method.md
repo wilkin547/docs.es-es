@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1ace501bf5de741ea110fe4d3bb4bc44843bf8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ca4542fe42fab0b5ff54b23b9492d3906698c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120622"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange (Método)
-Hace que este ICorDebugStepper paso a paso a través del subproceso que la contiene y devolver cuando llegue al código más allá del último de los intervalos especificados.  
+Hace que este objeto ICorDebugStepper tenga un solo paso a través de su subproceso contenedor y que devuelva cuando llegue al código que se encuentra más allá del último de los intervalos especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +37,25 @@ HRESULT StepRange (
   
 ## <a name="parameters"></a>Parámetros  
  `bStepIn`  
- [in] Establecido en `true` para adentrarse en una función que se llama dentro del subproceso. Establecido en `false` al paso a través de la función.  
+ de Establezca en `true` para entrar en una función a la que se llama en el subproceso. Establezca en `false` para pasar por la función.  
   
  `ranges`  
- [in] Una matriz de estructuras COR_DEBUG_STEP_RANGE, cada uno de los cuales especifica un intervalo.  
+ de Una matriz de estructuras COR_DEBUG_STEP_RANGE, cada una de las cuales especifica un intervalo.  
   
  `cRangeCount`  
  [in] Tamaño de la matriz `ranges`.  
   
 ## <a name="remarks"></a>Comentarios  
- El `StepRange` método funciona igual que el [ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) se alcanza el método, salvo que no se completa hasta que el código fuera del intervalo especificado.  
+ El método `StepRange` funciona como el método [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) , salvo que no se completa hasta que se alcanza el código fuera del intervalo especificado.  
   
- Esto puede ser más eficaz que la ejecución paso a paso una instrucción a la vez. Los intervalos se especifican como una lista de pares de desplazamiento desde el principio del marco del componente.  
+ Esto puede ser más eficaz que ejecutar una instrucción cada vez. Los intervalos se especifican como una lista de pares de desplazamiento desde el inicio del marco del stepper.  
   
- Los intervalos son relativos al código de lenguaje intermedio (MSIL) de Microsoft de un método. Llame a [SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) con `false` para hacer que los intervalos en relación con el código nativo de un método.  
+ Los intervalos son relativos al código del lenguaje intermedio de Microsoft (MSIL) de un método. Llame a [ICorDebugStepper:: SetRangeIL (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) con `false` para que los intervalos sean relativos al código nativo de un método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

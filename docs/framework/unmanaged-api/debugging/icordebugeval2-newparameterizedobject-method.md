@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753592"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084842"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject (Método)
 Crea una instancia de un nuevo objeto de tipo parametrizado y llama al método de constructor del objeto.  
@@ -41,27 +39,27 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>Parámetros  
  `pConstructor`  
- [in] Un puntero a un objeto ICorDebugFunction que representa el constructor del objeto que se creará una instancia.  
+ de Un puntero a un objeto ICorDebugFunction que representa el constructor del objeto del que se va a crear una instancia.  
   
  `nTypeArgs`  
- [in] El número de argumentos de tipo pasados.  
+ de El número de argumentos de tipo pasados.  
   
  `ppTypeArgs`  
- [in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto que se crea una instancia.  
+ de Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto del que se crea una instancia.  
   
  `nArgs`  
- [in] El número de argumentos pasados al constructor.  
+ de El número de argumentos pasados al constructor.  
   
  `ppArgs`  
- [in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que representa un valor de argumento que se pasa al constructor.  
+ de Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que representa un valor de argumento que se pasa al constructor.  
   
 ## <a name="remarks"></a>Comentarios  
- El constructor del objeto puede tardar <xref:System.Type> parámetros.  
+ El constructor del objeto puede tomar <xref:System.Type> parámetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

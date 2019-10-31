@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129697"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy (Método)
-Establece un valor que determina cómo una aplicación carga imágenes nativas mientras se ejecuta bajo un depurador administrado.  
+Establece un valor que determina cómo una aplicación carga imágenes nativas mientras se ejecuta en un depurador administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>Parámetros  
  `ePolicy`  
- [in] Un [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) constante que determina cómo una aplicación carga imágenes nativas mientras se ejecuta bajo un depurador administrado.  
+ de Una constante [cordebugngenpolicy (](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) que determina cómo una aplicación carga imágenes nativas mientras se ejecuta en un depurador administrado.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la directiva se establece correctamente, el método devuelve `S_OK`. Si `ePolicy` está fuera del intervalo de los valores enumerados definidos por [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), el método devuelve `E_INVALIDARG` y la llamada al método no tiene ningún efecto. Si no se puede actualizar la directiva de Native Image Generator (Ngen.exe), el método devuelve `E_FAIL`.  
+ Si la Directiva se establece correctamente, el método devuelve `S_OK`. Si `ePolicy` está fuera del intervalo de valores enumerados definidos por [cordebugngenpolicy (](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), el método devuelve `E_INVALIDARG` y la llamada al método no tiene ningún efecto. Si la Directiva del generador de imágenes nativas (Ngen. exe) no se puede actualizar, el método devuelve `E_FAIL`.  
   
- El `ICorDebugProcess5::EnableNGenPolicy` método puede llamarse en cualquier momento durante la vigencia del proceso. La directiva está vigente para los módulos que se cargan después de establece la directiva.  
+ Se puede llamar al método `ICorDebugProcess5::EnableNGenPolicy` en cualquier momento durante la vigencia del proceso. La Directiva está en vigor para todos los módulos que se cargan una vez establecida la Directiva.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

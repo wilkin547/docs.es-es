@@ -2,14 +2,12 @@
 title: Método ICorDebugDataTarget2::EnumerateThreadIDs
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dc5f8b7fa308bdb0fb270c11e044244839a7b47
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4510e6858045281a2a663095972b84c40df3a22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910285"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122163"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>Método ICorDebugDataTarget2::EnumerateThreadIDs
 Devuelve una lista de identificadores de subprocesos activos.  
@@ -40,9 +38,9 @@ HRESULT EnumerateThreadIDs(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md). **Encabezado:** Cordebug. idl, Cordebug. h  
+ **Plataformas:** Consulte [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md). **Encabezado:** Cordebug. idl, Cordebug. h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

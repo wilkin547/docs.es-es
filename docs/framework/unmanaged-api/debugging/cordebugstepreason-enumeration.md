@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133687"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason (Enumeración)
 Indica el resultado de un paso individual.  
@@ -42,20 +40,20 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Ejecución paso a paso ha finalizado normalmente, dentro de la misma función.|  
-|`STEP_RETURN`|Ejecución paso a paso ha continuado normalmente, después de la función devuelto.|  
-|`STEP_CALL`|Ejecución paso a paso ha continuado normalmente, al principio de una función llamada recientemente.|  
-|`STEP_EXCEPTION_FILTER`|Se generó una excepción y el control se ha pasado a un filtro de excepciones.|  
-|`STEP_EXCEPTION_HANDLER`|Se generó una excepción y el control se ha pasado a un controlador de excepciones.|  
-|`STEP_INTERCEPT`|Control se ha pasado a un interceptor.|  
-|`STEP_EXIT`|El subproceso se cerró antes de que se ha completado el paso.|  
+|`STEP_NORMAL`|La ejecución paso a paso se completó normalmente, dentro de la misma función.|  
+|`STEP_RETURN`|La ejecución continuará normalmente, después de que se devuelva la función.|  
+|`STEP_CALL`|El paso continuó normalmente, al principio de una función recién llamada.|  
+|`STEP_EXCEPTION_FILTER`|Se generó una excepción y se pasó el control a un filtro de excepciones.|  
+|`STEP_EXCEPTION_HANDLER`|Se generó una excepción y se pasó el control a un controlador de excepciones.|  
+|`STEP_INTERCEPT`|El control se pasó a un interceptor.|  
+|`STEP_EXIT`|El subproceso se cerró antes de que se completara el paso.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

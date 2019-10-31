@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125400"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks (Método)
-Obtiene un valor que indica si las devoluciones de llamada administradas actualmente están en cola para el subproceso especificado.  
+Obtiene un valor que indica si las devoluciones de llamada administradas están actualmente en la cola del subproceso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,22 +36,22 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>Parámetros  
  `pThread`  
- [in] Un puntero a un objeto "ICorDebugThread" que representa el subproceso.  
+ de Un puntero a un objeto "ICorDebugThread" que representa el subproceso.  
   
  `pbQueued`  
- [out] Un puntero a un valor que es `true` si las devoluciones de llamada administradas actualmente están en cola para el subproceso especificado; de lo contrario, `false`.  
+ enuncia Puntero a un valor que se `true` si las devoluciones de llamada administradas están actualmente en la cola del subproceso especificado; de lo contrario, `false`.  
   
- Si se especifica null para el `pThread` parámetro, `HasQueuedCallbacks` devolverá `true` si hay actualmente en cola devoluciones de llamada administradas para cualquier subproceso.  
+ Si se especifica null para el parámetro `pThread`, `HasQueuedCallbacks` devolverá `true` si hay devoluciones de llamada actualmente administradas en cola para cualquier subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- Las devoluciones de llamada será enviado a la vez, cada vez [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) se llama. El depurador puede comprobar esta marca si desea informar a varios eventos de depuración que se producen simultáneamente.  
+ Las devoluciones de llamada se enviarán de una en una, cada vez que se llame a [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) . El depurador puede comprobar esta marca si desea notificar varios eventos de depuración que se producen simultáneamente.  
   
- Cuando se ponen en cola los eventos de depuración, ha ya se ha producido, por lo que el depurador debe vaciar la cola completa para asegurarse de que el estado del código depurado. (Llame a `ICorDebugController::Continue` para vaciar la cola.) Por ejemplo, si la cola contiene dos eventos de depuración en el subproceso *X*, y el depurador suspende el subproceso *X* después del primer evento de depuración y, a continuación, llamadas `ICorDebugController::Continue`, el segundo evento de depuración para subproceso *X* se distribuirán aunque el subproceso se ha suspendido.  
+ Cuando se ponen en cola los eventos de depuración, ya se han producido, por lo que el depurador debe agotar toda la cola para estar seguro del estado de la depuración. (Llame `ICorDebugController::Continue` para purgar la cola). Por ejemplo, si la cola contiene dos eventos de depuración en el subproceso *x*y el depurador suspende el subproceso *x* después del primer evento de depuración y, a continuación, llama a `ICorDebugController::Continue`, se enviará el segundo evento de depuración para el subproceso *x* aunque el el subproceso se ha suspendido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

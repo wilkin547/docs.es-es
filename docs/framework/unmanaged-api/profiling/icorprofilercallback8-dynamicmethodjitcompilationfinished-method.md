@@ -1,5 +1,5 @@
 ---
-title: Método ICorProfilerCallback8::DynamicMethodJITCompilationFinished
+title: ICorProfilerCallback8::D método ynamicMethodJITCompilationFinished
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationFinished
@@ -8,17 +8,15 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e04459614ca697908fb9b71ecc3931ac305a838
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136585"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>Método ICorProfilerCallback8::DynamicMethodJITCompilationFinished
-[Se admite en .NET Framework 4.7 y versiones posteriores]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D método ynamicMethodJITCompilationFinished
+[Se admite en el .NET Framework 4,7 y versiones posteriores]  
   
 Notifica al generador de perfiles cada vez que se ha completado la compilación JIT de un método dinámico.  
   
@@ -34,25 +32,25 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 ## <a name="parameters"></a>Parámetros  
 [in] `functionId`  
-El identificador de la función en memoria para que JIT se inicia la compilación.   
+Identificador de la función en memoria para la que se inicia la compilación JIT.   
 
 [in] `hrStatus`   
-Un valor que indica si la compilación JIT fue correcta.
+Valor que indica si la compilación JIT se realizó correctamente.
 
 [in] `fIsSafeToBlock`   
-`true` para indicar que el bloqueo puede causar el tiempo de ejecución esperar el subproceso de llamada devolver desde esta devolución de llamada; `false` para indicar que la de bloqueo no afectará al funcionamiento del tiempo de ejecución.  
+`true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.  
 
 ## <a name="remarks"></a>Comentarios  
 
-Esta devolución de llamada se desencadena cada vez que ha finalizado la compilación JIT de un método dinámico. Esto incluye diversos métodos LCG y código auxiliar de IL. Su objetivo es proporcionar los escritores del generador de perfiles con la suficiente información para identificar el método compilado a los usuarios.
+Esta devolución de llamada se desencadena cuando finaliza la compilación JIT de un método dinámico. Esto incluye varios códigos auxiliares de IL y métodos LCG. Su objetivo es proporcionar a los escritores de Profiler información suficiente para identificar el método compilado para los usuarios.
 
 > [!NOTE]
-> `functionId` los valores no se puede usar para resolver a sus tokens de metadatos, porque los métodos dinámicos no tienen ningún metadato.
+> `functionId` valores no se pueden usar para resolver sus tokens de metadatos, porque los métodos dinámicos no tienen metadatos.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

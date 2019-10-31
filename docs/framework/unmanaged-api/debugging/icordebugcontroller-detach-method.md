@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fae364-f2c6-4a50-aa7e-3da9f2684dc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f687e48413cb227ad715720e24bd645065309553
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b98077914d680c908587649fdd517aca9c8dcd40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125437"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach (Método)
-Desasocia al depurador desde el dominio de aplicación o proceso.  
+Desasocia el depurador del dominio del proceso o de la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,14 +32,14 @@ HRESULT Detach ();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El proceso o dominio de aplicación continúa la ejecución con normalidad, pero el objeto "ICorDebugProcess" o "ICorDebugAppDomain" ya no es válido y no se producirá ninguna devolución de llamada adicional.  
+ El dominio del proceso o de la aplicación continúa la ejecución con normalidad, pero el objeto "ICorDebugProcess" o "ICorDebugAppDomain" ya no es válido y no se producirán más devoluciones de llamada.  
   
- En la versión 2.0 de .NET Framework, si está habilitada la depuración no administrada, este método se producirá un error debido a limitaciones del sistema operativo.  
+ En la versión .NET Framework 2,0, si está habilitada la depuración no administrada, este método producirá un error debido a las limitaciones del sistema operativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

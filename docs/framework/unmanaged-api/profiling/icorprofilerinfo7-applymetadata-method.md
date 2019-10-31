@@ -1,5 +1,5 @@
 ---
-title: 'Icorprofilerinfo7:: Applymetadata (método)'
+title: 'ICorProfilerInfo7:: ApplyMetaData (método)'
 ms.date: 02/15/2019
 dev_langs:
 - cpp
@@ -10,19 +10,17 @@ api_location:
 api_type:
 - COM
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f261b02dd19ead0d6803cae543f39a06c99f033
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00d9bef1e2b59a2d2207d1e343380e0e81bee848
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130350"
 ---
-# <a name="icorprofilerinfo7applymetadata-method"></a>Icorprofilerinfo7:: Applymetadata (método)
+# <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7:: ApplyMetaData (método)
 [Compatible con .NET Framework 4.6.1 y versiones posteriores]  
   
- Se aplica a los metadatos recién definido por el `IMetadataEmit::Define*` métodos a un módulo especificado.  
+ Aplica los metadatos recién definidos por los métodos `IMetadataEmit::Define*` a un módulo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,35 +32,35 @@ HRESULT ApplyMetaData(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleID`  
- [in] El identificador del módulo cuyos metadatos se ha cambiado.  
+ de Identificador del módulo cuyos metadatos se cambiaron.  
   
 ## <a name="remarks"></a>Comentarios  
- Si se realizan cambios en los metadatos después de la [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) devolución de llamada, debe llamar a este método antes de usar los nuevos metadatos.  
+ Si se realizan cambios en los metadatos después de la devolución de llamada [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) , debe llamar a este método antes de usar los nuevos metadatos.  
   
- `ApplyMetaData` solo admite la adición de los siguientes tipos de metadatos:  
+ `ApplyMetaData` solo admite agregar los siguientes tipos de metadatos:  
   
-- `AssemblyRef` los registros, que se creación mediante una llamada a la [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md). .  
+- `AssemblyRef` registros, que se crean mediante una llamada a [IMetaDataAssemblyEmit::D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md). .  
   
-- `TypeRef` los registros, que se creación mediante una llamada a la [DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) método.  
+- `TypeRef` registros, que se crean mediante una llamada al método [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) .  
   
-- `TypeSpec` los registros, que se creación mediante una llamada a la [GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) método.  
+- `TypeSpec` registros, que se crean mediante una llamada al método [IMetaDataEmit:: GetTokenFromTypeSpec (](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) .  
   
-- `MemberRef` los registros, que se creación mediante una llamada a la [DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) método.  
+- `MemberRef` registros, que se crean mediante una llamada al método [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) .  
   
-- `MemberSpec` los registros, que se creación mediante una llamada a la [Imetadataemit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) método.  
+- `MemberSpec` registros, que se crean mediante una llamada al método [IMetaDataEmit2::D efinemethodspec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) .  
   
-- `UserString` los registros, que se creación mediante una llamada a la [DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) método.  
+- `UserString` registros, que se crean mediante una llamada al método [IMetaDataEmit::D efineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) .  
 
-A partir de .NET Core 3.0, `ApplyMetaData` también admite los siguientes tipos:
+A partir de .NET Core 3,0, `ApplyMetaData` también admite los siguientes tipos:
 
-- `TypeDef` los registros, que se creación mediante una llamada a la [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) método.
+- `TypeDef` registros, que se crean mediante una llamada al método [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) .
 
-- `MethodDef` los registros, que se creación mediante una llamada a la [DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) método. Sin embargo, no se admite la adición de métodos virtuales a un tipo existente. Los métodos virtuales deben agregarse antes de la [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) devolución de llamada.
+- `MethodDef` registros, que se crean mediante una llamada al método [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) . Sin embargo, no se admite la adición de métodos virtuales a un tipo existente. Los métodos virtuales deben agregarse antes de la devolución de llamada [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

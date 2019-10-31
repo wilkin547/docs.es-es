@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128372"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilar aplicaciones con .NET Native
 
@@ -42,7 +40,7 @@ En el caso de los usuarios de las aplicaciones, .NET Native ofrece estas ventaja
 > [!IMPORTANT]
 > En la gran mayoría de las aplicaciones y los escenarios, .NET Native ofrece tiempos de inicio significativamente más rápidos y un rendimiento superior en comparación con una aplicación compilada en IL o en una imagen de NGEN. Sin embargo, los resultados pueden variar. Para asegurarse de que la aplicación se ha beneficiado de las mejoras de rendimiento de .NET Native, debe comparar su rendimiento con el de la versión nativa de non-.NET de la aplicación. Para obtener más información, vea [información general sobre la sesión de rendimiento](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
 
-Pero .NET Native implica más que una compilación en código nativo. Transforma la manera en que se compilan y ejecutan las aplicaciones de .NET Framework. En particular:
+Pero .NET Native implica más que una compilación en código nativo. Transforma la manera en que se compilan y ejecutan las aplicaciones de .NET Framework. En concreto:
 
 - Durante la precompilación, las partes necesarias de .NET Framework se vinculan estáticamente en la aplicación. Esto permite que la aplicación se ejecute con bibliotecas locales de aplicación de .NET Framework y que el compilador realice un análisis global para ofrecer un gran rendimiento. Como resultado, las aplicaciones se inician sistemáticamente más rápido después de las actualizaciones de.NET Framework.
 
@@ -65,17 +63,17 @@ Para aplicaciones de Windows 10, cargue los archivos binarios de compilación de
 
 Para obtener más información sobre el desarrollo de aplicaciones con la compilación de código con .NET Native, vea estos temas:
 
-- [Introducción con la compilación de código de .NET Native: Tutorial de experiencia del desarrollador](getting-started-with-net-native.md)
+- [Introducción a la compilación de código con .NET Native: tutorial de experiencia del programador](getting-started-with-net-native.md)
 
-- [.NET Native y compilación:](net-native-and-compilation.md) Cómo .NET Native compila el proyecto en código nativo.
+- [.NET Native y compilación:](net-native-and-compilation.md) cómo compila .NET Native el proyecto de código nativo.
 
-- [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native)
+- [Reflexión y .NET Native](reflection-and-net-native.md)
 
   - [APIs That Rely on Reflection](apis-that-rely-on-reflection.md) (API basadas en Reflection)
 
   - [Referencia de la API de reflexión](net-native-reflection-api-reference.md)
 
-  - [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+  - [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])
 
 - [Serialización y metadatos](serialization-and-metadata.md)
 

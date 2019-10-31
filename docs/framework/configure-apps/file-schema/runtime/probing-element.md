@@ -9,22 +9,20 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115863"
 ---
-# <a name="probing-element"></a>\<sondeo de > elemento
+# <a name="probing-element"></a>\<el elemento > de sondeo
 Especifica los subdirectorios base de la aplicación para los Common Language Runtime que se van a buscar al cargar los ensamblados.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**sondeo**\<  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +35,7 @@ Especifica los subdirectorios base de la aplicación para los Common Language Ru
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`privatePath`|Atributo necesario.<br /><br /> Especifica los subdirectorios del directorio base de la aplicación que pueden contener ensamblados. Delimita cada subdirectorio con un punto y coma.|  
   
@@ -47,7 +45,7 @@ Ninguno.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  

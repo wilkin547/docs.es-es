@@ -10,14 +10,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ae92232b1d50d1381b6873e21a4c185db6efd25
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051647"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124969"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidad COM sin registro
 La interoperabilidad COM sin registrar activa un componente sin usar el Registro de Windows para almacenar la información de los ensamblados. En vez de registrar un componente en un equipo durante la implementación, se crean archivos de manifiesto del estilo de Win32 en tiempo de diseño, con información sobre enlace y activación. En lugar de las claves del Registro, estos archivos de manifiesto dirigen la activación de un objeto.  

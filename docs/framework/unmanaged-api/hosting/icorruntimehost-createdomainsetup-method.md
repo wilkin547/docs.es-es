@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f8e9284283247ec46a225470ae3063dac539f43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 217874e625604613e67170a118a7bc3616e02c4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139649"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup (Método)
-Obtiene un puntero de interfaz de tipo IAppDomainSetup a un <xref:System.AppDomainSetup?displayProperty=nameWithType> instancia. `IAppDomainSetup` Proporciona métodos para configurar aspectos de un dominio de aplicación antes de crearlo.  
+Obtiene un puntero de interfaz de tipo IAppDomainSetup a una instancia de <xref:System.AppDomainSetup?displayProperty=nameWithType>. `IAppDomainSetup` proporciona métodos para configurar aspectos de un dominio de aplicación antes de que se cree.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,28 +35,28 @@ HRESULT CreateDomainSetup (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomainSetup`  
- [out] Un puntero de interfaz a un <xref:System.AppDomainSetup?displayProperty=nameWithType> instancia. Este parámetro es de tipo `IUnknown`, por lo que generalmente deberían llamar los llamadores `QueryInterface` en este puntero para obtener un puntero de interfaz de tipo `IAppDomainSetup`.  
+ enuncia Puntero de interfaz a una instancia de <xref:System.AppDomainSetup?displayProperty=nameWithType>. Este parámetro se escribe como `IUnknown`, por lo que los llamadores generalmente deben llamar a `QueryInterface` en este puntero para obtener un puntero de interfaz de tipo `IAppDomainSetup`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|La operación fue correcta.|  
+|S_OK|La operación se realizó correctamente.|  
 |S_FALSE|No se pudo completar la operación.|  
-|E_FAIL|Se ha producido un error catastrófico desconocido. Si el método devuelve E_FAIL, common language runtime (CLR) ya no es utilizable en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, el Common Language Runtime (CLR) ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- El puntero devuelto por este método normalmente se pasa como parámetro a la [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) método.  
+ Normalmente, el puntero devuelto por este método se pasa como un parámetro al método [createdomainex (](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versión de .NET framework:** 1.0, 1.1  
+ **Versión de .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vea también
 

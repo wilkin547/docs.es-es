@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 52a80838-af36-4399-bc97-d8a4c6d76df2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 638ce7933ededf2ff7b03b1c5aed7f6bdbfebc6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bff6dea0e870cf62734fa583eefa481c594481b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096520"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 (Interfaz)
 Proporciona métodos que comprueban las relaciones entre marcos primarios y secundarios.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[IsChild (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Determina si el marco actual es un marco secundario.|  
 |[IsMatchingParentFrame (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Determina si el marco especificado es el elemento primario del marco actual.|  
@@ -41,11 +39,11 @@ Proporciona métodos que comprueban las relaciones entre marcos primarios y secu
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

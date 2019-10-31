@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798255"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120210"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity función)
 Asigna el token de suplantación proporcionado para el subproceso actual.   
@@ -48,9 +46,9 @@ Si la función se ejecuta correctamente, el valor devuelto es `S_OK` (0).
 Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la función [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

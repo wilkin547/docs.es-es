@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d0f601c4b454b55edc5fa25eb2ee33d491009b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f86e704e4a52a702b8f563e3c613806eb061b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137531"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step (Método)
-Hace que este ICorDebugStepper paso a paso a través del subproceso que la contiene y, opcionalmente, para continuar pasando solo a través de funciones que se llaman dentro del subproceso.  
+Hace que este objeto ICorDebugStepper tenga un solo paso a través de su subproceso contenedor y, opcionalmente, continúe con el paso a través de las funciones a las que se llama en el subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT Step (
   
 ## <a name="parameters"></a>Parámetros  
  `bStepIn`  
- [in] Establecido en `true` para adentrarse en una función que se llama dentro del subproceso. Establecido en `false` al paso a través de la función.  
+ de Establezca en `true` para entrar en una función a la que se llama en el subproceso. Establezca en `false` para pasar por la función.  
   
 ## <a name="remarks"></a>Comentarios  
- El paso finaliza cuando common language runtime ejecuta la siguiente instrucción administrada en el marco de este motor de paso a paso. Si `Step` es llamado en un motor paso a paso, que no está en código administrado, el paso finalizará cuando se ejecuta la siguiente instrucción de código administrado por el subproceso.  
+ El paso se completa cuando el Common Language Runtime realiza la siguiente instrucción administrada en el marco de este stepper. Si se llama a `Step` en un stepper, que no está en código administrado, el paso se completará cuando el subproceso ejecute la siguiente instrucción de código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

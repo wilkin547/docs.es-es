@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111028"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator (Interfaz)
-Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensamblados en un proceso de destino.  
+Lo utiliza el nivel de servicios de acceso a datos para buscar metadatos de ensamblados en un proceso de destino.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -33,12 +31,12 @@ Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensa
 |[GetMetaData (método)](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera los metadatos de una imagen del proceso de destino.|  
   
 ## <a name="remarks"></a>Comentarios  
- El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, la implementación de un proceso activo sería diferente de un volcado de memoria.  
+ El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, la implementación de un proceso activo sería diferente de la de un volcado de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

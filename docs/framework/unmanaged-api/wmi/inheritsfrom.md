@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127425"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom función)
 Determina si la clase o instancia actual deriva de una clase principal especificada.
@@ -47,13 +45,13 @@ de Este parámetro no se utiliza.
 de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszAncestor`  
-de Nombre de la clase. `wszAncestor`debe apuntar a un `LPCWSTR`válido.
+de Nombre de la clase. `wszAncestor` debe apuntar a un `LPCWSTR`válido.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | El objeto actual hereda de `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | El objeto actual no hereda de `wszAncestor`. |
@@ -64,9 +62,9 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 Esta función contiene una llamada al método [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

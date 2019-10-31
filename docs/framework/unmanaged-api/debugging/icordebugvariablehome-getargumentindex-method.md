@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugVariableHome::GetArgumentIndex
+title: 'ICorDebugVariableHome:: GetArgumentIndex (método)'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetArgumentIndex
@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2457dff3063e47f1fb9d040caac1bc08441e1739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125149"
 ---
-# <a name="icordebugvariablehomegetargumentindex-method"></a>Método ICorDebugVariableHome::GetArgumentIndex
+# <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome:: GetArgumentIndex (método)
 
 Obtiene el índice de un argumento de función.
 
@@ -39,7 +37,7 @@ HRESULT GetArgumentIndex(
 ## <a name="parameters"></a>Parámetros
 
 `pArgumentIndex`\
-[out] Un puntero en el índice del argumento.
+enuncia Puntero al índice del argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -48,17 +46,17 @@ El método devuelve los valores siguientes.
 |Valor|Descripción|
 |-----------|-----------------|
 |`S_OK`|La llamada al método devolvió un índice de argumento válido.|
-|`E_FAIL`|Actual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancia representa una variable local.|
+|`E_FAIL`|La instancia de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) actual representa una variable local.|
 
 ## <a name="remarks"></a>Comentarios
 
-El índice del argumento se puede usar para recuperar metadatos para este argumento.
+El índice de argumento se puede utilizar para recuperar los metadatos de este argumento.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorDebug.idl, CorDebug.h
+**Encabezado:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 

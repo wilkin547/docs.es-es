@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131928"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal (Coclase)
 Proporciona interfaces para administrar el cálculo de referencias de punteros de interfaz.  
@@ -36,16 +34,16 @@ coclass ComCallUnmarshal {
   
 ## <a name="interfaces"></a>Interfaces  
   
-|Interfaz|DESCRIPCIÓN|  
+|Interfaz|Descripción|  
 |---------------|-----------------|  
-|`IMarshal`|Proporciona métodos para crear, inicializar y administrar a un servidor proxy en un proceso de cliente.|  
+|`IMarshal`|Proporciona métodos para crear, inicializar y administrar un proxy en un proceso de cliente.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.idl  
+ **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

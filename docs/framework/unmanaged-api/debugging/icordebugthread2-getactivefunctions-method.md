@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b9a301714ea60b4e3220eb75721e56e39bd9659
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139933"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions (Método)
 Obtiene información sobre la función activa en cada uno de los marcos de este subproceso.  
@@ -43,22 +41,22 @@ HRESULT GetActiveFunctions (
  [in] Tamaño de la matriz `pFunctions`.  
   
  `pcFunctions`  
- [out] Un puntero al número de objetos devueltos en la `pFunctions` matriz. El número de objetos devueltos será igual al número de marcos administrados en la pila.  
+ enuncia Puntero al número de objetos devueltos en la matriz de `pFunctions`. El número de objetos devueltos será igual al número de Marcos administrados en la pila.  
   
  `pFunctions`  
- [in, out] Una matriz de objetos COR_ACTIVE_FUNCTION, cada uno de los cuales contiene información sobre las funciones activas en los cuadros de este subproceso.  
+ [in, out] Matriz de objetos COR_ACTIVE_FUNCTION, cada uno de los cuales contiene información sobre las funciones activas de los marcos de este subproceso.  
   
- El primer elemento se utilizará para el marco de hoja y así sucesivamente de nuevo a la raíz de la pila.  
+ El primer elemento se usará para el marco hoja y así sucesivamente hasta la raíz de la pila.  
   
 ## <a name="remarks"></a>Comentarios  
- Si `pFunctions` es null en la entrada, `GetActiveFunctions` devuelve sólo el número de funciones que están en la pila. Es decir, si `pFunctions` es null en la entrada, `GetActiveFunctions` devuelve un valor únicamente en `pcFunctions`.  
+ Si `pFunctions` es null en la entrada, `GetActiveFunctions` devuelve solo el número de funciones que se encuentran en la pila. Es decir, si `pFunctions` es null en la entrada, `GetActiveFunctions` solo devuelve un valor en `pcFunctions`.  
   
- El `GetActiveFunctions` método está pensado como una optimización a través de obtener la misma información de marcos de pila del seguimiento e incluye sólo los fotogramas que habría tenido un objeto ICorDebugILFrame para ellos en el seguimiento de pila completa.  
+ El método `GetActiveFunctions` está pensado como una optimización para obtener la misma información de los fotogramas de un seguimiento de la pila e incluye solo los fotogramas que habrían tenido un objeto ICorDebugILFrame para ellos en el seguimiento de la pila completa.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

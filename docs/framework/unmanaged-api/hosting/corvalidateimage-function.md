@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42da5bb761ba8ce388bd41d46e8fdc4561ad0290
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770039"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136883"
 ---
-# <a name="corvalidateimage-function"></a>_CorValidateImage (Función)
-Valida las imágenes de módulo administrado y notifica al cargador del sistema operativo después de que se han cargado.  
+# <a name="_corvalidateimage-function"></a>_CorValidateImage (Función)
+Valida las imágenes del módulo administrado y notifica al cargador del sistema operativo una vez que se han cargado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,48 +35,48 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parámetros  
  `ImageBase`  
- [in] Un puntero a la ubicación inicial de la imagen para validar como código administrado. La imagen ya se debe cargar en la memoria.  
+ de Puntero a la ubicación inicial de la imagen que se va a validar como código administrado. La imagen ya debe estar cargada en la memoria.  
   
  `FileName`  
- [in] El nombre de archivo de la imagen.  
+ de Nombre de archivo de la imagen.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Esta función devuelve los valores estándar `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, y `E_FAIL`, así como los valores siguientes.  
+ Esta función devuelve los valores estándar `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`y `E_FAIL`, así como los valores siguientes.  
   
-|Valor devuelto|DESCRIPCIÓN|  
+|Valor devuelto|Descripción|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|La imagen no es válida. Este valor tiene el resultado HRESULT 0xC000007BL.|  
-|`STATUS_SUCCESS`|La imagen es válida. Este valor tiene el resultado HRESULT 0x00000000L.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|La imagen no es válida. Este valor tiene HRESULT 0xC000007BL.|  
+|`STATUS_SUCCESS`|La imagen es válida. Este valor tiene HRESULT 0x00000000L.|  
   
 ## <a name="remarks"></a>Comentarios  
- En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba los módulos administrados examinando el bit de directorio de Descriptor de COM en el encabezado de common object file format (COFF). Un bit establecido indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE.dll y llamadas `_CorValidateImage`, que realiza las acciones siguientes:  
+ En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba los módulos administrados examinando el bit del directorio de descriptores COM en el encabezado Common Object File Format (COFF). Un bit establecido indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE. dll y llama a `_CorValidateImage`, que realiza las acciones siguientes:  
   
 - Confirma que la imagen es un módulo administrado válido.  
   
-- Cambia el punto de entrada en la imagen a un punto de entrada en common language runtime (CLR).  
+- Cambia el punto de entrada de la imagen a un punto de entrada en el Common Language Runtime (CLR).  
   
-- Para las versiones de 64 bits de Windows, modifica la imagen que está en la memoria transformando PE32 en PE32 + formato.  
+- En las versiones de Windows de 64 bits, modifica la imagen que está en la memoria transformando el formato de PE32 a PE32 +.  
   
-- Devuelve al cargador cuándo se cargan las imágenes de módulo administrado.  
+- Vuelve al cargador cuando se cargan las imágenes del módulo administrado.  
   
- Para las imágenes ejecutables, el cargador del sistema operativo, a continuación, llama a la [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) función, independientemente del punto de entrada especificado en el archivo ejecutable. Para las imágenes de ensamblado DLL, el cargador llama a la [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) función.  
+ En el caso de las imágenes ejecutables, el cargador del sistema operativo llama a la función [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , independientemente del punto de entrada especificado en el archivo ejecutable. En el caso de las imágenes de ensamblado de DLL, el cargador llama a la función [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) .  
   
- `_CorExeMain` o `_CorDllMain` realiza las acciones siguientes:  
+ `_CorExeMain` o `_CorDllMain` realiza las siguientes acciones:  
   
 - Inicializa el CLR.  
   
-- Busca el punto de entrada administrado desde el encabezado CLR del ensamblado.  
+- Busca el punto de entrada administrado del encabezado CLR del ensamblado.  
   
-- Empieza a ejecutarse.  
+- Comienza la ejecución.  
   
- Las llamadas de cargador la [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funcionando cuando administra las imágenes de módulo se descargan. Sin embargo, esta función no realiza ninguna acción; simplemente devuelve.  
+ El cargador llama a la función [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) cuando se descargan imágenes del módulo administrado. Sin embargo, esta función no realiza ninguna acción; simplemente devuelve.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Encabezado:** Cor. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

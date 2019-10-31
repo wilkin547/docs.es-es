@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e32ce10b708afa5741d83cbd05f14accb4b2014f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137910"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>ICorDebugFunction::GetILCode (Método)
-Obtiene la instancia de ICorDebugCode que representa el código de lenguaje intermedio (MSIL) de Microsoft asociado a este objeto ICorDebugFunction.  
+Obtiene la instancia de ICorDebugCode que representa el código de lenguaje intermedio de Microsoft (MSIL) asociado a este objeto ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Parámetros  
  `ppCode`  
- [out] Un puntero a la `ICorDebugCode` de instancia o null si la función no se compila en MSIL.  
+ enuncia Puntero a la instancia de `ICorDebugCode`, o null, si la función no se compiló en MSIL.  
   
 ## <a name="remarks"></a>Comentarios  
- Si ha permitido en esta función, editar y continuar la `GetILCode` método obtendrá el código MSIL correspondiente a versión editada esta función del código de common language runtime (CLR).  
+ Si se permite editar y continuar en esta función, el método `GetILCode` obtendrá el código MSIL correspondiente a la versión editada de esta función del código en el Common Language Runtime (CLR).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

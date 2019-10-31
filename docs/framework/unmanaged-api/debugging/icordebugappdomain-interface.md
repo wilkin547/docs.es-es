@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugAppDomain
+title: ICorDebugAppDomain (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12753ab65f9339e8f6c3049bb72755e87464eb1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9abcb765357a0f305ae5acae77a4a13b07a003a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134683"
 ---
-# <a name="icordebugappdomain-interface"></a>Interfaz ICorDebugAppDomain
+# <a name="icordebugappdomain-interface"></a>ICorDebugAppDomain (Interfaz)
 
 Proporciona métodos para depurar dominios de aplicación. Esta interfaz es una subclase de ICorDebugController.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[Attach (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-attach-method.md)|Asocia el depurador al dominio de aplicación.|  
 |[EnumerateAssemblies (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Obtiene un enumerador para los ensamblados en el dominio de aplicación.|  
@@ -48,11 +46,11 @@ Proporciona métodos para depurar dominios de aplicación. Esta interfaz es una 
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

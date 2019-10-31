@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para configurar un dominio de aplicación
+title: 'Cómo: Configurar un dominio de aplicación'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06883646982aa6bd642dc4fce7881a289dad5901
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ca28984fa4a328e33d8d9bf79641cc451160f5ea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053188"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119914"
 ---
-# <a name="how-to-configure-an-application-domain"></a>Procedimiento para configurar un dominio de aplicación
+# <a name="how-to-configure-an-application-domain"></a>Cómo: Configurar un dominio de aplicación
 Puede proporcionar información de configuración a Common Language Runtime para un nuevo dominio de aplicación mediante la clase <xref:System.AppDomainSetup>. Al crear sus propios dominios de aplicación, la propiedad más importante es <xref:System.AppDomainSetup.ApplicationBase%2A>. Las otras propiedades **AppDomainSetup** las usan principalmente los hosts en tiempo de ejecución para configurar un dominio de aplicación determinado.  
   
  La propiedad **ApplicationBase** define el directorio raíz de la aplicación. Cuando el tiempo de ejecución tiene que satisfacer una solicitud de tipo, busca el ensamblado que contiene el tipo en el directorio especificado por la propiedad **ApplicationBase**.  

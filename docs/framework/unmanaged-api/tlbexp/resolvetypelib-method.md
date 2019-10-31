@@ -13,14 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124151"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib (Método)
 Resuelve el nombre simple de una biblioteca de tipos devolviendo su ruta de acceso completa.  
@@ -58,19 +56,19 @@ HRESULT ResolveTypeLib(
  de Marca [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) que identifica el entorno operativo. Los valores comunes son SYS_WIN32 y SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- enuncia Un puntero a un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) que contiene la ruta de acceso completa de la biblioteca de tipos `bstrSimpleName` con el nombre en el parámetro.  
+ enuncia Un puntero a un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) que contiene la ruta de acceso completa de la biblioteca de tipos denominada en el parámetro `bstrSimpleName`.  
   
 ## <a name="remarks"></a>Comentarios  
- La `ResolveTypeLib` [función LoadTypeLibWithResolver (](loadtypelibwithresolver-function.md) llama al método durante el procesamiento de [Tlbexp. exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) .  
+ La [función LoadTypeLibWithResolver (](loadtypelibwithresolver-function.md) llama al método `ResolveTypeLib` durante el procesamiento de [Tlbexp. exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) .  
   
- Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) que contenga la ruta de acceso completa de la biblioteca `bstrSimpleName` de tipos denominada en el parámetro.  
+ Las implementaciones personalizadas de esta interfaz deben devolver un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) que contenga la ruta de acceso completa de la biblioteca de tipos denominada en el parámetro `bstrSimpleName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: TlbRef. idl, TlbRef. h  
+ **Encabezado:** TlbRef. idl, TlbRef. h  
   
- **Biblioteca** TlbRef.lib  
+ **Biblioteca:** TlbRef. lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

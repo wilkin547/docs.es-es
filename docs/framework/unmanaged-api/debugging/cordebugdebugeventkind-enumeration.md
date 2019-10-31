@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 6075a6cd-97e6-4472-a090-0dd14860d1f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d2e01a5cf2b2aa25e91ebf0f8e3927858b12bea3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de4ac1f39ea9cfb4b616bd4e2c85e5de530dbb0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967563"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132231"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>Enumeración CorDebugDebugEventKind
 Indica el tipo de evento cuya información se descodifica mediante el método [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) .  
@@ -37,7 +35,7 @@ typedef enum CorDebugDebugEventKind {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|Evento load del módulo.|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Evento unload del módulo.|  
@@ -47,17 +45,17 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|Excepción sin controlar.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un miembro de la `CorDebugDebugEventKind` enumeración se devuelve mediante una llamada al método [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
+ Un miembro de la enumeración `CorDebugDebugEventKind` se devuelve llamando al método [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
   
 > [!NOTE]
 > Esta enumeración está pensada solo para su uso en escenarios de depuración .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

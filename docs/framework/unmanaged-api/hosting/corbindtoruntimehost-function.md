@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1965917e8a1c5ae07cf119df3664b969a979be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a6d9708e7281a72c88ba28012006784f7b0ee9d9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969250"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124356"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost (Función)
 Permite a los hosts cargar una versión determinada de Common Language Runtime (CLR) en un proceso.  
@@ -56,7 +54,7 @@ HRESULT CorBindToRuntimeHost (
  `pwszBuildFlavor`  
  [in] Cadena que especifica si se debe cargar la compilación de CLR para servidor o para estación de trabajo. Los valores válidos son `svr` y `wks`. La compilación para servidor está optimizada para aprovechar las ventajas que aportan varios procesadores al realizar recolecciones de elementos no utilizados, mientras que la compilación para estación de trabajo está optimizada para aplicaciones cliente que se ejecutan en equipos con un solo procesador.  
   
- Si `pwszBuildFlavor` está establecido en null, se carga la compilación de la estación de trabajo. Cuando se ejecuta en un equipo de un solo procesador, siempre se carga la compilación de la `pwszBuildFlavor` estación de trabajo `svr`, incluso si se establece en. Sin embargo, `pwszBuildFlavor` si se establece `svr` en y se especifica la recolección de elementos no utilizados simultánea ( `startupFlags` vea la descripción del parámetro), se cargará la compilación del servidor.  
+ Si `pwszBuildFlavor` se establece en null, se carga la compilación de la estación de trabajo. Cuando se ejecuta en un equipo de un solo procesador, se carga siempre la compilación de la estación de trabajo, incluso si `pwszBuildFlavor` está establecido en `svr`. Sin embargo, si se establece `pwszBuildFlavor` en `svr` y se especifica la recolección de elementos no utilizados simultánea (vea la descripción del parámetro `startupFlags`), se cargará la compilación del servidor.  
   
 > [!NOTE]
 > No se admite la recolección de elementos no utilizados simultánea en aplicaciones en las que se ejecuta el emulador WOW64 x86 en sistemas de 64 bits y que implementan la arquitectura Intel Itanium (denominada anteriormente IA-64). Para obtener más información sobre el uso de WOW64 en sistemas Windows de 64 bits, vea [ejecutar aplicaciones de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).  
@@ -71,7 +69,7 @@ HRESULT CorBindToRuntimeHost (
  [in] Conjunto de marcas que controla la recolección de elementos no utilizados simultánea, el código neutral respecto al dominio y el comportamiento del parámetro `pwszVersion`. Si no se establece ninguna marca, el valor predeterminado es un dominio único. Para obtener una lista de valores admitidos, consulte la [enumeración STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
  `rclsid`  
- de De la coclase que implementa la interfaz [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost.](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) `CLSID` Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ de `CLSID` de la coclase que implementa la interfaz [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  [in] El `IID` de la interfaz solicitada. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
@@ -80,11 +78,11 @@ HRESULT CorBindToRuntimeHost (
  [out] Puntero de interfaz a la versión del runtime que se cargó.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.idl  
+ **Encabezado:** MSCorEE. idl  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

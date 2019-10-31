@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetCurrentApartmentType function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6ecd2b49d6850a8fae25ddca54f855fdda2ccabb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120353"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType función)
 Recupera el tipo de contenedor en el que se está ejecutando el llamador.   
@@ -51,7 +49,7 @@ enuncia Un puntero a un valor de enumeración [APTTYPE](/windows/win32/api/objid
 
 ## <a name="return-value"></a>Valor devuelto
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `S_OK` | 0 | La función se completó correctamente. |
 | `E_FAIL` | 0x80000008 | El autor de la llamada no se está ejecutando en un contenedor. |
@@ -61,9 +59,9 @@ enuncia Un puntero a un valor de enumeración [APTTYPE](/windows/win32/api/objid
 Esta función contiene una llamada al método [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

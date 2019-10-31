@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: abb8b507b21ca8f40461192c37e6c2fbe73b684e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123600"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  

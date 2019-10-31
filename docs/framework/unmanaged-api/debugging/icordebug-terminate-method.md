@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 78838e9002cb3f5263395af9de255c54de47b6ae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963128"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134017"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate (Método)
-Finaliza el `ICorDebug` objeto.  
+Finaliza el objeto `ICorDebug`.  
   
 > [!NOTE]
-> `Terminate`no debe llamarse hasta que se haya recibido una devolución de llamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) para todos los procesos que se están depurando.  
+> no se debe llamar a `Terminate` hasta que se haya recibido una devolución de llamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) para todos los procesos que se están depurando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,14 +35,14 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- `Terminate`se debe llamar a cuando `ICorDebug` el objeto ya no se necesita.  
+ se debe llamar a `Terminate` cuando ya no se necesita el objeto `ICorDebug`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

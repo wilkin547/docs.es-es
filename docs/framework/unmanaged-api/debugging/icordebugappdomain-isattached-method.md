@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: af0c67c7-f53e-47c9-b84b-be50bd04903e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a3f01edcd6ce1d16ab2c651a66d2fd9cd2eb0ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e0b0c4ed9bac4abd1dc185031e41c1e3ed014a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737823"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134676"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached (Método)
 Obtiene un valor que indica si el depurador está asociado al dominio de aplicación.  
@@ -37,15 +35,15 @@ HRESULT IsAttached (
   
 ## <a name="parameters"></a>Parámetros  
  `pbAttached`  
- [out] `true` si el depurador está asociado al dominio de aplicación; en caso contrario, `false`.  
+ [out] `true` si el depurador está asociado al dominio de aplicación; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- No se puede usar los métodos ICorDebugController hasta que el depurador se asocia al dominio de aplicación.  
+ Los métodos ICorDebugController no se pueden usar hasta que el depurador se asocie al dominio de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

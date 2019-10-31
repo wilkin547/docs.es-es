@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed2364c7c47aed1430a86aeee3daabf6b94cbf3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 360434fe6e08804d8c80c4ea36d585209cc6761a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754484"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137819"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus (Método)
 Obtiene un valor que indica si la función representada por este objeto ICorDebugFunction2 está marcada como código de usuario.  
@@ -37,15 +35,15 @@ HRESULT GetJMCStatus (
   
 ## <a name="parameters"></a>Parámetros  
  `pbIsJustMyCode`  
- [out] Un puntero a un valor booleano que es `true`, si esta función está marcada como código de usuario; en caso contrario, el valor es `false`.  
+ enuncia Un puntero a un valor booleano que se `true`, si esta función está marcada como código de usuario; de lo contrario, el valor es `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la función representada por este `ICorDebugFunction2` no se puede depurar, `pbIsJustMyCode` siempre será `false`.  
+ Si no se puede depurar la función representada por este `ICorDebugFunction2`, `pbIsJustMyCode` siempre se `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

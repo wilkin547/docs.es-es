@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET'
+title: 'Ejemplo de interoperabilidad COM: cliente COM y servidor .NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48bd536cedd6a9689cdb18cca457ff06473396b5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a317d97219017e0ab14456a0ff74b7ae75e432c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123709"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET
+# <a name="com-interop-sample-com-client-and-net-server"></a>Ejemplo de interoperabilidad COM: cliente COM y servidor .NET
 En este ejemplo se muestra la interoperación de un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas. En este ejemplo, el cliente crea y llama a una instancia de la clase administrada `Loan`, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos. A lo largo de esta sección aparecen ejemplos de código de este ejemplo.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   

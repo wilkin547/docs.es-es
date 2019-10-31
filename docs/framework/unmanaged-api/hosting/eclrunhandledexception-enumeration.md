@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba0c2ea7733f098b7fac95f51b5eb16d083174e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779369"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131235"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException (Enumeración)
-Describe las opciones disponibles para administrar las excepciones que no se controlan en código de usuario.  
+Describe las opciones disponibles para administrar excepciones que no se controlan en el código de usuario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|Especifica que se produce el comportamiento predeterminado. El proceso se cierra.|  
-|`eHostDeterminedPolicy`|Especifica que common language runtime (CLR) pasa por alto las excepciones no controladas y permite al host determinar ninguna acción.|  
+|`eRuntimeDeterminedPolicy`|Especifica que se produce el comportamiento predeterminado. El proceso se ha anulado.|  
+|`eHostDeterminedPolicy`|Especifica que el Common Language Runtime (CLR) omite las excepciones no controladas y permite que el host determine cualquier acción más.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para especificar que el CLR se comportan como las versiones anteriores, use el `eHostDeterminedPolicy` miembro.  
+ Para especificar que el CLR se comporte como versiones anteriores, utilice el miembro `eHostDeterminedPolicy`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

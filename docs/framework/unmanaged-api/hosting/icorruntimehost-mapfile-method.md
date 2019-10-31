@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780085"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139505"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile (Método)
-Asigna el archivo especificado en la memoria. Este método está obsoleto.  
+Asigna el archivo especificado a la memoria. Este método está obsoleto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,19 +36,19 @@ HRESULT MapFile(
   
 ## <a name="parameters"></a>Parámetros  
  `hFile`  
- [in] El identificador del archivo que se puede asignar.  
+ de Identificador del archivo que se va a asignar.  
   
  `hMapAddress`  
- [out] La dirección de memoria de inicio donde comienza el archivo de asignación.  
+ enuncia Dirección de memoria de inicio en la que se va a empezar a asignar el archivo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
- **Versión de .NET framework:** 1.0, 1.1  
+ **Versión de .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Vea también
 

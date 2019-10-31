@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762276"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136627"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData (Método)
 Pide al depurador que devuelva la ruta de acceso completa a un módulo cuyos metadatos se necesitan para completar una operación solicitada por el depurador.  
@@ -46,7 +44,7 @@ HRESULT GetMetaData(
  [in] Cadena terminada en NULL que representa la ruta de acceso completa al archivo. Si la ruta de acceso completa no está disponible, el nombre y la extensión del archivo (*filename*. *extensión*).  
   
  `dwImageTimeStamp`  
- [in] Marca de tiempo de los encabezados del archivo PE de la imagen. Este parámetro puede emplearse para un servidor de símbolos ([SymSrv](/windows/desktop/debug/using-symsrv)) búsqueda.  
+ [in] Marca de tiempo de los encabezados del archivo PE de la imagen. Este parámetro puede usarse potencialmente para una búsqueda del servidor de símbolos ([SymSrv](/windows/desktop/debug/using-symsrv)).  
   
  `dwImageSize`  
  [in] Tamaño de la imagen en los encabezados de archivo PE. Este parámetro podría usarse para una búsqueda de SymSrv.  
@@ -62,12 +60,12 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] Puntero a un búfer en el que el depurador copiará la ruta de acceso completa del archivo que contiene los metadatos solicitados.  
   
- El `ofReadOnly` marca desde el [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeración se usa para solicitar acceso de solo lectura a los metadatos de este archivo.  
+ La marca de `ofReadOnly` de la enumeración [CorOpenFlags (](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) se usa para solicitar acceso de solo lectura a los metadatos de este archivo.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método. Cualquier otro HRESULT de error indica que el archivo no se puede recuperar.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente. `wszPathBuffer` contiene la ruta de acceso completa al archivo y termina en NULL.|  
 |E_NOT_SUFFICIENT_BUFFER|El tamaño actual de `wszPathBuffer` no es suficiente para contener la ruta de acceso completa. En este caso, `pcchPathBuffer` contiene el número necesario de `WCHAR`, incluido el carácter NULL final, y se llama a `GetMetaData` una segunda vez con el tamaño de búfer solicitado.|  
@@ -76,9 +74,9 @@ HRESULT GetMetaData(
  Si `wszImagePath` contiene una ruta de acceso completa para un módulo de un volcado de memoria, especifica la ruta de acceso del equipo desde el que se recopiló el volcado de memoria. Puede que el archivo no exista en esta ubicación o que en ella haya almacenado un archivo incorrecto con el mismo nombre.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

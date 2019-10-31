@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122855"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next (Método)
-Obtiene el número especificado de los ensamblados de la colección, empezando en la posición actual del cursor.  
+Obtiene el número especificado de ensamblados de la colección, comenzando en la posición actual del cursor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de ensamblados que van a recuperar.  
+ de Número de ensamblados que se van a recuperar.  
   
  `values`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugAssembly que representa un ensamblado.  
+ enuncia Matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugAssembly que representa un ensamblado.  
   
  `pceltFetched`  
- [out] Un puntero al número de ensamblados devueltos realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de ensamblados devueltos realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

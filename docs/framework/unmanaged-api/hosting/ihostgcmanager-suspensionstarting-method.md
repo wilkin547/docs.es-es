@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c381f524-94cf-4fa2-9298-50f847a03431
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3e808c7ed03d7b4cc9dfe77389df6b2eff491f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bf1b830f55110c00356527bc9caa41dfd94ae377
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937720"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130454"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting (Método)
 Notifica al host que el Common Language Runtime (CLR) está suspendiendo la ejecución de las tareas, para realizar una recolección de elementos no utilizados.  
@@ -35,9 +33,9 @@ HRESULT SuspensionStarting ();
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SuspensionStarting`se devolvió correctamente.|  
+|S_OK|`SuspensionStarting` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -45,17 +43,17 @@ HRESULT SuspensionStarting ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Las llamadas `SuspensionStarting` CLR para informar al host de que se está produciendo la recolección de elementos no utilizados.  
+ CLR llama `SuspensionStarting` para informar al host de que se está produciendo la recolección de elementos no utilizados.  
   
 > [!IMPORTANT]
 > No vuelva a programar esta tarea. El host debe volver a programar una tarea cuando se llama a [ThreadIsBlockingForSuspension (](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

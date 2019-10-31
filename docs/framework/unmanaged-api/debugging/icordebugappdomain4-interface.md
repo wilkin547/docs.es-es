@@ -2,17 +2,15 @@
 title: Interfaz de ICorDebugAppDomain4
 ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c6077f16f07c5f1fc76b6525ccb036aa1e4fa06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db5c08f74795026d7c6f3b5872fb6fdabf88ee5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922178"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088821"
 ---
 # <a name="icordebugappdomain4-interface"></a>Interfaz de ICorDebugAppDomain4
-Extiende lógicamente la ICorDebugAppDomain (interfaz) para obtener un objeto administrado desde un contenedor CCW.  
+Extiende lógicamente la interfaz ICorDebugAppDomain para obtener un objeto administrado desde un contenedor COM invocable.  
   
 ## <a name="method"></a>Método  
   
@@ -23,9 +21,9 @@ Extiende lógicamente la ICorDebugAppDomain (interfaz) para obtener un objeto ad
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

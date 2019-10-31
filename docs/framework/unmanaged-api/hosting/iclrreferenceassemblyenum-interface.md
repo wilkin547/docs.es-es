@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8adbf092-c3ba-4bee-b25b-0de6e43a4ce5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 466b0ceec8ce9c9800393f96055730ecafc153b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638520"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120546"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum (Interfaz)
-Proporciona métodos que permiten al host manipular el conjunto de ensamblados que se hace referencia a un archivo o secuencia utilizando los datos de identidad de ensamblado que están internas de common language runtime (CLR), sin necesidad de crear o entender esas identidades.  
+Proporciona métodos que permiten al host manipular el conjunto de ensamblados a los que hace referencia un archivo o una secuencia mediante datos de identidad de ensamblado internos del Common Language Runtime (CLR), sin necesidad de crear o comprender esas identidades.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -33,11 +31,11 @@ Proporciona métodos que permiten al host manipular el conjunto de ensamblados q
 |[Get (método)](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|Obtiene la identidad del ensamblado en el índice proporcionado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

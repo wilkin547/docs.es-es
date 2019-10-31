@@ -1,17 +1,15 @@
 ---
-title: Método ICorDebugInstanceFieldSymbol::GetSize
+title: 'ICorDebugInstanceFieldSymbol:: (método)'
 ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94ff0ddc266ef9a3f5fabf56f43f1eba2c74e3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71828cd8486e2ff09190d23473dbab303b92f933
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139029"
 ---
-# <a name="icordebuginstancefieldsymbolgetsize-method"></a>Método ICorDebugInstanceFieldSymbol::GetSize
+# <a name="icordebuginstancefieldsymbolgetsize-method"></a>ICorDebugInstanceFieldSymbol:: (método)
 Obtiene el tamaño, en bytes, del campo de instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,11 +30,11 @@ HRESULT GetSize(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

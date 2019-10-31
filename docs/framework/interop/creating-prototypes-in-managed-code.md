@@ -17,14 +17,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853834"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123614"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Crear prototipos en código administrado
 En este tema se describe cómo acceder a funciones no administradas y presenta varios campos de atributo que anotan la definición de método en el código administrado. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -89,7 +87,7 @@ extern "C" int MessageBox(
   
  En la tabla siguiente se muestra el conjunto completo de campos de atributo que pertenecen a la invocación de plataforma. Para cada campo, la tabla incluye el valor predeterminado y un vínculo a información sobre cómo usar estos campos para definir funciones DLL no administradas.  
   
-|Campo|DESCRIPCIÓN|  
+|Campo|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Habilita o deshabilita la asignación con ajuste perfecto.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Especifica la convención de llamada que se usará al pasar argumentos de método. El valor predeterminado es `WinAPI`, que corresponde a `__stdcall` para las plataformas de 32 bits basadas en Intel.|  

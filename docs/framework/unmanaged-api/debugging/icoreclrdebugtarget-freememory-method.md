@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98f2a0db-a6ec-4f9b-861d-f82485237d08
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0d61092621a55c49509c8c4e4c81f1d064e0fdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6821aacb80726cf202c99428a401b53b5c6ee566
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121804"
 ---
 # <a name="icoreclrdebugtargetfreememory-method"></a>ICoreClrDebugTarget::FreeMemory (Método)
-Libera la memoria asignada por el [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) y [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) métodos.  
+Libera la memoria asignada por los métodos [ICoreClrDebugTarget:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) y [ICoreClrDebugTarget:: enumruntimes (](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +36,16 @@ void FreeMemory (
   
 ## <a name="parameters"></a>Parámetros  
  `pMemory`  
- [in] Un puntero a la matriz que es devuelto por la [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) o [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) método.  
+ de Puntero a la matriz devuelta por el método [ICoreClrDebugTarget:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) o [ICoreClrDebugTarget:: enumruntimes (](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versiones de .NET framework:** 3.5 SP1  
+ **.NET Framework versiones:** 3,5 SP1  
   
 ## <a name="see-also"></a>Vea también
 

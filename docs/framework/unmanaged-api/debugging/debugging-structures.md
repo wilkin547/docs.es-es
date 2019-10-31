@@ -6,71 +6,69 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a4b5c2a65ae7e4c01ffc3977875e598d076557
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 05a321d5025f03d6a0378b462178bf06c0291f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025932"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123034"
 ---
 # <a name="debugging-structures"></a>Estructuras de depuración
 
 En esta sección se describen las estructuras no administradas que utiliza la API de depuración.
 
 ## <a name="in-this-section"></a>En esta sección
- [Estructura CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) define un intervalo de direcciones.
+ [Estructura CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) Define un intervalo de direcciones.
 
- [Estructura CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) define un IL para asignación de direcciones
+ [Estructura CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) Define una asignación de IL a dirección
 
- [CLR_DEBUGGING_VERSION (estructura)](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) define la versión del producto de common language runtime (CLR) con fines de depuración.
+ [Estructura CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) Define la versión del producto del Common Language Runtime (CLR) para fines de depuración.
 
- [CodeChunkInfo (estructura)](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) representa un único fragmento de código en la memoria.
+ [Estructura CodeChunkInfo (](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) Representa un único fragmento de código en memoria.
 
- [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso.
+ [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) Contiene información sobre las funciones que están activas actualmente en los marcos de un subproceso.
 
- [COR_ARRAY_LAYOUT (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) proporciona información sobre el diseño de un objeto de matriz en la memoria.
+ [Estructura COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) Proporciona información sobre el diseño de un objeto de matriz en la memoria.
 
- [COR_DEBUG_IL_TO_NATIVE_MAP](cor-debug-il-to-native-map-structure.md) contiene los desplazamientos que se usan para asignar el lenguaje intermedio de Microsoft (MSIL) de código para código nativo.
+ [COR_DEBUG_IL_TO_NATIVE_MAP](cor-debug-il-to-native-map-structure.md) Contiene los desplazamientos que se usan para asignar código de lenguaje intermedio de Microsoft (MSIL) a código nativo.
 
- [COR_DEBUG_STEP_RANGE](cor-debug-step-range-structure.md) contiene la información de desplazamiento para un intervalo de código.
+ [COR_DEBUG_STEP_RANGE](cor-debug-step-range-structure.md) Contiene la información de desplazamiento para un intervalo de código.
 
- [COR_FIELD (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) proporciona información sobre un campo en un objeto.
+ [Estructura COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) Proporciona información sobre un campo de un objeto.
 
- [COR_GC_REFERENCE (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) contiene información sobre un objeto que se va a recolectar.
+ [Estructura COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) Contiene información sobre un objeto que se va a recolectar como elemento no utilizado.
 
- [COR_HEAPINFO (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) proporciona información general sobre el montón de elementos no utilizados, incluso si es enumerable.
+ [Estructura COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) Proporciona información general sobre el montón de recolección de elementos no utilizados, incluido si es Enumerable.
 
- [COR_HEAPOBJECT (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) proporciona información sobre un objeto en el montón administrado.
+ [Estructura COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Proporciona información sobre un objeto en el montón administrado.
 
- [COR_IL_MAP](cor-il-map-structure.md) especifica cambios en el desplazamiento relativo de una función.
+ [COR_IL_MAP](cor-il-map-structure.md) Especifica los cambios en el desplazamiento relativo de una función.
 
- [COR_SEGMENT (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) contiene información sobre una región de memoria del montón administrado.
+ [Estructura COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) Contiene información sobre una región de memoria en el montón administrado.
 
- [COR_TYPEID (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) contiene un identificador de tipo.
+ [Estructura COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) Contiene un identificador de tipo.
 
- [COR_TYPE_LAYOUT (estructura)](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) proporciona información sobre el diseño de un objeto en memoria.
+ [Estructura COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) Proporciona información sobre el diseño de un objeto en la memoria.
 
- [COR_VERSION](cor-version-structure.md) almacena el número de versión de cuatro partes estándar de common language runtime.
+ [COR_VERSION](cor-version-structure.md) Almacena el número de versión de cuatro partes estándar del Common Language Runtime.
 
- [CorDebugBlockingObject (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) define un objeto que está bloqueando un subproceso y el motivo por qué se bloquea el subproceso.
+ [CorDebugBlockingObject (estructura](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) ) Define un objeto que está bloqueando un subproceso y el motivo por el que el subproceso está bloqueado.
 
- [CorDebugEHClause (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) representa una cláusula de control (EH) de la excepción para una parte determinada de lenguaje intermedio (IL).
+ [Estructura cordebugehclause (](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) Representa una cláusula de control de excepciones (EH) para una parte determinada del lenguaje intermedio (IL).
 
- [CorDebugExceptionObjectStackFrame (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) representa información de un objeto de excepción del marco de pila.
+ [Estructura cordebugexceptionobjectstackframe (](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) Representa la información del marco de pila de un objeto de excepción.
 
- [CorDebugGuidToTypeMapping (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) asigna un GUID en tiempo de ejecución de Windows a sus correspondientes [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objeto.
+ [Estructura cordebugguidtotypemapping (](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Asigna un GUID de Windows Runtime a su objeto [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) correspondiente.
 
- [Estructura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) define el contenedor para una solicitud de dirección del módulo.
+ [Estructura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) Define el contenedor para una solicitud de dirección del módulo.
 
- [Estructura DacpMethodDescData](../../../../docs/framework/unmanaged-api/debugging/dacpmethoddescdata-structure.md) define un búfer de transporte para obtener información de tiempo de ejecución de un método.
+ [Estructura DacpMethodDescData](../../../../docs/framework/unmanaged-api/debugging/dacpmethoddescdata-structure.md) Define un búfer de transporte para la información de tiempo de ejecución de un método.
 
- [Estructura DacpModuleData](../../../../docs/framework/unmanaged-api/debugging/dacpmoduledata-structure.md) define un búfer de transporte para obtener información de tiempo de ejecución de un módulo.
+ [Estructura DacpModuleData](../../../../docs/framework/unmanaged-api/debugging/dacpmoduledata-structure.md) Define un búfer de transporte para la información de tiempo de ejecución de un módulo.
 
- [Estructura DacpReJitData](../../../../docs/framework/unmanaged-api/debugging/dacprejitdata-structure.md) define la información básica sobre un determinado método del generador de perfiles instrumentada.
+ [Estructura DacpReJitData](../../../../docs/framework/unmanaged-api/debugging/dacprejitdata-structure.md) Define la información básica sobre un método instrumentado del generador de perfiles determinado.
 
- [StackTrace_SimpleContext (estructura)](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) proporciona un contexto simple que puede usarse en lugar de un completo `CONTEXT` estructura.
+ [Estructura StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) Proporciona un contexto simple que se puede utilizar en lugar de una estructura de `CONTEXT` completa.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

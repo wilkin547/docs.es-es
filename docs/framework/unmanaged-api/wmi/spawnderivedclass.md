@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798232"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120180"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass función)
 Crea un objeto de clase recién derivado a partir de un objeto específico.    
@@ -50,13 +48,13 @@ de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn
 [in] Reservado. Este parámetro debe ser 0.
 
 `ppNewClass`  
-enuncia Recibe el puntero al nuevo objeto de definición de clase. Si se produce un error, no se devuelve un nuevo objeto y `ppNewClass` se deja sin modificar. Su valor no puede `null`ser.
+enuncia Recibe el puntero al nuevo objeto de definición de clase. Si se produce un error, no se devuelve un nuevo objeto y `ppNewClass` se deja sin modificar. Su valor no se puede `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Se solicitó una operación no válida, como la generación de una clase a partir de una instancia. |
@@ -69,14 +67,14 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) .
 
-`ptr`debe ser una definición de clase que se convierte en la clase primaria del objeto generado. El objeto devuelto se convierte en una subclase del objeto actual.
+`ptr` debe ser una definición de clase que se convierte en la clase primaria del objeto generado. El objeto devuelto se convierte en una subclase del objeto actual.
 
-El nuevo objeto devuelto `ppNewClass` en se convierte automáticamente en una subclase del objeto actual. Este comportamiento no se puede invalidar. No hay ningún otro método por el que se puedan crear subclases (clases derivadas).
+El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una subclase del objeto actual. Este comportamiento no se puede invalidar. No hay ningún otro método por el que se puedan crear subclases (clases derivadas).
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

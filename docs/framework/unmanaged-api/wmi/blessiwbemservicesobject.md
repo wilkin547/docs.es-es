@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServicesObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f77ff394668a235dd63cf0cddf71ea418a28125b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798729"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141687"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Función BlessIWbemServicesObject
 Indica si las credenciales de usuario permiten el acceso a un objeto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) especificado. 
@@ -50,7 +48,7 @@ de Un puntero a un objeto de servicio WMI.
 de El nombre de usuario.
 
 `strPassword`\
-de La contraseña asociada `strUser`a.
+de Contraseña asociada a `strUser`.
 
 `strAuthority`\
 de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connectserverwmi.md) para obtener más información.
@@ -65,7 +63,7 @@ de Nivel de autorización.
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WinError. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o varios argumentos no son válidos. |
 | `E_POINTER` | 0x80004003 | El valor de `pIWbemServices` es `null`. | 
@@ -75,9 +73,9 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 ## <a name="requirements"></a>Requisitos
 
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
- **Encabezado**: WMINet_Utils.idl
+ **Encabezado:** WMINet_Utils. idl
 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

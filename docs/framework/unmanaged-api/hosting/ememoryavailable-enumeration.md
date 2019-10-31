@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772395"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134288"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable (Enumeración)
-Contiene valores que indican la cantidad de memoria física disponible en el equipo. Estos valores se asignan lógicamente a los eventos de alta y baja memoria se devuelve desde el `CreateMemoryResourceNotification` función de la API de Windows.  
+Contiene valores que indican la cantidad de memoria física disponible en el equipo. Estos valores se asignan lógicamente a los eventos de memoria alta y baja devueltas por la función `CreateMemoryResourceNotification` de la API de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +36,21 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Una gran cantidad de memoria física está disponible.|  
-|`eMemoryAvailableLow`|Muy poca memoria física está disponible.|  
+|`eMemoryAvailableHigh`|Hay mucha memoria física disponible.|  
+|`eMemoryAvailableLow`|Hay muy poca memoria física disponible.|  
 |`eMemoryAvailableNeutral`|La memoria física disponible es neutra.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este valor se pasa por el host de common language runtime (CLR), mediante una llamada a la [ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) método.  
+ El host pasa este valor al Common Language Runtime (CLR) mediante una llamada al método [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

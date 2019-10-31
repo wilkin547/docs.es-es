@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29427bab938437c40d0edb5676a2f8f76cbb6691
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 728e8bdbce7f93176324d8f80261030f8cbae283
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140410"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID (Método)
-Obtiene el identificador de sistema operativo de este proceso.  
+Obtiene el identificador del sistema operativo para este proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetProcessID (
   
 ## <a name="parameters"></a>Parámetros  
  `pid`  
- [out] Un puntero al identificador del proceso representado por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objeto.  
+ enuncia Puntero al identificador del proceso representado por este objeto [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

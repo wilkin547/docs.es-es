@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f93b4fbd5429ed2bdae8fb707e61df024cd8fd6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798223"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107512"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance función)
 Crea una instancia a partir de una clase.    
@@ -56,9 +54,9 @@ enuncia Recibe el puntero a la nueva instancia de la clase. Si se produce un err
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`no es una definición de clase válida y no puede generar nuevas instancias. O bien está incompleto o no se ha registrado con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` no es una definición de clase válida y no puede generar nuevas instancias. O bien está incompleto o no se ha registrado con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | El valor de `ppNewClass` es `null`. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
@@ -67,14 +65,14 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) .
 
-`ptr`debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que se admite la generación de una instancia a partir de una instancia de, pero la instancia devuelta está vacía). A continuación, use esta definición de clase para crear nuevas instancias. Se requiere una llamada a la función [PutInstanceWmi](putinstancewmi.md) si desea escribir la instancia en la administración de Windows.
+`ptr` debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que se admite la generación de una instancia a partir de una instancia de, pero la instancia devuelta está vacía). A continuación, use esta definición de clase para crear nuevas instancias. Se requiere una llamada a la función [PutInstanceWmi](putinstancewmi.md) si desea escribir la instancia en la administración de Windows.
 
-El nuevo objeto devuelto `ppNewClass` en se convierte automáticamente en una subclase del objeto actual. Este comportamiento no se puede invalidar. No hay ningún otro método por el que se puedan crear subclases (clases derivadas).
+El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una subclase del objeto actual. Este comportamiento no se puede invalidar. No hay ningún otro método por el que se puedan crear subclases (clases derivadas).
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

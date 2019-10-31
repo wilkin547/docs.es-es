@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b21bf047acf306fb41a7e6a8f8e73c698ea5b619
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca5db8c8570cedd9b0412b71058d453112a1831c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765204"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140131"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk (Método)
-Crea un [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para el subproceso cuya pila desea desenredar.  
+Crea un objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) para el subproceso cuya pila desea desenredar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,25 +33,25 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 ## <a name="parameters"></a>Parámetros  
  `ppStackWalk`  
- [out] Un puntero a la dirección de la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para el subproceso cuya pila desea desenredar.  
+ enuncia Puntero a la dirección del objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) para el subproceso cuya pila desea desenredar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|La `ICorDebugStackWalk` objeto se creó correctamente.|  
-|E_FAIL|El `ICorDebugStackWalk` no se creó el objeto.|  
+|S_OK|El objeto de `ICorDebugStackWalk` se ha creado correctamente.|  
+|E_FAIL|No se creó el objeto de `ICorDebugStackWalk`.|  
   
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- Si el `CreateStackWalk` método tiene éxito, el valor devuelto `ICorDebugStackWalk` contexto del objeto se establece en el contexto del subproceso actual.  
+ Si el método de `CreateStackWalk` se ejecuta correctamente, el contexto del objeto de `ICorDebugStackWalk` devuelto se establece en el contexto actual del subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

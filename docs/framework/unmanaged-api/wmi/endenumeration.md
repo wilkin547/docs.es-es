@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b9fd1f094c8fb56c94421a07437aa25a3549c487
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798816"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132041"
 ---
 # <a name="endenumeration-function"></a>Función EndEnumeration
 
@@ -50,7 +48,7 @@ de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
@@ -59,13 +57,13 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemClassObject:: EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-No se requiere una `EndEnumeration` llamada a la función, pero se recomienda porque libera los recursos asociados a la enumeración. Sin embargo, los recursos se desasignan automáticamente cuando se inicia la siguiente enumeración o se libera el objeto.
+No es necesaria una llamada a la función `EndEnumeration`, pero se recomienda porque libera los recursos asociados a la enumeración. Sin embargo, los recursos se desasignan automáticamente cuando se inicia la siguiente enumeración o se libera el objeto.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

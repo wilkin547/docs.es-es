@@ -8,14 +8,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96300808ba3024a138678494200b10ef722c6fd9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: 8505f4c742fb002be249ab069708f7f768c672df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894234"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123575"
 ---
 # <a name="default-marshaling-for-arrays"></a>Cálculo de referencias predeterminado para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  

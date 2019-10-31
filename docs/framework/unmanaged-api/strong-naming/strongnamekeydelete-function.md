@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d37f990241ae704abef55d863da0f40a31284837
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141586"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete (Función)
 
@@ -44,21 +42,21 @@ de Nombre del contenedor de claves que se va a eliminar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-`true`Cuando se complete correctamente; en caso `false`contrario,.
+`true` cuando se complete correctamente; de lo contrario, `false`.
 
 ## <a name="remarks"></a>Comentarios
 
 Utilice la función [StrongNameKeyInstall (](strongnamekeyinstall-function.md) para importar un par de claves pública y privada en un contenedor.
 
-Si la `StrongNameKeyDelete` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
+Si la función `StrongNameKeyDelete` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: StrongName. h
+**Encabezado:** StrongName. h
 
-**Biblioteca** Se incluye como recurso en MsCorEE. dll
+**Biblioteca:** Se incluye como recurso en MsCorEE. dll
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

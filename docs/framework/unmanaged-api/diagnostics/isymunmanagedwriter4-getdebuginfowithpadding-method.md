@@ -2,19 +2,17 @@
 title: ISymUnmanagedWriter4::GetDebugInfoWithPadding (Método)
 ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 191aa16c285b3a28beed65004d65525c9214ec93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 274bf79175bda9e880b1ef3cf8f125a017ad0734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121669"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding (Método)
-Funciona igual que [GetDebugInfo (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , salvo que la cadena de ruta de acceso se rellena con ceros que siguen el carácter nulo de terminación para que los datos de cadena de un tamaño fijo de `MAX_PATH`. Relleno solo se da si la longitud de cadena de ruta de acceso propio es menor que `MAX_PATH`.  
+Funciona igual que el [método GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , salvo que la cadena de ruta de acceso se rellena con ceros después del carácter nulo de terminación para convertir los datos de cadena en un tamaño fijo de `MAX_PATH`. El relleno solo se proporciona si la longitud de la cadena de ruta de acceso es menor que `MAX_PATH`.  
   
- Esto facilita la escritura herramientas que los archivos PE de diferencia.  
+ Esto facilita la escritura de herramientas que diferencian los archivos PE.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +33,7 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
  Devuelve `HRESULT`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

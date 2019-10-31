@@ -13,14 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - StrongNameSignatureGeneration function [.NET Framework strong naming]
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48cdd550e5d8c7c75a603d74456e99a066d5c599
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ab6fcb64e4654302e411d4dcc587df2e0bf1dc1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125191"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration (Función)
 Genera una firma de nombres seguros para el ensamblado especificado.  
@@ -54,7 +52,7 @@ BOOLEAN StrongNameSignatureGeneration (
  Las claves deben ser claves de firma de Rivest-Shamir-Adleman (RSA) de 1024 bits. En este momento no se admite ningún otro tipo de clave.  
   
  `pbKeyBlob`  
- de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor `wszKeyContainer` de claves especificado por contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `wszKeyContainer` contiene el par de claves.  
   
  `cbKeyBlob`  
  de Tamaño, en bytes, de `pbKeyBlob`.  
@@ -68,21 +66,21 @@ BOOLEAN StrongNameSignatureGeneration (
  enuncia Tamaño, en bytes, de la firma devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
+ Especifique NULL en `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
  La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
   
- Si la `StrongNameSignatureGeneration` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameSignatureGeneration` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

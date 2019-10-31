@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133466"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle (Método)
-Obtiene el identificador actual para la parte activa de este ICorDebugThread.  
+Obtiene el identificador actual para la parte activa de esta ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +35,17 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>Parámetros  
  `phThreadHandle`  
- [out] Un puntero a HTHREAD que es el identificador de la parte activa de este subproceso.  
+ enuncia Un puntero a un HTHREAD que es el identificador de la parte activa de este subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- El identificador puede cambiar cuando se ejecuta el proceso y puede ser diferente para las distintas partes del subproceso.  
+ El identificador puede cambiar a medida que se ejecuta el proceso y puede ser diferente para distintas partes del subproceso.  
   
- Este identificador pertenece a la API de depuración. El depurador debe duplicarlo antes de usarlo.  
+ Este identificador es propiedad de la API de depuración. El depurador debe duplicarlo antes de usarlo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

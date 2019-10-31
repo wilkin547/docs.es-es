@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b052aac7a71308486676aa688fd5ad655c2015f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096924"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next (Método)
-Obtiene el número de instancias de "ICorDebugModule" especificado por `celt` de la enumeración, comenzando en la posición actual.  
+Obtiene el número de instancias de "ICorDebugModule" especificadas por `celt` de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de `ICorDebugModule` instancias va a recuperar.  
+ de Número de instancias de `ICorDebugModule` que se van a recuperar.  
   
  `modules`  
- [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugModule` objeto.  
+ enuncia Matriz de punteros, cada uno de los cuales señala a un objeto `ICorDebugModule`.  
   
  `pceltFetched`  
- [out] Puntero al número de `ICorDebugModule` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
+ enuncia Puntero al número de instancias de `ICorDebugModule` devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

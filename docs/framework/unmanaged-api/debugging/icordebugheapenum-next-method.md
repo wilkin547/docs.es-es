@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aef821c10b8b44e54967245aaab3956c16ea15b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1beb69bfaad9acb9c269ad8becb81bea64edb6a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138467"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next (Método)
-Obtiene el número especificado de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instancias que contienen información acerca de los objetos del montón administrado.  
+Obtiene el número especificado de instancias de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) que contienen información sobre los objetos del montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,18 +39,18 @@ HRESULT Next(
  [in] Número de objetos que se van a recuperar.  
   
  objetos  
- [out] Una matriz de punteros, cada uno de los cuales señala a un [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objeto que proporciona información sobre un objeto en el montón administrado.  
+ enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) que proporciona información sobre un objeto en el montón administrado.  
   
  pceltFetched  
- [out] Un puntero al número de [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) los objetos devueltos realmente en `objects`. Este valor puede ser `null` si `celt` es 1.  
+ enuncia Puntero al número de objetos [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) realmente devueltos en `objects`. Este valor puede ser `null` si `celt` es 1.  
   
 ## <a name="remarks"></a>Comentarios  
  El campo `COR_HEAPOBJECT.type` es el identificador de una interfaz COM contada como referencia anidada. Esta referencia debe liberarla el llamador de `ICorDebugHeapEnum::Next`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

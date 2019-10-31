@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141724"
 ---
 # <a name="qualifierset_next-function"></a>QualifierSet_Next función)
 Recupera el siguiente calificador en una enumeración que se inició con una llamada a la función [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
@@ -53,19 +51,19 @@ de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/n
 [in] Reservado. Este parámetro debe ser 0.
 
 `pstrName`   
-enuncia Nombre del calificador. Si `null`es, este parámetro se omite; de `pstrName` lo contrario, no debe apuntar a un válido `BSTR` o se produce una fuga de memoria. Si no es null, la función siempre asigna un nuevo `BSTR` cuando devuelve. `WBEM_S_NO_ERROR`
+enuncia Nombre del calificador. Si `null`, se omite este parámetro; de lo contrario, `pstrName` no debe apuntar a un `BSTR` válido o se produce una fuga de memoria. Si no es null, la función siempre asigna un nuevo `BSTR` cuando devuelve `WBEM_S_NO_ERROR`.
 
 `pVal`   
-enuncia Cuando se realiza correctamente, el valor del calificador. Si se produce un error en `VARIANT` la función, `pVal` el señalado por no se modifica. Si este parámetro es `null`, se omite el parámetro.
+enuncia Cuando se realiza correctamente, el valor del calificador. Si se produce un error en la función, el `VARIANT` al que apunta `pVal` no se modifica. Si este parámetro es `null`, se omite el parámetro.
 
 `plFlavor`   
-enuncia Un puntero a un LONG que recibe el tipo de calificador. Si no se desea información de tipo, este parámetro puede `null`ser. 
+enuncia Un puntero a un LONG que recibe el tipo de calificador. Si no se desea información de tipo, este parámetro se puede `null`. 
 
 ## <a name="return-value"></a>Valor devuelto
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | El autor de la llamada no llama a [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
@@ -77,14 +75,14 @@ Los siguientes valores devueltos por esta función se definen en el archivo de e
 
 Esta función contiene una llamada al método [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) .
 
-Llame a la `QualifierSet_Next` función varias veces para enumerar todos los calificadores hasta que la `WBEM_S_NO_MORE_DATA`función devuelva. Para finalizar la enumeración pronto, llame a la función [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .
+Llame a la función `QualifierSet_Next` varias veces para enumerar todos los calificadores hasta que la función devuelva `WBEM_S_NO_MORE_DATA`. Para finalizar la enumeración pronto, llame a la función [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .
 
 El orden de los calificadores devueltos durante la enumeración es indefinido.
 
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

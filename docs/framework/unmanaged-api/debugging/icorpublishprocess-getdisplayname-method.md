@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 354e1b0dad942534068d5fb07071ed4ac695fb49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2750f082ddc40bbeee121116c3e877d037da84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764887"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140433"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName (Método)
-Obtiene la ruta de acceso completa del archivo ejecutable para el proceso que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
+Obtiene la ruta de acceso completa del archivo ejecutable para el proceso al que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,15 +41,15 @@ HRESULT GetDisplayName (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [out] El número de caracteres anchos que se devuelven en el `szName` matriz.  
+ enuncia Número de caracteres anchos devueltos en la matriz de `szName`.  
   
  `szName`  
- [out] Una matriz para almacenar el nombre, incluida la ruta de acceso completa del archivo ejecutable. El nombre termina en null.  
+ enuncia Una matriz para almacenar el nombre, incluida la ruta de acceso completa, del ejecutable. El nombre termina en NULL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorPub.idl, CorPub.h  
+ **Encabezado:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

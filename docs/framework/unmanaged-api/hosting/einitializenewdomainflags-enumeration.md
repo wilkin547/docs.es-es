@@ -12,17 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772412"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129413"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags (Enumeración)
-Permite que el host proporcionar el tiempo de ejecución con información sobre la inicialización de un dominio de aplicación.  
+Permite al host proporcionar información sobre la inicialización de un dominio de aplicación en el tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,20 +33,20 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|Ninguna marca.|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|Informa a common language runtime (CLR) que el host no realizará cambios en el estado de seguridad del dominio de aplicación en el <xref:System.AppDomainManager.InitializeNewDomain%2A> método.|  
+|`eInitializeNewDomainFlags_None`|Sin marcas.|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|Informa al Common Language Runtime (CLR) de que el host no realizará cambios en el estado de seguridad del dominio de aplicación en el método <xref:System.AppDomainManager.InitializeNewDomain%2A>.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [ICLRDomainManager](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) método toma un parámetro de tipo `EInitializeNewDomainFlags`.  
+ El método [ICLRDomainManager:: setappdomainmanagertype (](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) toma un parámetro de tipo `EInitializeNewDomainFlags`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

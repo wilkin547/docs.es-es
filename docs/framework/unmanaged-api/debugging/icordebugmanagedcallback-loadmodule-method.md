@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130723"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule (Método)
-Notifica al depurador que se ha cargado correctamente un módulo de common language runtime (CLR).  
+Notifica al depurador que un módulo de Common Language Runtime (CLR) se ha cargado correctamente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT LoadModule (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en la que se ha cargado el módulo.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en el que se ha cargado el módulo.  
   
  `pModule`  
- [in] Un puntero a un objeto ICorDebugModule que representa el módulo CLR.  
+ de Un puntero a un objeto ICorDebugModule que representa el módulo CLR.  
   
 ## <a name="remarks"></a>Comentarios  
- El `LoadModule` devolución de llamada proporciona un tiempo adecuado para examinar los metadatos para el módulo, establecer marcas de compilador de just-in-time (JIT), o habilitar o deshabilitar las devoluciones de llamada para el módulo de carga de clases.  
+ La devolución de llamada de `LoadModule` proporciona un tiempo adecuado para examinar los metadatos del módulo, establecer marcas de compilador Just-in-Time (JIT) o habilitar o deshabilitar las devoluciones de llamada de carga de clases para el módulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

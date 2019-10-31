@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122016"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC (Función)
-Convierte un valor HRESULT en un mensaje de error mediante el uso de la referencia cultural predeterminada del subproceso actual.  
+Convierte un valor HRESULT en un mensaje de error utilizando la referencia cultural predeterminada del subproceso actual.  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,21 +39,21 @@ HRESULT LoadStringRC (
   
 ## <a name="parameters"></a>Parámetros  
  `iResourceID`  
- [in] Un HRESULT.  
+ de Un valor HRESULT.  
   
  `szBuffer`  
- [out] Un búfer que contiene el mensaje de error tras completarse correctamente.  
+ enuncia Un búfer que contiene el mensaje de error tras una finalización correcta.  
   
  `iMax`  
- [in] El tamaño del búfer de mensaje de error.  
+ de Tamaño del búfer del mensaje de error.  
   
  `bQuiet`  
- [in] Pasa por alto.  
+ de Tendrán.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
+ Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los valores siguientes.  
   
-|Código devuelto|DESCRIPCIÓN|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szBuffer` es null o `iMax` es cero (0).|  
@@ -64,11 +62,11 @@ HRESULT LoadStringRC (
  Si el método no se completa correctamente, `szBuffer` contiene una cadena vacía.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll y Mscorwks.dll. Use MSCorEE.dll en lugar de Mscorwks.dll para asegurarse de que tener como destino la versión correcta de .NET Framework.  
+ **Biblioteca:** MSCorEE. dll y mscorwks. dll. Use MSCorEE. dll en lugar de mscorwks. dll para asegurarse de que tiene como destino la versión correcta del .NET Framework.  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

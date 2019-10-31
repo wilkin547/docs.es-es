@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dffc3d197b05bb71443aa60c101260daabadadd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136402"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress (Función)
-Obtiene la dirección de la función especificada a la que se exporta desde la última versión instalada de common language runtime (CLR).  
+Obtiene la dirección de la función especificada que se exporta de la última versión instalada del Common Language Runtime (CLR).  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,26 +37,26 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Parámetros  
  `pwszProcName`  
- [in] El nombre de la función.  
+ de Nombre de la función.  
   
  `ppv`  
- [out] La ubicación que recibe un puntero a la dirección de la función.  
+ enuncia La ubicación que recibe un puntero a la dirección de la función.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los siguientes valores definidos en CorError.h.  
+ Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los siguientes valores definidos en CorError. h.  
   
-|Código devuelto|DESCRIPCIÓN|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppv` no es válido.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La función no se exporta desde el tiempo de ejecución.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f3c4503-570e-44c1-ae6a-a3c6b840c732
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea2c72a91aaa09d1c2d0e0944b73beb9ea313d0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a736990188023031eb8df5a76dd16fcc289cfe20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134033"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>ICorDebugAppDomain::EnumerateSteppers (Método)
 Obtiene un enumerador para todos los steppers activos en el dominio de aplicación.  
@@ -37,12 +35,12 @@ HRESULT EnumerateSteppers (
   
 ## <a name="parameters"></a>Parámetros  
  `ppSteppers`  
- [out] Un puntero a la dirección de un objeto ICorDebugStepperEnum que es el enumerador para todos los steppers activos en el dominio de aplicación.  
+ enuncia Un puntero a la dirección de un objeto ICorDebugStepperEnum (que es el enumerador de todos los steppers activos en el dominio de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

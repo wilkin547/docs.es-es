@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ffddb8242b6627239a99bd9223b98762910b831
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753237"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137609"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType (Método)
-Obtiene un puntero a un nuevo objeto ICorDebugValue del tipo especificado, con un valor inicial de cero o null.  
+Obtiene un puntero a una nueva ICorDebugValue del tipo especificado, con un valor inicial de cero o null.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +36,20 @@ HRESULT CreateValueForType (
   
 ## <a name="parameters"></a>Parámetros  
  `pType`  
- [in] Puntero a un objeto ICorDebugType que representa el tipo.  
+ de Puntero a un objeto ICorDebugType que representa el tipo.  
   
  `ppValue`  
- [out] Puntero a la dirección de un `ICorDebugValue` objeto que representa el valor.  
+ enuncia Puntero a la dirección de un objeto `ICorDebugValue` que representa el valor.  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateValueForType` generaliza [ICorDebugEval](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , ya que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`. Es el único propósito de este método generar un valor que se puede pasar a una evaluación de función.  
+ `CreateValueForType` generaliza a [ICorDebugEval:: CreateValue (](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) permitiéndole especificar un tipo de objeto arbitrario, incluidos los tipos construidos como `List<int>`. El único propósito de este método es generar un valor que se pueda pasar a una evaluación de función.  
   
- El tipo debe ser una clase o un tipo de valor. No se puede usar este método para crear valores de la matriz o los valores de cadena.  
+ El tipo debe ser una clase o un tipo de valor. No se puede usar este método para crear valores de matriz o valores de cadena.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

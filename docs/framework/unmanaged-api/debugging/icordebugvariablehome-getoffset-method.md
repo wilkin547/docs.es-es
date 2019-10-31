@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugVariableHome::GetOffset
+title: 'ICorDebugVariableHome:: GetOffset (método)'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774530"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125097"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>Método ICorDebugVariableHome::GetOffset
-Obtiene el desplazamiento desde el registro de base de una variable.  
+# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome:: GetOffset (método)
+Obtiene el desplazamiento del registro base para una variable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `pOffset`  
- [out] El desplazamiento desde el registro de base.  
+ enuncia Desplazamiento del registro base.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El método devuelve los valores siguientes:  
+ El método devuelve los siguientes valores:  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|`S_OK`|La variable está en una ubicación de memoria relativa del registro.|  
-|`E_FAIL`|La variable no está en una ubicación de memoria relativa del registro.|  
+|`S_OK`|La variable está en una ubicación de memoria relativa de registro.|  
+|`E_FAIL`|La variable no está en una ubicación de memoria relativa de registro.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a15e3ab0d50763ad53b1caa921035239868fec1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f5b413ffbbc8fccbea38f23d8c87d40e010dd37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761234"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130616"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols (Método)
-Notifica al depurador que han cambiado los símbolos para un módulo de common language runtime.  
+Notifica al depurador que los símbolos para un módulo de Common Language Runtime han cambiado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +37,25 @@ HRESULT UpdateModuleSymbols (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el módulo en el que se han cambiado los símbolos.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el módulo en el que los símbolos han cambiado.  
   
  `pModule`  
- [in] Un puntero a un objeto ICorDebugModule que representa el módulo en el que se han cambiado los símbolos.  
+ de Un puntero a un objeto ICorDebugModule que representa el módulo en el que los símbolos han cambiado.  
   
  `pSymbolStream`  
- [in] Un puntero a un COM Win32 `IStream` objeto que contiene los símbolos modificados.  
+ de Puntero a un objeto de `IStream` COM de Win32 que contiene los símbolos modificados.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método proporciona una oportunidad para actualizar la vista del depurador de símbolos de un módulo mediante una llamada [ISymUnmanagedReader:: UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) o [ISymUnmanagedReader:: ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
+ Este método proporciona una oportunidad para actualizar la vista del depurador de los símbolos de un módulo llamando a [ISymUnmanagedReader:: UpdateSymbolStore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) o [ISymUnmanagedReader:: replacesymbolstore (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
- Esta devolución de llamada puede aparecer varias veces para el mismo módulo.  
+ Esta devolución de llamada puede producirse varias veces para el mismo módulo.  
   
- Un depurador debe intentar enlazar puntos de interrupción de nivel de código fuente independientes.  
+ Un depurador debe intentar enlazar puntos de interrupción sin enlazar en el nivel de origen.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

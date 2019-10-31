@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761899"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130727"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass (Método)
 Notifica al depurador que se ha cargado una clase.  
@@ -38,20 +36,20 @@ HRESULT LoadClass (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppDomain`  
- [in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en la que se ha cargado la clase.  
+ de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en el que se ha cargado la clase.  
   
  `c`  
- [in] Un puntero a un objeto ICorDebugClass que representa la clase.  
+ de Un puntero a un objeto ICorDebugClass que representa la clase.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta devolución de llamada solo se produce si se ha habilitado la carga de clases para el módulo que contiene la clase. Carga de las clases siempre está habilitada para los módulos dinámicos.  
+ Esta devolución de llamada solo se produce si se ha habilitado la carga de clases para el módulo que contiene la clase. La carga de clases está siempre habilitada para los módulos dinámicos.  
   
- El `LoadClass` devolución de llamada proporciona un tiempo adecuado para enlazar los puntos de interrupción a las clases recién generadas en módulos dinámicos.  
+ La devolución de llamada de `LoadClass` proporciona un tiempo adecuado para enlazar puntos de interrupción a clases recién generadas en módulos dinámicos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

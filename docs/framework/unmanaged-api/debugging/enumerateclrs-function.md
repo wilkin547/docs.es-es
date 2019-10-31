@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122974"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs (Función)
 Proporciona un mecanismo para enumerar los CLR de un proceso.  
@@ -70,15 +68,15 @@ HRESULT EnumerateCLRs (
   
  En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
   
- Esta función asigna la memoria para `ppHandleArrayOut` y `ppStringArrayOut`. Para liberar la memoria asignada, debe llamar a [CloseCLREnumeration (función)](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ Esta función asigna la memoria para `ppHandleArrayOut` y `ppStringArrayOut`. Para liberar la memoria asignada, debe llamar a la [función closeclrenumeration (](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
   
  Se puede llamar a esta función con ambos parámetros de matriz establecidos en NULL para devolver el número de los CLR en el proceso de destino. A partir de este número, un llamador puede deducir el tamaño del búfer que se creará: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** dbgshim.h  
+ **Encabezado:** dbgshim. h  
   
- **Biblioteca:** dbgshim.dll  
+ **Biblioteca:** dbgshim. dll  
   
- **Versiones de .NET framework:** 3.5 SP1
+ **.NET Framework versiones:** 3,5 SP1

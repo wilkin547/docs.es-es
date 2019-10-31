@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b56ffab8fb6a9ef70b51421f9cdc5535111e527
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120479"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication (Método)
 Se usa en escenarios de implementación ClickOnce basados en manifiesto para especificar la aplicación que se va a activar en un dominio nuevo. Para obtener más información acerca de estos escenarios, consulte [seguridad e implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -42,16 +40,16 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>Parámetros  
  `pwzAppFullName`  
- de Nombre completo de la aplicación, tal y como se <xref:System.ApplicationIdentity>define para.  
+ de Nombre completo de la aplicación, tal y como se define para <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- de Número de cadenas contenidas en `ppwzManifestPaths` la matriz.  
+ de Número de cadenas contenidas en la matriz de `ppwzManifestPaths`.  
   
  `ppwzManifestPaths`  
  [in] Opcional. Matriz de cadenas que contiene las rutas de acceso de manifiesto para la aplicación.  
   
  `dwActivationData`  
- de Número de cadenas contenidas en `ppwzActivationData` la matriz.  
+ de Número de cadenas contenidas en la matriz de `ppwzActivationData`.  
   
  `ppwzActivationData`  
  [in] Opcional. Una matriz de cadenas que contiene los datos de activación de la aplicación, como la parte de la cadena de consulta de la dirección URL de las aplicaciones implementadas a través de la Web.  
@@ -61,9 +59,9 @@ HRESULT ExecuteApplication(
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`se devolvió correctamente.|  
+|S_OK|`ExecuteApplication` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -71,19 +69,19 @@ HRESULT ExecuteApplication(
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ExecuteApplication`se utiliza para activar las aplicaciones ClickOnce en un dominio de aplicación recién creado.  
+ `ExecuteApplication` se utiliza para activar las aplicaciones ClickOnce en un dominio de aplicación recién creado.  
   
- El `pReturnValue` parámetro de salida se establece en el valor devuelto por la aplicación. Si proporciona un valor null para `pReturnValue`, `ExecuteApplication` no producirá un error, pero no devolverá ningún valor.  
+ El parámetro de salida `pReturnValue` se establece en el valor devuelto por la aplicación. Si proporciona un valor null para `pReturnValue`, `ExecuteApplication` no producirá un error, pero no devolverá ningún valor.  
   
 > [!IMPORTANT]
-> No llame al método [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) antes de llamar `ExecuteApplication` al método para activar una aplicación basada en manifiesto. Si se `Start` llama primero al método, se `ExecuteApplication` producirá un error en la llamada al método.  
+> No llame al método [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) antes de llamar al método `ExecuteApplication` para activar una aplicación basada en manifiesto. Si se llama primero al método `Start`, se producirá un error en la llamada al método `ExecuteApplication`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -94,4 +92,4 @@ HRESULT ExecuteApplication(
 - <xref:System.ApplicationIdentity>
 - [ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [SetAppDomainManager (método)](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
-- [Tutorial: Descarga de ensamblados a petición con la API de implementación ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Tutorial: Descargar ensamblados a petición con la API de implementación ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

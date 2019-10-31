@@ -2,17 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db065357e22ac576600a3ca61dda0882b9206a86
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129163"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)
-Permite definir la información de método asincrónico opcional para cada símbolo de método. Utilice siempre con un método abierto; es decir, entre las llamadas a la [OpenMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) y [CloseMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  
+Permite definir información de método asincrónico opcional para cada símbolo de método. Siempre se usa con un método abierto; es decir, entre las llamadas al [método openmethod (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) y al [método CloseMethod (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -25,12 +23,12 @@ Permite definir la información de método asincrónico opcional para cada símb
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[DefineAsyncStepInfo (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|Definir un grupo de async await operaciones en el método actual.<br /><br /> Cada desplazamiento yield coincide con la instrucción de devolución de una instrucción await, que identifica un rendimiento potencial. Cada `breakpointMethod` / `breakpointOffset` par identifica dónde se reanudará la operación asincrónica; puede estar en un método diferente.|  
-|[DefineCatchHandlerILOffset (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|Establece el IL de desplazamiento para el controlador catch generado por el compilador que encapsula un método asincrónico.<br /><br /> Se usa el desplazamiento IL de catch generado por el depurador para controlar la captura como si fuera código de no usuario, aunque puede producir en un método de código de usuario. En concreto, se utiliza en respuesta a un **CatchHandlerFound** eventos de excepción.|  
-|[DefineKickoffMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Establece el método inicial que inicia la operación asincrónica.|  
+|[DefineAsyncStepInfo (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|Defina un grupo de operaciones de espera asincrónica en el método actual.<br /><br /> Cada desplazamiento yield coincide con una instrucción return de Await, que identifica un posible rendimiento. Cada `breakpointMethod`/par de `breakpointOffset` identifica dónde se reanudará la operación asincrónica; puede estar en un método diferente.|  
+|[DefineCatchHandlerILOffset (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|Establece el desplazamiento IL para el controlador Catch generado por el compilador que ajusta un método asincrónico.<br /><br /> El depurador usa el desplazamiento IL de la captura generada para controlar la detección como si se tratara de código que no es de usuario, aunque puede producirse en un método de código de usuario. En concreto, se utiliza en respuesta a un evento de excepción **CatchHandlerFound** .|  
+|[DefineKickoffMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Establece el método de inicio que inicia la operación asincrónica.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

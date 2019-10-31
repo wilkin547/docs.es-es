@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb8cfb2d1c5902ecd0d5858ef21ba48b65b12506
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964367"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125336"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate (Método)
 Finaliza el proceso con el código de salida especificado.  
   
 > [!NOTE]
-> Este método es un contenedor para la función `TerminateProcess` de Win32. Por lo `Terminate` tanto, utiliza el código de salida del mismo modo que `TerminateProcess` la función de Win32 lo utiliza.  
+> Este método es un contenedor para la función `TerminateProcess` de Win32. Por lo tanto, `Terminate` utiliza el código de salida de la misma forma que la función `TerminateProcess` de Win32 la usa.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,17 +41,17 @@ HRESULT Terminate (
  de Un valor numérico que es el código de salida. Los valores numéricos válidos se definen en Winbase. h.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el proceso se detiene cuando `Terminate` se llama a, el proceso debe continuar usando el método [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para que el depurador reciba la confirmación de la finalización a través de [ICorDebugManagedCallback:: ](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)La devolución de llamada ExitProcess o [ICorDebugManagedCallback:: exitappdomain (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) .  
+ Si el proceso se detiene cuando se llama a `Terminate`, el proceso debe continuar usando el método [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para que el depurador reciba la confirmación de la terminación a través de [ICorDebugManagedCallback:: ](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)La devolución de llamada ExitProcess o [ICorDebugManagedCallback:: exitappdomain (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) .  
   
 > [!NOTE]
-> Este método no está implementado por un dominio de aplicación. Es decir, no se implementa en el <xref:System.AppDomain> nivel.  
+> Este método no está implementado por un dominio de aplicación. Es decir, no se implementa en el nivel de <xref:System.AppDomain>.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

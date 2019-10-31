@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128809"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext (Método)
-Obtiene el contexto del subproceso dado en este proceso.  
+Obtiene el contexto para el subproceso dado en este proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +37,25 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parámetros  
  `threadID`  
- [in] El identificador del subproceso que se va a recuperar el contexto.  
+ de IDENTIFICADOR del subproceso para el que se va a recuperar el contexto.  
   
  `contextSize`  
  [in] Tamaño de la matriz `context`.  
   
  `context`  
- [in, out] Una matriz de bytes que describen el contexto del subproceso.  
+ [in, out] Matriz de bytes que describen el contexto del subproceso.  
   
- El contexto especifica la arquitectura del procesador en el que se está ejecutando el subproceso.  
+ El contexto especifica la arquitectura del procesador en el que se ejecuta el subproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- El depurador debe llamar a este método en lugar de Win32 `GetThreadContext` método, porque el subproceso esté realmente en un estado "secuestrado", en el que se ha cambiado temporalmente su contexto. Este método debe usarse solo cuando un subproceso está en código nativo. Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) para subprocesos en código administrado.  
+ El depurador debe llamar a este método en lugar de al método `GetThreadContext` de Win32, porque el subproceso puede estar realmente en un estado "secuestrado", en el que su contexto ha cambiado temporalmente. Este método solo se debe usar cuando un subproceso está en código nativo. Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) para subprocesos en código administrado.  
   
- Los datos devueltos están una estructura de contexto para la plataforma actual. Al igual que con Win32 `GetThreadContext` método, el llamador debe inicializar el `context` parámetro antes de llamar a este método.  
+ Los datos devueltos son una estructura de contexto para la plataforma actual. Al igual que con el método de `GetThreadContext` de Win32, el llamador debe inicializar el parámetro `context` antes de llamar a este método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

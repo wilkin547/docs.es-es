@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119218"
 ---
 # <a name="app-settings-schema"></a>Esquema de configuración de aplicaciones
 
@@ -26,7 +26,7 @@ Contiene valores de configuración de aplicación personalizados, como rutas de 
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
-| Elemento | DESCRIPCIÓN |
+| Elemento | Descripción |
 | ------- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene etiquetas **\<add>** , **\<clear>** y **\<remove>** para controlar la configuración de aplicaciones. Tiene un atributo opcional **file**. |
 | [ **\<add>** ](add-element-for-appsettings.md) | Define un valor de configuración. Elemento secundario de **\<appSettings>** . Requiere atributos **key** y **value**. |

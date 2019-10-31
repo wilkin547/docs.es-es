@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe94203d315c32b62a191adf294a9c1310fe28e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b988b110100cd159b8e262573df409847d635c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738263"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134123"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess (Método)
-Asocia al depurador a un proceso existente.  
+Asocia el depurador a un proceso existente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +37,21 @@ HRESULT DebugActiveProcess (
   
 ## <a name="parameters"></a>Parámetros  
  `id`  
- [in] El identificador del proceso al que va a adjuntar el depurador.  
+ de IDENTIFICADOR del proceso al que se va a adjuntar el depurador.  
   
  `win32Attach`  
- [in] Valor booleano que se establece en `true` si el depurador debe comportarse como el depurador de Win32 para el proceso y enviar las devoluciones de llamada no administradas; en caso contrario, `false`.  
+ de Valor booleano que se establece en `true` si el depurador debe comportarse como el depurador de Win32 para el proceso y enviar las devoluciones de llamada no administradas; de lo contrario, `false`.  
   
  `ppProcess`  
- [out] Un puntero a la dirección de un objeto "ICorDebugProcess" que representa el proceso al que se ha vinculado el depurador.  
+ enuncia Puntero a la dirección de un objeto "ICorDebugProcess" que representa el proceso al que se ha adjuntado el depurador.  
   
 ## <a name="remarks"></a>Comentarios  
- No se admite la depuración de interoperabilidad en plataformas Win9x y no x86, como las plataformas basadas en IA-64 y basado en AMD64.  
+ No se admite la depuración de interoperabilidad en las plataformas Win9x y no x86, como las plataformas basadas en IA-64 y AMD64.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

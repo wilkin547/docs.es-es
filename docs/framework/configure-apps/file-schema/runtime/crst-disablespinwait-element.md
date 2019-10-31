@@ -5,22 +5,20 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252724"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117638"
 ---
-# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait >, elemento
+# <a name="crst_disablespinwait-element"></a>\<elemento > Crst_DisableSpinWait
 
 Especifica si se va a deshabilitar la espera de giro para una sección crítica cuando esté habilitada.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> Crst_DisableSpinWait**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,13 +32,13 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|**enabled**|Especifica si está deshabilitada la espera de girar para las secciones críticas cuando están configuradas.|  
+|**activó**|Especifica si está deshabilitada la espera de girar para las secciones críticas cuando están configuradas.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Deshabilitar el giro en espera cuando no se puede adquirir una sección crítica.|  
 |0|No deshabilite la espera de giro cuando no se pueda adquirir una sección crítica. Este es el valor predeterminado.|  
@@ -50,7 +48,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información acerca de diversas opciones de configuración en tiempo de ejecución.|  

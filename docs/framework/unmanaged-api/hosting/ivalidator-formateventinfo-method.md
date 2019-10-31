@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31329a8674a9991a3f306eeff44ee3437ad64a5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123300"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo (Método)
 Obtiene el mensaje de error correspondiente al error de validación especificado.  
@@ -41,25 +39,25 @@ HRESULT FormatEventInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `hVECode`  
- [in] El valor HRESULT que se pasó al controlador de errores de validación.  
+ de Valor HRESULT que se pasó al controlador de errores de validación.  
   
  `Context`  
- [in] Un `VEContext` instancia que contiene información contextual sobre el error de validación.  
+ de `VEContext` instancia de que contiene información de contexto sobre el error de validación.  
   
  `msg`  
- [in, out] Una cadena que contiene el mensaje de error devuelto.  
+ [in, out] Cadena que contiene el mensaje de error devuelto.  
   
  `ulMaxLength`  
- [in] La longitud máxima del mensaje de error.  
+ de La longitud máxima del mensaje de error.  
   
  `psa`  
- [in] Una matriz segura que contiene parámetros adicionales que describe el error.  
+ de Matriz segura que contiene los parámetros adicionales que describen el error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: IValidator.idl, IValidator.h  
+ **Encabezado:** IValidator. idl, IValidator. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

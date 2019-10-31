@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyHandle function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5af003f0295e0b403727f9af6b03ab81c4b8bccb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798538"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101868"
 ---
 # <a name="getpropertyhandle-function"></a>Función GetPropertyHandle
 
@@ -53,7 +51,7 @@ de Puntero a una instancia de [IWbemObjectAccess](/windows/desktop/api/wbemcli/n
 de Una cadena terminada en NULL de caracteres codificados en UTF16 que contiene el nombre de la propiedad.
 
 `pType`\
-enuncia Un puntero a un [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) miembro de enumeración que representa el tipo CIM de la propiedad.
+enuncia Un puntero a un miembro de enumeración de [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que representa el tipo CIM de la propiedad.
 
 `pHandle`\
 enuncia Un puntero a un entero que contiene el identificador de propiedad.
@@ -62,7 +60,7 @@ enuncia Un puntero a un entero que contiene el identificador de propiedad.
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | No se encontró el nombre de propiedad especificado. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
@@ -75,13 +73,13 @@ Esta función contiene una llamada al método [IWbemClassObject:: GetPropertyHan
 
 Puede usar este identificador para identificar propiedades al utilizar métodos [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) para leer o escribir valores de propiedad.
 
-Los identificadores se pueden recuperar para las propiedades de todos los `CIM_OBJECT` tipos `CIM_ARRAY`de datos distintos de y. Los identificadores devueltos funcionan en todas las instancias de una clase.
+Se pueden recuperar identificadores para las propiedades de todos los tipos de datos distintos de `CIM_OBJECT` y `CIM_ARRAY`. Los identificadores devueltos funcionan en todas las instancias de una clase.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: WMINet_Utils.idl
+**Encabezado:** WMINet_Utils. idl
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

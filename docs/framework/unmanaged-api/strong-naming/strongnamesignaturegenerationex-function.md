@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89398c221dcf9d6f89027f15da4062bc7ed67e3f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e8f63a6379af8f2b7b88c511840622d49d65d587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141574"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx (Función)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -54,7 +52,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
  Si `pbKeyBlob` no es null, se supone que el par de claves está incluido en el objeto binario grande (BLOB) de clave.  
   
  `pbKeyBlob`  
- de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor `wszKeyContainer` de claves especificado por contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `wszKeyContainer` contiene el par de claves.  
   
  `cbKeyBlob`  
  de Tamaño, en bytes, de `pbKeyBlob`.  
@@ -70,30 +68,30 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  de Uno o varios de los siguientes valores:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001): vuelve a calcular todos los valores hash para los módulos vinculados.  
+- `SN_SIGN_ALL_FILES` (0x00000001): vuelve a calcular todos los valores hash para los módulos vinculados.  
   
-- `SN_TEST_SIGN`(0x00000002): prueba-firma del ensamblado.  
+- `SN_TEST_SIGN` (0x00000002): prueba-firma del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
+ Especifique NULL en `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
  La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
   
- Si `SN_SIGN_ALL_FILES` se especifica, pero no se incluye una clave pública `pbKeyBlob` (y `wszFilePath` son NULL), se vuelven a calcular los valores hash de los módulos vinculados, pero no se vuelve a firmar el ensamblado.  
+ Si se especifica `SN_SIGN_ALL_FILES` pero no se incluye una clave pública (tanto `pbKeyBlob` como `wszFilePath` son NULL), se vuelven a calcular los valores hash de los módulos vinculados, pero no se vuelve a firmar el ensamblado.  
   
- Si `SN_TEST_SIGN` se especifica, el encabezado Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
+ Si se especifica `SN_TEST_SIGN`, el encabezado de Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
   
- Si la `StrongNameSignatureGenerationEx` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameSignatureGenerationEx` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

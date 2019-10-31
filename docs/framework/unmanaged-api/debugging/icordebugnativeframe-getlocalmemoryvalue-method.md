@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b600b3a2-9908-42d8-8093-ab6f39e9a2c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8e5a1813a81a84eac612a53964d39b48f0c536
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cee095003c136142052b8f946fa8227927c80ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746219"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096867"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue (Método)
-Obtiene el valor de un argumento o variable local que se almacena en la ubicación de memoria especificada para este marco nativo.  
+Obtiene el valor de un argumento o una variable local que está almacenado en la ubicación de memoria especificada para este marco nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,21 +38,21 @@ HRESULT GetLocalMemoryValue (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [in] Un `CORDB_ADDRESS` valor que especifica la ubicación de memoria que contiene el valor.  
+ de `CORDB_ADDRESS` valor que especifica la ubicación de memoria que contiene el valor.  
   
  `cbSigBlob`  
- [in] Un entero que especifica el tamaño de la firma de metadatos binaria que hace referencia el `pvSigBlob` parámetro.  
+ de Un entero que especifica el tamaño de la firma de metadatos binarios a la que hace referencia el parámetro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Un `PCCOR_SIGNATURE` valor al que apunta a la firma de metadatos binaria del tipo de valor.  
+ de Un valor `PCCOR_SIGNATURE` que apunta a la firma de metadatos binarios del tipo del valor.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un objeto de "ICorDebugValue" que representa el valor recuperado que se almacena en la ubicación de memoria especificada.  
+ enuncia Puntero a la dirección de un objeto "ICorDebugValue" que representa el valor recuperado que se almacena en la ubicación de memoria especificada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

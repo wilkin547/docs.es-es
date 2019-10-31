@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136337"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion (Función)
-Obtiene la información de versión de common language runtime (CLR) del archivo especificado, utilizando el búfer especificado.  
+Obtiene la información de la versión de Common Language Runtime (CLR) del archivo especificado, utilizando el búfer especificado.  
   
- Esta función está desusada en .NET Framework 4.  
+ Esta función está en desuso en el .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,21 +39,21 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parámetros  
  `szFilename`  
- [in] La ruta de acceso del archivo se va a examinar.  
+ de Ruta de acceso del archivo que se va a examinar.  
   
  `szBuffer`  
- [in, out] El búfer asignado para la información de versión que se devuelve.  
+ [in, out] Búfer asignado para la información de versión que se devuelve.  
   
  `cchBuffer`  
- [in] El tamaño, en caracteres anchos, de `szBuffer`.  
+ de Tamaño, en caracteres anchos, de `szBuffer`.  
   
  `dwLength`  
- [out] El tamaño, en bytes, del devuelto `szBuffer`.  
+ enuncia Tamaño, en bytes, del `szBuffer`devuelto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

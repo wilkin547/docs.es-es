@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4937c86be434ef5e97ec72763b7c53d5435bcaf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9339bb974c261e62502c760dfaf45651573cbe1a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136372"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable (Método)
-Indica si el tiempo de ejecución asociado a esta interfaz se puede cargar en el proceso actual, teniendo en cuenta otros tiempos de ejecución que ya es posible que cargarán en el proceso.  
+Indica si el tiempo de ejecución asociado a esta interfaz se puede cargar en el proceso actual, teniendo en cuenta otros tiempos de ejecución que podrían haberse cargado en el proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,27 +34,27 @@ HRESULT IsLoadable(
   
 ## <a name="parameters"></a>Parámetros  
  `pbLoadable`  
- [out] `true` si este tiempo de ejecución se puede cargar en el proceso actual; en caso contrario, `false`.  
+ [out] `true` si este tiempo de ejecución se podría cargar en el proceso actual; de lo contrario, `false`.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pbLoadable` es null.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si otro tiempo de ejecución ya está cargado en el proceso y el tiempo de ejecución asociado a esta interfaz se puede cargar para su ejecución en paralelo en proceso `pbLoadable` devuelve `true`. Si los dos tiempos de ejecución no pueden ejecutar en paralelo en proceso, `pbLoadable` devuelve `false`. Por ejemplo, puede ejecutar common language runtime (CLR) versión 4 side-by-side en el mismo proceso con la versión 2.0 de CLR o CLR versión 1.1. Sin embargo, CLR versión 1.1 y versión 2.0 de CLR no pueden ejecutar en paralelo en proceso.  
+ Si ya se ha cargado otro Runtime en el proceso y el tiempo de ejecución asociado a esta interfaz se puede cargar para la ejecución en paralelo en proceso, `pbLoadable` devuelve `true`. Si los dos tiempos de ejecución no se pueden ejecutar en paralelo, `pbLoadable` devuelve `false`. Por ejemplo, la versión 4 de Common Language Runtime (CLR) se puede ejecutar en paralelo en el mismo proceso con la versión de CLR 2,0 o la versión 1,1 de CLR. Sin embargo, la versión de CLR 1,1 y la versión de CLR 2,0 no se pueden ejecutar en paralelo.  
   
- Si no se cargan tiempos de ejecución en el proceso, este método siempre devuelve `true`.  
+ Si no se carga ningún Runtime en el proceso, este método siempre devuelve `true`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado:** Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

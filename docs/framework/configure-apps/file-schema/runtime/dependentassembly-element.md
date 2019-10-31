@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117595"
 ---
-# <a name="dependentassembly-element"></a>\<Elemento > de dependentAssembly
-Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dependentAssembly` elemento para cada ensamblado.  
+# <a name="dependentassembly-element"></a>\<elemento > dependentAssembly
+Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un elemento `dependentAssembly` para cada ensamblado.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**dependentAssembly >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,16 +39,16 @@ Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dep
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Contiene información de identificación sobre el ensamblado. Este elemento debe estar incluido en cada `dependentAssembly` elemento.|  
+|`assemblyIdentity`|Contiene información de identificación sobre el ensamblado. Este elemento debe estar incluido en cada elemento `dependentAssembly`.|  
 |`codeBase`|Especifica dónde puede encontrar el tiempo de ejecución un ensamblado compartido si no está instalado en el equipo.|  
 |`bindingRedirect`|Redirige una versión de ensamblado a otra versión.|  
 |`publisherPolicy`|Especifica si el tiempo de ejecución aplica la Directiva de edición para este ensamblado.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  

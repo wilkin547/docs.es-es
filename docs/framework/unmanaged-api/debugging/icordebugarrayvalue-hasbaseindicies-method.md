@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c488ca3a77f2c2b2a40c6143989cd86adf071787
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 418ebb51df3f2d86011ee2e77022c3ee5c7ac0b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088232"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>ICorDebugArrayValue::HasBaseIndicies (Método)
-Obtiene un valor que indica si las dimensiones de esta matriz tienen un índice base distinto de cero.  
+Obtiene un valor que indica si alguna dimensión de esta matriz tiene un índice base distinto de cero.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT HasBaseIndicies (
   
 ## <a name="parameters"></a>Parámetros  
  `pbHasBaseIndicies`  
- [out] Un puntero a un valor booleano que es `true` si uno o más dimensiones de esta `ICorDebugArrayValue` objeto tiene un índice base distinto de cero; en caso contrario, es el valor booleano `false`.  
+ enuncia Un puntero a un valor booleano que es `true` si una o más dimensiones de este objeto `ICorDebugArrayValue` tienen un índice base distinto de cero; de lo contrario, el valor booleano es `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

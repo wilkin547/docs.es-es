@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738473"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091156"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual (Método)
-Llamado por los servicios de acceso a datos de common language runtime (CLR) para asignar memoria en el espacio de direcciones de este proceso de destino.  
+Los servicios de acceso a datos de Common Language Runtime (CLR) llaman a esta función para asignar memoria en el espacio de direcciones de este proceso de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,29 +39,29 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>Parámetros  
  `addr`  
- [in] Un `CLRDATA_ADDRESS` valor que especifica la dirección inicial solicitada de la asignación de memoria.  
+ de `CLRDATA_ADDRESS` valor que especifica la dirección de inicio solicitada de la memoria que se va a asignar.  
   
  `size`  
- [in] El tamaño, en bytes, de la asignación de memoria.  
+ de Tamaño, en bytes, de la memoria que se va a asignar.  
   
  `typeFlags`  
- [in] Marcas que controlan la asignación de memoria. Consulte Win32 `VirtualAlloc` función.  
+ de Marcas que controlan la asignación de memoria. Vea la función `VirtualAlloc` de Win32.  
   
  `protectFlags`  
- [in] Los atributos de protección de la memoria asignada. Consulte Win32 `VirtualAlloc` función.  
+ de Atributos de protección de la memoria asignada. Vea la función `VirtualAlloc` de Win32.  
   
  `virt`  
- [out] Un puntero a un `CLRDATA_ADDRESS` valor que especifica la dirección inicial real de la memoria asignada.  
+ enuncia Un puntero a un valor de `CLRDATA_ADDRESS` que especifica la dirección inicial real de la memoria asignada.  
   
 ## <a name="remarks"></a>Comentarios  
- El `AllocVirtual` método actúa como un contenedor lógico para Win32 `VirtualAlloc` función.  
+ El método `AllocVirtual` actúa como contenedor lógico para la función de `VirtualAlloc` de Win32.  
   
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e59fda62-77d5-4e37-89cb-ce7ae4627975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b86828e01fb00b12feff2ed451793c240e16e240
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796593"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134387"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty (Método)
 Obtiene un puntero a la propiedad a la que hace referencia el identificador de propiedad especificado.  
@@ -48,9 +46,9 @@ HRESULT GetProperty (
  [in, out] Tamaño, en bytes, de `pvProperty`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

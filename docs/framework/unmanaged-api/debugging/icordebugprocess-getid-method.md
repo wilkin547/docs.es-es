@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ebdf0dd2457cd10e31ff71c32b1c09d0e014431
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae0c23e3d48df6add8951a6d90029185a99bb323
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765987"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128827"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID (Método)
-Obtiene el identificador de sistema operativo (SO) del proceso.  
+Obtiene el identificador del sistema operativo (SO) del proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,12 +33,12 @@ HRESULT GetID([out] DWORD *pdwProcessId);
   
 ## <a name="parameters"></a>Parámetros  
  `pdwProcessId`  
- [out] El identificador único del proceso.  
+ enuncia IDENTIFICADOR único del proceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

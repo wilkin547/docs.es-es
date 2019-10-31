@@ -7,14 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bb97d545da422a129ece1f432b3120e1a994c453
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956926"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141200"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Compatibilidad bidireccional en las aplicaciones de Windows Forms
 Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan idiomas bidireccionales (de derecha a izquierda), como el árabe y el hebreo. Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.
@@ -23,7 +21,7 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan 
  La configuración de referencia cultural e idioma de la interfaz de usuario determina cómo utiliza una aplicación las fechas, las horas, las monedas y otros datos. La compatibilidad con las referencias culturales y los idiomas de la interfaz de usuario es la misma con los idiomas bidireccionales que con los demás idiomas. Para obtener más información, vea [clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Propiedades RightToLeft y RightToLeftLayout
- La clase base <xref:System.Windows.Forms.Control>, de la que derivan los formularios, incluye una propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> que puede establecer para cambiar el orden de lectura de un formulario y sus controles. Si establece la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> del formulario, los controles predeterminados del formulario heredarán este ajuste. Sin embargo, también puede establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> individualmente en la mayoría de los controles. Consulte también [Cómo: Muestra el texto de derecha a izquierda en Windows Forms para la globalización @ no__t-0.
+ La clase base <xref:System.Windows.Forms.Control>, de la que derivan los formularios, incluye una propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> que puede establecer para cambiar el orden de lectura de un formulario y sus controles. Si establece la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> del formulario, los controles predeterminados del formulario heredarán este ajuste. Sin embargo, también puede establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> individualmente en la mayoría de los controles. Vea también [Cómo: Mostrar texto de derecha a izquierda en Windows Forms para la globalización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
 
  El efecto de la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> puede diferir de un control a otro. En algunos controles, la propiedad solo establece el orden de lectura, como en los controles <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ToolTip>. En otros controles, la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> cambia el orden de lectura y el diseño. Esto incluye los controles <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.CheckBox>. Otros controles requieren que se aplique la propiedad <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> para reflejar su diseño de derecha a izquierda. En la tabla siguiente, se proporcionan detalles sobre cómo las propiedades <xref:System.Windows.Forms.Control.RightToLeft%2A> y <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> afectan a los controles individuales de los formularios Windows Forms.
 
@@ -54,7 +52,7 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admitan 
 |<xref:System.Windows.Forms.MonthCalendar>|No se ve afectada, depende del idioma del sistema operativo|Refleja el control|Sí|
 |<xref:System.Windows.Forms.NotifyIcon>|No compatibles|No compatibles|No|
 |<xref:System.Windows.Forms.NumericUpDown>|Los botones de arriba y abajo se alinean a la izquierda|Ningún efecto|No|
-|<xref:System.Windows.Forms.OpenFileDialog>|En los sistemas operativos de derecha a izquierda, el establecimiento de la propiedad <xref:System.Windows.Forms.Control.RightToLeft> del formulario contenedor en <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localiza el cuadro de diálogo. |Ningún efecto|No|
+|<xref:System.Windows.Forms.OpenFileDialog>|En los sistemas operativos de derecha a izquierda, al establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft> del formulario contenedor en <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> se localiza el cuadro de diálogo |Ningún efecto|No|
 |<xref:System.Windows.Forms.PageSetupDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|
 |<xref:System.Windows.Forms.Panel>|Los controles secundarios pueden heredar esta propiedad|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro del control para admitir la disposición de derecha a izquierda|Sí|
 |<xref:System.Windows.Forms.PictureBox>|No compatibles|Ningún efecto|No|

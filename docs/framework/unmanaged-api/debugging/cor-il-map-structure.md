@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274052"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132337"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP (Estructura)
 Especifica los cambios en el desplazamiento relativo de una función.  
@@ -42,10 +40,10 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|El desplazamiento anterior del lenguaje intermedio de Microsoft (MSIL) con respecto al principio de la función.|  
 |`newOffset`|Nuevo desplazamiento de MSIL relativo al principio de la función.|  
-|`fAccurate`|`true`Si se sabe que la asignación es precisa; en caso `false`contrario,.|  
+|`fAccurate`|`true` si se sabe que la asignación es precisa; de lo contrario, `false`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El formato del mapa es el siguiente: El depurador asumirá `oldOffset` que hace referencia a un desplazamiento de MSIL en el código MSIL original y sin modificar. El `newOffset` parámetro hace referencia al desplazamiento de MSIL correspondiente en el nuevo código instrumentado.  
+ El formato del mapa es el siguiente: el depurador supondrá que `oldOffset` hace referencia a un desplazamiento de MSIL en el código MSIL original y sin modificar. El parámetro `newOffset` hace referencia al desplazamiento de MSIL correspondiente en el nuevo código instrumentado.  
   
  Para que funcione correctamente, deben cumplirse los siguientes requisitos:  
   
@@ -82,11 +80,11 @@ typedef struct _COR_IL_MAP {
 - Un nuevo desplazamiento de 20 o superior se asignará al anterior desplazamiento 9.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Corprof. idl  
+ **Encabezado:** Cordebug. idl, Corprof. idl  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

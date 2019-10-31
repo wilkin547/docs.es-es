@@ -2,14 +2,12 @@
 title: Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 27a2e0906343d115c47230c726efb74cd51d4c93
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3132e2c9502c91cbfa0b120f664fd0c6f99a2663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128145"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 Es importante probar las versiones de lanzamiento de la aplicación de la Plataforma universal de Windows en las plataformas de destino, ya que las configuraciones de depuración y de lanzamiento son completamente diferentes. De forma predeterminada, la configuración de depuración utiliza el tiempo de ejecución de .NET Core para compilar la aplicación, pero la configuración de lanzamiento usa .NET Native para compilar la aplicación en código nativo.  
@@ -28,7 +26,7 @@ Es importante probar las versiones de lanzamiento de la aplicación de la Plataf
   
 - El tamaño de su archivo ejecutable se reduce tanto como sea posible. Una de las formas en que .NET Native reduce el tamaño de un archivo ejecutable es recortando considerablemente los mensajes de excepción en tiempo de ejecución, un tema que se explica con más detalle en la sección [Runtime exception messages](#Messages) .  
   
-- El código está altamente optimizado. Esto significa que la inserción se utiliza siempre que es posible. (La inserción mueve código de rutinas externas a la rutina de llamada).   El hecho de que .NET Native ofrezca un tiempo de ejecución especializado e implemente inserción intensa afecta a la pila de llamadas que se muestra cuando se depura.  Para más información, consulte la sección [Runtime call stack](#CallStack) .  
+- El código está altamente optimizado. Esto significa que la inserción se utiliza siempre que es posible. (La inclusión mueve el código de las rutinas externas a la rutina de llamada).   El hecho de que .NET Native proporciona un entorno en tiempo de ejecución especializado e implementa la inclusión agresiva afecta a la pila de llamadas que se muestra al depurar.  Para más información, consulte la sección [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
 > Puede controlar si las compilaciones de depuración y de lanzamiento se compilan con la cadena de herramientas de .NET Native mediante la activación o desactivación del cuadro **Compilar con cadena de herramientas de .NET Native** .   Sin embargo, tenga en cuenta que la Tienda Windows siempre compilará la versión de producción de la aplicación con la cadena de herramientas de .NET Native.  

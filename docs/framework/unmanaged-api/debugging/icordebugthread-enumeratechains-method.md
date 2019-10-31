@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6f0ed843f72d3f1e1575da15776a94a9097fd02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38fe50f5a6608bb27d7a7818dee4784a7f8113ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771100"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133604"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains (Método)
-Obtiene un puntero de interfaz a un enumerador ICorDebugChainEnum que contiene todas las cadenas de pila en este objeto ICorDebugThread.  
+Obtiene un puntero de interfaz a un enumerador ICorDebugChainEnum (que contiene todas las cadenas de pila de este objeto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,25 +35,25 @@ HRESULT EnumerateChains (
   
 ## <a name="parameters"></a>Parámetros  
  `ppChains`  
- [out] Un puntero a la dirección de un `ICorDebugChainEnum` objeto que permite la enumeración de la pila de todos los encadena en este subproceso, empezando por la cadena activa (es decir, la más reciente).  
+ enuncia Puntero a la dirección de un objeto `ICorDebugChainEnum` que permite la enumeración de todas las cadenas de pila de este subproceso, comenzando en la cadena activa (es decir, la más reciente).  
   
 ## <a name="remarks"></a>Comentarios  
- La cadena de pila representa la pila de llamadas física del subproceso. Las circunstancias siguientes crean un límite de la cadena de pila:  
+ La cadena de pila representa la pila de llamadas física del subproceso. Las siguientes circunstancias crean un límite de cadena de pila:  
   
-- Una transición de administrado a no administrado o no administrado a administrado.  
+- Una transición administrada a no administrada o no administrada.  
   
 - Un cambio de contexto.  
   
-- Un secuestro de un subproceso de usuario del depurador.  
+- Un depurador que secuestra un subproceso de usuario.  
   
- En el caso de un subproceso que se ejecuta exclusivamente código administrado en un contexto único, una correspondencia uno a uno existirá entre los subprocesos y las cadenas de la pila.  
+ En el caso simple de un subproceso que ejecuta código meramente administrado en un contexto único, existirá una correspondencia uno a uno entre los subprocesos y las cadenas de pila.  
   
- Un depurador que desee reorganizar las pilas de llamadas física de todos los subprocesos en pilas de llamadas lógicas. Esto implicaría ordenar las cadenas de todos los subprocesos por sus relaciones de llamador y destinatario y reagrupar ellos.  
+ Es posible que un depurador desee reorganizar las pilas de llamadas físicas de todos los subprocesos en pilas de llamadas lógicas. Esto implicaría ordenar todas las cadenas de subprocesos por sus relaciones llamador y destinatario y reagruparlas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

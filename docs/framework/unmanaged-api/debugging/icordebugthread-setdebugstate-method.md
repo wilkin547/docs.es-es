@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6382bdf6-d488-4952-b653-cb09b6e1c6c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 1b2f3feca15bb8add17c9fe70805347b7c6a48ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133415"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState (Método)
 Establece marcas que describen el estado de depuración de esta ICorDebugThread.  
@@ -43,10 +41,10 @@ HRESULT SetDebugState (
  `SetDebugState` establece el estado de depuración actual del subproceso. (El "estado de depuración actual" representa el estado de depuración si se va a continuar el proceso, no el estado actual real). El valor normal de esto es THREAD_RUN. Solo el depurador puede afectar al estado de depuración de un subproceso. Los Estados de depuración continúan en el pasado, por lo que si desea mantener una THREAD_SUSPENDed de subprocesos en varias continuaciones, puede establecerla una vez y, a partir de ese momento, no tendrá que preocuparse por ella. La suspensión de subprocesos y la reanudación del proceso pueden provocar interbloqueos, aunque normalmente es improbable. Se trata de una calidad intrínseca de subprocesos y procesos y es por diseño. Un depurador puede interrumpir y reanudar asincrónicamente los subprocesos para interrumpir el interbloqueo. Si el estado de usuario del subproceso incluye USER_UNSAFE_POINT, el subproceso puede bloquear una recolección de elementos no utilizados (GC). Esto significa que el subproceso suspendido tiene una probabilidad mucho mayor de provocar un interbloqueo. Esto puede no afectar a los eventos de depuración ya en cola. Por lo tanto, un depurador debe purgar toda la cola de eventos (llamando a [ICorDebugController:: HasQueuedCallbacks (](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender o reanudar los subprocesos. En caso contrario, puede recibir eventos en un subproceso que cree que ya se ha suspendido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

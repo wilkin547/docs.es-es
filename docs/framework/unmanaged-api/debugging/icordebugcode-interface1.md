@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugCode
+title: ICorDebugCode (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode
@@ -14,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75cc8ea9d88dda42362f50b519864b1a78e1a64b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8cb95fad4394e2ce9b7f922e720071d8c4434edb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960790"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125587"
 ---
-# <a name="icordebugcode-interface"></a>Interfaz ICorDebugCode
+# <a name="icordebugcode-interface"></a>ICorDebugCode (Interfaz)
 
 Representa un segmento de código de lenguaje intermedio de Microsoft (MSIL) o código nativo.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
 |[CreateBreakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|Crea un punto de interrupción en el desplazamiento especificado.|  
 |[GetAddress (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|Obtiene la dirección virtual relativa (RVA) del segmento de código que representa `ICorDebugCode`.|  
@@ -42,17 +40,17 @@ Representa un segmento de código de lenguaje intermedio de Microsoft (MSIL) o c
 |[IsIL (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|Obtiene un valor que indica si esta instancia de `ICorDebugCode` está compilada en MSIL.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugCode` puede representar MSIL o código nativo. Un objeto "ICorDebugFunction" que representa el código MSIL puede tener o `ICorDebugCode` ninguno de los objetos asociados. Un objeto "ICorDebugFunction" que representa el código nativo puede tener cualquier número `ICorDebugCode` de objetos asociados a él.  
+ `ICorDebugCode` puede representar MSIL o código nativo. Un objeto "ICorDebugFunction" que representa el código MSIL puede tener cero o uno `ICorDebugCode` objetos asociados a él. Un objeto "ICorDebugFunction" que representa el código nativo puede tener cualquier número de objetos `ICorDebugCode` asociados a él.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cordebug. idl, Cordebug. h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

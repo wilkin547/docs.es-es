@@ -26,14 +26,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f2576aa0d1cf6a4938c8b1c8ee7883251cc192d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130222"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generar y compilar código fuente a partir de un gráfico CodeDOM
 El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para generar código fuente a partir de gráficos de objetos CodeDOM y para administrar la compilación con compiladores compatibles. Un proveedor de código puede generar código fuente en un lenguaje de programación determinado según un gráfico CodeDOM. Una clase que deriva de <xref:System.CodeDom.Compiler.CodeDomProvider> normalmente puede proporcionar métodos para generar y compilar código para el lenguaje admitido por el proveedor.  
@@ -91,7 +89,7 @@ El espacio de nombres <xref:System.CodeDom.Compiler> proporciona interfaces para
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Lenguajes con compatibilidad inicial  
- .NET Framework proporciona compiladores y generadores de código para los lenguajes siguientes: C#, Visual Basic, C++ y JScript. La compatibilidad de CodeDOM se puede extender a otros lenguajes si se implementan generadores y compiladores de código específicos del lenguaje.  
+ .NET Framework proporciona compiladores y generadores de código para los siguientes lenguajes: C#, Visual Basic, C++ y JScript. La compatibilidad de CodeDOM se puede extender a otros lenguajes si se implementan generadores y compiladores de código específicos del lenguaje.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -5,21 +5,19 @@ helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b6230833808ec45d702502e36f929db4e03173e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116800"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects >, elemento
+# <a name="gcallowverylargeobjects-element"></a>\<elemento > gcAllowVeryLargeObjects
 En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 gigabytes (GB).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
+&nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,13 +31,13 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`enabled`|Atributo necesario.<br /><br /> Especifica si las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`false`|Las matrices con un tamaño total superior a 2 GB no están habilitadas. Este es el valor predeterminado.|  
 |`true`|Las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  
@@ -49,7 +47,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  

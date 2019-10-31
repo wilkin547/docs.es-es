@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a26547a-9a34-4284-a463-78a7d4b496cf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38f48f2d95829d2c8111065e5f4ede4e43a16d63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5dbb5dc483bc5a08c59606654d55b5a62266e509
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134368"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName (Método)
 Obtiene el nombre legible del ensamblado al que hace referencia este objeto [IAssemblyName](iassemblyname-interface.md) .  
@@ -48,9 +46,9 @@ HRESULT GetDisplayName (
  de Combinación bit a bit de los valores de [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) que influyen en las características de `szDisplayName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion. h  
+ **Encabezado:** Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

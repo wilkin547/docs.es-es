@@ -3,14 +3,12 @@ title: Información general sobre el Modelo de objetos de esquema XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129146"
 ---
 # <a name="xml-schema-object-model-overview"></a>Información general sobre el Modelo de objetos de esquema XML
 El Modelo de objetos de esquema (SOM) de Microsoft .NET Framework es una API enriquecida que le permite crear, editar y validar esquemas mediante programación. El SOM funciona en los documentos de esquemas XML de forma similar a cómo funciona el Modelo de objetos de documento (DOM) en los documentos XML. Los documentos de esquemas XML son archivos XML válidos que, una vez cargados en el SOM, transmiten significado sobre la estructura y la validez de otros documentos XML que cumplen el esquema.  

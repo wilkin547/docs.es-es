@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738823"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122934"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion (Método)
-Lo llama [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) para notificar al depurador el resultado de un intento de enumerar un área especificada de memoria.  
+Llamado por [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) para informar al depurador del resultado de un intento de enumerar un área de memoria especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +36,20 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>Parámetros  
  `address`  
- [in] La dirección inicial de la región de memoria que se van a enumerar.  
+ de Dirección inicial de la región de memoria que se va a enumerar.  
   
  `size`  
- [in] El tamaño, en bytes, de la región de memoria.  
+ de Tamaño, en bytes, de la región de memoria.  
   
 ## <a name="remarks"></a>Comentarios  
- El `ICLRDataEnumMemoryRegions::EnumMemoryRegions` método llamará a este método de devolución de llamada después de cada intento de enumerar un área de memoria. La enumeración continuará incluso si este método devuelve un HRESULT que indica un error.  
+ El método `ICLRDataEnumMemoryRegions::EnumMemoryRegions` llamará a este método de devolución de llamada después de cada intento de enumerar una región de memoria. La enumeración continuará incluso si este método devuelve un valor HRESULT que indica un error.  
   
- Las áreas notificadas por esta devolución de llamada pueden ser duplicados o superpuestas regiones.  
+ Las regiones que se declaran mediante esta devolución de llamada pueden ser duplicados o regiones superpuestas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: ClrData.idl, ClrData.h  
+ **Encabezado:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

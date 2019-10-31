@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 505bba3bb5d08c13e29543c20df2daaebc863d12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77a0a8f58c11673a1958d837b4c3a21a05754c94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138318"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime (Función)
-Carga common language runtime (CLR) en un proceso mediante el uso de información de versión almacenada en un archivo XML. El formato del archivo XML se modela después del archivo de configuración de aplicación estándar. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
+Carga el Common Language Runtime (CLR) en un proceso utilizando la información de versión almacenada en un archivo XML. El formato del archivo XML se modela después del archivo de configuración de la aplicación estándar. Para obtener más información sobre los archivos de configuración, vea [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
- Esta función está desusada en .NET Framework 4. Consulte [cargar Common Language Runtime en un proceso](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
+ Esta función está en desuso en el .NET Framework 4. Vea [cargar Common Language Runtime en un proceso](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,27 +40,27 @@ HRESULT CorBindToCurrentRuntime (
   
 ## <a name="parameters"></a>Parámetros  
  `pwszFileName`  
- [in] El nombre de un archivo de configuración que especifica la versión de CLR para cargar. Si el nombre de archivo no es un nombre completo, se supone que para estar en el mismo directorio que el ejecutable que realiza la llamada.  
+ de Nombre de un archivo de configuración de la aplicación que especifica la versión de CLR que se va a cargar. Si el nombre de archivo no es completo, se supone que está en el mismo directorio que el ejecutable que realiza la llamada.  
   
- Se describe la versión del runtime que se cargue por el atributo de versión en el [ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elemento del archivo de configuración.  
+ La versión del tiempo de ejecución que se va a cargar se describe mediante el atributo version del elemento [\<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) del archivo de configuración.  
   
- Si se especifica ninguna versión, o si el `<requiredRuntime>` no se encuentra el elemento, se carga la última versión de CLR que está instalado en el equipo.  
+ Si no se especifica ninguna versión o si no se encuentra el elemento `<requiredRuntime>`, se carga la versión más reciente de CLR que está instalada en la máquina.  
   
  `rclsid`  
- [in] El `CLSID` de la coclase que implementa el [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interfaz. Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ de `CLSID` de la coclase que implementa la interfaz [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  [in] El `IID` de la interfaz solicitada. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
   
  `ppv`  
- [out] El puntero de interfaz devuelto.  
+ enuncia Puntero de interfaz devuelto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

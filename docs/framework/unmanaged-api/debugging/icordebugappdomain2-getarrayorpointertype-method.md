@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737803"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089115"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType (Método)
-Obtiene una matriz de tipo especificado, o un puntero o referencia al tipo especificado.  
+Obtiene una matriz del tipo especificado, o un puntero o una referencia al tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,16 +38,16 @@ HRESULT GetArrayOrPointerType (
   
 ## <a name="parameters"></a>Parámetros  
  `elementType`  
- [in] Un valor de la enumeración CorElementType que especifica el tipo nativo subyacente (una matriz, puntero o referencia), que se va a crear.  
+ de Un valor de la enumeración CorElementType que especifica el tipo nativo subyacente (una matriz, puntero o referencia) que se va a crear.  
   
  `nRank`  
- [in] El rango (es decir, el número de dimensiones) de la matriz. Este valor debe ser 0 si `elementType` especifica un tipo de puntero o referencia.  
+ de El rango (es decir, el número de dimensiones) de la matriz. Este valor debe ser 0 si `elementType` especifica un puntero o un tipo de referencia.  
   
  `pTypeArg`  
- [in] Un puntero a un objeto ICorDebugType que representa el tipo de matriz, puntero o referencia al crearse.  
+ de Un puntero a un objeto ICorDebugType que representa el tipo de matriz, puntero o referencia que se va a crear.  
   
  `ppType`  
- [out] Un puntero a la dirección de un `ICorDebugType` tipo de objeto que representa la matriz construida, tipo de puntero o referencia.  
+ enuncia Puntero a la dirección de un objeto `ICorDebugType` que representa la matriz construida, el tipo de puntero o el tipo de referencia.  
   
 ## <a name="remarks"></a>Comentarios  
  El valor de *elementType* debe ser uno de los siguientes:  
@@ -63,9 +61,9 @@ HRESULT GetArrayOrPointerType (
  Si el valor de *elementType* es ELEMENT_TYPE_PTR o ELEMENT_TYPE_BYREF, *nRank* debe ser cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

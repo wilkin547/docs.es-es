@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72d3d927-f590-4f2d-8f60-448f3dfb96af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e42db5d7ebc9ec9983fe9e56477808415b26968b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a00177faabfcad56d70ec5c64328c90675c1532
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751577"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138761"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank (Método)
-Obtiene el número de dimensiones en un tipo de matriz.  
+Obtiene el número de dimensiones de un tipo de matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +35,12 @@ HRESULT GetRank (
   
 ## <a name="parameters"></a>Parámetros  
  `pnRank`  
- [out] Un puntero al número de dimensiones.  
+ enuncia Puntero al número de dimensiones.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

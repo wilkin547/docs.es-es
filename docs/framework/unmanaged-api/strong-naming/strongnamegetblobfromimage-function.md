@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86b99b29a85f498a6bfa0363a446bf589876bff9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 41226cd909900bd2da7bdcf9b9a49567d3042b01
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094886"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage (Función)
 Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada.  
@@ -50,20 +48,20 @@ BOOLEAN StrongNameGetBlobFromImage (
  de Búfer que va a contener la representación binaria de la imagen.  
   
  `pcbBlob`  
- [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Después de la devolución, el tamaño real, en bytes `pbBlob`, de.  
+ [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se complete correctamente; en caso `false`contrario,.  
+ `true` cuando se complete correctamente; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la `StrongNameGetBlobFromImage` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la función `StrongNameGetBlobFromImage` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName. h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

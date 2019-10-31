@@ -2,12 +2,12 @@
 title: Enlace de datos de WPF con LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: c423ad9c8069b78b2e69a88d25d8e12bd3a3a1b7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139808"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Información general sobre el enlace de datos de WPF con LINQ to XML
 
@@ -91,4 +91,4 @@ Para implementar el enlace dinámico en WPF, se usarán las propiedades dinámic
 - [Propiedades dinámicas de LINQ to XML](linq-to-xml-dynamic-properties.md)
 - [XAML en WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [Enlace de datos (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [Uso del marcado de flujo de trabajo](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [Uso del marcado de flujo de trabajo](https://go.microsoft.com/fwlink/?LinkId=98685)

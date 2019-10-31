@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75754c2f-38c7-4707-85fe-559db4542729
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23ead080823ace1b091568108af8866dcbca14ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67841bbcd796e41b3b81f922020fe6c3677730c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124563"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>ICLRTask2::BeginPreventAsyncAbort (Método)
-Subproceso nuevo retrasos solicitudes de anulación de lo que las anulaciones de subproceso en el subproceso actual.  
+Retrasa las nuevas solicitudes de anulación de subprocesos para que resulten anulaciones de subprocesos en el subproceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,26 +34,26 @@ HRESULT BeginPreventAsyncAbort();
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |HOST_E_INVALIDOPERATION|Se llamó al método en un subproceso que no es el subproceso actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- Llamar a este método, el contador de anulaciones de subprocesos con retraso para el subproceso actual incrementa en uno.  
+ Al llamar a este método, se incrementa el contador Delay-Thread-Abort del subproceso actual en uno.  
   
- Las llamadas a `BeginPreventAsyncAbort` y [Iclrtask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) se pueden anidar. Siempre que el contador es mayor que cero, se retrasan las anulaciones de subproceso del subproceso actual. Si esta llamada no se empareja con una llamada a la `EndPreventAsyncAbort` método, es posible obtener acceso a un estado en que el subproceso no se puede entregar anulaciones al subproceso actual.  
+ Las llamadas a `BeginPreventAsyncAbort` y [ICLRTask2:: EndPreventAsyncAbort (](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) se pueden anidar. Siempre que el contador sea mayor que cero, se retrasarán las anulaciones de subproceso para el subproceso actual. Si esta llamada no se empareja con una llamada al método `EndPreventAsyncAbort`, es posible llegar a un estado en el que las anulaciones de subprocesos no se puedan entregar al subproceso actual.  
   
- No se respeta el retraso de un subproceso que se anula a sí mismo.  
+ No se respeta el retraso de un subproceso que se anule.  
   
- La funcionalidad que se expone mediante esta característica se usa internamente por la máquina virtual (VM). Uso inadecuado de estos métodos puede provocar un comportamiento no especificado en la máquina virtual. Por ejemplo, al llamar a `EndPreventAsyncAbort` sin llamar primero a `BeginPreventAsyncAbort` podría establecer el contador a cero cuando la máquina virtual ha incrementado previamente. De forma similar, no se comprueba el contador interno de desbordamiento. Si supera el límite de entero dado que se incrementa en el host y la máquina virtual, el comportamiento resultante no está especificado.  
+ La funcionalidad que expone esta característica se usa internamente en la máquina virtual (VM). El uso incorrecto de estos métodos puede provocar un comportamiento no especificado en la máquina virtual. Por ejemplo, la llamada a `EndPreventAsyncAbort` sin llamar primero a `BeginPreventAsyncAbort` podría establecer el contador en cero cuando la máquina virtual lo ha incrementado previamente. Del mismo modo, no se comprueba el desbordamiento del contador interno. Si supera su límite entero porque lo incrementa el host y la máquina virtual, el comportamiento resultante no se especifica.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

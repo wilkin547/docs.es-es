@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 96bb3a530bf4c63c3662ecfa635a929381fc0de6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855543"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121536"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture (Método)
 Obtiene un clon de la instancia de [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) devuelta desde una llamada a [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
@@ -37,13 +35,13 @@ HRESULT Capture (
   
 ## <a name="parameters"></a>Parámetros  
  `ppClonedContext`  
- enuncia Puntero a la dirección de un clon del `IHostSecurityContext` objeto que se va a capturar.  
+ enuncia Puntero a la dirección de un clon del objeto `IHostSecurityContext` que se va a capturar.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Capture`se devolvió correctamente.|  
+|S_OK|`Capture` devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -54,11 +52,11 @@ HRESULT Capture (
  El puntero de interfaz devuelto desde `Capture` es un clon del contexto capturado. Cuando esta información se mueve a través de un punto de código asincrónico, su duración se separa del puntero en el que se realizó la llamada. Por lo tanto, se puede liberar el puntero original.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MSCorEE.h  
+ **Encabezado:** MSCorEE. h  
   
- **Biblioteca** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

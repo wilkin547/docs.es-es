@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127290"
 ---
 # <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration función)
 Finaliza la enumeración iniciada con una llamada a la función [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
@@ -49,7 +47,7 @@ de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/n
 
 El siguiente valor devuelto por esta función se define en el archivo de encabezado *WbemCli. h* , o bien se puede definir como una constante en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
@@ -61,9 +59,9 @@ Se recomienda esta llamada, pero no es necesaria. Libera inmediatamente los recu
 
 ## <a name="requirements"></a>Requisitos  
 
-**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
-**Encabezado**: WMINet_Utils.idl  
+**Encabezado:** WMINet_Utils. idl  
   
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

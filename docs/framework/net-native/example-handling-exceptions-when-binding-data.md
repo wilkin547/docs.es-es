@@ -2,14 +2,12 @@
 title: 'Ejemplo: control de excepciones al enlazar datos'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ab5477257bd6d32d901ad01518f7a75081d2a10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128458"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: control de excepciones al enlazar datos
 > [!NOTE]
@@ -39,7 +37,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>¿Qué estaba haciendo la aplicación?  
- En la base de la pila, los marcos del <xref:Windows.UI.Xaml?displayProperty=nameWithType> espacio de nombres indican que el motor de representación XAML se estaba ejecutando.   El uso del método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una búsqueda basada en la reflexión del valor de una propiedad en el tipo cuyos metadatos se han quitado.  
+ En la base de la pila, los marcos del espacio de nombres <xref:Windows.UI.Xaml?displayProperty=nameWithType> indican que el motor de representación XAML se estaba ejecutando.   El uso del método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una búsqueda basada en la reflexión del valor de una propiedad en el tipo cuyos metadatos se han quitado.  
   
  El primer paso para proporcionar una directiva de metadatos sería agregar metadatos `serialize` para el tipo de forma que sus propiedades sean accesibles:  
   
@@ -57,9 +55,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>¿Se podría volver a escribir el código para que no use la reflexión?  
  Los enlaces de datos hacen un uso intensivo de la reflexión, de modo que cambiar el código para evitar la reflexión no es factible.  
   
- Sin embargo, hay formas de especificar el `ViewModel` en la página XAML para que la cadena de herramientas pueda asociar enlaces de propiedad con el tipo correcto en tiempo de compilación y mantener los metadatos sin usar una directiva en tiempo de ejecución.  Por ejemplo, podría aplicar el <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atributo en las propiedades. Esto hace que el compilador XAML genere la información de búsqueda necesaria y permite prescindir de una directiva en tiempo de ejecución en el archivo Default.rd.xml.  
+ Sin embargo, hay formas de especificar el `ViewModel` en la página XAML para que la cadena de herramientas pueda asociar enlaces de propiedad con el tipo correcto en tiempo de compilación y mantener los metadatos sin usar una directiva en tiempo de ejecución.  Por ejemplo, podría aplicar el atributo <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> en las propiedades. Esto hace que el compilador XAML genere la información de búsqueda necesaria y permite prescindir de una directiva en tiempo de ejecución en el archivo Default.rd.xml.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Introducción](getting-started-with-net-native.md)
-- [Ejemplo: Solución de problemas de programación dinámica](example-troubleshooting-dynamic-programming.md)
+- [Ejemplo: solucionar problemas de programación dinámica](example-troubleshooting-dynamic-programming.md)

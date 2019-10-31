@@ -7,14 +7,14 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3e1c3a3cfd61a9fa8e7abdae9a25ec1bc674492
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119229"
 ---
 # <a name="clear-element-for-appsettings"></a>\<borrar > elemento para \<appSettings >
 
@@ -22,7 +22,7 @@ Borra la configuración personalizada de la aplicación.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,17 +34,17 @@ Borra la configuración personalizada de la aplicación.
 
 ## <a name="attributes"></a>Atributos
 
-None
+Ninguno
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | DESCRIPCIÓN |
+|     | Descripción |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene la configuración de la aplicación personalizada, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración de la aplicación personalizada. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
 
 ## <a name="example"></a>Ejemplo
 
