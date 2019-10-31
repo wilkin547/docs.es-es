@@ -5,35 +5,35 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 5142fb9f4b5cd49bb35b58fdd92e4fb84b8ecc03
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 71322955c9583ac6d045370df7a95b69176f35e3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593058"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198062"
 ---
-# <a name="reference-visual-basic"></a><span data-ttu-id="6964d-102">Referencia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6964d-102">Reference (Visual Basic)</span></span>
-<span data-ttu-id="6964d-103">Esta sección proporciona vínculos a información de referencia sobre diversos aspectos de programación en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="6964d-103">This section provides links to reference information about various aspects of Visual Basic programming.</span></span>  
+# <a name="reference-visual-basic"></a><span data-ttu-id="05a88-102">Referencia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="05a88-102">Reference (Visual Basic)</span></span>
+<span data-ttu-id="05a88-103">En esta sección se proporcionan vínculos a información de referencia sobre diversos aspectos de la programación de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="05a88-103">This section provides links to reference information about various aspects of Visual Basic programming.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6964d-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="6964d-104">In This Section</span></span>  
- [<span data-ttu-id="6964d-105">Referencia del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6964d-105">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
- <span data-ttu-id="6964d-106">Proporciona información de referencia sobre diversos aspectos del lenguaje Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="6964d-106">Provides reference information for various aspects of the Visual Basic language.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="05a88-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="05a88-104">In This Section</span></span>  
+ [<span data-ttu-id="05a88-105">Referencia del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="05a88-105">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ <span data-ttu-id="05a88-106">Proporciona información de referencia sobre diversos aspectos del lenguaje Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="05a88-106">Provides reference information for various aspects of the Visual Basic language.</span></span>  
   
- [<span data-ttu-id="6964d-107">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6964d-107">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
- <span data-ttu-id="6964d-108">Proporciona vínculos a información sobre el compilador de línea de comandos, que proporciona una alternativa a la compilación de programas desde el IDE de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6964d-108">Provides links to information about the command-line compiler, which provides an alternative to compiling programs from the Visual Studio IDE.</span></span>  
+ [<span data-ttu-id="05a88-107">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="05a88-107">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="05a88-108">Proporciona vínculos a información sobre el compilador de línea de comandos, que proporciona una alternativa a la compilación de programas desde el IDE de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="05a88-108">Provides links to information about the command-line compiler, which provides an alternative to compiling programs from the Visual Studio IDE.</span></span>  
   
- [<span data-ttu-id="6964d-109">Información de referencia de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6964d-109">.NET Framework Reference Information</span></span>](../../visual-basic/reference/net-framework-reference-information.md)  
- <span data-ttu-id="6964d-110">Proporciona vínculos a información sobre cómo trabajar con la biblioteca de clases de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6964d-110">Provides links to information on working with the .NET Framework class library.</span></span>  
+ [<span data-ttu-id="05a88-109">Información de referencia de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="05a88-109">.NET Framework Reference Information</span></span>](../../visual-basic/reference/net-framework-reference-information.md)  
+ <span data-ttu-id="05a88-110">Proporciona vínculos a información sobre cómo trabajar con la biblioteca de clases de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="05a88-110">Provides links to information on working with the .NET Framework class library.</span></span>  
   
- [<span data-ttu-id="6964d-111">Especificación del lenguaje de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6964d-111">Visual Basic Language Specification</span></span>](../../visual-basic/reference/language-specification/index.md)  
- <span data-ttu-id="6964d-112">Proporciona vínculos a la especificación completa del lenguaje Visual Basic, que contiene información detallada sobre todos los aspectos del lenguaje.</span><span class="sxs-lookup"><span data-stu-id="6964d-112">Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.</span></span>  
+ [<span data-ttu-id="05a88-111">Especificación del lenguaje de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="05a88-111">Visual Basic Language Specification</span></span>](../../visual-basic/reference/language-specification/index.md)  
+ <span data-ttu-id="05a88-112">Proporciona vínculos a la especificación completa del lenguaje Visual Basic, que contiene información detallada sobre todos los aspectos del lenguaje.</span><span class="sxs-lookup"><span data-stu-id="05a88-112">Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6964d-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="6964d-113">Related Sections</span></span>  
- [<span data-ttu-id="6964d-114">Elementos generales de la interfaz de usuario (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="6964d-114">General User Interface Elements (Visual Studio)</span></span>](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- <span data-ttu-id="6964d-115">Contiene temas para cuadros de diálogo y ventanas que se usan en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6964d-115">Contains topics for dialog boxes and windows used in Visual Studio.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="05a88-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="05a88-113">Related Sections</span></span>  
+ [<span data-ttu-id="05a88-114">Elementos generales de la interfaz de usuario (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="05a88-114">General User Interface Elements (Visual Studio)</span></span>](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ <span data-ttu-id="05a88-115">Contiene temas sobre los cuadros de diálogo y las ventanas que se usan en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="05a88-115">Contains topics for dialog boxes and windows used in Visual Studio.</span></span>  
   
- [<span data-ttu-id="6964d-116">Herramientas XML en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="6964d-116">XML Tools in Visual Studio</span></span>](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- <span data-ttu-id="6964d-117">Proporciona vínculos a temas sobre diferentes herramientas XML disponibles en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6964d-117">Provides links to topics on various XML tools available in Visual Studio.</span></span>  
+ [<span data-ttu-id="05a88-116">Herramientas XML en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="05a88-116">XML Tools in Visual Studio</span></span>](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ <span data-ttu-id="05a88-117">Proporciona vínculos a temas sobre diversas herramientas XML disponibles en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="05a88-117">Provides links to topics on various XML tools available in Visual Studio.</span></span>  
   
- [<span data-ttu-id="6964d-118">Referencia de automatización y extensibilidad</span><span class="sxs-lookup"><span data-stu-id="6964d-118">Automation and Extensibility Reference</span></span>](/visualstudio/extensibility/extensibility-in-visual-studio)  
- <span data-ttu-id="6964d-119">Proporciona vínculos a temas que tratan sobre la automatización y extensibilidad de Visual Studio, para componentes compartidos y específicos del idioma.</span><span class="sxs-lookup"><span data-stu-id="6964d-119">Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.</span></span>
+ [<span data-ttu-id="05a88-118">Referencia de automatización y extensibilidad</span><span class="sxs-lookup"><span data-stu-id="05a88-118">Automation and Extensibility Reference</span></span>](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
+ <span data-ttu-id="05a88-119">Proporciona vínculos a temas que describen la automatización y extensibilidad en Visual Studio, tanto para componentes compartidos como para componentes específicos del lenguaje.</span><span class="sxs-lookup"><span data-stu-id="05a88-119">Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.</span></span>

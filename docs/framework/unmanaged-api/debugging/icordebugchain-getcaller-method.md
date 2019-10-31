@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192132"
 ---
-# <a name="icordebugchaingetcaller-method"></a><span data-ttu-id="6a690-102">ICorDebugChain::GetCaller (Método)</span><span class="sxs-lookup"><span data-stu-id="6a690-102">ICorDebugChain::GetCaller Method</span></span>
-<span data-ttu-id="6a690-103">Obtiene la cadena que llamó esta cadena.</span><span class="sxs-lookup"><span data-stu-id="6a690-103">Gets the chain that called this chain.</span></span>  
+# <a name="icordebugchaingetcaller-method"></a><span data-ttu-id="9f81e-102">ICorDebugChain::GetCaller (Método)</span><span class="sxs-lookup"><span data-stu-id="9f81e-102">ICorDebugChain::GetCaller Method</span></span>
+<span data-ttu-id="9f81e-103">Obtiene la cadena que llamó a esta cadena.</span><span class="sxs-lookup"><span data-stu-id="9f81e-103">Gets the chain that called this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a690-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6a690-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f81e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9f81e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCaller (  
@@ -35,20 +33,20 @@ HRESULT GetCaller (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a690-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6a690-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f81e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9f81e-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="6a690-106">[out] Un puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada.</span><span class="sxs-lookup"><span data-stu-id="6a690-106">[out] A pointer to the address of an ICorDebugChain object that represents the calling chain.</span></span>  
+ <span data-ttu-id="9f81e-106">enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada.</span><span class="sxs-lookup"><span data-stu-id="9f81e-106">[out] A pointer to the address of an ICorDebugChain object that represents the calling chain.</span></span>  
   
- <span data-ttu-id="6a690-107">Si esta cadena se llamó espontáneamente (como sería el caso si esta cadena o el depurador de inicializa la pila de llamadas), `ppChain` será null.</span><span class="sxs-lookup"><span data-stu-id="6a690-107">If this chain was spontaneously called (as would be the case if this chain or the debugger initialized the call stack), `ppChain` will be null.</span></span>  
+ <span data-ttu-id="9f81e-107">Si se llamó a esta cadena espontáneamente (como sería el caso si esta cadena o el depurador inicializara la pila de llamadas), `ppChain` será null.</span><span class="sxs-lookup"><span data-stu-id="9f81e-107">If this chain was spontaneously called (as would be the case if this chain or the debugger initialized the call stack), `ppChain` will be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6a690-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6a690-108">Remarks</span></span>  
- <span data-ttu-id="6a690-109">La cadena de llamada puede ser en un subproceso diferente, si se calculan las referencias de la llamada a través de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="6a690-109">The calling chain may be on a different thread, if the call was marshaled across threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f81e-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9f81e-108">Remarks</span></span>  
+ <span data-ttu-id="9f81e-109">La cadena de llamada puede estar en un subproceso diferente, si se serializó la llamada entre subprocesos.</span><span class="sxs-lookup"><span data-stu-id="9f81e-109">The calling chain may be on a different thread, if the call was marshaled across threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a690-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6a690-110">Requirements</span></span>  
- <span data-ttu-id="6a690-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a690-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f81e-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9f81e-110">Requirements</span></span>  
+ <span data-ttu-id="9f81e-111">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f81e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a690-112">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6a690-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9f81e-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f81e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6a690-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a690-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9f81e-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f81e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a690-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a690-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9f81e-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f81e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID429
 ms.assetid: 7fc5a271-8195-40a2-89f9-e05fd71bb8e0
-ms.openlocfilehash: 4147be694dd6f204c53a0f3317c7fbcc3cbee8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa23e4240a744b0c8eb09a5093274e7a1bf01c34
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584290"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198206"
 ---
-# <a name="cannot-create-activex-component"></a><span data-ttu-id="906ff-102">No se puede crear el componente ActiveX</span><span class="sxs-lookup"><span data-stu-id="906ff-102">Cannot create ActiveX Component</span></span>
-<span data-ttu-id="906ff-103">Intentó poner un control ActiveX en un formulario en el tiempo de diseño o agregar un formulario a un proyecto con un control ActiveX en él, pero no se pudo encontrar la información asociada correspondiente en el Registro.</span><span class="sxs-lookup"><span data-stu-id="906ff-103">You tried to place an ActiveX control on a form at design time or add a form to a project with an ActiveX control on it, but the associated information in the registry could not be found.</span></span>  
+# <a name="cannot-create-activex-component"></a><span data-ttu-id="d63d1-102">No se puede crear el componente ActiveX</span><span class="sxs-lookup"><span data-stu-id="d63d1-102">Cannot create ActiveX Component</span></span>
+<span data-ttu-id="d63d1-103">Intentó poner un control ActiveX en un formulario en el tiempo de diseño o agregar un formulario a un proyecto con un control ActiveX en él, pero no se pudo encontrar la información asociada correspondiente en el Registro.</span><span class="sxs-lookup"><span data-stu-id="d63d1-103">You tried to place an ActiveX control on a form at design time or add a form to a project with an ActiveX control on it, but the associated information in the registry could not be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="906ff-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="906ff-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d63d1-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="d63d1-104">To correct this error</span></span>  
   
-- <span data-ttu-id="906ff-105">Puede que la información en el Registro se haya eliminado o esté dañada.</span><span class="sxs-lookup"><span data-stu-id="906ff-105">The information in the registry may have been deleted or corrupted.</span></span> <span data-ttu-id="906ff-106">Reinstale el control ActiveX o póngase en contacto con el proveedor del control.</span><span class="sxs-lookup"><span data-stu-id="906ff-106">Reinstall the ActiveX control or contact the control vendor.</span></span>  
+- <span data-ttu-id="d63d1-105">Puede que la información en el Registro se haya eliminado o esté dañada.</span><span class="sxs-lookup"><span data-stu-id="d63d1-105">The information in the registry may have been deleted or corrupted.</span></span> <span data-ttu-id="d63d1-106">Reinstale el control ActiveX o póngase en contacto con el proveedor del control.</span><span class="sxs-lookup"><span data-stu-id="d63d1-106">Reinstall the ActiveX control or contact the control vendor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="906ff-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="906ff-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d63d1-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="d63d1-107">See also</span></span>
 
-- [<span data-ttu-id="906ff-108">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="906ff-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [<span data-ttu-id="906ff-109">Hable con nosotros</span><span class="sxs-lookup"><span data-stu-id="906ff-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="d63d1-108">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="d63d1-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="d63d1-109">Hable con nosotros</span><span class="sxs-lookup"><span data-stu-id="d63d1-109">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
