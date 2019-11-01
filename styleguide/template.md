@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306360"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775541"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -76,7 +76,7 @@ Los encabezados deben realizarse con estilo atx, es decir, usar de uno a seis ca
 
 Solo **debe** haber un encabezado de primer nivel (H1) en el tema, que se mostrará como título en la página.
 
-Si el encabezado finaliza con un carácter `#`, debe agregar un carácter `#` adicional al final para que el título se represente correctamente. Por ejemplo: `# Async Programming in F# #`.
+Si el encabezado termina en un carácter `#`, debe agregar un carácter de escape para que el título se represente correctamente. Por ejemplo: `# Async programming in F\#`.
 
 Los encabezados de segundo nivel generarán la tabla de contenido en la página que aparece en la sección "En este artículo" debajo del título en la página.
 
