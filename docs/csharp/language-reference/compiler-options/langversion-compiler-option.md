@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179918"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422957"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (Opciones del compilador de C#)
 
@@ -68,7 +68,7 @@ Para obtener información sobre cómo establecer esta opción del compilador med
 |Versión|Link|DESCRIPCIÓN|
 |-------|----|-----------|
 |C# 7.0 y posterior||actualmente, no disponible|
-|C# 6.0|[Vínculo](../language-specification/index.md)|Versión 6 de la especificación del lenguaje C#, borrador no oficial: .NET Foundation|
+|C# 6.0|[Vínculo](/dotnet/csharp/language-reference/language-specification/introduction)|Versión 6 de la especificación del lenguaje C#, borrador no oficial: .NET Foundation|
 |C# 5.0|[Descargar PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Norma ECMA-334 estándar, quinta edición|
 |C# 3.0|[Decargar DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Especificación del lenguaje C#, versión 3.0: Microsoft Corporation|
 |C# 2.0|[Descargar PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Norma ECMA-334 estándar, cuarta edición|

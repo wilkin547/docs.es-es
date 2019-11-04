@@ -2,12 +2,12 @@
 title: Ejemplo de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039186"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416757"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
@@ -17,7 +17,7 @@ El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para difere
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
@@ -25,9 +25,9 @@ El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para difere
   
  El uso compartido de puertos de NetTcp es una característica de Windows Communication Foundation (WCF) que permite que varias aplicaciones de red compartan un único puerto. El servicio de uso compartido de puerto de NetTcp acepta las conexiones usando el protocolo de net.tcp y reenvía mensajes basados en su dirección de destino.  
   
- El servicio de uso compartido de puerto de NetTcp no está habilitado de forma predeterminada. Antes de ejecutar este ejemplo, debe habilitar manualmente el servicio. Para obtener más información, vea [Cómo: Habilite el servicio](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)de uso compartido de puertos net. TCP. Si el servicio está deshabilitado, se produce una excepción cuando se inicia la aplicación de servidor.  
+ El servicio de uso compartido de puerto de NetTcp no está habilitado de forma predeterminada. Antes de ejecutar este ejemplo, debe habilitar manualmente el servicio. Para obtener más información, consulte [Cómo: habilitar el servicio de uso compartido de puertos net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Si el servicio está deshabilitado, se produce una excepción cuando se inicia la aplicación de servidor.  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
@@ -51,7 +51,7 @@ host.Open();
 
  Con el uso compartido del puerto habilitado, puede ejecutar el servicio varias veces sin tener un conflicto sobre el número de puerto. Si cambia el código para deshabilitar el uso compartido del puerto, iniciar hasta un máximo de dos copias del servicio da como resultado que la segunda fracase con un <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  Cada instancia del servicio imprime su número y dirección únicos. Por ejemplo, puede ver el texto siguiente al ejecutar service.exe.  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  Introduzca el número del servicio que ve aquí cuando ejecute client.exe.  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. Instale ASP.NET 4,0 con el siguiente comando.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

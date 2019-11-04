@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: a4cb85eb94584cff20c9ff26b4aa6bacee4f9883
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252969"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417575"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Tutorial: Crear y usar objetos dinámicos (C# y Visual Basic)
 
@@ -22,7 +22,7 @@ Los objetos dinámicos exponen miembros como propiedades y métodos en tiempo de
   
  Los objetos dinámicos también proporcionan un acceso cómodo a lenguajes dinámicos como IronPython e IronRuby. Puede usar un objeto dinámico para hacer referencia a un script dinámico que se interpreta en tiempo de ejecución.  
   
- Para hacer referencia a un objeto dinámico, use un enlace en tiempo de ejecución. En C#, el tipo de un objeto enlazado en tiempo de ejecución se especifica como `dynamic`. En Visual Basic, el tipo de un objeto enlazado en tiempo de ejecución se especifica como `Object`. Para obtener más información, vea [dynamic](../../language-reference/keywords/dynamic.md) y [Enlace en tiempo de compilación y en tiempo de ejecución](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Para hacer referencia a un objeto dinámico, use un enlace en tiempo de ejecución. En C#, el tipo de un objeto enlazado en tiempo de ejecución se especifica como `dynamic`. En Visual Basic, el tipo de un objeto enlazado en tiempo de ejecución se especifica como `Object`. Para obtener más información, vea [dynamic](../../language-reference/builtin-types/reference-types.md) y [Enlace en tiempo de compilación y en tiempo de ejecución](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  Puede crear objetos dinámicos personalizados con las clases del espacio de nombres <xref:System.Dynamic?displayProperty=nameWithType>. Por ejemplo, puede crear un objeto <xref:System.Dynamic.ExpandoObject> y especificar los miembros de ese objeto en tiempo de ejecución. También puede crear su propio tipo que hereda la clase <xref:System.Dynamic.DynamicObject>. Después, puede invalidar los miembros de la clase <xref:System.Dynamic.DynamicObject> para proporcionar funciones dinámicas en tiempo de ejecución.  
   
@@ -164,5 +164,5 @@ El siguiente proyecto que cree en este tutorial tendrá acceso a una biblioteca 
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
 - [Uso de tipo dinámico](./using-type-dynamic.md)
 - [Enlace en tiempo de compilación y en tiempo de ejecución](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Implementar interfaces dinámicas (PDF descargable de Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

@@ -2,12 +2,12 @@
 title: Evaluación de los cambios importantes en .NET Core
 description: Conozca las formas en que .NET Core intenta mantener la compatibilidad para los desarrolladores en todas las versiones de .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416668"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Evaluación de los cambios importantes en .NET Core
 
@@ -139,7 +139,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
   Esto se considera importante por dos motivos:
   
-  - Interrumpe los escenarios de enlace en tiempo de ejecución, como la característica de enlace en tiempo de ejecución en Visual Basic y [dinámica](../../csharp/language-reference/keywords/dynamic.md) en C#.
+  - Interrumpe los escenarios de enlace en tiempo de ejecución, como la característica de enlace en tiempo de ejecución en Visual Basic y [dinámica](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) en C#.
   
   - Interrumpe la [compatibilidad del origen](categories.md#source-compatibility) cuando los desarrolladores utilizan los [argumentos con nombre](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 

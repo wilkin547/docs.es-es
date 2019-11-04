@@ -2,12 +2,12 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595295"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418706"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Uso de LINQ para tener acceso a una colección
 
-LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, vea [Introducción a LINQ en C#](./linq/getting-started-with-linq.md).
+LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, vea [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/).
 
 El ejemplo siguiente ejecuta una consulta LINQ en una `List` genérica. La consulta LINQ devuelve otra colección que contiene los resultados.
 

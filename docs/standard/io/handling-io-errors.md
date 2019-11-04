@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120743"
 ---
 # <a name="handling-io-errors-in-net"></a>Control de errores de E/S en .NET
 

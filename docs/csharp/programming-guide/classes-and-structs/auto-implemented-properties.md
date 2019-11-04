@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 44f3beb9de8c9d339c42db26bb9c510998abc7d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 212fdde3a5ecc8b0a43e33bec3537bd57b1387e9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597137"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419413"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Propiedades autoimplementadas (Guía de programación de C#)
 En C# 3.0 y versiones posteriores, las propiedades implementadas automáticamente hacen que la declaración de propiedades sea más concisa cuando no es necesaria ninguna lógica adicional en los descriptores de acceso de la propiedad. También permite que el código de cliente cree objetos. Cuando se declara una propiedad tal como se muestra en el ejemplo siguiente, el compilador crea un campo de respaldo privado y anónimo al que solo se puede acceder con los descriptores de acceso de propiedad `get` y `set`.  
@@ -32,4 +32,4 @@ public string FirstName { get; set; } = "Jane";
 ## <a name="see-also"></a>Vea también
 
 - [Propiedades](./properties.md)
-- [Modificadores](../../language-reference/keywords/modifiers.md)
+- [Modificadores](/dotnet/csharp/language-reference/keywords)

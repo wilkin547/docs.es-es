@@ -4,12 +4,12 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961069"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454277"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -18,10 +18,11 @@ En este tutorial se enseña cómo implementar la aplicación en la nube a travé
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
-> Crear un área de trabajo de Azure Databricks.
-> Publicar la aplicación de .NET para Apache Spark.
-> Crear un trabajo y un clúster de Spark.
-> Ejecutar la aplicación en el clúster de Spark.
+>
+> - Crear un área de trabajo de Azure Databricks.
+> - Publicar la aplicación de .NET para Apache Spark.
+> - Crear un trabajo y un clúster de Spark.
+> - Ejecutar la aplicación en el clúster de Spark.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -44,7 +45,7 @@ En esta sección, creará un área de trabajo de Azure Databricks mediante Azure
    ![Creación de un recurso de Azure Databricks en Azure Portal](./media/databricks-deployment/create-databricks-resource.png)
 
 2. En **Azure Databricks Service**, proporcione los valores para crear un área de trabajo de Databricks.
-    
+
     |Propiedad.  |Descripción  |
     |---------|---------|
     |**Workspace name** (Nombre del área de trabajo)     | Proporcione un nombre para el área de trabajo de Databricks.        |
@@ -58,10 +59,10 @@ En esta sección, creará un área de trabajo de Azure Databricks mediante Azure
 
 ## <a name="install-azure-databricks-tools"></a>Instalación de las herramientas de Azure Databricks
 
-Puede usar la **CLI de Databricks** para conectarse a los clústeres de Azure Databricks y cargar archivos en ellos desde la máquina local. Los clústeres de Databricks tienen acceso a archivos a través del DBFS (Sistema de archivos de Databricks). 
+Puede usar la **CLI de Databricks** para conectarse a los clústeres de Azure Databricks y cargar archivos en ellos desde la máquina local. Los clústeres de Databricks tienen acceso a archivos a través del DBFS (Sistema de archivos de Databricks).
 
 1. La CLI de Databricks requiere Python 3.6 o una versión posterior. Si ya tiene Python instalado, puede omitir este paso.
- 
+
    **Para Windows**:
 
    [Descargar Python para Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
@@ -106,14 +107,14 @@ Ahora debería poder acceder a cualquier clúster de Azure Databricks que cree y
 
 1. Microsoft.Spark.Worker ayuda a Apache Spark a ejecutar la aplicación, como cualquier función definida por el usuario (UDF) que se haya escrito. Descargue [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
 
-2. *install-worker.sh* es un script que permite copiar archivos dependientes de .NET para Apache Spark en los nodos del clúster. 
+2. *install-worker.sh* es un script que permite copiar archivos dependientes de .NET para Apache Spark en los nodos del clúster.
 
-   Cree un nuevo archivo llamado **install-worker.sh** en el equipo local y pegue el [contenido de install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) que se encuentra en GitHub. 
+   Cree un nuevo archivo llamado **install-worker.sh** en el equipo local y pegue el [contenido de install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) que se encuentra en GitHub.
 
 3. *db-init.sh* es un script que instala las dependencias en el clúster de Spark de Databricks.
 
-   Cree un nuevo archivo llamado **db-init.sh** en el equipo local y pegue el [contenido de db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) que se encuentra en GitHub. 
-   
+   Cree un nuevo archivo llamado **db-init.sh** en el equipo local y pegue el [contenido de db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) que se encuentra en GitHub.
+
    En el archivo que se acaba de crear, establezca la variable `DOTNET_SPARK_RELEASE` en `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`. Deje el resto del archivo *db-init.sh* tal cual.
 
 > [!Note]
@@ -121,7 +122,7 @@ Ahora debería poder acceder a cualquier clúster de Azure Databricks que cree y
 
 ## <a name="publish-your-app"></a>Publicar la aplicación
 
-Luego, publique la aplicación *mySparkApp* creada en el tutorial [.NET para Apache Spark: comenzar en 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) para asegurarse de que el clúster de Spark tiene acceso a todos los archivos que necesita para ejecutar la aplicación. 
+Luego, publique la aplicación *mySparkApp* creada en el tutorial [.NET para Apache Spark: comenzar en 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) para asegurarse de que el clúster de Spark tiene acceso a todos los archivos que necesita para ejecutar la aplicación.
 
 1. Para publicar *mySparkApp*, ejecute los comandos siguientes:
 
@@ -163,13 +164,13 @@ En esta sección, se cargan varios archivos en el DBFS con el fin de que el clú
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Ejecute los comandos siguientes para cargar los archivos restantes que el clúster necesitará para ejecutar la aplicación: la carpeta de publicación comprimida, *Input.txt* y *microsoft-spark-2.4.x-0.3.0.jar*. 
+2. Ejecute los comandos siguientes para cargar los archivos restantes que el clúster necesitará para ejecutar la aplicación: la carpeta de publicación comprimida, *Input.txt* y *microsoft-spark-2.4.x-0.3.0.jar*.
 
    ```console
-   cd mySparkApp 
+   cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
-   
-   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory
    databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
@@ -178,7 +179,7 @@ En esta sección, se cargan varios archivos en el DBFS con el fin de que el clú
 
 La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecuta **spark-submit**, que es el comando que se usa para ejecutar .NET para trabajos de Apache Spark.
 
-1. En el área de trabajo de Azure Databricks, seleccione el icono de **Trabajos** y luego **+ Crear trabajo**. 
+1. En el área de trabajo de Azure Databricks, seleccione el icono de **Trabajos** y luego **+ Crear trabajo**.
 
    ![Creación de un trabajo de Azure Databricks](./media/databricks-deployment/create-job.png)
 
@@ -196,7 +197,7 @@ La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecu
 
 1. Vaya a su trabajo y seleccione **Editar** para configurar el clúster del trabajo.
 
-2. Establezca el clúster en **Spark 2.4.1**. Luego, seleccione **Opciones avanzadas** > **Scripts Init**. Escriba la ruta de acceso del script Init como `dbfs:/spark-dotnet/db-init.sh`. 
+2. Establezca el clúster en **Spark 2.4.1**. Luego, seleccione **Opciones avanzadas** > **Scripts Init**. Escriba la ruta de acceso del script Init como `dbfs:/spark-dotnet/db-init.sh`.
 
    ![Configuración de un clúster de Spark en Azure Databricks](./media/databricks-deployment/cluster-config.png)
 
@@ -208,7 +209,7 @@ La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecu
 
 2. La creación del clúster del trabajo tarda unos minutos. Una vez creado, se enviará el trabajo y podrá ver el resultado.
 
-3. Seleccione **Clústeres** en el menú de la izquierda y, después, el nombre y la ejecución del trabajo. 
+3. Seleccione **Clústeres** en el menú de la izquierda y, después, el nombre y la ejecución del trabajo.
 
 4. Seleccione **Registros de controladores** para ver la salida del trabajo. Cuando la aplicación termine de ejecutarse, verá la misma tabla de recuento de palabras de la ejecución local de introducción escrita en la consola de salida estándar.
 

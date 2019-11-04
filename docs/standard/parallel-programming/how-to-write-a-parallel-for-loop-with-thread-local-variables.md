@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139714"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
 En este ejemplo se muestra la forma de usar variables locales para el subproceso para almacenar y recuperar el estado en cada una de las tareas independientes creadas por un bucle <xref:System.Threading.Tasks.Parallel.For%2A>. Mediante el uso de datos locales de subproceso, se puede evitar la sobrecarga que supone la sincronización de un gran número de accesos a un estado compartido. En vez de escribir en un recurso compartido en cada iteración, se calcula y se almacena el valor hasta que finalizan todas las iteraciones de la tarea. A continuación, se escribe una vez el resultado final en el recurso compartido o se pasa a otro método.  
@@ -28,7 +26,7 @@ En este ejemplo se muestra la forma de usar variables locales para el subproceso
   
  Los dos primeros parámetros de cada método <xref:System.Threading.Tasks.Parallel.For%2A> especifican los valores de iteración inicial y final. En esta sobrecarga del método, el tercer parámetro es donde se inicializa el estado local. En este contexto, estado local significa una variable cuya duración se extiende desde justo antes de la primera iteración del bucle en el subproceso actual, hasta justo después de la última iteración.  
   
- El tipo del tercer parámetro es <xref:System.Func%601>, donde `TResult` es el tipo de la variable que almacenará el estado local de subproceso. Su tipo se define mediante el argumento de tipo genérico que se proporciona al llamar al método <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> genérico, que en este caso es <xref:System.Int64>. El argumento de tipo le indica al compilador el tipo de variable temporal que se usará para almacenar el estado local para el subproceso. En este ejemplo, la expresión `() => 0` (o `Function() 0` en Visual Basic) inicializa la variable local de subproceso en cero. Si el argumento de tipo genérico es un tipo de referencia o un tipo de valor definido por el usuario, la expresión tendrá el aspecto siguiente:  
+ El tipo del tercer parámetro es <xref:System.Func%601>, donde `TResult` es el tipo de la variable que almacenará el estado local de subproceso. Su tipo se define mediante el argumento de tipo genérico que se proporciona al llamar al método <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> genérico, que en este caso es <xref:System.Int64>. El argumento de tipo le indica al compilador el tipo de variable temporal que se usará para almacenar el estado local de subproceso. En este ejemplo, la expresión `() => 0` (o `Function() 0` en Visual Basic) inicializa la variable local de subproceso en cero. Si el argumento de tipo genérico es un tipo de referencia o un tipo de valor definido por el usuario, la expresión tendrá el aspecto siguiente:  
   
 ```csharp  
 () => new MyClass()  

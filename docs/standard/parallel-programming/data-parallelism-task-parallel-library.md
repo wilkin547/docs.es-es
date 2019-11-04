@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 19e518db75fe3e45f57cbb6fab8c5281cceb4d34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123160"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  

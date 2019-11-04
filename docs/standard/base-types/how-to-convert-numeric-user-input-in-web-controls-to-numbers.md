@@ -13,14 +13,12 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78ba284ad2e75b39c0fb1001b0f65b48c519dbb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140097"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedimiento para convertir en números datos numéricos proporcionados por el usuario en controles web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuarios pueden proporcionar datos numéricos en un control <xref:System.Web.UI.WebControls.TextBox> en un número casi ilimitado de formatos. Como resultado, es muy importante determinar la configuración regional y la referencia cultural del usuario de la página web. Al analizar las entradas del usuario, puede aplicar las convenciones de formato definidas por la configuración regional y la referencia cultural del usuario.  

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139658"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedimiento para escribir un bucle Parallel.For simple
 

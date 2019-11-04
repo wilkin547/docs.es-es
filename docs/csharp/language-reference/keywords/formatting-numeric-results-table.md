@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421969"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422751"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabla de formatos de presentación para valores numéricos (Referencia de C#)
 
@@ -57,4 +57,4 @@ Para más información, vea [Cadenas de formato numérico estándar](../../../st
 - [Aplicar formato a tipos](../../../standard/base-types/formatting-types.md)
 - [Formatos compuestos](../../../standard/base-types/composite-formatting.md)
 - [Interpolación de cadenas](../tokens/interpolated.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)

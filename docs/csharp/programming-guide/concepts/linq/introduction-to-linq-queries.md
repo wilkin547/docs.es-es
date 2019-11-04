@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 6188af0ffea699899212e4bcf20b7c19f68858b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e3439d2e0e0fb8f3126770ec7922f5ae180f781b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418246"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introducción a las consultas LINQ (C#)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consultas especializado. Con el tiempo se han desarrollado diferentes lenguajes para los distintos tipos de orígenes de datos, como SQL para las bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que deben admitir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica esta situación al ofrecer un modelo coherente para trabajar con los datos de varios formatos y orígenes. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Se usan los mismos patrones de codificación básicos para consultar y transformar datos de documentos XML, bases de datos SQL, conjuntos de datos de ADO.NET, colecciones de .NET y cualquier otro formato para el que haya disponible un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -61,7 +61,7 @@ IQueryable<Customer> custQuery =
 ## <a name="query"></a> La consulta  
  La consulta especifica la información que se debe recuperar de los orígenes de datos. Opcionalmente, una consulta también especifica cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. Las consultas se almacenan en una variable de consulta y se inicializan con una expresión de consulta. Para facilitar la escritura de consultas, C# ha incorporado una nueva sintaxis de consulta.  
   
- La consulta del ejemplo anterior devuelve todos los números pares de la matriz de enteros. La expresión de consulta contiene tres cláusulas: `from`, `where` y `select` (si está familiarizado con SQL, habrá observado que el orden de las cláusulas se invierte respecto al orden de SQL). La cláusula `from` especifica el origen de datos, la cláusula `where` aplica el filtro y la cláusula `select` especifica el tipo de los elementos devueltos. Estas y otras cláusulas de consulta se tratan con detalle en la sección [Expresiones de consulta LINQ](../../linq-query-expressions/index.md). Por ahora, lo importante es que en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] la variable de consulta no efectúa ninguna acción y no devuelve ningún dato. Lo único que hace es almacenar la información necesaria para generar los resultados cuando se ejecuta la consulta en algún momento posterior. Para obtener más información sobre cómo se construyen las consultas en segundo plano, vea [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md).  
+ La consulta del ejemplo anterior devuelve todos los números pares de la matriz de enteros. La expresión de consulta contiene tres cláusulas: `from`, `where` y `select` (si está familiarizado con SQL, habrá observado que el orden de las cláusulas se invierte respecto al orden de SQL). La cláusula `from` especifica el origen de datos, la cláusula `where` aplica el filtro y la cláusula `select` especifica el tipo de los elementos devueltos. Estas y otras cláusulas de consulta se tratan con detalle en la sección [Expresiones de consulta LINQ](../../../linq/index.md). Por ahora, lo importante es que en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] la variable de consulta no efectúa ninguna acción y no devuelve ningún dato. Lo único que hace es almacenar la información necesaria para generar los resultados cuando se ejecuta la consulta en algún momento posterior. Para obtener más información sobre cómo se construyen las consultas en segundo plano, vea [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md).  
   
 > [!NOTE]
 > Las consultas también se pueden expresar empleando una sintaxis de método. Para obtener más información, vea [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a LINQ en C#](./getting-started-with-linq.md)
+- [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/)
 - [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)
-- [Expresiones de consulta LINQ](../../linq-query-expressions/index.md)
+- [Expresiones de consulta LINQ](../../../linq/index.md)
 - [foreach, in](../../../language-reference/keywords/foreach-in.md)
 - [Palabras clave para consultas (LINQ)](../../../language-reference/keywords/query-keywords.md)

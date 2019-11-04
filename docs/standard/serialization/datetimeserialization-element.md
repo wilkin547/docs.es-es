@@ -6,14 +6,14 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: af0d8eeb36e023b4d38f9ad5831de3d392a487fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 180a4942dd4b701b56fe4788d5f8cd8607faaedd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922556"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459263"
 ---
-# <a name="datetimeserialization-element"></a>\<dateTimeSerialization > elemento
+# <a name="datetimeserialization-element"></a>\<elemento > dateTimeSerialization
 Determina el modo de serialización XML de los objetos <xref:System.DateTime>.  
   
  \<configuration>  
@@ -23,7 +23,7 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
   
 ```xml  
 <dateTimeSerialization  
-    mode = "Roundtrip" | "Local"  
+    mode = "Roundtrip|Local"  
 />  
 ```  
   
@@ -57,5 +57,5 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Elemento \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<Agregar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<agregar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [Elemento \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

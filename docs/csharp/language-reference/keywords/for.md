@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 5ebc478f8840173cacc0bc211061f3013379abd9
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167868"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422788"
 ---
 # <a name="for-c-reference"></a>for (Referencia de C#)
 
@@ -105,7 +105,7 @@ En el ejemplo siguiente se define el bucle `for` infinito:
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para más información, vea la sección [La declaración for](~/_csharplang/spec/statements.md#the-for-statement) de la [Especificación del lenguaje C#](../language-specification/index.md).
+Para más información, vea la sección [La declaración for](~/_csharplang/spec/statements.md#the-for-statement) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Vea también
 

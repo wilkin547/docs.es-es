@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 57ab0282c88a85b59c8fed7506ef811c8cced58f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2eda5a44d4c2dfd9a745871bdc345b7c50e6af49
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924445"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418793"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Clases estáticas y sus miembros (Guía de programación de C#)
 
@@ -87,7 +87,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
-Para más información, vea las secciones sobre [clases estáticas](~/_csharplang/spec/classes.md#static-classes) y sobre [miembros de instancia y estáticos](~/_csharplang/spec/classes.md#static-and-instance-members) de la [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para más información, vea las secciones sobre [clases estáticas](~/_csharplang/spec/classes.md#static-classes) y sobre [miembros de instancia y estáticos](~/_csharplang/spec/classes.md#static-and-instance-members) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="see-also"></a>Vea también
 

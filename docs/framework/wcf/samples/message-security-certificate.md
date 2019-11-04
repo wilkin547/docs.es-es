@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 496589a0c1a5a0a029e464bfdd87caf8515bb9e3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bd84cb45de68ee86cb042e85695f4893c0ca6988
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044865"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424130"
 ---
 # <a name="message-security-certificate"></a>Certificado de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor. Este ejemplo utiliza la configuración predeterminada de tal modo que todos los mensajes de la aplicación entre el cliente y el servidor se firman y cifran. Este ejemplo se basa en [wsHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) y consta de un programa de consola de cliente y una biblioteca de servicios hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -33,7 +33,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- El servicio expone un punto de conexión para comunicar con el servicio y un punto de conexión para exponer el documento WSDL del servicio mediante el protocolo WS-MetadataExchange, definido utilizando el archivo de configuración (Web.config). El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un elemento de [ \<> wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) estándar, que tiene como valor predeterminado el uso de la seguridad de mensaje. Este ejemplo establece el atributo `clientCredentialType` para certificar que se requiere la autenticación del cliente.  
+ El servicio expone un punto de conexión para comunicar con el servicio y un punto de conexión para exponer el documento WSDL del servicio mediante el protocolo WS-MetadataExchange, definido utilizando el archivo de configuración (Web.config). El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un elemento Standard [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) , que tiene como valor predeterminado el uso de la seguridad del mensaje. Este ejemplo establece el atributo `clientCredentialType` para certificar que se requiere la autenticación del cliente.  
   
 ```xml  
 <system.serviceModel>  
@@ -84,7 +84,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- El comportamiento especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado `findValue` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) de servidor se especifica en el atributo del elemento de > de serviceCredentials.  
+ El comportamiento especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado de servidor se especifica en el `findValue` atributo del elemento [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) .  
   
 ```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
@@ -193,7 +193,7 @@ client.Close();
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 CN=client.com  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
   
 - Instalar el certificado de cliente en el almacén de certificados de confianza del servidor.  
   
-     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio de Windows Communication Foundation (WCF) confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe establecerse `PeerOrChainTrust` en `PeerTrust`o. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo lograrlo con un archivo de configuración.  
+     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio de Windows Communication Foundation (WCF) confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe establecerse en `PeerOrChainTrust` o `PeerTrust`. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo lograrlo con un archivo de configuración.  
   
     ```bat
     echo ************  
@@ -246,7 +246,7 @@ Press <ENTER> to terminate client.
   
      La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   
-    ```  
+    ```console  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    > Si está utilizando una edición que no esté en inglés de EE. UU. de Windows, debe editar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.  
+    > Si usa una edición de Windows que no es de Estados Unidos, debe modificar el archivo Setup. bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.  
   
 > [!NOTE]
 > Las herramientas utilizadas en este archivo por lotes se encuentran en C:\Program Files\Microsoft Visual Studio 8\Common7\tools o C:\Program Files\Microsoft SDKs\Windows\v6.0\bin Uno de estos directorios debe estar en su ruta de acceso del sistema. Si tiene Visual Studio instalado, la manera más fácil de obtener este directorio en su ruta de acceso es abrir el Símbolo del sistema para desarrolladores para Visual Studio. Haga clic en **Inicio**y, a continuación, seleccione **todos los programas**, **Visual Studio 2012**, **herramientas**. Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas. De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio:  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
@@ -293,7 +293,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un Símbolo del sistema para desarrolladores para Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de una Símbolo del sistema para desarrolladores para Visual Studio (2010).  
   
-2. Escriba la dirección `http://localhost/servicemodelsamples/service.svc`para comprobar el acceso al servicio mediante un explorador.  
+2. Compruebe el acceso al servicio mediante un explorador escribiendo la dirección `http://localhost/servicemodelsamples/service.svc`.  
   
 3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
@@ -311,7 +311,7 @@ Press <ENTER> to terminate client.
   
 5. En el servidor, ejecute el **servicio Setup. bat** en un símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador. Al ejecutar **setup. bat** con el argumento **Service** se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-6. Edite el archivo Web. config para que refleje el nuevo `findValue` nombre del certificado (en el atributo [ \<del > serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
+6. Edite el archivo Web. config para que refleje el nuevo nombre del certificado (en el atributo `findValue` del [> de\<serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es igual que el nombre de dominio completo del equipo.  
   
 7. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
@@ -332,4 +332,4 @@ Press <ENTER> to terminate client.
 - Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

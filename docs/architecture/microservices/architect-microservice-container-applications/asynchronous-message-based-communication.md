@@ -2,12 +2,12 @@
 title: Comunicación asincrónica basada en mensajes
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedor | Las comunicaciones asincrónicas basadas en mensajes son un concepto fundamental en la arquitectura de microservicios, porque es la mejor manera de mantener los microservicios independientes entre sí mientras siguen sincronizándose.
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522759"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454235"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -77,7 +77,7 @@ Un desafío al implementar una arquitectura controlada por eventos entre varios 
 
 - Uso del patrón de [orígenes de eventos](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
-- Uso del [patrón de bandeja de salida](http://www.kamilgrzybek.com/design/the-outbox-pattern/): una tabla de base de datos transaccional como una cola de mensajes que será la base para un componente de creador de eventos que creará el evento y lo publicará.
+- Uso del [patrón de bandeja de salida](https://www.kamilgrzybek.com/design/the-outbox-pattern/): una tabla de base de datos transaccional como una cola de mensajes que será la base para un componente de creador de eventos que creará el evento y lo publicará.
 
 Temas adicionales que se deben tener en cuenta al usar la comunicación asincrónica son la idempotencia y la desduplicación de los mensajes. Estos temas se describen en la sección [Implementación de la comunicación basada en eventos entre microservicios (eventos de integración)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) más adelante en esta guía.
 

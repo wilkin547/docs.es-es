@@ -2,14 +2,14 @@
 title: Referencia de F# Interactive (fsi.exe)
 description: Obtenga información F# sobre cómo Interactive (FSI. exe) se F# usa para ejecutar código de forma interactiva en la F# consola o para ejecutar scripts.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002065"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419904"
 ---
-# <a name="interactive-programming-with-f"></a>Programación interactiva con F @ no__t-0
+# <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
 > [!NOTE]
 > En este artículo actualmente solo se describe la experiencia para Windows.  Se reescribirá.
@@ -25,7 +25,7 @@ Para usar F# Interactive desde la consola, ejecute fsi.exe.  Encontrará FSI. ex
 C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-donde `sku` es `Community`, `Professional` o `Enterprise`.
+donde `sku` es `Community`, `Professional`o `Enterprise`.
 
 Para obtener más información sobre las opciones de línea de comandos disponibles, vea [Opciones de F# Interactive](../../language-reference/fsharp-interactive-options.md).
 
@@ -43,10 +43,12 @@ Si tiene un proyecto abierto que hace referencia a algunas bibliotecas, puede ha
 
 Puede controlar los argumentos (opciones) de la línea de comandos de F# Interactive ajustando la configuración. En el menú **Herramientas**, seleccione **Opciones...** y, después, expanda **Herramientas de F#** . Las dos configuraciones que puede cambiar son las opciones de F# Interactive y la opción **F# Interactive de 64 bits**, que solo es relevante si ejecuta F# Interactive en un equipo de 64 bits. Este valor determina si desea ejecutar la versión de 64 bits dedicada de fsi.exe o de fsianycpu.exe, que usa la arquitectura del equipo para determinar si debe ejecutarse como un proceso de 32 o de 64 bits.
 
-## <a name="scripting-with-f"></a>Scripting con F @ no__t-0
+## <a name="scripting-with-f"></a>Scripting con F\#
+
 Los scripts usan la extensión de archivo **.fsx** o **.fsscript**. En lugar de compilar el código fuente y después ejecutar el ensamblado compilado, se puede ejecutar simplemente **fsi.exe** y especificar el nombre de archivo del script de código fuente de F#. F# Interactive lee el código y lo ejecuta en tiempo real.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Diferencias entre los entornos interactivo, compilado y de scripting
+
 Al compilar código en F# Interactive, tanto si se ejecuta de forma interactiva como si ejecuta un script, se define el símbolo **INTERACTIVE**. Al compilar código en el compilador, se define el símbolo **COMPILED**. Por consiguiente, si el código debe ser diferente en modo interactivo y en modo compilado, se pueden usar las directivas de preprocesador de la compilación condicional para determinar cuál se va a usar.
 
 Cuando se ejecutan scripts en F# Interactive, están disponibles algunas directivas que no están disponibles cuando se ejecuta el compilador. En la siguiente tabla se resumen las directivas que están disponibles cuando se usa F# Interactive.
@@ -87,7 +89,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 La salida es la siguiente:
 
 ```console
-Command line arguments: 
+Command line arguments:
 file1.fsx
 test
 90
@@ -95,7 +97,7 @@ test
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----|-----------|
 |[Opciones de F# Interactive](../../language-reference/fsharp-interactive-options.md)|Describe la sintaxis de línea de comandos y las F# opciones de la Interactive, FSI. exe.|
 |[Referencia de la biblioteca interactiva de F#](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Describe la funcionalidad de bibliotecas que está disponible cuando se ejecuta código en F# Interactive.|

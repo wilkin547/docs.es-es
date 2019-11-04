@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98abed0efa2e1b624ee1fb671300969f3d79a9db
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661670"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139687"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Procedimiento para escribir un bucle Parallel.ForEach con variables locales de partición
 

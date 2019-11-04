@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084224"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
@@ -38,7 +36,7 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
   
  El patrón de la expresión regular `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`href`|Coincide con la cadena literal "href". La búsqueda no distingue entre mayúsculas y minúsculas.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  

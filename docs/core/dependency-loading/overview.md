@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303669"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416660"
 ---
 # <a name="dependency-loading-in-net-core"></a>Carga de dependencias en .NET Core
 
@@ -39,4 +39,4 @@ En el tutorial [Creación de una aplicación .NET Core con complementos](../tuto
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Uso y depuración de la descargabilidad de ensamblado en .NET Core
 
-El artículo [Uso y depuración de la descargabilidad de ensamblado en .NET Core](../../standard/assembly/unloadability-howto.md) es un tutorial paso a paso. Muestra cómo cargar una aplicación .NET Core, ejecutarla y luego descargarla. En el artículo también se proporcionan sugerencias de depuración.
+El artículo [Uso y depuración de la descargabilidad de ensamblado en .NET Core](../../standard/assembly/unloadability.md) es un tutorial paso a paso. Muestra cómo cargar una aplicación .NET Core, ejecutarla y luego descargarla. En el artículo también se proporcionan sugerencias de depuración.

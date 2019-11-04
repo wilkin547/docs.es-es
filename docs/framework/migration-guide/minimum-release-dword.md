@@ -6,14 +6,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 - .NET Framework, minimum version value
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc5808229e0d3f467b886f6572bc767d5f1dd0ab
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: ceed1a3b3793f763e76a5ae769312bf6e534f1ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170470"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126284"
 ---
 # <a name="the-minimum-values-of-the-release-dword-for-net-framework-45-and-later-versions"></a>Valores mínimos de DWORD Release para .NET Framework 4.5 y versiones posteriores
 

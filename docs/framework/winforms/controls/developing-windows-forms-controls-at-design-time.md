@@ -9,15 +9,15 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1eebca72b8c564e6d846eba69b6b59139754738e
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015982"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460083"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Desarrollar controles Windows Forms en tiempo de diseño
 
@@ -30,49 +30,49 @@ Si quiere crear controles personalizados para usarlos en formularios Web Forms, 
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Tutorial: Crear un control compuesto](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+[Tutorial: crear un control compuesto](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 Muestra cómo crear un control compuesto simple en C#.
 
-[Tutorial: Heredar de un control Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+[Tutorial: heredar de un Control Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Muestra cómo crear un control de Windows Forms simple utilizando la herencia en C#.
 
-[Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Tutorial: realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
 Muestra cómo usar la característica de etiquetas inteligentes en controles de Windows Forms.
 
-[Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)\
-Muestra cómo utilizar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> atributo para serializar una colección.
+[Tutorial: serializar colecciones de tipos estándar con la\ DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
+Muestra cómo usar el atributo <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> para serializar una colección.
 
-[Tutorial: Depurar controles de Windows Forms personalizados en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+[Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
 Muestra cómo depurar el comportamiento en tiempo de diseño de un control de Windows Forms.
 
-[Tutorial: Crear un control de Windows Forms que aprovecha las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)\
+[Tutorial: crear un control de Windows Forms que aprovecha las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)\
 Muestra cómo integrar estrechamente un control compuesto en el entorno de diseño.
 
-[Procedimientos: Controles de autor para Windows Forms](how-to-author-controls-for-windows-forms.md)\
+[Cómo: Crear controles para Windows Forms](how-to-author-controls-for-windows-forms.md)\
 Proporciona información general sobre consideraciones para implementar un control de Windows Forms.
 
-[Procedimientos: Crear controles compuestos](how-to-author-composite-controls.md)\
+[Cómo: Crear controles compuestos](how-to-author-composite-controls.md)\
 Muestra cómo crear un control al heredar de un control compuesto.
 
-[Procedimientos: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)\
+[Cómo: Heredar de una clase UserControl](how-to-inherit-from-the-usercontrol-class.md)\
 Proporciona información general sobre el procedimiento para crear un control compuesto.
 
-[Procedimientos: Heredar de controles de Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)\
-Muestra cómo crear un control extendido heredando de la <xref:System.Windows.Forms.Button> clase control.
+[Cómo: Heredar de controles de Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)\
+Muestra cómo crear un control extendido heredando de la clase de control <xref:System.Windows.Forms.Button>.
 
-[Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)\
+[Cómo: Heredar de una clase de control](how-to-inherit-from-the-control-class.md)\
 Proporciona información general sobre la creación de un control extendido.
 
-[Cómo: Alinear un control con los bordes de los formularios en tiempo de diseño](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
-Muestra cómo usar la <xref:System.Windows.Forms.Control.Dock%2A> propiedad para alinear el control con el borde del formulario que ocupa.
+[Cómo: alinear un control con los bordes de los formularios en tiempo de diseño](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)\
+Muestra cómo usar la propiedad <xref:System.Windows.Forms.Control.Dock%2A> para alinear el control con el borde del formulario que ocupa.
 
 [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)\
 Muestra el procedimiento para instalar el control de modo que aparezca en el cuadro de diálogo **Customize Toolbox** (Personalizar cuadro de herramientas).
 
-[Procedimientos: Proporcionar un mapa de bits del cuadro de herramientas para un control](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
-Muestra cómo utilizar <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el **cuadro de herramientas**.
+[Cómo: proporcionar un mapa de bits del cuadro de herramientas para un Control](how-to-provide-a-toolbox-bitmap-for-a-control.md)\
+Muestra cómo utilizar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el cuadro de **herramientas**.
 
-[Cómo: Probar el comportamiento en tiempo de ejecución de un control UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
+[Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)\
 Muestra cómo utilizar **UserControl Test Container** para probar el comportamiento de un control compuesto.
 
 [Errores en tiempo de diseño en el Diseñador de Windows Forms](design-time-errors-in-the-windows-forms-designer.md)\

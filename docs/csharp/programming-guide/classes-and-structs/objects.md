@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596387"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419266"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guía de programación de C#)
 Una definición de clase o estructura es como un plano que especifica qué puede hacer el tipo. Un objeto es básicamente un bloque de memoria que se ha asignado y configurado de acuerdo con el plano. Un programa puede crear muchos objetos de la misma clase. Los objetos también se denominan instancias y pueden almacenarse en una variable con nombre, o en una matriz o colección. El código de cliente es el código que usa estas variables para llamar a los métodos y acceder a las propiedades públicas del objeto. En un lenguaje orientado a objetos, como C#, un programa típico consta de varios objetos que interactúan dinámicamente.  
@@ -64,7 +64,7 @@ Una definición de clase o estructura es como un plano que especifica qué puede
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [object](../../language-reference/keywords/object.md)
+- [object](../../language-reference/builtin-types/reference-types.md)
 - [Herencia](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

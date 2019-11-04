@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 1442daf646a29c3822d06d0b649f462b37523fe2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002117"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423251"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Excepciones y control de excepciones (Guía de programación de C#)
 
@@ -49,11 +49,11 @@ Para obtener más información sobre las excepciones y el control de excepciones
 - [Excepciones generadas por el compilador](compiler-generated-exceptions.md)
 - [Cómo: Controlar una excepción mediante Try y Catch (Guía de programación de C#)](how-to-handle-an-exception-using-try-catch.md)
 - [Cómo: Ejecutar código de limpieza mediante finally](how-to-execute-cleanup-code-using-finally.md)
-- [Uso de Detección de una excepción de no compatibilidad con CLS](how-to-catch-a-non-cls-exception.md)
+- [Cómo: Detección de una excepción de no compatibilidad con CLS](how-to-catch-a-non-cls-exception.md)
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para obtener más información, consulte la sección [Excepciones](~/_csharplang/spec/exceptions.md) de [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para obtener más información, consulte la sección [Excepciones](~/_csharplang/spec/exceptions.md) de [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
 
 ## <a name="see-also"></a>Vea también
 

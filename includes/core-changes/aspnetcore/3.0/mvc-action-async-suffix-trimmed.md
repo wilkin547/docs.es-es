@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dc9f37ae0cd6eef2c67e62421571290bba1c2233
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393953"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198571"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: se ha recortado el sufijo Async de los nombres de acción de controlador
 
@@ -48,7 +48,7 @@ Este cambio no afecta a los nombres especificados mediante el atributo `[ActionN
 ```csharp
 services.AddMvc(options =>
 {
-   options.SuppressAsyncSuffixInActionNames = false; 
+   options.SuppressAsyncSuffixInActionNames = false;
 });
 ```
 
@@ -66,7 +66,7 @@ Si la aplicación depende de que las acciones de MVC conserven el sufijo `Async`
 ```csharp
 services.AddMvc(options =>
 {
-   options.SuppressAsyncSuffixInActionNames = false; 
+   options.SuppressAsyncSuffixInActionNames = false;
 });
 ```
 

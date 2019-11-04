@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394237"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198576"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Marco compartido: se han quitado los ensamblados de Microsoft.AspNetCore.App
 
-A partir de ASP.NET Core 3.0, el marco compartido de ASP.NET Core (`Microsoft.AspNetCore.App`) solo contiene ensamblados propios totalmente desarrollados, admitidos y mantenidos por Microsoft. 
+A partir de ASP.NET Core 3.0, el marco compartido de ASP.NET Core (`Microsoft.AspNetCore.App`) solo contiene ensamblados propios totalmente desarrollados, admitidos y mantenidos por Microsoft.
 
 #### <a name="change-description"></a>Descripción del cambio
 
@@ -54,7 +54,7 @@ No será necesario que los proyectos consuman ensamblados en `Microsoft.AspNetCo
 
 Este cambio no se aplica a todos los archivos binarios a los que se hace referencia a través de `Microsoft.AspNetCore.App` en ASP.NET Core 2.x. Entre las excepciones destacables se incluyen las siguientes:
 
-- Las bibliotecas de `Microsoft.Extensions` que todavía tienen .NET Standard como destino estarán disponibles como paquetes NuGet (vea https://github.com/aspnet/Extensions)).
+- Las bibliotecas de `Microsoft.Extensions` que todavía tienen .NET Standard como destino estarán disponibles como paquetes NuGet (vea https://github.com/aspnet/Extensions) ).
 - API generadas por el equipo de ASP.NET Core que no forman parte de `Microsoft.AspNetCore.App`. Por ejemplo, los componentes siguientes están disponibles como paquetes NuGet:
   - Entity Framework Core
   - API que proporcionan integración de terceros

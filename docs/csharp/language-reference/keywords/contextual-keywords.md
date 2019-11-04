@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168616"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422866"
 ---
 # <a name="contextual-keywords-c-reference"></a>Palabras clave contextuales (Referencia de C#)
 
@@ -21,7 +21,7 @@ Las palabras clave contextuales se usan para proporcionar un significado especí
 |[add](./add.md)|Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe al evento.|  
 |[async](./async.md)|Indica que el método modificado, una expresión lambda o un método anónimo es asincrónico.|  
 |[await](../operators/await.md)|Suspende un método asincrónico hasta que finalice una tarea en espera.|  
-|[dynamic](./dynamic.md)|Define un tipo de referencia que permite que las operaciones en las que tiene lugar omitan la comprobación de tipos en tiempo de compilación.|  
+|[dynamic](../builtin-types/reference-types.md)|Define un tipo de referencia que permite que las operaciones en las que tiene lugar omitan la comprobación de tipos en tiempo de compilación.|  
 |[get](./get.md)|Define un método de descriptor de acceso para una propiedad o un indizador.|  
 |[global](../operators/namespace-alias-qualifier.md)|Alias del espacio de nombres global, que de lo contrario no tiene nombre.|  
 |[partial](./partial-type.md)|Define clases parciales, structs e interfaces a lo largo de la misma unidad de compilación.|  

@@ -2,12 +2,12 @@
 title: Operaciones cuantificadoras (C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 4a0f5b2c90d4b71a945dee02a32cbe897818c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5899af79799d5b8404e60027d7ba1b005c4b1b79
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591466"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423361"
 ---
 # <a name="quantifier-operations-c"></a>Operaciones cuantificadoras (C#)
 Las operaciones cuantificadoras devuelven un valor <xref:System.Boolean> que indica si algunos o todos los elementos de una secuencia cumplen una condición.  
@@ -30,5 +30,5 @@ Las operaciones cuantificadoras devuelven un valor <xref:System.Boolean> que ind
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [Cómo: Especificar dinámicamente filtros con predicado en tiempo de ejecución](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Cómo: Especificar dinámicamente filtros con predicado en tiempo de ejecución](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

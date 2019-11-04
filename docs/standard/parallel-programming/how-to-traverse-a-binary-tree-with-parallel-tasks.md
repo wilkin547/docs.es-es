@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Recorrer un árbol binario con tareas paralelas'
+title: Procedimiento para recorrer un árbol binario con tareas en paralelo
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44196652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141648"
 ---
-# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Cómo: Recorrer un árbol binario con tareas paralelas
+# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Procedimiento para recorrer un árbol binario con tareas en paralelo
 En el ejemplo siguiente se muestran dos formas de usar las tareas paralelas para recorrer una estructura de datos en árbol. La creación del árbol se deja como un ejercicio.  
   
 ## <a name="example"></a>Ejemplo  

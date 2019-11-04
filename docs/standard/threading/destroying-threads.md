@@ -9,14 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138094"
 ---
 # <a name="destroying-threads"></a>Destrucción de subprocesos
 El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para más información, consulte <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

@@ -1,25 +1,25 @@
 ---
-title: Procedimiento Aplicar un dibujo a un modelo 3D
+title: 'Cómo: Aplicar un dibujo a un modelo 3D'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawings [WPF], applying to 3-D models
 - 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-ms.openlocfilehash: 14470d0adeb948ea46a0720b5713c20fb7d8e6d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 311a3ac1d9fa219a3a365d506d9d0c3e8b6bc229
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855880"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459369"
 ---
-# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Procedimiento Aplicar un dibujo a un modelo 3D
+# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Cómo: Aplicar un dibujo a un modelo 3D
 
-En este ejemplo se muestra cómo utilizar <xref:System.Windows.Media.DrawingBrush> un <xref:System.Windows.Media.Media3D.Material> como aplicado a un modelo 3D.
+En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.DrawingBrush> como <xref:System.Windows.Media.Media3D.Material> aplicado a un modelo 3D.
 
-El código siguiente define <xref:System.Windows.Media.DrawingGroup> como el contenido de un. <xref:System.Windows.Media.DrawingBrush>  Se establece como la <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> propiedad de <xref:System.Windows.Media.Media3D.DiffuseMaterial> que se aplica a un plano 3D. <xref:System.Windows.Media.DrawingBrush>
+En el código siguiente se define un <xref:System.Windows.Media.DrawingGroup> como contenido de un <xref:System.Windows.Media.DrawingBrush>.  El <xref:System.Windows.Media.DrawingBrush> se establece como la propiedad <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> de la <xref:System.Windows.Media.Media3D.DiffuseMaterial> que se aplica a un plano 3D.
 
 > [!NOTE]
-> A menudo es conveniente definir objetos y valores complejos como el dibujo siguiente como recursos que se pueden volver a usar y simplificar el código. Vea [recursos XAML](../advanced/xaml-resources.md) para obtener más información.
+> A menudo es conveniente definir objetos y valores complejos como el dibujo siguiente como recursos que se pueden volver a usar y simplificar el código. Vea [recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) para obtener más información.
 
 [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]
 
@@ -31,7 +31,7 @@ En el código siguiente se muestra el ejemplo completo.
 
 ## <a name="see-also"></a>Vea también
 
-- [Recursos XAML](../advanced/xaml-resources.md)
+- [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Crear una escena 3D](how-to-create-a-3-d-scene.md)
 - [Información general sobre objetos Drawing](drawing-objects-overview.md)
 - [Información general sobre gráficos 3D](3-d-graphics-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534896"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422760"
 ---
 # <a name="group-clause-c-reference"></a>group (Cláusula, Referencia de C#)
 
@@ -54,7 +54,7 @@ En el ejemplo siguiente se muestra el uso de un valor booleano para una clave co
 
 ### <a name="grouping-by-numeric-range"></a>Agrupar por intervalo numérico
 
-En el ejemplo siguiente se usa una expresión para crear claves de grupo numéricas que representan un intervalo de percentil. Observe el uso de [let](let-clause.md) como ubicación adecuada para almacenar el resultado de una llamada de método, para no tener que llamar al método dos veces en la cláusula `group`. Para obtener más información sobre cómo usar métodos en expresiones de consulta de manera segura, vea [Cómo: Controlar excepciones en expresiones de consulta](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+En el ejemplo siguiente se usa una expresión para crear claves de grupo numéricas que representan un intervalo de percentil. Observe el uso de [let](let-clause.md) como ubicación adecuada para almacenar el resultado de una llamada de método, para no tener que llamar al método dos veces en la cláusula `group`. Para obtener más información sobre cómo usar métodos en expresiones de consulta de manera segura, vea [Cómo: Controlar excepciones en expresiones de consulta](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

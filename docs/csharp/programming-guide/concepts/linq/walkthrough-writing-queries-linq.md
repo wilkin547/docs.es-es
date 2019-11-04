@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924105"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418055"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Tutorial: Escribir consultas en C# (LINQ)
 Este tutorial muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINQ.  
@@ -185,4 +185,4 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
 ## <a name="see-also"></a>Vea también
 
 - [Language Integrated Query (LINQ) (C#)](./index.md)
-- [Expresiones de consulta LINQ](../../linq-query-expressions/index.md)
+- [Expresiones de consulta LINQ](../../../linq/index.md)

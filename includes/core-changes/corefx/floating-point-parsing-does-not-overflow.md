@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 192873aa5069aa4f96a18716afb066c80b223e29
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002448"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198564"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Las operaciones de análisis de punto flotante ya no producen un error o lanzan una excepción OverflowException
 
@@ -16,7 +16,7 @@ En .NET Core 2.2 y versiones anteriores, los métodos <xref:System.Double.Parse%
 
 A partir de .NET Core 3.0, los métodos <xref:System.Double.Parse%2A?displayProperty=nameWithType>, <xref:System.Double.TryParse%2A?displayProperty=nameWithType>, <xref:System.Single.Parse%2A?displayProperty=nameWithType> y <xref:System.Single.TryParse%2A?displayProperty=nameWithType> ya no producen errores al analizar cadenas numéricas fuera del rango. En su lugar, los métodos de análisis de <xref:System.Double> devuelven <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> para los valores que superan <xref:System.Double.MaxValue?displayProperty=nameWithType> y <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> para los valores menores que <xref:System.Double.MinValue?displayProperty=nameWithType>. Del mismo modo, los métodos de análisis de <xref:System.Single> devuelven <xref:System.Single.PositiveInfinity?displayProperty=nameWithType> para los valores que superan <xref:System.Single.MaxValue?displayProperty=nameWithType> y <xref:System.Single.NegativeInfinity?displayProperty=nameWithType> para los valores menores que <xref:System.Single.MinValue?displayProperty=nameWithType>.
 
-Este cambio se ha realizado para mejorar el cumplimiento de la norma IEEE 754:2008. 
+Este cambio se ha realizado para mejorar el cumplimiento de la norma IEEE 754:2008.
 
 #### <a name="version-introduced"></a>Versión introducida
 

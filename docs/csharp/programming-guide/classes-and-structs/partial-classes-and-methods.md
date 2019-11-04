@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596278"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419180"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Clases y métodos parciales (Guía de programación de C#)
 
@@ -164,11 +164,11 @@ partial void onNameChanged()
 
 - Los métodos parciales pueden ser genéricos. Las restricciones se colocan en la declaración de método parcial de definición y opcionalmente pueden repetirse en el de implementación. Los nombres del parámetro y del parámetro de tipo no tienen que ser iguales en la declaración de implementación y en la declaración de definición.
 
-- Puede crear un [delegado](../../language-reference/keywords/delegate.md) para un método parcial que se ha definido e implementado, pero no para un método parcial que solo se ha definido.
+- Puede crear un [delegado](../../language-reference/builtin-types/reference-types.md) para un método parcial que se ha definido e implementado, pero no para un método parcial que solo se ha definido.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para obtener más información, vea la sección [Tipos parciales](~/_csharplang/spec/classes.md#partial-types) de la [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para obtener más información, vea la sección [Tipos parciales](~/_csharplang/spec/classes.md#partial-types) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
 
 ## <a name="see-also"></a>Vea también
 

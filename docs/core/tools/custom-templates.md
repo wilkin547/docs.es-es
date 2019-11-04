@@ -3,12 +3,12 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117813"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420878"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -18,7 +18,7 @@ Puede instalar plantillas personalizadas desde un paquete NuGet en cualquier fue
 
 El motor de plantillas es de código abierto, y el repositorio de código en línea está en [dotnet/templating](https://github.com/dotnet/templating/) en GitHub. Visite el repositorio [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) para obtener ejemplos de plantillas. Puede encontrar más plantillas, incluidas las plantillas de terceros, en [Plantillas disponibles para dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) en GitHub. Para obtener información sobre cómo crear y usar plantillas personalizadas, vea [Cómo crear sus propias plantillas para dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) y la [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki).
 
-Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una plantilla personalizada para dotnet new](../tutorials/create-custom-template.md).
+Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una plantilla personalizada para dotnet new](../tutorials/cli-templates-create-item-template.md).
 
 ### <a name="net-default-templates"></a>Plantillas predeterminadas .NET
 
@@ -250,7 +250,7 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Vea también
 
-- [Creación de una plantilla personalizada para dotnet new (tutorial)](../tutorials/create-custom-template.md)
+- [Creación de una plantilla personalizada para dotnet new (tutorial)](../tutorials/cli-templates-create-item-template.md)
 - [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)
 - [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)

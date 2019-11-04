@@ -2,12 +2,12 @@
 title: Consultas básicas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: 3b94c17ef78a97c925dc64f19af27c8f491688d5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 273ffb9de17d01d0c3a9e1e7ac89d1ebf80b44fb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594863"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418643"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
 En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -32,4 +32,4 @@ En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxl
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultar árboles XML (C#)](./querying-xml-trees.md)
+- [Consultar árboles XML (C#)](how-to-find-an-element-with-a-specific-attribute.md)

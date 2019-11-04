@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow'
 description: Obtenga información sobre cómo transferir el conocimiento de un modelo de TensorFlow existente a un modelo de clasificación de imágenes de ML.NET nuevo. El modelo TensorFlow se entrenó para clasificar las imágenes en mil categorías. El modelo de ML.NET usa el aprendizaje de transferencia para clasificar las imágenes en menos categorías más amplias.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 399e9ce3288d53049e968688736f5b953d7e5b80
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129597"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -21,10 +21,10 @@ El modelo de TensorFlow se entrenó para clasificar las imágenes en mil categor
 
 Entrenar un modelo de [clasificación de imágenes](https://en.wikipedia.org/wiki/Outline_of_object_recognition) desde cero requiere establecer millones de parámetros, una enorme cantidad de datos de aprendizaje etiquetados y una gran cantidad de recursos informáticos (cientos de horas de GPU). Si bien no es tan eficaz como entrenar un modelo personalizado desde cero, el aprendizaje por transferencia permite acortar este proceso al trabajar con miles de imágenes frente a millones de imágenes etiquetadas y crear un modelo personalizado con bastante rapidez (menos de una hora en una máquina sin GPU). En este tutorial se amplía aún más ese proceso, con solo una docena de imágenes de aprendizaje.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
-> * Comprender el problema
+> * Entender el problema
 > * Incorporación del modelo de TensorFlow entrenado previamente en la canalización de ML.NET
 > * Entrenamiento y evaluación del modelo de ML.NET
 > * Clasificación de una imagen de prueba
@@ -82,7 +82,7 @@ La clasificación de imágenes es una tarea de Machine Learning común que nos 
 
 * Alimentos
 * Juguetes
-* Dispositivo
+* Dispositivos
 
 En este tutorial se usa el modelo de aprendizaje profundo del [modelo de inicio](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) de TensorFlow, un modelo de reconocimiento de imágenes popular entrenado en el conjunto de datos `ImageNet`. El modelo de TensorFlow clasifica imágenes completas en miles de clases como "Paraguas", "Jersey" y "Lavavajillas".
 
@@ -120,7 +120,7 @@ toaster2.png    appliance
 Las imágenes de entrenamiento y prueba se encuentran en las carpetas de recursos que descargará en un archivo ZIP. Estas imágenes pertenecen a Wikimedia Commons.
 > *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), el repositorio multimedia gratuito*. Recuperado a las 10:48 del 17 de octubre de 2018 desde: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
 
-## <a name="setup"></a>Configuración
+## <a name="setup"></a>Programa de instalación
 
 ### <a name="create-a-project"></a>Crear un proyecto
 
@@ -143,7 +143,7 @@ Las imágenes de entrenamiento y prueba se encuentran en las carpetas de recurso
 
 1. Descargue el [modelo de inicio](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) y descomprímalo.
 
-1. Copie el contenido del directorio `inception5h` que acaba de descomprimir en el directorio `assets/inputs-train/inception` del proyecto *TransferLearningTF*. En este directorio está el modelo y los archivos auxiliares adicionales que se necesitan en este tutorial, tal como se muestra en la imagen siguiente:
+1. Copie el contenido del directorio `inception5h` que acaba de descomprimir en el directorio `assets/inception` del proyecto *TransferLearningTF*. En este directorio está el modelo y los archivos auxiliares adicionales que se necesitan en este tutorial, tal como se muestra en la imagen siguiente:
 
    ![Contenido del directorio de inicio](./media/image-classification/inception-files.png)
 
@@ -302,7 +302,7 @@ Una canalización del modelo de ML.NET es una cadena de estimadores. Tenga en cu
 
     [!code-csharp[MapKeyToValue](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapKeyToValue)]
 
-## <a name="train-the-model"></a>Entrenamiento del modelo
+## <a name="train-the-model"></a>Entrenar el modelo
 
 1. Cargue los datos de entrenamiento con el contenedor [LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile(Microsoft.ML.DataOperationsCatalog,System.String,Microsoft.ML.Data.TextLoader.Options)). Agregue el siguiente código como la siguiente línea en el método `GenerateModel()`:
 
@@ -362,32 +362,24 @@ Una canalización del modelo de ML.NET es una cadena de estimadores. Tenga en cu
 
     ```console
     =============== Training classification model ===============
-    Image: broccoli.jpg predicted as: food with score: 0.976743
-    Image: pizza.jpg predicted as: food with score: 0.9751652
-    Image: pizza2.jpg predicted as: food with score: 0.9660203
-    Image: teddy2.jpg predicted as: toy with score: 0.9748783
-    Image: teddy3.jpg predicted as: toy with score: 0.9829691
-    Image: teddy4.jpg predicted as: toy with score: 0.9868168
-    Image: toaster.jpg predicted as: appliance with score: 0.9769174
-    Image: toaster2.png predicted as: appliance with score: 0.9800823
+    Image: broccoli2.jpg predicted as: food with score: 0.8955513
+    Image: pizza3.jpg predicted as: food with score: 0.9667718
+    Image: teddy6.jpg predicted as: toy with score: 0.9797683
     =============== Classification metrics ===============
-    LogLoss is: 0.0228266745633507
-    PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
+    LogLoss is: 0.0653774699265059
+    PerClassLogLoss is: 0.110315812569315 , 0.0204391272836966 , 0
     =============== Making single image classification ===============
-    Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-
-    C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
-    Press any key to close this window . . .
+    Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
-Felicidades. Ha creado correctamente un modelo de Machine Learning para la clasificación de imágenes al aplicar el aprendizaje de transferencia a un modelo de `TensorFlow` en ML.NET.
+¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para la clasificación de imágenes al aplicar el aprendizaje de transferencia a un modelo de `TensorFlow` en ML.NET.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF).
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
-> * Comprender el problema
+> * Entender el problema
 > * Incorporación del modelo de TensorFlow entrenado previamente en la canalización de ML.NET
 > * Entrenamiento y evaluación del modelo de ML.NET
 > * Clasificación de una imagen de prueba

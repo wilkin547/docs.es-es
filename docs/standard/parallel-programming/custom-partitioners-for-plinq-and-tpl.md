@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 42df511857d367859fc68e2d881dd5b5e2e0bfbc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662558"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141570"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ y TPL
 

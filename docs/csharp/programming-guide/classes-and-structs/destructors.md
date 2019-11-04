@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924497"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419361"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
@@ -85,7 +85,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
-Para más información, vea la sección sobre [destructores](~/_csharplang/spec/classes.md#destructors) de la [Especificación del lenguaje C#](../../language-reference/language-specification/index.md).
+Para más información, vea la sección sobre [destructores](~/_csharplang/spec/classes.md#destructors) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).
   
 ## <a name="see-also"></a>Vea también
 

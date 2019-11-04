@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771501"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417252"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -69,7 +69,7 @@ Puede empezar a programar la aplicación en .NET sin formato (normalmente en .NE
 
 ![2\. Escribir Dockerfiles](./media/image4.png)
 
-## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Paso 2. Crear un Dockerfile relacionado con una imagen base existente de .NET
+## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Paso 2. Crear un Dockerfile relacionado con una imagen base existente de .NET
 
 Necesita un Dockerfile para cada imagen personalizada que quiera compilar; también necesita un Dockerfile para cada contenedor que se vaya a implementar, tanto si se implementa automáticamente desde Visual Studio como manualmente mediante la CLI de Docker (comandos docker run y docker-compose). Si la aplicación contiene un único servicio personalizado, necesita un solo Dockerfile. Si la aplicación contiene varios servicios (como en una arquitectura de microservicios), necesita un Dockerfile para cada servicio.
 
@@ -117,7 +117,7 @@ Puede especificar otros valores de configuración en el Dockerfile, según el le
 ### <a name="additional-resources"></a>Recursos adicionales
 
 - **Compilación de imágenes de Docker para aplicaciones .NET Core** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Compile su propia imagen**. En la documentación oficial de Docker.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
@@ -306,7 +306,7 @@ Puede crear su propia imagen base de Docker desde cero. Este escenario no se rec
 
 ![3\. Crear imágenes definidas en Dockerfiles](./media/image7.png)
 
-## <a name="step-3-create-your-custom-docker-images-and-embed-your-application-or-service-in-them"></a>Paso 3. Crear las imágenes de Docker personalizadas e insertar la aplicación o el servicio en ellas
+## <a name="step-3-create-your-custom-docker-images-and-embed-your-application-or-service-in-them"></a>Paso 3. Crear las imágenes de Docker personalizadas e insertar la aplicación o el servicio en ellas
 
 Debe crear una imagen relacionada para cada servicio de la aplicación. Si la aplicación está formada por un único servicio o aplicación web, solo necesita una imagen.
 
@@ -338,7 +338,7 @@ Cuando se usa Visual Studio para crear un proyecto con compatibilidad con Docker
 
 ![4\. (Opcional) Crear servicios en el archivo docker-compose.yml](./media/image10.png)
 
-## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>Paso 4 Definir los servicios en docker-compose.yml al compilar una aplicación de Docker de varios contenedores
+## <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application"></a>Paso 4. Definir los servicios en docker-compose.yml al compilar una aplicación de Docker de varios contenedores
 
 El archivo [docker-compose.yml](https://docs.docker.com/compose/compose-file/) permite definir un conjunto de servicios relacionados para implementarlos como una aplicación compuesta con comandos de implementación. También configura sus relaciones de dependencia y la configuración en tiempo de ejecución.
 
@@ -502,7 +502,7 @@ Los comandos docker-compose up y docker run (o la ejecución y depuración de lo
 
 ![6\. Probar la aplicación o los microservicios](./media/image17.png)
 
-## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Paso 6. Probar la aplicación de Docker con el host local de Docker
+## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Paso 6. Probar la aplicación de Docker con el host local de Docker
 
 Este paso varía en función de lo que haga la aplicación. En una aplicación web de .NET Core sencilla implementada como un único contenedor o servicio, puede acceder al servicio si abre un explorador en el host de Docker y va a ese sitio, como se muestra en la figura 5-13. (Si la configuración del Dockerfile asigna el contenedor a un puerto del host distinto al 80, incluya el puerto del host en la dirección URL).
 
