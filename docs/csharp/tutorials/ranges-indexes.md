@@ -2,19 +2,20 @@
 title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699937"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039666"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
 Los intervalos e índices proporcionan una sintaxis concisa para acceder a elementos únicos o intervalos en una secuencia.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
 >

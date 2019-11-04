@@ -20,14 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736863"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121699"
 ---
 # <a name="net-regular-expressions"></a>Expresiones regulares de .NET
 Las expresiones regulares proporcionan un método eficaz y flexible para procesar texto. La notación extensiva de búsqueda de patrones coincidentes de las expresiones regulares permite analizar rápidamente grandes cantidades de texto para buscar patrones de caracteres específicos; para validar un texto con el fin de asegurar que se corresponde con un patrón predefinido (por ejemplo, una dirección de correo electrónico); para extraer, editar, reemplazar o eliminar subcadenas de texto; y para agregar las cadenas extraídas a una colección con el fin de generar un informe. Para muchas aplicaciones que usan cadenas o analizan grandes bloques de texto, las expresiones regulares son una herramienta indispensable.  

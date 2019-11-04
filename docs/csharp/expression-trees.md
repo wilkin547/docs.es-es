@@ -2,13 +2,14 @@
 title: Árboles de expresión
 description: Obtenga información sobre los árboles de expresión en .NET Core y cómo usarlos para representar código como estructuras que pueda examinar, modificar y ejecutar.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096620"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036322"
 ---
 # <a name="expression-trees"></a>Árboles de expresión
 

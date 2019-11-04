@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde68d0a938ed04380bf0e99cc0c544793571d77
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29d7fa8200ddd972c1a5c98ea6f30a7c8ff732e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965584"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139752"
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Procedimiento para acelerar cuerpos de bucle pequeños
 Si un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> tiene un cuerpo pequeño, su rendimiento puede ser menor que el del bucle secuencial equivalente, como el bucle [for](../../csharp/language-reference/keywords/for.md) de C# y el bucle [For](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) de Visual Basic. El menor rendimiento se debe a la sobrecarga implicada en la partición de los datos y al costo de invocar un delegado en cada iteración del bucle. Para abordar estos escenarios, la clase <xref:System.Collections.Concurrent.Partitioner> proporciona el método <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType>, que permite proporcionar un bucle secuencial para el cuerpo del delegado de manera que el delegado solo se invoque una sola vez por partición, en lugar de una vez por cada iteración. Para más información, consulte [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) (Particionadores personalizados para PLINQ y TPL).  

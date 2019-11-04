@@ -12,14 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e80e524a8bac28195067ce6bd30504005fc4b5a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140574"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 La administración de memoria automática es uno de los servicios que proporciona Common Language Runtime durante la [ejecución administrada](../../docs/standard/managed-execution-process.md). El recolector de elementos no utilizados de Common Language Runtime administra la asignación y liberación de la memoria de una aplicación. Esto significa que los programadores no tienen que escribir código para realizar tareas de administración de memoria al programar aplicaciones administradas. La administración automática de la memoria puede eliminar problemas frecuentes, como olvidar liberar un objeto y causar una pérdida de memoria, o intentar tener acceso a la memoria de un objeto que ya se ha liberado. En esta sección se describe cómo asigna y libera memoria el recolector de elementos no utilizados.  

@@ -15,14 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 222376e220bf74274082dfc6b76dc861d4f8ddc5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855987"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120816"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Realizar operaciones de cadenas que no tienen en cuenta las referencias culturales en colecciones
 

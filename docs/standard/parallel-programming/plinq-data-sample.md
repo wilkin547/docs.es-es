@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140009"
 ---
 # <a name="plinq-data-sample"></a>Ejemplo de datos de PLINQ
 Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que los transforman en colecciones en memoria de clientes, productos, pedidos y detalles de pedidos. Si desea realizar más pruebas con PLINQ, puede pegar los ejemplos de código de otros temas concretos en el código de este tema e invocarlo desde el método `Main`. También puede usar estos datos con sus propias consultas PLINQ.  

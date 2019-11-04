@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d7942ef6c36c01a9ae7ae2a9739f26dfcda5813
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394360"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041664"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>Identity: la interfaz de usuario usa la característica de recursos web estáticos
 
@@ -23,11 +23,11 @@ Como resultado de la interfaz de usuario de Identity que adopta la característi
 
 #### <a name="old-behavior"></a>Comportamiento anterior
 
-El marco de la interfaz de usuario predeterminado para la interfaz de usuario de Identity era **Bootstrap 3**. El marco de la interfaz de usuario se puede configurar mediante un parámetro para la llamada al método `AddIdentityUI` en `Startup.ConfigureServices`.
+El marco de la interfaz de usuario predeterminado para la interfaz de usuario de Identity era **Bootstrap 3**. El marco de la interfaz de usuario se puede configurar mediante un parámetro para la llamada al método `AddDefaultUI` en `Startup.ConfigureServices`.
 
 #### <a name="new-behavior"></a>Comportamiento nuevo
 
-El marco de la interfaz de usuario predeterminado para la interfaz de usuario de Identity es **Bootstrap 4**. El marco de la interfaz de usuario debe configurarse en el archivo del proyecto, en lugar de en la llamada al método `AddIdentityUI`.
+El marco de la interfaz de usuario predeterminado para la interfaz de usuario de Identity es **Bootstrap 4**. El marco de la interfaz de usuario debe configurarse en el archivo del proyecto, en lugar de en la llamada al método `AddDefaultUI`.
 
 #### <a name="reason-for-change"></a>Motivo del cambio
 
@@ -47,12 +47,12 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>API afectadas
 
-<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>
 
 <!-- 
 
 #### Affected APIs
 
-`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)`
+`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)`
 
 -->

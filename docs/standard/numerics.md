@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091590"
 ---
 # <a name="numerics-in-net"></a>Valores numéricos en .NET
 
@@ -32,11 +30,11 @@ ms.locfileid: "50191160"
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Sin signo|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Firmado|2|-32.768|32.767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Firmado|4|-2.147.483.648|2.147.483.647|  
-|<xref:System.Int64?displayProperty=nameWithType>|Firmado|8|-9.223.372.036.854.775.808|9.223.372.036.854.775.807|  
+|<xref:System.Int32?displayProperty=nameWithType>|Firmado|4|-2.147.483.648|2\.147.483.647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Firmado|8|-9.223.372.036.854.775.808|9\.223.372.036.854.775.807|  
 |<xref:System.SByte?displayProperty=nameWithType>|Firmado|1|-128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|Sin signo|2|0|65.535|  
-|<xref:System.UInt32?displayProperty=nameWithType>|Sin signo|4|0|4.294.967.295|  
+|<xref:System.UInt32?displayProperty=nameWithType>|Sin signo|4|0|4\.294.967.295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|Sin signo|8|0|18.446.744.073.709.551.615|  
   
 Cada tipo de entero admite un conjunto de operadores aritméticos estándar. La clase <xref:System.Math?displayProperty=nameWithType> proporciona métodos para un conjunto más amplio de funciones matemáticas.

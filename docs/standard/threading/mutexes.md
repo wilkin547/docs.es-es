@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 874f879697db0b47c73626350eeb05a01b38e1bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127562"
 ---
 # <a name="mutexes"></a>Mutexes
 Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso exclusivo a un recurso. La clase <xref:System.Threading.Mutex> usa más recursos del sistema que la clase <xref:System.Threading.Monitor>, pero se pueden calcular sus referencias a través de los límites de dominio de aplicación, se puede usar con varias esperas y se puede usar para sincronizar subprocesos en distintos procesos. Para ver una comparación de los mecanismos de sincronización administrados, consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8f36016b19583a06118edc906cf60a82be32f8
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133729"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103773"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 

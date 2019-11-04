@@ -35,14 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124808"
 ---
 # <a name="the-regular-expression-object-model"></a>El modelo de objetos de expresión regular
 <a name="introduction"></a> En este tema se describe el modelo de objetos usado para trabajar con expresiones regulares de .NET. Contiene las siguientes secciones:  
@@ -91,7 +89,7 @@ ms.locfileid: "64664659"
   
  El patrón de la expresión regular `^\d{3}-\d{2}-\d{4}$` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Buscar coincidencias con el principio de la cadena de entrada.|  
 |`\d{3}`|Coincide con tres dígitos decimales.|  
@@ -109,7 +107,7 @@ ms.locfileid: "64664659"
   
  El patrón de la expresión regular `\b(\w+)\W+(\1)\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -277,7 +275,7 @@ ms.locfileid: "64664659"
   
  El patrón de expresión regular `^(?<name>\w+):(?<value>\w+)` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`(?<name>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. El nombre de este grupo de captura es `name`.|  

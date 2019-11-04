@@ -12,14 +12,12 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc3393c27d2955528822c193c36a0f6d86f5c148
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132003"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procedimiento para valores de fecha y hora de ida y vuelta
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168968"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195493"
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -72,4 +72,4 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](./programming-guide/index.md)
-- [Ejemplos de Visual Studio](/visualstudio/ide/visual-studio-samples)
+- [Ejemplos de Visual Studio](/visualstudio/ide/visual-studio-ide)

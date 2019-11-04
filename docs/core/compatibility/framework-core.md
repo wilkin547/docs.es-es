@@ -2,14 +2,12 @@
 title: Cambios importantes, de .NET Framework a .NET Core 3.0 (.NET Core)
 description: Enumera los cambios importantes de .NET Framework a .NET Core 3.0 para Windows Forms y Windows Presentation Foundation.
 ms.date: 09/10/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 28da6a99e86d6c6f5cfc3b05c0a3a6419c310127
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182111"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089574"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>Cambios importantes para la migración desde .NET Framework a .NET Core 3.0
 

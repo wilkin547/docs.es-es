@@ -13,14 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103826"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET
 .NET Framework permite crear cadenas mediante asignaciones simples y además sobrecarga un constructor de clases para admitir la creación de cadenas con una serie de parámetros distintos. .NET Framework también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean nuevos objetos de cadena al combinar varias cadenas, matrices de cadenas u objetos.  

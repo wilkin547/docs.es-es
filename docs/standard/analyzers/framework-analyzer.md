@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929307"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197964"
 ---
 # <a name="the-net-framework-analyzer"></a>Analizador de .NET Framework
 
@@ -133,4 +133,4 @@ Existe un ataque que, a nivel computacional, puede interrumpir este algoritmo. D
 
 **Gravedad**: Advertencia
 
-Información adicional: [CA5351: No usar algoritmos criptográficos dañados](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
+Información adicional: [CA5351: No usar algoritmos criptográficos dañados](/visualstudio/code-quality/ca5351)

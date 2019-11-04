@@ -2,12 +2,12 @@
 title: Uso de bases de datos NoSQL como una infraestructura de persistencia
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre el uso de bases de datos NoSql en general, y Azure Cosmos DB en concreto, como una opción para implementar la persistencia.
 ms.date: 10/08/2018
-ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089869"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Uso de bases de datos NoSQL como una infraestructura de persistencia
 
@@ -122,7 +122,7 @@ Pero cuando se persiste el modelo en la base de datos NoSQL, el código y la API
 
 Se puede acceder a las bases de datos de Azure Cosmos DB desde código de .NET que se ejecuta en contenedores, como en cualquier otra aplicación. NET. Por ejemplo, los microservicios Locations.API y Marketing.API de eShopOnContainers se implementan para que puedan utilizar las bases de datos de Azure Cosmos DB.
 
-Pero hay una limitación en Azure Cosmos DB desde un punto de vista del entorno de desarrollo Docker. A pesar de que hay un [emulador de Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator) local capaz de ejecutarse en una máquina de desarrollo local (por ejemplo, un equipo PC), hasta finales de 2017, solo es compatible con Windows, pero no con Linux. 
+Pero hay una limitación en Azure Cosmos DB desde un punto de vista del entorno de desarrollo Docker. A pesar de que hay un [emulador de Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator) local capaz de ejecutarse en una máquina de desarrollo local (por ejemplo, un equipo PC), hasta finales de 2017, solo es compatible con Windows, pero no con Linux.
 
 También existe la posibilidad de ejecutar este emulador en Docker, pero solo en los contenedores de Windows, no en los de Linux. Eso es un hándicap inicial para el entorno de desarrollo si la aplicación se implementa como contenedores de Linux, puesto que actualmente no es posible implementar al mismo tiempo contenedores de Windows y Linux en Docker para Windows. Todos los contenedores que se implementen tienen que ser de Linux o de Windows.
 
@@ -150,7 +150,7 @@ Los contenedores de .NET Core personalizados pueden ejecutarse en un host Docker
 
 Una ventaja evidente de utilizar la API de MongoDB es que la solución puede ejecutarse en dos motores de base de datos, MongoDB o Azure Cosmos DB, por lo que sería fácil migrar a otros entornos. Pero en ocasiones merece la pena usar una API nativa (es decir, la API de Cosmos DB nativa) con el fin de aprovechar al máximo las capacidades de un determinado motor de base de datos.
 
-Para comparar el uso de MongoDB frente a Cosmos DB en la nube, consulte las [ventajas de usar Azure Cosmos DB en esta página](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). 
+Para comparar el uso de MongoDB frente a Cosmos DB en la nube, consulte las [ventajas de usar Azure Cosmos DB en esta página](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction).
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Análisis del enfoque para aplicaciones de producción: API de MongoDB frente a API de Cosmos DB
 
@@ -194,12 +194,12 @@ public class Locations
     public string Description { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location
                                                              { get; private set; }
-    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon
                                                              { get; private set; }
     public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
-    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList)
                                                     => SetPolygon(coordinatesList);
 
     private void SetPosition(double lon, double lat)
@@ -246,7 +246,7 @@ public class LocationsContext
         {
             return _database.GetCollection<Locations>("Locations");
         }
-    }       
+    }
 }
 ```
 
@@ -301,7 +301,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 Debe quitar la marca de comentario de la línea ESHOP_AZURE_COSMOSDB y actualizarla con su cadena de conexión de Azure Cosmos DB obtenida en Azure Portal como se explica en [Conectar una aplicación de MongoDB a Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-Si la variable global `ESHOP_AZURE_COSMOSDB` está vacía, lo que significa que la marca de comentario se ha quitado del archivo `.env`, entonces el contenedor usa una cadena de conexión de MongoDB predeterminada que apunta al contenedor de MongoDB local implementado en eShopOnContainers que se denomina `nosql.data` y se definió en el archivo docker-compose, tal y como se muestra en el siguiente código .yml. 
+Si la variable global `ESHOP_AZURE_COSMOSDB` está vacía, lo que significa que la marca de comentario se ha quitado del archivo `.env`, entonces el contenedor usa una cadena de conexión de MongoDB predeterminada que apunta al contenedor de MongoDB local implementado en eShopOnContainers que se denomina `nosql.data` y se definió en el archivo docker-compose, tal y como se muestra en el siguiente código .yml.
 
 ``` yml
 # docker-compose.yml

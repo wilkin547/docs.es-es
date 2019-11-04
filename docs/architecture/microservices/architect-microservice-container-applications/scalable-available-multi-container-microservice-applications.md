@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Descubra las opciones para orquestar microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad de las posibilidades de espacios de desarrollo de Azure durante el desarrollo del ciclo de vida de aplicación de Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090141"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -62,11 +62,11 @@ En la figura 4-24 puede ver la estructura de un clúster de Kubernetes, donde un
 
 En el entorno de desarrollo, [Docker anunció en julio de 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) que Kubernetes también puede ejecutarse en un único equipo de desarrollo (Windows 10 o macOS), basta con instalar [Docker Desktop](https://docs.docker.com/install/). Puede implementar posteriormente en la nube (AKS) para obtener más pruebas de integración, como se muestra en la figura 4-25.
 
-![Diagrama que muestra Kubernetes en una máquina de desarrollo y luego se implementa en AKS](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
+![Diagrama que muestra Kubernetes en una máquina de desarrollo y luego se implementa en AKS](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
 **Figura 4-25**. Ejecución de Kubernetes en el equipo de desarrollo y la nube
 
-## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Introducción a Azure Kubernetes Service (AKS) 
+## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Introducción a Azure Kubernetes Service (AKS)
 
 Para empezar a usar AKS, implemente un clúster de AKS desde Azure Portal o mediante la CLI. Para más información sobre la implementación de un clúster de Kubernetes en Azure, consulte [Inicio rápido: Implementación de un clúster de Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 

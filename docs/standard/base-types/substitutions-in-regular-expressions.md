@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968538"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122478"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 <a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  

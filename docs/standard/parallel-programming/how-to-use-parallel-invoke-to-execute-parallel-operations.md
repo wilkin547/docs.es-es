@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Usar Parallel.Invoke para ejecutar operaciones paralelas'
+title: Procedimiento para usar Parallel.Invoke para ejecutar operaciones en paralelo
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,18 +9,16 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0192e12c86b21eb126293bbd220e093b334768b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139729"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Cómo: Usar Parallel.Invoke para ejecutar operaciones paralelas
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procedimiento para usar Parallel.Invoke para ejecutar operaciones en paralelo
 
-En este ejemplo se muestra cómo paralelizar operaciones usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> en la biblioteca TPL. Se realizan tres operaciones en un origen de datos compartido. Como ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.
+En este ejemplo se muestra cómo paralelizar operaciones usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> en Task Parallel Library. Se realizan tres operaciones en un origen de datos compartido. Como ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.
 
 > [!NOTE]
 > En esta documentación, se utilizan expresiones lambda para definir delegados en la TPL. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md) (Expresiones lambda en PLINQ y TPL).
@@ -41,5 +39,5 @@ Copie y pegue el ejemplo completo en un proyecto de Microsoft Visual Studio y pr
 ## <a name="see-also"></a>Vea también
 
 - [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
-- [Cancelar una tarea y los elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Cómo: Cancelar una tarea y sus elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

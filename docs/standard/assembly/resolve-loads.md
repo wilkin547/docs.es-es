@@ -8,18 +8,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework], loading
 - application domains, resolving assembly loads
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: ee9ce292b18c75893dae46582dc5bb966981a614
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106995"
 ---
 # <a name="resolve-assembly-loads"></a>Resolución de cargas de ensamblado
 .NET proporciona el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicaciones que requieren un mayor control sobre la carga de ensamblados. Al controlar este evento, la aplicación puede cargar un ensamblado en el contexto de carga desde fuera de las rutas de acceso de sondeo normales, seleccionar qué versión de ensamblado cargar, emitir un ensamblado dinámico y devolverlo, etc. En este tema se proporcionan instrucciones para controlar el evento <xref:System.AppDomain.AssemblyResolve>.  

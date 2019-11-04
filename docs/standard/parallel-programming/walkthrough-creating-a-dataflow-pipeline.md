@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139875"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Tutorial: Creación de una canalización de flujos de datos
 Aunque puede usar los métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para recibir mensajes de los bloques de origen, también puede conectar los bloques de mensajes para formar una *canalización de flujo de datos*. Una canalización de flujo datos es una serie de componentes, o *bloques de flujo de datos*, de los que cada uno realiza una tarea concreta que contribuye a lograr un objetivo mayor. Cada bloque de flujo de datos de una canalización de flujo de datos realiza un determinado trabajo cuando recibe un mensaje de otro bloque de flujo de datos. Se podría establecer una analogía de esto con una cadena de montaje en la fabricación de automóviles. Mientras cada vehículo pasa a través de la línea de montaje, una estación monta el bastidor, la siguiente instala el motor y así sucesivamente. Dado que una cadena de montaje permite montar varios vehículos al mismo tiempo, proporciona un mejor rendimiento que montar de uno en uno los vehículos completos.
@@ -55,7 +53,7 @@ Aunque puede usar los métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlo
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Miembro|Tipo|Descripción|  
+|Miembro|Tipo|DESCRIPCIÓN|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Descarga el texto del libro desde la Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Separa el texto del libro en una matriz de palabras.|  

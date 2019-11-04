@@ -11,14 +11,12 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bb62b191dc3b3246745f9f0ea3737ed74a2bf57b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7bd0a7606b5f93289cf39d33794457265e7e453
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094605"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>Utilizar un delegado AsyncCallback y un objeto State
 Cuando se usa un delegado <xref:System.AsyncCallback> para procesar los resultados de la operación asincrónica en un subproceso independiente, puede usar un objeto de estados para pasar información entre las devoluciones de llamada y recuperar un resultado final. En este tema se explica dicha práctica mediante la ampliación del ejemplo de [Utilizar un delegado AsyncCallback para finalizar una operación asincrónica](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  

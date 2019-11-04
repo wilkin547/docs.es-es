@@ -2,20 +2,20 @@
 title: Implementación del patrón de interruptor
 description: Aprenda a implementar el patrón de interruptor como un sistema complementario en los reintentos HTTP.
 ms.date: 10/16/2018
-ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181926"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094113"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
 Tal y como se indicó anteriormente, debe controlar los errores que pueden comportar un tiempo variable de recuperación, como puede suceder al intentar conectarse a un recurso o servicio remoto. Controlar este tipo de error puede mejorar la estabilidad y la resistencia de una aplicación.
 
-En un entorno distribuido, las llamadas a servicios y recursos remotos pueden producir errores causados por errores transitorios, como tiempos de espera y conexiones de red lentas, o si los recursos responden de forma lenta o no están disponibles temporalmente. Estos errores suelen corregirse solos pasado un tiempo, y una aplicación en la nube sólida debería estar preparada para controlarlos mediante el uso de una estrategia como el "Patrón de reintento". 
+En un entorno distribuido, las llamadas a servicios y recursos remotos pueden producir errores causados por errores transitorios, como tiempos de espera y conexiones de red lentas, o si los recursos responden de forma lenta o no están disponibles temporalmente. Estos errores suelen corregirse solos pasado un tiempo, y una aplicación en la nube sólida debería estar preparada para controlarlos mediante el uso de una estrategia como el "Patrón de reintento".
 
-Pero también puede haber situaciones en que los errores se deban a eventos imprevistos que pueden tardar mucho más tiempo en corregirse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, no tiene sentido que una aplicación reintente continuamente una operación que es probable que no se lleve a cabo correctamente. 
+Pero también puede haber situaciones en que los errores se deban a eventos imprevistos que pueden tardar mucho más tiempo en corregirse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, no tiene sentido que una aplicación reintente continuamente una operación que es probable que no se lleve a cabo correctamente.
 
 Lo que debe hacer la aplicación es codificarse para aceptar que la operación ha fallado y controlar el error en consecuencia.
 
@@ -57,11 +57,11 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco fallos consecutivos al reintentar las solicitudes HTTP. Cuando esto ocurre, el circuito se interrumpirá durante 30 segundos. En ese período, las llamadas no se podrán realizar debido al interruptor del circuito.  La directiva interpreta automáticamente las [excepciones relevantes y los códigos de estado HTTP](/aspnet/core/fundamentals/http-requests#handle-transient-faults) como errores.  
 
-Los interruptores también se deben usar para redirigir las solicitudes a una infraestructura de reserva siempre que haya tenido problemas en un recurso concreto implementado en otro entorno que no sea el de la aplicación cliente o del servicio que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo a los microservicios de back-end, pero no a las aplicaciones cliente, estas aplicaciones pueden redirigir a los servicios de reserva. Polly está creando una directiva nueva para automatizar este escenario de [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
+Los interruptores también se deben usar para redirigir las solicitudes a una infraestructura de reserva siempre que haya tenido problemas en un recurso concreto implementado en otro entorno que no sea el de la aplicación cliente o del servicio que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo a los microservicios de back-end, pero no a las aplicaciones cliente, estas aplicaciones pueden redirigir a los servicios de reserva. Polly está creando una directiva nueva para automatizar este escenario de [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy).
 
-Todas estas características sirven para los casos en los que se administra la conmutación por error desde el código .NET, y no cuando Azure lo hace de forma automática, con la transparencia de ubicación. 
+Todas estas características sirven para los casos en los que se administra la conmutación por error desde el código .NET, y no cuando Azure lo hace de forma automática, con la transparencia de ubicación.
 
-Desde un punto de vista del uso, al utilizar HttpClient no hay necesidad de agregar nada nuevo aquí porque el código es el mismo que cuando se usa HttpClient con HttpClientFactory, como se mostró en las secciones anteriores. 
+Desde un punto de vista del uso, al utilizar HttpClient no hay necesidad de agregar nada nuevo aquí porque el código es el mismo que cuando se usa HttpClient con HttpClientFactory, como se mostró en las secciones anteriores.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Prueba de reintentos HTTP e interruptores en eShopOnContainers
 
@@ -69,7 +69,7 @@ Cada vez que inicie la solución eShopOnContainers en un host Docker, debe inici
 
 Este tipo de error también puede darse en el inicio, cuando la aplicación se está implementando en la nube. En ese caso, podría ser que los orquestadores movieran los contenedores de un nodo o máquina virtual a otro (iniciando así nuevas instancias) al repartir equitativamente los contenedores entre los nodos de clúster.
 
-La forma en que estos problemas se solucionan al iniciar todos los contenedores en "eShopOnContainers" es mediante el patrón de reintento mostrado anteriormente. 
+La forma en que estos problemas se solucionan al iniciar todos los contenedores en "eShopOnContainers" es mediante el patrón de reintento mostrado anteriormente.
 
 ### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>Prueba del interruptor en eShopOnContainers
 
@@ -90,7 +90,7 @@ Otra opción consiste en usar middleware personalizado que se implemente en el m
 
 Por ejemplo, cuando la aplicación se está ejecutando, puede habilitar el middleware realizando una solicitud con el siguiente URI en cualquier explorador. Tenga en cuenta que el microservicio de ordenación utiliza el puerto 5103.
 
-`http://localhost:5103/failing?enable` 
+`http://localhost:5103/failing?enable`
 
 Después, puede comprobar el estado mediante el URI `http://localhost:5103/failing`, como se muestra en la Figura 8-5.
 
@@ -100,7 +100,7 @@ Después, puede comprobar el estado mediante el URI `http://localhost:5103/faili
 
 En este punto, el microservicio de la cesta responde con el código de estado 500 siempre que su llamada lo invoque.
 
-Cuando se esté ejecutando el middleware, puede intentar realizar un pedido desde la aplicación web MVC. Como se produce un error en las solicitudes, el circuito se abre. 
+Cuando se esté ejecutando el middleware, puede intentar realizar un pedido desde la aplicación web MVC. Como se produce un error en las solicitudes, el circuito se abre.
 
 En el ejemplo siguiente, la aplicación web MVC presenta un bloque catch en la lógica para realizar un pedido.  Si el código detecta una excepción de circuito abierto, muestra un mensaje descriptivo al usuario en que se le indica que espere.
 
@@ -138,7 +138,7 @@ Aquí tiene un resumen. La directiva de reintentos intenta realizar la solicitud
 
 **Figura 8-6**. Interruptor que devuelve un error en la interfaz de usuario
 
-Puede implementar otra lógica que indique cuándo se debe abrir o interrumpir el circuito. También puede probar una solicitud HTTP en un microservicio de back-end distinto si se dispone de un centro de datos de reserva o un sistema back-end redundante. 
+Puede implementar otra lógica que indique cuándo se debe abrir o interrumpir el circuito. También puede probar una solicitud HTTP en un microservicio de back-end distinto si se dispone de un centro de datos de reserva o un sistema back-end redundante.
 
 Por último, otra posibilidad para `CircuitBreakerPolicy` consiste en usar `Isolate` (que fuerza y mantiene la apertura del circuito) y `Reset` (que lo cierra de nuevo). Estas características se pueden utilizar para crear un punto de conexión HTTP de utilidad que invoque Aislar y Restablecer directamente en la directiva.  Este tipo de punto de conexión HTTP, protegido adecuadamente, también se puede usar en el entorno de producción para aislar temporalmente un sistema de nivel inferior, como cuando quiere actualizarlo. También puede activar el circuito manualmente para proteger un sistema de nivel inferior que le parezca que está fallando.
 

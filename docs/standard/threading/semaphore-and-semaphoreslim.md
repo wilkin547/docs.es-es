@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127586"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore y SemaphoreSlim
 La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa un semáforo local o con nombre (para todo el sistema). Se trata de un contenedor fino alrededor del objeto semáforo de Win32. Los semáforos de Win32 son semáforos de recuento, que se pueden utilizar para controlar el acceso a un grupo de recursos.  

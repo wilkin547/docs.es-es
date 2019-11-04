@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Encapsular modelos de EAP en una tarea'
+title: Procedimiento para encapsular patrones de EAP en una tarea
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004265"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106823"
 ---
-# <a name="how-to-wrap-eap-patterns-in-a-task"></a>Cómo: Encapsular modelos de EAP en una tarea
+# <a name="how-to-wrap-eap-patterns-in-a-task"></a>Procedimiento para encapsular patrones de EAP en una tarea
 En el ejemplo siguiente se muestra cómo exponer una secuencia arbitraria de operaciones de modelo asincrónico basado en eventos (EAP) como una tarea mediante el uso de una clase <xref:System.Threading.Tasks.TaskCompletionSource%601>. En el ejemplo también se muestra cómo usar una clase <xref:System.Threading.CancellationToken> para invocar los métodos de cancelación integrados en los objetos <xref:System.Net.WebClient>.  
   
 ## <a name="example"></a>Ejemplo  

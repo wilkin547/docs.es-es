@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522951"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090133"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -132,7 +132,7 @@ Puede haber muchas más cuestiones transversales ofrecidas por los productos de 
 
 **Figura 4-14**. Uso de Azure API Management para la puerta de enlace de API
 
-Azure API Management resuelve las necesidades de administración y de puerta de enlace de API, como el registro, la seguridad, la medición, etc. En este caso, cuando se usa un producto como Azure API Management, el hecho de tener una sola puerta de enlace de API no es tan arriesgado porque estos tipos de puertas de enlace de API son "más estrechos", lo que significa que no implementan código C# personalizado que podría evolucionar hacia un componente monolítico. 
+Azure API Management resuelve las necesidades de administración y de puerta de enlace de API, como el registro, la seguridad, la medición, etc. En este caso, cuando se usa un producto como Azure API Management, el hecho de tener una sola puerta de enlace de API no es tan arriesgado porque estos tipos de puertas de enlace de API son "más estrechos", lo que significa que no implementan código C# personalizado que podría evolucionar hacia un componente monolítico.
 
 Los productos de puerta de enlace de API suelen actuar más como un proxy inverso para la comunicación de entrada, en el que se pueden filtrar las API de los microservicios internos y también aplicar la autorización a las API publicadas en este nivel único.
 

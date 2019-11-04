@@ -10,15 +10,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 89585ff97183912feb9b9af0bd326041b7381bfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105721"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -105,7 +103,7 @@ De forma predeterminada, se almacenan en caché los 15 últimos patrones de expr
 
 La expresión regular `\p{Sc}+\s*\d+` que se usa en este ejemplo comprueba que la cadena de entrada consta de un símbolo de moneda y al menos un dígito decimal. El patrón se define como se muestra en la tabla siguiente.
 
-|Patrón|DESCRIPCIÓN|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`\p{Sc}+`|Buscar coincidencias con uno o más caracteres de la categoría Símbolo Unicode, Moneda.|
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|
@@ -126,7 +124,7 @@ En el ejemplo siguiente, se compara el rendimiento de las expresiones regulares 
 
 El patrón de expresión regular usado en el ejemplo, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, se define como se muestra en la tabla siguiente.
 
-|Patrón|Descripción|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|
@@ -170,7 +168,7 @@ La compatibilidad con el retroceso aporta a las expresiones regulares eficacia y
 
 A menudo, las aplicaciones sufren una reducción del rendimiento por usar el retroceso a pesar de que el retroceso no es esencial para una coincidencia. Por ejemplo, la expresión regular `\b\p{Lu}\w*\b` busca una coincidencia con todas las palabras que comienzan por un carácter en mayúsculas, como se muestra en la tabla siguiente.
 
-|Patrón|Descripción|
+|Modelo|Descripción|
 |-|-|
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|
 |`\p{Lu}`|Busca una coincidencia con un carácter en mayúsculas.|
@@ -193,7 +191,7 @@ Por ejemplo, el patrón de expresión regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` e
 
 En estos casos, puede optimizar el rendimiento de la expresión regular quitando los cuantificadores anidados y reemplazando la subexpresión externa con una aserción de búsqueda anticipada o de búsqueda tardía de ancho cero. Las aserciones de búsqueda anticipada y de búsqueda tardía son delimitadores; no mueven el puntero en la cadena de entrada, sino que realizan una búsqueda hacia delante o hacia atrás para comprobar si se cumple una condición especificada. Por ejemplo, la expresión regular de número de pieza se puede volver a escribir como `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Este patrón de expresión regular se define como se muestra en la tabla siguiente.
 
-|Patrón|DESCRIPCIÓN|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. El número de pieza debe constar al menos de este carácter.|
@@ -243,7 +241,7 @@ Sin embargo, el uso de estos elementos de lenguaje tiene un costo. Hacen que el 
 
 A menudo, las construcciones de agrupación se usan en una expresión regular solo para poder aplicarles cuantificadores y los grupos capturados por estas subexpresiones no se usan posteriormente. Por ejemplo, la expresión regular `\b(\w+[;,]?\s?)+[.?!]` está diseñada para capturar una frase completa. En la tabla siguiente se describen los elementos del lenguaje de este patrón de expresión regular y su efecto sobre las colecciones <xref:System.Text.RegularExpressions.Match> y <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> del objeto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.
 
-|Patrón|Descripción|
+|Modelo|Descripción|
 |-------------|-----------------|
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|
@@ -274,7 +272,7 @@ Puede deshabilitar las capturas de una de las maneras siguientes:
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|DESCRIPCIÓN|
+|Title|DESCRIPCIÓN|
 |-----------|-----------------|
 |[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina la implementación del motor de expresiones regulares de .NET. El tema se centra en la flexibilidad de las expresiones regulares y explica la responsabilidad del desarrollador para garantizar un funcionamiento eficaz y sólido del motor de expresiones regulares.|
 |[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica qué es el retroceso y cómo afecta al rendimiento de las expresiones regulares, y examine los elementos del lenguaje que proporcionan alternativas al retroceso.|

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f61ad49753da9d96e733ea667095722ddc238fe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121108"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modelo asincrónico basado en tareas (TAP)
 El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> del espacio de nombres <xref:System.Threading.Tasks?displayProperty=nameWithType>, que se usan para representar operaciones asincrónicas arbitrarias. TAP es el patrón asincrónico de diseño recomendado para los nuevos desarrollos.  
@@ -191,7 +189,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Patrones para la programación asincrónica](../../../docs/standard/asynchronous-programming-patterns/index.md)|Presenta los tres patrones para realizar las operaciones asincrónicas: el patrón asincrónico basado en tareas (TAP), el modelo de programación asincrónica (APM) y el patrón asincrónico basado en eventos (EAP).|  
 |[Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Describe cómo implementar el patrón asincrónico basado en tareas (TAP) de tres maneras: mediante los compiladores de C# y Visual Basic de Visual Studio, manualmente o a través de una combinación del compilador y de métodos manuales.|  

@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121693"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadenas de formato TimeSpan estándar
 <a name="Top"></a> Una cadena de formato estándar <xref:System.TimeSpan> utiliza un único especificador de formato para definir la representación de texto de un valor <xref:System.TimeSpan> resultante de una operación de formato. Cualquier cadena de formato que contenga más de un carácter, incluido el espacio en blanco, se interpreta como una cadena de formato <xref:System.TimeSpan> personalizado. Para más información, consulte [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) (Cadenas de formato TimeSpan personalizadas).  
@@ -41,7 +39,7 @@ ms.locfileid: "69968547"
   
 <a name="top"></a> En la tabla siguiente se muestran los especificadores de formato de intervalo de tiempo estándar.  
   
-|Especificador de formato|nombre|DESCRIPCIÓN|Ejemplos|  
+|Especificador de formato|Name|DESCRIPCIÓN|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato constante (invariable)|Este especificador no tiene en cuenta la referencia cultural. Toma la forma `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Las cadenas de formato "t" y "T" producen los mismos resultados).<br /><br /> Más información: [Especificador de formato constante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato corto general|Este especificador solo genera lo necesario. Tiene en cuenta la referencia cultural y su forma es `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Más información: [Especificador de formato corto general ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  

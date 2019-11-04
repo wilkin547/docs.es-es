@@ -2,13 +2,14 @@
 title: Traducción de árboles de expresión
 description: Obtenga información sobre cómo visitar cada nodo en un árbol de expresión, mientras se crea una copia modificada de ese árbol de expresión.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036622"
 ---
 # <a name="translating-expression-trees"></a>Traducción de árboles de expresión
 

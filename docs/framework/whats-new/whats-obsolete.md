@@ -7,14 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140603"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases de .NET Framework
 
@@ -39,7 +37,7 @@ Al actualizar y volver a compilar el código existente, el uso de un tipo o miem
 
 - Cambie su código quitando el uso del tipo o miembro, si es posible.
 
-     o bien
+     O bien
 
 - Revise la documentación para que esta área de tecnología determine cómo responder al desuso.
 

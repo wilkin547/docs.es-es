@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6f57c0e2098cbd73edc34f34ba6e309bbf68fac9
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167932"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091487"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Procedimiento Implementación de un modelo de flujo de datos productor-consumidor
 Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para implementar un modelo productor-consumidor. En este modelo, el *productor* envía mensajes a un bloque de mensajes y el *consumidor* lee los mensajes de este bloque.  

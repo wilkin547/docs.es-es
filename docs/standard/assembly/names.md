@@ -5,14 +5,12 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a35be7c2a2cb4b499496f526d263bb1825a3614b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835317"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107128"
 ---
 # <a name="assembly-names"></a>Nombres de ensamblado
 Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  

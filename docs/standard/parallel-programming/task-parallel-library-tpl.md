@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 962c89acf12595ca5b9f27fe411b31773cc5e0c2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456938"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139954"
 ---
 # <a name="task-parallel-library-tpl"></a>Biblioteca de procesamiento paralelo basado en tareas (TPL)
 La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) es un conjunto de API y tipos públicos de los espacios de nombres <xref:System.Threading?displayProperty=nameWithType> y <xref:System.Threading.Tasks?displayProperty=nameWithType>. El propósito de la TPL es aumentar la productividad de los desarrolladores simplificando el proceso de agregar paralelismo y simultaneidad a las aplicaciones. La TPL escala el grado de simultaneidad de manera dinámica para usar con mayor eficacia todos los procesadores disponibles. Además, la TPL se encarga de la división del trabajo, la programación de los subprocesos en <xref:System.Threading.ThreadPool>, la compatibilidad con la cancelación, la administración de los estados y otros detalles de bajo nivel. Al utilizar la TPL, el usuario puede optimizar el rendimiento del código mientras se centra en el trabajo para el que el programa está diseñado.  
@@ -23,7 +21,7 @@ La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo b
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-|-|  
 |[Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)|Describe cómo crear bucles `for` y `foreach` paralelos (`For` y `For Each` en Visual Basic).|  
 |[Programación asincrónica basada en tareas](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Describe cómo crear y ejecutar tareas implícitamente mediante <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> o explícitamente usando objetos <xref:System.Threading.Tasks.Task> directamente.|  

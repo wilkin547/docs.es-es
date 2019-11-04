@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122468"
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
 En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework. Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 324cd42a2781202f19e7e1cb5055d571f0c58cf5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972616"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127636"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Procedimiento para hacer referencia a un ensamblado con nombre seguro
 El proceso para hacer referencia a tipos o recursos en un ensamblado con nombre seguro suele ser transparente. Puede hacer referencia en tiempo de compilación (enlace anticipado) o en tiempo de ejecución.  
@@ -32,7 +30,7 @@ Una referencia en tiempo de compilación se produce cuando se le indica al compi
 
 En un símbolo del sistema, escriba el siguiente comando:  
 
-\<*compiler command*> **/reference:**\<*assembly name*>  
+\<*compiler command*>  **/reference:** \<*assembly name*>  
 
 En este comando, *compiler command* es el comando del compilador para el lenguaje que está usando, y *assembly name* es el nombre del ensamblado con nombre seguro al que se hace referencia. También puede usar otras opciones de compilador, como la opción **/t:library** para crear un ensamblado de biblioteca.  
 
@@ -46,9 +44,9 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Cuando se crea una referencia en tiempo de ejecución a un ensamblado con nombre seguro (por ejemplo, mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), debe usar el nombre para mostrar del ensamblado con nombre seguro al que se hace referencia. La sintaxis de un nombre para mostrar es la siguiente:  
 
-\<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
+\<*assembly name*> **,** \<*version number*> **,** \<*culture*> **,** \<*public key token*>  
 
-Por ejemplo:   
+Por ejemplo:  
 
 ```console
 myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   

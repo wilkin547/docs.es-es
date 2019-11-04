@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab7c097f6b65d539117e5a6ef38eb67b24695a32
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394349"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198567"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: se ha deshabilitado la E/S sincrónica en todos los servidores
 
@@ -29,7 +29,7 @@ Se esperan errores parecidos a los siguientes:
 
 Cada servidor tiene una opción `AllowSynchronousIO` que controla este comportamiento y el valor predeterminado para todos ellos ahora es `false`.
 
-El comportamiento también se puede invalidar en función de cada solicitud como una mitigación temporal. Por ejemplo: 
+El comportamiento también se puede invalidar en función de cada solicitud como una mitigación temporal. Por ejemplo:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -53,7 +53,7 @@ De manera predeterminada, solo se permitían `HttpRequest.Body.Read`, `HttpRespo
 
 #### <a name="new-behavior"></a>Comportamiento nuevo
 
-Estas API sincrónicas no están permitidas de forma predeterminada: 
+Estas API sincrónicas no están permitidas de forma predeterminada:
 
 Se esperan errores parecidos a los siguientes:
 

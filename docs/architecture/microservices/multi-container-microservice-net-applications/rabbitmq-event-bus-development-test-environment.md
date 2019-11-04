@@ -2,12 +2,12 @@
 title: Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Uso de RabbitMQ para implementar la mensajería de un bus de eventos para entornos de integración con fines de desarrollo de entornos de prueba.
 ms.date: 10/02/2018
-ms.openlocfilehash: af02208bb9e680403a04377ccb740a8b15be29bc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089740"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
@@ -35,7 +35,7 @@ La implementación de RabbitMQ de un bus de eventos de desarrollo/pruebas de eje
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementar un método de publicación sencillo con RabbitMQ
 
-El código siguiente es una versión ***simplificada*** de una implementación de bus de eventos de RabbitMQ con el objetivo de presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs). 
+El código siguiente es una versión ***simplificada*** de una implementación de bus de eventos de RabbitMQ con el objetivo de presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs).
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -82,7 +82,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
         where TH : IIntegrationEventHandler<T>
     {
         var eventName = _subsManager.GetEventKey<T>();
-        
+
         var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
         if (!containsKey)
         {

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, specifying parallelism
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4395f6f8b59cca7b092a9d4d5d44c079244a29ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 50399d6cd32fe310089395ac8c660b08151ba808
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141652"
 ---
 # <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Procedimiento Especificación del grado de paralelismo en un bloque de flujos de datos
 En este documento se describe cómo establecer la propiedad <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> para que un bloque de flujo de datos de ejecución pueda procesar más de un mensaje al mismo tiempo. Esto resulta útil cuando tiene un bloque de flujo de datos que realiza un cálculo de ejecución prolongada y se puede beneficiar del procesamiento de mensajes en paralelo. En el ejemplo se usa la clase <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> para llevar a cabo varias operaciones de flujo de datos simultáneamente; sin embargo, puede especificar el grado máximo de paralelismo en cualquiera de los tipos de bloque de ejecución predefinidos que la biblioteca de flujo de datos TPL proporciona, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>.

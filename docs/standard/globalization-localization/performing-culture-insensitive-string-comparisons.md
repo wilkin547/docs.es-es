@@ -13,14 +13,12 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85ba91b63ab0edbccc768e2d1ad4aaef31fd2f21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915875"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120830"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
 De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=nameWithType> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas. Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar. Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.  

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e68465b6fae39089600457414e7f2a2328f725b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593126"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123139"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>Procedimiento Creación de tareas precalculadas
 En este documento se describe cómo utilizar el método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar los resultados de las operaciones asincrónicas de descarga que se retienen en una memoria caché. El método <xref:System.Threading.Tasks.Task.FromResult%2A> devuelve un objeto <xref:System.Threading.Tasks.Task%601> terminado que contiene el valor proporcionado como su propiedad <xref:System.Threading.Tasks.Task%601.Result%2A>. Este método es útil cuando se realiza una operación asincrónica que devuelve un objeto <xref:System.Threading.Tasks.Task%601> y el resultado de ese objeto <xref:System.Threading.Tasks.Task%601> ya se ha calculado.  

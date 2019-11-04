@@ -2,13 +2,14 @@
 title: Actualización segura de las interfaces mediante el uso de métodos de interfaz predeterminada en C#
 description: En este tutorial avanzado se describe cómo agregar de forma segura nuevas capacidades a las definiciones de la interfaz existente sin que ello interrumpa todas las clases y estructuras que implementan esa interfaz.
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275990"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039249"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Tutorial: Actualización de las interfaces mediante el uso de métodos de interfaz predeterminados en C# 8.0
 

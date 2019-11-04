@@ -8,14 +8,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138052"
 ---
 # <a name="foreground-and-background-threads"></a>Subprocesos de primer y segundo plano
 Un subproceso administrado es un subproceso en segundo plano o un subproceso en primer plano. Los subprocesos en segundo plano son idénticos a los subprocesos en primer plano con una excepción: un subproceso en segundo plano no mantiene el entorno de ejecución administrado en ejecución. Una vez que todos los subprocesos en primer plano se han detenido en un proceso administrado (donde el archivo .exe es un ensamblado administrado), el sistema detiene todos los subprocesos en segundo plano y se cierra.  

@@ -2,13 +2,14 @@
 title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332333"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039684"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 

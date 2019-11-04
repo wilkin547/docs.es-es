@@ -2,12 +2,12 @@
 title: Procedimiento para usar árboles de expresión para crear consultas dinámicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 400668e51fda4a728b42679c37a07399d1f73326
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7f18539dba17f9fcb8769ca56d977908c58e6579
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595074"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418677"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Procedimiento para usar árboles de expresión para crear consultas dinámicas (C#)
 En LINQ, los árboles de expresión se usan para representar consultas estructuradas destinadas a orígenes de datos que implementan <xref:System.Linq.IQueryable%601>. Por ejemplo, el proveedor LINQ implementa la interfaz <xref:System.Linq.IQueryable%601> para realizar consultas en almacenes de datos relacionales. El compilador de C# compila las consultas dirigidas a estos orígenes de datos en el código que genera un árbol de expresión en tiempo de ejecución. El proveedor de consultas puede después recorrer la estructura de datos del árbol de expresión y convertirla en un lenguaje de consulta adecuado para el origen de datos.  
@@ -109,4 +109,4 @@ foreach (string company in results)
 
 - [Árboles de expresión (C#)](./index.md)
 - [Cómo: Ejecutar árboles de expresión (C#)](./how-to-execute-expression-trees.md)
-- [Cómo: Especificar dinámicamente filtros con predicado en tiempo de ejecución](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Cómo: Especificar dinámicamente filtros con predicado en tiempo de ejecución](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

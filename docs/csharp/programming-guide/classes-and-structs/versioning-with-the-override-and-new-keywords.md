@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596010"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196200"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
 El lenguaje C# está diseñado para que las versiones entre clases [base](../../language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores. Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado. Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.  
@@ -56,7 +56,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
- Si no quiere que el método reemplace al nuevo método de clase base, se aplican las consideraciones siguientes. Para evitar la confusión entre los dos métodos, puede cambiarle el nombre a su método. Esto puede ser un proceso lento y propenso a errores y no resultar práctico en algunos casos. Pero si el proyecto es relativamente pequeño, puede usar opciones de refactorización de Visual Studio para cambiar el nombre del método. Para obtener más información, vea [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer) (Refactorización de clases y tipos [Diseñador de clases]).  
+ Si no quiere que el método reemplace al nuevo método de clase base, se aplican las consideraciones siguientes. Para evitar la confusión entre los dos métodos, puede cambiarle el nombre a su método. Esto puede ser un proceso lento y propenso a errores y no resultar práctico en algunos casos. Pero si el proyecto es relativamente pequeño, puede usar opciones de refactorización de Visual Studio para cambiar el nombre del método. Para obtener más información, vea [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/class-designer/refactoring-classes-and-types) (Refactorización de clases y tipos [Diseñador de clases]).  
   
  También puede evitar la advertencia mediante la palabra clave `new` en la definición de clase derivada:  
   

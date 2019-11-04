@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 7a8a8e6b6a393f151d69d1879f475e04f44df5fa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d70ec5784d56bad60fbc33ae0b992de1bebfce38
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590381"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417949"
 ---
 # <a name="events-c-programming-guide"></a>Eventos (Guía de programación de C#)
 Cuando ocurre algo interesante, los eventos habilitan una [clase](../../language-reference/keywords/class.md) u objeto para notificarlo a otras clases u objetos. La clase que envía (o *genera*) el evento recibe el nombre de *publicador* y las clases que reciben (o *controlan*) el evento se denominan *suscriptores*.  
@@ -49,7 +49,7 @@ Cuando ocurre algo interesante, los eventos habilitan una [clase](../../language
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
-Para obtener más información, consulte la sección [Eventos](~/_csharplang/spec/classes.md#events) de [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para obtener más información, consulte la sección [Eventos](~/_csharplang/spec/classes.md#events) de [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="featured-book-chapters"></a>Capítulos destacados del libro  
  [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (Delegados, eventos y expresiones lambda) en [C# 3.0 Cookbook, Tercera edición: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29) (Más de 250 soluciones para programadores de C# 3.0)  

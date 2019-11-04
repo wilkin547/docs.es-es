@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052210"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195178"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 El perfil de cliente .NET es un subconjunto de .NET Framework que se proporcionaba con .NET Framework 4 y versiones anteriores, optimizado para las aplicaciones cliente. .NET Framework es una plataforma de desarrollo para Windows, Windows Phone y Microsoft Azure que proporciona un entorno de ejecución de aplicaciones administrado y la biblioteca de clases .NET Framework. En .NET Framework 4 y versiones anteriores se proporcionaban dos opciones de implementación: .NET Framework completo y Client Profile. Client Profile permitía una implementación más rápida y el uso de paquetes de instalación de aplicaciones más pequeños que en la versión completa de .NET Framework.  
@@ -32,4 +32,4 @@ El perfil de cliente .NET es un subconjunto de .NET Framework que se proporciona
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Información general sobre la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Cómo: Usar una versión de .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Cómo: Usar una versión de .NET Framework como destino](/visualstudio/ide/visual-studio-multi-targeting-overview)

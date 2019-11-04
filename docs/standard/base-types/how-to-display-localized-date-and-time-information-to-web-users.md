@@ -13,14 +13,12 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138742"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedimiento para mostrar información localizada de fecha y hora a usuarios web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, las operaciones que analizarán y darán formato a valores de fecha y hora no deben basarse en un formato predeterminado (que suele ser el formato de referencia cultural local del servidor web) al interactuar con el usuario. En su lugar, los formularios Web Forms que controlan las entradas del usuario de cadenas de fecha y hora deben analizar estas cadenas usando la referencia cultural preferida del usuario. De forma similar, los datos de fecha y hora deben mostrarse al usuario en un formato que se ajuste a la referencia cultural del usuario. En este tema se explica cómo hacerlo.  

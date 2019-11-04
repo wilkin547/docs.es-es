@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 681c0f1f918c8991ed2544189488d1ea25547834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122217"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Procedimiento para especificar un programador de tareas en un bloque de flujos de datos
 Este documento muestra cómo asociar un programador de tareas específico al usar un flujo de datos en la aplicación. En el ejemplo, se usa la clase <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> en una aplicación de Windows Forms para mostrar cuándo están activas las tareas de lectura y cuándo está activa una tarea de escritura. También se usa el método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> para permitir que un bloque de flujo de datos se ejecute en el subproceso de la interfaz de usuario.

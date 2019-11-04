@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107054"
 ---
 # <a name="program-with-assemblies"></a>Programación con ensamblados
 Los ensamblados son los bloques de creación de .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad. Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Son una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.  

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01a34289b4845048438a3d3fd9263d1dcd1028c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963363"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138860"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedimiento para mostrar milisegundos en los valores de fecha y hora
 Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluyen las horas, minutos y segundos de un valor de tiempo, pero excluyen el componente correspondiente a los milisegundos. En este tema se muestra cómo se incluye un componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato.  

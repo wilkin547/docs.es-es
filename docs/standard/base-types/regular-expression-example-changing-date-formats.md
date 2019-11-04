@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084191"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Ejemplo de expresiones regulares: Cambiar formatos de fecha
 En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para reemplazar las fechas con el formato *mm*/*dd*/*aa* con fechas que tienen el formato *dd*-*mm*-*aa*.  
@@ -49,7 +47,7 @@ En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularE
   
  El patrón `${day}-${month}-${year}` define la cadena de reemplazo como se muestra en la siguiente tabla.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`$(day)`|Agregar la cadena capturada por el grupo de captura `day`.|  
 |`-`|Agregar un guión.|  

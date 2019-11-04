@@ -10,14 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ad535e9b862cce93244524c6cd67f667abaaa0e
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104357"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../standard/assembly/strong-named.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
@@ -57,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|Extrae la clave pública de *infile* y la almacena en un archivo .csv. Una coma separa cada byte de la clave pública. Este formato resulta útil para incluir en el código fuente las referencias a las claves en forma de matrices inicializadas. Si no especifica un parámetro *outfile*, esta opción coloca la salida en el Portapapeles. **Nota:**  Esta opción no comprueba si la entrada es únicamente una clave pública. Si `infile` contiene un par de claves con una clave privada, la clave privada también se extrae.|  
 |`-p infile outfile [hashalg]`|Extrae la clave pública del par de claves de *infile* y la almacena en *outfile*, opcionalmente mediante el algoritmo de RSA especificado por *hashalg*. Esta clave pública se puede usar para retrasar la firma de un ensamblado mediante las opciones **/delaysign+** y **/keyfile** de [Assembly Linker (Al.exe)](al-exe-assembly-linker.md). Cuando se retrasa la firma de un ensamblado, únicamente se establece en tiempo de compilación la clave pública, y se reserva espacio en el archivo para la firma que se agregará más tarde, cuando se conozca la clave privada.|  
 |`-pc container outfile [hashalg]`|Extrae la clave pública del par de claves de *container* y la almacena en *outfile*. Si usa la opción *hashalg*, la clave pública se extrae mediante el algoritmo de RSA.|  
-|`-Pb [y &#124; n]`|Especifica si se impone la directiva de omisión de nombres seguros. Si especifica *y*, no se validan los nombres seguros de los ensamblados de plena confianza cuando se cargan en un objeto <xref:System.AppDomain> de plena confianza. Si especifica *n*, se valida la corrección de los nombres seguros, pero no se valida un nombre seguro específico. <xref:System.Security.Permissions.StrongNameIdentityPermission> no tiene ningún efecto en ensamblados de plena confianza. Debe realizar su propia comprobación para buscar coincidencias con un nombre seguro.<br /><br /> Si no especifica `y` ni `n`, esta opción muestra el valor actual. El valor predeterminado es `y`. **Nota:**  En equipos de 64 bits, debe establecer este parámetro tanto en las instancias de 32 bits como en las de 64 bits de Sn.exe.|  
+|`-Pb [y &#124; n]`|Especifica si se impone la directiva de omisión de nombres seguros. Si especifica *y*, no se validan los nombres seguros de los ensamblados de plena confianza cuando se cargan en un objeto <xref:System.AppDomain> de plena confianza. Si especifica *n*, se valida la corrección de los nombres seguros, pero no se valida un nombre seguro específico. <xref:System.Security.Permissions.StrongNameIdentityPermission> no tiene ningún efecto en ensamblados de plena confianza. Debe realizar su propia comprobación para buscar coincidencias con un nombre seguro.<br /><br /> Si no especifica `y` ni `n`, esta opción muestra el valor actual. De manera predeterminada, es `y`. **Nota:**  En equipos de 64 bits, debe establecer este parámetro tanto en las instancias de 32 bits como en las de 64 bits de Sn.exe.|  
 |`-q[uiet]`|Especifica el modo silencioso; suprime la presentación de mensajes de operaciones correctas.|  
 |`-R[a] assembly infile`|Vuelve a firmar un ensamblado firmado anteriormente o un ensamblado con firma retrasada mediante el par de claves de *infile*.<br /><br /> Si se usa **-Ra**, los valores de hash se vuelven a calcular para todos los archivos del ensamblado.|  
 |`-Rc[a] assembly container`|Vuelve a firmar un ensamblado firmado anteriormente o uno con firma retrasada mediante el par de claves de *container*.<br /><br /> Si se usa **-Rca**, los valores de hash se vuelven a calcular para todos los archivos del ensamblado.|  

@@ -2,7 +2,7 @@
   href: index.md
 - name: Novedades de Visual Basic
   href: getting-started/whats-new.md
-- name: Primeros pasos
+- name: Introducción
   href: getting-started/index.md
   items:
     - name: Cambios importantes de Visual Basic en Visual Studio
@@ -26,7 +26,7 @@
         - name: Acceso a los servicios web de las aplicaciones
           href: developing-apps/programming/accessing-application-web-services.md
           items:
-            - name: Procedimiento Llamada a un servicio web de forma asincrónica
+            - name: 'Procedimientos para: Llamada a un servicio web de forma asincrónica'
               href: developing-apps/programming/how-to-call-a-web-service-asynchronously.md
         - name: Accessing Application Settings
           href: developing-apps/programming/app-settings/index.md
@@ -104,11 +104,11 @@
       href: programming-guide/program-structure/coding-conventions.md
     - name: Compilación condicional
       href: programming-guide/program-structure/conditional-compilation.md
-    - name: Procedimiento Interrupción y combinación de instrucciones en código
+    - name: 'Procedimientos para: Interrupción y combinación de instrucciones en código'
       href: programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
-    - name: Procedimiento Contracción y ocultación de secciones de código
+    - name: 'Procedimientos para: Contracción y ocultación de secciones de código'
       href: programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
-    - name: Procedimiento Instrucciones de etiquetas
+    - name: 'Procedimientos para: Instrucciones de etiquetas'
       href: programming-guide/program-structure/how-to-label-statements.md
     - name: Caracteres especiales en el código
       href: programming-guide/program-structure/special-characters-in-code.md
@@ -131,7 +131,7 @@
       href: programming-guide/language-features/constants-enums/index.md
     - name: Flujo de control
       href: programming-guide/language-features/control-flow/index.md
-    - name: Tipos de datos
+    - name: Tipo de datos
       href: programming-guide/language-features/data-types/index.md
       items:
         - name: Caracteres de tipo
@@ -148,14 +148,14 @@
         - name: Tipos de datos compuestos
           href: programming-guide/language-features/data-types/composite-data-types.md
           items:
-            - name: Procedimiento Inclusión de más de un valor en una variable
+            - name: 'Procedimientos para: Inclusión de más de un valor en una variable'
               href: programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
         - name: Tipos genéricos
           href: programming-guide/language-features/data-types/generic-types.md
           items:
-            - name: Procedimiento Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes
+            - name: 'Procedimientos para: Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes'
               href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-            - name: Procedimiento Uso de clases genéricas
+            - name: 'Procedimientos para: Uso de clases genéricas'
               href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
         - name: Procedimientos genéricos
           href: programming-guide/language-features/data-types/generic-procedures.md
@@ -172,14 +172,14 @@
               href: programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
             - name: Conversiones entre cadenas y otros tipos
               href: programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
-            - name: Procedimiento Conversión de un objeto a otro tipo
+            - name: 'Procedimientos para: Conversión de un objeto a otro tipo'
               href: programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
             - name: Conversiones de matriz
               href: programming-guide/language-features/data-types/array-conversions.md
         - name: Estructuras
           href: programming-guide/language-features/data-types/structures.md
           items:
-            - name: Procedimiento Declaración de estructuras
+            - name: 'Procedimientos para: Declaración de estructuras'
               href: programming-guide/language-features/data-types/how-to-declare-a-structure.md
             - name: Variables de estructura
               href: programming-guide/language-features/data-types/structure-variables.md
@@ -201,7 +201,7 @@
       href: programming-guide/language-features/early-late-binding/index.md
     - name: Tipos de errores
       href: programming-guide/language-features/error-types.md
-    - name: Events
+    - name: Eventos
       href: programming-guide/language-features/events/index.md
     - name: Interfaces
       href: programming-guide/language-features/interfaces/index.md
@@ -229,15 +229,15 @@
   items:
     - name: Introducción a la interoperabilidad COM
       href: programming-guide/com-interop/introduction-to-com-interop.md
-    - name: Procedimiento Referencia de los objetos COM
+    - name: 'Procedimientos para: Referencia de los objetos COM'
       href: programming-guide/com-interop/how-to-reference-com-objects.md
-    - name: Procedimiento Trabajo con controles ActiveX
+    - name: 'Procedimientos para: Trabajo con controles ActiveX'
       href: programming-guide/com-interop/how-to-work-with-activex-controls.md
     - name: 'Tutorial: Llamadas a las API de Windows'
       href: programming-guide/com-interop/walkthrough-calling-windows-apis.md
-    - name: Procedimiento Llamadas a las API de Windows
+    - name: 'Procedimientos para: Llamadas a las API de Windows'
       href: programming-guide/com-interop/how-to-call-windows-apis.md
-    - name: Procedimiento Llamada una función de Windows que adopta tipos sin signo
+    - name: 'Procedimientos para: Llamada una función de Windows que adopta tipos sin signo'
       href: programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
     - name: 'Tutorial: Creación de objetos COM'
       href: programming-guide/com-interop/walkthrough-creating-com-objects.md
@@ -348,7 +348,7 @@
           href: language-reference/directives/if-then-else-directives.md
         - name: '#Directiva Region'
           href: language-reference/directives/region-directive.md
-    - name: Funciones
+    - name: Functions
       href: language-reference/functions/index.md
       items:
         - name: Funciones de conversión
@@ -369,7 +369,7 @@
       items:
         - name: Ansi
           href: language-reference/modifiers/ansi.md
-        - name: Ensamblado
+        - name: Assembly
           href: language-reference/modifiers/assembly.md
         - name: Async
           href: language-reference/modifiers/async.md
@@ -379,7 +379,7 @@
           href: language-reference/modifiers/byref.md
         - name: ByVal
           href: language-reference/modifiers/byval.md
-        - name: Default
+        - name: Valor predeterminado
           href: language-reference/modifiers/default.md
         - name: Friend
           href: language-reference/modifiers/friend.md
@@ -387,9 +387,9 @@
           href: language-reference/modifiers/in-generic-modifier.md
         - name: Iterator
           href: language-reference/modifiers/iterator.md
-        - name: Key
+        - name: Clave
           href: language-reference/modifiers/key.md
-        - name: Module
+        - name: Módulo
           href: language-reference/modifiers/module-keyword.md
         - name: MustInherit
           href: language-reference/modifiers/mustinherit.md
@@ -401,7 +401,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: Optional
+        - name: Opcional
           href: language-reference/modifiers/optional.md
         - name: Modificador genérico Out
           href: language-reference/modifiers/out-generic-modifier.md
@@ -409,13 +409,13 @@
           href: language-reference/modifiers/overloads.md
         - name: Overridable
           href: language-reference/modifiers/overridable.md
-        - name: Overrides
+        - name: Invalidaciones
           href: language-reference/modifiers/overrides.md
         - name: ParamArray
           href: language-reference/modifiers/paramarray.md
         - name: Parcial
           href: language-reference/modifiers/partial.md
-        - name: Private
+        - name: Privada
           href: language-reference/modifiers/private.md
         - name: Private Protected
           href: language-reference/modifiers/private-protected.md
@@ -423,15 +423,15 @@
           href: language-reference/modifiers/protected.md
         - name: Protected Friend
           href: language-reference/modifiers/protected-friend.md
-        - name: Public
+        - name: Público
           href: language-reference/modifiers/public.md
         - name: ReadOnly
           href: language-reference/modifiers/readonly.md
         - name: Shadows
           href: language-reference/modifiers/shadows.md
-        - name: Shared
+        - name: Compartido
           href: language-reference/modifiers/shared.md
-        - name: Estático
+        - name: estática
           href: language-reference/modifiers/static.md
         - name: Unicode
           href: language-reference/modifiers/unicode.md
@@ -443,9 +443,9 @@
           href: language-reference/modifiers/writeonly.md
     - name: Módulos
       href: language-reference/modules.md
-    - name: Nothing
+    - name: Nada
       href: language-reference/nothing.md
-    - name: de la empresa
+    - name: Objetos
       href: language-reference/objects/index.md
       items:
         - name: My.Application (Objeto)
@@ -529,17 +529,17 @@
               href: language-reference/operators/concatenation-operator.md
             - name: Operador &=
               href: language-reference/operators/and-assignment-operator.md
-            - name: '* Operador'
+            - name: '* Operator'
               href: language-reference/operators/multiplication-operator.md
             - name: '*= (Operador)'
               href: language-reference/operators/multiplication-assignment-operator.md
-            - name: + Operador
+            - name: + Operator
               href: language-reference/operators/addition-operator.md
             - name: += (Operador)
               href: language-reference/operators/addition-assignment-operator.md
             - name: = (Operador)
               href: language-reference/operators/assignment-operator.md
-            - name: '- Operador'
+            - name: '- Operator'
               href: language-reference/operators/subtraction-operator.md
             - name: '-= (Operador)'
               href: language-reference/operators/subtraction-assignment-operator.md
@@ -547,7 +547,7 @@
               href: language-reference/operators/comparison-operators.md
             - name: Operador <=
               href: language-reference/operators/comparison-operators.md
-            - name: '> Operador'
+            - name: '> Operator'
               href: language-reference/operators/comparison-operators.md
             - name: '>= (Operador)'
               href: language-reference/operators/comparison-operators.md
@@ -555,7 +555,7 @@
               href: language-reference/operators/left-shift-operator.md
             - name: Operador <<=
               href: language-reference/operators/left-shift-assignment-operator.md
-            - name: '>> Operador'
+            - name: '>> Operator'
               href: language-reference/operators/right-shift-operator.md
             - name: '>>= (Operador)'
               href: language-reference/operators/right-shift-assignment-operator.md
@@ -573,7 +573,7 @@
               href: language-reference/operators/exponentiation-assignment-operator.md
             - name: Operador ?()
               href: language-reference/operators/null-conditional-operators.md
-            - name: '?. Operador'
+            - name: '?. Operator'
               href: language-reference/operators/null-conditional-operators.md
             - name: Operador AddressOf
               href: language-reference/operators/addressof-operator.md
@@ -603,9 +603,11 @@
               href: language-reference/operators/istrue-operator.md
             - name: Like (Operador)
               href: language-reference/operators/like-operator.md
-            - name: Operador Mod
+            - name: Mod (Operador)
               href: language-reference/operators/mod-operator.md
-            - name: New (Operador)
+            - name: NameOf (Operador)
+              href: language-reference/operators/nameof.md
+            - name: Nuevo operador
               href: language-reference/operators/new-operator.md
             - name: Operador Not
               href: language-reference/operators/not-operator.md
@@ -621,7 +623,7 @@
               href: language-reference/operators/typeof-operator.md
             - name: Operador Xor
               href: language-reference/operators/xor-operator.md
-    - name: Propiedades
+    - name: properties (Propiedades)
       href: language-reference/properties.md
     - name: Consultas
       href: language-reference/queries/index.md
@@ -1292,7 +1294,7 @@
         - name: Compilación desde la línea de comandos
           href: reference/command-line-compiler/building-from-the-command-line.md
           items:
-            - name: Procedimiento Invocación del compilador de la línea de comandos
+            - name: 'Procedimientos para: Invocación del compilador de la línea de comandos'
               href: reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
             - name: Líneas de comandos de compilación de ejemplo
               href: reference/command-line-compiler/sample-compilation-command-lines.md

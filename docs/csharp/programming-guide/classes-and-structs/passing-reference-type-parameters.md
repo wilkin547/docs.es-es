@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: f4329c525995b8246427072d1f537d91d875ef95
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596267"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419042"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Pasar parámetros Reference-Type (Guía de programación de C#)
 Una variable de un [tipo de referencia](../../language-reference/keywords/reference-types.md) no contiene sus datos directamente, contiene una referencia a sus datos. Al pasar un parámetro de tipo de referencia por valor, es posible cambiar los datos que pertenecen al objeto al que se hace referencia, como el valor de un miembro de clase. En cambio, no se puede cambiar el valor de la propia referencia; por ejemplo, no puede usar la misma referencia para asignar memoria para un nuevo objeto y hacer que persista fuera del método. Para ello, pase el parámetro mediante las palabras clave [ref](../../language-reference/keywords/ref.md) u [out](../../language-reference/keywords/out-parameter-modifier.md). Para simplificar, en el ejemplo siguiente se usa `ref`.  
@@ -37,7 +37,7 @@ Una variable de un [tipo de referencia](../../language-reference/keywords/refere
   
  En este ejemplo, los parámetros tienen que pasarse en función de la referencia para afectar a las variables en el programa que realiza la llamada. Si quita la palabra clave `ref` tanto del encabezado de método como de la llamada al método, no se llevará a cabo ningún cambio en el programa que realiza la llamada.  
   
- Para obtener más información sobre las cadenas, vea [string](../../language-reference/keywords/string.md).  
+ Para obtener más información sobre las cadenas, vea [string](../../language-reference/builtin-types/reference-types.md).  
   
 ## <a name="see-also"></a>Vea también
 

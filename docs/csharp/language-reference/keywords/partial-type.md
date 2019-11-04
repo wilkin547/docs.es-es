@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: db3fc477ddf857146072088e49e76855f5390701
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7af43a25f88ff0a53e5fa257b13bb1dc8a6d55eb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422704"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422613"
 ---
 # <a name="partial-type-c-reference"></a>Tipo parcial (Referencia de C#)
 
@@ -39,5 +39,5 @@ Dividir un tipo de clase, estructura o interfaz en varios archivos puede resulta
 
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [Introducción a los genéricos](../../programming-guide/generics/index.md)

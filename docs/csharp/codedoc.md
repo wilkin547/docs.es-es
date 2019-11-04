@@ -2,13 +2,14 @@
 title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521158"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037653"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 

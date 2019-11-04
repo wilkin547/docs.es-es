@@ -1,18 +1,16 @@
 ---
 title: Creación de una biblioteca de clases de .NET Standard con Visual Basic en Visual Studio 2017
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard escrita en Visual Basic con Visual Studio 2017
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100865"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Creación de una biblioteca de .NET Standard con Visual Basic y el SDK de .NET Core en Visual Studio 2017
 
@@ -39,7 +37,7 @@ Crear el proyecto de biblioteca de clases:
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo de solución **ClassLibraryProjects** y seleccione **Agregar** > **Nuevo proyecto** en el menú contextual.
 
-1. En el cuadro de diálogo **Agregar nuevo proyecto**, expanda el nodo **Visual Basic**, después seleccione el nodo **.NET Standard** seguido de la plantilla del proyecto **Biblioteca de clases (.NET Standard)**. En el cuadro de texto **Nombre**, escriba "StringLibrary" como nombre del proyecto. Pulse **Aceptar** para crear el proyecto de biblioteca de clases.
+1. En el cuadro de diálogo **Agregar nuevo proyecto**, expanda el nodo **Visual Basic**, después seleccione el nodo **.NET Standard** seguido de la plantilla del proyecto **Biblioteca de clases (.NET Standard)** . En el cuadro de texto **Nombre**, escriba "StringLibrary" como nombre del proyecto. Pulse **Aceptar** para crear el proyecto de biblioteca de clases.
 
    ![Cuadro de diálogo para agregar el nuevo proyecto de biblioteca de Visual Studio](./media/vb-library-with-visual-studio/create-new-library-project.png)
 

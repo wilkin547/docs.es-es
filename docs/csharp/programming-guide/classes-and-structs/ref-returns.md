@@ -1,15 +1,13 @@
 ---
 title: Valores devueltos y variables locales de tipo ref (Guía de C#)
 description: Obtenga información sobre cómo definir y usar valores locales y devueltos de tipo ref
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114488"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 

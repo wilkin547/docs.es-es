@@ -16,15 +16,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934765"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105704"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -278,7 +276,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  Si el código fuente de una estructura define constructores, estos deben tener parámetros; una estructura no puede definir un constructor sin parámetros y los compiladores no generan constructores sin parámetros para las estructuras u otros tipos de valor. Todos los tipos de valor tienen un constructor sin parámetros implícito. Common Language Runtime implementa este constructor, que inicializa todos los campos de la estructura en sus valores predeterminados.  
   
 <a name="Events"></a>   
-### <a name="events"></a>Eventos  
+### <a name="events"></a>Events  
  Un evento define un incidente al que se puede responder, así como los métodos para suscribirse a un evento, anular la suscripción y generar el evento. Los eventos se usan con frecuencia para informar a otros tipos de cambios de estado. Para más información, vea [Eventos](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>   

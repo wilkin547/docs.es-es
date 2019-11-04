@@ -1,13 +1,14 @@
 ---
 title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8.0. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846760"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039778"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -66,6 +67,12 @@ Tanto el contexto de anotación que acepta valores NULL como el contexto de adve
   - Las variables de un tipo de referencia, como cadena, no admiten un valor NULL. Todas las advertencias de nulabilidad están deshabilitadas.
 - `disable`: el contexto de anotación que acepta valores NULL es **disabled**. el contexto de advertencia que acepta valores NULL es **disabled**.
   - Las variables de tipo de referencia son inconscientes, como en versiones anteriores de C#. Todas las advertencias de nulabilidad están deshabilitadas.
+
+**Ejemplo**:
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 También puede usar directivas para establecer los mismos contextos en cualquier lugar del proyecto:
 

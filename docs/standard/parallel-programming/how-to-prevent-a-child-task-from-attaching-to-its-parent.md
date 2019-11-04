@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55b9c6c7175d8c7c33d8bfa03330c8e4b8816531
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139260"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Procedimiento Evitar que una tarea secundaria se adjunte a su elemento primario
 En este documento se explica cómo evitar que una tarea secundaria se adjunte a la tarea principal. Impedir que una tarea secundaria se adjunte a su elemento principal es útil cuando se llama a un componente que está escrito por un tercero y que también usa las tareas. Por ejemplo, un componente de terceros que utiliza la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> para crear un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> puede causar problemas en el código si es de larga duración o produce una excepción no controlada.  

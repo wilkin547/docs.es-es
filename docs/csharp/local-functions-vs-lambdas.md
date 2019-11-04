@@ -2,13 +2,14 @@
 title: Funciones locales frente a expresiones lambda
 description: Obtenga información sobre por qué las funciones locales pueden ser una opción mejor que las expresiones lambda.
 ms.date: 06/27/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611450"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038799"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Funciones locales frente a expresiones lambda
 

@@ -2,12 +2,12 @@
 title: Resistencia y alta disponibilidad en microservicios
 description: Con el objetivo de ofrecer una alta disponibilidad, los microservicios deben estar diseñados para soportar errores en la red transitoria y las dependencias.
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094214"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
@@ -31,8 +31,8 @@ En la sección [Implementación de comprobaciones de estado en servicios de ASP.
 
 También tiene la opción de usar una biblioteca de código abierto excelente llamada Beat Pulse, que está disponible en [GitHub](https://github.com/Xabaril/BeatPulse) y como [paquete NuGet](https://www.nuget.org/packages/BeatPulse/). Además, la biblioteca realiza comprobaciones de estado, concretamente de dos tipos:
 
-- **Ejecución**: comprueba si el microservicio se está ejecutando, es decir, si puede aceptar solicitudes y responder a estas. 
-- **Preparación**: comprueba si las dependencias del microservicio, como la base de datos o los servicios de cola, están listas, de modo que el microservicio pueda funcionar como debería. 
+- **Ejecución**: comprueba si el microservicio se está ejecutando, es decir, si puede aceptar solicitudes y responder a estas.
+- **Preparación**: comprueba si las dependencias del microservicio, como la base de datos o los servicios de cola, están listas, de modo que el microservicio pueda funcionar como debería.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Utilización de secuencias de eventos de diagnóstico y registro
 

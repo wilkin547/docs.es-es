@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131497"
 ---
 # <a name="using-threads-and-threading"></a>Uso de subprocesos y subprocesamiento
 
@@ -44,7 +42,7 @@ El método <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 
 
 En la tabla siguiente se muestran algunas de las propiedades de <xref:System.Threading.Thread>:  
   
-|Propiedad.|Descripción|  
+|Propiedad.|DESCRIPCIÓN|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Devuelve `true` si el subproceso se ha iniciado y todavía no ha terminado con normalidad o se ha anulado.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtiene o establece un valor booleano que indica si un subproceso es un subproceso en segundo plano. Los subprocesos en segundo plano son como los subprocesos en primer plano, con la diferencia de que un subproceso en segundo plano no impide que un proceso se detenga. Una vez que se hayan detenido todos los subprocesos en primer plano que pertenecen a un proceso, Common Language Runtime finaliza el proceso mediante una llamada al método <xref:System.Threading.Thread.Abort%2A> en los subprocesos en segundo plano que continúan activos. Para obtener más información, vea [Subprocesos de primer y segundo plano](foreground-and-background-threads.md).|  

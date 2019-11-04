@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590316"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417937"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
 Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  
@@ -64,7 +64,7 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
-Para obtener más información, vea las secciones [Excepciones](~/_csharplang/spec/exceptions.md) y [La instrucción throw](~/_csharplang/spec/statements.md#the-throw-statement) de la [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para obtener más información, vea las secciones [Excepciones](~/_csharplang/spec/exceptions.md) y [La instrucción throw](~/_csharplang/spec/statements.md#the-throw-statement) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="see-also"></a>Vea también
 

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 472304dff23e92620dd461e8bc43c3093431ddc4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 349cc8d78e9a080d720e09a7e3e5e314752605c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962516"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106961"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Procedimiento para crear y ejecutar una consulta PLINQ simple
 En el ejemplo siguiente se muestra cómo crear una consulta Parallel LINQ; para ello, se utiliza el método de extensión <xref:System.Linq.ParallelEnumerable.AsParallel%2A> en la secuencia de origen y se ejecuta la consulta con el método <xref:System.Linq.ParallelEnumerable.ForAll%2A>.  

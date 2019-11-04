@@ -25,14 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e9d53e7a75463e481b667a7ad84b68cb225e7f7c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141486"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato en .NET
 
@@ -103,7 +101,7 @@ La presentación del nombre de un tipo suele tener un uso limitado y no permite 
 
 En .NET, el método `ToString` de cada tipo de valor primitivo se ha invalidado para que se muestre el valor del objeto en lugar de su nombre. En la tabla siguiente se muestra la invalidación para cada tipo primitivo. Observe que la mayoría de los métodos invalidados llaman a otra sobrecarga del método `ToString` y le pasan el especificador de formato "G", que define el formato general de su tipo, y un objeto <xref:System.IFormatProvider> que representa la referencia cultural actual.
 
-|type|Invalidación de ToString|
+|Tipo|Invalidación de ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Devuelve <xref:System.Boolean.TrueString?displayProperty=nameWithType> o <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Llama a `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para dar formato al valor de tipo <xref:System.Byte> correspondiente a la referencia cultural actual.|
@@ -213,7 +211,7 @@ Aunque las cadenas de formato estándar pueden satisfacer generalmente la mayor�
 
 Todos los tipos numéricos (es decir, los tipos <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64> y <xref:System.Numerics.BigInteger>), así como <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>y todos los tipos de enumeración, son compatibles con el formato con cadenas de formato. Para obtener información sobre las cadenas de formato específicas que admite cada tipo, consulte los temas siguientes:
 
-|Título|Definición|
+|Title|Definición|
 |-----------|----------------|
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|
@@ -351,7 +349,7 @@ En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Definición|
+|Title|Definición|
 |-----------|----------------|
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141372"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 

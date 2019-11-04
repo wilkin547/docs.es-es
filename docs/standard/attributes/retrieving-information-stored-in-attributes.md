@@ -11,14 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957339"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130889"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperar información almacenada en atributos
 La recuperación de un atributo personalizado es un proceso sencillo. En primer lugar, declare una instancia del atributo que desea recuperar. A continuación, utilice el método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar el atributo nuevo en el valor del atributo que desea recuperar. Una vez inicializado el nuevo atributo, basta con usar sus propiedades para obtener los valores.  

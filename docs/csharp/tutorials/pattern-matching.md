@@ -2,13 +2,14 @@
 title: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332351"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039190"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 

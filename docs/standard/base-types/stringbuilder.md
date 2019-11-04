@@ -16,14 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620063"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121678"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilizar la clase StringBuilder en .NET
 El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los métodos de la clase <xref:System.String?displayProperty=nameWithType>, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto <xref:System.String> puede ser costosa. La clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase <xref:System.Text.StringBuilder> puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.  
@@ -98,7 +96,7 @@ El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los mét
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Reemplazar  
+### <a name="replace"></a>Sustituya  
  El método **Replace** se puede usar para reemplazar caracteres del objeto <xref:System.Text.StringBuilder> por otro carácter especificado. En el ejemplo siguiente se usa el método **Replace** para buscar todas las instancias del carácter de signo de exclamación (!) y reemplazarlas por el carácter de signo de interrogación (?) en un objeto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]

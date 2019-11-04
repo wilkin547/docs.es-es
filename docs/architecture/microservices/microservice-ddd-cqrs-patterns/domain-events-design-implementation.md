@@ -2,12 +2,12 @@
 title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031838"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093955"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -145,9 +145,9 @@ El enfoque diferido es el que se usa en eShopOnContainers. En primer lugar, se a
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ Con este código, los eventos de entidad se envían a sus controladores de event
 
 El resultado general es que se separa la generación de un evento de dominio (una sencilla adición a una lista en memoria) de su envío a un controlador de eventos. Además, en función del tipo de distribuidor que se use, los eventos se podrían enviar de forma sincrónica o asincrónica.
 
-Tenga en cuenta que aquí los límites transaccionales tienen una importancia especial. Si la unidad de trabajo y la transacción pueden abarcar más de un agregado (como ocurre cuando se usa EF Core y una base de datos relacional), esto puede funcionar bien. Pero si la transacción no puede abarcar agregados, como cuando se usa una base de datos NoSQL como Azure CosmosDB, se deben implementar pasos adicionales para lograr la coherencia. Este es otro motivo por el que la omisión de persistencia no es universal; depende del sistema de almacenamiento que se use. 
+Tenga en cuenta que aquí los límites transaccionales tienen una importancia especial. Si la unidad de trabajo y la transacción pueden abarcar más de un agregado (como ocurre cuando se usa EF Core y una base de datos relacional), esto puede funcionar bien. Pero si la transacción no puede abarcar agregados, como cuando se usa una base de datos NoSQL como Azure CosmosDB, se deben implementar pasos adicionales para lograr la coherencia. Este es otro motivo por el que la omisión de persistencia no es universal; depende del sistema de almacenamiento que se use.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Transacción única entre agregados frente a coherencia final entre agregados
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork

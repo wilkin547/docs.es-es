@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139982"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 

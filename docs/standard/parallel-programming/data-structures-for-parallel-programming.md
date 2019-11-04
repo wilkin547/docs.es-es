@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625608"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123148"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estructuras de datos para la programación paralela
 .NET Framework 4 incorpora varios tipos nuevos que son útiles en la programación paralela, incluido un conjunto de clases de colecciones simultáneas, primitivos de sincronización ligera y tipos para la inicialización diferida. Puede usar estos tipos con cualquier código de aplicación multiproceso, como la biblioteca TPL y PLINQ.  
@@ -22,7 +20,7 @@ ms.locfileid: "64625608"
   
  En la tabla siguiente se enumeran las nuevas clases de colecciones simultáneas:  
   
-|Tipo|Descripción|  
+|Tipo|DESCRIPCIÓN|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Proporciona capacidades de bloqueo y establecimiento de límites en colecciones seguras para subprocesos que implementan <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Los subprocesos de productor se bloquean si no hay ranuras disponibles o si la colección está llena. Los subprocesos de consumidor se bloquean si la colección está vacía. Este tipo también admite el acceso sin bloqueo de productores y consumidores. <xref:System.Collections.Concurrent.BlockingCollection%601> puede utilizarse como una clase base o una memoria auxiliar para proporcionar el bloqueo y el establecimiento de límite de cualquier clase de colección que admite <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Una implementación de contenedor segura para subprocesos que ofrece operaciones add y get escalables.|  
@@ -37,7 +35,7 @@ ms.locfileid: "64625608"
   
  En la tabla siguiente se enumeran los nuevos tipos de sincronización:  
   
-|Tipo|Descripción|  
+|Tipo|DESCRIPCIÓN|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permite que varios subprocesos funcionen en un algoritmo en paralelo proporcionando un punto en el que cada tarea pueda señalizar su llegada y después bloquearse hasta que llegan algunas tareas o todas. Para más información, consulte [Barrier](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica los escenarios de bifurcación y combinación proporcionando un mecanismo sencillo de encuentro. Para más información, vea [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -57,7 +55,7 @@ ms.locfileid: "64625608"
   
  En la tabla siguiente se enumeran los tipos de inicialización diferida:  
   
-|Tipo|Descripción|  
+|Tipo|DESCRIPCIÓN|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Proporciona una inicialización diferida segura para subprocesos y ligera.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Proporciona un valor inicializado de forma diferida por cada subproceso, donde cada subproceso invoca de forma diferida la función de inicialización.|  

@@ -2,12 +2,12 @@
 title: Suscripción a eventos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039782"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035638"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -105,7 +105,7 @@ Como se mencionó anteriormente en la sección sobre arquitectura, puede tener v
 
 - Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Uso del [patrón de bandeja de salida](http://gistlabs.com/2014/05/the-outbox/). Se trata de una tabla transaccional para almacenar los eventos de integración (extendiendo la transacción local).
+- Uso del [patrón de bandeja de salida](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Se trata de una tabla transaccional para almacenar los eventos de integración (extendiendo la transacción local).
 
 En este escenario, el uso del modelo de orígenes de evento (ES) completo es uno de los mejores métodos, si no *el* mejor. Pero en muchas situaciones, es posible que no pueda implementar un sistema de ES completo. Con los orígenes de evento solo se almacenan los eventos de dominio en la base de datos transaccional, en lugar de almacenar los datos de estado actuales. Almacenar solo los eventos de dominio puede tener grandes ventajas, como tener el historial del sistema disponible y poder determinar el estado del sistema en cualquier momento del pasado. Pero la implementación de un sistema de ES completo requiere que se cambie la arquitectura de la mayor parte del sistema y presenta otras muchas complejidades y requisitos. Por ejemplo, le interesaría usar una base de datos creada específicamente para los orígenes de eventos, como [Event Store](https://eventstore.org/), o bien una base de datos orientada a documentos como Azure Cosmos DB, MongoDB, Cassandra, CouchDB o RavenDB. Los orígenes de evento son un buen enfoque para este problema, pero no es la solución más sencilla a menos que ya esté familiarizado con los orígenes de eventos.
 
@@ -326,7 +326,7 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
     <https://go.particular.net/eShopOnContainers>
 
 - **Mensajería controlada por eventos** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Jimmy Bogard. Refactorización hacia la resiliencia: evaluación del acoplamiento** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>

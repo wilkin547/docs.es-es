@@ -14,14 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268173"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127613"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
 

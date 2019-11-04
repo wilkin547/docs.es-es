@@ -12,15 +12,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991645"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140535"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 

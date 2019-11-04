@@ -15,14 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8cf99e766e3ea66440a30b4b616a1d90ec937e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138618"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -31,7 +29,7 @@ ms.locfileid: "70972574"
   
 - La evidencia de entrada se combina con la evidencia recopilada por el cargador para crear un juego final de evidencias que se utiliza en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load**, **Assembly.LoadFrom** y **Activator.CreateInstance**.  
   
-- La evidencia de entrada se utiliza sin modificaciones como el conjunto final de evidencias utilizadas en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load(byte[])** y **AppDomain.DefineDynamicAssembly()**.  
+- La evidencia de entrada se utiliza sin modificaciones como el conjunto final de evidencias utilizadas en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load(byte[])** y **AppDomain.DefineDynamicAssembly()** .  
   
   Se pueden conceder permisos opcionales mediante la [directiva de seguridad](../../framework/misc/code-access-security-basics.md) establecida en el equipo donde se ejecutará el ensamblado. Si desea que su código controle todas las posibles excepciones de seguridad, puede:  
   

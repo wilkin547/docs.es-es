@@ -2,12 +2,12 @@
 title: Implementación de lecturas/consultas en un microservicio CQRS
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación del lado de consultas de CQRS en el microservicio Ordering en eShopOnContainers mediante Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094066"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementación de lecturas/consultas en un microservicio CQRS
 
@@ -35,7 +35,7 @@ Los datos devueltos (ViewModel) pueden ser el resultado de combinar datos de var
 
 Los ViewModel pueden ser tipos estáticos definidos en las clases. O bien, se pueden crear dinámicamente en función de las consultas realizadas (tal y como se implementa en el microservicio de pedidos), lo que resulta muy ágil para los desarrolladores.
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Uso de Dapper como micro ORM para realizar consultas 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Uso de Dapper como micro ORM para realizar consultas
 
 Para la consulta puede usar cualquier micro ORM, Entity Framework Core o incluso ADO.NET estándar. En la aplicación de ejemplo, se seleccionó Dapper para el microservicio de pedidos en eShopOnContainers como un buen ejemplo de un micro ORM popular. Dapper puede ejecutar consultas SQL estándar con un gran rendimiento, porque es un marco de trabajo muy ligero. Con Dapper, se puede escribir una consulta SQL que puede acceder a varias tablas y combinarlas.
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 

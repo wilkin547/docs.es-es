@@ -16,14 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cacccc182b3361ffd635f2b5f32ce8c17100d08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 72b60d0a91fda3e89448a19b506a6f8457835304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124408"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -36,7 +34,7 @@ Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
-|Especificador de formato|nombre|DESCRIPCIÓN|Ejemplos|
+|Especificador de formato|Name|DESCRIPCIÓN|Ejemplos|
 |----------------------|----------|-----------------|--------------|
 |"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [Especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|

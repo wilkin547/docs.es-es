@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588221"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417529"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversiones de puntero (Guía de programación de C#)
 En la tabla siguiente se muestran las conversiones de puntero implícitas predefinidas. Las conversiones implícitas pueden ocurrir en muchas situaciones, incluidas las instrucciones de asignación y de invocación de método.  
@@ -43,7 +43,7 @@ En la tabla siguiente se muestran las conversiones de puntero implícitas predef
 
 - [Guía de programación de C#](../index.md)
 - [Tipos de puntero](./pointer-types.md)
-- [Tipos](../../language-reference/keywords/types.md)
+- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed (instrucción)](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

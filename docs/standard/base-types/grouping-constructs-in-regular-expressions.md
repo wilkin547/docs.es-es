@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957178"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140115"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  

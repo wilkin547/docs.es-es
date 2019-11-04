@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fda8443666d1c90b31cf02c2f925d1c89243a8e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091315"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Procedimiento Iteración de directorios de archivos con la clase Parallel
 En muchos casos, la iteración de archivo es una operación que se puede paralelizar fácilmente. El tema [Cómo: Iteración de directorios de archivos con PLINQ ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) muestra la manera más fácil de realizar esta tarea para muchos escenarios. Sin embargo, pueden surgir complicaciones cuando el código tiene que tratar con los muchos tipos de excepciones que pueden surgir al obtener acceso al sistema de archivos. En el ejemplo siguiente se muestra un enfoque para el problema. Usa una iteración basada en la pila para recorrer todos los archivos y carpetas en un directorio especificado y habilita el código para detectar y controlar diversas excepciones. Por supuesto, la forma de controlar las excepciones depende de usted.  
