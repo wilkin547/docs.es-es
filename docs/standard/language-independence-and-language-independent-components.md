@@ -13,14 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ecb2c2e6a80f36ea1426b6145fd89b869a77f1b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663018"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120756"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -118,11 +116,11 @@ Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de
 |Enumeraciones|[Enumeraciones](#enums)|El tipo subyacente de una enumeración debe ser un tipo de entero integrado en CLS, el nombre del campo debe ser “value__” y dicho campo debe marcarse como `RTSpecialName`.|7|
 |Enumeraciones|[Enumeraciones](#enums)|Hay dos tipos distintos de enumeraciones, que se indican mediante la presencia o ausencia del atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType> (vea la biblioteca del apartado IV). Uno representa valores enteros con nombre; el otro representa los marcadores de bit con nombre que se pueden combinar para generar un valor sin nombre. El valor de `enum` no se limita a los valores especificados.|8|
 |Enumeraciones|[Enumeraciones](#enums)|Los campos estáticos literales de una enumeración deben contener el tipo de la propia enumeración.|9|
-|Eventos|[Eventos](#events)|Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos.|29|
-|Eventos|[Eventos](#events)|La accesibilidad de un evento y sus descriptores de acceso será idéntica.|30|
-|Eventos|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez.|31|
-|Eventos|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de <xref:System.Delegate?displayProperty=nameWithType>.|32|
-|Eventos|[Eventos](#events)|Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes, se omitirá el atributo `SpecialName` mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.|33|
+|Events|[Eventos](#events)|Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos.|29|
+|Events|[Eventos](#events)|La accesibilidad de un evento y sus descriptores de acceso será idéntica.|30|
+|Events|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez.|31|
+|Events|[Eventos](#events)|Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de <xref:System.Delegate?displayProperty=nameWithType>.|32|
+|Events|[Eventos](#events)|Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes, se omitirá el atributo `SpecialName` mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.|33|
 |Excepciones|[Excepciones](#exceptions)|Los objetos que se inicien deberán ser de tipo <xref:System.Exception?displayProperty=nameWithType> o de un tipo que herede de él. No obstante, los métodos conformes a CLS no necesitan bloquear la propagación de otros tipos de excepciones.|40|
 |General|[Conformidad con CLS: reglas](#Rules)|Las reglas de CLS solo se aplican a las partes de los tipos que son accesibles o visibles desde fuera del ensamblado de definición.|1|
 |General|[Conformidad con CLS: reglas](#Rules)|Los miembros de tipos no conformes con CLS no deben marcarse como conformes con CLS.|2|
@@ -436,7 +434,7 @@ Las propiedades de los tipos conformes a CLS deben seguir estas reglas:
 
 <a name="events"></a>
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>Events
 
 Un evento se define por su nombre y su tipo. El tipo de evento es un delegado que se utiliza para indicar el evento. Por ejemplo, el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> es del tipo <xref:System.ResolveEventHandler>. Además del propio evento, hay tres métodos con nombres basados en el nombre de evento que proporcionan la implementación del evento y que se marcan como `SpecialName` en los metadatos de ensamblado:
 

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512351"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103886"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tablas de conversión de tipos en .NET
 Una conversión de ampliación se produce cuando se convierte un valor de un tipo a otro tipo que es de igual o mayor tamaño. Una conversión de restricción se produce cuando se convierte un valor de un tipo a otro tipo que es de un tamaño menor. En las tablas de este tema se muestran los comportamientos de ambos tipos de conversiones.  

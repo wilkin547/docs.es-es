@@ -2,14 +2,12 @@
 title: Cambios importantes en Visual Basic - .NET Core
 description: Enumera los cambios importantes en Visual Basic cuando se usa en .NET Core.
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f15600b02ea8206f26e228b3b48aaf2b1208fa8d
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c4db31079098ca48dfd0ef4708a55049dde619fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092796"
 ---
 # <a name="visual-basic-breaking-changes"></a>Cambios importantes en Visual Basic
 
