@@ -10,15 +10,15 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017662"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460412"
 ---
 # <a name="control-styles-and-templates"></a>Estilos y plantillas de controles
-Los controles en Windows Presentation Foundation (WPF) tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Puede cambiar la estructura y la apariencia de un control modificando el <xref:System.Windows.Controls.ControlTemplate> de ese control. No hay ninguna forma de reemplazar solo la parte del árbol visual de un control; Para cambiar el árbol visual de un control debe establecer el <xref:System.Windows.Controls.Control.Template%2A> propiedad del control a su nueva y completa <xref:System.Windows.Controls.ControlTemplate>.  
+Los controles de Windows Presentation Foundation (WPF) tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Puede cambiar la estructura y la apariencia de un control modificando el <xref:System.Windows.Controls.ControlTemplate> de ese control. No hay ninguna manera de reemplazar solo parte del árbol visual de un control; para cambiar el árbol visual de un control, debe establecer la propiedad <xref:System.Windows.Controls.Control.Template%2A> del control en el <xref:System.Windows.Controls.ControlTemplate>nuevo y completo.  
   
  Los temas de escritorio determinan qué diccionario de recursos se usa. Para obtener los diccionarios de recursos de los temas de escritorio, consulte [Default WPF Themes ](https://go.microsoft.com/fwlink/?LinkID=158252) (Temas de WPF predeterminados).  
   
@@ -50,18 +50,18 @@ Los controles en Windows Presentation Foundation (WPF) tienen un <xref:System.Wi
  [ListView Styles and Templates](listview-styles-and-templates.md) (Estilos y plantillas de ListView)  
  [Menu Styles and Templates](menu-styles-and-templates.md) (Estilos y plantillas de Menu)  
  [NavigationWindow Styles and Templates](navigationwindow-styles-and-templates.md) (Estilos y plantillas de NavigationWindow)  
- [PasswordBox estilos y plantillas](passwordbox-styles-and-templates.md)  
+ [Estilos y plantillas de PasswordBox](passwordbox-styles-and-templates.md)  
  [ProgressBar Styles and Templates](progressbar-styles-and-templates.md) (Estilos y plantillas de ProgressBar)  
  [RadioButton Styles and Templates](radiobutton-styles-and-templates.md) (Estilos y plantillas de RadioButton)  
- [RepeatButton estilos y plantillas](repeatbutton-styles-and-templates.md)  
+ [Estilos y plantillas de RepeatButton](repeatbutton-styles-and-templates.md)  
  [ScrollBar Styles and Templates](scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)  
  [ScrollViewer Styles and Templates](scrollviewer-styles-and-templates.md) (Estilos y plantillas de ScrollViewer)  
  [Slider Styles and Templates](slider-styles-and-templates.md) (Estilos y plantillas de Slider)  
  [StatusBar Styles and Templates](statusbar-styles-and-templates.md) (Estilos y plantillas de StatusBar)  
  [TabControl Styles and Templates](tabcontrol-styles-and-templates.md) (Estilos y plantillas de TabControl)  
  [TextBox Styles and Templates](textbox-styles-and-templates.md) (Estilos y plantillas de TextBox Styles)  
- [Plantillas y estilos de control de posición](thumb-styles-and-templates.md)  
- [ToggleButton estilos y plantillas](togglebutton-styles-and-templates.md)  
+ [Estilos y plantillas de Thumb](thumb-styles-and-templates.md)  
+ [Estilos y plantillas de ToggleButton](togglebutton-styles-and-templates.md)  
  [ToolBar Styles and Templates](toolbar-styles-and-templates.md) (Estilos y plantillas de ToolBar)  
  [ToolTip Styles and Templates](tooltip-styles-and-templates.md) (Estilos y plantillas de ToolTip)  
  [TreeView Styles and Templates](treeview-styles-and-templates.md) (Estilos y plantillas de TreeView)  
@@ -75,4 +75,4 @@ Los controles en Windows Presentation Foundation (WPF) tienen un <xref:System.Wi
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Información general sobre la creación de controles](control-authoring-overview.md)  
   
- [Aplicar estilos y plantillas](styling-and-templating.md)
+ [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

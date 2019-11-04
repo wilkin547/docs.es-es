@@ -8,15 +8,15 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 27319179a9a30c5693f47039bf1e24c59adf0e68
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: d8cfae2fb47876d578c51e5f4acdfe0c31e752fe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424649"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460907"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Cómo: Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio Web
-Las aplicaciones de explorador XAML (XBAP) se ejecutan en un espacio aislado de seguridad de confianza parcial que está restringido al conjunto de permisos de la zona de Internet. Este conjunto de permisos restringe las llamadas de servicio web solo a los servicios web que se encuentran en el sitio de origen de la aplicación XBAP. Sin embargo, cuando se depura una aplicación XBAP desde Visual Studio 2005, no se considera que tiene el mismo sitio de origen que el servicio Web al que hace referencia. Esto hace que se produzcan excepciones de seguridad cuando la aplicación XBAP intenta llamar al servicio Web. Sin embargo, se puede configurar un proyecto de [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] de Visual Studio 2005 para simular tener el mismo sitio de origen que el servicio Web al que llama durante la depuración. Esto permite que la aplicación XBAP llame de forma segura al servicio Web sin producir excepciones de seguridad.
+Las aplicaciones de explorador XAML (XBAP) se ejecutan en un espacio aislado de seguridad de confianza parcial que está restringido al conjunto de permisos de la zona de Internet. Este conjunto de permisos restringe las llamadas de servicio web solo a los servicios web que se encuentran en el sitio de origen de la aplicación XBAP. Sin embargo, cuando se depura una aplicación XBAP desde Visual Studio 2005, no se considera que tiene el mismo sitio de origen que el servicio Web al que hace referencia. Esto hace que se produzcan excepciones de seguridad cuando la aplicación XBAP intenta llamar al servicio Web. Sin embargo, se puede configurar un proyecto de aplicación de explorador XAML (WPF) de Visual Studio 2005 para simular tener el mismo sitio de origen que el servicio Web al que llama durante la depuración. Esto permite que la aplicación XBAP llame de forma segura al servicio Web sin producir excepciones de seguridad.
 
 ## <a name="configuring-visual-studio"></a>Configuración de Visual Studio
  Para configurar Visual Studio 2005 para depurar una aplicación XBAP que llama a un servicio Web:
@@ -38,7 +38,7 @@ Las aplicaciones de explorador XAML (XBAP) se ejecutan en un espacio aislado de 
      `-debug c:\example.xbap`
 
 > [!NOTE]
-> Esta es la configuración predeterminada para las soluciones que se crean con la plantilla de proyecto de [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] de Visual Studio 2005.
+> Esta es la configuración predeterminada para las soluciones que se crean con la plantilla de proyecto de aplicación de explorador XAML (WPF) de Visual Studio 2005.
 
 1. Seleccione un proyecto en el **Explorador de soluciones**y, en el menú **Proyecto** , haga clic en **Propiedades**.
 

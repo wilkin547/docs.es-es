@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015667"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460596"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Tutorial: Heredar de un control de Windows Forms con C\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Tutorial: heredar de un control de Windows Forms con C\#
 
-Con Visual C#, puede crear controles personalizados eficaces a través de la *herencia*. A través de la herencia puede crear controles que conserven toda la funcionalidad inherente de controles de Windows Forms estándar y además incorporen funcionalidad personalizada. En este tutorial, creará un control heredado simple denominado `ValueButton`. Este botón heredará la funcionalidad del control de <xref:System.Windows.Forms.Button> Windows Forms estándar y expondrá una propiedad personalizada denominada `ButtonValue`.
+Con Visual C#, puede crear controles personalizados eficaces a través de la *herencia*. A través de la herencia puede crear controles que conserven toda la funcionalidad inherente de controles de Windows Forms estándar y además incorporen funcionalidad personalizada. En este tutorial, creará un control heredado simple denominado `ValueButton`. Este botón heredará la funcionalidad del control de <xref:System.Windows.Forms.Button> de Windows Forms estándar y expondrá una propiedad personalizada denominada `ButtonValue`.
 
 ## <a name="create-the-project"></a>Crear el proyecto
 
@@ -30,22 +30,22 @@ Cuando cree un proyecto, especifique su nombre para establecer el espacio de nom
 
 1. En Visual Studio, cree un nuevo proyecto de **biblioteca de controles Windows Forms** y asígnele el nombre **ValueButtonLib**.
 
-     El nombre del proyecto, `ValueButtonLib` también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ValueButton`, puede especificar su componente `ValueButton` mediante `ValueButtonLib.ValueButton`. Para más información, consulte [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md).
+     El nombre del proyecto, `ValueButtonLib`, también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ValueButton`, puede especificar su componente `ValueButton` mediante `ValueButtonLib.ValueButton`. Para más información, consulte [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md).
 
 2. En el **Explorador de soluciones**, haga clic con el botón derecho en **UserControl1.cs** y elija **Cambiar nombre** en el menú contextual. Cambie el nombre del archivo a **ValueButton.CS**. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "`UserControl1`".
 
 3. En el **Explorador de soluciones**, haga clic con el botón derecho en **ValueButton.cs** y seleccione **Ver código**.
 
-4. Busque la `class` línea de instrucción `public partial class ValueButton`,, y cambie el tipo del que este <xref:System.Windows.Forms.Button>control hereda de <xref:System.Windows.Forms.UserControl> . Esto permite que el control heredado herede toda la funcionalidad del <xref:System.Windows.Forms.Button> control.
+4. Busque la línea de instrucción de `class`, `public partial class ValueButton`y cambie el tipo del que hereda este control de <xref:System.Windows.Forms.UserControl> a <xref:System.Windows.Forms.Button>. Esto permite que el control heredado herede toda la funcionalidad del control <xref:System.Windows.Forms.Button>.
 
 5. En el **Explorador de soluciones**, abra el nodo **ValueButton.cs** para mostrar el archivo de código generado por el diseñador, **ValueButton.Designer.cs**. Abra este archivo en el **Editor de código**.
 
-6. Busque el `InitializeComponent` método y quite la línea que asigna la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propiedad. Esta propiedad no existe en el <xref:System.Windows.Forms.Button> control.
+6. Busque el método `InitializeComponent` y quite la línea que asigna la propiedad <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>. Esta propiedad no existe en el control <xref:System.Windows.Forms.Button>.
 
 7. En el menú **Archivo**, elija **Guardar todo** para guardar el proyecto.
 
     > [!NOTE]
-    > Ya no hay disponible ningún diseñador visual. Dado que <xref:System.Windows.Forms.Button> el control realiza su propia representación, no se puede modificar su apariencia en el diseñador. Su representación visual será exactamente la misma que la de la clase de la que hereda (es decir, <xref:System.Windows.Forms.Button>) a menos que se modifique en el código. Todavía puede agregar componentes, que no tienen ningún elemento de interfaz de usuario, a la superficie de diseño.
+    > Ya no hay disponible ningún diseñador visual. Dado que el control <xref:System.Windows.Forms.Button> realiza su propia representación, no se puede modificar su apariencia en el diseñador. Su representación visual será exactamente la misma que la de la clase de la que hereda (es decir, <xref:System.Windows.Forms.Button>) a menos que se modifique en el código. Todavía puede agregar componentes, que no tienen ningún elemento de interfaz de usuario, a la superficie de diseño.
 
 ## <a name="add-a-property-to-your-inherited-control"></a>Agregar una propiedad al control heredado
 
@@ -117,7 +117,7 @@ En el menú **Compilar** , haga clic en **Compilar solución**. La compilación 
 
 5. Establezca la propiedad **ButtonValue** en **5**.
 
-6. En la pestaña **todos los Windows Forms** del **cuadro de herramientas**, haga doble clic en **etiqueta** para agregar un <xref:System.Windows.Forms.Label> control al formulario.
+6. En la pestaña **todos los Windows Forms** del **cuadro de herramientas**, haga doble clic en **etiqueta** para agregar un control de <xref:System.Windows.Forms.Label> al formulario.
 
 7. Mueva la etiqueta al centro del formulario.
 
@@ -143,5 +143,5 @@ En el menú **Compilar** , haga clic en **Compilar solución**. La compilación 
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Tutorial: Crear un control compuesto con VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Tutorial: Crear un control compuesto con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

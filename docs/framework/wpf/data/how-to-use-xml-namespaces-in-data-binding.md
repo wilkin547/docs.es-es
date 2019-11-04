@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 9d8ddc5445bac28c68cd6cc99acf3313613a8c7f
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 47ce0d951df39c7b60aa2a543baf845f5471de6c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919664"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460306"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>Cómo: Usar espacios de nombres XML en el enlace de datos
 ## <a name="example"></a>Ejemplo
@@ -32,5 +32,5 @@ ms.locfileid: "72919664"
 ## <a name="see-also"></a>Vea también
 
 - [Enlazar a datos XML mediante XMLDataProvider y consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

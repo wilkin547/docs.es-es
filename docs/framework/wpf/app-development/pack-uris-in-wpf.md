@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580618"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459674"
 ---
 # <a name="pack-uris-in-wpf"></a>Empaquetar URI en WPF
 
@@ -188,7 +188,7 @@ En el ejemplo siguiente se muestra el Pack URI para un [!INCLUDE[TLA2#tla_xaml](
 
 Los archivos XAML que se configuran como MSBuild `Page` elementos se compilan en ensamblados de la misma manera que los archivos de recursos. Por consiguiente, los elementos de `Page` de MSBuild se pueden identificar mediante pack uri para los archivos de recursos.
 
-Los tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos que se configuran normalmente como elementos `Page` de MSBuild tienen uno de los elementos siguientes como su elemento raíz:
+Los tipos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos que se configuran normalmente como elementos`Page` de MSBuild tienen uno de los elementos siguientes como su elemento raíz:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -265,7 +265,7 @@ Con el fin de determinar el tipo de archivo al que hace referencia un Pack URI, 
 
 La resolución de URI no se aplica a los URI que hacen referencia a lo siguiente:
 
-- Archivos de contenido en ensamblados a los que se hace referencia: los [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no admiten estos tipos de archivo.
+- Archivos de contenido en ensamblados a los que se hace referencia: los [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]no admiten estos tipos de archivo.
 
 - Archivos incrustados en ensamblados a los que se hace referencia: los URI que los identifican son únicos porque incluyen el nombre del ensamblado al que se hace referencia y el sufijo `;component`.
 
@@ -407,11 +407,11 @@ En las secciones anteriores se ha explicado cómo construir pack uri para identi
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-Las aplicaciones y [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] independientes también pueden especificar una página como la interfaz de usuario inicial, como se muestra en el ejemplo siguiente.
+Las aplicaciones independientes y las aplicaciones de explorador XAML (XBAP) también pueden especificar una página como la interfaz de usuario inicial, como se muestra en el ejemplo siguiente.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Si la aplicación es una aplicación independiente y se especifica una página con <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] abre un <xref:System.Windows.Navigation.NavigationWindow> para hospedar la página. Por [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], la página se muestra en el explorador del host.
+Si la aplicación es una aplicación independiente y se especifica una página con <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] abre un <xref:System.Windows.Navigation.NavigationWindow> para hospedar la página. En el caso de las XBAP, la página se muestra en el explorador del host.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -457,7 +457,7 @@ Los diccionarios de recursos (<xref:System.Windows.ResourceDictionary>) se puede
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Para obtener información general sobre los temas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consulte [aplicar estilos y plantillas](../controls/styling-and-templating.md).
+Para obtener información general sobre los temas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consulte [aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -9,41 +9,41 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: e38756c5f266abc16b99f2359f8a87460d5d9450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32ee86e2388808739a2c2ff5a02bb40fc641129b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790902"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460542"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>Estilos y plantillas de TabControl
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.TabControl> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.TabControl>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
   
-## <a name="tabcontrol-parts"></a>Partes de TabControl  
- En la tabla siguiente se enumera los elementos con nombre para el <xref:System.Windows.Controls.TabControl> control.  
+## <a name="tabcontrol-parts"></a>Elementos TabControl  
+ En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.TabControl>.  
   
-|Parte|Tipo|Descripción|  
+|Parte|Type|Descripción|  
 |-|-|-|  
-|PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|El objeto que muestra el contenido de la seleccionada actualmente <xref:System.Windows.Controls.TabItem>.|  
+|PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Objeto que muestra el contenido de la <xref:System.Windows.Controls.TabItem>seleccionada actualmente.|  
   
- Cuando creas un <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.TabControl>, la plantilla podría contener un <xref:System.Windows.Controls.ItemsPresenter> dentro de un <xref:System.Windows.Controls.ScrollViewer>. (El <xref:System.Windows.Controls.ItemsPresenter> muestra cada elemento en el <xref:System.Windows.Controls.TabControl>; el <xref:System.Windows.Controls.ScrollViewer> habilita el desplazamiento dentro del control).  Si el <xref:System.Windows.Controls.ItemsPresenter> no es el elemento secundario directo de la <xref:System.Windows.Controls.ScrollViewer>, debe proporcionar el <xref:System.Windows.Controls.ItemsPresenter> el nombre, `ItemsPresenter`.  
+ Cuando se crea una <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.TabControl>, es posible que la plantilla contenga una <xref:System.Windows.Controls.ItemsPresenter> dentro de una <xref:System.Windows.Controls.ScrollViewer>. (El <xref:System.Windows.Controls.ItemsPresenter> muestra cada elemento del <xref:System.Windows.Controls.TabControl>; el <xref:System.Windows.Controls.ScrollViewer> habilita el desplazamiento dentro del control).  Si el <xref:System.Windows.Controls.ItemsPresenter> no es el elemento secundario directo del <xref:System.Windows.Controls.ScrollViewer>, debe proporcionar al <xref:System.Windows.Controls.ItemsPresenter> el nombre `ItemsPresenter`.  
   
-## <a name="tabcontrol-states"></a>Estados del control TabControl  
- En la tabla siguiente se enumera los estados visuales para el <xref:System.Windows.Controls.TabControl> control.  
+## <a name="tabcontrol-states"></a>Estados de TabControl  
+ En la tabla siguiente se enumeran los Estados visuales del control <xref:System.Windows.Controls.TabControl>.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|El estado predeterminado.|  
 |Deshabilitado|CommonStates|El control está deshabilitado.|  
-|Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
-|InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
-|InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
+|Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
+|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|  
+|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|  
   
-## <a name="tabitem-parts"></a>TabItem partes  
- El <xref:System.Windows.Controls.TabItem> control no tiene elementos con nombre.  
+## <a name="tabitem-parts"></a>Elementos de TabItem  
+ El control <xref:System.Windows.Controls.TabItem> no tiene ninguna parte con nombre.  
   
 ## <a name="tabitem-states"></a>Estados de TabItem  
- En la tabla siguiente se enumera los estados visuales para el <xref:System.Windows.Controls.TabItem> control.  
+ En la tabla siguiente se enumeran los Estados visuales del control <xref:System.Windows.Controls.TabItem>.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |----------------------|---------------------------|-----------------|  
@@ -54,12 +54,12 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |Sin foco|FocusStates|El control no tiene el foco.|  
 |Seleccionado|SelectionStates|El control está seleccionado.|  
 |No seleccionado|SelectionStates|El control no está seleccionado.|  
-|Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
-|InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
-|InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
+|Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
+|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|  
+|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|  
   
 ## <a name="tabcontrol-controltemplate-example"></a>Ejemplo de ControlTemplate de TabControl  
- El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.TabControl> y <xref:System.Windows.Controls.TabItem> controles.  
+ En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para los controles <xref:System.Windows.Controls.TabControl> y <xref:System.Windows.Controls.TabItem>.  
   
  [!code-xaml[ControlTemplateExamples#TabControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
   
@@ -75,5 +75,5 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

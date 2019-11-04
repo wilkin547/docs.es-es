@@ -3,12 +3,12 @@ title: Métricas de ML.NET
 description: Introducción a las métricas que se utilizan para evaluar el rendimiento de un modelo de ML.NET
 ms.date: 04/29/2019
 author: natke
-ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 362f2f382d050ff9ae246af2dffe3e15d22452eb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410534"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460736"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Métricas de evaluación de modelos en ML.NET
 
@@ -47,7 +47,7 @@ La macroprecisión proporciona más peso a los equipos pequeños en este ejemplo
 
 Para obtener más información sobre las métricas de clasificación multiclase, lea los artículos siguientes:
 
-- [Micropromedio y macropromedio de precisión, recuperación y puntuación F](http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
+- [Micropromedio y macropromedio de precisión, recuperación y puntuación F](https://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
 - [Clasificación multiclase con un conjunto de datos desequilibrado](https://towardsdatascience.com/machine-learning-multiclass-classification-with-imbalanced-data-set-29f6a177c1a)
 
 ## <a name="metrics-for-regression"></a>Métricas de regresión

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 4fc88f1e32b8ddce6abccad085b0c44a5c716e8b
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400805"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460578"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espacios de nombres y asignación de espacios de nombres XAML para WPF
 En este tema se explica con mayor detalle la presencia y el propósito de las dos asignaciones de espacio de nombres XAML que se encuentran a menudo en la etiqueta raíz de cada archivo XAML de WPF. También se describe cómo generar asignaciones similares para usar elementos definidos en su propio código y/o dentro de ensamblados independientes.  
@@ -39,7 +39,7 @@ En este tema se explica con mayor detalle la presencia y el propósito de las do
   
  La relación entre estas declaraciones es que la asignación del prefijo `x:` admite los elementos intrínsecos que forman parte de la definición del lenguaje XAML, y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es una implementación que usa XAML como lenguaje y define un vocabulario de sus objetos para XAML. Dado que los usos del vocabulario de WPF van a ser mucho más comunes que los usos de los elementos intrínsecos de XAML, el vocabulario de WPF se asigna como valor predeterminado.  
   
- La convención del prefijo `x:` para asignar los elementos intrínsecos del lenguaje XAML va seguida de las plantillas de proyecto, los ejemplos de código y la documentación de las características del lenguaje de este [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. El espacio de nombres XAML define muchas de las características usadas normalmente que son necesarias incluso para las aplicaciones básicas de WPF. Por ejemplo, para combinar cualquier código subyacente con un archivo XAML a través de una clase parcial, debe denominar esa clase como el atributo `x:Class` del elemento raíz del archivo XAML pertinente. Por otra parte, cualquier elemento definido en una página XAML al que quiera obtener acceso como recurso con clave debe tener el atributo `x:Key` establecido en el elemento en cuestión. Para obtener más información sobre estos y otros aspectos de XAML, vea [Información general sobre XAML (WPF)](xaml-overview-wpf.md) o [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md).  
+ La convención del prefijo `x:` para asignar los elementos intrínsecos del lenguaje XAML va seguida de las plantillas de proyecto, los ejemplos de código y la documentación de las características del lenguaje de este [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. El espacio de nombres XAML define muchas de las características usadas normalmente que son necesarias incluso para las aplicaciones básicas de WPF. Por ejemplo, para combinar cualquier código subyacente con un archivo XAML a través de una clase parcial, debe denominar esa clase como el atributo `x:Class` del elemento raíz del archivo XAML pertinente. Por otra parte, cualquier elemento definido en una página XAML al que quiera obtener acceso como recurso con clave debe tener el atributo `x:Key` establecido en el elemento en cuestión. Para obtener más información sobre estos y otros aspectos de XAML, vea [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) o [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Asignar a clases y ensamblados personalizados  
@@ -49,7 +49,7 @@ En este tema se explica con mayor detalle la presencia y el propósito de las do
   
  `clr-namespace:` El espacio de nombres CLR declarado dentro del ensamblado que contiene los tipos públicos que se exponen como elementos.  
   
- `assembly=`Ensamblado que contiene parte o todo el espacio de nombres CLR al que se hace referencia. Este valor suele ser simplemente el nombre del ensamblado, no la ruta de acceso, y no incluye la extensión (como .dll o .exe). La ruta de acceso a ese ensamblado se debe establecer como referencia de proyecto en el archivo de proyecto que contiene el XAML que se va a asignar. Para incorporar el control de versiones y la firma de nombre seguro, `assembly` el valor puede ser una cadena, tal <xref:System.Reflection.AssemblyName>y como se define en, en lugar del nombre de cadena simple.  
+ `assembly=` el ensamblado que contiene parte o todo el espacio de nombres CLR al que se hace referencia. Este valor suele ser simplemente el nombre del ensamblado, no la ruta de acceso, y no incluye la extensión (como .dll o .exe). La ruta de acceso a ese ensamblado se debe establecer como referencia de proyecto en el archivo de proyecto que contiene el XAML que se va a asignar. Para incorporar el control de versiones y la firma de nombre seguro, el valor de `assembly` puede ser una cadena, tal y como se define en <xref:System.Reflection.AssemblyName>, en lugar del nombre de cadena simple.  
   
  Observe que el carácter que separa el token `clr-namespace` de su valor es un signo de dos puntos (:), mientras que el carácter que separa el token `assembly` de su valor es un signo igual (=). El carácter que se usa entre estos dos tokens es un punto y coma. Además, no incluya ningún espacio en blanco en cualquier parte de la declaración.  
   
@@ -105,37 +105,37 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Asignar espacios de nombres CLR a espacios de nombres XML en un ensamblado  
- WPF define un atributo CLR que usan los procesadores XAML para asignar varios espacios de nombres CLR a un mismo espacio de nombres XAML. Este atributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, se coloca en el nivel de ensamblado en el código fuente que genera el ensamblado. El código fuente del ensamblado de WPF usa este atributo para asignar los distintos espacios de nombres <xref:System.Windows> comunes <xref:System.Windows.Controls>, como y [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] , al espacio de nombres.  
+ WPF define un atributo CLR que usan los procesadores XAML para asignar varios espacios de nombres CLR a un mismo espacio de nombres XAML. Este atributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, se coloca en el nivel de ensamblado en el código fuente que genera el ensamblado. El código fuente del ensamblado de WPF usa este atributo para asignar los distintos espacios de nombres comunes, como <xref:System.Windows> y <xref:System.Windows.Controls>, al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)].  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Toma dos parámetros: el nombre del espacio de nombres XML/XAML y el nombre del espacio de nombres CLR. Puede haber más <xref:System.Windows.Markup.XmlnsDefinitionAttribute> de una para asignar varios espacios de nombres CLR al mismo espacio de nombres XML. Una vez asignados, si se quiere se puede hacer referencia también a los miembros de esos espacios de nombres aunque no estén completos, proporcionando la instrucción `using` adecuada en la página de código subyacente de la clase parcial. Para obtener más información, vea <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ El <xref:System.Windows.Markup.XmlnsDefinitionAttribute> toma dos parámetros: el nombre del espacio de nombres XML/XAML y el nombre del espacio de nombres CLR. Puede haber más de un <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para asignar varios espacios de nombres CLR al mismo espacio de nombres XML. Una vez asignados, si se quiere se puede hacer referencia también a los miembros de esos espacios de nombres aunque no estén completos, proporcionando la instrucción `using` adecuada en la página de código subyacente de la clase parcial. Para obtener más información, vea <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Espacios de nombres de diseñador y otros prefijos de las plantillas XAML  
  Si trabaja con entornos de desarrollo o herramientas de diseño para XAML de WPF, tal vez observe que hay otros espacios de nombres XAML / prefijos definidos dentro del marcado XAML.  
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa un espacio de nombres de diseñador que está asignado normalmente al prefijo `d:`. Las plantillas de proyecto de WPF más recientes podrían pre-asignar este espacio de nombres XAML para admitir el intercambio de XAML entre [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] y otros entornos de diseño. Este espacio de nombres XAML de diseño se usa para perpetuar el estado del diseño mientras la interfaz de usuario basada en XAML en el diseñador va y vuelve. También lo usan características como `d:IsDataSource`, que habilitan los orígenes de datos en tiempo de ejecución en un diseñador.  
   
- Otro prefijo que podría ver asignado es `mc:`. `mc:` es para ofrecer compatibilidad de marcado, y aprovecha un modelo de compatibilidad de marcado que no es necesariamente específico de XAML. Hasta cierto punto, las características de compatibilidad de marcado se pueden usar para intercambiar XAML entre marcos o entre otros límites de implementación de respaldo, trabajar entre contextos de esquema XAML, ofrecer compatibilidad para modos limitados en los diseñadores, etc. Para obtener más información sobre los conceptos de compatibilidad de marcado y cómo se relacionan con WPF, vea [compatibilidad de marcado (MC:) Características](markup-compatibility-mc-language-features.md)del lenguaje.  
+ Otro prefijo que podría ver asignado es `mc:`. `mc:` es para ofrecer compatibilidad de marcado, y aprovecha un modelo de compatibilidad de marcado que no es necesariamente específico de XAML. Hasta cierto punto, las características de compatibilidad de marcado se pueden usar para intercambiar XAML entre marcos o entre otros límites de implementación de respaldo, trabajar entre contextos de esquema XAML, ofrecer compatibilidad para modos limitados en los diseñadores, etc. Para obtener más información sobre los conceptos de compatibilidad de marcado y su relación con WPF, vea [Características del lenguaje de compatibilidad de marcado (mc:)](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF y carga de ensamblados  
- El contexto de esquema XAML para WPF se integra con el modelo de aplicación de WPF, que a su vez usa el <xref:System.AppDomain>concepto definido por CLR de. La secuencia siguiente describe cómo el contexto de esquema XAML interpreta cómo cargar ensamblados o buscar tipos en tiempo de ejecución o en tiempo de diseño, en función del <xref:System.AppDomain> uso de WPF de y otros factores.  
+ El contexto de esquema XAML para WPF se integra con el modelo de aplicación de WPF, que a su vez usa el concepto de <xref:System.AppDomain>definido por CLR. La secuencia siguiente describe cómo el contexto de esquema XAML interpreta cómo cargar ensamblados o buscar tipos en tiempo de ejecución o en tiempo de diseño, según el uso de WPF de <xref:System.AppDomain> y otros factores.  
   
-1. Recorra en <xref:System.AppDomain>iteración el, buscando un ensamblado ya cargado que coincida con todos los aspectos del nombre, a partir del ensamblado cargado más recientemente.  
+1. Recorra en iteración el <xref:System.AppDomain>, buscando un ensamblado ya cargado que coincida con todos los aspectos del nombre, a partir del ensamblado cargado más recientemente.  
   
-2. Si el nombre es Qualified, llame <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> a en el nombre completo.  
+2. Si el nombre es Qualified, llame a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> en el nombre completo.  
   
 3. Si el nombre corto + el token de clave pública de un nombre completo coinciden con el ensamblado desde el que se ha cargado el marcado, devuelva dicho ensamblado.  
   
-4. Use el nombre corto + el token de clave pública <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>para llamar a.  
+4. Use el nombre corto + el token de clave pública para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 5. Si el nombre es Unqualified, llame a <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  El XAML dinámico no usa el Paso 3; no hay ensamblado desde el que cargar.  
   
- El XAML compilado para WPF (generado a través de XamlBuildTask) no utiliza los ensamblados ya <xref:System.AppDomain> cargados de (paso 1). Además, el nombre nunca debe estar incompleto en la salida de XamlBuildTask, por lo que el Paso 5 no se aplica.  
+ El XAML compilado para WPF (generado a través de XamlBuildTask) no usa los ensamblados ya cargados desde <xref:System.AppDomain> (paso 1). Además, el nombre nunca debe estar incompleto en la salida de XamlBuildTask, por lo que el Paso 5 no se aplica.  
   
  El BAML compilado (generado mediante PresentationBuildTask) usa todos los pasos, aunque el BAML tampoco debe contener nombres de ensamblado incompletos.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Descripción de los espacios de nombres XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

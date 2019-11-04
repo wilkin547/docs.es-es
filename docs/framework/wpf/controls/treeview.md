@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761343"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458289"
 ---
 # <a name="treeview"></a>TreeView
-El <xref:System.Windows.Controls.TreeView> control muestra información en una estructura jerárquica con nodos contraíbles.  
+El control <xref:System.Windows.Controls.TreeView> muestra información en una estructura jerárquica mediante el uso de nodos contraíbles.  
   
- La siguiente ilustración es un ejemplo de un <xref:System.Windows.Controls.TreeView> control anidadas <xref:System.Windows.Controls.TreeViewItem> controles:  
+ La siguiente ilustración es un ejemplo de un control de <xref:System.Windows.Controls.TreeView> que tiene controles de <xref:System.Windows.Controls.TreeViewItem> anidados:  
   
- ![Ilustración que muestra los controles de TreeViewItem anidados.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![Ilustración que muestra los controles TreeViewItem anidados.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a TreeView](treeview-overview.md)  
@@ -31,5 +31,5 @@ El <xref:System.Windows.Controls.TreeView> control muestra información en una e
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre el enlace de datos](../data/data-binding-overview.md)  
+ [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)  
   [Información general sobre plantillas de datos](../data/data-templating-overview.md)

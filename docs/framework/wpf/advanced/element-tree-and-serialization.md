@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962449"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460476"
 ---
 # <a name="element-tree-and-serialization"></a>Árbol de elementos y serialización
 Los elementos de programación de WPF a menudo existen con alguna forma de relación recíproca en el árbol. Por ejemplo, la interfaz de usuario de una aplicación, creada en XAML, puede conceptualizarse como un árbol de objetos. El árbol de elementos puede dividirse aún más en dos árboles discretos, pero paralelos en ocasiones: el árbol lógico y el árbol visual. La serialización en WPF implica guardar el estado de estos dos árboles, así como el estado de la aplicación y escribirlo en un archivo, posiblemente en XAML.  
@@ -39,5 +39,5 @@ Los elementos de programación de WPF a menudo existen con alguna forma de relac
   [Eventos](events-wpf.md)  
   [Entrada](input-wpf.md)  
   [Recursos](resources-wpf.md)  
-  [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+  [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modelo de subprocesos](threading-model.md)

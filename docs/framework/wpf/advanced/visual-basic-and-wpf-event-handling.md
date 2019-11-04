@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920340"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458302"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Control de eventos en Visual Basic y WPF
 En el lenguaje Microsoft Visual Basic .NET específicamente, puede usar la palabra clave `Handles` específica del lenguaje para asociar controladores de eventos con instancias, en lugar de adjuntar controladores de eventos con atributos o usar el método <xref:System.Windows.UIElement.AddHandler%2A>. Pero la técnica de `Handles` para adjuntar controladores a instancias tiene algunas limitaciones, ya que la sintaxis de `Handles` no es compatible con algunas de las características específicas de eventos enrutados del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -47,4 +47,4 @@ En el lenguaje Microsoft Visual Basic .NET específicamente, puede usar la palab
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Marcar eventos enrutados como controlados y control de clases](marking-routed-events-as-handled-and-class-handling.md)
 - [Información general sobre eventos enrutados](routed-events-overview.md)
-- [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
