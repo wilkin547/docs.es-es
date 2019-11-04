@@ -7,31 +7,29 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07a100e2cd6aaff2b54b99144c9d762c8979fb47
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140271"
 ---
-# <a name="optimization-for-shared-web-hosting"></a><span data-ttu-id="5e16e-102">Optimización de hospedaje web compartido</span><span class="sxs-lookup"><span data-stu-id="5e16e-102">Optimization for Shared Web Hosting</span></span>
-<span data-ttu-id="5e16e-103">Si es el administrador de un servidor compartido que hospeda varios sitios web pequeños, puede optimizar el rendimiento y aumentar la capacidad del sitio si agrega la siguiente configuración `gcTrimCommitOnLowMemory` al nodo `runtime` en el archivo Aspnet.config del directorio de .NET:</span><span class="sxs-lookup"><span data-stu-id="5e16e-103">If you are the administrator for a server that is shared by hosting several small Web sites, you can optimize performance and increase site capacity by adding the following `gcTrimCommitOnLowMemory` setting to the `runtime` node in the Aspnet.config file in the .NET directory:</span></span>  
+# <a name="optimization-for-shared-web-hosting"></a><span data-ttu-id="3405e-102">Optimización de hospedaje web compartido</span><span class="sxs-lookup"><span data-stu-id="3405e-102">Optimization for Shared Web Hosting</span></span>
+<span data-ttu-id="3405e-103">Si es el administrador de un servidor compartido que hospeda varios sitios web pequeños, puede optimizar el rendimiento y aumentar la capacidad del sitio si agrega la siguiente configuración `gcTrimCommitOnLowMemory` al nodo `runtime` en el archivo Aspnet.config del directorio de .NET:</span><span class="sxs-lookup"><span data-stu-id="3405e-103">If you are the administrator for a server that is shared by hosting several small Web sites, you can optimize performance and increase site capacity by adding the following `gcTrimCommitOnLowMemory` setting to the `runtime` node in the Aspnet.config file in the .NET directory:</span></span>  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
-> <span data-ttu-id="5e16e-104">Esta configuración solo se recomienda para escenarios de hospedaje web compartido.</span><span class="sxs-lookup"><span data-stu-id="5e16e-104">This setting is recommended only for shared Web hosting scenarios.</span></span>  
+> <span data-ttu-id="3405e-104">Esta configuración solo se recomienda para escenarios de hospedaje web compartido.</span><span class="sxs-lookup"><span data-stu-id="3405e-104">This setting is recommended only for shared Web hosting scenarios.</span></span>  
   
- <span data-ttu-id="5e16e-105">Dado que el recolector de elementos no utilizados conserva la memoria para asignaciones futuras, su espacio confirmado puede ser mayor que el estrictamente necesario.</span><span class="sxs-lookup"><span data-stu-id="5e16e-105">Because the garbage collector retains memory for future allocations, its committed space can be more than what is strictly needed.</span></span> <span data-ttu-id="5e16e-106">Puede reducir este espacio para dar cabida a las veces en que haya una carga pesada en la memoria del sistema.</span><span class="sxs-lookup"><span data-stu-id="5e16e-106">You can reduce this space to accommodate times when there is a heavy load on system memory.</span></span> <span data-ttu-id="5e16e-107">Reducir este espacio confirmado mejora el rendimiento y amplía la capacidad de hospedar varios sitios.</span><span class="sxs-lookup"><span data-stu-id="5e16e-107">Reducing this committed space improves performance and expands the capacity to host more sites.</span></span>  
+ <span data-ttu-id="3405e-105">Dado que el recolector de elementos no utilizados conserva la memoria para asignaciones futuras, su espacio confirmado puede ser mayor que el estrictamente necesario.</span><span class="sxs-lookup"><span data-stu-id="3405e-105">Because the garbage collector retains memory for future allocations, its committed space can be more than what is strictly needed.</span></span> <span data-ttu-id="3405e-106">Puede reducir este espacio para dar cabida a las veces en que haya una carga pesada en la memoria del sistema.</span><span class="sxs-lookup"><span data-stu-id="3405e-106">You can reduce this space to accommodate times when there is a heavy load on system memory.</span></span> <span data-ttu-id="3405e-107">Reducir este espacio confirmado mejora el rendimiento y amplía la capacidad de hospedar varios sitios.</span><span class="sxs-lookup"><span data-stu-id="3405e-107">Reducing this committed space improves performance and expands the capacity to host more sites.</span></span>  
   
- <span data-ttu-id="5e16e-108">Cuando la opción `gcTrimCommitOnLowMemory` está habilitada, el recolector de elementos no utilizados evalúa la carga de memoria del sistema y entra en un modo de reducción cuando la carga alcanza el 90 %.</span><span class="sxs-lookup"><span data-stu-id="5e16e-108">When the `gcTrimCommitOnLowMemory` setting is enabled, the garbage collector evaluates the system memory load and enters a trimming mode when the load reaches 90%.</span></span> <span data-ttu-id="5e16e-109">El modo de reducción se mantiene hasta que la carga desciende por debajo del 85 %.</span><span class="sxs-lookup"><span data-stu-id="5e16e-109">It maintains the trimming mode until the load drops under 85%.</span></span>  
+ <span data-ttu-id="3405e-108">Cuando la opción `gcTrimCommitOnLowMemory` está habilitada, el recolector de elementos no utilizados evalúa la carga de memoria del sistema y entra en un modo de reducción cuando la carga alcanza el 90 %.</span><span class="sxs-lookup"><span data-stu-id="3405e-108">When the `gcTrimCommitOnLowMemory` setting is enabled, the garbage collector evaluates the system memory load and enters a trimming mode when the load reaches 90%.</span></span> <span data-ttu-id="3405e-109">El modo de reducción se mantiene hasta que la carga desciende por debajo del 85 %.</span><span class="sxs-lookup"><span data-stu-id="3405e-109">It maintains the trimming mode until the load drops under 85%.</span></span>  
   
- <span data-ttu-id="5e16e-110">Cuando las condiciones lo permiten, el recolector de elementos no utilizados puede decidir que la configuración `gcTrimCommitOnLowMemory` ya no ayudará a la aplicación actual y la ignora.</span><span class="sxs-lookup"><span data-stu-id="5e16e-110">When conditions permit, the garbage collector can decide that the `gcTrimCommitOnLowMemory` setting will not help the current application and ignore it.</span></span>  
+ <span data-ttu-id="3405e-110">Cuando las condiciones lo permiten, el recolector de elementos no utilizados puede decidir que la configuración `gcTrimCommitOnLowMemory` ya no ayudará a la aplicación actual y la ignora.</span><span class="sxs-lookup"><span data-stu-id="3405e-110">When conditions permit, the garbage collector can decide that the `gcTrimCommitOnLowMemory` setting will not help the current application and ignore it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5e16e-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5e16e-111">Example</span></span>  
- <span data-ttu-id="5e16e-112">El siguiente fragmento XML muestra cómo habilitar la configuración `gcTrimCommitOnLowMemory`.</span><span class="sxs-lookup"><span data-stu-id="5e16e-112">The following XML fragment shows how to enable the `gcTrimCommitOnLowMemory` setting.</span></span> <span data-ttu-id="5e16e-113">Los puntos suspensivos indican otros valores que podrían estar en el nodo `runtime`.</span><span class="sxs-lookup"><span data-stu-id="5e16e-113">Ellipses indicate other settings that would be in the `runtime` node.</span></span>  
+## <a name="example"></a><span data-ttu-id="3405e-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3405e-111">Example</span></span>  
+ <span data-ttu-id="3405e-112">El siguiente fragmento XML muestra cómo habilitar la configuración `gcTrimCommitOnLowMemory`.</span><span class="sxs-lookup"><span data-stu-id="3405e-112">The following XML fragment shows how to enable the `gcTrimCommitOnLowMemory` setting.</span></span> <span data-ttu-id="3405e-113">Los puntos suspensivos indican otros valores que podrían estar en el nodo `runtime`.</span><span class="sxs-lookup"><span data-stu-id="3405e-113">Ellipses indicate other settings that would be in the `runtime` node.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -44,6 +42,6 @@ ms.locfileid: "69915898"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5e16e-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="5e16e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3405e-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="3405e-114">See also</span></span>
 
-- [<span data-ttu-id="5e16e-115">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="5e16e-115">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="3405e-115">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="3405e-115">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
