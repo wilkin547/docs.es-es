@@ -2,15 +2,15 @@
 title: Ejemplo de serialización JSON débilmente tipada
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: f41a71641ca655d9bf95104643385a56792b41bc
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1450a0e46ade615769d7ffdc1006102772dbc977
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045415"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424541"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Ejemplo de serialización JSON débilmente tipada
-Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica al trabajar con objetos notación de objetos JavaScript (JSON), como se describe en [el tema How to: Serializar y deserializar datos](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)JSON.  
+Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica al trabajar con los objetos JSON (JavaScript Object Notation), tal y como se describe en el tema [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  En algunos escenarios, un servicio o cliente Windows Communication Foundation (WCF) debe tener acceso a los objetos JSON generados por un servicio o cliente que está fuera del control del desarrollador. A medida que más servicios web exponen públicamente las API JSON, puede resultar poco práctico para que el desarrollador de WCF construya tipos locales definidos por el usuario en los que deserializar objetos JSON arbitrarios. Este ejemplo proporciona un mecanismo que permite a los desarrolladores de WCF trabajar con objetos JSON deserializados e arbitrarios sin crear tipos definidos por el usuario. Esto se conoce como *serialización débilmente tipada* de objetos JSON, porque no se conoce el tipo en el que un objeto JSON se deserializa en el momento de la compilación.  
   
@@ -25,7 +25,7 @@ Al serializar un tipo definido por el usuario en un formato de conexión determi
   
  Para deserializar este objeto, un cliente de WCF debe implementar los siguientes tipos definidos por el usuario.  
   
-```  
+```csharp  
 [DataContract]  
  public class MemberProfile  
  {  
@@ -58,9 +58,9 @@ Al serializar un tipo definido por el usuario en un formato de conexión determi
   
  Esto puede ser embarazoso, sobre todo si el cliente tiene que administrar más de un tipo de objeto JSON.  
   
- El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado. `JsonObject`se basa en la asignación natural entre los objetos JSON y .NET Framework diccionarios, y la asignación entre las matrices JSON y .NET Framework matrices. En el código siguiente se muestra el tipo `JsonObject` :  
+ El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado. `JsonObject` se basa en la asignación natural entre los objetos JSON y .NET Framework diccionarios, y la asignación entre las matrices JSON y .NET Framework. En el código siguiente se muestra el tipo `JsonObject` :  
   
-```  
+```csharp  
 // Instantiation of JsonObject json omitted  
   
 string name = json["root"]["personal"]["name"];  
@@ -85,7 +85,7 @@ string[] favoriteBands = {
   
  Para utilizar el tipo `JsonObject` , el contrato de operación del cliente debe utilizar <xref:System.ServiceModel.Channels.Message> como su tipo de valor devuelto.  
   
-```  
+```csharp  
 [ServiceContract]  
     interface IClientSideProfileService  
     {  
@@ -100,7 +100,7 @@ string[] favoriteBands = {
   
  Se crean instancias de `JsonObject` a continuación tal y como se muestran en el código siguiente.  
   
-```  
+```csharp  
 // Code to instantiate IClientSideProfileService channel omitted…  
   
 // Make a request to the service and obtain the Json response  
@@ -114,7 +114,7 @@ JsonObject json = new JsonObject(reader);
   
  El programa produce el siguiente resultado:  
   
-```  
+```console  
 Service listening at http://localhost:8000/.  
 To view the JSON output from the sample, navigate to http://localhost:8000/GetMemberProfile  
 This is Paul's page. I am 23 years old and I am 1.7 meters tall.  
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

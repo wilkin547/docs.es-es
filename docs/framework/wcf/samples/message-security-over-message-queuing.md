@@ -2,12 +2,12 @@
 title: Seguridad de mensajes mediante Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 039ec21296392321fec40df2cae7383ccb3be6ea
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039350"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424121"
 ---
 # <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.
@@ -55,9 +55,9 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
   
 3. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-4. En el servidor, ejecute `setup.bat service`. Al `setup.bat` ejecutar con `service` el argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
+4. En el servidor, ejecute `setup.bat service`. Al ejecutar `setup.bat` con el argumento `service`, se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-5. Edite Service. exe. config del servicio para reflejar el nuevo nombre del certificado ( `findValue` en el atributo en el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
+5. Edite Service. exe. config del servicio para reflejar el nuevo nombre del certificado (en el atributo `findValue` en el [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es igual que el nombre de dominio completo del equipo.  
   
 6. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
@@ -80,7 +80,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
 - Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="requirements"></a>Requisitos
  Este ejemplo exige que MSMQ se instale y se ejecute.
@@ -92,7 +92,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
 
  El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ. Los certificados se intercambian fuera de banda. Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.
 
-## <a name="description"></a>DESCRIPCIÓN
+## <a name="description"></a>Descripción
  El cliente de ejemplo y el código de servicio son los mismos que el ejemplo de [enlace de MSMQ de transacción](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) con una diferencia. En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.
 
 ```csharp
@@ -167,7 +167,7 @@ public interface IOrderProcessor
 
  Observe que el modo de seguridad se ha definido en "Message" y que ClientCredentialType se ha establecido en "Certificate".
 
- La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado de servidor se `findValue` especifica en el atributo de la [ \<> serviceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).
+ La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado de servidor se especifica en el `findValue` atributo del [> de\<serviceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -271,7 +271,7 @@ public class OrderProcessorService : IOrderProcessor
 
  Cuando se ejecuta, el código de servicio muestra la identificación del cliente. Se proporciona a continuación la siguiente salida de ejemplo desde el código de servicio:
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -300,7 +300,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 - Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.
 
-     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio de Windows Communication Foundation (WCF) confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe `PeerOrChainTrust` establecerse en o `PeerTrust` en valor. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.
+     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio de Windows Communication Foundation (WCF) confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe establecerse en `PeerOrChainTrust` o `PeerTrust` valor. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.
 
     ```bat
     echo ************
@@ -329,18 +329,18 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
     > [!NOTE]
-    > Si está utilizando una edición que no esté en inglés de EE. UU. de Microsoft Windows, debe modificar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.
+    > Si usa una edición de Microsoft Windows que no es de Estados Unidos, debe modificar el archivo Setup. bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" por su equivalente regional.
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

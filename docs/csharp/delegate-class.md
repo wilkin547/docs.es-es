@@ -2,13 +2,14 @@
 title: System.Delegate y la palabra clave `delegate`
 description: Obtenga información sobre las clases de .NET Framework que admiten delegados y sobre cómo se asignan a la palabra clave "delegate".
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465781"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420366"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate y la palabra clave `delegate`
 
@@ -31,7 +32,7 @@ Vamos a usar el método List.Sort() como ejemplo. El primer paso consiste en cre
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-El compilador genera una clase derivada de `System.Delegate` que coincide con la firma usada (en este caso, un método que devuelve un entero y tiene dos argumentos). El tipo de ese delegado es `Comparison`. El tipo de delegado `Comparison` es un tipo genérico. [Aquí](generics.md) puede obtener más información sobre los genéricos.
+El compilador genera una clase derivada de `System.Delegate` que coincide con la firma usada (en este caso, un método que devuelve un entero y tiene dos argumentos). El tipo de ese delegado es `Comparison`. El tipo de delegado `Comparison` es un tipo genérico. [Aquí](programming-guide/generics/index.md) puede obtener más información sobre los genéricos.
 
 Observe que puede parecer que la sintaxis declara una variable, pero en realidad declara un *tipo*. Puede definir tipos de delegado dentro de clases, directamente dentro de espacios de nombres o incluso en el espacio de nombres global.
 

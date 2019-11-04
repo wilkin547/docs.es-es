@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039448"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458105"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Patrones de controles de UI Automation para clientes
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039448"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Controles con patrones variables  
- Algunos tipos de controles admiten patrones diferentes en función de su estado o de la manera en la que se usan. Ejemplos de controles que pueden tener patrones variables son las vistas de lista (miniaturas, mosaicos, iconos, lista, detalles), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] gráficos (circular, línea, barra, valor de celda con una fórmula), el área de documento de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](normal, diseño web, esquema, diseño de impresión, vista previa de impresión) y Microsoft Windows Media Player máscaras.  
+ Algunos tipos de controles admiten patrones diferentes en función de su estado o de la manera en la que se usan. Ejemplos de controles que pueden tener patrones variables son las vistas de lista (miniaturas, mosaicos, iconos, lista, detalles), gráficos de Microsoft Excel (circular, línea, barra, valor de celda con una fórmula), área de documento de Microsoft Word (normal, diseño web, esquema, diseño de impresión, imprimir Versión preliminar) y Microsoft Windows Media Player máscaras.  
   
  Los controles que implementan tipos de controles personalizados pueden tener cualquier conjunto de patrones de control que sea necesario para representar su funcionalidad.  
   

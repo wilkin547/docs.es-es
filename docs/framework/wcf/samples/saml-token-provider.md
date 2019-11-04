@@ -2,12 +2,12 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044767"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424237"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el proveedor de tokens del administrador de credenciales predeterminado. WCF también se suministra con un proveedor de tokens de CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:
@@ -30,7 +30,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
 - Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.
 
- El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje. Un punto de conexión espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `serviceCredentials` le permite configurar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema. El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML. La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.
+ El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración app. config. Cada punto de conexión consta de una dirección, un enlace y un contrato. El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje. Un punto de conexión espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `serviceCredentials` le permite configurar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema. El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML. La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.
 
 ```xml
 <system.serviceModel>
@@ -119,7 +119,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      Para realizar esta tarea, el proveedor de tokens personalizado se deriva de la clase <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Este método crea y devuelve un nuevo `SecurityToken`.
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
      // Create a SamlSecurityToken from the provided assertion
@@ -160,7 +160,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      La clase <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. Un administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado SAML cuando los requisitos de tokens pasados indican que se solicita el token SAML. Si la clase (vea el paso 3) de credenciales del cliente no ha especificado una aserción, el administrador de tokens de seguridad crea una instancia adecuada.
 
-    ```
+    ```csharp
     public class SamlSecurityTokenManager :
      ClientCredentialsSecurityTokenManager
     {
@@ -232,7 +232,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      Se usa una clase de credenciales de cliente para representar las credenciales que se configuran para el proxy de cliente y crear un administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y un serializador de tokens.
 
-    ```
+    ```csharp
     public class SamlClientCredentials : ClientCredentials
     {
      ClaimSet claims;
@@ -275,7 +275,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      Para que el cliente pueda utilizar la credencial de cliente personalizada, el ejemplo elimina la clase de credencial de cliente predeterminada y proporciona la nueva.
 
-    ```
+    ```csharp
     // Create new credentials class
     SamlClientCredentials samlCC = new SamlClientCredentials();
 
@@ -309,7 +309,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      El certificado se almacena en el almacén My (Personal), en la ubicación de almacenamiento LocalMachine.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -323,7 +323,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -333,7 +333,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      El certificado está almacenado en My store en la ubicación del almacén CurrentUser.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -347,7 +347,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado de emisor.
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 

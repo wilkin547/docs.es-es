@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799309"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423825"
 ---
 # <a name="get-started"></a>Primeros pasos
 
@@ -21,7 +21,7 @@ Hay varias maneras de empezar a trabajar con .NET. Como .NET es una plataforma m
 
 * Los artículos de [introducción a C#](../csharp/getting-started/index.md) y de [tutoriales de C#](../csharp/tutorials/index.md) ofrecen varias maneras de comenzar con el enfoque puesto en C#.
 
-* Los tutoriales de [introducción a F#](../fsharp/tutorials/getting-started/index.md) proporcionan tres formas principales en que puede usar F#: con Visual Studio, Visual Studio Code o herramientas de la línea de comandos.
+* Los tutoriales de [introducción a F#](../fsharp/get-started/index.md) proporcionan tres formas principales en que puede usar F#: con Visual Studio, Visual Studio Code o herramientas de la línea de comandos.
 
 * Los artículos de [Introducción a Visual Basic](../visual-basic/getting-started/index.md) proporcionan guías sobre el uso de Visual Basic en Visual Studio.
 

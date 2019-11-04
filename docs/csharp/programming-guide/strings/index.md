@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252975"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423153"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>cadena frente System.String  
- En C#, la palabra clave `string` es un alias de <xref:System.String>. Por lo tanto, `String` y `string` son equivalentes y se puede utilizar la convención de nomenclatura que prefiera. La clase `String` proporciona muchos métodos para crear, manipular y comparar cadenas de forma segura. Además, el lenguaje C# sobrecarga algunos operadores para simplificar las operaciones de cadena comunes. Para más información sobre la palabra clave, consulte [string](../../language-reference/keywords/string.md). Para obtener más información sobre el tipo y sus métodos, vea <xref:System.String>.  
+ En C#, la palabra clave `string` es un alias de <xref:System.String>. Por lo tanto, `String` y `string` son equivalentes y se puede utilizar la convención de nomenclatura que prefiera. La clase `String` proporciona muchos métodos para crear, manipular y comparar cadenas de forma segura. Además, el lenguaje C# sobrecarga algunos operadores para simplificar las operaciones de cadena comunes. Para más información sobre la palabra clave, consulte [string](../../language-reference/builtin-types/reference-types.md). Para obtener más información sobre el tipo y sus métodos, vea <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Declaración e inicialización de cadenas  
  Puede declarar e inicializar cadenas de varias maneras, tal como se muestra en el ejemplo siguiente:  

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790915"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459062"
 ---
 # <a name="styles-and-templates"></a>Estilos y plantillas
-Creación de plantillas y estilos de Windows Presentation Foundation (WPF) hacen referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permiten una aplicación, el documento o el Diseñador de interfaz de usuario crear aplicaciones visualmente atractivas y estandaricen un aspecto determinado de su producto.  
+Los estilos y las plantillas de Windows Presentation Foundation (WPF) hacen referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permiten a una aplicación, documento o diseñador de la interfaz de usuario (UI) crear aplicaciones visualmente atractivas y estandarizar en una determinada apariencia de su producto.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Aplicar estilos y plantillas](styling-and-templating.md)  
-  [Cómo: Buscar elementos generados por el objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)  
+ [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [Buscar elementos generados por un objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Style>  

@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 76330c1228b1f55a5dbaf58a1acd231a391d550c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580514"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425324"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 
-El contenido que se puede hospedar en un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame> o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por los identificadores uniformes de recursos (URI) del paquete y a los que se ha navegado por hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.
+El contenido que se puede hospedar en una aplicación de explorador XAML (XBAP), un <xref:System.Windows.Controls.Frame>o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por los identificadores uniformes de recursos (URI) del paquete y a los que se ha navegado por hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.
 
 Sin embargo, otros tipos de aplicaciones tienen páginas que necesitan saber cuándo se ha navegado entre ellas. Por ejemplo, suponga una aplicación de recursos humanos que tiene una página con una lista de todos los empleados de una organización, la página "Lista de empleados". Esta página también podría permitir a los usuarios agregar a un nuevo empleado haciendo clic en un hipervínculo. Al hacer clic en ella, la página navega a una página "Agregar un empleado" para recopilar los datos del nuevo empleado y llevarlos a la página "Lista de empleados" para crear al nuevo empleado y actualizar la lista. Este estilo de navegación es similar a llamar a un método para realizar algún procesamiento y devolver un valor, que se conoce como programación estructurada. Por tanto, este estilo de navegación se conoce como *navegación estructurada*.
 
@@ -129,9 +129,9 @@ No es necesario pasar parámetros a la página llamada. En su lugar, podría hac
 
   2. Almacene los parámetros en <xref:System.Windows.Application.Properties%2A>.
 
-  3. Navegue hasta el <xref:System.Windows.Navigation.PageFunction%601> llamado.
+  3. Navegue hasta el <xref:System.Windows.Navigation.PageFunction%601>llamado.
 
-- Desde el <xref:System.Windows.Navigation.PageFunction%601> llamado:
+- Desde el <xref:System.Windows.Navigation.PageFunction%601>llamado:
 
   - Recupere y use los parámetros almacenados en <xref:System.Windows.Application.Properties%2A>.
 

@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Implementar una CompositeCollection
+title: 'Cómo: Implementar una CompositeCollection'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], CompositeCollection class
 ms.assetid: 0d8fc84c-7920-427f-8ad7-d55ca656c170
-ms.openlocfilehash: 8361c2bfa9c125aeadf0a62ca86af1855e5c3dbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3450cdc476b7090251a06b5b2b2718d29e18209
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931682"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454025"
 ---
-# <a name="how-to-implement-a-compositecollection"></a>Procedimiento Implementar una CompositeCollection
+# <a name="how-to-implement-a-compositecollection"></a>Cómo: Implementar una CompositeCollection
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo mostrar varias colecciones y elementos como una lista con los <xref:System.Windows.Data.CompositeCollection> clase. En este ejemplo, `GreekGods` es un <xref:System.Collections.ObjectModel.ObservableCollection%601> de `GreekGod` objetos personalizados. Las plantillas de datos se definen para que `GreekGod` objetos y `GreekHero` objetos aparecen con un gold y un color de primer plano cian, respectivamente.  
+ En el ejemplo siguiente se muestra cómo mostrar varias colecciones y elementos como una lista utilizando la clase <xref:System.Windows.Data.CompositeCollection>. En este ejemplo, `GreekGods` es una <xref:System.Collections.ObjectModel.ObservableCollection%601> de `GreekGod` objetos personalizados. Las plantillas de datos se definen para que `GreekGod` objetos y `GreekHero` objetos aparezcan con un color de primer plano dorado y aguamarina, respectivamente.  
   
  [!code-xaml[CompositeCollections#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositeCollections/CS/Window1.xaml#1)]  
   
@@ -23,5 +23,5 @@ ms.locfileid: "61931682"
 - <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>
 - <xref:System.Windows.Data.XmlDataProvider>
 - <xref:System.Windows.DataTemplate>
-- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

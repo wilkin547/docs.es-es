@@ -2,12 +2,12 @@
 title: Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799030"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424925"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 
@@ -31,7 +31,7 @@ El directorio virtual **ServiceModelSamples** se utiliza para compilar y ejecuta
     > [!WARNING]
     > Si se reinstala IIS, los siguientes comandos deberán ejecutarse de nuevo.
 
-    ```
+    ```console
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\ServiceModelReg.exe" -r
     ```
@@ -65,7 +65,7 @@ El directorio virtual **ServiceModelSamples** se utiliza para compilar y ejecuta
 
 11. Cree un directorio C:\logs en el equipo; en algunos ejemplos podría esperarse que exista. Asegúrese de que la cuenta adecuada tiene concedido acceso de escritura en esta carpeta. En Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]y Windows Server 2008 R2, esta cuenta es **servicio de red**. En [!INCLUDE[lserver](../../../../includes/lserver-md.md)], la cuenta es NT Authority\Network Service. En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la cuenta es ASPNET.
 
-12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la \<carpeta InstallPath > \WF_WCF_Samples\WCF\Setup  Este script realizará las siguientes tareas:
+12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la carpeta \<InstallPath > \WF_WCF_Samples\WCF\Setup\  Este script realizará las siguientes tareas:
 
     - Compile La herramienta FindPrivateKey.
 

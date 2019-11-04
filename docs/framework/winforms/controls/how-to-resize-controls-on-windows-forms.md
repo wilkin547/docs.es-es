@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms
+title: 'Cómo: Cambiar el tamaño de los controles en formularios Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e659bf02ea079afc10561e1d83f7ab7cef29a2e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987052"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459553"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Procedimiento Cambiar el tamaño de los controles en Windows Forms
+# <a name="how-to-resize-controls-on-windows-forms"></a>Cómo: cambiar el tamaño de los controles en Windows Forms
 
-Puede cambiar el tamaño de los controles individuales y puede cambiar el tamaño de varios controles del mismo tipo o de otro diferente <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.GroupBox> como los controles y.
+Puede cambiar el tamaño de los controles individuales y puede cambiar el tamaño de varios controles del mismo tipo o de otro diferente, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.
 
 ## <a name="to-resize-a-control"></a>Para cambiar el tamaño de un control
 
@@ -42,4 +42,4 @@ En Visual Studio, seleccione el control cuyo tamaño se va a cambiar y arrastre 
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
-- [Procedimientos: Cambiar el tamaño de Windows Forms mediante el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Cómo: cambiar el tamaño de Windows Forms mediante el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

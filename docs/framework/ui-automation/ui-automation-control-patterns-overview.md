@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131512"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458092"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131512"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Se utiliza con los controles que se pueden acoplar en un contenedor de acoplamiento. Por ejemplo, las barras de herramientas o las paletas de herramientas.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Se utiliza con los controles que pueden expandir o contraer. Por ejemplo, los elementos de menú de una aplicación como el menú **Archivo** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Se utiliza con los controles que admiten la funcionalidad de cuadrícula, como el ajuste de tamaño y el movimiento a una celda concreta. Por ejemplo, la vista de iconos grandes del Explorador de Windows o las tablas simples sin encabezados de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Se utiliza con los controles que admiten la funcionalidad de cuadrícula, como el ajuste de tamaño y el movimiento a una celda concreta. Por ejemplo, la vista de iconos grandes en el explorador de Windows o las tablas simples sin encabezados en Microsoft Word.|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Se utiliza con los controles que tienen celdas dentro de cuadrículas. Las celdas individuales deben admitir el patrón GridItem. Por ejemplo, cada celda de la vista de detalle del explorador de Microsoft Windows.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Se utiliza con los controles que se pueden invocar, como un botón.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Se utiliza con los controles que pueden cambiar entre varias representaciones del mismo conjunto de información, datos o elementos secundarios. Por ejemplo, un control de vista de lista donde los datos están disponibles en vistas en miniaturas, mosaico, iconos, lista o de detalle.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131512"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Se utiliza con los controles que tienen elementos individuales en una lista que permite desplazamiento. Por ejemplo, un control de lista que tiene elementos individuales en la lista de desplazamiento, como un control de cuadro combinado.|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Se utiliza con los controles de contenedor de selección. Por ejemplo, los cuadros de lista y los cuadros combinados.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Se utiliza con los elementos individuales de controles de contenedor de selección, como cuadros de lista y cuadros combinados.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Se utiliza con los controles que tienen una cuadrícula e información de encabezado. Por ejemplo, hojas de cálculo de [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] .|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Se utiliza con los controles que tienen una cuadrícula e información de encabezado. Por ejemplo, hojas de cálculo de Microsoft Excel.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Se utiliza con los elementos de una tabla.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Se utiliza con los controles de edición y documentos que exponen información textual.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Se utiliza con los controles donde se puede alternar el estado. Por ejemplo, casillas y elementos de menú que pueden activarse.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Se utiliza con los controles que se pueden cambiar de tamaño, mover y girar. Los usos típicos del patrón de control Transform se encuentran en diseñadores, formularios, editores gráficos y aplicaciones de dibujo.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. Por ejemplo, un selector de fecha y hora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expone información específica de Windows, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son las ventanas de aplicación de nivel superior ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], el explorador de Microsoft Windows, etc.), las ventanas secundarias de la interfaz de múltiples documentos (MDI) y los cuadros de diálogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expone información específica de Windows, un concepto fundamental para el sistema operativo Microsoft Windows. Ejemplos de controles que son ventanas son las ventanas de aplicación de nivel superior (Microsoft Word, explorador de Microsoft Windows, etc.), las ventanas secundarias de la interfaz de múltiples documentos (MDI) y los cuadros de diálogo.|  
   
 ## <a name="see-also"></a>Vea también
 

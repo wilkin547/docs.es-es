@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602072"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422723"
 ---
 # <a name="internal-c-reference"></a>internal (Referencia de C#)
 La palabra clave `internal` es un [modificador de acceso](./access-modifiers.md) para tipos y miembros de tipo. 
@@ -89,7 +89,7 @@ public class TestAccess
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
-Para obtener más información, vea la sección [Accesibilidad declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) de la [Especificación del lenguaje C#](../language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para obtener más información, vea la sección [Accesibilidad declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="see-also"></a>Vea también
 
@@ -98,7 +98,7 @@ Para obtener más información, vea la sección [Accesibilidad declarada](~/_csh
 - [Palabras clave de C#](./index.md)
 - [Modificadores de acceso](./access-modifiers.md)
 - [Niveles de accesibilidad](./accessibility-levels.md)
-- [Modificadores](./modifiers.md)
+- [Modificadores](index.md)
 - [public](./public.md)
 - [private](./private.md)
 - [protected](./protected.md)

@@ -1,18 +1,18 @@
 ---
 title: Uso de Close y Abort para liberar los recursos del cliente WCF
-description: Dispose puede producir un error y lanzan excepciones cuando se produce un error en la red. Que puede provocar un comportamiento no deseado. En su lugar, use cierre y anulación para liberar los recursos del cliente cuando se ha producido un error en la red.
+description: Dispose puede producir un error y producir excepciones cuando se produce un error en la red. Esto puede producir un comportamiento no deseado. En su lugar, utilice Close y Abort para liberar los recursos de cliente cuando se produce un error en la red.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afb52e89c5f159e7866ebc8f30fcfae7dd5be93a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007583"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424171"
 ---
-# <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Cierre y anulación libera los recursos sin ningún riesgo cuando se han quitado las conexiones de red
+# <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Cerrar y anular recursos de versión de forma segura cuando se han quitado las conexiones de red
 
-Este ejemplo muestra cómo utilizar el `Close` y `Abort` métodos para limpiar los recursos cuando se usa un cliente especificado. El `using` instrucción hace que las excepciones cuando la conexión de red no es estable. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.
+En este ejemplo se muestra el uso de los métodos `Close` y `Abort` para limpiar los recursos cuando se usa un cliente con tipo. La instrucción `using` produce excepciones cuando la conexión de red no es robusta. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.
 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
@@ -46,7 +46,7 @@ using (CalculatorClient client = new CalculatorClient())
 
 Dado que `Dispose`() se produce dentro de un bloque "finalmente", el `ApplicationException` nunca se ve fuera del bloque que se está utilizando si se produce un error `Dispose`() . Si el código fuera de debe conocer sobre cuando `ApplicationException` produce, la construcción "utilizando" puede producir los problemas enmascarando esta excepción.
 
-Finalmente, el ejemplo muestra correctamente cómo limpiar cuando se producen excepciones en `DemonstrateCleanupWithExceptions`. Esto utiliza un bloque prueba try/catch para crear informes errores y llamar`Abort`. Consulte la [espera excepciones](../../../../docs/framework/wcf/samples/expected-exceptions.md) ejemplo para obtener más detalles sobre cómo detectar las excepciones de las llamadas del cliente.
+Finalmente, el ejemplo muestra correctamente cómo limpiar cuando se producen excepciones en `DemonstrateCleanupWithExceptions`. Esto utiliza un bloque prueba try/catch para crear informes errores y llamar`Abort`. Vea el ejemplo de [excepciones esperado](../../../../docs/framework/wcf/samples/expected-exceptions.md) para obtener más detalles sobre cómo detectar excepciones de llamadas de cliente.
 
 ```csharp
 try
@@ -73,7 +73,7 @@ catch (Exception e)
 ```
 
 > [!NOTE]
-> La instrucción en uso y ServiceHost: Muchas aplicaciones poco más que hospedar un servicio y ServiceHost.Close raramente produce una excepción, por lo que estas aplicaciones pueden utilizar el uso de la instrucción con ServiceHost. Sin embargo, sea consciente que ServiceHost.Close puede iniciar una`CommunicationException`, por lo que si su aplicación continúa después de cerrar ServiceHost, debería evitar la instrucción en uso y seguir el patrón previamente proporcionado.
+> La instrucción en uso y ServiceHost: Muchas aplicaciones hospedadas en sí mismas hacen poco más que hospedar un servicio y ServiceHost.Close raramente produce una excepción, por lo que tales aplicaciones pueden utilizar sin ningún riesgo la instrucción en uso con ServiceHost. Sin embargo, sea consciente que ServiceHost.Close puede iniciar una`CommunicationException`, por lo que si su aplicación continúa después de cerrar ServiceHost, debería evitar la instrucción en uso y seguir el patrón previamente proporcionado.
 
 Al ejecutar el ejemplo, las respuestas y excepciones de la operación se muestran en la ventana de la consola del cliente.
 
@@ -81,7 +81,7 @@ El proceso de cliente ejecuta tres escenarios, cada uno de los cuales intentan l
 
 El resultado esperado del proceso de cliente es:
 
-```
+```console
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =
@@ -105,17 +105,17 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

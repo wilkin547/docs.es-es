@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a39d25f03583ab9020878b7a659bc99489231ff9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053899"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458886"
 ---
 # <a name="xamlname-grammar"></a>Gramática de XamlName
 La gramática de XamlName es una gramática específica que se define en la especificación del lenguaje XAML [MS-XAML], que se reproduce aquí por comodidad.  
@@ -34,7 +34,7 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
   
  Que presupone los siguientes valores de categoría generales según se define en la base de datos de caracteres Unicode  
 
-| Categoría Unicode   | DESCRIPCIÓN                   |
+| Categoría Unicode   | Descripción                   |
 |--------------------|-------------------------------|
 | Lu                 | Letra, mayúscula             |
 | Ll                 | Letra, minúscula             |
@@ -46,7 +46,7 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
 | Nd                 | Número, decimal               |
 | Nl                 | Número, letra                |
  
- XAML define una segunda gramática, DottedXamlName, que se usa para las referencias calificadas de propiedades y eventos, y también para los miembros adjuntos. Para obtener más información, <xref:System.Windows.DependencyProperty> vea e [información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
+ XAML define una segunda gramática, DottedXamlName, que se usa para las referencias calificadas de propiedades y eventos, y también para los miembros adjuntos. Para obtener más información, vea [información general sobre <xref:System.Windows.DependencyProperty> y XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md).  
   
  Los valores de cadena que son de tipo DottedXamlName deben ajustarse a la gramática siguiente:  
   
@@ -55,4 +55,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener la especificación completa, consulte [ \[MS-\]XAML](https://go.microsoft.com/fwlink/?LinkId=114525).
+ Para obtener la especificación completa, vea [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).

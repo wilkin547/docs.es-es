@@ -3,12 +3,12 @@ title: Patrones comunes para delegados
 description: Obtenga información sobre los patrones comunes para usar delegados en su código para evitar el acoplamiento seguro entre sus componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095703"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454083"
 ---
 # <a name="common-patterns-for-delegates"></a>Patrones comunes para delegados
 
@@ -58,7 +58,7 @@ Comencemos poco a poco: la implementación inicial aceptará mensajes nuevos y l
 
 La clase estática anterior es lo más sencillo que puede funcionar. Necesitamos escribir solo la implementación para el método que escribe mensajes en la consola: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Por último, necesita conectar el delegado asociándolo al delegado WriteMessage que se declara en el registrador:
 
@@ -107,13 +107,13 @@ Estos dos no son mutuamente exclusivos. Puede asociar ambos métodos de registro
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 Después, incluso en la misma aplicación, puede quitar uno de los delegados sin ocasionar ningún otro problema en el sistema:
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>Procedimientos

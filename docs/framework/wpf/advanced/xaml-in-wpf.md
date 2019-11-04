@@ -7,16 +7,16 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672010"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459566"
 ---
 # <a name="xaml-in-wpf"></a>XAML en WPF
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]es un lenguaje de marcado para la programación declarativa de aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]implementa una implementación de procesador XAML y proporciona compatibilidad con el lenguaje XAML. Los [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos se implementan de forma que pueden proporcionar el tipo necesario de respaldo para una representación XAML. En general, puede crear la mayoría de la interfaz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de usuario de la aplicación en el marcado XAML.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] es un lenguaje de marcado para la programación declarativa de aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementa una implementación del procesador XAML y proporciona compatibilidad con el lenguaje XAML. Los tipos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementan de forma que pueden proporcionar el tipo necesario de respaldo para una representación XAML. En general, puede crear la mayoría de la interfaz de usuario de la aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en el marcado XAML.  
   
 ## <a name="in-this-section"></a>En esta sección  
 
@@ -31,9 +31,9 @@ ms.locfileid: "68672010"
 [Procesamiento de espacios en blanco en XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
 [Clases TypeConverter y XAML](typeconverters-and-xaml.md)  
 [Entidades de caracteres XML y XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[Espacio de nombres XAML (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)  
+[Características de lenguaje (x:) de espacios de nombres XAML](../../xaml-services/xaml-namespace-x-language-features.md)  
 [Extensiones XAML de WPF](wpf-xaml-extensions.md)  
-[Compatibilidad de marcado (MC:) Características del lenguaje](markup-compatibility-mc-language-features.md)  
+[Características del lenguaje de compatibilidad de marcado (mc:)](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
@@ -44,5 +44,5 @@ ms.locfileid: "68672010"
 [Eventos](events-wpf.md)  
 [Entrada](input-wpf.md)  
 [Recursos](resources-wpf.md)  
-[Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+[Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [Modelo de subprocesos](threading-model.md)

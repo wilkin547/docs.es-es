@@ -1,30 +1,30 @@
 ---
 title: Operadores que aceptan valores NULL
-description: Obtenga información sobre los operadores que aceptan valores null que están disponibles en el F# lenguaje de programación.
+description: Obtenga información sobre los operadores que aceptan valores NULL que están F# disponibles en el lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 79165f35258b414624174153d2cd729b301cf389
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c747cf5c2e07ca9f80cef741d71d892fb437b3a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642092"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424042"
 ---
 # <a name="nullable-operators"></a>Operadores que aceptan valores NULL
 
-Los operadores que aceptan valores NULL son operadores de aritmética o de comparación binarios que funcionan con tipos aritméticos que acepta valores NULL en uno o ambos lados. Tipos que aceptan valores NULL se producen con frecuencia cuando se trabaja con datos de orígenes como bases de datos que permiten valores NULL en lugar de valores reales. Operadores que aceptan valores NULL se utilizan con frecuencia en las expresiones de consulta. Además de los operadores que aceptan valores NULL para las operaciones aritméticas y de comparación, se pueden usar operadores de conversión para convertir entre tipos que aceptan valores NULL. También hay versiones que aceptan valores NULL de algunos operadores de consulta.
+Los operadores que aceptan valores NULL son operadores aritméticos o de comparación binarios que funcionan con tipos aritméticos que aceptan valores NULL en uno o ambos lados. Los tipos que aceptan valores NULL se producen con frecuencia cuando se trabaja con datos de orígenes como bases de datos que permiten valores NULL en lugar de valores reales. Los operadores que aceptan valores NULL se utilizan con frecuencia en expresiones de consulta. Además de los operadores que aceptan valores NULL para operaciones aritméticas y de comparación, los operadores de conversión se pueden usar para realizar conversiones entre tipos que aceptan valores NULL. También hay versiones que aceptan valores NULL de ciertos operadores de consulta.
 
-## <a name="table-of-nullable-operators"></a>Tabla de operadores que aceptan valores null
+## <a name="table-of-nullable-operators"></a>Tabla de operadores que aceptan valores NULL
 
-La tabla siguiente enumera los operadores que aceptan valores NULL admitidos en el F# lenguaje.
+En la tabla siguiente se enumeran los operadores que F# aceptan valores NULL que se admiten en el lenguaje.
 
-|Que acepta valores NULL en la izquierda|Que acepta valores NULL en la derecha|Ambos lados que acepta valores null|
+|Acepta valores NULL a la izquierda|Acepta valores NULL a la derecha|Ambos lados aceptan valores NULL|
 |---|---|---|
-|[?>=](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[>=?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[?>=?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
-|[?>](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[?>?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
-|[?<=](https://msdn.microsoft.com/library/56fddf0a-e4ca-4891-a3be-fad1876be3b6)|[<=?](https://msdn.microsoft.com/library/02454a0f-30ca-4e77-ad84-ee7837461804)|[?<=?](https://msdn.microsoft.com/library/5c37c28c-0b57-4da5-be11-5a123f7e8ee4)|
-|[?<](https://msdn.microsoft.com/library/b71897f0-6e29-4c58-b0a7-a5bfa6f88917)|[<?](https://msdn.microsoft.com/library/be9ea40f-a67f-4e98-8067-a14046752e8b)|[?<?](https://msdn.microsoft.com/library/6f1962c8-5605-468c-94ae-f379ae98e17d)|
+|[? > =](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[> =?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[? > =?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
+|[? >](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[¿>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[? >?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
+|[? < =](https://msdn.microsoft.com/library/56fddf0a-e4ca-4891-a3be-fad1876be3b6)|[< =?](https://msdn.microsoft.com/library/02454a0f-30ca-4e77-ad84-ee7837461804)|[? < =?](https://msdn.microsoft.com/library/5c37c28c-0b57-4da5-be11-5a123f7e8ee4)|
+|[? <](https://msdn.microsoft.com/library/b71897f0-6e29-4c58-b0a7-a5bfa6f88917)|[¿<?](https://msdn.microsoft.com/library/be9ea40f-a67f-4e98-8067-a14046752e8b)|[? <?](https://msdn.microsoft.com/library/6f1962c8-5605-468c-94ae-f379ae98e17d)|
 |[?=](https://msdn.microsoft.com/library/5cdc8ff6-244b-49cf-9376-69ecf249fd7c)|[=?](https://msdn.microsoft.com/library/d2102894-6a51-475d-890a-735568c31f87)|[?=?](https://msdn.microsoft.com/library/5f793f29-1084-4570-b1c1-17c1b7ef764b)|
-|[?<>](https://msdn.microsoft.com/library/3643a5a8-2ea5-4ad6-82c4-83927c3884a0)|[<>?](https://msdn.microsoft.com/library/3179aace-70c4-4911-9258-619592214976)|[?<>?](https://msdn.microsoft.com/library/5da813d8-ee75-45b8-9ef4-146dcb6d394d)|
+|[? < >](https://msdn.microsoft.com/library/3643a5a8-2ea5-4ad6-82c4-83927c3884a0)|[< >?](https://msdn.microsoft.com/library/3179aace-70c4-4911-9258-619592214976)|[? < >?](https://msdn.microsoft.com/library/5da813d8-ee75-45b8-9ef4-146dcb6d394d)|
 |[?+](https://msdn.microsoft.com/library/2e8ddd05-b3f3-41b3-9d73-938d9e540f3f)|[+?](https://msdn.microsoft.com/library/74772ea8-f010-493e-bdb5-ba347f2fd4f1)|[?+?](https://msdn.microsoft.com/library/57f28137-0f42-43d2-92af-cad8c6c9d05f)|
 |[?-](https://msdn.microsoft.com/library/f237a7a6-89f2-48b2-a2fe-f0b98a2bedc2)|[-?](https://msdn.microsoft.com/library/4a345c07-314a-48f1-b557-ce072583589c)|[?-?](https://msdn.microsoft.com/library/e0024142-1d2a-4607-a39c-1eb1e86fa25a)|
 |[?*](https://msdn.microsoft.com/library/519da708-5ad6-4075-9d74-d00441cd6078)|[*?](https://msdn.microsoft.com/library/04c47870-de7b-480d-98a0-f47593b4ffac)|[?*?](https://msdn.microsoft.com/library/e57057ba-9c3a-40ec-8401-150c2b25f75b)|
@@ -33,11 +33,11 @@ La tabla siguiente enumera los operadores que aceptan valores NULL admitidos en 
 
 ## <a name="remarks"></a>Comentarios
 
-Los operadores que aceptan valores NULL se incluyen en el [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) módulo en el espacio de nombres [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). El tipo de datos que acepta valores NULL es `System.Nullable<'T>`.
+Los operadores que aceptan valores NULL se incluyen en el módulo [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) en el espacio de nombres [Microsoft. FSharp. Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). El tipo de los datos que aceptan valores NULL es `System.Nullable<'T>`.
 
-En las expresiones de consulta, los tipos que aceptan valores NULL surgen al seleccionar datos de un origen de datos que admita valores NULL en lugar de valores. En una base de datos de SQL Server, cada columna de datos en una tabla tiene un atributo que indica si se permiten valores NULL. Si se permiten valores NULL, los datos devueltos desde la base de datos pueden contener valores null que no pueden representarse mediante un tipo de datos primitivos como `int`, `float`, y así sucesivamente. Por lo tanto, los datos se devuelven como un `System.Nullable<int>` en lugar de `int`, y `System.Nullable<float>` en lugar de `float`. Se puede obtener el valor real de un `System.Nullable<'T>` objeto mediante el uso de la `Value` propiedad y se puede determinar si un `System.Nullable<'T>` objeto tiene un valor mediante una llamada a la `HasValue` método. Otro método útil es el `System.Nullable<'T>.GetValueOrDefault` método, que le permite obtener el valor o un valor predeterminado del tipo adecuado. El valor predeterminado es algún tipo de valor de "cero", como 0, 0,0, o `false`.
+En las expresiones de consulta, los tipos que aceptan valores NULL se producen cuando se seleccionan datos de un origen de datos que permite valores NULL en lugar de valores. En una base de datos de SQL Server, cada columna de datos de una tabla tiene un atributo que indica si se permiten valores NULL. Si se permiten valores NULL, los datos devueltos por la base de datos pueden contener valores NULL que no pueden representarse mediante un tipo de datos primitivo como `int`, `float`, etc. Por lo tanto, los datos se devuelven como un `System.Nullable<int>` en lugar de `int`y `System.Nullable<float>` en lugar de `float`. El valor real se puede obtener de un objeto `System.Nullable<'T>` mediante la propiedad `Value`, y puede determinar si un objeto `System.Nullable<'T>` tiene un valor llamando al método `HasValue`. Otro método útil es el método `System.Nullable<'T>.GetValueOrDefault`, que permite obtener el valor o un valor predeterminado del tipo adecuado. El valor predeterminado es alguna forma de valor "cero", como 0, 0,0 o `false`.
 
-Tipos que aceptan valores NULL se pueden convertir a tipos primitivos que no aceptan valores NULL mediante los operadores de conversión habituales como `int` o `float`. También es posible convertir de un tipo que acepta valores NULL a otro tipo que acepta valores NULL mediante el uso de los operadores de conversión de tipos que aceptan valores NULL. Los operadores de conversión correspondiente tienen el mismo nombre que los estándares, pero están en un módulo independiente, el [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) módulo en el [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) espacio de nombres. Normalmente, este espacio de nombres se abra cuando se trabaja con expresiones de consulta. En ese caso, puede usar los operadores de conversión que acepta valores NULL agregando el prefijo `Nullable.` para el operador de conversión adecuado, tal como se muestra en el código siguiente.
+Los tipos que aceptan valores NULL se pueden convertir en tipos primitivos que no aceptan valores NULL mediante los operadores de conversión habituales, como `int` o `float`. También es posible convertir de un tipo que acepta valores NULL a otro tipo que acepta valores NULL mediante los operadores de conversión para tipos que aceptan valores NULL. Los operadores de conversión adecuados tienen el mismo nombre que los estándar, pero se encuentran en un módulo independiente, el módulo que [acepta valores NULL](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) en el espacio de nombres [Microsoft. FSharp. Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) . Normalmente, se abre este espacio de nombres cuando se trabaja con expresiones de consulta. En ese caso, puede usar los operadores de conversión que aceptan valores NULL agregando el prefijo `Nullable.` al operador de conversión adecuado, tal y como se muestra en el código siguiente.
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -53,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 El resultado es `10.000000`
 
-En los campos de datos que acepta valores NULL, los operadores de consulta como `sumByNullable`, también existen para su uso en expresiones de consulta. Los operadores de consulta para los tipos que no aceptan valores NULL no son tipo compatible con los tipos que aceptan valores NULL, lo que debe usar la versión que acepta valores NULL del operador de consulta adecuado cuando se trabaja con valores de datos que acepta valores NULL. Para obtener más información, consulte [las expresiones de consulta](../query-expressions.md).
+Los operadores de consulta en campos de datos que aceptan valores NULL, como `sumByNullable`, también existen para su uso en expresiones de consulta. Los operadores de consulta para tipos que no aceptan valores NULL no son compatibles con tipos que aceptan valores NULL, por lo que debe usar la versión que acepta valores NULL del operador de consulta adecuado cuando se trabaja con valores de datos que aceptan valores NULL. Para obtener más información, vea [expresiones de consulta](../query-expressions.md).
 
-El ejemplo siguiente muestra el uso de operadores que aceptan valores NULL en una F# expresión de consulta. La primera consulta muestra cómo podría escribir una consulta sin un operador que acepta valores NULL. la segunda consulta muestra una consulta equivalente que usa un operador que acepta valores NULL. Para el contexto completo, incluido cómo configurar la base de datos para usar este código de ejemplo, vea [Tutorial: Acceso a una base de datos SQL mediante proveedores de tipo](../../tutorials/type-providers/accessing-a-sql-database.md).
+En el ejemplo siguiente se muestra el uso de operadores que aceptan F# valores NULL en una expresión de consulta. La primera consulta muestra cómo se escribiría una consulta sin un operador que acepta valores NULL; la segunda consulta muestra una consulta equivalente que utiliza un operador que acepta valores NULL. En el contexto completo, incluido cómo configurar la base de datos para usar este código de ejemplo, vea [Tutorial: acceso a un SQL Database mediante proveedores de tipos](../../tutorials/type-providers/index.md).
 
 ```fsharp
 open System

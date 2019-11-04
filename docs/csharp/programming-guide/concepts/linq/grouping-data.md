@@ -2,12 +2,12 @@
 title: Agrupar datos (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594203"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423418"
 ---
 # <a name="grouping-data-c"></a>Agrupar datos (C#)
 El agrupamiento hace referencia a la operación de colocar los datos en grupos de manera que los elementos de cada grupo compartan un atributo común.  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
 - [group (cláusula)](../../../language-reference/keywords/group-clause.md)
-- [Cómo: Crear un grupo anidado](../../linq-query-expressions/how-to-create-a-nested-group.md)
+- [Cómo: Crear un grupo anidado](../../../linq/create-a-nested-group.md)
 - [Cómo: Agrupar archivos por extensión (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Cómo: Agrupar los resultados de consultas](../../linq-query-expressions/how-to-group-query-results.md)
-- [Cómo: Realizar una subconsulta en una operación de agrupación](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Cómo: Agrupar los resultados de consultas](../../../linq/group-query-results.md)
+- [Cómo: Realizar una subconsulta en una operación de agrupación](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
 - [Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

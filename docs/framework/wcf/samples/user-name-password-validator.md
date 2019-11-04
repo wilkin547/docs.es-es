@@ -2,12 +2,12 @@
 title: Validador de contraseña de nombre de usuario
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4db661e80663b7b5b22a17d244f0204717fef652
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 553ccd69a02e057c5131128378611a19502e713d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044561"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424161"
 ---
 # <a name="user-name-password-validator"></a>Validador de contraseña de nombre de usuario
 Este ejemplo muestra cómo implementar un validador UserNamePassword personalizado. Esto es útil en casos donde ninguno de los modos de validación UserNamePassword integrados es apropiado para los requisitos de la aplicación; por ejemplo, cuando los pares nombre de usuario/contraseña se almacenan en un almacén externo, como una base de datos. Este ejemplo muestra un servicio que tiene un validador personalizado que comprueba dos pares de nombre de usuario y contraseña determinados. El cliente usa un par de nombre de usuario y contraseña para autenticar en el servicio.
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo implementar un validador UserNamePassword personaliza
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ Este ejemplo muestra cómo implementar un validador UserNamePassword personaliza
 
 - El servidor se autentica utilizando el certificado X.509 del servidor.
 
- El servicio expone un punto de conexión único para comunicarse con el servicio, definido usando el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que tiene como valor predeterminado el uso de WS-Security y la autenticación de nombre de usuario. El comportamiento del servicio especifica el modo `Custom` para validar los pares de nombre de usuario y contraseña del cliente con el tipo de la clase de validador. El comportamiento también especifica el certificado de servidor mediante el elemento `serviceCertificate`. El certificado de servidor debe contener el mismo valor para el `SubjectName` `findValue` que en el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración, App. config. El punto de conexión consta de una dirección, un enlace y un contrato. El enlace se configura con una `wsHttpBinding` estándar que tiene como valor predeterminado el uso de WS-Security y la autenticación de nombre de usuario. El comportamiento del servicio especifica el modo `Custom` para validar los pares de nombre de usuario y contraseña del cliente con el tipo de la clase de validador. El comportamiento también especifica el certificado de servidor mediante el elemento `serviceCertificate`. El certificado de servidor debe contener el mismo valor para el `SubjectName` que el `findValue` en el [> de\<serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -139,7 +139,7 @@ address="http://localhost:8001/servicemodelsamples/service/username"
 
  La implementación del cliente pide al usuario que introduzca un nombre de usuario y una contraseña.
 
-```
+```csharp
 // Get the username and password
 Console.WriteLine("Username authentication required.");
 Console.WriteLine("Provide a username.");
@@ -199,7 +199,7 @@ try
 
  Este ejemplo utiliza un UserNamePasswordValidator personalizado para validar pares de nombre de usuario y contraseña. El ejemplo implementa `CustomUserNamePasswordValidator`, derivado de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Consulte la documentación existente sobre <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> para obtener más información. Este ejemplo de validador personalizado determinado implementa el método `Validate` para aceptar dos pares de nombre de usuario y contraseña determinados tal y como se muestran en el código siguiente.
 
-```
+```csharp
 public class CustomUserNameValidator : UserNamePasswordValidator
 {
  // This method validates users. It allows in two users,
@@ -224,7 +224,7 @@ public class CustomUserNameValidator : UserNamePasswordValidator
 
  Una vez que se implementa el validador en el código de servicio, se debe informar al host de servicio sobre la instancia del validador que se va a usar. Esto se hace mediante el código siguiente.
 
-```
+```csharp
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator = new CustomUserNamePasswordValidator();
 ```
@@ -258,7 +258,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable %SERVER_NAME% especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado es el host local.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -272,7 +272,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 

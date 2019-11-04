@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421074"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460136"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -83,7 +83,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
  Las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de marcado solo se pueden instalar en el sistema de archivos local mediante XCopy o Windows Installer. Estas páginas se pueden ver con Internet Explorer o el explorador de Windows.  
   
- Para obtener más información sobre XAML, vea [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md).  
+ Para obtener más información sobre XAML, vea [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Implementar aplicaciones de explorador XAML  

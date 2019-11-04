@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: bb784528226c706417166025a2469ed9f72f9cc2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588668"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423163"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procedimiento Usar expresiones lambda en una consulta (Guía de programación de C#)
 No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pero sí en llamadas de método, y las expresiones de consulta pueden contener llamadas de método. De hecho, algunas operaciones de consulta solo se pueden expresar con la sintaxis de método. Para obtener más información sobre la diferencia entre la sintaxis de consulta y la sintaxis de método, vea [Query Syntax and Method Syntax in LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
@@ -28,7 +28,7 @@ No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pe
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Para ejecutar este código, copie y pegue el método en la clase `StudentClass` que se proporciona en [Cómo: Consultar una colección de objetos](../linq-query-expressions/how-to-query-a-collection-of-objects.md) y llámela desde el método `Main`.  
+ Para ejecutar este código, copie y pegue el método en la clase `StudentClass` que se proporciona en [Cómo: Consultar una colección de objetos](../../linq/query-a-collection-of-objects.md) y llámela desde el método `Main`.  
   
 ## <a name="see-also"></a>Vea también
 

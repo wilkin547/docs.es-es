@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588195"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423128"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 
@@ -23,7 +23,7 @@ void* identifier; //allowed but not recommended
 
 El tipo especificado antes de `*` en un tipo de puntero se denomina **tipo referente**. Solo un [tipo no administrado](../../language-reference/builtin-types/unmanaged-types.md) puede ser un tipo de referente.
 
-Los tipos de puntero no heredan de [object](../../language-reference/keywords/object.md) y no existe ninguna conversión entre tipos de puntero y `object`. Además, las conversiones boxing y unboxing no admiten punteros. Sin embargo, puede realizar la conversión entre diferentes tipos de puntero y entre tipos de puntero y tipos enteros.
+Los tipos de puntero no heredan de [object](../../language-reference/builtin-types/reference-types.md) y no existe ninguna conversión entre tipos de puntero y `object`. Además, las conversiones boxing y unboxing no admiten punteros. Sin embargo, puede realizar la conversión entre diferentes tipos de puntero y entre tipos de puntero y tipos enteros.
 
 Cuando declare varios punteros en la misma declaración, únicamente debe escribir el asterisco (*) con el tipo subyacente; no se usa como prefijo en cada nombre de puntero. Por ejemplo:
 
@@ -87,5 +87,5 @@ Para obtener más información, vea la sección [Tipos de puntero](~/_csharplang
 - [Guía de programación de C#](../index.md)
 - [Código no seguro y punteros](index.md)
 - [Conversiones de puntero](pointer-conversions.md)
-- [Tipos](../../language-reference/keywords/types.md)
+- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

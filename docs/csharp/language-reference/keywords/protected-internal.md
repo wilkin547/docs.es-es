@@ -3,12 +3,12 @@ title: 'protected internal: Referencia de C#'
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ddfefa2a0bb145aa49a60f06a40725d2706cecb5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6e5a4c6e63c2c05df54df6bed542eab3f43f9272
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661656"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422586"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Referencia de C#)
 
@@ -73,7 +73,7 @@ Los miembros de struct no pueden ser `protected internal`, porque los structs no
 - [Palabras clave de C#](index.md)
 - [Modificadores de acceso](access-modifiers.md)
 - [Niveles de accesibilidad](accessibility-levels.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

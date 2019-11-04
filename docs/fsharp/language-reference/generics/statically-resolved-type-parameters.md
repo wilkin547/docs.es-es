@@ -2,12 +2,12 @@
 title: Parámetros de tipo resueltos estáticamente
 description: Obtenga información sobre cómo usar F# un parámetro de tipo resuelto estáticamente, que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución.
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082924"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425009"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parámetros de tipo resueltos estáticamente
 
@@ -62,7 +62,7 @@ A partir F# de 4,1, también puede especificar nombres de tipo concretos en firm
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with

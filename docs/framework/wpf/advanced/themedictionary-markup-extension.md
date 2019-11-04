@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 471b444b66c5e8173542ab1e27cb1233bfde133f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ab38c2c885e230183852fff895e0a8a8f1d7a666
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582317"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459487"
 ---
 # <a name="themedictionary-markup-extension"></a>Extensión de marcado ThemeDictionary
 Proporciona a los autores de controles personalizados o a las aplicaciones que integran controles de otros fabricantes una manera de cargar los diccionarios de recursos específicos del tema para usarlos en la aplicación de estilos al control.  
@@ -45,7 +45,7 @@ Proporciona a los autores de controles personalizados o a las aplicaciones que i
   
  Mediante esta extensión, puede especificar un solo ensamblado de solo recursos que contenga algunos estilos para usar solo cuando el tema de Windows Aero se aplique al sistema del usuario, a otros estilos solo cuando el tema Luna esté activo, etc. Al usar esta extensión, se puede invalidar automáticamente y volver a cargar el contenido de un diccionario de recursos específico del control de modo que sea específico de otro tema cuando se necesite.  
   
- La `assemblyUri` cadena (valor de propiedad <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>) constituye la base de una Convención de nomenclatura que identifica qué diccionario se aplica a un tema determinado. La lógica de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> para `ThemeDictionary` completa la Convención mediante la generación de un identificador uniforme de recursos (URI) que señala a una variante determinada del Diccionario de temas, como se encuentra dentro de un ensamblado de recursos precompilado. En este artículo no se aborda plenamente la descripción de esta convención, ni el concepto de las interacciones de los temas con la aplicación general de estilos a controles o en el nivel de aplicación o de página. El escenario básico para utilizar `ThemeDictionary` es especificar la propiedad <xref:System.Windows.ResourceDictionary.Source%2A> de una `ResourceDictionary` declarada en el nivel de la aplicación. Cuando se proporciona un URI para el ensamblado a través de una extensión de `ThemeDictionary` en lugar de un URI directo, la lógica de la extensión proporcionará lógica de invalidación que se aplica cada vez que cambia el tema del sistema.  
+ La `assemblyUri` cadena (valor de propiedad<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>) constituye la base de una Convención de nomenclatura que identifica qué diccionario se aplica a un tema determinado. La lógica de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> para `ThemeDictionary` completa la Convención mediante la generación de un identificador uniforme de recursos (URI) que señala a una variante determinada del Diccionario de temas, como se encuentra dentro de un ensamblado de recursos precompilado. En este artículo no se aborda plenamente la descripción de esta convención, ni el concepto de las interacciones de los temas con la aplicación general de estilos a controles o en el nivel de aplicación o de página. El escenario básico para utilizar `ThemeDictionary` es especificar la propiedad <xref:System.Windows.ResourceDictionary.Source%2A> de una `ResourceDictionary` declarada en el nivel de la aplicación. Cuando se proporciona un URI para el ensamblado a través de una extensión de `ThemeDictionary` en lugar de un URI directo, la lógica de la extensión proporcionará lógica de invalidación que se aplica cada vez que cambia el tema del sistema.  
   
  La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado. El token de cadena que se proporciona después de la cadena de identificador `ThemeDictionary` se asigna como valor de <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> de la clase de extensión <xref:System.Windows.ThemeDictionaryExtension> subyacente.  
   
@@ -66,6 +66,6 @@ Proporciona a los autores de controles personalizados o a las aplicaciones que i
 ## <a name="see-also"></a>Vea también
 
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
-- [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
 - [Archivos de recursos, contenido y datos de aplicaciones de WPF](../app-development/wpf-application-resource-content-and-data-files.md)

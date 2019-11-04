@@ -2,14 +2,14 @@
 title: Migrar la aplicación de la Tienda Windows a .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128310"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455610"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la Tienda Windows a .NET Native
+# <a name="migrate-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la tienda Windows a .NET Native
 
 .NET Native proporciona la compilación estática de aplicaciones en la tienda Windows o en el equipo del desarrollador. Esto difiere de la compilación dinámica para las aplicaciones de la Tienda Windows realizada por el compilador Just-in-time (JIT) o el [generador de imágenes nativas (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) en el dispositivo. A pesar de las diferencias, .NET Native intenta mantener la compatibilidad con [.net para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). En su mayor parte, todo lo que funciona en .NET para aplicaciones de la tienda Windows también funciona con .NET Native.  Sin embargo, en algunos casos, puede encontrar cambios de comportamiento. En este documento se describen estas diferencias entre las aplicaciones estándar de .NET para la tienda Windows y .NET Native en las siguientes áreas:
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128310"
 
 Por ejemplo, el enlace de datos requiere una aplicación para poder asignar los nombres de propiedad a las funciones. En .NET para aplicaciones de la Tienda Windows, Common Language Runtime utiliza automáticamente la reflexión para proporcionar esta capacidad para tipos administrados y tipos nativos disponibles públicamente. En .NET Native, el compilador incluye automáticamente los metadatos de los tipos a los que se enlazan los datos.
 
-El compilador .NET Native también puede controlar tipos genéricos usados comúnmente como <xref:System.Collections.Generic.List%601> y <xref:System.Collections.Generic.Dictionary%602>, que funcionan sin necesidad de ninguna sugerencia ni Directiva. La palabra clave [dynamic](../../csharp/language-reference/keywords/dynamic.md) también se admite dentro de ciertos límites.
+El compilador .NET Native también puede controlar tipos genéricos usados comúnmente como <xref:System.Collections.Generic.List%601> y <xref:System.Collections.Generic.Dictionary%602>, que funcionan sin necesidad de ninguna sugerencia ni Directiva. La palabra clave [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) también se admite dentro de ciertos límites.
 
 > [!NOTE]
 > Debe probar exhaustivamente todas las rutas de código dinámicas al migrar la aplicación a .NET Native.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: a5a91d6a1f046b31ff26e769e9fcc1c7516904c8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0fbb515afbeac05168ced6f0a99f50eb29a5c848
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662603"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459650"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Instrucciones para el diseño de controles con estilos
 
@@ -30,15 +30,15 @@ La "aplicación de estilos y las plantillas" hacen referencia al conjunto de tec
 
 - plantillas de datos.
 
-Para obtener una introducción a los estilos y plantillas, vea [Aplicar estilos y plantillas](styling-and-templating.md).
+Para obtener una introducción a los estilos y plantillas, vea [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 <a name="Before_You_Start__Understanding_Your_Control"></a>
 
-## <a name="before-you-start-understanding-your-control"></a>Antes de empezar: Introducción al Control
+## <a name="before-you-start-understanding-your-control"></a>Antes de empezar: conocer los propios controles
 
 Antes de empezar con estas instrucciones, es importante conocer y definir el uso común de un control propio. La aplicación de estilos brinda un conjunto de posibilidades que suele ser difícil de controlar. Los controles escritos para un uso general (es decir, en muchas aplicaciones y por parte de muchos desarrolladores) se enfrentan al desafío de que la aplicación de estilo puede utilizarse para realizar cambios de gran alcance en el aspecto visual del control. De hecho, el control con estilo puede no asemejarse ni siquiera a las intenciones del autor del control. Habida cuenta de que la aplicación de estilo suele ofrecer una flexibilidad sin límites, puede basarse en la idea del uso común para ayudar a definir el ámbito de sus decisiones.
 
-Para entender el uso común del control, es conveniente pensar en la propuesta de valor del control. ¿Qué aporta este control a la tabla que no puede ofrecer ningún otro control? El uso común no conlleva ningún aspecto visual concreto, sino más bien la filosofía del control y un conjunto razonable de expectativas sobre su uso. Este conocimiento permite realizar algunas suposiciones sobre el modelo de composición y los comportamientos definidos por el estilo del control en el caso habitual. En el caso de <xref:System.Windows.Controls.ComboBox>, por ejemplo, conocer el uso común no aporta ninguna información sobre si un determinado <xref:System.Windows.Controls.ComboBox> tiene esquinas redondeadas, pero le proporcionará información sobre el hecho de que el <xref:System.Windows.Controls.ComboBox> probablemente necesita una ventana emergente y cierto nivel de alternancia si está abierto.
+Para entender el uso común del control, es conveniente pensar en la propuesta de valor del control. ¿Qué aporta este control a la tabla que no puede ofrecer ningún otro control? El uso común no conlleva ningún aspecto visual concreto, sino más bien la filosofía del control y un conjunto razonable de expectativas sobre su uso. Este conocimiento permite realizar algunas suposiciones sobre el modelo de composición y los comportamientos definidos por el estilo del control en el caso habitual. En el caso de <xref:System.Windows.Controls.ComboBox>, por ejemplo, comprender el uso común no le proporcionará información sobre si un <xref:System.Windows.Controls.ComboBox> determinado tiene esquinas redondeadas, pero le proporcionará información sobre el hecho de que el <xref:System.Windows.Controls.ComboBox> probablemente necesite una ventana emergente y alguna manera de alternar si está abierto.
 
 <a name="General_Guidelines"></a>
 
@@ -62,10 +62,10 @@ Para entender el uso común del control, es conveniente pensar en la propuesta d
 
   En la tabla siguiente se muestran los elementos del asistente que hoy emplean los estilos del control, aunque no se trata de una lista exhaustiva:
 
-  |Elemento|Tipo|Utilizada por|
+  |Elemento|Type|Utilizada por|
   |-------------|----------|-------------|
-  |<xref:System.Windows.Controls.ContentPresenter>|Basado en tipos|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>, etc. (todos los <xref:System.Windows.Controls.ContentControl> tipos)|
-  |<xref:System.Windows.Controls.ItemsPresenter>|Basado en tipos|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, etc. (todos los <xref:System.Windows.Controls.ItemsControl> tipos)|
+  |<xref:System.Windows.Controls.ContentPresenter>|Basado en tipos|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>, etc. (todos los tipos de <xref:System.Windows.Controls.ContentControl>)|
+  |<xref:System.Windows.Controls.ItemsPresenter>|Basado en tipos|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, etc. (todos los tipos de <xref:System.Windows.Controls.ItemsControl>)|
   |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Con nombre|<xref:System.Windows.Controls.ToolBar>|
   |<xref:System.Windows.Controls.Primitives.Popup>|Independiente|<xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolTip>, etc.|
   |<xref:System.Windows.Controls.Primitives.RepeatButton>|Con nombre|<xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.ScrollBar>, etc.|
@@ -79,7 +79,7 @@ Para entender el uso común del control, es conveniente pensar en la propuesta d
 
   - Los elementos del asistente con nombre deben identificarse mediante el elemento primario, y este último debe establecer la configuración necesaria en el elemento del asistente.
 
-  - Los elementos del asistente basados en tipos deben establecer directamente en ellos mismos la configuración requerida. Para ello, es posible que el elemento del asistente deba consultar información del contexto en que se usa, incluido su `TemplatedParent` (el tipo de control de la plantilla en que se usa). Por ejemplo, <xref:System.Windows.Controls.ContentPresenter> enlaza automáticamente la `Content` propiedad de su `TemplatedParent` a su <xref:System.Windows.Controls.ContentPresenter.Content%2A> propiedad cuando se usa en un <xref:System.Windows.Controls.ContentControl> tipo derivado.
+  - Los elementos del asistente basados en tipos deben establecer directamente en ellos mismos la configuración requerida. Para ello, es posible que el elemento del asistente deba consultar información del contexto en que se usa, incluido su `TemplatedParent` (el tipo de control de la plantilla en que se usa). Por ejemplo, <xref:System.Windows.Controls.ContentPresenter> enlaza automáticamente la propiedad `Content` de su `TemplatedParent` a su propiedad <xref:System.Windows.Controls.ContentPresenter.Content%2A> cuando se usa en un tipo derivado de <xref:System.Windows.Controls.ContentControl>.
 
   - No se pueden optimizar de esta forma los elementos del asistente independientes porque, por definición, ni el elemento del asistente ni el primario saben nada el uno del otro.
 
@@ -89,9 +89,9 @@ Para entender el uso común del control, es conveniente pensar en la propuesta d
 
   1. Enlace de propiedades. Ejemplo: enlace entre <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.
 
-  2. Animaciones de propiedades o cambios de propiedades desencadenados. Ejemplo: el estado de desplazamiento de un <xref:System.Windows.Controls.Button>.
+  2. Animaciones de propiedades o cambios de propiedades desencadenados. Ejemplo: estado de desplazamiento de un <xref:System.Windows.Controls.Button>.
 
-  3. Comando. Ejemplo: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> en <xref:System.Windows.Controls.Primitives.ScrollBar>.
+  3. Comando. Ejemplo: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand> / <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> en <xref:System.Windows.Controls.Primitives.ScrollBar>.
 
   4. Elementos del asistente independientes. Ejemplo: <xref:System.Windows.Controls.Primitives.TabPanel> en <xref:System.Windows.Controls.TabControl>.
 
@@ -105,7 +105,7 @@ Para entender el uso común del control, es conveniente pensar en la propuesta d
 
 - **Usar desencadenadores de estilo (a diferencia de los desencadenadores de plantilla) con moderación**. Los desencadenadores que afectan a las propiedades de elementos en la plantilla se deben declarar en la plantilla. Los desencadenadores que afectan a las propiedades del control (no `TargetName`) se pueden declarar en el estilo, a menos que sepa que el cambio de la plantilla también destruye el desencadenador.
 
-- **Ser coherente con los patrones de estilo existentes.** Muchas veces, hay varias formas de resolver un problema. Debe conocer los patrones de aplicación de estilos de control existentes y, cuando sea posible, mantener la coherencia con ellos. Esto es especialmente importante para los controles que derivan del mismo tipo base (por ejemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, y así sucesivamente).
+- **Ser coherente con los patrones de estilo existentes.** Muchas veces, hay varias formas de resolver un problema. Debe conocer los patrones de aplicación de estilos de control existentes y, cuando sea posible, mantener la coherencia con ellos. Esto es especialmente importante para los controles que derivan del mismo tipo base (por ejemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, etc.).
 
 - **Exponer propiedades para habilitar escenarios de personalización comunes sin volver a crear plantillas**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite partes acoplables/personalizables, por lo que un usuario de control solo puede usar dos métodos de personalización: configurar propiedades directamente o configurar propiedades con estilos. Habida cuenta de lo anterior, resulta conveniente exponer un número limitado de propiedades orientadas a escenarios de personalización muy comunes y de alta prioridad, ya que, de lo contrario, sería necesario volver a crear plantillas. A continuación se presentan procedimientos recomendados para saber cuándo y cómo habilitar escenarios de personalización:
 
@@ -119,7 +119,7 @@ Para entender el uso común del control, es conveniente pensar en la propuesta d
 
 ## <a name="theme-considerations"></a>Consideraciones sobre temas
 
-- **Los estilos de temas deben tratar de tener una semántica de propiedades coherente en todos los temas, pero sin garantizarlo**. Como parte de su documentación, el control debe tener un documento en que se describa la semántica de la propiedad del control, es decir, el "significado" de una propiedad para un control. Por ejemplo, el <xref:System.Windows.Controls.ComboBox> control debe definir el significado de la <xref:System.Windows.Controls.Control.Background%2A> propiedad dentro de <xref:System.Windows.Controls.ComboBox>. Los estilos predeterminados del control deben intentar seguir la semántica definida en ese documento en todos los temas. Por otro lado, los usuarios del control deben ser conscientes de que la semántica de la propiedad puede cambiar de un tema a otro. En algunos casos, es posible que una propiedad determinada no pueda expresarse dentro de las restricciones visuales requeridas por un tema concreto. (Por ejemplo, el tema Clásico no tiene un solo borde en el que `Thickness` se puede aplicar a muchos controles).
+- **Los estilos de temas deben tratar de tener una semántica de propiedades coherente en todos los temas, pero sin garantizarlo**. Como parte de su documentación, el control debe tener un documento en que se describa la semántica de la propiedad del control, es decir, el "significado" de una propiedad para un control. Por ejemplo, el control <xref:System.Windows.Controls.ComboBox> debe definir el significado de la propiedad <xref:System.Windows.Controls.Control.Background%2A> en <xref:System.Windows.Controls.ComboBox>. Los estilos predeterminados del control deben intentar seguir la semántica definida en ese documento en todos los temas. Por otro lado, los usuarios del control deben ser conscientes de que la semántica de la propiedad puede cambiar de un tema a otro. En algunos casos, es posible que una propiedad determinada no pueda expresarse dentro de las restricciones visuales requeridas por un tema concreto. (Por ejemplo, el tema Clásico no tiene un solo borde en el que `Thickness` se puede aplicar a muchos controles).
 
 - **Los estilos de temas no necesitan tener una semántica de desencadenadores coherente en todos los temas**. El comportamiento expuesto por un estilo de control mediante desencadenadores o animaciones puede variar de un tema a otro. Los usuarios del control deben ser conscientes de que un control no usará necesariamente el mismo mecanismo para lograr un comportamiento concreto en todos los temas. Un tema, por ejemplo, puede usar una animación para expresar el comportamiento de selección mediante movimiento del mouse mientras que otro tema usa un desencadenador. Esto puede provocar incoherencias en la conservación del comportamiento en los controles personalizados. (Cambiar la propiedad de segundo plano, por ejemplo, podría no afectar al estado de selección mediante movimiento del mouse del control si dicho estado se expresa mediante un desencadenador. Sin embargo, si el estado se implementa utilizando una animación, cambiar a segundo plano podría interrumpir irreparablemente la animación y, por lo tanto, la transición de estado).
 
@@ -127,5 +127,5 @@ Para entender el uso común del control, es conveniente pensar en la propuesta d
 
 ## <a name="see-also"></a>Vea también
 
-- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Información general sobre la creación de controles](control-authoring-overview.md)

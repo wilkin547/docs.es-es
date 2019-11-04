@@ -2,19 +2,19 @@
 title: Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 5333c9c5caad502ce925fe4a45a039c553812ba6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320196"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425268"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 La utilidad de configuración de WS-AtomicTransaction se utiliza para configurar valores básicos de compatibilidad de WS-AtomicTransaction.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 wsatConfig [Options]  
 ```  
   

@@ -2,12 +2,12 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a8a8713cd35e73b5126dadd7e0e17a3f8304188b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 835a158ba668a3aef749602c73fd9157e8d83a40
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045455"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425032"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens en Windows Communication Foundation (WCF) se usa para validar el token utilizado con el mensaje, comprobar que es autocoherente y autenticar la identidad asociada con el token.
@@ -108,7 +108,7 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. 
 
  La implementación del cliente establece el nombre de usuario y la contraseña que utilizar.
 
-```
+```csharp
 static void Main()
 {
      ...
@@ -125,7 +125,7 @@ static void Main()
 
      El ejemplo implementa un autenticador de tokens personalizado que valida que el nombre de usuario tiene un formato de correo electrónico válido. Deriva <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. El método más importante en esta clase es <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. En este método, el autenticador valida el formato del nombre de usuario y también que el nombre de host no es de un dominio no autorizado. Si se cumplen ambas condiciones, a continuación, devuelve una colección de solo lectura de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que se utiliza a continuación para proporcionar indicaciones que representan la información almacenada dentro del token del nombre de usuario.
 
-    ```
+    ```csharp
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
     {
         if (!ValidateUserNameFormat(userName))
@@ -144,7 +144,7 @@ static void Main()
 
      Este ejemplo proporciona su propia implementación de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> llamada `UnconditionalPolicy` que devuelve un conjunto de indicaciones e identidades que se pasaron a él en su constructor.
 
-    ```
+    ```csharp
     class UnconditionalPolicy : IAuthorizationPolicy
     {
         String id = Guid.NewGuid().ToString();
@@ -214,7 +214,7 @@ static void Main()
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> para objetos <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concretos que se pasan en el método `CreateSecurityTokenAuthenticator`. El administrador de tokens de seguridad también se utiliza para crear proveedores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenAuthenticator` para devolver el autenticador de tokens de nombre de usuario personalizado cuando los requisitos de token pasados indican que se solicita el autenticador de nombre de usuario.
 
-    ```
+    ```csharp
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
     {
         MyUserNameCredential myUserNameCredential;
@@ -244,7 +244,7 @@ static void Main()
 
      Se usa una clase de credenciales de servicio para representar las credenciales que se configuran para el servicio y crear el administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y serializadores de tokens.
 
-    ```
+    ```csharp
     public class MyUserNameCredential : ServiceCredentials
     {
 
@@ -270,7 +270,7 @@ static void Main()
 
      Para que el servicio utilice la credencial de servicio personalizada, eliminamos la clase de credencial de servicio predeterminada después de capturar el certificado del servicio que ya está preconfigurado en la credencial del servicio predeterminada y configuramos la nueva instancia de credencial de servicio para utilizar los certificados del servicio preconfigurados y agregar esta nueva instancia de credencial de servicio a los comportamientos del servicio.
 
-    ```
+    ```csharp
     ServiceCredentials sc = serviceHost.Credentials;
     X509Certificate2 cert = sc.ServiceCertificate.Certificate;
     MyUserNameCredential serviceCredential = new MyUserNameCredential();
@@ -281,7 +281,7 @@ static void Main()
 
  Para mostrar la información del autor de la llamada, puede usar <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> tal y como se muestra en el código siguiente. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene información de las notificaciones sobre el llamador actual.
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",
@@ -301,7 +301,7 @@ static void DisplayIdentityInformation()
 
      Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable `%SERVER_NAME%`especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado en este archivo por lotes es el host local.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -315,7 +315,7 @@ static void DisplayIdentityInformation()
 
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 

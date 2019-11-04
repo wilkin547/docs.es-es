@@ -2,17 +2,17 @@
 title: Transporte WS con credencial de mensaje
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: a2eade01ff3397d8f7ea790558909111c43b131d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cc452ade4ef7d0d2d197f058d74ca0c3d0e0230d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959789"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423074"
 ---
 # <a name="ws-transport-with-message-credential"></a>Transporte WS con credencial de mensaje
 Este ejemplo muestra el uso de la seguridad de transporte de SSL en combinación con la credencial del cliente que se lleva en el mensaje. El ejemplo usa el enlace `wsHttpBinding`.  
   
- De forma predeterminada, el enlace `wsHttpBinding` proporciona la comunicación HTTP. Cuando se configura para la seguridad del transporte, el enlace admite la comunicación de HTTPS. HTTPS proporciona confidencialidad y protección de integridad para los mensajes que se transmiten a través de la conexión. Sin embargo, el conjunto de mecanismos de autenticación que se pueden usar para autenticar el cliente en el servicio está limitado a lo que admite el transporte HTTPS. Windows Communication Foundation (WCF) ofrece un `TransportWithMessageCredential` modo de seguridad que está diseñado para superar esta limitación. Cuando se configura este modo de seguridad, la seguridad de transporte se utiliza para proporcionar confidencialidad e integridad para los mensajes transmitidos y realizar la autenticación del servicio. Sin embargo, la autenticación del cliente se realiza colocando la credencial del cliente directamente en el mensaje. Esto le permite usar cualquier tipo de credencial compatible con el modo de seguridad de mensajes para la autenticación del cliente, al mismo tiempo que mantiene la ventaja de rendimiento del modo de seguridad de transporte.  
+ De forma predeterminada, el enlace `wsHttpBinding` proporciona la comunicación HTTP. Cuando se configura para la seguridad del transporte, el enlace admite la comunicación de HTTPS. HTTPS proporciona confidencialidad y protección de integridad para los mensajes que se transmiten a través de la conexión. Sin embargo, el conjunto de mecanismos de autenticación que se pueden usar para autenticar el cliente en el servicio está limitado a lo que admite el transporte HTTPS. Windows Communication Foundation (WCF) ofrece un modo de seguridad `TransportWithMessageCredential` diseñado para superar esta limitación. Cuando se configura este modo de seguridad, la seguridad de transporte se utiliza para proporcionar confidencialidad e integridad para los mensajes transmitidos y realizar la autenticación del servicio. Sin embargo, la autenticación del cliente se realiza colocando la credencial del cliente directamente en el mensaje. Esto le permite usar cualquier tipo de credencial compatible con el modo de seguridad de mensajes para la autenticación del cliente, al mismo tiempo que mantiene la ventaja de rendimiento del modo de seguridad de transporte.  
   
  En este ejemplo, se utiliza un tipo de credencial `UserName` para autenticar el cliente con el servicio.  
   
@@ -61,7 +61,7 @@ public string GetCallerIdentity()
   
  La dirección especificada utiliza el esquema https://. La configuración de enlace establece el modo de seguridad en `TransportWithMessageCredential`. Debe especificarse el mismo modo de seguridad en el archivo Web.config del servicio.  
   
- Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert. exe, aparecerá una alerta de seguridad al intentar obtener acceso a una dirección https: `https://localhost/servicemodelsamples/service.svc`, como, desde el explorador. Para permitir que el cliente WCF funcione con un certificado de prueba en contexto, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. Este código, y la clase que lo acompaña, no son necesarios cuando se usan certificados de producción.  
+ Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert. exe, aparecerá una alerta de seguridad al intentar obtener acceso a una dirección https:, como `https://localhost/servicemodelsamples/service.svc`, desde el explorador. Para permitir que el cliente WCF funcione con un certificado de prueba en contexto, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. Este código, y la clase que lo acompaña, no son necesarios cuando se usan certificados de producción.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -71,7 +71,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Username authentication required.  
 Provide a valid machine or domain account. [domain\\user]  
    Enter username:   

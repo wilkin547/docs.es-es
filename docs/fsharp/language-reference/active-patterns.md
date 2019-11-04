@@ -2,12 +2,12 @@
 title: Patrones activos
 description: Obtenga información sobre cómo usar patrones activos para definir particiones con nombre que subdividen F# los datos de entrada en el lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: f5ed4a8600cba10d23d01628aba6ca07e543c586
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083079"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425091"
 ---
 # <a name="active-patterns"></a>Patrones activos
 
@@ -48,7 +48,7 @@ La salida de este programa es la siguiente:
 32 is even
 ```
 
-Otro uso de los patrones activos es descomponer los tipos de datos de varias maneras, por ejemplo, cuando los mismos datos subyacentes tienen varias representaciones posibles. Por ejemplo, un `Color` objeto se puede descomponer en una representación RGB o en una representación HSB.
+Otro uso de los patrones activos es descomponer los tipos de datos de varias maneras, por ejemplo, cuando los mismos datos subyacentes tienen varias representaciones posibles. Por ejemplo, un objeto de `Color` se puede descomponer en una representación RGB o en una representación HSB.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
@@ -92,7 +92,7 @@ La salida del ejemplo anterior es la siguiente:
 Something else : Not matched.
 ```
 
-Cuando se usan modelos activos parciales, algunas veces las opciones individuales pueden ser disjuntas o excluidas mutuamente, pero no es necesario. En el ejemplo siguiente, el cuadrado de patrón y el cubo de patrón no están separados, porque algunos números son cuadrados y cubos, como 64. En el siguiente programa se usa el patrón y para combinar los patrones de cuadrados y de cubo. Imprime todos los enteros hasta 1000 que son cuadrados y cubos, así como aquellos que son solo cubos. 
+Cuando se usan modelos activos parciales, algunas veces las opciones individuales pueden ser disjuntas o excluidas mutuamente, pero no es necesario. En el ejemplo siguiente, el cuadrado de patrón y el cubo de patrón no están separados, porque algunos números son cuadrados y cubos, como 64. En el siguiente programa se usa el patrón y para combinar los patrones de cuadrados y de cubo. Imprime todos los enteros hasta 1000 que son cuadrados y cubos, así como aquellos que son solo cubos.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -113,7 +113,7 @@ La salida es la siguiente:
 
 ## <a name="parameterized-active-patterns"></a>Modelos activos con parámetros
 
-Los modelos activos siempre toman al menos un argumento para el elemento que se está coincidentendo, pero también pueden tomar argumentos adicionales, en cuyo caso se aplica el nombre del *modelo activo parametrizado* . Los argumentos adicionales permiten que un patrón general esté especializado. Por ejemplo, los patrones activos que usan expresiones regulares para analizar cadenas suelen incluir la expresión regular como parámetro adicional, como en el código siguiente, que también usa el modelo `Integer` activo parcial definido en el ejemplo de código anterior. En este ejemplo, se proporcionan cadenas que usan expresiones regulares para varios formatos de fecha para personalizar el modelo activo ParseRegex general. El modelo activo entero se usa para convertir las cadenas coincidentes en enteros que se pueden pasar al constructor DateTime.
+Los modelos activos siempre toman al menos un argumento para el elemento que se está coincidentendo, pero también pueden tomar argumentos adicionales, en cuyo caso se aplica el nombre del *modelo activo parametrizado* . Los argumentos adicionales permiten que un patrón general esté especializado. Por ejemplo, los patrones activos que usan expresiones regulares para analizar cadenas suelen incluir la expresión regular como parámetro adicional, como en el código siguiente, que también usa el modelo activo parcial `Integer` definido en el ejemplo de código anterior. En este ejemplo, se proporcionan cadenas que usan expresiones regulares para varios formatos de fecha para personalizar el modelo activo ParseRegex general. El modelo activo entero se usa para convertir las cadenas coincidentes en enteros que se pueden pasar al constructor DateTime.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 

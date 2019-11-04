@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: ba4df55c3359e2a81eef0b4947a744d80ed49497
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a718a85ed42c4f8081348de20a195899f3c18c0a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040598"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458120"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Información general sobre TextPattern y objetos incrustados
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "73040598"
   
  Esta introducción describe cómo [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expone objetos incrustados o elementos secundarios en un contenedor o documento de texto.  
   
- En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] un objeto incrustado es cualquier elemento que tenga límites no textuales; por ejemplo, una imagen, un hipervínculo, una tabla o un tipo de documento, como una hoja de cálculo de [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] o un archivo de Microsoft Windows Media. Esto difiere de la definición estándar, según la cual se crea un elemento en una aplicación y se incrusta o vincula en otra. Si el objeto se puede editar en la aplicación original, es irrelevante en el contexto de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] un objeto incrustado es cualquier elemento que tenga límites no textuales; por ejemplo, una imagen, un hipervínculo, una tabla o un tipo de documento, como una hoja de cálculo de Microsoft Excel o un archivo de Microsoft Windows Media. Esto difiere de la definición estándar, según la cual se crea un elemento en una aplicación y se incrusta o vincula en otra. Si el objeto se puede editar en la aplicación original, es irrelevante en el contexto de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>   
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Objetos incrustados y el árbol de automatización de la interfaz de usuario  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010350"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460503"
 ---
 # <a name="events-wpf"></a>Eventos (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta los eventos enrutados, que pueden invocar controladores que existen en varios agentes de escucha en el árbol de elementos de una aplicación.  
@@ -44,6 +44,6 @@ ms.locfileid: "62010350"
   [Propiedades](properties-wpf.md)  
   [Entrada](input-wpf.md)  
   [Recursos](resources-wpf.md)  
-  [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
-  [WPF Content Model](../controls/wpf-content-model.md) (Modelo de contenido de WPF)  
+  [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [Modelo de contenido de WPF](../controls/wpf-content-model.md)  
   [Modelo de subprocesos](threading-model.md)

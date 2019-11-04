@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602028"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421928"
 ---
 # <a name="where-clause-c-reference"></a>where (Cláusula, Referencia de C#)
 
@@ -51,5 +51,5 @@ En tiempo de compilación, la palabra clave `where` se convierte en una llamada 
 - [from (cláusula)](from-clause.md)
 - [select (cláusula)](select-clause.md)
 - [Filtrado de datos](../../programming-guide/concepts/linq/filtering-data.md)
-- [Expresiones de consulta LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Introducción a LINQ en C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ en C#](../../linq/index.md)
+- [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/)

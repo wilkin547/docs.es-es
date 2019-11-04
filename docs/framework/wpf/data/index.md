@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400373"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460289"
 ---
 # <a name="data"></a>Datos
 El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a los datos de una variedad de orígenes de datos en forma de objetos de Common Language Runtime (CLR) y XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también ofrece un mecanismo para transferir los datos a través de operaciones de arrastrar y soltar.  
@@ -34,7 +34,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Controles](../controls/index.md)  
   
- [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+ [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  [Enlace de datos](../advanced/optimizing-performance-data-binding.md)  
   

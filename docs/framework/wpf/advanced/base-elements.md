@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926417"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453599"
 ---
 # <a name="base-elements"></a>Elementos base
-Cuatro clases--la clave<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, y <xref:System.Windows.FrameworkContentElement>: implementar un porcentaje considerable de la funcionalidad común de elementos disponible en la programación de WPF. Estas cuatro clases se conocen en este SDK como las clases de elementos base.  
+Cuatro clases clave:<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>y <xref:System.Windows.FrameworkContentElement>: implementan un porcentaje sustancial de la funcionalidad de elementos comunes disponible en la programación de WPF. En este SDK se hace referencia a estas cuatro clases como las clases de elementos base.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre elementos base](base-elements-overview.md)  
@@ -39,5 +39,5 @@ Cuatro clases--la clave<xref:System.Windows.UIElement>, <xref:System.Windows.Con
   [Eventos](events-wpf.md)  
   [Entrada](input-wpf.md)  
   [Recursos](resources-wpf.md)  
-  [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+  [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modelo de subprocesos](threading-model.md)

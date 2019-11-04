@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424121"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422296"
 ---
 # <a name="switch-c-reference"></a>switch (referencia de C#)
 
@@ -44,7 +44,7 @@ La expresión de coincidencia proporciona el valor que debe coincidir con los pa
 En C# 6 y versiones anteriores, la expresión de coincidencia debe ser una expresión que devuelva un valor de los siguientes tipos:
 
 - Un [carácter](char.md).
-- Una [cadena](string.md).
+- Una [cadena](../builtin-types/reference-types.md).
 - Un [booleano](bool.md).
 - Un valor entero, como [int](../builtin-types/integral-numeric-types.md) o [long](../builtin-types/integral-numeric-types.md).
 - Un valor [enum](enum.md).
@@ -125,7 +125,7 @@ donde *constant* es el valor que se va a comprobar. *constant* puede ser cualqui
 - El nombre de una variable `const` declarada.
 - Una constante de enumeración.
 - Un literal de [carácter](char.md).
-- Un literal de [cadena](string.md).
+- Un literal de [cadena](../builtin-types/reference-types.md).
 
 La expresión de constante se evalúa de la siguiente forma:
 
@@ -195,7 +195,7 @@ Tenga en cuenta que la cláusula `when` del ejemplo que intenta comprobar si un 
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para obtener más información, vea el apartado [Instrucción switch](~/_csharplang/spec/statements.md#the-switch-statement) en [Especificación del lenguaje C#](../language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
+Para obtener más información, vea el apartado [Instrucción switch](~/_csharplang/spec/statements.md#the-switch-statement) en [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
 
 ## <a name="see-also"></a>Vea también
 

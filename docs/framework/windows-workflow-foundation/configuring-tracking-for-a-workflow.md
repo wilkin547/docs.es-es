@@ -2,12 +2,12 @@
 title: Configurar seguimiento para un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353056"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458902"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurar seguimiento para un flujo de trabajo
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Configurar el seguimiento de servicio de flujo de trabajo
 
-Un flujo de trabajo se puede exponer como un servicio WCF cuando se hospeda en el host del servicio <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> es una implementación especializada de .NET ServiceHost para un servicio basado en flujo de trabajo. En esta sección se explica cómo configurar el seguimiento para un servicio de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que se ejecuta en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura mediante un archivo Web.config (para un servicio hospedado en web) o un archivo App.config (para un servicio hospedado en una aplicación independiente, como una aplicación de consola) especificando un comportamiento de servicio o mediante código agregando un comportamiento específico de seguimiento a la colección <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> del host de servicio.
+Un flujo de trabajo se puede exponer como un servicio WCF cuando se hospeda en el host del servicio de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> es una implementación especializada de .NET ServiceHost para un servicio basado en flujo de trabajo. En esta sección se explica cómo configurar el seguimiento para un servicio de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que se ejecuta en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura mediante un archivo Web.config (para un servicio hospedado en web) o un archivo App.config (para un servicio hospedado en una aplicación independiente, como una aplicación de consola) especificando un comportamiento de servicio o mediante código agregando un comportamiento específico de seguimiento a la colección <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> del host de servicio.
 
-En el caso de un servicio de flujo de trabajo hospedado en <xref:System.ServiceModel.WorkflowServiceHost>, puede Agregar el <xref:System.Activities.Tracking.EtwTrackingParticipant> mediante el < `behavior` > elemento en un archivo de configuración, tal y como se muestra en el ejemplo siguiente.
+En el caso de un servicio de flujo de trabajo hospedado en <xref:System.ServiceModel.WorkflowServiceHost>, puede Agregar el <xref:System.Activities.Tracking.EtwTrackingParticipant> mediante el <`behavior`elemento > en un archivo de configuración, tal y como se muestra en el ejemplo siguiente.
 
 ```xml
 <behaviors>
@@ -61,7 +61,7 @@ En el caso de un servicio de flujo de trabajo hospedado en <xref:System.ServiceM
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
 Por otra parte, en el caso de un servicio de flujo de trabajo hospedado en <xref:System.ServiceModel.WorkflowServiceHost>, puede agregar la extensión de comportamiento <xref:System.Activities.Tracking.EtwTrackingParticipant> a través del código. Para agregar un participante de seguimiento personalizado, cree una nueva extensión de comportamiento y agréguela a <xref:System.ServiceModel.ServiceHost> tal y como se muestra en el siguiente código de ejemplo.
@@ -196,7 +196,7 @@ Si es necesario escribir eventos en un determinado registro de aplicaciones, sig
     </system.serviceModel>
     ```
 
-2. Copie el archivo de manifiesto de la versión de%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man en una ubicación temporal y cambie su nombre a Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Copie el archivo de manifiesto de%windir%\Microsoft.NET\Framework\\\<última versión de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man en una ubicación temporal y cambie su nombre a Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Cambie el GUID del archivo de manifiesto por el nuevo GUID.
 

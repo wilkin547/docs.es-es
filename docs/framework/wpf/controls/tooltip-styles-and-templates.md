@@ -9,32 +9,32 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 24def466509c12eb69307de139e83dd5a1ed5ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626d0b4d49d653f820d1506f0aa09f06d26352c2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790681"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458635"
 ---
 # <a name="tooltip-styles-and-templates"></a>Estilos y plantillas de ToolTip
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ToolTip> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.ToolTip>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
   
-## <a name="tooltip-parts"></a>Partes de información sobre herramientas  
- El <xref:System.Windows.Controls.ToolTip> control no tiene elementos con nombre.  
+## <a name="tooltip-parts"></a>Elementos de información sobre herramientas  
+ El control <xref:System.Windows.Controls.ToolTip> no tiene ninguna parte con nombre.  
   
-## <a name="tooltip-states"></a>Estados de información sobre herramientas  
- En la tabla siguiente se enumera los estados visuales para el <xref:System.Windows.Controls.ToolTip> control.  
+## <a name="tooltip-states"></a>Estados de la información sobre herramientas  
+ En la tabla siguiente se enumeran los Estados visuales del control <xref:System.Windows.Controls.ToolTip>.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |-|-|-|  
 |Cerrado|OpenStates|El estado predeterminado.|  
-|Abrir|OpenStates|El <xref:System.Windows.Controls.ToolTip> está visible.|  
-|Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
-|InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
-|InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
+|Abrir|OpenStates|El <xref:System.Windows.Controls.ToolTip> es visible.|  
+|Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
+|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|  
+|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|  
   
-## <a name="tooltip-controltemplate-example"></a>Ejemplo de ControlTemplate de información sobre herramientas  
- El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.ToolTip> control.  
+## <a name="tooltip-controltemplate-example"></a>Ejemplo de ControlTemplate de ToolTip  
+ En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.ToolTip>.  
   
  [!code-xaml[ControlTemplateExamples#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
   
@@ -50,5 +50,5 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Transporte: interoperabilidad de WSE 3.0 TCP'
+title: 'Transporte: interoperabilidad de WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941033"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423873"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidad de WSE 3.0 TCP
+# <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidad de WSE 3.0 TCP
 El ejemplo de transporte de interoperabilidad de WSE 3,0 TCP muestra cómo implementar una sesión dúplex TCP como un transporte de Windows Communication Foundation personalizado (WCF). También muestra cómo puede utilizar la extensibilidad de la capa del canal para comunicarse a través de la conexión con sistemas que ya estén implementados. En los pasos siguientes se muestra cómo crear este transporte WCF personalizado:  
   
 1. Comenzando con un socket de TCP, cree las implementaciones del cliente y el servidor de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> que utilizan las tramas de DIME para delinear los límites del mensaje.  
@@ -52,7 +52,7 @@ El ejemplo de transporte de interoperabilidad de WSE 3,0 TCP muestra cómo imple
 ## <a name="channel-factory"></a>Generador de canales  
  El paso siguiente para escribir el transporte de TCP es crear una implementación de <xref:System.ServiceModel.Channels.IChannelFactory> para los canales de cliente.  
   
-- `WseTcpChannelFactory`se deriva de <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Es un generador que invalida `OnCreateChannel` para generar canales de cliente.  
+- `WseTcpChannelFactory` deriva de <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel >. Es un generador que invalida `OnCreateChannel` para generar canales de cliente.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,7 +62,7 @@ El ejemplo de transporte de interoperabilidad de WSE 3,0 TCP muestra cómo imple
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel`agrega lógica a la base `WseTcpDuplexSessionChannel` para conectarse a un `channel.Open` servidor TCP a la vez. Primero el nombre de host se resuelve como una dirección IP, como se muestra en el código siguiente.  
+- `ClientWseTcpDuplexSessionChannel` agrega lógica al `WseTcpDuplexSessionChannel` base para conectarse a un servidor TCP en tiempo de `channel.Open`. Primero el nombre de host se resuelve como una dirección IP, como se muestra en el código siguiente.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ El ejemplo de transporte de interoperabilidad de WSE 3,0 TCP muestra cómo imple
 ## <a name="channel-listener"></a>Agente de escucha del canal  
  El paso siguiente al escribir el transporte de TCP es crear una implementación de <xref:System.ServiceModel.Channels.IChannelListener> para aceptar los canales del servidor.  
   
-- `WseTcpChannelListener`deriva de <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e invalida en [begin] Open y on [begin] CLOSE para controlar la duración de su socket de escucha. En OnOpen, se crea un socket para realizar escuchas en IP_ANY. Las implementaciones más avanzadas pueden crear un segundo socket para realizar escuchas también en IPv6. También pueden permitir que la dirección IP se especifique en el nombre de host.  
+- `WseTcpChannelListener` deriva de <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel > y invalida en [begin] Open y on [begin] CLOSE para controlar la duración de su socket de escucha. En OnOpen, se crea un socket para realizar escuchas en IP_ANY. Las implementaciones más avanzadas pueden crear un segundo socket para realizar escuchas también en IPv6. También pueden permitir que la dirección IP se especifique en el nombre de host.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -135,7 +135,7 @@ El ejemplo de transporte de interoperabilidad de WSE 3,0 TCP muestra cómo imple
   
  Cliente:  
   
-```  
+```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Symbol: FABRIKAM  
@@ -159,7 +159,7 @@ Press enter.
   
  Servidor:  
   
-```  
+```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Press any key to exit when done...  

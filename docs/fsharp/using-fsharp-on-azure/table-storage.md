@@ -3,14 +3,14 @@ title: Introducción a Azure Table Storage mediante F#
 description: Almacene datos estructurados en la nube mediante Azure Table Storage o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395206"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424606"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table Storage y el Azure Cosmos DB Table API mediante F @ no__t-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table Storage y el Table API de Azure Cosmos DB con F\#
 
 Azure Table Storage es un servicio que almacena datos de NoSQL estructurados en la nube. Table Storage es un almacén de claves y atributos con un diseño sin esquema. Dado que el almacenamiento de tabla no tiene esquemas, es fácil adaptar los datos a medida que evolucionen las necesidades de la aplicación. El acceso a los datos es rápido y rentable para todos los tipos de aplicaciones. Normalmente, el almacenamiento de tablas es significativamente menor que el de SQL tradicional para volúmenes de datos similares.
 
@@ -54,7 +54,7 @@ Si se va a conectar a Azure Storage Table service, necesitará la cadena de cone
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Obtener la cadena de conexión de Azure Cosmos DB
 
-Si se va a conectar a Azure Cosmos DB, necesitará la cadena de conexión para este tutorial. Puede copiar la cadena de conexión desde el Azure Portal. En el Azure Portal, en la cuenta de Cosmos DB, vaya a **configuración** > **cadena de conexión**y haga clic en el botón **copiar** para copiar la cadena de conexión principal. 
+Si se va a conectar a Azure Cosmos DB, necesitará la cadena de conexión para este tutorial. Puede copiar la cadena de conexión desde el Azure Portal. En el Azure Portal, en la cuenta de Cosmos DB, vaya a **configuración** > **cadena de conexión**y haga clic en el botón **copiar** para copiar la cadena de conexión principal.
 
 En el tutorial, escriba la cadena de conexión en el script, como en el ejemplo siguiente:
 

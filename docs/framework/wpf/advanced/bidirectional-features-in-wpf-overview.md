@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 08e791c56582ecc2354696293cd5633051064848
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581924"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453878"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Información general sobre características bidireccionales en WPF
 
@@ -44,7 +44,7 @@ En el ejemplo siguiente se muestra cómo establecer <xref:System.Windows.Framewo
 
 [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]
 
-El <xref:System.Windows.Window> de nivel superior tiene un <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection.RightToLeft>, por lo que todos los elementos contenidos en él también heredan la misma <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Para que un elemento invalide una <xref:System.Windows.FrameworkElement.FlowDirection%2A> especificada, debe agregar un cambio de dirección explícito como el segundo <xref:System.Windows.Controls.TextBlock> en el ejemplo anterior que cambia a <xref:System.Windows.FlowDirection.LeftToRight>. Cuando no se define ningún <xref:System.Windows.FrameworkElement.FlowDirection%2A>, se aplica la <xref:System.Windows.FlowDirection.LeftToRight> predeterminada.
+El <xref:System.Windows.Window> de nivel superior tiene un <xref:System.Windows.FlowDirection><xref:System.Windows.FlowDirection.RightToLeft>, por lo que todos los elementos contenidos en él también heredan la misma <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Para que un elemento invalide una <xref:System.Windows.FrameworkElement.FlowDirection%2A> especificada, debe agregar un cambio de dirección explícito como el segundo <xref:System.Windows.Controls.TextBlock> en el ejemplo anterior que cambia a <xref:System.Windows.FlowDirection.LeftToRight>. Cuando no se define ningún <xref:System.Windows.FrameworkElement.FlowDirection%2A>, se aplica la <xref:System.Windows.FlowDirection.LeftToRight> predeterminada.
 
 En el gráfico siguiente se muestra la salida del ejemplo anterior:
 
@@ -166,7 +166,7 @@ En el gráfico siguiente se muestra la salida del ejemplo anterior con las flech
 
 ![Gráfico que muestra las flechas dibujadas mediante el elemento path.](./media/bidirectional-features-in-wpf-overview/arrows-drawn-path-element.png)
 
-Los <xref:System.Windows.Controls.Image> y <xref:System.Windows.Shapes.Path> son dos ejemplos de cómo usa [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.FlowDirection>. Además de diseñar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos en una dirección específica dentro de un contenedor, <xref:System.Windows.FlowDirection> se puede usar con elementos como <xref:System.Windows.Controls.InkPresenter> que representa la entrada de lápiz en una superficie, <xref:System.Windows.Media.LinearGradientBrush> <xref:System.Windows.Media.RadialGradientBrush>. Siempre que necesite un comportamiento de derecha a izquierda para el contenido que imite un comportamiento de izquierda a derecha, o viceversa, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona esa funcionalidad.
+Los <xref:System.Windows.Controls.Image> y <xref:System.Windows.Shapes.Path> son dos ejemplos de cómo usa [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.FlowDirection>. Además de diseñar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos en una dirección específica dentro de un contenedor, <xref:System.Windows.FlowDirection> se puede usar con elementos como <xref:System.Windows.Controls.InkPresenter> que representa la entrada de lápiz en una superficie, <xref:System.Windows.Media.LinearGradientBrush><xref:System.Windows.Media.RadialGradientBrush>. Siempre que necesite un comportamiento de derecha a izquierda para el contenido que imite un comportamiento de izquierda a derecha, o viceversa, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona esa funcionalidad.
 
 <a name="NumberSubstitution"></a>
 
@@ -174,7 +174,7 @@ Los <xref:System.Windows.Controls.Image> y <xref:System.Windows.Shapes.Path> son
 
 Históricamente, Windows ha admitido la sustitución de números al permitir la representación de distintas formas culturales para los mismos dígitos manteniendo el almacenamiento interno de estos dígitos unificado entre diferentes configuraciones regionales, por ejemplo, los números se almacenan en su valores hexadecimales conocidos, 0x40, 0x41, pero mostrados según el idioma seleccionado.
 
-Esto permite que las aplicaciones procesen valores numéricos sin necesidad de convertirlos de un idioma a otro; por ejemplo, un usuario puede abrir una hoja de cálculo [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] en una ventana en árabe localizada y ver los números con forma de árabe, pero abrirlos en un europeo versión de Windows y ver la representación Europea de los mismos números. Esto también es necesario para otros símbolos, como el símbolo de porcentaje y los separadores de coma, porque suelen acompañar a los números del mismo documento.
+Esto permite que las aplicaciones procesen valores numéricos sin necesidad de convertirlos de un idioma a otro; por ejemplo, un usuario puede abrir una hoja de cálculo de Microsoft Excel en una ventana en árabe traducida y ver los números con forma de árabe, pero abrirlo en un Versión europea de Windows y ver la representación Europea de los mismos números. Esto también es necesario para otros símbolos, como el símbolo de porcentaje y los separadores de coma, porque suelen acompañar a los números del mismo documento.
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] continúa con la tradición y agrega más compatibilidad con esta característica, que aumenta el control del usuario sobre cuándo y cómo usar la sustitución. Aunque esta característica está diseñada para cualquier idioma, es especialmente útil en el contenido bidireccional, donde definir los dígitos de un idioma concreto normalmente constituye un desafío para los desarrolladores de aplicaciones debido a las distintas referencias culturales en las que se puede ejecutar una aplicación.
 
@@ -204,11 +204,11 @@ Esta propiedad especifica el tipo de sustitución de números que se va a realiz
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.European>: los números siempre se representan como dígitos europeos.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: los números se representan mediante los dígitos nacionales de la referencia cultural de número, tal y como se especifica en el <xref:System.Globalization.CultureInfo.NumberFormat%2A> de la referencia cultural.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: los números se representan mediante los dígitos nacionales de la referencia cultural de número, tal y como se especifica en el <xref:System.Globalization.CultureInfo.NumberFormat%2A>de la referencia cultural.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: los números se representan mediante los dígitos tradicionales para la referencia cultural de número. Para la mayoría de las referencias culturales, es lo mismo que <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Sin embargo, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> da como resultado dígitos latinos en algunas referencias culturales árabes, mientras que este valor da como resultado dígitos árabes para todas las referencias culturales árabes.
 
-¿Qué significan esos valores para un desarrollador de contenido bidireccional? En la mayoría de los casos, es posible que el desarrollador solo necesite definir <xref:System.Windows.FlowDirection> y el idioma de cada elemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] textual, por ejemplo `Language="ar-SA"` y la lógica de <xref:System.Windows.Media.NumberSubstitution> se encarga de mostrar los números según el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] correcto. En el ejemplo siguiente se muestra el uso de números árabes y ingleses en una aplicación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] que se ejecuta en una versión árabe de Windows.
+¿Qué significan esos valores para un desarrollador de contenido bidireccional? En la mayoría de los casos, es posible que el desarrollador solo necesite definir <xref:System.Windows.FlowDirection> y el idioma de cada elemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] textual, por ejemplo `Language="ar-SA"` y la lógica de <xref:System.Windows.Media.NumberSubstitution> se encarga de mostrar los números según el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]correcto. En el ejemplo siguiente se muestra el uso de números árabes y ingleses en una aplicación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] que se ejecuta en una versión árabe de Windows.
 
 [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]
 
@@ -220,7 +220,7 @@ El <xref:System.Windows.FlowDirection> era importante en este caso porque al est
 
 **Definición de reglas de sustitución**
 
-En una aplicación real, es posible que tenga que establecer el idioma mediante programación. Por ejemplo, si desea establecer el atributo de `xml:lang` para que sea el mismo que el utilizado por el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del sistema, o puede cambiar el idioma en función del estado de la aplicación.
+En una aplicación real, es posible que tenga que establecer el idioma mediante programación. Por ejemplo, si desea establecer el atributo de `xml:lang` para que sea el mismo que el utilizado por el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]del sistema, o puede cambiar el idioma en función del estado de la aplicación.
 
 Si desea realizar cambios en función del estado de la aplicación, haga uso de otras características proporcionadas por [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 

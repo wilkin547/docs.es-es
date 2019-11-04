@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar a un origen de datos ADO.NET
+title: 'Cómo: Enlazar a un origen de datos ADO.NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-ms.openlocfilehash: dbe34cba8f01320fbf37beea65ed95656e09395c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0b3d7147f45bee5e8abd95bdc51c5f5f695cf830
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697139"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458409"
 ---
-# <a name="how-to-bind-to-an-adonet-data-source"></a>Procedimiento Enlazar a un origen de datos ADO.NET
+# <a name="how-to-bind-to-an-adonet-data-source"></a>Cómo: Enlazar a un origen de datos ADO.NET
 
-En este ejemplo se muestra cómo enlazar un control [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> a un ADO.NET `DataSet`.
+En este ejemplo se muestra cómo enlazar un control de <xref:System.Windows.Controls.ListBox> de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] a un `DataSet`de ADO.NET.
 
 ## <a name="example"></a>Ejemplo
 
@@ -27,7 +27,7 @@ En este ejemplo, se utiliza un objeto `OleDbConnection` para conectar al origen 
 [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
 [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]
 
-A continuación, se puede enlazar la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> del <xref:System.Windows.Controls.ListBox> a @no__t 2 de `DataSet`:
+A continuación, podemos enlazar la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> del <xref:System.Windows.Controls.ListBox> a `BookTable` del `DataSet`:
 
 [!code-xaml[ADODataSet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]
 
@@ -40,5 +40,5 @@ A continuación, se puede enlazar la propiedad <xref:System.Windows.Controls.Ite
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Data.BindingListCollectionView>
-- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

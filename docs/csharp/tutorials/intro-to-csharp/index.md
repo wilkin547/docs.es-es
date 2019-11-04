@@ -3,16 +3,18 @@ title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850769"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423102"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
-Le damos la bienvenida a los tutoriales de introducción a C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador.
+Le damos la bienvenida a los tutoriales de introducción a C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador. Puede obtener información sobre los conceptos básicos de C# en la [serie de vídeos C# 101](https://aka.ms/dotnet3-csharp) antes de comenzar estas lecciones interactivas.
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 En las primeras lecciones se explican los conceptos de C# con la utilización de pequeños fragmentos de código. Aprenderá los datos básicos de la sintaxis de C# y cómo trabajar con tipos de datos como cadenas, números y booleanos. Se trata de material totalmente interactivo, que le permitirá empezar a escribir y ejecutar código en cuestión de minutos. En las primeras lecciones se asume que no dispone de conocimientos previos sobre programación o sobre el lenguaje C#.
 

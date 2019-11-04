@@ -9,25 +9,25 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: ccc89e0e0c8977398ed162b246ff6cdede3b8351
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c4680a3ea9352e94d628e786fc8e4fd71018d00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790876"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458254"
 ---
 # <a name="textbox-styles-and-templates"></a>Estilos y plantillas de TextBox
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.TextBox> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.TextBox>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
   
 ## <a name="textbox-parts"></a>Elementos de cuadro de texto  
- En la tabla siguiente se enumera los elementos con nombre para el <xref:System.Windows.Controls.TextBox> control.  
+ En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.TextBox>.  
   
-|Parte|Tipo|Descripción|  
+|Parte|Type|Descripción|  
 |-|-|-|  
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Un elemento visual que puede contener un <xref:System.Windows.FrameworkElement>. El texto de la <xref:System.Windows.Controls.TextBox> se muestra en este elemento.|  
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visual que puede contener un <xref:System.Windows.FrameworkElement>. El texto del <xref:System.Windows.Controls.TextBox> se muestra en este elemento.|  
   
-## <a name="textbox-states"></a>Estados del cuadro de texto  
- En la tabla siguiente se enumera los estados visuales para el <xref:System.Windows.Controls.TextBox> control.  
+## <a name="textbox-states"></a>Estados de TextBox  
+ En la tabla siguiente se enumeran los Estados visuales del control <xref:System.Windows.Controls.TextBox>.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |----------------------|---------------------------|-----------------|  
@@ -37,12 +37,12 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |ReadOnly|CommonStates|El usuario no puede cambiar el texto en el <xref:System.Windows.Controls.TextBox>.|  
 |Con foco|FocusStates|El control tiene el foco.|  
 |Sin foco|FocusStates|El control no tiene el foco.|  
-|Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
-|InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
-|InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
+|Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
+|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|  
+|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|  
   
-## <a name="textbox-controltemplate-example"></a>Ejemplo de ControlTemplate de cuadro de texto  
- El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.TextBox> control.  
+## <a name="textbox-controltemplate-example"></a>Ejemplo de ControlTemplate de TextBox  
+ En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.TextBox>.  
   
  [!code-xaml[ControlTemplateExamples#TextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#textbox)]  
   
@@ -58,5 +58,5 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

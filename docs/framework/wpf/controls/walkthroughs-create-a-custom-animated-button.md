@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920172"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460055"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Tutoriales: Crear un botón animado personalizado
 Como su nombre sugiere, Windows Presentation Foundation (WPF) es ideal para crear experiencias de presentación enriquecidas para los clientes. En estos tutoriales se muestra cómo personalizar la apariencia y el comportamiento de un botón (incluidas las animaciones). Esta personalización se realiza mediante un estilo y una plantilla para que pueda aplicar este botón personalizado fácilmente a cualquier botón de la aplicación. En la ilustración siguiente se muestra el botón personalizado que creará.
@@ -26,7 +26,7 @@ Como su nombre sugiere, Windows Presentation Foundation (WPF) es ideal para crea
  [Crear un botón mediante el uso de XAML](walkthrough-create-a-button-by-using-xaml.md) Muestra cómo crear botones con comportamiento personalizado mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y Visual Studio.
 
 ## <a name="related-sections"></a>Secciones relacionadas
- [Aplicar estilos y plantillas](styling-and-templating.md) Describe cómo se pueden usar los estilos y las plantillas para determinar la apariencia y el comportamiento de los controles.
+ [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Describe cómo se pueden usar los estilos y las plantillas para determinar la apariencia y el comportamiento de los controles.
 
  [Información general sobre animaciones](../graphics-multimedia/animation-overview.md) Describe cómo se pueden animar los objetos mediante el sistema de animación y control de tiempo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925944"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420839"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Para información sobre las herramientas de .NET Core y el SDK de .NET Core, explore estos tutoriales:
 
@@ -49,6 +49,6 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Pruebas unitarias con MSTest y .NET Core](../testing/unit-testing-with-mstest.md)
 - [Desarrollo de bibliotecas con herramientas multiplataforma](libraries.md)
 - [Hospedaje de .NET Core desde código nativo](netcore-hosting.md)
-- [Creación de una plantilla personalizada para dotnet new](create-custom-template.md)
+- [Creación de una plantilla personalizada para dotnet new](cli-templates-create-item-template.md)
 
 Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).

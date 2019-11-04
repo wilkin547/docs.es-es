@@ -1,25 +1,25 @@
 ---
-title: Procedimiento Configurar notificación de actualizaciones de enlaces
+title: 'Cómo: Configurar la notificación de actualizaciones de enlaces'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa0f9264247f7585c1743e40fd980906556efd0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051993"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454952"
 ---
-# <a name="how-to-set-up-notification-of-binding-updates"></a>Procedimiento Configurar notificación de actualizaciones de enlaces
+# <a name="how-to-set-up-notification-of-binding-updates"></a>Cómo: Configurar la notificación de actualizaciones de enlaces
 En este ejemplo se muestra cómo configurar la notificación cuando se ha actualizado la propiedad de destino del enlace (destino) o el origen del enlace (origen) de un enlace.  
   
 ## <a name="example"></a>Ejemplo  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] genera un evento de actualización de datos cada vez que se actualiza el origen o el destino del enlace. Internamente, este evento se usar para informar a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que debe actualizarse porque se han cambiado los datos enlazados. Tenga en cuenta que para estos eventos funcionen y también para el enlace unidireccional o bidireccional funcionen correctamente, debe implementar la clase de datos mediante el <xref:System.ComponentModel.INotifyPropertyChanged> interfaz. Para más información, consulte [Cómo: Implementar la notificación de cambio de propiedad](how-to-implement-property-change-notification.md).  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] genera un evento de actualización de datos cada vez que se actualiza el origen o el destino del enlace. Internamente, este evento se usar para informar a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que debe actualizarse porque se han cambiado los datos enlazados. Tenga en cuenta que para que estos eventos funcionen y, además, para que el enlace unidireccional o bidireccional funcione correctamente, debe implementar la clase de datos mediante la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>. Para más información, consulte [Cómo: Implementar la notificación de cambio de propiedad](how-to-implement-property-change-notification.md).  
   
- Establecer el <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> o <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> propiedad (o ambos) para `true` en el enlace. El controlador que proporcione para la escucha de este evento debe adjuntarse directamente al elemento donde desee que se le informe de los cambios, o en el contexto de datos general si quiere que se le notifiquen los cambios en el contexto.  
+ Establezca la propiedad <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> o <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> (o ambos) en `true` en el enlace. El controlador que proporcione para la escucha de este evento debe adjuntarse directamente al elemento donde desee que se le informe de los cambios, o en el contexto de datos general si quiere que se le notifiquen los cambios en el contexto.  
   
  Este es un ejemplo que muestra cómo configurar las notificaciones cuando se ha actualizado una propiedad de destino.  
   
@@ -34,5 +34,5 @@ En este ejemplo se muestra cómo configurar la notificación cuando se ha actual
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

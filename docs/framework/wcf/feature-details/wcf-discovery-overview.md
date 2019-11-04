@@ -2,18 +2,18 @@
 title: Información general de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: fce16038b4c9ab65047125be1881be4b86976aee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d19aa72cc5e7217a2135ef919d611c8b2c2f27
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931853"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424518"
 ---
 # <a name="wcf-discovery-overview"></a>Información general de Detección de WCF
 Las API de detección proporcionan un modelo de programación unificado para la detección y la publicación dinámica de servicios Web mediante el protocolo WS-Discovery. Estas API permiten a los servicios publicarse y a los clientes encontrar los servicios publicados. Una vez que un servicio es reconocible, tiene la capacidad de enviar mensajes de anuncio, así como realizar escuchas y responder a solicitudes de detección. Los servicios reconocibles pueden enviar mensajes de Hola para anunciar su llegada a la red, así como mensajes de Adiós para anunciar su salida de la red. Para encontrar un servicio, los clientes envían a una solicitud `Probe` que contiene criterios específicos, como tipos de contratos de servicios, palabras clave y ámbito de red. Los servicios reciben la solicitud `Probe` y determinan si coinciden con los criterios. Si un servicio coincide, responde devolviendo un mensaje `ProbeMatch` al cliente con la información necesaria para ponerse en contacto con el servicio. Los clientes también pueden enviar solicitudes `Resolve` para buscar servicios que pueden haber cambiado la dirección de punto de conexión. Los servicios coincidentes responden a las solicitudes `Resolve` devolviendo un mensaje `ResolveMatch` al cliente.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Modos ad hoc y administrados  
- La API de detección admite dos modos diferentes: Administrado y ad hoc. En el modo administrado, hay un servidor centralizado, denominado proxy de detección, que contiene información sobre los servicios disponibles. El proxy de detección se puede rellenar con información sobre servicios de diferentes maneras. Por ejemplo, los servicios pueden enviar mensajes de anuncio durante el inicio al proxy de detección, o el proxy puede leer datos de una base de datos o un archivo de configuración para determinar qué servicios están disponibles. El modo en que se rellena el proxy de detección depende por completo del desarrollador. Los clientes utilizan el proxy de detección para recuperar información sobre servicios disponibles. Cuando un cliente busca un servicio, envía un mensaje `Probe` al proxy de detección y el proxy determina si alguno de los servicios que conoce coincide con el servicio que busca el cliente. Si hay coincidencias, el proxy de detección devuelve una respuesta `ProbeMatch` al cliente. A continuación, el cliente puede ponerse en contacto con el servicio de forma directa a través de la información de servicio devuelta por el proxy. El principio básico del modo administrado es que las solicitudes de detección se envían en modo de unidifusión a una autoridad, el proxy de detección. El sistema .NET Framework contiene componentes clave que le permiten compilar su propio proxy. Los clientes y los servicios pueden buscar el proxy a través de varios métodos:  
+ Las API de detección admiten dos modos diferentes: administrado y ad hoc. En el modo administrado, hay un servidor centralizado, denominado proxy de detección, que contiene información sobre los servicios disponibles. El proxy de detección se puede rellenar con información sobre servicios de diferentes maneras. Por ejemplo, los servicios pueden enviar mensajes de anuncio durante el inicio al proxy de detección, o el proxy puede leer datos de una base de datos o un archivo de configuración para determinar qué servicios están disponibles. El modo en que se rellena el proxy de detección depende por completo del desarrollador. Los clientes utilizan el proxy de detección para recuperar información sobre servicios disponibles. Cuando un cliente busca un servicio, envía un mensaje `Probe` al proxy de detección y el proxy determina si alguno de los servicios que conoce coincide con el servicio que busca el cliente. Si hay coincidencias, el proxy de detección devuelve una respuesta `ProbeMatch` al cliente. A continuación, el cliente puede ponerse en contacto con el servicio de forma directa a través de la información de servicio devuelta por el proxy. El principio básico del modo administrado es que las solicitudes de detección se envían en modo de unidifusión a una autoridad, el proxy de detección. El sistema .NET Framework contiene componentes clave que le permiten compilar su propio proxy. Los clientes y los servicios pueden buscar el proxy a través de varios métodos:  
   
 - El proxy puede responder a los mensajes ad hoc.  
   
@@ -30,8 +30,7 @@ Las API de detección proporcionan un modelo de programación unificado para la 
  Para hacer un servicio reconocible, debe agregarse <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> al host de servicio, así como un extremo de detección para especificar dónde realizar escuchas para los mensajes de detección. El siguiente ejemplo de código muestra cómo se puede modificar un servicio auto-hospedado para hacerlo reconocible.  
   
 ```csharp  
-Uri baseAddress = new Uri(string.Format("http://{0}:8000/discovery/scenarios/calculatorservice/{1}/",  
-        System.Net.Dns.GetHostName(), Guid.NewGuid().ToString()));
+Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
 
 // Create a ServiceHost for the CalculatorService type.
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -62,8 +61,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
  De forma predeterminada, la publicación del servicio no manda mensajes de anuncio. El servicio se debe configurar para mandar mensajes de anuncio. Esto proporciona una flexibilidad adicional a los escritores del servicio, ya que pueden anunciar el servicio de forma independiente de la realización de escuchas de mensajes de detección. El anuncio de servicio también se puede usar como mecanismo de registro de los servicios con un proxy de detección u otros registros del servicio. El siguiente código muestra cómo configurar un servicio para enviar mensajes de anuncio en un enlace de UDP.  
   
 ```csharp  
-Uri baseAddress = new Uri(string.Format("http://{0}:8000/discovery/scenarios/calculatorservice/{1}/",
-        System.Net.Dns.GetHostName(), Guid.NewGuid().ToString()));
+Uri baseAddress = new Uri($"http://{System.Net.Dns.GetHostName()}:8000/discovery/scenarios/calculatorservice/{Guid.NewGuid().ToString()}/");
 
 // Create a ServiceHost for the CalculatorService type.
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -155,7 +153,7 @@ class Client
   
 2. Usar un proxy de detección para comunicarse en nombre del servicio  
   
- Windows Server AppFabric tiene una característica de inicio automático que permite que un servicio se inicie antes de recibir ningún mensaje. Con este inicio automático establecido, un servicio hospedado por IIS/WAS se puede configurar como detectable. Para obtener más información acerca de la característica de inicio automático, consulte [característica de inicio automático de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Además de activar la característica de inicio automático, debe configurar el servicio para la detección. Para obtener más información, consulte [Cómo Agregue mediante programación la detectabilidad a un servicio WCF y el](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)cliente que[configura la detección en un archivo de configuración](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric tiene una característica de inicio automático que permite que un servicio se inicie antes de recibir ningún mensaje. Con este inicio automático establecido, un servicio hospedado por IIS/WAS se puede configurar como detectable. Para obtener más información acerca de la característica de inicio automático, consulte [característica de inicio automático de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Además de activar la característica de inicio automático, debe configurar el servicio para la detección. Para obtener más información, consulte [Cómo: agregar detectabilidad a un servicio WCF y configurar la](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[detección en un archivo de configuración](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)mediante programación.  
   
  Se puede usar un proxy de detección para comunicarse en nombre del servicio WCF cuando el servicio no se está ejecutando. El proxy puede escuchar para sondear o resolver los mensajes, y responder al cliente. El cliente puede entonces enviar los mensajes directamente al servicio. Cuando el cliente envíe un mensaje al servicio, se creará una instancia del mismo para responderlo. Para obtener más información sobre la implementación de un proxy de detección, vea [implementación de un proxy de detección](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

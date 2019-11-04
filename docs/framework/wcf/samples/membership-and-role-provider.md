@@ -2,12 +2,12 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039434"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424668"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio puede usar la pertenencia a ASP.NET y los proveedores de roles para autenticar y autorizar a los clientes.  
@@ -69,7 +69,7 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
 </system.web>  
 ```  
   
- El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para `SubjectName` el que `findValue` el atributo del elemento de configuración [ \<> de serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Además, el comportamiento especifica que el proveedor de pertenencia de ASP.NET realiza la autenticación de los pares de nombre de usuario y contraseña mediante el proveedor de roles ASP.NET especificando los nombres definidos para los dos proveedores.  
+ El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para la `SubjectName` que el atributo `findValue` en el elemento de configuración [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Además, el comportamiento especifica que el proveedor de pertenencia de ASP.NET realiza la autenticación de los pares de nombre de usuario y contraseña mediante el proveedor de roles ASP.NET especificando los nombres definidos para los dos proveedores.  
   
 ```xml  
 <system.serviceModel>  
@@ -150,9 +150,9 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
   
 4. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5. En el servidor, abra una Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y `setup.bat service`ejecute. Al `setup.bat` ejecutar con `service` el argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
+5. En el servidor, abra una Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecute `setup.bat service`. Al ejecutar `setup.bat` con el argumento `service`, se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-6. Edite el archivo Web. config para reflejar el nuevo nombre del `findValue` certificado (en el atributo [ \<del > serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
+6. Edite el archivo Web. config para que refleje el nuevo nombre del certificado (en el atributo `findValue` del [> de\<serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es igual que el nombre de dominio completo del equipo.  
   
 7. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
@@ -167,7 +167,7 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
 - Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
 > [!NOTE]
-> Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Archivo de instalación por lotes  
  El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.  
@@ -180,7 +180,7 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
   
      El certificado se almacena en el almacén My (Personal), en la ubicación de almacenamiento LocalMachine.  
   
-    ```  
+    ```console
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -194,6 +194,6 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
   
      Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   
-    ```  
+    ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  

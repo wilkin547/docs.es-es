@@ -4,18 +4,18 @@ description: En este tutorial se muestra cómo compilar un modelo de regresión 
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 298dd4aa97518bcfdb0c5c4f00e0135a328b3b9a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774421"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459163"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Predicción de precios mediante regresión con ML.NET
 
 En este tutorial se muestra cómo compilar un [modelo de regresión](../resources/glossary.md#regression) con ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > * Preparar y entender los datos
@@ -41,7 +41,7 @@ En este tutorial, aprenderá a:
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 
-1. Descargue los conjuntos de datos [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) y [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) y guárdelos en la carpeta *Datos* que ha creado en el paso anterior. Usaremos estos conjuntos de datos para entrenar el modelo de aprendizaje automático y, después, evaluar su precisión. Estos conjuntos de datos proceden originalmente del [conjunto de datos NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. Descargue los conjuntos de datos [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) y [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) y guárdelos en la carpeta *Datos* que ha creado en el paso anterior. Usaremos estos conjuntos de datos para entrenar el modelo de aprendizaje automático y, después, evaluar su precisión. Estos conjuntos de datos proceden originalmente del [conjunto de datos NYC TLC Taxi Trip](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en cada uno de los archivos \*.csv y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
@@ -63,7 +63,7 @@ El conjunto de datos proporcionado contiene las columnas siguientes:
 
 Cree clases para los datos de entrada y las predicciones:
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *TaxiTrip.cs*. A continuación, seleccione el botón **Agregar**.
 1. Agregue las siguientes directivas `using` al nuevo archivo:
 
@@ -138,7 +138,7 @@ El algoritmo que entrena el modelo requiere características **numéricas**, por
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-En el último paso para la preparación de los datos, se combinan todas las columnas de característica en la columna **Características** mediante la clase de transformación `mlContext.Transforms.Concatenate`. De forma predeterminada, un algoritmo de aprendizaje solo procesa las características de la columna **Features**. Agregue el siguiente código:
+En el último paso para la preparación de los datos, se combinan todas las columnas de característica en la columna **Características** mediante la clase de transformación `mlContext.Transforms.Concatenate`. De forma predeterminada, un algoritmo de aprendizaje solo procesa las características de la columna **Features**. Agregue el código siguiente:
 
 [!code-csharp[ColumnConcatenatingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
@@ -150,7 +150,7 @@ Anexe la tarea de aprendizaje automático [FastTreeRegressionTrainer](xref:Micro
 
 [!code-csharp[FastTreeRegressionTrainer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
-## <a name="train-the-model"></a>Entrenamiento del modelo
+## <a name="train-the-model"></a>Entrenar el modelo
 
 Ajuste el modelo a la `dataview` de entrenamiento y devuelva el modelo entrenado agregando la siguiente línea de código en el método `Train()`:
 
@@ -162,7 +162,7 @@ Devuelva el modelo entrenado con la siguiente línea de código en el método `T
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
-## <a name="evaluate-the-model"></a>Evaluación del modelo
+## <a name="evaluate-the-model"></a>Evaluar el modelo
 
 Luego evalúe el rendimiento del modelo con los datos de prueba de control de calidad y validación. Cree el método `Evaluate()`, justo después de `Train()`, con el código siguiente:
 
@@ -266,11 +266,11 @@ Para mostrar la tarifa prevista del viaje especificado, agregue el código sigui
 
 Ejecute el programa para ver la tarifa de taxi predicha para su caso de prueba.
 
-Felicidades. Ya ha creado correctamente un modelo de aprendizaje automático para predecir tarifas de viajes en taxi, ha evaluado su precisión y lo ha usado para hacer predicciones. Puede encontrar el código fuente de este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) de GitHub.
+¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para predecir tarifas de viajes en taxi, ha evaluado su precisión y lo ha usado para hacer predicciones. Puede encontrar el código fuente de este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) de GitHub.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 
 > [!div class="checklist"]
 >

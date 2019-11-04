@@ -4,17 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4e4b5822306fa8f4e6b4437f4a1bef92b53a86b9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046130"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458024"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
+
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
   
- .NET Framework es muy productivo en la compilación de aplicaciones. Gracias a unos lenguajes potentes y seguros, así como a una amplia colección de bibliotecas, la compilación de aplicaciones resulta muy fructífera. Sin embargo, una gran productividad conlleva responsabilidad. Use todas las posibilidades de .NET Framework, pero prepárese para ajustar el rendimiento del código cuando sea necesario. 
+.NET Framework es muy productivo en la compilación de aplicaciones. Gracias a unos lenguajes potentes y seguros, así como a una amplia colección de bibliotecas, la compilación de aplicaciones resulta muy fructífera. Sin embargo, una gran productividad conlleva responsabilidad. Use todas las posibilidades de .NET Framework, pero prepárese para ajustar el rendimiento del código cuando sea necesario. 
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Por qué el rendimiento del nuevo compilador afecta a su aplicación  
  El equipo .NET Compiler Platform («Roslyn») ha reescrito los compiladores de C# y Visual Basic en código administrado con el objetivo de proporcionar nuevas API para el modelado y análisis de código, la compilación de herramientas y la habilitación de experiencias, y también para permitir una experiencia mucho más enriquecedora en cuanto a código en Visual Studio. La reescritura de los compiladores y la compilación de experiencias de Visual Studio en los nuevos compiladores ha revelado información útil sobre el rendimiento que se puede emplear en cualquier aplicación de .NET Framework de gran tamaño o en cualquier aplicación que procese una gran cantidad de datos. No es necesario tener conocimientos sobre compiladores para beneficiarse de la información y los ejemplos del compilador de C#. 
@@ -31,17 +32,17 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
 ### <a name="fact-1-dont-prematurely-optimize"></a>Hecho 1: No optimice prematuramente  
  Escribir código más complejo de lo necesario conlleva costes de mantenimiento, depuración y pulido. Los programadores experimentados saben intuitivamente cómo resolver problemas de código y cómo escribir un código más eficaz. Sin embargo, a veces optimizan el código de forma prematura. Por ejemplo, usan una tabla hash cuando con una simple matriz bastaría, o utilizan un almacenamiento en caché complicado que puede consumir memoria en vez de simplemente recalcular los valores. Incluso los programadores experimentados deben probar el rendimiento y analizar el código cuando se detectan problemas. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Hecho 2: Si no mide, conjetura  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Hecho 2: Si no realiza mediciones, solo tiene conjeturas  
  Los perfiles y las medidas no mienten. Los perfiles muestran si la CPU está totalmente cargada o si hay un bloqueo en E/S de disco. Los perfiles indican el tipo y la cantidad de memoria que se está asignando y si la CPU emplea mucho tiempo en la [recolección de elementos no utilizados](../../standard/garbage-collection/index.md). 
   
  Establezca objetivos de rendimiento para los escenarios o las experiencias de cliente claves de la aplicación y escriba pruebas para medir el rendimiento. Investigue los errores de las pruebas mediante el método científico: use perfiles como guía, cree hipótesis sobre el origen del problema y pruebe esas hipótesis con un experimento o cambio de código. Establezca una línea base de medidas de rendimiento a lo largo del tiempo con pruebas periódicas para así aislar los cambios que causan regresiones en el rendimiento. Si enfoca de manera rigurosa el trabajo de rendimiento, evitará perder el tiempo con actualizaciones de código que no necesita. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Unas herramientas buenas marcan la diferencia  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Las herramientas de calidad marcan la diferencia  
  Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella. Microsoft incluye una variedad de herramientas de rendimiento como [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) y [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView es una herramienta gratuita muy potente que sirve para centrarse en los problemas con raíces profundas como, por ejemplo, E/S de disco, eventos de GC y memoria. Puede capturar eventos de [Seguimiento de eventos para Windows](../wcf/samples/etw-tracing.md) (ETW) relacionados con el rendimiento y ver fácilmente información por aplicación, por proceso, por pila y por subproceso. PerfView muestra la cantidad y el tipo de memoria que asigna la aplicación, así como las funciones o pilas de llamadas que contribuyen en determinada medida a las asignaciones de memoria. Para más información, vea los completos artículos de ayuda, las demostraciones y los vídeos que se incluyen con la herramienta (como los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) de Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Hecho 4: La clave son las asignaciones.  
+### <a name="fact-4-its-all-about-allocations"></a>Hecho 4: La clave está en las asignaciones  
  Podría pensarse que la compilación de una aplicación de .NET Framework que muestre una buena capacidad de respuesta depende de la utilización de los algoritmos —como usar una ordenación rápida en vez de una de burbuja—, pero no es así. El factor de mayor peso a la hora de compilar una aplicación diligente es la asignación de memoria, sobre todo cuando la aplicación es muy grande o procesa grandes cantidades de datos. 
   
  Casi todo el trabajo de compilar las experiencias de IDE con las nuevas API de compilador se invirtió en evitar las asignaciones y administrar las estrategias de almacenamiento en caché. El seguimiento de PerfView muestra que el rendimiento de los nuevos compiladores de C# y Visual Basic rara vez está asociado a la CPU. Los compiladores pueden estar asociados a E/S al leer miles o millones de líneas de código, al leer metadatos o al emitir código generado. Los retrasos del subproceso de la interfaz de usuario se deben prácticamente todos a la recolección de elementos no utilizados. La GC de .NET Framework está ajustada para optimizar el rendimiento y una gran parte de su trabajo se realiza mientras se ejecuta el código de la aplicación. Pero una única asignación puede desencadenar una costosa recolección [gen2](../../standard/garbage-collection/fundamentals.md) y detener todos los subprocesos. 
@@ -195,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- La primera versión de `WriteFormattedDocComment()` asignaba una matriz, varias subcadenas y una subcadena recortada junto con una matriz `params` vacía. También se ha comprobado "///". El código revisado solo usa la indización y no realiza ninguna asignación. Busca el primer carácter que no sea un espacio en blanco y, a continuación, comprueba el carácter carácter a carácter para ver si la cadena comienza con "///". El nuevo código usa `IndexOfFirstNonWhiteSpaceChar` en lugar de <xref:System.String.TrimStart%2A> para devolver el primer índice (después de un índice de inicio especificado) en el que se produce un carácter que no es un espacio en blanco. La corrección no está completa, pero sirve para comprobar cómo se aplican correcciones similares para obtener una solución completa. Al aplicar este enfoque en todo el código, se pueden quitar todas las asignaciones en `WriteFormattedDocComment()`. 
+ La primera versión de `WriteFormattedDocComment()` asignaba una matriz, varias subcadenas y una subcadena recortada junto con una matriz `params` vacía. También se ha comprobado "///". El código revisado solo usa la indización y no realiza ninguna asignación. Busca el primer carácter que no sea un espacio en blanco y, a continuación, comprueba el carácter carácter a carácter para ver si la cadena comienza con "///". El nuevo código utiliza `IndexOfFirstNonWhiteSpaceChar` en lugar de <xref:System.String.TrimStart%2A> para devolver el primer índice (después de un índice de inicio especificado) en el que se produce un carácter que no es un espacio en blanco. La corrección no está completa, pero sirve para comprobar cómo se aplican correcciones similares para obtener una solución completa. Al aplicar este enfoque en todo el código, se pueden quitar todas las asignaciones en `WriteFormattedDocComment()`. 
   
  **Ejemplo 4: StringBuilder**  
   
@@ -278,7 +279,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ y lambdas  
 Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejemplo de una característica de productividad. Sin embargo, su uso puede tener un impacto significativo en el rendimiento a lo largo del tiempo, y es posible que tenga que volver a escribir el código.
   
- **Ejemplo 5: Lambdas, List\<t > y IEnumerable\<T >**  
+ **Ejemplo 5: lambdas, List\<T> e IEnumerable\<T>**  
   
  En este ejemplo se usa [LINQ y código de estilo funcional](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
   
@@ -304,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- En la primera línea, la [expresión](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda se [cierra sobre](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) la variable `name`local. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
+ En la primera línea, la [expresión lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra sobre](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) la variable local `name`. Esto significa que, además de asignar un objeto para el [delegado](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`. El compilador genera código como el siguiente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -408,7 +409,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Como puede ver, el nuevo código con almacenamiento en caché tiene un campo `SyntaxTree` denominado `cachedResult`. Cuando este campo es null, `GetSyntaxTreeAsync()` hace el trabajo y guarda el resultado en la caché. `GetSyntaxTreeAsync()`Devuelve el `SyntaxTree` objeto. El problema es que cuando se tiene una función `async` de tipo `Task<SyntaxTree>`, y se devuelve un valor de tipo `SyntaxTree`, el compilador emite código para asignar una tarea que contenga el resultado (mediante `Task<SyntaxTree>.FromResult()`). La tarea se marca como completada y el resultado está disponible de inmediato. En el código de los nuevos compiladores, la aparición de objetos <xref:System.Threading.Tasks.Task> que ya se habían completado se producía tan a menudo que corregir estas asignaciones mejoró sensiblemente la respuesta. 
+ Como puede ver, el nuevo código con almacenamiento en caché tiene un campo `SyntaxTree` denominado `cachedResult`. Cuando este campo es null, `GetSyntaxTreeAsync()` hace el trabajo y guarda el resultado en la caché. `GetSyntaxTreeAsync()` devuelve el objeto `SyntaxTree`. El problema es que cuando se tiene una función `async` de tipo `Task<SyntaxTree>`, y se devuelve un valor de tipo `SyntaxTree`, el compilador emite código para asignar una tarea que contenga el resultado (mediante `Task<SyntaxTree>.FromResult()`). La tarea se marca como completada y el resultado está disponible de inmediato. En el código de los nuevos compiladores, la aparición de objetos <xref:System.Threading.Tasks.Task> que ya se habían completado se producía tan a menudo que corregir estas asignaciones mejoró sensiblemente la respuesta. 
   
  **Corrección para el ejemplo 6**  
   

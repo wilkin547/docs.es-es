@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919724"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421097"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 
@@ -171,21 +171,21 @@ A menudo, los complementos proporcionan varias interfaces de usuario para que se
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Complementos y aplicaciones del explorador XAML
 
-Hasta ahora, en los ejemplos, la aplicación host ha sido una aplicación independiente instalada. Pero las aplicaciones del explorador XAML (XBAP) también pueden hospedar complementos, aunque con los siguientes requisitos adicionales de compilación e implementación:
+Hasta ahora, en los ejemplos, la aplicación host ha sido una aplicación independiente instalada. Sin embargo, las aplicaciones de explorador XAML (XBAP) también pueden hospedar complementos, aunque con los siguientes requisitos adicionales de compilación e implementación:
 
-- El manifiesto de aplicación [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] se debe configurar de forma especial para descargar la canalización (carpetas y ensamblados) y el ensamblado del complemento en la caché de la aplicación ClickOnce en el equipo cliente, en la misma carpeta que la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+- El manifiesto de aplicación de XBAP se debe configurar de forma especial para descargar la canalización (carpetas y ensamblados) y el ensamblado del complemento en la caché de la aplicación ClickOnce en el equipo cliente, en la misma carpeta que la aplicación XBAP.
 
-- El código [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] para detectar y cargar complementos debe usar la caché de la aplicación ClickOnce para la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] como la canalización y la ubicación del complemento.
+- El código de XBAP para detectar y cargar complementos debe usar la caché de la aplicación ClickOnce para el XBAP como la canalización y la ubicación del complemento.
 
-- La [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debe cargar el complemento en un contexto de seguridad especial si el complemento hace referencia a archivos dinámicos que se encuentran en el sitio de origen; cuando los hospedan [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], los complementos solo pueden hacer referencia a los archivos dinámico que se encuentran en el sitio de origen de la aplicación host.
+- El XBAP debe cargar el complemento en un contexto de seguridad especial si el complemento hace referencia a archivos dinámicos que se encuentran en el sitio de origen. Cuando se hospedan en XBAP, los complementos solo pueden hacer referencia a archivos dinámicos que se encuentran en el sitio de origen de la aplicación host.
 
 Estas tareas se describen con detalle en las subsecciones siguientes.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configuración de la canalización y el complemento para la implementación de ClickOnce
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se descargan y se ejecutan desde una carpeta segura en la caché de implementación de ClickOnce. Para que una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hospede un complemento, la canalización y el ensamblado del complemento también se debe descargar en la carpeta segura. Para lograrlo, es preciso que configure el manifiesto de aplicación para incluir tanto la canalización como el ensamblado del complemento en la descarga. Esto se realiza más fácilmente en Visual Studio, aunque la canalización y el ensamblado del complemento deben estar en la carpeta raíz del proyecto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host para que Visual Studio detecte los ensamblados de canalización.
+Las XBAP se descargan y se ejecutan desde una carpeta segura en la caché de implementación de ClickOnce. Para que una aplicación XBAP hospede un complemento, la canalización y el ensamblado del complemento también se deben descargar en la carpeta Safe. Para lograrlo, es preciso que configure el manifiesto de aplicación para incluir tanto la canalización como el ensamblado del complemento en la descarga. Esto se realiza más fácilmente en Visual Studio, aunque la canalización y el ensamblado del complemento deben estar en la carpeta raíz del proyecto de XBAP del host para que Visual Studio detecte los ensamblados de canalización.
 
-Por consiguiente, el primer paso es crear el ensamblado de la canalización y del complemento para la raíz del proyecto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] estableciendo la salida de la compilación de cada proyecto de ensamblado de canalización y ensamblado de complemento. La siguiente tabla muestra las rutas de la salida de la compilación de los proyectos de ensamblado de canalización el proyecto de ensamblado de complemento que se encuentran en la misma carpeta de solución y raíz que el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host.
+Por lo tanto, el primer paso consiste en compilar la canalización y el ensamblado del complemento en la raíz del proyecto de XBAP mediante el establecimiento de los resultados de la compilación de cada ensamblado de canalización y proyectos de ensamblado de complementos. En la tabla siguiente se muestran las rutas de acceso de los resultados de compilación para proyectos de ensamblado de canalización y el proyecto de ensamblado de complemento que se encuentran en la misma solución y carpeta raíz que el proyecto de XBAP de host.
 
 Tabla 1: Crear rutas de la salida de la compilación para los ensamblados de canalización que hospeda una aplicación XBAP
 
@@ -197,21 +197,21 @@ Tabla 1: Crear rutas de la salida de la compilación para los ensamblados de can
 |Adaptador del lado del host|`..\HostXBAP\HostSideAdapters\`|
 |Complemento|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-El siguiente paso consiste en especificar los ensamblados de canalización y el ensamblado del complemento como [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] archivos de contenido en Visual Studio mediante el procedimiento siguiente:
+El siguiente paso consiste en especificar los ensamblados de canalización y el ensamblado de complemento como los archivos de contenido de XBAP en Visual Studio haciendo lo siguiente:
 
 1. Incluir Incluso el ensamblado de la canalización y del complemento en el proyecto haciendo clic con el botón derecho en cada carpeta de la canalización en el Explorador de soluciones y elegir **Incluir en el proyecto**.
 
 2. Establecer el **acción de compilación** de cada ensamblado de canalización y ensamblado de complemento en **Contenido** desde la ventana **Propiedades**.
 
-El paso final es configurar el manifiesto de aplicación para incluir los archivos del ensamblado de la canalización como el archivo del ensamblado del complemento en la descarga. Los archivos deben encontrarse en carpetas en la raíz de la carpeta en la caché de ClickOnce que ocupa la aplicación [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. La configuración se puede lograr en Visual Studio haciendo lo siguiente:
+El paso final es configurar el manifiesto de aplicación para incluir los archivos del ensamblado de la canalización como el archivo del ensamblado del complemento en la descarga. Los archivos deben encontrarse en carpetas en la raíz de la carpeta en la caché de ClickOnce que ocupa la aplicación XBAP. La configuración se puede lograr en Visual Studio haciendo lo siguiente:
 
-1. Haga clic con el botón derecho en el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], haga clic en **Propiedades**, **Publicar** y, después, haga clic en el botón **Archivos de aplicación**.
+1. Haga clic con el botón derecho en el proyecto XBAP, haga clic en **propiedades**, haga clic en **publicar**y, después, haga clic en el botón **archivos de aplicación** .
 
 2. En el cuadro de diálogo **Archivos de aplicación**, establezca el **estado de la publicación** de la DLL de cada canalización y complemento en **Incluir (automático)** y establezca el **grupo de descarga** de la DLL de cada canalización y complemento en **(Requerido)** .
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uso de la canalización y del complemento de la base de aplicación
 
-Cuando la canalización y el complemento están configurados para la implementación ClickOnce, se descargan en la misma carpeta de caché ClickOnce que el [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar la canalización y el complemento de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], el código de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debe obtenerlos de la base de la aplicación. Los distintos tipos y miembros del modelo de complementos de .NET Framework para usar canalizaciones y complementos proporcionan una compatibilidad especial para este escenario. En primer lugar, la ruta de acceso se identifica mediante el valor de enumeración <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>. Este valor se utiliza en las sobrecargas de los miembros del complemento pertinentes para usar canalizaciones que incluyan los siguientes:
+Cuando la canalización y el complemento están configurados para la implementación ClickOnce, se descargan en la misma carpeta de caché ClickOnce que la aplicación XBAP. Para usar la canalización y el complemento desde el XBAP, el código de XBAP debe obtenerlos de la base de la aplicación. Los distintos tipos y miembros del modelo de complementos de .NET Framework para usar canalizaciones y complementos proporcionan una compatibilidad especial para este escenario. En primer lugar, la ruta de acceso se identifica mediante el valor de enumeración <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>. Este valor se utiliza en las sobrecargas de los miembros del complemento pertinentes para usar canalizaciones que incluyan los siguientes:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

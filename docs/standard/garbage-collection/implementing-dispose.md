@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106887"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424327"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementar un método Dispose
 
 El método <xref:System.IDisposable.Dispose%2A> se implementa para liberar recursos no administrados que la aplicación usa. El recolector de elementos no utilizados de .NET no asigna ni libera memoria no administrada.  
   
-El modelo para desechar un objeto, lo que se conoce como [modelo de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md), sirve para imponer orden sobre la duración de un objeto. El patrón de Dispose se utiliza solo con los objetos que tienen acceso a recursos no administrados, como identificadores de archivo y de canalización, identificadores de registro, identificadores de espera o punteros a bloques de memoria sin administrar. Esto se debe a que el recolector de elementos no utilizados es muy eficaz a la hora de reclamar objetos administrados no usados, aunque no puede reclamar objetos no administrados.  
+El modelo para desechar un objeto, lo que se conoce como [modelo de Dispose](implementing-dispose.md), sirve para imponer orden sobre la duración de un objeto. El patrón de Dispose se utiliza solo con los objetos que tienen acceso a recursos no administrados, como identificadores de archivo y de canalización, identificadores de registro, identificadores de espera o punteros a bloques de memoria sin administrar. Esto se debe a que el recolector de elementos no utilizados es muy eficaz a la hora de reclamar objetos administrados no usados, aunque no puede reclamar objetos no administrados.  
   
 El patrón de Dispose tiene dos variaciones:  
   
@@ -169,4 +167,4 @@ En el ejemplo siguiente se muestra el patrón de Dispose para una clase derivada
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Cómo: Definir y usar clases y structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Patrón de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Patrón de Dispose](implementing-dispose.md)

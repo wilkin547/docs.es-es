@@ -1,33 +1,33 @@
 ---
-title: Procedimiento Aplicar un FocusVisualStyle a un control
+title: 'Cómo: Aplicar FocusVisualStyle a un control'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b44330ee7554f953389556bd62ff49db120b5db9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051330"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459809"
 ---
-# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Procedimiento Aplicar un FocusVisualStyle a un control
-En este ejemplo se muestra cómo crear un estilo visual de foco en recursos y aplicar el estilo a un control, mediante el <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad.  
+# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Cómo: Aplicar FocusVisualStyle a un control
+En este ejemplo se muestra cómo crear un estilo visual de foco en los recursos y cómo aplicar el estilo a un control mediante la propiedad <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se define un estilo que crea la composición del control adicional que solo se aplica cuando ese control recibe el foco del teclado en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Esto se logra definiendo un estilo con un <xref:System.Windows.Controls.ControlTemplate>, a continuación, hacer referencia a ese estilo como un recurso al establecer el <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad.  
+ En el ejemplo siguiente se define un estilo que crea una composición de control adicional que solo se aplica cuando ese control tiene el foco de teclado en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Esto se logra definiendo un estilo con un <xref:System.Windows.Controls.ControlTemplate>y haciendo referencia a ese estilo como un recurso al establecer la propiedad <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
   
- Un rectángulo externo que parece un borde se coloca fuera del área rectangular. A menos que modifique en caso contrario, el tamaño del estilo usa la <xref:System.Windows.FrameworkElement.ActualHeight%2A> y <xref:System.Windows.FrameworkElement.ActualWidth%2A> del control rectangular donde se aplica el estilo visual de foco. Este ejemplo establece los valores negativos para la <xref:System.Windows.FrameworkElement.Margin%2A> para que el borde parezca ligeramente fuera del control con el foco.  
+ Un rectángulo externo similar a un borde se coloca fuera del área rectangular. A menos que se modifique de otro modo, el tamaño del estilo utiliza el <xref:System.Windows.FrameworkElement.ActualHeight%2A> y <xref:System.Windows.FrameworkElement.ActualWidth%2A> del control rectangular donde se aplica el estilo visual de foco. Este ejemplo establece los valores negativos del <xref:System.Windows.FrameworkElement.Margin%2A> para que el borde aparezca ligeramente fuera del control con foco.  
   
  [!code-xaml[FEFocusVisualStyle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
   
- Un <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> es aditiva para cualquier estilo de plantilla de control que se incluye desde un estilo explícito o un estilo de tema; el estilo de un control principal todavía se puede crear mediante el uso de un <xref:System.Windows.Controls.ControlTemplate> y si ese estilo se establece en el <xref:System.Windows.FrameworkElement.Style%2A> propiedad.  
+ Un <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> es aditivo para cualquier estilo de plantilla de control que proceda de un estilo explícito o de un estilo de tema. el estilo principal de un control todavía se puede crear con una <xref:System.Windows.Controls.ControlTemplate> y establecer ese estilo en la propiedad <xref:System.Windows.FrameworkElement.Style%2A>.  
   
- Los estilos visuales deben usarse de forma coherente en un tema o una interfaz de usuario, el foco en lugar de usar otro diferente para cada elemento puede recibir el foco. Para obtener más información, consulte [aplicar estilo a controles y FocusVisualStyle foco](styling-for-focus-in-controls-and-focusvisualstyle.md).  
+ Los estilos visuales de foco deben usarse de forma coherente en un tema o una interfaz de usuario, en lugar de usar uno diferente para cada elemento que pueda recibir el foco. Para obtener más información, vea [aplicar estilo a los controles y FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
+- [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Aplicar estilo a los controles al recibir el foco y FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

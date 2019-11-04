@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929039"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423991"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalización de la serialización de estructuras
 
@@ -26,7 +26,7 @@ A veces, las reglas de serialización predeterminadas para las estructuras no es
 
 **✔️ USE**  solo `LayoutKind.Explicit` en la serialización cuando la estructura nativa tenga un diseño explícito, como una unión.
 
-**❌ EVITE** usar `LayoutKind.Explicit` al serializar estructuras en plataformas que no sean Windows. El entorno de ejecución de .NET Core no admite pasar estructuras explícitas por valor a funciones nativas en sistemas que no sean Windows Intel o AMD de 64 bits. Sin embargo, el entorno de ejecución admite pasar estructuras explícitas por referencia en todas las plataformas.
+**❌ evitar** el uso de `LayoutKind.Explicit` al calcular las referencias de estructuras en plataformas que no son de Windows si necesita tener como destino los tiempos de ejecución antes de .net Core 3,0. El tiempo de ejecución de .NET Core antes 3,0 no admite pasar estructuras explícitas por valor a funciones nativas en sistemas Intel o AMD de 64 bits que no son de Windows. Sin embargo, el entorno de ejecución admite pasar estructuras explícitas por referencia en todas las plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalización de la serialización de campos booleanos
 

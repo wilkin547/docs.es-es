@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353749"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422208"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -54,7 +54,7 @@ Los tipos simples se diferencian de otros tipos struct en que permiten determina
 
 - Las expresiones constantes, cuyos operandos son todas constantes de tipo simple, se evalúan en tiempo de compilación.
 
-Para más información, vea la sección [Tipos simples](~/_csharplang/spec/types.md#simple-types) de la [Especificación del lenguaje C#](../language-specification/index.md).
+Para más información, vea la sección [Tipos simples](~/_csharplang/spec/types.md#simple-types) de la [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="initializing-value-types"></a>Inicialización de tipos de valor
 
@@ -107,6 +107,6 @@ Para información sobre cómo aplicar formato al resultado de los tipos numéric
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Tipos](types.md)
+- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [Tipos de referencia](reference-types.md)
 - [Tipos de valores que aceptan valores NULL](../../programming-guide/nullable-types/index.md)

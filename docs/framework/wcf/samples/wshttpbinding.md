@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 7751e40762a99711302681f28a88d451087e4980
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5a2d190fe7dfd5305b47da0e6e67de822cfd695b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044505"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424457"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 Este ejemplo muestra cómo implementar un servicio típico y un cliente típico mediante Windows Communication Foundation (WCF). Este ejemplo está compuesto de un programa de consola de cliente (client.exe) y una biblioteca de servicios hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta. La interfaz `ICalculator`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. El cliente realiza solicitudes sincrónicas a una operación matemática determinada y el servicio responde con el resultado. La actividad del cliente es visible en la ventana de la consola.  
@@ -19,14 +19,14 @@ Este ejemplo muestra cómo implementar un servicio típico y un cliente típico 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsHttp`  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Este ejemplo expone el `ICalculator` contrato mediante el [ \<> wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). La configuración de este enlace se ha expandido en el archivo Web.config.  
+ Este ejemplo expone el contrato de `ICalculator` mediante el [> de\<wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). La configuración de este enlace se ha expandido en el archivo Web.config.  
   
 ```xml
 <bindings>  
@@ -62,13 +62,13 @@ Este ejemplo muestra cómo implementar un servicio típico y un cliente típico 
   
  En el elemento `binding` de base, el valor `maxReceivedMessageSize` le permite configurar el tamaño máximo de un mensaje entrante (en bytes). El valor `hostNameComparisonMode` le permite configurar si se considera el nombre de host al demultiplexar los mensajes en el servicio. El valor `messageEncoding` le permite configurar si utilizar la codificación de texto o MTOM para los mensajes. El valor `textEncoding` le permite configurar la codificación de caracteres para los mensajes. El valor `bypassProxyOnLocal` le permite configurar si utilizar un proxy HTTP para la comunicación local. El valor `transactionFlow` configura si se fluye (si se configura una operación para el flujo de la transacción) la transacción actual.  
   
- En el [ \<elemento > de reliableSession](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) , el valor booleano habilitado configura si las sesiones confiables están habilitadas. El valor `ordered` configura si se va a conservar la clasificación del mensaje. El valor `inactivityTimeout` configura cuánto tiempo puede estar una sesión inactiva antes de que se produzcan errores.  
+ En el elemento [\<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) , el valor booleano habilitado configura si las sesiones confiables están habilitadas. El valor `ordered` configura si se va a conservar la clasificación del mensaje. El valor `inactivityTimeout` configura cuánto tiempo puede estar una sesión inactiva antes de que se produzcan errores.  
   
- En el [ \<> de seguridad](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md), `mode` el valor configura qué modo de seguridad se debe usar. En este ejemplo, se utiliza la seguridad de los mensajes, que es el motivo por el que se especifica el [ \<> de mensajes](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) dentro del > de [ \<seguridad](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md).  
+ En el [> de seguridad de\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md), el valor de `mode` configura qué modo de seguridad se debe usar. En este ejemplo, se utiliza la seguridad de los mensajes, que es la razón por la que se especifica el [> de mensajes de\<](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) dentro del > de [seguridad\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md).  
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -81,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1. Instale ASP.NET 4,0 con el siguiente comando.  
   
-    ```  
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

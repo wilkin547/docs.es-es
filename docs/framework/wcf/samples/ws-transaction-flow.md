@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 955522630af7eab458545e3b4e9631e6fbea31eb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9f215bb5f6d2ec480022af477d93d9411fe190cd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038466"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424481"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
-Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para mostrar el uso `TransactionFlowAttribute` de con la enumeración **TransactionFlowOption** para determinar el grado el flujo de la transacción está habilitado. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
+Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para mostrar el uso de la `TransactionFlowAttribute` con la enumeración **TransactionFlowOption** para determinar el flujo de transacción de grado está habilitada. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 - Una solicitud de operación `Divide` no debe incluir una transacción fluida a través de la omisión de un atributo `TransactionFlow`.  
   
- Para habilitar el flujo de la transacción, se deben usar los enlaces con la [ \<propiedad transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) habilitada además de los atributos de operación adecuados. En este ejemplo, la configuración del servicio expone un punto de conexión del TCP y un punto de conexión HTTP además del punto de conexión de intercambio de metadatos. El extremo TCP y el extremo http usan los siguientes enlaces, que tienen habilitada la [ \<propiedad transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) .  
+ Para habilitar el flujo de la transacción, se deben usar los enlaces con la propiedad [\<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) , además de los atributos de operación adecuados. En este ejemplo, la configuración del servicio expone un punto de conexión del TCP y un punto de conexión HTTP además del punto de conexión de intercambio de metadatos. El extremo TCP y el extremo HTTP usan los siguientes enlaces, que tienen habilitada la propiedad [\<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) .  
   
 ```xml  
 <bindings>  
@@ -194,7 +194,7 @@ Console.WriteLine("Transaction committed");
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Starting transaction  
   Add(100,15.99) = 115.99  
   Subtract(145,76.54) = 68.46  
@@ -208,7 +208,7 @@ Press <ENTER> to terminate client.
   
  El registro de las solicitudes de operación de servicio se muestra en la ventana de la consola del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Press <ENTER> to terminate the service.  
   Writing row to database: Adding 100 to 15.99  
   Writing row to database: Subtracting 76.54 from 145  
@@ -268,7 +268,7 @@ Press <ENTER> to terminate the service.
   
 3. En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
   
-    1. En el menú **Inicio** , vaya a `Control Panel`, a continuación **herramientas administrativas**y a **servicios de componentes**.  
+    1. En el menú **Inicio** , vaya a `Control Panel`, a continuación, a **herramientas administrativas**y a **servicios de componentes**.  
   
     2. Haga clic con el botón derecho en **mi PC** y seleccione **propiedades**.  
   
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

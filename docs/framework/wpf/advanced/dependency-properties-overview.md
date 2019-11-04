@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401414"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458958"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
 Windows Presentation Foundation (WPF) proporciona un conjunto de servicios que se pueden usar para ampliar la funcionalidad de la [propiedad](../../../standard/base-types/common-type-system.md#Properties) de un tipo. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia. En esta información general se describe el sistema de propiedades de WPF y las funcionalidades de una propiedad de dependencia. Esto incluye cómo usar las propiedades de dependencia existentes en XAML y en el código. Esta información general también presenta aspectos especializados de las propiedades de dependencia, como los metadatos de las propiedades de dependencia y el proceso de creación de una propiedad de dependencia propia en una clase personalizada.
 
 ## <a name="prerequisites"></a>Requisitos previos
-En este tema se supone que tiene conocimientos básicos sobre el sistema de tipos de .NET y la programación orientada a objetos. Para seguir los ejemplos de este tema, también debe comprender el lenguaje XAML y saber cómo escribir aplicaciones de WPF. Para obtener más información, vea [Tutorial: Mi primera aplicación](../getting-started/walkthrough-my-first-wpf-desktop-application.md)de escritorio WPF.  
+En este tema se supone que tiene conocimientos básicos sobre el sistema de tipos de .NET y la programación orientada a objetos. Para seguir los ejemplos de este tema, también debe comprender el lenguaje XAML y saber cómo escribir aplicaciones de WPF. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Propiedades de dependencia y propiedades CLR
  En WPF, las propiedades se suelen exponer como [propiedades estándar](../../../standard/base-types/common-type-system.md#Properties) de .NET. En un nivel básico, podría interactuar directamente con estas propiedades y no llegar a saber que están implementadas como una propiedad de dependencia. Pero debería familiarizarse con todas o algunas de las características del sistema de propiedades de WPF, a fin de poder aprovechar estas características.
@@ -40,11 +40,11 @@ Las propiedades de dependencia y el sistema de propiedades de WPF extienden la f
 
 A continuación se enumera la terminología que se usa con las propiedades de dependencia:
 
-- **Propiedad de dependencia:** Propiedad respaldada por un <xref:System.Windows.DependencyProperty>.
+- **Propiedad de dependencia:** una propiedad que está respaldada por una <xref:System.Windows.DependencyProperty>.
 
-- **Identificador de la propiedad de dependencia:** <xref:System.Windows.DependencyProperty> Instancia de, que se obtiene como valor devuelto al registrar una propiedad de dependencia y, a continuación, se almacena como un miembro estático de una clase. Este identificador se usa como un parámetro para muchas de las API que interactúan con el sistema de propiedades de WPF.
+- **Identificador de la propiedad de dependencia:** una instancia de <xref:System.Windows.DependencyProperty>, que se obtiene como un valor devuelto al registrar una propiedad de dependencia y, después, se almacena como un miembro estático de una clase. Este identificador se usa como un parámetro para muchas de las API que interactúan con el sistema de propiedades de WPF.
 
-- **"Contenedor" de CLR:** Implementaciones de Get y set reales para la propiedad. Estas implementaciones incorporan el identificador de la propiedad de dependencia usándolo en las llamadas a <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A>, proporcionando así el respaldo para la propiedad que usa el sistema de propiedades WPF.
+- **"Contenedor" de CLR:** implementaciones de get y set reales de la propiedad. Estas implementaciones incorporan el identificador de la propiedad de dependencia usándolo en las llamadas a <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A>, proporcionando así el respaldo para la propiedad que usa el sistema de propiedades WPF.
 
 En el ejemplo siguiente se define la propiedad de dependencia `IsSpinning` y se muestra la relación del identificador <xref:System.Windows.DependencyProperty> con la propiedad que respalda.
 
@@ -61,7 +61,7 @@ El siguiente ejemplo de XAML especifica el color de fondo de un botón como rojo
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
-XAML admite una variedad de formatos de sintaxis para establecer propiedades. La sintaxis que se debe usar para una propiedad determinada dependerá del tipo de valor que use la propiedad, así como de otros factores, tal como la presencia de un convertidor de tipos. Para obtener más información sobre la sintaxis XAML y establecer propiedades, consulte [Información general sobre XAML (WPF)](xaml-overview-wpf.md) y [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md).
+XAML admite una variedad de formatos de sintaxis para establecer propiedades. La sintaxis que se debe usar para una propiedad determinada dependerá del tipo de valor que use la propiedad, así como de otros factores, tal como la presencia de un convertidor de tipos. Para obtener más información sobre la sintaxis XAML y establecer propiedades, consulte [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) y [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md).
 
 Como ejemplo de sintaxis sin atributos, en el ejemplo de XAML siguiente se muestra otro fondo de botón. Esta vez, en lugar de establecer un color sólido simple, el fondo se establece en una imagen, con un elemento que representa esa imagen y el origen de la imagen especificado como un atributo del elemento anidado. Este es un ejemplo de sintaxis de elemento de propiedad.
 
@@ -78,7 +78,7 @@ Para obtener un valor de propiedad también se requiere esencialmente una llamad
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-También puede llamar a las API <xref:System.Windows.DependencyObject.GetValue%2A> del sistema de propiedades y <xref:System.Windows.DependencyObject.SetValue%2A> directamente. Normalmente, esto no es necesario si se usan propiedades existentes (los contenedores son más cómodos y proporcionan una mejor exposición de la propiedad para las herramientas de desarrollo), pero la llamada directa a las API es adecuada para determinados escenarios.
+También puede llamar a las API del sistema de propiedades <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> directamente. Normalmente, esto no es necesario si se usan propiedades existentes (los contenedores son más cómodos y proporcionan una mejor exposición de la propiedad para las herramientas de desarrollo), pero la llamada directa a las API es adecuada para determinados escenarios.
 
 Las propiedades también se pueden establecer en XAML y se puede acceder a ellas más adelante en el código a través del código subyacente. Para obtener información detallada, vea [Código subyacente y XAML en WPF](code-behind-and-xaml-in-wpf.md).
 
@@ -200,5 +200,5 @@ Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera 
 
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
 - [Propiedades de dependencia de solo lectura](read-only-dependency-properties.md)
-- [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Arquitectura de WPF](wpf-architecture.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: a7109945192fe1577cd1b96c8b4d6c05270d54e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5013891db827e27b3cda55135fff4ee287cfcb4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588371"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423146"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Procedimiento Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
   
-- Obtener el valor hexadecimal de cada uno de los caracteres de un elemento [string](../../language-reference/keywords/string.md).  
+- Obtener el valor hexadecimal de cada uno de los caracteres de un elemento [string](../../language-reference/builtin-types/reference-types.md).  
   
 - Obtener el elemento [char](../../language-reference/keywords/char.md) que corresponde a cada valor de una cadena hexadecimal.  
   

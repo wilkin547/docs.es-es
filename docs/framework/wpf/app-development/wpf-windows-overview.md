@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040862"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424941"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] independientes proporcionan sus propias ventanas mediante el uso de la clase <xref:System.Windows.Window>. En este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
   
 > [!NOTE]
-> Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedadas en el explorador, incluidas las páginas de [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sueltas, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
+> Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedadas en el explorador, incluidas las aplicaciones de explorador XAML (XBAP) y las páginas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sueltos, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Clase de la ventana  
@@ -471,7 +471,7 @@ La apariencia predeterminada de una ventana incluye un botón de la barra de tar
   
  Sin embargo, esto está fuera del conjunto de permisos concedidos a las aplicaciones que se inician desde la zona de Internet o Intranet local mediante ClickOnce. Por lo tanto, los usuarios recibirán una advertencia de seguridad de ClickOnce y deberán elevar el conjunto de permisos para que la aplicación sea de plena confianza.  
   
- Además, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] no pueden mostrar ventanas o cuadros de diálogo de forma predeterminada. Para obtener información sobre las consideraciones de seguridad de aplicaciones independientes, vea [estrategia de seguridad de WPF: seguridad de plataforma](../wpf-security-strategy-platform-security.md).  
+ Además, las XBAP no pueden mostrar ventanas o cuadros de diálogo de forma predeterminada. Para obtener información sobre las consideraciones de seguridad de aplicaciones independientes, vea [estrategia de seguridad de WPF: seguridad de plataforma](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Otros tipos de ventanas  
