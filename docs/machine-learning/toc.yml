@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: Clasificación de opiniones mediante TensorFlow (clasificación de texto)
           href: tutorials/text-classification-tf.md
-    - name: Herramientas
+    - name: Generador de modelos y CLI
       items:
-        - name: Predicción de los precios con el generador de modelos
+        - name: Predicción de los precios (generador de modelos y regresión)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Análisis de opiniones mediante la CLI de ML.NET
           href: tutorials/mlnet-cli.md
-        - name: Análisis de opiniones mediante Model Builder y Razor Pages
+        - name: Análisis de opiniones en Razor Pages (generador de modelos y clasificación binaria)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Categorización de infracciones de estado (generador de modelos y clasificación multiclase)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Programación probabilística con Infer.NET
@@ -67,9 +69,9 @@
   items:
     - name: API
       items:
-        - name: Cargar los datos
+        - name: Carga de datos
           href: how-to-guides/load-data-ml-net.md
-        - name: Preparar los datos
+        - name: Preparación de los datos
           href: how-to-guides/prepare-data-ml-net.md
         - name: 'Entrenamiento, evaluación y explicación del modelo'
           items:
@@ -99,7 +101,7 @@
           href: how-to-guides/load-data-model-builder.md
         - name: Instalación de un generador de modelos
           href: how-to-guides/install-model-builder.md
-        - name: Instalación de la CLI
+        - name: Instalación de la CLI de Azure
           href: how-to-guides/install-ml-net-cli.md
         - name: Uso de la API de ML automatizado
           href: how-to-guides/how-to-use-the-automl-api.md
@@ -113,7 +115,7 @@
           href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
     - name: Herramientas
       items:
-        - name: Referencia de la CLI
+        - name: Referencia sobre la CLI
           href: reference/ml-net-cli-reference.md
         - name: Referencia de API de ML.NET AutoML
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
