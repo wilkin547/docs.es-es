@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ordenar y agrupar datos mediante una vista en XAML
+title: 'Cómo: Ordenar y agrupar datos mediante una vista en XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e42dd330535f71438ab7af3dca9d078e9dfd8d3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020743"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460124"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="f3be7-102">Procedimiento Ordenar y agrupar datos mediante una vista en XAML</span><span class="sxs-lookup"><span data-stu-id="f3be7-102">How to: Sort and Group Data Using a View in XAML</span></span>
-<span data-ttu-id="f3be7-103">En este ejemplo se muestra cómo crear una vista de una recolección de datos en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f3be7-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="f3be7-104">Las vistas permiten para las funcionalidades de agrupación, ordenación, filtrado y la noción de elemento actual.</span><span class="sxs-lookup"><span data-stu-id="f3be7-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="4fd84-102">Cómo: Ordenar y agrupar datos mediante una vista en XAML</span><span class="sxs-lookup"><span data-stu-id="4fd84-102">How to: Sort and Group Data Using a View in XAML</span></span>
+<span data-ttu-id="4fd84-103">En este ejemplo se muestra cómo crear una vista de una colección de datos en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4fd84-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="4fd84-104">Las vistas permiten la funcionalidad de agrupación, ordenación, filtrado y noción de un elemento actual.</span><span class="sxs-lookup"><span data-stu-id="4fd84-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f3be7-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f3be7-105">Example</span></span>  
- <span data-ttu-id="f3be7-106">En el ejemplo siguiente, el recurso estático denominado *coloca* se define como una colección de *lugar* objetos, donde cada *lugar* objeto está formado por un nombre de ciudad y el estado.</span><span class="sxs-lookup"><span data-stu-id="f3be7-106">In the following example, the static resource named *places* is defined as a collection of *Place* objects, in which each *Place* object is consisted of a city name and the state.</span></span> <span data-ttu-id="f3be7-107">El prefijo *src* se asigna al espacio de nombres donde el origen de datos *lugares* está definido.</span><span class="sxs-lookup"><span data-stu-id="f3be7-107">The prefix *src* is mapped to the namespace where the data source *Places* is defined.</span></span> <span data-ttu-id="f3be7-108">El prefijo *scm* se asigna a `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` y *dat* se asigna a `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span><span class="sxs-lookup"><span data-stu-id="f3be7-108">The prefix *scm* maps to `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` and *dat* maps to `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span></span>  
+## <a name="example"></a><span data-ttu-id="4fd84-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4fd84-105">Example</span></span>  
+ <span data-ttu-id="4fd84-106">En el ejemplo siguiente, el recurso estático denominado *lugares* se define como una colección de objetos *Place* , en la que *cada uno de* los objetos se compone de un nombre de ciudad y el estado.</span><span class="sxs-lookup"><span data-stu-id="4fd84-106">In the following example, the static resource named *places* is defined as a collection of *Place* objects, in which each *Place* object is consisted of a city name and the state.</span></span> <span data-ttu-id="4fd84-107">El prefijo *src* se asigna al espacio de nombres donde se definen los *lugares* de origen de datos.</span><span class="sxs-lookup"><span data-stu-id="4fd84-107">The prefix *src* is mapped to the namespace where the data source *Places* is defined.</span></span> <span data-ttu-id="4fd84-108">El prefijo *SCM* se asigna a `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` y a las asignaciones de *DAT* a `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span><span class="sxs-lookup"><span data-stu-id="4fd84-108">The prefix *scm* maps to `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` and *dat* maps to `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span></span>  
   
- <span data-ttu-id="f3be7-109">El ejemplo siguiente crea una vista de la recopilación de datos que se ordenan por el nombre de ciudad y agrupada por el estado.</span><span class="sxs-lookup"><span data-stu-id="f3be7-109">The following example creates a view of the data collection that is sorted by the city name and grouped by the state.</span></span>  
+ <span data-ttu-id="4fd84-109">En el ejemplo siguiente se crea una vista de la recopilación de datos que se ordena por el nombre de la ciudad y se agrupa por el estado.</span><span class="sxs-lookup"><span data-stu-id="4fd84-109">The following example creates a view of the data collection that is sorted by the city name and grouped by the state.</span></span>  
   
  [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- <span data-ttu-id="f3be7-110">La vista, a continuación, puede ser un origen de enlace, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f3be7-110">The view can then be a binding source, as in the following example:</span></span>  
+ <span data-ttu-id="4fd84-110">A continuación, la vista puede ser un origen de enlace, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="4fd84-110">The view can then be a binding source, as in the following example:</span></span>  
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- <span data-ttu-id="f3be7-111">Para los enlaces a datos XML definidos en un <xref:System.Windows.Data.XmlDataProvider> recursos, delante del nombre de XML con un símbolo @.</span><span class="sxs-lookup"><span data-stu-id="f3be7-111">For bindings to XML data defined in an <xref:System.Windows.Data.XmlDataProvider> resource, precede the XML name with an @ symbol.</span></span>  
+ <span data-ttu-id="4fd84-111">Para los enlaces a los datos XML definidos en un recurso de <xref:System.Windows.Data.XmlDataProvider>, anteponga un símbolo @ al nombre XML.</span><span class="sxs-lookup"><span data-stu-id="4fd84-111">For bindings to XML data defined in an <xref:System.Windows.Data.XmlDataProvider> resource, precede the XML name with an @ symbol.</span></span>  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
-## <a name="see-also"></a><span data-ttu-id="f3be7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f3be7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fd84-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="4fd84-112">See also</span></span>
 
 - <xref:System.Windows.Data.CollectionViewSource>
-- [<span data-ttu-id="f3be7-113">Obtener la vista predeterminada de una colección de datos</span><span class="sxs-lookup"><span data-stu-id="f3be7-113">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
-- [<span data-ttu-id="f3be7-114">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="f3be7-114">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="f3be7-115">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="f3be7-115">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="4fd84-113">Obtener la vista predeterminada de una colección de datos</span><span class="sxs-lookup"><span data-stu-id="4fd84-113">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
+- [<span data-ttu-id="4fd84-114">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="4fd84-114">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="4fd84-115">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="4fd84-115">How-to Topics</span></span>](data-binding-how-to-topics.md)
