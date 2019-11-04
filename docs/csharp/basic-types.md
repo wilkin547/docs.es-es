@@ -2,13 +2,14 @@
 title: 'Tipos básicos: Guía de C#'
 description: Obtenga información sobre los tipos principales (valores numéricos, cadenas y objeto) en todos los programas de C#
 ms.date: 10/10/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834248"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420713"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -65,7 +66,7 @@ Los tipos se pueden declarar con uno o varios *parámetros de tipo* que actúan 
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-El uso del parámetro de tipo permite reutilizar la misma clase para incluir cualquier tipo de elemento, sin necesidad de convertir cada elemento en [object](language-reference/keywords/object.md). Las clases de colección genéricas se denominan *colecciones fuertemente tipadas* porque el compilador conoce el tipo específico de los elementos de la colección y puede generar un error en tiempo de compilación si, por ejemplo, intenta agregar un valor entero al objeto `strings` del ejemplo anterior. Para obtener más información, consulte [Genéricos](programming-guide/generics/index.md).
+El uso del parámetro de tipo permite reutilizar la misma clase para incluir cualquier tipo de elemento, sin necesidad de convertir cada elemento en [object](language-reference/builtin-types/reference-types.md#the-object-type). Las clases de colección genéricas se denominan *colecciones fuertemente tipadas* porque el compilador conoce el tipo específico de los elementos de la colección y puede generar un error en tiempo de compilación si, por ejemplo, intenta agregar un valor entero al objeto `strings` del ejemplo anterior. Para obtener más información, consulte [Genéricos](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Tipos implícitos, tipos anónimos y tipos de tupla
 
@@ -81,9 +82,9 @@ Es importante entender dos aspectos fundamentales sobre el sistema de tipos en .
   
 - Es compatible con el principio de herencia. Los tipos pueden derivarse de otros tipos, denominados *tipos base*. El tipo derivado hereda (con algunas restricciones), los métodos, las propiedades y otros miembros del tipo base. A su vez, el tipo base puede derivarse de algún otro tipo, en cuyo caso el tipo derivado hereda los miembros de ambos tipos base en su jerarquía de herencia. Todos los tipos, incluidos los tipos numéricos integrados como <xref:System.Int32> (palabra clave de C#: `int`), se derivan en última instancia de un único tipo base, que es <xref:System.Object> (palabra clave de C#: `object`). Esta jerarquía de tipos unificada se denomina [Common Type System](../standard/common-type-system.md) (CTS). Para obtener más información sobre la herencia en C#, consulte [Herencia](programming-guide/classes-and-structs/inheritance.md).  
   
-- En CTS, cada tipo se define como un *tipo de valor* o un *tipo de referencia*. Esto incluye todos los tipos personalizados de la biblioteca de clases .NET Framework y también sus propios tipos definidos por el usuario. Los tipos que se definen mediante el uso de la palabra clave [struct](language-reference/keywords/struct.md) son tipos de valor; todos los tipos numéricos integrados son **structs**. Para obtener más información sobre los tipos de valor, consulte [Structs](structs.md). Los tipos que se definen mediante el uso de la palabra clave [class](language-reference/keywords/class.md) son tipos de referencia. Para obtener más información sobre los tipos de referencia, consulte [Classes](classes.md) (Clases). Los tipos de referencia y los tipos de valor tienen distintas reglas de tiempo de compilación y distintos comportamientos de tiempo de ejecución.
+- En CTS, cada tipo se define como un *tipo de valor* o un *tipo de referencia*. Esto incluye todos los tipos personalizados de la biblioteca de clases .NET Framework y también sus propios tipos definidos por el usuario. Los tipos que se definen mediante el uso de la palabra clave [struct](language-reference/keywords/struct.md) son tipos de valor; todos los tipos numéricos integrados son **structs**. Para obtener más información sobre los tipos de valor, consulte [Structs](structs.md). Los tipos que se definen mediante el uso de la palabra clave [class](language-reference/keywords/class.md) son tipos de referencia. Para obtener más información sobre los tipos de referencia, consulte [Classes](programming-guide/classes-and-structs/classes.md) (Clases). Los tipos de referencia y los tipos de valor tienen distintas reglas de tiempo de compilación y distintos comportamientos de tiempo de ejecución.
 
 ## <a name="see-also"></a>Vea también
 
 - [Structs](structs.md)
-- [Clases](classes.md)
+- [Clases](programming-guide/classes-and-structs/classes.md)

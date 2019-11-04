@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662731"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423035"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpiar recursos no administrados
 
@@ -27,7 +25,7 @@ En el caso de la mayoría de los objetos creados por la aplicación, puede usar 
 
 Si sus tipos utilizan recursos no administrados, debe hacer lo siguiente:
 
-- Implementar el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Para esto es necesario proporcionar una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> a fin de habilitar la liberación de recursos no administrados de forma determinista. Un consumidor de su tipo llama a <xref:System.IDisposable.Dispose%2A> cuando el objeto (y los recursos que utiliza) ya no se necesita. El método <xref:System.IDisposable.Dispose%2A> libera inmediatamente los recursos no administrados.
+- Implementar el [patrón Dispose](implementing-dispose.md). Para esto es necesario proporcionar una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> a fin de habilitar la liberación de recursos no administrados de forma determinista. Un consumidor de su tipo llama a <xref:System.IDisposable.Dispose%2A> cuando el objeto (y los recursos que utiliza) ya no se necesita. El método <xref:System.IDisposable.Dispose%2A> libera inmediatamente los recursos no administrados.
 
 - Planifique la liberación de los recursos no administrados en el caso de que un consumidor de su tipo olvide llamar a <xref:System.IDisposable.Dispose%2A>. Existen dos modos para hacer esto:
 
@@ -41,7 +39,7 @@ Los consumidores de su tipo pueden entonces llamar a la implementación <xref:Sy
 
 ## <a name="in-this-section"></a>En esta sección
 
-En [Implementar un método Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) se describe cómo implementar el [patrón de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) para liberar recursos no administrados.
+En [Implementar un método Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) se describe cómo implementar el [patrón de Dispose](implementing-dispose.md) para liberar recursos no administrados.
 
 En [Uso de objetos que implementan IDisposable](../../../docs/standard/garbage-collection/using-objects.md) se describe cómo los consumidores de un tipo garantizan que se llame a su implementación de <xref:System.IDisposable.Dispose%2A>. Se recomienda utilizar la instrucción `using` de C# o la instrucción `Using` Visual Basic para realizar este procedimiento.
 

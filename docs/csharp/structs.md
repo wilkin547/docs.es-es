@@ -2,13 +2,14 @@
 title: 'Structs: Guía de C#'
 description: Obtenga información sobre el tipo struct y cómo se crea.
 ms.date: 10/12/2016
+ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396127"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423115"
 ---
 # <a name="structs"></a>Estructuras
 
@@ -70,5 +71,5 @@ Los tipos de valor normales no pueden tener un valor [null](language-reference/k
 
 ## <a name="see-also"></a>Vea también
 
-- [Clases](classes.md)
+- [Clases](programming-guide/classes-and-structs/classes.md)
 - [Tipos básicos](basic-types.md)

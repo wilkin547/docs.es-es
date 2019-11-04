@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291595"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421586"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -37,7 +37,7 @@ Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual B
 
 ## <a name="automatic-memory-management"></a>Administración de memoria automática
 
-.NET usa la [recolección de elementos no utilizados](garbagecollection/index.md) para proporcionar administración automática de memoria para los programas. La GC funciona con un enfoque diferido para la administración de memoria y prefiere el rendimiento de la aplicación sobre la recolección inmediata de la memoria. Para más información sobre GC de .NET, consulte [Fundamentals of garbage collection (GC)](garbagecollection/fundamentals.md) (Fundamentos de la recolección de elementos no utilizados [GC]).
+.NET usa la [recolección de elementos no utilizados](garbage-collection/index.md) para proporcionar administración automática de memoria para los programas. La GC funciona con un enfoque diferido para la administración de memoria y prefiere el rendimiento de la aplicación sobre la recolección inmediata de la memoria. Para más información sobre GC de .NET, consulte [Fundamentals of garbage collection (GC)](garbage-collection/fundamentals.md) (Fundamentos de la recolección de elementos no utilizados [GC]).
 
 Las dos líneas siguientes asignan memoria:
 

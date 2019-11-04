@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: daa69997f70c22a97482fd7e63d42506e7051732
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
-ms.translationtype: MT
+ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291300"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421074"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -21,7 +21,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 - Implementación de XCopy.  
   
-- Implementación de [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+- Windows Installer la implementación.  
   
 - Implementación ClickOnce  
   
@@ -39,15 +39,15 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite empaquetar las aplicaciones como aplicaciones ejecutables autónomas que se pueden distribuir con facilidad a los clientes y ejecutar. Además, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] se instala con Windows y permite la integración con el escritorio, el menú Inicio y el panel de control programas.  
+ Windows Installer permite empaquetar las aplicaciones como ejecutables autónomos que se pueden distribuir fácilmente a los clientes y ejecutar. Además, Windows Installer se instala con Windows y permite la integración con el escritorio, el menú Inicio y el panel de control programas.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica la instalación y desinstalación de aplicaciones, pero no proporciona los medios para asegurarse de que las aplicaciones instaladas se mantengan actualizadas desde el punto de vista de su versión.  
+ Windows Installer simplifica la instalación y desinstalación de aplicaciones, pero no proporciona instalaciones para garantizar que las aplicaciones instaladas se mantengan actualizadas desde el punto de vista del control de versiones.  
   
  Para obtener más información acerca de Windows Installer, vea [implementación de Windows Installer](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
-### <a name="clickonce-deployment"></a>implementación de ClickOnce  
- ClickOnce habilita la implementación de aplicaciones de estilo Web para aplicaciones que no son de Web. Las aplicaciones se publican e implementan para Web o para servidores de archivos. Aunque ClickOnce no admite toda la gama de características de cliente que @no__t aplicaciones instaladas por -0, admite un subconjunto que incluye lo siguiente:  
+### <a name="clickonce-deployment"></a>Implementación ClickOnce  
+ ClickOnce habilita la implementación de aplicaciones de estilo Web para aplicaciones que no son de Web. Las aplicaciones se publican e implementan para Web o para servidores de archivos. Aunque ClickOnce no admite toda la gama de características de cliente que realizan Windows Installer aplicaciones instaladas, admite un subconjunto que incluye lo siguiente:  
   
 - Integración con el menú Inicio y el panel de control de Programas.  
   
@@ -69,50 +69,50 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 - Aplicaciones [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado.  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]  
+- Aplicaciones de explorador XAML (XBAP).  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Implementar aplicaciones independientes  
- Las aplicaciones independientes se implementan mediante ClickOnce o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. De cualquier modo, las aplicaciones independientes requieren plena confianza para ejecutarse. La plena confianza se concede automáticamente a las aplicaciones independientes que se implementan mediante [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Las aplicaciones independientes que se implementan mediante ClickOnce no reciben automáticamente plena confianza. En su lugar, ClickOnce muestra un cuadro de diálogo de advertencia de seguridad que los usuarios deben aceptar antes de instalar una aplicación independiente. Si el usuario acepta, se instala la aplicación independiente y se le otorgan permisos de plena confianza. En caso contrario, no se instala la aplicación independiente.  
+ Las aplicaciones independientes se implementan mediante ClickOnce o Windows Installer. De cualquier modo, las aplicaciones independientes requieren plena confianza para ejecutarse. La plena confianza se concede automáticamente a las aplicaciones independientes que se implementan mediante Windows Installer. Las aplicaciones independientes que se implementan mediante ClickOnce no reciben automáticamente plena confianza. En su lugar, ClickOnce muestra un cuadro de diálogo de advertencia de seguridad que los usuarios deben aceptar antes de instalar una aplicación independiente. Si el usuario acepta, se instala la aplicación independiente y se le otorgan permisos de plena confianza. En caso contrario, no se instala la aplicación independiente.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Implementar aplicaciones XAML solo de marcado  
- Las páginas solo de marcado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] normalmente se publican en servidores Web, como páginas HTML, y se pueden ver con Internet Explorer. Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se ejecutan dentro de un recinto de seguridad de confianza parcial con restricciones definidas por el conjunto de permisos de zona de Internet. Esto proporciona un espacio aislado de seguridad equivalente a las aplicaciones web basadas en HTML.  
+ Las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado normalmente se publican en servidores Web, como páginas HTML, y se pueden ver con Internet Explorer. Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se ejecutan dentro de un recinto de seguridad de confianza parcial con restricciones definidas por el conjunto de permisos de zona de Internet. Esto proporciona un espacio aislado de seguridad equivalente a las aplicaciones web basadas en HTML.  
   
  Para obtener más información sobre los cambios en materia de seguridad que se han realizado en las aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vea [Seguridad (WPF)](../security-wpf.md).  
   
- Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se pueden instalar en el sistema de archivos local usando XCopy o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Estas páginas se pueden ver con Internet Explorer o el explorador de Windows.  
+ Las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de marcado solo se pueden instalar en el sistema de archivos local mediante XCopy o Windows Installer. Estas páginas se pueden ver con Internet Explorer o el explorador de Windows.  
   
  Para obtener más información sobre XAML, vea [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Implementar aplicaciones de explorador XAML  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] son aplicaciones compiladas que necesitan los tres archivos siguientes para implementarse:  
+ Las XBAP son aplicaciones compiladas que requieren que se implementen los tres archivos siguientes:  
   
-- *ApplicationName*.exe: El archivo de aplicación del ensamblado ejecutable.  
+- *nombreDeAplicación*.exe: el archivo de aplicación del ensamblado ejecutable.  
   
-- *ApplicationName*.xbap: El manifiesto de implementación.  
+- *nombreDeAplicación*.xbap: el manifiesto de implementación.  
   
-- *ApplicationName*.exe.manifest: Manifiesto de aplicación  
+- *nombreDeAplicación*.exe.manifest: el manifiesto de la aplicación.  
   
 > [!NOTE]
 > Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
   
- Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, vea [Cómo: Cree un nuevo proyecto de aplicación de explorador de WPF @ no__t-0. Al igual que las páginas de solo marcado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se publican normalmente en un servidor Web y se ven con Internet Explorer.  
+ Estos archivos se generan cuando se compila una aplicación XBAP. Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Al igual que las páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de solo marcado, las XBAP se publican normalmente en un servidor Web y se ven con Internet Explorer.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se puede implementar en los clientes usando cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
+ Las XBAP se pueden implementar en los clientes mediante cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
   
 1. Actualizaciones automáticas cuando se publica una nueva versión.  
   
-2. Privilegios aumentados para [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que se ejecuta con plena confianza.  
+2. Privilegios de elevación para el XBAP que se ejecutan con plena confianza.  
   
  De manera predeterminada, ClickOnce publica los archivos de aplicación con la extensión .deploy. Esto puede ser problemático, pero también puede deshabilitarse. Para obtener más información, vea [Problemas de configuración de servidor y cliente en implementaciones de ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Para obtener más información sobre la manera de implementar [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], vea [Información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
+ Para obtener más información sobre cómo implementar aplicaciones de explorador XAML (XBAP), consulte [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalar .NET Framework  
- Para ejecutar una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], la plataforma de Microsoft .NET debe estar instalada en el cliente. Internet Explorer detecta automáticamente si los clientes se instalan con .NET Framework cuando se ven las aplicaciones hospedadas en el explorador [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Si el .NET Framework no está instalado, Internet Explorer solicita a los usuarios que lo instalen.  
+ Para ejecutar una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el marco de Microsoft .NET debe estar instalado en el cliente. Internet Explorer detecta automáticamente si los clientes se instalan con .NET Framework cuando se ven [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones hospedadas en el explorador. Si el .NET Framework no está instalado, Internet Explorer solicita a los usuarios que lo instalen.  
   
  Para detectar si el .NET Framework está instalado, Internet Explorer incluye una aplicación de programa previo que se registra como el controlador de las extensiones multipropósito de correo Internet (MIME) de reserva para los archivos de contenido con las siguientes extensiones:. XAML,. XPS,. XBAP y. Application. Si navega a estos tipos de archivo y el .NET Framework no está instalado en el cliente, la aplicación de arranque solicita permiso para instalarlo. Si no se proporciona el permiso, no se instalará ni el .NET Framework ni la aplicación.  
   

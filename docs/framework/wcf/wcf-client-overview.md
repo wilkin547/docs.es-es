@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321346"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420659"
 ---
 # <a name="wcf-client-overview"></a>Introducción a un cliente WCF
 En esta sección se describe qué hacen las aplicaciones cliente, cómo configurar, crear y usar un cliente de Windows Communication Foundation (WCF) y cómo proteger las aplicaciones cliente.  
@@ -41,9 +41,9 @@ En esta sección se describe qué hacen las aplicaciones cliente, cómo configur
 - Llamada a los servicios mediante los canales cliente.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Obtención del contrato de servicios, los enlaces y las direcciones  
- En WCF, los servicios y clientes modelan los contratos mediante atributos, interfaces y métodos administrados. Para conectar con un servicio en una aplicación cliente, es necesario obtener la información del tipo de contrato de servicios. Normalmente, esto se hace mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), que descarga los metadatos del servicio, los convierte en un archivo de código fuente administrado en el lenguaje de su elección y crea un archivo de configuración de la aplicación cliente. que puede usar para configurar el objeto de cliente de WCF. Por ejemplo, si va a crear un objeto de cliente de WCF para invocar un `MyCalculatorService` y sabe que los metadatos de ese servicio se publican en `http://computerName/MyCalculatorService/Service.svc?wsdl`, en el ejemplo de código siguiente se muestra cómo usar SvcUtil. exe para obtener un archivo @no__t 2 que contiene el servicio. contrato en código administrado.  
+ En WCF, los servicios y clientes modelan los contratos mediante atributos, interfaces y métodos administrados. Para conectar con un servicio en una aplicación cliente, es necesario obtener la información del tipo de contrato de servicios. Normalmente, esto se hace mediante la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), que descarga los metadatos del servicio, los convierte en un archivo de código fuente administrado en el lenguaje de su elección y crea un archivo de configuración de la aplicación cliente. que puede usar para configurar el objeto de cliente de WCF. Por ejemplo, si va a crear un objeto de cliente de WCF para invocar un `MyCalculatorService`y sabe que los metadatos de ese servicio se publican en `http://computerName/MyCalculatorService/Service.svc?wsdl`, en el ejemplo de código siguiente se muestra cómo usar SvcUtil. exe para obtener un archivo `ClientCode.vb` que contiene el servicio.  contrato en código administrado.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
@@ -169,7 +169,7 @@ End Interface
  La manera cómo se realizan las llamadas a las operaciones depende del desarrollador cliente. La razón es que los mensajes que constituyen una operación pueden asignarse a métodos sincrónicos o asincrónicos cuando se expresan en código administrado. Por consiguiente, si desea crear un cliente que llama a las operaciones de manera asincrónica, puede utilizar Svcutil.exe para generar código de cliente asincrónico mediante la opción `/async`. Para obtener más información, vea [Cómo: llamar a las operaciones de servicio de forma asincrónica](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Llamada a los servicios mediante canales de cliente WCF.  
- Los tipos de cliente de WCF extienden <xref:System.ServiceModel.ClientBase%601>, que a su vez deriva de la interfaz <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> para exponer el sistema del canal subyacente. Puede invocar los servicios utilizando el contrato de servicios de destino con la clase <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte la [arquitectura de cliente de WCF](./feature-details/client-architecture.md).  
+ Los tipos de cliente de WCF extienden <xref:System.ServiceModel.ClientBase%601>, que a su vez deriva de <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interfaz para exponer el sistema del canal subyacente. Puede invocar los servicios utilizando el contrato de servicios de destino con la clase <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte la [arquitectura de cliente de WCF](./feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Vea también
 

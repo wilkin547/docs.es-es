@@ -2,16 +2,15 @@
 title: Bibliotecas de Framework
 description: Obtenga información sobre cómo las bibliotecas proporcionan implementaciones para muchos tipos generales y específicos de las aplicaciones, algoritmos y funcionalidad de la utilidad.
 author: richlander
-ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 494ac194fe8dc9554c6e0d1d87ba2ed613d1d16b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663224"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424968"
 ---
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 
@@ -27,7 +26,7 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 
 .NET incluye un conjunto de tipos primitivos, que se usan (en distintos grados) en todos los programas. Estos tipos contienen datos, como números, cadenas, bytes y objetos arbitrarios. El lenguaje C# incluye palabras clave para estos tipos. A continuación se muestra un conjunto de ejemplo de estos tipos, con las palabras clave de C# correspondientes.
 
-* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo entero con signo de 16 bits. También existe el valor <xref:System.UInt16> sin signo.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo entero con signo de 32 bits. También existe el valor [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) sin firmar.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): tipo de punto flotante de 32 bits.
@@ -35,7 +34,7 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): entero sin signo de 8 bits que representa un byte de memoria.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano que representa `true` o `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): tipo numérico de 16 bits que representa un carácter Unicode.
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.
 
 ## <a name="data-structures"></a>Estructuras de datos
 

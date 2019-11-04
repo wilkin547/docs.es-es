@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396283"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417798"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
@@ -33,7 +33,7 @@ Algunas de estas restricciones son mutuamente excluyentes. Todos los tipos de va
 
 ## <a name="why-use-constraints"></a>Por qué usar restricciones
 
-Al restringir el parámetro de tipo, aumenta el número de operaciones y llamadas al método permitidas a las que se admiten mediante el tipo de restricción y todos los tipos en su jerarquía de herencia. Cuando se diseñan clases o métodos genéricos, si se va a realizar una operación en los miembros genéricos más allá de una asignación simple o una llamada a un método que <xref:System.Object?displayProperty=nameWithType> no admita, será necesario aplicar restricciones al parámetro de tipo. Por ejemplo, la restricción de clase base indica al compilador que solo los objetos de este tipo o derivados de este tipo se usarán como argumentos de tipo. Una vez que el compilador tenga esta garantía, puede permitir que los métodos de ese tipo se llamen en la clase genérica. En el ejemplo de código siguiente se muestran las funciones que podemos agregar a la clase `GenericList<T>` (en [Introducción a los genéricos](introduction-to-generics.md)) mediante la aplicación de una restricción de clase base.
+Al restringir el parámetro de tipo, aumenta el número de operaciones y llamadas al método permitidas a las que se admiten mediante el tipo de restricción y todos los tipos en su jerarquía de herencia. Cuando se diseñan clases o métodos genéricos, si se va a realizar una operación en los miembros genéricos más allá de una asignación simple o una llamada a un método que <xref:System.Object?displayProperty=nameWithType> no admita, será necesario aplicar restricciones al parámetro de tipo. Por ejemplo, la restricción de clase base indica al compilador que solo los objetos de este tipo o derivados de este tipo se usarán como argumentos de tipo. Una vez que el compilador tenga esta garantía, puede permitir que los métodos de ese tipo se llamen en la clase genérica. En el ejemplo de código siguiente se muestran las funciones que podemos agregar a la clase `GenericList<T>` (en [Introducción a los genéricos](../../../standard/generics/index.md)) mediante la aplicación de una restricción de clase base.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 

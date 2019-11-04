@@ -2,16 +2,16 @@
 title: Unit (Tipo)
 description: Obtenga información sobre F# cómo el tipo ' Unit ' se usa a menudo para contener el lugar en el que la sintaxis del lenguaje requiere un valor cuando no se necesita ningún valor o se desea.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e586702324565b8dcd4f6c7e11a0e1754f89c58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a5960fb05af50486a78345d10a5ad913e65729e3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630175"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424033"
 ---
 # <a name="unit-type"></a>Unit (Tipo)
 
-El `unit` tipo es un tipo que indica la ausencia de un valor específico; el `unit` tipo solo tiene un valor, que actúa como marcador de posición cuando no existe ningún otro valor o es necesario.
+El tipo de `unit` es un tipo que indica la ausencia de un valor concreto; el tipo de `unit` solo tiene un valor único, que actúa como marcador de posición cuando no existe ningún otro valor o es necesario.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -22,13 +22,13 @@ El `unit` tipo es un tipo que indica la ausencia de un valor específico; el `un
 
 ## <a name="remarks"></a>Comentarios
 
-Cada F# expresión debe evaluarse como un valor. En el caso de las expresiones que no generan un valor de interés, se utiliza el `unit` valor de tipo. El `unit` tipo es similar al `void` tipo en lenguajes como C# y C++.
+Cada F# expresión debe evaluarse como un valor. En el caso de las expresiones que no generan un valor de interés, se utiliza el valor de tipo `unit`. El tipo de `unit` se parece al tipo de `void` en C# lenguajes C++como y.
 
-El `unit` tipo tiene un valor único y ese valor se indica mediante el token `()`.
+El tipo de `unit` tiene un valor único y ese valor se indica mediante el token `()`.
 
-El valor del `unit` tipo se usa a menudo en F# la programación para contener el lugar en el que la sintaxis del lenguaje requiere un valor, pero cuando no se necesita ningún valor o no se desea. Un ejemplo podría ser el valor devuelto de `printf` una función. Dado que las acciones importantes de `printf` la operación se producen en la función, la función no tiene que devolver un valor real. Por lo tanto, el valor devuelto `unit`es de tipo.
+El valor del tipo de `unit` se usa a menudo F# en la programación para contener el lugar donde se requiere un valor en la sintaxis del lenguaje, pero cuando no se necesita ningún valor o no se desea. Un ejemplo podría ser el valor devuelto de una función `printf`. Dado que las acciones importantes de la operación de `printf` se producen en la función, la función no tiene que devolver un valor real. Por lo tanto, el valor devuelto es de tipo `unit`.
 
-Algunas construcciones esperan un `unit` valor. Por ejemplo, se `do` espera que un enlace o cualquier código en el nivel superior de un módulo se evalúe como `unit` un valor. El compilador emite una advertencia `do` cuando un enlace o código en el nivel superior de un módulo produce un resultado distinto `unit` del valor que no se utiliza, como se muestra en el ejemplo siguiente.
+Algunas construcciones esperan un valor `unit`. Por ejemplo, se espera que un enlace de `do` o cualquier código en el nivel superior de un módulo se evalúe como un valor de `unit`. El compilador emite una advertencia cuando una `do` enlace o código en el nivel superior de un módulo produce un resultado distinto del valor de `unit` que no se utiliza, como se muestra en el ejemplo siguiente.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet901.fs)]
 
@@ -36,5 +36,5 @@ Esta advertencia es una característica de la programación funcional; no aparec
 
 ## <a name="see-also"></a>Vea también
 
-- [Rectangle](primitive-types.md)
+- [Rectangle](basic-types.md)
 - [Referencia del lenguaje F#](index.md)

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663006"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423634"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -165,11 +165,11 @@ Constructores | [Constructores](#constructors) | No debe llamarse a los construc
 Enumeraciones | [Enumeraciones](#enumerations) | El tipo subyacente de una enumeración debe ser un tipo de entero integrado en CLS, el nombre del campo debe ser “value__” y dicho campo debe marcarse como `RTSpecialName`. |  7
 Enumeraciones | [Enumeraciones](#enumerations) | Hay dos tipos distintos de enumeraciones, que se indican mediante la presencia o ausencia del atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute) (consulte la biblioteca del apartado IV). Uno representa valores enteros con nombre; el otro representa los marcadores de bit con nombre que se pueden combinar para generar un valor sin nombre. El valor de `enum` no se limita a los valores especificados. |  8
 Enumeraciones | [Enumeraciones](#enumerations) | Los campos estáticos literales de una enumeración deben contener el tipo de la propia enumeración. |  9
-Eventos | [Eventos](#events) | Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos. |29
-Eventos | [Eventos](#events) | La accesibilidad de un evento y sus descriptores de acceso será idéntica. |30
-Eventos | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez. |31
-Eventos | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de [System.Delegate](xref:System.Delegate). |32
-Eventos | [Eventos](#events) | Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes se omitirá el atributo SpecialName mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.  |33
+Events | [Eventos](#events) | Los métodos que implementen un evento se marcarán como `SpecialName` en los metadatos. |29
+Events | [Eventos](#events) | La accesibilidad de un evento y sus descriptores de acceso será idéntica. |30
+Events | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben estar presentes o ausentes a la vez. |31
+Events | [Eventos](#events) | Los métodos `add` y `remove` de un evento deben tomar un parámetro cuyo tipo defina el tipo del evento, y ese tipo debe derivarse de [System.Delegate](xref:System.Delegate). |32
+Events | [Eventos](#events) | Los eventos deben adherirse a un patrón de asignación de nombres concreto. En las comparaciones de nombres correspondientes se omitirá el atributo SpecialName mencionado en la regla 29 de CLS y se seguirán las reglas del identificador.  |33
 Excepciones | [Excepciones](#exceptions) | Los objetos que se inicien deberán ser de tipo [System.Exception](xref:System.Exception) o de un tipo que herede de él. No obstante, los métodos conformes a CLS no necesitan bloquear la propagación de otros tipos de excepciones. | 40
 General | [Reglas de conformidad con CLS](#cls-compliance-rules) | Las reglas de CLS solo se aplican a las partes de los tipos que son accesibles o visibles desde fuera del ensamblado de definición. | 1
 General | [Reglas de conformidad con CLS](#cls-compliance-rules) | Los miembros de tipos no conformes con CLS no deben marcarse como conformes con CLS. | 2
@@ -230,7 +230,7 @@ public class Counter
 
    public override string ToString()
    {
-      return String.Format("{0}). ", ctr);
+      return $"{ctr}). ";
    }
 
    public UInt32 Value
@@ -276,7 +276,7 @@ Public Class Counter
    End Sub
 
    Public Overrides Function ToString() As String
-      Return String.Format("{0}). ", ctr)
+      Return $"{ctr}). "
    End Function
 
    Public ReadOnly Property Value As UInt32
@@ -2058,7 +2058,7 @@ Las propiedades de los tipos conformes a CLS deben seguir estas reglas:
 
 * Si una propiedad tiene un captador y un establecedor, estos deben ser virtuales, estáticos o de instancia. El compilador de C# aplica automáticamente esta regla mediante la sintaxis de la definición de la propiedad.
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>Events
 
 Un evento se define por su nombre y su tipo. El tipo de evento es un delegado que se utiliza para indicar el evento. Por ejemplo, el evento `DbConnection.StateChange` es del tipo `StateChangeEventHandler`. Además del propio evento, hay tres métodos con nombres basados en el nombre de evento que proporcionan la implementación del evento y que se marcan como `SpecialName` en los metadatos de ensamblado:
 

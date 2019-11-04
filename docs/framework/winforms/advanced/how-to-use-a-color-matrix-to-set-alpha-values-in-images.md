@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar una matriz de colores para establecer valores alfa en imágenes
+title: 'Cómo: Utilizar una matriz de colores para establecer valores alfa en imágenes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: fd63380e04eeb4b7ec7ed7d59032309ea7446507
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73e820845d040856a0ae367da8b9371ad6afa142
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593171"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423736"
 ---
-# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Procedimiento para usar una matriz de colores para establecer valores alfa en imágenes
-El <xref:System.Drawing.Bitmap> clase (que hereda de la <xref:System.Drawing.Image> clase) y la <xref:System.Drawing.Imaging.ImageAttributes> clase proporcionan funcionalidad para obtener y establecer valores de píxel. Puede usar el <xref:System.Drawing.Imaging.ImageAttributes> clase para modificar la versión alfa de los valores de una imagen completa, o bien puede llamar el <xref:System.Drawing.Bitmap.SetPixel%2A> método de la <xref:System.Drawing.Bitmap> clase para modificar valores de píxeles individuales.  
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Cómo: Utilizar una matriz de colores para establecer valores alfa en imágenes
+La clase <xref:System.Drawing.Bitmap> (que se hereda de la clase <xref:System.Drawing.Image>) y la clase <xref:System.Drawing.Imaging.ImageAttributes> proporcionan funcionalidad para obtener y establecer valores de píxeles. Puede usar la clase <xref:System.Drawing.Imaging.ImageAttributes> para modificar los valores alfa de una imagen completa, o puede llamar al método <xref:System.Drawing.Bitmap.SetPixel%2A> de la clase <xref:System.Drawing.Bitmap> para modificar valores de píxel individuales.  
   
 ## <a name="example"></a>Ejemplo  
- La <xref:System.Drawing.Imaging.ImageAttributes> clase tiene muchas propiedades que puede usar para modificar las imágenes durante la representación. En el ejemplo siguiente, un <xref:System.Drawing.Imaging.ImageAttributes> objeto se usa para establecer todos los valores alfa en 80 por ciento de su estado original. Esto se hace al inicializar una matriz de colores y estableciendo el valor de la matriz en 0,8 de escala de alfa. La dirección de la matriz de colores se pasa a la <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método de la <xref:System.Drawing.Imaging.ImageAttributes> objeto y el <xref:System.Drawing.Imaging.ImageAttributes> objeto se pasa a la <xref:System.Drawing.Graphics.DrawString%2A> método de la <xref:System.Drawing.Graphics> objeto.  
+ La clase <xref:System.Drawing.Imaging.ImageAttributes> tiene muchas propiedades que se pueden utilizar para modificar imágenes durante la representación. En el ejemplo siguiente, se usa un objeto <xref:System.Drawing.Imaging.ImageAttributes> para establecer todos los valores alfa en el 80 por ciento de lo que eran. Esto se hace inicializando una matriz de colores y estableciendo el valor de escala alfa en la matriz en 0,8. La dirección de la matriz de colores se pasa al método <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> del objeto <xref:System.Drawing.Imaging.ImageAttributes> y el objeto <xref:System.Drawing.Imaging.ImageAttributes> se pasa al método <xref:System.Drawing.Graphics.DrawString%2A> del objeto <xref:System.Drawing.Graphics>.  
   
- Durante la representación, los valores alfa en el mapa de bits se convierten en 80 por ciento de su estado original. Esto da como resultado una imagen que se mezcla con el fondo. Como se muestra en la siguiente ilustración, la imagen de mapa de bits es transparente; puede ver la línea negra sólida a través de él.  
+ Durante la representación, los valores alfa del mapa de bits se convierten al 80 por ciento de lo que eran. Esto da como resultado una imagen que se combina con el fondo. Como se muestra en la siguiente ilustración, la imagen de mapa de bits es transparente; puede ver la línea negra sólida a través de ella.  
   
- ![Combinación alfa usando una matriz](./media/image2.png "image2")  
+ ![Captura de pantalla de la combinación alfa mediante una matriz.](./media/how-to-use-a-color-matrix-to-set-alpha-values-in-images/alpha-blending-matrix.png "image2")  
   
- Donde es la imagen a través de la parte del fondo en blanco, la imagen se ha mezclado con el color blanco. Donde la imagen cruza la línea negra, la imagen se mezcla con el color negro.  
+ Cuando la imagen está sobre la parte blanca del fondo, la imagen se ha mezclado con el color blanco. Cuando la imagen cruza la línea negra, la imagen se combina con el color negro.  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  

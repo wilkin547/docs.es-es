@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117669"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420473"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -776,6 +776,6 @@ Creación de un archivo *global.json* en el directorio actual que establezca la 
 ## <a name="see-also"></a>Vea también
 
 - [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)
-- [Creación de una plantilla personalizada para dotnet new](../tutorials/create-custom-template.md)
+- [Creación de una plantilla personalizada para dotnet new](../tutorials/cli-templates-create-item-template.md)
 - [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)

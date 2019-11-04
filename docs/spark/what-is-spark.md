@@ -4,20 +4,20 @@ description: Más información sobre Apache Spark y escenarios de macrodatos.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583481"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458173"
 ---
 # <a name="what-is-apache-spark"></a>¿Qué es Apache Spark?
 
-[Apache Spark](https://spark.apache.org/) es una plataforma de procesamiento paralelo de código abierto que admite el procesamiento en memoria para mejorar el rendimiento de las aplicaciones que analizan macrodatos. Las soluciones de macrodatos están diseñadas para controlar datos que son demasiado grandes o complejos para las bases de datos tradicionales. Spark procesa grandes cantidades de datos en memoria, lo que es mucho más rápido que las alternativas basadas en disco. 
+[Apache Spark](https://spark.apache.org/) es una plataforma de procesamiento paralelo de código abierto que admite el procesamiento en memoria para mejorar el rendimiento de las aplicaciones que analizan macrodatos. Las soluciones de macrodatos están diseñadas para controlar datos que son demasiado grandes o complejos para las bases de datos tradicionales. Spark procesa grandes cantidades de datos en memoria, lo que es mucho más rápido que las alternativas basadas en disco.
 
 ## <a name="common-big-data-scenarios"></a>Escenarios comunes de macrodatos
 
-Es posible que considere la posibilidad de usar una arquitectura de macrodatos si tiene que almacenar y procesar grandes volúmenes de datos, transformar datos no estructurados o procesos de transmisión de datos. Spark es un motor de procesamiento distribuido de uso general que se puede usar para varios escenarios de macrodatos. 
+Es posible que considere la posibilidad de usar una arquitectura de macrodatos si tiene que almacenar y procesar grandes volúmenes de datos, transformar datos no estructurados o procesos de transmisión de datos. Spark es un motor de procesamiento distribuido de uso general que se puede usar para varios escenarios de macrodatos.
 
 ### <a name="extract-transform-and-load-etl"></a>Extracción, transformación y carga de datos (ETL)
 
@@ -33,7 +33,7 @@ Es posible que considere la posibilidad de usar una arquitectura de macrodatos s
 
 ### <a name="real-time-data-stream-processing"></a>Procesamiento de flujos de datos en tiempo real
 
-Los datos de streaming, o en tiempo real, son datos en movimiento. La telemetría desde dispositivos de IoT, blogs y clickstream son ejemplos de datos de streaming. Los datos en tiempo real se pueden procesar para proporcionar información útil, como análisis geoespacial, supervisión remota y detección de anomalías. Como sucede con los datos relacionales, los datos de streaming se pueden filtrar, agregar y preparar antes de moverlos a un receptor de salida. Apache Spark admite el [procesamiento de flujos de datos en tiempo real](/azure/architecture/data-guide/big-data/real-time-processing) mediante [Spark Streaming](https://spark.apache.org/streaming/). 
+Los datos de streaming, o en tiempo real, son datos en movimiento. La telemetría desde dispositivos de IoT, blogs y clickstream son ejemplos de datos de streaming. Los datos en tiempo real se pueden procesar para proporcionar información útil, como análisis geoespacial, supervisión remota y detección de anomalías. Como sucede con los datos relacionales, los datos de streaming se pueden filtrar, agregar y preparar antes de moverlos a un receptor de salida. Apache Spark admite el [procesamiento de flujos de datos en tiempo real](/azure/architecture/data-guide/big-data/real-time-processing) mediante [Spark Streaming](https://spark.apache.org/streaming/).
 
 ### <a name="batch-processing"></a>Procesamiento por lotes
 

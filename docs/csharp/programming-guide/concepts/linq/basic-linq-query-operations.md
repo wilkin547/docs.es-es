@@ -17,17 +17,17 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924390"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418724"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operaciones básicas de consulta LINQ (C#)
 En este tema se ofrece una breve introducción a las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y algunas de las clases de operaciones típicas que se realizan en una consulta. En los temas siguientes se ofrece información más detallada:  
   
- [Expresiones de consulta LINQ](../../linq-query-expressions/index.md)  
+ [Expresiones de consulta LINQ](../../../linq/index.md)  
   
  [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))  
   
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones de consulta LINQ](../../linq-query-expressions/index.md)
+- [Expresiones de consulta LINQ](../../../linq/index.md)
 - [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)
 - [Palabras clave para consultas (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Tipos anónimos](../../classes-and-structs/anonymous-types.md)

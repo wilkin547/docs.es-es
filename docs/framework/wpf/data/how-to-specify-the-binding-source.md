@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Especificar el origen de enlace
+title: 'Cómo: Especificar el origen de enlace'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 418dc77ce7638698d4850b06dafcea57787e1015
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4fde66b22bac6b4a2cfeb4eceb50027daadee387
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959697"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454365"
 ---
-# <a name="how-to-specify-the-binding-source"></a>Procedimiento Especificar el origen de enlace
+# <a name="how-to-specify-the-binding-source"></a>Cómo: Especificar el origen de enlace
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. Este tema describe las distintas maneras de especificar el origen de enlace.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,17 +37,17 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  Como alternativa, si desea especificar el origen en los enlaces individuales explícitamente, tiene las siguientes opciones. Estas tienen prioridad sobre el contexto de datos heredado.  
   
-|Propiedad|DESCRIPCIÓN|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|Utilice esta propiedad para establecer el origen en una instancia de un objeto. Si no necesita la funcionalidad de establecer un ámbito en el que varias propiedades heredan el mismo contexto de datos, puede utilizar la <xref:System.Windows.Data.Binding.Source%2A> propiedad en lugar de la `DataContext` propiedad. Para obtener más información, consulta <xref:System.Windows.Data.Binding.Source%2A>.|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Esto es útil cuando desea especificar el origen con respecto a donde está el destino del enlace. Entre los escenarios frecuentes en los que puede utilizar esta propiedad se encuentran las situaciones en las que desee enlazar una propiedad del elemento con otra propiedad del mismo elemento o situaciones en las que esté definiendo un enlace en un estilo o una plantilla. Para obtener más información, consulta <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|Especifique una cadena que represente el elemento con el que desee establecer el enlace. Esto es útil cuando desea enlazar con la propiedad de otro elemento de la aplicación. Por ejemplo, si <xref:System.Windows.Controls.Slider> desea utilizar un control para controlar el alto de otro control de la aplicación, o si desea enlazar el <xref:System.Windows.Controls.ContentControl.Content%2A> control del control <xref:System.Windows.Controls.ListBox> a la <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propiedad del control. Para obtener más información, consulta <xref:System.Windows.Data.Binding.ElementName%2A>.|  
+|<xref:System.Windows.Data.Binding.Source%2A>|Utilice esta propiedad para establecer el origen en una instancia de un objeto. Si no necesita la funcionalidad de establecer un ámbito en el que varias propiedades heredan el mismo contexto de datos, puede usar la propiedad <xref:System.Windows.Data.Binding.Source%2A> en lugar de la propiedad `DataContext`. Para obtener más información, vea <xref:System.Windows.Data.Binding.Source%2A>.|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|Esto es útil cuando desea especificar el origen con respecto a donde está el destino del enlace. Entre los escenarios frecuentes en los que puede utilizar esta propiedad se encuentran las situaciones en las que desee enlazar una propiedad del elemento con otra propiedad del mismo elemento o situaciones en las que esté definiendo un enlace en un estilo o una plantilla. Para obtener más información, vea <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|Especifique una cadena que represente el elemento con el que desee establecer el enlace. Esto es útil cuando desea enlazar con la propiedad de otro elemento de la aplicación. Por ejemplo, si desea utilizar un <xref:System.Windows.Controls.Slider> para controlar el alto de otro control en la aplicación, o si desea enlazar el <xref:System.Windows.Controls.ContentControl.Content%2A> del control a la propiedad <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> del control <xref:System.Windows.Controls.ListBox>. Para obtener más información, vea <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [Herencia de valores de propiedad](../advanced/property-value-inheritance.md)
-- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Información general sobre declaraciones de enlaces](binding-declarations-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

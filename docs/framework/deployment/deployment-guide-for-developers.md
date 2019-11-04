@@ -6,21 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833671"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457995"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de .NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
 
 Para obtener vínculos de descarga, vea la sección [Paquetes redistribuibles](#redistributable-packages). También puede descargar los paquetes y paquetes de idioma redistribuibles en estas páginas del Centro de descarga de Microsoft:
 
-- .NET Framework 4.8 para todos los sistemas operativos ([instalador web](http://go.microsoft.com/fwlink/?LinkId=2085155) o [instalador sin conexión](https://go.microsoft.com/fwlink/?linkid=2088631))
+- .NET Framework 4.8 para todos los sistemas operativos ([instalador web](https://go.microsoft.com/fwlink/?LinkId=2085155) o [instalador sin conexión](https://go.microsoft.com/fwlink/?linkid=2088631))
 
 - .NET Framework 4.7.2 para todos los sistemas operativos ([instalador web](https://go.microsoft.com/fwlink/?LinkId=863262) o [instalador sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -170,7 +168,7 @@ En Visual Studio, para elegir la implementación de InstallShield y agregar una 
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Implementación de Windows Installer XML (WiX)
 
-El conjunto de herramientas de Windows Installer XML (WiX) compila paquetes de instalación de Windows desde el código fuente XML. WiX es compatible con un entorno de línea de comandos que se puede integrar en los procesos de compilación para crear paquetes de instalación MSI y MSM. Al utilizar WiX, podrá [especificar .NET Framework como requisito previo](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)o [crear un encadenador](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) para controlar completamente la experiencia de implementación de .NET Framework. Para obtener más información sobre WiX, vea el sitio web [Conjunto de herramientas de Windows Installer XML (WiX)](http://wixtoolset.org/) .
+El conjunto de herramientas de Windows Installer XML (WiX) compila paquetes de instalación de Windows desde el código fuente XML. WiX es compatible con un entorno de línea de comandos que se puede integrar en los procesos de compilación para crear paquetes de instalación MSI y MSM. Al utilizar WiX, podrá [especificar .NET Framework como requisito previo](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)o [crear un encadenador](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) para controlar completamente la experiencia de implementación de .NET Framework. Para obtener más información sobre WiX, vea el sitio web [Conjunto de herramientas de Windows Installer XML (WiX)](https://wixtoolset.org/) .
 
 <a name="installing_manually"></a>
 

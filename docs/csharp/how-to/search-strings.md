@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202878"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420309"
 ---
 # <a name="how-to-search-strings"></a>Cómo: Buscar cadenas
 
@@ -19,7 +19,7 @@ Puede usar dos estrategias principales para buscar texto en cadenas. Los método
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-El tipo [string](../language-reference/keywords/string.md), que es un alias de la clase <xref:System.String?displayProperty=nameWithType>, proporciona una serie de métodos útiles para buscar el contenido de una cadena. Entre ellos se encuentran <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A> y <xref:System.String.LastIndexOf%2A>. La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> proporciona un vocabulario completo para buscar patrones en el texto. En este artículo, aprenderá estas técnicas y a elegir el mejor método para sus necesidades.
+El tipo [string](../language-reference/builtin-types/reference-types.md#the-string-type), que es un alias de la clase <xref:System.String?displayProperty=nameWithType>, proporciona una serie de métodos útiles para buscar el contenido de una cadena. Entre ellos se encuentran <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A> y <xref:System.String.LastIndexOf%2A>. La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> proporciona un vocabulario completo para buscar patrones en el texto. En este artículo, aprenderá estas técnicas y a elegir el mejor método para sus necesidades.
 
 ## <a name="does-a-string-contain-text"></a>¿Una cadena contiene texto?
 
@@ -39,7 +39,7 @@ Los métodos <xref:System.String.IndexOf%2A> y <xref:System.String.LastIndexOf%2
 
 La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> se puede usar para buscar cadenas. Estas búsquedas pueden abarcar una complejidad que va desde patrones de texto simples hasta otros complejos.
 
-En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para obtener más información, vea <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+En el ejemplo de código siguiente, se busca la palabra "the" o "their" en una oración, sin distinción entre mayúsculas y minúsculas. El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> realiza la búsqueda. Se proporciona la cadena de búsqueda y un patrón de búsqueda. En este caso, un tercer argumento especifica que la búsqueda no distingue mayúsculas de minúsculas. Para más información, consulte <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
 El patrón de búsqueda describe el texto que se busca. En la tabla siguiente, se describe cada elemento del patrón de búsqueda. (En la tabla siguiente, se usa el valor único `\` que se deben escribir como `\\` en una cadena de C#).
 

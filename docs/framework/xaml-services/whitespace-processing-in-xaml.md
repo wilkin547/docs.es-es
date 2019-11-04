@@ -7,19 +7,19 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: bf5c13f59b9e9c4774fde952a52289abb2815b65
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395982"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458501"
 ---
 # <a name="white-space-processing-in-xaml"></a>Procesamiento de espacios en blanco en XAML
-Las reglas de lenguaje para el estado XAML que un espacio en blanco significativo debe ser procesado por una implementación de procesador @no__t 0. En este tema se documentan estas reglas del lenguaje XAML. También documenta el control de espacios en blanco adicional definido por la implementación [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] del procesador XAML y del escritor XAML para la serialización.  
+Las reglas de lenguaje para el estado XAML que un espacio en blanco significativo debe ser procesado por una implementación de procesador [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]. En este tema se documentan estas reglas del lenguaje XAML. También documenta el control de espacios en blanco adicional definido por la implementación de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] del procesador XAML y del escritor XAML para la serialización.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>Definición de espacio en blanco  
- De forma coherente con [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], los caracteres de espacio en blanco en [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] son el espacio, el avance de barra y la tabulación. Se corresponden con los valores Unicode 0020, 000A y 0009, respectivamente.  
+ Coherente con [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], los caracteres de espacio en blanco en [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] son el espacio, el avance de barra y la tabulación. Se corresponden con los valores Unicode 0020, 000A y 0009, respectivamente.  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>Normalización de espacio en blanco  
@@ -51,7 +51,7 @@ Las reglas de lenguaje para el estado XAML que un espacio en blanco significativ
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>Conservar espacios en blanco  
- Hay varias técnicas para conservar el espacio en blanco en el origen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] para la presentación eventual que no se ve afectada por la normalización del espacio en blanco del procesador [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)].  
+ Hay varias técnicas para conservar el espacio en blanco en el [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] de origen para la presentación eventual que no se ven afectadas por la normalización de espacio en blanco del procesador de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)].  
   
  **xml: Space = "preserve"** : especifique este atributo en el nivel del elemento donde desee conservar el espacio en blanco. De esta manera, se conserva todo los espacios en blanco, incluidos los espacios que las aplicaciones de edición de código puedan agregar a los elementos de alineación de "impresión con sangría" como anidamiento visualmente intuitivo. Pero es el modelo de contenido del elemento contenedor el que determina si esos espacios se presentan. Evite especificar `xml:space="preserve"` en el nivel raíz, ya que la mayoría de los modelos de objetos no consideran el espacio en blanco como significativo independientemente de cómo establezca el atributo. La configuración global de `xml:space` puede tener consecuencias en el rendimiento del procesamiento XAML (en especial la serialización) en algunas implementaciones. Es aconsejable establecer solo el atributo específicamente en el nivel de elementos que representan el espacio en blanco dentro de las cadenas o que son colecciones significativas de espacio en blanco.  
   
@@ -70,12 +70,12 @@ Las reglas de lenguaje para el estado XAML que un espacio en blanco significativ
   
  Incluso en el caso de los modelos de contenido que pueden tomar cadenas, el comportamiento predeterminado dentro de estos modelos de contenido es que cualquier espacio en blanco que quede no se trata como significativo. Por ejemplo, <xref:System.Windows.Controls.ListBox> toma <xref:System.Collections.IList>, pero el espacio en blanco (como los saltos de barra entre <xref:System.Windows.Controls.ListBoxItem>) no se conserva y no se representa. Si intenta usar avances de línea como separadores entre las cadenas de elementos de <xref:System.Windows.Controls.ListBoxItem> , no funcionará en absoluto; las cadenas que están separadas por los avances de línea se tratan como una cadena y un elemento.  
   
- Las colecciones que tratan los espacios en blanco como significativos normalmente forman parte del modelo de documentos dinámicos. La colección principal que admite el comportamiento de conservación de espacio en blanco es <xref:System.Windows.Documents.InlineCollection>. Esta clase de colección se declara con el <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; Cuando se encuentra este atributo, el procesador [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tratará el espacio en blanco dentro de la colección como significativo. La combinación de `xml:space="preserve"` y el espacio en blanco dentro de una colección detenida <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> es que todos los espacios en blanco se conservan y se representan. La combinación de `xml:space="default"` y el espacio en blanco dentro de un <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> provoca la normalización del espacio en blanco inicial descrita anteriormente, que deja un espacio en ciertas posiciones, y esos espacios se conservan y representan. El comportamiento deseable depende del usuario, por lo que debe usar `xml:space` para habilitar el comportamiento que quiera.  
+ Las colecciones que tratan los espacios en blanco como significativos normalmente forman parte del modelo de documentos dinámicos. La colección principal que admite el comportamiento de conservación de espacio en blanco es <xref:System.Windows.Documents.InlineCollection>. Esta clase de colección se declara con el <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>; Cuando se encuentra este atributo, el procesador de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tratará el espacio en blanco dentro de la colección como significativo. La combinación de `xml:space="preserve"` y el espacio en blanco dentro de una colección detenida <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> es que todos los espacios en blanco se conservan y se representan. La combinación de `xml:space="default"` y el espacio en blanco dentro de un <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> provoca la normalización del espacio en blanco inicial descrita anteriormente, que deja un espacio en ciertas posiciones, y esos espacios se conservan y representan. El comportamiento deseable depende del usuario, por lo que debe usar `xml:space` para habilitar el comportamiento que quiera.  
   
- Además, algunos elementos insertados que indican un LineBreak en un modelo de documento dinámico no deben introducir deliberadamente un espacio adicional ni siquiera en una colección de espacio en blanco significativa. Por ejemplo, el elemento <xref:System.Windows.Documents.LineBreak> tiene el mismo propósito que la etiqueta \<BR/> en HTML y para mejorar la legibilidad en el marcado, normalmente un <xref:System.Windows.Documents.LineBreak> se separa de cualquier texto subsiguiente mediante un avance de carro creado. Ese avance de línea no se debe normalizar para convertirlo en un espacio inicial en la línea posterior. Para habilitar ese comportamiento, la definición de clase para el elemento <xref:System.Windows.Documents.LineBreak> aplica el <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, que a continuación lo interpreta el procesador @no__t 2 para indicar que el espacio en blanco que rodea a <xref:System.Windows.Documents.LineBreak> siempre se recorta.  
+ Además, algunos elementos insertados que indican un LineBreak en un modelo de documento dinámico no deben introducir deliberadamente un espacio adicional ni siquiera en una colección de espacio en blanco significativa. Por ejemplo, el elemento <xref:System.Windows.Documents.LineBreak> tiene el mismo propósito que la etiqueta \<BR/> en HTML y para mejorar la legibilidad en el marcado, normalmente un <xref:System.Windows.Documents.LineBreak> se separa de cualquier texto subsiguiente mediante un avance de carro creado. Ese avance de línea no se debe normalizar para convertirlo en un espacio inicial en la línea posterior. Para habilitar ese comportamiento, la definición de clase para el elemento <xref:System.Windows.Documents.LineBreak> aplica el <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, que el procesador de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] interpreta para indicar que el espacio en blanco que rodea a <xref:System.Windows.Documents.LineBreak> siempre se recorta.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Información general sobre XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [Entidades de caracteres XML y XAML](xml-character-entities-and-xaml.md)
 - [control de XML: Space en XAML](xml-space-handling-in-xaml.md)

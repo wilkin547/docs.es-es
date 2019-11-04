@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664002"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424866"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 
@@ -62,7 +62,7 @@ Las clases XML de .NET Framework proporcionan estas ventajas:
 
 En [Opciones de procesamiento XML](../../../../docs/standard/data/xml/xml-processing-options.md) se describen las opciones para procesar datos XML.
 
-En [Procesamiento de datos XML en memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) se describen los tres modelos para procesar datos XML en memoria: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la clase <xref:System.Xml.XmlDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XPath.XPathDocument> (basada en el modelo de datos XPath).
+En [Procesamiento de datos XML en memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) se describen los tres modelos para procesar datos XML en memoria: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la clase <xref:System.Xml.XmlDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XPath.XPathDocument> (basada en el modelo de datos XPath).
 
 [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)\
 Describe cómo utilizar el procesador XSLT.

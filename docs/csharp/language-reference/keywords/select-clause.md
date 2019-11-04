@@ -9,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 3ba52fccc0521df1a0bb5b6177575dc5d2152248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f1bfbeccaf6c3916a591f6447760fa01c3f8a3b6
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633849"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422363"
 ---
 # <a name="select-clause-c-reference"></a>select (Cláusula, Referencia de C#)
 
@@ -45,5 +45,5 @@ En tiempo de compilación, la cláusula `select` se convierte en una llamada de 
 - [from (cláusula)](from-clause.md)
 - [partial (Método) (Referencia de C#)](partial-method.md)
 - [Tipos anónimos](../../programming-guide/classes-and-structs/anonymous-types.md)
-- [Expresiones de consulta LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Introducción a LINQ en C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ en C#](../../linq/index.md)
+- [Introducción a LINQ en C#](/dotnet/csharp/programming-guide/concepts/linq/)

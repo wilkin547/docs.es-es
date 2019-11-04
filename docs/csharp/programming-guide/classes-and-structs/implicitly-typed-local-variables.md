@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635551"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419388"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales con asignación implícita de tipos (Guía de programación de C#)
 
@@ -99,7 +99,7 @@ Pero el uso de `var` supone al menos la posibilidad de que el código sea más d
 - [Tipos anónimos](anonymous-types.md)
 - [Inicializadores de objeto y colección](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [Expresiones de consulta LINQ](../linq-query-expressions/index.md)
+- [LINQ en C#](../../linq/index.md)
 - [LINQ (Language Integrated Query)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)

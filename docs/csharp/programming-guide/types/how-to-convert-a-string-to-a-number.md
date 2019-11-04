@@ -8,16 +8,16 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133704"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417645"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedimiento Convertir una cadena en un número (Guía de programación de C#)
 
-Puede convertir una [cadena](../../language-reference/keywords/string.md) en un número llamando al método `Parse` o `TryParse` que se encuentra en varios tipos numéricos (`int`, `long`, `double`, etc.) o usando métodos en la clase <xref:System.Convert?displayProperty=nameWithType>.  
+Puede convertir una [cadena](../../language-reference/builtin-types/reference-types.md) en un número llamando al método `Parse` o `TryParse` que se encuentra en varios tipos numéricos (`int`, `long`, `double`, etc.) o usando métodos en la clase <xref:System.Convert?displayProperty=nameWithType>.  
   
  Si tiene una cadena, resulta algo más eficaz y sencillo llamar a un método `TryParse` (por ejemplo, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) o un método `Parse` (por ejemplo, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  El uso de un método <xref:System.Convert> resulta más práctico para objetos generales que implementan <xref:System.IConvertible>.  
   

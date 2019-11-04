@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395931"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423676"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines en .NET
 
@@ -311,8 +311,8 @@ Al escribir asistentes que lean el búfer, se debe copiar cualquier carga devuel
 
 El código anterior:
 
-* Solicita un búfer de al menos 5 bytes de `PipeWriter` mediante <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>.
-* Escribe bytes para la cadena ASCII `"Hello"` en el elemento devuelto `Span<byte>`.
+* Solicita un búfer de al menos 5 bytes de `PipeWriter` mediante <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>.
+* Escribe bytes para la cadena ASCII `"Hello"` en el elemento devuelto `Memory<byte>`.
 * Llama a <xref:System.IO.Pipelines.PipeWriter.Advance%2A> para indicar el número de bytes que se han escrito en el búfer.
 * Vacía `PipeWriter`, que envía los bytes al dispositivo subyacente.
 

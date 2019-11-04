@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para colocar controles en formularios Windows Forms
+title: 'Cómo: Colocar los controles en formularios Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,41 +15,41 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1cc2cb4c749b7290a6edf914a8e6a697006ef43c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bb57d14397a4626e01c41dd687dfed7331282a10
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987080"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458329"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a>Procedimiento Colocar controles en Windows Forms
+# <a name="how-to-position-controls-on-windows-forms"></a>Cómo: colocar controles en Windows Forms
 
-Para colocar controles, use el diseñador de Windows Forms en Visual Studio o especifique la <xref:System.Windows.Forms.Control.Location%2A> propiedad.
+Para colocar controles, use el Diseñador de Windows Forms en Visual Studio o especifique la propiedad <xref:System.Windows.Forms.Control.Location%2A>.
 
 ## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Colocar un control en la superficie de diseño del Diseñador de Windows Forms
 
 En Visual Studio, arrastre el control hasta la ubicación adecuada con el mouse.
 
 > [!NOTE]
-> Seleccione el control y muévalo con las teclas de dirección para colocarlo con más precisión. Además, las *guías de alineación* le ayudan a colocar controles con precisión en el formulario. Para obtener más información, vea [Tutorial: Organizar controles en Windows Forms mediante las líneas](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)de ajuste.
+> Seleccione el control y muévalo con las teclas de dirección para colocarlo con más precisión. Además, las *guías de alineación* le ayudan a colocar controles con precisión en el formulario. Para obtener más información, vea [Tutorial: organizar controles en Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
 
 ## <a name="position-a-control-using-the-properties-window"></a>Colocar un control mediante el ventana Propiedades
 
 1. En Visual Studio, seleccione el control que desea colocar.
 
-2. En la ventana **propiedades** , escriba valores para la <xref:System.Windows.Forms.Control.Location%2A> propiedad, separados por una coma, para colocar el control dentro de su contenedor.
+2. En la ventana **propiedades** , escriba valores para la propiedad <xref:System.Windows.Forms.Control.Location%2A>, separados por una coma, para colocar el control dentro de su contenedor.
 
    El primer número (X) es la distancia desde el borde izquierdo del contenedor. el segundo número (Y) es la distancia desde el borde superior del área de contenedor, medido en píxeles.
 
    > [!NOTE]
-   > Puede expandir la <xref:System.Windows.Forms.Control.Location%2A> propiedad para escribir los valores **X** e y individualmente.
+   > Puede expandir la propiedad <xref:System.Windows.Forms.Control.Location%2A> para escribir los valores **X** e **y individualmente** .
 
 ## <a name="position-a-control-programmatically"></a>Colocar un control mediante programación
 
-1. Establezca la <xref:System.Windows.Forms.Control.Location%2A> propiedad del control <xref:System.Drawing.Point>en.
+1. Establezca la propiedad <xref:System.Windows.Forms.Control.Location%2A> del control en un <xref:System.Drawing.Point>.
 
     ```vb
     Button1.Location = New Point(100, 100)
@@ -63,7 +63,7 @@ En Visual Studio, arrastre el control hasta la ubicación adecuada con el mouse.
     button1->Location = Point(100, 100);
     ```
 
-2. Cambie la coordenada X de la ubicación del control mediante <xref:System.Windows.Forms.Control.Left%2A> la subpropiedad.
+2. Cambie la coordenada X de la ubicación del control mediante la subpropiedad <xref:System.Windows.Forms.Control.Left%2A>.
 
     ```vb
     Button1.Left = 300
@@ -79,7 +79,7 @@ En Visual Studio, arrastre el control hasta la ubicación adecuada con el mouse.
 
 ## <a name="increment-a-controls-location-programmatically"></a>Incrementar la ubicación de un control mediante programación
 
-Establezca la <xref:System.Windows.Forms.Control.Left%2A> subpropiedad para incrementar la coordenada X del control.
+Establezca la subpropiedad <xref:System.Windows.Forms.Control.Left%2A> para incrementar la coordenada X del control.
 
 ```vb
 Button1.Left += 200
@@ -94,15 +94,15 @@ button1->Left += 200;
 ```
 
 > [!NOTE]
-> Utilice la <xref:System.Windows.Forms.Control.Location%2A> propiedad para establecer las posiciones X e y de un control simultáneamente. Para establecer una posición individualmente, use la subpropiedad <xref:System.Windows.Forms.Control.Left%2A> del control (**X**) o <xref:System.Windows.Forms.Control.Top%2A> (**Y**). No intente establecer implícitamente las coordenadas X e y de la <xref:System.Drawing.Point> estructura que representa la ubicación del botón, ya que esta estructura contiene una copia de las coordenadas del botón.
+> Use la propiedad <xref:System.Windows.Forms.Control.Location%2A> para establecer simultáneamente las posiciones X e y de un control. Para establecer una posición individualmente, use la subpropiedad <xref:System.Windows.Forms.Control.Left%2A> (**X**) o <xref:System.Windows.Forms.Control.Top%2A> (**Y**) del control. No intente establecer implícitamente las coordenadas X e y de la estructura <xref:System.Drawing.Point> que representa la ubicación del botón, porque esta estructura contiene una copia de las coordenadas del botón.
 
 ## <a name="see-also"></a>Vea también
 
 - [Controles de formularios Windows Forms](index.md)
-- [Tutorial: Organizar controles en Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
-- [Procedimientos: Establecer la ubicación de la pantalla de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))
+- [Cómo: establecer la ubicación de la pantalla de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

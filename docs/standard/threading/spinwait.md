@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b66ec913a6e8726710d90737f97c04335ae6e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91588fc6e9c3c8e85de6a315c0743efb0137ecd5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676437"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128987"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> es un tipo de sincronización ligero que puede usar en escenarios de bajo nivel para evitar los costosos cambios de contexto y las transiciones de kernel que se requieren para los eventos de kernel. En los equipos con varios núcleos, cuando no se espera que un recurso se mantenga durante largos períodos de tiempo, puede resultar más eficaz que un subproceso en espera itere en modo de usuario en unas docenas o centenas de ciclos y que luego vuelva a intentar adquirir el recurso. Si el recurso está disponible después de girar, entonces habrá guardado varios miles de ciclos. Si el recurso aún no está disponible, habrá empleado solo algunos ciclos y podrá activar aún una espera basada en el kernel. A esta combinación de giro y espera se le denomina a veces una *operación de espera de dos fases*.  

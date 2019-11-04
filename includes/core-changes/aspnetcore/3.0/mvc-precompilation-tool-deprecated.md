@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 641233df165a1c2208a2185f2b6e99077f9a59d3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394388"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198574"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: herramienta de precompilación en desuso
 
 En ASP.NET Core 1.1, se presentó el paquete `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` (herramienta de precompilación MVC) para agregar compatibilidad con la compilación en tiempo de publicación de archivos Razor (archivos *.cshtml*). En ASP.NET Core 2.1, se presentó el [SDK de Razor](/aspnet/core/razor-pages/sdk?view=aspnetcore-2.1) para ampliar las características de la herramienta de precompilación. El SDK de Razor agregaba compatibilidad con los archivos Razor en tiempo de compilación y publicación. El SDK comprueba la exactitud de los archivos *.cshtml* en tiempo de compilación mientras mejora el tiempo de inicio de la aplicación. El SDK de Razor está activado de forma predeterminada y no se requiere ningún gesto para empezar a usarlo.
 
-En ASP.NET Core 3.0, se quitó la herramienta de precompilación MVC de ASP.NET Core 1.1. Las versiones anteriores del paquete seguirán recibiendo correcciones de seguridad y de errores importantes en la versión de revisión. 
+En ASP.NET Core 3.0, se quitó la herramienta de precompilación MVC de ASP.NET Core 1.1. Las versiones anteriores del paquete seguirán recibiendo correcciones de seguridad y de errores importantes en la versión de revisión.
 
 #### <a name="version-introduced"></a>Versión introducida
 

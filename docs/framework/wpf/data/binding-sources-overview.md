@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920289"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459019"
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. En este tema se describen los tipos de objetos que se pueden usar como origen de enlace.
@@ -54,7 +54,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 ## <a name="using-entire-objects-as-a-binding-source"></a>Utilizar objetos completos como origen de enlace
  Puede utilizar objetos completos como origen de enlace. Puede especificar un origen de enlace mediante el <xref:System.Windows.Data.Binding.Source%2A> o la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> y, a continuación, proporcionar una declaración de enlace en blanco: `{Binding}`. Los escenarios en los que esto resulta útil incluyen enlaces a objetos que son del tipo cadena, enlaces a objetos con varias propiedades en las que esté interesado o el enlace a objetos de la colección. Para obtener un ejemplo de enlace a un objeto de la colección completo, consulte [Cómo: Usar el patrón principal-detalle con datos jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Observe que puede ser necesario aplicar lógica personalizada para que los datos sean significativos para la propiedad de destino enlazada. La lógica personalizada puede tener el formato de un convertidor personalizado (si no existe la conversión de tipos predeterminada) o una <xref:System.Windows.DataTemplate>. Para más información sobre los convertidores, consulte la sección de conversión de datos de [Información general sobre el enlace de datos](data-binding-overview.md). Para más información sobre las plantillas de datos, consulte [Información general sobre plantillas de datos](data-templating-overview.md).
+ Observe que puede ser necesario aplicar lógica personalizada para que los datos sean significativos para la propiedad de destino enlazada. La lógica personalizada puede tener el formato de un convertidor personalizado (si no existe la conversión de tipos predeterminada) o una <xref:System.Windows.DataTemplate>. Para más información sobre los convertidores, consulte la sección de conversión de datos de [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md). Para más información sobre las plantillas de datos, consulte [Información general sobre plantillas de datos](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Utilizar objetos de colección como origen de enlace
@@ -64,7 +64,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 
  La clase <xref:System.Collections.ObjectModel.ObservableCollection%601> es una implementación integrada de una colección de datos que expone la interfaz <xref:System.Collections.Specialized.INotifyCollectionChanged>. Los objetos de datos individuales dentro de la colección deben cumplir los requisitos descritos en las secciones anteriores. Para ver un ejemplo, consulte [Cómo: Crear y enlazar a una colección ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Antes de implementar su propia colección, considere la posibilidad de usar <xref:System.Collections.ObjectModel.ObservableCollection%601> o una de las clases de colección existentes, como <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>y <xref:System.ComponentModel.BindingList%601>, entre muchas otras.
 
- WPF nunca se enlaza directamente a una colección. Si especifica una colección como origen de enlace, WPF se enlaza en realidad a la vista predeterminada de la colección. Para más información sobre las vistas predeterminadas, consulte [Información general sobre el enlace de datos](data-binding-overview.md).
+ WPF nunca se enlaza directamente a una colección. Si especifica una colección como origen de enlace, WPF se enlaza en realidad a la vista predeterminada de la colección. Para más información sobre las vistas predeterminadas, consulte [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md).
 
  Si tiene un escenario avanzado y desea implementar su propia colección, considere la posibilidad de usar la interfaz <xref:System.Collections.IList>. <xref:System.Collections.IList> proporciona una colección no genérica de objetos a los que se puede tener acceso individualmente por índice, lo que puede mejorar el rendimiento.
 
@@ -97,6 +97,6 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Especificación del origen de enlace](how-to-specify-the-binding-source.md)
-- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md)
 - [Información general de enlace de datos WPF con LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Optimizar el rendimiento del enlace de datos](../advanced/optimizing-performance-data-binding.md)

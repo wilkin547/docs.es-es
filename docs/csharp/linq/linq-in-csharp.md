@@ -3,12 +3,12 @@ title: LINQ en C#
 description: Vínculos a temas que ofrecen información más detallada sobre LINQ en C#.
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.openlocfilehash: a86bbabedc99531a5d02a9e60df5798a03653370
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b9301074996528cd1fbcfebde3a0a57b15e2f15
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633786"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421764"
 ---
 # <a name="linq-in-c"></a>LINQ en C\#
 
@@ -36,7 +36,7 @@ Describe las construcciones de lenguaje de C# compatibles con LINQ.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Expresiones de consulta LINQ](../programming-guide/linq-query-expressions/index.md)  
+[Expresiones de consulta LINQ](index.md)  
 Incluye información general sobre las consultas en LINQ y ofrece vínculos a recursos adicionales.
 
 [Información general sobre operadores de consulta estándar](../programming-guide/concepts/linq/standard-query-operators-overview.md)  

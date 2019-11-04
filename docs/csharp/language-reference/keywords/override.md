@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394236"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422635"
 ---
 # <a name="override-c-reference"></a>override (Referencia de C#)
 
@@ -53,7 +53,7 @@ En este ejemplo se define una clase base denominada `Employee` y una clase deriv
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Herencia](../../programming-guide/classes-and-structs/inheritance.md)
 - [Palabras clave de C#](index.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
 - [new (modificador)](new-modifier.md)

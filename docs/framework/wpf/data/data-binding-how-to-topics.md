@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: 59fe870e623ca998f24161123dc020144b7cd055
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 4e5f0f3bfe27a02930bdb004cd78e254a6a38ad6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920275"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459984"
 ---
 # <a name="data-binding-how-to-topics"></a>Temas de procedimientos de enlace de datos
 
@@ -65,5 +65,5 @@ En los temas de esta sección se describe cómo usar el enlace de datos para enl
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-- [Enlace de datos en WPF](data-binding-wpf.md)
+- [Enlace de datos en WPF](../../../desktop-wpf/data/data-binding-overview.md)
 - [Rendimiento del enlace de datos](../advanced/optimizing-performance-data-binding.md)
