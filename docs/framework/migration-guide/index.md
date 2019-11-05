@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126300"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457952"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Guía de migración a .NET Framework 4.8, 4.7, 4.6 y 4.5
 
@@ -25,7 +25,7 @@ Consulte los documentos siguientes antes de migrar la aplicación de versiones a
 
 - Consulte [Versiones y dependencias](versions-and-dependencies.md) para conocer la versión de CLR subyacente a cada versión de .NET Framework y obtener instrucciones sobre cómo establecer correctamente el destino de sus aplicaciones.
 
-- Consulte [Compatibilidad de aplicaciones](application-compatibility.md) para información sobre el tiempo de ejecución y los cambios de destino que puedan afectar a la aplicación y cómo abordar estos cambios.
+- Consulte [Compatibilidad de aplicaciones](application-compatibility.md) para información sobre el entorno de ejecución y los cambios de destino que puedan afectar a la aplicación y cómo abordarlos.
 
 - Consulte [Lo obsoleto en la biblioteca de clases](../whats-new/whats-obsolete.md) para determinar los tipos o miembros del código que quedaron obsoletos y las alternativas recomendadas.
 
