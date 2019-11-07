@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417720"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739204"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -174,7 +174,7 @@ Como se ha mencionado anteriormente, puede asignar implícitamente un tipo a una
 
 En algunos casos, resulta conveniente crear un tipo con nombre para conjuntos sencillos de valores relacionados que no desea almacenar ni pasar fuera de los límites del método. Puede crear *tipos anónimos* para este fin. Para más información, vea [Tipos anónimos](../classes-and-structs/anonymous-types.md).
 
-Los tipos de valor normales no pueden tener un valor [null](../../language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](../../language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos. Para más información, vea [Tipos que admiten un valor NULL](../nullable-types/index.md).
+Los tipos de valor normales no pueden tener un valor [null](../../language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](../../language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos. Para más información, vea [Tipos que admiten un valor NULL](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

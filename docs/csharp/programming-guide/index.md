@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423249"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739193"
 ---
 # <a name="c-programming-guide"></a>Guía de programación de C#
+
 Esta sección proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET Framework.  
   
  En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si nunca ha programado ni ha trabajado con C#, puede visitar los tutoriales de [Introducción a C#](../tutorials/intro-to-csharp/index.md) o el [tutorial de .NET en explorador](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), que no requiere ningún conocimiento previo de programación.  
@@ -28,8 +29,9 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
 [Dentro de un programa de C#](./inside-a-program/index.md)  
   
 [Main() y argumentos de la línea de comandos](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>Secciones de lenguaje  
+
+## <a name="language-sections"></a>Secciones de lenguaje
+
 [Instrucciones, expresiones y operadores](./statements-expressions-operators/index.md)  
 
  [Tipos](./types/index.md)  
@@ -41,7 +43,7 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
  [Tipos de enumeración](./enumeration-types.md)  
   
  [Delegados](./delegates/index.md)  
- 
+
  [Matrices](./arrays/index.md)  
   
  [Cadenas](./strings/index.md)  
@@ -62,13 +64,12 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
   
  [Espacios de nombres](./namespaces/index.md)  
   
- [Tipos de valores que aceptan valores NULL](./nullable-types/index.md)  
-  
  [Código no seguro y punteros](./unsafe-code-pointers/index.md)  
   
  [Comentarios de documentación XML](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Secciones de la plataforma  
+## <a name="platform-sections"></a>Secciones de la plataforma
+
  [Dominios de aplicación](../../framework/app-domains/application-domains.md)  
   
  [Ensamblados de .NET](../../standard/assembly/index.md)  

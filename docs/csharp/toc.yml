@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: Uso del espacio de nombres My
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: Tipos de valor que aceptan valores NULL
-      items:
-        - name: Información general
-          href: programming-guide/nullable-types/index.md
-        - name: Uso de tipos que admiten un valor NULL
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: Identificación de tipos que admiten un valor NULL
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: Código no seguro y punteros
       items:
         - name: Información general y restricciones
@@ -1314,6 +1306,9 @@
                   href: language-reference/keywords/enum.md
                 - name: struct
                   href: language-reference/keywords/struct.md
+                - name: Tipos de valor que aceptan valores NULL
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: Tipos de referencia
               items:
                 - name: Características de los tipos de referencia

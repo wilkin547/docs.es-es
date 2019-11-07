@@ -2,14 +2,14 @@
 title: Cree servicios resistentes preparados para la nube. aceptación de errores transitorios en la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Cree servicios resistentes preparados para la nube. aceptación de errores transitorios en la nube
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373969"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739395"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Cree servicios resistentes preparados para la nube: adopción de errores transitorios en la nube
 
 La resistencia es la capacidad de recuperarse de errores y seguir funcionando. No se trata de evitar los errores, sino de aceptar el hecho de que se produzcan errores y, a continuación, responder a ellos de forma que se evite el tiempo de inactividad o la pérdida de datos. El objetivo de la resistencia consiste en que la aplicación vuelva a un estado totalmente operativo después de un error.
 
@@ -27,7 +27,7 @@ Podría producirse un escenario similar en una aplicación que consuma servicios
 
 Una aplicación resistente como la que se muestra en la figura 4-9 debe implementar técnicas como "reintentos con retroceso exponencial" para ofrecer a la aplicación una oportunidad de controlar los errores transitorios en los recursos. También debe usar "disyuntores" en las aplicaciones. Un disyuntor impide que una aplicación intente obtener acceso a un recurso cuando realmente se trata de un error a largo plazo. Mediante el uso de un disyuntor, la aplicación evita la provocación de una denegación de servicio a sí misma.
 
-![Errores parciales administrados por reintentos con retroceso exponencial](./media/image9.png)
+![Diagrama de errores parciales administrados por reintentos con retroceso exponencial.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
 
 **Figura 4-9.** Errores parciales administrados por reintentos con retroceso exponencial
 

@@ -2,12 +2,12 @@
 title: Evaluación de los cambios importantes en .NET Core
 description: Conozca las formas en que .NET Core intenta mantener la compatibilidad para los desarrolladores en todas las versiones de .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416668"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739350"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Evaluación de los cambios importantes en .NET Core
 
@@ -52,7 +52,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 - **✔️ Cambio de un tipo [struct](../../csharp/language-reference/keywords/struct.md) a un tipo `readonly struct`**
 
   Tenga en cuenta que no se permite cambiar un tipo `readonly struct` a un tipo `struct`.
-  
+
 - **✔️ Adición de la palabra clave [sealed](../../csharp/language-reference/keywords/sealed.md) o [abstract](../../csharp/language-reference/keywords/abstract.md) a un tipo cuando hay ningún constructor *accesible* (público o protegido)**
 
 - **✔️ Expansión de la visibilidad de un tipo**
@@ -138,9 +138,9 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 - **❌ Cambio de nombre de un parámetro (incluido el cambio de mayúsculas y minúsculas)**
 
   Esto se considera importante por dos motivos:
-  
+
   - Interrumpe los escenarios de enlace en tiempo de ejecución, como la característica de enlace en tiempo de ejecución en Visual Basic y [dinámica](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) en C#.
-  
+
   - Interrumpe la [compatibilidad del origen](categories.md#source-compatibility) cuando los desarrolladores utilizan los [argumentos con nombre](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
 - **❌ Cambio de un valor `ref` devuelto a un valor `ref readonly` devuelto**
@@ -153,9 +153,9 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
   Aunque esto a menudo no es un cambio importante porque el compilador de C# tiende a emitir las instrucciones de lenguaje intermedio (IL) [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) para llamar a métodos no virtuales (`callvirt` realiza una comprobación nula, mientras que una llamada normal no lo hace), este comportamiento no es invariable por varias razones:
   - C# no es el único lenguaje al que se dirige .NET.
-  
+
   - El compilador de C# intenta cada vez más optimizar `callvirt` para una llamada normal cuando el método de destino no es virtual y probablemente no es nulo (como un método al que se accede a través del operador de propagación nula [?](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
-  
+
   Convertir un método en virtual significa que el código del consumidor a menudo acabaría llamándolo no virtual.
 
 - **❌ Adición de la palabra clave [virtual](../../csharp/language-reference/keywords/virtual.md) a un miembro**

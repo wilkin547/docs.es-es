@@ -2,12 +2,12 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591610"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736891"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -65,8 +65,8 @@ Puede que deba convertir un objeto a otro tipo.
 - [Convierta una cadena en un número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Use la coincidencia de patrones y los operadores `as` y `is` para una conversión segura a otro tipo](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Definición de las conversiones de tipos personalizadas](../language-reference/operators/user-defined-conversion-operators.md).
-- [Determine si un tipo es un tipo de valor que acepta valores NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Realice conversiones entre tipos de valores que aceptan valores NULL y tipos que no](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
+- [Determine si un tipo es un tipo de valor que acepta valores NULL](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
+- [Realice conversiones entre tipos de valores que aceptan valores NULL y tipos que no](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Comparaciones de igualdad y ordenación
 
