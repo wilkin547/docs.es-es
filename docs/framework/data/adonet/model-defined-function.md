@@ -2,42 +2,42 @@
 title: función definida por el modelo
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 1418eccecea647204620455969696c6390bd4a18
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 973d7ff9f7b76650782d62dcdcab60c8cedde18f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783623"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735576"
 ---
-# <a name="model-defined-function"></a><span data-ttu-id="f5fdc-102">función definida por el modelo</span><span class="sxs-lookup"><span data-stu-id="f5fdc-102">model-defined function</span></span>
-<span data-ttu-id="f5fdc-103">Una *función definida por el modelo* es una función que se define en un modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="f5fdc-104">El cuerpo de una función definida por el modelo se expresa en [Entity SQL](./ef/language-reference/entity-sql-language.md), lo que permite expresar la función independientemente de las reglas o los lenguajes admitidos en el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-104">The body of a model-defined function is expressed in [Entity SQL](./ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  
+# <a name="model-defined-function"></a><span data-ttu-id="65a2a-102">función definida por el modelo</span><span class="sxs-lookup"><span data-stu-id="65a2a-102">model-defined function</span></span>
+<span data-ttu-id="65a2a-103">Una *función definida por el modelo* es una función que se define en un modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="65a2a-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="65a2a-104">El cuerpo de una función definida por el modelo se expresa en [Entity SQL](./ef/language-reference/entity-sql-language.md), lo que permite expresar la función independientemente de las reglas o los lenguajes admitidos en el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="65a2a-104">The body of a model-defined function is expressed in [Entity SQL](./ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  
   
- <span data-ttu-id="f5fdc-105">La definición para una función definida por el modelo contiene la información siguiente:</span><span class="sxs-lookup"><span data-stu-id="f5fdc-105">A definition for a model-defined function contains the following information:</span></span>  
+ <span data-ttu-id="65a2a-105">La definición para una función definida por el modelo contiene la información siguiente:</span><span class="sxs-lookup"><span data-stu-id="65a2a-105">A definition for a model-defined function contains the following information:</span></span>  
   
-- <span data-ttu-id="f5fdc-106">El nombre de la función.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-106">A function name.</span></span> <span data-ttu-id="f5fdc-107">(Necesario)</span><span class="sxs-lookup"><span data-stu-id="f5fdc-107">(Required)</span></span>  
+- <span data-ttu-id="65a2a-106">El nombre de la función.</span><span class="sxs-lookup"><span data-stu-id="65a2a-106">A function name.</span></span> <span data-ttu-id="65a2a-107">(Necesario)</span><span class="sxs-lookup"><span data-stu-id="65a2a-107">(Required)</span></span>  
   
-- <span data-ttu-id="f5fdc-108">El tipo del valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-108">The type of the return value.</span></span> <span data-ttu-id="f5fdc-109">(Opcional)</span><span class="sxs-lookup"><span data-stu-id="f5fdc-109">(Optional)</span></span>  
+- <span data-ttu-id="65a2a-108">El tipo del valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="65a2a-108">The type of the return value.</span></span> <span data-ttu-id="65a2a-109">(Opcional)</span><span class="sxs-lookup"><span data-stu-id="65a2a-109">(Optional)</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="f5fdc-110">Si no se especifica ningún tipo de valor devuelto, este es void.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-110">If no return type is specified, the return value is void.</span></span>  
+    > <span data-ttu-id="65a2a-110">Si no se especifica ningún tipo de valor devuelto, este es void.</span><span class="sxs-lookup"><span data-stu-id="65a2a-110">If no return type is specified, the return value is void.</span></span>  
   
-- <span data-ttu-id="f5fdc-111">Información de parámetros.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-111">Parameter information.</span></span> <span data-ttu-id="f5fdc-112">(Opcional)</span><span class="sxs-lookup"><span data-stu-id="f5fdc-112">(Optional)</span></span>  
+- <span data-ttu-id="65a2a-111">Información de parámetros.</span><span class="sxs-lookup"><span data-stu-id="65a2a-111">Parameter information.</span></span> <span data-ttu-id="65a2a-112">(Opcional)</span><span class="sxs-lookup"><span data-stu-id="65a2a-112">(Optional)</span></span>  
   
-- <span data-ttu-id="f5fdc-113">Expresión [Entity SQL](./ef/language-reference/entity-sql-language.md) que define el cuerpo de la función.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-113">An [Entity SQL](./ef/language-reference/entity-sql-language.md) expression that defines the body of the function.</span></span>  
+- <span data-ttu-id="65a2a-113">Expresión [Entity SQL](./ef/language-reference/entity-sql-language.md) que define el cuerpo de la función.</span><span class="sxs-lookup"><span data-stu-id="65a2a-113">An [Entity SQL](./ef/language-reference/entity-sql-language.md) expression that defines the body of the function.</span></span>  
   
- <span data-ttu-id="f5fdc-114">Tenga en cuenta que las funciones definidas por el modelo no admiten parámetros de salida.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-114">Note that model-defined functions do not support output parameters.</span></span> <span data-ttu-id="f5fdc-115">Esta restricción se aplica para que las funciones definidas por el modelo puedan ser compuestas.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-115">This restriction is in place so that model-defined functions can be composed.</span></span>  
+ <span data-ttu-id="65a2a-114">Tenga en cuenta que las funciones definidas por el modelo no admiten parámetros de salida.</span><span class="sxs-lookup"><span data-stu-id="65a2a-114">Note that model-defined functions do not support output parameters.</span></span> <span data-ttu-id="65a2a-115">Esta restricción se aplica para que las funciones definidas por el modelo puedan ser compuestas.</span><span class="sxs-lookup"><span data-stu-id="65a2a-115">This restriction is in place so that model-defined functions can be composed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5fdc-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f5fdc-116">Example</span></span>  
- <span data-ttu-id="f5fdc-117">El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
+## <a name="example"></a><span data-ttu-id="65a2a-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="65a2a-116">Example</span></span>  
+ <span data-ttu-id="65a2a-117">El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.</span><span class="sxs-lookup"><span data-stu-id="65a2a-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
   
  ![Captura de pantalla que muestra un modelo con fecha de publicación.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
- <span data-ttu-id="f5fdc-119">El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](./ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales.</span><span class="sxs-lookup"><span data-stu-id="f5fdc-119">The [ADO.NET Entity Framework](./ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](./ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="f5fdc-120">El código CSDL siguiente define una función en el modelo conceptual que devuelve el número de años transcurridos desde la publicación de una instancia de `Book` (en el diagrama anterior).</span><span class="sxs-lookup"><span data-stu-id="f5fdc-120">The following CSDL defines a function in the conceptual model that returns the numbers of years since an instance of a `Book` (in the diagram above) was published.</span></span>  
+ <span data-ttu-id="65a2a-119">El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) para definir los modelos conceptuales.</span><span class="sxs-lookup"><span data-stu-id="65a2a-119">The [ADO.NET Entity Framework](./ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) to define conceptual models.</span></span> <span data-ttu-id="65a2a-120">El código CSDL siguiente define una función en el modelo conceptual que devuelve el número de años transcurridos desde la publicación de una instancia de `Book` (en el diagrama anterior).</span><span class="sxs-lookup"><span data-stu-id="65a2a-120">The following CSDL defines a function in the conceptual model that returns the numbers of years since an instance of a `Book` (in the diagram above) was published.</span></span>  
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
-## <a name="see-also"></a><span data-ttu-id="f5fdc-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="f5fdc-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65a2a-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="65a2a-121">See also</span></span>
 
-- [<span data-ttu-id="f5fdc-122">Conceptos clave de Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="f5fdc-122">Entity Data Model Key Concepts</span></span>](entity-data-model-key-concepts.md)
-- [<span data-ttu-id="f5fdc-123">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="f5fdc-123">Entity Data Model</span></span>](entity-data-model.md)
-- [<span data-ttu-id="f5fdc-124">Entity Data Model: Tipos de datos primitivos</span><span class="sxs-lookup"><span data-stu-id="f5fdc-124">Entity Data Model: Primitive Data Types</span></span>](entity-data-model-primitive-data-types.md)
+- [<span data-ttu-id="65a2a-122">Conceptos clave de Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="65a2a-122">Entity Data Model Key Concepts</span></span>](entity-data-model-key-concepts.md)
+- [<span data-ttu-id="65a2a-123">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="65a2a-123">Entity Data Model</span></span>](entity-data-model.md)
+- [<span data-ttu-id="65a2a-124">Entity Data Model: Tipos de datos primitivos</span><span class="sxs-lookup"><span data-stu-id="65a2a-124">Entity Data Model: Primitive Data Types</span></span>](entity-data-model-primitive-data-types.md)
