@@ -10,38 +10,38 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351771"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732935"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
 
 A veces se trabaja con un tipo de valor que no tiene un valor definido en determinadas circunstancias. Por ejemplo, un campo de una base de datos podría tener que distinguir entre tener un valor asignado que sea significativo y que no tenga un valor asignado. Los tipos de valor se pueden extender para tomar sus valores normales o un valor null. Dicha extensión se denomina un *tipo que acepta valores NULL*.
 
-Cada tipo que acepta valores NULL se construye a partir de la estructura genérica <xref:System.Nullable%601>. Considere una base de datos que realice un seguimiento de las actividades relacionadas con el trabajo. En el ejemplo siguiente se crea un tipo `Boolean` que acepta valores NULL y se declara una variable de ese tipo. Puede escribir la declaración de tres maneras:
+Cada tipo que acepta valores NULL se construye a partir de la estructura de <xref:System.Nullable%601> genérico. Considere una base de datos que realice un seguimiento de las actividades relacionadas con el trabajo. En el ejemplo siguiente se crea un tipo de `Boolean` que acepta valores NULL y se declara una variable de ese tipo. Puede escribir la declaración de tres maneras:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-La variable `ridesBusToWork` puede contener un valor de `True`, un valor de `False` o ningún valor. Su valor predeterminado inicial es ningún valor, que en este caso podría significar que la información no se ha obtenido todavía para esta persona. Por el contrario, `False` podría significar que se ha obtenido la información y que la persona no ha puesto en marcha el bus.
+La variable `ridesBusToWork` puede contener un valor de `True`, un valor de `False`o ningún valor. Su valor predeterminado inicial es ningún valor, que en este caso podría significar que la información no se ha obtenido todavía para esta persona. Por el contrario, `False` podría significar que se ha obtenido la información y que la persona no ha puesto en marcha el bus.
 
-Puede declarar variables y propiedades con tipos que aceptan valores NULL, y puede declarar una matriz con elementos de un tipo que acepta valores NULL. Puede declarar procedimientos con tipos que aceptan valores NULL como parámetros y puede devolver un tipo que acepta valores NULL desde un procedimiento `Function`.
+Puede declarar variables y propiedades con tipos que aceptan valores NULL, y puede declarar una matriz con elementos de un tipo que acepta valores NULL. Puede declarar procedimientos con tipos que aceptan valores NULL como parámetros y puede devolver un tipo que acepta valores NULL de un procedimiento `Function`.
 
-No se puede crear un tipo que acepta valores NULL en un tipo de referencia, como una matriz, una `String` o una clase. El tipo subyacente debe ser un tipo de valor. Para obtener más información, consulta [Value Types and Reference Types](value-types-and-reference-types.md).
+No se puede crear un tipo que acepta valores NULL en un tipo de referencia, como una matriz, una `String`o una clase. El tipo subyacente debe ser un tipo de valor. Para obtener más información, consulta [Value Types and Reference Types](value-types-and-reference-types.md).
 
 ## <a name="using-a-nullable-type-variable"></a>Usar una variable de tipo que acepta valores NULL
 
-Los miembros más importantes de un tipo que acepta valores NULL son sus propiedades <xref:System.Nullable%601.HasValue%2A> y <xref:System.Nullable%601.Value%2A>. En el caso de una variable de un tipo que acepta valores NULL, <xref:System.Nullable%601.HasValue%2A> indica si la variable contiene un valor definido. Si <xref:System.Nullable%601.HasValue%2A> es `True`, puede leer el valor de <xref:System.Nullable%601.Value%2A>. Tenga en cuenta que <xref:System.Nullable%601.HasValue%2A> y <xref:System.Nullable%601.Value%2A> son propiedades @no__t 2.
+Los miembros más importantes de un tipo que acepta valores NULL son sus propiedades <xref:System.Nullable%601.HasValue%2A> y <xref:System.Nullable%601.Value%2A>. En el caso de una variable de un tipo que acepta valores NULL, <xref:System.Nullable%601.HasValue%2A> indica si la variable contiene un valor definido. Si <xref:System.Nullable%601.HasValue%2A> es `True`, puede leer el valor de <xref:System.Nullable%601.Value%2A>. Tenga en cuenta que tanto <xref:System.Nullable%601.HasValue%2A> como <xref:System.Nullable%601.Value%2A> son propiedades `ReadOnly`.
 
 ### <a name="default-values"></a>Valores predeterminados
 
-Cuando se declara una variable con un tipo que acepta valores NULL, su propiedad <xref:System.Nullable%601.HasValue%2A> tiene un valor predeterminado de `False`. Esto significa que, de forma predeterminada, la variable no tiene ningún valor definido, en lugar del valor predeterminado de su tipo de valor subyacente. En el ejemplo siguiente, la variable `numberOfChildren` inicialmente no tiene ningún valor definido, aunque el valor predeterminado del tipo `Integer` es 0.
+Cuando se declara una variable con un tipo que acepta valores NULL, su propiedad <xref:System.Nullable%601.HasValue%2A> tiene un valor predeterminado de `False`. Esto significa que, de forma predeterminada, la variable no tiene ningún valor definido, en lugar del valor predeterminado de su tipo de valor subyacente. En el ejemplo siguiente, la variable `numberOfChildren` inicialmente no tiene ningún valor definido, aunque el valor predeterminado del tipo de `Integer` sea 0.
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Un valor NULL es útil para indicar un valor no definido o desconocido. Si `numberOfChildren` se ha declarado como `Integer`, no habría ningún valor que pudiera indicar que la información no está disponible actualmente.
+Un valor NULL es útil para indicar un valor no definido o desconocido. Si `numberOfChildren` se hubiera declarado como `Integer`, no habría ningún valor que pudiera indicar que la información no está disponible actualmente.
 
 ### <a name="storing-values"></a>Almacenar valores
 
@@ -58,15 +58,15 @@ Si una variable o propiedad de un tipo que acepta valores NULL contiene un valor
 
 ### <a name="retrieving-values"></a>Recuperación de valores
 
-Para recuperar el valor de una variable de un tipo que acepta valores NULL, primero debe probar su propiedad <xref:System.Nullable%601.HasValue%2A> para confirmar que tiene un valor. Si intenta leer el valor cuando <xref:System.Nullable%601.HasValue%2A> es `False`, Visual Basic produce una excepción <xref:System.InvalidOperationException>. En el ejemplo siguiente se muestra la forma recomendada de leer la variable `numberOfChildren` de los ejemplos anteriores.
+Para recuperar el valor de una variable de un tipo que acepta valores NULL, primero debe probar su propiedad <xref:System.Nullable%601.HasValue%2A> para confirmar que tiene un valor. Si intenta leer el valor cuando se `False`<xref:System.Nullable%601.HasValue%2A>, Visual Basic produce una excepción de <xref:System.InvalidOperationException>. En el ejemplo siguiente se muestra la forma recomendada de leer la variable `numberOfChildren` de los ejemplos anteriores.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
 ## <a name="comparing-nullable-types"></a>Comparar tipos que aceptan valores NULL
 
-Cuando se usan variables `Boolean` que aceptan valores NULL en Expresiones booleanas, el resultado puede ser `True`, `False` o `Nothing`. A continuación se encuentra la tabla de verdad para `And` y `Or`. Dado que `b1` y `b2` ahora tienen tres valores posibles, hay nueve combinaciones que evaluar.
+Cuando se usan variables de `Boolean` que aceptan valores NULL en Expresiones booleanas, el resultado puede ser `True`, `False`o `Nothing`. A continuación se encuentra la tabla de verdad para `And` y `Or`. Dado que `b1` y `b2` ahora tienen tres valores posibles, hay nueve combinaciones que evaluar.
 
-|b1|b2|B1 y B2|B1 o B2|
+|B1|B2|B1 y B2|B1 o B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -89,11 +89,11 @@ En este ejemplo, `b1 And b2` se evalúa como `Nothing`. Como resultado, se ejecu
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` y `OrElse`, que usan la evaluación de cortocircuito, deben evaluar sus segundos operandos cuando el primero se evalúa como @no__t 2.
+> `AndAlso` y `OrElse`, que usan la evaluación de cortocircuito, deben evaluar sus segundos operandos cuando el primero se evalúa como `Nothing`.
 
 ## <a name="propagation"></a>Propagación
 
-Si uno o los dos operandos de una operación aritmética, de comparación, de desplazamiento o de tipo aceptan valores NULL, el resultado de la operación también acepta valores NULL. Si ambos operandos tienen valores que no son `Nothing`, la operación se realiza en los valores subyacentes de los operandos, como si ninguno fuese un tipo que acepta valores NULL. En el ejemplo siguiente, las variables `compare1` y `sum1` se escriben implícitamente. Si coloca el puntero del mouse sobre ellos, verá que el compilador deduce los tipos que aceptan valores NULL para ambos.
+Si uno o los dos operandos de una operación aritmética, de comparación, de desplazamiento o de tipo aceptan valores NULL, el resultado de la operación también acepta valores NULL. Si ambos operandos tienen valores que no se `Nothing`, la operación se realiza en los valores subyacentes de los operandos, como si ninguno fuese un tipo que acepta valores NULL. En el ejemplo siguiente, las variables `compare1` y `sum1` se escriben implícitamente. Si coloca el puntero del mouse sobre ellos, verá que el compilador deduce los tipos que aceptan valores NULL para ambos.
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
@@ -110,11 +110,11 @@ Una base de datos es uno de los lugares más importantes para usar tipos que ace
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Tipos de datos](index.md)
-- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Tipos de valores y tipos de referencias](value-types-and-reference-types.md)
 - [Solución de problemas de tipos de datos](troubleshooting-data-types.md)
 - [Llenar conjuntos de datos mediante TableAdapters](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If (operador)](../../../language-reference/operators/if-operator.md)
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
 - [Is (operador)](../../../language-reference/operators/is-operator.md)
 - [IsNot (operador)](../../../language-reference/operators/isnot-operator.md)
-- [Usar tipos de valor que aceptanC#valores NULL ()](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Tipos de valor que aceptanC#valores NULL ()](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)

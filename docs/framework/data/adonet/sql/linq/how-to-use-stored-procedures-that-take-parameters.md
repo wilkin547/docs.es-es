@@ -1,21 +1,21 @@
 ---
-title: Procedimiento para usar procedimientos almacenados que toman parámetros
+title: 'Cómo: Usar procedimientos almacenados que toman parámetros'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: faf4ea9c52b91c3fc0f2f775e7bd5dfe039c53a8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003245"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738116"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedimiento para usar procedimientos almacenados que toman parámetros
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Cómo: Usar procedimientos almacenados que toman parámetros
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los parámetros de salida a parámetros de referencia y, para los tipos de valor, declara el parámetro como que acepta valores NULL.  
   
- Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de filas, vea [How para: Devuelve conjuntos de filas @ no__t-0.  
+ Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de filas, vea [Cómo: devolver conjuntos de filas](how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza un parámetro de entrada único (el identificador de cliente) y se devuelve un parámetro de salida (las ventas totales para ese cliente).  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Procedimientos almacenados](stored-procedures.md)
 - [Descargar bases de datos de ejemplo](downloading-sample-databases.md)
-- [Usar tipos de valor que aceptan valores NULL](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Tipos de valor que aceptan valores NULL](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Tipos de valor que aceptanC#valores NULL ()](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [Tipos de valores que aceptan valores NULL (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

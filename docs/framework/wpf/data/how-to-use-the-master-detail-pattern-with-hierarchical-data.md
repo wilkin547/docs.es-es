@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 2e7d9ceed3ab8385f07d87ecdb92c0a99d410b40
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e4183ddc3868a1568662853b46e05348df129092
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459079"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733482"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Cómo: Usar el patrón principal-detalle con datos jerárquicos
 Este ejemplo muestra cómo implementar el escenario principal-detalle.  
@@ -31,7 +31,7 @@ Este ejemplo muestra cómo implementar el escenario principal-detalle.
   
 2. Debe establecer la propiedad <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> en `true` en los controles de <xref:System.Windows.Controls.ListBox> de los que se realiza el seguimiento de la selección. Al establecer esta propiedad, se asegura de que el elemento seleccionado siempre se establece como <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Como alternativa, si el <xref:System.Windows.Controls.ListBox> obtiene datos de una <xref:System.Windows.Data.CollectionViewSource>, sincroniza la selección y la moneda automáticamente.  
   
- La técnica es ligeramente diferente cuando se usan datos de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Para obtener un ejemplo, consulte [usar el patrón principal-detalle con datos XML jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ La técnica es ligeramente diferente cuando se usan datos XML. Para obtener un ejemplo, consulte [usar el patrón principal-detalle con datos XML jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458546"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740798"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimizar el rendimiento: Enlace de datos
-El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos de una variedad de orígenes de datos en forma de objetos CLR y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos de una variedad de orígenes de datos en forma de objetos CLR y XML.  
   
  En este tema se proporcionan recomendaciones de rendimiento del enlace de datos.  
 
@@ -69,7 +69,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>No convierta objetos CLR a XML solamente para enlazar datos.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite enlazar datos a contenido de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]; sin embargo, el enlace de datos a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenido es más lento que el enlace de datos a objetos CLR. No convierta los datos de objetos de CLR a XML si el único propósito es el enlace de datos.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite enlazar datos al contenido XML; sin embargo, el enlace de datos a contenido XML es más lento que el enlace de datos a objetos CLR. No convierta los datos de objetos de CLR a XML si el único propósito es el enlace de datos.  
   
 ## <a name="see-also"></a>Vea también
 

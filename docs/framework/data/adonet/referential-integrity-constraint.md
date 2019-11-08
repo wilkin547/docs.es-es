@@ -2,12 +2,12 @@
 title: restricción de integridad referencial
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 28880c7085f8b4e3dd2e51b5633c1f0e2a984a4b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad35df7bcca62ffdbc3842b0817b22c5482a3d4d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794444"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738374"
 ---
 # <a name="referential-integrity-constraint"></a>restricción de integridad referencial
 Una *restricción de integridad referencial* en el Entity Data Model (EDM) es similar a una restricción de integridad referencial en una base de datos relacional. Del mismo modo que una columna (o columnas) de una tabla de base de datos puede hacer referencia a la clave principal de otra tabla, una [propiedad](property.md) (o propiedades) de un [tipo de entidad](entity-type.md) puede hacer referencia a la [clave de entidad](entity-key.md) de otro tipo de entidad. El tipo de entidad al que se hace referencia se denomina *extremo principal* de la restricción. El tipo de entidad que hace referencia al extremo principal se denomina *extremo dependiente* de la restricción.  
@@ -29,7 +29,7 @@ Una *restricción de integridad referencial* en el Entity Data Model (EDM) es si
   
  ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "Ejemplo de un modelo de restricción referencial")  
   
- El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](./ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define una restricción de integridad referencial en la asociación `PublishedBy` mostrada en el modelo conceptual anteriormente citado.  
+ El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) para definir los modelos conceptuales. El código CSDL siguiente define una restricción de integridad referencial en la asociación `PublishedBy` mostrada en el modelo conceptual anteriormente citado.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   

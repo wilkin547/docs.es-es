@@ -2,12 +2,12 @@
 title: Acceso seguro a datos
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782778"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735272"
 ---
 # <a name="secure-data-access"></a>Acceso seguro a datos
 Para escribir código de ADO.NET seguro, debe comprender los mecanismos de seguridad disponibles en el almacén de datos subyacente o en la base de datos. También debe tener en cuenta las implicaciones en la seguridad de otras características o componentes que pudieran incluirse en la aplicación.  
@@ -21,7 +21,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Proteger la información de conexión](protecting-connection-information.md)|Describe las prácticas y técnicas recomendadas de seguridad para proteger la información de conexión, como el uso de configuración protegida para cifrar cadenas de conexión.|  
 |[Recomendaciones para las estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
@@ -33,7 +33,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información sobre el uso de comandos con parámetros, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Parámetros de DataAdapter](dataadapter-parameters.md)|Describe cómo usar parámetros con `DataAdapter`.|  
 |[Modificación de datos con procedimientos almacenados](modifying-data-with-stored-procedures.md)|Describe cómo especificar parámetros y cómo obtener un valor devuelto.|  
@@ -44,7 +44,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Introducción a los ataques de scripts](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Describe cómo protegerse de ataques mediante scripts o instrucciones SQL.|  
   
@@ -53,9 +53,9 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
-|[Fundamentos del control de excepciones](../../../standard/exceptions/exception-handling-fundamentals.md)|Describe las formas básicas Try/Catch/Finally del control de excepciones estructurado.|  
+|[Controlar y generar excepciones en .NET](../../../standard/exceptions/index.md)|Describe las formas básicas Try/Catch/Finally del control de excepciones estructurado.|  
 |[Procedimientos recomendados para excepciones](../../../standard/exceptions/best-practices-for-exceptions.md)|Describe los procedimientos recomendados para controlar excepciones.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Proteger orígenes de datos de Access y Excel de Microsoft  
@@ -63,7 +63,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información sobre la protección de datos de Access y Excel, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Consideraciones de seguridad e instrucciones para el acceso 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Describe técnicas de seguridad para Access 2007 como el cifrado de archivos, la administración de contraseñas, la conversión de bases de datos a los nuevos formatos ACCDB y ACCDE y el uso de otras opciones de seguridad.|  
 |[Descripción del rol de los archivos de información de grupo de trabajo en la seguridad de acceso](https://support.microsoft.com/kb/305542)|Explica la función y la relación del archivo de información de grupo de trabajo en la seguridad de Access 2003.|  
@@ -73,7 +73,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea el siguiente recurso.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad basada en roles](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Describe cómo integrar código administrado en servicios de seguridad COM+.|  
   
@@ -82,7 +82,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Interoperating with Unmanaged Code](../../interop/index.md) (Interoperar con código no administrado)|Contiene temas que describen cómo exponer componentes COM a .NET Framework y cómo exponer componentes de .NET Framework a COM.|
 |[Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene temas avanzados como, por ejemplo, los ensamblados de interoperabilidad principal, los subprocesos y el cálculo de referencias personalizado.|

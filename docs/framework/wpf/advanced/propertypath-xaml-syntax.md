@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459353"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740788"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxis de PropertyPath de XAML
 
@@ -32,7 +32,7 @@ Algunas propiedades de estilo y plantilla, como <xref:System.Windows.Setter.Prop
 
 El enlace de datos es una característica de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que permite enlazar con el valor de destino de cualquier propiedad de dependencia. Sin embargo, el origen de este tipo de enlace de datos no necesita ser una propiedad de dependencia: puede ser cualquier tipo de propiedad que reconozca el proveedor de datos correspondiente. Las rutas de acceso de propiedad se utilizan especialmente para el <xref:System.Windows.Data.ObjectDataProvider>, que se usa para obtener los orígenes de enlace de los objetos de Common Language Runtime (CLR) y sus propiedades.
 
-Tenga en cuenta que el enlace de datos a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] no utiliza <xref:System.Windows.PropertyPath>, porque no utiliza <xref:System.Windows.Data.Binding.Path%2A> en el <xref:System.Windows.Data.Binding>. En su lugar, use <xref:System.Windows.Data.Binding.XPath%2A> y especifique la sintaxis válida de XPath en el [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] de los datos. <xref:System.Windows.Data.Binding.XPath%2A> también se especifica como una cadena, pero no se documenta aquí; vea [enlazar a datos XML mediante XmlDataProvider y consultas XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+Tenga en cuenta que el enlace de datos a XML no utiliza <xref:System.Windows.PropertyPath>, porque no utiliza <xref:System.Windows.Data.Binding.Path%2A> en el <xref:System.Windows.Data.Binding>. En su lugar, use <xref:System.Windows.Data.Binding.XPath%2A> y especifique la sintaxis válida de XPath en el Document Object Model XML (DOM) de los datos. <xref:System.Windows.Data.Binding.XPath%2A> también se especifica como una cadena, pero no se documenta aquí; vea [enlazar a datos XML mediante XmlDataProvider y consultas XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
 Una clave para entender las rutas de acceso de propiedad de enlace de datos es que puede tener como destino el enlace a un valor de propiedad individual o, en su lugar, puede enlazar a propiedades de destino que acepten listas o colecciones. Si va a enlazar colecciones, por ejemplo enlace un <xref:System.Windows.Controls.ListBox> que se expandirá en función del número de elementos de datos que haya en la colección, la ruta de acceso de la propiedad debe hacer referencia al objeto de colección, no a elementos individuales de la colección. El motor de enlace de datos hará coincidir automáticamente la colección utilizada como origen de datos con el tipo del destino de enlace, lo que producirá un comportamiento como el rellenado de una <xref:System.Windows.Controls.ListBox> con una matriz de elementos.
 
@@ -76,7 +76,7 @@ Puede especificar el tipo del índice si es necesario. Para obtener más informa
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Los paréntesis indican que esta propiedad de una <xref:System.Windows.PropertyPath> se debe construir utilizando una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo con la asignación adecuada. El `ownerType` busca en los tipos a los que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tiene acceso, a través de las declaraciones de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres.  `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. Esta sintaxis se usa, normalmente, para uno de los siguientes casos:
+Los paréntesis indican que esta propiedad de una <xref:System.Windows.PropertyPath> se debe construir utilizando una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo con la asignación adecuada. El `ownerType` busca en los tipos a los que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tiene acceso, a través de las declaraciones de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres.  `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. Esta sintaxis se usa, normalmente, para uno de los siguientes casos:
 
 - Se especifica la ruta de acceso en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tiene un estilo o plantilla sin un tipo de destino especificado. Un uso completo, normalmente, no es válido para otros casos que no sean este, porque en los casos sin estilo o sin plantilla, la propiedad existe en una instancia, no en un tipo.
 
@@ -97,7 +97,7 @@ Para usar como destino de guion gráfico, la propiedad especificada como `proper
 El carácter / de esta sintaxis se usa para navegar dentro de un objeto de origen de datos jerárquicos y se admiten varios pasos en la jerarquía con caracteres / sucesivos. El recorrido de origen representa la posición del puntero de registro actual, que se determina mediante la sincronización de los datos con la interfaz de usuario de su vista. Para obtener más información sobre el enlace con objetos de origen de datos jerárquicos y el concepto de puntero de registro actual en el enlace de datos, consulte [Usar el patrón principal-detalle con datos jerárquicos](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) o [Información general sobre el enlace de datos](../../../desktop-wpf/data/data-binding-overview.md).
 
 > [!NOTE]
-> Esta sintaxis se parece ligeramente a [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Una expresión [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] verdadera para el enlace a un origen de datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] no se utiliza como un valor <xref:System.Windows.Data.Binding.Path%2A> y debe utilizarse en su lugar para la propiedad <xref:System.Windows.Data.Binding.XPath%2A> mutuamente excluyente.
+> Superficialmente, esta sintaxis es similar a XPath. Una expresión XPath verdadera para el enlace a un origen de datos XML no se utiliza como valor <xref:System.Windows.Data.Binding.Path%2A> y se debe usar en su lugar para la propiedad <xref:System.Windows.Data.Binding.XPath%2A> mutuamente excluyente.
 
 ### <a name="collection-views"></a>Vistas de colección
 
@@ -204,7 +204,7 @@ Por ejemplo, la propiedad <xref:System.Windows.Controls.Panel.Background%2A> de 
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Los paréntesis indican que esta propiedad de una <xref:System.Windows.PropertyPath> se debe construir utilizando una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo. El `ownerType` busca en los tipos a los que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tiene acceso, a través de las declaraciones de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres. `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. La propiedad especificada como `propertyName` debe ser un <xref:System.Windows.DependencyProperty>. (Todas las propiedades adjuntas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementan como propiedades de dependencia, por lo que este problema solo afecta a las propiedades adjuntas personalizadas).
+Los paréntesis indican que esta propiedad de una <xref:System.Windows.PropertyPath> se debe construir utilizando una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo. El `ownerType` busca en los tipos a los que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tiene acceso, a través de las declaraciones de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres. `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. La propiedad especificada como `propertyName` debe ser un <xref:System.Windows.DependencyProperty>. (Todas las propiedades adjuntas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementan como propiedades de dependencia, por lo que este problema solo afecta a las propiedades adjuntas personalizadas).
 
 <a name="indexanim"></a>
 

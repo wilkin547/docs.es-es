@@ -6,12 +6,12 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582592"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740743"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitaciones en la serialización de XamlWriter.Save
 La <xref:System.Windows.Markup.XamlWriter.Save%2A> de API se puede usar para serializar el contenido de una aplicación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] como archivo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Pero existen algunas limitaciones notables relativas a qué se serializa exactamente. En este tema se documentan estas limitaciones y algunas consideraciones generales.  
@@ -40,4 +40,4 @@ La <xref:System.Windows.Markup.XamlWriter.Save%2A> de API se puede usar para ser
   
 - Documentos de texto enriquecido y dinámicos: el texto y el formato y la contención de todos los elementos se conservan en la salida. Esto puede ser útil para los mecanismos afines a la funcionalidad del Portapapeles.  
   
-- Conservación de datos de objetos comerciales: si se han almacenado datos en elementos personalizados, tales como datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], los objetos comerciales se pueden perpetuar mediante la serialización siempre que sigan determinadas reglas básicas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], como proporcionar constructores personalizados y conversión para valores de propiedades por referencia.
+- Conservar los datos del objeto comercial: si se han almacenado datos en elementos personalizados, como datos XML, siempre y cuando los objetos comerciales sigan reglas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] básicas, como proporcionar constructores y conversión personalizados para los valores de propiedad por referencia, estas empresas los objetos se pueden perpetuar a través de la serialización.

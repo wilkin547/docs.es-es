@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458978"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740852"
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458978"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Coerción, animaciones y valor base  
- Tanto la coerción como la animación actúan sobre un valor al que nos referimos como "valor base" en este [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. El valor base es, por tanto, cualquier valor que se determine mediante la evaluación ascendente de los elementos hasta alcanzar el elemento 2.  
+ Tanto la coerción como la animación actúan sobre un valor que se denomina el "valor base" en este SDK. El valor base es, por tanto, cualquier valor que se determine mediante la evaluación ascendente de los elementos hasta alcanzar el elemento 2.  
   
  Para una animación, el valor base puede tener un efecto en el valor animado si la animación no especifica los valores "From" y "To" para ciertos comportamientos o si se revierte deliberadamente al valor base al completarse. Para verlo en la práctica, ejecute el [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988). Intente establecer los valores locales del alto del rectángulo del ejemplo, de modo que el valor local inicial difiera de cualquier valor "From" de la animación. Observará que las animaciones se inician inmediatamente mediante los valores "From" y reemplazan el valor base una vez iniciadas. La animación podría especificar que se devuelva al valor encontrado antes de la animación una vez completada especificando el <xref:System.Windows.Media.Animation.FillBehavior>STOP. Después, se usa la precedencia normal para la determinación del valor base.  
   

@@ -2,22 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399130"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732556"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings>
+# <a name="websocketsettings"></a>\<webSocketSettings >
 Un elemento de configuración usado para especificar valores de WebSockets.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netHttpBinding**](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> webSocketSettings**  
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding**](nethttpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ Un elemento de configuración usado para especificar valores de WebSockets.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |createNotificationOnConnection|Especifica si se envía una notificación al realizar la conexión.|  
 |disablePayloadMasking|Especifica si el enmascaramiento de WebSocket está deshabilitado.|  
@@ -54,23 +54,23 @@ Un elemento de configuración usado para especificar valores de WebSockets.
   
 ## <a name="transportusage-attribute"></a>Atributo transportUsage  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |WhenDuplex|Use el protocolo WebSocket cuando el contrato sea dúplex.|  
 |Siempre|Use siempre el protocolo WebSocket independientemente del contrato.|  
-|Nunca|Nunca use el protocolo WebSocket.|  
+|Never|Nunca use el protocolo WebSocket.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- None  
+ Ninguno  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|\<netHttpBinding>|Especifica el NetHttpBinding|  
+|\<netHttpBinding >|Especifica el NetHttpBinding|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar \<el elemento > de webSocketSettings.  
+ En el ejemplo siguiente se muestra cómo usar el elemento \<webSocketSettings >.  
   
 ```xml  
 <netHttpBinding>
@@ -96,4 +96,4 @@ Un elemento de configuración usado para especificar valores de WebSockets.
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<> de enlace](bindings.md)

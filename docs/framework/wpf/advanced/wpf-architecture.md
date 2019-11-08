@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459597"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740694"
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
 En este tema se proporciona un paseo guiado por la jerarquía de clases de Windows Presentation Foundation (WPF). En él se explican la mayoría de los subsistemas principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describe cómo interactúan. También se detallan algunas de las decisiones tomadas por los arquitectos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -42,7 +42,7 @@ En este tema se proporciona un paseo guiado por la jerarquía de clases de Windo
   
  Es necesario comprender dos conceptos básicos al hablar de simultaneidad en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]: el distribuidor y la afinidad de subprocesos.  
   
- Durante la fase de diseño de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el objetivo era adoptar un único subproceso de ejecución, pero perteneciente a un modelo "con afinidad" y sin subprocesos. La afinidad de subprocesos se produce cuando un componente usa la identidad del subproceso que se está ejecutando para almacenar algún tipo de estado. La forma más común de esta afinidad es usar el almacenamiento local de subprocesos (TLS) para almacenar el estado. La afinidad de subprocesos requiere que cada subproceso lógico de ejecución sea propiedad de un único subproceso físico en el sistema operativo, lo que puede consumir mucha memoria. Finalmente, el modelo de subprocesos de WPF se mantuvo sincronizado con el modelo de subprocesos de User32 existente, que consiste en la ejecución de un solo subproceso con afinidad de subprocesos. La principal razón para esto fue la interoperabilidad; los sistemas como [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], el Portapapeles e Internet Explorer requieren la ejecución de afinidad con subproceso único (STA).  
+ Durante la fase de diseño de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el objetivo era adoptar un único subproceso de ejecución, pero perteneciente a un modelo "con afinidad" y sin subprocesos. La afinidad de subprocesos se produce cuando un componente usa la identidad del subproceso que se está ejecutando para almacenar algún tipo de estado. La forma más común de esta afinidad es usar el almacenamiento local de subprocesos (TLS) para almacenar el estado. La afinidad de subprocesos requiere que cada subproceso lógico de ejecución sea propiedad de un único subproceso físico en el sistema operativo, lo que puede consumir mucha memoria. Finalmente, el modelo de subprocesos de WPF se mantuvo sincronizado con el modelo de subprocesos de User32 existente, que consiste en la ejecución de un solo subproceso con afinidad de subprocesos. La razón principal para esto era la interoperabilidad: los sistemas como OLE 2,0, el portapapeles e Internet Explorer requieren la ejecución de afinidad de subproceso único (STA).  
   
  Dado que disponemos de objetos con subprocesos STA, necesitamos un medio de comunicación entre subprocesos y estar seguros de que nos encontramos en el subproceso correcto. A continuación se describe el rol del distribuidor. El distribuidor es un sistema de envío de mensajes básico que dispone de varias colas con prioridad. Por ejemplo, son mensajes las notificaciones de entrada sin formato (el mouse se ha movido), las funciones de marco de trabajo (diseño) o los comandos de usuario (ejecutar este método). Al derivar de <xref:System.Windows.Threading.DispatcherObject>, se crea un objeto CLR que tiene un comportamiento STA y se le proporcionará un puntero a un distribuidor en el momento de la creación.  
   

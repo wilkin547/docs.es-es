@@ -2,23 +2,23 @@
 title: <transport> de <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 49b31a889d192d190125214e89ba09305114eb7f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399309"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735977"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<> de transporte \<de > netPeerTcpBinding
-Especifica la configuración de seguridad de nivel de transporte al usar el [ \<> netPeerTcpBinding](netpeertcpbinding.md).  
+# <a name="transport-of-netpeertcpbinding"></a>\<> de transporte de \<netPeerTcpBinding >
+Especifica la configuración de seguridad de nivel de transporte cuando se usa el [\<netPeerTcpBinding >](netpeertcpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netPeerTcpBinding**](netpeertcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de seguridad**](security-of-netpeerbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de transporte**  
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**enlaces**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding**](netpeertcpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**enlace** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**seguridad**](security-of-netpeerbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte** >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,25 +37,25 @@ Especifica la configuración de seguridad de nivel de transporte al usar el [ \<
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |credentialType|Opcional. Especifica el tipo de credenciales utilizado para comprobar mensajes enviados con el transporte del mismo nivel. Este atributo es del tipo <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>Atributo credentialType  
   
-|Valor|DESCRIPCIÓN|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|Certificate|La autenticación del transporte de canal del mismo nivel requiere un certificado X509.|  
+|Certificado|La autenticación del transporte de canal del mismo nivel requiere un certificado X509.|  
 |Contraseña|La autenticación del transporte de canal del mismo nivel requiere una contraseña correcta.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- None  
+ Ninguno  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<security>](security-of-netpeerbinding.md)|Define la configuración de seguridad para el [ \<> netPeerTcpBinding](netpeertcpbinding.md).|  
+|[\<La >](security-of-netpeerbinding.md)|Define la configuración de seguridad para el [\<netPeerTcpBinding >](netpeertcpbinding.md).|  
   
 ## <a name="see-also"></a>Vea también
 
@@ -67,4 +67,4 @@ Especifica la configuración de seguridad de nivel de transporte al usar el [ \<
 - [Enlaces](../../../wcf/bindings.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<> de enlace](bindings.md)

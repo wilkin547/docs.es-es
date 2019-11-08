@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458820"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740828"
 ---
 # <a name="mcignorable-attribute"></a>Atributo mc:Ignorable
-Especifica qué [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefijos de espacio de nombres que se encuentran en un archivo de marcado puede ser omitido por un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. El atributo `mc:Ignorable` admite la compatibilidad de marcado para la asignación de espacios de nombres personalizados y para el control de versiones de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+Especifica los prefijos de espacios de nombres XML que se encuentran en un archivo de marcado que un procesador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] puede omitir. El atributo `mc:Ignorable` admite la compatibilidad de marcado para la asignación de espacios de nombres personalizados y para el control de versiones de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>Uso de atributos XAML (prefijo único)  
   
@@ -51,7 +51,7 @@ Especifica qué [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
 |*ThisElementCanBeIgnored*|Un elemento que puede ser omitido por implementaciones de procesador [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], si no se puede resolver el tipo subyacente.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `mc` prefijo de espacio de nombres de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] es la Convención de prefijo recomendada que se debe usar al asignar el espacio de nombres de compatibilidad de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `http://schemas.openxmlformats.org/markup-compatibility/2006`.  
+ El prefijo de espacio de nombres XML `mc` es la Convención de prefijo recomendada que se debe usar al asignar el espacio de nombres `http://schemas.openxmlformats.org/markup-compatibility/2006`[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Compatibility.  
   
  Los elementos o atributos en los que la parte del prefijo del nombre del elemento se identifican como `mc:Ignorable` no producirán errores cuando los procese un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Si ese atributo no se pudo resolver en un tipo o una construcción de programación subyacentes, se omite ese elemento. Tenga en cuenta, sin embargo, que los elementos omitidos todavía pueden generar errores de análisis adicionales para requisitos de elementos adicionales que son efectos secundarios de ese elemento que no se están procesando. Por ejemplo, un modelo de contenido de elemento determinado podría requerir exactamente un elemento secundario, pero si el elemento secundario especificado estuviera en un prefijo de `mc:Ignorable`, y el elemento secundario especificado no se pudo resolver en un tipo, el procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] podría producir un error.  
   

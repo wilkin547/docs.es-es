@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459032"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740727"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de los desarrolladores de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no tendrán que escribir una interfaz que use más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.  
@@ -49,7 +49,7 @@ ms.locfileid: "73459032"
   
  Si solo un subproceso puede modificar el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ¿cómo interactúan los subprocesos en segundo plano con el usuario? Un subproceso en segundo plano puede pedir al subproceso [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que realice una operación en su nombre. Para ello, registra un elemento de trabajo con el <xref:System.Windows.Threading.Dispatcher> del subproceso de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. La clase <xref:System.Windows.Threading.Dispatcher> proporciona dos métodos para registrar los elementos de trabajo: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> y <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Ambos métodos programan un delegado para que se ejecute. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> es una llamada sincrónica, es decir, no vuelve hasta que el subproceso de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] realmente termina de ejecutar el delegado. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> es asincrónico y vuelve inmediatamente.  
   
- El <xref:System.Windows.Threading.Dispatcher> ordena los elementos de su cola por prioridad. Hay diez niveles que se pueden especificar al agregar un elemento a la cola de <xref:System.Windows.Threading.Dispatcher>. Estas prioridades se mantienen en la enumeración <xref:System.Windows.Threading.DispatcherPriority>. Puede encontrar información detallada sobre los niveles de <xref:System.Windows.Threading.DispatcherPriority> en la documentación de [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].  
+ El <xref:System.Windows.Threading.Dispatcher> ordena los elementos de su cola por prioridad. Hay diez niveles que se pueden especificar al agregar un elemento a la cola de <xref:System.Windows.Threading.Dispatcher>. Estas prioridades se mantienen en la enumeración <xref:System.Windows.Threading.DispatcherPriority>. Puede encontrar información detallada sobre los niveles de <xref:System.Windows.Threading.DispatcherPriority> en la documentación de Windows SDK.  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>Subprocesos en acción: ejemplos  

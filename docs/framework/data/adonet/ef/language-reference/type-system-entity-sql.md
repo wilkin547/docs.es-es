@@ -2,12 +2,12 @@
 title: Sistema de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 0f7dae9e57132929737d752c67694cd369b79d9e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f99d63bd526981c4a9f079c25851dc9bbd89cf7c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319234"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738461"
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipos (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite varios tipos:  
@@ -53,4 +53,4 @@ from (select ref(o) as r from LOB.Orders as o) as o2
 - [Información general sobre Entity SQL](entity-sql-overview.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [CAST](cast-entity-sql.md)
-- [Especificaciones CSDL, SSDL MSL](csdl-ssdl-and-msl-specifications.md)
+- [Especificaciones CSDL, SSDL MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

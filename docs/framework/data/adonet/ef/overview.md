@@ -2,12 +2,12 @@
 title: Información general sobre Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854343"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738501"
 ---
 # <a name="entity-framework-overview"></a>Información general de Entity Framework
 
@@ -34,7 +34,7 @@ El Entity Framework permite a los desarrolladores trabajar con datos en forma de
 
 El modelo de almacenamiento y las asignaciones pueden cambiar según sea necesario sin requerir cambios en el modelo conceptual, las clases de datos o el código de la aplicación. Dado que los modelos de almacenamiento son específicos del proveedor, puede trabajar con un modelo conceptual coherente a través de varios orígenes de datos.
 
-El Entity Framework utiliza estos archivos de asignación y modelo para crear, leer, actualizar y eliminar operaciones en las entidades y relaciones del modelo conceptual en las operaciones equivalentes en el origen de datos. La Entity Framework incluso admite la asignación de entidades en el modelo conceptual a procedimientos almacenados en el origen de datos. Para obtener más información, vea las [Especificaciones de CSDL, SSDL y MSL](./language-reference/csdl-ssdl-and-msl-specifications.md).
+El Entity Framework utiliza estos archivos de asignación y modelo para crear, leer, actualizar y eliminar operaciones en las entidades y relaciones del modelo conceptual en las operaciones equivalentes en el origen de datos. La Entity Framework incluso admite la asignación de entidades en el modelo conceptual a procedimientos almacenados en el origen de datos. Para obtener más información, vea las [Especificaciones de CSDL, SSDL y MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Asignar objetos a datos
  La programación orientada a objetos supone un desafío al interactuar con sistemas de almacenamiento de datos. Aunque la organización de clases suele reflejar la organización de las tablas de bases de datos relacionales, el ajuste no es perfecto. Varias tablas normalizadas suelen corresponder a una sola clase y las relaciones entre las clases se representan a menudo de forma diferente a las relaciones entre tablas. Por ejemplo, para representar el cliente de un pedido de ventas, una clase `Order` podría utilizar una propiedad que contiene una referencia a una instancia de una clase `Customer`, mientras que una fila de la tabla `Order` en una base de datos contiene una columna de clave externa con un valor que corresponde a un valor de clave principal en la tabla `Customer` (o conjunto de columnas). Una clase `Customer` podría tener una propiedad denominada `Orders` que contuviera una colección de instancias de la clase `Order`, mientras que la tabla `Customer` en una base de datos no tiene ninguna columna comparable. El Entity Framework proporciona a los desarrolladores la flexibilidad necesaria para representar relaciones de esta manera, o para modelar más estrechamente las relaciones que se representan en la base de datos.
@@ -47,7 +47,7 @@ Como algo más que otra solución de asignación objeto-relacional, Entity Frame
 
 - LINQ to Entities. Proporciona compatibilidad con Language-Integrated Query (LINQ) para consultar los tipos de entidad que se definen en un modelo conceptual. Para obtener más información, vea [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Dialecto de SQL independiente del almacenamiento que trabaja directamente con entidades del modelo conceptual y que admite conceptos de Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)]se utiliza tanto con consultas de objeto como con consultas que se ejecutan con el proveedor de EntityClient. Para obtener más información, vea [información general sobre Entity SQL](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]Operador Dialecto de SQL independiente del almacenamiento que trabaja directamente con entidades del modelo conceptual y que admite conceptos de Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)] se utiliza con consultas de objeto y consultas que se ejecutan con el proveedor de EntityClient. Para obtener más información, vea [información general sobre Entity SQL](./language-reference/entity-sql-overview.md).
 
 El Entity Framework incluye el proveedor de datos de EntityClient. Este proveedor administra las conexiones, traduce las consultas de entidad en consultas específicas del origen de datos y devuelve un lector de datos que el Entity Framework utiliza para materializar los datos de la entidad en los objetos. Cuando no se requiere la materialización de los objetos, el proveedor de EntityClient también se puede utilizar como un proveedor de datos ADO.NET estándar habilitando las aplicaciones para ejecutar las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] y usar el lector de datos de solo lectura devuelto. Para obtener más información, consulte [proveedor de EntityClient para el Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
@@ -55,11 +55,11 @@ El diagrama siguiente muestra la arquitectura de Entity Framework para el acceso
 
 ![Diagrama arquitectónico Entity Framework](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-Las herramientas de Entity Data Model pueden generar una clase derivada `System.Data.Objects.ObjectContext` de `System.Data.Entity.DbContext` o que representa el contenedor de entidades en el modelo conceptual. Este contexto del objeto proporciona los medios para realizar el seguimiento de los cambios y administrar las identidades, la simultaneidad y las relaciones. Esta clase también expone un método `SaveChanges` que escribe las inserciones, actualizaciones y eliminaciones en el origen de datos. Al igual que las consultas, estas modificaciones son realizadas bien por los comandos que el sistema genera automáticamente o bien por los procedimientos almacenados que el programador especifica.
+Las herramientas de Entity Data Model pueden generar una clase derivada de `System.Data.Objects.ObjectContext` o `System.Data.Entity.DbContext` que representa el contenedor de entidades en el modelo conceptual. Este contexto del objeto proporciona los medios para realizar el seguimiento de los cambios y administrar las identidades, la simultaneidad y las relaciones. Esta clase también expone un método `SaveChanges` que escribe las inserciones, actualizaciones y eliminaciones en el origen de datos. Al igual que las consultas, estas modificaciones son realizadas bien por los comandos que el sistema genera automáticamente o bien por los procedimientos almacenados que el programador especifica.
 
 ## <a name="data-providers"></a>Proveedores de datos
 
-El `EntityClient` proveedor extiende el modelo de proveedor ADO.net accediendo a los datos en términos de entidades y relaciones conceptuales. Ejecuta consultas que utilizan [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] proporciona el lenguaje de consultas subyacente que permite a `EntityClient` comunicarse con la base de datos. Para obtener más información, consulte [proveedor de EntityClient para el Entity Framework](entityclient-provider-for-the-entity-framework.md).
+El proveedor de `EntityClient` amplía el modelo de proveedor de ADO.NET mediante el acceso a los datos en términos de entidades y relaciones conceptuales. Ejecuta consultas que utilizan [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] proporciona el lenguaje de consultas subyacente que permite a `EntityClient` comunicarse con la base de datos. Para obtener más información, consulte [proveedor de EntityClient para el Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 El Entity Framework incluye un proveedor de datos SqlClient actualizado que admite árboles de comandos canónicos. Para obtener más información, vea [SqlClient para el Entity Framework](sqlclient-for-the-entity-framework.md).
 

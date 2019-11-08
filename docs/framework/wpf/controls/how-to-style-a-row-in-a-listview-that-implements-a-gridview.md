@@ -6,12 +6,12 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 150988aab368e3ffef0107d29bea5ebc53163946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce79899d5c8e825ecb39e14ae8af4e0c33f13db3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459311"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733540"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Cómo: Aplicar un estilo a una fila en un control ListView que implementa una clase GridView
 En este ejemplo se muestra cómo aplicar un estilo a una fila en un control <xref:System.Windows.Controls.ListView> que implementa un modo de <xref:System.Windows.Controls.ListView.View%2A> <xref:System.Windows.Controls.GridView>.  
@@ -19,7 +19,7 @@ En este ejemplo se muestra cómo aplicar un estilo a una fila en un control <xre
 ## <a name="example"></a>Ejemplo  
  Puede aplicar un estilo a una fila en un control <xref:System.Windows.Controls.ListView> estableciendo un <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> en el control <xref:System.Windows.Controls.ListView>. Establezca el estilo de los elementos que se representan como objetos de <xref:System.Windows.Controls.ListViewItem>. El <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> hace referencia a los objetos <xref:System.Windows.Controls.ControlTemplate> que se usan para mostrar el contenido de la fila.  
   
- En el ejemplo completo, del cual se extraen los siguientes, se muestra una colección de información de la canción que se almacena en una base de datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Cada canción de la base de datos tiene un campo de clasificación y el valor de este campo especifica cómo mostrar una fila de información de la canción.  
+ El ejemplo completo, del que se extraen los ejemplos siguientes, muestra una colección de información de la canción almacenada en una base de datos XML. Cada canción de la base de datos tiene un campo de clasificación y el valor de este campo especifica cómo mostrar una fila de información de la canción.  
   
  En el ejemplo siguiente se muestra cómo definir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para los objetos <xref:System.Windows.Controls.ListViewItem> que representan las canciones de la colección Song. El <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> hace referencia a <xref:System.Windows.Controls.ControlTemplate> objetos que especifican cómo mostrar una fila de información de la canción.  
   

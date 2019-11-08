@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 091fde9a6149f72577e0cf38c8ebf1536abdf6ea
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040215"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738205"
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Los valores NULL se utilizan en bases de datos relacionales cuando el valor de una columna se desconoce o falta. Un NULL no es ni una cadena vacía (en los tipos de datos de caracteres o de fecha y hora) ni un valor cero (en los tipos de datos numéricos). La especificación ANSI SQL-92 afirma que un NULL debe ser igual en todos los tipos de datos; por lo tanto, todos los NULL se tratan de forma coherente. El espacio de nombres <xref:System.Data.SqlTypes> proporciona semántica para valores NULL mediante la implementación de la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad  `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
   
 > [!NOTE]
-> En la versión 2.0 de .NET Framework se introduce la compatibilidad con tipos que admiten valores NULL, lo que permite a los programadores ampliar un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos CLR que admiten valores NULL representan una instancia de la estructura <xref:System.Nullable>. Esta capacidad es especialmente útil cuando a los tipos de valor se les ha aplicado la conversión boxing o la conversión unboxing, lo que proporciona una compatibilidad mejorada con tipos de objeto. Los tipos CLR que admiten valores NULL no están pensados para el almacenamiento de valores NULL de base de datos porque un valor NULL ANSI SQL no se comporta del mismo modo que una referencia `null` (o `Nothing`, en Visual Basic). Para trabajar con valores NULL ANSI SQL de base de datos, utilice valores NULL <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre cómo trabajar con tipos CLR que admiten valores NULL en Visual Basic Vea tipos de C# valor que [aceptan](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)valores NULL y para ver el uso de tipos de [valor que aceptan valores NULL](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
+> En la versión 2.0 de .NET Framework se introduce la compatibilidad con tipos que admiten valores NULL, lo que permite a los programadores ampliar un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos CLR que admiten valores NULL representan una instancia de la estructura <xref:System.Nullable>. Esta capacidad es especialmente útil cuando a los tipos de valor se les ha aplicado la conversión boxing o la conversión unboxing, lo que proporciona una compatibilidad mejorada con tipos de objeto. Los tipos CLR que admiten valores NULL no están pensados para el almacenamiento de valores NULL de base de datos porque un valor NULL ANSI SQL no se comporta del mismo modo que una referencia `null` (o `Nothing`, en Visual Basic). Para trabajar con valores NULL ANSI SQL de base de datos, utilice valores NULL <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre cómo trabajar con tipos CLR que admiten valores NULL en Visual Basic Vea [tipos](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)de C# valor que aceptan valores NULL y para ver los [tipos de valor que aceptan valores NULL](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valores NULL y la lógica de tres valores  
  Permitir valores NULL en definiciones de columna introduce la lógica de tres valores en la aplicación. Una comparación puede evaluarse en función de una de tres condiciones:  

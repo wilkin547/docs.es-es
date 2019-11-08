@@ -1,15 +1,15 @@
 ---
-title: propiedad
+title: Propiedad
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 97d934ac581e7b1a923bf77dcf46121782fe8eab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d1e20a6570c458041ec5d8ececbfa291ca9e4612
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783176"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735399"
 ---
-# <a name="property"></a>propiedad
+# <a name="property"></a>Propiedad
 *Las propiedades* son los bloques de creación fundamentales de [tipos de entidad](entity-type.md) y [tipos complejos](complex-type.md). Las propiedades definen la forma y características de datos que una instancia del tipo de entidad o la instancia del tipo complejo contendrá. Las propiedades en un modelo conceptual son análogas a las propiedades definidas en una clase. Del mismo modo que las propiedades en una clase definen la forma de la clase y proporcionan información sobre los objetos, las propiedades en un modelo conceptual definen la forma de un tipo de entidad y proporcionan información sobre las instancias del tipo de entidad.  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "70783176"
   
 - Un conjunto de [aspectos](facet.md). (Opcional)  
   
- Una propiedad puede contener datos primitivos (como una cadena, un entero o un valor booleano) o estructura los datos (como un tipo complejo). Las propiedades de tipo primitivo también se denominan propiedades escalares. Para obtener más información, [vea Entity Data Model: Tipos](entity-data-model-primitive-data-types.md)de datos primitivos.  
+ Una propiedad puede contener datos primitivos (como una cadena, un entero o un valor booleano) o estructura los datos (como un tipo complejo). Las propiedades de tipo primitivo también se denominan propiedades escalares. Para obtener más información, vea [Entity Data Model: tipos de datos primitivos](entity-data-model-primitive-data-types.md).  
   
 > [!NOTE]
 > Un tipo complejo puede, por sí mismo, tener propiedades complejas.  
@@ -33,7 +33,7 @@ ms.locfileid: "70783176"
   
  ![Modelo de ejemplo con tres tipos de entidad](./media/property/example-model-three-entity-types.gif)  
   
- El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](./ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. En el siguiente CSDL se define el tipo de entidad `Book` (como se muestra en el diagrama anterior) y se indica el tipo y nombre de cada propiedad utilizando atributos XML. Una faceta opcional, `Nullable`, también se define utilizando un atributo de XML.  
+ El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) para definir los modelos conceptuales. En el siguiente CSDL se define el tipo de entidad `Book` (como se muestra en el diagrama anterior) y se indica el tipo y nombre de cada propiedad utilizando atributos XML. Una faceta opcional, `Nullable`, también se define utilizando un atributo de XML.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

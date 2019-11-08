@@ -2,19 +2,19 @@
 title: Consultas en LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 561fa3217a80a8437b7c4d175d5a1156096ac241
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 52f48fcacd6fbd92e4fd0531c5e1fa3577496941
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249559"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738482"
 ---
 # <a name="queries-in-linq-to-entities"></a>Consultas en LINQ to Entities
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. Language-Integrated Query (LINQ) ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de LINQ siempre se trabaja con objetos de programación.  
   
  Una operación de consulta de LINQ consta de tres acciones: obtener el origen o los orígenes de datos, crear la consulta y ejecutar la consulta.  
   
- Los orígenes de datos que implementan las interfaces genéricas <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601> pueden consultarse a través de LINQ. Las instancias de la <xref:System.Data.Objects.ObjectQuery%601> clase genérica, que implementa la interfaz <xref:System.Linq.IQueryable%601> genérica, actúan como origen de datos para las consultas de LINQ to Entities. La clase <xref:System.Data.Objects.ObjectQuery%601> genérica representa una consulta que devuelve una colección de cero o más objetos con tipo. También puede permitir que el compilador deduzca el tipo de una entidad C# mediante `var` la palabra clave (DIM in Visual Basic).  
+ Los orígenes de datos que implementan las interfaces genéricas <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601> pueden consultarse a través de LINQ. Las instancias de la clase <xref:System.Data.Objects.ObjectQuery%601> genérica, que implementa la interfaz de <xref:System.Linq.IQueryable%601> genérica, actúan como origen de datos para las consultas de LINQ to Entities. La clase <xref:System.Data.Objects.ObjectQuery%601> genérica representa una consulta que devuelve una colección de cero o más objetos con tipo. También puede permitir que el compilador infiera el tipo de una entidad C# mediante la palabra clave `var` (Dim in Visual Basic).  
   
  En la consulta se especifica exactamente la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. En LINQ, una consulta se almacena en una variable. Si la consulta devuelve una secuencia de valores, la propia variable de la consulta debe ser de un tipo que se pueda consultar. Esta variable de consulta no realiza ninguna acción y no devuelve datos; solamente almacena la información de la consulta. Tras crear una consulta debe ejecutarla para recuperar los datos.  
   
@@ -24,50 +24,50 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
 ### <a name="query-expression-syntax"></a>Sintaxis de expresiones de consulta  
  Las expresiones de consulta son una sintaxis de consulta declarativa. Esta sintaxis permite a un programador escribir consultas en un lenguaje de alto nivel que tenga un formato similar al de Transact-SQL. Si se utiliza la sintaxis de expresiones de consulta, se pueden realizar incluso operaciones complejas de filtrado, ordenación y agrupamiento en orígenes de datos con código mínimo. Para obtener más información, [consulte operaciones básicas de consulta (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Para obtener ejemplos que muestran cómo utilizar la sintaxis de expresiones de consulta, vea los siguientes temas:  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Estando](query-expression-syntax-examples-projection.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: proyección](query-expression-syntax-examples-projection.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Filtra](query-expression-syntax-examples-filtering.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: filtrado](query-expression-syntax-examples-filtering.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Pide](query-expression-syntax-examples-ordering.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: ordenación](query-expression-syntax-examples-ordering.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Operadores de agregado](query-expression-syntax-examples-aggregate-operators.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: operadores de agregado](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Particiones](query-expression-syntax-examples-partitioning.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: particionamiento](query-expression-syntax-examples-partitioning.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Operadores de combinación](query-expression-syntax-examples-join-operators.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: operadores de combinación](query-expression-syntax-examples-join-operators.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Operadores de elementos](query-expression-syntax-examples-element-operators.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: operadores de elementos](query-expression-syntax-examples-element-operators.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Agrupación](query-expression-syntax-examples-grouping.md)  
+- [Ejemplos de sintaxis de expresiones de consulta: agrupación](query-expression-syntax-examples-grouping.md)  
   
-- [Ejemplos de sintaxis de expresiones de consulta: Navegar por las relaciones](query-expression-syntax-examples-navigating-relationships.md)  
+- [Ejemplos de sintaxis de expresión de consulta: navegar por relaciones](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Sintaxis de consultas basadas en métodos  
- Otra forma de crear consultas LINQ to Entities es mediante el uso de consultas basadas en métodos. La sintaxis de las consultas basadas en métodos es una secuencia de llamadas de método directo a los métodos de operador de LINQ, pasando expresiones lambda como parámetros. Para obtener más información, vea [Expresiones lambda](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Para obtener ejemplos que muestran cómo utilizar la sintaxis basada en métodos, vea los siguientes temas:  
+ Otra forma de crear consultas LINQ to Entities es mediante el uso de consultas basadas en métodos. La sintaxis de las consultas basadas en métodos es una secuencia de llamadas de método directo a los métodos de operador de LINQ, pasando expresiones lambda como parámetros. Para obtener más información, vea [Lambda Expressions](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) (Expresiones lambda). Para obtener ejemplos que muestran cómo utilizar la sintaxis basada en métodos, vea los siguientes temas:  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Estando](method-based-query-syntax-examples-projection.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: proyección](method-based-query-syntax-examples-projection.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Filtra](method-based-query-syntax-examples-filtering.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: filtrado](method-based-query-syntax-examples-filtering.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Pide](method-based-query-syntax-examples-ordering.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: ordenación](method-based-query-syntax-examples-ordering.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Operadores de agregado](method-based-query-syntax-examples-aggregate-operators.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: operadores de agregación](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Particiones](method-based-query-syntax-examples-partitioning.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: partición](method-based-query-syntax-examples-partitioning.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Version](method-based-query-syntax-examples-conversion.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: conversión](method-based-query-syntax-examples-conversion.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Operadores de combinación](method-based-query-syntax-examples-join-operators.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: operadores de combinación](method-based-query-syntax-examples-join-operators.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Operadores de elementos](method-based-query-syntax-examples-element-operators.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: operadores de elementos](method-based-query-syntax-examples-element-operators.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Agrupación](method-based-query-syntax-examples-grouping.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: agrupación](method-based-query-syntax-examples-grouping.md)  
   
-- [Ejemplos de sintaxis de consultas basadas en métodos: Navegar por las relaciones](method-based-query-syntax-examples-navigating-relationships.md)  
+- [Ejemplos de sintaxis de consultas basadas en métodos: navegar por relaciones](method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>Vea también
 
 - [LINQ to Entities](linq-to-entities.md)
-- [Introducción a LINQ en C#](../../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introducción a LINQ en C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Introducción a LINQ en Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Entity Framework opciones de combinación y consultas compiladas](https://go.microsoft.com/fwlink/?LinkId=199591)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035795"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740709"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 
@@ -70,7 +70,7 @@ Al localizar aplicaciones basadas en [!INCLUDE[TLA2#tla_winclient](../../../../i
 
 ## <a name="localize-a-wpf-application"></a>Localizar una aplicación WPF
 
-Al localizar una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tiene varias opciones. Por ejemplo, puede enlazar los recursos localizables de la aplicación a un archivo [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], almacenar texto localizable en tablas resx o hacer que el localizador use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos. En esta sección se describe un flujo de trabajo de localización que usa el formato BAML de XAML, que ofrece varias ventajas:
+Al localizar una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tiene varias opciones. Por ejemplo, puede enlazar los recursos localizables de la aplicación a un archivo XML, almacenar texto localizable en tablas resx o hacer que el localizador use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos. En esta sección se describe un flujo de trabajo de localización que usa el formato BAML de XAML, que ofrece varias ventajas:
 
 - Puede localizarlo después de compilar.
 

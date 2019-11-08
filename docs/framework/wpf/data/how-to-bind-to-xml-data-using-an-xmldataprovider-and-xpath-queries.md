@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459213"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733552"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Cómo: Enlazar a datos XML mediante XMLDataProvider y consultas XPath
-En este ejemplo se muestra cómo enlazar a datos de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] mediante un <xref:System.Windows.Data.XmlDataProvider>.  
+En este ejemplo se muestra cómo enlazar a datos XML mediante una <xref:System.Windows.Data.XmlDataProvider>.  
   
- Con un <xref:System.Windows.Data.XmlDataProvider>, los datos subyacentes a los que se puede tener acceso a través del enlace de datos de la aplicación pueden ser cualquier árbol de nodos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. En otras palabras, una <xref:System.Windows.Data.XmlDataProvider> proporciona una manera cómoda de usar cualquier árbol de nodos [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] como un origen de enlace.  
+ Con un <xref:System.Windows.Data.XmlDataProvider>, los datos subyacentes a los que se puede tener acceso a través del enlace de datos en la aplicación pueden ser cualquier árbol de nodos XML. En otras palabras, una <xref:System.Windows.Data.XmlDataProvider> proporciona una manera cómoda de usar cualquier árbol de nodos XML como origen de enlace.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, los datos se incrustan directamente como una [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *isla de datos* dentro de la sección <xref:System.Windows.FrameworkElement.Resources%2A>. Una isla de datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] se debe encapsular entre etiquetas `<x:XData>` y tener siempre un nodo raíz único, que se corresponde con *Inventory* en este ejemplo.  
+ En el ejemplo siguiente, los datos se incrustan directamente como una *isla de datos* XML dentro de la sección <xref:System.Windows.FrameworkElement.Resources%2A>. Una isla de datos XML se debe ajustar en `<x:XData>` etiquetas y siempre tener un solo nodo raíz, que es el *inventario* en este ejemplo.  
   
 > [!NOTE]
-> El nodo raíz de los datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] tiene un atributo **xmlns** que establece el espacio de nombres de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] en una cadena vacía. Se trata de un requisito para aplicar las consultas XPath a una isla de datos insertada dentro de la página de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. En este caso en línea, el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y, por tanto, la isla de datos, hereda el espacio de nombres de <xref:System.Windows>. Por este motivo, debe establecer el espacio de nombres en blanco para mantener las consultas XPath calificadas por el espacio de nombres <xref:System.Windows>, que dirigirá erróneamente a las consultas.  
+> El nodo raíz de los datos XML tiene un atributo **xmlns** que establece el espacio de nombres XML en una cadena vacía. Se trata de un requisito para aplicar las consultas XPath a una isla de datos insertada dentro de la página de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. En este caso en línea, el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y, por tanto, la isla de datos, hereda el espacio de nombres de <xref:System.Windows>. Por este motivo, debe establecer el espacio de nombres en blanco para mantener las consultas XPath calificadas por el espacio de nombres <xref:System.Windows>, que dirigirá erróneamente a las consultas.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ En este ejemplo se muestra cómo enlazar a datos de [!INCLUDE[TLA#tla_xml](../..
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- En algunas aplicaciones, puede que no sea conveniente incrustar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] como una isla de datos dentro del código fuente de la página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ya que es imprescindible conocer el contenido exacto de los datos en tiempo de compilación. Por lo tanto, también se admite la obtención de los datos de un archivo [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] externo, como en el ejemplo siguiente:  
+ En algunas aplicaciones, la incrustación del XML como una isla de datos dentro del origen de la página de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] puede ser inadecuada, ya que el contenido exacto de los datos debe conocerse en tiempo de compilación. Por lo tanto, también se admite la obtención de los datos de un archivo XML externo, como en el ejemplo siguiente:  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- Si los datos de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] residen en un archivo de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] remoto, debe definir el acceso a los datos asignando una dirección URL adecuada al atributo <xref:System.Windows.Data.XmlDataProvider.Source%2A> como se indica a continuación:  
+ Si los datos XML residen en un archivo XML remoto, debe definir el acceso a los datos asignando una dirección URL adecuada al atributo <xref:System.Windows.Data.XmlDataProvider.Source%2A> como se indica a continuación:  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
