@@ -1,0 +1,77 @@
+---
+title: Patrones de resistencia de las aplicaciones
+description: Diseño de aplicaciones .NET nativas en la nube para Azure | Patrones de resistencia de aplicaciones
+ms.date: 06/30/2019
+ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73841892"
+---
+# <a name="application-resiliency-patterns"></a>Patrones de resistencia de las aplicaciones
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+
+La primera línea de defensa es la resistencia de las aplicaciones habilitadas para software.
+
+Aunque podría invertir un tiempo considerable en escribir su propio marco de resistencia, tales productos ya existen. Por ejemplo, [Polly](http://www.thepollyproject.org/) es una biblioteca completa de resistencia de .net y control de errores transitorios que permite a los desarrolladores expresar directivas de resistencia de forma fluida y segura para subprocesos. Polly tiene como destino aplicaciones compiladas con la .NET Framework completa o .NET Core. En la figura 6-2 se muestran las directivas de resistencia (es decir, la funcionalidad) disponibles en la biblioteca Polly. Estas directivas se pueden aplicar de forma individual o combinada.
+
+![Marco de Polly](./media/polly-resiliency-framework.png)
+
+**Figura 6-2**. Características del marco de resistencia de Polly
+
+Observe cómo en la figura anterior las directivas de resistencia se aplican a los mensajes de solicitud, tanto si proceden de un cliente externo como de otro servicio back-end. El objetivo es compensar la solicitud de un servicio que puede estar temporalmente no disponible. Estas breves interrupciones suelen manifestarse con los códigos de Estado HTTP que se muestran en la figura 6-3.
+
+![Códigos de Estado HTTP para reintentar](./media/http-status-codes.png)
+
+**Figura 6-3**. Códigos de Estado HTTP para reintentar
+
+Pregunta: ¿reintentaría un código de Estado HTTP de 403-prohibido? No. En este caso, el sistema funciona correctamente, pero informa al llamador de que no está autorizado para realizar la operación solicitada. Se debe tener cuidado para reintentar solo las operaciones causadas por errores.
+
+Como se recomienda en el capítulo 1, los desarrolladores de Microsoft que crean aplicaciones nativas de la nube deben tener como destino .NET Core. La versión 2,1 presentó la biblioteca [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) para crear instancias de cliente http para interactuar con recursos basados en URL. Al sustituir la clase HTTPClient original, la clase Factory admite muchas características mejoradas, una de las cuales es una [integración estrecha](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) con la biblioteca de resistencia Polly. Con él, puede definir fácilmente directivas de resistencia en la clase de inicio de la aplicación para controlar los errores parciales y los problemas de conectividad.
+
+A continuación, vamos a expandir los patrones de reintento y de disyuntor.
+
+### <a name="retry-pattern"></a>Patrón de reintento
+
+En un entorno de nube nativo distribuido, las llamadas a los servicios y a los recursos en la nube pueden producir errores debido a errores transitorios (de corta duración), que normalmente se corrigen después de un breve período de tiempo. La implementación de una estrategia de reintento ayuda a un servicio nativo de la nube a administrar estos escenarios.
+
+El [patrón Retry](https://docs.microsoft.com/azure/architecture/patterns/retry) permite a un servicio volver a intentar una operación de solicitud con error un número (configurable) de veces con un tiempo de espera que aumenta exponencialmente. En la figura 6-4 se muestra una acción de reintento.
+
+![Patrón de reintento en acción](./media/retry-pattern.png)
+
+**Figura 6-4**. Patrón de reintento en acción
+
+En la ilustración anterior, se ha implementado un patrón de reintento para una operación de solicitud. Está configurado para permitir hasta cuatro reintentos antes de que se produzca un error en un intervalo de retroceso (tiempo de espera) a partir de dos segundos, lo que se duplica exponencialmente para cada intento posterior.
+
+- Se produce un error en la primera invocación y se devuelve un código de Estado HTTP de 500. La aplicación espera dos segundos y vuelve a intentar la llamada.
+- También se produce un error en la segunda invocación y se devuelve un código de Estado HTTP de 500. La aplicación ahora duplica el intervalo de retroceso en cuatro segundos y vuelve a intentar la llamada.
+- Por último, la tercera llamada se realiza correctamente.
+- En este escenario, la operación de reintento habría intentado hasta cuatro reintentos mientras doblaba la duración de la interrupción antes de que se produjera un error en la llamada.
+
+Es importante aumentar el período de interrupción antes de reintentar la llamada para permitir que el tiempo de servicio se corrija automáticamente. Se recomienda implementar un retroceso que aumenta exponencialmente (duplicando el período en cada reintento) para permitir el tiempo de corrección adecuado.
+
+## <a name="circuit-breaker-pattern"></a>Patrón de disyuntor
+
+Aunque el patrón de reintento puede ayudar a salvar una solicitud en un error parcial, existen situaciones en las que los errores pueden deberse a eventos imprevistos que requerirán períodos más largos de tiempo para resolverse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, es poco puntual que una aplicación vuelva a intentar continuamente una operación que es improbable que se realice correctamente.
+
+Para empeorar todo, la ejecución de operaciones de reintento continuo en un servicio que no responde puede pasar a un escenario de denegación de servicio autoimpuesta en el que se inunda el servicio con llamadas continuas que agotan los recursos como la memoria, los subprocesos y la base de datos conexiones, que provocan errores en partes no relacionadas del sistema que utilizan los mismos recursos.
+
+En estas situaciones, sería preferible que la operación produjera un error inmediatamente y solo intentara invocar el servicio si es probable que se realizara correctamente.
+
+El [patrón](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) de disyuntor puede impedir que una aplicación intente ejecutar repetidamente una operación que es probable que produzca un error. También supervisa la aplicación con una llamada de prueba periódica para determinar si el error se ha resuelto. En la figura 6-5 se muestra el patrón de disyuntor en acción.
+
+![Patrón de disyuntor en acción](./media/circuit-breaker-pattern.png)
+
+**Figura 6-5**. Patrón de disyuntor en acción
+
+En la ilustración anterior, se ha agregado un patrón de disyuntor al patrón de reintento original. Observe que, después de 10 solicitudes con error, los disyuntores se abren y ya no permiten llamadas al servicio. El valor CheckCircuit, establecido en 30 segundos, especifica la frecuencia con la que la biblioteca permite que una solicitud continúe en el servicio. Si la llamada se realiza correctamente, el circuito se cierra y el servicio vuelve a estar disponible para el tráfico.
+
+Tenga en cuenta que la intención del patrón de disyuntor es *diferente* de la del patrón de reintento. El patrón de reintento permite que una aplicación vuelva a intentar una operación en la expectativa de que se realizará correctamente. El patrón de disyuntor impide que una aplicación realice una operación que es probable que produzca un error. A menudo, una aplicación *combinará* estos dos patrones mediante el patrón de reintento para invocar una operación a través de un disyuntor. Sin embargo, la lógica de reintentos debe ser sensible a las excepciones devueltas por el disyuntor y abandonar los reintentos si el disyuntor indica que un error no es transitorio.
+
+La resistencia de la aplicación es una para controlar las operaciones solicitadas problemáticas. Pero es solo la mitad de la historia. A continuación, se tratan las características de resistencia disponibles en la nube de Azure.
+
+>[!div class="step-by-step"]
+>[Anterior](resiliency.md)
+>[Siguiente](infrastructure-resiliency-azure.md)
