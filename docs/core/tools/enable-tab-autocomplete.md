@@ -3,13 +3,13 @@ title: Habilitación de la finalización con tabulación
 description: En este artículo se describe cómo habilitar la finalización con tabulación para la CLI de .NET Core para PowerShell, Bash y zsh.
 author: thraka
 ms.author: adegeo
-ms.date: 12/17/2018
-ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 11/03/2019
+ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182464"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739313"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
 
@@ -70,7 +70,10 @@ _dotnet_bash_complete()
   local word=${COMP_WORDS[COMP_CWORD]}
 
   local completions
-  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}")"
+  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)"
+  if [ $? -ne 0 ]; then
+    completions=""
+  fi
 
   COMPREPLY=( $(compgen -W "$completions" -- "$word") )
 }
@@ -78,7 +81,7 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>Zsh
+## <a name="zsh"></a>zsh
 
 Para agregar finalización con tabulación al shell de **zsh** para la CLI de .NET Core, agregue el código siguiente al archivo `.zshrc`:
 

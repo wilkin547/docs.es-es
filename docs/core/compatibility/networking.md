@@ -2,17 +2,14 @@
 title: 'Cambios importantes en las redes: .NET Core'
 description: Enumera los cambios importantes en las redes en .NET Core.
 ms.date: 10/03/2019
-ms.openlocfilehash: fba784b7533ff571164bc87af58ece5a47b7766d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5f22b03683a6350d1ac46521202bb469f7f22427
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092962"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739377"
 ---
-# <a name="networking-breaking-changes"></a>Cambios importantes en las redes 
-
-> [!IMPORTANT]
-> Este artículo está en construcción. Esta no es una lista completa de todos los cambios importantes en .NET Core. Para obtener más información sobre los cambios importantes en .NET Core, puede consultar las [propuestas de cambios importantes](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) individuales en el repositorio dotnet/docs de GitHub. 
+# <a name="networking-breaking-changes"></a>Cambios importantes en las redes
 
 Debajo se muestra una lista de cambios importantes en las redes según la versión de .NET Core.
 

@@ -2,17 +2,14 @@
 title: Cambios importantes de criptografía - .NET Core
 description: Enumera los cambios importantes relacionados con la criptografía en .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 628162eb391c27b810e9db0a869896eb8443a06f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093093"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739737"
 ---
 # <a name="cryptography-breaking-changes"></a>Cambios importantes de criptografía
-
-> [!IMPORTANT]
-> Este artículo está en construcción. Esta no es una lista completa de todos los cambios importantes en .NET Core. Para obtener más información sobre los cambios importantes en .NET Core, puede consultar las [propuestas de cambios importantes](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) individuales en el repositorio dotnet/docs de GitHub. 
 
 A continuación, se muestra una lista de cambios importantes relacionados con la criptografía según la versión de .NET Core.
 
