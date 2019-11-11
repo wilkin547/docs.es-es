@@ -2,12 +2,12 @@
 title: Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS
 description: Arquitectura de microservicios .NET para aplicaciones .NET en contenedor | Cómo abordar escenarios empresariales complejos donde se aplican patrones DDD y CQRS
 ms.date: 10/08/2018
-ms.openlocfilehash: d311641e2ac73205c04c3f1147b54991585ce851
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295106"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739840"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS
 
@@ -15,7 +15,9 @@ ms.locfileid: "70295106"
 
 Esta sección se centra en microservicios más avanzados que se implementan cuando se deben abordar subsistemas complejos y en microservicios derivados de los conocimientos de expertos en el dominio con reglas de negocios cambiantes. Los patrones de arquitectura que se usan en esta sección se basan en los enfoques de diseño guiado por el dominio (DDD) y segregación de responsabilidades de comandos y consultas (CQRS), como se ilustra en la figura 7-1.
 
-![Diferencia entre la arquitectura externa: patrones de microservicio, puertas de enlace de API, comunicaciones resistentes, pub/sub, etc., y la arquitectura interna: orientada a datos/CRUD, patrones de DDD, inserción de dependencias, varias bibliotecas, etc.](./media/image1.png)
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagrama en el que se comparan los patrones de arquitectura externos e internos.":::
+Diferencia entre la arquitectura externa: patrones de microservicio, puertas de enlace de API, comunicaciones resistentes, pub/sub, etc., y la arquitectura interna: orientada a datos/CRUD, patrones de DDD, inserción de dependencias, varias bibliotecas, etc.
+:::image-end:::
 
 **Figura 7-1**. Arquitectura de microservicios externa frente a patrones de arquitectura interna para cada microservicio.
 
@@ -40,7 +42,7 @@ DDD es un tema amplio con numerosos recursos para obtener más información. Pue
 
 ##### <a name="ddd-books"></a>Libros sobre DDD
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** \ (Diseño orientado al dominio: abordar la complejidad en el corazón del software)
+- **Eric Evans. Diseño orientado al dominio: Tackling Complexity in the Heart of Software** \ (Diseño orientado al dominio: abordar la complejidad en el corazón del software)
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries** \ (Referencia del diseño orientado al dominio: definiciones y resúmenes de patrones)
