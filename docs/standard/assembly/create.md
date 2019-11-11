@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122502"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740508"
 ---
 # <a name="create-assemblies"></a>Creación de ensamblados
 
@@ -46,8 +46,7 @@ Se deben tener en cuenta consideraciones especiales a la hora de poner los ensam
 
 ## <a name="see-also"></a>Vea también
 
-- [Programación con ensamblados](program.md)
-- [Versiones de los ensamblados](versioning.md)
+- [Control de versiones de los ensamblados](versioning.md)
 - [Cómo: Compilar un ensamblado de un solo archivo](../../framework/app-domains/build-single-file-assembly.md)
 - [Cómo: Compilar un ensamblado de varios archivos](../../framework/app-domains/build-multifile-assembly.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../framework/deployment/how-the-runtime-locates-assemblies.md)

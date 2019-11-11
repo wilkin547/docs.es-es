@@ -4,22 +4,22 @@ description: Obtenga información sobre los ensamblados de referencia, un tipo e
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: f509397f5cb48a004b800014b2b071721e0d68b8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c38f208c2daac914176bbeedbde9e69fd68f55c6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584123"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740484"
 ---
 # <a name="reference-assemblies"></a>Ensamblados de referencia
 
-*Los ensamblados de referencia*  son un tipo especial de ensamblado que contiene solo la cantidad mínima de metadatos necesarios para representar la superficie de la API pública de la biblioteca. Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación (de ahí el nombre), pero excluyen todas las implementaciones de miembros, así como las declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API. En cambio, los ensamblados normales se denominan *ensamblados de implementación*. 
+*Los ensamblados de referencia*  son un tipo especial de ensamblado que contiene solo la cantidad mínima de metadatos necesarios para representar la superficie de la API pública de la biblioteca. Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación (de ahí el nombre), pero excluyen todas las implementaciones de miembros, así como las declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API. En cambio, los ensamblados normales se denominan *ensamblados de implementación*.
 
 Los ensamblados de referencia no se pueden cargar para su ejecución, pero se pueden pasar como entrada del compilador de la misma manera que los ensamblados de implementación. Los ensamblados de referencia suelen distribuirse con el kit de desarrollo de software (SDK) de una plataforma o biblioteca determinada, un componente de software especial instalado solo en las máquinas de los desarrolladores.
 
 El uso de un ensamblado de referencia permite a los desarrolladores compilar programas que tienen como destino una versión de biblioteca específica sin tener el ensamblado de implementación completo para esa versión. Supongamos que solo tiene la versión más reciente de alguna biblioteca en el equipo, pero quiere compilar un programa que tenga como destino una máquina con una versión anterior de dicha biblioteca. Si compila directamente en el ensamblado de implementación, podría usar accidentalmente miembros de la API que no están disponibles en la versión anterior, y solo se daría cuenta del error al probar el programa en la máquina de destino. Si compila con el ensamblado de referencia para la versión anterior, obtendrá inmediatamente un error en tiempo de compilación.
 
-Además, un ensamblado de referencia puede representar un contrato; es decir, un conjunto de API que no se corresponde con el ensamblado de implementación concreto. Este ensamblado de referencia, denominado *ensamblado de contrato*, se puede usar para tener como destino varias plataformas que admiten el mismo conjunto de API. Por ejemplo, .NET Standard proporciona el ensamblado del contrato, *netstandard.dll*, que representa el conjunto de API comunes compartidas entre distintas plataformas .NET. Las implementaciones de estas API están contenidas en ensamblados diferentes en distintas plataformas, como *mscorlib. dll*  en .NET Framework o *System.Private.CoreLib.dll* en .NET Core. Una biblioteca que tiene como destino .NET Standard puede ejecutarse en todas las plataformas que admiten .NET Standard. 
+Además, un ensamblado de referencia puede representar un contrato; es decir, un conjunto de API que no se corresponde con el ensamblado de implementación concreto. Este ensamblado de referencia, denominado *ensamblado de contrato*, se puede usar para tener como destino varias plataformas que admiten el mismo conjunto de API. Por ejemplo, .NET Standard proporciona el ensamblado del contrato, *netstandard.dll*, que representa el conjunto de API comunes compartidas entre distintas plataformas .NET. Las implementaciones de estas API están contenidas en ensamblados diferentes en distintas plataformas, como *mscorlib. dll*  en .NET Framework o *System.Private.CoreLib.dll* en .NET Core. Una biblioteca que tiene como destino .NET Standard puede ejecutarse en todas las plataformas que admiten .NET Standard.
 
 ## <a name="using-reference-assemblies"></a>Uso de ensamblados de referencia
 
@@ -35,7 +35,7 @@ Dado que no contienen ninguna implementación, no se pueden cargar ensamblados d
 
 La generación de ensamblados de referencia para las bibliotecas puede ser útil cuando los consumidores de la biblioteca necesitan a menudo compilar sus programas en muchas versiones diferentes de la biblioteca (es decir, cuando necesita implementar una característica similar a los paquetes de destino de .NET Framework mencionados anteriormente para su propio proyecto). La distribución de los ensamblados de implementación para todas estas versiones puede no resultar práctica debido a su gran tamaño. Los ensamblados de referencia tienen un tamaño menor, por lo que distribuirlos como parte del SDK de la biblioteca reduce el tamaño de la descarga y ahorra espacio en disco.
 
-Los IDE y las herramientas de compilación también pueden aprovechar los ensamblados de referencia para reducir los tiempos de compilación en el caso de soluciones de gran tamaño que se componen de varias bibliotecas de clases. Normalmente, en escenarios de compilación incremental, se vuelve a generar un proyecto cuando se modifica cualquiera de sus archivos de entrada, incluidos los ensamblados de los que depende. El ensamblado de implementación cambia cada vez que el programador cambia la implementación de cualquier miembro. El ensamblado de referencia solo cambia cuando se ve afectada su API pública. Por lo tanto, el uso del ensamblado de referencia como archivo de entrada en lugar del ensamblado de implementación permite omitir la compilación del proyecto dependiente en algunos casos. 
+Los IDE y las herramientas de compilación también pueden aprovechar los ensamblados de referencia para reducir los tiempos de compilación en el caso de soluciones de gran tamaño que se componen de varias bibliotecas de clases. Normalmente, en escenarios de compilación incremental, se vuelve a generar un proyecto cuando se modifica cualquiera de sus archivos de entrada, incluidos los ensamblados de los que depende. El ensamblado de implementación cambia cada vez que el programador cambia la implementación de cualquier miembro. El ensamblado de referencia solo cambia cuando se ve afectada su API pública. Por lo tanto, el uso del ensamblado de referencia como archivo de entrada en lugar del ensamblado de implementación permite omitir la compilación del proyecto dependiente en algunos casos.
 
 Puede generar ensamblados de referencia:
 
@@ -59,9 +59,9 @@ Los metadatos de los ensamblados de referencia continúan conservando informaci�
 - Todos los tipos, incluidos los tipos privados y anidados.
 - Se conservan todos los atributos (incluso los internos).
 - Todos los métodos virtuales.
-- Implementaciones de interfaz explícitas. 
+- Implementaciones de interfaz explícitas.
 - Eventos y propiedades implementados explícitamente, ya que sus descriptores de acceso son virtuales.
-- Todos los campos de estructuras. 
+- Todos los campos de estructuras.
 
 Los ensamblados de referencia incluyen un atributo[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) de nivel de ensamblado. Este atributo puede especificarse en el origen. En tal caso, el compilador no necesitará sintetizarlo. Debido a este atributo, los tiempos de ejecución rechazarán cargar ensamblados de referencia para su ejecución (pero todavía pueden cargarse en modo de solo reflexión).
 
@@ -73,6 +73,5 @@ Los detalles de la estructura de ensamblado de referencia exacta dependen de la 
 ## <a name="see-also"></a>Vea también
 
 - [Ensamblados de .NET](index.md)
-- [Programación con ensamblados](program.md)
 - [Información general sobre destinos de Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Cómo: Adición o eliminación de referencias con el Administrador de referencias](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)

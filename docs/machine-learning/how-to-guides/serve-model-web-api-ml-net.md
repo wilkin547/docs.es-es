@@ -1,23 +1,20 @@
 ---
 title: Implementación de un modelo en una ASP.NET Core Web API
 description: Publicación del modelo de Machine Learning de Análisis de sentimiento de ML.NET en Internet mediante ASP.NET Core Web API
-ms.date: 09/11/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774519"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733309"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Implementación de un modelo en una ASP.NET Core Web API
 
 Aprenda cómo publicar un modelo de Machine Learning de ML.NET entrenado previamente en la Web a través de una ASP.NET Core Web API. Publicar un modelo a través de una API web permite predicciones mediante métodos HTTP estándar.
-
-> [!NOTE]
-> La extensión del servicio `PredictionEnginePool` está actualmente en versión preliminar.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -122,12 +119,8 @@ En el vínculo siguiente se proporciona más información si quiere aprender sob
 2. Agregue el código siguiente al método *ConfigureServices*:
 
     ```csharp
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
-    }
+    services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+        .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     ```
 
 En un nivel alto, este código inicializa los objetos y servicios de manera automática para su uso más adelante cuando lo solicite la aplicación en lugar de tener que hacerlo manualmente.
@@ -142,7 +135,7 @@ El modelo se identifica mediante el parámetro `modelName`, por lo que se puede 
 > Como alternativa, puede usar el método `FromUri` al trabajar con modelos almacenados de manera remota. En lugar de ver si hay eventos modificados de archivo, `FromUri` sondea la ubicación remota en busca de cambios. El intervalo de sondeo predeterminado es de 5 minutos. Puede aumentar o disminuir el intervalo de sondeo en función de los requisitos de la aplicación. En el ejemplo de código siguiente, `PredictionEnginePool` sondea el modelo almacenado en el URI especificado cada minuto.
 >
 >```csharp
->builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
 >       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
@@ -212,7 +205,7 @@ Una vez que todo está configurado, es momento de probar la aplicación.
     Negative
     ```
 
-Felicidades. Publicó correctamente el modelo para realizar predicciones en Internet mediante una ASP.NET Core Web API.
+¡Enhorabuena! Publicó correctamente el modelo para realizar predicciones en Internet mediante una ASP.NET Core Web API.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

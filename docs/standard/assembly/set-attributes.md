@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138640"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740473"
 ---
 # <a name="set-assembly-attributes"></a>Establecimiento de atributos de ensamblado
 
@@ -120,4 +120,3 @@ En el ejemplo de código siguiente, se muestran los atributos que se aplicarán 
 ## <a name="see-also"></a>Vea también
 
 - [Creación de ensamblados](create.md)
-- [Programación con ensamblados](program.md)

@@ -4,12 +4,12 @@ description: Obtenga información sobre el tipo struct y cómo se crea.
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423115"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739179"
 ---
 # <a name="structs"></a>Estructuras
 
@@ -53,21 +53,9 @@ Los structs comparten la mayoría de la sintaxis con las clases, aunque están m
   
 - Un struct puede implementar interfaces.
 
-## <a name="literal-values"></a>Valores literales
-
-En C#, los valores literales reciben un tipo del compilador. Puede especificar cómo debe escribirse un literal numérico; para ello, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá el tipo `double` para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea las páginas de referencia de los tipos individuales en [Tipos de valor](./language-reference/keywords/value-types.md).  
-  
-Dado que los literales tienen tipo y todos los tipos derivan en última instancia de <xref:System.Object>, puede escribir y compilar código como el siguiente:  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-En los dos últimos ejemplos se muestran las características del lenguaje incluidas en C# 7.0. El primero permite usar caracteres de subrayado como *separadores de dígitos* dentro de literales numéricos. Puede colocarlos donde quiera entre los dígitos para mejorar la legibilidad. No tienen ningún efecto en el valor.
-
-En el segundo se muestran *literales binarios*, que permiten especificar patrones de bits directamente, en lugar de mediante la notación hexadecimal.
-
 ## <a name="nullable-value-types"></a>Tipos de valor que aceptan valores NULL
 
-Los tipos de valor normales no pueden tener un valor [null](language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](./language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos o no definidos. Para más información, consulte [Tipos que admiten un valor NULL](programming-guide/nullable-types/index.md).
+Los tipos de valor normales no pueden tener un valor [null](language-reference/keywords/null.md), pero se pueden crear tipos de valor que aceptan valores NULL mediante la adición de `?` después del tipo. Por ejemplo, `int?` es un tipo `int` que también puede tener el valor [null](./language-reference/keywords/null.md). Los tipos que admiten un valor NULL son instancias del tipo struct genérico <xref:System.Nullable%601>. Los tipos que admiten un valor NULL son especialmente útiles cuando hay un intercambio de datos con bases de datos en las que los valores numéricos podrían ser nulos o no definidos. Para más información, consulte [Tipos que admiten un valor NULL](language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="see-also"></a>Vea también
 

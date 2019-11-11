@@ -2,12 +2,12 @@
 title: Valores devueltos y variables locales de tipo ref (Guía de C#)
 description: Obtenga información sobre cómo definir y usar valores locales y devueltos de tipo ref
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114488"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736818"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -25,7 +25,7 @@ Hay algunas restricciones en la expresión que un método puede devolver como un
 
 - El valor devuelto no puede ser el literal `null`. Si devuelve `null`, se genera el error del compilador CS8156, "No se puede usar una expresión en este contexto porque no se puede devolver por referencia".
 
-   Un método con un valor devuelto de referencia puede devolver un alias a una variable cuyo valor es actualmente el valor NULL (sin instancias) o un [tipo de valor que admite un valor NULL](../nullable-types/index.md) para un tipo de valor.
+   Un método con un valor devuelto de referencia puede devolver un alias a una variable cuyo valor es actualmente el valor NULL (sin instancias) o un [tipo de valor que admite un valor NULL](../../language-reference/builtin-types/nullable-value-types.md) para un tipo de valor.
 
 - El valor devuelto no puede ser una constante, un miembro de enumeración, el valor devuelto por valor desde una propiedad o un método de `class` o `struct`. Si infringe esta regla, se genera el error del compilador CS8156, "No se puede usar una expresión en este contexto porque no se puede devolver por referencia".
 

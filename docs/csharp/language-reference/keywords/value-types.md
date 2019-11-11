@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422208"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739674"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -32,7 +32,7 @@ Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?di
 
 A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.
 
-Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos de valor que admiten un valor NULL](../../programming-guide/nullable-types/index.md) correspondientes pueden ser `null`.
+Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos de valor que admiten un valor NULL](../builtin-types/nullable-value-types.md) correspondientes pueden ser `null`.
 
 Cada tipo de valor tiene un constructor sin parámetros implícito que inicializa el valor predeterminado de ese tipo. Para información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](default-values-table.md).
 
@@ -105,8 +105,6 @@ Para información sobre cómo aplicar formato al resultado de los tipos numéric
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [Tipos de referencia](reference-types.md)
-- [Tipos de valores que aceptan valores NULL](../../programming-guide/nullable-types/index.md)
+- [Tipos de valores que aceptan valores NULL](../builtin-types/nullable-value-types.md)

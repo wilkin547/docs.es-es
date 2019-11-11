@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 74d13de78369b13fbf970dce9a3ef5ae7cbaac7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698879"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736899"
 ---
 # <a name="null-c-reference"></a>null (Referencia de C#)
 
-La palabra clave `null` es un literal que representa una referencia nula que no hace referencia a ningún objeto. `null` es el valor predeterminado de las variables de tipo de referencia. Los tipos de valor normales no pueden ser NULL, excepto los [tipos de valor que admiten un valor NULL](../../programming-guide/nullable-types/index.md).
+La palabra clave `null` es un literal que representa una referencia nula que no hace referencia a ningún objeto. `null` es el valor predeterminado de las variables de tipo de referencia. Los tipos de valor normales no pueden ser NULL, excepto los [tipos de valor que admiten un valor NULL](../builtin-types/nullable-value-types.md).
 
 En el ejemplo siguiente se muestran algunos comportamientos de la palabra clave null:
 

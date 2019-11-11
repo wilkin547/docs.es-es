@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353728"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739682"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as
 
@@ -23,7 +23,7 @@ El código siguiente muestra la instrucción `is` de coincidencia de patrones. C
 
 El ejemplo anterior muestra una serie de características de sintaxis de coincidencia de patrones. Las instrucciones `if (a is Mammal m)` e `if (o is Mammal m)` combinan la prueba con una asignación de inicialización. La asignación solo se produce cuando la prueba se realiza correctamente. La variable `m` solo está en ámbito en la instrucción `if` insertada donde se ha asignado. No se puede acceder a `m` más adelante en el mismo método. Pruébela en la ventana interactiva.
 
-También puede usar la misma sintaxis para probar si un [tipo de valor que admite un valor NULL](../programming-guide/nullable-types/index.md) tiene un valor, como se muestra en el código de ejemplo siguiente:
+También puede usar la misma sintaxis para probar si un [tipo de valor que admite un valor NULL](../language-reference/builtin-types/nullable-value-types.md) tiene un valor, como se muestra en el código de ejemplo siguiente:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
