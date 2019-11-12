@@ -2,12 +2,12 @@
 title: Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 description: Descubra las ofertas de Microsoft compatibles con el ciclo de vida de aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094464"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738089"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 
@@ -15,7 +15,9 @@ ms.locfileid: "73094464"
 
 En la figura 3-1 se muestran los principales pilares del ciclo de vida de las aplicaciones de Docker clasificadas por el tipo de trabajo entregado por varios equipos (desarrollo de aplicaciones, procesos de infraestructuras de DevOps y operaciones y administración de TI). Por lo general, en la empresa, los perfiles del "rol" responsable de cada área son diferentes. Sus aptitudes también lo son.
 
-![Herramientas de Microsoft. Para la carga de trabajo de desarrollo y diseño: motor de Docker para Windows, VS y VS Code, .NET Core y Azure Kubernetes Service. Para la carga de trabajo de compilación, prueba y envío: Azure DevOps, Team Foundation Server, la CLI de Docker y Azure Kubernetes Service. Para la carga de trabajo de ejecución, supervisión y administración: Azure Monitor, Azure Portal, Azure Kubernetes Services, Service Fabric y otros orquestadores.](./media/image1.png)
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Diagrama en el que se muestran las herramientas de Microsoft necesarias para mantener aplicaciones de Docker.":::
+Herramientas de Microsoft. Para la carga de trabajo de desarrollo y diseño: motor de Docker para Windows, VS y VS Code, .NET Core y Azure Kubernetes Service. Para la carga de trabajo de compilación, prueba y envío: Azure DevOps, Team Foundation Server, la CLI de Docker y Azure Kubernetes Service. Para la carga de trabajo de ejecución, supervisión y administración: Azure Monitor, Azure Portal, Azure Kubernetes Services, Service Fabric y otros orquestadores.
+:::image-end:::
 
 **Figura 3-1.** Pilares principales del ciclo de vida de las aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft.
 

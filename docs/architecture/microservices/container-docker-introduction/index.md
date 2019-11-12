@@ -2,12 +2,12 @@
 title: Introducción a Containers y Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Introducción a Containers y Docker
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295148"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740051"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introducción a Containers y Docker
 
@@ -19,7 +19,7 @@ Los contenedores también aíslan las aplicaciones entre sí en un sistema opera
 
 Cada contenedor puede ejecutar una aplicación web o un servicio al completo, como se muestra en la figura 2-1. En este ejemplo, el host de Docker es un host de contenedor, y App 1, App 2, Svc 1 y Svc 2 son aplicaciones o servicios en contenedor.
 
-![Dos aplicaciones y dos servicios que se ejecutan en el sistema operativo en una máquina virtual o en un servidor físico](./media/image1.png)
+![Diagrama en el que se muestran cuatro contenedores que se ejecutan en una máquina virtual o un servidor.](./media/index/multiple-containers-single-host.png)
 
 **Figura 2-1**. Varios contenedores ejecutándose en un host de contenedor.
 
