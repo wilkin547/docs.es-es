@@ -1,68 +1,66 @@
 - name: Ensamblados de .NET
   href: index.md
+- name: Contenido de los ensamblados
+  href: contents.md
+- name: de manifiesto
+  href: manifest.md
+- name: Consideraciones de seguridad
+  href: security-considerations.md
+- name: Control de versiones
+  href: versioning.md
+- name: Ejecución simultánea
+  href: side-by-side-execution.md
+- name: Formato de archivo de ensamblado
+  href: file-format.md
+- name: Descargabilidad en .NET Core
+  href: unloadability.md
+- name: Ensamblados de referencia
+  href: reference-assemblies.md
+- name: Resolución de cargas de ensamblado
+  href: resolve-loads.md
+- name: Creación de ensamblados
+  href: create.md
+- name: Nombres de ensamblado
+  href: names.md
+- name: para buscar el nombre completo de un ensamblado
+  href: find-fully-qualified-name.md
+- name: Ubicación del ensamblado
+  href: location.md
+- name: Establecimiento de atributos de ensamblado
+  href: set-attributes.md
+- name: Ensamblados con nombre seguro
   items:
-    - name: Contenido de los ensamblados
-      href: contents.md
-    - name: Manifiesto del ensamblado
-      href: manifest.md
-    - name: Ensamblados con nombre seguro
+    - name: Información general
       href: strong-named.md
-    - name: Consideraciones de seguridad sobre ensamblados
-      href: security-considerations.md
-    - name: Control de versiones de ensamblado
-      href: versioning.md
-    - name: Ensamblados y ejecución en paralelo
-      href: side-by-side-execution.md
-    - name: Formato de archivo de ensamblado
-      href: file-format.md
-    - name: Procedimiento para usar y depurar la descargabilidad de ensamblados en .NET Core
-      href: unloadability.md
-    - name: Ensamblados de referencia
-      href: reference-assemblies.md
-    - name: Resolución de cargas de ensamblado
-      href: resolve-loads.md
-    - name: Programación con ensamblados
-      href: program.md
-      items:
-        - name: Creación de ensamblados
-          href: create.md
-        - name: Nombres de ensamblado
-          href: names.md
-        - name: Procedimiento para buscar el nombre completo de un ensamblado
-          href: find-fully-qualified-name.md
-        - name: Ubicación del ensamblado
-          href: location.md
-        - name: Establecimiento de atributos de ensamblado
-          href: set-attributes.md
-        - name: Crear y utilizar ensamblados con nombre seguro
-          href: create-use-strong-named.md
-          items:
-            - name: Procedimiento para crear un par de claves privada y pública
-              href: create-public-private-key-pair.md
-            - name: Procedimiento para firmar un ensamblado con un nombre seguro
-              href: sign-strong-name.md
-            - name: Nombres seguros mejorados
-              href: enhanced-strong-naming.md
-            - name: Procedimiento para hacer referencia a un ensamblado con nombre seguro
-              href: reference-strong-named.md
-            - name: Procedimiento para deshabilitar la característica de omisión de nombres seguros
-              href: disable-strong-name-bypass-feature.md
-        - name: Retraso de la firma de un ensamblado
-          href: delay-sign.md
-        - name: Procedimiento para ver el contenido de un ensamblado
-          href: view-contents.md
-        - name: Reenvío de tipos en Common Language Runtime
-          href: type-forwarding.md
-        - name: Ensamblados de confianza
-          href: friend.md
-          items:
-            - name: Procedimiento para crear ensamblados de confianza sin firmar
-              href: create-unsigned-friend.md
-            - name: Procedimiento para crear ensamblados de confianza firmados
-              href: create-signed-friend.md
-        - name: Procedimiento para determinar si un archivo es un ensamblado
-          href: identify.md
-        - name: Procedimiento para cargar y descargar ensamblados
-          href: load-unload.md
-        - name: 'Tutorial: Inserción de tipos de ensamblados administrados en Visual Studio'
-          href: embed-types-visual-studio.md
+    - name: Crear y utilizar ensamblados con nombre seguro
+      href: create-use-strong-named.md
+    - name: para crear un par de claves privada y pública
+      href: create-public-private-key-pair.md
+    - name: para firmar un ensamblado con un nombre seguro
+      href: sign-strong-name.md
+    - name: Nombres seguros mejorados
+      href: enhanced-strong-naming.md
+    - name: para hacer referencia a un ensamblado con nombre seguro
+      href: reference-strong-named.md
+    - name: Deshabilitación de la omisión de nombres seguros
+      href: disable-strong-name-bypass-feature.md
+- name: Retraso de la firma de un ensamblado
+  href: delay-sign.md
+- name: para ver el contenido de un ensamblado
+  href: view-contents.md
+- name: Icono de reenvío de tipo en CLR
+  href: type-forwarding.md
+- name: Ensamblados de confianza
+  items:
+    - name: Información general
+      href: friend.md
+    - name: para crear ensamblados de confianza sin firmar
+      href: create-unsigned-friend.md
+    - name: para crear ensamblados de confianza firmados
+      href: create-signed-friend.md
+- name: para determinar si un archivo es un ensamblado
+  href: identify.md
+- name: Carga y descarga de ensamblados
+  href: load-unload.md
+- name: 'Tutorial: Inserción de tipos de ensamblados administrados en Visual Studio'
+  href: embed-types-visual-studio.md
