@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 64264238-3b68-4bac-a887-36b552426a6c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ccc038b4420040779dae70f15e3a8827ba94180
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780950"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444107"
 ---
-# <a name="coinitiee-enumeration"></a><span data-ttu-id="44af3-102">COINITIEE (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="44af3-102">COINITIEE Enumeration</span></span>
-<span data-ttu-id="44af3-103">Especifica las constantes utilizadas por [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) al inicializar common language runtime.</span><span class="sxs-lookup"><span data-stu-id="44af3-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="coinitiee-enumeration"></a><span data-ttu-id="327c7-102">COINITIEE (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="327c7-102">COINITIEE Enumeration</span></span>
+<span data-ttu-id="327c7-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="327c7-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44af3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="44af3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="327c7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="327c7-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITEE {  
@@ -36,23 +34,23 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="44af3-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="44af3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="327c7-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="327c7-105">Members</span></span>  
   
-|<span data-ttu-id="44af3-106">Member</span><span class="sxs-lookup"><span data-stu-id="44af3-106">Member</span></span>|<span data-ttu-id="44af3-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="44af3-107">Description</span></span>|  
+|<span data-ttu-id="327c7-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="327c7-106">Member</span></span>|<span data-ttu-id="327c7-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="327c7-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|<span data-ttu-id="44af3-108">Modo de inicialización predeterminado.</span><span class="sxs-lookup"><span data-stu-id="44af3-108">Default initialization mode.</span></span> <span data-ttu-id="44af3-109">Esto inicializa el tiempo de ejecución y se crea el valor predeterminado <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="44af3-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
-|`COINITEE_DLL`|<span data-ttu-id="44af3-110">Se inicializa para ejecutar un archivo DLL administrado.</span><span class="sxs-lookup"><span data-stu-id="44af3-110">Initializes to run a managed DLL.</span></span>|  
-|`COINITEE_MAIN`|<span data-ttu-id="44af3-111">Se inicializa para ejecutar un archivo ejecutable administrado.</span><span class="sxs-lookup"><span data-stu-id="44af3-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="44af3-112">Esto inicializa el tiempo de ejecución pero no crea el valor predeterminado <xref:System.AppDomain>, que se crea después de escribir la rutina principal del archivo EXE.</span><span class="sxs-lookup"><span data-stu-id="44af3-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
+|`COINITEE_DEFAULT`|<span data-ttu-id="327c7-108">Default initialization mode.</span><span class="sxs-lookup"><span data-stu-id="327c7-108">Default initialization mode.</span></span> <span data-ttu-id="327c7-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="327c7-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
+|`COINITEE_DLL`|<span data-ttu-id="327c7-110">Initializes to run a managed DLL.</span><span class="sxs-lookup"><span data-stu-id="327c7-110">Initializes to run a managed DLL.</span></span>|  
+|`COINITEE_MAIN`|<span data-ttu-id="327c7-111">Initializes to run a managed EXE.</span><span class="sxs-lookup"><span data-stu-id="327c7-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="327c7-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span><span class="sxs-lookup"><span data-stu-id="327c7-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="44af3-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="44af3-113">Requirements</span></span>  
- <span data-ttu-id="44af3-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44af3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="327c7-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="327c7-113">Requirements</span></span>  
+ <span data-ttu-id="327c7-114">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="327c7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44af3-115">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="44af3-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="327c7-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="327c7-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="44af3-116">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="44af3-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="327c7-116">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="327c7-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="44af3-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44af3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="327c7-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="327c7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44af3-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="44af3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="327c7-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="327c7-118">See also</span></span>
 
-- [<span data-ttu-id="44af3-119">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="44af3-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="327c7-119">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="327c7-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

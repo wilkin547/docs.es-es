@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd492834-6529-4d39-b93d-f8cdbd3e297f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08340c82acb8eff2ce5b778c719f350b58b51fa5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae105a60969e819f7974735ed8f075c60ba93916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757530"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440349"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="7362d-102">IMetaDataFilter::MarkToken (Método)</span><span class="sxs-lookup"><span data-stu-id="7362d-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="7362d-103">Establece un valor que indica que se ha procesado el token de metadatos especificado.</span><span class="sxs-lookup"><span data-stu-id="7362d-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="715c8-102">IMetaDataFilter::MarkToken (Método)</span><span class="sxs-lookup"><span data-stu-id="715c8-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="715c8-103">Sets a value indicating that the specified metadata token has been processed.</span><span class="sxs-lookup"><span data-stu-id="715c8-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7362d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7362d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="715c8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="715c8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkToken (  
@@ -35,19 +33,19 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7362d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7362d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="715c8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="715c8-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="7362d-106">[in] El token para marcar como procesado.</span><span class="sxs-lookup"><span data-stu-id="7362d-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="715c8-106">[in] The token to mark as processed.</span><span class="sxs-lookup"><span data-stu-id="715c8-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7362d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7362d-107">Requirements</span></span>  
- <span data-ttu-id="7362d-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7362d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="715c8-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="715c8-107">Requirements</span></span>  
+ <span data-ttu-id="715c8-108">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="715c8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7362d-109">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="7362d-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="715c8-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="715c8-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7362d-110">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7362d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="715c8-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="715c8-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7362d-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7362d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="715c8-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="715c8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7362d-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="7362d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="715c8-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="715c8-112">See also</span></span>
 
-- [<span data-ttu-id="7362d-113">IMetaDataFilter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7362d-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="715c8-113">IMetaDataFilter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="715c8-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

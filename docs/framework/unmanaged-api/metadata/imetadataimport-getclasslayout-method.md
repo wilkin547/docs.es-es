@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782454"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437774"
 ---
-# <a name="imetadataimportgetclasslayout-method"></a><span data-ttu-id="bffc3-102">IMetaDataImport::GetClassLayout (Método)</span><span class="sxs-lookup"><span data-stu-id="bffc3-102">IMetaDataImport::GetClassLayout Method</span></span>
-<span data-ttu-id="bffc3-103">Obtiene la información de diseño de la clase a la que hace referencia el token TypeDef especificado.</span><span class="sxs-lookup"><span data-stu-id="bffc3-103">Gets layout information for the class referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportgetclasslayout-method"></a><span data-ttu-id="3f6c5-102">IMetaDataImport::GetClassLayout (Método)</span><span class="sxs-lookup"><span data-stu-id="3f6c5-102">IMetaDataImport::GetClassLayout Method</span></span>
+<span data-ttu-id="3f6c5-103">Obtiene la información de diseño de la clase a la que hace referencia el token TypeDef especificado.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-103">Gets layout information for the class referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bffc3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bffc3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f6c5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3f6c5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClassLayout  (   
@@ -40,35 +38,35 @@ HRESULT GetClassLayout  (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bffc3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="bffc3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f6c5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3f6c5-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="bffc3-106">[in] El token de TypeDef para la clase con el diseño para devolver.</span><span class="sxs-lookup"><span data-stu-id="bffc3-106">[in] The TypeDef token for the class with the layout to return.</span></span>  
+ <span data-ttu-id="3f6c5-106">[in] The TypeDef token for the class with the layout to return.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-106">[in] The TypeDef token for the class with the layout to return.</span></span>  
   
  `pdwPackSize`  
- <span data-ttu-id="bffc3-107">[out] Uno de los valores 1, 2, 4, 8 o 16, que representa el tamaño del paquete de la clase.</span><span class="sxs-lookup"><span data-stu-id="bffc3-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span></span>  
+ <span data-ttu-id="3f6c5-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span></span>  
   
  `rFieldOffset`  
- <span data-ttu-id="bffc3-108">[out] Una matriz de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) valores.</span><span class="sxs-lookup"><span data-stu-id="bffc3-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span></span>  
+ <span data-ttu-id="3f6c5-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span></span>  
   
  `cMax`  
- <span data-ttu-id="bffc3-109">[in] Tamaño máximo de la matriz `rFieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="bffc3-109">[in] The maximum size of the `rFieldOffset` array.</span></span>  
+ <span data-ttu-id="3f6c5-109">[in] Tamaño máximo de la matriz `rFieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-109">[in] The maximum size of the `rFieldOffset` array.</span></span>  
   
  `pcFieldOffset`  
- <span data-ttu-id="bffc3-110">[out] El número de elementos devueltos en `rFieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="bffc3-110">[out] The number of elements returned in `rFieldOffset`.</span></span>  
+ <span data-ttu-id="3f6c5-110">[out] The number of elements returned in `rFieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-110">[out] The number of elements returned in `rFieldOffset`.</span></span>  
   
  `pulClassSize`  
- <span data-ttu-id="bffc3-111">[out] El tamaño en bytes de la clase representada por `td`.</span><span class="sxs-lookup"><span data-stu-id="bffc3-111">[out] The size in bytes of the class represented by `td`.</span></span>  
+ <span data-ttu-id="3f6c5-111">[out] The size in bytes of the class represented by `td`.</span><span class="sxs-lookup"><span data-stu-id="3f6c5-111">[out] The size in bytes of the class represented by `td`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bffc3-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bffc3-112">Requirements</span></span>  
- <span data-ttu-id="bffc3-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bffc3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f6c5-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3f6c5-112">Requirements</span></span>  
+ <span data-ttu-id="3f6c5-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f6c5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bffc3-114">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="bffc3-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3f6c5-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3f6c5-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bffc3-115">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bffc3-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3f6c5-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3f6c5-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bffc3-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bffc3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3f6c5-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f6c5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bffc3-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="bffc3-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f6c5-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="3f6c5-117">See also</span></span>
 
-- [<span data-ttu-id="bffc3-118">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="bffc3-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="bffc3-119">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="bffc3-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="3f6c5-118">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="3f6c5-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="3f6c5-119">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="3f6c5-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
