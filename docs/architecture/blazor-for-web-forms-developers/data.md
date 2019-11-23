@@ -11,11 +11,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840824"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="cda80-103">Acceso y administración de datos</span><span class="sxs-lookup"><span data-stu-id="cda80-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="15489-103">Acceso y administración de datos</span><span class="sxs-lookup"><span data-stu-id="15489-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="cda80-104">*Este contenido estará disponible próximamente.*</span><span class="sxs-lookup"><span data-stu-id="cda80-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="15489-104">*Este contenido estará disponible próximamente.*</span><span class="sxs-lookup"><span data-stu-id="15489-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "73840824"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="cda80-105">[Anterior](forms-validation.md)
->[Siguiente](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="cda80-105">[Previous](forms-validation.md)
+><span data-ttu-id="15489-105">[Anterior](forms-validation.md)
+>[Siguiente](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="15489-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>
