@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6e8665e5e2194eb4a3dffad8e97a69deb202d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ed30f07fcec9c730e1514350c594399f0aa16e5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778977"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437264"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken (Método)
 Obtiene el nombre en UTF-8 del objeto al que hace referencia el token de metadatos especificado. Este método está obsoleto.  
@@ -38,22 +36,22 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] El token que representa el objeto para devolver el nombre.  
+ [in] The token representing the object to return the name for.  
   
  `pszUtf8NamePtr`  
- [out] Un puntero al nombre de objeto de UTF-8 en el montón.  
+ [out] A pointer to the UTF-8 object name in the heap.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetNameFromToken` está obsoleto. Como alternativa, llamar a un método para obtener las propiedades del tipo determinado de token necesario, como `GetFieldProps` para un campo o `GetMethodProps` para un método.  
+ `GetNameFromToken` está obsoleto. As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Versiones de .NET framework:** 1.0  
+ **.NET Framework Versions:** 1.0  
   
 ## <a name="see-also"></a>Vea también
 

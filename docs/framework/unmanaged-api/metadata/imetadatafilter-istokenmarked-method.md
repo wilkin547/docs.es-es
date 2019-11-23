@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e15f4e8691db13b9a646a1e1d783075acfcdd896
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10f31d56a9727e99157f49038c19781f12cd9958
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777083"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440430"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked (Método)
-Obtiene un valor que indica si el token de metadatos especificado se ha marcado como procesado.  
+Gets a value indicating whether the specified metadata token has been marked as processed.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] El token para examinar una marca de procesamiento.  
+ [in] The token to examine for a processing mark.  
   
  `pIsMarked`  
- [out] Un valor que es `true` si `tk` se ha procesado; en caso contrario `false`.  
+ [out] A value that is `true` if `tk` has been processed; otherwise `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1683965193801dbdee038ab06366178891fd978
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778760"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426725"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints (Método)
-Obtiene un enumerador para una matriz de restricciones de parámetros genéricos asociados con el parámetro genérico representado por el token especificado.  
+Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,33 +39,33 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador.  
+ [in, out] A pointer to the enumerator.  
   
  `tk`  
- [in]   Un token que representa el parámetro genérico cuyos restricciones son que hay que enumerar.  
+ [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
   
  `rGenericParamConstraints`  
- [out] Matriz de restricciones de parámetros genéricos a enumerar.  
+ [out] The array of generic parameter constraints to enumerate.  
   
  `cMax`  
- [in]   El número máximo solicitado de tokens para colocar en `rGenericParamConstraints`.  
+ [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] Un puntero al número de tokens se coloca en `rGenericParamConstraints`.  
+ [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` se devolvió correctamente.|  
-|`S_FALSE`|`phEnum` no tiene ningún elemento de miembro. En este caso, `pcGenericParameterConstraints` se establece en 0 (cero).|  
+|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
+|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

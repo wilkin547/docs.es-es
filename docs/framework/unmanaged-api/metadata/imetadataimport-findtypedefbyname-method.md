@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f182dad17e28cc5d19393bb4e13d747e34249fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1b1c557eea62cae6d2ad09303441e4635abc899
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782477"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437843"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName (Método)
-Obtiene un puntero a los metadatos de TypeDef token para el <xref:System.Type> con el nombre especificado.  
+Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +37,20 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>Parámetros  
  `szTypeDef`  
- [in] El nombre del tipo para el que se va a obtener el token de la definición de tipo.  
+ [in] The name of the type for which to get the TypeDef token.  
   
  `tkEnclosingClass`  
- [in] Un token de TypeDef o TypeRef que representa la clase envolvente. Si el tipo de búsqueda no es una clase anidada, establezca este valor en NULL.  
+ [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
   
  `ptd`  
- [out] Un puntero al token de TypeDef coincidente.  
+ [out] A pointer to the matching TypeDef token.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

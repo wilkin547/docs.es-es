@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9d2c74adecdfb0201f9f0c08998feba674f9e0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778927"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437128"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps (Método)
 Obtiene los valores de los metadatos del parámetro al que hace referencia el token de ParamDef especificado.  
@@ -46,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] Un token de ParamDef que representa el parámetro para devolver los metadatos.  
+ [in] A ParamDef token that represents the parameter to return metadata for.  
   
  `pmd`  
- [out] Un puntero a un token de MethodDef que representa el método que toma el parámetro.  
+ [out] A pointer to a MethodDef token representing the method that takes the parameter.  
   
  `pulSequence`  
- [out] La posición ordinal del parámetro en la lista de argumentos de método.  
+ [out] The ordinal position of the parameter in the method argument list.  
   
  `szName`  
- [out] Un búfer para almacenar el nombre del parámetro.  
+ [out] A buffer to hold the name of the parameter.  
   
  `cchName`  
- [in] El tamaño solicitado en caracteres anchos de `szName`.  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out] El tamaño devuelto en caracteres anchos de `szName`.  
+ [out] The returned size in wide characters of `szName`.  
   
  `pdwAttr`  
- [out] Un puntero a cualquier indicador de atributo asociado al parámetro. Se trata de una máscara de bits de `CorParamAttr` valores.  
+ [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `pdwCPlusTypeFlag`  
- [out] Un puntero a una marca que especifica que el parámetro es un <xref:System.ValueType>.  
+ [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Un puntero a una cadena constante devuelta por el parámetro.  
+ [out] A pointer to a constant string returned by the parameter.  
   
  `pcchValue`  
- [out] El tamaño de `ppValue` en caracteres anchos, o cero si `ppValue` no contiene una cadena.  
+ [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
   
 ## <a name="remarks"></a>Comentarios
 
-Los valores de secuencia en `pulSequence` comienzan por 1 para los parámetros. Un valor devuelto tiene un número de secuencia de 0.
+The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

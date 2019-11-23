@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b4464c72e8d189cea4831cb641b9ff05063ce25
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57ad0bd3ed76376421d22a84c0863d36ec2707c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747219"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430272"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed (Método)
-Notifica al generador de perfiles que se ha reanudado el subproceso especificado después de haberse suspendido.  
+Notifies the profiler that the specified thread has resumed after being suspended.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +34,12 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] El identificador del subproceso que se ha reanudado.  
+ [in] The ID of the thread that has been resumed.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

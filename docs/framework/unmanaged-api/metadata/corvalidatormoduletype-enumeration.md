@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04bed418d96658e29328cf2ce6bba445639b437f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750762"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448762"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType (Enumeración)
-Especifica el tipo de un módulo.  
+Specifies the type of a module.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,22 +41,22 @@ typedef enum
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|El módulo es un tipo no válido.|  
-|`ValidatorModuleTypeMin`|El valor mínimo de la `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|El módulo es un archivo ejecutable portable (PE).|  
-|`ValidatorModuleTypeObj`|El módulo es un archivo .obj.|  
-|`ValidatorModuleTypeEnc`|El módulo es una sesión del depurador de editar y continuar.|  
-|`ValidatorModuleTypeIncr`|El módulo es aquella que se ha compilado de forma incremental.|  
-|`ValidatorModuleTypeMax`|El valor máximo de la `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
+|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
+|`ValidatorModuleTypeObj`|The module is a .obj file.|  
+|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
+|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
+|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

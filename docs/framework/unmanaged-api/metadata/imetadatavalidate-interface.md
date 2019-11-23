@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 804c8c9434983b12b0647395c49197bf5026239b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bf48abda63fb3a4f8abe7c54e443d01d8faf96c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645128"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426114"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate (Interfaz)
 Proporciona métodos para validar las firmas de metadatos.  
@@ -34,11 +32,11 @@ Proporciona métodos para validar las firmas de metadatos.
 |[ValidatorInit (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Establece una marca que especifica el tipo del módulo en el ámbito de metadatos actual y registra el método de devolución de llamada especificado para los errores de validación.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

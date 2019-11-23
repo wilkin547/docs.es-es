@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778855"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436850"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken (Método)
 Obtiene la firma de metadatos binaria asociada al token especificado.  
@@ -39,20 +37,20 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parámetros  
  `mdSig`  
- [in] El token para devolver la firma de metadatos binaria.  
+ [in] The token to return the binary metadata signature for.  
   
  `ppvSig`  
- [out] Un puntero a la firma de metadatos devuelta.  
+ [out] A pointer to the returned metadata signature.  
   
  `pcbSig`  
- [out] El tamaño en bytes de la firma de metadatos binaria.  
+ [out] The size in bytes of the binary metadata signature.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

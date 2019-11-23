@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782008"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448743"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer (Método)
-Determina el búfer para la sección de códigos especificada.  
+Determines the buffer for the specified code section.  
   
- Este método está obsoleto y no debe usarse.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,20 +39,20 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>Parámetros  
  `section`  
- [in] La sección de código que se va a devolver el búfer.  
+ [in] The code section for which to return a buffer.  
   
  `RVA`  
- [in] La dirección virtual relativa del método para que se va a obtener un puntero.  
+ [in] The relative virtual address of the method for which to get a pointer.  
   
  `lpBuffer`  
- [out] Un puntero al búfer devuelto.  
+ [out] A pointer to the returned buffer.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

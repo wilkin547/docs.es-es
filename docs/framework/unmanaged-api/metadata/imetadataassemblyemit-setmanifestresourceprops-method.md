@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d080a3077df2cb4ad57ef463b5e02a3a28d8429d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6b5e12df60663b75e10b04eaa008a75d720d753
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779402"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434430"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps (Método)
 Modifica la estructura de metadatos `ManifestResource` especificada.  
@@ -40,26 +38,26 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mr`  
- [in] El símbolo (token) que especifica el `ManifestResource` estructura de metadatos que se puede modificar.  
+ [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
   
  `tkImplementation`  
- [in] El token de tipo `File` o `AssemblyRef`, que se asigna al proveedor de recursos.  
+ [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
   
  `dwOffset`  
- [in] El desplazamiento al principio del recurso dentro del archivo.  
+ [in] The offset to the beginning of the resource within the file.  
   
  `dwResourceFlags`  
- [in] Una combinación bit a bit de valores de indicador que especifican los atributos del recurso.  
+ [in] A bitwise combination of flag values that specify the attributes of the resource.  
   
 ## <a name="remarks"></a>Comentarios  
- Para crear un `ManifestResource` estructura de los metadatos, use el [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) método.  
+ To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

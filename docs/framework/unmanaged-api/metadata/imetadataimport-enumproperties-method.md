@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4fed7dbe4ec8343a3854d1f277e3228b14c0bf21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756491"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450025"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties (Método)
 Enumera los tokens de PropertyDef que representan las propiedades del tipo al que hace referencia el token de TypeDef especificado.  
@@ -41,33 +39,33 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `td`  
- [in] Un token de TypeDef que representa el tipo con propiedades a enumerar.  
+ [in] A TypeDef token representing the type with properties to enumerate.  
   
  `rProperties`  
- [out] Matriz utilizada para almacenar los tokens de PropertyDef.  
+ [out] The array used to store the PropertyDef tokens.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rProperties`.  
   
  `pcProperties`  
- [out] El número de tokens de PropertyDef devueltos en `rProperties`.  
+ [out] The number of PropertyDef tokens returned in `rProperties`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún token para enumerar. En ese caso, `pcProperties` es cero.|  
+|`S_OK`|`EnumProperties` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 18197f0c500a205a66bdda8a9401f31d4208ae67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94230cbad95ff0a5d4234c27aa5d1d56ac5be9bb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780429"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428397"
 ---
-# <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE (Enumeración)
+# <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE (Enumeración)
 Indica el tipo de cláusula de excepción en la que el código acaba de entrar o de la que acaba de salir.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,17 +37,17 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|La cláusula de excepción no es válida.|  
-|`COR_PRF_CLAUSE_FILTER`|La cláusula de excepción es una expresión de filtro.|  
-|`COR_PRF_CLAUSE_CATCH`|La cláusula de excepción es un `catch` instrucción.|  
-|`COR_PRF_CLAUSE_FINALLY`|La cláusula de excepción es un `finally` instrucción.|  
+|`COR_PRF_CLAUSE_NONE`|The exception clause is not valid.|  
+|`COR_PRF_CLAUSE_FILTER`|The exception clause is a filter expression.|  
+|`COR_PRF_CLAUSE_CATCH`|The exception clause is a `catch` statement.|  
+|`COR_PRF_CLAUSE_FINALLY`|The exception clause is a `finally` statement.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

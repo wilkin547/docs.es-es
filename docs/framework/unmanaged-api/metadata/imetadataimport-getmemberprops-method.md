@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782358"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437520"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps (Método)
-Obtiene la información almacenada en los metadatos de una definición de miembro especificado, incluido el nombre, la firma binaria y la dirección virtual relativa, de la <xref:System.Type> miembro al que hace referencia el token de metadatos especificado. Se trata de un método auxiliar simple: si *mb* es MethodDef, a continuación, **GetMethodProps** se denomina; si *mb* es un FieldDef, a continuación, **GetFieldProps** se llama. Consulte estos otros métodos para obtener más información. 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,50 +47,50 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- [in] El token que hace referencia al miembro para obtener los metadatos asociados.  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out] Un puntero al token de metadatos que representa la clase del miembro.  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out] El nombre del miembro.  
+ [out] The name of the member.  
   
  `cchMember`  
- [in] El tamaño en caracteres anchos de la `szMember` búfer.  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out] El tamaño en caracteres anchos del nombre devuelto.  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out] Los valores de marca aplicados al miembro.  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out] Un puntero a la firma de metadatos binaria del miembro.  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out] El tamaño en bytes de `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Un puntero a la dirección virtual relativa del miembro.  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out] Los marcadores de implementación de método asociados al miembro.  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out] Una marca que marca un <xref:System.ValueType>. Es uno de los `ELEMENT_TYPE_*` valores.
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out] Un valor de cadena constante devuelto por este miembro.  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out] El tamaño en caracteres de `ppValue`, o cero si `ppValue` no contiene una cadena.  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

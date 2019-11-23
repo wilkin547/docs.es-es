@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: add68d3f-45fd-4bef-af94-eb5273f26b11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 05ce699669095e9c0b45882b18a01ec326640038
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 026a952e14cda2ef4ebc32ca91006026e920e3c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779003"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437361"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope (Método)
-Obtiene los metadatos de un token para el módulo hace referencia en el ámbito de metadatos actual.  
+Gets a metadata token for the module referenced in the current metadata scope.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,14 +35,14 @@ HRESULT GetModuleFromScope (
   
 ## <a name="parameters"></a>Parámetros  
  `pmd`  
- [out] Un puntero al token que representa el módulo hace referencia en el ámbito de metadatos actual.  
+ [out] A pointer to the token representing the module referenced in the current metadata scope.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
