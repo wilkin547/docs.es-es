@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c606f67766334800444f39b115d90f65ecca13d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769497"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448596"
 ---
-# <a name="callid-structure"></a>CALL_ID (Estructura)
-Proporciona información a un depurador sobre una función que se llama. Consulte la [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfaz para obtener más información.  
+# <a name="call_id-structure"></a>CALL_ID (Estructura)
+Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,17 +40,17 @@ typedef struct tagCALL_ID
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`szMachine`|Identifica el equipo que realiza la llamada.|  
-|`dwPid`|Identifica el procesador del equipo.|  
-|`pUserThread`|Identifica el subproceso que se está ejecutando la llamada.|  
-|`addrStackPointer`|Especifica la dirección de la pila de llamadas.|  
-|`szEntryPoint`|Especifica la dirección de la llamada.|  
-|`szDestinationMachine`|Identifica el equipo que ejecutará la llamada.|  
+|`szMachine`|Identifies the machine that is making the call.|  
+|`dwPid`|Identifies the machine processor.|  
+|`pUserThread`|Identifies the thread that is executing the call.|  
+|`addrStackPointer`|Specifies the address of the call stack.|  
+|`szEntryPoint`|Specifies the address of the call.|  
+|`szDestinationMachine`|Identifies the machine that will execute the call.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Vea también
 

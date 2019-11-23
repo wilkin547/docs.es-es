@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777370"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430693"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob (Método)
-Recupera el BLOB de recursos de Win32. Llame a este método después de establecer las opciones de ensamblado.  
+Retrieves Win32 resource blob. Call this method after setting assembly options.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +39,28 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado.  
+ ID of the assembly.  
   
  `FileToken`  
- Token de archivo que se usa para recuperar el nombre de archivo que se utilizará al construir el recurso de versión de Win32.  
+ File token used to retrieve the filename to be used when constructing the Win32 Version resource  
   
  `fDll`  
- TRUE si file es un archivo DLL, false para un archivo EXE.  
+ TRUE if file is a DLL, false for an EXE.  
   
  `pszIconFile`  
- Icono opcional que se va a insertar en el BLOB de recursos.  
+ Optional icon to insert into the resource blob.  
   
  `ppResBlob`  
- Recibe el BLOB de recursos.  
+ Receives the resource blob.  
   
  `pcbResBlob`  
- Recibe el tamaño del BLOB.  
+ Receives the size of the blob.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

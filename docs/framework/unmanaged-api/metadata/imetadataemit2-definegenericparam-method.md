@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 027547098edefdca71317b8f885e71f468dc6e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777201"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444656"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam (Método)
-Crea una definición para un parámetro de tipo genérico y obtiene un token para ese parámetro de tipo genérico.  
+Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,32 +41,32 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] Un `mdTypeDef` o `mdMethodDef` token que representa el método o constructor que se va a definir un parámetro genérico.  
+ [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
   
  `ulParamSeq`  
- [in] El índice del parámetro genérico.  
+ [in] The index of the generic parameter.  
   
  `dwParamFlags`  
- [in] Un valor de la [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeración que describe el tipo del parámetro genérico.  
+ [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
   
  `szname`  
- [in] El nombre del parámetro.  
+ [in] The name of the parameter.  
   
  `reserved`  
- [in] Este parámetro está reservado para extensibilidad futura.  
+ [in] This parameter is reserved for future extensibility.  
   
  `rtkConstraints`  
- [in] Una matriz terminada en cero de restricciones de tipo. Miembros de la matriz deben ser un `mdTypeDef`, `mdTypeRef`, o `mdTypeSpec` token de metadatos.  
+ [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
   
  `pgp`  
- [out] Un token que representa el parámetro genérico.  
+ [out] A token that represents the generic parameter.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

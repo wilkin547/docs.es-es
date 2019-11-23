@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed4c46ea7e31177ac0446c8fae7805535323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759428"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448865"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd (Método)
-Obtiene las posiciones de documento de inicio y finalización para el origen de este método. La primera posición de la matriz es el inicio y la segunda posición de la matriz es el final.  
+Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +37,22 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>Parámetros  
  `docs`  
- [in] Las iniciales y finales documentos de origen.  
+ [in] The starting and ending source documents.  
   
  `lines`  
- [in] Documentos de origen iniciales y finales de líneas en las correspondientes.  
+ [in] The starting and ending lines in the corresponding source documents.  
   
  `columns`  
- [in] Documentos de origen de las columnas iniciales y finales en las correspondientes.  
+ [in] The starting and ending columns in the corresponding source documents.  
   
  `pRetVal`  
- [out] `true` si las posiciones se definieron; en caso contrario, `false`.  
+ [out] `true` if positions were defined; otherwise, `false`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

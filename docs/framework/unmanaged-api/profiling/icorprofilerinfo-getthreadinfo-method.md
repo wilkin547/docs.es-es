@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 405d5ff49ba7bc2e5204f00cf50c30822354e56d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5edc4e0e2fc25ddae6ccabc1aa9c9a031292b63a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775586"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449892"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo (Método)
-Obtiene la identidad del subproceso Win32 actual para el subproceso especificado.  
+Gets the current Win32 thread identity for the specified thread.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] El identificador del subproceso que se va a obtener el identificador de Win32 actual.  
+ [in] The ID of the thread for which to get the current Win32 ID.  
   
  `pdwWin32ThreadId`  
- [out] Identificador de un puntero al subproceso de Win32 actual del subproceso especificado.  
+ [out] A pointer to the specified thread's current Win32 thread ID.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

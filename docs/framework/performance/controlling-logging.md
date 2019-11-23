@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046686"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447676"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 
@@ -19,7 +19,7 @@ Se puede utilizar el seguimiento de eventos para Windows (ETW) para registrar lo
 
 - Las herramientas de línea de comandos [Logman](/windows-server/administration/windows-commands/logman) y [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), que se incluyen con el sistema operativo Windows.
 
-- Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).
+- Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
 
 Para capturar información de eventos de CLR, el proveedor de CLR debe estar instalado en el equipo. Para confirmar que el proveedor está instalado, escriba `logman query providers` en el símbolo del sistema. Se muestra una lista de proveedores. Esta lista debería contener una entrada para el proveedor de CLR, del modo siguiente.
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Cambie el directorio prompt a la carpeta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<. Versión de .net > \). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
+Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.
 
 `wevtutil im CLR-ETW.man`
 
@@ -113,5 +113,5 @@ Utilice los comandos enumerados a continuación para ver los eventos ETW de CLR.
 
 ## <a name="see-also"></a>Vea también
 
-- [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/)
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Eventos ETW en Common Language Runtime](etw-events-in-the-common-language-runtime.md)

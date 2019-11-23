@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a4305b94d785a764671a2d73f43facefd0da0e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782372"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437540"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps (Método)
-Obtiene un puntero a los tokens de metadatos para el <xref:System.Type> que implementa el método especificado, y para la interfaz que declara ese método.
+Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Parámetros  
  `iiImpl`  
- [in] El token de metadatos que representa el método para devolver los tokens de clase y la interfaz de.  
+ [in] The metadata token representing the method to return the class and interface tokens for.  
   
  `pClass`  
- [out] El token de metadatos que representa la clase que implementa el método.  
+ [out] The metadata token representing the class that implements the method.  
   
  `ptkIface`  
- [out] El token de metadatos que representa la interfaz que define el método implementado.  
+ [out] The metadata token representing the interface that defines the implemented method.  
 
 ## <a name="remarks"></a>Comentarios
 
- Obtener el valor de `iImpl` mediante una llamada a la [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) método.
+ You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
  
- Por ejemplo, suponga que una clase tiene un `mdTypeDef` valor de 0 x 02000007 y que implementa tres interfaces cuyos tipos tienen tokens de token: 
+ For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Conceptualmente, esta información se almacena en una tabla de la implementación de interfaz como:
+Conceptually, this information is stored into an interface implementation table as:
 
-| Número de fila | Símbolo (token) de clase | Símbolo (token) de interfaz |
+| Row number | Class token | Interface token |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -67,19 +65,19 @@ Conceptualmente, esta información se almacena en una tabla de la implementació
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recuerde que el token es un valor de 4 bytes:
+Recall, the token is a 4-byte value:
 
-- Los 3 bytes más bajos mantenga el número de fila o de RID.
-- El byte superior contiene el tipo de token: 0 x 09 para `mdtInterfaceImpl`.
+- The lower 3 bytes hold the row number, or RID.
+- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` Devuelve la información contenida en la fila cuyo token proporciona en el `iImpl` argumento. 
+`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

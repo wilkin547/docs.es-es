@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 062b63776264ae553039a2db0fc99d4fb7bec476
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745342"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445052"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated (Método)
-Notifica al generador de perfiles que se ha creado un vtable de interoperabilidad COM para el IID y la clase especificada.  
+Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,26 +37,26 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parámetros  
  `wrappedClasId`  
- [in] El identificador de la clase para el que se ha creado la tabla vtable.  
+ [in] The ID of the class for which the vtable has been created.  
   
  `implementedIID`  
- [in] El identificador de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz es solo interna.  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- [in] Un puntero al principio de la tabla vtable.  
+ [in] A pointer to the start of the vtable.  
   
  `cSlots`  
- [in] El número de ranuras que están en la tabla vtable.  
+ [in] The number of slots that are in the vtable.  
   
 ## <a name="remarks"></a>Comentarios  
- El generador de perfiles no debe bloquearse en su implementación de este método porque la pila no puede estar en un estado que permita la recolección de elementos y, por lo tanto, no se puede habilitar la recolección preferente. Si el generador de perfiles se bloquea aquí y se intenta realizar la recolección de elementos, el tiempo de ejecución se bloqueará hasta que devuelve esta devolución de llamada.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Implementación del generador de perfiles de este método no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

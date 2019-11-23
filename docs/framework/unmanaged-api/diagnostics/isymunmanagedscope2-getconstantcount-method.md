@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e1f0be6-c4e8-4d6c-98cd-d5fa9f686e87
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2752cf7dcdf0a33e5b6f4e7a51f3d63476c40e4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f795147bdcd822db90106c7f2171eb1771b1126f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777936"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446255"
 ---
 # <a name="isymunmanagedscope2getconstantcount-method"></a>ISymUnmanagedScope2::GetConstantCount (Método)
-Obtiene un recuento de las constantes definidas en este ámbito.  
+Gets a count of the constants defined within this scope.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +34,13 @@ HRESULT GetConstantCount(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- [out] Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener las constantes.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 
