@@ -1,15 +1,15 @@
 ---
-title: Refactorizar en funciones puras (Visual Basic)
+title: Refactorizar en funciones puras
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: HT
+ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834913"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346518"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactorizar en funciones puras (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring Into Pure Functions (Visual Basic)
 
 Un aspecto importante de las transformaciones funcionales puras es aprender cómo refactorizar código usando funciones puras.
 
@@ -21,7 +21,7 @@ Tal como se indicó previamente en esta sección, una función pura tiene dos ca
 
  Una forma de realizar una transición a la programación funcional es refactorizar código existente para eliminar efectos secundarios innecesarios y dependencias externas. De esta forma puede crear versiones de función pura del código existente.
 
-En este tema se trata qué es una función pura y qué no es. En el tutorial [: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) se muestra cómo manipular un documento WordprocessingML e incluye dos ejemplos de cómo refactorizar usando una función pura.
+En este tema se trata qué es una función pura y qué no es. The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminar efectos secundarios y dependencias externas
 
@@ -52,7 +52,7 @@ Este código genera el siguiente resultado:
 StringOne-StringTwo
 ```
 
-Tenga en cuenta que es irrelevante si los datos que se están modificando tienen `public` o `private` acceso, o si es un miembro de `shared` o un miembro de instancia. Una función pura no cambia datos fuera de la función.
+Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member. Una función pura no cambia datos fuera de la función.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Función no pura que cambia un argumento
 
@@ -103,9 +103,9 @@ Un enfoque que puede ser muy útil para escribir funciones que son localmente im
 
 Una característica importante de los operadores de consulta estándar es que se implementan como funciones puras.
 
-Para obtener más información, vea [información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programación funcional frente a programación imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -1,5 +1,5 @@
 ---
-title: Is (Operador, Visual Basic)
+title: Is (Operador)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.is
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: HT
+ms.openlocfilehash: 52fbb39ab0a36c8b947b78f464fad26be05ce204
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701363"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349531"
 ---
 # <a name="is-operator-visual-basic"></a>Is (Operador, Visual Basic)
-Compara dos variables de referencia de objeto.  
+Compares two object reference variables.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -27,34 +27,34 @@ result = object1 Is object2
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Cualquier valor de `Boolean`.  
+ Requerido. Any `Boolean` value.  
   
  `object1`  
- Obligatorio. Cualquier nombre de `Object`.  
+ Requerido. Any `Object` name.  
   
  `object2`  
- Obligatorio. Cualquier nombre de `Object`.  
+ Requerido. Any `Object` name.  
   
 ## <a name="remarks"></a>Comentarios  
- El operador `Is` determina si dos referencias de objeto hacen referencia al mismo objeto. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` hacen referencia a la misma instancia de objeto exacta, se `True``result`. Si no es así, `result` se `False`.  
+ The `Is` operator determines if two object references refer to the same object. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.  
   
- también se puede usar `Is` con la palabra clave `TypeOf` para crear una expresión `TypeOf`...`Is`, que comprueba si una variable de objeto es compatible con un tipo de datos.  
+ `Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.  
   
 > [!NOTE]
-> La palabra clave `Is` también se usa en [la Instrucción Case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el operador `Is` para comparar pares de referencias a objetos. Los resultados se asignan a un valor `Boolean` que representa si los dos objetos son idénticos.  
+ The following example uses the `Is` operator to compare pairs of object references. The results are assigned to a `Boolean` value representing whether the two objects are identical.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Como se muestra en el ejemplo anterior, puede utilizar el operador `Is` para probar los objetos enlazados en tiempo de compilación y en tiempo de ejecución.  
+ As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.  
   
 ## <a name="see-also"></a>Vea también
 
 - [TypeOf (operador)](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
