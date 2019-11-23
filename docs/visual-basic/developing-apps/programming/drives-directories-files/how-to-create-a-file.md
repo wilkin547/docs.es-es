@@ -5,23 +5,27 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: f24fdd6ce1fea7540c33e4a2fdfc06885825f76a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4b713d612b4b177014c5ecbe778297070b0df6a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628981"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977737"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Procedimiento para crear un archivo en Visual Basic
+
 En este ejemplo se crea un archivo de texto vacío en la ruta de acceso especificada usando el método <xref:System.IO.File.Create%2A> de la clase <xref:System.IO.File>.  
   
 ## <a name="example"></a>Ejemplo  
+
  [!code-vb[VbFileIOMisc#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/class2.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  Use la variable `file` para escribir en el archivo.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Si el archivo ya existe, se reemplaza.  
   
  Las condiciones siguientes pueden provocar una excepción:  
@@ -39,6 +43,7 @@ En este ejemplo se crea un archivo de texto vacío en la ruta de acceso especifi
 - La ruta de acceso es solo dos puntos ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  En entornos de confianza parcial, podría producirse una excepción <xref:System.Security.SecurityException>.  
   
  La llamada al método <xref:System.IO.File.Create%2A> requiere <xref:System.Security.Permissions.FileIOPermission>.  

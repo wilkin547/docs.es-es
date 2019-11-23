@@ -4,25 +4,25 @@ description: En este tutorial se muestra cómo crear una aplicación de consola 
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 454b9c94d717d7af098ee982d9eaffe18f1c347c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774415"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974776"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Análisis de opinión de los comentarios del sitio web con clasificación binaria de ML.NET
 
 En este tutorial se muestra cómo crear una aplicación de consola de .NET Core que clasifica las opiniones de los comentarios del sitio web y toma las medidas oportunas. El clasificador binario de opiniones utiliza C# en Visual Studio 2017.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > - Creación de una aplicación de consola
-> - Preparación de los datos
+> - Preparar los datos
 > - Carga de los datos
 > - Creación y entrenamiento del modelo
-> - Evaluación del modelo
+> - Evaluar el modelo
 > - Uso del modelo para realizar una predicción
 > - Ver los resultados
 
@@ -47,7 +47,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 ## <a name="prepare-your-data"></a>Preparar los datos
 
 > [!NOTE]
-> Los conjuntos de datos de este tutorial proceden de "From Group to Individual Labels using Deep Features", Kotzias et. al,. KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: Universidad de California, Facultad de Ciencias de la Computación y de la Información.
+> Los conjuntos de datos de este tutorial proceden de "From Group to Individual Labels using Deep Features", Kotzias et. al,. KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 1. Descargue el [archivo ZIP de conjunto de datos de frases con etiqueta de opinión de UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) y descomprímalo.
 
@@ -80,6 +80,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>¿Cómo se han preparado los datos?
+
 La clase de conjunto de datos de entrada, `SentimentData`, tiene un `string` para comentarios del usuario (`SentimentText`) y un valor `bool` (`Sentiment`) de 1 (positivo) o de 0 (negativo) para las opiniones. Ambos campos tienen atributos [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) adjuntos a ellos, que describe el orden de archivo de datos de cada campo.  Además, la propiedad `Sentiment` tiene un atributo [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) que lo designa como campo `Label`. El archivo de ejemplo siguiente no tiene una fila de encabezado y se ve así:
 
 |SentimentText                         |Opinión (etiqueta) |
@@ -96,6 +97,7 @@ La clase de salida `SentimentPrediction` contiene otras dos propiedades calculad
 Para este tutorial, la propiedad más importante es `Prediction`.
 
 ## <a name="load-the-data"></a>Carga de los datos
+
 Los datos de ML.NET se representan como una [clase IDataView](xref:Microsoft.ML.IDataView). `IDataView` es una manera flexible y eficiente de describir datos tabulares (numéricos y de texto). Los datos se pueden cargar desde un archivo de texto o en tiempo real (por ejemplo, archivos de registro o base de datos SQL) en un objeto `IDataView`.
 
 La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. La inicialización de `mlContext` crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
@@ -192,7 +194,7 @@ Anexe la tarea de aprendizaje automático a las definiciones de transformación 
 
 [SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) es el algoritmo de entrenamiento de clasificación. Se anexa a `estimator` y acepta `SentimentText` (`Features`) caracterizado y los parámetros de entrada `Label` para aprender de los datos históricos.
 
-### <a name="train-the-model"></a>Entrenamiento del modelo
+### <a name="train-the-model"></a>Entrenar el modelo
 
 Ajuste el modelo a los datos `splitTrainSet` y devuelva el modelo entrenado. Para ello, agregue lo que se indica a continuación como la siguiente línea de código en el método `BuildAndTrainModel()`:
 
@@ -206,7 +208,7 @@ El método [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28M
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnModel "Return the model")]
 
-## <a name="evaluate-the-model"></a>Evaluación del modelo
+## <a name="evaluate-the-model"></a>Evaluar el modelo
 
 Cuando el modelo haya sido entrenado, use sus datos de prueba para validar el rendimiento del modelo.
 
@@ -343,7 +345,7 @@ Dado que `SentimentPrediction` se hereda de `SentimentData`, el método `Transf
 
 [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
 
-## <a name="results"></a>Results
+## <a name="results"></a>Resultados
 
 Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Se han quitado de los siguientes resultados para mayor claridad.
 
@@ -372,7 +374,7 @@ Press any key to continue . . .
 
 ```
 
-Felicidades. Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir los sentimientos de los mensajes.
+¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para clasificar y predecir los sentimientos de los mensajes.
 
 La creación de modelos correctos es un proceso iterativo. Este modelo tiene una calidad inicial más baja, ya que el tutorial utiliza pequeños conjuntos de datos para proporcionar un entrenamiento rápido del modelo. Si no está satisfecho con la calidad del modelo, puede intentar mejorarlo proporcionando conjuntos de datos de entrenamiento más grandes o eligiendo distintos algoritmos de entrenamiento con distintos [hiperparámetros](../resources/glossary.md##hyperparameter) para cada algoritmo.
 
@@ -380,14 +382,14 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
 > - Creación de una aplicación de consola
-> - Preparación de los datos
+> - Preparar los datos
 > - Carga de los datos
 > - Creación y entrenamiento del modelo
-> - Evaluación del modelo
+> - Evaluar el modelo
 > - Uso del modelo para realizar una predicción
 > - Ver los resultados
 
