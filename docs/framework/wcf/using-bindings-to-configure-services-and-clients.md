@@ -29,9 +29,9 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
  WCF incluye un conjunto de enlaces proporcionados por el sistema que están diseñados para cubrir la mayoría de los requisitos y escenarios de la aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
   
-- <xref:System.ServiceModel.BasicHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los Servicios Web que cumple a la especificación del WS-I Basic Profile 1.1 (por ejemplo, servicios web ASP.NET [ASMX] - servicios basados).  
+- <xref:System.ServiceModel.BasicHttpBinding>: un enlace de protocolo HTTP adecuado para conectarse a los servicios web que se ajustan a la especificación de WS-I Basic Profile 1,1 (por ejemplo, los servicios Web de ASP.NET [ASMX]).  
   
-- <xref:System.ServiceModel.WSHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los extremos que cumplen con los protocolos de especificaciones de servicios Web.  
+- <xref:System.ServiceModel.WSHttpBinding>: un enlace de protocolo HTTP adecuado para conectarse a puntos de conexión que cumplen con los protocolos de especificaciones de servicios Web.  
   
 - <xref:System.ServiceModel.NetNamedPipeBinding>: utiliza la codificación binaria de .NET y las tecnologías de tramas junto con el transporte de canalización con nombre de Windows para conectarse a otros puntos de conexión de WCF en el mismo equipo.  
   
@@ -40,7 +40,7 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
  Para obtener una lista completa de los enlaces proporcionados por el sistema, con descripciones, vea [enlaces proporcionados por el sistema](system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Enlaces personalizados  
- Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información sobre los elementos de un enlace @no__t 0, vea [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](./extending/custom-bindings.md).  
+ Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información sobre los elementos de un enlace de <xref:System.ServiceModel.Channels.CustomBinding>, vea\<enlaces de [>](../configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](./extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilizar los enlaces  
  El uso de enlaces conlleva dos pasos básicos:  

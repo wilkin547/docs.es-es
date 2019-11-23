@@ -15,12 +15,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698210"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > elemento (configuración de red)
+# <a name="defaultproxy-element-network-settings"></a>\<elemento > defaultProxy (configuración de red)
 Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultProxy >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -44,7 +44,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 |`enabled`|Especifica si se usa un proxy web. El valor predeterminado es `true`.|  
 |`useDefaultCredentials`|Especifica si se usan las credenciales predeterminadas de este host para tener acceso al proxy web. El valor predeterminado es `false`.|  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -52,7 +52,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 |[module](module-element-network-settings.md)|Agrega un nuevo módulo proxy a la aplicación.|  
 |[proxi](proxy-element-network-settings.md)|Define un servidor proxy.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -61,7 +61,7 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 ## <a name="remarks"></a>Comentarios  
  Si el elemento defaultProxy está vacío, se usará la configuración de proxy de Internet Explorer. Este comportamiento es diferente de la versión 1.1 de .NET Framework.  
   
- Se produce una excepción si el elemento [Module](module-element-network-settings.md) especifica un tipo no público, el tipo no se deriva de la <xref:System.Net.IWebProxy> clase, se produjo una excepción del constructor sin parámetros de este objeto o se produjo una excepción al recuperar el objeto proxy predeterminado especificado por el sistema. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa principal del error.  
+ Se produce una excepción si el elemento [Module](module-element-network-settings.md) especifica un tipo no público, el tipo no se deriva de la clase <xref:System.Net.IWebProxy>, se produjo una excepción del constructor sin parámetros de este objeto o se produjo una excepción al recuperar el proxy predeterminado especificado por el sistema. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa principal del error.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

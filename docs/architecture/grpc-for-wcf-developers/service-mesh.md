@@ -1,14 +1,13 @@
 ---
 title: 'Mallas de servicio: gRPC para desarrolladores de WCF'
 description: Usar una malla de servicio para enrutar y equilibrar las solicitudes a los servicios de gRPC en un clúster de Kubernetes.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841994"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966969"
 ---
 # <a name="service-meshes"></a>Mallas de servicio
 
@@ -17,7 +16,7 @@ Una malla de servicio es un componente de infraestructura que toma el control de
 - Detección de servicios
 - Equilibrio de carga
 - Tolerancia a errores
-- Cifra
+- Cifrado
 - Supervisión
 
 Las mallas de servicio de Kubernetes funcionan agregando un contenedor adicional, denominado *proxy sidecar*, a cada POD incluido en la malla. El proxy asume el control de todas las solicitudes de red entrantes y salientes, lo que permite que la configuración y la administración de las redes sean independientes de los contenedores de la aplicación y, en muchos casos, sin necesidad de realizar cambios en el código de la aplicación.

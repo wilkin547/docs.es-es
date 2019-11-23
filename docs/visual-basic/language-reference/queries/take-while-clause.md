@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: fe6ee470698504bc0434930cc9aa6de712e04254
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004676"
@@ -28,12 +28,12 @@ Take While expression
   
 |Término|Definición|  
 |---|---|  
-|`expression`|Obligatorio. Expresión que representa una condición de la que se van a probar los elementos. La expresión debe devolver un valor `Boolean` o un equivalente funcional, como un `Integer` que se va a evaluar como @no__t 2.|  
+|`expression`|Obligatorio. Expresión que representa una condición de la que se van a probar los elementos. La expresión debe devolver un valor `Boolean` o un equivalente funcional, como un `Integer` que se va a evaluar como `Boolean`.|  
   
 ## <a name="remarks"></a>Comentarios  
- La cláusula `Take While` incluye elementos desde el inicio del resultado de una consulta hasta que el `expression` proporcionado devuelve `false`. Después de que el `expression` devuelva `false`, la consulta omitirá todos los elementos restantes. Se omite el `expression` para los resultados restantes.  
+ La cláusula `Take While` incluye elementos desde el principio del resultado de una consulta hasta que el `expression` proporcionado devuelve `false`. Una vez que el `expression` devuelva `false`, la consulta omitirá todos los elementos restantes. El `expression` se omite para los resultados restantes.  
   
- La cláusula `Take While` difiere de la cláusula `Where` en que se puede usar la cláusula `Where` para incluir todos los elementos de una consulta que cumplan una condición determinada. La cláusula `Take While` solo incluye elementos hasta la primera vez que la condición no se cumple. La cláusula `Take While` es muy útil cuando se trabaja con un resultado de consulta ordenado.  
+ La cláusula `Take While` difiere de la cláusula `Where` en que la cláusula `Where` se puede utilizar para incluir todos los elementos de una consulta que cumplan una condición determinada. La cláusula `Take While` solo incluye elementos hasta la primera vez que la condición no se cumple. La cláusula `Take While` es muy útil cuando se trabaja con un resultado de consulta ordenado.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se usa la cláusula `Take While` para recuperar los resultados hasta que se encuentre el primer cliente sin ningún pedido.  

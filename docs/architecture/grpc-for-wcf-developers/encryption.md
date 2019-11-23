@@ -1,14 +1,13 @@
 ---
 title: 'Cifrado y seguridad de red: gRPC para desarrolladores de WCF'
 description: Algunas notas sobre la seguridad de red y el cifrado en gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 67ee1ffaf00ea0cc6b771ede9f49b6a691af0968
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: fd993a2d75e97011c6c92cee02c24c5358a211ad
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841622"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967775"
 ---
 # <a name="encryption-and-network-security"></a>Cifrado y seguridad de red
 

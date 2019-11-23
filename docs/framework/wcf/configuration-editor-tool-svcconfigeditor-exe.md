@@ -74,7 +74,7 @@ El visor sigue automáticamente la ruta de acceso de fusión mediante combinaci�
 
 ### <a name="services"></a>Servicios
 
-El nodo **servicios** muestra todos los servicios asignados actualmente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento < `services` > en el archivo de configuración.
+El nodo **servicios** muestra todos los servicios asignados actualmente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del <`services`elemento > en el archivo de configuración.
 
 Al hacer clic en el nodo **servicios** , puede ver o realizar tareas en la página Resumen del servicio en el panel de **detalles** .
 
@@ -117,11 +117,11 @@ Puede crear una nueva configuración de punto de conexión de servicio de las ma
 4. Haga clic en **Aceptar**.
 
 > [!NOTE]
-> No se puede modificar el valor de [@no__t >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) en esta herramienta. Para agregar o modificar este elemento, debe utilizar un editor de texto o Visual Studio.
+> No se puede modificar el valor de [\<baseAddressPrefixFilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) dentro de esta herramienta. Para agregar o modificar este elemento, debe utilizar un editor de texto o Visual Studio.
 
 ### <a name="client"></a>Cliente
 
-El nodo **cliente** muestra todos los puntos de conexión de cliente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento < `client` > en el archivo de configuración.
+El nodo **cliente** muestra todos los puntos de conexión de cliente en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del <`client`elemento > en el archivo de configuración.
 
 Al hacer clic en el nodo **cliente** , puede ver o realizar tareas en la **Página de Resumen** del cliente en el **Panel de detalles**.
 
@@ -143,7 +143,7 @@ Puede crear una nueva configuración de extremo de cliente de las maneras siguie
 
 Los puntos de conexión estándar son puntos de conexión especializados que tienen uno o más aspectos de la dirección, contrato y enlace definidos en los valores predeterminados.
 
-Estos valores de configuración se almacenan en el nodo de **punto de conexión estándar** . El nodo **punto de conexión estándar** muestra todos los valores de punto de conexión estándar en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento `<standardEndpoints>` en el archivo de configuración.
+Estos valores de configuración se almacenan en el nodo de **punto de conexión estándar** . El nodo **punto de conexión estándar** muestra todos los valores de punto de conexión estándar en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento `<standardEndpoints>` del archivo de configuración.
 
 Al hacer clic en el nodo **extremo estándar** , puede ver o realizar tareas en la **página Resumen** de punto de conexión estándar en el **Panel de detalles**.
 
@@ -177,11 +177,11 @@ Puede eliminar una configuración de punto de conexión estándar de las maneras
 
 Si el extremo estándar está en uso, se muestra un mensaje de advertencia al intentar eliminarlo: **el extremo estándar está en uso. Si lo elimina ahora, asegúrese de eliminar todas sus referencias en otras partes de la configuración (por ejemplo, en el punto de conexión de servicio o punto de conexión de cliente). De lo contrario, la configuración no será válida y no se podrá abrir la próxima vez. ¿Está seguro de que desea eliminar el extremo estándar? "**
 
-### <a name="binding"></a>Enlaces
+### <a name="binding"></a>Enlace
 
 Las configuraciones de enlace se usan para configurar enlaces en extremos. Estos valores de configuración se almacenan en el nodo de **enlace** . Los puntos de conexión hacen referencia a las configuraciones de enlace por nombre y varios puntos de conexión pueden hacer referencia a una configuración de enlace única.
 
-El nodo **enlaces** muestra todos los valores de enlace en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del elemento < `bindings` > en el archivo de configuración.
+El nodo **enlaces** muestra todos los valores de enlace en el archivo de configuración. Cada subnodo del árbol corresponde a un subelemento del <`bindings`elemento > en el archivo de configuración.
 
 Al hacer clic en el nodo **enlaces** , puede ver o realizar tareas en la **página Resumen** de enlace en el **Panel de detalles**.
 
@@ -225,7 +225,7 @@ Un enlace personalizado es una colección de elementos de enlace que forman una 
 
 ### <a name="diagnostics"></a>Diagnóstico
 
-El nodo **diagnósticos** muestra toda la configuración de diagnóstico en el archivo de configuración. Permite activar o desactivar los contadores de rendimiento, habilitar o deshabilitar Instrumental de administración de Windows (WMI), configurar el seguimiento de WCF y configurar el registro de mensajes de WCF. La configuración del nodo **diagnósticos** corresponde a la sección < `system.diagnostics` > y `<diagnostics>` de `<system.serviceModel>` en el archivo de configuración.
+El nodo **diagnósticos** muestra toda la configuración de diagnóstico en el archivo de configuración. Permite activar o desactivar los contadores de rendimiento, habilitar o deshabilitar Instrumental de administración de Windows (WMI), configurar el seguimiento de WCF y configurar el registro de mensajes de WCF. La configuración del nodo **diagnósticos** corresponde a la sección <`system.diagnostics`> y `<diagnostics>` sección de `<system.serviceModel>` del archivo de configuración.
 
 Al hacer clic en el nodo **diagnósticos** , puede ver o realizar tareas en la **página Resumen** de diagnósticos en el **Panel de detalles**.
 
@@ -389,13 +389,13 @@ Una forma de crear un archivo de configuración nuevo es utilizar el Asistente p
 
 ## <a name="configuring-com"></a>Configurar COM+
 
-El editor de configuración de servicio le permite crear un nuevo archivo de configuración para una aplicación COM+ existente o editar una configuración COM+ existente. El nodo de **contrato com** solo está visible cuando la sección < `comContract` > existe en el archivo de configuración.
+El editor de configuración de servicio le permite crear un nuevo archivo de configuración para una aplicación COM+ existente o editar una configuración COM+ existente. El nodo de **contrato com** solo está visible cuando la sección <`comContract`> existe en el archivo de configuración.
 
 ### <a name="creating-a-new-com-configuration"></a>Crear una nueva configuración de COM+
 
 Antes de crear una nueva configuración de COM+, asegúrese de que su aplicación COM+ esté instalada en servicios de componente y registrada en la caché global de ensamblados (GAC).
 
-1. Menú seleccionar **archivo** : > **integrar**la**aplicación com+** @no__t 2. Esta operación cierra el archivo abierto actual. Si hay datos no guardados en el archivo actual, aparece el cuadro de diálogo Guardar. A continuación, se inicia el **Asistente para la integración de com+** .
+1. Menú **archivo** : > **integrar** -> **aplicación com+.** Esta operación cierra el archivo abierto actual. Si hay datos no guardados en el archivo actual, aparece el cuadro de diálogo Guardar. A continuación, se inicia el **Asistente para la integración de com+** .
 
 2. En la primera página, seleccione la aplicación COM+ del árbol. Si no encuentra su aplicación COM+ en el árbol, compruebe que está instalada en los servicios de componente y registrada en la caché global de ensamblados (GAC).
 
@@ -409,7 +409,7 @@ Antes de crear una nueva configuración de COM+, asegúrese de que su aplicació
 
 ### <a name="editing-an-existing-com-configuration"></a>Editar una configuración COM+ existente
 
-1. Seleccione el menú **archivo** > **abrir**el**servicio com+**  -> ...
+1. Seleccione el menú **archivo** -> **abrir** -> **servicio com+** ...
 
 2. Seleccione el servicio COM+ que desee editar en la lista.
 

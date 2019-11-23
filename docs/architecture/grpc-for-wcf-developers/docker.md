@@ -1,14 +1,13 @@
 ---
 title: Docker-gRPC para desarrolladores de WCF
 description: Creación de imágenes de Docker para aplicaciones de ASP.NET Core gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841658"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967838"
 ---
 # <a name="docker"></a>Docker
 

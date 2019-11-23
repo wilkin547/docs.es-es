@@ -14,14 +14,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697300"
 ---
-# <a name="listeners-element-for-source"></a>\<listeners > elemento para \<source >
-Agrega o quita agentes de escucha en la colección <xref:System.Diagnostics.TraceSource.Listeners%2A> para un <xref:System.Diagnostics.TraceSource>. Un agente de escucha dirige los resultados del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
+# <a name="listeners-element-for-source"></a>\<agentes de escucha > elemento para \<origen >
+Agrega o quita los agentes de escucha de la colección de <xref:System.Diagnostics.TraceSource.Listeners%2A> para un <xref:System.Diagnostics.TraceSource>. Un agente de escucha dirige los resultados del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<orígenes >** ](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **origen** >](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agentes de escucha** >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,20 +34,20 @@ Agrega o quita agentes de escucha en la colección <xref:System.Diagnostics.Trac
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección de `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` de un origen de seguimiento.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  

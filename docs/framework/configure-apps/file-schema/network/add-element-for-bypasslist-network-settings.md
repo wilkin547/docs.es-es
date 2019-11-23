@@ -17,14 +17,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699611"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<add > elemento para BypassList (configuración de red)
+# <a name="add-element-for-bypasslist-network-settings"></a>\<agregar > elemento para BypassList (configuración de red)
 Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agregar >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -43,10 +43,10 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
 |-------------------|---------------------|  
 |**address**|Expresión regular que describe una dirección IP o un nombre DNS.|  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
  Ninguno.  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -55,9 +55,9 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
 ## <a name="remarks"></a>Comentarios  
  El elemento `add` inserta expresiones regulares que describen las direcciones IP o los nombres de servidor DNS en la lista de direcciones que omiten un servidor proxy.  
   
- El valor del atributo `address` debe ser una expresión regular que describa un conjunto de direcciones IP o nombres de host.  
+ El valor del atributo `address` debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.  
   
- Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] + @no__t -0.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
+ Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\. contoso\\. com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-z] +\\. contoso\\. com $".  
   
  Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).  
   

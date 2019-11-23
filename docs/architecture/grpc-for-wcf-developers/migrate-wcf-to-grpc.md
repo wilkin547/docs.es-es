@@ -1,14 +1,13 @@
 ---
 title: Migración de una solución WCF a gRPC-gRPC para desarrolladores de WCF
 description: Cómo migrar distintos tipos de servicio WCF al equivalente en gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 65c30b777d9981cb3291b846f698f2a69b4498fc
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 33823d20e1593323a03da12981c5a4534c4d491a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841502"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971771"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>Migración de una solución WCF a gRPC
 

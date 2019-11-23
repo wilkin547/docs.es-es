@@ -14,14 +14,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698568"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>La expresión llama de forma recursiva a la propiedad contenedora ' \<propertyname > '
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>La expresión llama de forma recursiva a la propiedad contenedora '\<PropertyName > '
 Una instrucción en el procedimiento `Set` de una definición de propiedad almacena un valor en el nombre de la propiedad.  
   
  El enfoque recomendado para contener el valor de una propiedad es definir una variable `Private` en el contenedor de la propiedad y utilizarla en los procedimientos `Get` y `Set`. A continuación, el procedimiento `Set` debe almacenar el valor entrante en esta variable `Private`.  
   
- El procedimiento `Get` se comporta como un procedimiento `Function`, por lo que puede asignar un valor al nombre de la propiedad y devolver el control al encontrar la instrucción @no__t 2. Sin embargo, el enfoque recomendado consiste en incluir la variable `Private` como valor en una [instrucción return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ El procedimiento `Get` se comporta como un procedimiento `Function`, por lo que puede asignar un valor al nombre de la propiedad y devolver el control al encontrar la instrucción `End Get`. Sin embargo, el enfoque recomendado consiste en incluir la variable `Private` como valor en una [instrucción return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- El procedimiento `Set` se comporta como un procedimiento `Sub`, que no devuelve un valor. Por lo tanto, el nombre del procedimiento o de la propiedad no tiene ningún significado especial dentro de un procedimiento `Set` y no se puede almacenar un valor en él.  
+ El procedimiento `Set` se comporta como un procedimiento `Sub`, que no devuelve ningún valor. Por lo tanto, el nombre del procedimiento o de la propiedad no tiene ningún significado especial dentro de un procedimiento de `Set`, y no se puede almacenar un valor en él.  
   
  En el ejemplo siguiente se muestra el enfoque que puede producir este error, seguido del enfoque recomendado.  
   
@@ -57,7 +57,7 @@ End Class
   
  De forma predeterminada, este mensaje es una advertencia. Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **IDENTIFICADOR de error:** BC42026  
+ **Identificador de error:** BC42026  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

@@ -35,11 +35,11 @@ Las instrucciones de nomenclatura que se indican a continuación se aplican a la
   
  **✓ CONSIDER** finalizar los nombres de las clases derivadas con el nombre de la clase base.  
   
- Esto es muy legible y explica claramente la relación. Algunos ejemplos de esto en el código son: `ArgumentOutOfRangeException`, que es un tipo de `Exception` y `SerializableAttribute`, que es un tipo de `Attribute`. Sin embargo, es importante utilizar una resolución razonable para aplicar esta directriz; por ejemplo, la clase `Button` es un tipo de evento `Control`, aunque `Control` no aparece en su nombre.  
+ Esto es muy legible y explica claramente la relación. Algunos ejemplos de esto en el código son: `ArgumentOutOfRangeException`, que es un tipo de `Exception`y `SerializableAttribute`, que es un tipo de `Attribute`. Sin embargo, es importante utilizar una resolución razonable para aplicar esta directriz; por ejemplo, la clase `Button` es un tipo de evento `Control`, aunque `Control` no aparece en su nombre.  
   
  **✓ DO** prefijo los nombres de interfaz con la letra I, para indicar que el tipo es una interfaz.  
   
- Por ejemplo, `IComponent` (Sustantivo descriptivo), `ICustomAttributeProvider` (frase) y `IPersistable` (adjetivo) son nombres de interfaz apropiados. Como con otros nombres de tipo, evite las abreviaturas.  
+ Por ejemplo, `IComponent` (nombre descriptivo), `ICustomAttributeProvider` (frase) y `IPersistable` (adjetivo) son nombres de interfaz apropiados. Como con otros nombres de tipo, evite las abreviaturas.  
   
  **✓ DO** Asegúrese de que los nombres difieren solo en la "I" prefijo en el nombre de la interfaz cuando se define un par de interfaz de clase: donde la clase es una implementación estándar de la interfaz.  
   
@@ -78,7 +78,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.EventArgs`|**✓ DO** agregar el sufijo "EventArgs".|  
 |`System.Enum`|**X DO NOT** derivan de esta clase; use la palabra clave admitida por el lenguaje en su lugar; por ejemplo, en C#, utilice el `enum` palabra clave.<br /><br /> **X DO NOT** agregar el sufijo "Enum" o "Flag".|  
 |`System.Exception`|**✓ DO** agregar el sufijo "Exception".|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** agregar el sufijo "Diccionario". Tenga en cuenta que `IDictionary` es un tipo específico de colección, pero esta directriz tiene prioridad sobre la directriz de colecciones más general que se indica a continuación.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** agregar el sufijo "Diccionario". Tenga en cuenta que `IDictionary` es un tipo específico de colección, pero esta directriz tiene prioridad sobre las instrucciones de colecciones más generales que se indican a continuación.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** agregar el sufijo "Colección".|  
 |`System.IO.Stream`|**✓ DO** agregar el sufijo "Stream".|  
 |`CodeAccessPermission IPermission`|**✓ DO** agregar el sufijo "Permisos".|  
@@ -96,9 +96,9 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X DO NOT** utiliza un prefijo en los nombres de valor de enumeración (p. ej., "ad" para las enumeraciones de ADO.), "rtf" para las enumeraciones de texto enriquecido, etcetera.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
   
- @no__t 0Reprinted por el permiso de Pearson Education, Inc. de las directrices de diseño de [Framework: Convenciones, expresiones y patrones para bibliotecas de .NET reutilizables, 2ª edición @ no__t-0 de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 de Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows. *  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también
 

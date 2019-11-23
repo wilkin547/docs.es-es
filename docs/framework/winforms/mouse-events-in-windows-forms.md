@@ -66,7 +66,7 @@ El siguiente es el orden de los eventos que se producen para un clic doble del b
 
 8. Evento<xref:System.Windows.Forms.Control.MouseUp> .
 
-Para obtener un ejemplo de código que muestra el orden de los eventos de clic del mouse, vea [How para: Controlar los eventos de entrada del usuario en los controles de Windows Forms @ no__t-0.
+Para obtener un ejemplo de código que muestra el orden de los eventos de clic del mouse, consulte [Cómo: controlar eventos de entrada del usuario en controles de Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md).
 
 ### <a name="individual-controls"></a>Controles individuales
 
@@ -82,24 +82,24 @@ Los controles siguientes no siguen el comportamiento estándar de los eventos de
 
   - Clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Clic con el botón derecho: No se generaron eventos de clic
+  - Clic con el botón secundario: no se generan eventos
 
   - Doble clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Doble clic con el botón secundario: No se generaron eventos de clic
+  - Doble clic con el botón secundario: no se generan eventos
 
-- Controles <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> y <xref:System.Windows.Forms.CheckedListBox>
+- <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>y <xref:System.Windows.Forms.CheckedListBox> controles
 
   > [!NOTE]
   > Se produce el comportamiento de eventos que se describe a continuación cuando el usuario hace clic en cualquier parte dentro de estos controles.
 
   - Clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Clic con el botón derecho: No se generaron eventos de clic
+  - Clic con el botón secundario: no se generan eventos
 
   - Doble clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - Doble clic con el botón secundario: No se generaron eventos de clic
+  - Doble clic con el botón secundario: no se generan eventos
 
 - Control <xref:System.Windows.Forms.ListView>
 

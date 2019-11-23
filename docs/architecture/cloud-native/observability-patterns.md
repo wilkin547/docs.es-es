@@ -26,7 +26,7 @@ Cada lenguaje de programación tiene herramientas que permiten escribir registro
 * Detallado
 * Depuración
 * Información
-* Advertencia
+* advertencia
 * Error
 * Crítico
 

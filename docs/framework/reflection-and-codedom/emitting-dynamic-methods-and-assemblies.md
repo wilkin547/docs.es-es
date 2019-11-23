@@ -36,7 +36,7 @@ Además de los tipos administrados del espacio de nombres <xref:System.Reflectio
   
 Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente la sección II sobre la definición y la semántica de los metadatos y la partición III sobre el conjunto de instrucciones de CIL. La documentación está disponible en línea en [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](https://go.microsoft.com/fwlink/?LinkId=116487).  
   
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
   
 [Problemas de seguridad de la emisión de la reflexión](security-issues-in-reflection-emit.md)  
 Describe los problemas de seguridad relacionados con la creación de ensamblados dinámicos mediante emisión de la reflexión.  

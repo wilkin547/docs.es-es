@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar procedimientos almacenados asignados en formas de resultados secuenciales
+title: 'Cómo: Usar procedimientos almacenados asignados en formas de resultados secuenciales'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,8 +12,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003220"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Procedimiento para usar procedimientos almacenados asignados en formas de resultados secuenciales
-Este tipo de procedimiento almacenado puede generar más de una forma de resultado, pero se sabe en qué orden se devuelven los resultados. Compare este escenario con el escenario donde no se sabe el orden de los resultados devueltos. Para obtener más información, vea [Cómo: Use procedimientos almacenados asignados para varias formas de resultados @ no__t-0.  
+# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Cómo: Usar procedimientos almacenados asignados en formas de resultados secuenciales
+Este tipo de procedimiento almacenado puede generar más de una forma de resultado, pero se sabe en qué orden se devuelven los resultados. Compare este escenario con el escenario donde no se sabe el orden de los resultados devueltos. Para obtener más información, vea [Cómo: usar procedimientos almacenados asignados para varias formas de resultados](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
   
 ## <a name="example"></a>Ejemplo  
  A continuación se muestra el código T-SQL de un procedimiento almacenado que devuelve varias formas de resultados secuencialmente:  

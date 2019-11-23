@@ -17,12 +17,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699179"
 ---
-# <a name="trace-element"></a>\<trace >, elemento
+# <a name="trace-element"></a>\<elemento > de seguimiento
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** > de seguimiento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,7 +33,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -57,13 +57,13 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 |`false`|No utiliza el bloqueo global si el agente de escucha es seguro para subprocesos; de lo contrario, utiliza el bloqueo global.|  
 |`true`|Utiliza el bloqueo global independientemente de si el agente de escucha es seguro para subprocesos. Este es el valor predeterminado.|  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|Especifica un agente de escucha que recopila, almacena y enruta los mensajes.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -71,7 +71,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento `<trace>` para agregar el agente de escucha `MyListener` a la colección `Listeners`. `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. El atributo `useGlobalLock` se establece en `false`, lo que hace que no se use el bloqueo global si el agente de escucha de seguimiento es seguro para subprocesos. El atributo `autoflush` se establece en `true`, lo que hace que el agente de escucha de seguimiento escriba en el archivo independientemente de si se llama al método <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. El atributo `indentsize` se establece en 0 (cero), lo que hace que el agente de escucha Aplique sangría a cero espacios cuando se llama al método <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.  
+ En el ejemplo siguiente se muestra cómo usar el elemento `<trace>` para agregar el agente de escucha `MyListener` a la colección de `Listeners`. `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. El atributo `useGlobalLock` se establece en `false`, lo que hace que no se use el bloqueo global si el agente de escucha de seguimiento es seguro para subprocesos. El atributo `autoflush` se establece en `true`, que hace que el agente de escucha de seguimiento escriba en el archivo independientemente de si se llama al método <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. El atributo `indentsize` se establece en 0 (cero), lo que hace que el agente de escucha Aplique sangría a los espacios cero cuando se llama al método <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.  
   
 ```xml  
 <configuration>  

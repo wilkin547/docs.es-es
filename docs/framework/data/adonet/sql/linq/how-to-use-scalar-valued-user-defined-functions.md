@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar funciones definidas por el usuario con valores escalares
+title: 'Cómo: Usar funciones escalares definidas por el usuario'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,11 +12,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003235"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procedimiento para usar funciones definidas por el usuario con valores escalares
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Cómo: Usar funciones escalares definidas por el usuario
 Puede asignar un método de cliente definido en una clase a una función definida por el usuario utilizando el atributo <xref:System.Data.Linq.Mapping.FunctionAttribute>. Observe que el cuerpo del método construye una expresión que captura el intento de llamada al método y pasa esa expresión a <xref:System.Data.Linq.DataContext> para su conversión y ejecución.  
   
 > [!NOTE]
-> La ejecución directa sólo se produce si se llama a la función fuera de una consulta. Para obtener más información, vea [Cómo: Llamar a funciones definidas por el usuario en línea @ no__t-0.  
+> La ejecución directa sólo se produce si se llama a la función fuera de una consulta. Para obtener más información, vea [Cómo: llamar a funciones insertadas definidas por el usuario](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Ejemplo  
  El código de SQL siguiente presenta una función `ReverseCustName()` definida por el usuario con valores escalares.  

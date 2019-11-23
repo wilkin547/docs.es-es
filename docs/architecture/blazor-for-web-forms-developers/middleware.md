@@ -21,7 +21,7 @@ Una aplicación ASP.NET Core se basa en una serie de middleware. Los middleware 
 
 La canalización de solicitudes de ASP.NET Core consiste en una secuencia de delegados de solicitud a los que se llama de uno en uno. En el siguiente diagrama se muestra este concepto. El subproceso de ejecución sigue las flechas negras.
 
-![DUCCION](media/middleware/request-delegate-pipeline.png)
+![canalización](media/middleware/request-delegate-pipeline.png)
 
 El diagrama anterior carece de un concepto de eventos de ciclo de vida. Este concepto es fundamental para el modo en que se administran las solicitudes de formularios Web Forms de ASP.NET. Este sistema facilita la tarea de pensar en qué proceso está ocurriendo y permite insertar middleware en cualquier momento. El middleware se ejecuta en el orden en que se agrega a la canalización de solicitudes. También se agregan en el código en lugar de en los archivos de configuración, normalmente en *Startup.CS*.
 
@@ -35,7 +35,7 @@ ASP.NET 4. x incluye muchos módulos. De forma similar, ASP.NET Core tiene tambi
 
 En la tabla siguiente se enumeran los componentes y el middleware de reemplazo en ASP.NET Core.
 
-|Module                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
+|Módulo                 |Módulo ASP.NET 4. x           |ASP.NET Core, opción|
 |-----------------------|-----------------------------|-------------------|
 |Errores HTTP            |`CustomErrorModule`          |[Middleware de páginas de códigos de estado](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento predeterminado       |`DefaultDocumentModule`      |[Middleware de archivos predeterminados](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -48,11 +48,11 @@ En la tabla siguiente se enumeran los componentes y el middleware de reemplazo e
 |Redirección HTTP       |`HttpRedirectionModule`      |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
 |filtros ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
-|Filtrado de solicitudes      |`RequestFilteringModule`     |[Middleware de reescritura de URL IRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
+|Solicitud de filtrado      |`RequestFilteringModule`     |[Middleware de reescritura de URL IRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
 |Reescritura de URL&#8224;   |`RewriteModule`              |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
 |Compresión estática     |`StaticCompressionModule`    |[Middleware de compresión de respuestas](/aspnet/core/performance/response-compression)|
 |Contenido estático         |`StaticFileModule`           |[Middleware de archivos estáticos](/aspnet/core/fundamentals/static-files)|
-|Autorización de URL      |`UrlAuthorizationModule`     |[Identidad de ASP.NET Core](/aspnet/core/security/authentication/identity)|
+|Autorización URL      |`UrlAuthorizationModule`     |[Identidad de ASP.NET Core](/aspnet/core/security/authentication/identity)|
 
 Esta lista no es exhaustiva, pero debe dar una idea de la asignación que existe entre los dos marcos. Para obtener una lista más detallada, vea [módulos de IIS con ASP.net Core](/aspnet/core/host-and-deploy/iis/modules).
 

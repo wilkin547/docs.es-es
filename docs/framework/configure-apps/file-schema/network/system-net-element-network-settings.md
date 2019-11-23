@@ -19,7 +19,7 @@ ms.locfileid: "71697504"
 Contiene valores que especifican cómo se conecta .NET Framework a la red.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. net >**  
+&nbsp;&nbsp; **\<System. net >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,12 +29,12 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -43,20 +43,20 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
 |[mailSettings](mailsettings-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transferencia de correo (SMTP).|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
-|[Configuración](settings-element-network-settings.md)|Configura las opciones de red básicas para las clases de <xref:System.Net> y los espacios de nombres secundarios relacionados.|  
+|[Configuración](settings-element-network-settings.md)|Configura las opciones de red básicas para las clases en el <xref:System.Net> y los espacios de nombres secundarios relacionados.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica los módulos que se van a usar para solicitar información de los hosts de Internet.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|Contiene la configuración de todos los espacios de nombres.|  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento [@no__t -1System. net >](system-net-element-network-settings.md) contiene la configuración de las clases de los espacios de nombres de @no__t 2 y los elementos secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de los hosts de Internet.  
+ El elemento [\<System. net >](system-net-element-network-settings.md) contiene la configuración de las clases de la <xref:System.Net> y los espacios de nombres secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de los hosts de Internet.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una configuración típica utilizada por las clases <xref:System.Net>.  
+ En el ejemplo siguiente se muestra una configuración típica utilizada por las clases de <xref:System.Net>.  
   
 ```xml  
 <configuration>  

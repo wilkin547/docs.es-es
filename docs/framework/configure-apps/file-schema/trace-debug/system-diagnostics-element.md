@@ -15,11 +15,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699196"
 ---
-# <a name="systemdiagnostics-element"></a>\<SYSTEM. Diagnostics (elemento >)
+# <a name="systemdiagnostics-element"></a>\<System. Diagnostics (elemento >)
 Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. diagnostics >**  
+&nbsp;&nbsp; **\<System. diagnostics >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,12 +29,12 @@ Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enru
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -45,17 +45,17 @@ Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enru
 |[\<switches>](switches-element.md)|Contiene modificadores de seguimiento y los niveles en los que se establecen los modificadores de seguimiento.|  
 |[\<trace>](trace-element.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo insertar un modificador de seguimiento y un agente de escucha de seguimiento dentro del elemento **\<System. diagnostics >** . El modificador de seguimiento `General` se establece en el nivel <xref:System.Diagnostics.TraceLevel>. El agente de escucha de seguimiento `myListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo.  
+ En el ejemplo siguiente se muestra cómo insertar un modificador de seguimiento y un agente de escucha de seguimiento dentro del elemento **\<System. diagnostics >** . El modificador de seguimiento de `General` se establece en el nivel de <xref:System.Diagnostics.TraceLevel>. El agente de escucha de seguimiento `myListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo.  
   
 > [!NOTE]
-> En la versión 2.0 de .NET Framework, puede utilizar texto para especificar el valor de un modificador. Por ejemplo, puede especificar `true` para un <xref:System.Diagnostics.BooleanSwitch> o usar el texto que representa un valor de enumeración como @no__t 2 para un <xref:System.Diagnostics.TraceSwitch>. La línea `<add name="myTraceSwitch" value="Error" />` es equivalente a `<add name="myTraceSwitch" value="1" />`.  
+> En la versión 2.0 de .NET Framework, puede utilizar texto para especificar el valor de un modificador. Por ejemplo, puede especificar `true` para un <xref:System.Diagnostics.BooleanSwitch> o usar el texto que representa un valor de enumeración como `Error` para una <xref:System.Diagnostics.TraceSwitch>. La línea `<add name="myTraceSwitch" value="Error" />` es equivalente a `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

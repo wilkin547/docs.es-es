@@ -16,12 +16,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119266"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<elemento > appSettings para la configuración de \<
+# <a name="appsettings-element-for-configuration"></a>\<elemento > appSettings para la configuración de \<>
 
 Contiene la configuración de la aplicación personalizada. Se trata de una sección de configuración predefinida proporcionada por el .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>Sintaxis
 

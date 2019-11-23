@@ -17,17 +17,17 @@ ms.locfileid: "72003048"
 - Puede tratar un archivo de asignación externo de forma similar a un archivo de configuración. Por ejemplo, puede actualizar cómo se comportará su aplicación después de distribuir los binarios simplemente cambiando el archivo de asignación externo.  
   
 ## <a name="requirements"></a>Requisitos  
- El archivo de asignación debe ser un archivo XML y el archivo debe validarse con un archivo de definición de esquema [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (. xsd).  
+ El archivo de asignación debe ser un archivo XML y el archivo debe validarse con respecto a un archivo de definición de esquema [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (. xsd).  
   
  Se aplican las siguientes reglas:  
   
 - El archivo de asignación debe ser un archivo XML.  
   
-- El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, vea [Cómo: Validar archivos DBML y de asignación externa @ no__t-0.  
+- El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, vea [Cómo: validar archivos DBML y de asignación externa](how-to-validate-dbml-and-external-mapping-files.md).  
   
 - La asignación externa invalida la asignación basada en atributos. En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases. Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externo).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación (basados en atributos y externos).  
   
 ## <a name="xml-schema-definition-file"></a>Archivo de definición de esquema XML  
  La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.  
@@ -35,7 +35,7 @@ ms.locfileid: "72003048"
  Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML. Para obtener más información, vea [generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, consulte [How para: Validar archivos DBML y de asignación externa @ no__t-0.  
+> Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar correctamente este archivo para validar un archivo de asignación externo, vea [Cómo: validar archivos DBML y de asignación externa](how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Generación de código en LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Referencia](reference.md)
-- [Cómo: Generar el modelo de objetos como un archivo externo @ no__t-0
+- [Generación del modelo de objetos como un archivo externo](how-to-generate-the-object-model-as-an-external-file.md)

@@ -15,11 +15,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699093"
 ---
-# <a name="systemweb-element-web-settings"></a>@no__t elemento > -0SYSTEM. Web (configuración Web)
+# <a name="systemweb-element-web-settings"></a>\<elemento System. Web > (configuración Web)
 Contiene información sobre cómo el nivel de hospedaje de ASP.NET administra el comportamiento de todo el proceso.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. web >**  
+&nbsp;&nbsp; **\<System. web >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,19 +30,19 @@ Contiene información sobre cómo el nivel de hospedaje de ASP.NET administra el
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
 
-En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
 
 Ninguno.  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica los valores de configuración para los grupos de aplicaciones de IIS en un archivo Aspnet. config.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -50,7 +50,7 @@ Ninguno.
   
 ## <a name="remarks"></a>Comentarios  
 
-El elemento `system.web` y su elemento secundario `applicationPool` se agregaron a la .NET Framework a partir de .NET Framework 3,5 SP1. Al ejecutar IIS 7,0 o versiones posteriores en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 7,0 o versiones posteriores en el modo clásico o ISAPI, se omiten estos valores de configuración.  
+El elemento `system.web` y su elemento `applicationPool` secundario se agregaron a la .NET Framework a partir de .NET Framework 3,5 SP1. Al ejecutar IIS 7,0 o versiones posteriores en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 7,0 o versiones posteriores en el modo clásico o ISAPI, se omiten estos valores de configuración.  
   
 ## <a name="example"></a>Ejemplo  
 
@@ -67,7 +67,7 @@ En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el
 </configuration>  
 ```  
   
-## <a name="element-information"></a>Información de elemento  
+## <a name="element-information"></a>Información del elemento  
   
 |||  
 |-|-|  

@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
 ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
 ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71701363"
@@ -27,18 +27,18 @@ result = object1 Is object2
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Cualquier valor `Boolean`.  
+ Obligatorio. Cualquier valor de `Boolean`.  
   
  `object1`  
- Obligatorio. Cualquier nombre `Object`.  
+ Obligatorio. Cualquier nombre de `Object`.  
   
  `object2`  
- Obligatorio. Cualquier nombre `Object`.  
+ Obligatorio. Cualquier nombre de `Object`.  
   
 ## <a name="remarks"></a>Comentarios  
- El operador `Is` determina si dos referencias de objeto hacen referencia al mismo objeto. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` hacen referencia a la misma instancia de objeto exacta, @no__t 2 es `True`; Si no es así, `result` es `False`.  
+ El operador `Is` determina si dos referencias de objeto hacen referencia al mismo objeto. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` hacen referencia a la misma instancia de objeto exacta, se `True``result`. Si no es así, `result` se `False`.  
   
- `Is` también se puede usar con la palabra clave `TypeOf` para crear una expresión `TypeOf`... `Is`, que comprueba si una variable de objeto es compatible con un tipo de datos.  
+ también se puede usar `Is` con la palabra clave `TypeOf` para crear una expresión `TypeOf`...`Is`, que comprueba si una variable de objeto es compatible con un tipo de datos.  
   
 > [!NOTE]
 > La palabra clave `Is` también se usa en [la Instrucción Case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
@@ -48,7 +48,7 @@ result = object1 Is object2
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Como se muestra en el ejemplo anterior, puede utilizar el operador `Is` para probar los objetos enlazados en tiempo de compilación y los enlazados en tiempo de ejecución.  
+ Como se muestra en el ejemplo anterior, puede utilizar el operador `Is` para probar los objetos enlazados en tiempo de compilación y en tiempo de ejecución.  
   
 ## <a name="see-also"></a>Vea también
 

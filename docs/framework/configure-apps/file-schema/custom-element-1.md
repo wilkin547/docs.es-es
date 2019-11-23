@@ -20,7 +20,7 @@ ms.locfileid: "73118832"
 Define la configuración de una sección de configuración personalizada que se define mediante una \<sección > elemento y utiliza la clase <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,7 +44,7 @@ Ninguno
 
 ## <a name="remarks"></a>Comentarios
 
-El elemento **\<sectionName >** es un elemento personalizado definido por una [**sección de\<** ](section-element.md) etiqueta del elemento\<[**configSections >** ](configsections-element-for-configuration.md) . El sistema de configuración devuelve un objeto <xref:System.Collections.IDictionary> cuando se llama a <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+El elemento **\<sectionName >** es un elemento personalizado definido por una [**sección de\<>** ](section-element.md) etiqueta del elemento\<[**configSections >** ](configsections-element-for-configuration.md) . El sistema de configuración devuelve un objeto <xref:System.Collections.IDictionary> cuando se llama a <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Ejemplo
 

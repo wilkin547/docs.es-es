@@ -21,7 +21,7 @@ En su lugar, una base de datos totalmente administrada [como servicio (DBaaS)](h
 
 A continuación, veremos las opciones de DBaaS disponibles en Azure. Verá cómo Microsoft continúa teniendo el compromiso de mantener Azure una "plataforma abierta", que ofrece soporte administrado para muchas bases de datos relacionales y NoSQL de código abierto, y realiza contribuciones clave a las diversas bases de código abierto como miembro activo.
 
-## <a name="azure-sql-database"></a>Azure SQL Database
+## <a name="azure-sql-database"></a>Se aplica a: Base de datos SQL de Azure
 
 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) es una base de datos como servicio (DBaaS) relacional de uso general y enriquecida de características basada en la Motor de base de datos de Microsoft SQL Server. Está totalmente administrado por Microsoft y es una base de datos en la nube de alto rendimiento, confiable y segura. El servicio comparte muchas de las características que se encuentran en la versión local de SQL Server.
 

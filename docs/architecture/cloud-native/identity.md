@@ -1,5 +1,5 @@
 ---
-title: identidad
+title: Identidad
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Identidad
 ms.date: 09/23/2019
 ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
@@ -9,7 +9,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840350"
 ---
-# <a name="identity"></a>identidad
+# <a name="identity"></a>Identidad
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 

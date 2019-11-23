@@ -48,7 +48,7 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |25.12.06 01:01:00|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>Entero  
  Los literales enteros pueden ser de tipo Int32 (123), UInt32 (123U), Int64 (123L) y UInt64 (123UL).  
   
  Ejemplo:  
@@ -66,7 +66,7 @@ DATETIME '2006-12-25 01:01'
 |2|  
 |3|  
   
-### <a name="other"></a>Otros  
+### <a name="other"></a>Otro  
  Los literales Other admitidos por [!INCLUDE[esql](../../../../../../includes/esql-md.md)] son Guid, Binary, Float/Double, Decimal y `null`. Los literales NULL en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se consideran compatibles con todos los demás tipos del modelo conceptual.  
   
 ## <a name="type-constructors"></a>Constructores de tipos  
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
   
  Resultado:  
   
-|ID|Name|  
+|ID.|Name|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>Navegación  
- El operador de navegación por relaciones permite navegar por la relación de un tipo de entidad (extremo inicial) a otro (extremo final). [Navigate](navigate-entity-sql.md) toma el tipo de relación calificado como \<namespace >. \<relationship nombre de tipo >. Navigate devuelve Ref @ no__t-0T > Si la cardinalidad del extremo final es 1. Si la cardinalidad del extremo final es n, se devolverá la colección < Ref @ no__t-0T > >.  
+ El operador de navegación por relaciones permite navegar por la relación de un tipo de entidad (extremo inicial) a otro (extremo final). [Navigate](navigate-entity-sql.md) toma el tipo de relación calificado como \<espacio de nombres >. nombre del tipo de relación\<>. Navigate devuelve Ref\<T > Si la cardinalidad del extremo final es 1. Si la cardinalidad del extremo final es n, se devolverá la colección < referencia\<T > >.  
   
  Ejemplo:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE y SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona la cláusula SELECT VALUE para omitir la creación de filas implícitas. Solo se puede especificar un elemento en una cláusula SELECT VALUE. Cuando se utiliza este tipo de cláusula, no se crea ningún contenedor de filas en torno a los elementos de la cláusula SELECT y se puede generar una colección de la forma deseada, por ejemplo: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona la cláusula SELECT VALUE para omitir la construcción de filas implícita. Solo se puede especificar un elemento en una cláusula SELECT VALUE. Cuando se utiliza este tipo de cláusula, no se crea ningún contenedor de filas en torno a los elementos de la cláusula SELECT y se puede generar una colección de la forma deseada, por ejemplo: `SELECT VALUE a`.  
   
  Ejemplo:  
   
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] también proporciona el constructor de filas para crear filas arbitrarias. SELECT toma uno o más elementos en la proyección y devuelve un registro de datos con campos, por ejemplo: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] también proporciona el constructor de filas para construir filas arbitrarias. SELECT toma uno o más elementos en la proyección y devuelve un registro de datos con campos, por ejemplo: `SELECT a, b, c`.  
   
  Ejemplo:  
   
@@ -360,7 +360,7 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 |Valor|  
 |-----------|  
-|true|  
+|TRUE|  
   
 ## <a name="see-also"></a>Vea también
 

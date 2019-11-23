@@ -14,7 +14,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71700894"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>' \<membername > ' no puede exponer el tipo ' \<typename > ' fuera del proyecto a través de \<containertype > ' \<containertypename > '
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername > ' no puede exponer el tipo '\<TypeName > ' fuera del proyecto a través de \<containerType > '\<containertypename > '
 Una variable, un parámetro de procedimiento o un valor devuelto de función se expone fuera de su contenedor, pero se declara como un tipo que no se debe exponer fuera del contenedor.  
   
  El código esqueleto siguiente muestra una situación que genera este error.  
@@ -27,9 +27,9 @@ Public Class mainClass
 End Class  
 ```  
   
- Un tipo que se declara `Protected`, `Friend`, `Protected Friend` o `Private` está pensado para tener acceso limitado fuera del contexto de declaración. Si se usa como el tipo de datos de una variable con acceso menos restringido, se anularía este propósito. En el código de esqueleto anterior, `exposedVar` es `Public` y expondría @no__t 2 al código que no debe tener acceso a él.  
+ Un tipo que se declara `Protected`, `Friend`, `Protected Friend`o `Private` está diseñado para tener acceso limitado fuera de su contexto de declaración. Si se usa como el tipo de datos de una variable con acceso menos restringido, se anularía este propósito. En el código de esqueleto anterior, `exposedVar` se `Public` y exponería `privateClass` al código que no debería tener acceso a él.  
   
- **IDENTIFICADOR de error:** BC30909  
+ **Identificador de error:** BC30909  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

@@ -16,13 +16,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697497"
 ---
-# <a name="requiredruntime-element"></a>\<requiredRuntime >, elemento
+# <a name="requiredruntime-element"></a>\<requiredRuntime (elemento >)
 
 Especifica que la aplicación solo admite la versión 1.0 de Common Language Runtime. Este elemento está en desuso y ya no debe usarse. En su lugar, se debe usar el elemento [`supportedRuntime`](supportedruntime-element.md) .
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
+&nbsp;&nbsp;[ **\<startup >** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ safemode="true|false"/>
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
 
-En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
+En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.
 
 ### <a name="attributes"></a>Atributos
 
@@ -59,7 +59,7 @@ Ninguno.
 |Elemento|Descripción|
 |-------------|-----------------|
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
-|`startup`|Contiene el `<requiredRuntime>` elemento.|
+|`startup`|Contiene el elemento `<requiredRuntime>`.|
 
 ## <a name="remarks"></a>Comentarios
  Las aplicaciones compiladas para admitir solo la versión 1,0 del Runtime deben usar el elemento `<requiredRuntime>`. Las aplicaciones compiladas con la versión 1,1 o posterior del Runtime deben usar el elemento `<supportedRuntime>`.
@@ -67,7 +67,7 @@ Ninguno.
 > [!NOTE]
 > Si usa la función [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) para especificar el archivo de configuración, debe utilizar el elemento `<requiredRuntime>` para todas las versiones del Runtime. El elemento `<supportedRuntime>` se omite cuando se usa [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).
 
- La cadena de atributo `version` debe coincidir con el nombre de la carpeta de instalación de la versión especificada de la .NET Framework. Esta cadena no se interpreta. Si el código de inicio en tiempo de ejecución no encuentra una carpeta coincidente, el tiempo de ejecución no se carga; el código de inicio muestra un mensaje de error y se cierra.
+ El `version` cadena de atributo debe coincidir con el nombre de la carpeta de instalación de la versión especificada del .NET Framework. Esta cadena no se interpreta. Si el código de inicio en tiempo de ejecución no encuentra una carpeta coincidente, el tiempo de ejecución no se carga; el código de inicio muestra un mensaje de error y se cierra.
 
 > [!NOTE]
 > El código de inicio de una aplicación que se hospeda en Microsoft Internet Explorer omite el elemento `<requiredRuntime>`.
@@ -88,4 +88,4 @@ En el ejemplo siguiente se muestra cómo especificar la versión en tiempo de ej
 
 - [Esquema de la configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Cómo: configurar una aplicación para admitir .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

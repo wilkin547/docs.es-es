@@ -22,7 +22,7 @@ En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](
 ## <a name="boolean"></a>Booleano  
  Los literales booleanos se representan mediante las palabras clave `true` y `false`.  
   
-## <a name="integer"></a>Integer  
+## <a name="integer"></a>Entero  
  Los literales enteros pueden ser de tipo <xref:System.Int32> o <xref:System.Int64>. Un literal <xref:System.Int32> es una serie de caracteres numéricos. Un literal <xref:System.Int64> es una serie de caracteres numéricos seguidos de una letra L en mayúsculas.  
   
 ## <a name="decimal"></a>Decimal  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Un literal datetime es independiente de la configuración regional y está compuesto de una fecha y una hora. Tanto la fecha como la hora deben aparecer y no hay valores predeterminados.  
   
- La parte de la fecha debe tener el formato siguiente: `YYYY` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4, donde `YYYY` es un valor de año de cuatro dígitos entre 0001 y 9999, `MM` es el mes comprendido entre 1 y 12 y `DD` es el valor de día válido para el mes determinado `MM`.  
+ La parte de la fecha debe tener el formato: `YYYY`-`MM`-`DD`, donde `YYYY` es un valor de año de cuatro dígitos entre 0001 y 9999, `MM` es el mes comprendido entre 1 y 12 y `DD` es el valor de día válido para el mes determinado `MM`.  
   
  La hora debe tener el formato: `HH`:`MM`[:`SS`[.fffffff]], donde `HH` es el valor correspondiente a la hora comprendido entre 0 y 23, `MM` es el valor correspondiente a los minutos comprendido entre 0 y 59, `SS` es el valor correspondiente a los segundos comprendido entre 0 y 59, y fffffff es el valor correspondiente a la fracción de segundo comprendido entre 0 y 9999999. Todos los intervalos de valores incluyen los valores extremos. Las fracciones de segundo son opcionales. Los segundos son opcionales a menos que se especifiquen fracciones de segundo; en este caso, los segundos son necesarios. Cuando no se especifican segundos o fracciones de segundo, se usa el valor cero predeterminado.  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>GUID  
- Un literal `GUID` representa un identificador único global. Es una secuencia formada por la palabra clave `GUID` seguida de dígitos hexadecimales en el formato denominado *registro* : 8-4-4-4-12 entre comillas simples. Los dígitos hexadecimales no distinguen mayúsculas de minúsculas.  
+ Un literal `GUID` representa un identificador único global. Es una secuencia formada por la palabra clave `GUID` seguido de dígitos hexadecimales en el formato denominado *registro* : 8-4-4-4-12 entre comillas simples. Los dígitos hexadecimales no distinguen mayúsculas de minúsculas.  
   
  Puede haber cualquier número de espacios entre el símbolo GUID y la carga del literal, pero no puede haber líneas nuevas.  
   

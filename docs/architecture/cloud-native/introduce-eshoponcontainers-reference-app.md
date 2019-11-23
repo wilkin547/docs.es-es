@@ -32,7 +32,7 @@ Comencemos con una revisión de las características y los requisitos de la apli
 - Editar o quitar elementos de la cesta
 - Confirmación
 - Registrar una cuenta
-- Inicio de sesión
+- Iniciar sesión
 - Cerrar sesión
 - Revisar pedidos
 

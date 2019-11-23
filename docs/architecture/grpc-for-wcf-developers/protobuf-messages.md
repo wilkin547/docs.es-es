@@ -1,14 +1,13 @@
 ---
 title: 'Mensajes de protobuf: gRPC para desarrolladores de WCF'
 description: Obtenga información sobre cómo se definen los mensajes de protobuf en el C#IDL y se generan en.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 9943478698acfbb54b3e1dd0e6a856d11b9266c3
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4d543fe88c21999cd820a0bb98073d58a229913a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841472"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967436"
 ---
 # <a name="protobuf-messages"></a>Mensajes de Protobuf
 

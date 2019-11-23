@@ -23,17 +23,17 @@ ms.locfileid: "73118929"
 El esquema de secciones de configuración contiene elementos que definen valores personalizados en los archivos de configuración. Para obtener información general sobre los archivos de configuración y los esquemas, vea [esquema del archivo de configuración para el .NET Framework](index.md).
 
 [ **\<configuration>** ](configuration-element.md)   
-[ **\<configSections >** ](configsections-element-for-configuration.md)   
-[ **\<borrar >** ](clear-element-for-configsections.md)   
-[ **\<quitar >** ](remove-element-for-configsections.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
 [ **\<sección >** ](section-element.md)   
-[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
 |     | Descripción |
 | --- | ----------- |
 | [ **\<borrar >** para **\<configSections >** ](clear-element-for-configsections.md) | Borra todas las secciones y grupos de sección definidos previamente. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Borra todas las secciones y grupos de sección definidos previamente. |
-| [ **\<configSections >** ](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
 | [ **\<quitar >** para **\<configSections >** ](remove-element-for-configsections.md) | Quita una sección o grupo de sección predefinido. |
 | [ **\<sección >** para **\<configSections >** y **\<sectionGroup >** ](section-element.md) | Contiene una declaración de sección de configuración. |
 | [ **\<sectionGroup >** para **\<configSections >** ](sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |

@@ -22,7 +22,7 @@ La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde 
   
  Las secciones siguientes se vinculan a los temas que describen los procesos para personalizar los contenedores de interoperabilidad si puede (o debe) suministrar información adicional sobre tipos al contador al serializador.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>Esta sección  
 [Creación manual de contenedores](how-to-create-wrappers-manually.md)   
 Describe cómo crear manualmente un contenedor COM en código fuente administrado. 
  

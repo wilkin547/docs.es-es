@@ -22,16 +22,16 @@ sgen [options]
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/a @ no__t-1ssembly @ no__t-2: nombre de**_archivo_|Genera código de serialización para todos los tipos incluidos en el ensamblado o la aplicación ejecutable especificados por *filename*. Solo se puede proporcionar un nombre de archivo. Si se repite este argumento, se utilizará el último nombre.|  
+|**/a\[samblado\]:** _nombrearchivo_|Genera código de serialización para todos los tipos incluidos en el ensamblado o la aplicación ejecutable especificados por *filename*. Solo se puede proporcionar un nombre de archivo. Si se repite este argumento, se utilizará el último nombre.|  
 |**/c\[ompiler\]:** _options_|Especifica las opciones que se deben pasar al compilador de C#. Todas las opciones de csc.exe se admiten tal como se pasan al compilador. Esto puede servir para especificar que se debería firmar el ensamblado, así como para especificar el archivo de clave.|  
 |**/d\[ebug\]**|Genera un imagen que se puede utilizar con un depurador.|  
 |**/f\[orce\]**|Exige que se sobrescriba un ensamblado existente que tenga el mismo nombre. El valor predeterminado es **false**.|  
 |**/help o /?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|**/k @ no__t-1eep @ no__t-2**|Suprime la eliminación de los archivos de código fuente generados y otros archivos temporales después de que se han compilado en el ensamblado de serialización. Puede servir para determinar si la herramienta genera código de serialización para un tipo determinado.|  
-|**/n @ no__t-1ologo @ no__t-2**|Suprime la presentación de la portada de inicio de Microsoft.|  
-|**/o @ no__t-1ut @ no__t-2: ruta de**_acceso_|Especifica el directorio en el que se debe guardar el ensamblado generado. **Nota:**  El nombre del ensamblado generado está compuesto por el nombre del ensamblado de entrada y "xmlSerializers.dll".|  
-|**/p @ no__t-1roxytypes @ no__t-2**|Solo se genera código de serialización para los tipos de proxy de servicio Web XML.|  
-|**/r @ no__t-1eference @ no__t-2:** _archivo_|Especifica los ensamblados a los que hacen referencia los tipos que requieren serialización XML. Acepta varios archivos de ensamblado separados por comas.|  
+|**/k\[antener\]**|Suprime la eliminación de los archivos de código fuente generados y otros archivos temporales después de que se han compilado en el ensamblado de serialización. Puede servir para determinar si la herramienta genera código de serialización para un tipo determinado.|  
+|**/n\[ologo\]**|Suprime la presentación de la portada de inicio de Microsoft.|  
+|**/o\[ut\]:** _ruta de acceso_|Especifica el directorio en el que se debe guardar el ensamblado generado. **Nota:** El nombre del ensamblado generado se compone del nombre del ensamblado de entrada más "xmlSerializers.dll".|  
+|**/p\[roxytypes\]**|Solo se genera código de serialización para los tipos de proxy de servicio Web XML.|  
+|**/r\[eference\]:** _archivo_|Especifica los ensamblados a los que hacen referencia los tipos que requieren serialización XML. Acepta varios archivos de ensamblado separados por comas.|  
 |**/s\[ilent\]**|Suprime la presentación de mensajes de aprobación.|  
 |**/t\[ype\]:** _type_|Solo genera código de serialización para el tipo especificado.|  
 |**/v\[erbose\]**|Muestra resultados detallados para la depuración. Enumera tipos del ensamblado de destino que no se pueden serializar con <xref:System.Xml.Serialization.XmlSerializer>.|  

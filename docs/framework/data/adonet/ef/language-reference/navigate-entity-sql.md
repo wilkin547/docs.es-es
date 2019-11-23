@@ -23,11 +23,11 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 `instance-expression` una instancia de una entidad.
 
-`relationship-type` el nombre de tipo de la relación, del archivo de lenguaje de definición de esquemas conceptuales (CSDL). El `relationship-type` está calificado como \<namespace >. \<relationship nombre de tipo >.
+`relationship-type` el nombre de tipo de la relación, del archivo de lenguaje de definición de esquemas conceptuales (CSDL). El `relationship-type` se califica como \<> de espacio de nombres. nombre del tipo de relación\<>.
 
 `to` el final de la relación.
 
-`from` inicio de la relación.
+`from` el principio de la relación.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer era una relación de n:1, el tipo de resultado de la expresión Navigate es Ref @ no__t-0Customer >.
+Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer era una relación de n:1, el tipo de resultado de la expresión Navigate es Ref\<Customer >.
 
 Lo forma más simple de esta expresión es la siguiente:
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Del mismo modo, en una consulta de la forma siguiente, la expresión Navigate produciría una colección < Ref @ no__t-0Order > >.
+Del mismo modo, en una consulta de la forma siguiente, la expresión Navigate produciría una colección < referencia\<orden > >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
@@ -72,7 +72,7 @@ El valor de instance-expression debe ser de tipo entidad/referencia.
 
 La consulta de Entity SQL siguiente utiliza el operador NAVIGATE para navegar por la relación establecida entre los tipos de entidad Address y SalesOrderHeader. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:
 
-1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).
 
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :
 

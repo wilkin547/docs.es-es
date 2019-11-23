@@ -9,12 +9,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697770"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings (elemento de >) (configuración de URI)
+# <a name="schemesettings-element-uri-settings"></a>\<elemento > schemeSettings (configuración de URI)
 Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemeSettings >**  
+&nbsp;[ **uri de\<&nbsp;>** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -24,12 +24,12 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
- Ninguna  
+ Ninguno  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -37,14 +37,14 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
 |[clear](clear-element-for-schemesettings-uri-settings.md)|Borra todos los valores de esquema existentes.|  
 |[remove](remove-element-for-schemesettings-uri-settings.md)|Quita un valor de esquema para un nombre de esquema.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|Contiene opciones que especifican cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, la clase <xref:System.Uri?displayProperty=nameWithType> quita los caracteres de escape de los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
+ De forma predeterminada, la clase <xref:System.Uri?displayProperty=nameWithType> no aplica el escape a los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por este motivo, la clase <xref:System.Uri?displayProperty=nameWithType> primero anula el escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior al constructor de clase <xref:System.Uri?displayProperty=nameWithType> da como resultado el URI siguiente:  
+ Por esta razón, <xref:System.Uri?displayProperty=nameWithType> clase primero quita los caracteres de escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> constructor de clase da como resultado el URI siguiente:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una configuración utilizada por la clase <xref:System.Uri> para admitir los delimitadores de ruta de acceso con codificación porcentual de escape para el esquema http.  
+ En el ejemplo siguiente se muestra una configuración utilizada por la clase <xref:System.Uri> para admitir los delimitadores de ruta de acceso no codificados por porcentaje para el esquema http.  
   
 ```xml  
 <configuration>  
@@ -74,11 +74,11 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
 </configuration>  
 ```  
   
-## <a name="element-information"></a>Información de elemento  
+## <a name="element-information"></a>Información del elemento  
   
 |||
 |-|-|  
-|Espacio de nombres|Sistema|  
+|Espacio de nombres|System|  
 |Nombre de esquema||  
 |Archivo de validación||  
 |Puede estar vacío||  

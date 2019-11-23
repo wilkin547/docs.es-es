@@ -24,14 +24,14 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
   
 ## <a name="arguments"></a>Argumentos  
  `location`  
- Obligatorio. Nombre de la clase o módulo que contiene el procedimiento `Sub Main` que se va a llamar cuando se inicie el programa. Puede tener el formato **-Main: module** o **-Main: Namespace. Module**.  
+ Obligatorio. Nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que se va a llamar cuando se inicie el programa. Puede tener el formato **-Main: module** o **-Main: Namespace. Module**.  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice esta opción cuando cree un archivo ejecutable o un programa ejecutable de Windows. Si se omite la opción **-Main** , el compilador busca un @no__t compartido válido en todas las clases y módulos públicos.  
+ Utilice esta opción cuando cree un archivo ejecutable o un programa ejecutable de Windows. Si se omite la opción **-Main** , el compilador busca una `Sub Main` compartida válida en todas las clases y módulos públicos.  
   
- Vea el [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de las distintas formas del procedimiento `Main`.  
+ Vea el [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de las distintas formas del procedimiento de `Main`.  
   
- Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un procedimiento predeterminado @no__t 2 que inicia la aplicación si la clase no tiene ningún procedimiento `Main`. Esto le permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.  
+ Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un procedimiento de `Main` predeterminado que inicia la aplicación si la clase no tiene `Main` procedimiento. Esto le permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
@@ -46,7 +46,7 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
 4. Modifique el valor en el cuadro **objeto de inicio** .  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente compila `T2.vb` y `T3.vb`, especificando que el procedimiento `Sub Main` se encontrará en la clase `Test2`.  
+ En el código siguiente se compilan `T2.vb` y `T3.vb`, especificando que el procedimiento `Sub Main` se encontrará en la clase `Test2`.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  

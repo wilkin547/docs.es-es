@@ -1,14 +1,13 @@
 ---
 title: 'Introducción: gRPC para desarrolladores de WCF'
 description: Introducción
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841574"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967617"
 ---
 # <a name="introduction"></a>Introducción
 
@@ -62,7 +61,7 @@ En la sección final del libro se examina cómo sacar el máximo partido de gRPC
 
 ## <a name="whom-this-guide-is-for"></a>Para qué es esta guía
 
-Esta guía se ha escrito para desarrolladores que trabajan en .NET Framework o .NET Core y que han usado previamente WCF y que buscan migrar sus aplicaciones a un entorno de RPC moderno para .NET Core 3,0 y versiones posteriores. La guía también puede ser de uso más general para desarrolladores que actualicen o consideren la actualización a .NET Core 3,0 y que quieran usar las herramientas de gRPC integradas.
+Esta guía se ha escrito para desarrolladores que trabajan con .NET Framework o .NET Core, que han usado WCF antes y que buscan migrar sus aplicaciones a un entorno de RPC moderno para .NET Core 3.0 y versiones posteriores. La guía también puede ser de uso más general para desarrolladores que vayan a realizar la actualización a .NET Core 3.0 (o piensen hacerlo) y que quieran usar las herramientas de gRPC integradas.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

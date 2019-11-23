@@ -26,12 +26,12 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
  El valor de la entidad a la que se hace referencia.  
   
 ## <a name="remarks"></a>Comentarios  
- El operador DEREF desreferencia un valor de referencia y genera el resultado de dicha desreferenciación. Por ejemplo, si `r` es una referencia de tipo REF @ no__t-1T >, `Deref(r)` es una expresión de tipo `T` que produce la entidad a la que hace referencia `r`. Si el valor de referencia es NULL, o está pendiente (es decir, el destino de la referencia no existe), el resultado del operador DEREF es NULL.  
+ El operador DEREF desreferencia un valor de referencia y genera el resultado de dicha desreferenciación. Por ejemplo, si `r` es una referencia de tipo REF\<T >, `Deref(r)` es una expresión de tipo `T` que produce la entidad a la que hace referencia `r`. Si el valor de referencia es NULL, o está pendiente (es decir, el destino de la referencia no existe), el resultado del operador DEREF es NULL.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] utiliza el operador DEREF para desreferenciar un valor de referencia y generar el resultado de dicha desreferenciación. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito en [How para: Ejecute una consulta que devuelva los resultados de PrimitiveType @ no__t-0.  
+1. Siga el procedimiento descrito en [Cómo: ejecutar una consulta que devuelve resultados PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método ExecutePrimitiveTypeQuery:  
   

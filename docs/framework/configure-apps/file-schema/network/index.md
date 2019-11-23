@@ -22,7 +22,7 @@ ms.locfileid: "71698153"
 # <a name="network-settings-schema"></a>Esquema de la configuración de red
 La configuración de red especifica cómo se conecta .NET Framework a Internet.
 
-La configuración @no__t -0SYSTEM. net > especifica cómo se conecta el .NET Framework a la red. En la tabla siguiente se describe la función de cada elemento de configuración secundario bajo el [elemento \<system.Net> (configuración de red)](system-net-element-network-settings.md).  
+La configuración de \<System. net > especifica cómo el .NET Framework se conecta a la red. En la tabla siguiente se describe la función de cada elemento de configuración secundario bajo el [elemento \<system.Net> (configuración de red)](system-net-element-network-settings.md).  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -33,7 +33,7 @@ La configuración @no__t -0SYSTEM. net > especifica cómo se conecta el .NET Fra
 |[Elemento \<requestCaching> (configuración de red)](requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
 |[Elemento \<webRequestModules> (configuración de red)](webrequestmodules-element-network-settings.md)|Especifica los módulos usados para solicitar información de hosts de Internet.|  
   
-La configuración de > de \<uri especifica cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI). En la tabla siguiente se describe la función de cada elemento de configuración secundario en el [elemento de > \<uri (configuración de URI)](uri-element-uri-settings.md).  
+La configuración de URI de \<> especifica cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI). En la tabla siguiente se describe la función de cada elemento de configuración secundario en el [elemento\<uri > (configuración de URI)](uri-element-uri-settings.md).  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  

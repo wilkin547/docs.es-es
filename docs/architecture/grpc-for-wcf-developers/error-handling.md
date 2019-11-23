@@ -1,14 +1,13 @@
 ---
 title: 'Control de errores: gRPC para desarrolladores de WCF'
 description: PENDIENTE DE REDACTAR
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 91f5789d8ed0f01f3ce2f3f9a6c6ccf14f245290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842006"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967790"
 ---
 # <a name="error-handling"></a>Control de errores
 

@@ -16,11 +16,11 @@ El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona fun
 
 ## <a name="avgexpression"></a>AVG (expresión)
 
-Devuelve el promedio de los valores de una colección. Los valores Null se pasan por alto.
+Devuelve el promedio de los valores de una colección. Los valores nulos se omiten.
 
 **Argumentos**
 
-@No__t-0, `Int64`, `Double` y `Decimal`.
+`Int32`, `Int64`, `Double`y `Decimal`.
 
 **Valor devuelto**
 
@@ -32,7 +32,7 @@ Tipo de `expression`.
 
 ## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (colección)
  
- Devuelve la suma de comprobación de los valores de una colección. Los valores Null se pasan por alto.
+ Devuelve la suma de comprobación de los valores de una colección. Los valores nulos se omiten.
  
  **Argumentos**
  
@@ -40,7 +40,7 @@ Tipo de `expression`.
  
  **Valor devuelto**
  
- Una clase `Int32`.
+ Interfaz `Int32`.
  
  **Ejemplo**
  
@@ -52,7 +52,7 @@ Devuelve el número de elementos de una colección como un valor `Int32`.
 
 **Argumentos**
 
-Una colección @ no__t-0T >, donde T es uno de los tipos siguientes:
+Colección\<T >, donde T es uno de los tipos siguientes:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -61,7 +61,7 @@ Una colección @ no__t-0T >, donde T es uno de los tipos siguientes:
 
 **Valor devuelto**
 
-Una clase `Int32`.
+Interfaz `Int32`.
 
 **Ejemplo**
 
@@ -82,7 +82,7 @@ Devuelve el número de elementos de una colección como un valor `bigint`.
 
 **Valor devuelto**
 
-Una clase `Int64`.
+Interfaz `Int64`.
 
 **Ejemplo**
 
@@ -168,7 +168,7 @@ Devuelve la suma de todos los valores de la colección.
 
 **Argumentos**
 
-Colección (T), donde T es uno de los tipos siguientes: `Int32`, `Int64`, `Double`, `Decimal`.
+Colección (T), donde T es uno de los tipos siguientes: `Int32`, `Int64`, `Double``Decimal`.
 
 **Valor devuelto**
 

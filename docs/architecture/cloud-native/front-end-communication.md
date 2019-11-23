@@ -65,7 +65,7 @@ Al igual que cualquier puerta de enlace de API, su funcionalidad principal es re
 | Solicitar agregación | Autorización |
 | Detección de servicios (con Consul y Eureka) | Limitación de peticiones |
 | Equilibrio de carga | Registro, seguimiento |
-| Almacenamiento en memoria caché | Encabezados/transformación de cadena de consulta |
+| Almacenamiento en caché | Encabezados/transformación de cadena de consulta |
 | Paso de correlación | Middleware personalizado |
 | Calidad de servicio | Directivas de reintento |
 
@@ -120,7 +120,7 @@ Azure API Management está disponible en [cuatro niveles distintos](https://azur
 - Desarrollador
 - Básico
 - Estándar
-- Recargo
+- Premium
 
 El nivel de desarrollador está diseñado para cargas de trabajo y evaluación que no son de producción. Los otros niveles ofrecen más potencia, características y acuerdos de nivel de servicio (SLA) superiores. El nivel Premium proporciona soporte técnico de [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) y [de varias regiones](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region). Todos los niveles tienen un precio fijo por hora.
 

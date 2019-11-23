@@ -30,7 +30,7 @@ FUNCTION function-name
   
 ## <a name="arguments"></a>Argumentos  
  `function-name`  
- Nombre de la función.  
+ nombre de la función.  
   
  `parameter-name`  
  Nombre de un parámetro de la función.  
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Nombre de un tipo compatible.  
   
- COLECCIÓN (< type_definition @ no__t-0)  
+ COLECCIÓN (`>` de type_definition de <)  
  Una expresión que devuelve una colección de tipos, filas o referencias compatibles.  
   
  REF **(** `data_type` **)**  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Para obtener más información, vea [Cómo: Llame a una función definida por el usuario @ no__t-0.  
+ Para obtener más información, consulte [Cómo: Llamar a una función definida por el usuario](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  Las funciones también se pueden declarar en el modelo. Las funciones declaradas en el modelo se ejecutan de la misma manera que las funciones declaradas inline en el comando. Para obtener más información, vea [funciones definidas por el usuario](user-defined-functions-entity-sql.md).  
   

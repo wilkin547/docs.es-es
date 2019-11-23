@@ -25,7 +25,7 @@ MULTISET ( expression [{, expression }] )
  Cualquier lista válida de valores.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una colección de tipo MULTISET @ no__t-0T >.  
+ Colección de tipo MULTISET\<T >.  
   
 ## <a name="remarks"></a>Comentarios  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona tres tipos de constructores: los constructores ROW, los constructores de objeto y los constructores MULTISET (o colección). Para obtener más información, vea [construir tipos](constructing-types-entity-sql.md).  
@@ -44,7 +44,7 @@ MULTISET ( expression [{, expression }] )
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador MULTISET para crear una instancia de un conjunto múltiple a partir de una lista de valores. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   

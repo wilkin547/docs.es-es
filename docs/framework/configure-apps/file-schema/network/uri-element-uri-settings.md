@@ -9,11 +9,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697440"
 ---
-# <a name="uri-element-uri-settings"></a>\<uri (elemento de >) (configuración de URI)
+# <a name="uri-element-uri-settings"></a>\<URI > elemento (configuración de URI)
 Contiene opciones que especifican cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<uri >**  
+&nbsp;**URI de\<&nbsp;>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -23,12 +23,12 @@ Contiene opciones que especifican cómo el .NET Framework controla las direccion
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a>Elemento secundario  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
@@ -36,7 +36,7 @@ Contiene opciones que especifican cómo el .NET Framework controla las direccion
 |[iriParsing](iriparsing-element-uri-settings.md)|Especifica si el análisis de identificadores de recursos internacionales (IRI) se aplica a <xref:System.Uri> y si se deben aplicar reglas de análisis de IRI.|  
 |[schemeSettings](schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  

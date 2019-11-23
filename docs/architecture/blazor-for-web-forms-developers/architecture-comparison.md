@@ -52,7 +52,7 @@ Después de que un componente controle un evento, el increíble procesador repre
 
 ![Interacción con el DOM del increíble](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Los componentes también pueden indicar manualmente que se deben representar si su estado cambia fuera de un evento normal de la interfaz de usuario. Increíble utiliza un `SynchronizationContext` para aplicar un único subproceso lógico de ejecución. Los métodos de ciclo de vida de un componente y todas las devoluciones de llamada de eventos que se producen con el método increíblemente se ejecutan en este `SynchronizationContext`.
+Los componentes también pueden indicar manualmente que se deben representar si su estado cambia fuera de un evento normal de la interfaz de usuario. Increíble utiliza un `SynchronizationContext` para aplicar un único subproceso lógico de ejecución. Los métodos de ciclo de vida de un componente y todas las devoluciones de llamada de evento que se producen con el método increíblemente se ejecutan en este `SynchronizationContext`.
 
 >[!div class="step-by-step"]
 >[Anterior](introduction.md)

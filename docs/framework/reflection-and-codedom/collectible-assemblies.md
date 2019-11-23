@@ -23,7 +23,7 @@ Para habilitar la descarga, use la marca <xref:System.Reflection.Emit.AssemblyBu
 
 La duración de un ensamblado recopilable se controla mediante referencias a los tipos que contiene y los objetos que se crean a partir de esos tipos. Common Language Runtime no descarga un ensamblado siempre que existan uno o varios de los siguientes (`T` es cualquier tipo definido en el ensamblado): 
 
-- Instancia de `T`.
+- Una instancia de `T`.
 
 - Una instancia de una matriz de `T`.
  

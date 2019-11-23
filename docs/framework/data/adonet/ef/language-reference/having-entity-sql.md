@@ -10,7 +10,7 @@ ms.lasthandoff: 10/03/2019
 ms.locfileid: "71833731"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
-Especifica una condición de búsqueda para un grupo o agregado.  
+Especifica una condición de búsqueda para un grupo o un agregado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -20,7 +20,7 @@ Especifica una condición de búsqueda para un grupo o agregado.
   
 ## <a name="arguments"></a>Argumentos  
  `search_condition`  
- Especifica la condición de búsqueda del grupo o del agregado que se debe cumplir. Cuando se utiliza HAVING con GROUP BY ALL, la cláusula HAVING invalida ALL.  
+ Especifica la condición de búsqueda que debe cumplir el grupo o el agregado. Cuando se utiliza HAVING con GROUP BY ALL, la cláusula HAVING invalida ALL.  
   
 ## <a name="remarks"></a>Comentarios  
  La cláusula HAVING se utiliza para especificar una condición de filtrado adicional en el resultado de una agrupación. Si no se especifica una cláusula GROUP BY en la expresión de consulta, se supone un grupo de conjunto único implícito.  
@@ -40,7 +40,7 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza los operadores HAVING y GROUP BY para especificar una condición de búsqueda para un grupo o un agregado. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito en [How para: Ejecute una consulta que devuelva los resultados de PrimitiveType @ no__t-0.  
+1. Siga el procedimiento descrito en [Cómo: ejecutar una consulta que devuelve resultados PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   

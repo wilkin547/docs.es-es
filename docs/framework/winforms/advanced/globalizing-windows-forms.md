@@ -35,18 +35,18 @@ Presenta la propiedad `ImeMode`, que se usa para controlar el tipo de entrada qu
 
 - [Globalización y localización de aplicaciones .NET](../../../standard/globalization-localization/index.md)
 
-- [Tutorial: Descarga de ensamblados satélite a petición con la API de implementación ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Tutorial: Descargar ensamblados satélite a petición con la API de implementación ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
 
 - [Localizar aplicaciones ClickOnce](/visualstudio/deployment/localizing-clickonce-applications)
 
-- [Tutorial: Descarga de ensamblados satélite a petición con la API de implementación de ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
+- [Tutorial: Descargar ensamblados satélite a petición con la API de implementación de ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Cómo: Establezca la referencia cultural y la referencia cultural de la interfaz de usuario para Windows Forms Globalization @ no__t-0
+- [Cómo: establecer la referencia cultural y la referencia cultural de la interfaz de usuario para la globalización Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [Cómo: Crear Windows Forms y controles reflejados @ no__t-0
+- [Cómo: crear controles y Windows Forms reflejados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [Cómo: Compatibilidad con la localización en Windows Forms mediante AutoSize y el control TableLayoutPanel @ no__t-0
+- [Cómo: Admitir la localización en Windows Forms mediante AutoSize y el control TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [Tutorial: Localizar Windows Forms @ no__t-0
+- [Tutorial: localizar Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [Tutorial: Crear un diseño que ajuste la proporción de la localización @ no__t-0
+- [Tutorial: crear un diseño que ajuste la proporción de la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

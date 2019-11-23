@@ -17,15 +17,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697891"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<remove > elemento para BypassList (configuración de red)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<quitar > elemento para BypassList (configuración de red)
 
 Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**quitar >**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,7 +37,7 @@ Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
 
-En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
+En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.
 
 ### <a name="attributes"></a>Atributos
 
@@ -45,11 +45,11 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |-------------------|---------------------|
 |`address`|Expresión regular que describe una dirección IP o un nombre DNS.|
 
-### <a name="child-elements"></a>Elementos secundarios
+### <a name="child-elements"></a>Elemento secundario
 
 Ninguno.
 
-### <a name="parent-elements"></a>Elementos primarios
+### <a name="parent-elements"></a>Elemento principal
 
 |**Element**|**Descripción**|
 |-----------------|---------------------|
@@ -59,7 +59,7 @@ Ninguno.
 
 El elemento `remove` quita las expresiones regulares que describen las direcciones IP o los nombres de servidor DNS de la lista de direcciones que omiten un servidor proxy. Las direcciones se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.
 
-El valor del atributo `address` debe ser una expresión regular que describa un conjunto de direcciones IP o nombres de host.
+El valor del atributo `address` debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.
 
 Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).
 

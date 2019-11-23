@@ -1,14 +1,13 @@
 ---
 title: 'Creación de bibliotecas de cliente de gRPC: gRPC para desarrolladores de WCF'
 description: Explicación de los paquetes o bibliotecas de cliente compartidos para gRPC Services.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2135fe8b24a2311a31cb2bed191d290b1112bc66
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73842066"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967876"
 ---
 # <a name="create-grpc-client-libraries"></a>Creación de bibliotecas de cliente de gRPC
 

@@ -1,14 +1,13 @@
 ---
 title: Kubernetes-gRPC para desarrolladores de WCF
 description: Ejecutar ASP.NET Core gRPC Services en un clúster de Kubernetes.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841580"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967564"
 ---
 # <a name="kubernetes"></a>Kubernetes
 

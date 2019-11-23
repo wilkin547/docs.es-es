@@ -1,23 +1,23 @@
 ---
-title: Privado protegido (Visual Basic)
+title: Private Protected
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 265141f77f4a61a61414a07214830feaa8a1ab05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920502"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351339"
 ---
-# <a name="private-protected-visual-basic"></a>Privado protegido (Visual Basic)
+# <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
-La combinación de palabras claves `Private Protected` es un modificador de acceso de miembro. Un `Private Protected` miembro es accesible por todos los miembros de su clase contenedora, así como tipos derivados de la clase contenedora, pero solo si están presentes en el ensamblado que lo contiene.
+La combinación de palabras claves `Private Protected` es un modificador de acceso de miembro. A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
 
-Puede especificar `Private Protected` solo en los miembros de clases; no se puede aplicar `Private Protected` a los miembros de una estructura porque las estructuras no se puede heredar.
+You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
 
-El `Private Protected` modificador de acceso es compatible con Visual Basic 15.5 y versiones posteriores. Para ello, puede agregar el elemento siguiente a su proyecto de Visual Basic (\*.vbproj) archivo. Siempre que Visual Basic 15.5 o posterior esté instalado en el sistema, le permite aprovechar todas las características del lenguaje compatible con la versión más reciente del compilador de Visual Basic:
+The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
 
 ```xml
 <PropertyGroup>
@@ -25,44 +25,44 @@ El `Private Protected` modificador de acceso es compatible con Visual Basic 15.5
 </PropertyGroup>
 ```
 
-Para obtener más información, consulte [configuración de la versión de idioma de Visual Basic](../../language-reference/configure-language-version.md).
+For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
 
 > [!NOTE]
-> En Visual Studio, seleccione Ayuda de F1 en `private protected` proporciona ayuda para cualquiera [privada](private.md) o [protegido](protected.md). El IDE elige el token solo bajo el cursor en lugar de la palabra compuesta.
+> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
 
 ## <a name="rules"></a>Reglas
 
-- **Contexto de declaración.** Puede usar `Private Protected` sólo en el nivel de clase. Esto significa que el contexto de declaración de un `Protected` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.
+- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
 ## <a name="behavior"></a>Comportamiento
 
-- **Nivel de acceso.** Todo el código en una clase puede tener acceso a sus elementos. Código de cualquier clase que deriva de una clase base y se encuentra en el mismo ensamblado puede tener acceso a todas las `Private Protected` elementos de la clase base. Sin embargo, el código en cualquier clase que deriva de una clase base y se encuentra en un ensamblado diferente no puede acceder a la clase base `Private Protected` elementos.
+- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
 
-- **Modificadores de acceso.** Las palabras clave que especifican el nivel de acceso se denominan *modificadores de acceso*. Para obtener una comparación de los modificadores de acceso, consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 El modificador `Private Protected` se puede utilizar en los contextos siguientes:
 
-- [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md) de una clase anidada
+- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
 
 - [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md) de un delegado anidado en una clase
+- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
 
 - [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md) de una enumeración anidada en una clase
+- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
 
 - [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md) de una interfaz anidada en una clase
+- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
 
 - [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [Estructura de la instrucción](../../../visual-basic/language-reference/statements/structure-statement.md) de una estructura anidada en una clase
+- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
 
 - [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -73,7 +73,7 @@ El modificador `Private Protected` se puede utilizar en los contextos siguientes
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
-- [Niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

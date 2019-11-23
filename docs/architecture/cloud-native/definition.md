@@ -84,8 +84,8 @@ En la tabla siguiente se resalta la metodología de doce factores:
 | 4 | Servicios de respaldo | Los recursos auxiliares (almacenes de datos, memorias caché, agentes de mensajes) deben exponerse a través de una dirección URL direccionable. Al hacerlo, se desacopla el recurso de la aplicación, lo que permite que sea intercambiable.  |
 | 5 | Compilación, lanzamiento, ejecución | Cada versión debe exigir una separación estricta entre las fases de compilación, lanzamiento y ejecución. Cada una debe etiquetarse con un identificador único y admitir la capacidad de revertir. Los sistemas de CI/CD modernos ayudan a completar este principio. |
 | 6 | Procesos | Cada microservicio debe ejecutarse en su propio proceso, aislado de otros servicios en ejecución. Externalizar el estado necesario para un servicio de respaldo, como una caché distribuida o un almacén de datos. |
-| 7 | Enlace de Puerto | Cada microservicio debe ser independiente con las interfaces y la funcionalidad expuestas en su propio puerto. Esto proporciona aislamiento de otros microservicios. |
-| 8 | simultaneidad | Los servicios se escalan horizontalmente en un gran número de pequeños procesos (copias) idénticos en lugar de escalar verticalmente una única instancia grande en el equipo más eficaz disponible. |
+| 7 | Enlace de puerto | Cada microservicio debe ser independiente con las interfaces y la funcionalidad expuestas en su propio puerto. Esto proporciona aislamiento de otros microservicios. |
+| 8 | Simultaneidad | Los servicios se escalan horizontalmente en un gran número de pequeños procesos (copias) idénticos en lugar de escalar verticalmente una única instancia grande en el equipo más eficaz disponible. |
 | 9 | Eliminación | Las instancias de servicio deben ser descartables, con lo que se favorece el inicio rápido para aumentar las oportunidades de escalabilidad y cierres correctos para dejar el sistema en un estado correcto. Los contenedores de Docker junto con un orquestador cumplen de forma inherente este requisito. |
 | 10 | Paridad de desarrollo y producción | Mantenga entornos a lo largo del ciclo de vida de la aplicación lo más similar posible, evitando accesos directos costosos. En este caso, la adopción de contenedores puede contribuir en gran medida a la promoción del mismo entorno de ejecución. |
 | 11 | Registro | Tratar los registros generados por los microservicios como flujos de eventos. Procesarlos con un agregador de eventos y propagar los datos a herramientas de administración de datos y minería de datos, como Azure Monitor o Splunk y, finalmente, el archivo a largo plazo. |
@@ -125,7 +125,7 @@ Por diseño, cada microservicio encapsula sus propios datos y expone las operaci
 
 Los datos distribuidos se describen en el capítulo 5 de detalles, *patrones de datos nativos de la nube*.
 
-*Identity*
+*Identidad*
 
 ¿Cómo identificará el servicio quién tiene acceso a él y qué permisos tiene?
 
@@ -228,7 +228,7 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 | Programación | Aprovisionar automáticamente las instancias de contenedor.|
 | Afinidad/antiafinidad | Aprovisione contenedores cercanos o alejados entre sí, ayudando a la disponibilidad y al rendimiento. |
 | Seguimiento de estado | Detectar y corregir errores automáticamente.|
-| Muta | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
+| Conmutación por error | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
 | Cambiar escala | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
 | Redes | Administrar una superposición de redes para la comunicación del contenedor.|
 | Detección de servicios | Permite que los contenedores se localicen entre sí.|
@@ -278,7 +278,7 @@ Los proveedores de nube proporcionan las API para que pueda comunicarse con sus 
 
 Los servicios de respaldo se describen en el capítulo 5 de detalle, *patrones de datos nativos de la nube*y el capítulo 4, *patrones de comunicación nativa en la nube*.
 
-## <a name="automation"></a>automatización
+## <a name="automation"></a>Automation
 
 Como ha visto, los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas? ¿Cómo se implementan rápidamente características y actualizaciones de aplicaciones? ¿Cómo se redondea la imagen completa?
 

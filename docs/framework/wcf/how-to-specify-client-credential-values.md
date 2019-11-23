@@ -22,9 +22,9 @@ Con Windows Communication Foundation (WCF), el servicio puede especificar cómo 
 
 2. Abra el archivo de configuración XML. Si usa la herramienta Svcutil.exe, el nombre predeterminado del archivo es Output.config.
 
-3. Busque el elemento **\<la >** con el atributo **mode** (**\<security mode =**`MessageOrTransport`**>** donde `MessageOrTransport` está establecido en uno de los modos de seguridad.
+3. Busque el elemento **\<security >** con el atributo **mode** ( **\<Security mode =** `MessageOrTransport` **>** donde `MessageOrTransport` está establecido en uno de los modos de seguridad.
 
-4. Busque el elemento secundario que coincida con el valor del modo. Por ejemplo, si el modo está establecido en **Message**, busque el elemento **\<message >** incluido en el elemento de **> \<security** .
+4. Busque el elemento secundario que coincida con el valor del modo. Por ejemplo, si el modo se establece en **Message**, busque el elemento **\<Message >** incluido en el elemento **\<Security >** .
 
 5. Tenga en cuenta el valor asignado al atributo **clientCredentialType** . El valor real dependerá del modo que se use, de transporte o de mensaje.
 
@@ -58,11 +58,11 @@ Este ejemplo establece el modo de seguridad en transporte y establece el valor d
 
 ### <a name="to-specify-the-client-credential-value-on-the-client-in-configuration"></a>Para especificar el valor de credencial de cliente en el cliente en configuración
 
-1. Agregue un elemento [de > \<behavior](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) al elemento de [> \<behaviors](../configure-apps/file-schema/wcf/behaviors.md) .
+1. Agregue un elemento de [comportamiento de\<>](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) al elemento [\<Behaviors >](../configure-apps/file-schema/wcf/behaviors.md) .
 
-2. Agregue un elemento [de > \<clientCredentials](../configure-apps/file-schema/wcf/clientcredentials.md) al elemento de [> \<behaviors](../configure-apps/file-schema/wcf/behaviors.md) . Asegúrese de establecer el atributo `name` necesario en un valor adecuado.
+2. Agregue un elemento [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) al elemento [\<Behaviors >](../configure-apps/file-schema/wcf/behaviors.md) . Asegúrese de establecer el atributo `name` necesario en un valor adecuado.
 
-3. Agregue un elemento [de > \<clientCertificate](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) al elemento de [> \<clientCredentials](../configure-apps/file-schema/wcf/clientcredentials.md) .
+3. Agregue un elemento [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) al elemento [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) .
 
 4. Establezca los atributos siguientes en los valores adecuados: `storeLocation`, `storeName`, `x509FindType` y `findValue`, como se muestra en el código siguiente. Para más información, consulte [Trabajar con certificados](./feature-details/working-with-certificates.md).
 
@@ -81,7 +81,7 @@ Este ejemplo establece el modo de seguridad en transporte y establece el valor d
     </behaviors>
     ```
 
-5. Al configurar el cliente, especifique el comportamiento estableciendo el atributo `behaviorConfiguration` del elemento `<endpoint>`, como se muestra en el código siguiente. El elemento de punto de conexión es un elemento secundario del elemento de [> \<client](../configure-apps/file-schema/wcf/client.md) . Especifique también el nombre de la configuración de enlace estableciendo el atributo `bindingConfiguration` en el enlace para el cliente. Si está utilizando un archivo de configuración generado, se genera automáticamente el nombre del enlace. En este ejemplo, el nombre es `"tcpBindingWithCredential"`.
+5. Al configurar el cliente, especifique el comportamiento estableciendo el atributo `behaviorConfiguration` del elemento `<endpoint>`, como se muestra en el código siguiente. El elemento de punto de conexión es un elemento secundario del elemento de [> de cliente de\<](../configure-apps/file-schema/wcf/client.md) . Especifique también el nombre de la configuración de enlace estableciendo el atributo `bindingConfiguration` en el enlace para el cliente. Si está utilizando un archivo de configuración generado, se genera automáticamente el nombre del enlace. En este ejemplo, el nombre es `"tcpBindingWithCredential"`.
 
     ```xml
     <client>
@@ -106,9 +106,9 @@ Este ejemplo establece el modo de seguridad en transporte y establece el valor d
 - [Trabajo con certificados](./feature-details/working-with-certificates.md)
 - [Cómo crear un cliente](how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../configure-apps/file-schema/wcf/nettcpbinding.md)
-- [\<La >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
-- [@no__t 1message >](../configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
-- [@no__t 1behavior >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
-- [@no__t 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)
-- [@no__t 1clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
-- [@no__t 1clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<message>](../configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
+- [comportamiento de \<>](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [\<behaviors>](../configure-apps/file-schema/wcf/behaviors.md)
+- [\<clientCertificate>](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCredentials>](../configure-apps/file-schema/wcf/clientcredentials.md)

@@ -57,7 +57,7 @@ Si la aplicación basada en contenedor implica varios contenedores, lo más prob
 Como sucede con la mayoría de los recursos de Azure, puede crear clústeres de Azure Kubernetes mediante el portal o mediante herramientas de línea de comandos o herramientas de automatización de infraestructura como Helm o terraform. Para empezar a trabajar con un nuevo clúster, debe proporcionar la siguiente información:
 
 - Suscripción a Azure
-- Grupo de recursos
+- Grupos de recursos
 - Nombre del clúster de Kubernetes
 - Región
 - Versión de Kubernetes

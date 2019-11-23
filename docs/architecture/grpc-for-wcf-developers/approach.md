@@ -1,14 +1,13 @@
 ---
 title: Cómo gRPC se aproxima a RPC-gRPC para desarrolladores de WCF
 description: Comparar las características clave de WCF con gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3da28968f8c8bd6c4fdba7432ffc8458d8340457
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1ebfd102217c9685c5ff5200386c642b2017e98f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841694"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968127"
 ---
 # <a name="how-grpc-approaches-rpc"></a>Procedimiento de gRPC para abordar RPC
 

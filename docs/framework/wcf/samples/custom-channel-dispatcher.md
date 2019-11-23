@@ -13,7 +13,7 @@ ms.locfileid: "72291544"
 Este ejemplo muestra cómo crear la pila del canal de manera personalizada implementando <xref:System.ServiceModel.ServiceHostBase> directamente y cómo crear un distribuidor de canal personalizado en un entorno de host web. El distribuidor del canal interactúa con <xref:System.ServiceModel.Channels.IChannelListener> para aceptar los canales y recupera los mensajes de la pila del canal. Este ejemplo también proporciona un ejemplo básico para mostrar cómo integrar una pila del canal en un entorno de host web con <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>ServiceHostBase personalizado  
- Este ejemplo implementa el tipo base <xref:System.ServiceModel.ServiceHostBase> en lugar de <xref:System.ServiceModel.ServiceHost> para mostrar cómo reemplazar la implementación de la pila de Windows Communication Foundation (WCF) con una capa de control de mensajes personalizada en la parte superior de la pila de canales. Se invalida el método virtual <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> para compilar los agentes de escucha del canal y el distribuidor de canal.  
+ Este ejemplo implementa el tipo base <xref:System.ServiceModel.ServiceHostBase> en lugar de <xref:System.ServiceModel.ServiceHost> para demostrar cómo reemplazar la implementación de la pila de Windows Communication Foundation (WCF) con una capa de control de mensajes personalizada en la parte superior de la pila de canales. Se invalida el método virtual <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> para compilar los agentes de escucha del canal y el distribuidor de canal.  
   
  Para implementar un servicio hospedado en web, obtenga la extensión de servicio <xref:System.ServiceModel.Activation.VirtualPathExtension> de la colección de la propiedad <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> y agréguela al objeto <xref:System.ServiceModel.Channels.BindingParameterCollection> para que el nivel de transporte sepa cómo configurar el agente de escucha del canal según los valores de entorno de hospedaje, es decir, la configuración de Internet Information Services (IIS)/Servicio de activación de procesos de Windows (WAS).  
   
@@ -29,7 +29,7 @@ Este ejemplo muestra cómo crear la pila del canal de manera personalizada imple
   
  Para administrar el verbo HTTP-GET en especial, devuelve un mensaje HTML personalizado, en este caso, para que pueda examinar el servicio desde un explorador para ver que está compilado correctamente. Si la acción SOAP no coincide, envíe a un mensaje de error para indicar que no se admite la solicitud.  
   
- El cliente de este ejemplo es un cliente de WCF normal que no asume nada del servicio. Por lo tanto, el servicio está diseñado especialmente para coincidir con lo que se obtiene de una implementación de WCF @ no__t-0 normal. Como resultado, solo se requiere un contrato de servicio en el cliente.  
+ El cliente de este ejemplo es un cliente de WCF normal que no asume nada del servicio. Por lo tanto, el servicio está diseñado especialmente para coincidir con lo que se obtiene de una implementación de WCF<xref:System.ServiceModel.ServiceHost> normal. Como resultado, solo se requiere un contrato de servicio en el cliente.  
   
 ## <a name="using-the-sample"></a>Utilizar el ejemplo  
  Al ejecutar la aplicación cliente directamente, se genera el siguiente resultado.  

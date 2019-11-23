@@ -16,12 +16,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119015"
 ---
-# <a name="configsections-element-for-configuration"></a>\<elemento > configSections para la configuración de \<
+# <a name="configsections-element-for-configuration"></a>\<elemento > configSections para la configuración de \<>
 
 Contiene la sección de configuración y las declaraciones de espacio de nombres.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections >**
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>Atributos
 
@@ -38,7 +38,7 @@ Ninguno
 |     | Descripción |
 | --- | ----------- |
 | [ **\<sección >** ](section-element.md) | Contiene una declaración de sección de configuración. |
-| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Quita una sección o grupo de sección predefinido. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Borra todas las secciones y grupos de sección definidos previamente. |
 

@@ -1,14 +1,13 @@
 ---
 title: Llamada a Credentials-gRPC para desarrolladores de WCF
 description: Cómo implementar y usar credenciales de llamada de gRPC en ASP.NET Core 3,0.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2588fe3590a63ea6071b85ff29b3685efbfa25db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841676"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967998"
 ---
 # <a name="call-credentials"></a>Credenciales de llamada
 

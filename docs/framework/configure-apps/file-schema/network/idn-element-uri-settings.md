@@ -9,13 +9,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698172"
 ---
-# <a name="idn-element-uri-settings"></a>\<idn (elemento de >) (configuración de URI)
+# <a name="idn-element-uri-settings"></a>\<elemento > IDN (configuración de URI)
 
 Especifica si el análisis de nombres de dominio internacionalizados (IDN) se aplica a un nombre de dominio.
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<idn >**  
+&nbsp;[ **uri de\<&nbsp;>** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,7 +26,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
 
@@ -36,7 +36,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-Ninguna
+Ninguno
   
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -46,7 +46,7 @@ Ninguna
 
 ## <a name="remarks"></a>Comentarios
 
-La clase <xref:System.Uri> existente se ha ampliado en .NET Framework 3,5. 3,0 SP1 y 2,0 SP1 compatible con los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN). Los usuarios actuales no verán ningún cambio en el comportamiento de .NET Framework 2,0 a menos que habiliten específicamente la compatibilidad con IRI e IDN. Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.
+La clase de <xref:System.Uri> existente se ha ampliado en .NET Framework 3,5. 3,0 SP1 y 2,0 SP1 compatible con los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN). Los usuarios actuales no verán ningún cambio en el comportamiento de .NET Framework 2,0 a menos que habiliten específicamente la compatibilidad con IRI e IDN. Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.
 
 Para habilitar la compatibilidad con IRI, se necesitan los dos cambios siguientes:
 

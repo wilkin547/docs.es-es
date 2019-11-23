@@ -3,12 +3,12 @@ title: Comunicación entre servicios
 description: Obtenga información sobre cómo los microservicios de back-end nativos en la nube se comunican con otros microservicios de back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842018"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087593"
 ---
 # <a name="service-to-service-communication"></a>Comunicación entre servicios
 
@@ -34,7 +34,7 @@ Los sistemas de microservicios suelen usar una combinación de estos tipos de in
 
 Muchas veces, un microservicio podría necesitar *consultar* otro, lo que requiere una respuesta inmediata para completar una operación. Un microservicio de cesta de la compra puede necesitar información del producto y un precio para agregar un artículo a su cesta. Existen varios enfoques para implementar operaciones de consulta.
 
-### <a name="requestresponse-messaging"></a>Mensajería de solicitud/respuesta
+### <a name="requestresponse-messaging"></a>Mensajería de solicitud-respuesta
 
 Una opción para implementar este escenario es que el microservicio de back-end que realiza la llamada realice solicitudes HTTP directas a los microservicios que necesita consultar, tal como se muestra en la figura 4-8.
 
@@ -78,7 +78,7 @@ Otro enfoque para desacoplar mensajes HTTP sincrónicos es un [patrón de solici
 
 En este caso, el productor de mensajes crea un mensaje basado en consulta que contiene un identificador de correlación único y lo coloca en una cola de solicitudes. El servicio consumidor quita los mensajes de la cola, los procesa y coloca la respuesta en la cola de respuesta con el mismo identificador de correlación. El servicio productor quita el mensaje de la cola, lo hace coincidir con el identificador de correlación y continúa el procesamiento. En la sección siguiente se describen los detalles de las colas.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 Otro tipo de interacción de comunicación es un *comando*. Un microservicio puede necesitar otro microservicio para realizar una acción. El microservicio de pedidos puede necesitar el microservicio de envío para crear un envío para un pedido aprobado. En la figura 4-12, un microservicio, denominado productor, envía un mensaje a otro microservicio, el consumidor, y le hace algo.
 
@@ -144,7 +144,7 @@ En la figura 4-14 se describe la arquitectura de alto nivel de una cola de Servi
 
 En la ilustración anterior, observe la relación punto a punto. Dos instancias del mismo proveedor están poniendo en cola los mensajes en una sola cola de Service Bus. Cada mensaje se consume solo en una de las tres instancias de consumidor de la derecha. A continuación, se describe cómo implementar la mensajería en la que es posible que todos los consumidores puedan estar interesados en el mismo mensaje.
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Message Queue Server es una manera eficaz de implementar la comunicación en la que un productor puede enviar un mensaje de forma asincrónica a un consumidor. Sin embargo, ¿qué ocurre cuando *muchos consumidores diferentes* están interesados en el mismo mensaje? Una cola de mensajes dedicada para cada consumidor no se podría escalar bien y resultaría difícil de administrar.
 
@@ -208,7 +208,7 @@ Event Grid es un servicio en la nube sin servidor totalmente administrado. Se es
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Transmisión de mensajes en la nube de Azure
 
-Azure Service Bus y Event Grid proporcionan una gran compatibilidad para las aplicaciones que exponen eventos únicos y discretos, como un nuevo documento, que se ha insertado en un Cosmos DB. Pero, ¿qué ocurre si el sistema nativo de la nube necesita procesar un *flujo de eventos relacionados*? Los [flujos de eventos](https://msdn.microsoft.com/magazine/dn904671) son más complejos. Normalmente, se ordenan por tiempo, se interrelacionan y se deben procesar como un grupo.
+Azure Service Bus y Event Grid proporcionan una gran compatibilidad para las aplicaciones que exponen eventos únicos y discretos, como un nuevo documento, que se ha insertado en un Cosmos DB. Pero, ¿qué ocurre si el sistema nativo de la nube necesita procesar un *flujo de eventos relacionados*? Los [flujos de eventos](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) son más complejos. Normalmente, se ordenan por tiempo, se interrelacionan y se deben procesar como un grupo.
 
 [Azure Event hubs](https://azure.microsoft.com/services/event-hubs/) es una plataforma de streaming de datos y un servicio de ingesta de eventos que recopila, transforma y almacena eventos. Se ajusta para capturar datos de streaming, como las notificaciones de eventos continuos que se emiten desde un contexto de telemetría. El servicio es muy escalable y puede almacenar y [procesar millones de eventos por segundo](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Como se muestra en la figura 4-18, a menudo es una puerta delantera para una canalización de eventos, desacoplando el flujo de ingesta del consumo de eventos.
 
@@ -220,7 +220,7 @@ Event hubs admite la baja latencia y la retención de tiempo configurable. A dif
 
 Event hubs admite protocolos de publicación de eventos comunes, como HTTPS y AMQP. También es compatible con Kafka 1,0. [Las aplicaciones de Kafka existentes pueden comunicarse con el centro de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) mediante el protocolo Kafka, lo que proporciona una alternativa a la administración de clústeres de Kafka de gran tamaño. Muchos sistemas nativos de la nube de código abierto adoptan Kafka.
 
-Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para el procesamiento de eventos y proporciona otras características centradas en el flujo que no están disponibles en las colas y los temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan los eventos más recientes, se agregan al final de esta secuencia. En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
+Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan los eventos más recientes, se agregan al final de esta secuencia. En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
 
 ![Creación de particiones del centro de eventos](./media/event-hub-partitioning.png)
 

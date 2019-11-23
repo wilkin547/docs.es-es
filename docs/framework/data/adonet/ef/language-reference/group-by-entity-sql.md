@@ -23,7 +23,7 @@ Especifica los grupos en los que se van a colocar los objetos devueltos por una 
  Cualquier expresión de consulta válida en la que se realice una agrupación. `expression` puede ser una propiedad o una expresión no agregada que haga referencia a una propiedad devuelta por la cláusula FROM. Cada expresión de una cláusula GROUP BY se debe evaluar como un tipo en el que se pueda comparar la igualdad. Estos tipos son generalmente primitivos escalares, como números, cadenas y fechas. No se puede agrupar por una colección.  
   
 ## <a name="remarks"></a>Comentarios  
- Si se incluyen funciones de agregado en la cláusula SELECT @no__t lista de 0select >, GROUP BY calcula un valor de resumen para cada grupo. Cuando se especifica GROUP BY, cada nombre de propiedad que esté en una expresión no agregada de la lista de selección se debe incluir en la lista de GROUP BY, o la expresión GROUP BY debe coincidir exactamente con la expresión de la lista de selección.  
+ Si se incluyen funciones de agregado en la cláusula SELECT \<seleccionar lista >, GROUP BY calcula un valor de resumen para cada grupo. Cuando se especifica GROUP BY, cada nombre de propiedad que esté en una expresión no agregada de la lista de selección se debe incluir en la lista de GROUP BY, o la expresión GROUP BY debe coincidir exactamente con la expresión de la lista de selección.  
   
 > [!NOTE]
 > Si no se especifica la cláusula ORDER BY, los grupos devueltos por la cláusula GROUP BY no estarán en un orden concreto. Se recomienda utilizar siempre la cláusula ORDER BY para especificar un orden concreto de los datos.  
@@ -62,7 +62,7 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador GROUP BY para especificar los grupos en los que una consulta devuelve los objetos. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito en [How para: Ejecute una consulta que devuelva los resultados de PrimitiveType @ no__t-0.  
+1. Siga el procedimiento descrito en [Cómo: ejecutar una consulta que devuelve resultados PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   

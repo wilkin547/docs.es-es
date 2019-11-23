@@ -9,12 +9,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698091"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<iriParsing (elemento de >) (configuración de URI)
+# <a name="iriparsing-element-uri-settings"></a>\<elemento > Análisisiri (configuración de URI)
 Especifica si se aplica el análisis de identificadores de recursos internacionales (IRI) a un <xref:System.Uri> y si se deben aplicar reglas de análisis de IRI.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<iriParsing >**  
+&nbsp;[ **uri de\<&nbsp;>** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<análisisiri >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -25,7 +25,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+ En las secciones siguientes se describen atributos, elementos secundarios y elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -33,17 +33,17 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
 |-----------------|---------------------|  
 |`enabled`|Especifica si está habilitado el análisis de IRI. El valor predeterminado es `false`.|  
   
-### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+### <a name="child-elements"></a>Elemento secundario  
+ Ninguno  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a>Elemento principal  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|Contiene opciones que especifican cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
 ## <a name="remarks"></a>Comentarios  
- La clase <xref:System.Uri> existente se ha ampliado en .NET Framework 3,5. 3,0 SP1 y 2,0 SP1 para proporcionar compatibilidad con los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN). Los usuarios actuales no verán ningún cambio en el comportamiento de .NET Framework 2,0 a menos que habiliten específicamente la compatibilidad con IRI e IDN. Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.  
+ La clase de <xref:System.Uri> existente se ha ampliado en .NET Framework 3,5. 3,0 SP1 y 2,0 SP1 para proporcionar compatibilidad con los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN). Los usuarios actuales no verán ningún cambio en el comportamiento de .NET Framework 2,0 a menos que habiliten específicamente la compatibilidad con IRI e IDN. Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.  
   
  Para habilitar la compatibilidad con IRI, se necesitan los dos cambios siguientes:  
   
@@ -55,7 +55,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
 2. Especifique si deben aplicarse las reglas de análisis de IRI. Esto puede hacerse en el archivo machine.config o app.config.  
   
- Al habilitar el análisis de IRI ( `true`análisisiri Enabled =), se realizará la normalización y la comprobación de caracteres según las reglas de IRI más recientes en RFC 3987. El valor predeterminado es `false` y realizará la normalización y la comprobación de caracteres según RFC 2396 y RFC 3986 (para los literales de IPv6).  
+ Al habilitar el análisis de IRI (Análisisiri Enabled = `true`), se realizará la normalización y la comprobación de caracteres según las reglas de IRI más recientes en RFC 3987. El valor predeterminado es `false` y realizará la normalización y la comprobación de caracteres según RFC 2396 y RFC 3986 (para los literales de IPv6).  
   
 ### <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

@@ -20,7 +20,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="arguments"></a>Argumentos  
  `match`  
- Expresión @no__t 0 que se evalúa como un `String`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión que se evalúa como un `String`.  
   
  `pattern`  
  Patrón que va a coincidir con el elemento `String` especificado.  
@@ -32,19 +32,19 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Especifica que el resultado de LIKE se niega.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` si el elemento `string` coincide con el patrón; de lo contrario, `false`.  
+ `true` si el `string` coincide con el patrón; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- las expresiones [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que usan el operador LIKE se evalúan de forma muy similar a como se haría con las expresiones que usan igualdad como criterio de filtro. Sin embargo, las expresiones [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que usan el operador LIKE pueden incluir literales y caracteres comodín.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresiones que utilizan el operador LIKE se evalúan de la misma manera que las expresiones que usan igualdad como criterio de filtro. Sin embargo, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresiones que utilizan el operador LIKE puede incluir literales y caracteres comodín.  
   
  En la tabla siguiente se describe la sintaxis del patrón `string`.  
   
 |Carácter comodín|Descripción|Ejemplo|  
 |------------------------|-----------------|-------------|  
-|%|Cualquier elemento `string` de cero o más caracteres.|`title like '%computer%'` busca todos los títulos con la palabra `"computer"` en cualquier lugar del título.|  
+|%|Cualquier elemento `string` de cero o más caracteres.|`title like '%computer%'` encuentra todos los títulos con la palabra `"computer"` en cualquier parte del título.|  
 |_ (carácter de subrayado)|Cualquier carácter individual.|`firstname like '_ean'` busca todos los nombres de cuatro letras que terminan en `"ean`, "como Dean o Juan.|  
-|[ ]|Cualquier carácter individual del intervalo ([a-f]) o del conjunto ([abcdef]) que se han especificado.|`lastname like '[C-P]arsen'` busca los apellidos que terminan en "Arsen" y comienza con cualquier carácter individual entre C y P, como Carsen o Larsen.|  
-|[^]|Cualquier carácter individual no incluido en el intervalo ([^a-f]) o del conjunto ([^abcdef]) que se han especificado.|`lastname like 'de[^l]%'` busca todos los apellidos que comienzan por "de" y no incluyen "l" como la siguiente letra.|  
+|[ ]|Cualquier carácter individual del intervalo ([a-f]) o del conjunto ([abcdef]) que se han especificado.|`lastname like '[C-P]arsen'` encuentra los apellidos que terminan en "Arsen" y empiezan con cualquier carácter individual entre C y P, como Carsen o Larsen.|  
+|[^]|Cualquier carácter individual no incluido en el intervalo ([^a-f]) o del conjunto ([^abcdef]) que se han especificado.|`lastname like 'de[^l]%'` encuentra todos los apellidos que comienzan por "de" y no incluyen "l" como la siguiente letra.|  
   
 > [!NOTE]
 > El operador LIKE y la cláusula ESCAPE de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se pueden aplicar a los valores `System.DateTime` o `System.Guid`.  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > Puede utilizar extensiones específicas del proveedor si el destino es un proveedor concreto. Sin embargo, otros proveedores pueden tratar de manera diferente este tipo de estructuras. SqlServer admite patrones [primero-último] y [^primero-último] donde el primero coincide exactamente con un carácter entre el primero y el último, y el segundo coincide exactamente con un carácter que no está entre el primero y el último.  
   
 ### <a name="escape"></a>Escape  
- El uso de la cláusula ESCAPE permite buscar cadenas de caracteres que incluyen uno o más de los caracteres comodín especiales que se describen en la tabla de la sección anterior. Por ejemplo, suponga que varios documentos incluyen el literal "100%" en el título y desea buscar todos esos documentos. Debido a que el porcentaje (%) el carácter es un carácter comodín, debe usar la cláusula escape [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para ejecutar correctamente la búsqueda. A continuación se muestra un ejemplo de este filtro.  
+ El uso de la cláusula ESCAPE permite buscar cadenas de caracteres que incluyen uno o más de los caracteres comodín especiales que se describen en la tabla de la sección anterior. Por ejemplo, suponga que varios documentos incluyen el literal "100%" en el título y desea buscar todos esos documentos. Debido a que el porcentaje (%) el carácter es un carácter comodín, debe usar la cláusula de escape [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para ejecutar correctamente la búsqueda. A continuación se muestra un ejemplo de este filtro.  
   
 ```sql  
 "title like '%100!%%' escape '!'"  
@@ -66,7 +66,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  En esta expresión de búsqueda, el carácter comodín de porcentaje (%) situado inmediatamente después del carácter de exclamación (!) se trata como literal, en lugar de como carácter comodín. Puede usar cualquier carácter como carácter de escape, excepto los caracteres comodín [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y los caracteres de corchete (`[ ]`). En el ejemplo anterior, el carácter de exclamación (!) es el carácter de escape.  
   
 ## <a name="example"></a>Ejemplo  
- Las dos consultas [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes usan los operadores LIKE y ESCAPE para determinar si una cadena de caracteres específica coincide con un patrón especificado. La primera consulta busca el `Name` que empieza con los caracteres `Down_`. Esta consulta utiliza la opción ESCAPE porque el carácter de subrayado (`_`) es un carácter comodín. Sin especificar la opción ESCAPE, la consulta buscaría valores de `Name` que empezasen con la palabra `Down` seguida de cualquier carácter individual diferente del carácter de subrayado. Las consultas se basan en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+ En las dos consultas [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes se usan los operadores LIKE y ESCAPE para determinar si una cadena de caracteres específica coincide con un patrón especificado. La primera consulta busca el `Name` que empieza con los caracteres `Down_`. Esta consulta utiliza la opción ESCAPE porque el carácter de subrayado (`_`) es un carácter comodín. Sin especificar la opción ESCAPE, la consulta buscaría valores de `Name` que empezasen con la palabra `Down` seguida de cualquier carácter individual diferente del carácter de subrayado. Las consultas se basan en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
 1. Siga el procedimiento descrito en [Cómo: ejecutar una consulta que devuelve resultados PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   

@@ -9,16 +9,16 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834019"
 ---
-# <a name="serviceauthorization-element"></a>\<serviceAuthorization >, elemento
+# <a name="serviceauthorization-element"></a>\<elemento > serviceAuthorization
 
 Especifica valores que autorizan que el acceso repare las operaciones
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<behaviors >** ](behaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0behavior >** ](behavior-of-servicebehaviors.md)1
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1serviceAuthorization >**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**comportamientos**](behaviors.md)\<>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**comportamiento**](behavior-of-servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceAuthorization >**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,8 +41,8 @@ En las secciones siguientes se describen los atributos, los elementos secundario
 
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|impersonateCallerForAllOperations|Un valor booleano que especifica si todas las operaciones en el servicio suplantan al autor de la llamada. De manera predeterminada, es `false`.<br /><br /> Cuando una operación de servicio concreta suplanta al llamador, el contexto del subproceso se intercambia al contexto del llamador antes de ejecutar el servicio especificado.|  
-|principalPermissionMode|Establece la entidad de seguridad usada para llevar a cabo las operaciones en el servidor. Los valores son los siguientes:<br /><br /> -Ninguno<br />-   UseWindowsGroups<br />-   UseAspNetRoles<br />-Personalizado<br /><br /> El valor predeterminado es UseWindowsGroups. El valor es del tipo <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Para obtener más información sobre el uso de este atributo, vea [How para: Restrinja el acceso con la clase PrincipalPermissionAttribute @ no__t-0.|  
+|impersonateCallerForAllOperations|Un valor booleano que especifica si todas las operaciones en el servicio suplantan al autor de la llamada. El valor predeterminado es `false`.<br /><br /> Cuando una operación de servicio concreta suplanta al llamador, el contexto del subproceso se intercambia al contexto del llamador antes de ejecutar el servicio especificado.|  
+|principalPermissionMode|Establece la entidad de seguridad usada para llevar a cabo las operaciones en el servidor. Los valores son los siguientes:<br /><br /> -Ninguno<br />-   UseWindowsGroups<br />-   UseAspNetRoles<br />-Personalizado<br /><br /> El valor predeterminado es UseWindowsGroups. El valor es del tipo <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Para obtener más información sobre el uso de este atributo, vea [Cómo: restringir el acceso con la clase PrincipalPermissionAttribute](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Una cadena que especifica el nombre del proveedor de roles, que proporciona información de rol para una aplicación Windows Communication Foundation (WCF). El valor predeterminado es una cadena vacía.|  
 |ServiceAuthorizationManagerType|Una cadena que contiene el tipo de administrador de autorización de servicio. Para obtener más información, consulta <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
 
@@ -56,13 +56,13 @@ En las secciones siguientes se describen los atributos, los elementos secundario
 
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[@no__t 1behavior >](behavior-of-endpointbehaviors.md)|Contiene una colección de valores para el comportamiento de un servicio.|  
+|[comportamiento de \<>](behavior-of-endpointbehaviors.md)|Contiene una colección de valores para el comportamiento de un servicio.|  
 
 ## <a name="remarks"></a>Comentarios
 
 Esta sección contiene elementos que afectan a la autorización, a los proveedores de roles personalizados y a la suplantación.  
   
-El atributo `principalPermissionMode` especifica los grupos de usuarios que se han de utilizar al autorizar el uso de un método protegido. El valor predeterminado es `UseWindowsGroups` y especifica que en los grupos de Windows, como "Administradores" o "Usuarios", se busca una identidad que intente obtener acceso a un recurso. También puede especificar `UseAspNetRoles` para usar un proveedor de roles personalizado que esté configurado en el elemento de > @no__t -1System. Web, como se muestra en el código siguiente:
+El atributo `principalPermissionMode` especifica los grupos de usuarios que se han de utilizar al autorizar el uso de un método protegido. El valor predeterminado es `UseWindowsGroups` y especifica que en los grupos de Windows, como "Administradores" o "Usuarios", se busca una identidad que intente obtener acceso a un recurso. También puede especificar `UseAspNetRoles` para usar un proveedor de roles personalizado que esté configurado en el elemento de > \<System. Web, tal como se muestra en el código siguiente:
 
 ```xml
 <system.web>
@@ -85,7 +85,7 @@ El atributo `principalPermissionMode` especifica los grupos de usuarios que se h
 </system.web>
 ```
   
-En el código siguiente se muestra el `roleProviderName` usado con el atributo `principalPermissionMode`:
+En el código siguiente se muestra el `roleProviderName` utilizado con el atributo `principalPermissionMode`:
   
 ```xml
 <behaviors>
@@ -105,6 +105,6 @@ Para obtener un ejemplo detallado del uso de este elemento de configuración, ve
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [Comportamientos de seguridad](../../../wcf/feature-details/security-behaviors-in-wcf.md)
 - [Autorización de acceso a operaciones de servicio](../../../wcf/samples/authorizing-access-to-service-operations.md)
-- [Cómo: Crear un administrador de autorización personalizado para un servicio @ no__t-0
-- [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute @ no__t-0
+- [Creación de un administrador de autorización personalizado para un servicio](../../../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [Directiva de autorización](../../../wcf/samples/authorization-policy.md)

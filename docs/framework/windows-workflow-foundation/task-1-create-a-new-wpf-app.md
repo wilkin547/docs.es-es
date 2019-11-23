@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 1: Crear una aplicación de Windows Presentation Foundation'
+title: 'Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 3205840da575041b449eb841fc8084e89937fca7
@@ -9,9 +9,9 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/08/2019
 ms.locfileid: "72031896"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarea 1: Crear una aplicación de Windows Presentation Foundation
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation
 
-En esta tarea, creará una aplicación de Windows Presentation Foundation (WPF) vacía mediante la plantilla de Visual Studio de aplicación WPF y agregará referencias a los ensamblados de flujo de trabajo [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] apropiados.  
+En esta tarea, creará una aplicación de Windows Presentation Foundation (WPF) vacía mediante la plantilla de Visual Studio de aplicación WPF y agregará referencias a los ensamblados de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] adecuados.  
   
 ## <a name="to-create-the-wpf-application-project"></a>Para crear el proyecto de aplicación WPF
 
@@ -37,9 +37,9 @@ En esta tarea, creará una aplicación de Windows Presentation Foundation (WPF) 
     - System.Activities.Presentation
     - System.Activities.Core.Presentation
 
-10. Consulte @no__t 0Task 2: Hospede el Diseñador de flujo de trabajo @ no__t-0 para obtener información sobre cómo hospedar el lienzo de diseño del diseñador de flujo de trabajo.
+10. Vea [tarea 2: hospedar el diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md) para obtener información sobre cómo hospedar el lienzo de diseño del diseñador de flujo de trabajo.
 
 ## <a name="see-also"></a>Vea también
 
 - [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
-- @no__t 0Task 2: Hospede el Diseñador de flujo de trabajo @ no__t-0
+- [Tarea 2: Hospedaje del Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)

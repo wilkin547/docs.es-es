@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Ver los datos de rendimiento  
- Para ver los datos capturados por los contadores de rendimiento, utilice el monitor de rendimiento (Perfmon.exe) incluido en Windows. Puede iniciar esta herramienta; para ello, vaya a **Inicio**, haga clic en **ejecutar** y escriba @no__t 2 en el cuadro de diálogo.  
+ Para ver los datos capturados por los contadores de rendimiento, utilice el monitor de rendimiento (Perfmon.exe) incluido en Windows. Puede iniciar esta herramienta; para ello, vaya a **Inicio**, haga clic en **ejecutar** y escriba `perfmon.exe` en el cuadro de diálogo.  
   
 > [!NOTE]
 > Se pueden lanzar instancias del contador de rendimiento antes de que el distribuidor del punto de conexión haya procesado los últimos mensajes. Esto puede dar lugar a que no se capturen los datos de rendimiento de algunos mensajes.  
@@ -121,11 +121,11 @@ config.Save();
 
 Se instalan varios archivos en la carpeta de instalación del SDK para que pueda tener acceso a los contadores de rendimiento de WCF mediante programación. Estos archivos se enumeran de la siguiente manera:
   
-- *@no__t -1ServiceModelEndpointPerfCounters. VRG*
-- *@no__t -1ServiceModelOperationPerfCounters. VRG*
-- *@no__t -1ServiceModelServicePerfCounters. VRG*  
-- *@no__t -1SMSvcHostPerfCounters. VRG*
-- *@no__t -1TransactionBridgePerfCounters. VRG*
+- *\_ServiceModelEndpointPerfCounters. VRG*
+- *\_ServiceModelOperationPerfCounters. VRG*
+- *\_ServiceModelServicePerfCounters. VRG*  
+- *\_SMSvcHostPerfCounters. VRG*
+- *\_TransactionBridgePerfCounters. VRG*
   
 Para obtener más información sobre cómo obtener acceso a los contadores mediante programación, vea [arquitectura de programación del contador de rendimiento](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   

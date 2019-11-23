@@ -19,7 +19,7 @@ A pesar de las diferencias importantes de la estructura del proyecto, los formul
 
 Para crear su primera aplicación increíble, siga las instrucciones de los [pasos de introducción más rápido](/aspnet/core/blazor/get-started). Puede seguir las instrucciones para crear una aplicación de servidor más brillante o una aplicación webassembly increíblemente hospedada en ASP.NET Core. A excepción de la lógica específica del modelo de hospedaje, la mayor parte del código en ambos proyectos es el mismo.
 
-## <a name="project-file"></a>Archivo del proyecto
+## <a name="project-file"></a>Archivo de proyecto
 
 Las aplicaciones de servidor increíbles son proyectos de .NET Core. El archivo de proyecto de la aplicación de servidor de extraordinariamente es tan sencillo como puede obtener:
 

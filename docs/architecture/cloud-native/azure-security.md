@@ -234,7 +234,7 @@ De forma predeterminada, Microsoft administra las claves utilizadas para cifrar 
 
 Las máquinas virtuales usan almacenamiento cifrado, pero es posible proporcionar otra capa de cifrado mediante tecnologías como BitLocker en Windows o DM-Crypt en Linux. Estas tecnologías significan que incluso si la imagen de disco se perdió fuera del almacenamiento, no sería posible leerla.
 
-### <a name="azure-sql"></a>SQL de Azure
+### <a name="azure-sql"></a>Azure SQL
 
 Las bases de datos hospedadas en SQL de Azure usan una tecnología denominada [cifrado de datos transparente (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) para asegurarse de que los datos permanecen cifrados. Está habilitada de forma predeterminada en todas las bases de datos SQL recién creadas, pero debe habilitarse manualmente para las bases de datos heredadas. TDE ejecuta el cifrado y descifrado en tiempo real de no solo la base de datos, sino también las copias de seguridad y los registros de transacciones.
 

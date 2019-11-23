@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
 ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
 ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834913"
@@ -21,7 +21,7 @@ Tal como se indicó previamente en esta sección, una función pura tiene dos ca
 
  Una forma de realizar una transición a la programación funcional es refactorizar código existente para eliminar efectos secundarios innecesarios y dependencias externas. De esta forma puede crear versiones de función pura del código existente.
 
-En este tema se trata qué es una función pura y qué no es. En [Tutorial: En el tutorial de manipulación de contenido en un documento WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) se muestra cómo manipular un documento WordprocessingML e incluye dos ejemplos de cómo refactorizar usando una función pura.
+En este tema se trata qué es una función pura y qué no es. En el tutorial [: manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) se muestra cómo manipular un documento WordprocessingML e incluye dos ejemplos de cómo refactorizar usando una función pura.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminar efectos secundarios y dependencias externas
 
@@ -52,7 +52,7 @@ Este código genera el siguiente resultado:
 StringOne-StringTwo
 ```
 
-Tenga en cuenta que es irrelevante si los datos que se están modificando tienen acceso `public` o `private`, o si es un miembro de @no__t 2 o un miembro de instancia. Una función pura no cambia datos fuera de la función.
+Tenga en cuenta que es irrelevante si los datos que se están modificando tienen `public` o `private` acceso, o si es un miembro de `shared` o un miembro de instancia. Una función pura no cambia datos fuera de la función.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Función no pura que cambia un argumento
 
@@ -108,4 +108,4 @@ Para obtener más información, vea [información general sobre operadores de co
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Diferencias entre la programación funcional y Programación imperativa (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Programación funcional frente a programación imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

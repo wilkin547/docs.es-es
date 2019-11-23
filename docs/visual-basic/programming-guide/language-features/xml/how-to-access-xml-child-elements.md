@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Elementos secundarios XML Access (Visual Basic)
+title: 'Cómo: Obtener acceso a elementos secundarios XML'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML axis [Visual Basic], child
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: 3c00166e471b7c6d69bd7f6fc3bda87b651d7d46
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: af5ea809cb0777b16230f20e133764dd5f1f86d9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598668"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332338"
 ---
-# <a name="how-to-access-xml-child-elements-visual-basic"></a>Procedimiento Elementos secundarios XML Access (Visual Basic)
-Este ejemplo muestra cómo usar a un elemento secundario de la propiedad de eje para tener acceso a todos los elementos secundarios XML que tienen un nombre especificado en un elemento XML. En concreto, usa el <xref:System.Xml.Linq.XElement.Value%2A> propiedad para obtener el valor del primer elemento de la colección que la `name` devuelve de propiedad de eje secundario. El `name` propiedad de eje secundario obtiene todos los elementos secundarios denominados `phone` en el `contact` objeto. En este ejemplo también usa el `phone` propiedad de eje secundario para tener acceso a todos los elementos secundarios denominados `phone` que están contenidas en el `contact` objeto.  
+# <a name="how-to-access-xml-child-elements-visual-basic"></a>Cómo: Obtener acceso a elementos secundarios XML (Visual Basic)
+This example shows how to use a child axis property to access all XML child elements that have a specified name in an XML element. In particular, it uses the <xref:System.Xml.Linq.XElement.Value%2A> property to get the value of the first element in the collection that the `name` child axis property returns. The `name` child axis property gets all child elements named `phone` in the `contact` object. This example also uses the `phone` child axis property to access all child elements named `phone` that are contained in the `contact` object.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  

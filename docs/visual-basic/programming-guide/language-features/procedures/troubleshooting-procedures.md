@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: c74947e21de8ba26ffde01f6f28aea67346c2071
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72002079"
@@ -21,7 +21,7 @@ En esta página se enumeran algunos problemas comunes que pueden producirse al t
   
 ## <a name="returning-an-array-type-from-a-function-procedure"></a>Devolver un tipo de matriz a partir de un procedimiento de función
 
-Si un procedimiento `Function` devuelve un tipo de datos de matriz, no se puede usar el nombre `Function` para almacenar valores en los elementos de la matriz. Si intenta hacerlo, el compilador lo interpreta como una llamada al `Function`. En el ejemplo siguiente se generan errores del compilador:
+Si un procedimiento `Function` devuelve un tipo de datos de matriz, no se puede utilizar el nombre de `Function` para almacenar valores en los elementos de la matriz. Si intenta hacerlo, el compilador lo interpreta como una llamada a la `Function`. En el ejemplo siguiente se generan errores del compilador:
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,7 +35,7 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-La instrucción `AllOnes(i) = 1` genera un error del compilador porque parece llamar a `AllOnes` con un argumento del tipo de datos incorrecto (un valor escalar @no__t 2 en lugar de una matriz `Integer`). La instrucción `Return AllOnes()` genera un error del compilador porque parece llamar a `AllOnes` sin ningún argumento.  
+La instrucción `AllOnes(i) = 1` genera un error del compilador porque parece llamar a `AllOnes` con un argumento del tipo de datos incorrecto (un `Integer` escalar en lugar de una matriz de `Integer`). La instrucción `Return AllOnes()` genera un error del compilador porque parece llamar a `AllOnes` sin ningún argumento.  
   
  **Enfoque correcto:** Para poder modificar los elementos de una matriz que se va a devolver, defina una matriz interna como variable local. En el ejemplo siguiente se compila sin errores:
 
@@ -59,9 +59,9 @@ En el ejemplo siguiente se realizan llamadas a `increase` y `replace`:
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-La primera llamada `MsgBox` muestra "después del aumento (n): 11, 21, 31, 41 ". Dado que `n` es un tipo de referencia, `increase` puede cambiar sus miembros, aunque se pase `ByVal`.
+La primera llamada a `MsgBox` muestra "después del aumento (n): 11, 21, 31, 41". Dado que `n` es un tipo de referencia, `increase` puede cambiar sus miembros, aunque se pase `ByVal`.
 
-La segunda llamada `MsgBox` muestra "después de reemplazar (n): 11, 21, 31, 41 ". Dado que se pasa `n` `ByVal`, @no__t 2 no puede modificar la variable `n` asignando una nueva matriz a ella. Cuando `replace` crea la nueva instancia de la matriz `k` y la asigna a la variable local `a`, pierde la referencia a `n` pasada por el código de llamada. Cuando incrementa los miembros de `a`, solo se ve afectada la matriz local `k`.
+La segunda llamada a `MsgBox` muestra "After Replace (n): 11, 21, 31, 41". Dado que `n` se pasa `ByVal`, `replace` no puede modificar la variable `n` mediante la asignación de una nueva matriz a ella. Cuando `replace` crea la nueva instancia de la matriz `k` y la asigna a la variable local `a`, pierde la referencia a `n` pasada por el código de llamada. Cuando incrementa los miembros de `a`, solo se ve afectada la `k` de la matriz local.
 
 **Enfoque correcto:** Para poder modificar un elemento variable subyacente, páselo por referencia. En el ejemplo siguiente se muestra el cambio en la declaración de `replace` que le permite reemplazar una matriz por otra en el código de llamada:
 
@@ -75,7 +75,7 @@ La *firma* de un procedimiento viene determinada por el nombre del procedimiento
 
 Los elementos siguientes, aunque pertenezcan a la lista de parámetros, no son componentes de la firma de un procedimiento:
 
-- Palabras clave de modificador de procedimientos, como `Public`, `Shared` y `Static`.
+- Palabras clave de modificador de procedimientos, como `Public`, `Shared`y `Static`.
 - Nombres de parámetro.
 - Palabras clave de modificador de parámetro, como `ByRef` y `Optional`.
 - El tipo de datos del valor devuelto (excepto para un operador de conversión).

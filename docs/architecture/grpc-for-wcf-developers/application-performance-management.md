@@ -1,14 +1,13 @@
 ---
 title: 'Administración del rendimiento de las aplicaciones: gRPC para desarrolladores de WCF'
 description: Registro, métricas y seguimiento de ASP.NET Core aplicaciones gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841688"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968178"
 ---
 # <a name="application-performance-management"></a>Administración del rendimiento de las aplicaciones
 
@@ -68,7 +67,7 @@ La mayoría de las plataformas de métricas admiten cinco tipos básicos de mét
 | ----------- | ----------- |
 | Contador     | Realiza un seguimiento de la frecuencia con la que sucede algo, como solicitudes, errores, etc. |
 | Gálibo       | Registra un valor único que cambia con el tiempo, como las conexiones activas. |
-| Cargas   | Mide una distribución de valores a través de límites arbitrarios. Por ejemplo, un histograma podría realizar un seguimiento del tamaño del conjunto de datos, contando cuántos contenían < 10 registros, cuántos 11-100 y 101-1000 y > 1000 registros. |
+| Histograma   | Mide una distribución de valores a través de límites arbitrarios. Por ejemplo, un histograma podría realizar un seguimiento del tamaño del conjunto de datos, contando cuántos contenían < 10 registros, cuántos 11-100 y 101-1000 y > 1000 registros. |
 | Medir       | Mide la velocidad a la que se produce un evento en varios intervalos de tiempo. |
 | Temporizador       | Realiza un seguimiento de la duración de los eventos y la velocidad a la que se produce, almacenado como histograma. |
 
@@ -160,7 +159,7 @@ public class Startup
 
 El paquete OpenTracing es una capa de abstracción y, como tal, requiere una implementación específica de back-end. Las implementaciones de la API de OpenTracing están disponibles para los siguientes back-ends de código abierto.
 
-| Name | Package | Sitio Web |
+| Name | Paquete | Sitio Web |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | APM elástica | [Elástico. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

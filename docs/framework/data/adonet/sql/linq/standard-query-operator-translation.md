@@ -26,7 +26,7 @@ En los párrafos siguientes se describen las diferencias entre los operadores de
 
 ### <a name="concat"></a>Concat
 
-El método <xref:System.Linq.Enumerable.Concat%2A> se define para los conjuntos múltiples ordenados cuando el orden del receptor y el orden del argumento son iguales. <xref:System.Linq.Enumerable.Concat%2A> funciona como `UNION ALL` sobre los conjuntos múltiples después del orden común.
+El método <xref:System.Linq.Enumerable.Concat%2A> se define para los conjuntos múltiples ordenados cuando el orden del receptor y el orden del argumento son iguales. <xref:System.Linq.Enumerable.Concat%2A> funciona como `UNION ALL` a través de los conjuntos multiconjunto seguidos del orden común.
 
 El último paso es ordenar en SQL antes de que se generen los resultados. <xref:System.Linq.Enumerable.Concat%2A> no conserva el orden de sus argumentos. Para garantizar una ordenación correcta, debe ordenar explícitamente los resultados de <xref:System.Linq.Enumerable.Concat%2A>.
 
@@ -38,7 +38,7 @@ El método <xref:System.Linq.Enumerable.Union%2A> se define para los conjuntos m
 
 ### <a name="take-skip"></a>Take, Skip
 
-los métodos <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.
+<xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> métodos están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada sobre cómo omitir y tomar excepciones en SQL Server 2000 "en [solución de problemas](troubleshooting.md).
@@ -80,13 +80,13 @@ Tanto <xref:System.Linq.Enumerable.Take%2A> como <xref:System.Linq.Enumerable.Sk
 |<xref:System.Linq.Enumerable.Reverse%2A>|La conversión de este método es posible para un conjunto ordenado pero [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no la realiza actualmente.|
 |<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|La conversión de estos métodos es posible para un conjunto ordenado pero [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no la realiza actualmente.|
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|Las consultas SQL funcionan en conjuntos múltiples, no en secuencias indizables.|
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (sobrecarga con argumento predeterminado)|En general, no se puede especificar un valor predeterminado para una tupla arbitraria. Los valores nulos para las tuplas son posibles en algunos casos a través de combinaciones externas.|
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (sobrecarga con el argumento predeterminado)|En general, no se puede especificar un valor predeterminado para una tupla arbitraria. Los valores nulos para las tuplas son posibles en algunos casos a través de combinaciones externas.|
 
 ## <a name="expression-translation"></a>Conversión de expresiones
 
 ### <a name="null-semantics"></a>Semántica de valores null
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no impone las semántica de comparación de valores null en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. Por esta razón, la semántica refleja la semántica de SQL definida según la configuración del servidor o la conexión. Por ejemplo, dos valores NULL se consideran distintos en valores predeterminados de SQL Server, pero puede cambiar la configuración para cambiar la semántica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no tiene en cuenta la configuración del servidor cuando convierte las consultas.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no impone la semántica de comparación de valores NULL en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. Por esta razón, la semántica refleja la semántica de SQL definida según la configuración del servidor o la conexión. Por ejemplo, dos valores NULL se consideran distintos en valores predeterminados de SQL Server, pero puede cambiar la configuración para cambiar la semántica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no tiene en cuenta la configuración del servidor cuando convierte las consultas.
 
 Una comparación con el literal null se convierte a la versión de SQL correcta (`is null` o `is not null`).
 
@@ -94,7 +94,7 @@ SQL Server define el valor `null` en la intercalación. [!INCLUDE[vbtecdlinq](..
 
 ### <a name="aggregates"></a>Agregados
 
-El método de agregado del operador de consulta estándar <xref:System.Linq.Enumerable.Sum%2A> se evalúa como cero para una secuencia vacía o para una secuencia que solo contiene valores nulos. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semántica de SQL se deja sin cambios y <xref:System.Linq.Enumerable.Sum%2A> se evalúa como @no__t 2 en lugar de cero para una secuencia vacía o para una secuencia que solo contiene valores NULL.
+El método de agregado del operador de consulta estándar <xref:System.Linq.Enumerable.Sum%2A> se evalúa como cero para una secuencia vacía o para una secuencia que solo contiene valores nulos. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semántica de SQL se deja sin cambios y <xref:System.Linq.Enumerable.Sum%2A> se evalúa como `null` en lugar de cero para una secuencia vacía o para una secuencia que solo contiene valores NULL.
 
 En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se aplican las restricciones de SQL para los agregados en los resultados intermedios. <xref:System.Linq.Enumerable.Sum%2A> para cantidades enteras de 32 bits no se calcula utilizando los resultados de 64 bits. Puede producirse un desbordamiento en la conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que realiza <xref:System.Linq.Enumerable.Sum%2A> aun cuando la implementación del operador de consulta estándar no produce un desbordamiento para la secuencia en memoria correspondiente.
 
@@ -158,7 +158,7 @@ Métodos de conversión:
 
 ### <a name="inheritance-mapping-restrictions"></a>Restricciones de la asignación de herencia
 
-Para obtener más información, vea [Cómo: Asignar jerarquías de herencia @ no__t-0.
+Para obtener más información, vea [Cómo: asignar jerarquías de herencia](how-to-map-inheritance-hierarchies.md).
 
 ### <a name="inheritance-in-queries"></a>Herencia en consultas
 
@@ -170,7 +170,7 @@ Los operadores, `is` y `as`, y el método `GetType` no están limitados al opera
 
 A partir de .NET Framework 3.5 Service Pack 1, LINQ to SQL admite la asignación a tipos nuevos de fecha y hora incorporados con SQL Server 2008. Pero, hay algunas limitaciones en los operadores de consulta de LINQ to SQL que puede usar al operar con valores asignados a estos tipos nuevos.
 
-### <a name="unsupported-query-operators"></a>Operadores de consulta no admitidos
+### <a name="unsupported-query-operators"></a>Operadores de consulta no compatibles
 
 Los operadores de consulta siguientes no se admiten en valores asignados a los nuevos tipos de fecha y hora de SQL Server: `DATETIME2`, `DATE`, `TIME` y `DATETIMEOFFSET`.
 
@@ -188,7 +188,7 @@ Para obtener más información sobre la asignación a estos SQL Server tipos de 
 
 ## <a name="sql-server-2005-support"></a>Compatibilidad con SQL Server 2005
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite las características de SQL Server 2005 siguientes:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite las siguientes características SQL Server 2005:
 
 - Procedimientos almacenados escritos para SQL CLR.
 
@@ -198,17 +198,17 @@ Para obtener más información sobre la asignación a estos SQL Server tipos de 
 
 ## <a name="sql-server-2000-support"></a>Compatibilidad con SQL Server 2000
 
-Las siguientes limitaciones SQL Server 2000 (en comparación con Microsoft SQL Server 2005) afectan a la compatibilidad con @no__t 0.
+Las siguientes limitaciones SQL Server 2000 (en comparación con Microsoft SQL Server 2005) afectan a la compatibilidad con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operadores Cross Apply y Outer Apply
 
-Estos operadores no están disponibles en SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta una serie de operaciones de reescritura para sustituirlos por las combinaciones adecuadas.
+Estos operadores no están disponibles en SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta una serie de reescrituras para reemplazarlas por combinaciones adecuadas.
 
-`Cross Apply` y `Outer Apply` se generan para la navegación de relaciones. El conjunto de consultas para el que son posibles tales operaciones de reescritura no está bien definido. Por esta razón, el conjunto mínimo de consultas que se admite para SQL Server 2000 es el conjunto que no implica la navegación por la relación.
+se generan `Cross Apply` y `Outer Apply` para las navegaciones de la relación. El conjunto de consultas para el que son posibles tales operaciones de reescritura no está bien definido. Por esta razón, el conjunto mínimo de consultas que se admite para SQL Server 2000 es el conjunto que no implica la navegación por la relación.
 
 ### <a name="text--ntext"></a>text / ntext
 
-Los tipos de datos `text` @ no__t-1 @ no__t-2 no se pueden usar en algunas operaciones de consulta en `varchar(max)` @ no__t-4 @ no__t-5, que son compatibles con Microsoft SQL Server 2005.
+Los tipos de datos `text` / `ntext` no se pueden usar en algunas operaciones de consulta en `varchar(max)` / `nvarchar(max)`, que son compatibles con Microsoft SQL Server 2005.
 
 Esta limitación no tiene ninguna resolución. Concretamente, no puede utilizar `Distinct()` en ningún resultado que contenga miembros que se asignen a columnas `text` o `ntext`.
 
@@ -228,7 +228,7 @@ La materialización crea objetos CLR a partir de las filas devueltas por una o m
 
   - Constructores
 
-  - Métodos `ToString` en las proyecciones
+  - `ToString` métodos en proyecciones
 
   - Conversiones de tipos en las proyecciones
 

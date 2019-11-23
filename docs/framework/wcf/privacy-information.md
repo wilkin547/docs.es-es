@@ -147,9 +147,9 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  wsse:BinarySecurityToken  
   
- \- para xmlns: SAML = "urn: oasis: names: TC: SAML: 1.0: Assertion" se quitan los elementos en negrita (a continuación):  
+ \- para xmlns: SAML = "urn: oasis: names: TC: SAML: 1.0: Assertion", se quitan los elementos en negrita (a continuación):  
   
- @no__t 0Assertion  
+ Aserción de \<  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  >  
   
- \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<condiciones NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- @no__t 0AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [URI] \</audiencia > +  
+ \<audiencia > [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition/> *  
   
- < @ no__t-1--tipo base abstracto  
+ <\!--tipo base abstracto  
   
- \<Condition/> *  
+ \<condición/> *  
   
  -->  
   
- \</condiciones >?  
+ \<>/Conditions?  
   
- @no__t 0Advice >  
+ \<consejos >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion > [Assertion] \</Assertion > *  
+ \<aserción > [Assertion]\</Assertion > *  
   
  [any]*  
   
- \</consejos >?  
+ \<>/Advice?  
   
- < @ no__t-1--tipos base abstractos  
+ <\!: tipos base abstractos  
   
- \<Statement/> *  
+ \<instrucción/> *  
   
- @no__t 0SubjectStatement >  
+ \<SubjectStatement>  
   
- @no__t 0Subject >  
+ \<asunto >  
   
  `<NameIdentifier`  
   
@@ -211,23 +211,23 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  `</NameIdentifier>?`  
   
- @no__t 0SubjectConfirmation >  
+ \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyURI] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any] \</SubjectConfirmationData >?  
+ \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds: KeyInfo >... \</DS: KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</SubjectConfirmation >?  
+ \<>/SubjectConfirmation?  
   
- \</asunto >  
+ \</Subject>  
   
- \</SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
- @no__t 0AuthenticationStatement  
+ \<AuthenticationStatement  
   
  AuthenticationMethod =" [uri]"  
   
@@ -255,13 +255,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  />*  
   
- \</AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- @no__t 0AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
- @no__t 0Attribute  
+ \<atributo)  
   
  AttributeName="[string]"  
   
@@ -271,11 +271,11 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</atributo > +  
+ \</Attribute>+  
   
- \</AttributeStatement > *  
+ \</AttributeStatement>*  
   
- @no__t 0AuthorizationDecisionStatement  
+ \<AuthorizationDecisionStatement  
   
  Resource =" [uri]"  
   
@@ -285,17 +285,17 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  [Subject]  
   
- \<Action espacio de nombres = "[URI]" > [cadena] \</acción > +  
+ \<Action namespace = "[URI]" > [cadena]\</Action > +  
   
- @no__t 0Evidence >  
+ \<Evidence >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion > [Assertion] \</Assertion > +  
+ \<aserción > [Assertion]\</Assertion > +  
   
- \</> de evidencia?  
+ \<>/Evidence?  
   
- \</AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
  \</Assertion >  
   

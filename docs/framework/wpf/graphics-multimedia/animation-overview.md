@@ -213,7 +213,7 @@ Dado que las animaciones generan valores de propiedad, existen distintos tipos d
 
   En los ejemplos de este tema se incluyen estas animaciones porque son las más fáciles de usar. Las animaciones From/to/by se describen en detalle en la información general de las animaciones From/to/by.
 
-- \<*tipo*> AnimationUsingKeyFrames
+- \<*Type*>AnimationUsingKeyFrames
 
   Las animaciones de fotogramas clave son más eficaces que las animaciones From/To/By porque se puede especificar cualquier número de valores de destino e incluso controlar su método de interpolación. Algunos tipos solo se pueden animar con animaciones de fotogramas clave. Las animaciones de fotogramas clave se describen en detalle en [información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md).
 
@@ -248,7 +248,7 @@ Tres propiedades de temporización usadas con frecuencia son <xref:System.Window
 
 #### <a name="the-duration-property"></a>Propiedad Duration
 
-Como se ha mencionado previamente, un objeto Timeline representa un segmento de tiempo. La longitud de ese segmento viene determinada por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la escala de tiempo, que normalmente se especifica mediante un valor de <xref:System.Windows.Duration.TimeSpan%2A>. Cuando una escala de tiempo llega al final de su duración, ha completado una iteración.
+Como se ha mencionado previamente, una escala de tiempo representa un segmento de tiempo. La longitud de ese segmento viene determinada por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de la escala de tiempo, que normalmente se especifica mediante un valor de <xref:System.Windows.Duration.TimeSpan%2A>. Cuando una escala de tiempo llega al final de su duración, ha completado una iteración.
 
 Una animación utiliza su propiedad <xref:System.Windows.Media.Animation.Timeline.Duration%2A> para determinar su valor actual. Si no se especifica un valor de <xref:System.Windows.Media.Animation.Timeline.Duration%2A> para una animación, se usa 1 segundo, que es el valor predeterminado.
 
@@ -367,7 +367,7 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)|Describe cómo el sistema de control de tiempo utiliza las clases <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock>, que permiten crear animaciones.|
 |[Sugerencias y trucos para animaciones](animation-tips-and-tricks.md)|Enumera las sugerencias útiles para solucionar problemas con animaciones, como el rendimiento.|
@@ -377,10 +377,10 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 |[Funciones de aceleración ](easing-functions.md)|Explica cómo aplicar fórmulas matemáticas a las animaciones para obtener un comportamiento realista, como el rebote.|
 |[Información general sobre animaciones en trazados ](path-animations-overview.md)|Describe cómo mover o girar un objeto a lo largo de un trazado complejo.|
 |[Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)|Describe las animaciones de propiedades mediante guiones gráficos, animaciones locales, relojes y animaciones por fotograma.|
-|[Información general sobre objetos Storyboard ](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|
+|[Información general sobre objetos Storyboard](storyboards-overview.md)|Describe cómo utilizar guiones gráficos con varias escalas de tiempo para crear animaciones complejas.|
 |[Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)|Describe los tipos de <xref:System.Windows.Media.Animation.Timeline> y las propiedades que se usan en las animaciones.|
 |[Información general sobre eventos de control de tiempo](timing-events-overview.md)|Describe los eventos disponibles en los objetos <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> para ejecutar el código en los puntos de la escala de tiempo, como iniciar, pausar, reanudar, omitir o detener.|
-|[Temas "Cómo..."](animation-and-timing-how-to-topics.md)|Contiene ejemplos de código para usar animaciones y escalas de tiempo en una aplicación.|
+|[Temas de procedimientos](animation-and-timing-how-to-topics.md)|Contiene ejemplos de código para usar animaciones y escalas de tiempo en una aplicación.|
 |[Temas de procedimientos de relojes](clocks-how-to-topics.md)|Contiene ejemplos de código para usar el objeto <xref:System.Windows.Media.Animation.Clock> en la aplicación.|
 |[Temas de procedimientos de fotogramas clave](key-frame-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de fotogramas clave en una aplicación.|
 |[Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)|Contiene ejemplos de código para usar animaciones de trazado en una aplicación.|

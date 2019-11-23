@@ -55,7 +55,7 @@ Se han efectuado varios cambios relacionados con los gráficos y animaciones.
 
 ## <a name="graphics-and-rendering"></a>Gráficos y representación
 
-WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](graphics.md) (Gráficos). La representación de elementos gráficos se basa en la clase <xref:System.Windows.Media.Visual>. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, vea [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).
+WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](graphics.md) (Gráficos). La representación de elementos gráficos se basa en la clase <xref:System.Windows.Media.Visual>. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, consulte [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).
 
 ### <a name="2-d-shapes"></a>Formas 2D
 
@@ -137,7 +137,7 @@ Para obtener más información, consulte [Información general sobre animaciones
 
 <a name="media"></a>
 
-## <a name="media"></a>Multimedia
+## <a name="media"></a>Medios
 
 Las imágenes, el vídeo y el audio son maneras de ofrecer experiencias de usuario e información con mucho contenido multimedia.
 

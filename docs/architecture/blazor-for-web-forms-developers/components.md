@@ -77,7 +77,7 @@ Las directivas de Razor comienzan con el carácter `@` y suelen usarse al princi
 
 En la tabla siguiente se resumen las distintas directivas de Razor que se usan en increíble y sus equivalentes de formularios Web Forms ASP.NET, si existen.
 
-|Directiva    |Descripción|Ejemplo|Equivalentes de formularios Web Forms|
+|Directive    |Descripción|Ejemplo|Equivalentes de formularios Web Forms|
 |-------------|-----------|-------|--------------------|
 |`@attribute` |Agrega un atributo de nivel de clase al componente.|`@attribute [Authorize]`|Ninguno|
 |`@code`      |Agrega miembros de clase al componente.|`@code { ... }`|`<script runat="server">...</script>`|
