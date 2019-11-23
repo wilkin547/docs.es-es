@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: e6708971909c1035e41786f4d8dad1cf9afdffaf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ce29703a181106353695414e8b291b14c697fc56
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665616"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444789"
 ---
-# <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4 (método)
+# <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9::GetCodeInfo4 Method
 
-Dada la dirección de inicio del código nativo, devuelve los bloques de memoria virtual que almacenan este código.
+Given the native code start address, returns the blocks of virtual memory that store this code.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,40 +34,40 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 #### <a name="parameters"></a>Parámetros
 
 `pNativeCodeStartAddress` \
-de Puntero al inicio de una función nativa.
+[in] A pointer to the start of a native function.
 
 `cCodeInfos` \
 [in] Tamaño de la matriz `codeInfos`.
 
 `pcCodeInfos` \
-enuncia Un puntero al número total de estructuras [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) disponibles.
+[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.
 
 `codeInfos` \
 [out] Búfer proporcionado por el llamador. Después de que el método vuelva, contiene una matriz de estructuras `COR_PRF_CODE_INFO`, cada una de las cuales describe un bloque de código nativo.
 
 ## <a name="remarks"></a>Comentarios
 
-El `GetCodeInfo4` método es similar a [getcodeinfo3 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md), con la salvedad de que puede buscar información de código para diferentes versiones nativas de un método.
+The `GetCodeInfo4` method is similar to [GetCodeInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md), except that it can look up code information for different native versions of a method.
 
 > [!NOTE]
-> `GetCodeInfo4`puede desencadenar una recolección de elementos no utilizados.
+> `GetCodeInfo4` can trigger a garbage collection.
 
 Las extensiones se clasifican en orden creciente de desplazamiento de Common Intermediate Language (CIL).
 
-Después `GetCodeInfo4` de que devuelva, debe comprobar `codeInfos` que el búfer era lo suficientemente grande como para contener todas las estructuras [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) . Para ello, compare el valor de `cCodeInfos` con el valor del parámetro `cchName`. Si `cCodeInfos` dividido por el tamaño de una estructura [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) es menor que `pcCodeInfos`, asigne un búfer `codeInfos` mayor, actualice `cCodeInfos` con el nuevo tamaño mayor y vuelva a llamar `GetCodeInfo4` a.
+After `GetCodeInfo4` returns, you must verify that the `codeInfos` buffer was large enough to contain all the [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures. Para ello, compare el valor de `cCodeInfos` con el valor del parámetro `cchName`. If `cCodeInfos` divided by the size of a [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo4` again.
 
-También tiene la opción de llamar primero a `GetCodeInfo4` con un búfer `codeInfos` de longitud de cero para obtener el tamaño de búfer correcto. Después, puede establecer el tamaño del búfer `codeInfos` en el valor devuelto en `pcCodeInfos`, multiplicado por el tamaño de una estructura [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) y volver a llamar a `GetCodeInfo4`.
+También tiene la opción de llamar primero a `GetCodeInfo4` con un búfer `codeInfos` de longitud de cero para obtener el tamaño de búfer correcto. You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structure, and call `GetCodeInfo4` again.
 
 ## <a name="requirements"></a>Requisitos
 
-**Select** Consulte [sistemas operativos compatibles con .net Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Encabezado**: Corprof. idl, Corprof. h
+**Encabezado:** CorProf.idl, CorProf.h
 
-**Biblioteca** CorGuids.lib
+**Biblioteca:** CorGuids.lib
 
-**Versiones de .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Vea también
 
-- [Interfaz ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/ICorProfilerInfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/ICorProfilerInfo9-interface.md)

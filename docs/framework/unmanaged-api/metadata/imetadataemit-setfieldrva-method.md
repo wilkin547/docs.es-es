@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93ca394eb877a86e4242d5f9f18eb26f5628db7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 501199bedec3b7a65d95c80cdef178831a65fd01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751076"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428418"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA (Método)
-Establece un valor de la variable global para la dirección virtual relativa del campo al que hace referencia el token especificado.  
+Sets a global variable value for the relative virtual address of the field referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT SetFieldRVA (
   
 ## <a name="parameters"></a>Parámetros  
  `fd`  
- [in] El token para el campo de destino.  
+ [in] The token for the target field.  
   
  `ulRVA`  
- [in] La dirección de un área de código o datos.  
+ [in] The address of a code or data area.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

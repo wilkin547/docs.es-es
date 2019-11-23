@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781264"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446016"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 (Función)
-Notifica al generador de perfiles que una función está a punto de devolver al autor de llamada y proporciona información sobre la pila marco y la función de valor devuelto.  
+Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,40 +37,40 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>Parámetros  
  `funcId`  
- [in] El identificador de la función que devuelve.  
+ [in] The identifier of the function that is returning.  
   
  `clientData`  
- [in] El identificador de la función reasignada, que el generador de perfiles especificado anteriormente a través de la [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) función.  
+ [in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
   
  `func`  
- [in] Un `COR_PRF_FRAME_INFO` valor al que apunta a la información sobre el marco de pila.  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- El generador de perfiles debe tratar como un identificador opaco que puede pasarse al motor de ejecución en el [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método.  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
  `retvalRange`  
- [in] Un puntero a un [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructura que especifica la ubicación de memoria del valor devuelto de la función.  
+ [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.  
   
- Para tener acceso a información del valor devuelto, el `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca. El generador de perfiles puede utilizar el [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para establecer las marcas de evento.  
+ In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores de la `func` y `retvalRange` parámetros no son válidos tras el `FunctionLeave2` función devuelve porque los valores pueden cambiar o se destruye.  
+ The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.  
   
- El `FunctionLeave2` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
+ The `FunctionLeave2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
+ The execution engine does not save any registers before calling this function.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- La implementación de `FunctionLeave2` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionLeave2` devuelve.  
+ The implementation of `FunctionLeave2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.  
   
- Además, el `FunctionLeave2` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

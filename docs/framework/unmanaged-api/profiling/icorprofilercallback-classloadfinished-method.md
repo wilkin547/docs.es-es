@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6508c989b143780090d582fd4175fe20bedeb770
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745440"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445123"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished (Método)
-Notifica al generador de perfiles que una clase ha terminado de cargarse.  
+Notifies the profiler that a class has finished loading.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] Identifica la clase que se cargó.  
+ [in] Identifies the class that was loaded.  
   
  `hrStatus`  
- [in] Un HRESULT que indica si la clase se ha cargado correctamente.  
+ [in] An HRESULT that indicates whether the class loaded successfully.  
   
 ## <a name="remarks"></a>Comentarios  
- El valor de `classId` no es válido para una solicitud de información hasta que el `ClassLoadFinished` se llama al método.  
+ The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
   
- Algunas partes de la carga de la clase podrían continuar después de la `ClassLoadFinished` devolución de llamada. Un error HRESULT en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` sólo indica que la primera parte de la carga de la clase se ha realizado correctamente.  
+ Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

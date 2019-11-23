@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 413cde3d0977c1fd6897fc5bd6fa7a3fef00ac02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763340"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440851"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 (Función)
-Notifica al generador de perfiles que el control se pasa a una función y proporciona información sobre la pila los argumentos de marco y la función. Esta función reemplaza la [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) función.  
+Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments. This function supersedes the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,40 +37,40 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="parameters"></a>Parámetros  
  `funcId`  
- [in] El identificador de la función a la que se pasa el control.  
+ [in] The identifier of the function to which control is passed.  
   
  `clientData`  
- [in] El identificador de función reasignada que especificó previamente en el generador de perfiles mediante el [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) función.  
+ [in] The remapped function identifier, which the profiler previously specified by using the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
   
  `func`  
- [in] Un `COR_PRF_FRAME_INFO` valor al que apunta a la información sobre el marco de pila.  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- El generador de perfiles debe tratar como un identificador opaco que puede pasarse al motor de ejecución en el [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método.  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
  `argumentInfo`  
- [in] Un puntero a un [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) estructura que especifica las ubicaciones de memoria de los argumentos de función.  
+ [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that specifies the locations in memory of the function's arguments.  
   
- Para tener acceso a información del argumento, el `COR_PRF_ENABLE_FUNCTION_ARGS` se debe establecer la marca. El generador de perfiles puede utilizar el [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para establecer las marcas de evento.  
+ In order to access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores de la `func` y `argumentInfo` parámetros no son válidos tras el `FunctionEnter2` función devuelve porque los valores pueden cambiar o se destruye.  
+ The values of the `func` and `argumentInfo` parameters are not valid after the `FunctionEnter2` function returns because the values may change or be destroyed.  
   
- El `FunctionEnter2` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
+ The `FunctionEnter2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
+ The execution engine does not save any registers before calling this function.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- La implementación de `FunctionEnter2` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionEnter2` devuelve.  
+ The implementation of `FunctionEnter2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter2` returns.  
   
- Además, el `FunctionEnter2` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ Also, the `FunctionEnter2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

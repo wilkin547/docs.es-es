@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d64a39dcdb6e3b26ff38106673719e475315f5dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5fa3647c86d97730e7ad6a2576dd34af75251d6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782108"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433959"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams (Método)
 Enumera los tokens de ParamDef que representan los parámetros del método al que hace referencia el token de MethodDef especificado.  
@@ -41,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in] Un token de MethodDef que representa el método con los parámetros para enumerar.  
+ [in] A MethodDef token representing the method with the parameters to enumerate.  
   
  `rParams`  
- [out] Matriz utilizada para almacenar los tokens de ParamDef.  
+ [out] The array used to store the ParamDef tokens.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rParams`.  
   
  `pcTokens`  
- [out] El número de tokens de ParamDef devueltos en `rParams`.  
+ [out] The number of ParamDef tokens returned in `rParams`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún token para enumerar. En ese caso, `pcTokens` es cero.|  
+|`S_OK`|`EnumParams` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: bf617279b16f53164209f5ae7605830dabda4c2e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043926"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433942"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Almacenar en caché en los clientes de automatización de la interfaz de usuario
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se presenta el almacenamiento en caché de los patrones de control y las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
  En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], almacenamiento en caché implica la captura previa de datos. Así, es posible acceder a los datos sin necesidad de más comunicación entre procesos. Normalmente, el almacenamiento en caché se utiliza en aplicaciones cliente de Automatización de la interfaz de usuario para recuperar los patrones de control y las propiedades de forma masiva. La información se recupera después desde la caché según sea necesario. La aplicación actualiza periódicamente la caché, normalmente en respuesta a eventos que indican que algo en [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ha cambiado.  
   
- Las ventajas del almacenamiento en caché son más evidentes con los controles de Windows Presentation Foundation (WPF) y los controles personalizados que tienen proveedores de automatización de la interfaz de usuario del lado servidor. Las ventajas son menores si se accede a proveedores de lado cliente, como los proveedores predeterminados de los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. Las ventajas son menores si se accede a proveedores de lado cliente, como los proveedores predeterminados de los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
   
  El almacenamiento en caché se produce cuando la aplicación activa un elemento <xref:System.Windows.Automation.CacheRequest> y después utiliza cualquier método o propiedad que devuelva un elemento <xref:System.Windows.Automation.AutomationElement>; por ejemplo, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Los métodos de la clase <xref:System.Windows.Automation.TreeWalker> son una excepción; el almacenamiento en caché solo se realiza si se especifica un elemento <xref:System.Windows.Automation.CacheRequest> como un parámetro (por ejemplo, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71043926"
 ## <a name="activating-the-cacherequest"></a>Activación de CacheRequest  
  El almacenamiento en caché solo se realiza cuando se recuperan los objetos <xref:System.Windows.Automation.AutomationElement> mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo para el subproceso actual. Hay dos formas de activar un elemento <xref:System.Windows.Automation.CacheRequest>.  
   
- La manera habitual es llamar a <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método devuelve un objeto que implementa <xref:System.IDisposable>. La solicitud permanecerá activa mientras exista el objeto <xref:System.IDisposable> . La forma más fácil de controlar la duración del objeto es incluir la llamada dentro de un `using` bloqueC#() `Using` o (Visual Basic). Esto garantiza que la solicitud se extraerá de la pila, aunque se produzca una excepción.  
+ La manera habitual es llamar a <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método devuelve un objeto que implementa <xref:System.IDisposable>. La solicitud permanecerá activa mientras exista el objeto <xref:System.IDisposable> . The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. Esto garantiza que la solicitud se extraerá de la pila, aunque se produzca una excepción.  
   
  Otra forma, que resulta útil cuando se quieren anidar solicitudes de almacenamiento en caché, es llamar a <xref:System.Windows.Automation.CacheRequest.Push%2A>. Esto coloca la solicitud en una pila y la activa. La solicitud permanece activa hasta que se quita de la pila mediante <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La solicitud pasa a estar temporalmente inactiva si se inserta otra solicitud en la pila; solo la solicitud superior de la pila está activa.  
   
@@ -105,4 +105,4 @@ ms.locfileid: "71043926"
 
 - [Eventos de Automatización de la interfaz de usuario para clientes](ui-automation-events-for-clients.md)
 - [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](use-caching-in-ui-automation.md)
-- [Ejemplo de FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777443"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446509"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute (Método)
-Llame a para establecer los atributos personalizados de nivel de ensamblado.  
+Call to set assembly-level custom attributes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado.  
+ ID of the assembly.  
   
  `FileToken`  
- Archivo que Desarchiva el atributo. Puede ser null si `AssemblyID` no indica un valor de netmodule sin enlazar.  
+ File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `tkType`  
- Tipo del atributo personalizado.  
+ Type of the custom attribute.  
   
  `pCustomValue`  
- Datos de valores personalizados.  
+ Custom value data.  
   
  `cbCustomValue`  
- Longitud de los datos de valor personalizados.  
+ Length of custom value data.  
   
  `bSecurity`  
- TRUE si el atributo personalizado está relacionado con la firma de ensamblados.  
+ TRUE if the custom attribute is related to assembly signing.  
   
  `bAllowMulti`  
- TRUE si se van a emitir varios atributos.  
+ TRUE if multiple attributes are to be emitted.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

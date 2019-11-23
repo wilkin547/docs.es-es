@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: ad721d28f6a7dc6ae0370ce10178990cb02fb9f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380359"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430055"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences (Método)
 
@@ -48,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] Matriz de identificadores de objeto, cada uno de los cuales contiene el `ObjectID` del elemento principal en el par de controladores de dependencia.
 
 `valueRefIds`\
-[in] Matriz de identificadores de objeto, cada uno de los cuales contiene el `ObjectID` del elemento secundario en el par de controladores de dependencia. (`keyRefIds[i]` mantiene `valueRefIds[i]` activo.)
+[in] Matriz de identificadores de objeto, cada uno de los cuales contiene el `ObjectID` del elemento secundario en el par de controladores de dependencia. (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
 
 `rootIds`\
 [in] Matriz de valores `GCHandleID` que apuntan a un entero que contiene información adicional sobre la raíz de recolección de elementos no utilizados.
@@ -57,7 +55,7 @@ Ninguno de los valores `ObjectID` devueltos por el método `ConditionalWeakTable
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo de código siguiente se muestra cómo implementar [ICorProfilerCallback5](icorprofilercallback5-interface.md) y usar este método.
+The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -82,13 +80,13 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Comentarios
 
-Un generador de perfiles para el .NET Framework 4.5 o versiones posteriores implementa la [ICorProfilerCallback5](icorprofilercallback5-interface.md) interfaz y registra las dependencias especificadas por el `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5` proporciona el conjunto completo de las dependencias entre los objetos activos representados por `ConditionalWeakTable` entradas. Estas dependencias y el miembro de campo referencias especificadas por el [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) método habilitar un generador de perfiles administrado generar el gráfico de objeto completo de objetos activos.
+A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: CorProf.idl, CorProf.h
+**Encabezado:** CorProf.idl, CorProf.h
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 

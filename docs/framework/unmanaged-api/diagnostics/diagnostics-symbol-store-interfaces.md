@@ -9,57 +9,55 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdb691570a9a2bf7bd2bb21af500b06c10b0bc53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787899"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448525"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de almacén de símbolos de diagnósticos
-En este tema se describe las interfaces no administradas que permiten a un compilador generar información de símbolos para su uso por un depurador.  
+This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [IBindingDisplay (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- Proporciona métodos que muestran la información de enlace actual sobre la aplicación en ejecución.  
+ Provides methods that display current binding information about the running application.  
   
  [IDebugAutoAttach (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
- Define la interfaz para la asociación automática del depurador que invoca el servidor.  
+ Defines the interface for a server-invoked debugger auto attach.  
   
  [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- Declara los métodos para registrar y anular el registro de un origen de conexión de notificación.  
+ Declares methods for registering and unregistering a connection notification source.  
   
  [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- Declara los métodos de notificación del receptor.  
+ Declares methods for sink notification.  
   
  [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- Declara un método para establecer filtros de notificación.  
+ Declares a method for setting notification filters.  
   
  [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)  
- Proporciona información para la característica Editar y continuar.  
+ Provides information for the Edit and Continue feature.  
   
  [ISymUnmanagedAsyncMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
- Esta interfaz es el complemento de lectura a [ISymUnmanagedAsyncMethodPropertiesWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
+ This interface is the reading complement to [ISymUnmanagedAsyncMethodPropertiesWriter Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Permite la definición de la información de método asincrónico opcional por el símbolo de método. Debe usar con un método abierto (es decir, entre las llamadas a la [OpenMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)y [CloseMethod (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Allows definition of optional async method information per method symbol. Must use with an opened method (that is, between calls to the [OpenMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)and the [CloseMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- Representa un enlazador de símbolos de código no administrado.  
+ Represents a symbol binder for unmanaged code.  
   
  [ISymUnmanagedBinder2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- Representa un enlazador de símbolos de código no administrado y extiende el `ISymUnmanagedBinder` interfaz.  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedBinder3 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- Representa un enlazador de símbolos de código no administrado y extiende el `ISymUnmanagedBinder` interfaz.  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedConstant (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
- Proporciona acceso a las constantes no administrados.  
+ Provides access to unmanaged constants.  
   
  [ISymUnmanagedDispose (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)  
- Se deshace de los recursos no administrados.  
+ Disposes of unmanaged resources.  
   
  [ISymUnmanagedDocument (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)  
  Representa un documento al que hace referencia un almacén de símbolos.  
@@ -68,52 +66,52 @@ En este tema se describe las interfaces no administradas que permiten a un compi
  Proporciona métodos para escribir en un documento al que hace referencia un almacén de símbolos.  
   
  [ISymUnmanagedENCUpdate (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)  
- Proporciona métodos para la característica Editar y continuar.  
+ Provides methods for the Edit and Continue feature.  
   
  [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
- Representa un método en el almacén de símbolos.  
+ Represents a method within the symbol store.  
   
  [ISymUnmanagedNamespace (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
- Representa un espacio de nombres.  
+ Represents a namespace.  
   
  [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- Representa un lector de símbolos que proporciona acceso a documentos, métodos y variables dentro de un almacén de símbolos.  
+ Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.  
   
  [ISymUnmanagedReader2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Obtiene un método del lector de símbolos dado un token de método y un número de versión de editar y copiar.  
+ Gets a symbol reader method given a method token and an edit-and-copy version number.  
   
  [ISymUnmanagedReaderSymbolSearchInfo (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- Proporciona métodos que obtienen información de búsqueda de símbolos.  
+ Provides methods that get symbol search information.  
   
  [ISymUnmanagedScope (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- Representa un ámbito léxico dentro de un método.  
+ Represents a lexical scope within a method.  
   
  [ISymUnmanagedScope2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- Representa un ámbito léxico dentro de un método y extiende el `ISymUnmanagedScope` interfaz con métodos que obtienen información sobre las constantes definidas dentro del ámbito...  
+ Represents a lexical scope within a method, and extends the `ISymUnmanagedScope` interface with methods that get information about constants defined within the scope..  
   
  [ISymUnmanagedSourceServerModule (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
- Proporciona datos del servidor de origen para un módulo.  
+ Provides source server data for a module.  
   
  [ISymUnmanagedSymbolSearchInfo (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Proporciona métodos que obtienen información acerca de la ruta de acceso de búsqueda.  
+ Provides methods that get information about the search path.  
   
  [ISymUnmanagedVariable (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- Representa una variable, como un parámetro, una variable local o un campo.  
+ Represents a variable, such as a parameter, a local variable, or a field.  
   
  [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, los ámbitos léxicos y variables.  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.  
   
  [ISymUnmanagedWriter2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, los ámbitos léxicos y variables. Extiende la `ISymUnmanagedWriter` interfaz.  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter3 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, los ámbitos léxicos y variables. Extiende la `ISymUnmanagedWriter` interfaz.  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter4 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
- ISymUnmanagedWriter4 (interfaz).  
+ ISymUnmanagedWriter4 interface.  
   
  [ISymUnmanagedWriter5 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)  
- ISymUnmanagedWriter5 (interfaz).  
+ ISymUnmanagedWriter5 interface.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  

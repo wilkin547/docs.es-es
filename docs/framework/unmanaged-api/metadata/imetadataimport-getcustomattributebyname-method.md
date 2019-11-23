@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd7ba7ff10918e5953ea8ae89a60af3115af48a3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782432"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437684"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName (Método)
-Obtiene el atributo personalizado, dado su nombre y propietario.  
+Gets the custom attribute, given its name and owner.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,26 +38,26 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>Parámetros  
  `tkObj`  
- [in] Un token de metadatos que representa el objeto que posee el atributo personalizado.  
+ [in] A metadata token representing the object that owns the custom attribute.  
   
  `szName`  
- [in] El nombre del atributo personalizado.  
+ [in] The name of the custom attribute.  
   
  `ppData`  
- [out] Un puntero a una matriz de datos que es el valor del atributo personalizado.  
+ [out] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbData`  
- [out] El tamaño en bytes de los datos devueltos en *`ppData`.  
+ [out] The size in bytes of the data returned in *`ppData`.  
   
 ## <a name="remarks"></a>Comentarios  
- Es válido para definir varios atributos personalizados para el mismo propietario; incluso es posible que tienen el mismo nombre. Sin embargo, `GetCustomAttributeByName` devuelve solo una instancia. (`GetCustomAttributeByName` devuelve la primera instancia que encuentra.) Para encontrar todas las instancias de un atributo personalizado, llame a la [EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) método.  
+ It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

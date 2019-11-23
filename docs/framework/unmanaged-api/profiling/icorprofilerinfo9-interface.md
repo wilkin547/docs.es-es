@@ -3,29 +3,29 @@ title: Interfaz ICorProfilerInfo9
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: af6bd02c6d4e88c72dca20d2520d1ecc8cf1c421
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 74031fd822550f8a0752d02ce0c2d89b2f5ae546
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928782"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444951"
 ---
 # <a name="icorprofilerinfo9-interface"></a>Interfaz ICorProfilerInfo9
 
-Una subclase de [ICorProfilerInfo8](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md) que proporciona métodos para consultar información sobre las funciones con varias versiones de código nativo.  
+A subclass of [ICorProfilerInfo8](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md) that provides methods to query information about functions with multiple native code versions.  
 
 ## <a name="methods"></a>Métodos  
 
-| Método|DESCRIPCIÓN|  
+| Método|Descripción|  
 | ------------|-----------------|  
-|[Método GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md)| Dado un functionId y rejitId, enumera la dirección de inicio del código nativo de todas las versiones de JIT de este código que existen actualmente. |
-|[Método GetILToNativeMapping3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getiltonativemapping3-method.md)| Dada la dirección de inicio del código nativo, devuelve la información de asignación nativa a IL para esta versión JIT del código. |
-|[Método GetCodeInfo4](icorprofilerinfo9-getcodeinfo4-method.md)| Dada la dirección de inicio del código nativo, devuelve los bloques de memoria virtual que almacenan este código. |
+|[GetNativeCodeStartAddresses Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md)| Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist. |
+|[GetILToNativeMapping3 Method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getiltonativemapping3-method.md)| Given the native code start address, returns the native to IL mapping information for this jitted version of the code. |
+|[GetCodeInfo4 Method](icorprofilerinfo9-getcodeinfo4-method.md)| Given the native code start address, returns the blocks of virtual memory that store this code. |
 
 ## <a name="requirements"></a>Requisitos  
-**Select** Consulte [sistemas operativos compatibles con .net Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).  
-**Encabezado**: Corprof. idl, Corprof. h  
-**Versiones de .net:** [!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
+**Encabezado:** CorProf.idl, CorProf.h  
+**.NET Versions:** [!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
 
 ## <a name="see-also"></a>Vea también
 

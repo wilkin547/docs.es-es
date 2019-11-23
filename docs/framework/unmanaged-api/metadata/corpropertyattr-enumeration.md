@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fb70d530af24798636972de0a4d6280dbcb8f1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781628"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450140"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr (Enumeración)
 Contiene valores que describen los metadatos de una propiedad.  
@@ -42,18 +40,18 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`prSpecialName`|Especifica que la propiedad es especial y que su nombre describe cómo.|  
-|`prReservedMask`|Reservado para uso interno por common language runtime.|  
-|`prRTSpecialName`|Especifica que los metadatos de common language runtime API internas deben comprobar la codificación del nombre de propiedad.|  
-|`prHasDefault`|Especifica que la propiedad tiene un valor predeterminado.|  
+|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
+|`prReservedMask`|Reserved for internal use by the common language runtime.|  
+|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
+|`prHasDefault`|Specifies that the property has a default value.|  
 |`prUnused`|Sin usar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

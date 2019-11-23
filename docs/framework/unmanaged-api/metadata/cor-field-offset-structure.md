@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fdfbb22d231d16be7757ff5df26a5a010928af54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 646952d5cd55b74081a0ba6171a6eee6b0138512
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767056"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443967"
 ---
-# <a name="corfieldoffset-structure"></a>COR_FIELD_OFFSET (Estructura)
+# <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET (Estructura)
 Almacena el desplazamiento, dentro de una clase, del campo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,18 +35,18 @@ typedef struct COR_FIELD_OFFSET {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`ridOfField`|Un `mdFieldDef` token de metadatos que representa el campo.|  
-|`ulOffset`|El desplazamiento del campo dentro de su clase.|  
+|`ridOfField`|An `mdFieldDef` metadata token that represents the field.|  
+|`ulOffset`|The field's offset within its class.|  
   
 ## <a name="remarks"></a>Comentarios  
- [GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) y [SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) métodos toman un parámetro de tipo `COR_FIELD_OFFSET`.  
+ [IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h, CorProf.idl  
+ **Header:** CorHdr.h, CorProf.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22321dc8f8c4b8d9c2ae50b061a2ba105f92ebb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746084"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446207"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData (Método)
-Devuelve los datos del servidor de origen para el módulo. El llamador debe liberar recursos usando `CoTaskMemFree`.  
+Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +35,16 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Parámetros  
  `pDataByteCount`  
- [out] Un puntero a un `ULONG32` que recibe el tamaño, en bytes, de los datos del servidor de origen.  
+ [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
   
  `ppData`  
- [out] Un puntero a la devuelta `pDataByteCount` valor.  
+ [out] A pointer to the returned `pDataByteCount` value.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

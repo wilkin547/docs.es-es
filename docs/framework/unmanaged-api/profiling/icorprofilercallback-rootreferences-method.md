@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbdf853b-d1a4-4828-8ef7-53d121d8e6ae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a68ea07c40c966422be6ebb663e62508032c2610
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c96cacf508ef5c056a1ff4469247393fdfb9e9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750446"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444475"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences (Método)
-Notifica al generador de perfiles con información acerca de las referencias de raíz después de la recolección de elementos.  
+Notifies the profiler with information about root references after garbage collection.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +35,22 @@ HRESULT RootReferences(
   
 ## <a name="parameters"></a>Parámetros  
  `cRootRefs`  
- [in] El número de referencias en el `rootRefIds` matriz.  
+ [in] The number of references in the `rootRefIds` array.  
   
  `rootRefIds`  
- [in] Una matriz de identificadores de objeto que hacen referencia a un objeto estático o un objeto en la pila.  
+ [in] An array of object IDs that reference either a static object or an object on the stack.  
   
 ## <a name="remarks"></a>Comentarios  
- Ambos `RootReferences` y [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) se llama para notificar al generador de perfiles. Los generadores de perfiles normalmente implementarán una u otra, pero no ambos, porque la información pasada `RootReferences2` es un superconjunto de las que pasa `RootReferences`.  
+ Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler. Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
   
- Es posible que el `rootRefIds` matriz que contendrá un objeto null. Por ejemplo, todas las referencias de objeto declaradas en la pila se tratan como raíces por el recolector de elementos no utilizados y siempre se notificará.  
+ It is possible for the `rootRefIds` array to contain a null object. For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.  
   
- Los identificadores de objeto devuelven por `RootReferences` no son válidos durante la devolución de llamada, porque podría ser la recolección de elementos en medio de mover objetos de direcciones antiguas a nuevas direcciones. Por lo tanto, los generadores de perfiles no deben intentar inspeccionar objetos durante un `RootReferences` llamar. Cuando [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) es llamado, todos los objetos se han movido a sus nuevas ubicaciones y se pueden inspeccionar de manera segura.  
+ The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. Therefore, profilers must not attempt to inspect objects during a `RootReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

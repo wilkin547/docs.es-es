@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777884"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446310"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces (Método)
-Obtiene los espacios de nombres que se utilizan dentro de este ámbito.  
+Gets the namespaces that are being used within this scope.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,16 +41,16 @@ HRESULT GetNamespaces(
  [in] Tamaño de la matriz `namespaces`.  
   
  `pcNameSpaces`  
- [out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out] Matriz que recibe los espacios de nombres.  
+ [out] The array that receives the namespaces.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 
