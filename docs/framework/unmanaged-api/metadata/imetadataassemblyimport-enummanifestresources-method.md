@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777958"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449558"
 ---
-# <a name="imetadataassemblyimportenummanifestresources-method"></a><span data-ttu-id="7e966-102">IMetaDataAssemblyImport::EnumManifestResources (Método)</span><span class="sxs-lookup"><span data-stu-id="7e966-102">IMetaDataAssemblyImport::EnumManifestResources Method</span></span>
-<span data-ttu-id="7e966-103">Obtiene un puntero a un enumerador para los recursos que se hace referencia en el manifiesto del ensamblado actual.</span><span class="sxs-lookup"><span data-stu-id="7e966-103">Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.</span></span>  
+# <a name="imetadataassemblyimportenummanifestresources-method"></a><span data-ttu-id="15344-102">IMetaDataAssemblyImport::EnumManifestResources (Método)</span><span class="sxs-lookup"><span data-stu-id="15344-102">IMetaDataAssemblyImport::EnumManifestResources Method</span></span>
+<span data-ttu-id="15344-103">Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="15344-103">Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e966-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7e966-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15344-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="15344-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumManifestResources (  
@@ -38,35 +36,35 @@ HRESULT EnumManifestResources (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e966-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7e966-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15344-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="15344-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="7e966-106">[in, out] Un puntero en el enumerador.</span><span class="sxs-lookup"><span data-stu-id="7e966-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="7e966-107">Esto debe ser un valor null valor cuando el `EnumManifestResources` se llama al método por primera vez.</span><span class="sxs-lookup"><span data-stu-id="7e966-107">This must be a null value when the `EnumManifestResources` method is called for the first time.</span></span>  
+ <span data-ttu-id="15344-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="15344-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="15344-107">This must be a null value when the `EnumManifestResources` method is called for the first time.</span><span class="sxs-lookup"><span data-stu-id="15344-107">This must be a null value when the `EnumManifestResources` method is called for the first time.</span></span>  
   
  `rManifestResources`  
- <span data-ttu-id="7e966-108">[out] Matriz utilizada para almacenar el `mdManifestResource` los tokens de metadatos.</span><span class="sxs-lookup"><span data-stu-id="7e966-108">[out] The array used to store the `mdManifestResource` metadata tokens.</span></span>  
+ <span data-ttu-id="15344-108">[out] The array used to store the `mdManifestResource` metadata tokens.</span><span class="sxs-lookup"><span data-stu-id="15344-108">[out] The array used to store the `mdManifestResource` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="7e966-109">[in] El número máximo de `mdManifestResource` tokens que se pueden colocar en `rManifestResources`.</span><span class="sxs-lookup"><span data-stu-id="7e966-109">[in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.</span></span>  
+ <span data-ttu-id="15344-109">[in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.</span><span class="sxs-lookup"><span data-stu-id="15344-109">[in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="7e966-110">[out] El número de `mdManifestResource` tokens realmente están colocan en `rManifestResources`.</span><span class="sxs-lookup"><span data-stu-id="7e966-110">[out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.</span></span>  
+ <span data-ttu-id="15344-110">[out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.</span><span class="sxs-lookup"><span data-stu-id="15344-110">[out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7e966-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7e966-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="15344-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="15344-111">Return Value</span></span>  
   
-|<span data-ttu-id="7e966-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7e966-112">HRESULT</span></span>|<span data-ttu-id="7e966-113">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="7e966-113">Description</span></span>|  
+|<span data-ttu-id="15344-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="15344-112">HRESULT</span></span>|<span data-ttu-id="15344-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="15344-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="7e966-114">`EnumManifestResources` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="7e966-114">`EnumManifestResources` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="7e966-115">No hay ningún token para enumerar.</span><span class="sxs-lookup"><span data-stu-id="7e966-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="7e966-116">En este caso, `pcTokens` se establece en cero.</span><span class="sxs-lookup"><span data-stu-id="7e966-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="15344-114">`EnumManifestResources` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="15344-114">`EnumManifestResources` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="15344-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="15344-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="15344-116">In this case, `pcTokens` is set to zero.</span><span class="sxs-lookup"><span data-stu-id="15344-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7e966-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7e966-117">Requirements</span></span>  
- <span data-ttu-id="7e966-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e966-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15344-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="15344-117">Requirements</span></span>  
+ <span data-ttu-id="15344-118">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15344-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e966-119">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="7e966-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="15344-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="15344-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7e966-120">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7e966-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="15344-120">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="15344-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7e966-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e966-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="15344-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15344-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e966-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="7e966-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15344-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="15344-122">See also</span></span>
 
-- [<span data-ttu-id="7e966-123">IMetaDataAssemblyImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7e966-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="15344-123">IMetaDataAssemblyImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="15344-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

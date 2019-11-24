@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763353"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448326"
 ---
-# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="aed32-102">ISymUnmanagedReader::GetDocuments (Método)</span><span class="sxs-lookup"><span data-stu-id="aed32-102">ISymUnmanagedReader::GetDocuments Method</span></span>
-<span data-ttu-id="aed32-103">Devuelve una matriz de todos los documentos definidos en el almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="aed32-103">Returns an array of all the documents defined in the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="d28a9-102">ISymUnmanagedReader::GetDocuments (Método)</span><span class="sxs-lookup"><span data-stu-id="d28a9-102">ISymUnmanagedReader::GetDocuments Method</span></span>
+<span data-ttu-id="d28a9-103">Returns an array of all the documents defined in the symbol store.</span><span class="sxs-lookup"><span data-stu-id="d28a9-103">Returns an array of all the documents defined in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aed32-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="aed32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d28a9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d28a9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocuments (  
@@ -37,22 +35,22 @@ HRESULT GetDocuments (
         length_is (*pcDocs)] ISymUnmanagedDocument *pDocs[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aed32-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="aed32-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d28a9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d28a9-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="aed32-106">[in] Tamaño de la matriz `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="aed32-106">[in] The size of the `pDocs` array.</span></span>  
+ <span data-ttu-id="d28a9-106">[in] Tamaño de la matriz `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="d28a9-106">[in] The size of the `pDocs` array.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="aed32-107">[out] Un puntero a una variable que recibe la longitud de la matriz.</span><span class="sxs-lookup"><span data-stu-id="aed32-107">[out] A pointer to a variable that receives the array length.</span></span>  
+ <span data-ttu-id="d28a9-107">[out] A pointer to a variable that receives the array length.</span><span class="sxs-lookup"><span data-stu-id="d28a9-107">[out] A pointer to a variable that receives the array length.</span></span>  
   
  `pDocs`  
- <span data-ttu-id="aed32-108">[out] Un puntero a una variable que recibe la matriz de documentos.</span><span class="sxs-lookup"><span data-stu-id="aed32-108">[out] A pointer to a variable that receives the document array.</span></span>  
+ <span data-ttu-id="d28a9-108">[out] A pointer to a variable that receives the document array.</span><span class="sxs-lookup"><span data-stu-id="d28a9-108">[out] A pointer to a variable that receives the document array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aed32-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="aed32-109">Return Value</span></span>  
- <span data-ttu-id="aed32-110">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="aed32-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d28a9-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="d28a9-109">Return Value</span></span>  
+ <span data-ttu-id="d28a9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d28a9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aed32-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="aed32-111">Requirements</span></span>  
- <span data-ttu-id="aed32-112">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="aed32-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d28a9-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d28a9-111">Requirements</span></span>  
+ <span data-ttu-id="d28a9-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d28a9-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aed32-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="aed32-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d28a9-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="d28a9-113">See also</span></span>
 
-- [<span data-ttu-id="aed32-114">ISymUnmanagedReader (interfaz)</span><span class="sxs-lookup"><span data-stu-id="aed32-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="d28a9-114">ISymUnmanagedReader (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d28a9-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

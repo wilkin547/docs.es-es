@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 96b3b270fb12aa451d9026435dd3d2c4c196b09c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23f6186b2561cbcd52db767616d986084f33860b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782026"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435932"
 ---
-# <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="f43c3-102">IMetaDataEmit::SaveToStream (Método)</span><span class="sxs-lookup"><span data-stu-id="f43c3-102">IMetaDataEmit::SaveToStream Method</span></span>
-<span data-ttu-id="f43c3-103">Guarda todos los metadatos en el ámbito actual a los especificados `IStream`.</span><span class="sxs-lookup"><span data-stu-id="f43c3-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  
+# <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="fecbe-102">IMetaDataEmit::SaveToStream (Método)</span><span class="sxs-lookup"><span data-stu-id="fecbe-102">IMetaDataEmit::SaveToStream Method</span></span>
+<span data-ttu-id="fecbe-103">Saves all metadata in the current scope to the specified `IStream`.</span><span class="sxs-lookup"><span data-stu-id="fecbe-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f43c3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f43c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fecbe-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fecbe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToStream (   
@@ -36,23 +34,23 @@ HRESULT SaveToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f43c3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f43c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fecbe-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fecbe-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="f43c3-106">[in] La secuencia de escritura para guardar en.</span><span class="sxs-lookup"><span data-stu-id="f43c3-106">[in] The writable stream to save to.</span></span>  
+ <span data-ttu-id="fecbe-106">[in] The writable stream to save to.</span><span class="sxs-lookup"><span data-stu-id="fecbe-106">[in] The writable stream to save to.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="f43c3-107">[in] Reservado.</span><span class="sxs-lookup"><span data-stu-id="f43c3-107">[in] Reserved.</span></span> <span data-ttu-id="f43c3-108">Debe ser cero.</span><span class="sxs-lookup"><span data-stu-id="f43c3-108">Must be zero.</span></span>  
+ <span data-ttu-id="fecbe-107">[in] Reservado.</span><span class="sxs-lookup"><span data-stu-id="fecbe-107">[in] Reserved.</span></span> <span data-ttu-id="fecbe-108">Must be zero.</span><span class="sxs-lookup"><span data-stu-id="fecbe-108">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f43c3-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f43c3-109">Requirements</span></span>  
- <span data-ttu-id="f43c3-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f43c3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fecbe-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fecbe-109">Requirements</span></span>  
+ <span data-ttu-id="fecbe-110">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fecbe-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f43c3-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="f43c3-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fecbe-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fecbe-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f43c3-112">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f43c3-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fecbe-112">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fecbe-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f43c3-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f43c3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fecbe-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fecbe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f43c3-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="f43c3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fecbe-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="fecbe-114">See also</span></span>
 
-- [<span data-ttu-id="f43c3-115">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f43c3-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="f43c3-116">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f43c3-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="fecbe-115">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="fecbe-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="fecbe-116">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="fecbe-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

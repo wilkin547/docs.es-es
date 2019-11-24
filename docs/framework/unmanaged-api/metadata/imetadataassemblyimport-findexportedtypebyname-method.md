@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777921"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449446"
 ---
-# <a name="imetadataassemblyimportfindexportedtypebyname-method"></a><span data-ttu-id="db2a9-102">IMetaDataAssemblyImport::FindExportedTypeByName (Método)</span><span class="sxs-lookup"><span data-stu-id="db2a9-102">IMetaDataAssemblyImport::FindExportedTypeByName Method</span></span>
-<span data-ttu-id="db2a9-103">Obtiene un puntero a un tipo exportado, dados su nombre y el tipo envolvente.</span><span class="sxs-lookup"><span data-stu-id="db2a9-103">Gets a pointer to an exported type, given its name and enclosing type.</span></span>  
+# <a name="imetadataassemblyimportfindexportedtypebyname-method"></a><span data-ttu-id="48a21-102">IMetaDataAssemblyImport::FindExportedTypeByName (Método)</span><span class="sxs-lookup"><span data-stu-id="48a21-102">IMetaDataAssemblyImport::FindExportedTypeByName Method</span></span>
+<span data-ttu-id="48a21-103">Gets a pointer to an exported type, given its name and enclosing type.</span><span class="sxs-lookup"><span data-stu-id="48a21-103">Gets a pointer to an exported type, given its name and enclosing type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db2a9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="db2a9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48a21-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="48a21-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
@@ -37,29 +35,29 @@ HRESULT FindExportedTypeByName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db2a9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="db2a9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="48a21-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="48a21-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="db2a9-106">[in] El nombre del tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="db2a9-106">[in] The name of the exported type.</span></span>  
+ <span data-ttu-id="48a21-106">[in] The name of the exported type.</span><span class="sxs-lookup"><span data-stu-id="48a21-106">[in] The name of the exported type.</span></span>  
   
  `mdtExportedType`  
- <span data-ttu-id="db2a9-107">[in] El token de metadatos para la clase envolvente del tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="db2a9-107">[in] The metadata token for the enclosing class of the exported type.</span></span> <span data-ttu-id="db2a9-108">Este valor es `mdExportedTypeNil` si exporta solicitado tipo no es un tipo anidado.</span><span class="sxs-lookup"><span data-stu-id="db2a9-108">This value is `mdExportedTypeNil` if the requested exported type is not a nested type.</span></span>  
+ <span data-ttu-id="48a21-107">[in] The metadata token for the enclosing class of the exported type.</span><span class="sxs-lookup"><span data-stu-id="48a21-107">[in] The metadata token for the enclosing class of the exported type.</span></span> <span data-ttu-id="48a21-108">This value is `mdExportedTypeNil` if the requested exported type is not a nested type.</span><span class="sxs-lookup"><span data-stu-id="48a21-108">This value is `mdExportedTypeNil` if the requested exported type is not a nested type.</span></span>  
   
  `ptkExportedType`  
- <span data-ttu-id="db2a9-109">[out] Un puntero a la `mdExportedType` token que representa el tipo exportado.</span><span class="sxs-lookup"><span data-stu-id="db2a9-109">[out] A pointer to the `mdExportedType` token that represents the exported type.</span></span>  
+ <span data-ttu-id="48a21-109">[out] A pointer to the `mdExportedType` token that represents the exported type.</span><span class="sxs-lookup"><span data-stu-id="48a21-109">[out] A pointer to the `mdExportedType` token that represents the exported type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db2a9-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="db2a9-110">Remarks</span></span>  
- <span data-ttu-id="db2a9-111">El `FindExportedTypeByName` método usa las reglas estándares empleadas por common language runtime para resolver las referencias.</span><span class="sxs-lookup"><span data-stu-id="db2a9-111">The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="48a21-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="48a21-110">Remarks</span></span>  
+ <span data-ttu-id="48a21-111">The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.</span><span class="sxs-lookup"><span data-stu-id="48a21-111">The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db2a9-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="db2a9-112">Requirements</span></span>  
- <span data-ttu-id="db2a9-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db2a9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="48a21-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="48a21-112">Requirements</span></span>  
+ <span data-ttu-id="48a21-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48a21-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db2a9-114">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="db2a9-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="48a21-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="48a21-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="db2a9-115">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="db2a9-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="48a21-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="48a21-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="db2a9-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db2a9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="48a21-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48a21-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db2a9-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="db2a9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48a21-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="48a21-117">See also</span></span>
 
-- [<span data-ttu-id="db2a9-118">IMetaDataAssemblyImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db2a9-118">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="db2a9-119">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="db2a9-119">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="48a21-118">IMetaDataAssemblyImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="48a21-118">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="48a21-119">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="48a21-119">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

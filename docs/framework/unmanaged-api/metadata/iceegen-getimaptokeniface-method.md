@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 847a5531-c37d-49cd-8844-9e54b5d86cf7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b42c7ed5614f5f436559ce4af462ff16896a89c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17fdddbcc9d49d5b5b1aed01b1dc2e4c0424e3f3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746144"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435019"
 ---
-# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="ac012-102">ICeeGen::GetIMapTokenIface (Método)</span><span class="sxs-lookup"><span data-stu-id="ac012-102">ICeeGen::GetIMapTokenIface Method</span></span>
-<span data-ttu-id="ac012-103">Obtiene la interfaz al que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="ac012-103">Gets the interface referenced by the specified token.</span></span>  
+# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="9a59d-102">ICeeGen::GetIMapTokenIface (Método)</span><span class="sxs-lookup"><span data-stu-id="9a59d-102">ICeeGen::GetIMapTokenIface Method</span></span>
+<span data-ttu-id="9a59d-103">Gets the interface referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="9a59d-103">Gets the interface referenced by the specified token.</span></span>  
   
- <span data-ttu-id="ac012-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="ac012-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="9a59d-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="9a59d-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac012-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ac012-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a59d-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9a59d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIMapTokenIface (  
@@ -37,19 +35,19 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac012-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ac012-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9a59d-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9a59d-106">Parameters</span></span>  
  `pIMapToken`  
- <span data-ttu-id="ac012-107">[in, out] El token de metadatos para la interfaz que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="ac012-107">[in, out] The metadata token for the interface to be returned.</span></span>  
+ <span data-ttu-id="9a59d-107">[in, out] The metadata token for the interface to be returned.</span><span class="sxs-lookup"><span data-stu-id="9a59d-107">[in, out] The metadata token for the interface to be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac012-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ac012-108">Requirements</span></span>  
- <span data-ttu-id="ac012-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac012-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a59d-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a59d-108">Requirements</span></span>  
+ <span data-ttu-id="9a59d-109">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a59d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac012-110">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="ac012-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9a59d-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a59d-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ac012-111">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ac012-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9a59d-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9a59d-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ac012-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac012-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9a59d-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a59d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac012-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="ac012-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a59d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a59d-113">See also</span></span>
 
-- [<span data-ttu-id="ac012-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ac012-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="9a59d-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9a59d-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
