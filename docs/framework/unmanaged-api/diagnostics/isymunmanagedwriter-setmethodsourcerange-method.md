@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776601"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427864"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange (Método)
-Especifica el principio y final reales de un método dentro de un archivo de origen. Utilice este método para especificar la extensión de un método con independencia de los puntos de secuencia que existan dentro del método.  
+Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +39,28 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>Parámetros  
  `startDoc`  
- [in] Un puntero al documento que contiene la posición inicial.  
+ [in] A pointer to the document containing the starting position.  
   
  `startLine`  
- [in] El número de línea inicial.  
+ [in] The starting line number.  
   
  `startColumn`  
- [in] La columna inicial.  
+ [in] The starting column.  
   
  `endDoc`  
- [in] Un puntero al documento que contiene la posición final.  
+ [in] A pointer to the document containing the ending position.  
   
  `endLine`  
- [in] El número de línea final.  
+ [in] The ending line number.  
   
  `endColumn`  
- [in] El número de columna final.  
+ [in] The ending column number.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

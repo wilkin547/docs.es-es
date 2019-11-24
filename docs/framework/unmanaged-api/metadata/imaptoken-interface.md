@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 4c5c4df0-43f3-4830-a01b-8d029806f2c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8521452d6cd39a6a89b8c83f208fedfc390c21fb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965772"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432226"
 ---
 # <a name="imaptoken-interface"></a>IMapToken (Interfaz)
-Proporciona funciones de asignación entre ensamblados.  
+Provides mapping capabilities between assemblies.  
   
 > [!NOTE]
-> El `IMapToken` cliente debe implementar la interfaz.  
+> The `IMapToken` interface must be implemented by the client.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[Map (método)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Asigna una relación entre dos ensamblados mediante firmas de metadatos.|  
+|[Map (método)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Maps a relationship between two assemblies using metadata signatures.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteca** Se utiliza como recurso en MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

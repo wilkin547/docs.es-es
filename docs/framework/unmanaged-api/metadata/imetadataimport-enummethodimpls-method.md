@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8be30e8c3b6bc7c03ede5f897f176e04153003b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781973"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427494"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls (Método)
 Enumera los tokens MethodBody y MethodDeclaration que representan métodos del tipo especificado.  
@@ -42,36 +40,36 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `td`  
- [in] Una definición de tipo de token para el tipo cuyas implementaciones de método para enumerar.  
+ [in] A TypeDef token for the type whose method implementations to enumerate.  
   
  `rMethodBody`  
- [out] La matriz para almacenar los tokens MethodBody.  
+ [out] The array to store the MethodBody tokens.  
   
  `rMethodDecl`  
- [out] La matriz para almacenar los tokens MethodDeclaration.  
+ [out] The array to store the MethodDeclaration tokens.  
   
  `cMax`  
- [in] El tamaño máximo de la `rMethodBody` y `rMethodDecl` matrices.  
+ [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
   
  `pcTokens`  
- [in] El número real de los métodos devueltos en `rMethodBody` y `rMethodDecl`.  
+ [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún token de método para enumerar. En ese caso, `pcTokens` es cero.|  
+|`S_OK`|`EnumMethodImpls` returned successfully.|  
+|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

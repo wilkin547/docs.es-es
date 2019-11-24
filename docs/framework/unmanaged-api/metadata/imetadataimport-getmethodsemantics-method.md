@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e018eaa-d60e-4a0b-a2c5-8c36bd09d905
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65bc4bc74e06368e6c7be9b742a8f311ecadc7fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0542c518b64764ad27aa00b8d595be1191059436
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782321"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437447"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics (Método)
-Obtiene marcadores que indican la relación entre el método al que hace referencia el token de MethodDef especificado y la propiedad emparejada y el evento al que hace referencia EventProp especificado (token).  
+Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,23 +37,23 @@ HRESULT GetMethodSemantics (
   
 ## <a name="parameters"></a>Parámetros  
  `mb`  
- [in] Un token de MethodDef que representa el método para obtener la información semántica de funciones.  
+ [in] A MethodDef token representing the method to get the semantic role information for.  
   
  `tkEventProp`  
- [in] Un token que representa la propiedad emparejada y eventos que se va a obtener la función del método.  
+ [in] A token representing the paired property and event for which to get the method's role.  
   
  `pdwSemanticsFlags`  
- [out] Un puntero a los marcadores semántica asociada. Este valor es una máscara de bits desde el [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeración.  
+ [out] A pointer to the associated semantics flags. This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.  
   
 ## <a name="remarks"></a>Comentarios  
- El [IMetaDataEmit:: DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) método establece las marcas de semántica de un método.  
+ The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

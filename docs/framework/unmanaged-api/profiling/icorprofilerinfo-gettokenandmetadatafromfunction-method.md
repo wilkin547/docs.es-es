@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b608b8818890bdb27a956a90c7987cf7c421304d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3e14230888e9bf846879d5728c2b20883fb8d53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772272"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438740"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction (Método)
-Obtiene el token de metadatos y una instancia de la interfaz de metadatos que puede utilizarse con el token para la función especificada.  
+Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +37,21 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función que se va a obtener el token de metadatos y la interfaz de metadatos.  
+ [in] The ID of the function for which to get the metadata token and metadata interface.  
   
  `riid`  
- [in] El identificador de referencia de la interfaz de metadatos para obtener la instancia de.  
+ [in] The reference ID of the metadata interface to get the instance of.  
   
  `ppImport`  
- [out] Un puntero a la dirección de la instancia de la interfaz de metadatos que puede utilizarse con el token para la función especificada.  
+ [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
   
  `pToken`  
- [out] Un puntero al token de metadatos para la función especificada.  
+ [out] A pointer to the metadata token for the specified function.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

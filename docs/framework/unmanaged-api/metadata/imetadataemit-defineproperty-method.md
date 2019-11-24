@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777506"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431524"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty (Método)
-Crea una definición de propiedad para el tipo especificado, con la especificación `get` y `set` los descriptores de acceso de método y obtiene un token para esa definición de propiedad.  
+Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,47 +46,47 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [in] El token para la clase o interfaz en el que se está definiendo la propiedad.  
+ [in] The token for class or interface on which the property is being defined.  
   
  `szProperty`  
- [in] El nombre de la propiedad.  
+ [in] The name of the property.  
   
  `dwPropFlags`  
- [in] Las marcas de propiedad.  
+ [in] The property flags.  
   
  `pvSig`  
- [in] La firma de la propiedad.  
+ [in] The property signature.  
   
  `cbSig`  
- [in] El recuento de bytes en `pvSig`.  
+ [in] The count of bytes in `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] El tipo de valor predeterminado de la propiedad.  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in] El valor predeterminado para la propiedad.  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] El recuento de (Unicode) los caracteres de `pValue`.  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in] El método que establece el valor de propiedad.  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in] El método que obtiene el valor de propiedad.  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in] Una matriz de otros métodos asociados a la propiedad. Finalice la matriz con un `mdTokenNil`.  
+ [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
   
  `pmdProp`  
- [out] El `mdProperty` token asignado.  
+ [out] The `mdProperty` token assigned.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

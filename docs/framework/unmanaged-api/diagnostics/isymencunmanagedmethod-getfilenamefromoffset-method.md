@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bfdc9d58a86bb4cf945f0c8106bcfc00f3743e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760312"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448655"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset (Método)
-Obtiene el nombre de archivo de la línea asociada con un desplazamiento.  
+Gets the file name for the line associated with an offset.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,22 +38,22 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `dwOffset`  
- [in] Un `ULONG32` que contiene el desplazamiento.  
+ [in] A `ULONG32` that contains the offset.  
   
  `cchName`  
- [in] Un `ULONG32` que indica el tamaño de la `szName` búfer.  
+ [in] A `ULONG32` that indicates the size of the `szName` buffer.  
   
  `pcchName`  
- [out] Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los nombres de archivo.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
   
  `szName`  
- [out] Búfer que contiene los nombres de archivo.  
+ [out] The buffer that contains the file names.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3adc29f73a3ab4a43a399b024a6c0187f02b5851
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436386"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString (Método)
-Emite la cadena especificada en la base de código.  
+Emits the specified string into the code base.  
   
- Este método está obsoleto y no debe usarse.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,17 +38,17 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>Parámetros  
  `lpString`  
- [in] Cadena que se emita.  
+ [in] The string to emit.  
   
  `RVA`  
- [out] La dirección virtual relativa de la cadena emitida.  
+ [out] The relative virtual address of the emitted string.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

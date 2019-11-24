@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3fd3a34c-d176-46e9-9996-fb1646cff9b0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 995c7edf99c917b8bcdc1d51dcc0bf50868e4f35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50f41bb55b7c3dc45646a465032074ce90be0abf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777055"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444510"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint (Método)
-Devuelve el método que se especificó como el punto de entrada de usuario para el módulo, si existe. Por ejemplo, este método podría ser el método del usuario principal en lugar de código auxiliar generado por el compilador antes del método principal.  
+Returns the method that was specified as the user entry point for the module, if any. For example, this method could be the user's main method rather than compiler-generated stubs before the main method.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +34,13 @@ HRESULT GetUserEntryPoint (
   
 ## <a name="parameters"></a>Parámetros  
  `pToken`  
- [out] Un puntero a una variable que recibe el punto de entrada.  
+ [out] A pointer to a variable that receives the entry point.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777552"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431689"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam (Método)
-Crea una definición de parámetro con la firma especificada para el método al que hace referencia el token especificado y obtiene un token para esa definición de parámetro.  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parámetros  
  `md`  
- [in] El token para el método cuyo parámetro se está definiendo.  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in] El número de secuencia del parámetro.  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in] El nombre del parámetro en Unicode.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Marcas para el parámetro. Se trata de una máscara de bits de `CorParamAttr` valores.  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** para el valor constante.  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in] El valor constante para el parámetro.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] El tamaño, en caracteres Unicode, de `pValue`.  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out] El `mdParamDef` token asignado.  
+ [out] The `mdParamDef` token assigned.  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores de secuencia en `ulParamSeq` comienzan por 1 para los parámetros. Un valor devuelto tiene un número de secuencia de 0.  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704d19f1-bdef-4745-af8c-6476eb246fb3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7dd59c1e0e8b28c557910da3fd9c6489370cc62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0adf4f91e1bc7bfb72f634cb3bf038710198b74f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778955"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437143"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps (Método)
-Obtiene la definición de tipo (token) para el elemento primario <xref:System.Type> del elemento especificado de tipo anidado.  
+Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>Parámetros  
  `tdNestedClass`  
- [in] Una definición de tipo token que representa el <xref:System.Type> para devolver la clase primaria símbolo (token).  
+ [in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.  
   
  `ptdEnclosingClass`  
- [out] Un puntero al token de TypeDef para el <xref:System.Type> que `tdNestedClass` está anidado en.  
+ [out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

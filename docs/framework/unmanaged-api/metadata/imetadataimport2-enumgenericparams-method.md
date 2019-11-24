@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d0377ade5265bba9b313d6ed2e91c446497fac6e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855715"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428309"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams (Método)
-Obtiene un enumerador para una matriz de tokens de parámetro genéricos asociados al token de TypeDef o MethodDef especificado.  
+Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,33 +39,33 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Puntero al enumerador.  
+ [in, out] A pointer to the enumerator.  
   
  `tk`  
- de El token TypeDef o MethodDef cuyos parámetros genéricos se van a enumerar.  
+ [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
   
  `rGenericParams`  
- enuncia Matriz de parámetros genéricos que se va a enumerar.  
+ [out] The array of generic parameters to enumerate.  
   
  `cMax`  
- de Número máximo solicitado de tokens que se van a `rGenericParams`colocar en.  
+ [in] The requested maximum number of tokens to place in `rGenericParams`.  
   
  `pcGenericParams`  
- enuncia Número devuelto de tokens colocados en `rGenericParams`.  
+ [out] The returned number of tokens placed in `rGenericParams`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams`se devolvió correctamente.|  
-|`S_FALSE`|`phEnum`no tiene elementos de miembro. En este caso, `pcGenericParams` se establece en 0 (cero).|  
+|`S_OK`|`EnumGenericParams` returned successfully.|  
+|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteca** Se utiliza como recurso en MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

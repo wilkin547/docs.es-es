@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4dcc575-3ac8-4453-9be1-2b24f47363d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 11dc050e2fe16a64db4ac95bb1386e2d90535e81
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 951fc10a4560e0b4e256312017cdcd9a389f17f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895028"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427815"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint (Método)
-Especifica el método definido por el usuario que es el punto de entrada de este módulo. Por ejemplo, este punto de entrada podría ser el método Main del usuario en lugar de los códigos auxiliares generados por el compilador antes de Main.  
+Specifies the user-defined method that is the entry point for this module. For example, this entry point could be the user's main method instead of compiler-generated stubs before main.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +34,13 @@ HRESULT SetUserEntryPoint(
   
 ## <a name="parameters"></a>Parámetros  
  `entryMethod`  
- de Símbolo (token) de metadatos para el método que es el punto de entrada del usuario.  
+ [in] The metadata token for the method that is the user entry point.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym. idl, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

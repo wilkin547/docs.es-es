@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7ece16d8dcdc685db960a485cd19261f6b9f2fbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afd60cdf566bea459816ee890d44cc09258de516
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757595"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435944"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save (Método)
-Guarda todos los metadatos en el ámbito actual en el archivo en la dirección especificada.  
+Saves all metadata in the current scope to the file at the specified address.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Parámetros  
  `wzFile`  
- [in] El nombre del archivo que se guarde en. Si este valor es null, la copia en memoria se guardará a la última ubicación que se usó.  
+ [in] The name of the file to save to. If this value is null, the in-memory copy will be saved to the last location that was used.  
   
  `dwSaveFlags`  
- [in] Reservado. Debe ser cero.  
+ [in] Reservado. Must be zero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

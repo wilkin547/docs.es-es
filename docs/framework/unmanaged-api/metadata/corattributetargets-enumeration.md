@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780921"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443870"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets (Enumeración)
 Especifica los elementos de aplicación en los que se permite aplicar un atributo.  
@@ -62,34 +60,34 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`catAssembly`|Atributo puede aplicarse a un ensamblado.|  
-|`catModule`|Atributo puede aplicarse a un módulo ejecutable portable (.dll o .exe).|  
-|`catClass`|Atributo puede aplicarse a una clase.|  
-|`catStruct`|Atributo puede aplicarse a una estructura; es decir, un valor de tipo.|  
-|`catEnum`|Atributo puede aplicarse a una enumeración.|  
-|`catConstructor`|Atributo puede aplicarse a un constructor.|  
-|`catMethod`|Atributo puede aplicarse a un método.|  
-|`catProperty`|Atributo puede aplicarse a una propiedad.|  
-|`catField`|Atributo puede aplicarse a un campo.|  
-|`catEvent`|Atributo puede aplicarse a un evento.|  
-|`catInterface`|Atributo puede aplicarse a una interfaz.|  
-|`catParameter`|Atributo puede aplicarse a un parámetro.|  
-|`catDelegate`|Atributo puede aplicarse a un delegado.|  
-|`catGenericParameter`|Atributo puede aplicarse a un parámetro genérico.|  
-|`catAll`|Atributo puede aplicarse a cualquier elemento de la aplicación.|  
-|`catClassMembers`|Atributo puede aplicarse a un miembro de una clase.|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
+|`catAll`|Attribute can be applied to any application element.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `CorAttributeTargets` valores de enumeración se pueden combinar con una operación OR bit a bit para obtener la combinación preferida.  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- El `CorAttributeTargets` es semejante a los recursos administrados <xref:System.AttributeTargets?displayProperty=nameWithType> enumeración.  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

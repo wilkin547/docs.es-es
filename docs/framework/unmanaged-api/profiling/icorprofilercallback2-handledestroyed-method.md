@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab4f4bbd-40c7-4667-bfde-60cd73803110
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3cb8783ba1427ecc2396abb32f350664ddf83d19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad1eb765c435244389a671c74026539fa3590cf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779319"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439754"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed (Método)
-Notifica al generador de perfiles de código que se ha destruido un identificador de la colección de elementos no utilizados.  
+Notifies the code profiler that a garbage collection handle has been destroyed.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +34,12 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>Parámetros  
  `handleId`  
- [in] El identificador del controlador de la colección de elementos no utilizados.  
+ [in] The ID of the handle for the garbage collection.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

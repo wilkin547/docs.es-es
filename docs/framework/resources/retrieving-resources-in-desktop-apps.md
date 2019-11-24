@@ -18,15 +18,16 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 3c14e251b6ca88fb864952c3411b5ea0c46da302
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129940"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445743"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
-Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  
+
+Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperar recursos de ensamblados  
@@ -205,4 +206,4 @@ csc Example.cs
 - [Recursos de aplicaciones de escritorio](index.md)
 - [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
-- [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+- [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772254"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438709"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass (Método)
-Determina si la clase especificada es una clase de matriz.  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,24 +37,24 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] El identificador de la clase se va a examinar.  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out] Un puntero a un valor de la enumeración CorElementType que indica el tipo de los elementos de matriz.  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out] Un puntero al identificador de clase de los elementos de matriz, cuando esté disponible.  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out] Un puntero a un entero que indica el rango (es decir, el número de dimensiones) de la matriz.  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la clase especificada es una clase de matriz, el `IsArrayClass` método devuelve S_OK HRESULT y valores para cualquier parámetro de salida distinto de null. En caso contrario, devuelve S_FALSE.  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

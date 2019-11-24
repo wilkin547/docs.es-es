@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780648"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439066"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread (Método)
-El identificador de un subproceso se asigna a un identificador de subproceso de Win32.  
+Maps the ID of a thread to a Win32 thread handle.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,18 +35,18 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] El identificador de subproceso para asignarse.  
+ [in] The thread ID to be mapped.  
   
  `phThread`  
- [out] Un puntero a un identificador de subproceso de Win32.  
+ [out] A pointer to a Win32 thread handle.  
   
 ## <a name="remarks"></a>Comentarios  
- El generador de perfiles debe llamar a Win32 `DuplicateHandle` función en el identificador antes de usarlo.  
+ The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

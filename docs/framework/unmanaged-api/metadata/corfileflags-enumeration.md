@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c6ac7dabd2dfcc7829fd42389c0a6c261fe456d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c315e2ae2753b59b4e277764d27c3fb3388b515c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781870"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445421"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags (Enumeración)
-Contiene valores que describen el tipo de archivo definido en una llamada a [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,15 +37,15 @@ typedef enum CorFileFlags {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Indica que el archivo no es un archivo de recursos.|  
-|`ffContainsNoMetaData`|Indica que el archivo, posiblemente un archivo de recursos, no contiene metadatos.|  
+|`ffContainsMetaData`|Indicates that the file is not a resource file.|  
+|`ffContainsNoMetaData`|Indicates that the file, possibly a resource file, does not contain metadata.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894469"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427844"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute (Método)
-Define un atributo personalizado basado en su nombre. Estos atributos se guardan en el almacén de símbolos, a diferencia de los atributos personalizados de metadatos.  
+Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +37,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parámetros  
  `parent`  
- de Token de metadatos para el que se define el atributo.  
+ [in] The metadata token for which the attribute is being defined.  
   
  `name`  
- de Un puntero a un `WCHAR` que contiene el nombre del atributo.  
+ [in] A pointer to a `WCHAR` that contains the attribute name.  
   
  `cData`  
- de Que indica el tamaño de la `data` matriz. `ULONG32`  
+ [in] A `ULONG32` that indicates the size of the `data` array.  
   
  `data`  
- de Valor del atributo.  
+ [in] The attribute value.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym. idl, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

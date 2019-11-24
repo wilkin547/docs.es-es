@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787468"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438409"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder (Método)
-Agrega un reenviador de tipos para un tipo anidado a la tabla de tipos del ensamblado especificado.  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado del que se va a exportar.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Token de archivo o ID. de ensamblado del archivo que define el tipo.  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- Token para el tipo.  
+ Token for the type.  
   
  `ParentType`  
- Token del tipo primario.  
+ Token of parent type.  
   
  `pszTypename`  
- Nombre completo del tipo que se va a exportar.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`marcas como `tdPublic` o `tdNested`.  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- Recibe el token del tipo de exportación. Esto solo es necesario para emitir tipos anidados.  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

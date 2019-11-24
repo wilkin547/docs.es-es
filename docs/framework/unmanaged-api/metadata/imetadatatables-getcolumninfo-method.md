@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774258"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436094"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo (Método)
-Obtiene datos sobre la columna especificada de la tabla especificada.  
+Gets data about the specified column in the specified table.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- de Índice de la tabla deseada.  
+ [in] The index of the desired table.  
   
  `ixCol`  
- de Índice de la columna deseada.  
+ [in] The index of the desired column.  
   
  `poCol`  
- enuncia Puntero al desplazamiento de la columna de la fila.  
+ [out] A pointer to the offset of the column in the row.  
   
  `pcbCol`  
- enuncia Puntero al tamaño, en bytes, de la columna.  
+ [out] A pointer to the size, in bytes, of the column.  
   
  `pType`  
- enuncia Puntero al tipo de los valores de la columna.  
+ [out] A pointer to the type of the values in the column.  
   
  `ppName`  
- enuncia Un puntero a un puntero al nombre de la columna.  
+ [out] A pointer to a pointer to the column name.  
  
 ## <a name="remarks"></a>Comentarios
 
-El tipo de columna devuelto está dentro de un intervalo de valores:
+The returned column type falls within a range of values:
 
-| pType                    | Descripción   | Función auxiliar                   |
+| pType                    | Descripción   | Helper function                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)   | Libra           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Token codificado | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT` (96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
 | `iLONG` (98)             | Int32         | **IsFixedType**                   |
@@ -78,21 +76,21 @@ El tipo de columna devuelto está dentro de un intervalo de valores:
 | `iGUID` (102)            | GUID          | **IsHeapType**                    |
 | `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-Los valores que se almacenan en el *montón* (es decir, `IsHeapType == true`) se pueden leer mediante:
+Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
 
-- `iSTRING`: **IMetadataTables. GetString**
-- `iGUID`: **IMetadataTables. GetGUID**
-- `iBLOB`: **IMetadataTables. GetBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> Para usar las constantes definidas en la tabla anterior, incluya la Directiva `#define _DEFINE_META_DATA_META_CONSTANTS` proporciona el archivo de encabezado *Cor. h* .
+> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
 
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

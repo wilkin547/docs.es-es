@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9466df3f6413f86eb8558f0037b96c254b2a2e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777342"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428016"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable (Método)
-Define una única variable en el ámbito léxico actual. Este método puede llamarse varias veces para una variable del mismo nombre que tenga varias ubicaciones en un ámbito. En este caso, sin embargo, los valores de la `startOffset` y `endOffset` parámetros no deben superponerse.  
+Define una única variable en el ámbito léxico actual. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,40 +43,40 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- [in] Un puntero a un `WCHAR` que define el nombre de variable local.  
+ [in] A pointer to a `WCHAR` that defines the local variable name.  
   
  `attributes`  
- [in] Atributos de la variable locales.  
+ [in] The local variable attributes.  
   
  `cSig`  
- [in] Un `ULONG32` que indica el tamaño, en bytes, de la `signature` búfer.  
+ [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
   
  `signature`  
- [in] La firma de variable local.  
+ [in] The local variable signature.  
   
  `addrKind`  
- [in] El tipo de dirección.  
+ [in] The address type.  
   
  `addr1`  
- [in] La primera dirección de la especificación de parámetro.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] La segunda dirección de la especificación de parámetro.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Tercera dirección de la especificación de parámetro.  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in] El desplazamiento inicial de la variable. Este parámetro es opcional. Si es 0, se omite este parámetro y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable está comprendida dentro de los desplazamientos del ámbito actual.  
+ [in] The start offset for the variable. Este parámetro es opcional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in] Desplazamiento final de la variable. Este parámetro es opcional. Si es 0, se omite este parámetro y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable está comprendida dentro de los desplazamientos del ámbito actual.  
+ [in] The end offset for the variable. Este parámetro es opcional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

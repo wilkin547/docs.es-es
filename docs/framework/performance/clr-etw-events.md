@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6798a83973f94f07a2a215d5208aa55f0f9ae929
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046748"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428168"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW de CLR
 Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW). Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md). CLR tiene dos proveedores para los eventos:  
@@ -63,8 +63,8 @@ Los temas de esta sección describen los eventos de seguimiento de eventos para 
   
 ## <a name="see-also"></a>Vea también
 
-- [Mejorar la depuración y el ajuste del rendimiento con ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
-- [Blog de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Controlar el registro de .NET Framework](controlling-logging.md)
 - [Proveedores ETW de CLR](clr-etw-providers.md)
 - [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md)

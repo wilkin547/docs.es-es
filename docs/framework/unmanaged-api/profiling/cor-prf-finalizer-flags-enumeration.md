@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a66b2b94765c3d59327e500f1e208dc93cd8e231
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e718d05f033cc46fa460a81f6816a13ec32476d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781933"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428348"
 ---
-# <a name="corprffinalizerflags-enumeration"></a>COR_PRF_FINALIZER_FLAGS (Enumeración)
+# <a name="cor_prf_finalizer_flags-enumeration"></a>COR_PRF_FINALIZER_FLAGS (Enumeración)
 Describe el finalizador de un objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,17 +34,17 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|El finalizador es crítico.|  
+|`COR_PRF_FINALIZER_CRITICAL`|The finalizer is critical.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `COR_PRF_FINALIZER_FLAGS` enumeración la utiliza el [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) método para describir el finalizador de un objeto.  
+ The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

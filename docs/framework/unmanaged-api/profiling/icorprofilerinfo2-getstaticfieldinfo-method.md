@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 36cb8d5865cdc4c1c8e34671010ede25d531bacf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e74bab058adda759db1fb549022608eedfef5d80
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782257"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432973"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo (Método)
-Obtiene un valor que indica el tipo de estática que se aplica al campo especificado.  
+Gets a value that indicates the kind of static that applies to the specified field.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,23 +36,23 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Parámetros  
  `classId`  
- [in] El identificador de la clase donde se define el campo estático.  
+ [in] The ID of the class in which the static field is defined.  
   
  `fieldToken`  
- [in] El token de metadatos para el campo estático.  
+ [in] The metadata token for the static field.  
   
  `pFieldInfo`  
- [out] Un puntero a un valor de la [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeración que indica si el campo especificado es estático y, si es así, el tipo de estática que se aplica al campo.  
+ [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta información puede utilizarse para determinar qué función se debe llamar para obtener la dirección del campo estático.  
+ This information can be used to determine which function to call to get the address of the static field.  
   
- El código del generador de perfiles debería comprobar los metadatos de un campo estático para asegurarse de que realmente tiene una dirección. Literales estáticos (es decir, constantes) sólo existen en los metadatos y no tiene una dirección.  
+ The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

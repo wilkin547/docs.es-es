@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6505995b128e31ed2a18881d31afa0bb1bfe150e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779426"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431876"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps (Método)
 Modifica la estructura de metadatos `File` especificada.  
@@ -40,26 +38,26 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parámetros  
  `file`  
- [in] El token de metadatos que especifica el `File` estructura de metadatos que se puede modificar.  
+ [in] The metadata token that specifies the `File` metadata structure to be modified.  
   
  `pbHashValue`  
- [in] Un puntero a los hash de los datos asociados con el archivo.  
+ [in] A pointer to the hash data associated with the file.  
   
  `cbHashValue`  
- [in] El tamaño en bytes de `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Una combinación bit a bit de [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores que especifican distintos atributos del archivo.  
+ [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
   
 ## <a name="remarks"></a>Comentarios  
- Para crear un `File` estructura de los metadatos, use el [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) método.  
+ To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

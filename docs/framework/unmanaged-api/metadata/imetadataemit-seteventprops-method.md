@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737183"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450319"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps (Método)
-Establece o actualiza la característica especificada de un evento definido por una llamada anterior a [DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,32 +41,32 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parámetros  
  `ev`  
- [in] El token de evento.  
+ [in] The event token.  
   
  `dwEventFlags`  
- [in] Marcas de evento. Se trata de una máscara de bits de `CorEventAttr` valores.  
+ [in] Event flags. This is a bitmask of `CorEventAttr` values.  
   
  `tkEventType`  
- [in] El token para la clase de eventos. Puede ser un `mdTypeDef` o un `mdTypeRef` token.  
+ [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `mdAddOn`  
- [in] El método utilizado para suscribirse al evento, o null.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] El método utilizado para cancelar la suscripción al evento, o null.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] El método utilizado (por una clase derivada) para generar el evento.  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] Una matriz de tokens para otros métodos asociados al evento. Debe ser el último elemento de la matriz `mdMethodDefNil`.  
+ [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
