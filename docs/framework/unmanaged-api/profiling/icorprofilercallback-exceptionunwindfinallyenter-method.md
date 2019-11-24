@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3b25ae535bfe50d216ca64a2e8163c0e6df58535
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f16add7b5a9d18e0c1eb33209b609e9bf7e18b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755964"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445311"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter (Método)
-Notifica al generador de perfiles que la fase de desenredo de excepciones está entrando en control de un `finally` cláusula contenida en la función especificada.  
+Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,17 +34,17 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función que contiene el `finally` cláusula.  
+ [in] The ID of the function that contains the `finally` clause.  
   
 ## <a name="remarks"></a>Comentarios  
- El generador de perfiles no debe bloquearse en su implementación de este método porque la pila no puede estar en un estado que permita la recolección de elementos y, por lo tanto, no se puede habilitar la recolección preferente. Si el generador de perfiles se bloquea aquí y se intenta realizar la recolección de elementos, el tiempo de ejecución se bloqueará hasta que devuelve esta devolución de llamada.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Implementación del generador de perfiles de este método no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

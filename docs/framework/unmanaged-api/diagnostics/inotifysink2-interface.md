@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940405"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440968"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 (Interfaz)
-Declara los métodos de notificación del receptor.  
+Declares methods for sink notification.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[OnSyncCallEnter (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Se invoca cuando se entra en una llamada.|  
-|[OnSyncCallExit (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Se invoca cuando se sale de una llamada.|  
-|[OnSyncCallOut (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Se invoca cuando una llamada está inactiva.|  
-|[OnSyncCallReturn (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Se invoca cuando se devuelve una llamada.|  
+|[OnSyncCallEnter (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Gets invoked when entering a call.|  
+|[OnSyncCallExit (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Gets invoked when exiting a call.|  
+|[OnSyncCallOut (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Gets invoked when a call is out.|  
+|[OnSyncCallReturn (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Gets invoked when a call returns.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Vea también
 

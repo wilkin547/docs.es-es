@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26c9c85f22f9d8201214dc56f32718e055a97801
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c5b8f18424ba54d9e8e14ba0a518a89e0d54796
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779265"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439468"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete (Método)
-Lo llama common language runtime (CLR) para indicar que el generador de perfiles puede llamar ahora a la [ICorProfilerInfo3:: EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) y [ICorProfilerInfo3:: EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) métodos de puesta al día.  
+Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch-up methods.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +32,7 @@ HRESULT ProfilerAttachComplete ();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `ProfilerAttachComplete` devolución de llamada se emite después el [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) se llama al método. Indica que:  
+ The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method is called. Indica que:  
   
 - Las devoluciones de llamada que solicitó el generador de perfiles en `InitializeForAttach` se han activado.  
   
@@ -43,9 +41,9 @@ HRESULT ProfilerAttachComplete ();
  CLR pasa por alto el valor devuelto por esta devolución de llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

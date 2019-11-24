@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1a95b3078f4a592e28e0deb9869fc520cde811d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 047516574595f9ffcd61360f51823da73a2f9733
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439519"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach (Método)
 Lo llama Common Language Runtime (CLR) para dar al generador de perfiles una oportunidad de inicializar su estado después de una operación de adjuntar.  
@@ -41,7 +39,7 @@ HRESULT InitializeForAttach(
  [in] Puntero de interfaz para la interfaz `ICorProfilerInfo*`.  
   
  `pvClientData`  
- [in] Pasa un puntero a los datos a la [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método en su `pvClientData` parámetro. Si este parámetro es nulo, `cbClientData` será 0 (cero). CLR libera esta memoria cuando vuelve de `InitializeForAttach`.  
+ [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. Si este parámetro es nulo, `cbClientData` será 0 (cero). CLR libera esta memoria cuando vuelve de `InitializeForAttach`.  
   
  `cbClientData`  
  [in] Tamaño, en bytes, de los datos a los que señala `pvClientData`.  
@@ -50,9 +48,9 @@ HRESULT InitializeForAttach(
  CLR llama a `InitializeForAttach` para dar al generador de perfiles una oportunidad de solicitar devoluciones de llamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

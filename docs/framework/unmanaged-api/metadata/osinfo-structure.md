@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89111bf7eb03d20c2010c7a20c4cd055c2a021e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761595"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430732"
 ---
 # <a name="osinfo-structure"></a>OSINFO (Estructura)
-Contiene detalles sobre el sistema operativo para un ensamblado o módulo.  
+Contains details about the operating system for an assembly or module.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +36,21 @@ typedef struct {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`dwOSPlatformId`|Uno de los valores de identificador definidos por la función de la plataforma Microsoft Windows `GetVersionEx`. Se admiten los siguientes valores:<br /><br /> -VER_PLATFORM_WIN32s, o 0 x 0000, para especificar Microsoft Windows 3.1.<br />-VER_PLATFORM_WIN32_WINDOWS, o 0 x 0001, para especificar Windows 95, Windows 98 o sistemas operativos que se hereda de ellos.<br />-VER_PLATFORM_WIN32_NT, o 0 x 0010, para especificar Windows NT o sistemas operativos que se hereda de él.|  
-|`dwOSMajorVersion`|La versión principal del sistema operativo o un valor NULL para indicar cualquier versión.|  
-|`dwOSMinorVersion`|La versión secundaria del sistema operativo o un valor NULL para indicar cualquier versión.|  
+|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
+|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
+|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
   
 ## <a name="remarks"></a>Comentarios  
- `OSINFO` se basa en el `OSVERSIONINFOEX` estructura que es utilizado en las llamadas a la función de la plataforma Microsoft Windows `GetVersionEx`. Esta estructura se usa por ASSEMBLYMETADATA (estructura) para indicar su compatibilidad de sistema operativo.  
+ `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

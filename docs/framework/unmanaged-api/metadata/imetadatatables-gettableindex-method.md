@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6ec3800-e0d9-4387-afb8-ddc0b818114c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 195642d9186016417db310402b664a1043d09e71
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48c38288e960ff2e1fe21f30b6eceae8eeaac2da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781377"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434856"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex (Método)
-Obtiene el índice de la tabla al que hace referencia el token especificado.  
+Gets the index for the table referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +36,20 @@ HRESULT GetTableIndex (
   
 ## <a name="parameters"></a>Parámetros  
  `token`  
- [in] El token que hace referencia a la tabla.  
+ [in] The token that references the table.  
   
  `pixTbl`  
- [out] Un puntero al índice devuelto para la tabla que se hace referencia.  
+ [out] A pointer to the returned index for the referenced table.  
   
 ## <a name="remarks"></a>Comentarios  
- No se recomienda el uso de este método, porque no devuelve resultados coherentes. Para obtener información acerca de la tabla GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente "Partition II: Definición de metadatos y la semántica". La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) (Estándares de ECMA C# y Common Language Infrastructure) en MSDN y [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) (Estándar ECMA-335: Common Language Infrastructure [CLI]) en el sitio web de Ecma International.  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) (Estándares de ECMA C# y Common Language Infrastructure) en MSDN y [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) (Estándar ECMA-335: Common Language Infrastructure [CLI]) en el sitio web de Ecma International.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

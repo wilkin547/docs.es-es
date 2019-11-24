@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12f16b9bc87ea65e2699ec902d717b08d3155b95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 080777b656e1c3df1cc4170fe1dff6de6ddb41fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756179"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445393"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound (Método)
-Notifica al generador de perfiles que la fase de búsqueda del control de excepciones encuentra un controlador para la excepción que se produjo.  
+Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +34,12 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función que contiene el controlador de excepciones.  
+ [in] The ID of the function that contains the exception handler.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4f639f9794002748e1019821514c546e4f4429f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed2553f2d971deefd85f731dd39f383cd096c5b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746870"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439816"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted (Método)
-Notifica al generador de perfiles de código que ha iniciado la recopilación de elementos no utilizados.  
+Notifies the code profiler that garbage collection has started.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,25 +36,25 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>Parámetros  
  `cGenerations`  
- [in] El número total de entradas en el `generationCollected` matriz.  
+ [in] The total number of entries in the `generationCollected` array.  
   
  `generationCollected`  
- [in] Una matriz de valores booleanos, que son `true` si la generación que se corresponde con el índice de matriz está siendo recopilados por esta colección de elementos no utilizados; en caso contrario, `false`.  
+ [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
   
- La matriz se indiza por un valor de la [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeración, que indica la generación.  
+ The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
   
  `reason`  
- [in] Un valor de la [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) indujo la enumeración que indica la razón por la recolección de elementos.  
+ [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
   
 ## <a name="remarks"></a>Comentarios  
- Todas las devoluciones de llamada que pertenecen a esta colección de elementos no utilizados se producirán entre el `GarbageCollectionStarted` devolución de llamada y el correspondiente [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) devolución de llamada. No es necesitan que estas devoluciones de llamada se produzca en el mismo subproceso.  
+ All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
   
- Es seguro para el generador de perfiles inspeccionar los objetos en sus ubicaciones originales durante la `GarbageCollectionStarted` devolución de llamada. El recolector de elementos no utilizados se iniciará el movimiento de objetos después de la devolución de `GarbageCollectionStarted`. Después de que el generador de perfiles ha devuelto desde esta devolución de llamada, el generador de perfiles debe tener en cuenta todos los identificadores de objeto son válidos hasta que reciba un `ICorProfilerCallback2::GarbageCollectionFinished` devolución de llamada.  
+ It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

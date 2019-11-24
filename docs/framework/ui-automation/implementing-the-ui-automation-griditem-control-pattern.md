@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: fdaac3cad61f6047201587e48d4377fa61b868af
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 832a53e072afc5533f2eeb7feb0cc326771cf23d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043400"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435256"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementar el patrón de control GridItem de UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IGridItemProvider>y se incluye información sobre propiedades. Al final de la información general se proporcionan vínculos a referencias adicionales.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "71043400"
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Propiedad.|Ninguno|  
   
  Este patrón de control no tiene métodos o propiedades asociados.  
   

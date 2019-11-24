@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d58c8c0413346536c3e61e67ca0077c08c2b387
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781652"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436494"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr (Enumeración)
 Contiene valores que describen los metadatos de un parámetro de método.  
@@ -46,20 +44,20 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`pdIn`|Especifica que el parámetro se pasa a la llamada al método.|  
-|`pdOut`|Especifica que el parámetro se pasa desde el método de devolución.|  
-|`pdOptional`|Especifica que el parámetro es opcional.|  
-|`pdReservedMask`|Reservado para uso interno por common language runtime.|  
-|`pdHasDefault`|Especifica que el parámetro tiene un valor predeterminado.|  
-|`pdHasFieldMarshal`|Especifica que el parámetro tiene información de serialización.|  
+|`pdIn`|Specifies that the parameter is passed into the method call.|  
+|`pdOut`|Specifies that the parameter is passed from the method return.|  
+|`pdOptional`|Specifies that the parameter is optional.|  
+|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`pdHasDefault`|Specifies that the parameter has a default value.|  
+|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
 |`pdUnused`|Sin usar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

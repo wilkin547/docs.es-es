@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777290"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438570"
 ---
 # <a name="exporttype-method"></a>ExportType (Método)
-Especifica que un tipo es exportable.  
+Specifies that a type is exportable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +39,28 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado del que se va a exportar.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Token de archivo o ID. de ensamblado del archivo que define el tipo exportable.  
+ File token or assembly ID of file that defines the exportable type.  
   
  `TypeToken`  
- Token del tipo que se va a convertir.  
+ Token of type to be made exportable.  
   
  `pszTypename`  
- Nombre completo del tipo que se va a convertir en exportable.  
+ Fully qualified type name to be made exportable.  
   
  `dwFlags`  
- `ComType`marcas como `tdPublic` o `tdNested`. Este parámetro se puede pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Recibe el token para el tipo exportado.  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

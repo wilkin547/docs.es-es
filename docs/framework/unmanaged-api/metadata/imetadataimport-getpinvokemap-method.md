@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1be6079ed382b8ab27d0aec16bd725f5c5b9cb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778906"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437099"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap (Método)
 Obtiene un token ModuleRef para representar el ensamblado de destino de una llamada PInvoke.  
@@ -42,29 +40,29 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parámetros  
  `tk`  
- [in] Un token de FieldDef o MethodDef para obtener los metadatos de asignación de PInvoke.  
+ [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
   
  `pdwMappingFlags`  
- [out] Un puntero a los marcadores utilizados para la asignación. Este valor es una máscara de bits desde el [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeración.  
+ [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
   
  `szImportName`  
- [out] El nombre de la DLL de destino no administrado.  
+ [out] The name of the unmanaged target DLL.  
   
  `cchImportName`  
- [in] El tamaño en caracteres anchos de `szImportName`.  
+ [in] The size in wide characters of `szImportName`.  
   
  `pchImportName`  
- [out] El número de caracteres anchos que se devuelven en `szImportName`.  
+ [out] The number of wide characters returned in `szImportName`.  
   
  `pmrImportDLL`  
- [out] Un puntero a un token ModuleRef que representa la biblioteca de objetos de destino no administrado.  
+ [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

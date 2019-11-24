@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777303"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427983"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints (Método)
-Define un grupo de puntos de secuencia dentro del método actual. Cada línea de inicio y la columna inicial define el principio de una instrucción dentro de un método. Cada línea final y columna final definen el final de una instrucción dentro de un método. Las matrices se deben ordenar en orden creciente de los desplazamientos. El desplazamiento siempre se mide desde el principio del método, en bytes.  
+Define un grupo de puntos de secuencia dentro del método actual. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Parámetros  
  `document`  
- [in] El objeto de documento para el que se definen los puntos de secuencia.  
+ [in] The document object for which the sequence points are being defined.  
   
  `spCount`  
- [in] Un `ULONG32` que indica el tamaño de cada uno de los `offsets`, `lines`, `columns`, `endLines`, y `endColumns` búferes.  
+ [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
   
  `offsets`  
- [in] El desplazamiento de los puntos de secuencia medido desde el principio del método.  
+ [in] The offset of the sequence points measured from the beginning of the method.  
   
  `lines`  
- [in] Los números de línea inicial de los puntos de secuencia.  
+ [in] The starting line numbers of the sequence points.  
   
  `columns`  
- [in] Los números de columna a partir de los puntos de secuencia.  
+ [in] The starting column numbers of the sequence points.  
   
  `endLines`  
- [in] Los números de línea final de los puntos de secuencia. Este parámetro es opcional.  
+ [in] The ending line numbers of the sequence points. Este parámetro es opcional.  
   
  `endColumns`  
- [in] Los números de columna final de los puntos de secuencia. Este parámetro es opcional.  
+ [in] The ending column numbers of the sequence points. Este parámetro es opcional.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

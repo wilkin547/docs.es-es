@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f82b187a099ef7decca590da361f6b1abfa22e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bdb8cd02e0beb69e3ec594b0aadd741a5f0d924
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753801"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428337"
 ---
-# <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE (Estructura)
+# <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE (Estructura)
 Describe un intervalo (es decir, un bloque) de memoria sometida a recopilación de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,20 +37,20 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`generation`|Un valor de la [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeración que especifica el bloque de memoria de la generación a la que pertenece.|  
-|`rangeStart`|El identificador de un objeto que especifica la ubicación inicial del bloque de memoria.|  
-|`rangeLength`|Un puntero a un entero que especifica el tamaño de la parte utilizada del bloque de memoria (es decir, la cantidad de memoria utilizada dentro del bloque).|  
-|`rangeLengthReserved`|Un puntero a un entero que especifica el tamaño del bloque de memoria (es decir, la cantidad de memoria reservada para el bloque).|  
+|`generation`|A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.|  
+|`rangeStart`|The ID of an object that specifies the starting location of the block of memory.|  
+|`rangeLength`|A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).|  
+|`rangeLengthReserved`|A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).|  
   
 ## <a name="remarks"></a>Comentarios  
- El `rangeLength` valor garantiza que sea precisa solo si [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) o [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), ambos de los que usan el `COR_PRF_GC_GENERATION_RANGE` estructura, se llama desde el [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) o [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) método.  
+ The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

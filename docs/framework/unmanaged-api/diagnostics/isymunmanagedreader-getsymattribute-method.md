@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737235"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440138"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute (Método)
-Obtiene un atributo personalizado basándose en su nombre. A diferencia de los atributos personalizados de los metadatos, estos atributos personalizados se encuentran en el almacén de símbolos.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parámetros  
  `parent`  
- [in] El token de metadatos para el objeto que se solicita el atributo.  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in] Un puntero a la variable que indica el atributo para recuperar.  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
  [in] Tamaño de la matriz `buffer`.  
   
  `pcBuffer`  
- [out] Un puntero a la variable que recibe la longitud de los datos del atributo.  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out] Un puntero a la variable que recibe los datos del atributo.  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

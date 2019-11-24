@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e283bea2ce2f4b2e17da6e8dcb85165d3c4d6693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 923a92ea256f79a1b0130b61c4fd99460fda96a0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776960"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441800"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition (Método)
-Devuelve una matriz de métodos, cada uno de los cuales contiene el punto de interrupción en la posición especificada en un documento.  
+Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,28 +40,28 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Parámetros  
  `document`  
- [in] El documento especificado.  
+ [in] The specified document.  
   
  `line`  
- [in] La línea del documento especificado.  
+ [in] The line of the specified document.  
   
  `column`  
- [in] La columna del documento especificado.  
+ [in] The column of the specified document.  
   
  `cMethod`  
  [in] Tamaño de la matriz `pRetVal`.  
   
  `pcMethod`  
- [out] Un puntero a una variable que recibe el número de elementos devueltos en la `pRetVal` matriz.  
+ [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
   
  `pRetVal`  
- [out] Una matriz de punteros, cada uno de los cuales señala a una [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) objeto que representa un método que contiene el punto de interrupción.  
+ [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

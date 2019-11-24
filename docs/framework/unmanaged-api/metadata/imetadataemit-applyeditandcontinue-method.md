@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 05de7d45c53d8aeaafaa06ae351050cc8bca3622
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777690"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432696"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue (Método)
-El ámbito de ensamblado actual se actualiza con los cambios realizados en los metadatos especificados.  
+Updates the current assembly scope with the changes made in the specified metadata.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +35,16 @@ HRESULT ApplyEditAndContinue (
   
 ## <a name="parameters"></a>Parámetros  
  `pImport`  
- \[en\] puntero a un [IUnknown](/cpp/atl/iunknown) objeto que representa los metadatos delta del archivo portable ejecutable (PE).
+ \[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.
   
- Los metadatos delta están el bloque de metadatos que incluyen los cambios realizados en la copia de los metadatos del módulo real.  
+ The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

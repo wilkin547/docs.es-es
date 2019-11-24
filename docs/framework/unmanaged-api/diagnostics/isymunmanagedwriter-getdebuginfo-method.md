@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777308"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427963"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo (Método)
-Devuelve la información necesaria para que un compilador escribir la entrada de directorio de depuración en el encabezado del archivo portable ejecutable (PE). Rellena todos los campos, excepto para el escritor de símbolos `TimeDateStamp` y `PointerToRawData`. (El compilador es responsable de establecer correctamente estos dos campos).  
+Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
   
- Un compilador debe llamar a este método, emitir el blob de datos hasta el archivo PE, establezca el `PointerToRawData` campo IMAGE_DEBUG_DIRECTORY para señalar los datos emitidos y escribir IMAGE_DEBUG_DIRECTORY en el archivo PE. El compilador también debe establecer el `TimeDateStamp` campo igual la `TimeDateStamp` del archivo PE que se está generando.  
+ A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,22 +40,22 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `pIDD`  
- [in, out] Un puntero a IMAGE_DEBUG_DIRECTORY que van a rellenar el escritor de símbolos.  
+ [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
   
  `cData`  
- [in] Un `DWORD` que contiene el tamaño de los datos de depuración.  
+ [in] A `DWORD` that contains the size of the debug data.  
   
  `pcData`  
- [out] Un puntero a un `DWORD` que recibe el tamaño del búfer necesario para contener los datos de depuración.  
+ [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
   
  `data`  
- [out] Un puntero a un búfer que es lo suficientemente grande como para contener los datos para el almacén de símbolos de depuración.  
+ [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

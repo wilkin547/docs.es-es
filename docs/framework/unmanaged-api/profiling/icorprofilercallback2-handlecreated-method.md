@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 594d970dbe0a176a5ec49015e105f89ff64bdfac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779325"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439759"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated (Método)
-Notifica al generador de perfiles de código que se ha creado un identificador de la colección de elementos no utilizados.  
+Notifies the code profiler that a garbage collection handle has been created.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>Parámetros  
  `handleId`  
- [in] El identificador del controlador de la colección de elementos no utilizados.  
+ [in] The ID of the handle for the garbage collection.  
   
  `initialObjectId`  
- [in] El identificador del objeto para el que se creó el identificador de la colección de elementos no utilizados.  
+ [in] The ID of the object for which the garbage collection handle was created.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

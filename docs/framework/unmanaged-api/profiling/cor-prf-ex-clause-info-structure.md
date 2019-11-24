@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df4bfe69b22439073342693a03376a0b506f9c70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781945"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428373"
 ---
-# <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO (Estructura)
+# <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO (Estructura)
 Almacena información sobre una instancia específica de cláusula de excepción y su marco asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,17 +37,17 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`clauseType`|Un valor de la [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeración que especifica el tipo de cláusula de excepción del código que acaba de escribir o a la izquierda.|  
-|`programCounter`|El punto de entrada nativo del controlador de cláusula, por ejemplo, el contenido del registro X86 EIP.|  
-|`framePointer`|El puntero al marco lógico para el controlador de la cláusula — por ejemplo, el contenido del registro X86 EBP.|  
-|`shadowStackPointer`|Puntero a la pila de sombra. Este valor es el contenido del registro BSP y solo se aplica a IA64.|  
+|`clauseType`|A value of the [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeration that specifies the type of exception clause the code just entered or left.|  
+|`programCounter`|The native entry point of the clause handler — for example, the contents of the X86 EIP register.|  
+|`framePointer`|The pointer to the logical frame for the clause handler — for example, the contents of the X86 EBP register.|  
+|`shadowStackPointer`|The pointer to the shadow stack. This value is the contents of the BSP register and applies only to IA64.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se recibe una notificación de excepción, [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) puede usarse para obtener la información de dirección y el marco nativa para la cláusula de excepción (`catch` / `finally`/datos de filtro) que se va a ejecutarse o que recientemente se ha ejecutado.  
+ When an exception notification is received, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) can be used to get the native address and frame information for the exception clause (`catch`/`finally`/filter) that is about to be run or has just been run.  
   
- Ejecución de una cláusula de excepción implica estas devoluciones de llamada de common language runtime (CLR):  
+ Execution of an exception clause involves these callbacks from the common language runtime (CLR):  
   
 - [ICorProfilerCallback::ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)  
   
@@ -64,9 +62,9 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 - [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

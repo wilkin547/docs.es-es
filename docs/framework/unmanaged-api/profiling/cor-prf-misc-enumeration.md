@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752132"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432278"
 ---
-# <a name="corprfmisc-enumeration"></a>COR_PRF_MISC (Enumeración)
+# <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC (Enumeración)
 Contiene valores constantes que especifican identificadores especiales.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,16 +36,16 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|El identificador predeterminado utilizado por [GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) para un módulo que todavía no se ha asociado a un ensamblado.|  
-|`PROFILER_GLOBAL_CLASS`|El identificador de clase predeterminada para las constantes globales que no pertenecen a una clase.|  
-|`PROFILER_GLOBAL_MODULE`|El identificador de módulo predeterminado para los objetos globales que no pertenecen a un módulo.|  
+|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
+|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
+|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

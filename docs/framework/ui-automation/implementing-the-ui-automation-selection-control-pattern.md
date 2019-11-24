@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 39baadbad4bf5aff1cc2cd7877489f43581e0fa0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 754af531a20805c53785a37695dce97bb7967a53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458161"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447117"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementar el patrón de control Selection de UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.ISelectionProvider>, incluida la información sobre eventos y propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
   
@@ -29,12 +29,12 @@ ms.locfileid: "73458161"
   
 - Los controles que tienen un intervalo mínimo, máximo y continuo, como el control deslizante **Volumen** , deben implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider> en lugar de <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
-- Controles de selección única que administran los controles secundarios que implementan <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, como el control deslizante de **resolución de pantalla** del cuadro de diálogo **propiedades de pantalla** o el control de selección selector de **colores** de Microsoft Word (se muestra a continuación ), debe implementar <xref:System.Windows.Automation.Provider.ISelectionProvider>; sus elementos secundarios deben implementar <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> y <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Single-selection controls that manage child controls that implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, such as the **Screen Resolution** slider in the **Display Properties** dialog box or the **Color Picker** selection control from Microsoft Word (illustrated below), should implement <xref:System.Windows.Automation.Provider.ISelectionProvider>; their children should implement both <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
- ![Selector de colores con amarillo resaltado.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Color picker with yellow highlighted.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Ejemplo de asignación de cadena de muestrario de colores  
   
-- Los menús no admiten <xref:System.Windows.Automation.SelectionPattern>. Si está trabajando con elementos de menú que incluyen tanto gráficos como texto (como los elementos del **Panel de vista previa** en el menú **Ver** de Microsoft Outlook) y necesita transmitir el estado, debe implementar <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- Los menús no admiten <xref:System.Windows.Automation.SelectionPattern>. If you are working with menu items that include both graphics and text (such as the **Preview Pane** items in the **View** menu in Microsoft Outlook) and need to convey state, you should implement <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>Miembros requeridos para ISelectionProvider  

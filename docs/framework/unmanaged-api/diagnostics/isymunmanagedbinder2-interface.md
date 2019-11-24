@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c9fbb8364fb967e739eb9807b26cbc65f0ebec1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8300e3a7b324a2ff4acabeb30b30d2cdabc7c776
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944190"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449325"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 (Interfaz)
-Representa un enlazador de símbolos para código no administrado y extiende la interfaz [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) .  
+Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.  
   
 > [!IMPORTANT]
-> Se trata de un riesgo para la seguridad de abrir un archivo de base de datos de programa (PDB) desde un origen que no es de confianza.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[GetReaderForFile2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|Dada una interfaz de metadatos y un nombre de archivo, devuelve la interfaz [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración asociados al módulo. Proporciona una búsqueda más extensa que el método [ISymUnmanagedBinder:: GetReaderForFile (](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) .|  
+|[GetReaderForFile2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module. Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym. idl, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

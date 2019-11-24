@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447154"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementar el patrón de control ExpandCollapse de UI Automation
 
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).
 
 En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, incluida la información sobre propiedades, métodos y eventos. Al final de la información general se proporcionan vínculos a referencias adicionales.
 
@@ -55,10 +55,10 @@ Para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvide
 
 |Miembros requeridos|Tipo de miembro|Notas|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propiedad|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Método|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Método|None|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Evento|Este control no tiene ningún evento asociado; use este delegado genérico.|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propiedad.|Ninguno|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Método|Ninguno|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Método|Ninguno|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|evento|Este control no tiene ningún evento asociado; use este delegado genérico.|
 
 <a name="Exceptions"></a>
 
@@ -68,7 +68,7 @@ Los proveedores deben producir las siguientes excepciones.
 
 |Tipo de excepción|Condición|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> <xref:System.Windows.Automation.ExpandCollapseState> Sellama = a o cuando .<xref:System.Windows.Automation.ExpandCollapseState.LeafNode> <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|
+|<xref:System.InvalidOperationException>|Either <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called when the <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
 
 ## <a name="see-also"></a>Vea también
 

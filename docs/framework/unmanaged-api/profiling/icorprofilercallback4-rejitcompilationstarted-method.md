@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58293929b576493d3751f9ce30ba00cec92e180c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 074b0b11a822d2b8bcb9588484557e3e5eba69dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758165"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430194"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted (Método)
-Notifica al generador de perfiles que se ha iniciado el compilador de just-in-time (JIT) volver a compilar una función.  
+Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función que se ha iniciado el compilador JIT para volver a compilar.  
+ [in] The ID of the function that the JIT compiler has started to recompile.  
   
  `rejitId`  
- [in] El identificador de la recompilación de la nueva versión de la función.  
+ [in] The recompilation ID of the new version of the function.  
   
  `fIsSafeToBlock`  
- [in] `true` para indicar que el bloqueo puede causar el tiempo de ejecución esperar el subproceso de llamada devolver desde esta devolución de llamada; `false` para indicar que la de bloqueo no afectará al funcionamiento del tiempo de ejecución. Un valor de `true` no daña el tiempo de ejecución, pero puede afectar a los resultados de generación de perfiles.  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime. A value of `true` does not harm the runtime, but can affect the profiling results.  
   
 ## <a name="remarks"></a>Comentarios  
- Es posible recibir más de un par de `ReJITCompilationStarted` y [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) método llama para cada función debido al modo en el tiempo de ejecución controla los constructores de clase. Por ejemplo, el tiempo de ejecución empieza a compilar un método, pero el constructor de la clase B debe ejecutarse. Por lo tanto, el tiempo de ejecución vuelve a compilar el constructor de clase B y lo ejecuta. Mientras se ejecuta el constructor, realiza una llamada al método A, lo que hace que el método a compilarse de nuevo. En este escenario, se detiene la primera recompilación de un método. Sin embargo, ambos intenta volver a compilar una son se notifica con eventos de recompilación JIT del método.  
+ It is possible to receive more than one pair of `ReJITCompilationStarted` and [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) method calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to recompile method A, but the class constructor for class B needs to be run. Therefore, the runtime recompiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be recompiled again. In this scenario, the first recompilation of method A is halted. However, both attempts to recompile method A are reported with JIT recompilation events.  
   
- Los generadores de perfiles deben admitir la secuencia de devoluciones de llamada de recompilación JIT en casos donde dos subprocesos están realizando simultáneamente las devoluciones de llamada. Por ejemplo, un subproceso a llama a `ReJITCompilationStarted`; sin embargo, antes de un subproceso llama a [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), el subproceso B llama a [ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) con el identificador de función desde el `ReJITCompilationStarted` devolución de llamada para el subproceso A. Podría parecer que el identificador de función no debe encontrarse aún válido porque una llamada a [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) tenía no se han recibido por el generador de perfiles. Sin embargo, en este caso, el identificador de función es válido.  
+ Profilers must support the sequence of JIT recompilation callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `ReJITCompilationStarted`; however, before thread A calls [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from the `ReJITCompilationStarted` callback for thread A. It might appear that the function ID should not yet be valid because a call to [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) had not yet been received by the profiler. However, in this case, the function ID is valid.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

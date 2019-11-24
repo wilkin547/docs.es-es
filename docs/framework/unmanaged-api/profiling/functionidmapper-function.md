@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9dee1404a8da63208bba7b7529b16eabbee3254
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23c6f0a29160b6e1dc194cf360c07374c565522b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745766"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440707"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper (Función)
-Notifica al generador de perfiles que el identificador especificado de una función puede reasignarse a otro identificador que se usará en el [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), y [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) devoluciones de llamada para esa función. Además, `FunctionIDMapper` permite al generador de perfiles indicar si desea recibir devoluciones de llamada de esa función.  
+Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. Además, `FunctionIDMapper` permite al generador de perfiles indicar si desea recibir devoluciones de llamada de esa función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,24 +38,24 @@ UINT_PTR __stdcall FunctionIDMapper (
  [in] Identificador de la función que se va a reasignar.  
   
  `pbHookFunction`  
- [out] Un puntero a un valor que establece el generador de perfiles en `true` si desea recibir `FunctionEnter2`, `FunctionLeave2`, y `FunctionTailcall2` devoluciones de llamada; de lo contrario, establece este valor en `false`.  
+ [out] A pointer to a value that the profiler sets to `true` if it wants to receive `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` callbacks; otherwise, it sets this value to `false`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El generador de perfiles devuelve un valor que el motor de ejecución utiliza como identificador de función alternativo. El valor devuelto no puede ser null a menos que se devuelva `false` en `pbHookFunction`. En caso contrario, un valor null devuelto producirá resultados imprevisibles, que posiblemente incluyan la detención del proceso.  
+ El generador de perfiles devuelve un valor que el motor de ejecución utiliza como identificador de función alternativo. El valor devuelto no puede ser null a menos que se devuelva `false` en `pbHookFunction`. Otherwise, a null return value will produce unpredictable results, including possibly halting the process.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionIDMapper` función es una devolución de llamada. Se implementa mediante el generador de perfiles para volver a asignar un identificador de función a algún otro identificador que es más útil para el generador de perfiles. El `FunctionIDMapper` devuelve el identificador alternativo que se usará para una función determinada. El motor de ejecución respeta, a continuación, la solicitud del generador de perfiles pasando este Id. alternativo, además del identificador de la función tradicional, vuelva al generador de perfiles en el `clientData` parámetro de la `FunctionEnter2`, `FunctionLeave2`, y `FunctionTailcall2` enlaces para identificar la función para la que se llama el enlace.  
+ The `FunctionIDMapper` function is a callback. It is implemented by the profiler to remap a function ID to some other identifier that is more useful for the profiler. The `FunctionIDMapper` returns the alternate ID to be used for any given function. The execution engine then honors the profiler's request by passing this alternate ID, in addition to the traditional function ID, back to the profiler in the `clientData` parameter of the `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` hooks, to identify the function for which the hook is being called.  
   
- Puede usar el [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) método para especificar la implementación de la `FunctionIDMapper` función. Puede llamar a la `ICorProfilerInfo::SetFunctionIDMapper` método solo una vez y se recomienda que realice en el [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) devolución de llamada.  
+ You can use the [ICorProfilerInfo::SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) method to specify the implementation of the `FunctionIDMapper` function. You can call the `ICorProfilerInfo::SetFunctionIDMapper` method only once, and we recommend that you do so in the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.  
   
- De forma predeterminada, se supone que un generador de perfiles que establece la marca COR_PRF_MONITOR_ENTERLEAVE utilizando [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md), y que establece enlaces mediante [SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) o [ICorProfilerInfo2:: Setenterleavefunctionhooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), debería recibir el `FunctionEnter2`, `FunctionLeave2`, y `FunctionTailcall2` devoluciones de llamada para cada función. Sin embargo, pueden implementar los generadores de perfiles `FunctionIDMapper` para evitar selectivamente la recepción de estas devoluciones de llamada para ciertas funciones estableciendo `pbHookFunction` a `false`.  
+ By default, it is assumed that a profiler that sets the COR_PRF_MONITOR_ENTERLEAVE flag by using [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md), and which sets hooks via [ICorProfilerInfo::SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) or [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), should receive the `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` callbacks for every function. However, profilers may implement `FunctionIDMapper` to selectively avoid receiving these callbacks for certain functions by setting `pbHookFunction` to `false`.  
   
- Los generadores de perfiles deben ser tolerantes a los casos donde varios subprocesos de una aplicación de perfiles están llamando al mismo tiempo el mismo método o función. En tales casos, el generador de perfiles puede recibir varios `FunctionIDMapper` las devoluciones de llamada para el mismo `FunctionID`. El generador de perfiles debe tener la seguridad devolver los mismos valores de esta devolución de llamada cuando se llama varias veces con el mismo `FunctionID`.  
+ Profilers should be tolerant of cases where multiple threads of a profiled application are calling the same method/function simultaneously. In such cases, the profiler may receive multiple `FunctionIDMapper` callbacks for the same `FunctionID`. The profiler should be certain to return the same values from this callback when it is called multiple times with the same `FunctionID`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

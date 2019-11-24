@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751306"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446371"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren (Método)
-Obtiene a los elementos secundarios de este ámbito.  
+Gets the children of this scope.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,19 +37,19 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parámetros  
  `cChildren`  
- [in] Un `ULONG32` que indica el tamaño de la `children` matriz.  
+ [in] A `ULONG32` that indicates the size of the `children` array.  
   
  `pcChildren`  
- [out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los elementos secundarios.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.  
   
  `children`  
- [out] La matriz devuelta de los elementos secundarios.  
+ [out] The returned array of children.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

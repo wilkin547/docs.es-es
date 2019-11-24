@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781728"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436613"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType (Enumeración)
 Proporciona valores que indican el tipo vinculado en código nativo.  
@@ -42,21 +40,21 @@ typedef enum
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`nltNone`|Indica que se especifica ninguna de las palabras clave.|  
-|`nltAnsi`|Indica que se especifica una palabra clave ANSI.|  
-|`nltUnicode`|Indica que se especifica una palabra clave de Unicode|  
-|`nltAuto`|Indica que se especifica una palabra clave auto.|  
-|`nltOle`|Indica que se especifica una palabra clave OLE.|  
+|`nltNone`|Indicates that none of the keywords are specified.|  
+|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
+|`nltUnicode`|Indicates that a Unicode keyword is specified|  
+|`nltAuto`|Indicates that an auto keyword is specified.|  
+|`nltOle`|Indicates that an OLE keyword is specified.|  
 |`nltMaxValue`|No se utiliza.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

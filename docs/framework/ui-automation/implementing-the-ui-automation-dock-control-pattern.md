@@ -6,22 +6,22 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e2084483a34709392b9d3ceab02472c36944132
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043467"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435437"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementar el patrón de control Dock de UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IDockProvider>y se incluye información sobre propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
   
  El patrón de control <xref:System.Windows.Automation.DockPattern> se utiliza para exponer las propiedades de acoplamiento de un control dentro de un contenedor de acoplamiento. Un contenedor de acoplamiento es un control que permite organizar elementos secundarios horizontal y verticalmente, relacionados entre sí. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Contenedor de acoplamiento con dos elementos secundarios acoplados.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Docking container with two docked children.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Ejemplo de acoplamiento de Visual Studio donde la ventana "Vista de clases" es DockPosition.Right y la ventana "Lista de errores" es DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -42,8 +42,8 @@ Ejemplo de acoplamiento de Visual Studio donde la ventana "Vista de clases" es D
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Método|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Método|Ninguno|  
   
  Este patrón de control no tiene eventos asociados.  
   
@@ -53,7 +53,7 @@ Ejemplo de acoplamiento de Visual Studio donde la ventana "Vista de clases" es D
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> : Cuando un control no puede ejecutar el estilo de acoplamiento solicitado.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   When a control is not able to execute the requested dock style.|  
   
 ## <a name="see-also"></a>Vea también
 

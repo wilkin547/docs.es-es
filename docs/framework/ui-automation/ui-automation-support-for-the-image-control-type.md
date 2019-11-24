@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-ms.openlocfilehash: 4426f0c0feb0c3399e9fe1bffcecfb6dc24928f5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 52ccece88284724b03a6eb2d678bb27ab1d687c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71041537"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446753"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Compatibilidad de UI Automation para el tipo de control Image
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] con el tipo de control Image. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un tipo de control es un conjunto de condiciones que un control debe cumplir para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , valores de propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y patrones de control.  
   
@@ -29,10 +29,10 @@ ms.locfileid: "71041537"
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
-|Image|Imagen (depende de si la imagen contiene información (según el valor de la propiedad `IsContentElement` ))|  
+|Imagen|Imagen (depende de si la imagen contiene información (según el valor de la propiedad `IsContentElement` ))|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## <a name="required-ui-automation-properties"></a>Propiedades necesarias para la automatización de la interfaz de usuario  
+## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
  En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para el tipo de control Image. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|Notas|  
@@ -43,7 +43,7 @@ ms.locfileid: "71041537"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vea las notas.|Si el control puede recibir el enfoque del teclado, debe admitir esta propiedad.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vea las notas.|La propiedad Name se debe exponer para todos los controles de imagen que contienen información. El acceso mediante programación a esta información requiere que se ofrezca un equivalente textual al gráfico. Si el control de imagen es puramente decorativo, únicamente debe aparecer en la vista de control del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y no es necesario que tenga un nombre. Los marcos de trabajo de interfaz de usuario deben admitir propiedad de texto alternativo o ALT en las imágenes que se pueden establecer desde dentro de su marco de trabajo. Esta propiedad se asignará entonces a la propiedad de nombre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Vea las notas.|Si hay una etiqueta de texto estático, esta propiedad debe exponer una referencia a ese control.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Image|Este valor es el mismo para todos los marcos de trabajo de la interfaz de usuario.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Imagen|Este valor es el mismo para todos los marcos de trabajo de la interfaz de usuario.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"imagen"|Cadena localizada que corresponde al tipo de control Image.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Vea las notas.|El control de imagen debe incluirse en la vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuando contiene información significativa aún no expuesta al usuario final.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|El control de imagen siempre se incluye en la vista del control del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -54,29 +54,29 @@ ms.locfileid: "71041537"
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control necesarios para la automatización de la interfaz de usuario  
  En la tabla siguiente se muestran los patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que se deben admitir por todos los controles de imagen. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
-|Patrón de control|Soporte técnico|Notas|  
+|Patrón de control|Compatibilidad|Notas|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|El control de imagen admite el patrón Grid Item si el control está dentro de un contenedor de cuadrícula.|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|Depende|El control de imagen admite el patrón Table Item  si el control está dentro de un contenedor que tiene controles de encabezado.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Nunca|Si el control de imagen contiene una imagen en la que se puede hacer clic, el control debe admitir un tipo de control que admita el patrón Invoke, como el tipo de control Button.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Nunca|Los controles de imagen no deben admitir el patrón Selection Item.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Never|Si el control de imagen contiene una imagen en la que se puede hacer clic, el control debe admitir un tipo de control que admita el patrón Invoke, como el tipo de control Button.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Never|Los controles de imagen no deben admitir el patrón Selection Item.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
  En la tabla siguiente se muestran los eventos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que se deben admitir por todos los controles de imagen. Para más información sobre eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
-|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
+|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Compatibilidad|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Nunca|None|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Nunca|None|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Nunca|None|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Nunca|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obligatorio|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|None|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Never|Ninguno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Never|Ninguno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Never|Ninguno|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Never|Ninguno|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Requerido|Ninguno|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Requerido|Ninguno|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Requerido|Ninguno|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Requerido|Ninguno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|Ninguno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Requerido|Ninguno|  
   
 ## <a name="see-also"></a>Vea también
 

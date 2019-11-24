@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b33de4c-19cb-4a36-a93f-8675b2a36d58
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df97f4c37d8f335ce183685debd7c0933be910ed
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787211"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445561"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile (Método)
-Permite especificar o restablecer el archivo de manifiesto que el vinculador utiliza al crear el ensamblado.  
+Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +35,16 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parámetros  
  `pszFile`  
   
- Nombre del archivo de manifiesto cuyo contenido se coloca en el BLOB de recursos de Win32.  
+ The name of the manifest file whose contents are put into the Win32 resources blob.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="remarks"></a>Comentarios  
- Llame a este método antes de solicitar el Win32ResBlob. El valor del `pszFile` parámetro es el nombre del archivo de manifiesto cuyo contenido se lee y se coloca en los recursos de Win32 con el ID. de recurso. Cuando se llama con un parámetro de NULL, se borra cualquier manifiesto leído previamente. Esto permite restablecer el estado del enlazador con respecto al tiempo de inicialización.  
+ Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere aLink. h  
+ Requires aLink.h  
   
 ## <a name="see-also"></a>Vea también
 

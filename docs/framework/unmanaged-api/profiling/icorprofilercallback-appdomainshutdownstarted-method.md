@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9d1cf182eaf6f245baa5d898bac3ca7d3190234
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763093"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445182"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted (Método)
-Notifica al generador de perfiles que se está descargando un dominio de aplicación de un proceso.  
+Notifies the profiler that an application domain is being unloaded from a process.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,15 +34,15 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Parámetros  
  `appDomainId`  
- [in] Identifica el dominio en el que se almacenan los ensamblados de la aplicación.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
 ## <a name="remarks"></a>Comentarios  
- El valor de `appDomainId` no es válido para cualquier solicitud de información después de la `AppDomainShutdownStarted` devuelve del método, se trata de la última oportunidad para obtener información acerca de este dominio de aplicación del generador de perfiles.  
+ The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

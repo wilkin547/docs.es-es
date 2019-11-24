@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fa7dfe101b07ae6eb8d58daad85954f0ce29b02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c4e132b90fa1f51bc6f858d75c159af212ec019
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747056"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439891"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition (Método)
-Notifica al generador de perfiles que se ha producido una transición desde código no administrado a código administrado.  
+Notifies the profiler that a transition from unmanaged code to managed code has occurred.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ HRESULT UnmanagedToManagedTransition(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función que se llama.  
+ [in] The ID of the function that is being called.  
   
  `reason`  
- [in] Un valor de la [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeración que indica si la transición se produjo debido a una llamada a código administrado desde código no administrado, o debido a una devolución de una función no administrada que se llama a uno administrada.  
+ [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el valor de `reason` es COR_PRF_TRANSITION_RETURN y `functionId` es no nulo, la función ID es el de la función no administrada y nunca habrá sido compilado mediante el compilador just-in-time (JIT). Funciones no administradas tengan cierta información básica asociado con ellos, como el nombre y algunos metadatos.  
+ If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler. Unmanaged functions have some basic information associated with them, such as a name and some metadata.  
   
- Si el valor de `reason` es COR_PRF_TRANSITION_CALL, puede que sea posible que la función llamada (es decir, la función administrada) no se ha recibido la compilación JIT.  
+ If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

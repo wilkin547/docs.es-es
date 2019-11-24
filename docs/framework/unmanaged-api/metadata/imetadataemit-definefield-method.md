@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777655"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432546"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField (Método)
-Crea una definición para un campo con la firma de metadatos especificados y obtiene un token para esa definición de campo.  
+Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parámetros  
  `td`  
- [in] El `mdTypeDef` token para la clase o interfaz envolvente.  
+ [in] The `mdTypeDef` token for the enclosing class or interface.  
   
  `szName`  
- [in] El nombre del campo en formato Unicode.  
+ [in] The field name in Unicode.  
   
  `dwFieldFlags`  
- [in] Los atributos del campo. Se trata de una máscara de bits de `CorFieldAttr` valores.  
+ [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `pvSigBlob`  
- [in] La firma del campo como un BLOB.  
+ [in] The field signature as a BLOB.  
   
  `cbSigBlob`  
- [in] El recuento de bytes en `pvSigBlob`.  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in] El `ELEMENT_TYPE_` *\** para el valor constante. Se trata de un `CorElementType` valor. Si no define un valor constante para el campo, utilice `ELEMENT_TYPE_END`.  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] El valor constante para el campo.  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in] El tamaño en caracteres (Unicode) de `pValue`.  
+ [in] The size in (Unicode) characters of `pValue`.  
   
  `pmd`  
- [out] El `mdFieldDef` token asignado.  
+ [out] The `mdFieldDef` token assigned.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

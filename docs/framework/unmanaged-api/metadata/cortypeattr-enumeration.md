@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779199"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436452"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr (Enumeración)
 Contiene valores que indican los metadatos de tipo.  
@@ -77,46 +75,46 @@ typedef enum CorTypeAttr {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Se utiliza para obtener información de visibilidad del tipo.|  
-|`tdNotPublic`|Especifica que el tipo no está en ámbito público.|  
-|`tdPublic`|Especifica que el tipo está en ámbito público.|  
-|`tdNestedPublic`|Especifica que el tipo se anida con visibilidad pública.|  
-|`tdNestedPrivate`|Especifica que el tipo se anida con visibilidad privada.|  
-|`tdNestedFamily`|Especifica que el tipo se anida con visibilidad de familia.|  
-|`tdNestedAssembly`|Especifica que el tipo se anida con visibilidad de ensamblado.|  
-|`tdNestedFamANDAssem`|Especifica que el tipo se anida con visibilidad de familia y ensamblado.|  
-|`tdNestedFamORAssem`|Especifica que el tipo se anida con visibilidad de familia o ensamblado.|  
-|`tdLayoutMask`|Obtiene información de diseño para el tipo.|  
-|`tdAutoLayout`|Especifica que los campos de este tipo se distribuyen automáticamente.|  
-|`tdSequentialLayout`|Especifica que los campos de este tipo se disponen secuencialmente.|  
-|`tdExplicitLayout`|Especifica el que diseño de los campos se proporciona explícitamente.|  
-|`tdClassSemanticsMask`|Obtiene información semántica sobre el tipo.|  
+|`tdVisibilityMask`|Used for type visibility information.|  
+|`tdNotPublic`|Specifies that the type is not in public scope.|  
+|`tdPublic`|Specifies that the type is in public scope.|  
+|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
+|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
+|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
+|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
+|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
+|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
+|`tdLayoutMask`|Gets layout information for the type.|  
+|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
+|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
+|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
+|`tdClassSemanticsMask`|Gets semantic information about the type.|  
 |`tdClass`|Especifica que el tipo es una clase.|  
 |`tdInterface`|Especifica que el tipo es una interfaz.|  
 |`tdAbstract`|Especifica que el tipo es abstracto.|  
-|`tdSealed`|Especifica que no se puede extender el tipo.|  
-|`tdSpecialName`|Especifica que el nombre de clase es especial. Su nombre describe cómo.|  
-|`tdImport`|Especifica que el tipo se ha importado.|  
-|`tdSerializable`|Especifica que el tipo es serializable.|  
-|`tdWindowsRuntime`|Especifica que este tipo es un tipo en tiempo de ejecución de Windows.|  
-|`tdStringFormatMask`|Obtiene información sobre cómo se codifican y formato de cadenas.|  
-|`tdAnsiClass`|Especifica que este tipo interpreta LPTSTR como ANSI.|  
-|`tdUnicodeClass`|Especifica que este tipo interpreta LPTSTR como Unicode.|  
-|`tdAutoClass`|Especifica que este tipo interpreta LPTSTR automáticamente.|  
-|`tdCustomFormatClass`|Especifica que el tipo tiene una codificación no estándar, tal y como especifica `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Esta máscara se usa para obtener información de codificación no estándar para la interoperabilidad nativa. El significado de los valores de estos dos bits no está especificado.|  
-|`tdBeforeFieldInit`|Especifica que el tipo se debe inicializar antes del primer intento para tener acceso a un campo estático.|  
-|`tdForwarder`|Especifica que se exporta el tipo y un reenviador de tipos.|  
-|`tdReservedMask`|Common language runtime utiliza internamente esta marca y los indicadores siguientes.|  
-|`tdRTSpecialName`|Especifica que common language runtime debe comprobar la codificación de nombres.|  
-|`tdHasSecurity`|Especifica que el tipo tiene seguridad asociada a él.|  
+|`tdSealed`|Specifies that the type cannot be extended.|  
+|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
+|`tdImport`|Specifies that the type is imported.|  
+|`tdSerializable`|Specifies that the type is serializable.|  
+|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
+|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
+|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
+|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
+|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
+|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
+|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
+|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
+|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
+|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
+|`tdHasSecurity`|Specifies that the type has security associated with it.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

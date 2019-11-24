@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f72984da8f75eec35517da6ec1f8a73bc96c4609
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdfba34f35e40b2a50dbc4edc5b6b6c45f17194f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780818"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442873"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 (Método)
-Devuelve el tamaño de un objeto especificado. Reemplaza el [GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) método mediante la notificación de tamaños de los objetos que son más grandes que lo que puede expresarse en un `ULONG`.  
+Returns the size of a specified object. Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,18 +35,18 @@ HRESULT GetObjectSize2(
   
 ## <a name="parameters"></a>Parámetros  
  `objectId`  
- [in] El identificador del objeto.  
+ [in] The ID of the object.  
   
  `pcSize`  
- [out] Puntero al tamaño del objeto, en bytes.  
+ [out] A pointer to the object's size, in bytes.  
   
 ## <a name="remarks"></a>Comentarios  
- A menudo, distintos objetos de los mismos tipos tienen el mismo tamaño. Sin embargo, algunos tipos, como matrices o cadenas, pueden tener un tamaño diferente para cada objeto.  
+ Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

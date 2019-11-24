@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c13eb7ca16cdb7c70f3fef0dd4efcb9362cd3d87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b404a187d8628a04d2aa51df15f86fcc9d0b14f8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776582"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427856"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange (Método)
-Define el intervalo de desplazamiento del ámbito léxico especificado. El ámbito se convierte en el nuevo ámbito actual y se inserta en una pila de ámbitos. Los ámbitos deben formar una jerarquía. Elementos del mismo nivel no se pueden superponer.  
+Define el intervalo de desplazamiento del ámbito léxico especificado. The scope becomes the new current scope and is pushed onto a stack of scopes. Scopes must form a hierarchy. Siblings are not allowed to overlap.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,22 +36,22 @@ HRESULT OpenScope(
   
 ## <a name="parameters"></a>Parámetros  
  `scopeId`  
- [in] El identificador de ámbito para el ámbito.  
+ [in] The scope identifier for the scope.  
   
  `startOffset`  
- [in] El desplazamiento, en bytes, de la primera instrucción del ámbito léxico desde el principio del método.  
+ [in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.  
   
  `endOffset`  
- [in] El desplazamiento, en bytes, de la última instrucción del ámbito léxico desde el principio del método.  
+ [in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Comentarios  
- [ISymUnmanagedWriter:: OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) devuelve un identificador de ámbito opaco que puede utilizarse con `ISymUnmanagedWriter::SetScopeRange` definir un ámbito de desplazamiento inicial y final en un momento posterior. En este caso, los desplazamientos pasados a `ISymUnmanagedWriter::OpenScope` y [CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) se omiten. Los identificadores de ámbito solo son válidos en el método actual.  
+ [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored. Scope identifiers are only valid in the current method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3e184022-0247-4824-a23d-6b29593d8d01
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 190774b17d6e8214dd2358edb74f3eaf3b079fc2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c49bdcb9345960bce018cefd4443948f997c7267
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782673"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428367"
 ---
-# <a name="corprfcodegenflags-enumeration"></a>COR_PRF_CODEGEN_FLAGS (Enumeración)
-Define las marcas de generación de código que se pueden establecer con el [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método.  
+# <a name="cor_prf_codegen_flags-enumeration"></a>COR_PRF_CODEGEN_FLAGS (Enumeración)
+Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,18 +35,18 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|No hay ninguna función insertarse en el cuerpo de la función. Sin embargo, la función en sí se puede insertar en sus llamadores.|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Todas las optimizaciones se deshabilitará para el cuerpo de la función. Sin embargo, la propia función puede seguir siendo insertada en sus llamadores.|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|No functions will be inlined into this function’s body. However, the function itself may be inlined into its callers.|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|All optimizations will be disabled for this function’s body. However, the function itself may still be inlined into its callers.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `COR_PRF_CODEGEN_FLAGS` enumeración la utiliza el [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) método para habilitar el generador de perfiles controlar la generación de código para la función recompilada con JIT.  
+ The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

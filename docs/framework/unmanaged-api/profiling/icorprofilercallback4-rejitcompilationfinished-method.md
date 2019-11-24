@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758194"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439308"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished (Método)
-Notifica al generador de perfiles que el compilador de just-in-time (JIT) ha terminado de volver a compilar una función.  
+Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función que se volvió a compilar.  
+ [in] The ID of the function that was recompiled.  
   
  `rejitId`  
  [in] Identidad de la función recompilada con JIT.  
   
  `hrStatus`  
- [in] Un valor que indica si la recompilación con JIT fue correcta.  
+ [in] A value that indicates whether the JIT recompilation was successful.  
   
  `fIsSafeToBlock`  
- [in] `true` para indicar que el bloqueo puede causar el tiempo de ejecución esperar el subproceso de llamada devolver desde esta devolución de llamada; `false` para indicar que la de bloqueo no afectará al funcionamiento del tiempo de ejecución.  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
   
- Un valor de `true` no daña el tiempo de ejecución, pero puede afectar a los resultados de generación de perfiles.  
+ A value of `true` does not harm the runtime, but can affect the profiling results.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

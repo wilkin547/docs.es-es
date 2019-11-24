@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ffe25cae7122e65bed6aece7b0f6b2abe82c1eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779293"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439561"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged (Método)
-Notifica al generador de perfiles de código que ha cambiado el nombre de un subproceso.  
+Notifies the code profiler that the name of a thread has changed.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +36,18 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>Parámetros  
  `threadId`  
- [in] El identificador del subproceso.  
+ [in] The ID of the thread.  
   
  `cchName`  
- [in] La longitud del nuevo nombre del subproceso.  
+ [in] The length of the new name of the thread.  
   
  `name`  
- [in] El nuevo nombre del subproceso. El nombre no está terminada en null.  
+ [in] The new name of the thread. The name is not null-terminated.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 38e4928ad0f3560698cbecab81a11630d67e4db2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431818"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef (Método)
-Define una referencia a un miembro de un módulo fuera del ámbito actual y obtiene un token para esa definición de referencia.  
+Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,26 +39,26 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parámetros  
  `tkImport`  
- [in] Token para el miembro de destino clase o interfaz, si el miembro no es global; Si el miembro es global, la `mdModuleRef` token para ese otro archivo.  
+ [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
   
  `szName`  
- [in] El nombre del miembro de destino.  
+ [in] The name of the target member.  
   
  `pvSigBlob`  
- [in] La firma del miembro de destino.  
+ [in] The signature of the target member.  
   
  `cbSigBlob`  
- [in] El recuento de bytes en `pvSigBlob`.  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `pmr`  
- [out] El `mdMemberRef` token asignado.  
+ [out] The `mdMemberRef` token assigned.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

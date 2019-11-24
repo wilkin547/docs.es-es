@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894456"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438287"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 (Método)
-Define una única variable global.  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- de Nombre de la variable global.  
+ [in] The global variable name.  
   
  `attributes`  
- de Atributos de la variable global.  
+ [in] The global variable attributes.  
   
  `sigToken`  
- de Símbolo (token) de metadatos de la firma.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- de Tipo de dirección.  
+ [in] The address type.  
   
  `addr1`  
- de Primera dirección de la especificación de parámetro.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- de Segunda dirección de la especificación de parámetro.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- de Tercera dirección de la especificación de parámetro.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>Vea también
 

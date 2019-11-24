@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a5758ea-2354-43c0-92a3-32c9909d64e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 736e76a57e6dbce76267ad0fdd242897b4bfdbd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1217bb30be8b88f8ba1cf21f03f2531778358d4b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746891"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439841"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished (Método)
-Notifica al generador de perfiles que ha completado la recolección de elementos y todas las devoluciones de llamada de colección de elementos no utilizados se han emitido para ella.  
+Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +32,12 @@ HRESULT GarbageCollectionFinished();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Es seguro para el generador de perfiles inspeccionar los objetos en sus ubicaciones finales cuando el `GarbageCollectionFinished` se llama al método.  
+ It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

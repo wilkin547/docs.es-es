@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f4eb244e02e13e418a55351dbc1eb1f5b5d16d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45a369def193b9c8d8f9a3aa954ede600a87dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617740"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434736"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport (Interfaz)
 Proporciona métodos para importar y manipular los metadatos existentes desde un archivo portable ejecutable (PE) u otro origen, como una biblioteca de tipos o un archivo binario de metadatos independiente en tiempo de ejecución.  
@@ -105,11 +103,11 @@ Proporciona métodos para importar y manipular los metadatos existentes desde un
 - Los métodos Get están diseñados específicamente para devolver propiedades de un solo valor de un elemento de metadatos. Cuando la propiedad es una referencia a otro elemento, se devuelve un token de ese elemento. Cualquier tipo de entrada de puntero puede ser NULL para indicar que no se solicita el valor concreto. Para obtener las propiedades que son esencialmente objetos de colección (por ejemplo, la colección de interfaces que implementa una clase), utilice los métodos de enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

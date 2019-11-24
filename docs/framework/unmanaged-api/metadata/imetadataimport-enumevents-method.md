@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780709"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440008"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents (Método)
 Enumera los tokens de definición de eventos del token de TypeDef especificado.  
@@ -41,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] El token de TypeDef cuyas definiciones de evento son que hay que enumerar.  
+ [in] The TypeDef token whose event definitions are to be enumerated.  
   
  `rEvents`  
- [out] Matriz de eventos devueltos.  
+ [out] The array of returned events.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rEvents`.  
   
  `pcEvents`  
- [out] El número real de los eventos devueltos en `rEvents`.  
+ [out] The actual number of events returned in `rEvents`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún evento para enumerar. En ese caso, `pcEvents` es cero.|  
+|`S_OK`|`EnumEvents` returned successfully.|  
+|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

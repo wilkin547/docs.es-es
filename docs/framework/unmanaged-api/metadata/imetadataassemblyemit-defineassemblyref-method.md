@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776305"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432080"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef (Método)
 Crea una estructura `AssemblyRef` que contiene los metadatos para el ensamblado al que este ensamblado hace referencia y devuelve el token de metadatos asociado.  
@@ -44,40 +42,40 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parámetros  
  `pbPublicKeyOrToken`  
- [in] La clave pública del publicador del ensamblado que se hace referencia. La función auxiliar [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) puede usarse para obtener el hash de la clave pública para pasar como este parámetro.  
+ [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
   
  `cbPublicKeyOrToken`  
- [in] El tamaño en bytes de `pbPublicKeyOrToken`.  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] El nombre de texto legible del ensamblado. Este valor no debe superar los 1024 caracteres.  
+ [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
   
  `pMetaData`  
- [in] Una instancia ASSEMBLYMETADATA que contiene la información de versión, la plataforma y la configuración regional del ensamblado que se hace referencia.  
+ [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
   
  `pbHashValue`  
- [in] El hash de datos asociados al ensamblado que se hace referencia. Opcional.  
+ [in] The hash data associated with the referenced assembly. Opcional.  
   
  `cbHashValue`  
- [in] El tamaño en bytes de `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Una combinación bit a bit de [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores que influyen en el comportamiento del motor de ejecución.  
+ [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
   
  `pmdar`  
- [out] Un puntero a la devuelta `AssemblyRef` token de metadatos.  
+ [out] A pointer to the returned `AssemblyRef` metadata token.  
   
 ## <a name="remarks"></a>Comentarios  
- Una `AssemblyRef` estructura de los metadatos debe definirse para cada ensamblado al que hace referencia este ensamblado.  
+ One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
   
- En tiempo de ejecución, los detalles de un ensamblado de referencia se pasan a la resolución de ensamblado con un valor que indica que representan el "información"compilada. La resolución de ensamblado, a continuación, aplica la directiva.  
+ At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

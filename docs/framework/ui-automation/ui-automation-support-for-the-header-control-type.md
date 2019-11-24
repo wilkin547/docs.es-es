@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-ms.openlocfilehash: 77e21c155225402ee1f0544a762f1265cb171dcc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 077083a375c7415d1e6b3f79cea4a0574c0f3257
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71041626"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429858"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Compatibilidad de UI Automation para el tipo de control Header
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] con el tipo de control Header. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un tipo de control es un conjunto de condiciones que un control debe cumplir para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , valores de propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y patrones de control.  
   
@@ -29,14 +29,14 @@ ms.locfileid: "71041626"
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
-|Encabezado<br /><br /> -HeaderItem (1 o más)|None|  
+|Header<br /><br /> -   HeaderItem (1 or more)|Ninguno|  
   
  Los controles de encabezado siempre tienen 1 o más elementos secundarios en la vista de control del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
  Los controles de encabezado tienen cero elementos secundarios en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## <a name="required-ui-automation-properties"></a>Propiedades necesarias para la automatización de la interfaz de usuario  
+## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
  En la tabla siguiente se muestran las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que tienen un valor o una definición que es especialmente relevante para los controles de encabezado. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|Notas|  
@@ -46,8 +46,8 @@ ms.locfileid: "71041626"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Vea las notas.|Se admite si hay un rectángulo delimitador. Si no todos los puntos que se encuentran dentro del rectángulo delimitador son seleccionables, y realiza pruebas de aciertos especializadas, invalide y ofrezca un punto en el que hacer clic.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vea las notas.|Si el control puede recibir el enfoque del teclado, debe admitir esta propiedad.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vea las notas.|El control de encabezado necesita un nombre si hay más de un encabezado de fila o más de un encabezado de columna. Esto identifica la información dentro del encabezado.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|Los controles de encabezado no tienen una etiqueta estática.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Encabezado|Este valor es el mismo para todos los marcos de trabajo de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`Operador|Los controles de encabezado no tienen una etiqueta estática.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Header|Este valor es el mismo para todos los marcos de trabajo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"encabezado"|Este valor es el mismo para todos los marcos de trabajo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Horizontal|El valor de esta propiedad expone la posición del control de encabezado: tanto si es un encabezado de fila, como un encabezado de columna.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|El control de encabezado no se incluye en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -57,7 +57,7 @@ ms.locfileid: "71041626"
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control necesarios para la automatización de la interfaz de usuario  
  En la tabla siguiente se muestran los patrones de control de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de encabezado. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
-|Patrón de control|Soporte técnico|Notas|  
+|Patrón de control|Compatibilidad|Notas|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|Depende|Implemente este patrón de control si se puede cambiar el tamaño del control de encabezado.|  
   
@@ -65,13 +65,13 @@ ms.locfileid: "71041626"
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
  En la tabla siguiente se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de encabezado. Para más información sobre eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
-|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
+|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Compatibilidad|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> .|Obligatorio|None|  
-|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> .|Obligatorio|None|  
-|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> .|Obligatorio|None|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Obligatorio|None|  
-|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Obligatorio|None|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> .|Requerido|Ninguno|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> .|Requerido|Ninguno|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> .|Requerido|Ninguno|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Requerido|Ninguno|  
+|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Requerido|Ninguno|  
   
 ## <a name="see-also"></a>Vea también
 

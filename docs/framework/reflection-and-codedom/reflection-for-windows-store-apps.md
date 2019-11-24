@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9edab859900bf2001956045a5285801bb61d310
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9aaec282fda0a038d14f3a0cd57e1a8a2855f2ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045938"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448133"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexión en .NET Framework para aplicaciones de la Tienda Windows
-A partir de .NET Framework 4.5, .NET Framework incluye un conjunto de tipos y miembros de reflexión para su uso en aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Estos tipos y miembros están disponibles en la versión completa de .NET Framework, así como en [.NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/?LinkID=225700). En este documento se explican las diferencias principales entre estos y sus homólogos en .NET Framework 4 y versiones anteriores.  
+
+Starting with the .NET Framework 4.5, the .NET Framework includes a set of reflection types and members for use in Windows 8.x Store apps. These types and members are available in the full .NET Framework as well as in the .NET for Windows Store apps. En este documento se explican las diferencias principales entre estos y sus homólogos en .NET Framework 4 y versiones anteriores.  
   
- Si está creando una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], debe usar los tipos y miembros de reflexión de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Estos tipos y miembros también están disponibles, aunque no son necesarios, para su uso en aplicaciones de escritorio, por lo que puede usar el mismo código para ambos tipos de aplicaciones.  
+ If you are creating a Windows 8.x Store app, you must use the reflection types and members in the [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Estos tipos y miembros también están disponibles, aunque no son necesarios, para su uso en aplicaciones de escritorio, por lo que puede usar el mismo código para ambos tipos de aplicaciones.  
   
 ## <a name="typeinfo-and-assembly-loading"></a>TypeInfo y carga de ensamblados  
  En [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], la clase <xref:System.Reflection.TypeInfo> contiene algunas funcionalidades de la clase <xref:System.Type> de .NET Framework 4. Un objeto <xref:System.Type> representa una referencia a una definición de tipo, mientras que un objeto <xref:System.Reflection.TypeInfo> representa la propia definición de tipo. Esto permite manipular los objetos <xref:System.Type> sin necesidad de que el runtime cargue el ensamblado al que hacen referencia. Al obtener el objeto <xref:System.Reflection.TypeInfo> asociado se fuerza la carga del ensamblado.  
@@ -33,10 +34,10 @@ A partir de .NET Framework 4.5, .NET Framework incluye un conjunto de tipos y m
  Las propiedades de reflexión solo devuelven los métodos declarados en un objeto determinado en lugar de recorrer el árbol de herencia. Además, no usan los parámetros <xref:System.Reflection.BindingFlags> para el filtrado. En su lugar, el filtrado tiene lugar en el código de usuario, mediante el uso de consultas LINQ en las colecciones devueltas. Para los objetos de reflexión que se originan con el runtime (por ejemplo, como resultado de `typeof(Object)`), recorrer el árbol de herencia se logra mejor usando los métodos del asistente de la clase <xref:System.Reflection.RuntimeReflectionExtensions>. Los consumidores de objetos de contextos de reflexión personalizados no pueden usar estos métodos, y deben recorrer el árbol de herencia por su cuenta.  
   
 ## <a name="restrictions"></a>Restricciones  
- En una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], el acceso a algunos tipos y miembros de .NET Framework está restringido. Por ejemplo, no puede llamar a los métodos de .NET Framework que no estén incluidos en [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] usando un objeto <xref:System.Reflection.MethodInfo>. Además, ciertos tipos y miembros que no se consideran seguros en el contexto de una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están bloqueados, al igual que los miembros <xref:System.Runtime.InteropServices.Marshal> y <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal>. Esta restricción solo afecta a los tipos y miembros de .NET Framework; puede llamar a su propio código o al de otros fabricantes como lo haría normalmente.  
+ In a Windows 8.x Store app, access to some .NET Framework types and members is restricted. Por ejemplo, no puede llamar a los métodos de .NET Framework que no estén incluidos en [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] usando un objeto <xref:System.Reflection.MethodInfo>. In addition, certain types and members that are not considered safe within the context of a Windows 8.x Store app are blocked, as are <xref:System.Runtime.InteropServices.Marshal> and <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> members. Esta restricción solo afecta a los tipos y miembros de .NET Framework; puede llamar a su propio código o al de otros fabricantes como lo haría normalmente.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo usa tipos y miembros de reflexión de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] para recuperar los métodos y las propiedades del tipo <xref:System.Globalization.Calendar>, incluidos los métodos y las propiedades heredados. Para ejecutar este código, péguelo en el archivo de código de una página [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] que contenga un control <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> denominado `textblock1` en un proyecto denominado Reflexión. Si pega este código dentro de un proyecto con otro nombre, asegúrese de cambiar el nombre del espacio de nombres para que coincida con su proyecto.  
+ Este ejemplo usa tipos y miembros de reflexión de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] para recuperar los métodos y las propiedades del tipo <xref:System.Globalization.Calendar>, incluidos los métodos y las propiedades heredados. To run this code, paste it into the code file for a Windows 8.x Store page that contains a <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> control named `textblock1` in a project named Reflection. Si pega este código dentro de un proyecto con otro nombre, asegúrese de cambiar el nombre del espacio de nombres para que coincida con su proyecto.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
@@ -44,4 +45,3 @@ A partir de .NET Framework 4.5, .NET Framework incluye un conjunto de tipos y m
 ## <a name="see-also"></a>Vea también
 
 - [Reflexión](reflection.md)
-- [.NET para aplicaciones de la Tienda Windows: API admitidas](https://go.microsoft.com/fwlink/?LinkID=225700)

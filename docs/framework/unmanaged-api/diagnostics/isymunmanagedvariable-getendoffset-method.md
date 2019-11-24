@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ef32a963b73f2109b9747ef303e8ccd6a729838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ac1fc0b3567c49dfb36d2886926bee72d62a8dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778267"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446069"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset (Método)
-Obtiene el desplazamiento final de esta variable dentro de su elemento primario. Si se trata de una variable local dentro de un ámbito, el desplazamiento final se encontrará dentro de los desplazamientos definidos para el ámbito.  
+Gets the end offset of this variable within its parent. If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parámetros  
  `pRetVal`  
- [out] Un puntero a un `ULONG32` que recibe el desplazamiento final.  
+ [out] A pointer to a `ULONG32` that receives the end offset.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

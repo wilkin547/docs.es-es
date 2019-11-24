@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636942"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431437"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString (Método)
 
-Obtiene la cadena codificada de forma rígida en el índice especificado en la columna de cadena en el ámbito actual.
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,21 +39,21 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Parámetros
 
 `ixUserString`\
-[in] El valor de índice desde el que se recuperará la cadena codificada de forma rígida.
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out] Un puntero al tamaño de `ppData`.
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out] Un puntero a un puntero a la cadena devuelta.
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: Cor.h
+**Header:** Cor.h
 
-**Biblioteca:** Usar como un recurso en MsCorEE.dll
+**Library:** Used as a resource in MsCorEE.dll
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

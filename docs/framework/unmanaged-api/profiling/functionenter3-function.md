@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 24c9077863ada4d1208f29755a70d2cf8abc1208
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd224279b3df6c9e8e55cd81ebfbf2e5ea2428d5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782698"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440781"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 (Función)
-Notifica al generador de perfiles que se pasa a una función de control.  
+Notifies the profiler that control is being passed to a function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,23 +32,23 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parámetros  
  `functionOrRemappedID`  
- [in] El identificador de la función a la que se pasa el control.  
+ [in] The identifier of the function to which control is passed.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionEnter3` función de devolución de llamada notifica el generador de perfiles cuando las funciones se llama a, pero hace no inspección de argumento de soporte técnico. Use la [ICorProfilerInfo3:: Setenterleavefunctionhooks3 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar su implementación de esta función.  
+ The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- El `FunctionEnter3` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec(naked)` atributo de clase de almacenamiento.  
+ The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
+ The execution engine does not save any registers before calling this function.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04b7862363b441ab35d6dd364c4dffaf7464153
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08fbf49e6944de4934a9fe7a960405ee96a7d8e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445939"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished (Método)
-Notifica al generador de perfiles que un módulo ha terminado de cargarse.  
+Notifies the profiler that a module has finished loading.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +35,20 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>Parámetros  
  `moduleId`  
- [in] El identificador del módulo que ha terminado de cargarse.  
+ [in] The ID of the module that has finished loading.  
   
  `hrStatus`  
- [in] Un HRESULT que indica si el módulo se cargó correctamente.  
+ [in] An HRESULT that indicates whether the module was loaded successfully.  
   
 ## <a name="remarks"></a>Comentarios  
- El valor de `moduleId` no es válido para una solicitud de información hasta que el `ModuleLoadFinished` se llama al método.  
+ The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
   
- Algunas partes de la carga del módulo podrían continuar después de la `ModuleLoadFinished` devolución de llamada. Un error HRESULT en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` sólo indica que la primera parte de la carga del módulo se ha realizado correctamente.  
+ Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

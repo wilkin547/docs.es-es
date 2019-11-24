@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 208dd5ff2ba9eb450cac5a9807f0cd09852d5cf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9da4e34fa948db2fc73cbde813bac9b3430605ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436253"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData (Método)
-Obtiene un puntero a un `ITypeLib` instancia que representa la biblioteca de tipos con los nombres de biblioteca y el módulo especificados.  
+Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +37,20 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>Parámetros  
  `strModule`  
- [in] El nombre del módulo de la biblioteca de tipos.  
+ [in] The name of the type library's module.  
   
  `strTlbName`  
- [in] El nombre de la biblioteca de tipos.  
+ [in] The name of the type library.  
   
  `ppITL`  
- [out] Un puntero a una ubicación que recibe la dirección de la `ITypeLib` instancia que representa la biblioteca de tipos.  
+ [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

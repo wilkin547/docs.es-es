@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dcfdb417cb43c819f21f66611129135ad0beb42b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746907"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439853"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued (Método)
-Notifica al generador de perfiles de código que un objeto con un finalizador se ha puesto en cola para el subproceso del finalizador para la ejecución de su `Finalize` método.  
+Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +35,15 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Parámetros  
  `finalizerFlags`  
- [in] Un valor de la [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeración que describe aspectos del finalizador.  
+ [in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.  
   
  `objectID`  
- [in] El identificador del objeto que se ha puesto en cola.  
+ [in] The ID of the object that has been queued.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

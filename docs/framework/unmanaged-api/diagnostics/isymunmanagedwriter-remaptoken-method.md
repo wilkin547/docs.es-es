@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04ca1d56f3e93c77f335218bb534f890e9053d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e441d4ff39632d9381e445ee99249d04539ad87
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427888"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken (Método)
-Notifica al escritor de símbolos que se ha reasignado un token de metadatos que se emitieron los metadatos. Si el escritor de símbolos ha almacenado el antiguo token en el almacén de símbolos, deberá actualizar que el token almacenado con el nuevo valor, o bien guardar la asignación del lector de símbolos correspondiente para volver a asignar durante la fase de lectura.  
+Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted. If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +35,16 @@ HRESULT RemapToken(
   
 ## <a name="parameters"></a>Parámetros  
  `oldToken`  
- [in] El token de metadatos que se ha reasignado.  
+ [in] The metadata token that was remapped.  
   
  `newToken`  
- [in] El nuevo token de metadatos a la que `oldToken` se volvió a asignar.  
+ [in] The new metadata token to which `oldToken` was remapped.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

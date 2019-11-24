@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf16563e6d5fef3a743e802166173004a857dd0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b1c8b3f5bd88b216c59f5cc6846f83f3c094ee
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745836"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440751"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo (Función)
-Notifica al generador de perfiles que se pasa a una función de control y proporciona un identificador que puede pasarse a la [método ICorProfilerInfo3:: Getfunctionenter3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar los argumentos de marco y la función de la pila.  
+Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,30 +34,30 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>Parámetros  
  `functionIDOrClientID`  
- [in] El identificador de la función a la que se pasa el control.  
+ [in] The identifier of the function to which control is passed.  
   
  `eltInfo`  
- [in] Controlador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.  
+ [in] Controlador opaco que representa información sobre un marco de pila determinado. This handle is valid only during the callback to which it is passed.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionEnter3WithInfo` método de devolución de llamada notifica el generador de perfiles cuando se llama a las funciones y permite usar el generador de perfiles la [método ICorProfilerInfo3:: Getfunctionenter3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para inspeccionar los valores de argumento. Para obtener acceso a información del argumento, el `COR_PRF_ENABLE_FUNCTION_ARGS` marca se ha establecido. El generador de perfiles puede utilizar el [SetEventMask (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento y, a continuación, utilice el [ICorProfilerInfo3:: Setenterleavefunctionhooks3withinfo (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar su implementación de esta función.  
+ The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values. To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
   
- El `FunctionEnter3WithInfo` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec(naked)` atributo de clase de almacenamiento.  
+ The `FunctionEnter3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
+ The execution engine does not save any registers before calling this function.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- La implementación de `FunctionEnter3WithInfo` no debe bloquearse, porque ello retrasará la recolección de elementos. La implementación no debe intentar una recolección de elementos, ya que la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionEnter3WithInfo` devuelve.  
+ The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.  
   
- El `FunctionEnter3WithInfo` función no debe llamar al código administrado o provocar una asignación de memoria administrada de ninguna manera.  
+ The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

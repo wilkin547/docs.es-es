@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042886"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446890"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtener elementos de UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se describen las distintas formas de obtener objetos <xref:System.Windows.Automation.AutomationElement> para elementos [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   

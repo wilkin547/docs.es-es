@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781358"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426658"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo (Método)
-Obtiene el nombre, el tamaño de fila, el número de filas, número de columnas y el índice de columna de clave de la tabla especificada.  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,29 +40,29 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>Parámetros  
  `ixTbl`  
- [in] El identificador de la tabla cuyas propiedades se deben devolver.  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out] Un puntero al tamaño, en bytes, de una fila de tabla.  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out] Un puntero al número de filas de la tabla.  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out] Un puntero al número de columnas de la tabla.  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out] Un puntero al índice de la columna de clave, o -1 si la tabla no tiene ninguna columna de clave.  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out] Un puntero a un puntero al nombre de tabla.  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

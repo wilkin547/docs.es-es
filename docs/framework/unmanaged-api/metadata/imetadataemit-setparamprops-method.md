@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8448de17ad974bc77021a7880b7d8576c69ae75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750915"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432499"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps (Método)
-Establece o cambia las características de un parámetro de método que se ha definido por una llamada anterior a [DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,29 +40,29 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>Parámetros  
  `pd`  
- [in] El token para el parámetro de destino.  
+ [in] The token for the target parameter.  
   
  `szName`  
- [in] El nombre del parámetro en Unicode.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Marcas para el parámetro.  
+ [in] The flags for the parameter.  
   
  `dwCPlusTypeFlag`  
- [in] El ELEMENT_TYPE_ * para el valor constante.  
+ [in] The ELEMENT_TYPE_* for the constant value.  
   
  `pValue`  
- [in] El valor constante para el parámetro.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] El tamaño en caracteres (Unicode) de `pValue`.  
+ [in] The size in (Unicode) characters of `pValue`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

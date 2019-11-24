@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0da1ef80-d242-4636-87d0-43e0470b342a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 208552dd94f587b9326280ad455ca2478ae4ac4d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f97da4e68d4b76178198e91c3fb8f08b56dda7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780248"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448190"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC (Método)
-Fuerza la recolección que se produzca dentro de common language runtime (CLR).  
+Forces garbage collection to occur within the common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +32,12 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `ForceGC` método debe llamarse únicamente desde un subproceso que nunca se ha ejecutado el código administrado y no tiene las devoluciones de llamada del generador de perfiles en su pila. La implementación más conveniente consiste en crear un subproceso independiente en el generador de perfiles llama a `ForceGC` cuando está señalado.  
+ The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack. The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

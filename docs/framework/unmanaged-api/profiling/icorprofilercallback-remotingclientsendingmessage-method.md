@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782901"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445793"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage (Método)
-Notifica al generador de perfiles que el cliente envía una solicitud al servidor.  
+Notifies the profiler that the client is sending a request to the server.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +35,23 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parámetros  
  `pCookie`  
- [in] Un valor que se corresponde con el valor proporcionado en [RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) en estas condiciones:  
+ [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
   
-- Las cookies GUID de comunicación remota están activas.  
+- Remoting GUID cookies are active.  
   
-- El canal se realiza correctamente en la transmisión del mensaje.  
+- The channel succeeds in transmitting the message.  
   
-- Las cookies de GUID están activas en el proceso de servidor.  
+- GUID cookies are active on the server-side process.  
   
- Esto permite que simplifica el emparejamiento de las llamadas remotas y la creación de una pila de llamadas lógicas.  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in] Un valor que es `true` si la llamada es asincrónica; en caso contrario, `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

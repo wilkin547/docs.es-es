@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5153a25ef87d9c06bb46b74945c8eb68eb041682
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948464"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443144"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 (Método)
-Asigna un puntero de instrucción de código administrado a la versión recompilada con JIT de una función.  
+Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,26 +36,26 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parámetros  
  `ip`  
- de Puntero de instrucción en código administrado.  
+ [in] The instruction pointer in managed code.  
   
  `pFunctionId`  
- enuncia IDENTIFICADOR de la función.  
+ [out] The function ID.  
   
  `pReJitId`  
- enuncia La identidad de la versión recompilada con JIT de la función.  
+ [out] The identity of the JIT-recompiled version of the function.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetFunctionFromIP2`es similar a `GetFunctionFromIP`, con la salvedad de que obtiene el identificador de recompilación JIT en lugar del identificador de función de la función que contiene la dirección IP especificada.  
+ `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
   
 > [!NOTE]
-> `GetFunctionFromIP2`puede desencadenar una recolección de elementos `GetFunctionFromIP` no utilizados, mientras que no.  Para obtener más información, vea [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Corprof. idl, Corprof. h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

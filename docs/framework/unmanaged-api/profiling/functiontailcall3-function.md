@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aec2304e00d5328fcf55adbf5521c08865c05c56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d7c226d26d677a8b10df29e0343b71682c46699
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763306"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427365"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 (Función)
-Notifica al generador de perfiles que la función que se ejecuta actualmente está a punto de realizar una llamada de cola a otra función.  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,27 +32,27 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parámetros  
  `functionOrRemappedID`  
- [in] El identificador de la función que se ejecuta actualmente que se va a llamar a una cola.  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionTailcall3` función de devolución de llamada notifica el generador de perfiles cuando se llama a funciones. Use la [ICorProfilerInfo3:: Setenterleavefunctionhooks3 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar su implementación de esta función.  
+ The `FunctionTailcall3` callback function notifies the profiler as functions are being called. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- El `FunctionTailcall3` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec(naked)` atributo de clase de almacenamiento.  
+ The `FunctionTailcall3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
+ The execution engine does not save any registers before calling this function.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- La implementación de `FunctionTailcall3` no debe bloquearse, porque ello retrasará la recolección de elementos. La implementación no debe intentar una recolección de elementos, ya que la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionTailcall3` devuelve.  
+ The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.  
   
- El `FunctionTailcall3` función no debe llamar al código administrado o provocar una asignación de memoria administrada de ninguna manera.  
+ The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   
