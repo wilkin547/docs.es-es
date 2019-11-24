@@ -14,27 +14,25 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64e9d5e4bf43c8dac39850dafcd58a547191fc99
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697829"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445510"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="f42cd-102">IDebugAutoAttach (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="f42cd-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="f42cd-103">Define la interfaz para la asociación automática del depurador invocada por el servidor.</span><span class="sxs-lookup"><span data-stu-id="f42cd-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="1afc2-102">IDebugAutoAttach (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="1afc2-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="1afc2-103">Defines the interface for server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="1afc2-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f42cd-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="f42cd-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1afc2-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="1afc2-104">Methods</span></span>  
   
-|<span data-ttu-id="f42cd-105">Método</span><span class="sxs-lookup"><span data-stu-id="f42cd-105">Method</span></span>|<span data-ttu-id="f42cd-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="f42cd-106">Description</span></span>|  
+|<span data-ttu-id="1afc2-105">Método</span><span class="sxs-lookup"><span data-stu-id="1afc2-105">Method</span></span>|<span data-ttu-id="1afc2-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="1afc2-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f42cd-107">AutoAttach (método)</span><span class="sxs-lookup"><span data-stu-id="f42cd-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="f42cd-108">Realiza automática del depurador invocado por el servidor de adjuntar.</span><span class="sxs-lookup"><span data-stu-id="f42cd-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="1afc2-107">AutoAttach (método)</span><span class="sxs-lookup"><span data-stu-id="1afc2-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="1afc2-108">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="1afc2-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f42cd-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f42cd-109">Requirements</span></span>  
- <span data-ttu-id="f42cd-110">**Encabezado**: DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="f42cd-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1afc2-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1afc2-109">Requirements</span></span>  
+ <span data-ttu-id="1afc2-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="1afc2-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f42cd-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="f42cd-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1afc2-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="1afc2-111">See also</span></span>
 
-- [<span data-ttu-id="f42cd-112">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="f42cd-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="1afc2-112">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="1afc2-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

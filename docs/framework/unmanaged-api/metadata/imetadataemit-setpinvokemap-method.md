@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5a6fd0a9ae798fa5071d9b4b9fac1f8b3c759a20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e2a78e2d049e952aa1be0b3a8fd640eb18d0320
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750874"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440567"
 ---
-# <a name="imetadataemitsetpinvokemap-method"></a><span data-ttu-id="1a397-102">IMetaDataEmit::SetPinvokeMap (Método)</span><span class="sxs-lookup"><span data-stu-id="1a397-102">IMetaDataEmit::SetPinvokeMap Method</span></span>
-<span data-ttu-id="1a397-103">Establece o cambia las características de una firma de método PInvoke, tal como se define mediante una llamada anterior a [DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span><span class="sxs-lookup"><span data-stu-id="1a397-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span></span>  
+# <a name="imetadataemitsetpinvokemap-method"></a><span data-ttu-id="ef331-102">IMetaDataEmit::SetPinvokeMap (Método)</span><span class="sxs-lookup"><span data-stu-id="ef331-102">IMetaDataEmit::SetPinvokeMap Method</span></span>
+<span data-ttu-id="ef331-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span><span class="sxs-lookup"><span data-stu-id="ef331-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a397-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1a397-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef331-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ef331-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetPinvokeMap (   
@@ -38,29 +36,29 @@ HRESULT SetPinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1a397-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1a397-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef331-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ef331-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="1a397-106">[in] El `mdToken` a que la asignación se aplica la información.</span><span class="sxs-lookup"><span data-stu-id="1a397-106">[in] The `mdToken` to which mapping information applies.</span></span>  
+ <span data-ttu-id="ef331-106">[in] The `mdToken` to which mapping information applies.</span><span class="sxs-lookup"><span data-stu-id="ef331-106">[in] The `mdToken` to which mapping information applies.</span></span>  
   
  `dwMappingFlags`  
- <span data-ttu-id="1a397-107">[in] Marcas usadas por PInvoke para realizar la asignación.</span><span class="sxs-lookup"><span data-stu-id="1a397-107">[in] Flags used by PInvoke to do the mapping.</span></span> <span data-ttu-id="1a397-108">Se trata de una máscara de bits de `CorPinvokeMap` valores.</span><span class="sxs-lookup"><span data-stu-id="1a397-108">This is a bitmask of `CorPinvokeMap` values.</span></span>  
+ <span data-ttu-id="ef331-107">[in] Flags used by PInvoke to do the mapping.</span><span class="sxs-lookup"><span data-stu-id="ef331-107">[in] Flags used by PInvoke to do the mapping.</span></span> <span data-ttu-id="ef331-108">This is a bitmask of `CorPinvokeMap` values.</span><span class="sxs-lookup"><span data-stu-id="ef331-108">This is a bitmask of `CorPinvokeMap` values.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="1a397-109">[in] El nombre del destino de exportación en la DLL nativa.</span><span class="sxs-lookup"><span data-stu-id="1a397-109">[in] The name of the target export in the native DLL.</span></span>  
+ <span data-ttu-id="ef331-109">[in] The name of the target export in the native DLL.</span><span class="sxs-lookup"><span data-stu-id="ef331-109">[in] The name of the target export in the native DLL.</span></span>  
   
  `mrImportDLL`  
- <span data-ttu-id="1a397-110">[in] El `mdModuleRef` token para el destino de DLL no administrada.</span><span class="sxs-lookup"><span data-stu-id="1a397-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span></span>  
+ <span data-ttu-id="ef331-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span><span class="sxs-lookup"><span data-stu-id="ef331-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1a397-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1a397-111">Requirements</span></span>  
- <span data-ttu-id="1a397-112">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a397-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef331-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ef331-111">Requirements</span></span>  
+ <span data-ttu-id="ef331-112">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef331-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1a397-113">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="1a397-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ef331-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ef331-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1a397-114">**Biblioteca:** Usar como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1a397-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ef331-114">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ef331-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1a397-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a397-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ef331-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef331-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1a397-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="1a397-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef331-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef331-116">See also</span></span>
 
-- [<span data-ttu-id="1a397-117">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1a397-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="1a397-118">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1a397-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="ef331-117">IMetaDataEmit (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ef331-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="ef331-118">IMetaDataEmit2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ef331-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
