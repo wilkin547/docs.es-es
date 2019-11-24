@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17b7af7016cf88fd3ae263dd952502d515b0c833
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781645"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441558"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap (Enumeración)
-Especifica opciones para una llamada PInvoke.  
+Specifies options for a PInvoke call.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,35 +63,35 @@ typedef enum  CorPinvokeMap {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`pmNoMangle`|Use cada nombre de miembro especificada.|  
+|`pmNoMangle`|Use each member name as specified.|  
 |`pmCharSetMask`|Reservado.|  
 |`pmCharSetNotSpec`|Reservado.|  
-|`pmCharSetAnsi`|Calcular las referencias de cadenas como cadenas de caracteres de varios bytes.|  
-|`pmCharSetUnicode`|Calcular las referencias de cadenas como caracteres de 2 bytes Unicode.|  
-|`pmCharSetAuto`|Serializar automáticamente las cadenas de forma apropiada para el sistema operativo de destino. El valor predeterminado es Unicode en Windows NT, Windows 2000, Windows XP y la familia Windows Server 2003; el valor predeterminado es ANSI en Windows 98 y Windows Millennium Edition.|  
+|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
+|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
+|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
 |`pmBestFitUseAssem`|Reservado.|  
-|`pmBestFitEnabled`|Realizar una asignación con ajuste perfecto de caracteres Unicode que no tienen a una coincidencia exacta en el juego de caracteres ANSI.|  
-|`pmBestFitDisabled`|No realice la asignación con ajuste perfecto de caracteres Unicode. En este caso, se reemplazará por todos los caracteres no se puede asignar un '?'.|  
+|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
+|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
 |`pmBestFitMask`|Reservado.|  
 |`pmThrowOnUnmappableCharUseAssem`|Reservado.|  
-|`pmThrowOnUnmappableCharEnabled`|Produce una excepción cuando el serializador de interoperabilidad encuentra un carácter no se puede asignar.|  
-|`pmThrowOnUnmappableCharDisabled`|No producen una excepción cuando el serializador de interoperabilidad encuentra un carácter no asignable.|  
+|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
 |`pmThrowOnUnmappableCharMask`|Reservada|  
-|`pmSupportsLastError`|Permitir que el destinatario llamar a Win32 `SetLastError` función antes de volver del método con atributos.|  
+|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
 |`pmCallConvMask`|Reservada|  
-|`pmCallConvWinapi`|Use la convención de llamada de plataforma predeterminada. Por ejemplo, en Windows, el valor predeterminado es `StdCall` y en Windows CE .NET es `Cdecl`.|  
-|`pmCallConvCdecl`|Use el `Cdecl` convención de llamada. En este caso, el llamador limpia la pila. Esto permite llamar a funciones con `varargs` (es decir, las funciones que aceptan un número variable de parámetros).|  
-|`pmCallConvStdcall`|Use el `StdCall` convención de llamada. En este caso, el destinatario limpia la pila. Esta es la convención predeterminada para llamar a funciones no administradas con platform invoke.|  
-|`pmCallConvThiscall`|Use el `ThisCall` convención de llamada. En este caso, el primer parámetro es el `this` puntero y se almacena en ECX. Otros parámetros se insertan en la pila. El `ThisCall` convención de llamada se usa para llamar a métodos en clases exportadas desde una DLL no administrada.|  
+|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
+|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
+|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
+|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
 |`pmCallConvFastcall`|Reservado.|  
 |`pmMaxValue`|Reservado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042159"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441493"
 ---
 # <a name="ui-automation-events-overview"></a>Información general sobre eventos de UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  La notificación de eventos de[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] es una característica clave para las tecnologías de asistencia, entre las que se incluyen lectores de pantalla y lupas. Estos clientes de automatización de la interfaz de usuario, realizan un seguimiento de los eventos que los proveedores de automatización de la interfaz de usuario generan cuando sucede algo en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , y usan esa información para notificar a los usuarios finales.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "71042159"
 ## <a name="types-of-events"></a>Tipos de eventos  
  Existen varias categorías de eventos[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] :  
   
-|Evento|DESCRIPCIÓN|  
+|evento|Descripción|  
 |-----------|-----------------|  
 |Cambio de propiedad|Se genera cuando se produce un cambio en un patrón de control o elemento de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Por ejemplo, si un cliente necesita supervisar un control de casilla de una aplicación, se puede registrar para escuchar si se produce un evento de cambio de propiedad en la propiedad <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Cuando el control de casilla se activa o desactiva, el proveedor genera el evento y el cliente puede actuar según sea necesario.|  
 |Acción de elemento|Se genera cuando se produce un cambio en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] como resultado de la actividad del usuario final o de programación, por ejemplo, cuando se hace clic en un botón o se invoca mediante <xref:System.Windows.Automation.InvokePattern>.|  
@@ -66,7 +66,7 @@ ms.locfileid: "71042159"
 ## <a name="ui-automation-event-arguments"></a>Argumentos de eventos de automatización de la interfaz de usuario  
  Las clases siguientes encapsulan los argumentos de eventos.  
   
-|Clase|DESCRIPCIÓN|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contiene información sobre la carga asincrónica de contenido, como el porcentaje de carga completada.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Contiene información sobre un evento simple que no requiere datos adicionales.|  

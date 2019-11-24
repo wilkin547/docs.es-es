@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 55989fa9-ab43-4f08-8eb6-2eb56fa7ca76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 36c99477e9faead5e24799d5b0ae8901f1dd13c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787508"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448710"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder (Método)
-Agrega un reenviador de tipos a la tabla de tipos del ensamblado especificado.  
+Adds a type forwarder to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +37,22 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>Parámetros  
  `tkAssemblyRef`  
- Referencia al ensamblado al que hace referencia el reenviador de tipos.  
+ Reference to the assembly to which the type forwarder refers.  
   
  `pszTypename`  
- Nombre completo del tipo que se va a exportar.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`marcas como `tdPublic` o `tdNested`. Este valor se puede pasar al [método DefineExportedType (](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Recibe el token del tipo exportado. Esto solo es necesario para emitir tipos anidados.  
+ Receives the token of the exported type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

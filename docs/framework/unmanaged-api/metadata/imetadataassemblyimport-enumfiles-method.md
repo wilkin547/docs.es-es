@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c402b20f9d7f0d370cfa6ec8376603efa8c3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4549789ea1af584c0850a535d9f6bb54f844ce0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777988"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443552"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles (Método)
-Enumera los archivos que se hace referencia en el manifiesto del ensamblado actual.  
+Enumerates the files referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,30 +38,30 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador. Debe ser un valor null para la primera llamada de este método.  
+ [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
   
  `rFiles`  
- [out] Matriz utilizada para almacenar el `mdFile` los tokens de metadatos.  
+ [out] The array used to store the `mdFile` metadata tokens.  
   
  `cMax`  
- [in] El número máximo de `mdFile` tokens que se pueden colocar en `rFiles`.  
+ [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
   
  `pcTokens`  
- [out] El número de `mdFile` tokens realmente están colocan en `rFiles`.  
+ [out] The number of `mdFile` tokens actually placed in `rFiles`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún token para enumerar. En este caso, `pcTokens` se establece en cero.|  
+|`S_OK`|`EnumFiles` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

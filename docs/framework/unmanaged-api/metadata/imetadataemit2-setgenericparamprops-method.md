@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0c9f104329818f47597e8735389e5e6205ca617
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a93bbe0d7a9d9e6ff7505bbc215efa79176ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777105"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440436"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps (Método)
-Establece los valores de propiedad de la definición de parámetro genérico al que hace referencia el token especificado.  
+Sets property values for the generic parameter definition referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,26 +39,26 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parámetros  
  `gp`  
- [in] El token para la definición de parámetro genérico para el que se va a establecer los valores.  
+ [in] The token for the generic parameter definition for which to set values.  
   
  `dwParamFlags`  
- [in] Un valor de la [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeración que describe el tipo del parámetro genérico.  
+ [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
   
  `szName`  
- [in] Opcional. El nombre del parámetro que se va a establecer los valores.  
+ [in] Opcional. The name of the parameter for which to set values.  
   
  `reserved`  
  [in] Reservado para extensibilidad futura.  
   
  `rtkConstraints`  
- [in] Opcional. Una matriz terminada en cero de restricciones de tipo. Miembros de la matriz deben ser un `mdTypeDef`, `mdTypeRef`, o `mdTypeSpec` token de metadatos.  
+ [in] Opcional. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

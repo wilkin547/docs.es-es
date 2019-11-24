@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130272"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446897"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Información general acerca de Dynamic Language Runtime
 
@@ -51,7 +51,7 @@ Algunos ejemplos de lenguajes desarrollados con DLR son los siguientes:
 
 - IronPython. Disponible como software de código abierto en el sitio web de [GitHub](https://github.com/IronLanguages/ironpython2).
 
-- IronRuby. Disponible como software de código abierto en el sitio web de [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).
+- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
 
 ## <a name="primary-dlr-advantages"></a>Principales ventajas de DLR
  DLR ofrece las ventajas que se indican a continuación.
@@ -74,7 +74,7 @@ Algunos ejemplos de lenguajes desarrollados con DLR son los siguientes:
 ## <a name="dlr-architecture"></a>Arquitectura de DLR
  En la ilustración siguiente se muestra la arquitectura de Dynamic Language Runtime.
 
- ![Información general sobre la arquitectura de Dynamic Language Runtime](./media/dlr-archoverview.png "DLR_ArchOverview") Arquitectura de DLR
+ ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
 
  DLR agrega un conjunto de servicios a CLR para una mejor compatibilidad con los lenguajes dinámicos. Entre estos servicios, se incluyen los siguientes:
 

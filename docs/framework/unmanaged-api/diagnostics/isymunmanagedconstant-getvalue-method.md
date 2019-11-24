@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0036fc10-e768-47a8-b9cf-bf47faf8d194
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e89dabeeb4956d106e8d0ca83520d87f3b330e63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 00be35e9a15349b8bca5f76b948b8477dd240888
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776804"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449239"
 ---
 # <a name="isymunmanagedconstantgetvalue-method"></a>ISymUnmanagedConstant::GetValue (Método)
-Obtiene el valor de la constante.  
+Gets the value of the constant.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +35,13 @@ HRESULT GetValue(
   
 ## <a name="parameters"></a>Parámetros  
  `pValue`  
- [out] Un puntero a una variable que recibe el valor.  
+ [out] A pointer to a variable that receives the value.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

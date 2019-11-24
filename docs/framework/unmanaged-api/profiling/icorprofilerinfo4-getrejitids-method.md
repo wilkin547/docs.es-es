@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f6d26abba649b608858fde8beaac750600493869
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855943"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442853"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs (Método)
-Devuelve una matriz de identificadores que identifican todas las versiones compiladas con JIT de la función especificada que se siguen asignando. Esto incluye las versiones de funciones compiladas con JIT que se han revertido posteriormente pero que todavía no se han liberado (por ejemplo, cuando el dominio de aplicación que contiene la función revertida todavía está en uso).  
+Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,26 +37,26 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- de `FunctionID` De la instancia de la función para la que se van a enumerar las versiones.  
+ [in] The `FunctionID` of the function instance for which to enumerate versions.  
   
  `cReJitIds`  
- de Número de identificadores de recompilación JIT asignados en `reJitIds` la matriz.  
+ [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
   
  `pcReJitIds`  
- enuncia Número real de identificadores recompilados con JIT.  
+ [out] The actual number of JIT-recompiled IDs.  
   
  `reJitIds`  
- enuncia Matriz asignada por el llamador que contendrá los identificadores de recompilación JIT de la función especificada.  
+ [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetReJITIDs`enumera los identificadores de compilación JIT activos para una instancia de función determinada. Sigue el mismo patrón de uso que otras `ICorProfilerInfo` funciones que aceptan búferes asignados por el autor de la llamada.  
+ `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
   
 ## <a name="requirements"></a>Requisitos  
- **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Corprof. idl, Corprof. h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

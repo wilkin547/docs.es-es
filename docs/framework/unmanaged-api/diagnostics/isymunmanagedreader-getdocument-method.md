@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759351"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448344"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument (Método)
-Busca un documento. El lenguaje del documento, el proveedor y el tipo son opcionales.  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>Parámetros  
  `url`  
- [in] La dirección URL que identifica el documento.  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in] El lenguaje del documento. Este parámetro es opcional.  
+ [in] The document language. Este parámetro es opcional.  
   
  `languageVendor`  
- [in] La identidad del proveedor para el lenguaje del documento. Este parámetro es opcional.  
+ [in] The identity of the vendor for the document language. Este parámetro es opcional.  
   
  `documentType`  
- [in] El tipo del documento. Este parámetro es opcional.  
+ [in] The type of the document. Este parámetro es opcional.  
   
  `pRetVal`  
- [out] Un puntero a la interfaz devuelta.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

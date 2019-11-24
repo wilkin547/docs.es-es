@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781737"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450187"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags (Enumeración)
 Proporciona valores de marca que el vinculador usa al vincular código nativo.  
@@ -40,19 +38,19 @@ typedef enum
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`nlfNone`|Indica que no hay marcas.|  
-|`nlfLastError`|Indica un `setLastError` palabra clave.|  
-|`nlfNoMangle`|Indica un `nomangle` palabra clave.|  
+|`nlfNone`|Indicates no flags.|  
+|`nlfLastError`|Indicates a `setLastError` keyword.|  
+|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
 |`nlfMaxValue`|No se utiliza.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

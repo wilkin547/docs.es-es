@@ -1,5 +1,5 @@
 ---
-title: Método AddFile
+title: AddFile (Método)
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787688"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446684"
 ---
-# <a name="addfile-method"></a>Método AddFile
-Agrega archivos al ensamblado. También se puede usar para crear módulos sin enlazar.  
+# <a name="addfile-method"></a>AddFile (Método)
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR único del ensamblado que se va a aumentar.  
+ Unique ID of the assembly to be augmented.  
   
  `pszFilename`  
- Nombre completo del archivo que se va a agregar.  
+ Fully qualified name of file to be added.  
   
  `dwFlags`  
- Marcas `ffContainsNoMetaData` de FileDef com+ como y `ffWriteable`. `dwFlags`se pasa al [método definefile (](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit](../metadata/imetadataemit-interface.md) interfaz interface que se va a usar para emitir metadatos, si es necesario.  
+ [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
   
  `pFileToken`  
- Puntero al lugar donde se almacenará el identificador único del archivo agregado.  
+ Pointer to where the unique ID of the added file will be stored.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Vea también
 

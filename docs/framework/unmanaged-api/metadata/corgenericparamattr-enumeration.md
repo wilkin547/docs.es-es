@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981829500e499be05a8de7c1ffb4683429a903e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781856"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450284"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr (Enumeración)
-Contiene valores que describen el <xref:System.Type> parámetros para los tipos genéricos, como las usadas en llamadas a [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,22 +45,22 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`gpVarianceMask`|Varianza de parámetro solo se aplica a parámetros genéricos para interfaces y delegados.|  
-|`gpNonVariant`|Indica la ausencia de varianza.|  
-|`gpCovariant`|Indica la covarianza.|  
-|`gpContravariant`|Indica la contravarianza.|  
-|`gpSpecialConstraintMask`|Pueden aplicar las restricciones especiales a cualquier <xref:System.Type> parámetro.|  
-|`gpNoSpecialConstraint`|Indica que se aplica ninguna restricción a la <xref:System.Type> parámetro.|  
-|`gpReferenceTypeConstraint`|Indica que el <xref:System.Type> parámetro debe ser un tipo de referencia.|  
-|`gpNotNullableValueTypeConstraint`|Indica que el <xref:System.Type> parámetro debe ser un tipo de valor no puede ser un valor null.|  
-|`gpDefaultConstructorConstraint`|Indica que el <xref:System.Type> parámetro debe tener un constructor público predeterminado que no toma ningún parámetro.|  
+|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
+|`gpNonVariant`|Indicates the absence of variance.|  
+|`gpCovariant`|Indicates covariance.|  
+|`gpContravariant`|Indicates contravariance.|  
+|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
+|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
+|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
+|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
+|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

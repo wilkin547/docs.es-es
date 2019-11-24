@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944097"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449295"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 (Interfaz)
-Extiende la interfaz de enlazador de símbolos. Obtenga esta interfaz llamando `QueryInterface` a en un objeto que implementa la `ISymUnmanagedBinder` interfaz.  
+Extends the symbol binder interface. Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.  
   
 > [!IMPORTANT]
-> Se trata de un riesgo para la seguridad de abrir un archivo de base de datos de programa (PDB) desde un origen que no es de confianza.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|DESCRIPCIÓN|  
+|Método|Descripción|  
 |------------|-----------------|  
-|[GetReaderFromCallback (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Permite al usuario implementar o proporcionar a través de la devolución `IID_IDiaReadExeAtRVACallback` de `IID_IDiaReadExeAtOffsetCallback` llamada o para obtener la información del directorio de depuración de la memoria.|  
+|[GetReaderFromCallback (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym. idl, CorSym. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
 

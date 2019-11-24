@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74f0e6e39f99c9e6981066e6a3171bb9508cf1a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e7a25fce945504cff0d07f499ae4bb79378e9f3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782138"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449691"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info (Método)
-Proporciona el marco de pila de la función que se va a notificar al generador de perfiles la [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) función. Solo se puede llamar a este método durante la devolución de llamada `FunctionTailcall3WithInfo`.  
+Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. Solo se puede llamar a este método durante la devolución de llamada `FunctionTailcall3WithInfo`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,10 +36,10 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El `FunctionID` de la función que devuelve.  
+ [in] The `FunctionID` of the function that is returning.  
   
  `eltInfo`  
- [in] Controlador opaco que representa información sobre un marco de pila determinado. El generador de perfiles debe proporcionar el mismo `eltInfo` que no se proporcionó para el generador de perfiles mediante el `FunctionTailcall3WithInfo` función.  
+ [in] Controlador opaco que representa información sobre un marco de pila determinado. The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
   
  `pFrameInfo`  
  [out] Controlador opaco que representa información genérica sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada `FunctionTailcall3WithInfo` en la que el generador de perfiles llamó al método `GetFunctionTailcall3Info`.  
@@ -49,9 +47,9 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

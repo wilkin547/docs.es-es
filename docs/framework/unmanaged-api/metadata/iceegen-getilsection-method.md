@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8bddb782e13b4e7400c7e4a8128dc333efc8141d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ef944fd06d07dc8c4e49061a5e72d8acc4d0465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746181"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436349"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection (Método)
-Obtiene la sección de la base de código de lenguaje intermedio al que hace referencia el identificador especificado.  
+Gets the section of the intermediate language code base referenced by the specified handle.  
   
- Este método está obsoleto y no debe usarse.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,14 +37,14 @@ HRESULT GetIlSection (
   
 ## <a name="parameters"></a>Parámetros  
  `section`  
- [in] El identificador de la sección para obtener.  
+ [in] The handle to the section to get.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

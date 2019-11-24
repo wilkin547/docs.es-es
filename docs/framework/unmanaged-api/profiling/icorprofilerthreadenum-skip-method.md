@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c394c2b17404351bd0813ab1eb21230a1edd9de
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aaa8eaa2c4eb927a817425611f71e51c9f3d37af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781103"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447580"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip (Método)
 Desplaza el cursor del enumerador desde su posición actual para omitir el número especificado de elementos.  
@@ -36,23 +34,23 @@ HRESULT Skip (    [in] ULONG celt
   
 ## <a name="parameters"></a>Parámetros  
  `celt`  
- [in] El número de elementos que se van a omitir.  
+ [in] The number of elements to be skipped.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`celt` se omitieron los elementos.|  
-|S_FALSE|Menos de `celt` se omitieron los elementos, lo que indica que no hay ningún elemento más.|  
+|S_OK|`celt` elements were skipped.|  
+|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
   
 ## <a name="remarks"></a>Comentarios  
- La nueva posición del cursor de este enumerador es (posición actual) + `celt`.  
+ The new position of this enumerator's cursor is (current position) + `celt`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

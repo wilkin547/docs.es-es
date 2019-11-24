@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781767"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450198"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl (Enumeración)
 Contiene valores que describen las características de implementación de un método.  
@@ -56,29 +54,29 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Marcas que describen el tipo de código.|  
-|`miIL`|Especifica que la implementación del método es el lenguaje intermedio de Microsoft (MSIL).|  
+|`miCodeTypeMask`|Flags that describe code type.|  
+|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
 |`miNative`|Especifica que la implementación del método es nativa.|  
-|`miOPTIL`|Especifica que la implementación del método es OPTIL.|  
-|`miRuntime`|Especifica que common language runtime proporciona la implementación del método.|  
-|`miManagedMask`|Marcadores que indican si el código es managed o unmanaged.|  
-|`miUnmanaged`|Especifica que la implementación del método es no administrada.|  
-|`miManaged`|Especifica que se administra la implementación del método.|  
-|`miForwardRef`|Especifica que el método está definido. Esta marca se utiliza principalmente en escenarios de combinación.|  
-|`miPreserveSig`|Especifica que la firma del método no se puede trastocar para una conversión de HRESULT.|  
-|`miInternalCall`|Reservado para uso interno por common language runtime.|  
-|`miSynchronized`|Especifica que el método tiene un único subproceso a través de su cuerpo.|  
+|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
+|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
+|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
+|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
+|`miManaged`|Specifies that the method implementation is managed.|  
+|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
+|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
+|`miInternalCall`|Reserved for internal use by the common language runtime.|  
+|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
 |`miNoInlining`|Especifica que el método no se puede insertar.|  
-|`miAggressiveInlining`|Especifica que el método debe insertarse si es posible.|  
-|`miNoOptimization`|Especifica que el método no se debe optimizar.|  
-|`miMaxMethodImplVal`|El máximo valor válido para un `CorMethodImpl`.|  
+|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
+|`miNoOptimization`|Specifies that the method should not be optimized.|  
+|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

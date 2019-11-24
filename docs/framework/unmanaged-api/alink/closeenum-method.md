@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa4a091e-13fe-4264-91de-e12f1c767c87
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d9529022eb04c81152dced5c63f255c510851a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 018af6929ad4023c70bfb975b9be010912415dd7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777465"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446562"
 ---
 # <a name="closeenum-method"></a>CloseEnum (Método)
-Cierra la enumeración indicada y libera los recursos asociados.  
+Closes the indicated enumeration and frees associated resources.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +35,13 @@ HRESULT CloseEnum(
   
 ## <a name="parameters"></a>Parámetros  
  `hEnum`  
- Identificador de la enumeración que se va a cerrar.  
+ Handle of enumeration to be closed.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

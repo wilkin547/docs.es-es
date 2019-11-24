@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 154b2460-59ce-4874-a9f2-1b3353486ac5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3de3a9c152f3074339dba330b7827cf795a7e537
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c3c3a0168216902e5982b7d0193e72acc2bdf47
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745978"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448099"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate (Método)
-Genera y obtiene una sección de código con el nombre especificado y los valores de marca.  
+Generates and gets a code section using the specified name and flag values.  
   
- Este método está obsoleto y no debe usarse.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,23 +39,23 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>Parámetros  
  `name`  
- [in] Un puntero a una cadena que especifica el nombre de la sección que se va a crear.  
+ [in] A pointer to a string that specifies the name of the section to be created.  
   
  `flags`  
- [in] Marcadores que especifican opciones.  
+ [in] Flags that specify options.  
   
  `section`  
- [out] Un puntero a la sección de código recién creado.  
+ [out] A pointer to the newly created code section.  
   
 ## <a name="remarks"></a>Comentarios  
- Llamar a `GetSectionCreate` sólo si tiene requisitos de sección especial que no se controlan mediante otros métodos.  
+ Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

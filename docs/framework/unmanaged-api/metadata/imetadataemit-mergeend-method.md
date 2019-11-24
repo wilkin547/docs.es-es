@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34ecfc2f01f22971e135358806adeea632e02f8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757647"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448027"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd (Método)
 
-Combina en el actual ámbito de todos los ámbitos de los metadatos especificados por una o varias llamadas anteriores al [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,41 +34,41 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Parámetros
 
-Este método no toma ningún parámetro.
+This method takes no parameters.
 
 ## <a name="remarks"></a>Comentarios
 
-Esta rutina desencadena la combinación real de los metadatos, de todos los ámbitos especificados utilizando delante de las llamadas a de importación `IMetaDataEmit::Merge`, en el ámbito de salida actual.
+This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
 
-Se aplican las siguientes condiciones especiales para la fusión mediante combinación:
+The following special conditions apply to the merge:
 
-- Un identificador de versión de módulo (MVID) nunca se importa, porque es único para los metadatos en el ámbito de importación.
+- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
 
-- No hay propiedades de todo el módulo existentes se sobrescriben.
+- No existing module-wide properties are overwritten.
 
-  Si ya se han establecido propiedades del módulo para el ámbito actual, no hay propiedades del módulo se importan. Sin embargo, si no se han establecido las propiedades de módulo en el ámbito actual, se importan solo una vez, cuando se encuentran en primer lugar. Si se vuelven a encontrar las propiedades de módulo, son duplicados. Si se comparan los valores de todas las propiedades de módulo (excepto el MVID) y no se encuentran duplicados, se produce un error.
+  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
 
-- Para obtener definiciones de tipo (`TypeDef`), no hay duplicados se combinan en el ámbito actual. `TypeDef` se comprueban los objetos duplicados en cada *nombre de objeto completo* + *GUID* + *número de versión*. Si hay una coincidencia en el nombre o GUID y cualquiera de los otros dos elementos es diferente, se produce un error. En caso contrario, si coincide con los tres elementos, `MergeEnd` realiza una comprobación rápida para asegurarse de que las entradas son en realidad duplicados; en caso contrario, se produce un error. Esta comprobación superficial busca:
+- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
 
-  - Las declaraciones de miembro mismo, que se producen en el mismo orden. Los miembros que se marcan como `mdPrivateScope` (consulte la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeración) no se incluyen en esta comprobación; se combinan de manera especial.
+  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
 
-  - El mismo diseño de clase.
+  - The same class layout.
 
-  Esto significa que un `TypeDef` objeto debe siempre por completo y coherente definirse en cada ámbito de metadatos donde se declara; si sus implementaciones de miembros (para una clase) se reparten entre varias unidades de compilación, la definición completa se supone que presente en cada ámbito y no es incremental para cada ámbito. Por ejemplo, si los nombres de parámetro son relevantes para el contrato, se debe emitir la misma manera en cada ámbito; Si no son relevantes, no se emiten en metadatos.
+  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
 
-  La excepción es que un `TypeDef` objeto puede tener miembros incrementales marcados como `mdPrivateScope`. Al encontrar estos, `MergeEnd` agrega incrementalmente el ámbito actual sin tener en cuenta los duplicados. Dado que el compilador reconoce el ámbito privado, el compilador debe ser responsable de aplicar las reglas.
+  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
 
-- No se importan o se combinan; direcciones virtuales relativas (RVA) el compilador se espera volver a emitir esta información.
+- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
 
-- Se combinan los atributos personalizados solo cuando se combina el elemento al que están conectados. Por ejemplo, se combinan los atributos personalizados asociados a una clase cuando la clase se encuentra en primer lugar. Si los atributos personalizados que están asociados con un `TypeDef` o `MemberDef` específica de la unidad de compilación (por ejemplo, la marca de tiempo de compilación de un miembro), no se combinan y se deja al compilador que quitar o actualizar estos metadatos.
+- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Encabezado**: Cor.h
+**Header:** Cor.h
 
-**Biblioteca:** Usar como un recurso en MSCorEE.dll
+**Library:** Used as a resource in MSCorEE.dll
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

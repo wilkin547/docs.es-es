@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777061"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446991"
 ---
 # <a name="importfile-method"></a>ImportFile (Método)
-Importa ensamblados y módulos sin enlazar.  
+Imports assemblies and unbound modules.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +39,28 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>Parámetros  
  `pszFilename`  
- Nombre completo del archivo que se va a importar.  
+ Fully qualified name of file to be imported.  
   
  `pszTargetName`  
- Nombre opcional del archivo de salida que se puede usar para cambiar el nombre del archivo a medida que está vinculado al ensamblado.  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `fSmartImport`  
- Si es TRUE, se usa ImportTypes (; de lo contrario, la importación se debe realizar manualmente.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- Puntero al token en el que se almacenará un identificador de archivo único. El archivo puede ser un ensamblado o un archivo.  
+ Pointer to token where a unique file ID will be stored. The file can be an assembly or a file.  
   
  `ppAssemblyScope`  
- Recibe un puntero a la [interfaz IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md). Puede ser NULL si el archivo no es un ensamblado.  
+ Receives pointer to [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md). Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- Puntero al recuento de archivos y/o ámbitos que se han importado.  
+ Pointer to the count of files and/or scopes that have been imported.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

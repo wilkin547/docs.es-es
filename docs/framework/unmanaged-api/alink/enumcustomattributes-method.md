@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a5b3f1e9bf1444feb73949ef7133fbd9ae35134
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777349"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446471"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes (Método)
-Recupera los atributos personalizados de nivel de ensamblado.  
+Retrieves assembly-level custom attributes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,25 +39,25 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Parámetros  
  `hEnum`  
- Identificador del enumerador.  
+ Handle of enumerator.  
   
  `tkType`  
- Tipo de atributos que se van a enumerar. Se `mdTokenNill` utiliza para todos los atributos.  
+ Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
   
  `rCustomValues`  
- Recibe tokens de atributos personalizados.  
+ Receives custom attributes tokens.  
   
  `cMax`  
- Especifica el tamaño `rCustomValues` de la matriz.  
+ Specifies size of `rCustomValues` array.  
   
  `pcCustomValues`  
- Opcionalmente, recibe el recuento de valores de token.  
+ Optionally receives count of token values.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

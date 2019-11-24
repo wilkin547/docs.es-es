@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777086"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445679"
 ---
 # <a name="importtypes-method"></a>ImportTypes (Método)
-Inicia la importación de tipos de cada ámbito importado mediante el [método importFile](importfile-method.md).  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- IDENTIFICADOR del ensamblado en el que se va a importar.  
+ ID of the assembly to import to.  
   
  `FileToken`  
- IDENTIFICADOR del archivo desde el que se va a importar.  
+ ID of the file to import from.  
   
  `dwScope`  
- Ámbito de base cero que se va a importar.  
+ Zero-based scope to import.  
   
  `phEnum`  
- Recibe el identificador de enumerador para los tipos de este ámbito.  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- Opcionalmente, recibe la interfaz de [interfaz IMetaDataImport](../metadata/imetadataimport-interface.md) .  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- Opcionalmente, recibe el recuento de tipos en el ámbito indicado.  
+ Optionally receives count of types in the indicated scope.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

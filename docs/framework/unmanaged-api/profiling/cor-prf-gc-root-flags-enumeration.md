@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f179e3b01d6c3b34dfa765565a0fc38d0ba867c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 174486a88192bd5ff11074930d5ad3375603f8a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753698"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449458"
 ---
-# <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS (Enumeración)
-Indica una propiedad de una raíz de la colección de elementos no utilizados.  
+# <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS (Enumeración)
+Indicates a property of a garbage collection root.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,20 +37,20 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|La raíz impide que una colección de elementos no utilizados traslade el objeto.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|La raíz no impide la recolección de elementos.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|La raíz hace referencia a un campo de objeto en lugar del propio objeto.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|La raíz impide la recolección si el recuento de referencias del objeto es un valor determinado.|  
+|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
   
 ## <a name="remarks"></a>Comentarios  
- `COR_PRF_GC_ROOT_FLAGS` es una máscara de bits que proporciona información adicional sobre raíces especiales. Sin embargo, no todas las raíces son especiales. Por ejemplo, algunas raíces no son referencias débiles, punteros interiores, anclados o recuento de referencias. Para esas raíces, no hay ninguna marca para transmitir. Por lo tanto, los métodos que utilizan esta enumeración, como el [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) método send 0 para la máscara de bits de marcas, que indica que todos los marcadores están desactivados.  
+ `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

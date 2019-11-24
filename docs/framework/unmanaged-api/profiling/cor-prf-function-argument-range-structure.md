@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c0c0679dac84089577a2698ed8b0b5497a1a81e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 223ad57f0b317bf75778d4e5355ec129185f5a29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753905"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449487"
 ---
-# <a name="corprffunctionargumentrange-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE (Estructura)
+# <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE (Estructura)
 Representa un bloque de argumentos de función almacenados en la memoria de forma contigua, ordenados de izquierda a derecha.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,15 +35,15 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>Miembros  
   
-|Miembros|DESCRIPCIÓN|  
+|Miembros|Descripción|  
 |-------------|-----------------|  
-|`startAddress`|La dirección inicial del bloque.|  
-|`length`|La longitud del bloque contiguo.|  
+|`startAddress`|The starting address of the block.|  
+|`length`|The length of the contiguous block.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

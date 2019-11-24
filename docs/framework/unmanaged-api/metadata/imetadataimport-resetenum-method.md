@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa5a446ba7bfd70330601c7cbc129800761cdb7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f965ab215ff861c6df61de82dcbbea6b389c8da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782622"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426781"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum (Método)
 Restablece el enumerador especificado a la posición especificada.  
@@ -38,17 +36,17 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>Parámetros  
  `hEnum`  
- [in] Para restablecer el enumerador.  
+ [in] The enumerator to reset.  
   
  `ulPos`  
- [in] Nueva posición en la que se va a colocar el enumerador.  
+ [in] The new position at which to place the enumerator.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

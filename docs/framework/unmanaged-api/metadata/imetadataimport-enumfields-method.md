@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775535"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449538"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields (Método)
 Enumera los tokens de FieldDef del tipo al que hace referencia el token de TypeDef especificado.  
@@ -41,33 +39,33 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parámetros  
  `phEnum`  
- [in, out] Un puntero en el enumerador.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] El token de TypeDef de la clase cuyos campos son que hay que enumerar.  
+ [in] The TypeDef token of the class whose fields are to be enumerated.  
   
  `rFields`  
- [out] La lista de tokens de FieldDef.  
+ [out] The list of FieldDef tokens.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rFields`.  
   
  `pcTokens`  
- [out] El número real de los tokens de FieldDef devueltos en `rFields`.  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún campo para enumerar. En ese caso, `pcTokens` es cero.|  
+|`S_OK`|`EnumFields` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

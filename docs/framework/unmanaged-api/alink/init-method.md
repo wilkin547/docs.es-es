@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e48b5c64-049f-4f93-ad87-d07ae9cd5845
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf96770dd58c9b84596c082a615f626ec723cc6c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 986ae69e7ebb8f607be5d37fab426bcc787abb26
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787247"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445643"
 ---
 # <a name="init-method"></a>Init (Método)
-Prepara objetos que implementan la [interfaz ialink (](ialink-interface.md) para su uso.  
+Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +35,16 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Parámetros  
  `pDispenser`  
- Puntero de la [interfaz IMetaDataDispenserEx](../metadata/imetadatadispenserex-interface.md) al dispensador de metadatos.  
+ [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
   
  `pErrorHandler`  
- Puntero de [interfaz imetadataerror (](../metadata/imetadataerror-interface.md) a una interfaz de control de errores opcional.  
+ [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método se ejecuta correctamente.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Vea también
 

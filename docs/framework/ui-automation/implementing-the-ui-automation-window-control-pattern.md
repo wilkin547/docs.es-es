@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: ad2f84fbde512bb99b213bf3b97f2190091d8576
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042988"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447038"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementar el patrón de control Window de UI Automation
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IWindowProvider>, incluida la información sobre las propiedades, los métodos y los eventos de <xref:System.Windows.Automation.WindowPattern> . Al final del tema se ofrecen vínculos a referencias adicionales.  
   
- El <xref:System.Windows.Automation.WindowPattern> patrón de control se usa para admitir controles que proporcionan la funcionalidad fundamental basada en ventanas dentro de una interfaz gráfica de usuario (GUI) tradicional. Entre los ejemplos de controles que deben implementar este patrón de control se incluyen las ventanas de aplicación de nivel superior, las ventanas secundarias de interfaz de múltiples documentos (MDI), los controles de panel de división de tamaño ajustable, los cuadros de diálogo modales y las ventanas de ayuda de globo.  
+ The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
@@ -41,18 +41,18 @@ ms.locfileid: "71042988"
   
 |Miembro requerido|Tipo de miembro|Notas|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Propiedad|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Método|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Método|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Método|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Evento|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Evento|None|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Evento|No se garantiza que sea <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Propiedad.|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Método|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Método|Ninguno|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Método|Ninguno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|evento|Ninguno|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|evento|Ninguno|  
+|<xref:System.Windows.Automation.WindowInteractionState>|evento|No se garantiza que sea <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Excepciones  
@@ -60,8 +60,8 @@ ms.locfileid: "71042988"
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> : Cuando un control no admite un comportamiento solicitado.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> : Cuando el parámetro no es un número válido.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
   
 ## <a name="see-also"></a>Vea también
 

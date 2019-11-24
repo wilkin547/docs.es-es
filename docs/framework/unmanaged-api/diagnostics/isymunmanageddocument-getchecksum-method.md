@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776769"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449201"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum (Método)
 Obtiene la suma de comprobación.  
@@ -38,16 +36,16 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parámetros  
  `cData`  
- [in] La longitud del búfer proporcionado por el `data` parámetro  
+ [in] The length of the buffer provided by the `data` parameter  
   
  `pcData`  
- [out] El tamaño y la longitud de la suma de comprobación, en bytes.  
+ [out] The size and length of the checksum, in bytes.  
   
  `data`  
- [out] Búfer que recibe la suma de comprobación.  
+ [out] The buffer that receives the checksum.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, un código de error.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>Vea también
 

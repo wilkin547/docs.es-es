@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 19f1839aa2c4ca810e76c1745103a00c6f5ea5a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777581"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431737"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef (Método)
-Crea la firma de metadatos para un módulo con el nombre especificado.  
+Creates the metadata signature for a module with the specified name.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,17 +36,17 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>Parámetros  
  `szName`  
- [in] El nombre de otro archivo de metadatos, normalmente un archivo DLL. Esto es sólo el nombre de archivo. No use un nombre de ruta de acceso completa.  
+ [in] The name of the other metadata file, typically a DLL. This is the file name only. Do not use a full path name.  
   
  `pmur`  
- [out] Asignado `mdModuleRef` token.  
+ [out] The assigned `mdModuleRef` token.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usar como un recurso en MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ab203fc054298971fadfd9abe4e787844313898b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3256f6f64e2ee4678b2627eea81e12cb4a02fd1e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765324"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449625"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach (Método)
 Indica al CLR que desasocie el generador de perfiles.  
@@ -41,26 +39,26 @@ HRESULT RequestProfilerDetach(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|DESCRIPCIÓN|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|La solicitud de desasociación es válida y el procedimiento de desasociación continuará ahora en otro subproceso. Una vez completada totalmente la desasociación, se genera un evento `ProfilerDetachSucceeded`.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|El generador de perfiles no se pudo un [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) intento para el [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interfaz, que debe implementar para admitir la operación de desasociación. La desasociación no se intentó.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|The profiler failed an [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) attempt for the [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, which it must implement to support the detach operation. La desasociación no se intentó.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|No se puede realizar la desasociación porque el generador de perfiles establece marcas inmutables en el inicio. No se intentó la desasociación; el generador de perfiles sigue totalmente asociado.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Desasociación es imposible porque utiliza el generador de perfiles instrumenta código de lenguaje intermedio (MSIL) de Microsoft o insertadas `enter` / `leave` enlaces. No se intentó la desasociación; el generador de perfiles sigue totalmente asociado.<br /><br /> **Tenga en cuenta** MSIL instrumentado es código que se proporciona el generador de perfiles mediante el [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) método.|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|El tiempo de ejecución no se ha inicializado aún en la aplicación administrada. (Es decir, el tiempo de ejecución no se ha cargado completamente). Este código de error se puede devolver cuando se solicita la desasociación dentro de la devolución de llamada del generador de perfiles [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|Se llamó a `RequestProfilerDetach` en un momento no permitido. Esto se produce si se llama al método en un subproceso administrado pero no desde un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método o desde un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método que no puede tolerar una recolección de elementos. Para obtener más información, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Detachment is impossible because the profiler used instrumented Microsoft intermediate language (MSIL) code, or inserted `enter`/`leave` hooks. No se intentó la desasociación; el generador de perfiles sigue totalmente asociado.<br /><br /> **Note** Instrumented MSIL is code is code that is provided by the profiler using the [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|El tiempo de ejecución no se ha inicializado aún en la aplicación administrada. (That is, the runtime has not been fully loaded.) This error code may be returned when detachment is requested inside the profiler callback's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method.|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|Se llamó a `RequestProfilerDetach` en un momento no permitido. This occurs if the method is called on a managed thread but not from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method or from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method that cannot tolerate a garbage collection. For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Comentarios  
  Durante el procedimiento de desasociación, el subproceso de desasociación (el subproceso creado específicamente para desasociar el generador de perfiles) comprueba ocasionalmente si todos los subprocesos han salido del código del generador de perfiles. El generador de perfiles debe proporcionar una estimación de cuánto tiempo deben tardar usando para ello el parámetro `dwExpectedCompletionMilliseconds`. Un valor adecuado es la cantidad de tiempo típica que el generador de perfiles invierte dentro de un método `ICorProfilerCallback*` cualquiera; este valor no debe ser menor que la mitad de la cantidad máxima de tiempo que el generador de perfiles espera invertir.  
   
- El subproceso de desasociación usa `dwExpectedCompletionMilliseconds` para decidir cuánto tiempo debe esperar antes de comprobar si el código de devolución de llamada del generador de perfiles se ha extraído de todas las pilas. Aunque los detalles del siguiente algoritmo pueden cambiar en futuras versiones del CLR, ilustra una forma de usar `dwExpectedCompletionMilliseconds` para determinar cuándo es seguro descargar el generador de perfiles. El subproceso de desasociación espera primero `dwExpectedCompletionMilliseconds` milisegundos. Si después de volver del estado de suspensión, el CLR descubre que el código de devolución de llamada del generador de perfiles está presente, el subproceso de desasociación suspende de nuevo, esta vez para dos veces `dwExpectedCompletionMilliseconds` milisegundos. Si después de volver de este segundo estado de suspensión, el subproceso de desasociación descubre que aún hay código de devolución de llamada del generador de perfiles, entra en suspensión durante 10 minutos antes de volver a comprobar. El subproceso de desasociación sigue realizando la comprobación cada 10 minutos.  
+ El subproceso de desasociación usa `dwExpectedCompletionMilliseconds` para decidir cuánto tiempo debe esperar antes de comprobar si el código de devolución de llamada del generador de perfiles se ha extraído de todas las pilas. Aunque los detalles del siguiente algoritmo pueden cambiar en futuras versiones del CLR, ilustra una forma de usar `dwExpectedCompletionMilliseconds` para determinar cuándo es seguro descargar el generador de perfiles. El subproceso de desasociación espera primero `dwExpectedCompletionMilliseconds` milisegundos. If, after awakening from the sleep, the CLR finds that profiler callback code is still present, the detach thread sleeps again, this time for two times `dwExpectedCompletionMilliseconds` milliseconds. Si después de volver de este segundo estado de suspensión, el subproceso de desasociación descubre que aún hay código de devolución de llamada del generador de perfiles, entra en suspensión durante 10 minutos antes de volver a comprobar. El subproceso de desasociación sigue realizando la comprobación cada 10 minutos.  
   
  Si el generador de perfiles especifica `dwExpectedCompletionMilliseconds` como 0 (cero), el CLR usa un valor predeterminado de 5000, lo que significa que realizará una comprobación después de 5 segundos, otra vez después de 10 segundos y, a partir de entonces, cada 10 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

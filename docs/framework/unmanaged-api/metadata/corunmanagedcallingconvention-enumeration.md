@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9206fbde13f457d4b2e2941ee744d645c6df9774
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781993"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442437"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention (Enumeración)
-Especifica las convenciones de llamada para código no administrado.  
+Specifies the calling conventions for unmanaged code.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,24 +44,24 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Miembros  
   
-|Member|DESCRIPCIÓN|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|La convención de llamada de lenguaje C.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|La convención de llamada estándar.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" convención de llamada.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|La convención de llamada "rápida".|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|No se utiliza.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|No se utiliza.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|No se utiliza.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|No se utiliza.|  
   
 ## <a name="remarks"></a>Comentarios  
- El CLR no admite la convención de llamada "rápida" en la versión 1.0 de .NET Framework.  
+ The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

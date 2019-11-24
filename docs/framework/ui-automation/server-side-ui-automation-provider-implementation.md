@@ -6,21 +6,21 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042765"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446850"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).
 
 En esta sección se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado.
 
-La implementación de para los elementos de Windows Presentation Foundation (WPF)[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] y los que no son de ( [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]como los diseñados para) es fundamentalmente diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.
+The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.
 
 <a name="Security_Considerations"></a>
 
@@ -56,7 +56,7 @@ El proveedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-
 
 Cada proveedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] debe implementar una de las interfaces siguientes:
 
-|Interfaz|DESCRIPCIÓN|
+|Interfaz|Descripción|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Proporciona funcionalidad para un control simple hospedado en una ventana. Es compatible con las propiedades y los patrones de control.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Se hereda de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Agrega una funcionalidad para un elemento de un control complejo, incluida la navegación por el fragmento, el establecimiento del foco y la devolución del rectángulo delimitador del elemento.|
@@ -64,7 +64,7 @@ Cada proveedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptl
 
 Las interfaces siguientes incrementan la funcionalidad, pero no se requiere su implementación.
 
-|Interfaz|DESCRIPCIÓN|
+|Interfaz|Descripción|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Habilita al proveedor para realizar un seguimiento de las solicitudes de eventos.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Habilita la reordenación de los elementos basados en ventanas en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de un fragmento.|
@@ -115,7 +115,7 @@ Por lo general, en lo que respecta a los controles basados en HWND, los proveedo
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, consulta <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, vea <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > Los proveedores hospedados en un control de <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deben devolver el elemento [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . En este caso, es posible que el proveedor de ventana predeterminado no consiga recuperar el valor correcto.
 >
@@ -129,7 +129,7 @@ Para obtener código de ejemplo, vea [Return Properties from a UI Automation Pro
 
 Los proveedores de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben generar eventos para notificar a las aplicaciones cliente los cambios en el estado de la interfaz de usuario. Para generar eventos, se usan los métodos siguientes:
 
-|Método|DESCRIPCIÓN|
+|Método|Descripción|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Genera varios eventos, incluidos los que desencadenan los patrones de control.|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Genera un evento cuando ha cambiado una propiedad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
@@ -139,7 +139,7 @@ El propósito de un evento es notificar al cliente algo que ha sucedido en la [!
 
 Para optimizar el rendimiento, un proveedor puede generar eventos de forma selectiva o no generarlos en absoluto si no se registra ninguna aplicación cliente para recibirlos. Para conseguir esta optimización, se usan los métodos siguientes:
 
-|Método|DESCRIPCIÓN|
+|Método|Descripción|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Esta propiedad estática especifica si alguna aplicación cliente se ha suscrito a eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|La implementación del proveedor de esta interfaz en una raíz de fragmento permite recibir información cuando los clientes registran controladores de eventos o anulan su registro en los eventos del fragmento.|

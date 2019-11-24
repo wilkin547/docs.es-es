@@ -6,14 +6,12 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92f2419070738a49f78c1f1497652cc0b89f3b21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042203"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447866"
 ---
 # <a name="metadata-enumerations"></a>Enumeraciones para metadatos
 En esta sección se describen las enumeraciones no administradas que la API de metadatos usa.  
@@ -26,16 +24,16 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que describen las características de una referencia de ensamblado.  
   
  [CeeSectionAttr (enumeración)](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- Proporciona valores que especifican los atributos de una sección para su uso por el [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaz.  
+ Provides values that specify the attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
  [CeeSectionRelocType (enumeración)](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- Proporciona valores para influir en el tipo de `reloc` instrucción se emite en una llamada a la [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) método.  
+ Provides values to influence the type of `reloc` instruction emitted in a call to the [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) method.  
   
  [COINITICOR (enumeración)](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
- Especifica las constantes utilizadas por [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) al inicializar common language runtime.  
+ Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when initializing the common language runtime.  
   
  [COINITIEE (enumeración)](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)  
- Especifica las constantes utilizadas por [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) al inicializar common language runtime.  
+ Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
   
  [CorArgType (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corargtype-enumeration.md)  
  Contiene valores que describen el tipo nativo de un identificador en tiempo de ejecución.  
@@ -68,13 +66,13 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que describen los metadatos de un campo.  
   
  [CorFileFlags (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- Contiene valores que describen el tipo de archivo definido en una llamada a la [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) método.  
+ Contains values that describe the type of file defined in a call to the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
   
  [CorFileMapping (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- Contiene valores que describen el tipo de asignación de archivo que se devuelve de una llamada a la [IMetaDataInfo:: GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) método.  
+ Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
   
  [CorGenericParamAttr (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- Contiene valores que describen el <xref:System.Type> parámetros para los tipos genéricos, como las usadas en llamadas a la [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) método.  
+ Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to the [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) method.  
   
  [CorImportOptions (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  Contiene valores de marca que controlan el comportamiento durante la importación de un ensamblado fuera del ámbito actual.  
@@ -116,7 +114,7 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que describen los metadatos de un parámetro de método.  
   
  [CorPEKind (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- Contiene valores que describen un archivo portable ejecutable, tal como lo devuelve una llamada a la [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) método.  
+ Contains values that describe a portable executable file, as returned from a call to the [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) method.  
   
  [CorPinvokeMap (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
  Contiene valores que describen las características de una llamada PInvoke.  
@@ -134,7 +132,7 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que indican el nivel de precisión necesario al consultar el tamaño de una operación de guardar.  
   
  [CorSerializationType (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corserializationtype-enumeration.md)  
- Contiene valores que describen la manera en que el CLR serializa un objeto. Por lo general, estos valores corresponden a valores CorElementType.  
+ Contiene valores que describen la manera en que el CLR serializa un objeto. These values generally correspond to CorElementType values.  
   
  [CorSetENC (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)  
  Contiene valores que se usan para influir en el comportamiento durante la generación de metadatos.  
@@ -152,10 +150,10 @@ En esta sección se describen las enumeraciones no administradas que la API de m
  Contiene valores que describen las convenciones de llamada no administradas.  
   
  [CorValidatorModuleType (enumeración)](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- Proporciona los valores utilizados por la [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interfaz para especificar el tipo de módulo (archivo PE frente a archivo .obj).  
+ Provides values used by the [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface to specify the type of the module (PE file vs. .obj file).  
   
  [COUNINITIEE (enumeración)](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
- Especifica las constantes utilizadas por [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) al inicializar common language runtime.  
+ Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
