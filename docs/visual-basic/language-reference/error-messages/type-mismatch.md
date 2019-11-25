@@ -1,27 +1,27 @@
 ---
-title: No coinciden los tipos (Visual Basic)
+title: Error de coincidencia de tipos
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID13
 ms.assetid: f72e9e21-f475-43f2-9464-29c8ad27b6c2
-ms.openlocfilehash: 2823cd566b4fc05aa6a27002dbf548a520de7970
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57620ef156f99e1dbe7502d7d72ecac583aed049
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051564"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346667"
 ---
-# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="dd96e-102">No coinciden los tipos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd96e-102">Type mismatch (Visual Basic)</span></span>
-<span data-ttu-id="dd96e-103">Se intentó convertir un valor a otro tipo de forma que no es válida.</span><span class="sxs-lookup"><span data-stu-id="dd96e-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
+# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="54df6-102">No coinciden los tipos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54df6-102">Type mismatch (Visual Basic)</span></span>
+<span data-ttu-id="54df6-103">You attempted to convert a value to another type in a way that is not valid.</span><span class="sxs-lookup"><span data-stu-id="54df6-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dd96e-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="dd96e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="54df6-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="54df6-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="dd96e-105">Compruebe la asignación para asegurarse de que es válido.</span><span class="sxs-lookup"><span data-stu-id="dd96e-105">Check the assignment to make sure it is valid.</span></span>  
+1. <span data-ttu-id="54df6-105">Check the assignment to make sure it is valid.</span><span class="sxs-lookup"><span data-stu-id="54df6-105">Check the assignment to make sure it is valid.</span></span>  
   
-2. <span data-ttu-id="dd96e-106">Asegúrese de que no ha pasado un objeto a un procedimiento que espera una sola propiedad o valor.</span><span class="sxs-lookup"><span data-stu-id="dd96e-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
+2. <span data-ttu-id="54df6-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span><span class="sxs-lookup"><span data-stu-id="54df6-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
   
-3. <span data-ttu-id="dd96e-107">Asegúrese de que no ha usado un nombre de proyecto o módulo donde se esperaba una expresión.</span><span class="sxs-lookup"><span data-stu-id="dd96e-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
+3. <span data-ttu-id="54df6-107">Make sure you did not use a module or project name where an expression was expected.</span><span class="sxs-lookup"><span data-stu-id="54df6-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd96e-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="dd96e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54df6-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="54df6-108">See also</span></span>
 
-- [<span data-ttu-id="dd96e-109">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="dd96e-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="54df6-109">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="54df6-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
