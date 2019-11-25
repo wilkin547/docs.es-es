@@ -1,57 +1,43 @@
 ---
 title: 'Tabla de tipos de valor: Referencia de C#'
 ms.custom: seodec18
-ms.date: 08/24/2018
+ms.date: 11/06/2019
 helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
-- types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: c470bbdff6cb08732f063afb9b325e44d9ca4d6b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859558"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428465"
 ---
-# <a name="value-types-table-c-reference"></a><span data-ttu-id="001c2-102">Tabla de tipos de valor (referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="001c2-102">Value types table (C# Reference)</span></span>
+# <a name="value-types-table-c-reference"></a><span data-ttu-id="2a2f6-102">Tabla de tipos de valor (referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-102">Value types table (C# reference)</span></span>
 
-<span data-ttu-id="001c2-103">En la tabla siguiente se muestran los tipos de valor de C#:</span><span class="sxs-lookup"><span data-stu-id="001c2-103">The following table shows the C# value types:</span></span>
+<span data-ttu-id="2a2f6-103">En la tabla siguiente se muestran los tipos de valor de C#:</span><span class="sxs-lookup"><span data-stu-id="2a2f6-103">The following table shows the C# value types:</span></span>
 
-|<span data-ttu-id="001c2-104">Tipo de valor</span><span class="sxs-lookup"><span data-stu-id="001c2-104">Value type</span></span>|<span data-ttu-id="001c2-105">Categoría</span><span class="sxs-lookup"><span data-stu-id="001c2-105">Category</span></span>|<span data-ttu-id="001c2-106">Sufijo de tipo</span><span class="sxs-lookup"><span data-stu-id="001c2-106">Type suffix</span></span>|
-|----------------|--------------|-----------------|
-|[<span data-ttu-id="001c2-107">bool</span><span class="sxs-lookup"><span data-stu-id="001c2-107">bool</span></span>](bool.md)|<span data-ttu-id="001c2-108">Booleano</span><span class="sxs-lookup"><span data-stu-id="001c2-108">Boolean</span></span>||
-|`byte`|<span data-ttu-id="001c2-109">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-109">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>||
-|[<span data-ttu-id="001c2-110">char</span><span class="sxs-lookup"><span data-stu-id="001c2-110">char</span></span>](char.md)|<span data-ttu-id="001c2-111">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-111">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>
-|`decimal`|<span data-ttu-id="001c2-112">Numérico, [punto flotante](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-112">Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="001c2-113">M o m</span><span class="sxs-lookup"><span data-stu-id="001c2-113">M or m</span></span>|
-|`double`|<span data-ttu-id="001c2-114">Numérico, [punto flotante](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-114">Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="001c2-115">D o d</span><span class="sxs-lookup"><span data-stu-id="001c2-115">D or d</span></span>|
-|[<span data-ttu-id="001c2-116">enum</span><span class="sxs-lookup"><span data-stu-id="001c2-116">enum</span></span>](enum.md)|<span data-ttu-id="001c2-117">Enumeración</span><span class="sxs-lookup"><span data-stu-id="001c2-117">Enumeration</span></span>||
-|`float`|<span data-ttu-id="001c2-118">Numérico, [punto flotante](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-118">Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="001c2-119">F o f</span><span class="sxs-lookup"><span data-stu-id="001c2-119">F or f</span></span>|
-|`int`|<span data-ttu-id="001c2-120">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-120">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>||
-|`long`|<span data-ttu-id="001c2-121">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-121">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="001c2-122">L o l</span><span class="sxs-lookup"><span data-stu-id="001c2-122">L or l</span></span>|
-|`sbyte`|<span data-ttu-id="001c2-123">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-123">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>||
-|`short`|<span data-ttu-id="001c2-124">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-124">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>||
-|[<span data-ttu-id="001c2-125">struct</span><span class="sxs-lookup"><span data-stu-id="001c2-125">struct</span></span>](struct.md)|<span data-ttu-id="001c2-126">Estructura definida por el usuario</span><span class="sxs-lookup"><span data-stu-id="001c2-126">User-defined structure</span></span>||
-|`uint`|<span data-ttu-id="001c2-127">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-127">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="001c2-128">U o u</span><span class="sxs-lookup"><span data-stu-id="001c2-128">U or u</span></span>|
-|`ulong`|<span data-ttu-id="001c2-129">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-129">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="001c2-130">UL, Ul, uL, ul, LU, Lu, lU o lu</span><span class="sxs-lookup"><span data-stu-id="001c2-130">UL, Ul, uL, ul, LU, Lu, lU, or lu</span></span>|
-|`ushort`|<span data-ttu-id="001c2-131">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="001c2-131">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>||
+|<span data-ttu-id="2a2f6-104">Tipo de valor</span><span class="sxs-lookup"><span data-stu-id="2a2f6-104">Value type</span></span>|<span data-ttu-id="2a2f6-105">Categoría</span><span class="sxs-lookup"><span data-stu-id="2a2f6-105">Category</span></span>|
+|----------------|--------------|
+|[<span data-ttu-id="2a2f6-106">bool</span><span class="sxs-lookup"><span data-stu-id="2a2f6-106">bool</span></span>](bool.md)|<span data-ttu-id="2a2f6-107">Booleano</span><span class="sxs-lookup"><span data-stu-id="2a2f6-107">Boolean</span></span>|
+|`byte`|<span data-ttu-id="2a2f6-108">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-108">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|[<span data-ttu-id="2a2f6-109">char</span><span class="sxs-lookup"><span data-stu-id="2a2f6-109">char</span></span>](../builtin-types/char.md)|<span data-ttu-id="2a2f6-110">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-110">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|`decimal`|<span data-ttu-id="2a2f6-111">Numérico, [punto flotante](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-111">Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)</span></span>|
+|`double`|<span data-ttu-id="2a2f6-112">Numérico, [punto flotante](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-112">Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)</span></span>|
+|[<span data-ttu-id="2a2f6-113">enum</span><span class="sxs-lookup"><span data-stu-id="2a2f6-113">enum</span></span>](enum.md)|<span data-ttu-id="2a2f6-114">Enumeración</span><span class="sxs-lookup"><span data-stu-id="2a2f6-114">Enumeration</span></span>|
+|`float`|<span data-ttu-id="2a2f6-115">Numérico, [punto flotante](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-115">Numeric, [floating-point](../builtin-types/floating-point-numeric-types.md)</span></span>|
+|`int`|<span data-ttu-id="2a2f6-116">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-116">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|`long`|<span data-ttu-id="2a2f6-117">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-117">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|`sbyte`|<span data-ttu-id="2a2f6-118">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-118">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|`short`|<span data-ttu-id="2a2f6-119">Con signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-119">Signed, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|[<span data-ttu-id="2a2f6-120">struct</span><span class="sxs-lookup"><span data-stu-id="2a2f6-120">struct</span></span>](struct.md)|<span data-ttu-id="2a2f6-121">Estructura definida por el usuario</span><span class="sxs-lookup"><span data-stu-id="2a2f6-121">User-defined structure</span></span>|
+|`uint`|<span data-ttu-id="2a2f6-122">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-122">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|`ulong`|<span data-ttu-id="2a2f6-123">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-123">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
+|`ushort`|<span data-ttu-id="2a2f6-124">Sin signo, numérico, [entero](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="2a2f6-124">Unsigned, numeric, [integral](../builtin-types/integral-numeric-types.md)</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="001c2-132">Comentarios</span><span class="sxs-lookup"><span data-stu-id="001c2-132">Remarks</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a2f6-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="2a2f6-125">See also</span></span>
 
-<span data-ttu-id="001c2-133">Use un sufijo de tipo para especificar un tipo de un literal numérico.</span><span class="sxs-lookup"><span data-stu-id="001c2-133">You use a type suffix to specify a type of a numerical literal.</span></span> <span data-ttu-id="001c2-134">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="001c2-134">For example:</span></span>
-
-```csharp
-decimal a = 0.1M;
-```
-
-<span data-ttu-id="001c2-135">Si un [literal numérico entero](~/_csharplang/spec/lexical-structure.md#integer-literals) no tiene sufijo, tiene el primero de los siguientes tipos en el que se puede representar su valor: `int`, `uint`, `long`, `ulong`.</span><span class="sxs-lookup"><span data-stu-id="001c2-135">If an [integer numerical literal](~/_csharplang/spec/lexical-structure.md#integer-literals) has no suffix, it has the first of the following types in which its value can be represented: `int`, `uint`, `long`, `ulong`.</span></span>
-
-<span data-ttu-id="001c2-136">Si un [literal numérico real](~/_csharplang/spec/lexical-structure.md#real-literals) no tiene sufijo, es de tipo `double`.</span><span class="sxs-lookup"><span data-stu-id="001c2-136">If a [real numerical literal](~/_csharplang/spec/lexical-structure.md#real-literals) has no suffix, it's of type `double`.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="001c2-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="001c2-137">See also</span></span>
-
-- [<span data-ttu-id="001c2-138">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="001c2-138">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="001c2-139">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="001c2-139">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="001c2-140">Tabla de valores predeterminados</span><span class="sxs-lookup"><span data-stu-id="001c2-140">Default values table</span></span>](default-values-table.md)
-- [<span data-ttu-id="001c2-141">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="001c2-141">Value types</span></span>](value-types.md)
-- [<span data-ttu-id="001c2-142">Tabla de formatos de presentación para valores numéricos</span><span class="sxs-lookup"><span data-stu-id="001c2-142">Formatting numeric results table</span></span>](formatting-numeric-results-table.md)
+- [<span data-ttu-id="2a2f6-126">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="2a2f6-126">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="2a2f6-127">Tabla de valores predeterminados</span><span class="sxs-lookup"><span data-stu-id="2a2f6-127">Default values table</span></span>](default-values-table.md)
+- [<span data-ttu-id="2a2f6-128">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="2a2f6-128">Value types</span></span>](value-types.md)
+- [<span data-ttu-id="2a2f6-129">Tabla de formatos de presentación para valores numéricos</span><span class="sxs-lookup"><span data-stu-id="2a2f6-129">Formatting numeric results table</span></span>](formatting-numeric-results-table.md)
