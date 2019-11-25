@@ -4,12 +4,12 @@ description: Descubra las características de telemetría de la CLI de ML.NET qu
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929283"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977262"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Recopilación de telemetría mediante la CLI de ML.NET
 
@@ -17,7 +17,7 @@ La [CLI de ML.NET](https://aka.ms/mlnet-cli) incluye una característica de tele
 
 ## <a name="how-microsoft-uses-the-data"></a>Cómo Microsoft usa los datos
 
-El equipo del producto usa los datos de telemetría de la CLI de ML.NET para ayudar a entender cómo mejorar las herramientas. Por ejemplo, si los clientes usan con poca frecuencia determinada tarea de aprendizaje de automático, el equipo del producto investiga por qué y usa las conclusiones para dar prioridad al desarrollo de características. La telemetría de la CLI de ML.NET también ayuda con la depuración de problemas, como bloqueos y anomalías de código. 
+El equipo del producto usa los datos de telemetría de la CLI de ML.NET para ayudar a entender cómo mejorar las herramientas. Por ejemplo, si los clientes usan con poca frecuencia determinada tarea de aprendizaje de automático, el equipo del producto investiga por qué y usa las conclusiones para dar prioridad al desarrollo de características. La telemetría de la CLI de ML.NET también ayuda con la depuración de problemas, como bloqueos y anomalías de código.
 
 Mientras que el equipo del producto valora esta información, también sabemos que no todos desean enviar estos datos. [Averigüe cómo deshabilitar la telemetría.](#opt-out-of-data-collection)
 
@@ -57,6 +57,7 @@ La característica recopila los siguientes datos:
 Los datos se envían de forma segura a los servidores de Microsoft con tecnología de [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), se conservan bajo acceso restringido y se utilizan bajo controles de seguridad estrictos de sistemas seguros de [Azure Storage](https://azure.microsoft.com/services/storage/).
 
 ### <a name="data-points-not-collected"></a>Punto de datos no recopilados
+
 La característica de telemetría *no* recopila:
 
 - datos personales, como los nombres de usuario

@@ -2,12 +2,12 @@
 title: PNRP en el desarrollo de aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: 4cd0d739e58cd252213e8d5c16d29cc612338df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f9a408fbd7fbbb77c0fd5208926f4b06fcf23b38
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178144"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428209"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP en el desarrollo de aplicaciones
 En Windows Vista, las aplicaciones de red pueden tener acceso a la publicación de nombres y funciones de resolución a través de una interfaz de programación de aplicaciones (API) de PNRP simplificada.  
@@ -17,7 +17,7 @@ En Windows Vista, las aplicaciones de red pueden tener acceso a la publicación 
   
  Para una resolución de nombres de PNRP altamente simplificada en Windows Vista, los nombres PNRP ahora se encuentran integrados en la función getaddrinfo() de Windows Sockets. Para usar PNRP con el fin de resolver un nombre para una dirección de IPv6, las aplicaciones pueden usar la función getaddrinfo() para resolver el nombre de dominio completo (FQDN) name.prnp.net, donde "name" es el nombre de mismo nivel que se resuelve. El dominio pnrp.net es un dominio reservado en Windows Vista para la resolución de nombres de PNRP.  
   
- La transmisión de mensajes entre aplicaciones punto a punto todavía se controla mediante arquitecturas subyacentes, como [datos de gran tamaño y secuencias](https://go.microsoft.com/fwlink/?LinkID=179652) de PeerChannel y WCF.  
+ La transmisión de mensajes entre aplicaciones punto a punto todavía se controla mediante arquitecturas subyacentes, como [datos de gran tamaño y secuencias](../wcf/feature-details/large-data-and-streaming.md) de PeerChannel y WCF.  
   
 ## <a name="see-also"></a>Vea también
 

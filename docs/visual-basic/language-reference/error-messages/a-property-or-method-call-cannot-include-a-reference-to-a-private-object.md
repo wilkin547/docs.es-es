@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 67b0b50ecd6d7933d2aeea4556a8e261632e297a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53f9052555555a5b9dcb038dfee9cd54dc2b4251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646916"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976200"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>Una llamada a una propiedad o un método no puede incluir una referencia a un objeto privado como un argumento o un valor de retorno
+
 Entre las causas posibles de este error se incluyen:  
   
 - Un cliente invocó una propiedad o un método de un componente fuera de proceso e intentó pasar una referencia a un objeto privado como uno de los argumentos.  

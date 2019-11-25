@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 6a49c070bd7d2e3819044c6bb653671a2fc8199f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106995"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347253"
 ---
 # <a name="resolve-assembly-loads"></a>Resolución de cargas de ensamblado
 .NET proporciona el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicaciones que requieren un mayor control sobre la carga de ensamblados. Al controlar este evento, la aplicación puede cargar un ensamblado en el contexto de carga desde fuera de las rutas de acceso de sondeo normales, seleccionar qué versión de ensamblado cargar, emitir un ensamblado dinámico y devolverlo, etc. En este tema se proporcionan instrucciones para controlar el evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -160,7 +160,6 @@ Process is terminated due to StackOverflowException.
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class BadExample

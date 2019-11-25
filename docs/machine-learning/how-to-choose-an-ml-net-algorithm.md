@@ -4,12 +4,12 @@ description: Aprenda a elegir un algoritmo de ML.NET para su modelo de Machine L
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972088"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976698"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Cómo elegir un algoritmo de ML.NET
 
@@ -19,9 +19,9 @@ Los algoritmos funcionan con **características**. Las características son valo
 
 ## <a name="trainer--algorithm--task"></a>Instructor = algoritmo + tarea
 
-Un algoritmo es la expresión matemática que se ejecuta para generar un **modelo**. Diferentes algoritmos generan modelos con diferentes características. 
+Un algoritmo es la expresión matemática que se ejecuta para generar un **modelo**. Diferentes algoritmos generan modelos con diferentes características.
 
-Con ML.NET, se puede aplicar el mismo algoritmo a distintas tareas. Por ejemplo, se puede usar el ascenso coordinado dual estocástico para la clasificación binaria, la clasificación multiclase y la regresión. La diferencia radica en cómo se interpreta la salida del algoritmo para que coincida con la tarea. 
+Con ML.NET, se puede aplicar el mismo algoritmo a distintas tareas. Por ejemplo, se puede usar el ascenso coordinado dual estocástico para la clasificación binaria, la clasificación multiclase y la regresión. La diferencia radica en cómo se interpreta la salida del algoritmo para que coincida con la tarea.
 
 Para cada combinación de tarea o algoritmo, ML.NET proporciona un componente que ejecuta el algoritmo de entrenamiento y no la interpretación. Estos componentes se denominan instructores. Por ejemplo, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> usa el algoritmo **StochasticDualCoordinatedAscent** que se aplica a la tarea de **regresión**.
 

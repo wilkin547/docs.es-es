@@ -1,24 +1,26 @@
 ---
-title: Procedimiento para leer la configuración de la aplicación en Visual Basic
+title: Procedimiento para leer la configuración de la aplicación
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 04726381f8d285ae61045d1624b3b41b7f47e491
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823589"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329566"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Procedimiento para leer la configuración de la aplicación en Visual Basic
+
 Puede leer la configuración de un usuario accediendo a la propiedad de configuración del objeto `My.Settings`.  
   
  El objeto `My.Settings` expone cada configuración como una propiedad. El nombre de propiedad es el mismo que el nombre de la configuración y el tipo de propiedad es el mismo que el tipo de configuración. El **Ámbito** de la configuración indica si la propiedad es de solo lectura. La propiedad de una configuración con ámbito **Aplicación** es de solo lectura, mientras que la propiedad de una configuración con ámbito **Usuario** es de lectura y escritura. Para más información, consulte [My.Settings (Objeto)](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se muestra el valor de la configuración `Nickname`.  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  

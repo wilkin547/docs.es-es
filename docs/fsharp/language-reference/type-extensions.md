@@ -1,17 +1,17 @@
 ---
 title: Extensiones de tipo
 description: Obtenga información F# sobre cómo las extensiones de tipo permiten agregar nuevos miembros a un tipo de objeto definido previamente.
-ms.date: 02/08/2019
-ms.openlocfilehash: 5d31d87095d3381e66dc32da4b6d7bb746886406
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106845"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978254"
 ---
 # <a name="type-extensions"></a>Extensiones de tipo
 
-Las extensiones de tipo (también denominadas aumentos) son una familia de características que permiten agregar nuevos miembros a un tipo de objeto definido previamente. Las tres características son:
+Las extensiones de tipo (también denominadas _aumentos_) son una familia de características que permiten agregar nuevos miembros a un tipo de objeto definido previamente. Las tres características son:
 
 - Extensiones de tipo intrínsecas
 - Extensiones de tipo opcionales
@@ -66,11 +66,11 @@ type Variant with
 
 El uso de una extensión de tipo le permite separar cada uno de los elementos siguientes:
 
-- La declaración de un `Variant` tipo
-- Funcionalidad para imprimir la `Variant` clase en función de su "forma"
-- Una manera de tener acceso a la funcionalidad de impresión con `.`la notación de estilo de objeto
+- Declaración de un tipo de `Variant`
+- Funcionalidad para imprimir la clase `Variant` en función de su "forma"
+- Una manera de tener acceso a la funcionalidad de impresión con la notación de `.`de estilo de objeto
 
-Esta es una alternativa a la definición de todo como miembro `Variant`en. Aunque no es un enfoque bastante mejor, puede ser una representación más limpia de la funcionalidad en algunas situaciones.
+Esta es una alternativa a la definición de todo como miembro en `Variant`. Aunque no es un enfoque bastante mejor, puede ser una representación más limpia de la funcionalidad en algunas situaciones.
 
 Las extensiones de tipo intrínseco se compilan como miembros del tipo que aumentan y aparecen en el tipo cuando la reflexión examina el tipo.
 
@@ -83,19 +83,16 @@ Las extensiones de tipo opcionales son útiles para extender un tipo que no se h
 ```fsharp
 module Extensions
 
-open System.Collections.Generic
-
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
         seq {
             for x in xs do
-                for i in 1 .. n do
-                    yield x
+                for _ in 1 .. n -> x
         }
 ```
 
-Ahora puede acceder `RepeatElements` como si es un miembro de <xref:System.Collections.Generic.IEnumerable%601> , siempre y cuando el `Extensions` módulo se abra en el ámbito en el que está trabajando.
+Ahora puede tener acceso a `RepeatElements` como si es miembro de <xref:System.Collections.Generic.IEnumerable%601> siempre que el módulo de `Extensions` se abra en el ámbito en el que está trabajando.
 
 Las extensiones opcionales no aparecen en el tipo extendido cuando se examinan por reflexión. Las extensiones opcionales deben estar en módulos y solo están en el ámbito cuando el módulo que contiene la extensión está abierto o está en el ámbito de otra forma.
 
@@ -121,9 +118,9 @@ type IEnumerable<'T> with
 
 No hay ninguna manera de obtener este código para trabajar con una extensión de tipo opcional:
 
-- Tal y como está `Sum` , el miembro tiene una restricción `'T` diferente`static member get_Zero` en `static member (+)`(y) de la que define la extensión de tipo.
-- La modificación de la extensión de tipo para que tenga la `Sum` misma restricción que ya no coincidirá con `IEnumerable<'T>`la restricción definida en.
-- Al `member this.Sum` cambiar `member inline this.Sum` a, se producirá un error que indica que las restricciones de tipo no coinciden.
+- Tal y como está, el miembro de `Sum` tiene una restricción diferente en `'T` (`static member get_Zero` y `static member (+)`) de la que define la extensión de tipo.
+- La modificación de la extensión de tipo para que tenga la misma restricción que `Sum` ya no coincidirá con la restricción definida en `IEnumerable<'T>`.
+- Al cambiar `member this.Sum` a `member inline this.Sum`, se producirá un error que indica que las restricciones de tipo no coinciden.
 
 Lo que se desea son los métodos estáticos que "flotan espacio" y se pueden presentar como si estuvieran extendiendo un tipo. Aquí es donde los métodos de extensión son necesarios.
 
@@ -144,7 +141,7 @@ type IEnumerableExtensions() =
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Cuando se usa, este código aparecerá como si `Sum` se hubiera definido en <xref:System.Collections.Generic.IEnumerable%601>, siempre y cuando `Extensions` se haya abierto o esté en el ámbito.
+Cuando se usa, este código aparecerá como si `Sum` se define en <xref:System.Collections.Generic.IEnumerable%601>, siempre y cuando `Extensions` se haya abierto o esté en el ámbito.
 
 ## <a name="other-remarks"></a>Otros comentarios
 
@@ -152,7 +149,7 @@ Las extensiones de tipo también tienen los siguientes atributos:
 
 - Se puede extender cualquier tipo al que se pueda tener acceso.
 - Las extensiones de tipo intrínseca y opcional pueden definir _cualquier_ tipo de miembro, no solo los métodos. Por ejemplo, las propiedades de extensión también son posibles.
-- El `self-identifier` token en la [Sintaxis](type-extensions.md#syntax) representa la instancia del tipo que se invoca, al igual que los miembros ordinarios.
+- El token de `self-identifier` en la [Sintaxis](type-extensions.md#syntax) representa la instancia del tipo que se invoca, al igual que los miembros ordinarios.
 - Los miembros extendidos pueden ser miembros estáticos o de instancia.
 - Las variables de tipo en una extensión de tipo deben coincidir con las restricciones del tipo declarado.
 
@@ -162,8 +159,8 @@ También existen las siguientes limitaciones para las extensiones de tipo:
 - Las extensiones de tipo no admiten métodos de invalidación como aumentos.
 - Las extensiones de tipo no admiten [parámetros de tipo resueltos estáticamente](./generics/statically-resolved-type-parameters.md).
 - Las extensiones de tipo opcionales no admiten constructores como aumentos.
-- Las extensiones de tipo no se pueden definir en las abreviaturas de [tipo](type-abbreviations.md).
-- Las extensiones de tipo no son `byref<'T>` válidas para (aunque se pueden declarar).
+- Las extensiones de tipo no se pueden definir en las [abreviaturas de tipo](type-abbreviations.md).
+- Las extensiones de tipo no son válidas para `byref<'T>` (aunque se pueden declarar).
 - Las extensiones de tipo no son válidas para los atributos (aunque se pueden declarar).
 - Puede definir extensiones que sobrecarguen otros métodos del mismo nombre, pero el F# compilador da preferencia a los métodos que no son de extensión si hay una llamada ambigua.
 

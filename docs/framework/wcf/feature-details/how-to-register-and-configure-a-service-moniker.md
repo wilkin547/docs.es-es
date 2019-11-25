@@ -1,18 +1,18 @@
 ---
-title: Procedimiento para registrar y configurar un moniker de servicio
+title: Cómo registrar y configurar un moniker de servicio
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972142"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976126"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Procedimiento para registrar y configurar un moniker de servicio
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Cómo registrar y configurar un moniker de servicio
 Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF) dentro de una aplicación COM con un contrato con tipo, debe registrar los tipos con atributos necesarios en COM y configurar la aplicación COM y el moniker con el enlace necesario configuraciones.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Para registrar los tipos con atributos necesarios en COM  
@@ -67,7 +67,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
   
      Puede utilizar cualquiera de estas cadenas moniker desde una aplicación de Visual Basic 6.0, siempre que agregue una referencia al ensamblado que contiene los tipos `IMathService`, como se muestra en el siguiente código de ejemplo.  
   
-    ```vb  
+    ```vb
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -85,7 +85,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
     > Puede utilizar un código similar en una aplicación C#, C++, o cualquier otra aplicación de lenguaje .NET.  
   
     > [!NOTE]
-    > : Si el moniker tiene un formato incorrecto o si el servicio no está disponible, `GetObject` la llamada a devuelve un error de "sintaxis no válida". Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
+    > : si el moniker es incorrecto o el servicio no está disponible, la llamada a `GetObject` devolverá el error "Sintaxis no válida." Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
   
      Aunque este tema se centra en la utilización del moniker de servicio del código de VB 6.0, puede utilizar un moniker de servicio de otros lenguajes. Si utiliza un moniker del código de C++, deberá importar el ensamblado generado por Svcutil.exe con "no_namespace named_guids raw_interfaces_only", como se muestra en el siguiente código.  
   

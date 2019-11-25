@@ -1,5 +1,5 @@
 ---
-title: Cómo agregar una ubicación personalizada a un cuadro de diálogo de archivos
+title: 'Cómo: Agregar un lugar común a un cuadro de diálogo de archivos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 824c948fafd0a0995ad261389414d2d79918c8a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7172e484451cf932413920910ec9124b3388bd76
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916348"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976990"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Cómo agregar una ubicación personalizada a un cuadro de diálogo de archivos
-Los cuadros de diálogo para abrir y guardar predeterminados en [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] tienen un área en el lado izquierdo titulada **Vínculos favoritos**. Esta área se denomina ubicaciones personalizadas. Las <xref:System.Windows.Forms.OpenFileDialog> clases <xref:System.Windows.Forms.SaveFileDialog> y permiten agregar carpetas a la <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> colección.  
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Cómo: Agregar un lugar común a un cuadro de diálogo de archivos
+Los cuadros de diálogo abrir y guardar predeterminados de Windows Vista tienen un área en el lado izquierdo del cuadro de diálogo titulado **vínculos favoritos**. Esta área se denomina ubicaciones personalizadas. Las clases <xref:System.Windows.Forms.OpenFileDialog> y <xref:System.Windows.Forms.SaveFileDialog> permiten agregar carpetas a la colección de <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>.  
   
 > [!NOTE]
-> Para que una ubicación personalizada aparezca <xref:System.Windows.Forms.OpenFileDialog> en o <xref:System.Windows.Forms.SaveFileDialog>, la <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> propiedad debe establecerse `true` en (valor predeterminado).  
+> Para que una ubicación personalizada aparezca en el <xref:System.Windows.Forms.OpenFileDialog> o <xref:System.Windows.Forms.SaveFileDialog>, la propiedad <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> debe estar establecida en `true` (valor predeterminado).  
   
 ### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Para agregar una ubicación personalizada a un cuadro de diálogo de archivos  
   
-- Agregue una ruta de acceso, un GUID de carpeta conocida <xref:System.Windows.Forms.FileDialogCustomPlace> o un objeto <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> a la colección del cuadro de diálogo.  
+- Agregue una ruta de acceso, un GUID de carpeta conocida o un objeto de <xref:System.Windows.Forms.FileDialogCustomPlace> a la colección de <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> del cuadro de diálogo.  
   
      En el siguiente ejemplo de código se muestra cómo agregar una ruta de acceso:  
   

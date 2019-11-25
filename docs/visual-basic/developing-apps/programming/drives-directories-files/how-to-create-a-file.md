@@ -1,16 +1,16 @@
 ---
-title: Procedimiento para crear un archivo en Visual Basic
+title: Procedimiento para crear un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: b4b713d612b4b177014c5ecbe778297070b0df6a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 20533ec01d3198d499312ed0c15ec8cca2ff70bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977737"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348796"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Procedimiento para crear un archivo en Visual Basic
 

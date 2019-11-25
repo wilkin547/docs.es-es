@@ -1,5 +1,5 @@
 ---
-title: Manipular archivos y directorios en Visual Basic
+title: Manipulación de archivos y directorios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314690"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333808"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
+
 En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en Visual Basic. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
   
  En este tutorial se usan los miembros del elemento `My.Computer.FileSystem Object`, que están disponibles en Visual Basic. Vea <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información. Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.  
@@ -150,11 +151,13 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
 6. Ejecute la aplicación. La casilla **Guardar resultados** y el botón **Examine** (Examinar) se deshabilitan si no hay ningún elemento seleccionado en `ListBox`.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>Ejemplo completo usando My.Computer.FileSystem  
+
  A continuación, se muestra el ejemplo completo.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>Ejemplo completo usando System.IO  
+
  En el siguiente ejemplo equivalente se usan clases del espacio de nombres <xref:System.IO> en lugar de usar objetos `My.Computer.FileSystem`.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  

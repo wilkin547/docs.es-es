@@ -3,27 +3,24 @@ title: 'Tutorial: Inspección visual automatizada mediante el aprendizaje de tra
 description: En este tutorial se muestra cómo usar el aprendizaje de transferencia para entrenar un modelo de aprendizaje profundo de TensorFlow en ML.NET con la API de detección de imágenes con el fin de clasificar las imágenes de superficies de hormigón como con grietas o sin grietas.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/25/2019
+ms.date: 11/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b8aec80134188811eb80ad1394e5a64d65a3c6f0
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 443f9e9a83ebf31bb6c62323015af4a554323b67
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961957"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74205054"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Inspección visual automatizada mediante el aprendizaje de transferencia con la API Image Classification de ML.NET
 
 Obtenga información sobre cómo entrenar un modelo de aprendizaje profundo personalizado mediante el aprendizaje de transferencia, un modelo TensorFlow previamente entrenado y la API Image Classification de ML.NET para clasificar las imágenes de superficies de hormigón como con grietas o sin grietas.
 
-> [!NOTE]
-> En este tutorial se usa una versión preliminar de la API Image Classification de ML.NET.
-
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
-> - Comprender el problema
+> - Entender el problema
 > - Obtener información sobre la API Image Classification de ML.NET
 > - Comprender el modelo entrenado previamente
 > - Usar el aprendizaje de transferencia para entrenar un modelo de clasificación de imágenes de TensorFlow personalizado
@@ -37,7 +34,7 @@ En este tutorial, aprenderá a:
 
 Este ejemplo es una aplicación de consola de .NET Core de C# que clasifica imágenes mediante un modelo TensorFlow de aprendizaje profundo entrenado previamente. El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary) en GitHub.
 
-## <a name="understand-the-problem"></a>Comprender el problema
+## <a name="understand-the-problem"></a>Entender el problema
 
 La clasificación de imágenes es un problema de visión informática. La clasificación de imágenes toma una imagen como entrada y la categoriza en una clase prescrita. A continuación se muestran algunos escenarios en los que la clasificación de imágenes es útil:
 
@@ -56,7 +53,7 @@ ML.NET proporciona varias formas de realizar la clasificación de imágenes. En 
 
 El aprendizaje de transferencia aplica los conocimientos obtenidos de la resolución de un problema a otro problema relacionado.
 
-Entrenar un modelo de aprendizaje profundo desde cero requiere establecer varios parámetros, una enorme cantidad de datos de entrenamiento etiquetados y una gran cantidad de recursos informáticos (cientos de horas de GPU). El uso de un modelo entrenado previamente, junto con el aprendizaje de transferencia, permite acceso directo al proceso de entrenamiento. 
+Entrenar un modelo de aprendizaje profundo desde cero requiere establecer varios parámetros, una enorme cantidad de datos de entrenamiento etiquetados y una gran cantidad de recursos informáticos (cientos de horas de GPU). El uso de un modelo entrenado previamente, junto con el aprendizaje de transferencia, permite acceso directo al proceso de entrenamiento.
 
 ## <a name="training-process"></a>Proceso de entrenamiento
 
@@ -77,14 +74,14 @@ Una vez calculados los valores de salida de la fase de cuello de botella, se usa
 
 ## <a name="understand-the-pretrained-model"></a>Descripción del modelo entrenado previamente
 
-El modelo previamente entrenado que se usa en este tutorial es la variante de capa 101 del modelo de Residual Network v2 (ResNet). El modelo original se ha entrenado para clasificar las imágenes en mil categorías. El modelo toma como entrada una imagen de tamaño 224 x 224 y genera las probabilidades de clase para cada una de las clases en las que se ha entrenado. Parte de este modelo se usa para entrenar un nuevo modelo mediante imágenes personalizadas con el fin de realizar predicciones entre dos clases. 
+El modelo previamente entrenado que se usa en este tutorial es la variante de capa 101 del modelo de Residual Network v2 (ResNet). El modelo original se ha entrenado para clasificar las imágenes en mil categorías. El modelo toma como entrada una imagen de tamaño 224 x 224 y genera las probabilidades de clase para cada una de las clases en las que se ha entrenado. Parte de este modelo se usa para entrenar un nuevo modelo mediante imágenes personalizadas con el fin de realizar predicciones entre dos clases.
 
 ## <a name="create-console-application"></a>Creación de una aplicación de consola
 
 Ahora que tiene conocimientos generales del aprendizaje de transferencia y de la API Image Classification, es momento de compilar la aplicación.
 
 1. Cree una **Aplicación de consola de .NET Core de C#** llamada "DeepLearning_ImageClassification_Binary".
-1. Instale el paquete NuGet **Microsoft.ML 1.4.0-preview2**:
+1. Instale el paquete NuGet **Microsoft.ML**, versión **1.4.0**:
     1. En el Explorador de soluciones, haga clic con el botón derecho en **Administrar paquetes NuGet**.
     1. Elija "nuget.org" como origen del paquete.
     1. Seleccione la pestaña **Examinar**.
@@ -92,14 +89,14 @@ Ahora que tiene conocimientos generales del aprendizaje de transferencia y de la
     1. Busque **Microsoft.ML**.
     1. Seleccione el botón **Instalar**.
     1. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
-    1. Repita estos pasos para **Microsoft.ML.Dnn 0.16.0-preview2** y **Microsoft.ML.ImageAnalytics 1.4.0-preview2**.
+    1. Repita estos pasos para los paquetes NuGet **Microsoft.ML.Vision**, versión **1.4.0**, **SciSharp.TensorFlow.Redist**, versión **1.15.0** y **Microsoft.ML.ImageAnalytics**, versión **1.4.0**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 
 > [!NOTE]
-> Los conjuntos de valores de este tutorial están tomados del documento "SDNET2018: A concrete crack image dataset for machine learning applications" (2018) (SDNET2018: Un conjunto de datos de imágenes de hormigón descifradas para aplicaciones de aprendizaje automático) de Marc Maguire, Sattar Dorafshan y Robert J. Thomas. Examinar todos los conjuntos de datos. Documento 48. [https://login.microsoftonline.com/tfp/00000000-0000-0000-0000-000000000000/b2c_1a_tp_sign-up-or-sign-in/v2.0/](https://digitalcommons.usu.edu/all_datasets/48 )
+> Los conjuntos de valores de este tutorial están tomados del documento "SDNET2018: A concrete crack image dataset for machine learning applications" (2018) (SDNET2018: Un conjunto de datos de imágenes de hormigón descifradas para aplicaciones de aprendizaje automático) de Marc Maguire, Sattar Dorafshan y Robert J. Thomas. Examinar todos los conjuntos de datos. Documento 48. https://digitalcommons.usu.edu/all_datasets/48
 
-SDNET2018 es un conjunto de datos de imágenes que contiene anotaciones para estructuras de hormigón con grietas y sin grietas (tableros de puente, muros y pavimento). 
+SDNET2018 es un conjunto de datos de imágenes que contiene anotaciones para estructuras de hormigón con grietas y sin grietas (tableros de puente, muros y pavimento).
 
 ![Ejemplos de tablero de puente del conjunto de datos de SDNET2018](./media/image-classification-api-transfer-learning/sdnet2018decksamples.png)
 
@@ -126,9 +123,9 @@ En este tutorial, solo se usan imágenes de tableros de puente.
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
 
-1. Debajo de la clase `Program` en *Program.cs*, cree una clase llamada `ImageData`. Esta clase se utiliza para representar los datos cargados inicialmente. 
+1. Debajo de la clase `Program` en *Program.cs*, cree una clase llamada `ImageData`. Esta clase se utiliza para representar los datos cargados inicialmente.
 
-    [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L135-L140)]
+    [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L137-L142)]
 
     `ImageData` contiene las propiedades siguientes:
 
@@ -139,40 +136,46 @@ En este tutorial, solo se usan imágenes de tableros de puente.
 
     1. Debajo de la clase `ImageData`, defina el esquema de los datos de entrada en una nueva clase llamada `ModelInput`.
 
-        [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L142-L151)]
+        [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L144-L153)]
 
         `ModelInput` contiene las propiedades siguientes:
 
-        - `ImagePath` es la ruta de acceso completa donde se almacena la imagen. 
+        - `ImagePath` es la ruta de acceso completa donde se almacena la imagen.
         - `Label` es la categoría a la que pertenece la imagen. Este es el valor que se va a predecir.
         - `Image` es la representación `byte[]` de la imagen. El modelo espera que los datos de la imagen sean de este tipo para el entrenamiento.
-        - `LabelAsKey` es la representación numérica de `Label`. 
+        - `LabelAsKey` es la representación numérica de `Label`.
 
         Solo se usan `Image` y `LabelAsKey` para entrenar el modelo y hacer predicciones. Las propiedades `ImagePath` y `Label` se conservan por comodidad para tener acceso al nombre y categoría del archivo de imagen original.
 
-    1. Después, debajo de la clase `ModelInput`, defina el esquema de los datos de salida en una nueva clase llamada `ModelOutput`. 
+    1. Después, debajo de la clase `ModelInput`, defina el esquema de los datos de salida en una nueva clase llamada `ModelOutput`.
 
-        [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L153-L160)]
+        [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L155-L162)]
 
         `ModelOutput` contiene las propiedades siguientes:
 
         - `ImagePath` es la ruta de acceso completa donde se almacena la imagen.
-        - `Label` es la categoría original a la que pertenece la imagen. Este es el valor que se va a predecir. 
+        - `Label` es la categoría original a la que pertenece la imagen. Este es el valor que se va a predecir.
         - `PredictedLabel` es el valor que predice el modelo.
 
         De forma similar a `ModelInput`, solo se requiere `PredictedLabel` para realizar predicciones, ya que contiene la predicción que realiza el modelo. Las propiedades `ImagePath` y `Label` se conservan por comodidad para tener acceso al nombre y categoría del archivo de imagen original.
 
+### <a name="create-workspace-directory"></a>Creación del directorio del área de trabajo
+
+Cuando los datos de entrenamiento y validación no cambian a menudo, se recomienda almacenar en caché los valores de cuello de botella calculados para las ejecuciones posteriores.
+
+1. En el proyecto, cree un directorio llamado *workspace* para almacenar los valores de cuello de botella calculados y la versión `.pb` del modelo.
+
 ### <a name="define-paths-and-initialize-variables"></a>Definición de rutas de acceso e inicialización de variables
 
-1. En el método `Main`, defina la ubicación de los recursos.
+1. Dentro del método `Main`, defina la ubicación de los recursos, los valores de cuello de botella calculados y la versión `.pb` del modelo.
 
-    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L16)]
+    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
 1. Luego, inicialice la variable `mlContext` con una instancia nueva de [MLContext](xref:Microsoft.ML.MLContext).
 
-    [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L18)]
+    [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
-La clase [MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. Al inicializar mlContext se crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
+    La clase [MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. Al inicializar mlContext se crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
 
 ## <a name="load-the-data"></a>Carga de los datos
 
@@ -189,7 +192,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. En `LoadImagesDirectory`, agregue el código siguiente para obtener todas las rutas de acceso de archivo de los subdirectorios:
 
-    [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L102-L103)]
+    [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L104-L105)]
 
 1. Luego, recorra en iteración cada uno de los archivos mediante una instrucción `foreach`.
 
@@ -202,33 +205,33 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. En la instrucción `foreach`, compruebe que se admiten las extensiones de archivo. La API Image Classification admite formatos JPEG y PNG.
 
-    [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L107-L108)]
+    [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L109-L110)]
 
 1. Después, obtenga la etiqueta del archivo. Si el parámetro `useFolderNameAsLabel` está establecido en `true`, el directorio principal donde se guarda el archivo se usa como etiqueta. De lo contrario, espera que la etiqueta sea un prefijo del nombre de archivo o el propio nombre de archivo.
 
-    [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L110-L124)]
+    [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L112-L126)]
 
 1. Por último, cree una nueva instancia de `ModelInput`.
 
-    [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L126-L130)]
+    [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L128-L132)]
 
-### <a name="prepare-the-data"></a>Preparación de los datos
+### <a name="prepare-the-data"></a>Preparar los datos
 
 1. De vuelta en el método `Main`, use el método de utilidad `LoadFromDirectory` para obtener la lista de imágenes que se usan para el entrenamiento.
 
-    [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L20)]
+    [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L21)]
 
 1. Luego, cargue las imágenes en un elemento [`IDataView`](xref:Microsoft.ML.IDataView) con el método [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*).
 
-    [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L22)]    
+    [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L23)]
 
 1. Los datos se cargan en el orden en que se han leído desde los directorios. Para equilibrar los datos, ordénelos aleatoriamente mediante el método [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*).
 
-    [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L24)]
+    [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L25)]
 
-1. Los modelos de Machine Learning esperan que la entrada esté en formato numérico. Por lo tanto, es necesario realizar algún procesamiento previo en los datos antes del entrenamiento. Cree un elemento [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) formado por las transformaciones [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) y [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*). La transformación `MapValueToKey` toma el valor de categoría en la columna `Label`, lo convierte en un valor `KeyType` numérico y lo almacena en una nueva columna llamada `LabelAsKey`. `LoadImages` toma los valores de la columna `ImagePath`, junto con el parámetro `imageFolder`, con el fin de cargar las imágenes para el entrenamiento. Al establecer `useImageType` en `false`, las imágenes se convierten en un elemento `byte[]`. 
+1. Los modelos de Machine Learning esperan que la entrada esté en formato numérico. Por lo tanto, es necesario realizar algún procesamiento previo en los datos antes del entrenamiento. Cree un elemento [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) formado por las transformaciones [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) y `LoadRawImageBytes`. La transformación `MapValueToKey` toma el valor de categoría en la columna `Label`, lo convierte en un valor `KeyType` numérico y lo almacena en una nueva columna llamada `LabelAsKey`. `LoadImages` toma los valores de la columna `ImagePath`, junto con el parámetro `imageFolder`, con el fin de cargar las imágenes para el entrenamiento.
 
-    [!code-csharp [DefinePreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L26-L33)]
+    [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L27-L33)]
 
 1. Use el método [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) para aplicar los datos a `preprocessingPipeline`[`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) seguido del método [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*), que devuelve un elemento [`IDataView`](xref:Microsoft.ML.IDataView) que contiene los datos procesados previamente.
 
@@ -238,9 +241,9 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [CreateDataSplits](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L39-L40)]
 
-    En el ejemplo de código anterior se realizan dos divisiones. En primer lugar, los datos procesados previamente se dividen y el 70 % de estos se usa para el entrenamiento, mientras que el 30 % restante se utiliza para la validación. Después, 30 % perteneciente al conjunto de validación se divide en conjuntos de validación y pruebas, donde el 90 % se usa para la validación y el 10 % se usa para las pruebas. 
+    En el ejemplo de código anterior se realizan dos divisiones. En primer lugar, los datos procesados previamente se dividen y el 70 % de estos se usa para el entrenamiento, mientras que el 30 % restante se utiliza para la validación. Después, 30 % perteneciente al conjunto de validación se divide en conjuntos de validación y pruebas, donde el 90 % se usa para la validación y el 10 % se usa para las pruebas.
 
-    Una manera de pensar en la finalidad de estas particiones de datos es hacer un examen. Al estudiar para un examen, se revisan las notas, libros u otros recursos para obtener una idea sobre los conceptos que hay que preparar para el examen. Esto es para lo que sirve el conjunto de entrenamiento. Después, se puede realizar un examen ficticio para poner a prueba los conocimientos. Aquí es donde el conjunto de validación es práctico. Se quiere comprobar si se tiene una idea correcta de los conceptos antes de realizar el examen real. En función de estos resultados, tome nota de lo que no haya acertado o de lo que no haya entendido bien e incorpore los cambios a medida que repasa para el examen real. Por último, realice el examen. Esto es para lo que se usa el conjunto de prueba. Nunca ha visto las preguntas que aparecen en el examen y ahora puede usar lo que ha aprendido a partir del entrenamiento y la validación para aplicar sus conocimientos a la tarea que nos ocupa. 
+    Una manera de pensar en la finalidad de estas particiones de datos es hacer un examen. Al estudiar para un examen, se revisan las notas, libros u otros recursos para obtener una idea sobre los conceptos que hay que preparar para el examen. Esto es para lo que sirve el conjunto de entrenamiento. Después, se puede realizar un examen ficticio para poner a prueba los conocimientos. Aquí es donde el conjunto de validación es práctico. Se quiere comprobar si se tiene una idea correcta de los conceptos antes de realizar el examen real. En función de estos resultados, tome nota de lo que no haya acertado o de lo que no haya entendido bien e incorpore los cambios a medida que repasa para el examen real. Por último, realice el examen. Esto es para lo que se usa el conjunto de prueba. Nunca ha visto las preguntas que aparecen en el examen y ahora puede usar lo que ha aprendido a partir del entrenamiento y la validación para aplicar sus conocimientos a la tarea que nos ocupa.
 
 1. Asigne a las particiones sus respectivos valores para los datos de entrenamiento, validación y prueba.
 
@@ -248,29 +251,31 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 ## <a name="define-the-training-pipeline"></a>Definición de la canalización de entrenamiento
 
-El entrenamiento del modelo consta de un par de pasos. En primer lugar, se usa la API Image Classification para entrenar el modelo. Luego, las etiquetas codificadas de la columna `PredictedLabel` se convierten de nuevo a su valor de categoría original mediante la transformación `MapKeyToValue`. 
+El entrenamiento del modelo consta de un par de pasos. En primer lugar, se usa la API Image Classification para entrenar el modelo. Luego, las etiquetas codificadas de la columna `PredictedLabel` se convierten de nuevo a su valor de categoría original mediante la transformación `MapKeyToValue`.
 
-1. Defina la canalización [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) de entrenamiento que consta de las transformaciones `mapLabelEstimator` y `ImageClassification`.
+1. Cree una variable para almacenar un conjunto de parámetros obligatorios y opcionales para un `ImageClassificationTrainer`. 
 
-    [!code-csharp [DefineTrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L58)]    
+    [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 
-    El estimador de `ImageClassification` toma varios parámetros:
+    `ImageClassificationTrainer` admite varios parámetros opcionales:
 
-    - `featuresColumnName` es la columna que se utiliza como entrada del modelo.
-    - `labelColumnName` es la columna del valor que se va a predecir.
-    - `arch` define la arquitectura de modelo previamente entrenada que se va a usar. En este tutorial se usa la variante de capa 101 del modelo ResNetv2.
-    - `epoch` especifica el número máximo de iteraciones en todo el conjunto de datos a lo largo del proceso de entrenamiento. Cuanto mayor sea el número, más tiempo se entrena el modelo y, posiblemente, mejor será el modelo que se produzca.
-    - `batchSize` es el número de ejemplos que se van a usar a la vez para el entrenamiento. Durante una época, se usan varios lotes iguales a batchSize para entrenar y actualizar el modelo. Cuanto menor es el número, menor es la memoria necesaria cuando se procesa cada lote.
-    - `testOnTrainSet` indica al modelo que mida el rendimiento en el conjunto de entrenamiento cuando no haya ningún conjunto de validación.
-    - `metricsCallback` enlaza una función para realizar un seguimiento del progreso durante el entrenamiento.
-    - `validationSet` es [`IDataView`](xref:Microsoft.ML.IDataView) que contiene los datos de validación.
-    - `reuseTrainSetBottleneckCachedValues` indica al modelo si se deben usar los valores almacenados en caché de la fase de cuello de botella en las ejecuciones posteriores. La fase de cuello de botella es un cálculo de paso a través único que es intensiva a nivel de computación la primera vez que se realiza. Si los datos de entrenamiento no cambian y quiere experimentar con un número distinto de épocas o tamaño de lote, el uso de los valores almacenados en caché reduce considerablemente la cantidad de tiempo necesario para entrenar un modelo.
-    - `reuseValidationSetBottleneckCachedValues` es parecido a `reuseTrainSetBottleneckCachedValues` solo que, en este caso, se usa para el conjunto de validación.
-    - `disableEarlyStopping` indica al estimador de ImageClassification si se emplea una estrategia de detención temprana. Como el modelo busca los valores óptimos que le ayudarán a realizar predicciones precisas durante el entrenamiento, el rendimiento puede aumentar o disminuir. En última instancia, si el modelo alcanza la última época, puede darse el caso de que los patrones que haya aprendido del entrenamiento sean poco óptimos. La detención temprana supervisa el entrenamiento de estos descensos en el rendimiento y detiene el proceso de entrenamiento en un esfuerzo por conservar una versión óptima del modelo.
+    - `FeatureColumnName` es la columna que se utiliza como entrada del modelo.
+    - `LabelColumnName` es la columna del valor que se va a predecir.
+    - `ValidationSet` es [`IDataView`](xref:Microsoft.ML.IDataView) que contiene los datos de validación.
+    - `Arch` define la arquitectura de modelo previamente entrenada que se va a usar. En este tutorial se usa la variante de capa 101 del modelo ResNetv2.
+    - `MetricsCallback` enlaza una función para realizar un seguimiento del progreso durante el entrenamiento.
+    - `TestOnTrainSet` indica al modelo que mida el rendimiento en el conjunto de entrenamiento cuando no haya ningún conjunto de validación.
+    - `ReuseTrainSetBottleneckCachedValues` indica al modelo si se deben usar los valores almacenados en caché de la fase de cuello de botella en las ejecuciones posteriores. La fase de cuello de botella es un cálculo de paso a través único que es intensiva a nivel de computación la primera vez que se realiza. Si los datos de entrenamiento no cambian y quiere experimentar con un número distinto de épocas o tamaño de lote, el uso de los valores almacenados en caché reduce considerablemente la cantidad de tiempo necesario para entrenar un modelo.
+    - `ReuseValidationSetBottleneckCachedValues` es parecido a `ReuseTrainSetBottleneckCachedValues` solo que, en este caso, se usa para el conjunto de validación.
+    - `WorkspacePath` define el directorio donde se almacenan los valores de cuello de botella calculados y la versión `.pb` del modelo.
+
+1. Defina la canalización de entrenamiento [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) que consta de `mapLabelEstimator` y `ImageClassificationTrainer`.
+
+    [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L59-L60)]
 
 1. Use el método [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) para entrenar el modelo.
 
-    [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L60)]
+    [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L62)]
 
 ## <a name="use-the-model"></a>Uso del modelo
 
@@ -278,7 +283,7 @@ Ahora que se ha entrenado el modelo, es el momento de usarlo para clasificar las
 
 Debajo del método `Main`, cree un método de utilidad nuevo llamado `OutputPrediction` para mostrar información de predicción en la consola.
 
-[!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L94-L98)]
+[!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L96-L100)]
 
 ### <a name="classify-a-single-image"></a>Clasificación de una sola imagen
 
@@ -293,23 +298,23 @@ Debajo del método `Main`, cree un método de utilidad nuevo llamado `OutputPred
 
 1. Cree un elemento [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) en el método `ClassifySingleImage`. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que permite pasar datos y luego realizar una predicción en una única instancia de datos.
 
-    [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L71)]    
+    [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L73)]
 
-1. Para tener acceso a una única instancia de `ModelInput`, convierta [`IDataView`](xref:Microsoft.ML.IDataView) de `data` en un elemento [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) mediante el método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) y, después, obtenga la primera observación. 
+1. Para tener acceso a una única instancia de `ModelInput`, convierta [`IDataView`](xref:Microsoft.ML.IDataView) de `data` en un elemento [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) mediante el método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) y, después, obtenga la primera observación.
 
-    [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L73)]
+    [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L75)]
 
 1. Use el método [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) para clasificar la imagen.
 
-    [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L75)]
+    [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L77)]
 
 1. Genere la predicción en la consola con el método `OutputPrediction`.
 
-    [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L77-L78)]
+    [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L79-L80)]
 
 1. En el método `Main`, llame a `ClassifySingleImage` mediante el conjunto de prueba de imágenes.
 
-    [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L62)]
+    [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L64)]
 
 ### <a name="classify-multiple-images"></a>Clasificación de varias imágenes
 
@@ -324,21 +329,21 @@ Debajo del método `Main`, cree un método de utilidad nuevo llamado `OutputPred
 
 1. Cree un elemento [`IDataView`](xref:Microsoft.ML.IDataView) que contenga las predicciones mediante el método [`Transform`](xref:Microsoft.ML.ITransformer.Transform*). Agregue el código siguiente dentro del método `ClassifyImages`.
 
-    [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L83)]
+    [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L85)]
 
 1. Para recorrer en iteración las predicciones, convierta [`IDataView`](xref:Microsoft.ML.IDataView) de `predictionData` en un elemento [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) con el método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) y, después, obtenga las 10 primeras observaciones.
 
-    [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L85)]
+    [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L87)]
 
 1. Recorra en iteración y genere las etiquetas originales y previstas de las predicciones.
 
-    [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L87-L91)]
+    [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L89-L93)]
 
 1. Por último, en el método `Main`, llame a `ClassifyImages` mediante el conjunto de prueba de imágenes.
 
-    [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L64)]
+    [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L66)]
 
-## <a name="run-the-application"></a>Ejecución de la aplicación
+## <a name="run-the-application"></a>Ejecutar la aplicación
 
 Ejecute la aplicación de consola. La salida debe ser similar a la siguiente. Es posible que vea advertencias o mensajes de procesamiento, si bien se han quitado de los resultados siguientes para mayor claridad. Por motivos de brevedad, la salida se ha resumido.
 
@@ -347,10 +352,10 @@ Ejecute la aplicación de consola. La salida debe ser similar a la siguiente. Es
 No se imprime ningún valor para el nombre de la imagen porque las imágenes se cargan como un elemento `byte[]` y, por lo tanto, no hay ningún nombre de imagen para mostrar.
 
 ```test
-Phase: Bottleneck Computation, Dataset used:      Train, Image Index: 279, Image Name:
-Phase: Bottleneck Computation, Dataset used:      Train, Image Index: 280, Image Name:
-Phase: Bottleneck Computation, Dataset used: Validation, Image Index:   1, Image Name:
-Phase: Bottleneck Computation, Dataset used: Validation, Image Index:   2, Image Name:
+Phase: Bottleneck Computation, Dataset used:      Train, Image Index: 279
+Phase: Bottleneck Computation, Dataset used:      Train, Image Index: 280
+Phase: Bottleneck Computation, Dataset used: Validation, Image Index:   1
+Phase: Bottleneck Computation, Dataset used: Validation, Image Index:   2
 ```
 
 **Fase de entrenamiento**
@@ -373,18 +378,18 @@ Image: 7001-163.jpg | Actual Value: UD | Predicted Value: UD
 Image: 7001-210.jpg | Actual Value: UD | Predicted Value: UD
 ```
 
-Al inspeccionar la imagen *7001-220.jpg*, puede ver que, de hecho, no tiene grietas. 
+Al inspeccionar la imagen *7001-220.jpg*, puede ver que, de hecho, no tiene grietas.
 
 ![Imagen del conjunto de SDNET2018 que se usa para la predicción](./media/image-classification-api-transfer-learning/predictedimage.jpg)
 
-Felicidades. Ha compilado correctamente un modelo de aprendizaje profundo para la clasificación de imágenes.
+¡Enhorabuena! Ha compilado correctamente un modelo de aprendizaje profundo para la clasificación de imágenes.
 
 ### <a name="improve-the-model"></a>Mejora del modelo
 
 Si no está satisfecho con los resultados del modelo, puede intentar mejorar su rendimiento probando algunos de los enfoques siguientes:
 
-- **Más datos**: cuanto mayor sea el número de ejemplos de los que pueda aprender un modelo, mejor funcionará. Descargue el [conjunto de datos SDNET2018](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?filename=2&article=1047&context=all_datasets&type=additional) completo y úselo para entrenar. 
-- **Aumentar los datos**: Una técnica común para agregar diversidad a los datos es aumentarlos tomando una imagen y aplicando distintas transformaciones (girar, voltear, desplazar o recortar). Esto agrega ejemplos más variados para que el modelo aprenda de ellos. 
+- **Más datos**: cuanto mayor sea el número de ejemplos de los que pueda aprender un modelo, mejor funcionará. Descargue el [conjunto de datos SDNET2018](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?filename=2&article=1047&context=all_datasets&type=additional) completo y úselo para entrenar.
+- **Aumentar los datos**: Una técnica común para agregar diversidad a los datos es aumentarlos tomando una imagen y aplicando distintas transformaciones (girar, voltear, desplazar o recortar). Esto agrega ejemplos más variados para que el modelo aprenda de ellos.
 - **Entrenar durante más tiempo**: cuanto más tiempo se entrene, más ajustado estará el modelo. Aumentar el número de épocas puede mejorar el rendimiento del modelo.
 - **Experimentar con otros hiperparámetros**: además de los parámetros que se usan en este tutorial, se pueden ajustar otros parámetros para mejorar potencialmente el rendimiento. Cambiar la velocidad de aprendizaje, que determina el tamaño de las actualizaciones realizadas en el modelo después de cada época, puede mejorar el rendimiento.
 - **Usar una arquitectura de modelo diferente**: en función de lo que parezcan los datos, puede variar el modelo que sea capaz de aprender mejor sus características. Si no está satisfecho con el rendimiento del modelo, intente cambiar la arquitectura.

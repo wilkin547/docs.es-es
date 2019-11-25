@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120108"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429665"
 ---
 # <a name="64-bit-applications"></a>Aplicaciones de 64 bits
 Al compilar una aplicación, puede especificar que debe ejecutarse en un sistema operativo Windows de 64 bits como una aplicación nativa o bajo WOW64 (Windows de 32 bits en Windows de 64 bits). WOW64 es un entorno de compatibilidad que permite a una aplicación de 32 bits ejecutarse en un sistema de 64 bits. WOW64 se incluye en todas las versiones de 64 bits del sistema operativo Windows.  
@@ -41,11 +41,7 @@ Al compilar una aplicación, puede especificar que debe ejecutarse en un sistema
 ## <a name="general-64-bit-programming-information"></a>Información general de programación de 64 bits  
  Para obtener información general sobre la programación de 64 bits, vea los siguientes documentos:  
   
-- Para más información sobre la versión de 64 bits de CLR en un equipo Windows de 64 bits, vea el [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) en el sitio web de MSDN.  
-  
-- En la documentación de Windows SDK, vea [Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512) (Guía de programación para Windows de 64 bits).  
-  
-- Para información sobre cómo descargar una versión de 64 bits de CLR, vea [.NET Framework Developer Center Downloads](https://go.microsoft.com/fwlink/?LinkId=50953) (Descargas del centro para desarrolladores de .NET Framework) en el sitio web de MSDN.  
+- En la documentación de Windows SDK, vea [Programming Guide for 64-bit Windows](/windows/win32/winprog64/programming-guide-for-64-bit-windows) (Guía de programación para Windows de 64 bits).  
   
 - Para información sobre la compatibilidad de Visual Studio para crear aplicaciones de 64 bits, consulte [Compatibilidad de 64 bits del IDE de Visual Studio](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   

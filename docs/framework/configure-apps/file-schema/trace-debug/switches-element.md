@@ -9,20 +9,20 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: c161f842192396101dcc6850f3b3da328958eac3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4aeb3cb0cd75f0fb27e3b359b86da61a77b491c7
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697086"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088801"
 ---
-# <a name="switches-element"></a>\<switches >, elemento
+# <a name="switches-element"></a>\<modificadores > elemento
 Contiene modificadores de seguimiento y el nivel en el que están establecidos.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<switches >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<modificadores** >
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -53,7 +53,7 @@ Contiene modificadores de seguimiento y el nivel en el que están establecidos.
  Puede cambiar el nivel de un modificador de seguimiento si lo coloca en un archivo de configuración. Si el modificador es un <xref:System.Diagnostics.BooleanSwitch>, puede activarlo y desactivarlo. Si el modificador es un <xref:System.Diagnostics.TraceSwitch>, puede asignarle niveles diferentes para especificar los tipos de mensajes de seguimiento o de depuración que genera la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento **> \<switch** para establecer el modificador de seguimiento @no__t 2 en el nivel <xref:System.Diagnostics.TraceLevel> y habilitar el modificador de seguimiento booleano `Data`.  
+ En el ejemplo siguiente se muestra cómo utilizar el elemento **\<modificador >** para establecer el modificador de `General` seguimiento en el nivel de <xref:System.Diagnostics.TraceLevel> y habilitar el modificador de seguimiento booleano `Data`.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,3 @@ Contiene modificadores de seguimiento y el nivel en el que están establecidos.
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
 - [Esquema de la configuración de seguimiento y depuración](index.md)
- 

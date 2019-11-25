@@ -1,13 +1,13 @@
 ---
 title: Referencia de palabras clave
 description: Busque vínculos a información sobre todas las F# palabras clave del lenguaje.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425081"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976616"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
@@ -87,7 +87,7 @@ En la tabla siguiente se F# muestran todas las palabras clave en orden alfabéti
 |`when`|[Restricciones](./generics/constraints.md)|Se usa para las condiciones booleanas (*cuando las protege*) en las coincidencias de patrones y para introducir una cláusula de restricción para un parámetro de tipo genérico.|
 |`while`|[Bucles: expresión `while...do`](loops-while-do-expression.md)|Introduce una construcción de bucle.|
 |`with`|[Expresiones de coincidencia](match-expressions.md)<br /><br />[Expresiones de objeto](object-expressions.md)<br /><br />[Expresiones de registro de copia y actualización](copy-and-update-record-expressions.md)<br /><br />[Extensiones de tipo](type-extensions.md)<br /><br />[Exceptions: The `try...with` Expression](./exception-handling/the-try-with-expression.md) (Excepciones: la expresión `try...with`)|Se usa junto con la palabra clave `match` en expresiones de coincidencia de patrones. También se usa en expresiones de objeto, expresiones de copia de registros y extensiones de tipo para introducir definiciones de miembros, y para introducir controladores de excepciones.|
-|`yield`|[Secuencias](sequences.md)|Se utiliza en una expresión de secuencia para generar un valor para una secuencia.|
+|`yield`|[Listas](lists.md), [matrices](arrays.md), [secuencias](sequences.md)|Se utiliza en una lista, matriz o expresión de secuencia para generar un valor para una secuencia. Normalmente se puede omitir, ya que es implícita en la mayoría de los casos.|
 |`yield!`|[Expresiones de cálculo](computation-expressions.md)<br /><br />[Flujos de trabajo asincrónicos](asynchronous-workflows.md)|Se utiliza en una expresión de cálculo para anexar el resultado de una expresión de cálculo determinada a una colección de resultados para la expresión de cálculo que lo contiene.|
 
 Los tokens siguientes están reservados en F# porque son palabras clave en el lenguaje OCaml:

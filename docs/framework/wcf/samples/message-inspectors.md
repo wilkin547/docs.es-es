@@ -2,12 +2,12 @@
 title: Inspectores de mensaje
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424153"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977306"
 ---
 # <a name="message-inspectors"></a>Inspectores de mensaje
 Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
@@ -19,7 +19,7 @@ Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje d
 ## <a name="message-inspector"></a>Inspector de mensaje  
  Los inspectores de mensaje de cliente implementan la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> y los inspectores de mensaje de servicio implementan la interfaz <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Las implementaciones se pueden combinar en una clase única para formar un inspector de mensaje que trabaja para ambas partes. Este ejemplo implementa este tipo de inspector de mensaje combinado. El inspector se construye transmitiendo un conjunto de esquemas sobre la base de qué mensajes entrantes y salientes se validan, y permite al programador especificar si se validan los mensajes entrantes o salientes y si el inspector está en modo cliente o envío, el cual afecta al control de errores tal y como se analiza después en este tema.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  La clase `SchemaValidationBehavior` siguiente es el comportamiento utilizado para agregar el inspector de mensaje de este ejemplo al tiempo de ejecución del cliente o la distribución. La implementación es bastante básica en ambos casos. En <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> y <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, se crea el inspector de mensaje y se agrega a la colección <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> del tiempo de ejecución respectivo.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  El método `CreateBehavior` invalidado convierte los datos de configuración en un objeto de comportamiento cuando el tiempo de ejecución evalúa los datos de configuración cuando genera un cliente o un punto de conexión.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

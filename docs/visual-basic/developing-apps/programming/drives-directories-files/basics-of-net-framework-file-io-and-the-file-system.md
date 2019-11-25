@@ -1,5 +1,5 @@
 ---
-title: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
+title: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348943"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 
@@ -84,7 +84,7 @@ En la tabla siguiente se enumeran las tareas que implican acceso a archivos y at
 
 ## <a name="file-permissions"></a>Permisos de archivo
 
-Es posible controlar el acceso a archivos y directorios mediante la clase <xref:System.Security.Permissions.FileIOPermission>. Esto puede ser especialmente importante para los desarrolladores que trabajan con formularios Web Forms, que, de forma predeterminada, se ejecutan en el contexto de una cuenta de usuario local especial denominada ASPNET, creada como parte de las instalaciones de ASP.NET y .NET Framework. Cuando este tipo de aplicación solicita acceso a un recurso, la cuenta de usuario ASPNET tiene permisos limitados, que pueden impedir que el usuario realice acciones como escribir en un archivo desde una aplicación web. Para obtener más información, vea <xref:System.Security.Permissions.FileIOPermission>.
+Es posible controlar el acceso a archivos y directorios mediante la clase <xref:System.Security.Permissions.FileIOPermission>. Esto puede ser especialmente importante para los desarrolladores que trabajan con formularios Web Forms, que, de forma predeterminada, se ejecutan en el contexto de una cuenta de usuario local especial denominada ASPNET, creada como parte de las instalaciones de ASP.NET y .NET Framework. Cuando este tipo de aplicación solicita acceso a un recurso, la cuenta de usuario ASPNET tiene permisos limitados, que pueden impedir que el usuario realice acciones como escribir en un archivo desde una aplicación web. Para más información, consulte <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Almacenamiento aislado de archivos
 

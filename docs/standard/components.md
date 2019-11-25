@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835282"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283921"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -35,7 +35,7 @@ Cada implementación de .NET incluye los siguientes componentes:
 
 Hay cuatro implementaciones principales de .NET que Microsoft desarrolla y mantiene activamente: .NET Core, .NET Framework, Mono y UWP.
 
-### <a name="net-core"></a>Núcleo de .NET
+### <a name="net-core"></a>.NET Core
 
 .NET Core es una implementación multiplataforma de .NET diseñada para controlar cargas de trabajo de servidor y en la nube a escala. Se ejecuta en Windows, macOS y Linux. Implementa .NET Standard, de forma que cualquier código que tenga como destino .NET Standard se puede ejecutar en .NET Core. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) y [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) se ejecutan todos en .NET Core.
 
@@ -110,6 +110,6 @@ Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Está
 - [.NET Standard](net-standard.md)
 - [Guía de .NET Core](../core/index.md)
 - [Guía de .NET Framework](../framework/index.md)
-- [Guía de C#](../csharp/index.md)
+- [Guía de C#](../csharp/index.yml)
 - [Guía de F#](../fsharp/index.md)
 - [Guía de VB.NET](../visual-basic/index.md)

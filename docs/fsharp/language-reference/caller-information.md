@@ -1,13 +1,13 @@
 ---
 title: Información del llamador
 description: Describe cómo usar los atributos de argumento de información del llamador para obtener información del llamador de un método.
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106582"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976797"
 ---
 # <a name="caller-information"></a>Información del llamador
 
@@ -15,7 +15,7 @@ Mediante los atributos de información del llamador, se puede obtener informaci�
 
 Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) :
 
-|Atributo|DESCRIPCIÓN|Type|
+|Atributo|Descripción|Type|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -51,10 +51,10 @@ Puede proporcionar explícitamente los argumentos opcionales para controlar la i
 
 ## <a name="member-names"></a>Nombres de miembro
 
-Puede usar el [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar el nombre de miembro como un `String` argumento para el método llamado. Mediante esta técnica, se evita el problema de que la refactorización de cambio de nombre `String` no cambie los valores. Esta ventaja es especialmente útil para las siguientes tareas:
+Puede usar el atributo [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) para evitar especificar el nombre de miembro como un argumento `String` para el método llamado. Mediante esta técnica, se evita el problema de que la refactorización de cambio de nombre no cambie los valores de `String`. Esta ventaja es especialmente útil para las siguientes tareas:
 
 - Usar el seguimiento y las rutinas de diagnóstico.
-- Implementar la interfaz [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, debe especificar el nombre de la propiedad como un literal.
+- Implementar la interfaz [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el atributo [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) , debe especificar el nombre de la propiedad como un literal.
 
 En el gráfico siguiente se muestran los nombres de miembro que se devuelven cuando se usa el atributo CallerMemberName.
 

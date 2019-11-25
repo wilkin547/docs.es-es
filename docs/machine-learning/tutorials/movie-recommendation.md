@@ -5,18 +5,18 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774463"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977382"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Creación de un recomendador de películas mediante factorización matricial con ML.NET
 
 Este tutorial muestra cómo compilar una recomendación de películas con ML.NET en una consola de aplicación de .NET Core. Los pasos utilizan C# y Visual Studio 2019.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
 > * Seleccionar un algoritmo de Machine Learning
@@ -73,7 +73,7 @@ Hay varias maneras de enfocar los problemas vinculados a las recomendaciones, co
 
 2. En el Explorador de soluciones, haga clic con el botón secundario en cada uno de los archivos \*.csv y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
-   ![copiar si es posterior en VS](./media/movie-recommendation/copytoout.gif)
+   ![GIF de un usuario que selecciona Copiar si es posterior en VS.](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>Carga de los datos
 
@@ -83,7 +83,7 @@ Los datos de las clasificaciones de recomendación se dividen en conjuntos de da
 
 A continuación se muestra una vista previa de los datos de los archivos \*.csv:
 
-![vista previa de los datos](./media/movie-recommendation/csv-dataset-preview.png)
+![Captura de pantalla de la vista previa del conjunto de datos CSV.](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 En los archivos \*.csv, hay cuatro columnas:
 
@@ -102,7 +102,7 @@ En su caso, quiere predecir clasificaciones de películas, por lo que la columna
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Usted decide qué `Features` se usan para predecir la `Label`. También puede usar métodos como la [importancia de la permutación de las características](../how-to-guides/determine-global-feature-importance-in-model.md) para ayudar a seleccionar las mejores `Features`.
+Usted decide qué `Features` se usan para predecir la `Label`. También puede usar métodos como la [importancia de la característica de permutación](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) para ayudar a seleccionar las mejores `Features`.
 
 En este caso, debe eliminar la columna `timestamp` como `Feature` porque la marca de tiempo no afecta realmente a la manera en que un usuario clasifica una película determinada y, por tanto, no contribuye a realizar una predicción más exacta:
 
@@ -171,11 +171,11 @@ En ML.NET hay tres conceptos principales: [Data](../resources/glossary.md#data) 
 
 Los algoritmos de entrenamiento de Machine Learning requieren datos en un formato determinado. Los `Transformers` se usan para transformar datos tabulares a un formato compatible.
 
-![imagen de transformador](./media/movie-recommendation/transformer.png)
+![Diagrama del flujo de datos de Transformer.](./media/movie-recommendation/data-transformer-transformed.png)
 
 Para crear `Transformers` en ML.NET, debe crear `Estimators`. Los `Estimators` toman datos y devuelven `Transformers`.
 
-![imagen de estimador](./media/movie-recommendation/estimator.png)
+![Diagrama del flujo de datos de Estimator.](./media/movie-recommendation/data-estimator-transformer.png)
 
 El algoritmo de entrenamiento de recomendación que usará para entrenar el modelo es un ejemplo de un `Estimator`.
 
@@ -373,9 +373,9 @@ Agregue lo que se indica a continuación como la siguiente línea de código en 
 
 ### <a name="use-your-saved-model"></a>Uso del modelo guardado
 
-Una vez que haya guardado el modelo entrenado, puede consumirlo en diversos entornos (vea la ["Guía de procedimientos"](../how-to-guides/consuming-model-ml-net.md) para saber cómo poner en marcha un modelo de Machine Learning entrenado en aplicaciones).
+Una vez que haya guardado el modelo entrenado, puede usarlo en entornos diferentes. Consulte [Guardar y cargar modelos entrenados](../how-to-guides/save-load-machine-learning-models-ml-net.md) para obtener información sobre cómo poner en marcha un modelo de aprendizaje automático entrenado en aplicaciones.
 
-## <a name="results"></a>Results
+## <a name="results"></a>Resultados
 
 Después de seguir los pasos anteriores, ejecute la aplicación de consola (CTRL + F5). Los resultados de la predicción anterior deben ser similares a lo que se indica a continuación. Es posible que vea advertencias o mensajes de procesamiento, si bien se han quitado de los resultados siguientes para mayor claridad.
 
@@ -410,7 +410,7 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-Felicidades. Ha compilado correctamente un modelo de Machine Learning para la recomendación de películas. Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
+¡Enhorabuena! Ha compilado correctamente un modelo de Machine Learning para la recomendación de películas. Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
 
 ## <a name="improve-your-model"></a>Mejora del código
 
@@ -420,7 +420,7 @@ Hay varias maneras de mejorar el rendimiento del modelo para obtener prediccione
 
 El hecho de agregar más datos de entrenamiento con suficientes ejemplos para cada usuario e identificador de película puede ayudar a mejorar la calidad del modelo de recomendación.
 
-La [validación cruzada](../how-to-guides/train-cross-validation-ml-net.md) es una técnica para evaluar modelos que divide aleatoriamente los datos en subconjuntos (en lugar de extraer datos de prueba del conjunto de datos, como ha hecho en este tutorial) y toma algunos grupos como datos de entrenamiento y otros como datos de prueba. Este método supera en lo que respecta a la calidad del modelo la división en entrenamiento/prueba.
+La [validación cruzada](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) es una técnica para evaluar modelos que divide aleatoriamente los datos en subconjuntos (en lugar de extraer datos de prueba del conjunto de datos, como ha hecho en este tutorial) y toma algunos grupos como datos de entrenamiento y otros como datos de prueba. Este método supera en lo que respecta a la calidad del modelo la división en entrenamiento/prueba.
 
 ### <a name="features"></a>Características
 
@@ -428,7 +428,7 @@ En este tutorial, solo ha usado las tres `Features` (`user id`, `movie id` y `ra
 
 Aunque es un buen comienzo, tal vez le interese agregar otros atributos o `Features` (por ejemplo, edad, sexo, ubicación geográfica, etc.) si se incluyen en el conjunto de datos. El hecho de agregar `Features` más pertinentes puede ayudar a mejorar el rendimiento del modelo de recomendación.
 
-Si no está seguro de qué `Features` pueden ser más pertinentes para la tarea de Machine Learning, puede usar el Cálculo de la contribución de las características (FCC) y la [importancia de la permutación de las características](../how-to-guides/determine-global-feature-importance-in-model.md), que proporciona ML.NET para descubrir las `Features` más influyentes.
+Si no está seguro de qué `Features` pueden ser más pertinentes para la tarea de aprendizaje automático, puede usar el Cálculo de la contribución de las características (FCC) y la [importancia de la característica de permutación](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md), que proporciona ML.NET para descubrir las `Features` más influyentes.
 
 ### <a name="algorithm-hyperparameters"></a>Hiperparámetros de algoritmo
 
@@ -453,7 +453,7 @@ var options = new MatrixFactorizationTrainer.Options
 
 El algoritmo de factorización matricial con filtrado de colaboración es solo un enfoque para realizar recomendaciones de películas. En muchos casos, es posible que no tenga a su disposición los datos de las clasificaciones y que solo cuente con el historial de películas de los usuarios. En otros casos, podría disponer de más datos que la clasificación del usuario.
 
-| Algoritmo       | Escenario           | Muestra  |
+| Algoritmo       | Escenario           | Ejemplo  |
 | ------------- |:-------------:| -----:|
 | Factorización matricial de una clase | Úselo cuando solo tenga los valores userId y movieId. Este tipo de recomendación se basa en el escenario de compra conjunta, es decir, en los productos que se suelen comprar juntos. Esto significa que se recomendará a los clientes un conjunto de productos en función de su propio historial de pedidos de compra. | [>Pruébelo](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
 | Máquinas de factorización con reconocimiento de campo | Úselo para realizar recomendaciones cuando disponga de más características que userId, productId y la clasificación (por ejemplo, la descripción o el precio del producto). Este método también usa un enfoque de filtrado de colaboración. | [>Pruébelo](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
@@ -468,7 +468,7 @@ Los datos que se han usado en este tutorial se han tomado del [conjunto de datos
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 
 > [!div class="checklist"]
 >

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044452"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449412"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 
@@ -66,7 +66,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Nuevo**|Genera un nuevo .pfx que no se puede comprobar a través de una entidad de certificación (CA). Para obtener más información sobre los tipos de certificados usados para firmar implementaciones de ClickOnce, consulte [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Contraseña**|Proporciona un área para escribir la contraseña usada para firmar con este certificado. Si no procede, puede dejarse en blanco.|  
 |**Firmar con certificado almacenado**|Muestra una lista seleccionable de certificados digitales guardados en el almacén de certificados del equipo.|  
-|**URI de marca de tiempo**|Muestra el Localizador uniforme de recursos (URI) de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para más información, consulte [Miembros del programa de certificados raíz de Windows](https://go.microsoft.com/fwlink/?LinkId=159000) y [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**URI de marca de tiempo**|Muestra el Localizador uniforme de recursos (URI) de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para más información, consulte [Miembros del programa de certificados raíz de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) y [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**No firmar**|Le permite guardar el manifiesto sin agregar una firma de un certificado digital.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Descripciones de pestañas y paneles  

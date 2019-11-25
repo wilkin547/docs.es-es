@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699765"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088548"
 ---
-# <a name="oidentry-element"></a>\<oidEntry >, elemento
+# <a name="oidentry-element"></a>\<elemento > oidEntry
 Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap**](oidmap-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oidEntry >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -38,7 +38,7 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**OID**|Atributo necesario.<br /><br /> Especifica el OID ASN. 1 correspondiente al algoritmo implementado por la clase.|  
-|**name**|Atributo necesario.<br /><br /> Especifica el valor para el atributo de **nombre** en la etiqueta de [> \<nameEntry](nameentry-element.md) .|  
+|**name**|Atributo necesario.<br /><br /> Especifica el valor para el atributo de **nombre** en la etiqueta [\<elemento nameEntry >](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -49,14 +49,14 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`cryptographySettings`|Contiene la configuración de criptografía.|  
-|`mscorlib`|Contiene el `cryptographySettings` elemento.|  
+|`mscorlib`|Contiene el elemento `cryptographySettings`.|  
 |`oidMap`|Contiene las asignaciones de identificador de objetos (OID) ASN. 1 a las clases.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los identificadores de objeto ASN. 1 identifican los algoritmos en algunos formatos criptográficos. Asigne identificadores de objeto a nombres descriptivos para los algoritmos que desee identificar.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento **> \<oidEntry** para asignar un identificador de objeto para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
+ En el ejemplo siguiente se muestra cómo usar el elemento **\<oidEntry >** para asignar un identificador de objeto para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 
 - [Esquema de los archivos de configuración](../index.md)
 - [Esquema de la configuración de criptografía](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)
 - [Asignar identificadores de objeto a algoritmos de criptografía](../../map-object-identifiers-to-cryptography-algorithms.md)

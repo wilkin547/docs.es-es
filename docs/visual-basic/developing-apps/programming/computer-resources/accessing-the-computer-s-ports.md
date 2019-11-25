@@ -1,21 +1,23 @@
 ---
-title: Acceso a los puertos del equipo (Visual Basic)
+title: Acceso a los puertos del equipo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589331"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329593"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Acceso a los puertos del equipo (Visual Basic)
+
 El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener acceso a los puertos serie del equipo.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Cómo: Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Describe cómo mostrar los puertos serie disponibles.  
   
@@ -32,6 +34,7 @@ El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener 
  Explica cómo usar .NET Framework al realizar operaciones de puerto.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Describe el objeto `My.Computer.Ports` y sus miembros.  
   
@@ -42,5 +45,6 @@ El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener 
  Describe el método `OpenSerialPort`, que crea y abre un objeto <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  <xref:System.IO.Ports.SerialPort>  
  Describe la clase <xref:System.IO.Ports.SerialPort> de .NET Framework.

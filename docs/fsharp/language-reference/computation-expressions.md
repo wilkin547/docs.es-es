@@ -1,13 +1,13 @@
 ---
 title: Expresiones de cálculo
 description: Aprenda a crear una sintaxis adecuada para escribir cálculos en que F# se pueden secuenciar y combinar mediante construcciones y enlaces de flujo de control.
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424743"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976787"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+En la mayoría de los casos, se puede omitir mediante llamadores. La manera más común de omitir `yield` es con el operador `->`:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+En el caso de expresiones más complejas que pueden dar lugar a muchos valores diferentes, y quizás condicionalmente, basta con omitir la palabra clave:
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 Como con la [palabra clave yield C#en ](../../csharp/language-reference/keywords/yield.md), cada elemento de la expresión de cálculo se devuelve tal y como se recorre en iteración.
 
 `yield` está definido por el miembro `Yield(x)` en el tipo de generador, donde `x` es el elemento que se va a devolver.
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 Cuando se evalúa, la expresión de cálculo llamada por `yield!` tendrá sus elementos devueltos uno por uno, con lo que se aplanará el resultado.
 
 `yield!` está definido por el miembro `YieldFrom(x)` en el tipo de generador, donde `x` es una colección de valores.
+
+A diferencia de `yield`, se debe especificar explícitamente `yield!`. Su comportamiento no es implícito en las expresiones de cálculo.
 
 ### `return`
 
@@ -394,7 +424,7 @@ En el ejemplo siguiente se muestra la extensión de la clase de `Microsoft.FShar
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

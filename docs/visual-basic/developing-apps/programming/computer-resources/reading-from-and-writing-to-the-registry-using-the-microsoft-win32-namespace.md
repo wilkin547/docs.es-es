@@ -1,20 +1,22 @@
 ---
-title: Leer y escribir en el Registro mediante el espacio de nombres Microsoft.Win32 (Visual Basic)
+title: Leer y escribir en el Registro mediante Microsoft.Win32 Namespace
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: bf0d6ae329c5a09986a4a7bf641fe6820387ff22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 841344186b8e56717b81e90397aabc608bdc6dab
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916558"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345496"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Leer y escribir en el Registro mediante el espacio de nombres Microsoft.Win32 (Visual Basic)
+
 Aunque `My.Computer.Registry` debería cubrir sus necesidades básicas al programar con el Registro, también puede usar las clases <xref:Microsoft.Win32.Registry> y <xref:Microsoft.Win32.RegistryKey> del espacio de nombres <xref:Microsoft.Win32> de .NET Framework.  
   
 ## <a name="keys-in-the-registry-class"></a>Claves de la clase Registry  
+
  La clase <xref:Microsoft.Win32.Registry> proporciona las claves base del Registro que se pueden usar para tener acceso a las subclaves y sus valores. Las claves base son de solo lectura. En la tabla siguiente se enumeran y se describen las siete claves expuestas por la clase <xref:Microsoft.Win32.Registry>.  
   
 |**Key**|**Descripción**|  
@@ -31,6 +33,7 @@ Aunque `My.Computer.Registry` debería cubrir sus necesidades básicas al progra
 > Es más seguro escribir datos en el usuario actual (<xref:Microsoft.Win32.Registry.CurrentUser>) que en el equipo local (<xref:Microsoft.Win32.Registry.LocalMachine>). Cuando la clave que está creando fue creada anteriormente por otro proceso posiblemente malintencionado, se produce una condición normalmente conocida como "squatting". Para evitar que esto ocurra, use un método como <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, que devuelve `Nothing` si la clave no existe.  
   
 ## <a name="reading-a-value-from-the-registry"></a>Leer un valor del Registro  
+
  En el código siguiente se muestra cómo leer una cadena de HKEY_CURRENT_USER.  
   
  [!code-vb[VbResourceTasks#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#20)]  

@@ -1,5 +1,5 @@
 ---
-title: Crear, eliminar y mover archivos y directorios en Visual Basic
+title: Crear, eliminar y mover archivos y directorios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -22,60 +22,63 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590952"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348912"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Crear, eliminar y mover archivos y directorios en Visual Basic
+
 En esta sección se muestran tareas asociadas con crear, eliminar, mover y cambiar el nombre de archivos y directorios en Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Copiar archivos con un modelo específico en un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+
+ [Cómo: Copiar archivos con un patrón específico en un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Muestra cómo copiar los archivos que tienen un modelo de nombre de archivo concreto, como solo los archivos .txt, en un directorio.  
   
- [Crear una copia de un archivo en el mismo directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [Cómo: Crear una copia de un archivo en el mismo directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  Muestra cómo crear una copia de un archivo en el mismo directorio.  
   
- [Crear una copia de un archivo en un directorio diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [Cómo: Crear una copia de un archivo en otro directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
  Muestra cómo copiar un archivo en otro directorio.  
   
- [Crear un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [Cómo: crear un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Muestra cómo crear un archivo.  
   
- [Eliminar un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Cómo: eliminar un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  Muestra cómo eliminar un archivo.  
   
- [Buscar archivos con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [Cómo: Buscar archivos con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
  Muestra cómo mostrar solo los archivos de un directorio que tienen un modelo concreto de nombre de archivo.  
   
- [Mover archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [Cómo: Mover un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
  Muestra cómo mover un archivo a un directorio diferente.  
   
- [Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [Cómo: Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
  Muestra cómo cambiar el nombre de un archivo.  
   
- [Copiar un directorio en otro directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [Cómo: Copiar un directorio en otro](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  Muestra cómo copiar un directorio en otra ubicación.  
   
- [Crear un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [Cómo: crear un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
  Muestra cómo crear un directorio.  
   
- [Buscar subdirectorios con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [Cómo: Buscar subdirectorios con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
  Muestra cómo enumerar los directorios cuyo nombre sigue un modelo concreto.  
   
- [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ [Cómo: Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
  Muestra cómo enumerar los archivos en un directorio.  
   
- [Recuperar el contenido del directorio Mis documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ [Cómo: recuperar el contenido del directorio Mis documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  Muestra cómo leer de los directorios especiales.  
   
- [Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [Cómo: Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Muestra cómo usar métodos `My` para combinar rutas de acceso a archivos.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Describe el objeto `My.Computer.FileSystem` y sus miembros.  
   
@@ -116,6 +119,7 @@ En esta sección se muestran tareas asociadas con crear, eliminar, mover y cambi
  Describe el objeto `SpecialDirectories`.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Leer archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Enumera las tareas asociadas con la lectura de archivos.  
   

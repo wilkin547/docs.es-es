@@ -2,12 +2,12 @@
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 7a50454c5189c48704adfaaed2c90d2638dd677f
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928971"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978182"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  
@@ -55,7 +55,7 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
  Se admiten las codificaciones de texto y binarias. Se admiten todos los modos de transferencia de WCF. Para obtener más información, vea [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Agregar referencia de servicio  
- Para llamar a un servicio WCF desde una aplicación de la Tienda Windows, use la característica Agregar referencia de servicio de Visual Studio 2012. Observará algunos cambios en la funcionalidad de Agregar referencia de servicio cunado se lleva a cabo desde una aplicación de la Tienda Windows. Primero no se genera ningún archivo de configuración. Las aplicaciones de la Tienda Windows no usan archivos de configuración, por lo que deben configurarse en el código. Este código de configuración se puede encontrar en el archivo References.cs que genera Agregar referencia de servicio. Para ver este archivo, asegúrese de seleccionar "Mostrar todos los archivos" en el explorador de soluciones. El archivo se encuentra en los nodos Referencias de servicio y Reference.svcmap en el proyecto. Todas las operaciones generadas para los servicios WCF en una aplicación de la Tienda Windows serán asincrónicas mediante el patrón asincrónico basado en tareas. Para obtener más información, vea [tareas asincrónicas: simplificar la programación asincrónica con tareas](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Para llamar a un servicio WCF desde una aplicación de la Tienda Windows, use la característica Agregar referencia de servicio de Visual Studio 2012. Observará algunos cambios en la funcionalidad de Agregar referencia de servicio cunado se lleva a cabo desde una aplicación de la Tienda Windows. Primero no se genera ningún archivo de configuración. Las aplicaciones de la Tienda Windows no usan archivos de configuración, por lo que deben configurarse en el código. Este código de configuración se puede encontrar en el archivo References.cs que genera Agregar referencia de servicio. Para ver este archivo, asegúrese de seleccionar "Mostrar todos los archivos" en el explorador de soluciones. El archivo se encuentra en los nodos Referencias de servicio y Reference.svcmap en el proyecto. Todas las operaciones generadas para los servicios WCF en una aplicación de la Tienda Windows serán asincrónicas mediante el patrón asincrónico basado en tareas. Para obtener más información, vea [tareas asincrónicas: simplificar la programación asincrónica con tareas](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
   
  Debido a que la configuración ahora se genera en el código, cualquier cambio realizado en el archivo Reference.cs se sobrescribirá cada vez que se actualice la referencia de servicio. Para solucionar esta situación, el código de configuración se genera en un método parcial, que puede implementar en la clase de proxy cliente. El método parcial se declara de la siguiente manera:  
   
@@ -120,9 +120,9 @@ En las aplicaciones de la tienda Windows se admiten los siguientes modos de segu
   
 En las aplicaciones de la tienda Windows se admiten los siguientes tipos de credenciales de cliente:
   
-1. None  
+1. Ninguno  
   
-2. Básica  
+2. Básico  
   
 3. Implícita  
   
@@ -139,7 +139,7 @@ En las aplicaciones de la tienda Windows se admiten los siguientes tipos de cred
  Para que las aplicaciones de la Tienda Windows tengan acceso y envíen las credenciales de Windows predeterminadas, debe habilitar esta funcionalidad en el archivo Package.appmanifest. Abra este archivo y seleccione la pestaña capacidades y seleccione "credenciales de Windows predeterminadas". Esto permite que la aplicación se conecte a recursos de la intranet que necesitan credenciales de dominio.  
   
 > [!IMPORTANT]
-> Para que las aplicaciones de la tienda Windows realicen llamadas entre equipos, debe habilitar otra función denominada "redes domésticas o de trabajo". Este valor se encuentra también en el archivo Package.appmanifest en la pestaña Capacidades. Seleccione la casilla Redes domésticas o de trabajo. Esto permite el acceso de entrada y de salida de la aplicación a redes de ubicaciones de confianza del usuario como domésticas y de trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
+> Para que las aplicaciones de la tienda Windows realicen llamadas entre equipos, debe habilitar otra función denominada "redes domésticas o de trabajo". Esta configuración también se encuentra en el archivo package. AppManifest en la pestaña capacidades. Seleccione la casilla Home/Work networking. Esto permite el acceso de entrada y de salida de la aplicación a redes de ubicaciones de confianza del usuario como domésticas y de trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
   
 ### <a name="misc"></a>Varios  
  El uso de las clases siguientes se admite para las aplicaciones de la Tienda Windows:  

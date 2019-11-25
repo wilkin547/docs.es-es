@@ -1,19 +1,20 @@
 ---
-title: 'Solución del problema: Agentes de escucha de registro (Visual Basic)'
+title: 'Solución del problema: agentes de escucha de registro'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 12282df50bc42d2a153a9aa8db01f2654acd91ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd139935dae7fe4d1334b861e6590df29bab7202
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299532"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346853"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>Solución del problema: Agentes de escucha de registro (Visual Basic)
+
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación.  
   
  Para determinar qué agentes de escucha de registro reciben esos mensajes, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
@@ -36,7 +37,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
      [!code-vb[VbVbalrMyApplicationLog#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#19)]  
   
-     Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
+     Para más información, consulte <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
 ## <a name="see-also"></a>Vea también
 

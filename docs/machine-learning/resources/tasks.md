@@ -4,16 +4,16 @@ description: Explore las diferentes tareas de aprendizaje automático y las tare
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630054"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977252"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tareas de aprendizaje automático en ML.NET
 
-Cuando se crea un modelo de aprendizaje automático, primero debe definir lo que espera lograr con sus datos. Esto le permite elegir la tarea de aprendizaje de automático adecuada para su situación. La siguiente lista describe las diferentes tareas de aprendizaje automático que puede elegir y algunos casos de uso comunes.
+Cuando se crea un modelo de aprendizaje automático, primero debe definir lo que espera lograr con sus datos. Esto le permite elegir la tarea de aprendizaje de automático adecuada para su situación. La siguiente lista describe las diferentes tareas de aprendizaje automático que puede elegir y algunos casos de uso comunes. Para más información sobre cómo elegir la tarea adecuada para el escenario, vea [Algoritmos](../how-to-choose-an-ml-net-algorithm.md).
 
 Cuando haya decidido qué tarea funciona en su escenario, debe elegir el mejor algoritmo para entrenar el modelo. Los algoritmos disponibles se muestran en la sección correspondiente a cada tarea.
 
@@ -24,7 +24,7 @@ Una tarea de [aprendizaje automatizado supervisado](glossary.md#supervised-machi
 * [Comprensión del sentimiento de comentarios de Twitter](../tutorials/sentiment-analysis.md) en tanto que "positivos" o "negativos".
 * Diagnosticar si un paciente tiene una determinada enfermedad o no.
 * Tomar una decisión para marcar un correo electrónico como no deseado o no.
-* Determinar si una foto contiene un perro o una fruta.
+* Determinar si una fotografía contiene un elemento determinado o no, como un perro o una fruta.
 
 Para obtener más información, consulte el artículo de Wikipedia [Binary classification](https://en.wikipedia.org/wiki/Binary_classification) (Clasificación binaria).
 
@@ -34,15 +34,15 @@ Puede entrenar un modelo de clasificación binaria mediante los algoritmos sigui
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
-* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
 ### <a name="binary-classification-inputs-and-outputs"></a>Entradas y salidas de clasificación binaria
@@ -52,7 +52,7 @@ Para obtener los mejores resultados con la clasificación binaria, los datos de 
 Los datos de la columna de etiquetas de entrada deben ser <xref:System.Boolean>.
 Los datos de la columna de características de entrada deben ser un vector de tamaño fijo de <xref:System.Single>.
 
-Estos instructores generan las siguientes columnas:
+Estos instructores generan las columnas siguientes:
 
 | Nombre de columna de salida | Tipo de columna | DESCRIPCIÓN|
 | -- | -- | -- |
@@ -79,10 +79,10 @@ Puede entrenar un modelo de clasificación multiclase mediante los siguientes al
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Entradas y salidas de clasificación multiclase
 
@@ -112,7 +112,7 @@ Puede entrenar un modelo de regresión mediante los siguientes algoritmos:
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
@@ -140,7 +140,7 @@ Una tarea de [aprendizaje automático no supervisado](glossary.md#unsupervised-m
 
 Puede entrenar un modelo de agrupación en clústeres mediante el siguiente algoritmo:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ### <a name="clustering-inputs-and-outputs"></a>Entradas y salidas de agrupación en clústeres
 
@@ -193,7 +193,7 @@ Una tarea de clasificación construye un clasificador a partir de un conjunto de
 Puede entrenar un modelo de clasificación mediante los algoritmos siguientes:
 
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 
 ### <a name="ranking-input-and-outputs"></a>Salidas y entradas de clasificación
 

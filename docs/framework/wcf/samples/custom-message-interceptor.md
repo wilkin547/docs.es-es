@@ -2,12 +2,12 @@
 title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: daa041bf63442dace0d33e1e3207d0857b6b7312
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 61f9bae24f5edb70430f4f3eaa16e42da221a7b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928921"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978307"
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  
@@ -22,7 +22,7 @@ Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particula
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
@@ -44,7 +44,7 @@ Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particula
   
  Estas clases escogen un generador y un agente de escucha internos y delegan todas las llamadas excepto `OnCreateChannel` y `OnAcceptChannel` al generador y agente de escucha internos.  
   
-```csharp  
+```csharp
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
 { 
     //... 
@@ -57,10 +57,10 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adición de un elemento de enlace  
- El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement`toma un `ChannelMessageInterceptor` como una entrada y lo `ChannelMessageInterceptor` utiliza para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
+ El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement` toma un `ChannelMessageInterceptor` como entrada y utiliza este `ChannelMessageInterceptor` para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
   
 ```csharp
-public class InterceptingBindingElement : BindingElement 
+public class InterceptingBindingElement : BindingElement
 {
 }
 ```  
@@ -78,10 +78,10 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ## <a name="adding-policy"></a>Adición de directivas  
  Para integrar con nuestro sistema de directivas, `InterceptingBindingElement` implementa IPolicyExportExtension para señalar que deberíamos participar en la generación de directivas. Para permitir importar la directiva en un cliente generado, el usuario puede registrar una clase derivada de `InterceptingBindingElementImporter` e invalidar `CreateMessageInterceptor`() para generar su clase `ChannelMessageInterceptor` habilitada por la directiva.  
   
-## <a name="example-droppable-message-inspector"></a>Ejemplo: Inspector de mensaje con preportador  
+## <a name="example-droppable-message-inspector"></a>Ejemplo: inspector de mensajes que pueden quitarse  
  En este ejemplo se incluye una implementación de ejemplo de `ChannelMessageInspector` que quita mensajes.  
   
-```csharp  
+```csharp
 class DroppingServerElement : InterceptingElement  
 {  
     protected override ChannelMessageInterceptor CreateMessageInterceptor()  

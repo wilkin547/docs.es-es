@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para leer archivos binarios en Visual Basic
+title: Procedimiento para leer archivos binarios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623718"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335294"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Procedimiento para leer archivos binarios en Visual Basic
+
 El objeto `My.Computer.FileSystem` proporciona el método `ReadAllBytes` para leer archivos binarios.  
   
 ### <a name="to-read-from-a-binary-file"></a>Para leer un archivo binario  
@@ -28,6 +29,7 @@ El objeto `My.Computer.FileSystem` proporciona el método `ReadAllBytes` para le
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Las condiciones siguientes pueden provocar que se produzca una excepción:  
   
 - La ruta de acceso no es válida por una de las razones siguientes: es una cadena de longitud cero, sólo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (<xref:System.ArgumentException>).  

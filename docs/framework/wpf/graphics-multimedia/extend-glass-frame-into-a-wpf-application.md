@@ -10,19 +10,19 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039845"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977020"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Ampliar el marco de vidrio en una aplicación de WPF
 
-En este tema se muestra cómo extender [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] el marco Glass en el área cliente de una aplicación Windows Presentation Foundation (WPF).
+En este tema se muestra cómo extender el marco Glass de Windows Vista en el área cliente de una aplicación Windows Presentation Foundation (WPF).
 
 > [!NOTE]
-> Este ejemplo solo funciona en una máquina [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] que ejecute el Administrador de ventanas de escritorio (DWM) con efecto de cristal habilitado. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic no admite el efecto de cristal transparente. Las áreas que normalmente se representarían con el efecto de cristal transparente en otras ediciones de [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] se representan opacas.
+> Este ejemplo solo funcionará en un equipo con Windows Vista que ejecute el Administrador de ventanas de escritorio (DWM) con Glass habilitado. Windows Vista Home Basic Edition no admite el efecto de cristal transparente. Las áreas que normalmente se representarían con el efecto de cristal transparente en otras ediciones de Windows Vista se representan opacas.
 
 ## <a name="example"></a>Ejemplo
 
@@ -30,7 +30,7 @@ En la imagen siguiente se muestra el marco Glass extendido en la barra de direcc
 
 ![Captura de pantalla que muestra el marco de cristal ampliado detrás de la barra de direcciones de IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Para extender el marco Glass en una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, se necesita acceso a la API no administrada. En el ejemplo de código siguiente se realiza una invocación de plataforma (PInvoke) para las dos API necesarias para extender el marco en el área cliente. Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.
+Para extender el marco de cristal en una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], se necesita acceso a la API no administrada. En el ejemplo de código siguiente se realiza una invocación de plataforma (PInvoke) para las dos API necesarias para extender el marco en el área cliente. Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Ejemplo
 
-Para usar la función [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), debe obtenerse un identificador de ventana. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el identificador de ventana se puede obtener a <xref:System.Windows.Interop.HwndSource.Handle%2A> partir de la <xref:System.Windows.Interop.HwndSource>propiedad de un. En el ejemplo siguiente, el marco se extiende en el área cliente en el <xref:System.Windows.FrameworkElement.Loaded> evento de la ventana.
+Para usar la función [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), debe obtenerse un identificador de ventana. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el identificador de ventana se puede obtener de la propiedad <xref:System.Windows.Interop.HwndSource.Handle%2A> de una <xref:System.Windows.Interop.HwndSource>. En el ejemplo siguiente, el marco se extiende en el área cliente del evento <xref:System.Windows.FrameworkElement.Loaded> de la ventana.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una ventana simple en la que el marco se amplía en el área cliente. El marco se extiende detrás del borde superior que contiene los dos <xref:System.Windows.Controls.TextBox> objetos.
+En el ejemplo siguiente se muestra una ventana simple en la que el marco se amplía en el área cliente. El marco se extiende detrás del borde superior que contiene los dos objetos <xref:System.Windows.Controls.TextBox>.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,7 +145,7 @@ En el ejemplo siguiente se muestra una ventana simple en la que el marco se ampl
 </Window>
 ```
 
-En la imagen siguiente se muestra el marco Glass extendido en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] una aplicación:
+En la imagen siguiente se muestra el marco Glass extendido en una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
 
 ![Captura de pantalla que muestra un marco de cristal ampliado en una aplicación WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

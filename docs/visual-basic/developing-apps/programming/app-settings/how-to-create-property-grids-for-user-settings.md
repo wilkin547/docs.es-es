@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear cuadrículas de propiedades para la configuración del usuario en Visual Basic
+title: Procedimiento para crear cuadrículas de propiedades para la configuración del usuario
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 4a31b44cca61caea5fdf725405646f628b5430b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bed4e8a2b50f0115c3b8d9d6abf427df5f216388
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968393"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329609"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Procedimiento para crear cuadrículas de propiedades para la configuración del usuario en Visual Basic
+
 Una cuadrícula de propiedades para la configuración del usuario se crea rellenando un control <xref:System.Windows.Forms.PropertyGrid> con las propiedades de configuración de usuario del objeto `My.Settings`.  
   
 > [!NOTE]
@@ -47,6 +48,7 @@ Una cuadrícula de propiedades para la configuración del usuario se crea rellen
     > Para mostrar solo la configuración del ámbito de aplicación, utilice el atributo <xref:System.Configuration.ApplicationScopedSettingAttribute> en lugar de <xref:System.Configuration.UserScopedSettingAttribute>.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  La aplicación guarda la configuración del usuario cuando se cierra. Para guardar la configuración inmediatamente, llame al método `My.Settings.Save`. Para obtener más información, vea [Cómo: Conservar la configuración del usuario en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>Vea también

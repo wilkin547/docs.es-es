@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796505"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428527"
 ---
 # <a name="default-values-table-c-reference"></a>Tabla de valores predeterminados (referencia de C#)
 
@@ -23,10 +23,10 @@ En la tabla siguiente se muestran los valores predeterminados de los tipos de C#
 |Cualquier [tipo numérico entero integrado](../builtin-types/integral-numeric-types.md)|0 (cero)|
 |Cualquier [tipo numérico de punto flotante integrado](../builtin-types/floating-point-numeric-types.md)|0 (cero)|
 |[bool](bool.md)|`false`|
-|[char](char.md)|`'\0'` (U+0000)|
+|[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Valor generado por la expresión `(E)0`, donde `E` es el identificador de enumeración.|
 |[struct](struct.md)|El valor generado al establecer todos los campos de tipo de valor en sus valores predeterminados y todos los campos de tipo de referencia en `null`.|
-|Cualquier [tipo de valor que acepta valores NULL](../../programming-guide/nullable-types/index.md)|Instancia para la que la propiedad <xref:System.Nullable%601.HasValue%2A> es `false` y la propiedad <xref:System.Nullable%601.Value%2A> no está definida. Este valor predeterminado también se conoce con el valor *null* del tipo de valor que acepta valores NULL.|
+|Cualquier [tipo de valor que acepta valores NULL](../builtin-types/nullable-value-types.md)|Instancia para la que la propiedad <xref:System.Nullable%601.HasValue%2A> es `false` y la propiedad <xref:System.Nullable%601.Value%2A> no está definida. Este valor predeterminado también se conoce con el valor *null* de un tipo de valor que acepta valores NULL.|
 
 Use el [operador predeterminado](../operators/default.md) para generar el valor predeterminado de un tipo, tal y como se muestra en el ejemplo siguiente:
 

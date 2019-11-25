@@ -3,12 +3,12 @@ title: Introducción a Docker
 description: En este artículo se proporciona una introducción e información general para Docker en el contexto de una aplicación de .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522997"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087387"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
@@ -40,7 +40,7 @@ El registro de contenedor de Microsoft (MCR) es el origen oficial de las imágen
 
 ### <a name="dockerfile"></a>Dockerfile
 
-Un archivo **Dockerfile** es aquel que define un conjunto de instrucciones que crea una imagen. Cada instrucción de **Dockerfile** crea una capa en la imagen. Por lo general, cuando se recompila la imagen, solo se recompilan las capas que han cambiado. **Dockerfile** se puede distribuir a otros usuarios, para que puedan recompilarlo a fin de crear una imagen de la misma manera en que usted la creó. Aunque esto le permite distribuir las *instrucciones* sobre cómo crear la imagen, el método principal para distribuir la imagen consiste en publicarla en un registro.
+Un archivo **Dockerfile** es aquel que define un conjunto de instrucciones que crea una imagen. Cada instrucción de **Dockerfile** crea una capa en la imagen. Por lo general, cuando se recompila la imagen, solo se recompilan las capas que han cambiado. El **Dockerfile** se puede distribuir a otros usuarios, para que puedan recrear una imagen de la misma manera que usted. Aunque esto le permite distribuir las *instrucciones* sobre cómo crear la imagen, el método principal para distribuir la imagen consiste en publicarla en un registro.
 
 ## <a name="net-core-images"></a>Imágenes de .NET Core
 
@@ -61,7 +61,7 @@ Implemente aplicaciones web o API con contenedores de Linux en un entorno PaaS.
 - [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Hospede el contenedor en la nube sin ningún servicio de administración de nivel superior.
 
- [Azure Batch](https://azure.microsoft.com/services/batch/)\
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Ejecute trabajos de proceso repetitivos mediante contenedores.
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
@@ -72,7 +72,7 @@ Almacene y administre imágenes de contenedor en todos los tipos de implementaci
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-docker-netcore-container.md).
+- [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-container.md).
 - [Obtenga información sobre cómo incluir una aplicación ASP.NET Core en contenedores.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
 - [Obtenga información sobre las herramientas de contenedor en Visual Studio](/visualstudio/containers/overview)

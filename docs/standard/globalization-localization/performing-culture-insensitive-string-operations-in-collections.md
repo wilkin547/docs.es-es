@@ -15,12 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120816"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353670"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Realizar operaciones de cadenas que no tienen en cuenta las referencias culturales en colecciones
 
@@ -78,7 +78,6 @@ internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
 `SortedList` representa una colección de pares clave-valor ordenados por claves a los que se accede por clave y por índice. Cuando usa `SortedList` donde las cadenas son las claves, la propiedad `Thread.CurrentCulture` puede afectar la ordenación y la búsqueda. Para obtener el comportamiento que no tiene en cuenta las referencias culturales desde `SortedList`, cree `SortedList` con uno de los constructores que acepta un parámetro `comparer`. El parámetro `comparer` especifica la implementación <xref:System.Collections.IComparer> para usarla al comparar claves. Para el parámetro, especifique una clase de comparador personalizada que usa`CultureInfo.InvariantCulture` para comparar claves. En el ejemplo siguiente se muestra una clase de comparación que no tiene en cuenta las referencias culturales y que puede especificar como el parámetro `comparer` para un constructor `SortedList`.
 
 ```vb
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

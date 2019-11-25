@@ -1,15 +1,15 @@
 ---
-title: 'Modelos de diseño: suscripción-publicación basada en la lista'
+title: 'Patrones de diseño: suscripción-publicación basada en la lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928840"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978209"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Modelos de diseño: suscripción-publicación basada en la lista
+# <a name="design-patterns-list-based-publish-subscribe"></a>Patrones de diseño: suscripción-publicación basada en la lista
 Este ejemplo muestra el patrón de publicación-suscripción basado en lista implementado como un programa Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  El servicio utiliza un evento de .NET Framework como mecanismo para informar a todos los suscriptores sobre la nueva información. Cuando un cliente se une el servicio llamando a Suscripción, proporciona un controlador de eventos. Cuando un cliente sale de la lista, cancela la suscripción de su controlador de eventos desde el evento. Cuando un origen de datos llama al servicio para crear un informe sobre un cambio de precio, el servicio genera el evento. Esto llama a cada instancia del servicio, una para cada cliente que se ha suscrito, y hace que sus controladores de eventos se ejecuten. Cada controlador de eventos pasa la información a su cliente a través de su función de devolución de llamada.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

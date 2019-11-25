@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698387"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088516"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<add elemento > para connectionManagement (configuración de red)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<agregar > elemento para connectionManagement (configuración de red)
 Agrega una dirección IP o nombre DNS a la lista de administración de conexión.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement**](connectionmanagement-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agregar >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  

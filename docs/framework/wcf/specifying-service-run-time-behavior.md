@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ffa2f906ac2ff4630de83938ce365c1b9d5d4d64
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321384"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976635"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificación del comportamiento en tiempo de ejecución del servicio
 Una vez que haya diseñado un contrato de servicios ([Designing Service Contracts](designing-service-contracts.md)) y haya implementado su contrato de servicios ([Implementing Service Contracts](implementing-service-contracts.md)), puede configurar el comportamiento de la operación del tiempo de ejecución del servicio. En este tema se tratan los comportamientos de operaciones y servicios proporcionados por el sistema y se describe dónde encontrar más información para crear nuevos comportamientos. Aunque algunos comportamientos se aplican como atributos, muchos se aplican usando un archivo de configuración de la aplicación o mediante programación. Para obtener más información sobre la configuración de la aplicación de servicio, consulte [configuración de servicios](configuring-services.md).  
@@ -59,7 +59,7 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
   
  Sin embargo, también puede crear un objeto de servicio y crear el host de servicio mediante ese objeto. Para hacerlo, debe establecer también la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.InstanceContextMode.Single> o se producirá una excepción al abrir el host del servicio.  
   
- Utilice el constructor <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> para crear este tipo de servicio. Ofrece una alternativa para implementar un <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizado cuando desee proporcionar una instancia de objeto concreta para su uso con el servicio de singleton. Puede utilizar esta sobrecarga cuando su tipo de implementación de servicio sea difícil de construir (por ejemplo, si no implementa un constructor público predeterminado que no tiene parámetros).  
+ Utilice el constructor <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> para crear este tipo de servicio. Ofrece una alternativa para implementar un <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizado cuando desee proporcionar una instancia de objeto concreta para su uso con el servicio de singleton. Puede usar esta sobrecarga cuando su tipo de implementación de servicio es difícil de construir (por ejemplo, si no implementa un constructor público sin parámetros).
   
  Tenga en cuenta que cuando se proporciona un objeto a este constructor, algunas características relacionadas con el comportamiento de la creación de instancias de Windows Communication Foundation (WCF) funcionan de manera diferente. Por ejemplo, llamar a <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> , no tiene ningún efecto cuando se proporciona una instancia de objeto conocida. De igual forma, se omite cualquier otro mecanismo de lanzamiento de instancia. La clase <xref:System.ServiceModel.ServiceHost> siempre se comporta como si la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> se hubiese establecido en <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas las operaciones.  
   

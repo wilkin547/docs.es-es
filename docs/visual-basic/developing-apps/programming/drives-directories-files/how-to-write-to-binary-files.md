@@ -1,17 +1,17 @@
 ---
-title: Procedimiento para escribir en archivos binarios en Visual Basic
+title: Procedimiento para escribir en archivos binarios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: ab42fa50aaf39397ac51db8a4cc3a3b00f6ce878
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039416"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334430"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Procedimiento para escribir en archivos binarios en Visual Basic
 

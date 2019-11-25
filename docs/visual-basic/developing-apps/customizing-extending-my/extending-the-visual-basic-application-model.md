@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582761"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976861"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Ampliar el modelo de la aplicación de Visual Basic
 
@@ -82,6 +82,7 @@ Si la aplicación es una aplicación normal (aplicación de varias instancias) o
  El constructor <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> llama a la propiedad <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> para determinar qué motor de representación de texto se va a utilizar para los formularios de la aplicación. De forma predeterminada, la propiedad <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> devuelve `False`, que indica que se utilizará el motor de representación de texto GDI, que es el valor predeterminado en Visual Basic 2005 y versiones posteriores. Puede invalidar la propiedad <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> para devolver `True`, que indica que se utilizará el motor de representación de texto GDI+, que es el valor predeterminado en Visual Basic .NET 2002 y Visual Basic .NET 2003.
 
 ## <a name="configuring-the-application"></a>Configuración de la aplicación
+
  Como parte del modelo de aplicación de Visual Basic, la clase <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> proporciona propiedades protegidas que configuran la aplicación. Estas propiedades se deben establecer en el constructor de la clase de implementación.
 
  En un proyecto de Windows Forms predeterminado, el **Diseñador de proyectos** crea código para establecer las propiedades con la configuración del diseñador. Las propiedades solo se usan cuando se inicia la aplicación; su configuración después de que se inicie la aplicación no tiene ningún efecto.

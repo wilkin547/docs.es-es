@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740653"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976776"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Espacios de nombres y asignación de espacios de nombres XAML para WPF
 En este tema se explica con mayor detalle la presencia y el propósito de las dos asignaciones de espacio de nombres XAML que se encuentran a menudo en la etiqueta raíz de cada archivo XAML de WPF. También se describe cómo generar asignaciones similares para usar elementos definidos en su propio código y/o dentro de ensamblados independientes.  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Espacios de nombres de diseñador y otros prefijos de las plantillas XAML  
  Si trabaja con entornos de desarrollo o herramientas de diseño para XAML de WPF, tal vez observe que hay otros espacios de nombres XAML / prefijos definidos dentro del marcado XAML.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa un espacio de nombres de diseñador que está asignado normalmente al prefijo `d:`. Las plantillas de proyecto de WPF más recientes podrían pre-asignar este espacio de nombres XAML para admitir el intercambio de XAML entre [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] y otros entornos de diseño. Este espacio de nombres XAML de diseño se usa para perpetuar el estado del diseño mientras la interfaz de usuario basada en XAML en el diseñador va y vuelve. También lo usan características como `d:IsDataSource`, que habilitan los orígenes de datos en tiempo de ejecución en un diseñador.  
+ WPF Designer para Visual Studio usa un espacio de nombres de diseñador que normalmente se asigna al prefijo `d:`. Las plantillas de proyecto más recientes para WPF podrían asignar previamente este espacio de nombres XAML para admitir el intercambio del código XAML entre WPF Designer para Visual Studio y otros entornos de diseño. Este espacio de nombres XAML de diseño se usa para perpetuar el estado del diseño mientras la interfaz de usuario basada en XAML en el diseñador va y vuelve. También lo usan características como `d:IsDataSource`, que habilitan los orígenes de datos en tiempo de ejecución en un diseñador.  
   
  Otro prefijo que podría ver asignado es `mc:`. `mc:` es para ofrecer compatibilidad de marcado, y aprovecha un modelo de compatibilidad de marcado que no es necesariamente específico de XAML. Hasta cierto punto, las características de compatibilidad de marcado se pueden usar para intercambiar XAML entre marcos o entre otros límites de implementación de respaldo, trabajar entre contextos de esquema XAML, ofrecer compatibilidad para modos limitados en los diseñadores, etc. Para obtener más información sobre los conceptos de compatibilidad de marcado y su relación con WPF, vea [Características del lenguaje de compatibilidad de marcado (mc:)](markup-compatibility-mc-language-features.md).  
   

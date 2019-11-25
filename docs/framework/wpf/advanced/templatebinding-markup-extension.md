@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458669"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976670"
 ---
 # <a name="templatebinding-markup-extension"></a>Extensión de marcado TemplateBinding
 Vincula el valor de una propiedad de una plantilla de control para que sea el valor de otra propiedad del control con plantilla.  
@@ -38,7 +38,7 @@ Vincula el valor de una propiedad de una plantilla de control para que sea el va
 |`sourceProperty`|Otra propiedad de dependencia existente en el tipo con plantilla, especificada por el valor de <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> O bien<br /><br /> Nombre de propiedad "relacionada" que se define por un tipo diferente del tipo de destino que se va a convertir en un tipo con plantilla. En realidad, se trata de un objeto <xref:System.Windows.PropertyPath>. Consulte [sintaxis XAML de PropertyPath](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Comentarios  
- Un `TemplateBinding` es una forma optimizada de un [enlace](binding-markup-extension.md) para escenarios de plantilla, similar a un `Binding` construido con `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` siempre es un enlace unidireccional, aunque las propiedades implicadas establezcan por defecto un enlace bidireccional. Ambas propiedades implicadas deben ser propiedades de dependencia. Para lograr el enlace bidireccional a un elemento primario con plantilla, use en su lugar la siguiente instrucción de enlace `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
+ Un `TemplateBinding` es una forma optimizada de un [enlace](binding-markup-extension.md) para escenarios de plantilla, similar a un `Binding` construido con `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. `TemplateBinding` siempre es un enlace unidireccional, aunque las propiedades implicadas establezcan por defecto un enlace bidireccional. Ambas propiedades implicadas deben ser propiedades de dependencia. Para lograr el enlace bidireccional a un elemento primario con plantilla, use en su lugar la siguiente instrucción de enlace `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
   
  [RelativeSource](relativesource-markupextension.md) es otra extensión de marcado que a veces se usa junto con o en lugar de `TemplateBinding` para realizar un enlace de propiedad relativo dentro de una plantilla.  
   

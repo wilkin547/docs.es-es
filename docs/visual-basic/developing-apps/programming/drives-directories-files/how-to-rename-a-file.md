@@ -1,18 +1,19 @@
 ---
-title: Procedimiento para cambiar el nombre de un archivo en Visual Basic
+title: Procedimiento para cambiar el nombre de un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 2bc3e19968362993528c166ca6ec7a7fbbec1993
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623220"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334553"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Procedimiento para cambiar el nombre de un archivo en Visual Basic
+
 Use el método `RenameFile` del objeto `My.Computer.FileSystem` para cambiar el nombre de un archivo proporcionando la ubicación actual, el nombre de archivo y el nombre de archivo nuevo. No se puede usar este método para mover un archivo. Use el método `MoveFile` para mover y cambiar el nombre del archivo.  
   
 ### <a name="to-rename-a-file"></a>Para cambiar el nombre de un archivo  
@@ -24,6 +25,7 @@ Use el método `RenameFile` del objeto `My.Computer.FileSystem` para cambiar el 
  Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, el fragmento de código se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Las condiciones siguientes pueden provocar una excepción:  
   
 - La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  

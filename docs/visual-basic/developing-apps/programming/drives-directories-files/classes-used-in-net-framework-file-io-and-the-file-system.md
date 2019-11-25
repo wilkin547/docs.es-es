@@ -1,22 +1,24 @@
 ---
-title: Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
+title: Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348001"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348931"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
+
 En las tablas siguientes se incluyen las clases usadas más comúnmente para las operaciones de E/S de archivos en .NET Framework, clasificadas en clases de E/S de archivos, clases usadas para crear secuencias y clases usadas para leer y escribir en secuencias.  
   
 Para obtener una lista más completa, vea [Información general de la biblioteca de clases](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Clases básicas de E/S para archivos, unidades y directorios  
+
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
   
 |Clase|DESCRIPCIÓN|  
@@ -34,6 +36,7 @@ Para obtener una lista más completa, vea [Información general de la biblioteca
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Controla el acceso a archivos y carpetas mediante la definición de los permisos <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> y <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Clases usadas para crear secuencias  
+
  En la tabla siguiente se muestran y describen las clases principales usadas para crear secuencias.  
   
 |Clase|DESCRIPCIÓN|  
@@ -45,6 +48,7 @@ Para obtener una lista más completa, vea [Información general de la biblioteca
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Define un flujo que vincula flujos de datos a transformaciones criptográficas.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Clases usadas para leer y escribir en secuencias  
+
  En la tabla siguiente se muestran las clases concretas usadas para leer y escribir en los archivos con secuencias.  
   
 |**Clase**|**Descripción**|  

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 5b3b0af5b46774beff9fb7a2a86c37e5399c0dd2
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bea5cd1b42773e62601edbc113b2155ff78cf884
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957388"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977410"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Análisis de opiniones mediante la CLI de ML.NET
 
@@ -105,7 +105,7 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
 
     ![Comando de entrenamiento automático de la CLI de ML.NET en PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
-    En este caso en concreto, en solo 10 segundos y con el pequeño conjunto de datos proporcionado, la herramienta de la CLI fue capaz de ejecutar varias iteraciones, lo que implica entrenar varias veces según diferentes combinaciones de algoritmos o la configuración con diferentes transformaciones de datos internos e hiperparámetros del algoritmo. 
+    En este caso en concreto, en solo 10 segundos y con el pequeño conjunto de datos proporcionado, la herramienta de la CLI fue capaz de ejecutar varias iteraciones, lo que implica entrenar varias veces según diferentes combinaciones de algoritmos o la configuración con diferentes transformaciones de datos internos e hiperparámetros del algoritmo.
 
     Por último, el modelo de "mejor calidad" que se encontró en 10 segundos es un modelo que usa un instructor o algoritmo concreto con cualquier configuración específica. Según el tiempo de exploración, el comando puede generar un resultado diferente. La selección se basa en las diversas métricas que se muestran, como `Accuracy`.
 
@@ -118,16 +118,16 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
     Para ver métricas adicionales e **información más detallada acerca de las métricas**, como la precisión, AUC, AUCPR y la puntuación F1 utilizada para evaluar los distintos modelos, puede leer [Descripción de las métricas de ML.NET](../resources/metrics.md).
 
     > [!NOTE]
-    > Puede probar este mismo conjunto de datos y especificar unos minutos para `--max-exploration-time` (por ejemplo, tres minutos, por lo que se especifican 180 segundos) que encontrará un "mejor modelo" con una configuración de canalización de entrenamiento distinta para este conjunto de datos (que es bastante pequeño: 1000 filas). 
-        
-    Para encontrar un modelo de "mejor o buena calidad" que sea un "modelo listo para la producción" dirigido a conjuntos de datos grandes, debe realizar experimentos con la CLI normalmente especificando mucho más tiempo de exploración según el tamaño del conjunto de datos. De hecho, en muchos casos es posible que necesite varias horas de exploración, sobre todo si el conjunto de datos es de gran tamaño en filas y columnas. 
+    > Puede probar este mismo conjunto de datos y especificar unos minutos para `--max-exploration-time` (por ejemplo, tres minutos, por lo que se especifican 180 segundos) que encontrará un "mejor modelo" con una configuración de canalización de entrenamiento distinta para este conjunto de datos (que es bastante pequeño: 1000 filas).
+
+    Para encontrar un modelo de "mejor o buena calidad" que sea un "modelo listo para la producción" dirigido a conjuntos de datos grandes, debe realizar experimentos con la CLI normalmente especificando mucho más tiempo de exploración según el tamaño del conjunto de datos. De hecho, en muchos casos es posible que necesite varias horas de exploración, sobre todo si el conjunto de datos es de gran tamaño en filas y columnas.
 
 1. La ejecución del comando anterior ha generado los siguientes recursos:
 
-    - Un .zip de modelo serializado ("mejor modelo") listo para usarse. 
+    - Un .zip de modelo serializado ("mejor modelo") listo para usarse.
     - El código de C# para ejecutar o calificar dicho modelo generado (para realizar predicciones en las aplicaciones del usuario final con ese modelo).
     - El código de entrenamiento de C# utilizado para generar ese modelo (con fines de aprendizaje).
-    - Un archivo de registro con todas las iteraciones exploradas con información detallada específica acerca de cada algoritmo que se ha intentado con su combinación de hiperparámetros y transformaciones de datos. 
+    - Un archivo de registro con todas las iteraciones exploradas con información detallada específica acerca de cada algoritmo que se ha intentado con su combinación de hiperparámetros y transformaciones de datos.
 
     Los dos primeros recursos (modelo de archivo ZIP y el código de C# para ejecutar ese modelo) se pueden usar directamente en las aplicaciones de usuario final (aplicación web ASP.NET Core, servicios, aplicación de escritorio, etc.) para realizar predicciones con dicho modelo de ML generado.
 
@@ -145,10 +145,10 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
     ![Solución de VS generada por la CLI](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
     - La **biblioteca de clases** generada que contiene el modelo serializado de ML (archivo .zip) y las clases de datos (modelo de datos) es algo que puede usar directamente en la aplicación del usuario final, incluso haciendo referencia directamente a esa biblioteca de clases (o moviendo el código, como desee).
-    - La **aplicación de consola** generada contiene un código de ejecución que debe revisar. Después, normalmente reutiliza el "código de puntuación" (el código que ejecuta el modelo de ML para realizar predicciones) moviendo ese código sencillo (unas cuantas líneas) a la aplicación del usuario final en la que quiere realizar las predicciones. 
+    - La **aplicación de consola** generada contiene un código de ejecución que debe revisar. Después, normalmente reutiliza el "código de puntuación" (el código que ejecuta el modelo de ML para realizar predicciones) moviendo ese código sencillo (unas cuantas líneas) a la aplicación del usuario final en la que quiere realizar las predicciones.
 
-1. Abra los archivos de clase **ModelInput.cs** y **ModelOutput.cs** en el proyecto de la biblioteca de clases. Verá que estas clases son "clases de datos" o clases POCO que se usan para almacenar datos. Se trata de "código reutilizable", pero resulta útil generarlo si el conjunto de datos tiene decenas o incluso centenares de columnas. 
-    - La clase `ModelInput` se usa al leer los datos del conjunto de datos. 
+1. Abra los archivos de clase **ModelInput.cs** y **ModelOutput.cs** en el proyecto de la biblioteca de clases. Verá que estas clases son "clases de datos" o clases POCO que se usan para almacenar datos. Se trata de "código reutilizable", pero resulta útil generarlo si el conjunto de datos tiene decenas o incluso centenares de columnas.
+    - La clase `ModelInput` se usa al leer los datos del conjunto de datos.
     - La clase `ModelOutput` se utiliza para obtener el resultado de la predicción (datos de predicción).
 
 1. Abra el archivo Program.cs y explore el código. En unas cuantas líneas, podrá ejecutar el modelo y realizar una predicción de ejemplo.
@@ -164,7 +164,7 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
         var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
-        // Create sample data to do a single prediction with it 
+        // Create sample data to do a single prediction with it
         ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
@@ -174,7 +174,7 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
     }
     ```
 
-- La primera línea de código crea simplemente un objeto `MLContext` necesario cada vez que se ejecuta el código de ML.NET. 
+- La primera línea de código crea simplemente un objeto `MLContext` necesario cada vez que se ejecuta el código de ML.NET.
 
 - La segunda línea de código está comentada porque no es necesario entrenar el modelo debido a que la herramienta de la CLI ya lo ha entrenado y guardado en el archivo ZIP serializado del modelo. Pero si desea ver *"cómo la CLI entrenó el modelo"* , puede quitar la marca del comentario en esa línea y ejecutar o depurar el código de aprendizaje para ese modelo particular de ML.
 
@@ -215,11 +215,11 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
 
     ---
 
-1. Pruebe a cambiar los datos de ejemplo codificados de forma rígida a otras frases con diferentes opiniones y vea cómo el modelo predice opiniones positivas o negativas. 
+1. Pruebe a cambiar los datos de ejemplo codificados de forma rígida a otras frases con diferentes opiniones y vea cómo el modelo predice opiniones positivas o negativas.
 
 ## <a name="infuse-your-end-user-applications-with-ml-model-predictions"></a>Incorporar las aplicaciones del usuario final con predicciones del modelo de ML
 
-Puede usar un "código de puntuación del modelo de ML" similar para ejecutar el modelo en la aplicación del usuario final y realizar predicciones. 
+Puede usar un "código de puntuación del modelo de ML" similar para ejecutar el modelo en la aplicación del usuario final y realizar predicciones.
 
 Por ejemplo, podría mover directamente ese código a cualquier aplicación de escritorio de Windows como **WPF** y **WinForms** y ejecutar el modelo de la misma manera que se realizó en la aplicación de consola.
 
@@ -229,14 +229,14 @@ Sin embargo, la forma de implementar esas líneas de código para ejecutar un mo
 
 La creación del objeto de modelo (`ITransformer` cargado desde el archivo .zip de un modelo) y el objeto `PredictionEngine` debe optimizarse especialmente cuando se ejecuta en aplicaciones web escalables y servicios distribuidos. En el primer caso, el objeto de modelo (`ITransformer`), la optimización es sencilla. Puesto que el objeto `ITransformer` es seguro para subprocesos, puede copiar en caché el objeto como un singleton o un objeto estático para cargar el modelo una vez.
 
-En el segundo objeto, el objeto `PredictionEngine`, no es tan fácil porque el objeto `PredictionEngine` no es seguro para subprocesos, por lo que no se puede crear una instancia de este objeto como singleton u objeto estático en una aplicación de ASP.NET Core. Este problema de escalabilidad y seguridad para subprocesos se describe detalladamente en esta [entrada de blog](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
+En el segundo objeto, el objeto `PredictionEngine`, no es tan fácil porque el objeto `PredictionEngine` no es seguro para subprocesos, por lo que no se puede crear una instancia de este objeto como singleton u objeto estático en una aplicación de ASP.NET Core. Este problema de escalabilidad y seguridad para subprocesos se describe detalladamente en esta [entrada de blog](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).
 
 Sin embargo, las cosas ahora son mucho más fáciles de lo que se explica en esa entrada de blog. Hemos trabajado en un enfoque más sencillo para usted y hemos creado un buen **"paquete de integración de .NET Core"** que puede usar fácilmente en sus servicios y aplicaciones de ASP.NET Core registrándolos en los servicios de DI de la aplicación (servicios de inserción de dependencias) y usándolos directamente desde el código. Consulte el siguiente tutorial y ejemplo para hacerlo:
 
 - [Tutorial: Ejecución de modelos de ML.NET en aplicaciones web escalables de ASP.NET Core y WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [Ejemplo: Modelo de ML.NET escalable en ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
-## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Explorar el código de C# generado que se usó para entrenar el modelo de "mejor calidad" 
+## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Explorar el código de C# generado que se usó para entrenar el modelo de "mejor calidad"
 
 Para fines de aprendizaje más avanzados, también puede explorar el código de C# generado que utilizó la herramienta de la CLI para entrenar el modelo generado.
 
@@ -253,7 +253,7 @@ Resulta interesante comparar el algoritmo elegido y la configuración de canaliz
 - [Automatizar el entrenamiento del modelo con la CLI de ML.NET](../automate-training-with-cli.md)
 - [Tutorial: Ejecución de modelos de ML.NET en aplicaciones web escalables de ASP.NET Core y WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [Ejemplo: Modelo de ML.NET escalable en ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [Guía de referencia de comandos de entrenamiento automático de la CLI de ML.NET](../reference/ml-net-cli-reference.md) 
+- [Guía de referencia de comandos de entrenamiento automático de la CLI de ML.NET](../reference/ml-net-cli-reference.md)
 - [Cómo instalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET](../how-to-guides/install-ml-net-cli.md)
 - [Telemetría en la CLI de ML.NET](../resources/ml-net-cli-telemetry.md)
 

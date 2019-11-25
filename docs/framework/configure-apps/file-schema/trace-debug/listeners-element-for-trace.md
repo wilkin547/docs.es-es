@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 10530cfadf2e182f912c699e50294af4b57f47b5
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699349"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088862"
 ---
-# <a name="listeners-element-for-trace"></a>\<listeners > elemento para \<trace >
+# <a name="listeners-element-for-trace"></a>\<agentes de escucha > elemento para \<seguimiento >
 Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](trace-element.md) > de seguimiento\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agentes de escucha** >
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -44,7 +44,7 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Lo
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Borra la colección `Listeners` de un seguimiento.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Quita un agente de escucha de la colección `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Quita un agente de escucha de la colección de `Listeners`.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -55,13 +55,13 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Lo
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Las clases <xref:System.Diagnostics.Debug> y <xref:System.Diagnostics.Trace> comparten la misma colección de **agentes de escucha** . Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase utiliza el mismo agente de escucha. Las clases de agente de escucha incluidas con el .NET Framework derivan de la clase <xref:System.Diagnostics.TraceListener>.  
+ Las clases <xref:System.Diagnostics.Debug> y <xref:System.Diagnostics.Trace> comparten la misma colección **Listeners** . Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase utiliza el mismo agente de escucha. Las clases de agente de escucha incluidas con el .NET Framework derivan de la clase <xref:System.Diagnostics.TraceListener>.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
  Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento **> \<listeners** para agregar los agentes de escucha `MyListener` y `MyEventListener` a la colección **Listeners** . `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
+ En el ejemplo siguiente se muestra cómo usar el elemento **\<listeners >** para agregar los agentes de escucha `MyListener` y `MyEventListener` a la colección **Listeners** . `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para leer un valor a partir de una clave del Registro en Visual Basic
+title: Procedimiento para leer un valor en una clave del Registro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662753"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345614"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedimiento para leer un valor a partir de una clave del Registro en Visual Basic
+
 El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer valores en el Registro de Windows.  
   
  Si la clave, "Software\MyApp" en el ejemplo siguiente, no existe, se produce una excepción. Si `ValueName`, "Nombre" en el ejemplo siguiente, no existe, se devuelve `Nothing`.  
@@ -39,6 +40,7 @@ El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer 
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  El registro contiene claves de nivel superior o raíz que se usan para almacenar datos. Por ejemplo, la clave raíz HKEY_LOCAL_MACHINE se usa para almacenar una configuración de nivel de equipo que usan todos los usuarios, mientras que HKEY_CURRENT_USER se usa para almacenar datos específicos de un usuario individual.  
   
  Las condiciones siguientes pueden provocar una excepción:  
@@ -50,6 +52,7 @@ El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer 
 - Que el nombre de la clave supere el límite de 255 caracteres (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
 ## <a name="see-also"></a>Vea también

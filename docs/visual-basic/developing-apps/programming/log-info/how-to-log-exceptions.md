@@ -1,18 +1,19 @@
 ---
-title: Procedimiento para registrar excepciones en Visual Basic
+title: Procedimiento para registrar excepciones
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307228"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352087"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Procedimiento para registrar excepciones en Visual Basic
+
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre excepciones que se producen en la aplicación. Estos ejemplos muestran cómo usar el método `My.Application.Log.WriteException` para registrar excepciones que detecta explícitamente y excepciones que no se controlan.  
   
  Para registrar información de seguimiento, use el método `My.Application.Log.WriteEntry`. Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para crear un servicio WCF que se comunique a través de WebSockets
+title: Cómo crear un servicio WCF que se comunique a través de WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970006"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977135"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedimiento para crear un servicio WCF que se comunique a través de WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Cómo crear un servicio WCF que se comunique a través de WebSockets
 Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
 ### <a name="define-the-service"></a>Definir el servicio  
@@ -42,21 +42,21 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
+    {  
+        public async Task StartSendingQuotes()  
         {  
-            public async Task StartSendingQuotes()  
+            var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
+            var random = new Random();  
+            double price = 29.00;  
+
+            while (((IChannel)callback).State == CommunicationState.Opened)  
             {  
-                var callback = OperationContext.Current.GetCallbackChannel<IStockQuoteCallback>();  
-                var random = new Random();  
-                double price = 29.00;  
-  
-                while (((IChannel)callback).State == CommunicationState.Opened)  
-                {  
-                    await callback.SendQuote("MSFT", price);  
-                    price += random.NextDouble();  
-                    await Task.Delay(1000);  
-                }  
+                await callback.SendQuote("MSFT", price);  
+                price += random.NextDouble();  
+                await Task.Delay(1000);  
             }  
         }  
+    }  
     ```  
   
      La operación de servicio `StartSendingQuotes` se implementa como una llamada asincrónica. Recuperamos el canal de devolución de llamada mediante `OperationContext` y si el canal está abierto, hacemos una llamada asincrónica en el canal de devolución de llamada.  

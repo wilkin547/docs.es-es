@@ -2,12 +2,12 @@
 title: Host de servicio personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 80b2642fa202500aa22dc7d045476cb36677d47c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fdb61d205b0c97e9ccaad8335b1b0eab555bedfb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928859"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976661"
 ---
 # <a name="custom-service-host"></a>Host de servicio personalizado
 Este ejemplo muestra cómo utilizar un derivado personalizado de la clase <xref:System.ServiceModel.ServiceHost> para modificar el comportamiento de tiempo de ejecución de un servicio. Este enfoque proporciona una alternativa reutilizable para configurar un gran número de servicios de una manera común. El ejemplo también muestra cómo utilizar la clase <xref:System.ServiceModel.Activation.ServiceHostFactory> para utilizar un ServiceHost personalizado en el entorno de host de Internet Information Services (IIS) o el Servicio de activación de procesos de Windows (WAS).  
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo utilizar un derivado personalizado de la clase <xref:
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
@@ -34,7 +34,7 @@ Este ejemplo muestra cómo utilizar un derivado personalizado de la clase <xref:
   
  En este ejemplo, deseamos compilar un ServiceHost personalizado que agregue ServiceMetadataBehavior, (que habilita la publicación de los metadatos) aun cuando este comportamiento no se agregue explícitamente en el archivo de configuración del servicio. Para lograr esto, creamos una nueva clase que hereda de <xref:System.ServiceModel.ServiceHost> e invalida `ApplyConfiguration`().  
   
-```csharp  
+```csharp
 class SelfDescribingServiceHost : ServiceHost  
 {  
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
@@ -59,7 +59,7 @@ class SelfDescribingServiceHost : ServiceHost
   
  Porque no deseamos omitir cualquier configuración proporcionada en el archivo de configuración de la aplicación, la primera cosa que nuestra reemplazo de `ApplyConfiguration`() hace, es llamar a la implementación base. Cuando este método se completa, podemos agregar imperiosamente <xref:System.ServiceModel.Description.ServiceMetadataBehavior> a la descripción utilizando el código imperativo siguiente.  
   
-```csharp  
+```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
 if (mexBehavior == null)  
 {  
@@ -76,7 +76,7 @@ else
   
  La última cosa que nuestro () invalidador`ApplyConfiguration`debe hacer, es agregar el punto de conexión de metadatos predeterminado. Por convención, se crea un extremo de metadatos para cada URI en la colección BaseAddresses del host del servicio.  
   
-```csharp  
+```csharp
 //Add a metadata endpoint at each base address  
 //using the "/mex" addressing convention  
 foreach (Uri baseAddress in this.BaseAddresses)  
@@ -113,7 +113,7 @@ foreach (Uri baseAddress in this.BaseAddresses)
 ## <a name="using-a-custom-servicehost-in-self-host"></a>Utilizar un ServiceHost personalizado en el mismo host  
  Ahora que hemos completado nuestra implementación de ServiceHost personalizada, podemos utilizarla para agregar metadatos que publican el comportamiento de cualquier servicio, hospedando ese servicio dentro de una instancia de nuestro`SelfDescribingServiceHost`. El código siguiente muestra cómo utilizarlo en el escenario del mismo host.  
   
-```csharp  
+```csharp
 SelfDescribingServiceHost host =   
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
@@ -124,7 +124,7 @@ host.Open();
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Utilizar un ServiceHost personalizado en IIS o WAS  
  Utilizar un host del servicio personalizado en escenarios de autohospedaje es sencillo, porque es su código de aplicación el que es finalmente responsable de crear y abrir la instancia del host de servicio. En el entorno de hospedaje de IIS o WAS, sin embargo, la infraestructura de WCF está creando dinámicamente una instancia del host del servicio en respuesta a los mensajes entrantes. Los hosts de servicio personalizados también se pueden utilizar en este entorno host, pero requieren código adicional en el formulario de ServiceHostFactory. El código siguiente muestra un derivado de <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve instancias de nuestro `SelfDescribingServiceHost`personalizado.  
   
-```csharp  
+```csharp
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
     protected override ServiceHost CreateServiceHost(Type serviceType,   
@@ -151,7 +151,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- Aquí hemos agregado un atributo `Factory` adicional a la directiva `@ServiceHost` y pasamos el nombre de tipo de CLR de nuestro generador personalizado como el valor del atributo. Cuando IIS o WAS recibe un mensaje para este servicio, la infraestructura de hospedaje de WCF crea primero una instancia de ServiceHostFactory y, a continuación, crea instancias del propio `ServiceHostFactory.CreateServiceHost()`host del servicio mediante una llamada a.  
+ Aquí hemos agregado un atributo `Factory` adicional a la directiva `@ServiceHost` y pasamos el nombre de tipo de CLR de nuestro generador personalizado como el valor del atributo. Cuando IIS o WAS recibe un mensaje para este servicio, la infraestructura de hospedaje de WCF crea primero una instancia de ServiceHostFactory y, a continuación, crea instancias del propio host del servicio mediante una llamada a `ServiceHostFactory.CreateServiceHost()`.  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
  Aunque este ejemplo proporciona un cliente totalmente funcional y una implementación del servicio completa, el ejemplo pretende mostrar cómo modificar el comportamiento del tiempo de ejecución de un servicio por medio de un host personalizado. Siga los siguientes pasos:  
@@ -176,4 +176,4 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Hospedar un servicio WCF en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Cómo: hospedar un servicio WCF en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

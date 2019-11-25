@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180282"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977353"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Predicción de precios mediante regresión con el Generador de modelos
 
@@ -83,8 +83,8 @@ El Generador de modelos acepta datos de dos orígenes, una base de datos de SQL�
 
 1. En el paso de datos de la herramienta Generador de modelos, seleccione *Archivo* en la lista desplegable origen de datos.
 1. Seleccione el botón junto al cuadro de texto *Seleccionar un archivo* y use el Explorador de archivos para examinar y seleccionar *taxi-fare-test.csv* en el directorio *Datos*.
-1. Elija *fare_amount* en la lista desplegable *Column to Predict (Label)* (Columna para la predicción [etiqueta]) y vaya al paso de entrenamiento de la herramienta Generador de modelos.
-1. Expanda la lista desplegable *Input Columns (Features)* (Columnas de entrada [características]) y desactive la columna *trip_time_in_secs* para excluirla como característica durante el entrenamiento.
+1. Elija *fare_amount* en el menú desplegable *Column to Predict (Label)* (Columna para la predicción [etiqueta]).
+1. Expanda la lista desplegable *Input Columns (Features)* (Columnas de entrada [características]) y desactive la columna *trip_time_in_secs* para excluirla como característica durante el entrenamiento.  Vaya al paso de entrenamiento de la herramienta Generador de modelos.
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
@@ -126,7 +126,7 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
     using TaxiFarePredictionML.Model;
     ```
 
-1. Para hacer una predicción según los datos nuevos con el modelo, cree una instancia nueva de la clase `ModelInput` dentro del método `Main` de la aplicación. Observe que el importe de la tarifa no forma parte de la entrada. Esto se debe a que el modelo generará la predicción para él. 
+1. Para hacer una predicción según los datos nuevos con el modelo, cree una instancia nueva de la clase `ModelInput` dentro del método `Main` de la aplicación. Observe que el importe de la tarifa no forma parte de la entrada. Esto se debe a que el modelo generará la predicción para él.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
     };
     ```
 
-1. Use el método `Predict` de la clase `ConsumeModel`. El método `Predict` carga el modelo entrenado, crea un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para el modelo y lo usa para realizar predicciones según los datos nuevos. 
+1. Use el método `Predict` de la clase `ConsumeModel`. El método `Predict` carga el modelo entrenado, crea un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para el modelo y lo usa para realizar predicciones según los datos nuevos.
 
     ```csharp
     // Make prediction
@@ -180,4 +180,4 @@ Para más información sobre los temas mencionados en este tutorial, visite esto
 - [Escenarios del Generador de modelos](../automate-training-with-model-builder.md#scenarios)
 - [Regresión](../resources/glossary.md#regression)
 - [Métricas de regresión del modelo](../resources/metrics.md#metrics-for-regression)
-- [Conjunto de datos NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+- [Conjunto de datos NYC TLC Taxi Trip](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

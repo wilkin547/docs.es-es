@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para eliminar un archivo en Visual Basic
+title: Procedimiento para eliminar un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: dcaf74a6ff99113903f066740ebf143dfad95f74
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629154"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348780"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Procedimiento para eliminar un archivo en Visual Basic
+
 El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un archivo. Entre las opciones que ofrece se encuentran: enviar el archivo eliminado a la **Papelera de reciclaje**, pedir al usuario que confirme la eliminación del archivo o qué hacer si el usuario cancela la operación.  
   
 ### <a name="to-delete-a-text-file"></a>Para eliminar un archivo de texto  
@@ -36,6 +37,7 @@ El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un 
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Las condiciones siguientes pueden provocar una excepción:  
   
 - La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  

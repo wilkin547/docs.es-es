@@ -1,24 +1,26 @@
 ---
-title: Leer y escribir en el Registro (Visual Basic)
+title: Leer y escribir en el Registro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591478"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349763"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Leer y escribir en el Registro (Visual Basic)
+
 En este tema se describen las tareas y los temas conceptuales asociados al Registro.  
   
  Al programar en Visual Basic, puede optar por acceder al Registro mediante las funciones proporcionadas por Visual Basic o mediante las clases del Registro de .NET Framework. El Registro hospeda información del sistema operativo, así como de las aplicaciones hospedadas en el equipo. Si trabaja con el Registro, puede poner en peligro la seguridad al permitir accesos inadecuados a recursos del sistema o a información protegida.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Cómo: Crear una clave del Registro y establecer su valor](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  Describe cómo usar los métodos `CreateSubKey` y `SetValue` del objeto `My.Computer.Registry` para crear una clave del Registro y establecer su valor.  
   
@@ -35,6 +37,7 @@ En este tema se describen las tareas y los temas conceptuales asociados al Regis
  Describe problemas de seguridad que afectan al Registro.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  Enumera y explica los miembros del objeto `My.Computer.Registry`.  
   

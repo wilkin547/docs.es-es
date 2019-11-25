@@ -10,21 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168939"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088058"
 ---
-# <a name="compiler-element"></a>\<Elemento > del compilador
+# <a name="compiler-element"></a>\<elemento > del compilador
 
 Especifica los atributos de configuración del compilador para un proveedor de lenguaje.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<compiladores >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> del compilador**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. codedom**](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**compiladores**](compilers-element.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**compilador** >
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,7 +46,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 |Atributo|Descripción|
 |---------------|-----------------|
-|`compilerOptions`|Atributo opcional.<br /><br /> Especifica argumentos adicionales específicos del compilador para la compilación. Los valores `compilerOptions` del atributo se enumeran normalmente en un tema de opciones del compilador para el compilador.|
+|`compilerOptions`|Atributo opcional.<br /><br /> Especifica argumentos adicionales específicos del compilador para la compilación. Los valores del atributo `compilerOptions` se muestran normalmente en un tema de opciones del compilador para el compilador.|
 |`extension`|Atributo necesario.<br /><br /> Proporciona una lista separada por puntos y comas de extensiones de nombre de archivo usadas por los archivos de código fuente para el proveedor de lenguaje. Por ejemplo, ". cs".|
 |`language`|Atributo necesario.<br /><br /> Proporciona una lista separada por puntos y comas de nombres de idioma admitidos por el proveedor de lenguaje. Por ejemplo, "c#; CS; CSharp".|
 |`type`|Atributo necesario.<br /><br /> Especifica el nombre de tipo del proveedor de lenguaje, incluido el nombre del ensamblado que contiene la implementación del proveedor. El nombre de tipo debe cumplir los requisitos definidos en la [especificación de nombres de tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|
@@ -56,19 +56,19 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[\<providerOption >, elemento](provideroption-element.md)|Especifica los atributos de versión del compilador para un proveedor de lenguaje.|
+|[\<elemento > providerOption](provideroption-element.md)|Especifica los atributos de versión del compilador para un proveedor de lenguaje.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
 |Elemento|Descripción|
 |-------------|-----------------|
 |[Elemento \<configuration>](../configuration-element.md)|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
-|[\<Elemento > de System. CodeDom](system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|
-|[\<compiladores > elemento](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más `<compiler>` elementos.|
+|[\<elemento > System. CodeDom](system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|
+|[\<compiladores > elemento](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más elementos `<compiler>`.|
 
 ## <a name="remarks"></a>Comentarios
 
-Cada `<compiler>` elemento especifica los atributos de configuración del compilador para un proveedor de lenguaje específico. El proveedor extiende la <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> clase para un lenguaje específico; el `<compiler>` elemento define la configuración del compilador y del generador de código para el proveedor de lenguaje.
+Cada elemento `<compiler>` especifica los atributos de configuración del compilador para un proveedor de lenguaje específico. El proveedor amplía la clase <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> para un idioma concreto; el elemento `<compiler>` define el compilador y la configuración del generador de código para el proveedor de lenguaje.
 
 .NET Framework define la configuración inicial del compilador en el archivo de configuración del equipo (Machine.config). Los desarrolladores y los proveedores de compiladores pueden agregar valores de configuración para una nueva implementación de <xref:System.CodeDom.Compiler.CodeDomProvider>. Use el método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar mediante programación los valores de configuración del compilador y del proveedor de lenguaje en un equipo.
 

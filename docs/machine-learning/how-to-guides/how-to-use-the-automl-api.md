@@ -1,14 +1,14 @@
 ---
 title: Cómo usar la API de ML automatizada de ML.NET
 description: La API de ML automatizada de ML.NET automatiza el proceso de compilación de modelos y genera un modelo listo para la implementación. Descubra las opciones que puede usar para configurar tareas de aprendizaje automático.
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774552"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977117"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Cómo usar la API de aprendizaje automático automatizada de ML.NET
 
@@ -17,7 +17,7 @@ El aprendizaje automático automatizado (AutoML) automatiza el proceso de aplica
 > [!NOTE]
 > Este tema hace referencia a la API de aprendizaje automático de ML.NET, que actualmente se encuentra en versión preliminar. El material puede estar sujetos a cambios.
 
-## <a name="load-data"></a>Carga de datos
+## <a name="load-data"></a>Cargar los datos
 
 El aprendizaje automático automatizado admite la carga de un conjunto de datos en un [IDataView](xref:Microsoft.ML.IDataView). Los datos pueden estar en forma de archivos de valores separados por tabulaciones (TSV) y archivos de valores separados por comas (CSV).
 
@@ -32,6 +32,7 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Seleccionar el tipo de tarea de aprendizaje automático
+
 Antes de crear un experimento, determine el tipo de problema de aprendizaje automático que desea resolver. El aprendizaje automático automatizado admite las siguientes tareas de ML:
 
 * Clasificación binaria
@@ -62,7 +63,7 @@ Cree una configuración de experimento para el tipo de tarea de ML determinada:
 
 ## <a name="configure-experiment-settings"></a>Establecer la configuración de experimento
 
-Los experimentos son altamente configurables. Consulte los [documentos de la API de AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) para obtener una lista completa de las opciones de configuración.
+Los experimentos son altamente configurables. Consulte los [documentos de la API de AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) para obtener una lista completa de las opciones de configuración.
 
 Estos son algunos ejemplos:
 
@@ -116,7 +117,7 @@ La métrica de optimización, tal como se muestra en el ejemplo anterior, determ
 
 |[Clasificación binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Clasificación multiclase](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regresión](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|Precisión| LogLoss | RSquared
+|Exactitud| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
 |AreaUnderRocCurve | MacroAccuracy | MeanSquaredError
 |F1Score | MicroAccuracy | RootMeanSquaredError
@@ -125,7 +126,7 @@ La métrica de optimización, tal como se muestra en el ejemplo anterior, determ
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>Preprocesamiento de datos y caracterización
+## <a name="data-pre-processing-and-featurization"></a>Caracterización y procesamiento previo de datos
 
 > [!NOTE]
 > La columna de características solo admitía los tipos de <xref:System.Boolean>, <xref:System.Single> y <xref:System.String>.

@@ -4,12 +4,12 @@ description: Explore los componentes de ingeniería de características que se a
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929257"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977231"
 ---
 # <a name="data-transformations"></a>Transformaciones de datos
 
@@ -21,7 +21,7 @@ Las transformaciones de datos se usan para:
 
 Las transformaciones de esta guía devuelven clases que implementan la interfaz [IEstimator](xref:Microsoft.ML.IEstimator%601). Las transformaciones de datos se pueden encadenar juntas. Cada transformación espera y genera datos de tipos y formatos específicos, que se especifican en la documentación de referencia vinculada.
 
-Algunas transformaciones de datos requieren datos de aprendizaje para calcular sus parámetros. Por ejemplo, el transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula el medio y la varianza de los datos de aprendizaje durante la operación `Fit()` y usa esos parámetros en la operación `Transform()`. 
+Algunas transformaciones de datos requieren datos de aprendizaje para calcular sus parámetros. Por ejemplo, el transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula el medio y la varianza de los datos de aprendizaje durante la operación `Fit()` y usa esos parámetros en la operación `Transform()`.
 
 Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, la transformación <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> puede realizar la operación `Transform()` sin haber visto ningún dato de aprendizaje durante la operación `Fit()`.
 
@@ -62,7 +62,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 | Transformación | Definición |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Transformar una columna de texto en una matriz flotante de recuentos de n-gramas y char-gramas normalizados | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Transformar una columna de texto en una matriz flotante de recuentos de n-gramas y char-gramas normalizados |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Dividir una o más columnas de texto en palabras individuales |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Dividir una o más columnas de texto en flotantes de caracteres individuales sobre un conjunto de temas |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Cambiar mayúsculas y minúsculas, quitar marcas diacríticas, signos de puntuación y números |

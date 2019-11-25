@@ -8,20 +8,20 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699819"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088641"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings >, elemento
+# <a name="cryptographysettings-element"></a>\<elemento > cryptographySettings
 Contiene la configuración de criptografía.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptographySettings >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -39,18 +39,18 @@ Contiene la configuración de criptografía.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Contiene asignaciones de clases a nombres descriptivos.|  
-|[\<oidMap>](oidmap-element.md)|Contiene las asignaciones de identificador de objetos (OID) ASN. 1 a las clases.|  
+|[\<cryptoNameMapping >](cryptonamemapping-element.md)|Contiene asignaciones de clases a nombres descriptivos.|  
+|[\<oidMap >](oidmap-element.md)|Contiene las asignaciones de identificador de objetos (OID) ASN. 1 a las clases.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`mscorlib`|Contiene el `cryptographySettings` elemento.|  
+|`mscorlib`|Contiene el elemento `cryptographySettings`.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento **> \<cryptographySettings** para contener asignaciones de nombres de criptografía y asignaciones OID. En este ejemplo se configura el tiempo de ejecución para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> devuelva un objeto `MyHashClass` y la clase `MyCryptoClass` se asigne al identificador de objeto 1.3.36.2.1.  
+ En el ejemplo siguiente se muestra cómo utilizar el elemento **\<cryptographySettings >** para contener asignaciones de nombres de criptografía y asignaciones OID. En este ejemplo se configura el tiempo de ejecución para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> devuelva un objeto `MyHashClass` y la clase `MyCryptoClass` se asigne al identificador de objeto 1.3.36.2.1.  
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ Contiene la configuración de criptografía.
 
 - [Esquema de los archivos de configuración](../index.md)
 - [Esquema de la configuración de criptografía](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)

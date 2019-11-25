@@ -1,5 +1,5 @@
 ---
-title: Elemento @no__t 0 para <listeners> para <trace>
+title: <remove> elemento de <listeners> para <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697222"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088846"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<remove > elemento para > \<listeners para \<trace >
+# <a name="remove-element-for-listeners-for-trace"></a>\<quitar > elemento para \<agentes de escucha > para \<> de seguimiento
 Quita un agente de escucha de la colección **Listeners** .  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](trace-element.md) > de seguimiento\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**agentes de escucha**](listeners-element-for-trace.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**quitar >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -53,7 +53,7 @@ Quita un agente de escucha de la colección **Listeners** .
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
-> Al quitar el <xref:System.Diagnostics.DefaultTraceListener> de la colección `Listeners` se modifica el comportamiento de los métodos @no__t 2, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>. La llamada a un método `Assert` o `Fail` suele tener como resultado la presentación de un cuadro de mensaje; sin embargo, el cuadro de mensaje no se muestra si el <xref:System.Diagnostics.DefaultTraceListener> no está en la colección `Listeners`.  
+> Al quitar el <xref:System.Diagnostics.DefaultTraceListener> de la colección `Listeners` se modifica el comportamiento de los métodos <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>. La llamada a un método `Assert` o `Fail` suele tener como resultado la presentación de un cuadro de mensaje; sin embargo, el cuadro de mensaje no se muestra si el <xref:System.Diagnostics.DefaultTraceListener> no está en la colección de `Listeners`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo quitar el agente de escucha de seguimiento predeterminado de la colección de **agentes de escucha** de seguimiento.  

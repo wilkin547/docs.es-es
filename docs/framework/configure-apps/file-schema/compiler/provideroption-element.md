@@ -8,22 +8,22 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 8d90364e34aa15bbd38e82ec70ec44616d7360f8
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: a6718173e84ecffc4ba0641f6e865e777aa6b1a4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167666"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088670"
 ---
-# <a name="provideroption-element"></a>\<providerOption >, elemento
+# <a name="provideroption-element"></a>\<elemento > providerOption
 Especifica los atributos de versión del compilador para un proveedor de lenguaje.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<compiladores >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> del compilador**](compiler-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> providerOption**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. codedom**](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**compiladores**](compilers-element.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**compilador**](compiler-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<providerOption >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -38,7 +38,7 @@ Especifica los atributos de versión del compilador para un proveedor de lenguaj
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`name`|Atributo necesario.<br /><br /> Especifica el nombre de la opción; por ejemplo, "CompilerVersion".|  
 |`value`|Atributo necesario.<br /><br /> Especifica el valor de la opción; por ejemplo, "v 3.5".|  
@@ -51,18 +51,18 @@ Especifica los atributos de versión del compilador para un proveedor de lenguaj
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[Elemento \<configuration>](../configuration-element.md)|Elemento raíz necesario en cada archivo de configuración utilizado por Common Language Runtime y las aplicaciones de .NET Framework.|  
-|[\<Elemento > de System. CodeDom](system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
-|[\<compiladores > elemento](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más `<compiler>` elementos.|  
+|[\<elemento > System. CodeDom](system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
+|[\<compiladores > elemento](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más elementos `<compiler>`.|  
 |[Elemento \<compiler>](compiler-element.md)|Especifica los atributos de configuración del compilador para un proveedor de lenguaje.|  
   
 ## <a name="remarks"></a>Comentarios  
- En los proveedores de código .NET Framework versión 3,5, Code Document Object Model (CodeDom) pueden admitir opciones específicas del proveedor mediante el `<providerOption>` elemento.  
+ En los proveedores de código .NET Framework versión 3,5, Code Document Object Model (CodeDOM) pueden admitir opciones específicas del proveedor mediante el elemento `<providerOption>`.  
   
- El .NET Framework 3,5 incluye ensamblados de .NET Framework 2,0 actualizados y proporciona nuevos ensamblados de la versión 3,5 que contienen nuevos tipos. Los proveedores C# de código de Microsoft y Visual Basic se encuentran en .NET Framework ensamblados 2,0, pero se han actualizado para admitir los compiladores de la versión 3,5. De forma predeterminada, los proveedores de código actualizados generan código para los compiladores de la versión 2,0. Puede usar el `<providerOption>` elemento para cambiar la versión del compilador de destino a 3,5. Para ello, especifique "CompilerVersion" para el `name` atributo y "v 3.5" para el `value` atributo. Debe preceder el número de versión con una "v" en minúscula.  
+ El .NET Framework 3,5 incluye ensamblados de .NET Framework 2,0 actualizados y proporciona nuevos ensamblados de la versión 3,5 que contienen nuevos tipos. Los proveedores C# de código de Microsoft y Visual Basic se encuentran en .NET Framework ensamblados 2,0, pero se han actualizado para admitir los compiladores de la versión 3,5. De forma predeterminada, los proveedores de código actualizados generan código para los compiladores de la versión 2,0. Puede usar el elemento `<providerOption>` para cambiar la versión del compilador de destino a 3,5. Para ello, especifique "CompilerVersion" para el atributo `name` y "v 3.5" para el atributo `value`. Debe preceder el número de versión con una "v" en minúscula.  
   
- Puede hacer que la especificación de versión sea global agregando el `<providerOption>` elemento al .NET Framework 2,0 Machine. config o archivo Web. config raíz. Si actualiza la versión predeterminada del compilador a 3,5 en el archivo Machine. config, puede cambiarla de nuevo a 2,0 por aplicación mediante el `<providerOption>` elemento en el archivo de configuración de la aplicación.  
+ Para hacer que la especificación de la versión sea global, agregue el elemento `<providerOption>` al archivo Machine. config de la .NET Framework 2,0 o a la raíz del archivo Web. config. Si actualiza la versión predeterminada del compilador a 3,5 en el archivo Machine. config, puede volver a cambiarla a 2,0 por aplicación mediante el elemento `<providerOption>` del archivo de configuración de la aplicación.  
   
- Los implementadores de proveedores de código CodeDom pueden procesar opciones personalizadas proporcionando un constructor que `providerOptions` toma un parámetro <xref:System.Collections.Generic.IDictionary%602>de tipo.  
+ Los implementadores de proveedores de código CodeDOM pueden procesar opciones personalizadas proporcionando un constructor que toma un parámetro `providerOptions` de tipo <xref:System.Collections.Generic.IDictionary%602>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo especificar que se debe usar C# la versión 3,5 del proveedor de código.  

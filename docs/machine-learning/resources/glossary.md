@@ -4,12 +4,12 @@ description: Un glosario de los términos importantes sobre aprendizaje automát
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180185"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977283"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -29,9 +29,9 @@ Un caso de [clasificación](#classification) donde la [etiqueta](#label) es solo
 
 ## <a name="calibration"></a>Calibración
 
-Calibración es el proceso de asignar una puntuación sin procesar en una pertenencia de la clase, para la clasificación binaria y multiclase. Algunos instructores de ML.NET tienen un sufijo `NonCalibrated`. Estos algoritmos generan una puntuación sin procesar que luego se debe asignar a una probabilidad de la clase. 
+Calibración es el proceso de asignar una puntuación sin procesar en una pertenencia de la clase, para la clasificación binaria y multiclase. Algunos instructores de ML.NET tienen un sufijo `NonCalibrated`. Estos algoritmos generan una puntuación sin procesar que luego se debe asignar a una probabilidad de la clase.
 
-## <a name="catalog"></a>Catálogo 
+## <a name="catalog"></a>Catálogo
 
 En ML.NET, un catálogo es una colección de funciones de extensión, agrupadas con un objetivo común.
 
@@ -170,7 +170,7 @@ El proceso de identificación de un [modelo](#model) para un conjunto de datos d
 
 Clase de ML.NET que implementa la interfaz <xref:Microsoft.ML.ITransformer>.
 
-Un transformador convierte un <xref:Microsoft.ML.IDataView> en otro. Un transformador se crea entrenando un [estimador](#estimator) o una canalización de estimadores. 
+Un transformador convierte un <xref:Microsoft.ML.IDataView> en otro. Un transformador se crea entrenando un [estimador](#estimator) o una canalización de estimadores.
 
 ## <a name="unsupervised-machine-learning"></a>Aprendizaje automático no supervisado
 

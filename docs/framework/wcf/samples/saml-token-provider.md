@@ -2,12 +2,12 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424237"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976707"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el proveedor de tokens del administrador de credenciales predeterminado. WCF también se suministra con un proveedor de tokens de CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:
@@ -161,8 +161,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
      La clase <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. Un administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado SAML cuando los requisitos de tokens pasados indican que se solicita el token SAML. Si la clase (vea el paso 3) de credenciales del cliente no ha especificado una aserción, el administrador de tokens de seguridad crea una instancia adecuada.
 
     ```csharp
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697690"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089115"
 ---
-# <a name="settings-element-network-settings"></a>\<settings (elemento >) (configuración de red)
+# <a name="settings-element-network-settings"></a>Elemento > de configuración de \<(configuración de red)
 Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** >
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -48,11 +48,11 @@ Configura opciones de red básicas para el espacio de nombres <xref:System.Net?d
 |-------------|-----------------|  
 |[httpListener](httplistener-element-network-settings.md)|Personaliza los parámetros utilizados por la clase <xref:System.Net.HttpListener>.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Personaliza los parámetros de la solicitud Web.|  
-|[ipv6](ipv6-element-network-settings.md)|Habilita la compatibilidad con el protocolo de Internet versión 6 (IPv6).|  
-|[\<performanceCounter (elemento >) (configuración de red)](performancecounter-element-network-settings.md)|Habilita los contadores de rendimiento de red.|  
+|[Protocolo](ipv6-element-network-settings.md)|Habilita la compatibilidad con el protocolo de Internet versión 6 (IPv6).|  
+|[\<elemento > performanceCounter (configuración de red)](performancecounter-element-network-settings.md)|Habilita los contadores de rendimiento de red.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Configura las conexiones a los recursos de red.|  
 |[tomacorriente](socket-element-network-settings.md)|Especifica si las operaciones de socket utilizan puertos de finalización.|  
-|[\<webProxyScript (elemento >) (configuración de red)](webproxyscript-element-network-settings.md)|Configura las características del script que se usan para detectar los proxies Web.|  
+|[\<elemento > webProxyScript (configuración de red)](webproxyscript-element-network-settings.md)|Configura las características del script que se usan para detectar los proxies Web.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   

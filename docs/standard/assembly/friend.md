@@ -5,12 +5,12 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: bf1cb28a6e3096a42aae1c777f6d2d6f9cc16c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774329"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348177"
 ---
 # <a name="friend-assemblies"></a>Ensamblados de confianza
 
@@ -55,7 +55,6 @@ public class ClassWithFriendMethod
 
 ```vb
 Imports System.Runtime.CompilerServices
-Imports System
 <Assembly: InternalsVisibleTo("AssemblyB")>
 
 ' Friend class.
@@ -81,9 +80,9 @@ El compilador realiza una validación básica del nombre del ensamblado de confi
 
      El nombre de ensamblado de confianza que se pasa al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> no puede ser el nombre seguro de *AssemblyB*. No incluya la versión, la referencia cultural, la arquitectura o el token de clave pública del ensamblado.
 
-- Si el ensamblado *Assembly A* no tiene nombre seguro, el nombre de ensamblado de confianza solo debe consistir en el nombre del ensamblado. Para obtener más información, consulte [Instrucciones: Crear ensamblados de confianza sin firmar](create-unsigned-friend.md).
+- Si el ensamblado *Assembly A* no tiene nombre seguro, el nombre de ensamblado de confianza solo debe consistir en el nombre del ensamblado. Para obtener más información, vea [Cómo: Crear ensamblados de confianza sin firmar](create-unsigned-friend.md).
 
-- Si *AssemblyB* tiene un nombre seguro, hay que especificar la clave de nombre seguro de *AssemblyB* mediante la configuración del proyecto o la opción `/keyfile` de la línea de comandos del compilador. Para obtener más información, consulte [Instrucciones: Crear ensamblados de confianza firmados](create-signed-friend.md).
+- Si *AssemblyB* tiene un nombre seguro, hay que especificar la clave de nombre seguro de *AssemblyB* mediante la configuración del proyecto o la opción `/keyfile` de la línea de comandos del compilador. Para obtener más información, vea [Cómo: Crear ensamblados de confianza firmados](create-signed-friend.md).
 
  La clase <xref:System.Security.Permissions.StrongNameIdentityPermission> también proporciona la capacidad de compartir tipos, con las siguientes diferencias:
 
@@ -99,8 +98,8 @@ Para obtener información sobre cómo acceder a los tipos y métodos `internal` 
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
-- [Uso de Crear ensamblados de confianza sin firmar](create-unsigned-friend.md)
-- [Uso de Crear ensamblados de confianza firmados](create-signed-friend.md)
+- [Cómo: Crear ensamblados de confianza sin firmar](create-unsigned-friend.md)
+- [Cómo: Crear ensamblados de confianza firmados](create-signed-friend.md)
 - [Ensamblados de .NET](index.md)
 - [Guía de programación de C#](../../csharp/programming-guide/index.md)
 - [Conceptos de programación (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

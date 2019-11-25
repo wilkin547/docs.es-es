@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698432"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087951"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<add > elemento para authenticationModules (configuración de red)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<agregar > elemento para authenticationModules (configuración de red)
 Agrega un módulo de autenticación a la aplicación.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules**](authenticationmodules-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agregar >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  

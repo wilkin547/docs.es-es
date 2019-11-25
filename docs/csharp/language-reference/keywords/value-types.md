@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739674"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428454"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -40,7 +40,7 @@ Cada tipo de valor tiene un constructor sin parámetros implícito que inicializ
 
 Los *tipos simples* son un conjunto de tipos struct predefinidos proporcionados por C# y comprenden los siguientes tipos:
 
-- [Tipos enteros](../builtin-types/integral-numeric-types.md): tipos numéricos enteros y tipo [char](char.md)
+- [Tipos enteros](../builtin-types/integral-numeric-types.md): tipos numéricos enteros y tipo [char](../builtin-types/char.md)
 - [Tipos de punto flotante](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0d6eda0aea9ad97063cc5362d83163443de034a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016080"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976955"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,13 +24,13 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>¿Qué son XPDM y WDDM?  
- Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM se refiere a [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model y WDDM, a Windows Display Driver Model. WDDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
+ Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM se refiere a [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model y WDDM, a Windows Display Driver Model. WDDM está disponible en equipos que ejecutan Windows Vista y [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM está disponible en equipos que ejecutan Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Configuración de registro  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro parámetros de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Parámetro|DESCRIPCIÓN|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |**Opción de deshabilitación de aceleración de hardware**|Especifica si se debe habilitar la aceleración de hardware.|  
 |**Valor máximo de muestreo múltiple**|Especifica el grado de muestreo múltiple para el suavizado de contorno de contenido 3D.|  
@@ -57,7 +57,7 @@ En este tema se ofrece información general sobre la configuración del Registro
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- El **valor máximo de muestreo múltiple** permite ajustar la cantidad máxima de suavizado de contorno del contenido 3D. Use este nivel para deshabilitar el suavizado de contorno [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 3D en o habilitarlo en. [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]  
+ El **valor máximo de muestreo múltiple** permite ajustar la cantidad máxima de suavizado de contorno del contenido 3D. Use este nivel para deshabilitar el suavizado de contorno 3D en Windows Vista o habilitarlo en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
  El **valor máximo de muestreo múltiple** es un valor DWORD comprendido entre 0 y 16. Un valor de 0 especifica que debe deshabilitarse el suavizado de contorno de muestreo múltiple del contenido 3D y un valor de 16 intentará usar un suavizado de contorno de muestreo múltiple hasta 16 veces mayor, si la tarjeta de vídeo lo admite. Tenga en cuenta que el establecimiento de este valor de clave del registro en los equipos que usan controladores XPDM hará que las aplicaciones usen una gran cantidad de memoria de vídeo adicional, reduzcan el rendimiento de la representación 3D y tenga el potencial de introducir errores de representación y estabilidad surge.  
   
@@ -68,7 +68,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 |Clave del Registro|Tipo de valor|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|string|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
  En noviembre de 2004, Microsoft publicó una nueva versión de las directrices de pruebas de controladores; los controladores escritos después de esta fecha ofrecen una mayor estabilidad. De forma predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará la canalización de aceleración de hardware para estos controladores y recurrirá a la representación de software para los controladores XPDM publicados antes de esta fecha.  
   
@@ -89,7 +89,7 @@ En este tema se ofrece información general sobre la configuración del Registro
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- La **opción usar rasterizador de referencia** permite forzar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] el modo de representación de hardware simulado para la depuración: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra en modo de hardware, pero usa el rasterizador de software de referencia de Microsoft Direct3D, d3dref9. dll. en lugar de un dispositivo de hardware real.  
+ La **opción usar rasterizador de referencia** permite forzar el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en un modo de representación de hardware simulado para la depuración: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra en modo de hardware, pero usa el rasterizador de software de referencia de Microsoft Direct3D, d3dref9. dll, en lugar de un dispositivo de hardware real.  
   
  El rasterizador de referencia es muy lento, pero omite el controlador de vídeo para evitar cualquier problema de representación causado por problemas de controladores. Por este motivo, se puede usar el rasterizador de referencia para determinar si los problemas de representación se deben al controlador de vídeo. El archivo d3dref9.dll debe estar en una ubicación en la que la aplicación pueda acceder a él, como cualquier ubicación en la ruta del sistema o el directorio local de la aplicación.  
   

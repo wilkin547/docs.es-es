@@ -1,5 +1,5 @@
 ---
-title: Escribir en archivos en Visual Basic
+title: Escribir en archivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,33 +8,36 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588124"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352135"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Escribir en archivos en Visual Basic
+
 En esta sección se explica cómo realizar tareas relacionadas con la escritura en archivos.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Escribir texto en archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+
+ [Cómo: Escribir texto en archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  Explica cómo se puede escribir en archivos de texto.  
   
- [Anexar a archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [Cómo: anexar a archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
  Explica cómo se puede anexar texto a un archivo de texto.  
   
- [Escribir en archivos binarios](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [Cómo: escribir en archivos binarios](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
  Explica cómo se puede escribir en un archivo binario.  
   
- [Escribir texto en archivos del directorio Mis documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [Cómo: escribir texto en archivos del directorio Mis documentos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
  Explica cómo se puede crear un archivo de texto en el directorio **Mis documentos** y cómo se puede escribir en él.  
   
- [Escribir texto en archivos con StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [Cómo: escribir texto en archivos con StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  Explica cómo se puede escribir en un archivo con un objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Describe el objeto `My.Computer.FileSystem` y sus métodos y propiedades.  
   
@@ -48,6 +51,7 @@ En esta sección se explica cómo realizar tareas relacionadas con la escritura 
  Describe el método `WriteAllText`.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Leer archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Explica cómo realizar tareas relacionadas con la lectura de archivos.  
   

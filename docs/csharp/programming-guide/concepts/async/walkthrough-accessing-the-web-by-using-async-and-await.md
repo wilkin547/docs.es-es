@@ -2,12 +2,12 @@
 title: 'Tutorial: Acceso a web usando Async y Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195642"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281790"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
 
@@ -254,7 +254,7 @@ Tenga en cuenta que los recuentos tardan unos segundos en mostrarse. Durante ese
 
      La llamada a `webReq.GetResponseAsync` devuelve `Task(Of WebResponse)` o `Task<WebResponse>`. A continuación, se aplica un operador await a la tarea para recuperar el valor `WebResponse`.
 
-     Si el método asincrónico debe realizar un trabajo que no depende de la finalización de la tarea, el método puede continuar con ese trabajo entre estas dos instrucciones, después de la llamada al método asincrónico y antes de que se aplique el operador `await`. Para obtener ejemplos, vea [Cómo: para realizar varias solicitudes web en paralelo con async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) y [ Ampliar el tutorial de Async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Si el método asincrónico debe realizar un trabajo que no depende de la finalización de la tarea, el método puede continuar con ese trabajo entre estas dos instrucciones, después de la llamada al método asincrónico y antes de que se aplique el operador `await`. Para obtener ejemplos, vea [Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) y [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 3. Dado que ha agregado el operador `await` en el paso anterior, se produce un error del compilador. El operador puede usarse únicamente en los métodos marcados con el modificador [async](../../../language-reference/keywords/async.md). Omita el error mientras repita los pasos de conversión para reemplazar la llamada a `CopyTo` con una llamada a `CopyToAsync`.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Vea también
 
-- [Async Sample: Acceso al tutorial web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Acceso al tutorial web (C# y Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [Programación asincrónica con Async y Await (C#)](./index.md)
 - [Async Return Types (C#)](./async-return-types.md) (Tipos de valor devuelto de async [C#])
 - [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])
-- [Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Cómo: Hacer varias solicitudes web en paralelo usando async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

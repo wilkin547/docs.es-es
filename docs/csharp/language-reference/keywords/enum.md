@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771867"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428525"
 ---
 # <a name="enum-c-reference"></a>enum (Referencia de C#)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 En esta enumeración, la secuencia de elementos debe iniciarse a partir de `1` en lugar de `0`. Sin embargo, se recomienda incluir una constante con el valor 0. Para obtener más información, vea [Tipos de enumeración](../../programming-guide/enumeration-types.md).
 
-Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier [tipo numérico entero](../builtin-types/integral-numeric-types.md). El tipo [char](char.md) no puede ser un tipo subyacente de una enumeración. El tipo subyacente predeterminado de los elementos de la enumeración es [int](../builtin-types/integral-numeric-types.md). Para declarar una enumeración de otro tipo entero, como [byte](../builtin-types/integral-numeric-types.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.
+Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier [tipo numérico entero](../builtin-types/integral-numeric-types.md). El tipo [char](../builtin-types/char.md) no puede ser un tipo subyacente de una enumeración. El tipo subyacente predeterminado de los elementos de la enumeración es [int](../builtin-types/integral-numeric-types.md). Para declarar una enumeración de otro tipo entero, como [byte](../builtin-types/integral-numeric-types.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920409"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977028"
 ---
 # <a name="wpf-walkthroughs"></a>Tutoriales de WPF
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. Esto hace que sean un buen punto de partida para conocer el producto o una característica en particular.
@@ -21,11 +21,11 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes. E
 
 |Title|Descripción|
 |-----------|-----------------|
-|[Tutorial: compilar una aplicación WPF sencilla con WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Muestra cómo compilar una aplicación WPF sencilla con el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|
+|[Tutorial: compilar una aplicación WPF sencilla con WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Muestra cómo compilar una aplicación WPF sencilla con WPF Designer.|
 |[Tutorial: crear un diseño dinámico](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Muestra cómo crear un diseño dinámico mediante el uso de un control panel de <xref:System.Windows.Controls.Grid>.|
 |[Tutorial: crear una aplicación de tamaño variable mediante el diseñador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Muestra cómo crear diseños de ventana que el usuario pueda cambiar de tamaño en tiempo de ejecución.|
-|[Tutorial: crear un enlace de datos mediante el diseñador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Muestra cómo utilizar el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para crear enlaces de datos que conectan los datos a un control.|
-|[Tutorial: usar DesignInstance para enlazar a datos en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Muestra cómo utilizar el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para crear enlaces de datos en tiempo de diseño para un contexto de datos que se asigna en tiempo de ejecución.|
+|[Tutorial: crear un enlace de datos mediante el diseñador de WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Muestra cómo usar el diseñador de WPF para crear enlaces de datos que conectan datos a un control.|
+|[Tutorial: usar DesignInstance para enlazar a datos en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Muestra cómo usar WPF Designer para crear enlaces de datos en tiempo de diseño para un contexto de datos que se asigna en tiempo de ejecución.|
 
 ## <a name="wpf-walkthroughs"></a>Tutoriales de WPF
 

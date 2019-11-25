@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699512"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087539"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<clear > elemento para BypassList (configuración de red)
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<borrar > elemento para BypassList (configuración de red)
 Borra la lista de omisión del proxy.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList**](bypasslist-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**clear >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -45,7 +45,7 @@ Borra la lista de omisión del proxy.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[bypasslist](bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.|  
+|[BypassList](bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `clear` borra todas las entradas de la lista de omisión.  

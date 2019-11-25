@@ -1,19 +1,20 @@
 ---
-title: Procedimiento para recibir cadenas de puertos serie en Visual Basic
+title: Procedimiento para recibir cadenas de puertos serie
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296725"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345597"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedimiento para recibir cadenas de puertos serie en Visual Basic
+
 En este tema se explica cómo usar `My.Computer.Ports` para recibir cadenas de los puertos serie del equipo en Visual Basic.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Para recibir cadenas del puerto serie  
@@ -24,7 +25,7 @@ En este tema se explica cómo usar `My.Computer.Ports` para recibir cadenas de l
   
 2. Determine el puerto serie que debe proporcionar las cadenas. En este ejemplo se da por supuesto que es `COM1`.  
   
-3. Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para obtener más información, vea <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3. Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para más información, consulte <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      El bloque `Try...Catch...Finally` permite a la aplicación cerrar el puerto serie aun cuando se genere una excepción. Todo el código que manipula el puerto serie debe aparecer dentro de este bloque.  
   
@@ -51,14 +52,17 @@ En este tema se explica cómo usar `My.Computer.Ports` para recibir cadenas de l
      [!code-vb[VbVbalrMyComputer#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#44)]  
   
 ## <a name="example"></a>Ejemplo  
+
  [!code-vb[VbVbalrMyComputer#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#37)]  
   
  Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  En este ejemplo se presupone que el equipo usa `COM1`.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  En este ejemplo se presupone que el equipo usa `COM1`. Para brindar mayor flexibilidad, el código debe permitir al usuario seleccionar el puerto serie que quiera de una lista de puertos disponibles. Para obtener más información, vea [Cómo: Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
  En este ejemplo se usa un bloque `Try...Catch...Finally` para asegurarse de que la aplicación cierra el puerto y para capturar las excepciones de tiempo de espera. Para obtener más información, vea [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  

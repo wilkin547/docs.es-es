@@ -3,12 +3,12 @@ title: Cómo instalar la herramienta de la interfaz de la línea de comandos (CL
 description: Instalar e instalación de la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118004"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977077"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Cómo instalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET
 
@@ -29,7 +29,7 @@ Nota: Si después de instalar el [SDK de .NET Core 2.2](https://dotnet.microsoft
 
 ## <a name="install"></a>Instalar
 
-La CLI de ML.NET se instala como cualquier otra herramienta global de dotnet. Use el comando de la CLI de .NET Core de `dotnet tool install`. 
+La CLI de ML.NET se instala como cualquier otra herramienta global de dotnet. Use el comando de la CLI de .NET Core de `dotnet tool install`.
 
 En el ejemplo siguiente se muestra cómo instalar la CLI de ML.NET en la ubicación de la fuente de NuGet predeterminada:
 
@@ -112,7 +112,7 @@ En el equipo donde desea habilitar la finalización, deberá hacer dos cosas.
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (Para otros shells, [busque](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) o abra una [incidencia](https://github.com/dotnet/System.CommandLine/issues).)
 
@@ -136,5 +136,5 @@ En este caso, la CLI de .NET Core no agrega esta ubicación automáticamente a l
 
 - [Tutorial de "Introducción a la herramienta de la CLI de ML.NET"](../tutorials/mlnet-cli.md)
 - [Cómo entrenar automáticamente modelos con la herramienta de la CLI de ML.NET](../automate-training-with-cli.md)
-- [Guía de referencia de comandos de entrenamiento automático de la CLI de ML.NET](../reference/ml-net-cli-reference.md) 
+- [Guía de referencia de comandos de entrenamiento automático de la CLI de ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetría en la CLI de ML.NET](../resources/ml-net-cli-telemetry.md)

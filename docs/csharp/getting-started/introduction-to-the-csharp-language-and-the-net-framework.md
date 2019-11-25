@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608303"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283060"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introducción al lenguaje C# y .NET Framework
 
@@ -44,7 +44,7 @@ C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos que per
   
  Los siguientes son recursos adicionales de C#:  
   
-- Para obtener una buena introducción general al lenguaje, consulte el capítulo 1 de la [especificación del lenguaje C#](../language-reference/language-specification/index.md).  
+- Para obtener una buena introducción general al lenguaje, consulte el capítulo 1 de la [especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 - Para más información sobre aspectos específicos del lenguaje C#, consulte la [referencia de C#](../language-reference/index.md).  
   
@@ -68,5 +68,4 @@ C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos que per
   
 ## <a name="see-also"></a>Vea también
 
-- [C#](../index.md)
-- [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Introducción a Visual C#](/visualstudio/ide/quickstart-csharp-console)

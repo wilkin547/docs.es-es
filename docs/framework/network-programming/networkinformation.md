@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 65b15e61acaa39c9bfc4e0bd81b26f5a211bd1f1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bc0604fd33d06521727c9aa0302ed313d8a2305f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047549"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428234"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 El espacio de nombres <xref:System.Net.NetworkInformation> permite recopilar información sobre eventos, cambios, estadísticas y propiedades de red. También se puede determinar si un host remoto es accesible mediante la clase <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -26,6 +26,9 @@ El espacio de nombres <xref:System.Net.NetworkInformation> permite recopilar inf
 ## <a name="see-also"></a>Vea también
 
 - [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
-- [Ejemplo de tecnología de información de red](https://go.microsoft.com/fwlink/?LinkID=179564)
-- [NetStat Tool Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179562) (Ejemplo de tecnología de la herramienta NetStat)
-- [Ping Client Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179565) (Ejemplo de tecnología para hacer ping en un cliente)
+
+<!-- to-do: review sample links
+- [Network Information Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=Network%20Information)
+- [NetStat Tool Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=NetStat%20Tool)
+- [Ping Client Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=Ping%20Client)
+-->

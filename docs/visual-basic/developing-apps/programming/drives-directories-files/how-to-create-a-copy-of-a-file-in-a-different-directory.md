@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear una copia de un archivo en un directorio diferente en Visual Basic
+title: Procedimiento para crear una copia de un archivo en otro directorio
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: fa4289f33a8c9498648dc71cb92d6403ece30524
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9a14e1f3743979548b92a3db653d09a470a1875
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628811"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348839"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Procedimiento para crear una copia de un archivo en un directorio diferente en Visual Basic
+
 El método `My.Computer.FileSystem.CopyFile` le permite copiar archivos. Sus parámetros proporcionan la capacidad de sobrescribir archivos existentes, cambiar el nombre al archivo, mostrar el progreso de la operación y permitir al usuario cancelar la operación.  
   
 ### <a name="to-copy-a-text-file-to-another-folder"></a>Para copiar un archivo de texto en otra carpeta  
@@ -24,6 +25,7 @@ El método `My.Computer.FileSystem.CopyFile` le permite copiar archivos. Sus par
      [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Las condiciones siguientes pueden provocar que se produzca una excepción:  
   
 - La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  

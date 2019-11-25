@@ -1,5 +1,5 @@
 ---
-title: Elemento @no__t 0 para <add> para <listeners> para <trace>
+title: <filter> elemento de <add> para <listeners> para <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: f6b1ec99c5aab8e85df7f1920aca32f49a5be066
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cc970240ac07ad3ea72be50d1e9af452da638fa9
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699360"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088893"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<filter > elemento para \<add > para \<listeners > para \<trace >
-Agrega un filtro a un agente de escucha en la colección `Listeners` para un seguimiento.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0add >** ](add-element-for-listeners-for-trace.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1filter >**  
-  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<filtro > elemento para \<agregar > para \<agentes de escucha > \<> de seguimiento
+Agrega un filtro a un agente de escucha en la colección de `Listeners` para un seguimiento.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](trace-element.md) > de seguimiento\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**agentes de escucha**](listeners-element-for-trace.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**agregar >** ](add-element-for-listeners-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**filtro** >
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -40,7 +40,7 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un seg
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`type`|Atributo necesario.<br /><br /> Especifica el tipo del filtro, que debe heredar de la clase <xref:System.Diagnostics.TraceFilter>. Puede usar el nombre completo del espacio de nombres del tipo, que corresponde a la propiedad <xref:System.Type.FullName%2A> del tipo, o puede usar el nombre de tipo completo, incluida la información del ensamblado, que corresponde a la propiedad <xref:System.Type.AssemblyQualifiedName%2A>. Para obtener información sobre los nombres de tipo completos, vea [especificar nombres de tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Atributo necesario.<br /><br /> Especifica el tipo de filtro, que debe heredar de la clase <xref:System.Diagnostics.TraceFilter>. Puede usar el nombre completo del espacio de nombres del tipo, que corresponde a la propiedad <xref:System.Type.FullName%2A> del tipo, o puede usar el nombre de tipo completo, incluida la información del ensamblado, que corresponde a la propiedad <xref:System.Type.AssemblyQualifiedName%2A>. Para obtener información sobre los nombres de tipo completos, vea [especificar nombres de tipo completos](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase de filtro especificada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -57,12 +57,12 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un seg
 |`add`|Agrega un agente de escucha a la colección `Listeners`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento `<filter>` debe estar incluido en un elemento `<add>` para un agente de escucha de seguimiento que especifique el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en un [> \<sharedListeners](sharedlisteners-element.md). Si el agente de escucha se define en un [> \<sharedListeners](sharedlisteners-element.md), el filtro para ese agente de escucha debe definirse en ese elemento.  
+ El elemento `<filter>` debe estar incluido en un elemento `<add>` para un agente de escucha de seguimiento que especifique el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en una [> sharedListeners\<](sharedlisteners-element.md). Si el agente de escucha se define en una [\<sharedListeners >](sharedlisteners-element.md), el filtro para ese agente de escucha debe definirse en ese elemento.  
   
  Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el elemento `<filter>` para agregar un filtro al agente de escucha `console` en la colección `Listeners` para el seguimiento, especificando el nivel de evento de filtro como `Error`.  
+ En el ejemplo siguiente se muestra cómo usar el elemento `<filter>` para agregar un filtro a la `console` del agente de escucha de la colección de `Listeners` para el seguimiento, especificando el nivel de evento de filtro como `Error`.  
   
 ```xml  
 <configuration>  

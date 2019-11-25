@@ -1,5 +1,5 @@
 ---
-title: Acceso a archivos con Visual Basic
+title: Acceso a archivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583310"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348894"
 ---
 # <a name="file-access-with-visual-basic"></a>Acceso a archivos con Visual Basic
+
 El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con archivos y carpetas. Sus propiedades, métodos y eventos permiten crear, copiar, mover, investigar y eliminar archivos y carpetas. `My.Computer.FileSystem` ofrece un mejor rendimiento que las funciones heredadas (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) proporcionadas por Visual Basic para la compatibilidad con versiones anteriores.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Leer archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Enumera temas que tratan sobre el uso del objeto `My.Computer.FileSystem` para leer desde archivos  
   
@@ -40,7 +42,7 @@ El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con ar
  [Codificaciones de archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Explica codificaciones de archivos y su uso.  
   
- [Tutorial: Manipular archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Tutorial: Manipulación de archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo crear una utilidad que presenta información sobre archivos y carpetas.  
   
  [Solución de problemas: Leer y escribir en archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  

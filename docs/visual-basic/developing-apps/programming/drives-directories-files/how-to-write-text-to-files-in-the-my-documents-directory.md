@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para escribir texto en archivos del directorio Mis documentos en Visual Basic
+title: Procedimiento para escribir texto en archivos del directorio Mis documentos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 4f9eb4c9e0eb92712b5ea1a4feef24f2bb95d70b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bc62f2bc63a2ea185b8ea4c8d271dd28d347d6f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334521"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedimiento para escribir texto en archivos del directorio Mis documentos en Visual Basic
+
 El objeto `My.Computer.FileSystem.SpecialDirectories` le permite tener acceso a los directorios especiales, como el directorio **MyDocuments**.  
   
 ## <a name="procedure"></a>Procedimiento  
@@ -30,15 +31,19 @@ El objeto `My.Computer.FileSystem.SpecialDirectories` le permite tener acceso a 
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Ejemplo  
+
  [!code-vb[VbFileIOWrite#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  Reemplace `test.txt` por el nombre del archivo en el que quiere escribir.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Este código vuelve a producir todas las excepciones que pueden ocurrir al escribir texto en el archivo. Puede reducir la probabilidad de que se produzcan excepciones usando los controles de Windows Forms como los componentes [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) y [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md), que limitan las opciones del usuario a los nombres de archivo válidos. En cambio, el uso de estos controles no es infalible. El sistema de archivos puede cambiar entre el momento en el que el usuario selecciona un archivo y el momento en el que se ejecuta el código. Por ello, cuando se trabaja con archivos casi siempre es prácticamente necesario realizar un control de excepciones.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  Si realiza una ejecución en un contexto de confianza parcial, el código podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
  En este ejemplo se crea un nuevo archivo. Si una aplicación necesita crear un archivo, precisará permisos de creación para la carpeta correspondiente. Los permisos se establecen usando listas de control de acceso. Si el archivo ya existe, la aplicación solo necesitará permiso de escritura, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo privilegios de lectura en un solo archivo, en lugar de privilegios de creación para una carpeta. También es más seguro escribir datos en carpetas de usuario en lugar de en la carpeta raíz o en la carpeta **Archivos de programa**. Para obtener más información, vea [Información general sobre la tecnología ACL](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  

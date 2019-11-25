@@ -2,12 +2,12 @@
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 52c4e99f8b2a834d7200c2d2c2383fbdb21bdd1a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989941"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978325"
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
@@ -36,7 +36,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Este ejemplo expone el contrato de ICalculator mediante el [ \<> wsHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). La configuración de este enlace en el cliente se muestra en el código siguiente.  
+ Este ejemplo expone el contrato de ICalculator mediante el [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). La configuración de este enlace en el cliente se muestra en el código siguiente.  
   
 ```xml  
 <bindings>
@@ -137,7 +137,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
      El <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. Un administrador de tokens de seguridad también se utiliza para crear autenticadores y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado cuando los requisitos de tokens pasados indican que se solicita un token emitido.  
   
-    ```csharp  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        else  
+        else
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
      Se usa una clase de credenciales de cliente para representar las credenciales que se configuran para el proxy de cliente y crea el administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y serializadores de tokens.  
   
-    ```csharp  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 4. Implementar la caché del token. La implementación del ejemplo utiliza una clase base abstracta a través de la cual los consumidores de una caché de token determinada interactúan con la caché.  
   
-    ```csharp  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
      Para que el cliente utilice la credencial de cliente personalizada, el ejemplo elimina la clase de credencial de cliente predeterminada y proporciona la nueva.  
   
-    ```csharp  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -250,6 +250,6 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

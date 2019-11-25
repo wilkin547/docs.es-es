@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para eliminar una clave del Registro en Visual Basic
+title: Procedimiento para eliminar una clave del Registro
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662771"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345653"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Procedimiento para eliminar una clave del Registro en Visual Basic
+
 Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> y <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> se pueden usar para eliminar las claves del Registro.  
   
 ## <a name="procedure"></a>Procedimiento  
@@ -30,6 +31,7 @@ Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  El método `DeleteSubKey` devuelve una cadena vacía si el par clave/valor no existe.  
   
  Las condiciones siguientes pueden provocar una excepción:  
@@ -43,6 +45,7 @@ Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
 - Que la clave del Registro sea de solo lectura (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  Las llamadas del Registro producen errores si no se conceden permisos suficientes en tiempo de ejecución (<xref:System.Security.Permissions.RegistryPermission>) o si el usuario no tiene el acceso correcto (como se determina en las ACL) para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo.  
   
 ## <a name="see-also"></a>Vea también

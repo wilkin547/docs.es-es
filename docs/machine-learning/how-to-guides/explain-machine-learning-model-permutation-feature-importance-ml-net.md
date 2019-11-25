@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736873"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976686"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Explicación de las predicciones del modelo mediante la importancia de características de permutación
 
@@ -18,15 +18,15 @@ Obtenga información sobre cómo explicar predicciones del modelo de Machine Lea
 
 A menudo se piensa en los modelos de Machine Learning como cajas negras que toman entradas y generan salidas. Rara vez se entienden los pasos intermedios o las interacciones entre las características que afectan a la salida. A medida que el aprendizaje automático se introduce en otros aspectos de la vida diaria como la asistencia sanitaria, es de vital importancia comprender por qué un modelo de Machine Learning toma esas decisiones. Por ejemplo, si un modelo de Machine Learning realiza diagnósticos, los profesionales sanitarios necesitan una forma de buscar en los factores que se incluyeron en la realización de dicho diagnóstico. Proporcionar el diagnóstico correcto puede marcar una gran diferencia en el hecho de que un paciente tenga una recuperación rápida o no. Por lo tanto, cuanto mayor sea el nivel de explicación en un modelo, mayor será la confianza que tengan los profesionales sanitarios para aceptar o rechazar las decisiones tomadas por el modelo.
 
-Se utilizan diversas técnicas para explicar modelos, una de los cuales es PFI. PFI es una técnica utilizada para explicar los modelos de clasificación y regresión que se inspira en el [artículo *Random Forests* de Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (consulte la sección 10). En un nivel alto, esto funciona de manera es revolviendo los datos de manera aleatoria en una característica a la vez para todo el conjunto de datos y calculando cuánto se reduce la métrica de rendimiento de interés. Cuanto mayor sea el cambio, más importante será esa característica. 
+Se utilizan diversas técnicas para explicar modelos, una de los cuales es PFI. PFI es una técnica utilizada para explicar los modelos de clasificación y regresión que se inspira en el [artículo *Random Forests* de Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (consulte la sección 10). En un nivel alto, esto funciona de manera es revolviendo los datos de manera aleatoria en una característica a la vez para todo el conjunto de datos y calculando cuánto se reduce la métrica de rendimiento de interés. Cuanto mayor sea el cambio, más importante será esa característica.
 
 Además, al resaltar las características más importantes, los compiladores del modelo pueden centrarse en el uso de un subconjunto de características más significativas que potencialmente pueden reducir el ruido y el tiempo de entrenamiento.
 
 ## <a name="load-the-data"></a>Carga de los datos
 
-Las características del conjunto de datos que se usa para este ejemplo están en las columnas 1 a 12. El objetivo es predecir `Price`. 
+Las características del conjunto de datos que se usa para este ejemplo están en las columnas 1 a 12. El objetivo es predecir `Price`.
 
-| Columna | Característica | DESCRIPCIÓN 
+| Columna | Característica | DESCRIPCIÓN
 | --- | --- | --- |
 | 1 | CrimeRate | Tasa de criminalidad per cápita
 | 2 | ResidentialZones | Zonas residenciales en la ciudad
@@ -103,7 +103,7 @@ El ejemplo de código siguiente ilustra el proceso de entrenamiento de un modelo
 
 ```csharp
 // 1. Get the column name of input features.
-string[] featureColumnNames = 
+string[] featureColumnNames =
     data.Schema
         .Select(column => column.Name)
         .Where(columnName => columnName != "Label").ToArray();
@@ -131,7 +131,7 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 En ML.NET, use el método [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) para la tarea correspondiente.
 
 ```csharp
-ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
+ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
     mlContext
         .Regression
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
@@ -139,7 +139,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
 
 El resultado del uso de [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) en el conjunto de datos de entrenamiento es un [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) de objetos [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics). [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) proporciona estadísticas de resumen, como desviación media y estándar para diversas observaciones de [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) equivalentes al número de permutaciones especificadas por el parámetro `permutationCount`.
 
-La importancia o, en este caso, la disminución de la media absoluta de la métrica de R cuadrado calculada con [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions), se puede ordenar de las más importante a la menos importante.  
+La importancia o, en este caso, la disminución de la media absoluta de la métrica de R cuadrado calculada con [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions), se puede ordenar de las más importante a la menos importante.
 
 ```csharp
 // Order features by importance
@@ -156,7 +156,7 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-Imprimir los valores para cada una de las características de `featureImportanceMetrics` generaría resultados similares a los siguientes. Tenga en cuenta que debe esperar para ver resultados diferentes porque estos valores varían en función de los datos que se proporcionan.  
+Imprimir los valores para cada una de las características de `featureImportanceMetrics` generaría resultados similares a los siguientes. Tenga en cuenta que debe esperar para ver resultados diferentes porque estos valores varían en función de los datos que se proporcionan.
 
 | Característica | Cambiar a R cuadrado |
 |:--|:--:|

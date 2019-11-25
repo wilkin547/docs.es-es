@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para cargar un archivo en Visual Basic
+title: Procedimiento para cargar un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: b2c313078e3438c84068b6cc54d787b567a768b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662697"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345561"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Procedimiento para cargar un archivo en Visual Basic
+
 El método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> se puede usar para cargar un archivo y almacenarlo en una ubicación remota. Si el parámetro `ShowUI` se establece en `True`, aparece un cuadro de diálogo que muestra el progreso de la carga y permite a los usuarios cancelar la operación.  
   
 ### <a name="to-upload-a-file"></a>Para cargar un archivo  
@@ -37,6 +38,7 @@ El método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> se puede u
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Las siguientes condiciones pueden provocar una excepción:  
   
 - La ruta de acceso de archivo local no es válida (<xref:System.ArgumentException>).  

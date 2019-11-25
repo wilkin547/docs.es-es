@@ -8,21 +8,21 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 15f4d10a70dc3c6abd32869f5b7b0006a799b4bf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 78f6418160b80096214c6e37268a5a90498d6d4d
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698044"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089241"
 ---
-# <a name="module-element-network-settings"></a>\<module (elemento >) (configuración de red)
+# <a name="module-element-network-settings"></a>\<el elemento > del módulo (configuración de red)
 Agrega un nuevo módulo proxy a la aplicación.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<module >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**módulo** >
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -50,9 +50,9 @@ Agrega un nuevo módulo proxy a la aplicación.
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
   
 ## <a name="remarks"></a>Comentarios  
- El elemento `module` registra las clases de proxy que implementan la interfaz <xref:System.Net.IWebProxy>. Después de registrar la clase de proxy, se puede usar `module` para solicitar información a través del proxy admitido.  
+ El elemento `module` registra las clases de proxy que implementan la interfaz <xref:System.Net.IWebProxy>. Después de registrar la clase de proxy, `module` se puede usar para solicitar información a través del proxy admitido.  
   
- El valor del atributo `type` debe ser el nombre de clase del módulo y el nombre de la biblioteca de vínculos dinámicos (DLL) correspondiente.  
+ El valor del atributo `type` debe ser el nombre de clase del módulo y el nombre de su biblioteca de vínculos dinámicos (DLL) correspondiente.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

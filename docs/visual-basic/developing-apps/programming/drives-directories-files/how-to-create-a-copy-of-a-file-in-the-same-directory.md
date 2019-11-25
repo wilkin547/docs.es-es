@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para crear una copia de un archivo en el mismo directorio en Visual Basic
+title: Procedimiento para crear una copia de un archivo en el mismo directorio
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 747d985cbd9e2f2cc7f9b07f5723455a63a87b8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629092"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348818"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Procedimiento para crear una copia de un archivo en el mismo directorio en Visual Basic
+
 Use el método `My.Computer.FileSystem.CopyFile` para copiar archivos. Con los parámetros puede sobrescribir archivos existentes, cambiar el nombre del archivo, mostrar el progreso de la operación y permitir al usuario cancelar la operación.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Para crear una copia de un archivo en la misma carpeta  
@@ -32,6 +33,7 @@ Use el método `My.Computer.FileSystem.CopyFile` para copiar archivos. Con los p
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Las condiciones siguientes pueden provocar que se produzca una excepción:  
   
 - La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  

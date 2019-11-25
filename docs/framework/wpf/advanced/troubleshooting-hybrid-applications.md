@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 541d71efa66d14855704797892cac68799215159
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919756"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978338"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Solución de problemas de aplicaciones híbridas
 <a name="introduction"></a> En este tema se enumeran algunos problemas comunes que se pueden producir al crear aplicaciones híbridas, que usan las dos tecnologías, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -96,7 +96,7 @@ ms.locfileid: "72919756"
   
 <a name="wpf_designer"></a>   
 ## <a name="wpf-designer"></a>WPF Designer  
- Puede diseñar el contenido de WPF mediante [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]. En las secciones siguientes se indican algunos problemas comunes que se pueden producir al crear aplicaciones híbridas con [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+ Puede diseñar el contenido de WPF mediante WPF Designer para Visual Studio. En las secciones siguientes se enumeran algunos problemas comunes que se pueden producir al crear aplicaciones híbridas con WPF Designer.  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent se omite en tiempo de diseño  
  Es posible que la propiedad <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> no funcione según lo esperado en tiempo de diseño.  
