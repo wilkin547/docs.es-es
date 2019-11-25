@@ -1,5 +1,5 @@
 ---
-title: Auto (Visual Basic)
+title: Auto
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ea46e5f8b882bb986f23e792b240bad0c5be7a5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802711"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351616"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Especifica que Visual Basic debe serializar las cadenas según las reglas de .NET Framework basadas en el nombre externo del procedimiento externo que se declara.  
+Specifies that Visual Basic should marshal strings according to .NET Framework rules based on the external name of the external procedure being declared.  
   
- Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información que debe tener para llamar correctamente al procedimiento. Esta información incluye dónde se encuentra el procedimiento, el cómo se identifica, su secuencia de llamada y el tipo de valor devuelto y el carácter de cadena juego que utiliza. El [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
+ When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
   
- El `charsetmodifier` parte en la `Declare` instrucción proporciona la información del conjunto de caracteres para la serialización de cadenas durante una llamada al procedimiento externo. También afecta a cómo Visual Basic busca el archivo externo para el nombre del procedimiento externo. El `Auto` modificador especifica que Visual Basic debe serializar las cadenas según las reglas de .NET Framework y que debe determinar el juego de la plataforma de tiempo de ejecución y, posiblemente, de caracteres base modificar el nombre del procedimiento externo si inicial de búsqueda se produce un error. Para obtener más información, vea "Juegos de caracteres" en [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Auto` modifier specifies that Visual Basic should marshal strings according to .NET Framework rules, and that it should determine the base character set of the run-time platform and possibly modify the external procedure name if the initial search fails. For more information, see "Character Sets" in [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Si se especifica ningún modificador de conjunto de caracteres, `Ansi` es el valor predeterminado.  
+ If no character set modifier is specified, `Ansi` is the default.  
   
 ## <a name="remarks"></a>Comentarios  
- El `Auto` modificador se puede usar en este contexto:  
+ The `Auto` modifier can be used in this context:  
   
  [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Notas de desarrollador de dispositivos inteligentes  
- No se admite esta palabra clave.  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This keyword is not supported.  
   
 ## <a name="see-also"></a>Vea también
 

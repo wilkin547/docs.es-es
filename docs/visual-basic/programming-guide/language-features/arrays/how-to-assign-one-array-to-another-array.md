@@ -1,27 +1,27 @@
 ---
-title: Procedimiento Asignar una matriz a otra (Visual Basic)
+title: 'Cómo: Asignar una matriz a otra'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858887"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351887"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedimiento Asignar una matriz a otra (Visual Basic)
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Cómo: Asignar una matriz a otra (Visual Basic)
 
-Dado que las matrices son objetos, se puede usar en instrucciones de asignación como otros tipos de objeto. Una variable de matriz contiene un puntero a los datos que constituyen los elementos de matriz y la información de rango y la longitud y la copia de una asignación de puntero this.
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>Para asignar una matriz a otra
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. Asegúrese de que las dos matrices tienen el mismo rango (número de dimensiones) y tipos de datos de elemento compatibles.
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. Usar una instrucción de asignación estándar para asignar la matriz de origen a la matriz de destino. No siga cualquier nombre de la matriz con paréntesis.
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Dado que las matrices son objetos, se puede usar en instrucciones de asignación
     controlArray = formArray
     ```
 
-Al asignar una matriz a otra, se aplican las reglas siguientes:
+When you assign one array to another, the following rules apply:
 
-- **Rangos iguales.** El rango (número de dimensiones) de la matriz de destino debe ser el mismo que el de la matriz de origen.
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  Los rangos de las dos matrices son iguales, las dimensiones no es necesario para que sea igual. Puede cambiar el número de elementos de una dimensión determinada durante la asignación.
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **Tipos de elemento.** Deben tener ambas matrices *tipo de referencia* elementos o ambas matrices deben tener *tipo de valor* elementos. Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - Si ambas matrices tienen elementos de tipo de valor, los tipos de elemento de datos deben ser exactamente el mismo. La única excepción a esto es que puede asignar una matriz de `Enum` elementos en una matriz del tipo base del que `Enum`.
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - Si ambas matrices tienen la referencia de elementos de tipo, el tipo de elemento de origen debe derivar del tipo de elemento de destino. Cuando esto sucede, las dos matrices tienen la misma relación de herencia que sus elementos. Esto se denomina *covarianza de matrices*.
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-El compilador notifica un error si se infringen las reglas anteriores, por ejemplo si los tipos de datos no son compatibles o los rangos no son iguales. Puede agregar el código para asegurarse de que las matrices son compatibles antes de intentar una asignación de control de errores. También puede usar el [TryCast (operador)](../../../../visual-basic/language-reference/operators/trycast-operator.md) palabra clave si desea evitar que se produzca una excepción.
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
 ## <a name="see-also"></a>Vea también
 

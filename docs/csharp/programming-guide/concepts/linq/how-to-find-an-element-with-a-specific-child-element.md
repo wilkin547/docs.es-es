@@ -2,12 +2,12 @@
 title: Procedimiento para buscar un elemento con un elemento secundario específico (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253743"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141148"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Procedimiento para buscar un elemento con un elemento secundario específico (C#)
 Este tema muestra cómo encontrar un elemento en particular que tenga un elemento secundario con un valor específico.  

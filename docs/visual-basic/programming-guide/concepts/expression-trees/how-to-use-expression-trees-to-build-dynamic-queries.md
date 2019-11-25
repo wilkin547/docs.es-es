@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: usar árboles de expresión para generar consultas dinámicas (Visual Basic)'
+title: 'Cómo: Usar árboles de expresión para crear consultas dinámicas'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 5cb4d99982deb48a47a25b52bc7f5e4c8634219c
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524221"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344715"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Cómo: usar árboles de expresión para generar consultas dinámicas (Visual Basic)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)
 
-En LINQ, los árboles de expresión se usan para representar consultas estructuradas destinadas a orígenes de datos que implementan <xref:System.Linq.IQueryable%601>. Por ejemplo, el proveedor LINQ implementa la interfaz <xref:System.Linq.IQueryable%601> para realizar consultas en almacenes de datos relacionales. El compilador de Visual Basic compila las consultas que tienen como destino estos orígenes de datos en el código que crea un árbol de expresión en tiempo de ejecución. El proveedor de consultas puede después recorrer la estructura de datos del árbol de expresión y convertirla en un lenguaje de consulta adecuado para el origen de datos.
+En LINQ, los árboles de expresión se usan para representar consultas estructuradas destinadas a orígenes de datos que implementan <xref:System.Linq.IQueryable%601>. Por ejemplo, el proveedor LINQ implementa la interfaz <xref:System.Linq.IQueryable%601> para realizar consultas en almacenes de datos relacionales. The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime. El proveedor de consultas puede después recorrer la estructura de datos del árbol de expresión y convertirla en un lenguaje de consulta adecuado para el origen de datos.
 
 Los arboles de expresión también se usan en LINQ para representar expresiones lambda que se asignan a variables de tipo <xref:System.Linq.Expressions.Expression%601>.
 
@@ -107,9 +107,9 @@ En este código se usa un número fijo de expresiones en el predicado que se pas
 
 - Incluya el espacio de nombres System.Linq.Expressions.
 
-- Copie el código del ejemplo y péguelo en el procedimiento `Main` `Sub`.
+- Copy the code from the example and paste it into the `Main` `Sub` procedure.
 
 ## <a name="see-also"></a>Vea también
 
 - [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Cómo: ejecutar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

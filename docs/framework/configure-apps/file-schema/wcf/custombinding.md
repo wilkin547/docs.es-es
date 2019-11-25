@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 766dab35541465da15ccb1090d41b22332aafd0e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739052"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140798"
 ---
 # <a name="custombinding"></a>\<customBinding >
 
@@ -182,7 +182,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |Atributo|Descripción|
 |---------------|-----------------|
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
-|name|Cadena que contiene el nombre de configuración del enlace. Este valor es una cadena definida por el usuario que actúa como cadena de identificación para el enlace personalizado. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
+|name|Cadena que contiene el nombre de configuración del enlace. Este valor es una cadena definida por el usuario que actúa como cadena de identificación para el enlace personalizado. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
 |openTimeout|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
@@ -194,7 +194,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |[\<compositeDuplex >](compositeduplex.md)|Especifica la mensajería bidireccional para el enlace personalizado. Se usa con los transportes que no permiten comunicaciones dúplex de manera nativa, como, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.<br /><br /> El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión. El atributo `ClientBaseAddress` proporciona esta dirección del cliente.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
 |[\<pnrpPeerResolver >](pnrppeerresolver.md)|Especifica una resolución de nombre de mismo nivel de protocolo de resolución de nombres de mismo nivel (PNRP). Este elemento es del tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession >](reliablesession.md)|Especifica el valor para la mensajería de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez. Este elemento es del tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[\<La >](security-of-custombinding.md)|Especifica las opciones de seguridad del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[> de seguridad de \<](security-of-custombinding.md)|Especifica las opciones de seguridad del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
 |[\<sección sslstreamsecurity >](sslstreamsecurity.md)|Especifica la configuración de seguridad para un enlace de secuencia SSL. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
 |[\<transactionFlow >](transactionflow.md)|Especifica que el enlace soporta el flujo de transacción, y el protocolo que va a ser utilizado por el atributo `transactionProtocol`. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
 |[\<windowsStreamSecurity >](windowsstreamsecurity.md)|Especifica las opciones de seguridad de transmisión del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|

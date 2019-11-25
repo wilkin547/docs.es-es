@@ -1,5 +1,5 @@
 ---
-title: Palabras clave como nombres de elementos en código (Visual Basic)
+title: Palabras clave como nombres de elementos en código
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, naming conventions
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 2e3613bd4a74da51cf7dbb63e52eddca811ca8e1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cdcda7c5c78481af1633bf29d75070c521ab393
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947661"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347394"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palabras clave como nombres de elementos en código (Visual Basic)
-Cualquier elemento de programa, como una variable, una clase o un miembro, puede tener el mismo nombre que una palabra clave restringida. Por ejemplo, puede crear una variable denominada `Loop`. Sin embargo, para hacer referencia a su versión del mismo, que tiene el mismo nombre que `Loop` la palabra clave Restricted, debe precederlo con una cadena de calificación completa o encerrarlo entre corchetes (`[ ]`), como se muestra en el ejemplo siguiente.  
+Any program element — such as a variable, class, or member — can have the same name as a restricted keyword. For example, you can create a variable named `Loop`. However, to refer to your version of it — which has the same name as the restricted `Loop` keyword — you must either precede it with a full qualification string or enclose it in square brackets (`[ ]`), as the following example shows.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- Si no hace ninguno de estos, Visual Basic supone el uso de la palabra clave Intrinsic `Loop` y genera un error, como en el ejemplo siguiente:  
+ If you do not do either of these, then Visual Basic assumes use of the intrinsic `Loop` keyword and produces an error, as in the following example:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- Puede usar corchetes al hacer referencia a formularios y controles, y al declarar una variable o definir un procedimiento con el mismo nombre que una palabra clave restringida. Puede ser fácil olvidarse de calificar nombres o incluir corchetes y, por tanto, introducir errores en el código y dificultar su lectura. Por esta razón, se recomienda no usar palabras clave restringidas como nombres de elementos de programa. Sin embargo, si una versión futura de Visual Basic define una nueva palabra clave que entra en conflicto con un nombre de formulario o control existente, puede usar esta técnica al actualizar el código para que funcione con la nueva versión.  
+ You can use square brackets when referring to forms and controls, and when declaring a variable or defining a procedure with the same name as a restricted keyword. It can be easy to forget to qualify names or include square brackets, and thus introduce errors into your code and make it harder to read. For this reason, we recommend that you not use restricted keywords as the names of program elements. However, if a future version of Visual Basic defines a new keyword that conflicts with an existing form or control name, then you can use this technique when updating your code to work with the new version.  
   
 > [!NOTE]
-> El programa también podría incluir nombres de elementos proporcionados por otros ensamblados a los que se hace referencia. Si estos nombres entran en conflicto con palabras clave restringidas, la colocación de los corchetes hace que Visual Basic los interprete como elementos definidos.  
+> Your program also might include element names provided by other referenced assemblies. If these names conflict with restricted keywords, then placing square brackets around them causes Visual Basic to interpret them as your defined elements.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

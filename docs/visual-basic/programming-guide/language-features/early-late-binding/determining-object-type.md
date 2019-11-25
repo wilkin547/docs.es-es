@@ -1,5 +1,5 @@
 ---
-title: Determinar tipos de objeto (Visual Basic)
+title: Determinar el tipo de objeto
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a77cc0603a0b61f58a4aa703c4b1e6ef4c26729c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050524"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345198"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
-Variables de objeto genéricas (es decir, las variables se declaran como `Object`) puede contener objetos de cualquier clase. Al usar las variables de tipo `Object`, es posible que deba realizar diferentes acciones basadas en la clase del objeto; por ejemplo, algunos objetos podrían no admitir un método o propiedad concreta. Visual Basic ofrece dos maneras de determinar qué tipo de objeto se almacena en una variable de objeto: el `TypeName` función y el `TypeOf...Is` operador.  
+Generic object variables (that is, variables you declare as `Object`) can hold objects from any class. When using variables of type `Object`, you may need to take different actions based on the class of the object; for example, some objects might not support a particular property or method. Visual Basic provides two means of determining which type of object is stored in an object variable: the `TypeName` function and the `TypeOf...Is` operator.  
   
-## <a name="typename-and-typeofis"></a>TypeName y TypeOf... Es  
- El `TypeName` función devuelve una cadena y es la mejor opción cuando necesite almacenar o mostrar el nombre de clase de un objeto, como se muestra en el siguiente fragmento de código:  
+## <a name="typename-and-typeofis"></a>TypeName and TypeOf…Is  
+ The `TypeName` function returns a string and is the best choice when you need to store or display the class name of an object, as shown in the following code fragment:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
- El `TypeOf...Is` operador es la mejor opción para comprobar el tipo de un objeto, porque es mucho más rápido que una comparación de cadena equivalente mediante `TypeName`. El siguiente fragmento de código utiliza `TypeOf...Is` dentro de un `If...Then...Else` instrucción:  
+ The `TypeOf...Is` operator is the best choice for testing an object's type, because it is much faster than an equivalent string comparison using `TypeName`. The following code fragment uses `TypeOf...Is` within an `If...Then...Else` statement:  
   
  [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
- Aquí vence una palabra de advertencia. El `TypeOf...Is` operador devuelve `True` si un objeto es de un tipo específico, o se deriva de un tipo específico. Casi todo lo que hace con Visual Basic implica objetos, que incluyen algunos elementos que normalmente no se considera objetos, como cadenas y enteros. Estos objetos se derivan y heredan los métodos de <xref:System.Object>. Cuando se pasa un `Integer` y evaluado con `Object`, `TypeOf...Is` operador devuelve `True`. En el ejemplo siguiente se notifica que el parámetro `InParam` es tanto un `Object` y un `Integer`:  
+ A word of caution is due here. The `TypeOf...Is` operator returns `True` if an object is of a specific type, or is derived from a specific type. Almost everything you do with Visual Basic involves objects, which include some elements not normally thought of as objects, such as strings and integers. These objects are derived from and inherit methods from <xref:System.Object>. When passed an `Integer` and evaluated with `Object`, the `TypeOf...Is` operator returns `True`. The following example reports that the parameter `InParam` is both an `Object` and an `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
- En el ejemplo siguiente se usa tanto `TypeOf...Is` y `TypeName` para determinar el tipo de objeto que se pasa en el `Ctrl` argumento. El `TestObject` las llamadas a procedimiento `ShowType` con tres tipos diferentes de controles.  
+ The following example uses both `TypeOf...Is` and `TypeName` to determine the type of object passed to it in the `Ctrl` argument. The `TestObject` procedure calls `ShowType` with three different kinds of controls.  
   
 #### <a name="to-run-the-example"></a>Para ejecutar el ejemplo  
   
-1. Cree un nuevo proyecto de aplicación de Windows y agregue un <xref:System.Windows.Forms.Button> (control), un <xref:System.Windows.Forms.CheckBox> control y un <xref:System.Windows.Forms.RadioButton> control al formulario.  
+1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
   
-2. En el botón en el formulario, llame a la `TestObject` procedimiento.  
+2. From the button on your form, call the `TestObject` procedure.  
   
-3. Agregue el código siguiente al formulario:  
+3. Add the following code to your form:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   

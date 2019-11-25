@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Buscar un único descendiente con el método Descendants (Visual Basic)
+title: 'Cómo: Buscar un único descendiente utilizando el método Descendants'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: dbde5686d1b7670290d434c0a04515cbc10622fd
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 1c1192c85a7244a9a03a2cd55144abcfb02dcbf1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249961"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352994"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Procedimiento Buscar un único descendiente con el método Descendants (Visual Basic)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>How to: Find a Single Descendant Using the Descendants Method (Visual Basic)
 Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -44,7 +44,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -82,4 +82,4 @@ GC3 Value
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

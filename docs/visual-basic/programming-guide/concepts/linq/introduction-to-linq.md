@@ -1,20 +1,20 @@
 ---
-title: Introducción a LINQ (Visual Basic)
+title: Introducción a LINQ
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 7c42cf73dce91bfb4da1b886613635532460f0e6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: add442583bd81665533b704c0c9721b111cddd78
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402412"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338903"
 ---
-# <a name="introduction-to-linq-visual-basic"></a>Introducción a LINQ (Visual Basic)
+# <a name="introduction-to-linq-visual-basic"></a>Introduction to LINQ (Visual Basic)
 Language-Integrated Query (LINQ) es una innovación que se ha presentado en la versión 3.5 de .NET Framework que reduce la distancia entre el mundo de los objetos y el de los datos.  
   
- Tradicionalmente, las consultas con datos se expresaban como cadenas simples sin comprobación de tipos en tiempo de compilación ni compatibilidad con IntelliSense. Además, tendrá que aprender un lenguaje de consulta diferente para cada tipo de origen de datos: bases de datos SQL, documentos XML, varios servicios web y así sucesivamente. LINQ permite una *consulta* una construcción de lenguaje de primera clase en Visual Basic. Escribe consultas en colecciones de objetos fuertemente tipadas con palabras clave del lenguaje y operadores familiares.  
+ Tradicionalmente, las consultas con datos se expresaban como cadenas simples sin comprobación de tipos en tiempo de compilación ni compatibilidad con IntelliSense. Además, tiene que aprender un lenguaje de consultas diferente para cada tipo de origen de datos: bases de datos SQL, documentos XML y varios servicios web, entre otros. LINQ makes a *query* a first-class language construct in Visual Basic. Escribe consultas en colecciones de objetos fuertemente tipadas con palabras clave del lenguaje y operadores familiares.  
   
- Puede escribir consultas LINQ en Visual Basic para las bases de datos SQL Server, documentos XML, conjuntos de datos de ADO.NET y cualquier colección de objetos que admite <xref:System.Collections.IEnumerable> o genérico <xref:System.Collections.Generic.IEnumerable%601> interfaz. La compatibilidad con LINQ también se proporciona por terceros para muchos servicios web y otras implementaciones de base de datos.  
+ You can write LINQ queries in Visual Basic for SQL Server databases, XML documents, ADO.NET Datasets, and any collection of objects that supports <xref:System.Collections.IEnumerable> or the generic <xref:System.Collections.Generic.IEnumerable%601> interface. La compatibilidad con LINQ también se proporciona por terceros para muchos servicios web y otras implementaciones de base de datos.  
   
  Puede usar consultas LINQ en proyectos nuevos, o junto con otras consultas que no son de LINQ en proyectos existentes. El único requisito es que el proyecto tenga como destino .NET Framework 3.5 o versiones posteriores.  
   
@@ -23,15 +23,15 @@ Language-Integrated Query (LINQ) es una innovación que se ha presentado en la v
  ![Diagrama en el que se muestra una consulta LINQ con IntelliSense.](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Para obtener más información sobre LINQ, empiece a familiarizarse con algunos conceptos básicos en la sección Introducción [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), y, a continuación, lea la documentación de la tecnología de LINQ en el que esté ¿está interesado:  
+ To learn more details about LINQ, start by becoming familiar with some basic concepts in the Getting Started section [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), and then read the documentation for the LINQ technology in which you are interested:  
   
 - Bases de datos de SQL Server: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
-- Documentos XML: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML documents: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
-- Conjuntos de datos de ADO.NET: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- Conjuntos de datos ADO.NET: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-- Colecciones .NET, archivos y cadenas, entre otros: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET collections, files, strings and so on: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Vea también
 

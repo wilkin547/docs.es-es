@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025503"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204793"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 
@@ -99,7 +99,7 @@ Vea [Cómo: Leer texto de un archivo](how-to-read-text-from-a-file.md), [Cómo: 
 
 ## <a name="asynchronous-io-operations"></a>Operaciones de E/S asincrónicas
 
-Leer o escribir una gran cantidad de datos puede requerir muchos recursos. Estas tareas se deben realizar de forma asincrónica si la aplicación necesita seguir respondiendo al usuario. Con las operaciones de E/S sincrónicas, el subproceso de la interfaz de usuario está bloqueado hasta que se completa la operación que usa gran cantidad de recursos.  Use operaciones de E/S asincrónicas al desarrollar aplicaciones para la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para evitar crear la impresión de que la aplicación ha dejado de responder.
+Leer o escribir una gran cantidad de datos puede requerir muchos recursos. Estas tareas se deben realizar de forma asincrónica si la aplicación necesita seguir respondiendo al usuario. Con las operaciones de E/S sincrónicas, el subproceso de la interfaz de usuario está bloqueado hasta que se completa la operación que usa gran cantidad de recursos.  Use operaciones de E/S asincrónicas al desarrollar aplicaciones para la Tienda Windows 8.x y, de este modo, evitar crear la impresión de que la aplicación ya no funciona.
 
 Los miembros asincrónicos contienen `Async` en sus nombres, como los métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A>. Estos métodos se usan con las palabras clave `async` y `await`.
 
@@ -129,7 +129,7 @@ Vea [Cómo: Comprimir y extraer archivos](how-to-compress-and-extract-files.md).
 
 El almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. El almacenamiento proporciona un sistema de archivos virtual que está aislado para cada usuario, ensamblado y (opcionalmente) dominio. El almacenamiento aislado es especialmente útil cuando la aplicación no tiene permiso para obtener acceso a los archivos del usuario. Se pueden guardar los valores o los archivos de la aplicación de una forma controlada por la directiva de seguridad del equipo.
 
-El almacenamiento aislado no está disponible para aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], sino que deben usarse las clases de datos de aplicaciones del espacio de nombres de <xref:Windows.Storage?displayProperty=nameWithType>. Para más información, vea [Datos de la aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+El almacenamiento aislado no está disponible para aplicaciones de la Tienda Windows 8.x, sino que deben usarse las clases de datos de aplicaciones del espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType>. Para más información, vea [Datos de la aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
 
 Las clases siguientes se utilizan con frecuencia al implementar el almacenamiento aislado:
 
@@ -145,7 +145,7 @@ Vea [Almacenamiento aislado](isolated-storage.md).
 
 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contiene muchos de los tipos necesarios para leer y escribir en secuencias; sin embargo, este conjunto no incluye todos los tipos de E/S de .NET Framework.
 
-Estas son algunas diferencias importantes que se deben tener en cuenta al utilizar operaciones de E/S en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:
+Estas son algunas diferencias importantes que se deben tener en cuenta al utilizar operaciones de E/S en las aplicaciones de la Tienda Windows 8.x:
 
 - Los tipos relacionados específicamente con las operaciones de archivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> y <xref:System.IO.DirectoryInfo>, no se incluyen en [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. En su lugar, use los tipos en el espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType> de Windows Runtime, como <xref:Windows.Storage.StorageFile> y <xref:Windows.Storage.StorageFolder>.
 
@@ -157,13 +157,13 @@ Estas son algunas diferencias importantes que se deben tener en cuenta al utiliz
 
 Si es necesario, puede convertir entre las secuencias de .NET Framework y las secuencias de Windows Runtime. Para obtener más información, vea [Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa](how-to-convert-between-dotnet-streams-and-winrt-streams.md) o <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-Para obtener más información sobre las operaciones de E/S en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vea [Inicio rápido: Lectura y escritura de archivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Para obtener más información sobre las operaciones de E/S en una aplicación de la Tienda Windows 8.x, vea [Inicio rápido: lectura y escritura de un archivo](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/S y seguridad
 
 Cuando se utilizan las clases del espacio de nombres <xref:System.IO?displayProperty=nameWithType>, se deben seguir los requisitos de seguridad del sistema operativo como las listas de control de acceso (ACL) para controlar el acceso a los archivos y directorios. Este requisito es adicional a cualquier requisito <xref:System.Security.Permissions.FileIOPermission>. Se pueden administrar las listas de control de acceso mediante programación. Para obtener más información, vea [Cómo: Agregar o quitar entradas de la lista de control de acceso](how-to-add-or-remove-access-control-list-entries.md).
 
-Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. Use en su lugar [almacenamiento aislado](isolated-storage.md) para las aplicaciones tradicionales de .NET Framework, o [datos de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. En su lugar, use el [almacenamiento aislado](isolated-storage.md) para las aplicaciones tradicionales de .NET Framework, o bien [datos de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para las aplicaciones de la Tienda Windows 8.x.
 
 Solo se realiza una comprobación de seguridad cuando se construye la secuencia. Por consiguiente, no abra una secuencia y se la pase al código o a los dominios de aplicación de menos confianza.
 

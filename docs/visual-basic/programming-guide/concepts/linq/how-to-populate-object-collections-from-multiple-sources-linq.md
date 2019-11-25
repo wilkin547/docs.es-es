@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
+title: 'Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 21474758cffd15c0cb4193cdb2a7bc33c981c938
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586201"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346979"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedimiento Rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
 
 En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una secuencia de tipos nuevos.
 
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una s
 
 ## <a name="to-create-the-data-file"></a>Para crear el archivo de datos
 
-- Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [Cómo: Combinar contenido de archivos no similares (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-En el [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, un inicializador de objeto se usa para crear instancias de cada nuevo `Student` objeto mediante el uso de los datos de los dos orígenes.
+In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
 
 Si no tiene que almacenar los resultados de una consulta, los tipos anónimos pueden ser más convenientes que los tipos con nombre. Los tipos con nombre son necesarios si pasa los resultados de la consulta fuera del método en el que se ejecuta la consulta. En el ejemplo siguiente se lleva a cabo la misma tarea que en el ejemplo anterior, con la diferencia de que se usan tipos anónimos en lugar de tipos con nombre:
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

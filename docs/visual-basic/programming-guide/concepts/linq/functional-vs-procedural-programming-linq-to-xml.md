@@ -1,15 +1,15 @@
 ---
-title: Programación funcional frente a Programación de procedimientos (LINQ to XML) (Visual Basic)
+title: Programación funcional y programación de procedimientos (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: f7e57ab2db5fa20a3a8414058573ca96e30e80d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d1e3cf01b30454d29836f176afcd39cb2b55b73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618254"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353408"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programación funcional frente a Programación de procedimientos (LINQ to XML) (Visual Basic)
+# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Functional vs. Procedural Programming (LINQ to XML) (Visual Basic)
 Existen varios tipos de aplicaciones XML:  
   
 - Algunas aplicaciones toman los documentos XML de origen y crean nuevos documentos XML que tienen una forma diferente que los documentos de origen.  
@@ -36,10 +36,10 @@ Existen varios tipos de aplicaciones XML:
   
  Puede usar LINQ to XML con cualquier enfoque. Se usan las mismas clases y, en algunos casos, los mismos métodos. No obstante, la estructura y los objetivos de los dos enfoques son muy diferentes. Por ejemplo, en situaciones diferentes, uno u otro enfoque tendrá a menudo un rendimiento mejor y usará más o menos memoria. Asimismo, uno u otro enfoque será más fácil de escribir y proporcionará código más fácil de mantener.  
   
- Para obtener una comparación de los dos enfoques, vea [Diferencias entre la modificación del árbol XML en memoria y Construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
+ To see the two approaches contrasted, see [In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- Para ver un tutorial sobre cómo escribir transformaciones funcionales, consulte [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ For a tutorial on writing functional transformations, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML de información general de programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de interoperabilidad (Visual Basic)
+title: Solución de problemas de interoperabilidad
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop, deploying assemblies
@@ -16,61 +16,61 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: c04cd0928eb83aabcd1f0f4b1b43f8ae6d356d20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 344c180cf0b9426898e17b45db768a337fd45beb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969326"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338686"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionar problemas de interoperabilidad (Visual Basic)
-Al interoperar entre COM y el código administrado del .NET Framework, puede encontrar uno o varios de los siguientes problemas comunes.  
+When you interoperate between COM and the managed code of the .NET Framework, you may encounter one or more of the following common issues.  
   
-## <a name="vbconinteroperabilitymarshalinganchor1"></a>Serialización de interoperabilidad  
- En ocasiones, puede que tenga que usar tipos de datos que no forman parte de la .NET Framework. Los ensamblados de interoperabilidad controlan la mayor parte del trabajo de los objetos COM, pero puede que tenga que controlar los tipos de datos que se utilizan cuando los objetos administrados se exponen a COM. Por ejemplo, las estructuras de las bibliotecas de clases `BStr` deben especificar el tipo no administrado en las cadenas enviadas a los objetos com creados por Visual Basic 6,0 y versiones anteriores. En tales casos, puede usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para que los tipos administrados se expongan como tipos no administrados.  
+## <a name="vbconinteroperabilitymarshalinganchor1"></a> Interop Marshaling  
+ At times, you may have to use data types that are not part of the .NET Framework. Interop assemblies handle most of the work for COM objects, but you may have to control the data types that are used when managed objects are exposed to COM. For example, structures in class libraries must specify the `BStr` unmanaged type on strings sent to COM objects created by Visual Basic 6.0 and earlier versions. In such cases, you can use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to cause managed types to be exposed as unmanaged types.  
   
-## <a name="vbconinteroperabilitymarshalinganchor2"></a>Exportar cadenas de longitud fija a código no administrado  
- En Visual Basic 6,0 y versiones anteriores, las cadenas se exportan a objetos COM como secuencias de bytes sin un carácter de terminación null. Por compatibilidad con otros lenguajes, Visual Basic .NET incluye un carácter de terminación al exportar cadenas. La mejor manera de abordar esta incompatibilidad es exportar cadenas que no tienen el carácter de terminación como matrices de `Byte` o `Char`.  
+## <a name="vbconinteroperabilitymarshalinganchor2"></a> Exporting Fixed-Length Strings to Unmanaged Code  
+ In Visual Basic 6.0 and earlier versions, strings are exported to COM objects as sequences of bytes without a null termination character. For compatibility with other languages, Visual Basic .NET includes a termination character when exporting strings. The best way to address this incompatibility is to export strings that lack the termination character as arrays of `Byte` or `Char`.  
   
-## <a name="vbconinteroperabilitymarshalinganchor3"></a>Exportar jerarquías de herencia  
- Las jerarquías de clases administradas se acoplan cuando se exponen como objetos COM. Por ejemplo, si define una clase base con un miembro y, a continuación, hereda la clase base en una clase derivada que se expone como un objeto COM, los clientes que usan la clase derivada en el objeto COM no podrán usar los miembros heredados. Solo se puede tener acceso a los miembros de clase base desde objetos COM como instancias de una clase base y, a continuación, solo si la clase base también se crea como un objeto COM.  
+## <a name="vbconinteroperabilitymarshalinganchor3"></a> Exporting Inheritance Hierarchies  
+ Managed class hierarchies flatten out when exposed as COM objects. For example, if you define a base class with a member, and then inherit the base class in a derived class that is exposed as a COM object, clients that use the derived class in the COM object will not be able to use the inherited members. Base class members can be accessed from COM objects only as instances of a base class, and then only if the base class is also created as a COM object.  
   
 ## <a name="overloaded-methods"></a>Métodos sobrecargados  
- Aunque puede crear métodos sobrecargados con Visual Basic, no son compatibles con COM. Cuando una clase que contiene métodos sobrecargados se expone como un objeto COM, se generan nuevos nombres de método para los métodos sobrecargados.  
+ Although you can create overloaded methods with Visual Basic, they are not supported by COM. When a class that contains overloaded methods is exposed as a COM object, new method names are generated for the overloaded methods.  
   
- Por ejemplo, considere una clase que tiene dos sobrecargas del `Synch` método. Cuando la clase se expone como un objeto com, los nuevos nombres de método generados `Synch` podrían `Synch_2`ser y.  
+ For example, consider a class that has two overloads of the `Synch` method. When the class is exposed as a COM object, the new generated method names could be `Synch` and `Synch_2`.  
   
- El cambio de nombre puede producir dos problemas para los consumidores del objeto COM.  
+ The renaming can cause two problems for consumers of the COM object.  
   
-1. Es posible que los clientes no esperen los nombres de método generados.  
+1. Clients might not expect the generated method names.  
   
-2. Los nombres de método generados en la clase expuesta como un objeto COM pueden cambiar cuando se agregan nuevas sobrecargas a la clase o a su clase base. Esto puede producir problemas de control de versiones.  
+2. The generated method names in the class exposed as a COM object can change when new overloads are added to the class or its base class. This can cause versioning problems.  
   
- Para resolver ambos problemas, asigne a cada método un nombre único, en lugar de usar sobrecarga, al desarrollar objetos que se expondrán como objetos COM.  
+ To solve both problems, give each method a unique name, instead of using overloading, when you develop objects that will be exposed as COM objects.  
   
-## <a name="vbconinteroperabilitymarshalinganchor4"></a>Uso de objetos COM mediante ensamblados de interoperabilidad  
- Los ensamblados de interoperabilidad se usan casi como si fueran reemplazos de código administrados para los objetos COM que representan. Sin embargo, dado que son contenedores y no objetos COM reales, existen algunas diferencias entre el uso de ensamblados de interoperabilidad y ensamblados estándar. Estas áreas de diferencia incluyen la exposición de las clases y los tipos de datos de los parámetros y los valores devueltos.  
+## <a name="vbconinteroperabilitymarshalinganchor4"></a> Use of COM Objects Through Interop Assemblies  
+ You use interop assemblies almost as if they are managed code replacements for the COM objects they represent. However, because they are wrappers and not actual COM objects, there are some differences between using interop assemblies and standard assemblies. These areas of difference include the exposure of classes, and data types for parameters and return values.  
   
-## <a name="vbconinteroperabilitymarshalinganchor5"></a>Clases que se exponen como interfaces y clases  
- A diferencia de las clases de los ensamblados estándar, las clases COM se exponen en ensamblados de interoperabilidad como una interfaz y una clase que representa la clase COM. El nombre de la interfaz es idéntico al de la clase COM. El nombre de la clase de interoperabilidad es el mismo que el de la clase COM original, pero con la palabra "class" anexada. Por ejemplo, supongamos que tiene un proyecto con una referencia a un ensamblado de interoperabilidad para un objeto COM. Si la clase com se denomina `MyComClass`, IntelliSense y el examinador de objetos muestran una interfaz denominada `MyComClass` y una clase denominada `MyComClassClass`.  
+## <a name="vbconinteroperabilitymarshalinganchor5"></a> Classes Exposed as Both Interfaces and Classes  
+ Unlike classes in standard assemblies, COM classes are exposed in interop assemblies as both an interface and a class that represents the COM class. The interface's name is identical to that of the COM class. The name of the interop class is the same as that of the original COM class, but with the word "Class" appended. For example, suppose you have a project with a reference to an interop assembly for a COM object. If the COM class is named `MyComClass`, IntelliSense and the Object Browser show an interface named `MyComClass` and a class named `MyComClassClass`.  
   
-## <a name="vbconinteroperabilitymarshalinganchor6"></a>Crear instancias de una clase .NET Framework  
- Generalmente, se crea una instancia de una clase .NET Framework utilizando la `New` instrucción con un nombre de clase. Tener una clase com representada por un ensamblado de interoperabilidad es el único caso `New` en el que se puede utilizar la instrucción con una interfaz. A menos que use la clase com con una `Inherits` instrucción, puede usar la interfaz como lo haría con una clase. En el código siguiente se muestra cómo crear `Command` un objeto en un proyecto que tiene una referencia al objeto com de la biblioteca de Microsoft objetos de datos ActiveX 2,8:  
+## <a name="vbconinteroperabilitymarshalinganchor6"></a> Creating Instances of a .NET Framework Class  
+ Generally, you create an instance of a .NET Framework class using the `New` statement with a class name. Having a COM class represented by an interop assembly is the one case in which you can use the `New` statement with an interface. Unless you are using the COM class with an `Inherits` statement, you can use the interface just as you would a class. The following code demonstrates how to create a `Command` object in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
- Sin embargo, si usa la clase COM como base para una clase derivada, debe usar la clase de interoperabilidad que representa la clase COM, como en el código siguiente:  
+ However, if you are using the COM class as the base for a derived class, you must use the interop class that represents the COM class, as in the following code:  
   
  [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
-> Los ensamblados de interoperabilidad implementan implícitamente interfaces que representan clases COM. No debe intentar usar la `Implements` instrucción para implementar estas interfaces o se producirá un error.  
+> Interop assemblies implicitly implement interfaces that represent COM classes. You should not try to use the `Implements` statement to implement these interfaces or an error will result.  
   
-## <a name="vbconinteroperabilitymarshalinganchor7"></a>Tipos de datos de parámetros y valores devueltos  
- A diferencia de los miembros de ensamblados estándar, los miembros de ensamblado de interoperabilidad pueden tener tipos de datos que difieren de los usados en la declaración del objeto original. Aunque los ensamblados de interoperabilidad convierten implícitamente los tipos COM en tipos de Common Language Runtime compatibles, debe prestar atención a los tipos de datos que se usan en ambos lados para evitar errores en tiempo de ejecución. Por ejemplo, en los objetos com creados en Visual Basic 6,0 y versiones anteriores, los valores `Integer` de tipo suponen el `Short`.NET Framework tipo equivalente,. Se recomienda usar el Examinador de objetos para examinar las características de los miembros importados antes de usarlos.  
+## <a name="vbconinteroperabilitymarshalinganchor7"></a> Data Types for Parameters and Return Values  
+ Unlike members of standard assemblies, interop assembly members may have data types that differ from those used in the  original object declaration. Although interop assemblies implicitly convert COM types to compatible common language runtime types, you should pay attention to the data types that are used by both sides to prevent runtime errors. For example, in COM objects created in Visual Basic 6.0 and earlier versions, values of type `Integer` assume the .NET Framework equivalent type, `Short`. It is recommended that you use the Object Browser to examine the characteristics of imported members before you use them.  
   
-## <a name="vbconinteroperabilitymarshalinganchor8"></a>Métodos COM de nivel de módulo  
- La mayoría de los objetos com se utilizan creando una instancia de una clase com `New` mediante la palabra clave y llamando a los métodos del objeto. Una excepción a esta regla implica objetos com que contienen `AppObj` clases `GlobalMultiUse` de o com. Estas clases son similares a los métodos de nivel de módulo en Visual Basic clases .NET. Visual Basic 6,0 y versiones anteriores crean implícitamente instancias de estos objetos por primera vez que se llama a uno de sus métodos. Por ejemplo, en Visual Basic 6,0 puede Agregar una referencia a la biblioteca de objetos de Microsoft DAO 3,6 y llamar `DBEngine` al método sin crear primero una instancia:  
+## <a name="vbconinteroperabilitymarshalinganchor8"></a> Module level COM methods  
+ Most COM objects are used by creating an instance of a COM class using the `New` keyword and then calling methods of the object. One exception to this rule involves COM objects that contain `AppObj` or `GlobalMultiUse` COM classes. Such classes resemble module level methods in Visual Basic .NET classes. Visual Basic 6.0 and earlier versions implicitly create instances of such objects for you the first time that you call one of their methods. For example, in Visual Basic 6.0 you can add a reference to the Microsoft DAO 3.6 Object Library and call the `DBEngine` method without first creating an instance:  
   
 ```vb  
 Dim db As DAO.Database  
@@ -79,52 +79,52 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ' Use the database object.  
 ```  
   
- Visual Basic .NET requiere que siempre se creen instancias de objetos COM antes de poder usar sus métodos. Para usar estos métodos en Visual Basic, declare una variable de la clase deseada y use la palabra clave New para asignar el objeto a la variable de objeto. La `Shared` palabra clave se puede usar cuando se desea asegurarse de que solo se crea una instancia de la clase.  
+ Visual Basic .NET requires that you always create instances of COM objects before you can use their methods. To use these methods in Visual Basic, declare a variable of the desired class and use the new keyword to assign the object to the object variable. The `Shared` keyword can be used when you want to make sure that only one instance of the class is created.  
   
  [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor9"></a>Errores no controlados en los controladores de eventos  
- Un problema común de interoperabilidad implica errores en los controladores de eventos que controlan los eventos generados por objetos COM. Estos errores se omiten a menos que compruebe específicamente si `On Error` hay `Try...Catch...Finally` errores mediante instrucciones o. Por ejemplo, el ejemplo siguiente es de un proyecto Visual Basic .NET que tiene una referencia al objeto COM de la biblioteca de Microsoft Objetos de datos ActiveX 2,8.  
+## <a name="vbconinteroperabilitymarshalinganchor9"></a> Unhandled Errors in Event Handlers  
+ One common interop problem involves errors in event handlers that handle events raised by COM objects. Such errors are ignored unless you specifically check for errors using `On Error` or `Try...Catch...Finally` statements. For example, the following example is from a Visual Basic .NET project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object.  
   
  [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
- Este ejemplo genera un error según lo esperado. Sin embargo, si intenta usar el mismo ejemplo sin `Try...Catch...Finally` el bloque, se omitirá el error como si utilizara la `OnError Resume Next` instrucción. Sin el control de errores, se produce un error en la división por cero de forma silenciosa. Dado que tales errores nunca generan errores de excepción no controlados, es importante usar algún tipo de control de excepciones en los controladores de eventos que controlan los eventos de los objetos COM.  
+ This example raises an error as expected. However, if you try the same example without the `Try...Catch...Finally` block, the error is ignored as if you used the `OnError Resume Next` statement. Without error handling, the division by zero silently fails. Because such errors never raise unhandled exception errors, it is important that you use some form of exception handling in event handlers that handle events from COM objects.  
   
-### <a name="understanding-com-interop-errors"></a>Descripción de los errores de interoperabilidad COM  
- Sin el control de errores, las llamadas de interoperabilidad a menudo generan errores que proporcionan poca información. Siempre que sea posible, utilice el control de errores estructurado para proporcionar más información acerca de los problemas cuando se producen. Esto puede ser especialmente útil al depurar aplicaciones. Por ejemplo:  
+### <a name="understanding-com-interop-errors"></a>Understanding COM interop errors  
+ Without error handling, interop calls often generate errors that provide little information. Whenever possible, use structured error handling to provide more information about problems when they occur. This can be especially helpful when you debug applications. Por ejemplo:  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
- Puede encontrar información como la descripción del error, HRESULT y el origen de los errores COM mediante el examen del contenido del objeto de excepción.  
+ You can find information such as the error description, HRESULT, and the source of COM errors by examining the contents of the exception object.  
   
-## <a name="vbconinteroperabilitymarshalinganchor10"></a>Problemas de controles ActiveX  
- La mayoría de los controles ActiveX que funcionan con Visual Basic 6,0 funcionan con Visual Basic .NET sin problemas. Las excepciones principales son los controles de contenedor o los controles que contienen visualmente otros controles. A continuación se indican algunos ejemplos de controles anteriores que no funcionan correctamente con Visual Studio:  
+## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX Control Issues  
+ Most ActiveX controls that work with Visual Basic 6.0 work with Visual Basic .NET without trouble. The main exceptions are container controls, or controls that visually contain other controls. Some examples of older controls that do not work correctly with Visual Studio are as follows:  
   
-- Control de marco de Microsoft Forms 2,0  
+- Microsoft Forms 2.0 Frame control  
   
-- Control de flechas, también conocido como control de número  
+- Up-Down control, also known as the spin control  
   
-- Control de pestaña Sheridan  
+- Sheridan Tab Control  
   
- Solo existen algunas soluciones alternativas para los problemas de control ActiveX no admitidos. Puede migrar los controles existentes a Visual Studio si es el propietario del código fuente original. De lo contrario, puede consultar a los proveedores de software para actualizarlos. Versiones de controles compatibles con NET para reemplazar controles ActiveX no compatibles.  
+ There are only a few workarounds for unsupported ActiveX control problems. You can migrate existing controls to Visual Studio if you own the original source code. Otherwise, you can check with software vendors for updated .NET-compatible versions of controls to replace unsupported ActiveX controls.  
   
-## <a name="vbconinteroperabilitymarshalinganchor11"></a>Pasar propiedades ReadOnly de controles ByRef  
- Visual Basic .net genera a veces errores com como, "error 0x800A017F CTL_E_SETNOTSUPPORTED", cuando se pasan `ReadOnly` propiedades de algunos controles ActiveX antiguos como `ByRef` parámetros a otros procedimientos. Las llamadas a procedimientos similares desde Visual Basic 6,0 no generan un error, y los parámetros se tratan como si se hubieran pasado por valor. El mensaje de error de Visual Basic .net indica que está intentando cambiar una propiedad que no tiene un procedimiento `Set` de propiedad.  
+## <a name="vbconinteroperabilitymarshalinganchor11"></a> Passing ReadOnly Properties of Controls ByRef  
+ Visual Basic .NET sometimes raises COM errors such as, "Error 0x800A017F CTL_E_SETNOTSUPPORTED", when you pass `ReadOnly` properties of some older ActiveX controls as `ByRef` parameters to other procedures. Similar procedure calls from Visual Basic 6.0 do not raise an error, and the parameters are treated as if you passed them by value. The Visual Basic .NET error message indicates that you are trying to change a property that does not have a property `Set` procedure.  
   
- Si tiene acceso al procedimiento al que se llama, puede evitar este error si usa la `ByVal` palabra clave para declarar los parámetros que aceptan `ReadOnly` propiedades. Por ejemplo:  
+ If you have access to the procedure being called, you can prevent this error by using the `ByVal` keyword to declare parameters that accept `ReadOnly` properties. Por ejemplo:  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
- Si no tiene acceso al código fuente para el procedimiento al que se llama, puede forzar que la propiedad se pase por valor agregando un conjunto adicional de corchetes alrededor del procedimiento que realiza la llamada. Por ejemplo, en un proyecto que tenga una referencia al objeto COM de la biblioteca de Microsoft Objetos de datos ActiveX 2,8, puede usar:  
+ If you do not have access to the source code for the procedure being called, you can force the property to be passed by value by adding an extra set of brackets around the calling procedure. For example, in a project that has a reference to the Microsoft ActiveX Data Objects 2.8 Library COM object, you can use:  
   
  [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor12"></a>Implementar ensamblados que exponen la interoperabilidad  
- La implementación de ensamblados que exponen interfaces COM presenta algunos desafíos únicos. Por ejemplo, un posible problema se produce cuando las aplicaciones independientes hacen referencia al mismo ensamblado COM. Esta situación es habitual cuando se instala una nueva versión de un ensamblado y otra aplicación sigue usando la versión anterior del ensamblado. Si desinstala un ensamblado que comparte un archivo DLL, puede hacer que no esté disponible de forma involuntaria para los demás ensamblados.  
+## <a name="vbconinteroperabilitymarshalinganchor12"></a> Deploying Assemblies That Expose Interop  
+ Deploying assemblies that expose COM interfaces presents some unique challenges. For example, a potential problem occurs when separate applications reference the same COM assembly. This situation is common when a new version of an assembly is installed and another application is still using the old version of the assembly. If you uninstall an assembly that shares a DLL, you can unintentionally make it unavailable to the other assemblies.  
   
- Para evitar este problema, debe instalar los ensamblados compartidos en la caché de ensamblados global (GAC) y utilizar un módulo CRT para el componente. Si no puede instalar la aplicación en la GAC, debe instalarse en CommonFilesFolder en un subdirectorio específico de la versión.  
+ To avoid this problem, you should install shared assemblies to the Global Assembly Cache (GAC) and use a MergeModule for the component. If you cannot install the application in the GAC, it should be installed to CommonFilesFolder in a version-specific subdirectory.  
   
- Los ensamblados que no se comparten se deben ubicar en paralelo en el directorio con la aplicación que realiza la llamada.  
+ Assemblies that are not shared should be located side by side in the directory with the calling application.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -132,6 +132,6 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Tutorial: Implementar la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Tutorial: Implementación de la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Caché global de ensamblados](../../../framework/app-domains/gac.md)

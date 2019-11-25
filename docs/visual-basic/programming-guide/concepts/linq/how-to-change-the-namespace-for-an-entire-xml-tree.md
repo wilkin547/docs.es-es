@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Cambiar el espacio de nombres de un árbol XML completo (Visual Basic)
+title: 'Cómo: Cambiar el espacio de nombres de todo un árbol XML'
 ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-ms.openlocfilehash: c18974da3d60f0abf4df7193f52f24f43501260d
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 37edb426b106d3fbf90ea06118526abab0a78bf8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710459"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346927"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Procedimiento Cambiar el espacio de nombres de un árbol XML completo (Visual Basic)
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>How to: Change the Namespace for an Entire XML Tree (Visual Basic)
 En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. Es posible modificar la propiedad <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. No es posible modificar la propiedad <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, pero es posible copiar con facilidad los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, eliminar los atributos existentes y, a continuación, agregar los atributos nuevos que se encuentran en el espacio de nombres deseado.  
   
- Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el código siguiente se crean dos árboles XML que no están en ningún espacio de nombres. A continuación, se cambia el espacio de nombres de cada árbol y se combinan ambos árboles en uno sólo.  
@@ -78,4 +78,4 @@ Console.WriteLine(root)
   
 ## <a name="see-also"></a>Vea también
 
-- [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

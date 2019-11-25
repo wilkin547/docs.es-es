@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee35ce1016d9e0a825254fad4b08d4b94da16943
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: d534553fcc6ee63d560e731a535d44c3acd1a214
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170955"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347897"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Transformaciones XSLT con la clase XslTransform
 
@@ -48,7 +48,6 @@ Las funciones `msxsl:script` y `msxsl:node-set` son las únicas extensiones XSLT
 En el código de ejemplo siguiente se carga una hoja de estilos XSL, se lee un archivo denominado mydata.xml en <xref:System.Xml.XPath.XPathDocument> y se realiza la transformación de los datos en un archivo ficticio denominado myStyleSheet.xsl al enviar la salida con formato a la consola.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.XPath

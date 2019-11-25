@@ -1,5 +1,5 @@
 ---
-title: Distinct (Cláusula, Visual Basic)
+title: Distinct (Cláusula)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryDistinct
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: e8d3e38261a04c4d29faab351d24d6710413b09a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 94471898807ef4552564c3e01465f2b2f6211d0c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004792"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335375"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct (Cláusula, Visual Basic)
-Restringe los valores de la variable de rango actual para eliminar los valores duplicados en las cláusulas de consulta subsiguientes.  
+Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -25,10 +25,10 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Puede usar la cláusula `Distinct` para devolver una lista de elementos únicos. La cláusula `Distinct` hace que la consulta omita los resultados de la consulta duplicada. La cláusula `Distinct` se aplica a los valores duplicados para todos los campos devueltos especificados por la cláusula `Select`. Si no se especifica ninguna cláusula `Select`, se aplica la cláusula `Distinct` a la variable de rango de la consulta identificada en la cláusula `From`. Si la variable de rango no es un tipo inmutable, la consulta solo omitirá el resultado de una consulta si todos los miembros del tipo coinciden con el resultado de una consulta existente.  
+ You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente expresión de consulta combina una lista de clientes y una lista de pedidos de cliente. La cláusula `Distinct` se incluye para devolver una lista de nombres de cliente únicos y fechas de pedido.  
+ The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   

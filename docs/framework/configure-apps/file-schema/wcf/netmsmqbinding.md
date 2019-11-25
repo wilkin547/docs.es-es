@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4bc8884b2d4cb6f8201e2038894c69d0805bddda
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7456c6373c64e07b73e15e7e2bb229dce4032121
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738826"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140741"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding >
 Define un enlace en cola adecuado para la comunicación del equipo de cruce.  
@@ -75,7 +75,7 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 |`maxBufferPoolSize`|Entero que especifica el tamaño máximo del grupo de búferes para este enlace. El valor predeterminado es 8.|  
 |`maxReceivedMessageSize`|Un entero positivo que define el tamaño del mensaje máximo, en bytes, incluyendo encabezados, que está procesado por este enlace. El remitente de un mensaje que supere este límite recibirá un error SOAP. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65536. Este límite en el tamaño del mensaje tiene como objetivo limitar la exposición a ataques de denegación de servicio (DoS).|  
 |`maxRetryCycles`|Un entero que indica el número de ciclos de reintento utilizado por la característica de detección de mensaje dudoso. Un mensaje se vuelve un mensaje dudoso cuando produce un error en todos los intentos de entrega de todos los ciclos. El valor predeterminado es 3. Para obtener más información, vea <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Atributo necesario. Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Atributo necesario. Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`QueueTransferProtocol`|Un valor <xref:System.ServiceModel.QueueTransferProtocol> válido que especifica el transporte del canal de comunicación en cola que este enlace utiliza. MSMQ no admite el direccionamiento de Active Directory al utilizar el protocolo de mensajería de confianza SOAP. Por lo tanto, no debe establecer este atributo en `Srmp` o `Srmps` cuando el atributo `useActiveDirectory` está establecido en `true`.|  
 |`receiveErrorHandling`|Un valor <xref:System.ServiceModel.ReceiveErrorHandling> que especifica cómo se administran mensajes dudosos y que no se pueden enviar.|  
@@ -93,7 +93,7 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<La >](security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[> de seguridad de \<](security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   

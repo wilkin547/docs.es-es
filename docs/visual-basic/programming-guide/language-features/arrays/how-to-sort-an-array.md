@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ordenar una matriz en Visual Basic
+title: 'How to: Sort An Array'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 467d1bcce6bda2feb5a8e59c152cb292d753e79b
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3fb9af8de0fc86075fdccd64506c855c1c720660
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700976"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351851"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>Cómo: ordenar una matriz en Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
 
-En este artículo se muestra un ejemplo de cómo ordenar una matriz de cadenas en Visual Basic.
+This article shows an example of how to sort an array of strings in Visual Basic.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se declara una matriz de objetos `String` denominada `zooAnimals`, se rellena y, a continuación, se ordena alfabéticamente:
+This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 Las condiciones siguientes pueden provocar una excepción:
 
-- La matriz está vacía (clase <xref:System.ArgumentNullException>).
-- La matriz es multidimensional (clase <xref:System.RankException>).
-- Uno o varios elementos de la matriz no implementan la interfaz <xref:System.IComparable> (clase <xref:System.InvalidOperationException>).
+- Array is empty (<xref:System.ArgumentNullException> class).
+- Array is multidimensional (<xref:System.RankException> class).
+- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Event (instrucción) (Visual Basic)
+title: Event (Instrucción)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: ab4ff31cbc7b16e1d0ad8defed18e523c237e10d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: dd42e3364d96a8a9b3800b3d1f5e94b2fa25bad4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583370"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351223"
 ---
 # <a name="event-statement"></a>Event (Instrucción)
 Declara un evento definido por el usuario.  
@@ -58,14 +58,14 @@ End Event
   
 |Parte|Descripción|  
 |---|---|  
-|`attrlist`|Opcional. Lista de atributos que se aplican a este evento. Los diversos atributos se separan con comas. Debe incluir la [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre corchetes angulares ("`<`" y "`>`").|  
-|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [público](../../../visual-basic/language-reference/modifiers/public.md): cualquier código que pueda tener acceso al elemento que lo declara puede tener acceso a él.<br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md): solo el código dentro de su clase o una clase derivada puede tener acceso a él.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo el código del mismo ensamblado puede acceder a él.<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md): solo el código del elemento que lo declara puede tener acceso al mismo.<br /> -    código de solo[amigos protegido](../../language-reference/modifiers/protected-friend.md)en la clase del evento, una clase derivada o el mismo ensamblado pueden tener acceso a él. <br />-  código[privado solo protegido](../../language-reference/modifiers/private-protected.md)en la clase del evento o una clase derivada en el mismo ensamblado puede tener acceso al mismo.|  
+|`attrlist`|Opcional. Lista de atributos que se aplican a este evento. Los diversos atributos se separan con comas. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
+|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)—any code that can access the element that declares it can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)—only code within its class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)—only code in the same assembly can access it.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)—only code in the element that declares it can access it.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-only code in the event's class, a derived class, or the same assembly can access it. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md)-only code in the event's class or a derived class in the same assembly can access it.|  
 |`Shared`|Opcional. Especifica que este evento no está asociado a una instancia específica de una clase o estructura.|  
 |`Shadows`|Opcional. Indica que este evento vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un elemento `Private` reemplaza un elemento de clase base, el código que no tiene permiso para acceder al elemento `Private` accede en su lugar al elemento de clase base.|  
 |`eventname`|Requerido. Nombre del evento; sigue las convenciones estándar de nomenclatura de variables.|  
-|`parameterlist`|Opcional. Lista de variables locales que representan los parámetros de este evento. Debe incluir la [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
+|`parameterlist`|Opcional. Lista de variables locales que representan los parámetros de este evento. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
 |`Implements`|Opcional. Indica que este evento implementa un evento de una interfaz.|  
-|`implementslist`|Es necesario si se proporciona `Implements`. Lista de procedimientos `Sub` que se implementan. Los diversos procedimientos se separan con comas:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Cada `implementedprocedure` tiene la sintaxis y las partes siguientes:<br /><br /> `interface`.`definedname`<br /><br /> -    `interface`: necesario. Nombre de una interfaz que implementan la estructura o clase contenedora de este procedimiento.<br />-    `Definedname`: necesario. Nombre por el que se define el procedimiento en `interface`. No tiene que ser el mismo que `name`, el nombre que usa este procedimiento para implementar el procedimiento definido.|  
+|`implementslist`|Es necesario si se proporciona `Implements`. Lista de procedimientos `Sub` que se implementan. Los diversos procedimientos se separan con comas:<br /><br /> *implementedprocedure* [ , *implementedprocedure* ... ]<br /><br /> Cada `implementedprocedure` tiene la sintaxis y las partes siguientes:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` - Required. Nombre de una interfaz que implementan la estructura o clase contenedora de este procedimiento.<br />-   `Definedname` - Required. Nombre por el que se define el procedimiento en `interface`. No tiene que ser el mismo que `name`, el nombre que usa este procedimiento para implementar el procedimiento definido.|  
 |`Custom`|Requerido. Los eventos declarados como `Custom` deben definir descriptores de acceso `AddHandler`, `RemoveHandler` y `RaiseEvent` personalizados.|  
 |`delegatename`|Opcional. Nombre de un delegado que especifica la firma del controlador de eventos.|  
 |`AddHandler`|Requerido. Declara un descriptor de acceso `AddHandler`, que especifica las instrucciones que se deben ejecutar cuando se agrega un controlador de eventos, ya sea explícitamente mediante la instrucción `AddHandler` o implícitamente mediante la cláusula `Handles`.|  
@@ -75,7 +75,7 @@ End Event
 |`End RemoveHandler`|Requerido. Finaliza el bloque `RemoveHandler`.|  
 |`RaiseEvent`|Requerido. Declara un descriptor de acceso `RaiseEvent`, que especifica las instrucciones que se ejecutan cuando se produce el evento mediante la instrucción `RaiseEvent`. Normalmente, invoca una lista de delegados mantenida por los descriptores de acceso `AddHandler` y `RemoveHandler`.|  
 |`End RaiseEvent`|Requerido. Finaliza el bloque `RaiseEvent`.|  
-|`delegatesignature`|Requerido. Lista de parámetros que coincide con los parámetros requeridos por el delegado `delegatename`. Debe incluir la [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre paréntesis.|  
+|`delegatesignature`|Requerido. Lista de parámetros que coincide con los parámetros requeridos por el delegado `delegatename`. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
 |`statements`|Opcional. Instrucciones que contienen los cuerpos de los métodos `AddHandler`, `RemoveHandler` y `RaiseEvent`.|  
 |`End Event`|Requerido. Finaliza el bloque `Event`.|  
   
@@ -89,9 +89,9 @@ End Event
   
  Para controlar un evento, debe asociarlo a una subrutina del controlador de eventos mediante la instrucción `Handles` o `AddHandler`. Las firmas de la subrutina y del evento deben coincidir. Para controlar un evento compartido, debe usar la instrucción `AddHandler`.  
   
- Solo se puede usar `Event` en un nivel de módulo. Esto significa que el contexto de la *declaración* de un evento debe ser una clase, una estructura, un módulo o una interfaz, y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
+ Solo se puede usar `Event` en un nivel de módulo. This means the *declaration context* for an event must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
- En la mayoría de los casos, puede usar la primera sintaxis de la sección Sintaxis de este tema para declarar los eventos. Sin embargo, algunos escenarios requieren un mayor control sobre el comportamiento detallado del evento. La última sintaxis de la sección Sintaxis de este tema, que usa la palabra clave `Custom`, proporciona ese control permitiéndole definir eventos personalizados. En un evento personalizado, debe especificar exactamente lo que sucede cuando el código agrega o quita un controlador de eventos a o desde el evento, o cuando el código provoca el evento. Para obtener ejemplos, vea [Cómo: declarar eventos personalizados para conservar memoria](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) y [Cómo: declarar eventos personalizados para evitar bloqueos](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ En la mayoría de los casos, puede usar la primera sintaxis de la sección Sintaxis de este tema para declarar los eventos. Sin embargo, algunos escenarios requieren un mayor control sobre el comportamiento detallado del evento. La última sintaxis de la sección Sintaxis de este tema, que usa la palabra clave `Custom`, proporciona ese control permitiéndole definir eventos personalizados. En un evento personalizado, debe especificar exactamente lo que sucede cuando el código agrega o quita un controlador de eventos a o desde el evento, o cuando el código provoca el evento. For examples, see [How to: Declare Custom Events To Conserve Memory](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) and [How to: Declare Custom Events To Avoid Blocking](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usan eventos para contar los segundos de 10 a 0. El código muestra algunos de los métodos, propiedades e instrucciones relacionados con eventos. Esto incluye la instrucción `RaiseEvent`.  
@@ -102,7 +102,7 @@ End Event
   
  El código de `Form1` especifica los estados inicial y terminal del formulario. También contiene el código que se ejecuta cuando se producen eventos.  
   
- Para usar este ejemplo, abra un nuevo proyecto de Windows Forms. Agregue un botón denominado `Button1` y un cuadro de texto denominado `TextBox1` al formulario principal, denominado `Form1`. A continuación, haga clic con el botón secundario en el formulario y haga clic en **Ver código** para abrir el editor de código.  
+ Para usar este ejemplo, abra un nuevo proyecto de Windows Forms. Agregue un botón denominado `Button1` y un cuadro de texto denominado `TextBox1` al formulario principal, denominado `Form1`. Then right-click the form and click **View Code** to open the code editor.  
   
  Agregue una variable `WithEvents` a la sección de declaraciones de la clase `Form1`:  
   
@@ -112,10 +112,10 @@ End Event
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón **iniciar**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
+ Press F5 to run the previous example, and click the button labeled **Start**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
   
 > [!NOTE]
-> El método `My.Application.DoEvents` no procesa los eventos de la misma manera que el formulario. Para habilitar el formulario de modo que controle directamente los eventos, puede usar multithreading. Para obtener más información, vea [subprocesamiento administrado](../../../standard/threading/index.md).  
+> El método `My.Application.DoEvents` no procesa los eventos de la misma manera que el formulario. Para habilitar el formulario de modo que controle directamente los eventos, puede usar multithreading. For more information, see [Managed Threading](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Vea también
 

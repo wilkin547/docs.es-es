@@ -1,28 +1,28 @@
 ---
-title: Cadenas en Visual Basic
+title: Cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db79284e45161f87e447fec7ab7faf91093a3fd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024591"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344337"
 ---
 # <a name="strings-in-visual-basic"></a>Cadenas en Visual Basic
-Esta sección describen los conceptos básicos de uso de cadenas en Visual Basic.  
+This section describes the basic concepts behind using strings in Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Enumera temas que describen los conceptos básicos de uso de cadenas en Visual Basic.  
+ Lists topics that describe the basic concepts behind using strings in Visual Basic.  
   
  [Cómo: Crear cadenas mediante un objeto StringBuilder en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Muestra cómo crear eficazmente una cadena larga a partir de varias cadenas más pequeñas.  
   
- [Cómo: Buscar en una cadena](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
+ [Buscar en una cadena](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
  Muestra cómo se determina el índice de la primera aparición de una subcadena.  
   
  [Conversión entre cadenas y otros tipos de datos en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  

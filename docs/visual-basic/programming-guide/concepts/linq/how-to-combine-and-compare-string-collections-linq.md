@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
+title: 'Cómo: Combinar y comparar colecciones de cadenas (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352885"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348435"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedimiento Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
 
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de VB.NET con una instrucción `Imports` para el espacio de nombres System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

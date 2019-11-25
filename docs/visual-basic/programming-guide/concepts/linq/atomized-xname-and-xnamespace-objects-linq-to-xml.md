@@ -1,17 +1,17 @@
 ---
-title: Objetos XName y XNamespace atomizados (LINQ to XML) (Visual Basic)
+title: Objetos XName y XNamespace atomizados (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: ae6d21c21aac4455e7932015c131fb4295673056
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 0ffed5d00364f6614b439480607ed521f52754ec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351817"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345725"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Objetos XName y XNamespace atomizados (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)
 
-Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto. Esto da como resultado mejoras de rendimiento para las consultas: cuando se compara la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si los dos puntos de referencia apuntan al mismo objeto. El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.
+Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto. De esta forma, se incrementan los beneficios de rendimiento de las consultas: cuando compare la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si los dos puntos de referencia apuntan al mismo objeto. El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.
 
 ## <a name="atomization-semantics"></a>Semántica de atomización
 
@@ -74,4 +74,4 @@ Este ejemplo produce el siguiente resultado:
 
 ## <a name="see-also"></a>Vea también
 
-- [Rendimiento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

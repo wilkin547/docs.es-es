@@ -1,15 +1,15 @@
 ---
-title: Diferencias entre la modificación del árbol XML en memoria y Construcción funcional (LINQ to XML) (Visual Basic)
+title: Modificación del árbol XML en memoria frente a la construcción funcional (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 5b43d28390927fa1426f914fa6fd88a1a5d00b9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15c38cdf7ce860b34d8d3e9d59b8f06d80f6edd8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613616"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344437"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Diferencias entre la modificación del árbol XML en memoria y Construcción funcional (LINQ to XML) (Visual Basic)
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)
 Modificar un árbol XML directamente es un enfoque tradicional para cambiar la forma de un documento XML. Una aplicación típica carga un documento en un almacén de datos como DOM o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; utiliza una interfaz de programación para insertar nodos, eliminar nodos o cambiar el contenido de los nodos y, a continuación, guarda el XML en un archivo o lo transmite a través de una red.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite otro enfoque que es útil en muchos escenarios: la *construcción funcional*. La construcción funcional trata la modificación de datos como un problema de transformación en lugar de una manipulación detallada de un almacén de datos. Si puede tomar una representación de datos y transformarla eficientemente de una a otra, el resultado es el mismo que si ha tomado un almacén de datos y lo ha manipulado de alguna manera para que tome otra forma. Un aspecto fundamental del enfoque de construcción funcional es pasar los resultados de las consultas a los constructores <xref:System.Xml.Linq.XDocument> y <xref:System.Xml.Linq.XElement>.  
@@ -76,4 +76,4 @@ Console.WriteLine(newTree)
   
 ## <a name="see-also"></a>Vea también
 
-- [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

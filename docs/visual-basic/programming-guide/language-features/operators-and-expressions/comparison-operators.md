@@ -1,5 +1,5 @@
 ---
-title: Operadores de comparación en Visual Basic
+title: Operadores de comparación
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -15,84 +15,84 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1feb08539e47ec6fda64aa1a1f8ec2cc19f7b62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827962"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346064"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Operadores de comparación en Visual Basic
-Operadores de comparación comparan dos expresiones y devuelven un `Boolean` valor que representa la relación de los valores. Existen operadores para comparar valores numéricos, operadores para comparar cadenas y operadores para comparar objetos. Los tres tipos de operadores se describen a continuación.  
+Comparison operators compare two expressions and return a `Boolean` value that represents the relationship of their values. There are operators for comparing numeric values, operators for comparing strings, and operators for comparing objects. All three types of operators are discussed herein.  
   
-## <a name="comparing-numeric-values"></a>Comparar valores numéricos  
- Visual Basic compara valores numéricos con seis operadores de comparación numérica. Cada operador toma como operandos dos expresiones que se evalúan como valores numéricos. En la tabla siguiente se enumera los operadores y se muestra ejemplos de cada uno.  
+## <a name="comparing-numeric-values"></a>Comparing Numeric Values  
+ Visual Basic compares numeric values using six numeric comparison operators. Each operator takes as operands two expressions that evaluate to numeric values. The following table lists the operators and shows examples of each.  
   
-|Operador|Condición de prueba|Ejemplos|  
+|"??"|Condition tested|Ejemplos|  
 |--------------|----------------------|--------------|  
-|`=` (Igualdad)|¿Es el valor de la primera expresión igual al valor del segundo?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>` (Desigualdad)|¿No es igual al valor de la segunda el valor de la primera expresión?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<` (Menor que)|¿Es el valor de la primera expresión menor que el valor del segundo?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>` (Mayor que)|¿El valor de la primera expresión es mayor que el valor del segundo?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=` (Menor o igual que)|¿Es el valor de la primera expresión menor o igual que el valor del segundo?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=` (Mayor o igual que)|¿Es el valor de la primera expresión mayor o igual que el valor del segundo?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|`=` (Equality)|Is the value of the first expression equal to the value of the second?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
+|`<>` (Inequality)|Is the value of the first expression unequal to the value of the second?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<` (Less than)|Is the value of the first expression less than the value of the second?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>` (Greater than)|Is the value of the first expression greater than the value of the second?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=` (Less than or equal to)|Is the value of the first expression less than or equal to the value of the second?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=` (Greater than or equal to)|Is the value of the first expression greater than or equal to the value of the second?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>Comparar cadenas  
- Visual Basic compara cadenas mediante la [Like (operador)](../../../../visual-basic/language-reference/operators/like-operator.md) , así como los operadores de comparación numérica. El `Like` operador permite especificar un patrón. La cadena, a continuación, se compara con el patrón, y si coincide, el resultado es `True`. De lo contrario, el resultado es `False`. Los operadores numéricos permiten comparar `String` valores según su criterio de ordenación, como se muestra en el ejemplo siguiente.  
+ Visual Basic compares strings using the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md) as well as the numeric comparison operators. The `Like` operator allows you to specify a pattern. The string is then compared against the pattern, and if it matches, the result is `True`. De lo contrario, el resultado es `False`. The numeric operators allow you to compare `String` values based on their sort order, as the following example shows.  
   
  `"73" < "9"`  
   
  `' The result of the preceding comparison is True.`  
   
- El resultado en el ejemplo anterior es `True` porque el primer carácter de la primera cadena que se ordena delante del primer carácter en la segunda cadena. Si los primeros caracteres sean iguales, la comparación podría seguir al carácter siguiente en las dos cadenas y así sucesivamente. También puede comprobar la igualdad de cadenas con el operador de igualdad, como se muestra en el ejemplo siguiente.  
+ The result in the preceding example is `True` because the first character in the first string sorts before the first character in the second string. If the first characters were equal, the comparison would continue to the next character in both strings, and so on. You can also test equality of strings using the equality operator, as the following example shows.  
   
  `"734" = "734"`  
   
  `' The result of the preceding comparison is True.`  
   
- Si una cadena es un prefijo de otra, como "aa" y "aaa", la cadena más larga se considera que es mayor que la cadena más corta. Esto se ilustra en el siguiente ejemplo:  
+ If one string is a prefix of another, such as "aa" and "aaa", the longer string is considered to be greater than the shorter string. Esto se ilustra en el siguiente ejemplo:  
   
  `"aaa" > "aa"`  
   
  `' The result of the preceding comparison is True.`  
   
- El criterio de ordenación se basa en una comparación binaria o una comparación textual según la configuración de `Option Compare`. Para obtener más información, consulte [instrucción Option Compare](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+ The sort order is based on either a binary comparison or a textual comparison depending on the setting of `Option Compare`. For more information see [Option Compare Statement](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
-## <a name="comparing-objects"></a>Comparar objetos  
- Visual Basic compara dos variables de referencia de objeto con el [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) y [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md). Puede usar cualquiera de estos operadores para determinar si dos variables de referencia que hacen referencia a la misma instancia de objeto. Esto se ilustra en el siguiente ejemplo:  
+## <a name="comparing-objects"></a>Comparing Objects  
+ Visual Basic compares two object reference variables with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md). You can use either of these operators to determine if two reference variables refer to the same object instance. Esto se ilustra en el siguiente ejemplo:  
   
  [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
- En el ejemplo anterior, `x Is y` se evalúa como `True`, ya que ambas variables hacen referencia a la misma instancia. Compare este resultado con el siguiente ejemplo.  
+ In the preceding example, `x Is y` evaluates to `True`, because both variables refer to the same instance. Contrast this result with the following example.  
   
  [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
- En el ejemplo anterior, `x Is y` se evalúa como `False`, porque aunque las variables hacen referencia a objetos del mismo tipo, hacen referencia a distintas instancias de ese tipo.  
+ In the preceding example, `x Is y` evaluates to `False`, because although the variables refer to objects of the same type, they refer to different instances of that type.  
   
- Cuando desea probar dos objetos no está señalando a la misma instancia, el `IsNot` operador le permite evitar una combinación gramaticalmente torpe de `Not` y `Is`. Esto se ilustra en el siguiente ejemplo:  
+ When you want to test for two objects not pointing to the same instance, the `IsNot` operator lets you avoid a grammatically clumsy combination of `Not` and `Is`. Esto se ilustra en el siguiente ejemplo:  
   
  [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
- En el ejemplo anterior, `If a IsNot b` es equivalente a `If Not a Is b`.  
+ In the preceding example, `If a IsNot b` is equivalent to `If Not a Is b`.  
   
-### <a name="comparing-object-type"></a>Comparación de tipo de objeto  
- Puede probar si un objeto es de un tipo determinado con el `TypeOf`... `Is` expresión. La sintaxis es la siguiente:  
+### <a name="comparing-object-type"></a>Comparing Object Type  
+ You can test whether an object is of a particular type with the `TypeOf`...`Is` expression. La sintaxis es la siguiente:  
   
  `TypeOf <objectexpression> Is <typename>`  
   
- Cuando `typename` especifica un tipo de interfaz, el `TypeOf`... `Is` expresión devuelve `True` si el objeto implementa el tipo de interfaz. Cuando `typename` es un tipo de clase, la expresión devuelve `True` si el objeto es una instancia de la clase especificada o de una clase que derive de la clase especificada. Esto se ilustra en el siguiente ejemplo:  
+ When `typename` specifies an interface type, then the `TypeOf`...`Is` expression returns `True` if the object implements the interface type. When `typename` is a class type, then the expression returns `True` if the object is an instance of the specified class or of a class that derives from the specified class. Esto se ilustra en el siguiente ejemplo:  
   
  [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
- En el ejemplo anterior, el `TypeOf x Is Control` expresión se evalúa como `True` porque el tipo de `x` es `Button`, que hereda de `Control`.  
+ In the preceding example, the `TypeOf x Is Control` expression evaluates to `True` because the type of `x` is `Button`, which inherits from `Control`.  
   
- Para obtener más información, consulte [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
+ For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - [Comparaciones de valores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Operadores de comparación](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Operadores](../../../../visual-basic/language-reference/operators/index.md)
-- [Operadores aritméticos en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Operadores de concatenación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Operadores lógicos y bit a bit en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

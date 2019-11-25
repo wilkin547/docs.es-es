@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454989"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281656"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -626,7 +626,7 @@ A partir de .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=name
 
 **Mejoras de rendimiento de la recolección de elementos no utilizados**
 
-Los cambios en la recolección de elementos no utilizados en .NET Framework 4.7.1 mejoran el rendimiento general, sobre todo para las asignaciones del montón de objetos grandes. En .NET Framework 4.7.1, se usan bloqueos independientes para las asignaciones de montón de objetos pequeños y de montón de objetos grandes, lo que permite que se realicen asignaciones de montón de objetos grandes cuando la operación de GC en segundo plano (BGC) rastrea el montón de objetos pequeños. Como resultado, las aplicaciones que realizan un número elevado de asignaciones de montón de objetos grandes deben observar una reducción de la contención del bloqueo de asignación y un rendimiento mejorado. Para más información, vea la sección "Runtime - GC Performance Improvements" (Tiempo de ejecución: mejoras de rendimiento de GC) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Características del compilador y del tiempo de ejecución de NET Framework 4.7.1).
+Los cambios en la recolección de elementos no utilizados en .NET Framework 4.7.1 mejoran el rendimiento general, sobre todo para las asignaciones del montón de objetos grandes. En .NET Framework 4.7.1, se usan bloqueos independientes para las asignaciones de montón de objetos pequeños y de montón de objetos grandes, lo que permite que se realicen asignaciones de montón de objetos grandes cuando la operación de recolección de elementos no utilizados en segundo plano barre el montón de objetos pequeños. Como resultado, las aplicaciones que realizan un número elevado de asignaciones de montón de objetos grandes deben observar una reducción de la contención del bloqueo de asignación y un rendimiento mejorado. Para más información, vea la sección "Runtime - GC Performance Improvements" (Tiempo de ejecución: mejoras de rendimiento de GC) en la entrada de blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Características del compilador y del tiempo de ejecución de NET Framework 4.7.1).
 
 <a name="net471"/>
 
@@ -1178,7 +1178,7 @@ En versiones anteriores de .NET Framework, las aplicaciones WPF no pueden optar 
 
 Para admitir la reciente proliferación de entornos con valores altos o híbridos de PPP para las aplicaciones WPF, WPF en .NET Framework 4.6.2 habilita el reconocimiento de monitor. Consulte [los ejemplos y la guía para desarrolladores](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) en GitHub para obtener más información sobre cómo activar el reconocimiento de PPP por monitor en la aplicación WPF.
 
-En versiones anteriores de .NET Framework, las aplicaciones WPF tienen habilitado el reconocimiento de PPP del sistema. En otras palabras, el sistema operativo escala la interfaz de usuario de la aplicación según corresponda, en función del valor de PPP del monitor en el que se representa la aplicación. ,
+En versiones anteriores de .NET Framework, las aplicaciones WPF tienen habilitado el reconocimiento de PPP del sistema. En otras palabras, el sistema operativo escala la interfaz de usuario de la aplicación según corresponda, en función del valor de PPP del monitor en el que se representa la aplicación.
 
 Para aplicaciones que se ejecutan en .NET Framework 4.6.2, puede deshabilitar los cambios de PPP por monitor en las aplicaciones WPF. Para ello, agregue una instrucción de configuración en la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación de la siguiente manera:
 
@@ -1894,7 +1894,7 @@ Algunas de las mejoras realizadas durante la depuración de las aplicaciones de 
 
 - Mayor compatibilidad con las excepciones de los componentes de Windows en tiempo de ejecución. En [!INCLUDE[win81](../../../includes/win81-md.md)], las excepciones que se inician en aplicaciones de la Tienda Windows conservan información sobre el error que provocó la excepción, incluso entre diferentes lenguajes. Puede obtener más información sobre esta característica en la sección "Windows Store app development" (Desarrollo de aplicaciones de la Tienda Windows) de la publicación del [anuncio de .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-A partir de Visual Studio 2013, puede usar la [herramienta de optimización guiada por perfiles administrados (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) para optimizar las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], así como las de escritorio.
+A partir de Visual Studio 2013, puede usar la [herramienta de optimización guiada por perfiles administrados (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) para optimizar las aplicaciones de Tienda Windows 8.x, así como las aplicaciones de escritorio.
 
 Para descubrir las nuevas características de ASP.NET 4.5.1, vea [ASP.NET and Web Tools for Visual Studio 2013 Release Notes](/aspnet/visual-studio/overview/2013/release-notes) (Notas de la versión de ASP.NET y herramientas web para Visual Studio 2013).
 
@@ -1944,7 +1944,7 @@ En .NET Framework 4.5, Managed Extensibility Framework (MEF) cuenta con las sigu
 
 - Ámbitos múltiples.
 
-- Un subconjunto de MEF que puede usar cuando cree aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Este subconjunto está disponible como un [paquete descargable](https://go.microsoft.com/fwlink/?LinkId=256238) en la galería de NuGet. Para instalar el paquete, abra el proyecto en Visual Studio, elija **Administrar paquetes de NuGet** en el menú **Proyecto** y busque en línea el paquete `Microsoft.Composition`.
+- Un subconjunto de MEF que puede usar cuando cree aplicaciones de la Tienda Windows 8.x. Este subconjunto está disponible como un [paquete descargable](https://go.microsoft.com/fwlink/?LinkId=256238) en la galería de NuGet. Para instalar el paquete, abra el proyecto en Visual Studio, elija **Administrar paquetes de NuGet** en el menú **Proyecto** y busque en línea el paquete `Microsoft.Composition`.
 
 Para obtener más información, vea [Managed Extensibility Framework (MEF)](../mef/index.md).
 
@@ -1956,9 +1956,9 @@ En .NET Framework 4.5, se agregaron nuevas características asincrónicas a los 
 
 ### <a name="tools"></a>Herramientas
 
-En .NET Framework 4.5, el generador de archivos de recursos (Resgen.exe) permite crear un archivo .resw para su uso en aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] desde un archivo .resources incrustado en un ensamblado de .NET Framework. Para obtener más información, vea [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md) (Resgen.exe [generador de archivos de recursos]).
+En .NET Framework 4.5, el generador de archivos de recursos (Resgen.exe) permite crear un archivo .resw para su uso en aplicaciones de la Tienda Windows 8.x desde un archivo .resources incrustado en un ensamblado de .NET Framework. Para obtener más información, vea [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md) (Resgen.exe [generador de archivos de recursos]).
 
-La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el tiempo de inicio de la aplicación, la utilización de la memoria (el tamaño del espacio de trabajo) y el rendimiento mediante la optimización de los ensamblados de imagen nativos. La herramienta de línea de comandos genera datos de perfil para los ensamblados nativos de aplicación de la imagen. Vean [Mpgo.exe (Managed Profile Guided Optimization Tool)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) (Mpgo.exe [herramienta de optimización guiada por perfiles administrados]). A partir de Visual Studio 2013, puede usar Mpgo.exe para optimizar las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], así como las de escritorio.
+La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el tiempo de inicio de la aplicación, la utilización de la memoria (el tamaño del espacio de trabajo) y el rendimiento mediante la optimización de los ensamblados de imagen nativos. La herramienta de línea de comandos genera datos de perfil para los ensamblados nativos de aplicación de la imagen. Vean [Mpgo.exe (Managed Profile Guided Optimization Tool)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) (Mpgo.exe [herramienta de optimización guiada por perfiles administrados]). A partir de Visual Studio 2013, puede usar la Mpgo.exe para optimizar las aplicaciones de Tienda Windows 8.x, así como las aplicaciones de escritorio.
 
 <a name="parallel" />
 
@@ -2118,7 +2118,7 @@ Para obtener más información, vea [Novedades de Windows Workflow Foundation](h
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
+Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de la Tienda Windows 8.x para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de clases portables <a name="portable" />
 
@@ -2130,4 +2130,4 @@ El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones 
 - [Novedades de accesibilidad en .NET Framework](whats-new-in-accessibility.md)
 - [Novedades de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
-- [What's New in Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio) (Novedades de Visual C++)
+- [Novedades de C++ en Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

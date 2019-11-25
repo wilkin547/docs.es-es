@@ -1,15 +1,15 @@
 ---
-title: Creación de particiones de datos (Visual Basic)
+title: Realizar particiones de datos
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ab4e27ef6d825b9100fc3c15b7a9554ae49e516
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665901"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353151"
 ---
-# <a name="partitioning-data-visual-basic"></a>Creación de particiones de datos (Visual Basic)
+# <a name="partitioning-data-visual-basic"></a>Partitioning Data (Visual Basic)
 Partición en LINQ es la operación de dividir una secuencia de entrada en dos secciones, sin reorganizar los elementos, y devolver después una de las secciones.  
   
  En la siguiente ilustración se muestran los resultados de tres operaciones de partición diferentes en una secuencia de caracteres. La primera operación devuelve los tres primeros elementos de la secuencia. La segunda operación omite los tres primeros elementos y devuelve los restantes. La tercera operación omite los dos primeros elementos de la secuencia y devuelve los tres siguientes.  
@@ -20,7 +20,7 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
   
 ## <a name="operators"></a>Operadores  
   
-|Nombre de operador|Descripción|Sintaxis de expresión de consulta de Visual Basic|Más información|  
+|Nombre de operador|Descripción|Visual Basic Query Expression Syntax|Más información|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
 |Skip|Omite los elementos hasta una determinada posición de una secuencia.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -30,22 +30,22 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   
 ### <a name="skip"></a>Skip  
- El siguiente ejemplo de código utiliza el `Skip` cadenas en Visual Basic para omitir las cuatro primeras cadenas de una matriz de cadenas antes de devolver el resto de la matriz.  
+ The following code example uses the `Skip` clause in Visual Basic to skip over the first four strings in an array of strings before returning the remaining strings in the array.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- El siguiente ejemplo de código utiliza el `Skip While` cláusula en Visual Basic para omitir las cadenas en una matriz mientras la primera letra de la cadena es "a". Se devuelven las cadenas restantes de la matriz.  
+ The following code example uses the `Skip While` clause in Visual Basic to skip over the strings in an array while the first letter of the string is "a". The remaining strings in the array are returned.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- El siguiente ejemplo de código utiliza el `Take` cláusula en Visual Basic para devolver las primeras dos cadenas en una matriz de cadenas.  
+ The following code example uses the `Take` clause in Visual Basic to return the first two strings in an array of strings.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- El siguiente ejemplo de código utiliza el `Take While` cláusula en Visual Basic para devolver las cadenas de una matriz, mientras que la longitud de la cadena es cinco o menos.  
+ The following code example uses the `Take While` clause in Visual Basic to return strings from an array while the length of the string is five or less.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   

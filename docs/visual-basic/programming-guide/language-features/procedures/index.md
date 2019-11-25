@@ -1,5 +1,5 @@
 ---
-title: Procedimientos en Visual Basic
+title: Procedimientos
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635632"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345991"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
-Un *procedimiento* es un bloque de instrucciones de Visual Basic dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una búsqueda de coincidencias `End` declaración. Todas las instrucciones ejecutables en Visual Basic deben estar dentro de algún procedimiento.  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
 ## <a name="calling-a-procedure"></a>Llamada a un procedimiento  
  Cuando invoca un procedimiento desde otra parte del código, está realizando una *llamada a procedimiento*. Cuando el procedimiento termina de ejecutarse, devuelve el control al código que lo ha invocado, el cual se conoce como *código de llamada*. El código de llamada es una instrucción, o una expresión de una instrucción, que especifica el procedimiento por el nombre y le transfiere el control.  
@@ -24,7 +24,7 @@ Un *procedimiento* es un bloque de instrucciones de Visual Basic dentro de una i
 ## <a name="returning-from-a-procedure"></a>Devolución desde un procedimiento  
  Un procedimiento devuelve el control al código de llamada cuando termina de ejecutarse. Para ello, puede usar una [instrucción Return](../../../../visual-basic/language-reference/statements/return-statement.md), la [instrucción Exit](../../../../visual-basic/language-reference/statements/exit-statement.md) adecuada para el procedimiento o la instrucción [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) del procedimiento. A continuación, el control pasa al código de llamada seguido del punto de la llamada a procedimiento.  
   
-- Con una instrucción `Return`, el control vuelve inmediatamente al código de llamada. Las instrucciones que siguen la instrucción `Return` no se ejecutan. Puede tener más de una instrucción `Return` en el mismo procedimiento.  
+- Con una instrucción `Return`, el control vuelve inmediatamente al código de llamada. Las instrucciones siguientes a la instrucción `Return` no se ejecutan. Puede tener más de una instrucción `Return` en el mismo procedimiento.  
   
 - Con una instrucción `Exit Sub` o `Exit Function`, el control vuelve inmediatamente al código de llamada. Las instrucciones siguientes a la instrucción `Exit` no se ejecutan. Puede tener más de una instrucción `Exit` en el mismo procedimiento. Además, puede combinar instrucciones `Return` y `Exit` en el mismo procedimiento.  
   
@@ -34,7 +34,7 @@ Un *procedimiento* es un bloque de instrucciones de Visual Basic dentro de una i
  En la mayoría de los casos, un procedimiento necesita operar en datos diferentes cada vez que se llama. Puede pasar esta información al procedimiento como parte de la llamada a procedimiento. El procedimiento define cero o más *parámetros*, cada uno de los cuales representa un valor que espera que le pase. Cada parámetro de la definición del procedimiento tiene un *argumento* correspondiente en la llamada a procedimiento. Un argumento representa el valor que pasa al parámetro correspondiente en una llamada a procedimiento determinada.  
   
 ## <a name="types-of-procedures"></a>Tipos de procedimientos  
- Visual Basic usa varios tipos de procedimientos:  
+ Visual Basic uses several types of procedures:  
   
 - Los [procedimientos Sub](./sub-procedures.md) realizan acciones, pero no devuelven un valor al código de llamada.  
   
@@ -63,7 +63,7 @@ Un *procedimiento* es un bloque de instrucciones de Visual Basic dentro de una i
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Crear un procedimiento](./how-to-create-a-procedure.md)
+- [Crear un procedimiento](./how-to-create-a-procedure.md)
 - [Subprocedimientos](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
 - [Procedimientos de propiedades](./property-procedures.md)

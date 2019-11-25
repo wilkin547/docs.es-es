@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 272c224c8a1c5061392856685f374237f8a10579
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9b456dc407f634e7f40f69bbac9b6d932f1f4420
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956870"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350707"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Acceso a atributos en DOM
 
@@ -28,7 +28,6 @@ Si desea obtener todos los atributos de un nodo de elemento en una colección, l
 El siguiente ejemplo de código muestra cómo recuperar una colección de atributos y cómo utilizar el método **Count** de forma que el índice de bucle la recorra en iteración. El código muestra, a continuación, cómo recuperar un solo atributo de la colección y mostrar su valor.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -118,7 +117,7 @@ public class Sample
 
 Este ejemplo muestra el siguiente resultado:
 
-**Salida**
+**Resultado**
 
 Muestra todos los atributos en la colección.
 
@@ -147,7 +146,6 @@ Como **XmlAttributeCollection** es una colección y se puede iterar por nombre o
 Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.IO
 Imports System.Xml
 
@@ -197,7 +195,6 @@ public class Sample
 Para recuperar un solo nodo de atributo del elemento, se utiliza método <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType>. Este método devuelve un objeto de tipo **XmlAttribute**. Una vez que se tiene el objeto **XmlAttribute**, todos los métodos y propiedades de la clase <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> están disponibles en ese objeto, como **OwnerElement**.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 

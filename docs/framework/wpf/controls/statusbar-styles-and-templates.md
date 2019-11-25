@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], StatusBar
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-ms.openlocfilehash: b1dd575d58571b845fc849ca432ad440d1ce3ec4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 843c9003edbe94115719a63a968eda3833515a85
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458261"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283374"
 ---
 # <a name="statusbar-styles-and-templates"></a>Estilos y plantillas de StatusBar
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Primitives.StatusBar>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Primitives.StatusBar>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="statusbar-parts"></a>Partes de StatusBar  
  El control <xref:System.Windows.Controls.Primitives.StatusBar> no tiene ninguna parte con nombre.  
@@ -61,4 +61,4 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

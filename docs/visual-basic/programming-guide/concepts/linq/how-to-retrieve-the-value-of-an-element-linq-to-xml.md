@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: recuperar el valor de un elemento (LINQ to XML) (Visual Basic)'
+title: 'Cómo: Recuperar el valor de un elemento (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: cbeda0b7f4b1c1161b14c0ecf8c0971139405a75
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: cc0ddb9c4fc6364d4b10ebac378ab47cc38e508f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320424"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352421"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Cómo: recuperar el valor de un elemento (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)
 Este tema muestra cómo obtener el valor de los elementos. Existen dos formas principales de hacerlo. Una forma consiste en convertir un elemento <xref:System.Xml.Linq.XElement> o un atributo <xref:System.Xml.Linq.XAttribute> al tipo deseado. El operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado y lo asigna a la variable. Como alternativa, se puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  Con Visual Basic, el mejor método consiste en usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  

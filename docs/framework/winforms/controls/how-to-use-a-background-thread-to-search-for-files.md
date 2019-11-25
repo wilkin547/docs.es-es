@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para usar un subproceso en segundo plano para buscar archivos
+title: 'Cómo: Utilizar un subproceso en segundo plano para buscar archivos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +10,36 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5dcb990266b94916bec715520a61f6a102c1e6ef
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: db9be1f57e15baac4820d33f6f245d69bd1ab430
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015747"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351951"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procedimiento para usar un subproceso en segundo plano para buscar archivos
-El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega funcionalidad <xref:System.Threading> al espacio de nombres; sin embargo <xref:System.Threading> , el espacio de nombres se conserva por compatibilidad con versiones anteriores y uso futuro, si así lo decide. Para obtener más información, vea [información general sobre el componente BackgroundWorker](backgroundworker-component-overview.md).
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Cómo: Utilizar un subproceso en segundo plano para buscar archivos
+The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose. For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).
 
- Windows Forms utiliza el modelo de contenedor uniproceso (STA) porque Windows Forms se basa en ventanas nativas de Win32 que son subprocesos de apartamento de forma inherente. El modelo STA implica que se puede crear una ventana en cualquier subproceso, pero no puede cambiar de subprocesos una vez creada, y todas las llamadas de función a ella deben realizarse en su subproceso de creación. Fuera de Windows Forms, las clases del .NET Framework utilizan el modelo de subprocesamiento libre. Para obtener información sobre los subprocesos en el .NET Framework, vea [subprocesamiento](../../../standard/threading/index.md).
+ Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded. The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread. Outside Windows Forms, classes in the .NET Framework use the free threading model. For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).
 
- El modelo STA requiere que se calculen las referencias de los métodos de un control que se deben llamar desde fuera del subproceso de creación del control (se ejecutan en) el subproceso de creación del control. La clase <xref:System.Windows.Forms.Control> base proporciona varios métodos (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>y <xref:System.Windows.Forms.Control.EndInvoke%2A>) para este propósito. <xref:System.Windows.Forms.Control.Invoke%2A>realiza llamadas de método sincrónicas; <xref:System.Windows.Forms.Control.BeginInvoke%2A> realiza llamadas a métodos asincrónicos.
+ The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread. The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose. <xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.
 
- Si utiliza el multithreading en el control para tareas que consumen muchos recursos, la interfaz de usuario puede seguir respondiendo mientras se ejecuta un cálculo de uso intensivo de recursos en un subproceso en segundo plano.
+ If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.
 
- En el ejemplo siguiente`DirectorySearcher`() se muestra un control de Windows Forms multiproceso que usa un subproceso en segundo plano para buscar de forma recursiva en un directorio los archivos que coinciden con una cadena de búsqueda especificada y, a continuación, rellena un cuadro de lista con el resultado de la búsqueda. Los conceptos clave que se ilustran en el ejemplo son los siguientes:
+ The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result. The key concepts illustrated by the sample are as follows:
 
-- `DirectorySearcher`inicia un nuevo subproceso para realizar la búsqueda. El subproceso ejecuta el `ThreadProcedure` método que, a su vez, llama `RecurseDirectory` al método auxiliar para realizar la búsqueda real y rellenar el cuadro de lista. Sin embargo, rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los dos elementos con viñetas siguientes.
+- `DirectorySearcher` starts a new thread to perform the search. The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box. However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.
 
-- `DirectorySearcher`define el `AddFiles` método para agregar archivos a un cuadro de lista; sin `RecurseDirectory` embargo, no `AddFiles` puede `AddFiles` invocar directamente porque solo puede ejecutarse en `DirectorySearcher`el subproceso STA que creó.
+- `DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.
 
-- La única forma `RecurseDirectory` de llamar `AddFiles` a es a través de una llamada entre subprocesos, es <xref:System.Windows.Forms.Control.Invoke%2A> decir, mediante `AddFiles` una llamada a o <xref:System.Windows.Forms.Control.BeginInvoke%2A> para `DirectorySearcher`calcular las referencias al subproceso de creación de. `RecurseDirectory`utiliza <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que se pueda realizar la llamada de forma asincrónica.
+- The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`. `RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.
 
-- La serialización de un método requiere el equivalente de un puntero de función o una devolución de llamada. Esto se logra mediante el uso de delegados en el .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A>toma un delegado como argumento. `DirectorySearcher`por lo tanto, define`FileListDelegate`un delegado () `AddFiles` , se enlaza a `FileListDelegate` una instancia de en su constructor y pasa esta instancia <xref:System.Windows.Forms.Control.BeginInvoke%2A>de delegado a. `DirectorySearcher`también define un delegado de eventos cuyas referencias se calculan cuando se completa la búsqueda.
+- Marshaling a method requires the equivalent of a function pointer or callback. This is accomplished using delegates in the .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument. `DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.
 
 ```vb
 Option Strict
 Option Explicit
 
-Imports System
 Imports System.IO
 Imports System.Threading
 Imports System.Windows.Forms
@@ -569,20 +568,19 @@ namespace Microsoft.Samples.DirectorySearcher
 }
 ```
 
-## <a name="using-the-multithreaded-control-on-a-form"></a>Usar el control multiproceso en un formulario
- En el ejemplo siguiente se muestra cómo se puede `DirectorySearcher` usar el control multiproceso en un formulario.
+## <a name="using-the-multithreaded-control-on-a-form"></a>Using the Multithreaded Control on a Form
+ The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.
 
 ```vb
 Option Explicit
 Option Strict
 
-Imports Microsoft.Samples.DirectorySearcher
-Imports System
-Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Imports System.Data
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports Microsoft.Samples.DirectorySearcher
 
 Namespace SampleUsage
 
@@ -664,14 +662,14 @@ End Namespace
 ```csharp
 namespace SampleUsage
 {
-   using Microsoft.Samples.DirectorySearcher;
    using System;
-   using System.Drawing;
    using System.Collections;
    using System.ComponentModel;
-   using System.Windows.Forms;
    using System.Data;
-
+   using System.Drawing;
+   using System.Windows.Forms;
+   using Microsoft.Samples.DirectorySearcher;
+   
    /// <summary>
    ///      Summary description for Form1.
    /// </summary>
@@ -766,4 +764,4 @@ namespace SampleUsage
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Información general sobre el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Event-based Asynchronous Pattern Overview](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)

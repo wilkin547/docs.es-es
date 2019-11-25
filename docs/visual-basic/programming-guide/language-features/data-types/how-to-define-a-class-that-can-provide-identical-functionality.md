@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Defina una clase que pueda proporcionar una funcionalidad idéntica en tipos de datos diferentes (Visual Basic)
+title: 'Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757395"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350040"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procedimiento Defina una clase que pueda proporcionar una funcionalidad idéntica en tipos de datos diferentes (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)
 Puede definir una clase desde la que se puedan crear objetos que proporcionen una funcionalidad idéntica en tipos de datos diferentes. Para ello, especifique uno o más *parámetros de tipo* en la definición. Posteriormente, la clase puede servir de plantilla para los objetos que usan distintos tipos de datos. Una clase definida de esta manera se denomina *clase genérica*.  
   
  La ventaja de definir una clase genérica es que se define una sola vez y, después, el código puede usarla para crear muchos objetos que emplean una gran variedad de tipos de datos. El resultado es rendimiento mayor que al definir la clase con el tipo `Object` .  
@@ -62,7 +62,7 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
 6. Asegúrese de que el código solo usa operaciones y métodos admitidos por cualquier tipo de datos que pueda proporcionar a `itemType`.  
   
-     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista. Un constructor con parámetros permite el uso de código para establecer el límite superior de `items`, y el constructor sin parámetros lo establece en 9 (para un total de 10 elementos).  
+     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista. A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -81,5 +81,5 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
 - [Independencia del lenguaje y componentes independientes del lenguaje](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Cómo: Utilizar una clase genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Utilizar una clase genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)

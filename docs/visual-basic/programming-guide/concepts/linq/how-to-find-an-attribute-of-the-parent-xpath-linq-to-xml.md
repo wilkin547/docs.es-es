@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
+title: 'Cómo: Buscar un atributo del elemento principal (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: ce8fbb828a5ea8df79f449d50f1d61702a4e3df2
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: c4cb2f2e52aeaa42fd69b83c19c47fd205d48cbc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249925"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352955"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar un atributo del elemento primario (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo desplazarse hasta el elemento primario y buscar un atributo en él.  
   
  La expresión XPath es:  
@@ -19,7 +19,7 @@ En este tema se muestra cómo desplazarse hasta el elemento primario y buscar un
 ## <a name="example"></a>Ejemplo  
  Este ejemplo busca primero un elemento `Author`. Después busca el atributo `id` del elemento primario.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -49,4 +49,4 @@ id="bk101"
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

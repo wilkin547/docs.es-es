@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3224250b08a780b87b9b7f96547830b0563daadf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559507"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351938"
 ---
 # <a name="extending-the-dom"></a>Extender DOM
 
@@ -127,7 +127,6 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 En el ejemplo siguiente se cuenta el número de elementos de un documento XML:
 
 ```vb
-Imports System
 Imports System.Xml
 Imports System.IO
 
@@ -235,7 +234,7 @@ book.xml
 </book>
 ```
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Resultados
 
 ```console
 Number of elements in book.xml: 3
@@ -251,7 +250,7 @@ Para obtener más información sobre el control de eventos de nodo, vea [Eventos
 
 ## <a name="default-attributes-and-the-createelement-method"></a>Atributos predeterminados y el método CreateElement
 
-Si va a invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A> en una clase derivada, los atributos predeterminados no se agregan al crear elementos nuevos mientras se edita el documento. Esto solo constituye un problema durante la edición. Puesto que el método <xref:System.Xml.XmlDocument.CreateElement%2A> es responsable de la adición de atributos predeterminados a un <xref:System.Xml.XmlDocument>, debe codificar esta funcionalidad en dicho método <xref:System.Xml.XmlDocument.CreateElement%2A>. Si va a cargar un <xref:System.Xml.XmlDocument> que incluye atributos predeterminados, se controlarán correctamente. Para obtener más información sobre los atributos predeterminados, vea [Crear nuevos atributos para elementos en DOM](creating-new-attributes-for-elements-in-the-dom.md).
+Si va a invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A> en una clase derivada, los atributos predeterminados no se agregan al crear elementos nuevos mientras se edita el documento. Esto solo constituye un problema durante la edición. Puesto que el método <xref:System.Xml.XmlDocument.CreateElement%2A> es responsable de la adición de atributos predeterminados a un <xref:System.Xml.XmlDocument>, debe programar esta funcionalidad en dicho método <xref:System.Xml.XmlDocument.CreateElement%2A>. Si va a cargar un <xref:System.Xml.XmlDocument> que incluye atributos predeterminados, se controlarán correctamente. Para obtener más información sobre los atributos predeterminados, vea [Crear nuevos atributos para elementos en DOM](creating-new-attributes-for-elements-in-the-dom.md).
 
 ## <a name="see-also"></a>Vea también
 

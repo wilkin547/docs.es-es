@@ -2,17 +2,17 @@
 title: Configuración simplificada de los servicios de WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 57aa92eb0a2978ab463c368ed70fb298cc5fb90d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c78f5ca281c784a8f554ad1f4e3a1f245eee4914
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038870"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141864"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configuración simplificada de los servicios de WCF
 Este ejemplo muestra cómo implementar y configurar un servicio y un cliente típicos con Windows Communication Foundation (WCF). Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
   
- Este servicio, que expone un extremo para comunicar con el servicio, utiliza la configuración simplificada en [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Antes de [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], el extremo se solía definir en un archivo de configuración (Web.config), como se muestra en el siguiente código de configuración de ejemplo.  
+ Este servicio, que expone un punto de conexión para comunicarse con el servicio, utiliza la configuración simplificada en .NET Framework 4. Antes de .NET Framework 4, el punto de conexión se define normalmente en un archivo de configuración (Web. config), tal como se muestra en el siguiente código de configuración de ejemplo.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -37,7 +37,7 @@ Este ejemplo muestra cómo implementar y configurar un servicio y un cliente tí
 </configuration>  
 ```  
   
- En [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], el elemento `<service>` es opcional. Cuando un servicio no define ningún punto de conexión, se agregan al servicio un punto de conexión para cada dirección base y el contrato implementado. La dirección base se anexa al nombre del contrato para determinar el punto de conexión y el esquema de direcciones determina el enlace. El siguiente ejemplo de código muestra un archivo de configuración simplificado. Tal y como se ha configurado, un cliente puede `http://localhost/servicemodelsamples/service.svc` tener acceso al servicio en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local. El servicio no expone ningún metadato de forma predeterminada. Como tal, el servicio activa el comportamiento <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
+ En .NET Framework 4, el elemento `<service>` es opcional. Cuando un servicio no define ningún punto de conexión, se agregan al servicio un punto de conexión para cada dirección base y el contrato implementado. La dirección base se anexa al nombre del contrato para determinar el punto de conexión y el esquema de direcciones determina el enlace. El siguiente ejemplo de código muestra un archivo de configuración simplificado. Tal y como se ha configurado, se puede tener acceso al servicio en `http://localhost/servicemodelsamples/service.svc` un cliente en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local. El servicio no expone ningún metadato de forma predeterminada. Como tal, el servicio activa el comportamiento <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -74,7 +74,7 @@ Este ejemplo muestra cómo implementar y configurar un servicio y un cliente tí
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   

@@ -1,5 +1,5 @@
 ---
-title: Constantes definidas por el usuario (Visual Basic)
+title: Constantes definidas por el usuario
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic], circular references
@@ -9,51 +9,51 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 194a420b3749ca5c858a65c07b8c164287c1582a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645861"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354006"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes definidas por el usuario (Visual Basic)
-Una constante es un nombre descriptivo que ocupa el lugar de un número o una cadena que no cambia. Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación. Puede usar las constantes que se definen mediante los controles o componentes que funciona con, o puede crear sus propios. Se describen las constantes que crea usted mismo como *definido por el usuario*.  
+A constant is a meaningful name that takes the place of a number or string that does not change. Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación. You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
   
- Declarar una constante con el `Const` instrucción, utilizando las mismas directrices que lo haría para crear un nombre de variable. Si `Option Strict` es `On`, debe declarar explícitamente el tipo de constante.  
+ You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
   
-## <a name="const-statement-usage"></a>Utilización de la instrucción const  
- Un `Const` instrucción puede representar un matemáticas o cantidad de fecha y hora:  
+## <a name="const-statement-usage"></a>Const Statement Usage  
+ A `Const` statement can represent a mathematical or date/time quantity:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- También puede definir `String` constantes:  
+ It also can define `String` constants:  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- La expresión en el lado derecho del signo igual ( `=` ) suele ser un número o una cadena literal, pero también puede ser una expresión que da como resultado un número o una cadena (aunque esa expresión no puede contener las llamadas a funciones). Puede incluso definir constantes en términos de constantes definidas previamente:  
+ The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Ámbito de las constantes definidas por el usuario  
- Un `Const` ámbito de la instrucción es el mismo que el de una variable declarada en la misma ubicación. Puede especificar el ámbito en cualquiera de las maneras siguientes:  
+## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
+ A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
   
-- Para crear una constante que sólo existe dentro de un procedimiento, declarar dentro de ese procedimiento.  
+- To create a constant that exists only within a procedure, declare it within that procedure.  
   
-- Para crear una constante disponible para todos los procedimientos dentro de una clase, pero no para el código fuera de ese módulo, declárelo en la sección de declaraciones de la clase.  
+- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
   
-- Para crear una constante que esté disponible para todos los miembros de un ensamblado, pero no para los clientes fuera del ensamblado, declare mediante el `Friend` palabra clave en la sección de declaraciones de la clase.  
+- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
   
-- Para crear una constante disponible en toda la aplicación, declare mediante el `Public` palabra clave en las declaraciones de sección de la clase.  
+- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
   
- Para obtener más información, vea [Cómo: Declare una constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   
-### <a name="avoiding-circular-references"></a>Evitar referencias circulares  
- Dado que las constantes se pueden definir en términos de otras constantes, es posible crear accidentalmente un *ciclo*, o una referencia circular, entre dos o más constantes. Cuando haya dos o más constantes públicas, cada uno de los cuales se define en términos de la otra, como en el ejemplo siguiente, se produce un ciclo:  
+### <a name="avoiding-circular-references"></a>Avoiding Circular References  
+ Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- Si se produce un ciclo, Visual Basic genera un error del compilador.  
+ If a cycle occurs, Visual Basic generates a compiler error.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -63,6 +63,6 @@ Una constante es un nombre descriptivo que ocupa el lugar de un número o una ca
 - [Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Información general sobre las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Información general sobre las constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Cómo: Declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

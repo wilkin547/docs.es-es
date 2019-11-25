@@ -1,5 +1,5 @@
 ---
-title: UShort (Tipo de datos, Visual Basic)
+title: UShort (Tipo de datos)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.ushort
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: d85219fad631b09c19eac054b87d4843b0c73a45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7cdbd5fb192fd5cc1be6260dcdcdb1f30cf3f865
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646939"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343856"
 ---
-# <a name="ushort-data-type-visual-basic"></a>Tipo de datos UShort (Visual Basic)
+# <a name="ushort-data-type-visual-basic"></a>UShort data type (Visual Basic)
 
-Contiene enteros de 16 bits sin signo (2 bytes) cuyo valor oscila de 0 a 65.535.  
+Holds unsigned 16-bit (2-byte) integers ranging in value from 0 through 65,535.  
   
 ## <a name="remarks"></a>Comentarios
 
- Use la `UShort` tipo de datos para contener datos binarios demasiado grandes para `Byte`.  
+ Use the `UShort` data type to contain binary data too large for `Byte`.  
   
  El valor predeterminado de `UShort` es 0.  
 
-## <a name="literal-assignments"></a>Asignaciones de literales
+## <a name="literal-assignments"></a>Literal assignments
 
-Puede declarar e inicializar un `UShort` variable mediante la asignación de un literal decimal, un literal hexadecimal, un literal octal, o (a partir de 2017 Visual Basic) un literal binario. Si el literal entero está fuera del intervalo de `UShort` (es decir, si es inferior a <xref:System.UInt16.MinValue?displayProperty=nameWithType> o mayor que <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.
+You can declare and initialize a `UShort` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. Si el literal entero está fuera del intervalo de `UShort` (es decir, si es inferior a <xref:System.UInt16.MinValue?displayProperty=nameWithType> o mayor que <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.
 
-En el ejemplo siguiente, los enteros que equivalen a 65 034 que se representan como decimal, hexadecimal, literales binarios y se asignan a `UShort` valores.
+In the following example, integers equal to 65,034 that are represented as decimal, hexadecimal, and binary literals are assigned to `UShort` values.
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
-> Use el prefijo `&h` o `&H` para denotar un literal hexadecimal, el prefijo `&b` o `&B` para denotar un literal binario y el prefijo `&o` o `&O` para denotar un literal octal. Los literales decimales no tienen prefijo.
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Los literales decimales no tienen prefijo.
 
-A partir de Visual Basic 2017, también puede usar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como en el ejemplo siguiente se muestra.
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-A partir de Visual Basic 15.5, también puede usar el carácter de subrayado (`_`) como separador inicial entre el prefijo y los dígitos hexadecimales, binarios u octales. Por ejemplo:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Por ejemplo:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -56,23 +56,23 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-También pueden incluir literales numéricos el `US` o `us` [carácter de tipo](../../programming-guide/language-features/data-types/type-characters.md) para denotar el `UShort` tipo de datos, como se muestra en el ejemplo siguiente.
+Numeric literals can also include the `US` or `us` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UShort` data type, as the following example shows.
 
 ```vb
 Dim number = &H_5826us
 ```
 
-## <a name="programming-tips"></a>Sugerencias de programación
+## <a name="programming-tips"></a>sugerencias de programación
   
-- **Números negativos.** Dado que `UShort` es un tipo sin signo, que no puede representar un número negativo. Si usa el operador unario menos (`-`) operador en una expresión que se evalúa como tipo `UShort`, Visual Basic convierte la expresión a `Integer` primero.  
+- **Negative Numbers.** Because `UShort` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UShort`, Visual Basic converts the expression to `Integer` first.  
   
-- **Conformidad con CLS.** El `UShort` es de tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
+- **CLS Compliance.** The `UShort` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
   
-- **Ampliación.** El `UShort` tipo de datos se amplía a `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `UShort` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Widening.** The `UShort` data type widens to `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UShort` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **Caracteres de tipo.** Anexar los caracteres de tipo literal `US` a un literal, se convierte a la `UShort` tipo de datos. `UShort` no tiene ningún carácter de tipo identificador.  
+- **Type Characters.** Appending the literal type characters `US` to a literal forces it to the `UShort` data type. `UShort` has no identifier type character.  
   
-- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt16?displayProperty=nameWithType>.  
+- **Framework Type.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -80,5 +80,5 @@ Dim number = &H_5826us
 - [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
 - [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

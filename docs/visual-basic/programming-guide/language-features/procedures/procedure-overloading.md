@@ -1,5 +1,5 @@
 ---
-title: Sobrecarga de procedimiento (Visual Basic)
+title: Sobrecarga de procedimientos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures
@@ -17,74 +17,74 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 91e76e8c051b1d6f8b6fc1604018a26b23b4945b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663303"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352596"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimiento (Visual Basic)
 
-*Sobrecarga* un procedimiento significa definirlo en varias versiones, con el mismo nombre pero con distintas listas de parámetros. El propósito de sobrecarga es definir varias versiones estrechamente relacionadas de un procedimiento sin tener que distinguirlas por su nombre. Hacer esto mediante la variación de la lista de parámetros.
+*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
 
-## <a name="overloading-rules"></a>Reglas de sobrecarga
+## <a name="overloading-rules"></a>Overloading Rules
 
-Cuando se sobrecarga un procedimiento, se aplican las reglas siguientes:
+When you overload a procedure, the following rules apply:
 
-- **Mismo nombre**. Cada versión sobrecargada debe usar el mismo nombre de procedimiento.
+- **Same Name**. Each overloaded version must use the same procedure name.
 
-- **Firma diferente**. Cada versión sobrecargada debe diferir de todas las versiones sobrecargadas en al menos uno de los siguientes aspectos:
+- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
 
-  - Número de parámetros
+  - Number of parameters
 
-  - Orden de los parámetros
+  - Order of the parameters
 
-  - Tipos de datos de los parámetros
+  - Data types of the parameters
 
-  - Número de parámetros de tipo (para un procedimiento genérico)
+  - Number of type parameters (for a generic procedure)
 
-  - Tipo de valor devuelto (solo para un operador de conversión)
+  - Return type (only for a conversion operator)
 
-  Junto con el nombre del procedimiento, los elementos anteriores se denominan colectivamente la *firma* del procedimiento. Cuando se llama a un procedimiento sobrecargado, el compilador utiliza la firma para comprobar que la llamada coincide con la definición.
+  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
 
-- **Los elementos no forma parte de la firma**. No se pueden sobrecargar un procedimiento sin modificar la firma. En concreto, no se puede sobrecargar un procedimiento cambiando únicamente uno o varios de los siguientes elementos:
+- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
 
-  - Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y `Static`
+  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
 
-  - Nombres de parámetro de tipo o parámetro
+  - Parameter or type parameter names
 
-  - Restricciones de parámetro de tipo (para un procedimiento genérico)
+  - Type parameter constraints (for a generic procedure)
 
-  - Palabras clave de modificador de parámetro, como `ByRef` y `Optional`
+  - Parameter modifier keywords, such as `ByRef` and `Optional`
 
-  - Si devuelve un valor
+  - Whether it returns a value
 
-  - El tipo de datos del valor devuelto (excepto para un operador de conversión)
+  - The data type of the return value (except for a conversion operator)
 
-  Los elementos de la lista anterior no forman parte de la firma. Aunque no se pueden utilizar para diferenciar entre versiones sobrecargadas, se puede variar entre las versiones sobrecargadas que correctamente se diferencian por sus firmas.
+  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
 
-- **Los argumentos enlazados**. Si piensa pasar una variable de objeto enlazado en tiempo de ejecución a una versión sobrecargada, debe declarar el parámetro apropiado como <xref:System.Object>.
+- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
 
-## <a name="multiple-versions-of-a-procedure"></a>Varias versiones de un procedimiento
+## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
 
-Supongamos que está escribiendo un `Sub` procedimiento para registrar una transacción en el saldo de un cliente y desea poder hacer referencia al cliente por nombre o por número de cuenta. Para dar cabida a esto, puede definir dos diferentes `Sub` procedimientos, como en el ejemplo siguiente:
+Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Versiones sobrecargadas
+### <a name="overloaded-versions"></a>Overloaded Versions
 
-Es una alternativa a la sobrecarga de un único nombre de procedimiento. Puede usar el [sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md) palabra clave para definir una versión del procedimiento para cada lista de parámetros, como se indica a continuación:
+An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Sobrecargas adicionales
+#### <a name="additional-overloads"></a>Additional Overloads
 
-Si desea aceptar un importe de transacción en el `Decimal` o `Single`, se podrían sobrecargar aún más `post` para permitir esta variación. Si lo hizo en cada una de las sobrecargas en el ejemplo anterior, tendría cuatro `Sub` procedimientos, todo ello con el mismo nombre pero con cuatro firmas diferentes.
+If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
 
-## <a name="advantages-of-overloading"></a>Ventajas de la sobrecarga
+## <a name="advantages-of-overloading"></a>Advantages of Overloading
 
-La ventaja de sobrecargar un procedimiento es en la flexibilidad de la llamada. Para usar el `post` procedimiento declarado en el ejemplo anterior, el código de llamada puede obtener la identificación del cliente como un `String` o un `Integer`y, a continuación, llamar al mismo procedimiento en ambos casos. Esto se ilustra en el siguiente ejemplo:
+The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. Esto se ilustra en el siguiente ejemplo:
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -93,10 +93,10 @@ La ventaja de sobrecargar un procedimiento es en la flexibilidad de la llamada. 
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
-- [Cómo: Definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Cómo: Llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
-- [Cómo: Sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
+- [Sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md)
 - [Resolución de sobrecargas](./overload-resolution.md)
 - [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)

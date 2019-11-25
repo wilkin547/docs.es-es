@@ -1,19 +1,19 @@
 ---
-title: Interoperabilidad COM (Visual Basic)
+title: Interoperabilidad COM
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcfdb5f3661292dda2e084eca22afab9bbec15d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627075"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348002"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
-El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. En esta sección se tratan algunos de los problemas asociados con la creación y el uso de objetos COM con Visual Basic.  
+El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a la interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -22,16 +22,16 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  [Cómo: Hacer referencia a objetos COM desde Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Describe cómo agregar referencias a objetos COM que tienen bibliotecas de tipos.  
   
- [Cómo: Trabajar con controles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Muestra cómo usar los controles ActiveX existentes para agregar características al cuadro de herramientas de Visual Studio.  
+ [Trabajar con controles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
   
  [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Describe el proceso de llamar a las API que forman parte del sistema operativo Windows.  
   
- [Cómo: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ [Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  Muestra cómo definir y llamar a la función `MessageBox` en User32.dll.  
   
- [Procedimientos: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  Muestra cómo llamar a una función de Windows que tiene un parámetro de un tipo sin signo.  
   
  [Tutorial: Crear objetos COM con Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
@@ -43,7 +43,7 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
  Proporciona información general sobre cómo usar objetos COM y .NET Framework en la misma aplicación.  
   
- [Tutorial: Implementar la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [Tutorial: Implementación de la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Describe cómo usar objetos COM existentes como base para nuevos objetos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

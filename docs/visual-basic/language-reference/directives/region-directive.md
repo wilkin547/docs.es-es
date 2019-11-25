@@ -1,5 +1,5 @@
 ---
-title: '#Directiva de región (Visual Basic)'
+title: '#Directiva Region'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cf9b103486378d001b588aa285f590980b51bb8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812650"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343792"
 ---
 # <a name="region-directive"></a>#Region (Directiva)
+
 Contrae y oculta secciones de código en archivos de Visual Basic.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,15 +30,17 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`identifier_string`|Obligatorio. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
+|`identifier_string`|Requerido. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
 |`#End Region`|Finaliza el bloque `#Region`.|  
   
 ## <a name="remarks"></a>Comentarios  
- La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio. Puede colocar, o *anidar*, las regiones dentro de otras regiones para agrupar regiones similares.  
+
+ La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio. You can place, or *nest*, regions within other regions to group similar regions together.  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se usa la directiva `#Region`.  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
@@ -46,4 +49,4 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
 
 - [#If...Then...#Else (directivas)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Esquematización](/visualstudio/ide/outlining)
-- [Cómo: Contraer y ocultar secciones de código](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+- [Contraer y ocultar secciones de código](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

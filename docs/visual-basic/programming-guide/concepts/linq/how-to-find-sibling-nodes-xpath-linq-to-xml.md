@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: buscar nodos del mismo nivel (XPath-LINQ to XML) (Visual Basic)'
+title: 'Cómo: Buscar nodos del mismo nivel (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 9640c8708082965515d4b90c979519f7efdaa2ba
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582708"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344639"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar nodos del mismo nivel (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)
 
 Quizás desea buscar todos los elementos relacionados de un nodo que tienen un nombre específico. La recopilación resultante puede incluir el nodo de contexto si también tiene el nombre específico.
 
@@ -71,4 +71,4 @@ Results are identical
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML para los usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

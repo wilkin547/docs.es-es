@@ -1,23 +1,23 @@
 ---
-title: Características del lenguaje Visual Basic
+title: Características del lenguaje
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053787"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345067"
 ---
 # <a name="visual-basic-language-features"></a>Características del lenguaje Visual Basic
-Los temas siguientes se presentan y tratan los componentes esenciales de Visual Basic, un lenguaje de programación orientada a objetos. Después de crear la interfaz de usuario para su aplicación con formularios y controles, debe escribir el código que define el comportamiento de la aplicación. Al igual que con cualquier lenguaje de programación modernos, Visual Basic admite un número de elementos de lenguaje y construcciones de programación comunes.  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. Después de crear la interfaz de usuario para su aplicación con formularios y controles, debe escribir el código que define el comportamiento de la aplicación. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- Si ha programado en otros lenguajes, gran parte del material tratado en esta sección le resultará familiar. Aunque la mayoría de las construcciones son similar a los de otros lenguajes, la naturaleza orientada a eventos de Visual Basic presenta algunas diferencias sutiles.  
+ Si ha programado en otros lenguajes, gran parte del material tratado en esta sección le resultará familiar. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- Si está familiarizado con la programación, el material de esta sección sirve como introducción a los bloques de creación básicos para escribir código. Una vez que comprenda los conceptos básicos, puede crear aplicaciones eficaces con Visual Basic.  
+ Si está familiarizado con la programación, el material de esta sección sirve como introducción a los bloques de creación básicos para escribir código. Once you understand the basics, you can create powerful applications using Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -83,4 +83,4 @@ Los temas siguientes se presentan y tratan los componentes esenciales de Visual 
  Describe algunos de los tipos de colecciones proporcionadas por .NET Framework. Muestra cómo usar colecciones sencillas y colecciones de pares clave-valor.  
   
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
- Proporciona información de referencia sobre diversos aspectos de programación en Visual Basic.
+ Provides reference information on various aspects of Visual Basic programming.

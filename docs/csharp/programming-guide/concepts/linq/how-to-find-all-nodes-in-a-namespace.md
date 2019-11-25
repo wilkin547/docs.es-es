@@ -2,12 +2,12 @@
 title: Procedimiento para buscar todos los nodos de un espacio de nombres (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253780"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141185"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Procedimiento para buscar todos los nodos de un espacio de nombres (C#)
 Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.  

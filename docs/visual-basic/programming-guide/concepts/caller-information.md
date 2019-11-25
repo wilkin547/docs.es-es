@@ -1,20 +1,20 @@
 ---
-title: Información del llamador (Visual Basic)
+title: Información del llamador
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349472"
 ---
-# <a name="caller-information-visual-basic"></a>Información del llamador (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic)
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.  
   
  Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Atributo|Descripción|Tipo|  
+|Atributo|Descripción|Type|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|  

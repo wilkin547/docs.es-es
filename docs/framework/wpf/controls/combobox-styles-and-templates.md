@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 29b5c351031b799c148c1e4f525e7bdcf96480bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460772"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283786"
 ---
 # <a name="combobox-styles-and-templates"></a>Estilos y plantillas de ComboBox
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.ComboBox>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.ComboBox>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="combobox-parts"></a>Elementos ComboBox  
  En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.ComboBox>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contiene el texto del <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|La lista desplegable que contiene los elementos del cuadro combinado.|  
@@ -43,7 +43,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |Válido|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `false`.|  
 |InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el foco.|  
 |InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> es `true` tiene el control no tiene el foco.|  
-|edita|EditStates|La propiedad <xref:System.Windows.Controls.ComboBox.IsEditable%2A> es `true`.|  
+|Edita|EditStates|La propiedad <xref:System.Windows.Controls.ComboBox.IsEditable%2A> es `true`.|  
 |No editables|EditStates|La propiedad <xref:System.Windows.Controls.ComboBox.IsEditable%2A> es `false`.|  
   
 ## <a name="comboboxitem-parts"></a>Elementos de ComboBoxItem  
@@ -84,4 +84,4 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

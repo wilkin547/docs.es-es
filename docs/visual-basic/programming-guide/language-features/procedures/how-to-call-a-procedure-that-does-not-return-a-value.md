@@ -1,30 +1,30 @@
 ---
-title: Procedimiento Llamar a un procedimiento que no devuelve un valor (Visual Basic)
+title: 'Cómo: Llamar a un procedimiento que no devuelve un valor'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5de98c6edf795a11bd9f0465aa6919f09eebfa
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864239"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340959"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Procedimiento Llamar a un procedimiento que no devuelve un valor (Visual Basic)
-Un `Sub` procedimiento no devuelve un valor al código de llamada. Llama de forma explícita con una instrucción independiente que realiza la llamada. No se puede llamar a simplemente utilizando su nombre dentro de una expresión.  
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Cómo: Llamar a un procedimiento que no devuelve un valor (Visual Basic)
+A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
   
-### <a name="to-call-a-sub-procedure"></a>Para llamar a un procedimiento Sub  
+### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
   
-1. Especifique el nombre de la `Sub` procedimiento.  
+1. Specify the name of the `Sub` procedure.  
   
-2. Siga el nombre del procedimiento con paréntesis para delimitar la lista de argumentos. Si no hay ningún argumento, opcionalmente, puede omitir los paréntesis. Sin embargo, el uso de los paréntesis hace que el código más fácil de leer.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Coloque los argumentos en la lista de argumentos entre paréntesis, separados por comas. Asegúrese de proporcionar los argumentos en el mismo orden que el `Sub` procedimiento define los parámetros correspondientes.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
   
-     El ejemplo siguiente se llama a la de Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> función para activar una ventana de aplicación. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> toma el título de ventana como único argumento. No se devuelve un valor al código de llamada. Si no se está ejecutando un proceso de Bloc de notas, en el ejemplo se produce un <xref:System.ArgumentException>. El `Shell` procedimiento se da por supuesto que las aplicaciones están en las rutas de acceso especificadas.  
+     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
@@ -36,6 +36,6 @@ Un `Sub` procedimiento no devuelve un valor al código de llamada. Llama de form
 - [Subprocedimientos](./sub-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Cómo: Crear un procedimiento](./how-to-create-a-procedure.md)
-- [Cómo: Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
-- [Cómo: Llamar a un controlador de eventos en Visual Basic](./how-to-call-an-event-handler.md)
+- [Crear un procedimiento](./how-to-create-a-procedure.md)
+- [Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

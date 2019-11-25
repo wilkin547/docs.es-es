@@ -1,15 +1,15 @@
 ---
-title: Serializar con una declaración XML (Visual Basic)
+title: Serializar con una declaración XML
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96c95b4c94290016684721a194ca31a836a49740
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786443"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350630"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializar con una declaración XML (Visual Basic)
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
 En este tema se describe cómo controlar si la serialización genera una declaración XML.  
   
 ## <a name="xml-declaration-generation"></a>Generación de declaración XML  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString())
   
 ## <a name="see-also"></a>Vea también
 
-- [Serializar árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

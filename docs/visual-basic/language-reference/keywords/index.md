@@ -1,5 +1,5 @@
 ---
-title: Palabras clave de Visual Basic
+title: Palabras clave
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reserved keywords, Visual Basic
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8fd6389db453da4352fee12e870edc3004ce8f1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197522"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338790"
 ---
 # <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
 
-En las tablas siguientes se enumeran todas las palabras clave del lenguaje Visual Basic.
+The following tables list all Visual Basic language keywords.
 
 ## <a name="reserved-keywords"></a>Palabras clave reservadas
 
@@ -80,7 +80,7 @@ Las palabras clave siguientes están *reservadas*, lo que significa que no se pu
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`y `Wend` se conservan como palabras clave reservadas, aunque ya no se usan en Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../queries/let-clause.md) (Cláusula Let).
+> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../queries/let-clause.md) (Cláusula Let).
 
 ## <a name="unreserved-keywords"></a>Palabras clave no reservadas
 

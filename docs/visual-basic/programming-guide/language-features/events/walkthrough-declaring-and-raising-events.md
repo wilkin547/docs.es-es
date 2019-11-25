@@ -1,5 +1,5 @@
 ---
-title: Declarar y generar eventos (Visual Basic)
+title: Declarar y generar eventos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -9,55 +9,55 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 20e2b0efbf40597049c515134f408927f18d5603
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f4c303604f9cf55b4ecd500636e0d2772b6234c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956329"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345086"
 ---
-# <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y generar eventos (Visual Basic)
-En este tutorial se muestra cómo declarar y generar eventos para una clase `Widget`denominada. Después de completar los pasos, es posible que desee leer el tema [complementario: Control de](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)eventos, que muestra cómo utilizar los eventos `Widget` de los objetos para proporcionar información de estado en una aplicación.  
+# <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y provocar eventos (Visual Basic)
+This walkthrough demonstrates how to declare and raise events for a class named `Widget`. After you complete the steps, you might want to read the companion topic, [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), which shows how to use events from `Widget` objects to provide status information in an application.  
   
-## <a name="the-widget-class"></a>La clase widget  
- Supongamos por el momento que tiene `Widget` una clase. La `Widget` clase tiene un método que puede tardar mucho tiempo en ejecutarse y desea que la aplicación pueda incluir algún tipo de indicador de finalización.  
+## <a name="the-widget-class"></a>The Widget Class  
+ Assume for the moment that you have a `Widget` class. Your `Widget` class has a method that can take a long time to execute, and you want your application to be able to put up some kind of completion indicator.  
   
- Por supuesto, puede hacer que el `Widget` objeto muestre un cuadro de diálogo porcentaje de finalización, pero a continuación se bloqueará este cuadro de diálogo en todos los proyectos en los `Widget` que se haya utilizado la clase. Un buen principio de diseño de objetos es permitir que la aplicación que usa un objeto controle la interfaz de usuario, a menos que el propósito completo del objeto sea administrar un formulario o un cuadro de diálogo.  
+ Of course, you could make the `Widget` object show a percent-complete dialog box, but then you would be stuck with that dialog box in every project in which you used the `Widget` class. A good principle of object design is to let the application that uses an object handle the user interface—unless the whole purpose of the object is to manage a form or dialog box.  
   
- El propósito de `Widget` es realizar otras tareas, por lo que es mejor agregar un `PercentDone` evento y dejar que el procedimiento que llama `Widget`a los métodos de llame a ese evento y muestre las actualizaciones de estado. El `PercentDone` evento también puede proporcionar un mecanismo para cancelar la tarea.  
+ The purpose of `Widget` is to perform other tasks, so it is better to add a `PercentDone` event and let the procedure that calls `Widget`'s methods handle that event and display status updates. The `PercentDone` event can also provide a mechanism for canceling the task.  
   
-#### <a name="to-build-the-code-example-for-this-topic"></a>Para compilar el ejemplo de código de este tema  
+#### <a name="to-build-the-code-example-for-this-topic"></a>To build the code example for this topic  
   
-1. Abra un nuevo proyecto de aplicación de Windows Visual Basic y cree un `Form1`formulario denominado.  
+1. Open a new Visual Basic Windows Application project and create a form named `Form1`.  
   
-2. Agregue dos botones y una etiqueta a `Form1`.  
+2. Add two buttons and a label to `Form1`.  
   
 3. Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
   
-    |Objeto|Propiedad|Parámetro|  
+    |Object|Propiedad.|Parámetro|  
     |------------|--------------|-------------|  
-    |`Button1`|`Text`|Tarea de inicio|  
+    |`Button1`|`Text`|Start Task|  
     |`Button2`|`Text`|Cancelar|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4. En el menú **proyecto** , elija **Agregar clase** para agregar una clase denominada `Widget.vb` al proyecto.  
+4. On the **Project** menu, choose **Add Class** to add a class named `Widget.vb` to the project.  
   
-#### <a name="to-declare-an-event-for-the-widget-class"></a>Para declarar un evento para la clase widget  
+#### <a name="to-declare-an-event-for-the-widget-class"></a>To declare an event for the Widget class  
   
-- Use la `Event` palabra clave para declarar un evento en `Widget` la clase. Tenga en cuenta que un evento `ByVal` puede `ByRef` tener argumentos y `Widget`, `PercentDone` como se muestra en el evento:  
+- Use the `Event` keyword to declare an event in the `Widget` class. Note that an event can have `ByVal` and `ByRef` arguments, as `Widget`'s `PercentDone` event demonstrates:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- Cuando el objeto que realiza la `PercentDone` llamada recibe un `Percent` evento, el argumento contiene el porcentaje de la tarea que ha finalizado. El `Cancel` argumento se puede establecer en `True` para cancelar el método que provocó el evento.  
+ When the calling object receives a `PercentDone` event, the `Percent` argument contains the percentage of the task that is complete. The `Cancel` argument can be set to `True` to cancel the method that raised the event.  
   
 > [!NOTE]
-> Puede declarar argumentos de evento del mismo modo que los argumentos de procedimientos, con las siguientes excepciones: Los eventos no `Optional` pueden `ParamArray` tener argumentos o, y los eventos no tienen valores devueltos.  
+> You can declare event arguments just as you do arguments of procedures, with the following exceptions: Events cannot have `Optional` or `ParamArray` arguments, and events do not have return values.  
   
- El evento es desencadenado por `LongTask` el método de `Widget` la clase. `PercentDone` `LongTask`toma dos argumentos: la cantidad de tiempo que el método está realizando el trabajo y el intervalo de tiempo mínimo antes `LongTask` de que se ponga en pausa para generar el `PercentDone` evento.  
+ The `PercentDone` event is raised by the `LongTask` method of the `Widget` class. `LongTask` takes two arguments: the length of time the method pretends to be doing work, and the minimum time interval before `LongTask` pauses to raise the `PercentDone` event.  
   
-#### <a name="to-raise-the-percentdone-event"></a>Para generar el evento PercentDone  
+#### <a name="to-raise-the-percentdone-event"></a>To raise the PercentDone event  
   
-1. Para simplificar el acceso `Timer` a la propiedad utilizada por esta clase, `Imports` agregue una instrucción al principio de la sección de declaraciones del módulo de clase, encima `Class Widget` de la instrucción.  
+1. To simplify access to the `Timer` property used by this class, add an `Imports` statement to the top of the declarations section of your class module, above the `Class Widget` statement.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
@@ -65,13 +65,13 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase `Wid
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- Cuando la aplicación llama al `LongTask` método, la `Widget` clase genera el `PercentDone` evento cada `MinimumInterval` segundos. Cuando el evento vuelve, `LongTask` comprueba si el `Cancel` argumento se estableció en `True`.  
+ When your application calls the `LongTask` method, the `Widget` class raises the `PercentDone` event every `MinimumInterval` seconds. When the event returns, `LongTask` checks to see if the `Cancel` argument was set to `True`.  
   
- Aquí se necesitan algunas renuncias. Para simplificar, `LongTask` el procedimiento presupone que sabe de antemano cuánto tiempo tardará la tarea en realizarse. Esto casi nunca es el caso. Dividir las tareas en fragmentos de tamaño uniforme puede ser difícil y, a menudo, lo más importante para los usuarios es simplemente la cantidad de tiempo que pasa antes de que obtengan una indicación de que se está produciendo algo.  
+ A few disclaimers are necessary here. For simplicity, the `LongTask` procedure assumes you know in advance how long the task will take. This is almost never the case. Dividing tasks into chunks of even size can be difficult, and often what matters most to users is simply the amount of time that passes before they get an indication that something is happening.  
   
- Es posible que haya detectado otro problema en este ejemplo. La `Timer` propiedad devuelve el número de segundos transcurridos desde la medianoche; por lo tanto, la aplicación se bloquea si se inicia justo antes de medianoche. Un enfoque más cuidadoso para medir el tiempo tomaría condiciones de límite, como esto, o evitar que se consuman por completo `Now`, mediante propiedades como.  
+ You may have spotted another flaw in this sample. The `Timer` property returns the number of seconds that have passed since midnight; therefore, the application gets stuck if it is started just before midnight. A more careful approach to measuring time would take boundary conditions such as this into consideration, or avoid them altogether, using properties such as `Now`.  
   
- Ahora que la `Widget` clase puede generar eventos, puede pasar al siguiente tutorial. [Tutorial: El `WithEvents` ](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) controlde`PercentDone` eventos muestra cómo utilizar para asociar un controlador de eventos al evento.  
+ Now that the `Widget` class can raise events, you can move to the next walkthrough. [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) demonstrates how to use `WithEvents` to associate an event handler with the `PercentDone` event.  
   
 ## <a name="see-also"></a>Vea también
 

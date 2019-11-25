@@ -1,5 +1,5 @@
 ---
-title: MID (instrucción) (Visual Basic)
+title: Mid (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MidB
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: ea22af2eb896542bfc329e087101608e08c45107
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: eeef4c13743b75a3d5e61ac46afb94d9ea105b7a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581477"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348025"
 ---
 # <a name="mid-statement"></a>Mid (Instrucción)
-Reemplaza un número especificado de caracteres de una variable de `String` por caracteres de otra cadena.  
+Replaces a specified number of characters in a `String` variable with characters from another string.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,42 +32,42 @@ Mid( _
   
 ## <a name="parts"></a>Elementos  
  `Target`  
- Requerido. Nombre de la variable de `String` que se va a modificar.  
+ Requerido. Name of the `String` variable to modify.  
   
  `Start`  
- Requerido. `Integer` expresión. Posición de carácter en `Target` donde comienza la sustitución del texto. `Start` usa un índice basado en uno.  
+ Requerido. `Integer` expression. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
   
  `Length`  
- Opcional. `Integer` expresión. Número de caracteres que se van a reemplazar. Si se omite, se usa todo `String`.  
+ Opcional. `Integer` expression. Number of characters to replace. If omitted, all of `String` is used.  
   
  `StringExpression`  
- Requerido. `String` expresión que reemplaza a parte de `Target`.  
+ Requerido. `String` expression that replaces part of `Target`.  
   
 ## <a name="exceptions"></a>Excepciones  
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` < = 0 o `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` <= 0 or `Length` < 0.|  
   
 ## <a name="remarks"></a>Comentarios  
- El número de caracteres reemplazados siempre es menor o igual que el número de caracteres de `Target`.  
+ The number of characters replaced is always less than or equal to the number of characters in `Target`.  
   
- Visual Basic tiene una función <xref:Microsoft.VisualBasic.Strings.Mid%2A> y una instrucción `Mid`. Estos elementos operan en un número especificado de caracteres de una cadena, pero la función `Mid` devuelve los caracteres mientras la instrucción `Mid` reemplaza los caracteres. Para obtener más información, vea <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. Para obtener más información, vea <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> La `MidB` instrucción de versiones anteriores de Visual Basic reemplaza una subcadena en bytes, en lugar de caracteres. Se usa principalmente para convertir cadenas en aplicaciones de juegos de caracteres de doble byte (DBCS). Todas las cadenas de Visual Basic están en Unicode y ya no se admiten `MidB`.  
+> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. It is used primarily for converting strings in double-byte character set (DBCS) applications. All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se utiliza la instrucción `Mid` para reemplazar un número especificado de caracteres de una variable de cadena por caracteres de otra cadena.  
+ This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Módulo:** `Strings`  
+ **Module:** `Strings`  
   
- **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Vea también
 

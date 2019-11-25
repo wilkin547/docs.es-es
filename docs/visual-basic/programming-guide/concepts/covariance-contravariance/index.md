@@ -1,13 +1,13 @@
 ---
-title: Covarianza y contravarianza (Visual Basic)
+title: Covarianza y contravarianza
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 8315a272aca891820f7349d854a16375abdae900
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a75970d98890cb1fb363d4672bd90d376bccf89c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524256"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352147"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Covarianza y contravarianza (Visual Basic)
 
@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-En .NET Framework 4 o posterior, Visual Basic admite la covarianza y la contravarianza en interfaces y delegados genéricos y permite la conversión implícita de parámetros de tipo genérico. Para obtener más información, vea [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (Visual Basic)) y [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) (Varianza en delegados (Visual Basic)).
+In .NET Framework 4 or later, Visual Basic supports covariance and contravariance in generic interfaces and delegates and allows for implicit conversion of generic type parameters. Para obtener más información, vea [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (Visual Basic)) y [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) (Varianza en delegados (Visual Basic)).
 
 En el ejemplo de código siguiente, se muestra la conversión implícita de referencias para interfaces genéricas.
 

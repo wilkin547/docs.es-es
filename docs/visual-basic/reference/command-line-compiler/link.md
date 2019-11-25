@@ -1,5 +1,5 @@
 ---
-title: -Link (Visual Basic)
+title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 0a6a6b6436210e699d8fd176dc1ba6e4aded7c8d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523987"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335848"
 ---
-# <a name="-link-visual-basic"></a>-Link (Visual Basic)
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -57,9 +57,9 @@ o
   
 - Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Use [-LIBPATH](libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
+ Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- Al igual que la opción del compilador [-Reference](reference.md) , la opción del compilador `-link` usa el archivo de respuesta VBC. RSP, que hace referencia a los ensamblados .NET Framework utilizados con frecuencia. Use la opción del compilador [-noconfig](noconfig.md) si no desea que el compilador use el archivo Vbc. rsp.  
+ Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
   
  La forma abreviada de `-link` es `-l`.  
   
@@ -83,7 +83,7 @@ o
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Ejemplo  
- La línea de comandos siguiente compila los ensamblados de referencia y `OfficeApp.vb` de archivos de origen de `COMData1.dll` y `COMData2.dll` para generar `OfficeApp.exe`.  
+ The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Compilador de línea de comandos de Visual Basic](index.md)
 - [Tutorial: Incrustación de los tipos de los ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
-- [-Reference (Visual Basic)](reference.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

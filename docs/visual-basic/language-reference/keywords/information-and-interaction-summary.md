@@ -1,16 +1,16 @@
 ---
-title: Resumen de información e interacción (Visual Basic)
+title: Resumen de información e interacción
 ms.date: 07/20/2015
 helpviewer_keywords:
 - information functions [Visual Basic]
 - interaction functions [Visual Basic]
 ms.assetid: 6e698461-e944-4c0f-ae48-87429f1fe740
-ms.openlocfilehash: 1157462f743396f8fb4b4304c0529db5377bd41e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2dd4a8b4c7b06d53a1f19df35cf42a451c552f7d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802757"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349791"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>Resumen de información e interacción (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  

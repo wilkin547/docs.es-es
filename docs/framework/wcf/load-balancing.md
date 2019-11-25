@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 572537826074dd51b56f1cae9edb767708bc1c3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c9a1e889ab5adcb8f0eb5ea851c81a4f9ee56e95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321031"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138543"
 ---
 # <a name="load-balancing"></a>Equilibrio de carga
 Una manera de aumentar la capacidad de las aplicaciones de Windows Communication Foundation (WCF) es escalarlas horizontalmente mediante su implementación en una granja de servidores con equilibrio de carga. Se puede equilibrar la carga de las aplicaciones WCF mediante técnicas de equilibrio de carga estándar, como equilibradores de carga de software como equilibrio de carga de red de Windows, así como dispositivos de equilibrio de carga basados en hardware.  
@@ -56,7 +56,7 @@ Una manera de aumentar la capacidad de las aplicaciones de Windows Communication
 </configuration>  
 ```  
   
- Si se usa la configuración simplificada presentada en [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], se puede lograr el mismo comportamiento mediante la siguiente configuración simplificada.  
+ Con la configuración simplificada introducida en .NET Framework 4, se puede lograr el mismo comportamiento mediante la siguiente configuración simplificada.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

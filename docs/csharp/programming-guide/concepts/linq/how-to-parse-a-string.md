@@ -1,15 +1,15 @@
 ---
-title: 'Procedimientos para: para analizar una cadena (C#)'
+title: Procedimiento para analizar una cadena (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 16310e37afec950c372c7b47637986bb0eb399b8
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 086a4baecee9ee927b08d6da53d16324ef32e8a8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956619"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140978"
 ---
-# <a name="how-to-parse-a-string-c"></a>Procedimientos para: para analizar una cadena (C#)
+# <a name="how-to-parse-a-string-c"></a>Procedimiento para analizar una cadena (C#)
 
 En este tema se muestra cómo analizar una cadena para crear un árbol XML en C#.
 
@@ -56,4 +56,4 @@ Console.WriteLine(contactNodes[0]);
 
 ## <a name="see-also"></a>Vea también
 
-- [Uso de Buscar un elemento con un atributo específico (C#)](how-to-find-an-element-with-a-specific-attribute.md)
+- [Procedimiento para buscar un elemento con un atributo específico (C#)](how-to-find-an-element-with-a-specific-attribute.md)

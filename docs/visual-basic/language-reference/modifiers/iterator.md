@@ -1,35 +1,35 @@
 ---
-title: Iterador (Visual Basic)
+title: Iterador
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Iterator
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 4f42cf864e836c53cff5e7d620f4bdfa43c4c7ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d7eaf186bae544031487ce027505e1e0d4ae0f3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661283"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351521"
 ---
 # <a name="iterator-visual-basic"></a>Iterador (Visual Basic)
-Especifica que una función o `Get` descriptor de acceso es un iterador.  
+Specifies that a function or `Get` accessor is an iterator.  
   
 ## <a name="remarks"></a>Comentarios  
- Un *iterador* realiza una iteración personalizada en una colección. Un iterador usa la [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección a la vez. Cuando un `Yield` se alcanza la instrucción, se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.  
+ An *iterator* performs a custom iteration over a collection. An iterator uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element in the collection one at a time. When a `Yield` statement is reached, the current location in code is retained. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.  
   
- Un iterador se puede implementar como una función o como un `Get` descriptor de acceso de una definición de propiedad. El `Iterator` modificador aparece en la declaración de la función de iterador o `Get` descriptor de acceso.  
+ An iterator can be implemented as a function or as a `Get` accessor of a property definition. The `Iterator` modifier appears in the declaration of the iterator function or `Get` accessor.  
   
- Llamar a un iterador desde código de cliente mediante un [For Each... Instrucción Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ You call an iterator from client code by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- El tipo de valor devuelto de una función de iterador o `Get` descriptor de acceso puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, o <xref:System.Collections.Generic.IEnumerator%601>.  
+ The return type of an iterator function or `Get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Un iterador no puede tener ninguno `ByRef` parámetros.  
+ An iterator cannot have any `ByRef` parameters.  
   
  Un iterador no puede aparecer en un evento, un constructor de instancia, un constructor estático o un destructor estático.  
   
- Un iterador puede ser una función anónima. Para obtener más información, consulta [Iteradores](../../programming-guide/concepts/iterators.md).  
+ An iterator can be an anonymous function. Para más información, vea [Iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Uso  
  El modificador `Iterator` se puede utilizar en los contextos siguientes:  
@@ -39,16 +39,16 @@ Especifica que una función o `Get` descriptor de acceso es un iterador.
 - [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra una función de iterador. La función de iterador tiene una `Yield` instrucción que está dentro de un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) bucle. Cada iteración de la [para cada](../../../visual-basic/language-reference/statements/for-each-next-statement.md) cuerpo de instrucción en `Main` crea una llamada a la `Power` función de iterador. Cada llamada a la función de iterador prosigue con la siguiente ejecución de la instrucción `Yield`, que se produce durante la siguiente iteración del bucle `For…Next`.  
+ The following example demonstrates an iterator function. The iterator function has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. Cada llamada a la función de iterador prosigue con la siguiente ejecución de la instrucción `Yield`, que se produce durante la siguiente iteración del bucle `For…Next`.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra un descriptor de acceso `Get` que es un iterador. El `Iterator` modificador está en la declaración de propiedad.  
+ En el ejemplo siguiente se muestra un descriptor de acceso `Get` que es un iterador. The `Iterator` modifier is in the property declaration.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- Para obtener ejemplos adicionales, consulte [iteradores](../../programming-guide/concepts/iterators.md).  
+ For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Propiedades de eje secundario XML (Visual Basic)
+title: XML Child Axis Property
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyChildAxis
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 88d0b1f315bc1bb9dc474604d222a8ebcc1e40aa
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582239"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349465"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Propiedades de eje secundario XML (Visual Basic)
 Proporciona el acceso a los elementos secundarios de uno de los siguientes: un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.  
@@ -31,20 +31,20 @@ object.<child>
 |Término|de esquema JSON|  
 |---|---|  
 |`object`|Requerido. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.|  
-|. <|Requerido. Denota el inicio de una propiedad de eje secundario.|  
-|`child`|Requerido. Nombre de los nodos secundarios a los que se va a tener acceso, con el formato [`prefix:]name`.<br /><br /> -    `Prefix`: opcional. Prefijo de espacio de nombres XML para el nodo secundario. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.<br />-    `Name`: necesario. Nombre del nodo secundario local. Vea [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|.<|Requerido. Denota el inicio de una propiedad de eje secundario.|  
+|`child`|Requerido. Name of the child nodes to access, of the form [`prefix:]name`.<br /><br /> -   `Prefix` - Optional. Prefijo de espacio de nombres XML para el nodo secundario. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.<br />-   `Name` - Required. Nombre del nodo secundario local. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Requerido. Denota el final de una propiedad de eje secundario.|  
   
 ## <a name="return-value"></a>Valor devuelto  
  Una colección de objetos <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="remarks"></a>Comentarios  
- Puede usar una propiedad de eje secundario XML para tener acceso a los nodos secundarios por nombre desde un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o desde una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Utilice la propiedad XML `Value` para tener acceso al valor del primer nodo secundario de la colección devuelta. Para obtener más información, vea [propiedad valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Puede usar una propiedad de eje secundario XML para tener acceso a los nodos secundarios por nombre desde un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o desde una colección de objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Utilice la propiedad XML `Value` para tener acceso al valor del primer nodo secundario de la colección devuelta. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- El compilador Visual Basic convierte las propiedades del eje secundario en llamadas al método <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+ The Visual Basic compiler converts child axis properties to calls to the <xref:System.Xml.Linq.XContainer.Elements%2A> method.  
   
 ## <a name="xml-namespaces"></a>Espacios de nombres XML  
- El nombre de una propiedad de eje secundario puede usar únicamente prefijos de espacios de nombres XML declarados globalmente con la instrucción `Imports`. No puede utilizar prefijos de espacio de nombres XML declarados localmente dentro de literales de elemento XML. Para obtener más información, vea [instrucción Imports (espacio de nombres XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ El nombre de una propiedad de eje secundario puede usar únicamente prefijos de espacios de nombres XML declarados globalmente con la instrucción `Imports`. No puede utilizar prefijos de espacio de nombres XML declarados localmente dentro de literales de elemento XML. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo obtener acceso a los nodos secundarios llamados `phone` desde el objeto `contact`.  

@@ -1,13 +1,13 @@
 ---
-title: Serialización (Visual Basic)
+title: Serialización
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ce97e541cb204b92663464e36d9e8f221ccc3f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751116"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351916"
 ---
 # <a name="serialization-visual-basic"></a>Serialización (Visual Basic)
 La serialización es un proceso que consiste en convertir un objeto en una secuencia de bytes para almacenar el objeto o transmitirlo a la memoria, a una base de datos o a un archivo. Su propósito principal es guardar el estado de un objeto para poder volver a crearlo cuando sea necesario. El proceso inverso se denomina deserialización.  
@@ -59,11 +59,11 @@ La serialización es un proceso que consiste en convertir un objeto en una secue
  La serialización de diseñador es una forma especial de serialización que abarca el tipo de persistencia de objeto normalmente asociado a las herramientas de desarrollo. La serialización de diseñador es un proceso que consiste en convertir un gráfico de objetos en un archivo de código fuente que puede utilizarse posteriormente para recuperar el gráfico de objetos. Un archivo de código fuente puede contener código, marcado o incluso información de la tabla SQL.  
   
 ## <a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos  
- [Tutorial: Conservar un objeto en Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ [Walkthrough: Persisting an Object in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md) (Tutorial: Conservar un objeto en Visual Studio [Visual Basic])  
  Se explica cómo se puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.  
   
- [Cómo: Leer datos de objetos de un archivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [How to: Read Object Data from an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Lectura de datos de objetos de un archivo XML [Visual Basic])  
  Se muestra cómo leer los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
- [Cómo: Escribir datos de objetos en un archivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Escritura de datos de objetos en un archivo XML [Visual Basic])  
  Se muestra cómo escribir el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: 334cb4a44788980262110eadac3305283bb61a92
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f533142d5ba202bd4aaf628487eaaa2a18a535d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458392"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283385"
 ---
 # <a name="slider-styles-and-templates"></a>Estilos y plantillas de Slider
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Slider>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Slider>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="slider-parts"></a>Elementos deslizantes  
  En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.Slider>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Contenedor del elemento que indica la posición del <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Elemento que muestra un intervalo de selección a lo largo del <xref:System.Windows.Controls.Slider>.  El intervalo de selección solo es visible si la propiedad <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> es `true`.|  
@@ -59,4 +59,4 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

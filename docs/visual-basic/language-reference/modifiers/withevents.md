@@ -1,5 +1,5 @@
 ---
-title: WithEvents (Visual Basic)
+title: WithEvents
 ms.date: 07/20/2015
 f1_keywords:
 - vb.WithEvents
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 50d5a768393e90d28d150b451405e35e6f4c7953
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350752"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Especifica que una o varias variables de miembro declaradas hacen referencia a una instancia de una clase que puede generar eventos.
+Specifies that one or more declared member variables refer to an instance of a class that can raise events.
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando una variable se define utilizando `WithEvents`, puede especificar mediante declaración que un método controla los eventos de la variable mediante la palabra clave `Handles`.
+When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
 
-Solo se puede usar `WithEvents` en el nivel de clase o módulo. Esto significa que el contexto de la declaración de una variable `WithEvents` debe ser una clase o módulo y no puede ser un archivo de código fuente, un espacio de nombres, una estructura o un procedimiento.
+You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
 
-No se puede usar `WithEvents` en un miembro de estructura.
+You cannot use `WithEvents` on a structure member.
 
-Solo se pueden declarar variables individuales, no matrices, con `WithEvents`.
+You can declare only individual variables—not arrays—with `WithEvents`.
 
 ## <a name="rules"></a>Reglas
 
-**Tipos de elemento.** Debe declarar `WithEvents` variables como variables de objeto para que puedan aceptar instancias de clase. Sin embargo, no puede declararlos como `Object`. Debe declararlos como la clase específica que puede provocar los eventos.
+**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
 
-El modificador `WithEvents` se puede usar en este contexto: [instrucción Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Ejemplo
 

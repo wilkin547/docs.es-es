@@ -2,12 +2,12 @@
 title: Operaciones set (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: cea0c0ba4dd6c7f874f69e3ec4a179248397b67d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7fd61e17c37c3d9056159cf4ec3ccfafa2ceb871
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591117"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140929"
 ---
 # <a name="set-operations-c"></a>Operaciones set (C#)
 Las operaciones set de LINQ se refieren a operaciones de consulta que generan un conjunto de resultados en función de la presencia o ausencia de elementos equivalentes dentro de la misma colección o en distintas colecciones (o conjuntos).  
@@ -33,7 +33,7 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
 ### <a name="except"></a>Except  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La secuencia devuelta solo contiene los elementos de la primera secuencia de entrada que no están en la segunda secuencia de entrada.  
   
- ![Gráfico que muestra la acción de Except&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Muestra el comportamiento de Except.")  
+ ![Gráfico que muestra la acción de Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Muestra el comportamiento de Except.")  
   
 ### <a name="intersect"></a>Formar intersección  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La secuencia devuelta contiene los elementos que son comunes a las dos secuencias de entrada.  
@@ -48,5 +48,5 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
 - [Cómo: Buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

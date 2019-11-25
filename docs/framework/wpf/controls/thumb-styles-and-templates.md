@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-ms.openlocfilehash: c2114a02016db96d898a394b6892b6d3042d81ff
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0d0d88e3b527beacfa5f879027e696aa75b18147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458239"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283680"
 ---
 # <a name="thumb-styles-and-templates"></a>Estilos y plantillas de Thumb
 
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Primitives.Thumb>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.Primitives.Thumb>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="thumb-parts"></a>Elementos Thumb
 
@@ -59,4 +59,4 @@ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo Co
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - parts [WPF], DocumentViewer
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
-ms.openlocfilehash: 7a812ff913703e3aa8408da8a11d28ee5adfa7fd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ac1dc4f74a8e8f3ad2e84c6d50239ec827306c28
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460350"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283532"
 ---
 # <a name="documentviewer-styles-and-templates"></a>Estilos y plantillas de DocumentViewer
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.DocumentViewer>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.DocumentViewer>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="documentviewer-parts"></a>Elementos DocumentViewer  
  En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.DocumentViewer>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|El contenido y el área de desplazamiento.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|El cuadro de búsqueda, en la parte inferior de forma predeterminada.|  
@@ -54,4 +54,4 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

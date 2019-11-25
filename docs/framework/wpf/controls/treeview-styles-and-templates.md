@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 45276d23380fe956fc3d59b90d5baae23ee8a7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460188"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283632"
 ---
 # <a name="treeview-styles-and-templates"></a>Estilos y plantillas de TreeView
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.TreeView>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.TreeView>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="treeview-parts"></a>Elementos de TreeView  
  El control <xref:System.Windows.Controls.TreeView> no tiene ninguna parte con nombre.  
@@ -36,7 +36,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 ## <a name="treeviewitem-parts"></a>Elementos TreeViewItem  
  En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Elemento visual que contiene el contenido del encabezado del control <xref:System.Windows.Controls.TreeView>.|  
   
@@ -79,4 +79,4 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,5 +1,5 @@
 ---
-title: Instrucción ReDim (Visual Basic)
+title: ReDim (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582083"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346738"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrucción ReDim (Visual Basic)
 Reasigna espacio de almacenamiento a una variable de matriz.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Reglas  
   
-- **Varias variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` de cada variable. Las variables se separan con comas.  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Las variables se separan con comas.  
   
-- **Límites de matriz.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
   
      El número de dimensiones de `boundlist` debe coincidir con el número de dimensiones (rango) de la matriz original.  
   
-- **Tipos de datos.** La instrucción `ReDim` no puede cambiar el tipo de datos de una variable de matriz o sus elementos.  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **Inicial.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **Criterios.** La instrucción `ReDim` no puede cambiar el rango (número de dimensiones) de la matriz.  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **Cambio de tamaño con Preserve.** Si utiliza `Preserve`, solo podrá cambiar el tamaño de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
   
      Por ejemplo, si su matriz tiene solo una dimensión, puede cambiar el tamaño de esa dimensión y conservar todo el contenido de la matriz, ya que es la última y única dimensión. Sin embargo, si su matriz tiene dos o más dimensiones, puede cambiar solamente el tamaño de la última dimensión si utiliza `Preserve`.  
   
-- **Propiedades.** Puede usar `ReDim` en una propiedad que contiene una matriz de valores.  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>Comportamiento  
   
-- **Reemplazo de matriz.** `ReDim` libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
   
-- **Inicialización sin Preserve.** Si no se especifica `Preserve`, `ReDim` inicializa los elementos de la nueva matriz utilizando el valor predeterminado para su tipo de datos.  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Inicialización con Preserve.** Si especifica `Preserve`, Visual Basic copia los elementos de la matriz existente en la nueva matriz.  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente aumenta el tamaño de la última dimensión de una matriz dinámica sin perder los datos existentes en la matriz y, a continuación, reduce el tamaño con pérdida de datos parcial. Por último, reduce el tamaño a su valor original y reinicializa todos los elementos de la matriz.  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  El tercer `ReDim` crea otra nueva matriz y quita otras cinco columnas del final de cada fila en cada capa. Esta vez no copia los elementos existentes. Esta instrucción revierte la matriz a su tamaño original. Dado que la instrucción no incluye el modificador `Preserve`, establece todos los elementos de matriz con sus valores predeterminados originales.  
   
- Para obtener más ejemplos, consulte [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Vea también
 

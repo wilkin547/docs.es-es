@@ -1,16 +1,16 @@
 ---
-title: Introducción a eventos
+title: Introducción a los eventos
 description: Obtenga información sobre los eventos en .NET Core y nuestros objetivos de diseño del lenguaje para los eventos en esta introducción.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771914"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138521"
 ---
-# <a name="introduction-to-events"></a>Introducción a eventos
+# <a name="introduction-to-events"></a>Introducción a los eventos
 
 [Anterior](delegates-patterns.md)
 
@@ -24,15 +24,15 @@ Puede definir eventos que deben generarse para las clases. Una consideración im
 
 La suscripción a un evento también crea un acoplamiento entre dos objetos (el origen del evento y el receptor del evento). Necesita asegurarse de que el receptor del evento cancela la suscripción del origen del evento cuando ya no está interesado en eventos.
 
-## <a name="design-goals-for-event-support"></a>Diseñar objetivos para la compatibilidad con eventos
+## <a name="design-goals-for-event-support"></a>Diseño de objetivos para la compatibilidad con eventos
 
-El diseño del lenguaje para eventos tiene como destino estos objetivos.
+El diseño del lenguaje para eventos tiene como destino estos objetivos:
 
-En primer lugar, permita un acoplamiento mínimo entre un origen de eventos y un receptor de eventos. Estos dos componentes puede que no se hayan escrito por la misma organización e incluso pueden actualizarse en programaciones totalmente diferentes.
+- Permita un acoplamiento mínimo entre un origen de eventos y un receptor de eventos. Estos dos componentes puede que no se hayan escrito por la misma organización e incluso pueden actualizarse en programaciones totalmente diferentes.
 
-En segundo lugar, debe ser muy sencillo suscribirse a un evento y cancelar la suscripción de este.
+- Debe ser muy sencillo suscribirse a un evento y cancelar la suscripción de este.
 
-Y, por último, los orígenes de eventos deben admitir varios suscriptores de eventos. También deben admitir no tener ningún suscriptor de eventos asociado.
+- Los orígenes de eventos deben admitir varios suscriptores de eventos. También deben admitir no tener ningún suscriptor de eventos asociado.
 
 Puede observar que los objetivos de los eventos son muy similares a los de los delegados.
 Este es el motivo por el que la compatibilidad del lenguaje de eventos se basa en la compatibilidad del lenguaje de delegados.
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-El método de controlador normalmente es el prefijo "On" seguido del nombre del evento, como se ha mostrado anteriormente.
+El método de controlador normalmente tiene el prefijo "On" seguido del nombre del evento, como se ha mostrado anteriormente.
 
 Cancela la suscripción con el operador `-=`:
 

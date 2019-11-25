@@ -1,5 +1,5 @@
 ---
-title: With...End With (Instrucción, Visual Basic)
+title: With...End With (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.With
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582250"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352735"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With (Instrucción, Visual Basic)
 
@@ -64,10 +64,10 @@ Puede incluir una instrucción `With...End With` dentro de otra. Las instruccion
 
 No se pueden crear bifurcaciones en un bloque de instrucciones `With` desde fuera del bloque.
 
-A menos que el bloque contenga un bucle, las instrucciones se ejecutan una sola vez. Puede anidar diferentes tipos de estructuras de control. Para obtener más información, vea [estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+A menos que el bloque contenga un bucle, las instrucciones se ejecutan una sola vez. Puede anidar diferentes tipos de estructuras de control. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> La palabra clave `With` también se puede usar en inicializadores de objeto. Para obtener más información y ejemplos, vea [inicializadores de objeto: tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) y [tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> La palabra clave `With` también se puede usar en inicializadores de objeto. For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Si usa un bloque `With` solo para inicializar las propiedades o campos de un objeto del que acaba de crear instancias, considere la posibilidad de utilizar en su lugar un inicializador de objetos.
 

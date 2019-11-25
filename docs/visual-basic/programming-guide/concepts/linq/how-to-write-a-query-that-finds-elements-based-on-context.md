@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Escribir una consulta que busca elementos en función del contexto (Visual Basic)
+title: 'Cómo: Escribir una consulta que busca elementos en función del contexto'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: d25c6d47eee2ae092c84c3db3c08c3e21e7d98d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835027"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346214"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Procedimiento Escribir una consulta que busca elementos en función del contexto (Visual Basic)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>How to: Write a Query that Finds Elements Based on Context (Visual Basic)
 Es posible que alguna vez tenga que escribir una consulta que seleccione elementos basándose en su contexto. Quizás desea filtrar basándose en elementos de mismo nivel precedentes o siguientes. Quizás desea filtrar basándose e elementos secundarios o elementos antecesores.  
   
  Puede hacerlo escribiendo una consulta y utilizando los resultados de la consulta en la cláusula `where`. Si primero tiene que realizar una prueba con valores NULL y después probar el valor, resulta más cómodo realizar la consulta en una cláusula `let` y después utilizar los resultados en la cláusula `where`.  
@@ -58,7 +58,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -112,4 +112,4 @@ id = 6
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

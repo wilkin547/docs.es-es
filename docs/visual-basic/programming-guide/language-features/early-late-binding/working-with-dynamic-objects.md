@@ -1,26 +1,26 @@
 ---
-title: Trabajar con objetos dinámicos (Visual Basic)
+title: Trabajar con objetos dinámicos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20d007fb48e1db352bab6d8e25d2e60e02554732
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973191"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345174"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>Trabajar con objetos dinámicos (Visual Basic)
-Objetos dinámicos proporcionan otra forma, no sea el `Object` tipo, enlazar en tiempo de ejecución a un objeto en tiempo de ejecución. Un objeto dinámico expone miembros como propiedades y métodos en tiempo de ejecución mediante el uso de interfaces dinámicas que se definen en el <xref:System.Dynamic> espacio de nombres. Puede usar las clases en el <xref:System.Dynamic> espacio de nombres para crear objetos que trabajar con estructuras de datos que no coinciden con un formato o tipo estático. También puede usar los objetos dinámicos que se definen en los lenguajes dinámicos como IronPython e IronRuby. Para obtener ejemplos que muestran cómo crear objetos dinámicos o usar un objeto dinámico definido en un lenguaje dinámico, vea [Tutorial: Crear y utilizar objetos dinámicos](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, o <xref:System.Dynamic.ExpandoObject>.  
+Dynamic objects provide another way, other than the `Object` type, to late bind to an object at run time. A dynamic object exposes members such as properties and methods at run time by using dynamic interfaces that are defined in the <xref:System.Dynamic> namespace. You can use the classes in the <xref:System.Dynamic> namespace to create objects that work with data structures that do not match a static type or format. You can also use the dynamic objects that are defined in dynamic languages such as IronPython and IronRuby. For examples that show how to create dynamic objects or use a dynamic object defined in a dynamic language, see [Walkthrough: Creating and Using Dynamic Objects](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md), <xref:System.Dynamic.DynamicObject>, or <xref:System.Dynamic.ExpandoObject>.  
   
- Visual Basic se enlaza a los objetos desde la dynamic language runtime y los lenguajes dinámicos como IronPython e IronRuby utilizando el <xref:System.Dynamic.IDynamicMetaObjectProvider> interfaz. Ejemplos de clases que implementan la `IDynamicMetaObjectProvider` interfaz son el <xref:System.Dynamic.DynamicObject> y <xref:System.Dynamic.ExpandoObject> clases.  
+ Visual Basic binds to objects from the dynamic language runtime and dynamic languages such as IronPython and IronRuby by using the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. Examples of classes that implement the `IDynamicMetaObjectProvider` interface are the <xref:System.Dynamic.DynamicObject> and <xref:System.Dynamic.ExpandoObject> classes.  
   
- Si se realiza una llamada enlazada en tiempo de ejecución a un objeto que implementa el `IDynamicMetaObjectProvider` interfaz, Visual Basic se enlaza el objeto dinámico mediante el uso de esa interfaz. Si se realiza una llamada enlazada en tiempo de ejecución a un objeto que no implementa la `IDynamicMetaObjectProvider` interfaz, o si la llamada a la `IDynamicMetaObjectProvider` se produce un error en la interfaz, Visual Basic se enlaza al objeto utilizando las capacidades de enlace en tiempo de ejecución de Visual Basic.  
+ If a late-bound call is made to an object that implements the `IDynamicMetaObjectProvider` interface, Visual Basic binds to the dynamic object by using that interface. If a late-bound call is made to an object that does not implement the `IDynamicMetaObjectProvider` interface, or if the call to the `IDynamicMetaObjectProvider` interface fails, Visual Basic binds to the object by using the late-binding capabilities of the Visual Basic runtime.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Dynamic.DynamicObject>
 - <xref:System.Dynamic.ExpandoObject>
-- [Tutorial: Crear y usar objetos dinámicos](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Walkthrough: Creating and Using Dynamic Objects](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md) (Tutorial: Crear y usar objetos dinámicos [C# y Visual Basic])
 - [Enlace en tiempo de compilación y en tiempo de ejecución](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

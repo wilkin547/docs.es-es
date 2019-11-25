@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Detectar errores de análisis (Visual Basic)
+title: 'Cómo: Detectar errores de análisis'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 14c4f76c5f10616f9346084cda276e2862b2b41d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352932"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353346"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Procedimiento Detectar errores de análisis (Visual Basic)
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>How to: Catch Parsing Errors (Visual Basic)
 En este tema se describe cómo detectar XML no válido o mal formado.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se implementa con <xref:System.Xml.XmlReader>. Si se pasa XML no válido o mal formado a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la clase <xref:System.Xml.XmlReader> subyacente iniciará una excepción. Los diferentes métodos que analizan XML, como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> no detectan la excepción; la excepción se propaga de forma que la aplicación pueda detectarla.  
@@ -43,4 +43,4 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
 ## <a name="see-also"></a>Vea también
 
-- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Llamadas a métodos de eje de cadena (LINQ to XML) (Visual Basic)
+title: 'Cómo: Encadenar llamadas de métodos de eje (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-ms.openlocfilehash: 8c607915d83c49958e3aa86c9625fa1311a2274b
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: de6fbec9fa7948c618252415774ff6a2e9289c74
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709835"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346932"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Procedimiento Llamadas a métodos de eje de cadena (LINQ to XML) (Visual Basic)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)
 Un patrón común que puede utilizar en el código consiste en llamar a un método Axis y, después, llamar a uno de los métodos de extensión Axes.  
   
  Hay dos métodos Axes con el nombre `Elements` que devuelven una colección de elementos: el método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> y el método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>. Puede combinar estos dos ejes para encontrar todos los elementos de un nombre especificado en una profundidad determinada del árbol.  
@@ -17,7 +17,7 @@ Un patrón común que puede utilizar en el código consiste en llamar a un méto
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> y <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> para buscar todos los elementos `Name` en todos los elementos `Address` de todos los elementos `PurchaseOrder`.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -86,9 +86,9 @@ Next
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma técnica para XML que se encuentre en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ El siguiente ejemplo muestra la misma técnica para XML que se encuentre en un espacio de nombres. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
