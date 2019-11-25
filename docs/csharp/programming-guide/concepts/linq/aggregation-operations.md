@@ -2,12 +2,12 @@
 title: Operaciones de agregación (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: 04415c430059057cef26b3750faa03b925cfa994
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aebefcad8a741a97a51e73bfade9d4a16d343100
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594984"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141533"
 ---
 # <a name="aggregation-operations-c"></a>Operaciones de agregación (C#)
 Una operación de agregación calcula un valor único a partir de una colección de valores. Un ejemplo de operación de agregación es calcular el promedio de temperatura diaria a partir de los valores de temperatura diaria durante un mes.  
@@ -34,6 +34,6 @@ Una operación de agregación calcula un valor único a partir de una colección
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [Cómo: Calcular valores de columna en un archivo de texto CSV (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Procedimiento para calcular valores de columna en un archivo de texto CSV (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
 - [Cómo: Buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
 - [Cómo: Buscar el número total de bytes en un conjunto de carpetas (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-ms.openlocfilehash: 7cca21630bd1dbd6896f882d058f288f603e95df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4f099dfaf5ff02edd3958d7eab9354ce727a239
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123904"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281797"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos
 El [importador de la biblioteca de tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) es una herramienta de línea de comandos que convierte las coclases e interfaces contenidas en una biblioteca de tipos COM en metadatos. Esta herramienta crea automáticamente un ensamblado de interoperabilidad y un espacio de nombres para la información de tipos. Una vez que los metadatos de una clase están disponibles, los clientes administrados pueden crear instancias del tipo COM y llamar a sus métodos, como si se tratara de una instancia de .NET. Tlbimp.exe convierte una biblioteca de tipos completa en metadatos de una vez y no se puede generar información de tipos para un subconjunto de los tipos definidos en una biblioteca de tipos.  
@@ -29,13 +29,13 @@ El [importador de la biblioteca de tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-
 ## <a name="example"></a>Ejemplo  
  El comando siguiente genera el ensamblado Loanlib.dll en el espacio de nombres `Loanlib`.  
   
-```  
+```console  
 tlbimp Loanlib.tlb  
 ```  
   
  El comando siguiente genera un ensamblado de interoperabilidad con un nombre modificado (LOANLib.dll).  
   
-```  
+```console  
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   

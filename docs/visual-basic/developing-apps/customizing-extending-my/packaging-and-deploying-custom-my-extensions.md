@@ -1,52 +1,52 @@
 ---
-title: Empaquetar e implementar extensiones My (Visual Basic) de personalizadas
+title: Packaging and deploying custom My extensions
 ms.date: 08/14/2018
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2e2a6705fb3d8d4424d46d96bbf49b41e1414af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014211"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330260"
 ---
-# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Empaquetar e implementar extensiones My (Visual Basic)
+# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Package and deploy custom My extensions (Visual Basic)
 
-Visual Basic proporciona una manera fácil de implementar personalizado `My` extensiones de espacio de nombres mediante el uso de plantillas de Visual Studio. Si va a crear una plantilla de proyecto para que su `My` las extensiones son una parte integral del nuevo tipo de proyecto, simplemente puede incluir el personalizado `My` código de extensión con el proyecto al exportar la plantilla. Para obtener más información acerca de cómo exportar las plantillas de proyecto, vea [Cómo: Crear plantillas de proyecto](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic provides an easy way for you to deploy your custom `My` namespace extensions by using Visual Studio templates. If you are creating a project template for which your `My` extensions are an integral part of the new project type, you can just include your custom `My` extension code with the project when you export the template. For more information about exporting project templates, see [How to: Create Project Templates](/visualstudio/ide/how-to-create-project-templates).
 
-Si su custom `My` extensión está en un solo archivo de código, puede exportar el archivo como una plantilla de elementos que los usuarios pueden agregar a cualquier tipo de proyecto de Visual Basic. A continuación, puede personalizar la plantilla de elemento para habilitar funcionalidades adicionales y el comportamiento personalizado `My` extensión en un proyecto de Visual Basic. Estas funcionalidades incluyen lo siguiente:
+If your custom `My` extension is in a single code file, you can export the file as an item template that users can add to any type of Visual Basic project. You can then customize the item template to enable additional capabilities and behavior for your custom `My` extension in a Visual Basic project. Those capabilities include the following:
 
-- Lo que permite a los usuarios administrar personalizado `My` extensión desde el **extensiones My** página del Diseñador de proyectos de Visual Basic.
+- Allowing users to manage your custom `My` extension from the **My Extensions** page of the Visual Basic Project Designer.
 
-- Agregar automáticamente personalizado `My` extensión cuando una referencia a un ensamblado especificado se agrega a un proyecto.
+- Automatically adding your custom `My` extension when a reference to a specified assembly is added to a project.
 
-- Ocultar el `My` plantilla de elemento de extensión en el **Agregar elemento** cuadro de diálogo para que no se incluye en la lista de elementos de proyecto.
+- Hiding the `My` extension item template in the **Add Item** dialog box so that it is not included in the list of project items.
 
-Este tema describe cómo empaquetar una personalizada `My` extensión como una plantilla de elemento oculto que se puede administrar desde el **extensiones My** página del Diseñador de proyectos de Visual Basic. Personalizado `My` extensión también se puede agregar automáticamente cuando se agrega una referencia a un ensamblado especificado a un proyecto.
+This topic discusses how to package a custom `My` extension as a hidden item template that can be managed from the **My Extensions** page of the Visual Basic Project Designer. The custom `My` extension can also be added automatically when a reference to a specified assembly is added to a project.
 
-## <a name="create-a-my-namespace-extension"></a>Crear una extensión de espacio de nombres My
+## <a name="create-a-my-namespace-extension"></a>Create a My namespace extension
 
-El primer paso para crear un paquete de implementación para un personalizado `My` extensión consiste en crear la extensión como un archivo de código único. Para obtener detalles y orientación sobre cómo crear una personalizada `My` extensión, vea [extender el Namespace My en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
+The first step in creating a deployment package for a custom `My` extension is to create the extension as a single code file. For details and guidance about how to create a custom `My` extension, see [Extending the My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
 
-## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exportar una extensión de espacio de nombres My como una plantilla de elemento
+## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Export a My namespace extension as an item template
 
-Una vez que tenga un archivo de código que incluye su `My` extensión del espacio de nombres, puede exportar el archivo de código como una plantilla de elemento de Visual Studio. Para obtener instrucciones sobre cómo exportar un archivo como una plantilla de elemento de Visual Studio, consulte [Cómo: Crear plantillas de elementos](/visualstudio/ide/how-to-create-item-templates).
+After you have a code file that includes your `My` namespace extension, you can export the code file as a Visual Studio item template. For instructions on how to export a file as a Visual Studio item template, see [How to: Create Item Templates](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
-> Si su `My` extensión del espacio de nombres tiene una dependencia en un ensamblado determinado, puede personalizar la plantilla de elemento para instalar automáticamente su `My` extensión del espacio de nombres cuando se agrega una referencia a ese ensamblado. Como resultado, que desea excluir esa referencia de ensamblado al exportar el archivo de código como una plantilla de elemento de Visual Studio.
+> If your `My` namespace extension has a dependency on a particular assembly, you can customize your item template to automatically install your `My` namespace extension when a reference to that assembly is added. As a result, you will want to exclude that assembly reference when you export the code file as a Visual Studio item template.
 
-## <a name="customize-the-item-template"></a>Personalizar la plantilla de elemento
+## <a name="customize-the-item-template"></a>Customize the item template
 
-Puede habilitar la plantilla de elemento para administrarse desde el **extensiones My** página del Diseñador de proyectos de Visual Basic. También puede habilitar la plantilla de elemento que se agregará automáticamente cuando se agrega una referencia a un ensamblado especificado a un proyecto. Para habilitar estas personalizaciones, agregará un nuevo archivo denominado CustomData, a la plantilla y, a continuación, agregue un nuevo elemento al XML en el archivo .vstemplate.
+You can enable your item template to be managed from the **My Extensions** page of the Visual Basic Project Designer. You can also enable the item template to be added automatically when a reference to a specified assembly is added to a project. To enable these customizations, you will add a new file, called the CustomData file, to your template, and then add a new element to the XML in your .vstemplate file.
 
-### <a name="add-the-customdata-file"></a>Agregue el archivo CustomData
+### <a name="add-the-customdata-file"></a>Add the CustomData file
 
-El archivo CustomData es un archivo de texto que tiene una extensión de nombre de archivo. CustomData (el nombre de archivo puede establecerse en cualquier valor significativo para la plantilla) y que contiene XML. El XML en el archivo CustomData indica a Visual Basic para incluir su `My` extensión cuando los usuarios usen el **extensiones My** página del Diseñador de proyectos de Visual Basic. Opcionalmente, puede agregar el <`AssemblyFullName>` atributo al archivo CustomData XML. Esto indica a Visual Basic para instalar automáticamente el personalizado `My` extensión cuando una referencia a un ensamblado determinado se agrega al proyecto. Puede usar cualquier editor de texto o editor XML para crear el archivo CustomData y, a continuación, agregarlo a la carpeta comprimida (archivo .zip) de la plantilla del elemento.
+The CustomData file is a text file that has a file name extension of .CustomData (the file name can be set to any value meaningful to your template) and that contains XML. The XML in the CustomData file instructs Visual Basic to include your `My` extension when users use the **My Extensions** page of the Visual Basic Project Designer. You can optionally add the <`AssemblyFullName>` attribute to your CustomData file XML. This instructs Visual Basic to automatically install your custom `My` extension when a reference to a particular assembly is added to the project. You can use any text editor or XML editor to create the CustomData file, and then add it to your item template's compressed folder (.zip file).
 
-Por ejemplo, el siguiente XML muestra el contenido de un archivo CustomData que agregará el elemento de plantilla en la carpeta Extensiones My de un proyecto de Visual Basic cuando una referencia al ensamblado Microsoft.VisualBasic.PowerPacks.Vs.dll se agrega al proyecto.
+For example, the following XML shows the contents of a CustomData file that will add the template item to the My Extensions folder of a Visual Basic project when a reference to the Microsoft.VisualBasic.PowerPacks.Vs.dll assembly is added to the project.
 
 ```xml
 <VBMyExtensionTemplate
@@ -56,25 +56,25 @@ Por ejemplo, el siguiente XML muestra el contenido de un archivo CustomData que 
 />
 ```
 
-El archivo CustomData contiene un <`VBMyExtensionTemplate>` elemento que tiene atributos como se muestra en la tabla siguiente.
+The CustomData file contains a <`VBMyExtensionTemplate>` element that has attributes as listed in the following table.
 
 |Atributo|Descripción|
 |---|---|
-|`ID`|Obligatorio. Un identificador único para la extensión. Si la extensión que tiene este identificador ya se ha agregado al proyecto, no se pedirá al usuario que vuelva a agregarlo.|
-|`Version`|Obligatorio. Un número de versión para la plantilla de elemento.|
-|`AssemblyFullName`|Opcional. Nombre de ensamblado. Cuando se agrega una referencia a este ensamblado al proyecto, se pedirá al usuario para agregar el `My` extensión desde esta plantilla de elemento.|
+|`ID`|Requerido. A unique identifier for the extension. If the extension that has this ID has already been added to the project, the user will not be prompted to add it again.|
+|`Version`|Requerido. A version number for the item template.|
+|`AssemblyFullName`|Opcional. Nombre de ensamblado. When a reference to this assembly is added to the project, the user will be prompted to add the `My` extension from this item template.|
 
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Agregar el \<CustomDataSignature > elemento para el archivo .vstemplate
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Add the \<CustomDataSignature> element to the .vstemplate file
 
-Para identificar la plantilla de elemento de Visual Studio como un `My` extensión del espacio de nombres, también debe modificar el archivo .vstemplate para la plantilla de elemento. Debe agregar un `<CustomDataSignature>` elemento a la `<TemplateData>` elemento. El `<CustomDataSignature>` elemento debe contener el texto `Microsoft.VisualBasic.MyExtension`, como se muestra en el ejemplo siguiente.
+To identify your Visual Studio item template as a `My` namespace extension, you must also modify the .vstemplate file for your item template. You must add a `<CustomDataSignature>` element to the `<TemplateData>` element. The `<CustomDataSignature>` element must contain the text `Microsoft.VisualBasic.MyExtension`, as shown in the following example.
 
 ```xml
 <CustomDataSignature>Microsoft.VisualBasic.MyExtension</CustomDataSignature>
 ```
 
-No puede modificar directamente los archivos en una carpeta comprimida (archivo .zip). Debe copiar el archivo .vstemplate de la carpeta comprimida, modificarlo y, a continuación, reemplace el archivo .vstemplate en la carpeta comprimida por la copia actualizada.
+You cannot modify files in a compressed folder (.zip file) directly. You must copy the .vstemplate file from the compressed folder, modify it, and then replace the .vstemplate file in the compressed folder with your updated copy.
 
-El ejemplo siguiente muestra el contenido de un archivo .vstemplate que tiene el `<CustomDataSignature>` elemento agregado.
+The following example shows the contents of a .vstemplate file that has the `<CustomDataSignature>` element added.
 
 ```xml
 <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -97,9 +97,9 @@ El ejemplo siguiente muestra el contenido de un archivo .vstemplate que tiene el
 </VSTemplate>
 ```
 
-## <a name="install-the-template"></a>Instalar la plantilla
+## <a name="install-the-template"></a>Install the template
 
-Para instalar la plantilla, puede copiar la carpeta comprimida (*.zip* archivo) a la carpeta de plantillas de elemento de Visual Basic. De forma predeterminada, las plantillas de elemento de usuario se encuentran en *%USERPROFILE%\Documents\Visual Studio \<versión\>\Templates\ItemTemplates\Visual Basic*. Como alternativa, puede publicar la plantilla como un instalador de Visual Studio (*.vsi*) archivo.
+To install the template, you can copy the compressed folder ( *.zip* file) to the Visual Basic item templates folder. By default, user item templates are located in *%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates\Visual Basic*. Alternatively, you can publish the template as a Visual Studio Installer ( *.vsi*) file.
 
 ## <a name="see-also"></a>Vea también
 

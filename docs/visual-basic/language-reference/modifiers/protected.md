@@ -1,5 +1,5 @@
 ---
-title: Protected (Visual Basic)
+title: Protected
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Protected
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 8370d15e99a6f7ed0868441a4e44360fb258be13
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 740c998b8a6ccc6798bce37e9b08e408dac7c17d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583070"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351305"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
-Modificador de acceso de miembro que especifica que solo se puede tener acceso a uno o varios elementos de programación declarados desde dentro de su propia clase o desde una clase derivada.
+A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
 
 ## <a name="remarks"></a>Comentarios
 
-A veces, un elemento de programación declarado en una clase contiene datos confidenciales o código restringido, y desea limitar el acceso al elemento. Sin embargo, si la clase es heredable y espera una jerarquía de clases derivadas, podría ser necesario que estas clases derivadas tengan acceso a los datos o al código. En tal caso, desea que el elemento sea accesible tanto desde la clase base como desde todas las clases derivadas. Para limitar el acceso a un elemento de esta manera, puede declararlo con `Protected`.
+Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
 
 > [!NOTE]
-> El modificador de acceso `Protected` se puede combinar con otros dos modificadores:
+> The `Protected` access modifier can be combined with two other modifiers:
 >
-> - El modificador [Friend protegido](protected-friend.md) hace que un miembro de clase sea accesible desde dentro de esa clase, desde las clases derivadas y desde el mismo ensamblado en el que se define la clase.
-> - El modificador [Private Protected](private-protected.md) hace que un miembro de clase sea accesible para los tipos derivados, pero solo dentro del ensamblado que lo contiene.
+> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
+> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
 
 ## <a name="rules"></a>Reglas
 
-**Contexto de declaración.** Solo se puede usar `Protected` en el nivel de clase. Esto significa que el contexto de la declaración de un elemento `Protected` debe ser una clase y no puede ser un archivo de código fuente, un espacio de nombres, una interfaz, un módulo, una estructura o un procedimiento.
+**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
 ## <a name="behavior"></a>Comportamiento
 
-- **Nivel de acceso.** Todo el código de una clase puede tener acceso a sus elementos. El código de cualquier clase que deriva de una clase base puede tener acceso a todos los elementos `Protected` de la clase base. Esto es cierto para todas las generaciones de derivación. Esto significa que una clase puede tener acceso a `Protected` elementos de la clase base de la clase base, etc.
+- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
 
-     El acceso protegido no es un superconjunto o subconjunto de acceso de confianza.
+     Protected access is not a superset or subset of friend access.
 
-- **Modificadores de acceso.** Las palabras clave que especifican el nivel de acceso se denominan *modificadores de acceso*. Para obtener una comparación de los modificadores de acceso, vea [niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 El modificador `Protected` se puede utilizar en los contextos siguientes:
 
@@ -76,7 +76,7 @@ El modificador `Protected` se puede utilizar en los contextos siguientes:
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

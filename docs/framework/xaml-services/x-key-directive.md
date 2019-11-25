@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: b00218623add052e135bc5815d615fe7cdf002ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8321a09db31c9f6d2103a252a195fcdbf8da3e66
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459956"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283855"
 ---
 # <a name="xkey-directive"></a>x:Key (Directiva)
 Identifica de forma única los elementos que se crean y a los que se hace referencia en un diccionario definido por XAML. Agregar un valor de `x:Key` a un elemento de objeto XAML es la forma más común de identificar un recurso en un diccionario de recursos, por ejemplo en un <xref:System.Windows.ResourceDictionary>de WPF.  
@@ -86,7 +86,7 @@ Identifica de forma única los elementos que se crean y a los que se hace refere
   
 ### <a name="xaml-element-usage-xaml-2009-only"></a>Uso de elementos XAML (solo XAML 2009)  
   
-```  
+```xaml  
 <object>  
   <x:Key>  
 keyObject  

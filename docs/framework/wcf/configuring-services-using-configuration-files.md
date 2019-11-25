@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9a8db0670fff604cc9db8279ab1566e6e3fd3c8d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 29792726567373c907898cf6ced9891577f11588
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320674"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141630"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 La configuración de un servicio de Windows Communication Foundation (WCF) con un archivo de configuración ofrece la flexibilidad de proporcionar datos de punto de conexión y de comportamiento de servicio en el punto de implementación en lugar de en tiempo de diseño. En este tema se describen las principales técnicas disponibles.  
   
- Un servicio WCF se puede configurar mediante la tecnología de configuración de .NET Framework. Normalmente, los elementos XML se agregan al archivo Web. config para un sitio Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, WCF incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas de un servicio. A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio determinado, el tiempo de ejecución configura automáticamente el servicio con algunos extremos estándar y un enlace o comportamiento predeterminados. En la práctica, escribir la configuración es una parte importante de la programación de aplicaciones WCF.  
+ Un servicio WCF se puede configurar mediante la tecnología de configuración de .NET Framework. Normalmente, los elementos XML se agregan al archivo Web. config para un sitio Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, WCF incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas de un servicio. A partir de .NET Framework 4, WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio determinado, el tiempo de ejecución configura automáticamente el servicio con algunos extremos estándar y un enlace o comportamiento predeterminados. En la práctica, escribir la configuración es una parte importante de la programación de aplicaciones WCF.  
   
  Para obtener más información, consulte [configuración de enlaces para servicios](configuring-bindings-for-wcf-services.md). Para obtener una lista de los elementos que se usan con más frecuencia, vea [enlaces proporcionados por el sistema](system-provided-bindings.md). Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](./samples/simplified-configuration-for-wcf-services.md).  
   
@@ -28,7 +28,7 @@ La configuración de un servicio de Windows Communication Foundation (WCF) con u
   
  En Visual Studio, el archivo denominado app. config se usa para crear el archivo de configuración final. El nombre final realmente utilizado para la configuración depende del nombre de ensamblado. Por ejemplo, un ensamblado denominado "Cohowinery.exe" tiene un nombre final de archivo de configuración de "Cohowinery.exe.config". Sin embargo, solo necesita modificar el archivo App.config. Los cambios realizados en ese archivo se realizan automáticamente en tiempo de compilación en el archivo final de configuración de la aplicación.  
   
- Al utilizar un archivo App.config, el sistema de configuración combina el archivo App.config con el contenido del archivo Machine.config cuando se inicia la aplicación y se aplica la configuración. Este mecanismo permite definir los valores de equipo en el archivo Machine.config. El archivo App.config se puede utilizar para reemplazar los valores del archivo Machine.config; también puede bloquear los valores en el archivo Machine.config para que se utilicen. En el caso de Web.config, el sistema de configuración combina los archivos Web.config de todos los directorios que conducen al directorio de la aplicación en la configuración que se aplica. Para obtener más información sobre la configuración y las prioridades de configuración, consulte los temas del espacio de nombres <xref:System.Configuration>.  
+ Al utilizar un archivo App.config, el sistema de configuración combina el archivo App.config con el contenido del archivo Machine.config cuando se inicia la aplicación y se aplica la configuración. Este mecanismo permite definir los valores de equipo en el archivo Machine.config. El archivo App.config se puede utilizar para reemplazar los valores del archivo Machine.config; también puede bloquear los valores en el archivo Machine.config para que se utilicen. En el caso de Web.config, el sistema de configuración combina los archivos Web.config de todos los directorios que conducen al directorio de la aplicación en la configuración que se aplica. Para obtener más información sobre la configuración y las prioridades de configuración, vea los temas del espacio de nombres <xref:System.Configuration>.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Secciones principales del archivo de configuración  
  Las secciones principales del archivo de configuración incluyen los elementos siguientes.  
@@ -66,21 +66,21 @@ La configuración de un servicio de Windows Communication Foundation (WCF) con u
 > [!NOTE]
 > Las secciones de enlaces y comportamientos son opcionales y solo se incluyen si son necesarias.  
   
-### <a name="the-services-element"></a>El elemento de > \<services  
- El elemento `services` contiene las especificaciones para todos los servicios que la aplicación hospeda. A partir del modelo de configuración simplificado de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], esta sección es opcional.  
+### <a name="the-services-element"></a>El elemento > de \<Services  
+ El elemento `services` contiene las especificaciones para todos los servicios que la aplicación hospeda. A partir del modelo de configuración simplificado en .NET Framework 4, esta sección es opcional.  
   
- [@no__t 1services >](../configure-apps/file-schema/wcf/services.md)  
+ [> de \<Services](../configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>El elemento de > \<service  
+### <a name="the-service-element"></a>El elemento > de servicio \<  
  Cada elemento service tiene estos atributos:  
   
 - `name`Operador Especifica el tipo que proporciona una implementación de un contrato de servicios. Este es un nombre completo que consta del espacio de nombres, un punto y el nombre del tipo. Por ejemplo, `"MyNameSpace.myServiceType"`.  
   
 - `behaviorConfiguration`Operador Especifica el nombre de uno de los elementos `behavior` encontrados en el elemento `behaviors` . El comportamiento especificado rige las acciones como si el servicio permitiese la suplantación. Si su valor es el nombre vacío o no se proporciona ningún atributo `behaviorConfiguration` , se agrega al servicio el conjunto predeterminado de comportamientos de servicio.  
   
-- [@no__t 1service >](../configure-apps/file-schema/wcf/service.md)  
+- [> de servicio \<](../configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>El elemento de > \<endpoint  
+### <a name="the-endpoint-element"></a>Elemento de > de punto de conexión \<  
  Cada extremo requiere una dirección, un enlace y un contrato, que están representados por los atributos siguientes:  
   
 - `address`Operador Especifica el Identificador uniforme de recursos (URI) del servicio, que puede ser una dirección absoluta o una relativa a la dirección base del servicio. Si está establecido en una cadena vacía, indica que el extremo está disponible en la dirección base que se especifica al crear <xref:System.ServiceModel.ServiceHost> para el servicio.  
@@ -91,29 +91,29 @@ La configuración de un servicio de Windows Communication Foundation (WCF) con u
   
 - `contract`Operador Especifica la interfaz que define el contrato. Ésta es la interfaz implementada en el tipo de Common Language Runtime (CLR) especificado por el atributo `name` del elemento `service` .  
   
-- [@no__t 1endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [\<punto de conexión >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
-### <a name="the-bindings-element"></a>El elemento de > \<bindings  
+### <a name="the-bindings-element"></a>\<enlaces > elemento  
  El elemento `bindings` contiene las especificaciones para todos los enlaces que puede utilizar cualquier extremo definido en cualquier servicio.  
   
- [@no__t 1bindings >](../configure-apps/file-schema/wcf/bindings.md)  
+ [\<enlaces >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-binding-element"></a>El elemento de > \<binding  
+### <a name="the-binding-element"></a>\<elemento de > de enlace  
  El elemento `binding` contenidos en el elemento `bindings` pueden ser uno de los enlaces proporcionados por el sistema (consulte [System-Provided Bindings](system-provided-bindings.md)) o un enlace personalizado (consulte [Custom Bindings](./extending/custom-bindings.md)). El elemento `binding` tiene un atributo `name` que pone en correlación el enlace con el extremo especificado en el atributo `bindingConfiguration` del elemento `endpoint` . Si no se especifica ningún nombre, dicho enlace corresponde al enlace predeterminado de ese tipo de enlace.  
   
 Para obtener más información sobre la configuración de servicios y clientes, vea [configuración de servicios WCF](configuring-services.md).
   
- [@no__t 1binding >](../misc/binding.md)  
+ [\<> de enlace](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-behaviors-element"></a>El elemento de > \<behaviors  
+### <a name="the-behaviors-element"></a>El elemento > Behaviors \<  
  Éste es un elemento contenedor para los elementos `behavior` que definen los comportamientos de un servicio.  
   
- [@no__t 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)  
+ [\<comportamientos >](../configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>El elemento de > \<behavior  
- Cada elemento `behavior` se identifica mediante un atributo `name` y proporciona un comportamiento proporcionado por el sistema, como < `throttling` > o un comportamiento personalizado. Si no se especifica ningún nombre, dicho elemento de comportamiento corresponde al servicio predeterminado o al comportamiento de extremo.  
+### <a name="the-behavior-element"></a>El elemento > de comportamiento de \<  
+ Cada `behavior` elemento se identifica mediante un atributo `name` y proporciona un comportamiento proporcionado por el sistema, como <`throttling`> o un comportamiento personalizado. Si no se especifica ningún nombre, dicho elemento de comportamiento corresponde al servicio predeterminado o al comportamiento de extremo.  
   
- [@no__t 1behavior >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [comportamiento de \<](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Uso de las configuraciones de comportamientos y enlaces  
  WCF facilita el uso compartido de las configuraciones entre los puntos de conexión mediante un sistema de referencia en la configuración. En lugar de asignar directamente los valores de configuración a un extremo, los valores de configuración relacionados con el enlace se agrupan en elementos `bindingConfiguration` de la sección `<binding>` . Una configuración de enlace es un grupo con nombre de valores en un enlace. Entonces, los extremos pueden hacer referencia a `bindingConfiguration` por nombre.  
@@ -148,7 +148,7 @@ Para obtener más información sobre la configuración de servicios y clientes, 
 </configuration>  
 ```  
   
- El `name` de la `bindingConfiguration` se establece en el elemento `<binding>` . El `name` debe ser una cadena única dentro del ámbito del tipo de enlace; en este caso, el [< basicHttpBinding @ no__t-2](../configure-apps/file-schema/wcf/basichttpbinding.md), o un valor vacío para hacer referencia al enlace predeterminado. El extremo vincula a la configuración estableciendo el atributo `bindingConfiguration` en esta cadena.  
+ El `name` de la `bindingConfiguration` se establece en el elemento `<binding>` . El `name` debe ser una cadena única dentro del ámbito del tipo de enlace; en este caso, el [\>basicHttpBinding < ](../configure-apps/file-schema/wcf/basichttpbinding.md), o un valor vacío para hacer referencia al enlace predeterminado. El extremo vincula a la configuración estableciendo el atributo `bindingConfiguration` en esta cadena.  
   
  Una `behaviorConfiguration` se implementa de la misma manera, tal y como se muestra en el ejemplo siguiente.  
   
@@ -188,7 +188,7 @@ Para obtener más información sobre la configuración de servicios y clientes, 
   
  `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- Y el archivo `~\Web.config` tiene el siguiente contenido:  
+ Y el archivo de `~\Web.config` tiene el siguiente contenido:  
   
 ```xml  
 <configuration>  
@@ -222,7 +222,7 @@ Para obtener más información sobre la configuración de servicios y clientes, 
   
  El servicio ubicado en ~\Child\Service.svc se comportará como si tuviese los comportamientos de serviceMetadata y serviceDebug. El servicio ubicado en ~\Service.svc tendrá solo el comportamiento de serviceDebug. Lo que sucede es que se combinan las dos colecciones de comportamientos con el mismo nombre (en este caso, la cadena vacía).  
   
- También puede borrar las colecciones de comportamientos mediante la etiqueta de > \<clear y quitar los comportamientos individuales de la colección mediante la etiqueta de > \<Remove. Por ejemplo, las dos configuraciones siguientes hacen que el servicio secundario tenga únicamente el comportamiento de serviceMetadata:  
+ También puede borrar las colecciones de comportamientos mediante el \<borrar > etiqueta y quitar los comportamientos individuales de la colección mediante el \<quitar > etiqueta. Por ejemplo, las dos configuraciones siguientes hacen que el servicio secundario tenga únicamente el comportamiento de serviceMetadata:  
   
 ```xml  
 <configuration>  
@@ -260,11 +260,11 @@ Para obtener más información sobre la configuración de servicios y clientes, 
   
  La combinación de comportamientos se aplica a comportamientos de extremo y comportamientos de servicio en la configuración.  
   
- Si una colección de comportamientos secundarios contiene un comportamiento que ya se encuentra en la colección de comportamientos primarios, el comportamiento secundario invalida el primario. Por tanto, si una colección de comportamientos primarios tuviera `<serviceMetadata httpGetEnabled="False" />` y una colección de comportamientos secundarios tuviera `<serviceMetadata httpGetEnabled="True" />`, el comportamiento secundario invalidaría el comportamiento primario en la colección de comportamientos y httpGetEnabled sería "true".  
+ Si una colección de comportamientos secundarios contiene un comportamiento que ya se encuentra en la colección de comportamientos primarios, el comportamiento secundario invalida el primario. Por tanto, si una colección de comportamientos primarios tuviera `<serviceMetadata httpGetEnabled="False" />` y una colección de comportamientos secundarios tenía `<serviceMetadata httpGetEnabled="True" />`, el comportamiento secundario invalidaría el comportamiento primario en la colección de comportamientos y httpGetEnabled sería "true".  
   
 ## <a name="see-also"></a>Vea también
 
 - [Configuración simplificada](simplified-configuration.md)
 - [Configuración de servicios WCF](configuring-services.md)
-- [@no__t 1service >](../configure-apps/file-schema/wcf/service.md)
-- [@no__t 1binding >](../misc/binding.md)
+- [> de servicio \<](../configure-apps/file-schema/wcf/service.md)
+- [\<> de enlace](../configure-apps/file-schema/wcf/bindings.md)

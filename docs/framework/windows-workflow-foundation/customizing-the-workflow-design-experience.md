@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 926edb4478551affa03619f44ee886d5eb591e4d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 41be55391ae9481f6c2e4feb76443f7fb676b69d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637274"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141927"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Personalizar la experiencia de diseño del flujo de trabajo
 
-Los escenarios para diseñar las actividades personalizadas y para re-hospedar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] se han simplificado enormemente en [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. El desarrollo y la implementación resultan ahora más fáciles y más flexibles. El cambio infraestructural clave es que el nuevo modelo de programación Diseñador de actividad se basa en Windows Presentation Foundation (WPF). Esto proporciona la capacidad de definir diseñadores de actividad mediante declaración y re-hospedar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en otras aplicaciones con relativa facilidad. Al realizar el rehospedaje, se puede desarrollar un editor de expresiones personalizado para admitir IntelliSense o un dominio de expresión simplificado. La integración con Windows Communication Foundation (WCF) se ha vuelto más uniforme con el uso de servicios de flujo de trabajo. Se pueden utilizar diseñadores de actividad personalizados y el árbol de elementos de modelo para mejorar las experiencias en tiempo de diseño en los diseñadores de flujo de trabajo rehospedados.
+Los escenarios para diseñar actividades personalizadas y para rehospedar el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] se han simplificado en gran medida en .NET Framework 4. El desarrollo y la implementación resultan ahora más fáciles y más flexibles. El cambio de clave infraestructura es que el nuevo modelo de programación del diseñador de actividad se basa en Windows Presentation Foundation (WPF). Esto proporciona la capacidad de definir diseñadores de actividad mediante declaración y re-hospedar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en otras aplicaciones con relativa facilidad. Al realizar el rehospedaje, se puede desarrollar un editor de expresiones personalizado para admitir IntelliSense o un dominio de expresión simplificado. La integración con Windows Communication Foundation (WCF) ha vuelto a ser más fluida con el uso de los servicios de flujo de trabajo. Se pueden utilizar diseñadores de actividad personalizados y el árbol de elementos de modelo para mejorar las experiencias en tiempo de diseño en los diseñadores de flujo de trabajo rehospedados.
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -23,11 +23,11 @@ Los escenarios para diseñar las actividades personalizadas y para re-hospedar [
 
  [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
 
- Describe cómo volver a hospedar el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] fuera de Visual Studio y cómo mostrar errores de validación.
+ Describe cómo volver a hospedar el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] fuera de Visual Studio y cómo mostrar los errores de validación.
 
  [Utilización de un editor de expresiones personalizado](using-a-custom-expression-editor.md)
 
- Describe cómo implementar un editor de expresiones personalizado para usar con los diseñadores de flujo de trabajo rehospedados fuera de Visual Studio 2010.
+ Describe cómo implementar un editor de expresiones personalizado para usarlo con diseñadores de flujo de trabajo rehospedados fuera de Visual Studio 2010.
 
 ## <a name="reference"></a>Referencia
 

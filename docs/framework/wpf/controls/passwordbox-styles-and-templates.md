@@ -9,22 +9,22 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 4ba90182468466773644c7375059f0cc01675b33
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458838"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283461"
 ---
 # <a name="passwordbox-styles-and-templates"></a>Estilos y plantillas de PasswordBox
 
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.PasswordBox>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.PasswordBox>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="passwordbox-parts"></a>Partes de PasswordBox
 
 En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.PasswordBox>.
 
-|Parte|Type|Descripción|
+|Parte|Tipo|Descripción|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Elemento visual que puede contener un <xref:System.Windows.FrameworkElement>. El texto del <xref:System.Windows.Controls.PasswordBox> se muestra en este elemento.|
 
@@ -62,4 +62,4 @@ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo Co
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

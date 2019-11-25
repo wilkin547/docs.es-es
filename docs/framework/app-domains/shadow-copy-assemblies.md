@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119777"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204572"
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.
 
 > [!IMPORTANT]
-> Las instantáneas no se admiten en las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+> Shadow copying is not supported in Windows 8.x Store apps.
 
 Common Language Runtime bloquea el archivo de ensamblado al cargar el ensamblado, por lo que no se puede actualizar el archivo hasta que se descarga el ensamblado. La única manera de descargar un ensamblado de un dominio de aplicación es descargar el dominio de aplicación, por lo que en circunstancias normales, no se puede actualizar un ensamblado en el disco hasta que todos los dominios de aplicación que lo están usando se descargan.
 

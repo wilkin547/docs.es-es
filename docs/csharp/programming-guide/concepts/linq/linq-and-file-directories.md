@@ -2,12 +2,12 @@
 title: LINQ y directorios de archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a91e397686b329d47380a8b03f61be2e2ec5043
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591978"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140933"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ y directorios de archivos (C#)
 Muchas operaciones de sistema de archivos son esencialmente consultas y, por tanto, son adecuadas para el enfoque LINQ.  
@@ -25,7 +25,7 @@ Muchas operaciones de sistema de archivos son esencialmente consultas y, por tan
  [Cómo: Buscar el número total de bytes en un conjunto de carpetas (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  Muestra cómo devolver el número total de bytes en todos los archivos en un árbol de directorio especificado.  
   
- [Cómo: Comparar el contenido de dos carpetas (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
+ [Procedimiento para comparar el contenido de dos carpetas (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
  Muestra cómo devolver todos los archivos que se encuentran en dos carpetas especificadas y también todos los archivos que se encuentran en una carpeta pero no en la otra.  
   
  [Cómo: Buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  

@@ -2,12 +2,12 @@
 title: Procedimiento para compilar ejemplos de LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 9bbd04731854d67b9276f339a15f2c7f2193f9b4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 289a13daed7e3c871156bf50c6fa04c113c0cd13
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594116"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141455"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Procedimiento para compilar ejemplos de LINQ to XML (C#)
 Los diferentes fragmentos de código y ejemplos de esta documentación utilizan clases y tipos de diferentes espacios de nombres. Cuando se compila código C#, se deben proporcionar las directivas `using` adecuadas.  

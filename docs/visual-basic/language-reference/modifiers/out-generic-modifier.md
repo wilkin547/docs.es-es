@@ -1,5 +1,5 @@
 ---
-title: Out (Modificador genérico) (Visual Basic)
+title: Modificador genérico Out
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceOut
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053930"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351420"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Modificador genérico) (Visual Basic)
 
-Para los parámetros de tipo genérico, la `Out` palabra clave especifica que el tipo es covariante.
+For generic type parameters, the `Out` keyword specifies that the type is covariant.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -37,11 +37,11 @@ En una interfaz genérica, un parámetro de tipo se puede declarar como covarian
 
 - El parámetro de tipo no se usa como restricción genérica para los métodos de interfaz.
 
-En un delegado genérico, un parámetro de tipo puede se puede declarar como covariante si se usa solo como un tipo de valor devuelto del método y no se usan para los argumentos de método.
+In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
 
 La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.
 
-En Visual Basic, no puede declarar eventos en las interfaces covariantes sin especificar el tipo de delegado. Además, no pueden tener anidadas interfaces covariante clases, enumeraciones o estructuras, pero puede haber interfaces anidadas.
+In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
 
 ## <a name="behavior"></a>Comportamiento
 
@@ -57,7 +57,7 @@ En el ejemplo siguiente se muestra cómo declarar, extender e implementar una in
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. También se muestra cómo usar la conversión implícita de tipos de delegado.
+En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. It also shows how you can use implicit conversion for delegate types.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

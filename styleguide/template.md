@@ -14,16 +14,16 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775541"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089276"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
-Esta plantilla de dotnet/docs contiene ejemplos de sintaxis de Markdown, así como instrucciones sobre cómo establecer los metadatos. Para sacar el máximo provecho de ella, debe ver el [Markdown sin formato](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) y la [vista representada](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (por ejemplo, el Markdown sin formato muestra el bloque de metadatos, mientras que la vista representada no).
+Esta plantilla de dotnet/docs contiene ejemplos de sintaxis de Markdown, así como instrucciones sobre cómo establecer los metadatos. Para sacar el máximo partido, debe ver el [Markdown sin formato](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) y la [vista representada](https://github.com/dotnet/docs/blob/master/styleguide/template.md).
 
 Al crear un archivo de Markdown, debe copiar la plantilla en un archivo nuevo, rellenar los metadatos como se indica a continuación, configurar el encabezado H1 como se indica antes del título de este artículo y eliminar el contenido.
 
@@ -38,7 +38,7 @@ Puede encontrar el bloque de metadatos completo más arriba (en el [Markdown sin
 - **description**: resume el contenido del artículo. Habitualmente aparece en la página de resultados de la búsqueda, pero no se usa para la clasificación de la búsqueda. Debe tener entre 115 y 145 caracteres, incluidos los espacios.
 - **author** y **ms.author**: el campo author debe contener el **nombre de usuario de GitHub** del autor, no su alias.  Por otro lado, el campo **ms.author** debe contener un alias de Microsoft e indica al responsable de mantener el artículo.
 - **ms.topic**: el tipo de tema. El valor más común es `conceptual` y se establece en un nivel global. Otros valores comunes que se usan son `tutorial`, `overview` y `reference`.
-- **ms.devlang** define el filtro de lenguaje que se muestra para el tema. Puede ver una lista de los valores admitidos en la sección [Lenguajes admitidos](#supported-languages). Solo se debe establecer cuando el tema abarca más de un lenguaje de programación. Por lo general, en nuestro contenido solo se usa `csharp`, `vb`, `fsharp` y `cpp` para este valor.
+- **dev_langs** define el filtro de lenguaje que se muestra para el tema. Puede ver una lista de los valores admitidos en la sección [Lenguajes admitidos](#supported-languages). Solo se debe establecer cuando el tema abarca más de un lenguaje de programación. Por lo general, en nuestro contenido solo se usa `csharp`, `vb`, `fsharp` y `cpp` para este valor.
 - **ms.prod**: identificación del producto que se usa con fines de inteligencia empresarial. Por lo general, se establecen en un nivel global, por lo que no suelen aparecer en el bloque de metadatos de cada artículo.
 - **ms.technology**: clasificación de inteligencia empresarial adicional. Algunos de los valores admitidos son: `devlang-csharp` para temas de C#, `devlang-fsharp` para temas de F# y `devlang-visual-basic` para temas de VB. Los valores variarán en otras guías, por lo que deberá pedir ayuda a un miembro del equipo.
 - **ms.date**: fecha con formato DD/MM/AAAA. Se muestra en la página publicada para indicar la última vez que el artículo se editó de manera sustancial o se garantizó como "actualizado" (es decir, la última vez que se revisó el artículo y se consideró como actualizado).
@@ -54,29 +54,31 @@ Todos los Markdown básicos y característicos de GitHub (GFM) son compatibles. 
 
 Markdown utiliza caracteres especiales como \*, \` y \# para dar formato. Si desea incluir uno de estos caracteres en el contenido, tiene dos opciones disponibles:
 
-- Colocar una barra diagonal inversa antes del carácter especial para "escapar" (por ejemplo, `\*` para un \*)
-- Utilizar el [código de entidad HTML](https://www.ascii.cl/htmlcodes.htm) para el carácter (por ejemplo, `&#42;` para un *).
+- Colocar una barra diagonal inversa antes del carácter especial para "aplicarle escape" (por ejemplo, `\*` para \*).
+- Usar el [código de entidad HTML](https://www.ascii.cl/htmlcodes.htm) para el carácter (por ejemplo, `&#42;` para &#42;).
 
-## <a name="file-name"></a>Nombre del archivo
+## <a name="file-name"></a>Nombre de archivo
 
 Los nombres de archivo utilizan las siguientes reglas:
 
 - Solo contienen letras minúsculas, números y guiones.
 - No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
-- Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
-- No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
+- Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. No utilice gerundios.
+- No utilice palabras cortas ni incluya un, y, el, en, o, etc.
 - Debe estar en Markdown y utilizar la extensión de archivo .md.
 - Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
 
 ## <a name="headings"></a>Encabezados
 
-Utilice mayúsculas y minúsculas de estilo de oración. Ponga siempre en mayúscula la primera palabra de un encabezado, pero no ponga en mayúsculas la palabra que sigue a un signo de dos puntos en un título o encabezado (por ejemplo, "Cómo: ordenar una matriz").
+Utilice mayúsculas y minúsculas de estilo de oración. Ponga en mayúscula la primera letra de la primera palabra de un título, los nombres propios y la primera letra que aparezca después de un signo de dos puntos (por ejemplo, "Tutorial: Predicción de precios mediante regresión con ML.NET").
+
+No agregue un signo de dos puntos después de "Cómo" (por ejemplo, "Cómo ordenar una matriz" y no "Cómo: Ordenar una matriz").
 
 Los encabezados deben realizarse con estilo atx, es decir, usar de uno a seis caracteres hash (#) al principio de la línea para indicar un título, correspondiente a los niveles de encabezados HTML de H1 a H6. Más arriba se pueden encontrar ejemplos de encabezados de primer y segundo nivel.
 
 Solo **debe** haber un encabezado de primer nivel (H1) en el tema, que se mostrará como título en la página.
 
-Si el encabezado termina en un carácter `#`, debe agregar un carácter de escape para que el título se represente correctamente. Por ejemplo: `# Async programming in F\#`.
+Si el encabezado termina en un carácter `#`, debe agregar un carácter de escape para que el título se represente correctamente. Por ejemplo, `# Async programming in F\#`.
 
 Los encabezados de segundo nivel generarán la tabla de contenido en la página que aparece en la sección "En este artículo" debajo del título en la página.
 
@@ -140,9 +142,9 @@ El UID equivale al nombre de miembro y de tipo completo.
 
 Si agrega un carácter \* (o %2A) después del UID, el vínculo representa la página de sobrecarga y no una API específica. Por ejemplo, puede usarlo cuando quiera establecer un vínculo a la página [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) de manera genérica en lugar de una sobrecarga específica como [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). También puede usar \* para establecer un vínculo a una página de miembro cuando el miembro no está sobrecargado. Esto evitará que tenga que incluir la lista de parámetros en el UID.
 
-Para establecer un vínculo a una sobrecarga de método específica, debe incluir el nombre de tipo completo de cada uno de los parámetros del método. Por ejemplo, \<xref:System.DateTime.ToString> establece un vínculo al método [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) sin parámetros, mientras que \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> establece un vínculo al método [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Puede encontrar los UID de un miembro sobrecargado específico desde `https://xref.docs.microsoft.com/autocomplete`. La cadena de consulta"?text= *\<type-member-name>* " identifica el tipo o miembro cuyos UID quiere ver. Por ejemplo, `https://xref.docs.microsoft.com/autocomplete?text=string.format` recupera las sobrecargas [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
+Para establecer un vínculo a una sobrecarga de método específica, debe incluir el nombre de tipo completo de cada uno de los parámetros del método. Por ejemplo, \<xref:System.DateTime.ToString> establece un vínculo al método [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) sin parámetros, mientras que \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> establece un vínculo al método [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Puede encontrar los UID de un miembro sobrecargado específico desde <https://xref.docs.microsoft.com/autocomplete>. La cadena de consulta"?text= *\<type-member-name>* " identifica el tipo o miembro cuyos UID quiere ver. Por ejemplo, <https://xref.docs.microsoft.com/autocomplete?text=string.format> recupera las sobrecargas [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
 
-Para establecer un vínculo a un tipo genérico, como [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), puede usar el carácter ` (%60), seguido del número de parámetros de tipo genérico. Por ejemplo, \<xref:System.Nullable%601> establece un vínculo al tipo [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), mientras que \<xref:System.Func%602> establece un vínculo al delegado [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
+Para establecer un vínculo a un tipo genérico, como [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), puede usar el carácter \` (%60), seguido del número de parámetros de tipo genérico. Por ejemplo, \<xref:System.Nullable%601> establece un vínculo al tipo [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), mientras que \<xref:System.Func%602> establece un vínculo al delegado [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
 Puede utilizar alguna de las siguientes sintaxis:
 
@@ -165,7 +167,7 @@ Para obtener más información acerca de cómo utilizar esta notación, consulte
 Hay dos maneras de encontrar el UID:
 
 - Vea el código fuente de la página de API a la que quiere establecer un vínculo y busque el valor ms.assetid. Tenga en cuenta que los valores de sobrecarga individuales no aparecen en el código fuente.
-- Use esta herramienta para buscar los UID: https://xref.docs.microsoft.com/autocomplete?text=tostring (reemplace tostring con partes del nombre de la API que intenta encontrar). La herramienta busca el parámetro de consulta `text` proporcionado en cualquier parte del UID. Por ejemplo, puede buscar el nombre de miembro (ToString), el nombre de miembro parcial (ToStri), el nombre de tipo y de miembro (Double.ToString), etc.
+- Use esta herramienta para buscar los UID: <https://xref.docs.microsoft.com/autocomplete?text=tostring> (reemplace tostring con partes del nombre de la API que intenta encontrar). La herramienta busca el parámetro de consulta `text` proporcionado en cualquier parte del UID. Por ejemplo, puede buscar el nombre de miembro (ToString), el nombre de miembro parcial (ToStri), el nombre de tipo y de miembro (Double.ToString), etc.
 
 Cuando el UID contiene los caracteres especiales \`, \# o \*, el valor de UID debe estar codificado en HTML como `%60`, `%23` y `%2A`, respectivamente. En ocasiones verá paréntesis codificados, pero no es requisito.
 
@@ -180,7 +182,7 @@ Ejemplos:
 ### <a name="ordered-lists"></a>Listas ordenadas
 
 1. Esto
-1. Es
+1. Is
 1. Una
 1. Por orden
 1. Lista
@@ -194,11 +196,11 @@ Ejemplos:
     1. Señora Beatriz
     1. Profesor Alcalá
 1. ordered
-1. lista
+1. list
 
 ### <a name="unordered-lists"></a>Listas desordenadas
 
-- Esto
+- Este
 - is
 - a
 - con viñetas
@@ -206,9 +208,9 @@ Ejemplos:
 
 #### <a name="unordered-list-with-an-embedded-list"></a>Lista desordenada con una lista insertada
 
-- Esto
+- Este
 - con viñetas
-- lista
+- list
   - Sr. Valladares
   - Sr. Tórrez
 - contains
@@ -272,9 +274,9 @@ Incluir fragmentos de programas completos garantiza que todo el código se ejecu
 
 Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar la codificación de color específica del lenguaje a un bloque de código. Esta es la lista de lenguajes admitidos donde se muestra la etiqueta de Markdown para cada id. de lenguaje.
 
-#### <a name="supported-languages"></a>Idiomas compatibles
+#### <a name="supported-languages"></a>Idiomas admitidos
 
-|Name|Etiqueta de Markdown|
+|NOMBRE|Etiqueta de Markdown|
 |-----|-------|
 |Consola de .NET|dotnetcli|
 |ASP.NET (C#)|aspx-csharp|
@@ -288,12 +290,12 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 |C++/WinRT|cppwinrt|
 |C#|csharp|
 |C# en el explorador|csharp-interactive|
-|Consola|consola|
+|Consola|console|
 |CSHTML|cshtml|
 |DAX|dax|
 |Dockerfile|dockerfile|
 |F#|fsharp|
-|Ir|go|
+|Go|go|
 |HTML|html|
 |HTTP|http|
 |Java|Java|
@@ -305,6 +307,7 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps (punto como separador decimal)|powerapps-dot|
 |PowerApps (coma como separador decimal)|powerapps-comma|
 |PowerShell|powershell|
@@ -318,13 +321,14 @@ Utilice tres acentos graves (\`\`\`) + un identificador de lenguaje para aplicar
 |Visual Basic|vb|
 |VBScript|vbscript|
 |XAML|xaml|
-|XML|xml|
+|XML|Xml|
+|yml|yml|
 
 El nombre `csharp-interactive` especifica el lenguaje C# y la capacidad de ejecutar los ejemplos desde el explorador. Estos fragmentos de código se compilan y ejecutan en un contenedor de Docker y los resultados de la ejecución del programa se muestran en la ventana del explorador del usuario.
 
 Estos son ejemplos de bloques de código que usan los id. de lenguaje para (\`\`\`csharp), Python (\`\`\`python) y PowerShell (\`\`\`powershell).
 
-##### <a name="c9839"></a>C&#9839;
+##### <a name="c"></a>C\#
 
 ```csharp
 using System;
@@ -433,7 +437,7 @@ docs.microsoft proporciona algunas extensiones adicionales a Markdown caracterí
 
 ### <a name="alerts"></a>Alertas
 
-Es importante usar los siguientes estilos de alerta, por lo que se representan con el estilo correspondiente en el sitio de documentación. Sin embargo, el motor de representación en GitHub no los diferencia.
+Es importante usar los siguientes estilos de alerta, por lo que se representan con el estilo correspondiente en el sitio de documentación. Pero el motor de representación en GitHub no los diferencia.
 
 ```markdown
 > [!NOTE]

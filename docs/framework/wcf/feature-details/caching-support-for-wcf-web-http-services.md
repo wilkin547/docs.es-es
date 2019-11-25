@@ -2,20 +2,20 @@
 title: Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988769"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141786"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]permite usar el mecanismo de almacenamiento en caché declarativo que ya está disponible en ASP.NET en los servicios Web HTTP de WCF. Esto le permite almacenar en memoria caché las respuestas de las operaciones de servicio Web HTTP de WCF. Cuando un usuario envía un protocolo HTTP GET al servicio que está configurado para almacenarlo en memoria caché, ASP.NET devuelve la respuesta almacenada en memoria caché y no se llama al método de servicio. Cuando la memoria caché expira, la próxima vez que un usuario envía un protocolo HTTP GET, se llama al método de servicio y la respuesta se vuelve a almacenar en memoria caché. Para obtener más información sobre el almacenamiento en caché de ASP.NET, consulte [Introducción al almacenamiento en caché de ASP.net](https://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] le permite usar el mecanismo de almacenamiento en caché declarativo que ya está disponible en ASP.NET en los servicios Web HTTP de WCF. Esto le permite almacenar en memoria caché las respuestas de las operaciones de servicio Web HTTP de WCF. Cuando un usuario envía un protocolo HTTP GET al servicio que está configurado para almacenarlo en memoria caché, ASP.NET devuelve la respuesta almacenada en memoria caché y no se llama al método de servicio. Cuando la memoria caché expira, la próxima vez que un usuario envía un protocolo HTTP GET, se llama al método de servicio y la respuesta se vuelve a almacenar en memoria caché. Para obtener más información sobre el almacenamiento en caché de ASP.NET, consulte [Introducción al almacenamiento en caché de ASP.net](https://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Almacenamiento en memoria caché básico del servicio Web HTTP  
  Para habilitar el almacenamiento en memoria caché del servicio WEB HTTP, debe habilitar primero la compatibilidad de ASP.NET aplicando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> al servicio, definiendo <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> como <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] introduce un nuevo atributo llamado <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> que le permite especificar un nombre de perfil de memoria caché. Este atributo se aplica a una operación del servicio. El siguiente ejemplo aplica <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a un servicio para habilitar la compatibilidad de ASP.NET y configura la operación `GetCustomer` para almacenar en memoria caché. El atributo <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> especifica un perfil de memoria caché que contiene la configuración de memoria caché que se va a utilizar.  
+ .NET Framework 4 introduce un nuevo atributo denominado <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> que le permite especificar un nombre de Perfil de caché. Este atributo se aplica a una operación del servicio. El siguiente ejemplo aplica <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a un servicio para habilitar la compatibilidad de ASP.NET y configura la operación `GetCustomer` para almacenar en memoria caché. El atributo <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> especifica un perfil de memoria caché que contiene la configuración de memoria caché que se va a utilizar.  
   
 ```csharp
 [ServiceContract] 
@@ -42,7 +42,7 @@ public class Service
 > [!WARNING]
 > Si no se activa el modo de compatibilidad de ASP.NET y se utiliza <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, se produce una excepción.  
   
- El nombre de perfil de memoria caché especificado por <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> identifica un perfil de memoria caché agregado al archivo de configuración Web.config. El perfil de caché se define con en un`outputCacheSetting`< elemento > como se muestra en el siguiente ejemplo de configuración.  
+ El nombre de perfil de memoria caché especificado por <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> identifica un perfil de memoria caché agregado al archivo de configuración Web.config. El perfil de caché se define con en un <`outputCacheSetting`elemento > como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml
 <!-- ...  -->
@@ -58,10 +58,10 @@ public class Service
 </system.web>  
 ```  
   
- Éste es el mismo elemento de configuración que está disponible para las aplicaciones ASP.NET. Para obtener más información acerca de los perfiles de <xref:System.Web.Configuration.OutputCacheProfile>caché de ASP.net, vea. Para los servicios Web HTTP, los atributos más importantes del perfil de la memoria caché son: `cacheDuration` y `varyByParam`. Se necesitan ambos atributos. `cacheDuration` establece la cantidad de tiempo que una respuesta se debe almacenar en memoria caché en segundos. `varyByParam` permite especificar un parámetro de cadena de consulta que se usa para almacenar en memoria caché las respuestas. Todas las solicitudes realizadas con valores de parámetro de cadena de consulta diferentes se almacenan en memoria caché por separado. Por ejemplo, una vez que se realiza una solicitud `http://MyServer/MyHttpService/MyOperation?param=10`inicial a, todas las solicitudes posteriores realizadas con el mismo URI se devolverían la respuesta almacenada en caché (siempre que no haya transcurrido la duración de la caché). Las respuestas para una solicitud similar que es igual pero tiene un valor diferente para el parámetro de cadena de consulta de parámetros se almacenan en la memoria caché por separado. Si no desea este comportamiento de almacenamiento en caché por separado, establezca `varyByParam` en "none".  
+ Éste es el mismo elemento de configuración que está disponible para las aplicaciones ASP.NET. Para obtener más información sobre los perfiles de caché de ASP.NET, consulte <xref:System.Web.Configuration.OutputCacheProfile>. Para los servicios Web HTTP, los atributos más importantes del perfil de la memoria caché son: `cacheDuration` y `varyByParam`. Se necesitan ambos atributos. `cacheDuration` establece la cantidad de tiempo que una respuesta se debe almacenar en memoria caché en segundos. `varyByParam` permite especificar un parámetro de cadena de consulta que se usa para almacenar en memoria caché las respuestas. Todas las solicitudes realizadas con valores de parámetro de cadena de consulta diferentes se almacenan en memoria caché por separado. Por ejemplo, una vez que se realiza una solicitud inicial a `http://MyServer/MyHttpService/MyOperation?param=10`, todas las solicitudes posteriores realizadas con el mismo URI se devolverían la respuesta almacenada en caché (siempre que no haya transcurrido la duración de la caché). Las respuestas para una solicitud similar que es igual pero tiene un valor diferente para el parámetro de cadena de consulta de parámetros se almacenan en la memoria caché por separado. Si no desea este comportamiento de almacenamiento en caché por separado, establezca `varyByParam` en "none".  
   
 ## <a name="sql-cache-dependency"></a>Dependencia de memoria caché de SQL  
- Las respuestas del servicio Web HTTP también pueden estar almacenadas en memoria caché con una dependencia de memoria caché de SQL. Si el servicio Web HTTP de WCF depende de los datos almacenados en una base de datos SQL, puede que desee almacenar en memoria caché la respuesta del servicio e invalidar la respuesta almacenada en memoria caché cuando se produzcan cambios en los datos de tabla de base de datos SQL. Este comportamiento se configura completamente en el archivo Web.config. Primero debe definir una cadena de conexión en el elemento`connectionStrings`< >.  
+ Las respuestas del servicio Web HTTP también pueden estar almacenadas en memoria caché con una dependencia de memoria caché de SQL. Si el servicio Web HTTP de WCF depende de los datos almacenados en una base de datos SQL, puede que desee almacenar en memoria caché la respuesta del servicio e invalidar la respuesta almacenada en memoria caché cuando se produzcan cambios en los datos de tabla de base de datos SQL. Este comportamiento se configura completamente en el archivo Web.config. Primero debe definir una cadena de conexión en el <`connectionStrings`elemento >.  
   
 ```xml
 <connectionStrings>
@@ -71,7 +71,7 @@ public class Service
 </connectionStrings>
 ```  
   
- A continuación, debe habilitar la dependencia de caché de`caching`SQL dentro de un elemento`system.web`< > dentro del elemento < > como se muestra en el siguiente ejemplo de configuración.  
+ A continuación, debe habilitar la dependencia de caché de SQL dentro de una <`caching`elemento > en el elemento <`system.web`> como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml  
 <system.web>
@@ -87,7 +87,7 @@ public class Service
 </system.web>
 ```  
   
- Aquí, la dependencia de memoria caché de SQL está habilitada y se establece un tiempo de sondeo de 1.000 milisegundos. Cada vez que el tiempo de sondeo transcurre, se comprueba la tabla de la base de datos para detectar actualizaciones. Si se detectan cambios, se quita el contenido de la memoria caché y la próxima vez que se invoque la operación del servicio, se almacenará en memoria caché una nueva respuesta. En el elemento`sqlCacheDependency`< > Agregue las bases de datos y haga referencia a las cadenas de conexión`databases`dentro del elemento < >, tal como se muestra en el ejemplo siguiente.  
+ Aquí, la dependencia de memoria caché de SQL está habilitada y se establece un tiempo de sondeo de 1.000 milisegundos. Cada vez que el tiempo de sondeo transcurre, se comprueba la tabla de la base de datos para detectar actualizaciones. Si se detectan cambios, se quita el contenido de la memoria caché y la próxima vez que se invoque la operación del servicio, se almacenará en memoria caché una nueva respuesta. Dentro de la <`sqlCacheDependency`elemento > Agregue las bases de datos y haga referencia a las cadenas de conexión en el <`databases`elemento >, tal como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <system.web>
@@ -103,7 +103,7 @@ public class Service
 </system.web>  
 ```  
   
- A continuación, debe configurar los valores de la caché de`caching`resultados en el elemento < > como se muestra en el ejemplo siguiente.  
+ A continuación, debe configurar los valores de la caché de resultados en el <`caching`elemento > como se muestra en el ejemplo siguiente.  
   
 ```xml
 <system.web>

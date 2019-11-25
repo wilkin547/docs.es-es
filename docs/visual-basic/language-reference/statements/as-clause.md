@@ -1,5 +1,5 @@
 ---
-title: As (Cláusula, Visual Basic)
+title: Cláusula As
 ms.date: 07/20/2015
 f1_keywords:
 - vb.as
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945098"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350169"
 ---
 # <a name="as-clause-visual-basic"></a>As (Cláusula, Visual Basic)
-Presenta un `As` cláusula que identifica un tipo de datos en una instrucción de declaración o una lista de restricciones en un parámetro de tipo genérico.  
+Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
   
 ## <a name="remarks"></a>Comentarios  
  La palabra clave `As` se puede usar en los siguientes contextos:  
@@ -37,9 +37,9 @@ Presenta un `As` cláusula que identifica un tipo de datos en una instrucción d
   
  [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For... Instrucciones Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [Para cada uno... Instrucciones Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,11 +57,11 @@ Presenta un `As` cláusula que identifica un tipo de datos en una instrucción d
   
  [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try... Catch... Instrucciones finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Crear una nueva Variable](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Crear una variable nueva](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Declaración de variables](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455522"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089329"
 ---
 # <a name="attached-properties-overview"></a>Información general sobre propiedades asociadas
 
@@ -60,7 +60,7 @@ El escenario más típico en el que WPF define una propiedad adjunta es cuando u
 
 ## Propiedades adjuntas en el código<a name="attached_properties_code"></a>
 
-Las propiedades adjuntas en WPF no tienen los métodos de "contenedor" de CLR típicos para facilitar el acceso get/set. Esto se debe a que la propiedad adjunta no es necesariamente parte del espacio de nombres CLR para las instancias en las que se establece la propiedad. No obstante, un procesador de XAML debe poder establecer esos valores durante el análisis de XAML. Para admitir el uso de una propiedad adjunta efectiva, el tipo de propietario de la propiedad adjunta debe implementar métodos de descriptor de acceso dedicados en la forma **Get_PropertyName_** y **Set_PropertyName_** . Estos métodos de descriptor de acceso dedicados también resultan útiles para obtener o establecer la propiedad adjunta en el código. Desde una perspectiva del código, una propiedad adjunta se parece a un campo de respaldo, que presenta descriptores de acceso de métodos en lugar de descriptores de acceso de propiedades. Ese campo de respaldo puede existir en cualquier objeto, en lugar de tener que definirse específicamente.
+Las propiedades adjuntas en WPF no tienen los métodos de "contenedor" de CLR típicos para facilitar el acceso get/set. Esto se debe a que la propiedad adjunta no es necesariamente parte del espacio de nombres CLR para las instancias en las que se establece la propiedad. No obstante, un procesador de XAML debe poder establecer esos valores durante el análisis de XAML. Para admitir el uso de una propiedad adjunta efectiva, el tipo de propietario de la propiedad adjunta debe implementar métodos de descriptor de acceso dedicados en el formulario **Get_PropertyName_** y **Set_PropertyName_** . Estos métodos de descriptor de acceso dedicados también resultan útiles para obtener o establecer la propiedad adjunta en el código. Desde una perspectiva del código, una propiedad adjunta se parece a un campo de respaldo, que presenta descriptores de acceso de métodos en lugar de descriptores de acceso de propiedades. Ese campo de respaldo puede existir en cualquier objeto, en lugar de tener que definirse específicamente.
 
 En el ejemplo siguiente se muestra cómo establecer una propiedad adjunta en el código. En este ejemplo, `myCheckBox` es una instancia de la clase <xref:System.Windows.Controls.CheckBox>.
 
@@ -123,7 +123,7 @@ En el ejemplo siguiente se muestra el registro de la propiedad de dependencia (m
 
 #### <a name="attached-property-attributes"></a>Atributos de propiedades adjuntas
 
-WPF define varias [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] que están diseñadas para proporcionar información sobre las propiedades adjuntas a los procesos de reflexión y para los usuarios típicos de reflexión e información de propiedades, como los diseñadores. Dado que las propiedades adjuntas tienen un tipo de ámbito ilimitado, los diseñadores necesitan una manera de evitar abrumar a los usuarios con una lista global de todas las propiedades adjuntas que se definen en una implementación de tecnología específica que utiliza XAML. Los [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] que WPF define para las propiedades adjuntas se pueden usar para definir el ámbito de las situaciones en las que se debe mostrar una propiedad adjunta determinada en una ventana Propiedades. También puede aplicar estos atributos para sus propias propiedades adjuntas personalizadas. El propósito y la sintaxis de [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] se describe en las páginas de referencia correspondientes:
+WPF define varios atributos .NET diseñados para proporcionar información sobre las propiedades adjuntas a los procesos de reflexión y para los usuarios típicos de reflexión e información de propiedades, como los diseñadores. Dado que las propiedades adjuntas tienen un tipo de ámbito ilimitado, los diseñadores necesitan una manera de evitar abrumar a los usuarios con una lista global de todas las propiedades adjuntas que se definen en una implementación de tecnología específica que utiliza XAML. Los atributos .NET que WPF define para las propiedades adjuntas se pueden usar para definir el ámbito de las situaciones en las que se debe mostrar una propiedad adjunta determinada en una ventana Propiedades. También puede aplicar estos atributos para sus propias propiedades adjuntas personalizadas. El propósito y la sintaxis de los atributos de .NET se describen en las páginas de referencia adecuadas:
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

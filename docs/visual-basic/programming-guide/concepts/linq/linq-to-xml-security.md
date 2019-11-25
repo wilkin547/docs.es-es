@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML seguridad (Visual Basic)
+title: Seguridad de LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 63997d2c7d47effac9c87fec80c69a68815a4ee9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01b03dc5792981d41d16cc7b551892bd6fe2bcde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639894"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331739"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML seguridad (Visual Basic)
+# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Security (Visual Basic)
 Este tema describe los problemas de seguridad asociados a LINQ to XML. Además, proporciona algunas indicaciones para reducir la exposición a esos problemas de seguridad.  
   
 ## <a name="linq-to-xml-security-overview"></a>Información general de seguridad de LINQ to XML  
@@ -101,4 +101,4 @@ Este tema describe los problemas de seguridad asociados a LINQ to XML. Además, 
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: Procedimiento para agregar métodos personalizados para las consultas LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594148"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141470"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Procedimiento para agregar métodos personalizados para las consultas LINQ (C#)
 

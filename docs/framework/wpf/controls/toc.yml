@@ -394,8 +394,8 @@
       items:
         - name: Aplicar estilos y plantillas
           href: styling-and-templating.md
-        - name: Personalizar la apariencia de un control existente creando una clase ControlTemplate
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: Personalización de un control existente con un objeto ControlTemplate
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: Procedimiento para buscar elementos generados por un objeto ControlTemplate
           href: how-to-find-controltemplate-generated-elements.md
     - name: Personalización de controles

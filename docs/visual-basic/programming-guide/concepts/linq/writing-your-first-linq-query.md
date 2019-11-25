@@ -1,55 +1,55 @@
 ---
-title: Escribir la primera consulta con LINQ (Visual Basic)
+title: Escribir la primera consulta con LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 5c83d888f65ce5c216327e94c5d4d1267fb93c29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9fe4241972815a04ec9c6a51a45760d72a8bbb2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952009"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349343"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escribir la primera consulta con LINQ (Visual Basic)
-Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se expresan en un lenguaje de consulta dedicado. Con el tiempo, se han desarrollado distintos lenguajes para distintos tipos de orígenes de datos, por ejemplo, SQL para bases de datos relacionales y XQuery para XML. Esto hace que sea necesario que el desarrollador de la aplicación Aprenda un nuevo lenguaje de consulta para cada tipo de origen de datos o formato de datos que se admita.  
+Una *consulta* es una expresión que recupera datos de un origen de datos. Queries are expressed in a dedicated query language. Over time, different languages have been developed for different types of data sources, for example, SQL for relational databases and XQuery for XML. This makes it necessary for the application developer to learn a new query language for each type of data source or data format that is supported.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]simplifica la situación al ofrecer un modelo coherente para trabajar con datos en varios tipos de orígenes de datos y formatos. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Puede usar los mismos patrones de codificación básicos para consultar y transformar datos en documentos XML, bases de datos SQL, conjuntos de datos y entidades de ADO.net, colecciones de .NET Framework y cualquier otro origen o formato [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para el que esté disponible un proveedor. En este documento se describen las tres fases de la creación y el [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] uso de consultas básicas.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] simplifies the situation by offering a consistent model for working with data across various kinds of data sources and formats. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. You use the same basic coding patterns to query and transform data in XML documents, SQL databases, ADO.NET datasets and entities, .NET Framework collections, and any other source or format for which a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is available. This document describes the three phases of the creation and use of basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.  
   
-## <a name="three-stages-of-a-query-operation"></a>Tres fases de una operación de consulta  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]las operaciones de consulta se componen de tres acciones:  
+## <a name="three-stages-of-a-query-operation"></a>Three Stages of a Query Operation  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operations consist of three actions:  
   
-1. Obtener el origen o los orígenes de datos.  
+1. Obtain the data source or sources.  
   
 2. Crear la consulta.  
   
 3. Ejecutar la consulta.  
   
- En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la ejecución de una consulta es distinta de la creación de la consulta. No se recuperan datos mediante la creación de una consulta. Este punto se analiza con más detalle más adelante en este tema.  
+ In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], the execution of a query is distinct from the creation of the query. You do not retrieve any data just by creating a query. Este punto se analiza con más detalle más adelante en este tema.  
   
- En el ejemplo siguiente se muestran las tres partes de una operación de consulta. En el ejemplo se usa una matriz de enteros como un origen de datos adecuado para fines de demostración. Sin embargo, los mismos conceptos también se aplican a otros orígenes de datos.  
+ The following example illustrates the three parts of a query operation. The example uses an array of integers as a convenient data source for demonstration purposes. However, the same concepts also apply to other data sources.  
   
 > [!NOTE]
-> En la [Página compilar, diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), asegúrese de que la **opción Infer** está establecida en **on**.  
+> On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- Salida:  
+ Resultado:  
   
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>El origen de datos  
- Dado que el origen de datos del ejemplo anterior es una matriz, admite implícitamente la interfaz <xref:System.Collections.Generic.IEnumerable%601> genérica. Este hecho le permite usar una matriz como origen de datos para una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Los tipos compatibles con <xref:System.Collections.Generic.IEnumerable%601> o una interfaz derivada, como la interfaz genérica <xref:System.Linq.IQueryable%601>, se denominan *tipos consultables*.  
+ Because the data source in the previous example is an array, it implicitly supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface. It is this fact that enables you to use an array as a data source for a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Los tipos compatibles con <xref:System.Collections.Generic.IEnumerable%601> o una interfaz derivada, como la interfaz genérica <xref:System.Linq.IQueryable%601>, se denominan *tipos consultables*.  
   
- Como un tipo que se pueda consultar implícitamente, la matriz no requiere ninguna modificación ni tratamiento especial para [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] servir como origen de datos. Lo mismo se aplica a cualquier tipo de colección que <xref:System.Collections.Generic.IEnumerable%601>admita, incluidas las <xref:System.Collections.Generic.List%601>clases <xref:System.Collections.Generic.Dictionary%602>genéricas, y otras de la biblioteca de clases .NET Framework.  
+ As an implicitly queryable type, the array requires no modification or special treatment to serve as a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source. The same is true for any collection type that supports <xref:System.Collections.Generic.IEnumerable%601>, including the generic <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, and other classes in the .NET Framework class library.  
   
- Si los datos de origen no implementan <xref:System.Collections.Generic.IEnumerable%601>ya, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se necesita un proveedor para implementar la funcionalidad de los *operadores de consulta estándar* para ese origen de datos. Por ejemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] controla el trabajo de carga de un documento XML en un <xref:System.Xml.Linq.XElement> tipo consultable, tal como se muestra en el ejemplo siguiente. Para obtener más información acerca de los operadores de consulta estándar, consulte [Introducción a los operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md).  
+ If the source data does not already implement <xref:System.Collections.Generic.IEnumerable%601>, a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is needed to implement the functionality of the *standard query operators* for that data source. For example, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] handles the work of loading an XML document into a queryable <xref:System.Xml.Linq.XElement> type, as shown in the following example. For more information about standard query operators, see [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md).  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
- Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], primero se crea una asignación relacional de objetos en tiempo de diseño, ya sea manualmente o mediante el [LINQ to SQL herramientas de Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) en Visual Studio. Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos. En el ejemplo siguiente, `customers` representa una tabla específica en la base de datos <xref:System.Data.Linq.Table%601> y admite <xref:System.Linq.IQueryable%601>Generic.  
+ With [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], you first create an object-relational mapping at design time, either manually or by using the [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) in Visual Studio. Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos. In the following example, `customers` represents a specific table in the database, and <xref:System.Data.Linq.Table%601> supports generic <xref:System.Linq.IQueryable%601>.  
   
 ```vb  
 ' Create a data source from a SQL table.  
@@ -57,37 +57,37 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Para obtener más información sobre cómo crear tipos específicos de orígenes de datos, vea la documentación de los distintos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Para obtener una lista de estos proveedores, consulte [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)). La regla básica es sencilla: un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origen de datos es cualquier objeto que admita la <xref:System.Collections.Generic.IEnumerable%601> interfaz genérica o una interfaz que herede de ella.  
+ Para obtener más información sobre cómo crear tipos específicos de orígenes de datos, vea la documentación de los distintos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (For a list of these providers, see [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) The basic rule is simple: a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source is any object that supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface, or an interface that inherits from it.  
   
 > [!NOTE]
-> Los tipos como <xref:System.Collections.IEnumerable> [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que admiten la interfaz no genérica también se pueden usar como orígenes <xref:System.Collections.ArrayList> de datos. Para obtener un ejemplo en el <xref:System.Collections.ArrayList>que se [usa, consulte Cómo: Consultar una ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+> Types such as <xref:System.Collections.ArrayList> that support the non-generic <xref:System.Collections.IEnumerable> interface can also be used as [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data sources. For an example that uses an <xref:System.Collections.ArrayList>, see [How to: Query an ArrayList with LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
-## <a name="the-query"></a>La consulta  
- En la consulta, se especifica la información que se desea recuperar del origen de datos o de los orígenes. También tiene la opción de especificar cómo se debe ordenar, agrupar o estructurar esa información antes de que se devuelva. Para habilitar la creación de consultas, Visual Basic ha incorporado una nueva sintaxis de consulta en el lenguaje.  
+## <a name="the-query"></a>The Query  
+ In the query, you specify what information you want to retrieve from the data source or sources. You also have the option of specifying how that information should be sorted, grouped, or structured before it is returned. To enable query creation, Visual Basic has incorporated new query syntax into the language.  
   
- Cuando se ejecuta, la consulta del ejemplo siguiente devuelve todos los números pares de una matriz de enteros, `numbers`.  
+ When it is executed, the query in the following example returns all the even numbers from an integer array, `numbers`.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- La expresión de consulta contiene tres cláusulas `From`: `Where`, y `Select`. La función y el propósito específicos de cada cláusula de expresión de consulta se describen en [operaciones básicas de consulta (Visual Basic)](basic-query-operations.md). Para obtener más información, vea [consultas](../../../../visual-basic/language-reference/queries/index.md). Tenga en cuenta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]que en, una definición de consulta a menudo se almacena en una variable y se ejecuta más adelante. La variable de consulta, `evensQuery` como en el ejemplo anterior, debe ser un tipo consultable. El tipo de `evensQuery` es `IEnumerable(Of Integer)`, asignado por el compilador mediante la inferencia de tipo de local.  
+ The query expression contains three clauses: `From`, `Where`, and `Select`. The specific function and purpose of each query expression clause is discussed in [Basic Query Operations (Visual Basic)](basic-query-operations.md). For more information, see [Queries](../../../../visual-basic/language-reference/queries/index.md). Note that in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a query definition often is stored in a variable and executed later. The query variable, such as `evensQuery` in the previous example, must be a queryable type. The type of `evensQuery` is `IEnumerable(Of Integer)`, assigned by the compiler using local type inference.  
   
- Es importante recordar que la propia variable de consulta no realiza ninguna acción y no devuelve ningún dato. Solo almacena la definición de la consulta. En el ejemplo anterior, es el bucle `For Each` el que ejecuta la consulta.  
+ It is important to remember that the query variable itself takes no action and returns no data. It only stores the query definition. In the previous example, it is the `For Each` loop that executes the query.  
   
 ## <a name="query-execution"></a>Ejecución de la consulta  
- La ejecución de consultas es independiente de la creación de consultas. La creación de consultas define la consulta, pero la ejecución se desencadena mediante un mecanismo diferente. Una consulta se puede ejecutar en cuanto se define (*ejecución inmediata*) o se puede almacenar la definición y la consulta se puede ejecutar más adelante (*ejecución aplazada*).  
+ Query execution is separate from query creation. Query creation defines the query, but execution is triggered by a different mechanism. A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).  
   
 ### <a name="deferred-execution"></a>Ejecución aplazada  
- Una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] típica es similar A la del ejemplo anterior, en la que `evensQuery` se define. Crea la consulta, pero no la ejecuta inmediatamente. En su lugar, la definición de consulta se almacena en la `evensQuery`variable de consulta. La consulta se ejecuta más adelante, normalmente mediante un `For Each` bucle, que devuelve una secuencia de valores o aplicando un operador de consulta estándar, `Count` como o `Max`. Este proceso se conoce como *ejecución aplazada*.  
+ A typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query resembles the one in the previous example, in which `evensQuery` is defined. It creates the query but does not execute it immediately. Instead, the query definition is stored in the query variable `evensQuery`. You execute the query later, typically by using a `For Each` loop, which returns a sequence of values, or by applying a standard query operator, such as `Count` or `Max`. This process is referred to as *deferred execution*.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
- En el caso de una secuencia de valores, se obtiene acceso a los datos recuperados mediante `For Each` la variable`number` de iteración del bucle (en el ejemplo anterior). Dado que la variable de `evensQuery`consulta,, contiene la definición de la consulta en lugar de los resultados de la consulta, puede ejecutar una consulta tantas veces como desee utilizando la variable de consulta más de una vez. Por ejemplo, podría tener una base de datos en la aplicación que se está actualizando continuamente mediante una aplicación independiente. Después de crear una consulta que recupere datos de esa base de datos, puede usar un `For Each` bucle para ejecutar la consulta repetidamente y recuperar los datos más recientes cada vez.  
+ For a sequence of values, you access the retrieved data by using the iteration variable in the `For Each` loop (`number` in the previous example). Because the query variable, `evensQuery`, holds the query definition rather than the query results, you can execute a query as often as you want by using the query variable more than one time. For example, you might have a database in your application that is being updated continually by a separate application. After you have created a query that retrieves data from that database, you can use a `For Each` loop to execute the query repeatedly, retrieving the most recent data every time.  
   
- En el ejemplo siguiente se muestra cómo funciona la ejecución aplazada. Una `evensQuery2` vez que se define y se `For Each` ejecuta con un bucle, como en los ejemplos anteriores, algunos elementos del `numbers` origen de datos cambian. A continuación, `For Each` se ejecuta `evensQuery2` de nuevo un segundo bucle. Los resultados son diferentes por segunda vez, ya que `For Each` el bucle vuelve a ejecutar la consulta con los nuevos valores de `numbers`.  
+ The following example demonstrates how deferred execution works. After `evensQuery2` is defined and executed with a `For Each` loop, as in the previous examples, some elements in the data source `numbers` are changed. Then a second `For Each` loop runs `evensQuery2` again. The results are different the second time, because the `For Each` loop executes the query again, using the new values in `numbers`.  
   
  [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
- Salida:  
+ Resultado:  
   
  `Evens in original array:`  
   
@@ -98,25 +98,25 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>Ejecución inmediata  
- En la ejecución diferida de consultas, la definición de consulta se almacena en una variable de consulta para su ejecución posterior. En la ejecución inmediata, la consulta se ejecuta en el momento de su definición. La ejecución se desencadena cuando se aplica un método que requiere acceso a elementos individuales del resultado de la consulta. A menudo, la ejecución inmediata se fuerza mediante el uso de uno de los operadores de consulta estándar que devuelven valores únicos. Algunos ejemplos `Count`son `Max` ,`Average`, y `First`. Estos operadores de consulta estándar ejecutan la consulta tan pronto como se aplican para calcular y devolver un resultado singleton. Para obtener más información sobre los operadores de consulta estándar que devuelven valores únicos, vea operaciones de [agregación](aggregation-operations.md), [operaciones de elementos](element-operations.md)y [operaciones de cuantificador](quantifier-operations.md).  
+ In deferred execution of queries, the query definition is stored in a query variable for later execution. In immediate execution, the query is executed at the time of its definition. Execution is triggered when you apply a method that requires access to individual elements of the query result. Immediate execution often is forced by using one of the standard query operators that return single values. Examples are `Count`, `Max`, `Average`, and `First`. These standard query operators execute the query as soon as they are applied in order to calculate and return a singleton result. For more information about standard query operators that return single values, see [Aggregation Operations](aggregation-operations.md), [Element Operations](element-operations.md), and [Quantifier Operations](quantifier-operations.md).  
   
- La consulta siguiente devuelve un recuento de los números pares en una matriz de enteros. La definición de consulta no se guarda y `numEvens` es una sencilla `Integer`.  
+ The following query returns a count of the even numbers in an array of integers. The query definition is not saved, and `numEvens` is a simple `Integer`.  
   
  [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
- Puede lograr el mismo resultado mediante el `Aggregate` método.  
+ You can achieve the same result by using the `Aggregate` method.  
   
  [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
- También puede forzar la ejecución de una consulta mediante una `ToList` llamada `ToArray` al método o en una consulta (inmediato) o una variable de consulta (aplazada), como se muestra en el código siguiente.  
+ You can also force execution of a query by calling the `ToList` or `ToArray` method on a query (immediate) or query variable (deferred), as shown in the following code.  
   
  [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
- En los ejemplos anteriores, `evensQuery3` es una variable de consulta, `evensList` pero es una lista `evensArray` y es una matriz.  
+ In the previous examples, `evensQuery3` is a query variable, but `evensList` is a list and `evensArray` is an array.  
   
- Usar `ToList` o`ToArray` para forzar la ejecución inmediata es especialmente útil en escenarios en los que desea ejecutar la consulta inmediatamente y almacenar en caché los resultados en un objeto de colección único. Para obtener más información sobre estos métodos, vea [convertir tipos de datos](converting-data-types.md).  
+ Using `ToList` or `ToArray` to force immediate execution is especially useful in scenarios in which you want to execute the query immediately and cache the results in a single collection object. For more information about these methods, see [Converting Data Types](converting-data-types.md).  
   
- También puede hacer que se ejecute una consulta mediante un `IEnumerable` método como el <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> método.  
+ You can also cause a query to be executed by using an `IEnumerable` method such as the <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> method.  
   
 ## <a name="see-also"></a>Vea también
 

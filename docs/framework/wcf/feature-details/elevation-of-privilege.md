@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: eae3c2a72e686774ee510dfc3ec9db04df7db630
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8838b139efa20bc796fc21567cc6fc9ee8691eee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966168"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283243"
 ---
 # <a name="elevation-of-privilege"></a>Elevación de privilegios
 La *elevación de privilegios* resulta de conceder a un atacante permisos de autorización más allá de los concedidos inicialmente. Por ejemplo, un atacante con un conjunto de privilegios de permisos de "solo lectura" eleva de algún modo el conjunto para incluir la "lectura y escritura".  
@@ -18,14 +18,14 @@ La *elevación de privilegios* resulta de conceder a un atacante permisos de aut
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>El STS de confianza debería firmar las notificaciones de tokens de SAML  
  Un token del lenguaje de marcado de aserción de seguridad (SAML) es un token XML genérico que es del tipo predeterminado para tokens emitidos. Un servicio de tokens de seguridad (STS) puede construir un token SAML en el que confíe el servicio web final en un intercambio típico. Los tokens SAML contienen las notificaciones en declaraciones. Un atacante puede copiar las notificaciones desde un token válido, crear un nuevo token SAML y firmarlo con un emisor diferente. El objetivo es determinar si el servidor está validando a los emisores y, si no, utilizar esa debilidad para construir tokens SAML que concedan privilegios más allá de los proporcionados por un STS de confianza.  
   
- La clase <xref:System.IdentityModel.Tokens.SamlAssertion> comprueba la firma digital contenida dentro de un token de SAML y el <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predeterminado necesita que los tokens de SAML estén firmados por un certificado X.509 que sea válido cuando el <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> se establezca en <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. El modo `ChainTrust` solo no es suficiente para determinar si el emisor del token de SAML es de confianza. Los servicios que requieren un modelo de confianza más específico pueden usar directivas de autorización y cumplimiento para comprobar el emisor de los conjuntos de notificaciones producidos mediante la autenticación de tokens emitidos o usar los valores de validación X.509 en <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir el conjunto de certificados de firma permitidos. Para obtener más información, consulte [Administración de notificaciones y autorización con el modelo](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) de identidades y [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ La clase <xref:System.IdentityModel.Tokens.SamlAssertion> comprueba la firma digital contenida dentro de un token de SAML y el <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predeterminado necesita que los tokens de SAML estén firmados por un certificado X.509 que sea válido cuando el <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> se establezca en <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` modo solo es insuficiente para determinar si el emisor del token SAML es de confianza. Los servicios que requieren un modelo de confianza más específico pueden usar directivas de autorización y cumplimiento para comprobar el emisor de los conjuntos de notificaciones producidos mediante la autenticación de tokens emitidos o usar los valores de validación X.509 en <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir el conjunto de certificados de firma permitidos. Para obtener más información, consulte [Administración de notificaciones y autorización con el modelo de identidades](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) y [Federación y tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Intercambio de identidad sin un contexto de seguridad  
  Lo siguiente se aplica únicamente a WinFX.  
   
  Cuando se establece una conexión entre un cliente y un servidor, la identidad del cliente no cambia, excepto en una situación: después de abrir el cliente WCF, si se cumplen todas las condiciones siguientes:  
   
-- Los procedimientos para establecer un contexto de seguridad (mediante una sesión de seguridad de transporte o una sesión de seguridad de<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> mensajes) se desactivan (la propiedad se `false` establece en en caso de seguridad de mensaje o el transporte no es capaz de establecer seguridad las sesiones se usan en el caso de seguridad de transporte. HTTPS es un ejemplo de dicho transporte).  
+- Los procedimientos para establecer un contexto de seguridad (mediante una sesión de seguridad de transporte o una sesión de seguridad de mensajes) se desactivan (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propiedad está establecida en `false` en caso de que se use la seguridad de mensajes o el transporte no sea capaz de establecer sesiones de seguridad en caso de seguridad de transporte. HTTPS es un ejemplo de dicho transporte).  
   
 - Está utilizando la autenticación de Windows.  
   
@@ -38,7 +38,7 @@ La *elevación de privilegios* resulta de conceder a un atacante permisos de aut
  Si desea tener un comportamiento determinista al utilizar la autenticación de Windows junto con la suplantación, debe establecer explícitamente la credencial de Windows o debe establecer un contexto de seguridad con el servicio. Para ello, utilice una sesión de seguridad de mensajes o una sesión de seguridad de transporte. Por ejemplo, el transporte net.tcp puede proporcionar una sesión de seguridad de transporte. Además, debe utilizar solo una versión sincrónica de operaciones de cliente al llamar al servicio. Si establece un contexto de seguridad de mensajes, no debería mantener abierta la conexión con el servicio más tiempo del periodo de renovación de sesión configurado, puesto que la identidad también puede cambiar durante el proceso de renovación de sesión.  
   
 ### <a name="credentials-capture"></a>Captura de credenciales  
- Lo siguiente se aplica a [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] y versiones posteriores.  
+ Lo siguiente se aplica a .NET Framework 3,5 y versiones posteriores.  
   
  Las credenciales utilizadas por el cliente o el servicio se basan en el subproceso de contexto actual. Las credenciales se obtienen cuando se llama al método `Open` (o `BeginOpen`, para las llamadas asincrónicas) del cliente o servicio. Para las clases <xref:System.ServiceModel.ServiceHost> y <xref:System.ServiceModel.ClientBase%601>, los métodos `Open` y `BeginOpen` heredan de los métodos <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> y <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> de la clase <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
@@ -46,13 +46,13 @@ La *elevación de privilegios* resulta de conceder a un atacante permisos de aut
 > Al utilizar el método `BeginOpen`, no se puede garantizar que las credenciales capturadas sean las credenciales del proceso que llama al método.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Las cachés de tokens permiten la repetición mediante datos obsoletos  
- WCF usa la función de autoridad de seguridad local `LogonUser` (LSA) para autenticar a los usuarios por nombre de usuario y contraseña. Dado que la función Logon es una operación costosa, WCF le permite almacenar en caché los tokens que representan a los usuarios autenticados para aumentar el rendimiento. El mecanismo de almacenamiento en caché guarda los resultados de `LogonUser` para los usos posteriores. Este mecanismo está deshabilitado de forma predeterminada; para habilitarla, establezca la <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propiedad en `true`o `cacheLogonTokens` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)utilice el atributo del > userNameAuthentication.  
+ WCF usa la función de `LogonUser` de autoridad de seguridad local (LSA) para autenticar a los usuarios por nombre de usuario y contraseña. Dado que la función Logon es una operación costosa, WCF le permite almacenar en caché los tokens que representan a los usuarios autenticados para aumentar el rendimiento. El mecanismo de almacenamiento en caché guarda los resultados de `LogonUser` para los usos posteriores. Este mecanismo está deshabilitado de forma predeterminada; para habilitarlo, establezca la propiedad <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> en `true`, o use el atributo `cacheLogonTokens` del [>\<userNameAuthentication](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
  Puede establecer un período de vida (TTL) para los tokens almacenados en memoria caché estableciendo la propiedad <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> en <xref:System.TimeSpan> o utilizar el atributo `cachedLogonTokenLifetime` del elemento `userNameAuthentication`; el valor predeterminado es de 15 minutos. Tenga en cuenta que mientras un token esté almacenado en memoria caché, cualquier cliente que presente el mismo nombre de usuario y contraseña podrá utilizar el token, aunque la cuenta de usuario se elimine de Windows o se haya cambiado su contraseña. Hasta que expire el TTL y el token se quite de la memoria caché, WCF permite que el usuario (posiblemente malintencionado) se autentique.  
   
- Para mitigar esto: Para reducir la ventana de ataque, `cachedLogonTokenLifetime` establezca el valor en el intervalo de tiempo más corto que necesiten los usuarios.  
+ Para paliar esto: disminuya la ventana de ataque estableciendo el valor de `cachedLogonTokenLifetime` en el intervalo de tiempo más corto que necesiten sus usuarios.  
   
-## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Autorización de tokens emitidos: Fecha de expiración restablecida a valor grande  
+## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Autorización de tokens emitidos: restablecimiento de la expiración a un valor mayor  
  Bajo ciertas condiciones, la propiedad <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> del <xref:System.IdentityModel.Policy.AuthorizationContext> puede establecerse en un valor inesperadamente mayor (el valor del campo <xref:System.DateTime.MaxValue> menos un día o el 20 de diciembre de 9999).  
   
  Esto ocurre al utilizar el <xref:System.ServiceModel.WSFederationHttpBinding> y cualquiera de los enlaces proporcionados por el sistema que tengan un token emitido como el tipo de credencial de cliente.  

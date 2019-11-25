@@ -3,14 +3,14 @@ title: Creación de tipos mixin mediante métodos de interfaz predeterminados
 description: Con el uso de los miembros de interfaz predeterminados, puede extender las interfaces con implementaciones predeterminadas opcionales para los implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039269"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140849"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Funcionalidad de combinación al crear clases mediante interfaces con métodos de interfaz predeterminados
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Funcionalidad de combinación al crear clases mediante interfaces con métodos de interfaz predeterminados
 
 A partir de C# 8.0 en .NET Core 3.0, puede definir una implementación cuando declare un miembro de una interfaz. Esta característica proporciona nuevas funcionalidades en las que puede definir implementaciones predeterminadas para las características declaradas en las interfaces. Las clases pueden elegir cuándo invalidar la funcionalidad, cuándo usar la funcionalidad predeterminada y cuándo no se debe declarar la compatibilidad con características discretas.
 

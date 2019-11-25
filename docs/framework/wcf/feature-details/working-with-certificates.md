@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774299"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283283"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 
@@ -53,7 +53,7 @@ Seleccionar dónde almacenar un certificado depende de cómo y cuándo se ejecut
 
 - Si el servicio WCF se hospeda en un servicio Windows, use el almacén del **equipo local**. Observe que es necesario tener privilegios de administrador para instalar certificados en el almacén de la máquina local.
 
-- Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, use el almacén del **usuario actual**.
+- Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, utilice el almacén del **usuario actual**.
 
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes
 
@@ -72,7 +72,7 @@ Los certificados digitales se usan para autenticar una entidad confiando en esta
 
 Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.
 
-|Clase|Propiedad.|
+|Clase|Property|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -113,7 +113,7 @@ Las preguntas más comunes sobre certificados son qué certificados utilizar y p
 
 ### <a name="service-certificates"></a>Certificados de servicio
 
-Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) que se usa para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio se `http://www.contoso.com/endpoint/`, el campo **asunto** también debe contener el valor `www.contoso.com`.
+Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) utilizado para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio se `http://www.contoso.com/endpoint/`, el campo **asunto** también debe contener el valor `www.contoso.com`.
 
 Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Normalmente, la inicialización es "CN" para el nombre común, por ejemplo, `CN = www.contoso.com`. También es posible que el campo **Asunto** esté en blanco, en cuyo caso el campo **Nombre alternativo del firmante** puede contener el valor **Nombre DNS**.
 
@@ -184,7 +184,7 @@ Con esta capacidad habilitada, puede definir la propiedad <xref:System.ServiceMo
 
 Asignar un certificado X.509 al token que representa una cuenta de usuario de Windows está considerado como un aumento de los privilegios, porque, una vez asignado, el token de Windows se puede utilizar para obtener acceso a recursos protegidos. Por consiguiente, la directiva de dominio requiere que el certificado X.509 cumpla con su directiva antes de realizar la asignación. El paquete de seguridad *SChannel* hace cumplir este requisito.
 
-Si se usa [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] o una versión posterior, WCF garantiza que el certificado es conforme con la directiva de dominio antes de asignarlo a una cuenta de Windows.
+Cuando se usa .NET Framework 3,5 o versiones posteriores, WCF garantiza que el certificado se ajusta a la Directiva de dominio antes de que se asigne a una cuenta de Windows.
 
 En la primera versión de WCF, la asignación se realiza sin consultar la directiva de dominio. Por consiguiente, es posible que las aplicaciones anteriores que solían funcionar al ejecutarse bajo la primera publicación, provoquen un error si se habilita la asignación y el certificado X.509 no cumple la directiva de dominio.
 
@@ -194,4 +194,4 @@ En la primera versión de WCF, la asignación se realiza sin consultar la direct
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
