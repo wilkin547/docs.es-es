@@ -3,6 +3,8 @@
   items:
     - name: Conceptos clave de seguridad
       href: key-security-concepts.md
+    - name: Compatibilidad entre FIPS y .NET Core
+      href: fips-compliance.md
     - name: Seguridad basada en roles
       href: role-based-security.md
       items:

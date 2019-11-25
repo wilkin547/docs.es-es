@@ -9,7 +9,7 @@
 - name: 'Guía de escritorio de .NET: WPF'
   href: desktop-wpf/
 - name: 'Guía de C#'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'Guía de F#'
   href: fsharp/
 - name: Guía de Visual Basic
