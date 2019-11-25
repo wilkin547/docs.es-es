@@ -7,32 +7,20 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834553"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974913"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
-<a name="top"></a> Estos eventos recopilan información que es específica de los métodos. La carga de estos eventos es necesaria para la resolución de símbolos. Además, estos eventos proporcionan información útil como el número de veces que se llama a un método.
+Estos eventos recopilan información que es específica de los métodos. La carga de estos eventos es necesaria para la resolución de símbolos. Además, estos eventos proporcionan información útil como el número de veces que se llama a un método.
 
 Todos los eventos de método tienen un nivel de “Informativo (4)”. Todos los eventos detallados de método tienen un nivel de “Detallado (5)”.
 
 Todos los eventos de método se generan mediante la palabra clave `JITKeyword` (0x10) o la palabra clave `NGenKeyword` (0x20) con el proveedor de runtime, o `JitRundownKeyword` (0x10) o `NGENRundownKeyword` (0x20) con el proveedor de detención.
-
-Los eventos de método CLR se dividen a su vez en los siguientes tipos:
-
-- [Eventos de método CLR](#clr_method_events)
-
-- [Eventos de marcador de método CLR](#clr_method_marker_events)
-
-- [Eventos detallados de método CLR](#clr_method_verbose_events)
-
-- [Evento MethodJittingStarted](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
 
 ## <a name="clr-method-events"></a>Eventos de método CLR
 
@@ -63,12 +51,8 @@ En la siguiente tabla, se muestran los datos del evento:
 |MethodStartAddress|win:UInt64|Dirección de inicio del método.|
 |MethodSize|win:UInt32|Tamaño del método.|
 |MethodToken|win:UInt32|0 para métodos dinámicos y asistentes de JIT.|
-|MethodFlags|win:UInt32|0x1 Método dinámico.<br /><br /> 0X2 Método genérico.<br /><br /> 0x4 Método de código compilado JIT (de lo contrario, código de imagen nativa de NGEN).<br /><br /> 0x8 Método auxiliar.|
+|MethodFlags|win:UInt32|0x1: método dinámico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método de código compilado JIT (en caso contrario, código de imagen nativa de NGEN).<br /><br /> 0x8: método del asistente.|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
-
-[Volver al principio](#top)
-
-<a name="clr_method_marker_events"></a>
 
 ## <a name="clr-method-marker-events"></a>Eventos de marcador de método CLR
 
@@ -96,10 +80,6 @@ En la siguiente tabla, se muestran los datos del evento:
 |Nombre de campo|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
-
-[Volver al principio](#top)
-
-<a name="clr_method_verbose_events"></a>
 
 ## <a name="clr-method-verbose-events"></a>Eventos detallados de método CLR
 
@@ -130,15 +110,11 @@ En la siguiente tabla, se muestran los datos del evento:
 |MethodStartAddress|win:UInt64|Dirección de inicio.|
 |MethodSize|win:UInt32|Longitud de método.|
 |MethodToken|win:UInt32|0 para métodos dinámicos y asistentes de JIT.|
-|MethodFlags|win:UInt32|0x1 Método dinámico.<br /><br /> 0X2 Método genérico.<br /><br /> 0x4 Método compilado JIT (de lo contrario, generado por NGen. exe)<br /><br /> 0x8 Método auxiliar.|
+|MethodFlags|win:UInt32|0x1: método dinámico.<br /><br /> 0x2: método genérico.<br /><br /> 0 x 4: método compilado JIT (de lo contrario, generado por NGen.exe)<br /><br /> 0x8: método del asistente.|
 |MethodNameSpace|win:UnicodeString|Nombre del espacio de nombres completo que está asociado al método.|
 |MethodName|win:UnicodeString|Nombre de clase completo que está asociado al método.|
 |MethodSignature|win:UnicodeString|Signatura del método (lista separada por comas de nombres de tipo).|
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
-
-[Volver al principio](#top)
-
-<a name="methodjittingstarted_event"></a>
 
 ## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted
 

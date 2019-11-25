@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894326"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975240"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospedar el servicio de datos (Data Services de WCF)
-Con WCF Data Services, puede crear un servicio que exponga los datos como una [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente. Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, un servicio de datos no puede enlazar y escuchar en un socket de red las solicitudes HTTP entrantes. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
+Mediante el uso de WCF Data Services, puede crear un servicio que exponga los datos como una fuente de Open Data Protocol (OData). Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, un servicio de datos no puede enlazar y escuchar en un socket de red las solicitudes HTTP entrantes. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
 
  El host del servicio de datos realiza las siguientes tareas en nombre del servicio de datos:
 

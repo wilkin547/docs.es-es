@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458468"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974156"
 ---
 # <a name="collection-type-dependency-properties"></a>Propiedades de dependencia de tipo de colección
 En este tema se proporciona una guía y modelos recomendados para implementar una propiedad de dependencia donde el tipo de la propiedad es un tipo de colección.  
@@ -28,8 +28,11 @@ En este tema se proporciona una guía y modelos recomendados para implementar un
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Inicialización de la colección más allá del valor predeterminado  
  Cuando cree una propiedad de dependencia, no especifique el valor predeterminado de la propiedad como el valor inicial del campo. En su lugar, especifique el valor predeterminado a través de los metadatos de la propiedad de dependencia. Si la propiedad es un tipo de referencia, el valor predeterminado especificado en los metadatos de la propiedad de dependencia no es un valor predeterminado por instancia; en su lugar, es un valor predeterminado que se aplica a todas las instancias del tipo. Por lo tanto, debe tener cuidado de no usar la colección estática singular definida por los metadatos de la propiedad de colección como el valor predeterminado operativo para las instancias recién creadas del tipo. En su lugar, debe asegurarse de establecer deliberadamente el valor de la colección en una colección única (instancia) como parte de la lógica del constructor de clase. De lo contrario, habrá creado involuntariamente una clase singleton.  
   
- Considere el ejemplo siguiente. En la siguiente sección del ejemplo se muestra la definición de una clase `Aquarium`. La clase define la propiedad de dependencia de tipo de colección `AquariumObjects`, que usa el tipo de <xref:System.Collections.Generic.List%601> genérico con una restricción de tipo <xref:System.Windows.FrameworkElement>. En la llamada <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> para la propiedad de dependencia, los metadatos establecen el valor predeterminado para que sea un nuevo <xref:System.Collections.Generic.List%601>genérico.  
-  
+ Considere el ejemplo siguiente. En la siguiente sección del ejemplo se muestra la definición de una clase `Aquarium`, que contiene un error con el valor predeterminado. La clase define la propiedad de dependencia de tipo de colección `AquariumObjects`, que usa el tipo de <xref:System.Collections.Generic.List%601> genérico con una restricción de tipo <xref:System.Windows.FrameworkElement>. En la llamada <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> para la propiedad de dependencia, los metadatos establecen el valor predeterminado para que sea un nuevo <xref:System.Collections.Generic.List%601>genérico.
+
+> [!WARNING]
+> El código siguiente no se comporta correctamente.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

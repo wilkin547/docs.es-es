@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: b9280936a16d50283c01120c9dc046e65a0a79ae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 26cfee95f7cd3b956ff263d90b713e9d70b98202
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790874"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975332"
 ---
 # <a name="defining-wcf-data-services"></a>Definir Servicios de datos de WCF
 
-En esta sección se describe cómo crear y configurar WCF Data Services para exponer datos como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] una fuente. Para obtener más información sobre los pasos básicos necesarios para crear un servicio de datos, vea [exponer los datos como un servicio](exposing-your-data-as-a-service-wcf-data-services.md).
+En esta sección se describe cómo crear y configurar WCF Data Services para exponer datos como una fuente de Open Data Protocol (OData). Para obtener más información sobre los pasos básicos necesarios para crear un servicio de datos, vea [exponer los datos como un servicio](exposing-your-data-as-a-service-wcf-data-services.md).
 
 ## <a name="in-this-section"></a>En esta sección
 

@@ -3,20 +3,20 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834107"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736829"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
 En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
 
-## <a name="create-your-application"></a>Creación de la aplicación
+## <a name="create-your-application"></a>Creación de una aplicación
 
-En una ventana de terminal, cree un directorio denominado *clases*. Creará la aplicación ahí. Cambie a ese directorio y escriba `dotnet new console` en la ventana de la consola. Este comando crea la aplicación. Abra *Program.cs*. Debería ser parecido a este:
+En una ventana de terminal, cree un directorio denominado *clases*. Creará la aplicación ahí. Cambie a ese directorio y escriba `dotnet new console` en la ventana de la consola. Este comando crea la aplicación. Abra *Program.cs*. El resultado debería tener un aspecto similar a este:
 
 ```csharp
 using System;
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 Use las [instrucciones `try` y `catch`](../../language-reference/keywords/try-catch.md) para marcar un bloque de código que puede generar excepciones y para detectar los errores que se esperan. Puede usar la misma técnica para probar el código que genera una excepción para un saldo negativo:
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

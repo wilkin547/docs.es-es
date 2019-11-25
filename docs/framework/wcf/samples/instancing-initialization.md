@@ -2,15 +2,15 @@
 title: Creación de instancias de inicialización
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ca135aca8f84ddf79ec7447e7fa7814f61984419
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 44cd278fb0e48e07562b0b8ad52855b4a3f70761
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989844"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975862"
 ---
 # <a name="instancing-initialization"></a>Creación de instancias de inicialización
-Este ejemplo extiende el ejemplo de [agrupación](../../../../docs/framework/wcf/samples/pooling.md) definiendo una interfaz `IObjectControl`,, que personaliza la inicialización de un objeto mediante su activación y desactivación. El cliente invoca métodos que devuelven el objeto al grupo y que no devuelven el objeto al grupo.  
+Este ejemplo extiende el ejemplo de [agrupación](../../../../docs/framework/wcf/samples/pooling.md) definiendo una interfaz, `IObjectControl`, que personaliza la inicialización de un objeto mediante su activación y desactivación. El cliente invoca métodos que devuelven el objeto al grupo y que no devuelven el objeto al grupo.  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -21,16 +21,16 @@ Este ejemplo extiende el ejemplo de [agrupación](../../../../docs/framework/wcf
  EndpointDispatcher proporciona la extensibilidad (para todos los mensajes recibidos o enviados por el servicio) del ámbito del extremo mediante la clase <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Esta clase le permite personalizar varias propiedades que controlan el comportamiento de EndpointDispatcher. Este ejemplo se centra en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> que señala al objeto que proporciona las instancias de la clase de servicio.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- En WCF, EndpointDispatcher crea instancias de una clase de servicio mediante un proveedor de instancias que implementa la <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfaz. Esta interfaz tiene solo dos métodos:  
+ En WCF, EndpointDispatcher crea instancias de una clase de servicio mediante un proveedor de instancias que implementa la interfaz <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. Esta interfaz tiene solo dos métodos:  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Cuando llega un mensaje, el distribuidor llama <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> al método para crear una instancia de la clase de servicio para procesar el mensaje. La propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> determina la frecuencia de las llamadas a este método. Por ejemplo, si la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está establecida en <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, se crea una nueva instancia de la clase de servicio para procesar cada mensaje que llega, por lo que se llamará a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> siempre que llegue un mensaje.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: cuando un mensaje llega, el distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> para crear una instancia de la clase de servicio para procesar el mensaje. La propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> determina la frecuencia de las llamadas a este método. Por ejemplo, si la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está establecida en <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, se crea una nueva instancia de la clase de servicio para procesar cada mensaje que llega, por lo que se llamará a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> siempre que llegue un mensaje.  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Cuando la instancia de servicio finaliza el procesamiento del mensaje, EndpointDispatcher llama <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> al método. Tal y como ocurre en el método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, la frecuencia de las llamadas a este método está determinada por la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: cuando la instancia del servicio termina de procesar el mensaje, EndpointDispatcher llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>. Tal y como ocurre en el método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, la frecuencia de las llamadas a este método está determinada por la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
   
 ## <a name="the-object-pool"></a>Agrupación de objetos  
  La clase `ObjectPoolInstanceProvider` contiene la implementación para el grupo de objetos. Esta clase implementa la interfaz <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para interactuar con el nivel de modelo de servicio. Cuando EndpointDispatcher llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, en lugar de crear una nueva instancia, la implementación personalizada busca un objeto existente en un grupo en memoria. Si hay uno disponible, se devuelve. De lo contrario, `ObjectPoolInstanceProvider` comprueba si la propiedad `ActiveObjectsCount` (número de objetos devueltos desde el grupo) ha alcanzado el tamaño máximo del grupo. Si no, se crea una nueva instancia y se devuelve al autor de la llamada y, como consecuencia, se incrementa `ActiveObjectsCount`. De lo contrario, se pone en la cola una solicitud de creación de objetos para un período configurado de tiempo. Se muestra la implementación para `GetObjectFromThePool` en el código de ejemplo siguiente.  
   
-```csharp  
+```csharp
 private object GetObjectFromThePool()  
 {  
     bool didNotTimeout =   
@@ -74,7 +74,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
   
  La implementación `ReleaseInstance` personalizada agrega la instancia liberada de nuevo al grupo y disminuye el valor de `ActiveObjectsCount`. EndpointDispatcher puede llamar a estos métodos desde subprocesos diferentes y, por consiguiente, se necesita tener acceso sincronizado a los miembros de nivel de clase en la clase `ObjectPoolInstanceProvider`.  
   
-```csharp  
+```csharp
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
 {  
     lock (poolLock)  
@@ -125,7 +125,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 }  
 ```  
   
- El `ReleaseInstance` método proporciona una característica de *inicialización de limpieza* . Normalmente el grupo mantiene un número mínimo de objetos para la duración del grupo. Sin embargo, puede haber períodos de uso excesivo que requieren la creación de objetos adicionales en el grupo para alcanzar el límite máximo especificado en la configuración. Finalmente, cuando el grupo se vuelve menos activo, esos objetos adicionales pueden suponer una sobrecarga adicional. Por consiguiente, cuando `activeObjectsCount` llega a cero, se inicia un temporizador inactivo que activa y realiza un ciclo de limpieza.  
+ El método `ReleaseInstance` proporciona una característica de *inicialización de limpieza* . Normalmente el grupo mantiene un número mínimo de objetos para la duración del grupo. Sin embargo, puede haber períodos de uso excesivo que requieren la creación de objetos adicionales en el grupo para alcanzar el límite máximo especificado en la configuración. Finalmente, cuando el grupo se vuelve menos activo, esos objetos adicionales pueden suponer una sobrecarga adicional. Por consiguiente, cuando `activeObjectsCount` llega a cero, se inicia un temporizador inactivo que activa y realiza un ciclo de limpieza.  
   
 ```csharp  
 if (activeObjectsCount == 0)  
@@ -136,13 +136,13 @@ if (activeObjectsCount == 0)
   
  Las extensiones de nivel de ServiceModel se enlazan utilizando los comportamientos siguientes:  
   
-- Comportamientos de servicio: Permiten la personalización de todo el tiempo de ejecución del servicio.  
+- Comportamientos del servicio: permiten la personalización del tiempo de ejecución completo del servicio.  
   
-- Comportamientos del extremo: Estos permiten la personalización de un punto de conexión de servicio determinado, incluido EndpointDispatcher.  
+- Comportamientos del punto de conexión: permiten la personalización de un punto de conexión de servicio determinado, incluido EndpointDispatcher.  
   
-- Comportamientos del contrato: Estos permiten la personalización de <xref:System.ServiceModel.Dispatcher.ClientRuntime> las clases o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> en el cliente o el servicio, respectivamente.  
+- Comportamientos del contrato: permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientRuntime> o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> en el cliente o el servicio respectivamente.  
   
-- Comportamientos de la operación: Estos permiten la personalización de <xref:System.ServiceModel.Dispatcher.ClientOperation> las clases o <xref:System.ServiceModel.Dispatcher.DispatchOperation> en el cliente o el servicio, respectivamente.  
+- Comportamientos de la operación: permiten la personalización de las clases <xref:System.ServiceModel.Dispatcher.ClientOperation> o <xref:System.ServiceModel.Dispatcher.DispatchOperation> en el cliente o el servicio respectivamente.  
   
  Con el objetivo de una extensión de agrupación de objetos, se puede crear un comportamiento de punto de conexión o de servicio. En este ejemplo, utilizamos un comportamiento de servicio, que aplica la capacidad de agrupación de objetos a cada punto de conexión del servicio. Los comportamientos de servicio se crean implementando la interfaz <xref:System.ServiceModel.Description.IServiceBehavior>. Hay varias maneras de hacer que ServiceModel sea consciente de los comportamientos personalizados:  
   
@@ -154,15 +154,15 @@ if (activeObjectsCount == 0)
   
  Este ejemplo utiliza un atributo personalizado. Cuando se construye <xref:System.ServiceModel.ServiceHost>, examina los atributos utilizados en la definición de tipo del servicio y agrega los comportamientos disponibles a la colección de comportamientos de la descripción del servicio.  
   
- La <xref:System.ServiceModel.Description.IServiceBehavior> interfaz tiene tres métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> y.`,` <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> WCF llama a estos métodos cuando <xref:System.ServiceModel.ServiceHost> se inicializa. Primero se llama a <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>; permite inspeccionar el servicio para ver si hay incoherencias. Después se llama a <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>; este método solo se necesita en escenarios muy avanzados. En último lugar se llama a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>, que es responsable de configurar el tiempo de ejecución. Los parámetros siguientes se pasan a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ La interfaz <xref:System.ServiceModel.Description.IServiceBehavior> tiene tres métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` y <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. WCF llama a estos métodos cuando se inicializa el <xref:System.ServiceModel.ServiceHost>. Primero se llama a <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>; permite inspeccionar el servicio para ver si hay incoherencias. Después se llama a <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>; este método solo se necesita en escenarios muy avanzados. En último lugar se llama a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>, que es responsable de configurar el tiempo de ejecución. Los parámetros siguientes se pasan a <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
-- `Description`: Este parámetro proporciona la descripción del servicio para todo el servicio. Esto se puede utilizar para inspeccionar los datos de la descripción sobre los extremos del servicio, los contratos, enlaces y otros datos asociados al servicio.  
+- `Description`: este parámetro proporciona la descripción del servicio para todo el servicio. Esto se puede utilizar para inspeccionar los datos de la descripción sobre los extremos del servicio, los contratos, enlaces y otros datos asociados al servicio.  
   
-- `ServiceHostBase`: Este parámetro proporciona el <xref:System.ServiceModel.ServiceHostBase> que se está inicializando actualmente.  
+- `ServiceHostBase`: este parámetro proporciona <xref:System.ServiceModel.ServiceHostBase> que se inicializa actualmente.  
   
  En la implementación <xref:System.ServiceModel.Description.IServiceBehavior> personalizada, se crea una nueva instancia de `ObjectPoolInstanceProvider` y se asigna a la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> en cada <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> que está adjuntada a <xref:System.ServiceModel.ServiceHostBase>.  
   
-```csharp  
+```csharp
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
 {  
     if (enabled)  
@@ -190,7 +190,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Además de una implementación <xref:System.ServiceModel.Description.IServiceBehavior>, la clase `ObjectPoolingAttribute` cuenta con varios miembros para personalizar el grupo de objetos mediante los argumentos de atributo. Estos miembros incluyen `MaxSize`, `MinSize`, `Enabled` y `CreationTimeout`, para que coincida con el conjunto de características de agrupación de objetos proporcionada por .NET Enterprise Services.  
   
- El comportamiento de la agrupación de objetos se puede Agregar ahora a un servicio WCF mediante la anotación de la implementación del servicio `ObjectPooling` con el atributo personalizado que se acaba de crear.  
+ El comportamiento de la agrupación de objetos se puede Agregar ahora a un servicio WCF mediante la anotación de la implementación del servicio con el atributo de `ObjectPooling` personalizado recién creado.  
   
 ```csharp  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
@@ -205,7 +205,7 @@ public class PoolService : IPoolService
   
  El conjunto de objetos llama al método `Activate` justo antes de devolver el objeto. Se llama a `Deactivate` cuando el objeto vuelve al conjunto. La clase base <xref:System.EnterpriseServices.ServicedComponent> también tiene una propiedad `boolean` llamada `CanBePooled`, que se puede utilizar para notificar al grupo si el objeto puede agruparse más adelante.  
   
- Para imitar esta funcionalidad, el ejemplo declara una interfaz pública (`IObjectControl`) que tiene los miembros mencionados anteriormente. Las clases de servicio implementan esta interfaz con objeto de proporcionar inicialización específica de contexto. Se debe modificar la implementación <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para cumplir estos requisitos. Ahora, cada vez que obtenga un objeto llamando al `GetInstance` método, debe comprobar si el objeto `IObjectControl.` implementa si lo hace, debe llamar al `Activate` método adecuadamente.  
+ Para imitar esta funcionalidad, el ejemplo declara una interfaz pública (`IObjectControl`) que tiene los miembros mencionados anteriormente. Las clases de servicio implementan esta interfaz con objeto de proporcionar inicialización específica de contexto. Se debe modificar la implementación <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para cumplir estos requisitos. Ahora, cada vez que obtenga un objeto llamando al método `GetInstance`, debe comprobar si el objeto implementa `IObjectControl.` si lo hace, debe llamar al método `Activate` adecuadamente.  
   
 ```csharp  
 if (obj is IObjectControl)  
@@ -261,6 +261,6 @@ else if (pool.Count < minPoolSize)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 1e94038a41a6a6cc19be6c67bff2891397793fb3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924684"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739660"
 ---
 # <a name="-and--operators-c-reference"></a>?? Operadores ?? y ?? (referencia de C#)
 
@@ -26,9 +26,9 @@ Disponible en C# 8.0 y versiones posteriores, el operador de asignación de uso
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 
-El operando izquierdo del operador `??=` debe ser una variable, una [propiedad](../../programming-guide/classes-and-structs/properties.md) o un elemento de [indizador](../../programming-guide/indexers/index.md). Para más información sobre la asignación de uso combinado de NULL, consulte la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md).
+El operando izquierdo del operador `??=` debe ser una variable, una [propiedad](../../programming-guide/classes-and-structs/properties.md) o un elemento de [indizador](../../programming-guide/indexers/index.md).
 
-En C# 7.3 y versiones anteriores, el tipo del operando izquierdo del operador `??` debe ser un tipo de referencia o un [tipo de valor que acepta valores NULL](../../programming-guide/nullable-types/index.md). A partir C# 8.0, ese requisito se reemplaza por lo siguiente: el tipo del operando izquierdo de los operadores `??` y `??=` no puede ser un tipo de valor que no acepta valores NULL. En concreto, en C# 8.0 y versiones posteriores puede usar los operadores de uso combinado de NULL con parámetros de tipo sin restricciones:
+En C# 7.3 y versiones anteriores, el tipo del operando izquierdo del operador `??` debe ser un [tipo de referencia](../keywords/reference-types.md) o un [tipo de valor que acepta valores NULL](../builtin-types/nullable-value-types.md). A partir C# 8.0, ese requisito se reemplaza por lo siguiente: el tipo del operando izquierdo de los operadores `??` y `??=` no puede ser un tipo de valor que no acepta valores NULL. En concreto, a partir de C# 8.0 puede usar los operadores de fusión de NULL con parámetros de tipo sin restricciones:
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -50,23 +50,23 @@ d ??= (e ??= f)
 
 Los operadores `??` y `??=` puede resultar útiles en los siguientes escenarios:
 
-- En expresiones con los [operadores no condicionales ? y ?[]](member-access-operators.md#null-conditional-operators--and-), puede usar el operador de uso combinado de NULL para proporcionar una expresión alternativa para evaluar en caso de que el resultado de la expresión con la operación condicional NULL sea `null`:
+- En expresiones con los [operadores no condicionales ? y ?[]](member-access-operators.md#null-conditional-operators--and-), puede usar el operador `??` para proporcionar una expresión alternativa para evaluar en caso de que el resultado de la expresión con la operación condicional NULL sea `null`:
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- Cuando trabaja con [tipos de valor que aceptan valores NULL](../../programming-guide/nullable-types/index.md) y necesita proporcionar un valor de un tipo de valor subyacente, use el operador de uso combinado de NULL para especificar el valor para proporcionar en caso de que un valor de tipo que acepta valores NULL sea `null`:
+- Cuando trabaja con [tipos de valor que aceptan valores NULL](../builtin-types/nullable-value-types.md) y necesita proporcionar un valor de un tipo de valor subyacente, use el operador `??` para especificar el valor para proporcionar en caso de que un valor de tipo que acepta valores NULL sea `null`:
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
   Use el método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> si el valor que se va usar cuando un valor de tipo que acepta valores NULL es `null` debe ser el valor predeterminado del tipo de valor subyacente.
 
-- A partir de C# 7.0, puede usar una [expresión `throw`](../keywords/throw.md#the-throw-expression) como el operando derecho del operador de uso combinado de NULL para hacer el código de comprobación de argumentos más conciso:
+- A partir de C# 7.0, puede usar una [expresión `throw`](../keywords/throw.md#the-throw-expression) como el operando derecho del operador `??` para hacer el código de comprobación de argumentos más conciso:
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
   El ejemplo anterior también muestra cómo usar [miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) para definir una propiedad.
 
-- A partir C# 8.0, puede usar el operador `??=` para reemplazar el código del formulario
+- A partir de C# 8.0, puede usar el operador `??=` para reemplazar el código del formulario
 
   ```csharp
   if (variable is null)
@@ -88,6 +88,8 @@ Los operadores `??` y `??=` no se pueden sobrecargar.
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para obtener más información sobre el operador `??`, vea la sección [El operador de uso combinado de NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+
+Para más información sobre el operador `??=`, consulte la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md).
 
 ## <a name="see-also"></a>Vea también
 

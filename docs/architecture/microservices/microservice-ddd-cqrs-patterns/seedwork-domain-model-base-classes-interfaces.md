@@ -2,12 +2,12 @@
 title: Seedwork (interfaces y clases base reutilizables para su modelo de dominio)
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Uso del concepto SeedWork como punto de partida para iniciar la implementación de un modelo de dominio orientado a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093801"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737221"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (interfaces y clases base reutilizables para su modelo de dominio)
 
@@ -15,7 +15,9 @@ La carpeta de soluciones contiene una carpeta *SeedWork*. Esta carpeta contiene 
 
 En la Figura 7-12 se muestran las clases que forman el seedwork del modelo de dominio en el microservicio de pedidos. Tiene algunas clases base personalizadas, como Entity, ValueObject y Enumeration, además de algunas interfaces. Estas interfaces (IRepository y IUnitOfWork) informan al nivel de infraestructura de lo que requiere implementación. Estas interfaces también se usan mediante la inserción de dependencias del nivel de aplicación.
 
-![Contenido detallado de la carpeta SeedWork, que contiene interfaces y clases base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs, y ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="Captura de pantalla de las clases contenidas en la carpeta SeedWork.":::
+Contenido detallado de la carpeta SeedWork, que contiene interfaces y clases base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs y ValueObject.cs.
+:::image-end:::
 
 **Figura 7-12.** Un conjunto de muestra de interfaces y clases base "seedwork" del modelo de dominio
 

@@ -2,14 +2,12 @@
 title: 'Mitigación: deserialización de objetos en distintos dominios de aplicación'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894123"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457924"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigación: deserialización de objetos en distintos dominios de aplicación
 En algunos casos, cuando una aplicación usa dos o más dominios de aplicación con distintas bases de aplicación, un intento de deserializar objetos en el contexto de llamada lógico entre dominios de aplicación produce una excepción.  
@@ -50,4 +48,4 @@ En algunos casos, cuando una aplicación usa dos o más dominios de aplicación 
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios en el runtime](runtime-changes-in-the-net-framework-4-5-1.md)
+- [Compatibilidad de aplicaciones](application-compatibility.md)

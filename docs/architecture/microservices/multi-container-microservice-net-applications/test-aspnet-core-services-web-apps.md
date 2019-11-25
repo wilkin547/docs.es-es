@@ -2,12 +2,12 @@
 title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772016"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739479"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -144,7 +144,7 @@ Recientemente se han reestructurado las pruebas de referencia de la aplicación 
 
 Las pruebas unitarias y de integración por microservicio se incluyen en una carpeta de prueba en cada microservicio y las pruebas de carga y aplicación se incluyen en la carpeta de pruebas de la carpeta de soluciones, como se muestra en la figura 6-25.
 
-![Estructura de las pruebas en eShopOnContainers: cada servicio tiene una carpeta "prueba" que incluye pruebas unitarias y funcionales. En la carpeta "prueba" de la solución hay pruebas funcionales y de carga para toda la aplicación.](./media/image42.png)
+![Captura de pantalla de VS que apunta a algunos de los proyectos de prueba de la solución.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Figura 6-25**. Estructura de carpetas de prueba en eShopOnContainers
 

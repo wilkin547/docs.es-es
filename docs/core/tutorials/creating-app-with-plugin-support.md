@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579500"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739699"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -285,3 +285,7 @@ Esto evita que los ensamblados `A.PluginBase` se copien en el directorio de sali
 ## <a name="plugin-target-framework-recommendations"></a>Recomendaciones para plataformas de destino de complemento
 
 Como en la carga de dependencias de complemento se usa el archivo *deps.json*, hay un problema relacionado con la plataforma de destino del complemento. En concreto, los complementos deben tener como destino un runtime como .NET Core 3.0, en lugar de una versión de .NET Standard. El archivo *.deps.json* se genera en función de la plataforma de destino del proyecto y, como muchos paquetes compatibles con .NET Standard incluyen ensamblados de referencia para compilar en .NET Standard y ensamblados de implementación para runtimes específicos, es posible que el archivo *.deps.json* no vea correctamente los ensamblados de implementación, o bien que tome la versión de .NET Standard de un ensamblado en lugar de la de .NET Core que se espera.
+
+## <a name="plugin-framework-references"></a>Referencias del marco de trabajo de complementos
+
+En la actualidad, los complementos no pueden introducir nuevos marcos en el proceso. Por ejemplo, no puede cargar un complemento que use el marco `Microsoft.AspNetCore.App` en una aplicación en la que solo se use el marco `Microsoft.NETCore.App` raíz. La aplicación host debe declarar referencias a todos los marcos de trabajo necesarios para los complementos.

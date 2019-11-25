@@ -2,12 +2,12 @@
 title: Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las nuevas opciones para usar IHostedService y BackgroundService para implementar tareas en segundo plano en microservicios de .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770121"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737198"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -17,11 +17,11 @@ Desde un punto de vista genérico, en .NET Core este tipo de tareas se llaman *S
 
 Desde la versión 2.0 de .NET Core, el marco proporciona una nueva interfaz denominada <xref:Microsoft.Extensions.Hosting.IHostedService> que le ayuda a implementar fácilmente servicios hospedados. La idea básica es que pueda registrar varias tareas en segundo plano (servicios hospedados), que se ejecutan en segundo plano mientras se ejecuta el host o host web, tal como se muestra en la imagen 6-26.
 
-![ASP.NET Core 1.x y 2.x son compatibles con IWebHost para procesos en segundo plano en las aplicaciones web, .NET Core 2.1 es compatible con IHost para procesos en segundo plano con aplicaciones de consola normales.](./media/image26.png)
+![Diagrama que compara IWebHost de ASP.NET Core e IHost de .NET Core.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **Figura 6-26**. Uso de IHostedService en un WebHost frente a un Host
 
-Observe la diferencia entre `WebHost` y `Host`.
+ASP.NET Core 1.x y 2.x admiten IWebHost para los procesos en segundo plano en aplicaciones web. .NET Core 2.1 admite IHost para los procesos en segundo plano con aplicaciones de consola planas. Observe la diferencia entre `WebHost` y `Host`.
 
 `WebHost` (clase base que implementa `IWebHost`) en ASP.NET Core 2.0 es el artefacto de infraestructura que se utiliza para proporcionar características de servidor HTTP al proceso, por ejemplo, si se va a implementar una aplicación web MVC o un servicio de API Web. Proporciona todas las ventajas de la nueva infraestructura de ASP.NET Core, lo que le permite usar la inserción de dependencias, insertar middleware en la canalización de solicitudes, etc., además de utilizar de manera precisa `IHostedServices` para tareas en segundo plano.
 
@@ -224,9 +224,11 @@ WebHost.CreateDefaultBuilder(args)
 
 En la siguiente ilustración se muestra un resumen visual de las clases y las interfaces implicadas al implementar IHostedServices.
 
-![Diagrama de clases: IWebHost y IHost pueden hospedar muchos servicios, que heredan de BackgroundService, que implementa IHostedService.](./media/image27.png)
+![Diagrama que muestra que IWebHost y IHost pueden hospedar muchos servicios.](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
 **Figura 6-27**. Diagrama de clases que muestra las distintas clases e interfaces relacionadas con IHostedService
+
+Diagrama de clases: IWebHost y IHost pueden hospedar muchos servicios, que heredan de BackgroundService, que implementa IHostedService.
 
 ### <a name="deployment-considerations-and-takeaways"></a>Impresiones y consideraciones sobre implementación
 

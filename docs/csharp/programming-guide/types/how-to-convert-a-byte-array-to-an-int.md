@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 96507f03a3d64b96ef6059a92459bfc7fa854372
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395684"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195465"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Procedimiento Convertir una matriz de bytes en un valor int (Guía de programación de C#)
 
@@ -35,7 +35,7 @@ En este ejemplo se muestra cómo usar la clase <xref:System.BitConverter> para c
 En este ejemplo se inicializa una matriz de bytes, se invierte la matriz si la arquitectura de equipo es little-endian (es decir, en primer lugar se almacena el byte menos significativo) y, después, se llama al método [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) para convertir cuatro bytes de la matriz en `int`. El segundo argumento de [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) especifica el índice de inicio de la matriz de bytes.
 
 > [!NOTE]
-> El resultado puede cambiar en función del orden de bytes de la arquitectura del equipo.
+> El resultado puede cambiar en función de los modos endian de la arquitectura del equipo.
 
 [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]
 
@@ -44,7 +44,7 @@ En este ejemplo se inicializa una matriz de bytes, se invierte la matriz si la a
 En este ejemplo, el método <xref:System.BitConverter.GetBytes%28System.Int32%29> de la clase <xref:System.BitConverter> se llama para convertir `int` en una matriz de bytes.
 
 > [!NOTE]
-> El resultado puede cambiar en función del orden de bytes de la arquitectura del equipo.
+> El resultado puede cambiar en función de los modos endian de la arquitectura del equipo.
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 

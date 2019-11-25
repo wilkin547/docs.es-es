@@ -2,12 +2,12 @@
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772059"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739545"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -65,9 +65,11 @@ Para que pueda centrarse en la arquitectura y las tecnologías en lugar de pensa
 
 La aplicación consta de varios subsistemas, incluidos varios front-end de interfaz de usuario de tienda (una aplicación web y una aplicación móvil nativa), junto con los microservicios de back-end y los contenedores para todas las operaciones necesarias del lado servidor con varias puertas de enlace de API como puntos de entrada consolidados a los microservicios internos. En la figura 6-1 se muestra la arquitectura de la aplicación de referencia.
 
-![Los clientes móviles y de SPA se comunican con puntos de conexión de puerta de enlace de API única, que después se comunican con los microservicios. Los clientes web tradicionales se comunican con el microservicio MVC, que se comunica con los microservicios.](./media/image1.png)
+![Diagrama de aplicaciones cliente que usan eShopOnContainers en un solo host de Docker.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Figura 6-1**. La arquitectura de aplicación de referencia de eShopOnContainers para el entorno de desarrollo
+
+En el diagrama anterior se muestra que los clientes móviles y SPA se comunican con los puntos de conexión de puerta de enlace de API única y, a continuación, se comunican con los microservicios. Los clientes web tradicionales se comunican con el microservicio MVC, que se comunica con microservicios mediante la puerta de enlace de API.
 
 **Entorno de hospedaje**. En la figura 6-1 se pueden ver varios contenedores implementados dentro de un único host de Docker. Ese sería el caso al implementar en un único host de Docker con el comando docker-compose up. Pero si se usa un clúster de orquestadores o contenedores, cada contenedor podría ejecutarse en otro host (nodo) y cualquier nodo podría ejecutar cualquier número de contenedores, como se explicó anteriormente en la sección sobre arquitectura.
 
@@ -96,7 +98,7 @@ Por tanto, las unidades de implementación de los microservicios (e incluso de l
 
 Una solución basada en microservicios como esta tiene muchas ventajas:
 
-**Cada microservicio es relativamente pequeño, fácil de administrar y desarrollar**. Concretamente:
+**Cada microservicio es relativamente pequeño, fácil de administrar y desarrollar**. De manera específica:
 
 - Es fácil para los desarrolladores entender y empezar a trabajar rápidamente con buena productividad.
 
@@ -140,7 +142,7 @@ Como se mencionó en la sección sobre arquitectura, al diseñar y crear una apl
 
 La arquitectura externa es la arquitectura de microservicio compuesta por varios servicios, siguiendo los principios descritos en la sección sobre arquitectura de esta guía. Pero en función de la naturaleza de cada microservicio y con independencia de la arquitectura general de microservicios que elija, es habitual y a veces aconsejable tener distintas arquitecturas internas, cada una basada en patrones diferentes, para los distintos microservicios. Los microservicios incluso pueden usar tecnologías y lenguajes de programación diferentes. En la figura 6-2 se ilustra esta diversidad.
 
-![Diferencia entre la arquitectura externa: patrones de microservicio, puertas de enlace de API, comunicaciones resistentes, pub/sub, etc., y la arquitectura interna: orientada a datos/CRUD, patrones de DDD, inserción de dependencias, varias bibliotecas, etc.](./media/image2.png)
+![Diagrama en el que se comparan los patrones de arquitectura externos e internos.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Figura 6-2**. Diferencias entre arquitectura y diseño externos e internos
 
@@ -170,11 +172,11 @@ También se pueden compilar microservicios con muchas tecnologías y lenguajes, 
 
 Lo importante es que ningún modelo o estilo arquitectónico determinado, ni ninguna tecnología concreta, es adecuado para todas las situaciones. En la figura 6-3 se muestran algunos enfoques y tecnologías (aunque en ningún orden concreto) que se pueden usar en otros microservicios.
 
-![Los patrones de varias arquitecturas y los microservicios políglotas implican que puede mezclar y adaptar lenguajes y tecnologías a las necesidades de cada microservicio y permitir que se sigan comunicando entre sí.](./media/image3.png)
+![Diagrama que muestra 12 microservicios complejos en una arquitectura global multilingüe.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Figura 6-3**. Modelos arquitectónicos múltiples y el mundo de los microservicios políglotas
 
-Como se muestra en la figura 6-3, en las aplicaciones formadas por muchos microservicios (contextos delimitados en terminología del diseño controlado por dominios, o simplemente "subsistemas" como microservicios autónomos), podría implementar cada microservicio de forma diferente. Cada uno de ellos podría tener un modelo arquitectónico diferente y usar otros lenguajes y bases de datos según la naturaleza de la aplicación, los requisitos empresariales y las prioridades. En algunos casos, es posible que los microservicios sean similares. Pero eso no es lo habitual, porque el límite del contexto y los requisitos de cada subsistema suelen ser diferentes.
+Los patrones de varias arquitecturas y los microservicios políglotas implican que puede mezclar y adaptar lenguajes y tecnologías a las necesidades de cada microservicio y permitir que se sigan comunicando entre sí. Como se muestra en la figura 6-3, en las aplicaciones formadas por muchos microservicios (contextos delimitados en terminología del diseño controlado por dominios, o simplemente "subsistemas" como microservicios autónomos), podría implementar cada microservicio de forma diferente. Cada uno de ellos podría tener un modelo arquitectónico diferente y usar otros lenguajes y bases de datos según la naturaleza de la aplicación, los requisitos empresariales y las prioridades. En algunos casos, es posible que los microservicios sean similares. Pero eso no es lo habitual, porque el límite del contexto y los requisitos de cada subsistema suelen ser diferentes.
 
 Por ejemplo, para una aplicación de mantenimiento CRUD simple, es posible que no tenga sentido diseñar e implementar patrones de DDD. Pero para el dominio o el negocio principal, es posible que tenga que aplicar patrones más avanzados para abordar la complejidad empresarial con reglas de negocio cambiantes.
 

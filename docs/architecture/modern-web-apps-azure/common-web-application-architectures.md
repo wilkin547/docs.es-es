@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332007"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972131"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -266,7 +266,6 @@ El archivo `docker-compose.yml` hace referencia a `Dockerfile` en el proyecto `W
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore

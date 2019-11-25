@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052064"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975700"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errores de inicialización de .NET Framework: Administración de la experiencia del usuario
 
@@ -59,7 +59,7 @@ La aparición de un mensaje de error que comunica que la versión solicitada de 
 
 El método [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) acepta un miembro de enumeración de [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) como entrada. Puede incluir el indicador METAHOST_POLICY_SHOW_ERROR_DIALOG para solicitar un mensaje de error si no se encuentra la versión solicitada de CLR. De forma predeterminada, el mensaje de error no se muestra. (El método [ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) no acepta esta marca, y no facilita ninguna otra forma de mostrar el mensaje de error).
 
-Windows proporciona una función [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) que puede usar para manifestar si quiere que se muestren los mensajes de error como resultado del código que se ejecuta dentro del proceso. Puede especificar la marca SEM_FAILCRITICALERRORS para impedir que se muestre el mensaje de error.
+Windows proporciona una función [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) que puede usar para manifestar si quiere que se muestren los mensajes de error como resultado del código que se ejecuta dentro del proceso. Puede especificar la marca SEM_FAILCRITICALERRORS para impedir que se muestre el mensaje de error.
 
 Sin embargo, en algunos escenarios, es importante reemplazar el valor de SEM_FAILCRITICALERRORS establecido por un proceso de aplicación. Por ejemplo, si tiene un componente COM nativo que hospeda al CLR y que a su vez se hospeda en un proceso en el que se establece SEM_FAILCRITICALERRORS, quizás desee reemplazar la marca, teniendo en cuenta el impacto que tendrá en ese proceso de aplicación determinado el mostrar mensajes de error. En este caso, puede utilizar una de las marcas siguientes para reemplazar SEM_FAILCRITICALERRORS:
 

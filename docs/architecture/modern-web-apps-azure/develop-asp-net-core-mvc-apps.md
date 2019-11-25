@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181942"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971583"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -172,7 +172,7 @@ Otro enfoque para desacoplar la aplicación de los detalles de implementación c
 
 ### <a name="feature-organization"></a>Organización de las características
 
-De forma predeterminada, las aplicaciones ASP.NET Core organizan su estructura de carpetas para que incluir controladores y vistas, y con frecuencia ViewModels. El código del lado cliente para admitir estas estructuras del lado servidor normalmente se almacena por separado en la carpeta wwwroot. Pero es posible que esta organización genere problemas en aplicaciones grandes, puesto que trabajar con cualquier característica determinada a menudo requiere saltar entre estas carpetas. Esto se complica cada vez más a medida que aumenta el número de archivos y subcarpetas en cada carpeta, lo que da lugar a una gran cantidad de desplazamiento por el Explorador de soluciones. Una solución a este problema consiste en organizar el código de aplicación por _característica_ en lugar de por tipo de archivo. Este estilo profesional se conoce normalmente como carpetas de características o [sectores de características](https://msdn.microsoft.com/magazine/mt763233.aspx) (vea también: [Vertical Slice](https://deviq.com/vertical-slices/) (Sectores verticales).
+De forma predeterminada, las aplicaciones ASP.NET Core organizan su estructura de carpetas para que incluir controladores y vistas, y con frecuencia ViewModels. El código del lado cliente para admitir estas estructuras del lado servidor normalmente se almacena por separado en la carpeta wwwroot. Pero es posible que esta organización genere problemas en aplicaciones grandes, puesto que trabajar con cualquier característica determinada a menudo requiere saltar entre estas carpetas. Esto se complica cada vez más a medida que aumenta el número de archivos y subcarpetas en cada carpeta, lo que da lugar a una gran cantidad de desplazamiento por el Explorador de soluciones. Una solución a este problema consiste en organizar el código de aplicación por _característica_ en lugar de por tipo de archivo. Este estilo profesional se conoce normalmente como carpetas de características o [sectores de características](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (vea también: [Vertical Slice](https://deviq.com/vertical-slices/) (Sectores verticales).
 
 ASP.NET Core MVC admite las áreas para este propósito. Con las áreas, se pueden crear conjuntos independientes de carpetas de controladores y vistas (así como los modelos asociados) en cada carpeta de área. En la figura 7-1 se muestra una estructura de carpetas de ejemplo, en la que se usan áreas.
 
@@ -237,7 +237,7 @@ Después, esta convención se especifica como una opción al agregar compatibili
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC también usa una convención para localizar vistas. Se puede reemplazar con una convención personalizada para que las vistas se ubiquen en las carpetas de características (mediante el nombre de la característica proporcionado por FeatureConvention, anteriormente). Puede obtener más información sobre este enfoque y descargar un ejemplo funcional en el artículo de MSDN, [Sectores de características para ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx).
+ASP.NET Core MVC también usa una convención para localizar vistas. Se puede reemplazar con una convención personalizada para que las vistas se ubiquen en las carpetas de características (mediante el nombre de la característica proporcionado por FeatureConvention, anteriormente). Puede obtener más información sobre este enfoque y descargar un ejemplo funcional en el artículo de MSDN, [Sectores de características para ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="cross-cutting-concerns"></a>Intereses transversales
 
@@ -311,18 +311,18 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Puede leer más sobre la implementación de filtros y descargar un ejemplo funcional en el artículo de MSDN, [ASP.NET Core: filtros de ASP.NET Core MVC reales](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Puede leer más sobre la implementación de filtros y descargar un ejemplo funcional en el artículo de MSDN, [ASP.NET Core: filtros de ASP.NET Core MVC reales](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Referencias: estructuración de aplicaciones
 >
 > - **Áreas**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine: Sectores de características para ASP.NET Core MVC**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filtros**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN: filtros de ASP.NET Core MVC reales**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Seguridad
 

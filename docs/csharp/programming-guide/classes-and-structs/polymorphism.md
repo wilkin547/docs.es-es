@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922081"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970345"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 El polimorfismo suele considerarse el tercer pilar de la programación orientada a objetos, después de la encapsulación y la herencia. Polimorfismo es una palabra griega que significa "con muchas formas" y tiene dos aspectos diferentes:  
@@ -93,7 +93,7 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
 - [Saber cuándo utilizar las palabras clave Override y New](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Cómo: Invalidar el método ToString](./how-to-override-the-tostring-method.md)  
+- [Invalidación del método ToString](./how-to-override-the-tostring-method.md)
   
 ## <a name="see-also"></a>Vea también
 

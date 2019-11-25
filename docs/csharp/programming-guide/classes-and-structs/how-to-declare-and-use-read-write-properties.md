@@ -1,5 +1,5 @@
 ---
-title: 'Procedimiento Declarar y usar propiedades de lectura y escritura: Guía de programación de C#'
+title: Procedimiento para declarar y usar propiedades de lectura y escritura - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 010c3d4c1ae976091b5382f00a982400746f6436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2865feb74692e7075c92a9ee2b5cd2a7735a8e62
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596929"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971011"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Procedimiento Declarar y usar propiedades de lectura y escritura (Guía de programación de C#)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Procedimiento para declarar y usar propiedades de lectura y escritura (Guía de programación de C#)
 Las propiedades proporcionan la comodidad de los miembros de datos públicos sin los riesgos que provienen del acceso sin comprobar, sin controlar y sin proteger a los datos de un objeto. Esto se consigue mediante los *descriptores de acceso*: métodos especiales que asignan y recuperan valores del miembro de datos subyacente. El descriptor de acceso [set](../../language-reference/keywords/set.md) permite que los miembros de datos se asignen, y el descriptor de acceso [get](../../language-reference/keywords/get.md) recupera los valores de los miembros de datos.  
   
  En este ejemplo se muestra una clase `Person` que tiene dos propiedades: `Name` (string) y `Age` (int). Ambas propiedades proporcionan descriptores de acceso `get` y `set`, de manera que se consideran propiedades de lectura y escritura.  

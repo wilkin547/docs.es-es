@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126437"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.  

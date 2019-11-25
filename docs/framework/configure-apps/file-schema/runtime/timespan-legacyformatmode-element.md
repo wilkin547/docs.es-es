@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115216"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968904"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<elemento > TimeSpan_LegacyFormatMode
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode elemento >
 
 Determina si el tiempo de ejecución conserva el comportamiento heredado en operaciones de formato con valores <xref:System.TimeSpan?displayProperty=nameWithType>.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<en tiempo de ejecución >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** TimeSpan_LegacyFormatMode >  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -75,13 +75,13 @@ En el ejemplo siguiente se crea una instancia de un objeto <xref:System.TimeSpan
 
 Al ejecutar el ejemplo en el .NET Framework 3,5 o en una versión anterior, se muestra el siguiente resultado:
 
-```
+```console
 12:30:45
 ```
 
 Esto difiere notablemente de la salida si ejecuta el ejemplo en el .NET Framework 4 o una versión posterior:
 
-```
+```console
 Invalid Format
 ```
 

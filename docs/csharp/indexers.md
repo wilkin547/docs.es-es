@@ -2,13 +2,14 @@
 title: Indizadores
 description: Obtenga información sobre los indexadores de C# y cómo implementan propiedades indexadas, que son propiedades a las que se hace referencia con uno o más argumentos.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197605"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039117"
 ---
 # <a name="indexers"></a>Indizadores
 
@@ -326,4 +327,4 @@ Los desarrolladores usan el tipo `DateTime`, aunque emplean la propiedad `Date` 
 ## <a name="summing-up"></a>Resumen
 
 Debe crear indizadores siempre que tenga un elemento de propiedad en la clase, en la que dicha propiedad no representa un valor único, sino una serie de valores donde cada elemento se identifica mediante un conjunto de argumentos. Estos argumentos únicamente pueden identificar el elemento al que se debe hacer referencia en la colección.
-Los indizadores amplían el concepto de las [propiedades](properties.md), en las que un miembro se trata como un elemento de datos desde fuera de la clase, pero se trata como un método en el lado. Los indizadores permiten que los argumentos busquen un solo elemento en una propiedad que representa un conjunto de elementos.
+Los indizadores amplían el concepto de las [propiedades](properties.md), en las que un miembro se trata como un elemento de datos desde fuera de la clase, pero como un método desde dentro. Los indizadores permiten que los argumentos busquen un solo elemento en una propiedad que representa un conjunto de elementos.

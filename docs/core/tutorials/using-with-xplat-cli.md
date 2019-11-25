@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117351"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736993"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos
 
@@ -39,22 +39,22 @@ Veamos un tutorial rápido:
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) crea un archivo de proyecto `Hello.csproj` actualizado con las dependencias necesarias para compilar una aplicación de consola.  Además, se crea un archivo `Program.cs`, un archivo básico que contiene el punto de entrada para la aplicación.
+   [`dotnet new`](../tools/dotnet-new.md) crea un archivo de proyecto *Hello.csproj* actualizado con las dependencias necesarias para compilar una aplicación de consola. Además, también crea *Program.cs*, un archivo básico que contiene el punto de entrada para la aplicación.
 
-   `Hello.csproj`:
+   *Hello.csproj*:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    El archivo de proyecto especifica todo lo que es necesario para restaurar las dependencias y compilar el programa.
 
    - La etiqueta `OutputType` especifica que estamos creando un archivo ejecutable, es decir, una aplicación de consola.
    - La etiqueta `TargetFramework` especifica la implementación .NET a la que nos dirigimos. En un escenario avanzado, con una sola operación puede especificar varios marcos de destino y compilar en todos ellos. En este tutorial, nos centraremos en compilar únicamente para .NET Core 2.1.
 
-   `Program.cs`:
+   *Program.cs*:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   El programa se inicia mediante `using System`, lo que significa "llevar cada cosa del espacio de nombres `System` al ámbito de este archivo". El espacio de nombres `System` incluye construcciones básicas, como `string` o tipos numéricos.
+   El programa se inicia mediante `using System`, lo que significa "llevar cada cosa del espacio de nombres `System` al ámbito de este archivo". El espacio de nombres `System` incluye la clase `Console`.
 
    Después, definimos un espacio de nombres denominado `Hello`. Puede cambiar esto por cualquier cosa que desee. Se define una clase denominada `Program` dentro del espacio de nombres, con un método `Main` que toma una matriz de cadenas como argumento. Esta matriz contiene la lista de argumentos que se ha pasado cuando se llama al programa compilado. Tal y como está, esta matriz no se usa: todo lo que hace el programa es escribir "Hello World!" en la consola. en la consola. Después, realizaremos cambios en el código que usará este argumento.
 
@@ -116,7 +116,7 @@ Cambiemos un poco el programa. Los números Fibonacci son divertidos, así que v
    15: 377
    ```
 
-Y listo.  Puede aumentar `Program.cs` como desee.
+Y listo.  Puede aumentar *Program.cs* como prefiera.
 
 ## <a name="working-with-multiple-files"></a>Trabajar con varios archivos
 
@@ -125,11 +125,11 @@ Se compilará sobre el ejemplo de Fibonacci anterior mediante el almacenamiento 
 
 1. Agregue un archivo nuevo dentro del directorio *Hello* denominado *FibonacciGenerator.cs* con el código siguiente:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. Cambie el método `Main` en su archivo *Program.cs* para crear una instancia de la nueva clase y llamar a su método como se muestra en el ejemplo siguiente:
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Ejecute [`dotnet build`](../tools/dotnet-build.md) para compilar los cambios.
 

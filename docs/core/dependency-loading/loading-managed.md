@@ -4,12 +4,12 @@ description: Descripción de los detalles del algoritmo de carga de ensamblado a
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bf95cbd0eebed064f0198ae9b0f7a4288a938f8a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "72303633"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973508"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>Algoritmo de carga de ensamblado administrado
 
@@ -23,7 +23,7 @@ El mecanismo más común para desencadenar la carga de un ensamblado administrad
 
 El uso directo de API específicas también desencadenará cargas:
 
-|API  |DESCRIPCIÓN  |`Active` <xref:System.Runtime.Loader.AssemblyLoadContext> |
+|API  |DESCRIPCIÓN  |`Active`<xref:System.Runtime.Loader.AssemblyLoadContext> |
 |---------|---------|---------|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyName%2A?displayProperty=nameWithType>|`Load-by-name`|La instancia de [this](../../csharp/language-reference/keywords/this.md).|
 |<xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType><p><xref:System.Runtime.Loader.AssemblyLoadContext.LoadFromNativeImagePath%2A?displayProperty=nameWithType>|Cargue desde la ruta de acceso.|La instancia de [this](../../csharp/language-reference/keywords/this.md).|
@@ -31,7 +31,7 @@ El uso directo de API específicas también desencadenará cargas:
 |<xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>|Cargue desde la ruta de acceso en una nueva instancia de <xref:System.Runtime.Loader.AssemblyLoadContext>.|La nueva instancia de <xref:System.Runtime.Loader.AssemblyLoadContext>.|
 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>|Cargue desde la ruta de acceso en la instancia de <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.<p>Agregue un controlador <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving> a <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>. El controlador cargará las dependencias del ensamblado desde su directorio.|Instancia de <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.|
 |<xref:System.Reflection.Assembly.Load(System.Reflection.AssemblyName)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.String)?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>|`Load-by-name`.|Se infiere del autor de la llamada.<p>Prefiere los métodos <xref:System.Runtime.Loader.AssemblyLoadContext>.|
-|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|Cargue desde el objeto.|Se infiere del autor de la llamada.<p>Prefiere los métodos <xref:System.Runtime.Loader.AssemblyLoadContext>.|
+|<xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType><p><xref:System.Reflection.Assembly.Load(System.Byte[],System.Byte[])?displayProperty=nameWithType>|Cargue desde el objeto en una nueva instancia de <xref:System.Runtime.Loader.AssemblyLoadContext>.|La nueva instancia de <xref:System.Runtime.Loader.AssemblyLoadContext>.|
 <xref:System.Type.GetType(System.String)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean)?displayProperty=nameWithType><p><xref:System.Type.GetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType>|`Load-by-name`.|Se infiere del autor de la llamada.<p>Prefiere los métodos <xref:System.Type.GetType%2A?displayProperty=nameWithType> con un argumento `assemblyResolver`.|
 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>|Si el tipo `name` describe un tipo genérico calificado con el ensamblado, desencadene un elemento `Load-by-name`.|Se infiere del autor de la llamada.<p>Prefiere <xref:System.Type.GetType%2A?displayProperty=nameWithType> al utilizar nombres de tipo calificados con el ensamblado.|
 <xref:System.Activator.CreateInstance(System.String,System.String)?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Object[])?displayProperty=nameWithType><p><xref:System.Activator.CreateInstance(System.String,System.String,System.Boolean,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo,System.Object[])?displayProperty=nameWithType>|`Load-by-name`.|Se infiere del autor de la llamada.<p>Prefiere los métodos <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> que toman un argumento <xref:System.Type>.|

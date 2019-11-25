@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970651"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037972"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017
 
@@ -42,11 +42,11 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
    El código fuente creado por la plantilla de prueba unitaria hace lo siguiente:
 
-   * Importa el espacio de nombres de <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contiene los tipos utilizados para las pruebas unitarias.
+   - Importa el espacio de nombres de <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contiene los tipos utilizados para las pruebas unitarias.
 
-   * Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> a la clase `UnitTest1`. Cada método de prueba en una clase de prueba etiquetada con el atributo \[TestMethod\] se ejecuta automáticamente cuando se ejecute la prueba unitaria.
+   - Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> a la clase `UnitTest1`. Cada método de prueba en una clase de prueba etiquetada con el atributo \[TestMethod\] se ejecuta automáticamente cuando se ejecute la prueba unitaria.
 
-   * Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como un método de prueba para la ejecución automática cuando se ejecuta la prueba unitaria.
+   - Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como un método de prueba para la ejecución automática cuando se ejecuta la prueba unitaria.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto **StringLibraryTest** y seleccione **Agregar referencia** del menú contextual.
 
@@ -73,11 +73,11 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
    El código fuente creado por la plantilla de prueba unitaria hace lo siguiente:
 
-   * Importa el espacio de nombres de <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contiene los tipos utilizados para las pruebas unitarias.
+   - Importa el espacio de nombres de <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contiene los tipos utilizados para las pruebas unitarias.
 
-   * Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> a la clase `UnitTest1`. Cada método de prueba en una clase de prueba etiquetada con el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> se ejecuta automáticamente cuando se ejecute la prueba unitaria.
+   - Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> a la clase `UnitTest1`. Cada método de prueba en una clase de prueba etiquetada con el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> se ejecuta automáticamente cuando se ejecute la prueba unitaria.
 
-   * Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como un método de prueba para la ejecución automática cuando se ejecuta la prueba unitaria.
+   - Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como un método de prueba para la ejecución automática cuando se ejecuta la prueba unitaria.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto **StringLibraryTest** y seleccione **Agregar referencia** del menú contextual.
 
@@ -93,7 +93,7 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
 Cuando Visual Studio ejecuta una prueba unitaria, ejecuta cada método marcado con el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> en una clase de prueba unitaria; la clase a la que se le aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>. Un método de prueba finaliza cuando se encuentra el primer error, o cuando todas las pruebas contenidas en el método se han realizado correctamente.
 
-Las pruebas más comunes llaman a los miembros de la clase <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muchos métodos de aserción incluyen al menos dos parámetros, uno de los cuales es el resultado esperado de la prueba y el otro es el resultado real de la prueba. Algunos de sus métodos a los que se llama con más frecuencia se muestran en la tabla siguiente.
+Las pruebas más comunes llaman a los miembros de la clase <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muchos métodos de aserción incluyen al menos dos parámetros, uno de los cuales es el resultado esperado de la prueba y el otro es el resultado real de la prueba. Algunos de sus métodos a los que se llama con más frecuencia se muestran en la tabla siguiente:
 
 Métodos de aserción | Función
 --- | ---
@@ -116,7 +116,7 @@ Para crear los métodos de prueba:
 
 1. Reemplace el código de la ventana de código *UnitTest1.cs* por el código siguiente:
 
-   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Observe que la prueba de caracteres en mayúsculas del método `TestStartsWithUpper` incluye la letra mayúscula griega alfa (U+0391) y la letra mayúscula cirílica EM (U+041C), y la prueba de caracteres en minúsculas del método `TestDoesNotStartWithUpper` incluye la letra griega minúscula alfa (U+03B1) y la letra cirílica minúscula Ghe (U+0433).
 
@@ -128,7 +128,7 @@ Para crear los métodos de prueba:
 
 1. Reemplace el código de la ventana de código *UnitTest1.vb* por el código siguiente:
 
-    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Observe que la prueba de caracteres en mayúsculas del método `TestStartsWithUpper` incluye la letra mayúscula griega alfa (U+0391) y la letra mayúscula cirílica EM (U+041C), y la prueba de caracteres en minúsculas del método `TestDoesNotStartWithUpper` incluye la letra griega minúscula alfa (U+03B1) y la letra cirílica minúscula Ghe (U+0433).
 

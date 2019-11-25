@@ -2,12 +2,12 @@
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454848"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737541"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -17,7 +17,9 @@ Como se ha mencionado anteriormente, el nivel de aplicación se puede implementa
 
 Por ejemplo, el código de nivel de aplicación del microservicio de pedidos se implementa directamente como parte del proyecto **Ordering.API** (un proyecto de API web de ASP.NET Core), como se muestra en la figura 7-23.
 
-![Vista del Explorador de soluciones del microservicio Ordering.API que muestra las subcarpetas de la carpeta Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries y Validations.](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Captura de pantalla del microservicio Ordering.API en el Explorador de soluciones.":::
+Vista del Explorador de soluciones del microservicio Ordering.API que muestra las subcarpetas de la carpeta Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries y Validations.
+:::image-end:::
 
 **Figura 7-23.** Nivel de aplicación en el proyecto de API web de ASP.NET Core Ordering.API
 
@@ -181,9 +183,11 @@ El patrón de comandos está intrínsecamente relacionado con el patrón CQRS qu
 
 Como se muestra en la figura 7-24, el patrón se basa en la aceptación de comandos del lado cliente, su procesamiento según las reglas del modelo de dominio y, por último, la conservación de los estados con transacciones.
 
-![Vista superior del lado de escritura en CQRS: La aplicación de interfaz de usuario envía un comando a través de la API que llega a un elemento CommandHandler, el cual depende del modelo de dominio y de la infraestructura para actualizar la base de datos.](./media/image21.png)
+![Diagrama que muestra el flujo de datos general del cliente a la base de datos.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **Figura 7-24.** Vista general de los comandos o el "lado transaccional" en un patrón CQRS
+
+En la figura 7-24 se muestra que la aplicación de interfaz de usuario envía un comando a través de la API que llega a un elemento `CommandHandler`, que depende del modelo de dominio y de la infraestructura para actualizar la base de datos.
 
 ### <a name="the-command-class"></a>La clase de comando
 
@@ -423,9 +427,11 @@ Las otras dos opciones principales, que son las recomendadas, son estas:
 
 Como se muestra en la figura 7-25, en un enfoque CQRS se usa un mediador inteligente, similar a un bus en memoria, que es lo suficientemente inteligente como para redirigir al controlador de comandos correcto según el tipo del comando o DTO que se recibe. Las flechas simples de color negro entre los componentes representan las dependencias entre los objetos (en muchos casos, insertados mediante DI) con sus interacciones relacionadas.
 
-![Acercamiento de la imagen anterior: el controlador de ASP.NET Core envía el comando a la canalización del comando MediatR, por lo que obtienen el controlador adecuado.](./media/image22.png)
+![Diagrama que muestra un flujo de datos más detallado del cliente a la base de datos.](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **Figura 7-25.** Uso del patrón de mediador en proceso en un único microservicio CQRS
+
+En el diagrama anterior se muestra más detalle de la imagen 7-24: el controlador ASP.NET Core envía el comando a la canalización de comandos MediatR para que llegue al controlador adecuado.
 
 El motivo por el que tiene sentido usar el patrón de mediador es que, en las aplicaciones empresariales, las solicitudes de procesamiento pueden resultar complicadas. Le interesa poder agregar un número abierto de cuestiones transversales como registro, validaciones, auditoría y seguridad. En estos casos, puede basarse en una canalización de mediador (vea [Patrón de mediador](https://en.wikipedia.org/wiki/Mediator_pattern)) para proporcionar un medio para estos comportamientos adicionales o cuestiones transversales.
 
@@ -439,11 +445,11 @@ Por ejemplo, en el microservicio de pedidos de eShopOnContainers, se implementar
 
 Otra opción consiste en usar mensajes asincrónicos basados en agentes o colas de mensajes, como se muestra en la figura 7-26. Esa opción también se podría combinar con el componente de mediador justo antes del controlador de comandos.
 
-![La canalización del comando también puede controlarse mediante una cola de mensajes de alta disponibilidad para entregar los comandos en el controlador adecuado.](./media/image23.png)
+![Diagrama que muestra el flujo de datos mediante una cola de mensajes de alta disponibilidad.](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **Figura 7-26.** Uso de colas de mensajes (comunicación fuera de proceso y entre procesos) con comandos CQRS
 
-El uso de colas de mensajes para aceptar los comandos puede complicar más la canalización del comando, ya que probablemente será necesario dividir la canalización en dos procesos conectados a través de la cola de mensajes externos. Pero se debe usar si hay que ofrecer mayor escalabilidad y rendimiento según la mensajería asincrónica. Téngalo en cuenta en el caso de la figura 7-26, donde el controlador simplemente envía el mensaje de comando a la cola y vuelve. Después, los controladores de comandos procesan los mensajes a su propio ritmo. Esa es una gran ventaja de las colas: la cola de mensajes puede actuar como un búfer en casos en que se necesita hiperescalabilidad (por ejemplo, para existencias o cualquier otro escenario con un gran volumen de datos de entrada).
+La canalización del comando también puede controlarse mediante una cola de mensajes de alta disponibilidad para entregar los comandos en el controlador adecuado. El uso de colas de mensajes para aceptar los comandos puede complicar más la canalización del comando, ya que probablemente será necesario dividir la canalización en dos procesos conectados a través de la cola de mensajes externos. Pero se debe usar si hay que ofrecer mayor escalabilidad y rendimiento según la mensajería asincrónica. Téngalo en cuenta en el caso de la figura 7-26, donde el controlador simplemente envía el mensaje de comando a la cola y vuelve. Después, los controladores de comandos procesan los mensajes a su propio ritmo. Esa es una gran ventaja de las colas: la cola de mensajes puede actuar como un búfer en casos en que se necesita hiperescalabilidad (por ejemplo, para existencias o cualquier otro escenario con un gran volumen de datos de entrada).
 
 En cambio, debido a la naturaleza asincrónica de las colas de mensajes, debe saber cómo comunicar a la aplicación cliente si el proceso del comando se ha realizado correctamente o no. Como norma, nunca debería usar comandos "Fire and Forget" (dispare y olvídese). Cada aplicación empresarial necesita saber si un comando se ha procesado correctamente, o al menos se ha validado y aceptado.
 

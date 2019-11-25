@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos para: para comprobar si las cadenas tienen un formato de correo electrónico válido'
+title: Cómo comprobar si las cadenas tienen un formato de correo electrónico válido
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,16 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 352808e561a0f59d41f092eb7c70c40a591da5b6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846766"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197580"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimientos para: comprobar que las cadenas están en un formato de correo electrónico válido
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Cómo comprobar si las cadenas tienen un formato de correo electrónico válido
 
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.
 
@@ -37,7 +35,7 @@ En el ejemplo se define un método `IsValidEmail` , que devuelve `true` si la ca
 
 Para comprobar que la dirección de correo electrónico es válida, el método `IsValidEmail` llama al método <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> con el patrón de expresión regular `(@)(.+)$` para separar el nombre de dominio de la dirección de correo electrónico. El tercer parámetro es un delegado <xref:System.Text.RegularExpressions.MatchEvaluator> que representa el método que procesa y reemplaza el texto coincidente. El patrón de expresión regular se interpreta de esta manera:
 
-|Patrón|DESCRIPCIÓN|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`(@)`|Buscar el carácter @. Este es el primer grupo de captura.|
 |`(.+)`|Buscar una coincidencia con una o más apariciones de cualquier carácter. Este es el segundo grupo de captura.|
@@ -52,7 +50,7 @@ Tenga en cuenta que el método `IsValidEmail` no realiza la autenticación para 
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-En este ejemplo, el patrón de expresión regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` se interpreta como se muestra en la leyenda siguiente. La expresión regular se compila mediante la marca <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
+En este ejemplo, el patrón de expresión regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` se interpreta como se muestra en la leyenda siguiente. La expresión regular se compila mediante la marca <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
 
 Patrón `^`: Comenzar la búsqueda de coincidencia al principio de la cadena.
 
@@ -64,7 +62,7 @@ Patrón `|(([0-9a-z]`: Si el primer carácter no es un signo de comillas, buscar
 
 Patrón `(\.(?!\.))`: Si el carácter siguiente es un punto, determinar que coincide. Si no lo es, buscar más adelante en el siguiente carácter y probar si coincide. `(?!\.)` es una aserción de búsqueda anticipada negativa de ancho igual a cero que evita que aparezcan dos puntos consecutivos en la parte local de una dirección de correo electrónico.
 
-Patrón ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: Si el carácter siguiente no es un punto, busque la coincidencia de cualquier carácter de palabra o uno de los caracteres siguientes: -!#$%&'*+/=?^`{}|~
+Patrón ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: Si el carácter siguiente no es un punto, busque la coincidencia de cualquier carácter de palabra o uno de los caracteres siguientes: -!#$%&'\*+/=?^\`{}|~
 
 Patrón ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``: Buscar el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.
 

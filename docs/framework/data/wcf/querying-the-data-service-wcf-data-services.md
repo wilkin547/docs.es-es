@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: cc0e8a5e7d254fc4b34566d2252869a2da4af3db
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894283"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975166"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultar el servicio de datos (Data Services de WCF)
 
@@ -24,7 +24,7 @@ La biblioteca de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-
 
 La clase <xref:System.Data.Services.Client.DataServiceQuery%601> genérica representa una consulta que devuelve una colección de cero o más instancias de tipo de entidad. Una consulta del servicio de datos siempre pertenece al contexto de un servicio de datos existente. Este contexto mantiene la información necesaria del URI del servicio y la de los metadatos para crear y ejecutar la consulta.
 
-Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para agregar un servicio de datos a una aplicación cliente basada en .NET Framework, se crea una clase de contenedor de entidades <xref:System.Data.Services.Client.DataServiceContext> que hereda de la clase. Esta clase incluye propiedades que devuelven instancias de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo. Existe una propiedad para cada conjunto de entidades que expone el servicio de datos. Estas propiedades facilitan la creación de una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo.
+Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para agregar un servicio de datos a una aplicación cliente basada en .NET Framework, se crea una clase de contenedor de entidades que hereda de la clase <xref:System.Data.Services.Client.DataServiceContext>. Esta clase incluye propiedades que devuelven instancias de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo. Existe una propiedad para cada conjunto de entidades que expone el servicio de datos. Estas propiedades facilitan la creación de una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> con tipo.
 
 Las consultas se ejecutan en los escenarios siguientes:
 
@@ -43,13 +43,13 @@ Cuando se ejecuta la siguiente consulta, devuelve todas las entidades `Customers
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-Para obtener más información, vea [Cómo: Ejecutar consultas](how-to-execute-data-service-queries-wcf-data-services.md)de servicio de datos.
+Para obtener más información, vea [Cómo: ejecutar consultas de servicio de datos](how-to-execute-data-service-queries-wcf-data-services.md).
 
-El [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente admite consultas para objetos enlazados en tiempo de ejecución, como cuando se usa el tipo C#dinámico en. Sin embargo, por razones de rendimiento siempre debe redactar consultas fuertemente tipadas en el servicio de datos. El cliente no admite los objetos de tipo y dinámicos de la clase <xref:System.Tuple>.
+El cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite consultas para objetos enlazados en tiempo de ejecución, como cuando se usa el C#tipo dinámico en. Sin embargo, por razones de rendimiento siempre debe redactar consultas fuertemente tipadas en el servicio de datos. El cliente no admite los objetos de tipo y dinámicos de la clase <xref:System.Tuple>.
 
 ## <a name="linq-queries"></a>Consultas LINQ
 
-Dado que <xref:System.Data.Services.Client.DataServiceQuery%601> la clase implementa la <xref:System.Linq.IQueryable%601> interfaz definida por LINQ, la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente puede transformar consultas LINQ en datos del conjunto de entidades en un URI que representa una expresión de consulta evaluada en un servicio de datos. recurso. En el siguiente ejemplo hay una consulta LINQ que es equivalente a la clase <xref:System.Data.Services.Client.DataServiceQuery%601> anterior que devuelve `Orders` con un costo de flete de más de 30 dólares y ordena los resultados por el costo del flete:
+Dado que la clase <xref:System.Data.Services.Client.DataServiceQuery%601> implementa la interfaz de <xref:System.Linq.IQueryable%601> definida por LINQ, la biblioteca de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] puede transformar consultas LINQ en datos del conjunto de entidades en un URI que representa una expresión de consulta evaluada en un recurso del servicio de datos. En el siguiente ejemplo hay una consulta LINQ que es equivalente a la clase <xref:System.Data.Services.Client.DataServiceQuery%601> anterior que devuelve `Orders` con un costo de flete de más de 30 dólares y ordena los resultados por el costo del flete:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -77,7 +77,7 @@ Puede usar la opción de consulta `$orderby` tanto para ordenar como para filtra
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-Puede llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> consecutivamente para construir expresiones de consulta complejas. Para obtener más información, vea [Cómo: Agregar opciones de consulta a una consulta](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)de servicio de datos.
+Puede llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> consecutivamente para construir expresiones de consulta complejas. Para obtener más información, vea [Cómo: agregar opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).
 
 Las opciones de consulta le proporcionan otra forma de expresar los componentes estáticos de una consulta LINQ. Para obtener más información, vea [consideraciones sobre LINQ](linq-considerations-wcf-data-services.md).
 
@@ -93,7 +93,7 @@ El cliente ejecuta una consulta en dos partes. Siempre que sea posible, las expr
 [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryclientevalspecific)]
 [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryclientevalspecific)]
 
-En este ejemplo, la expresión `(basePrice – (basePrice * discount))` se evalúa en el cliente. Por ello, el URI de la consulta real `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` que se envía al servicio de datos contiene el valor decimal ya calculado de `90` en la cláusula de filtro. El resto de las partes de la expresión de filtrado, incluida la expresión de subcadena, las evalúa el servicio de datos. Las expresiones que se evalúan en el cliente siguen la semántica de Common Language Runtime (CLR), mientras que las expresiones enviadas al servicio de datos confían en la implementación del servicio de datos del protocolo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Debe tener en cuenta los escenarios en los que esta evaluación independiente pueda causar resultados inesperados, como cuando tanto el cliente como el servidor realicen evaluaciones basadas en la hora en distintas zonas horarias.
+En este ejemplo, la expresión `(basePrice – (basePrice * discount))` se evalúa en el cliente. Por ello, el URI de la consulta real `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` que se envía al servicio de datos contiene el valor decimal ya calculado de `90` en la cláusula de filtro. El resto de las partes de la expresión de filtrado, incluida la expresión de subcadena, las evalúa el servicio de datos. Las expresiones que se evalúan en el cliente siguen la semántica de Common Language Runtime (CLR), mientras que las expresiones enviadas al servicio de datos se basan en la implementación del servicio de datos del protocolo OData. Debe tener en cuenta los escenarios en los que esta evaluación independiente pueda causar resultados inesperados, como cuando tanto el cliente como el servidor realicen evaluaciones basadas en la hora en distintas zonas horarias.
 
 ## <a name="query-responses"></a>Respuestas de consulta
 
@@ -118,7 +118,7 @@ Las instancias de tipo de entidad que representan entidades del servicio de dato
 
 - La propiedad <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>: devuelve un objeto <xref:System.Data.Services.Client.DataServiceQueryContinuation> que contiene el URI de la siguiente página de resultados.
 
-De forma predeterminada [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , solo devuelve los datos seleccionados explícitamente por el URI de la consulta. De esta forma, puede cargar explícitamente datos desde el servicio de datos cuando sea necesario. Se envía una solicitud al servicio de datos cada vez que carga datos explícitamente desde el servicio de datos. Los datos que se pueden cargar explícitamente incluyen entidades relacionadas, datos de respuesta paginados y flujos de datos binarios.
+De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] solo devuelve datos seleccionados explícitamente por el URI de la consulta. De esta forma, puede cargar explícitamente datos desde el servicio de datos cuando sea necesario. Se envía una solicitud al servicio de datos cada vez que carga datos explícitamente desde el servicio de datos. Los datos que se pueden cargar explícitamente incluyen entidades relacionadas, datos de respuesta paginados y flujos de datos binarios.
 
 > [!NOTE]
 > Puesto que un servicio de datos puede devolver una respuesta paginada, se recomienda que la aplicación use el patrón de programación para controlar la respuesta paginada de un servicio de datos. Para obtener más información, vea [cargar contenido diferido](loading-deferred-content-wcf-data-services.md).
@@ -129,7 +129,7 @@ La cantidad de datos devueltos por una consulta también se puede reducir especi
 
 En algunos escenarios, es útil saber el número total de entidades de una entidad establecida y no solamente el número devuelto por la consulta. Llame al método <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> de <xref:System.Data.Services.Client.DataServiceQuery%601> para solicitar que se incluya este recuento total de entidades del conjunto con los resultados de la consulta. En este caso, la propiedad <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> del objeto <xref:System.Data.Services.Client.QueryOperationResponse%601> devuelto devuelve el número total de entidades del conjunto.
 
-Además, puede obtener el recuento total de entidades del conjunto como valor de las estructuras <xref:System.Int32> o <xref:System.Int64> llamando a los métodos <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.LongCount%2A>, respectivamente. Cuando se llama a estos métodos, no se devuelve ningún objeto <xref:System.Data.Services.Client.QueryOperationResponse%601>; solo se devuelve el valor de recuento. Para obtener más información, consulte [Cómo Determine el número de entidades devueltas](number-of-entities-returned-by-a-query-wcf.md)por una consulta.
+Además, puede obtener el recuento total de entidades del conjunto como valor de las estructuras <xref:System.Int32> o <xref:System.Int64> llamando a los métodos <xref:System.Linq.Enumerable.Count%2A> o <xref:System.Linq.Enumerable.LongCount%2A>, respectivamente. Cuando se llama a estos métodos, no se devuelve ningún objeto <xref:System.Data.Services.Client.QueryOperationResponse%601>; solo se devuelve el valor de recuento. Para obtener más información, vea [Cómo: determinar el número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md).
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -139,17 +139,17 @@ Además, puede obtener el recuento total de entidades del conjunto como valor de
 
 - [Consideraciones sobre LINQ](linq-considerations-wcf-data-services.md)
 
-- [Cómo: Ejecutar consultas de servicio de datos](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Cómo: ejecutar consultas de servicios de datos](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Procedimientos: Agregar opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Adición de opciones de consulta a una consulta de servicio de datos](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [Cómo: Determinar el número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md)
+- [Determinación del número de entidades devueltas por una consulta](number-of-entities-returned-by-a-query-wcf.md)
 
-- [Procedimientos: Especificar credenciales de cliente para una solicitud de servicio de datos](specify-client-creds-for-a-data-service-request-wcf.md)
+- [Especificación de las credenciales del cliente para una solicitud de servicio de datos](specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [Cómo: Establecer encabezados en la solicitud de cliente](how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [Establecimiento de los encabezados en la solicitud de cliente](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [Cómo: Resultados de la consulta de proyecto](how-to-project-query-results-wcf-data-services.md)
+- [Resultados de consulta del proyecto](how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>Vea también
 

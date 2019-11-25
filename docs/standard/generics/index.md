@@ -28,33 +28,18 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948739"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974663"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
-<a name="top"></a> Los genéricos permiten personalizar un método, clase, estructura o interfaz con respecto a los datos precisos sobre los que se actúa. Por ejemplo, en lugar de utilizar la clase <xref:System.Collections.Hashtable> , que permite cualquier tipo de clave y valor, puede utilizar la clase genérica <xref:System.Collections.Generic.Dictionary%602> y especificar el tipo permitido para la clave y el tipo permitido para el valor. Entre las ventajas de los genéricos están una mayor reutilización del código y la seguridad de tipos.  
-  
- En este tema se proporciona información general sobre los genéricos en .NET, así como un resumen de los métodos o tipos genéricos. Contiene las siguientes secciones:  
-  
-- [Definición y uso de genéricos](#defining_and_using_generics)  
-  
-- [Terminología de los genéricos](#generics_terminology)  
-  
-- [Biblioteca de clases y lenguajes compatibles](#class_library_and_language_support)  
-  
-- [Genéricos y tipos anidados](#nested_types_and_generics)  
-  
-- [Temas relacionados](#related_topics)  
-  
-- [Referencia](#reference)  
-  
-<a name="defining_and_using_generics"></a>   
-## <a name="defining-and-using-generics"></a>Definición y uso de genéricos  
+Los genéricos permiten personalizar un método, clase, estructura o interfaz con respecto a los datos precisos sobre los que se actúa. Por ejemplo, en lugar de utilizar la clase <xref:System.Collections.Hashtable> , que permite cualquier tipo de clave y valor, puede utilizar la clase genérica <xref:System.Collections.Generic.Dictionary%602> y especificar el tipo permitido para la clave y el tipo permitido para el valor. Entre las ventajas de los genéricos están una mayor reutilización del código y la seguridad de tipos.  
+
+## <a name="defining-and-using-generics"></a>Definición y uso de genéricos
  Los genéricos son clases, estructuras, interfaces y métodos que tienen marcadores de posición (parámetros de tipo) para uno o varios de los tipos que almacenan o utilizan. Una clase de colección genérica puede usar un parámetro de tipo como marcador de posición para el tipo de objetos que almacena; los parámetros de tipo aparecen como los tipos de sus campos y los tipos de parámetros de sus métodos. Un método genérico puede usar su parámetro de tipo como el tipo de su valor devuelto o como el tipo de uno de sus parámetros formales. El código siguiente ilustra una definición de clase genérica simple.  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -66,8 +51,7 @@ ms.locfileid: "69948739"
  [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
  [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
-  
-<a name="generics_terminology"></a>   
+
 ### <a name="generics-terminology"></a>Terminología de los genéricos  
  Los siguientes términos se utilizan para explicar los genéricos en .NET:  
   
@@ -97,10 +81,7 @@ ms.locfileid: "69948739"
  [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
- [Volver al principio](#top)  
-  
-<a name="advantages_limitations"></a>   
-## <a name="advantages-and-disadvantages-of-generics"></a>Ventajas y desventajas de los genéricos  
+## <a name="advantages-and-disadvantages-of-generics"></a>Ventajas y desventajas de los genéricos
  Usar delegados y colecciones genéricas ofrece muchas ventajas:  
   
 - Seguridad de tipos. Los genéricos trasladan al compilador la carga de la seguridad de tipos. No es necesario escribir código para comprobar el tipo de datos correcto porque se hace en tiempo de compilación. Se reduce la necesidad de conversión de tipos y la posibilidad de errores en tiempo de ejecución.  
@@ -131,10 +112,7 @@ ms.locfileid: "69948739"
     > Un tipo anidado definido mediante la emisión de código en un ensamblado dinámico o mediante el uso de [Ilasm.exe (Ensamblado de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no necesita incluir los parámetros de tipo de sus tipos envolventes. Sin embargo, si no los incluye, los parámetros de tipo no estarán en el ámbito de la clase anidada.  
   
      Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
-  
- [Volver al principio](#top)  
-  
-<a name="class_library_and_language_support"></a>   
+
 ## <a name="class-library-and-language-support"></a>Biblioteca de clases y lenguajes compatibles  
  .NET ofrece una serie de clases de colección genérica en los espacios de nombres siguientes:  
   
@@ -148,17 +126,11 @@ ms.locfileid: "69948739"
   
  Common language runtime proporciona nuevos opcode y prefijos para admitir tipos genéricos en el lenguaje intermedio de Microsoft (MSIL), incluidos <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>y <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# y Visual Basic proporcionan compatibilidad completa para definir y utilizar genéricos. Para más información sobre la compatibilidad de lenguaje, consulte [Tipos genéricos en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introducción a los genéricos](../../csharp/programming-guide/generics/index.md) e [Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
-  
- [Volver al principio](#top)  
-  
-<a name="nested_types_and_generics"></a>   
+ Visual C++, C# y Visual Basic proporcionan compatibilidad completa para definir y utilizar genéricos. Para más información sobre la compatibilidad de lenguaje, consulte [Tipos genéricos en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introducción a los genéricos](../../csharp/programming-guide/generics/index.md) e [Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp). 
+
 ## <a name="nested-types-and-generics"></a>Genéricos y tipos anidados  
  Un tipo que está anidado en un tipo genérico puede depender de los parámetros de tipo del tipo genérico envolvente. Common language runtime considera que los tipos anidados son genéricos, aunque no tengan sus propios parámetros de tipo genérico. Cuando cree una instancia de un tipo anidado, especifique los argumentos de tipo para todos los tipos genéricos envolventes.  
-  
- [Volver al principio](#top)  
-  
-<a name="related_topics"></a>   
+
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|DESCRIPCIÓN|  
@@ -173,13 +145,10 @@ ms.locfileid: "69948739"
 |[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Describe los genéricos a los usuarios de Visual Basic e incluye temas sobre el uso y la definición de tipos genéricos.|  
 |[Introducción a los genéricos](../../csharp/programming-guide/generics/index.md)|Proporciona información general sobre la definición y uso de tipos genéricos para usuarios de C#.|  
 |[Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Describe los genéricos a los usuarios de C++ e incluye las diferencias entre genéricos y plantillas.|  
-  
-<a name="reference"></a>   
+
 ## <a name="reference"></a>Referencia  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
   
  <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
-  
- [Volver al principio](#top)

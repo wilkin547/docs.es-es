@@ -4,12 +4,12 @@ description: Cómo usar el Generador de modelos de ML.NET para entrenar un model
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929476"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971524"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -60,7 +60,7 @@ Si el escenario requiere clasificación en dos categorías, puede usar esta plan
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Predecir una categoría (que cuente con tres categorías o más)
 
-La clasificación multiclase puede usarse para clasificar los datos en tres o más clases. 
+La clasificación multiclase puede usarse para clasificar los datos en tres o más clases.
 
 ![Ejemplos de clasificación multiclase que incluyen la clasificación de documentos y productos, el enrutamiento de incidencias de soporte técnico y la priorización de problemas de clientes](media/multiclass-classification-examples.png)
 

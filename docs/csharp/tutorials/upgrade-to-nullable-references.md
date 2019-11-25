@@ -4,12 +4,12 @@ description: En este tutorial avanzado se ofrece una introducción a los tipos d
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969346"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -32,7 +32,7 @@ En este tutorial se da por supuesto que está familiarizado con C# y. NET, inclu
 
 ## <a name="explore-the-sample-application"></a>Exploración de la aplicación de ejemplo
 
-La aplicación de ejemplo que va a migrar es una aplicación web de lector de fuentes RSS. Esta aplicación lee una única fuente RSS y muestra los resúmenes de los artículos más recientes. Puede hacer clic en cualquiera de los artículos para visitar el sitio. La aplicación es relativamente nueva, pero se escribió antes de que estuvieran disponibles los tipos de referencia que admiten valores NULL. Las decisiones de diseño para la aplicación representaban principios de sonido, pero no aprovechan esta importante característica del lenguaje.
+La aplicación de ejemplo que va a migrar es una aplicación web de lector de fuentes RSS. Esta aplicación lee una única fuente RSS y muestra los resúmenes de los artículos más recientes. Puede seleccionar cualquiera de los artículos para visitar el sitio. La aplicación es relativamente nueva, pero se escribió antes de que estuvieran disponibles los tipos de referencia que admiten valores NULL. Las decisiones de diseño para la aplicación representaban principios de sonido, pero no aprovechan esta importante característica del lenguaje.
 
 La aplicación de ejemplo incluye una biblioteca de pruebas unitarias que valida la funcionalidad principal de la aplicación. Ese proyecto facilitará la actualización de forma segura si cambia cualquiera de las implementaciones en función de las advertencias generadas. Puede descargar el código de inicio del repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) de GitHub.
 

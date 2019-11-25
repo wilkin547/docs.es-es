@@ -9,38 +9,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 7f5969bc6f73b2260ae1ffa4b0026d5b4119ff88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c589e85a0bbfb3f0b5858698ffb2a294ff88cf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134270"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973778"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flujo de datos (biblioteca TPL)
-<a name="top"></a> La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) proporciona componentes de flujo de datos que ayudan a aumentar la solidez de aplicaciones habilitadas para simultaneidad. Se conoce colectivamente a estos componentes de flujo de datos como *biblioteca TDF (biblioteca de TPL Dataflow)* pero nos referiremos descriptivamente a ella como "biblioteca de flujos de datos TPL". Este modelo de flujo de datos promueve una programación basada en actores mediante el paso de mensajes en proceso para tareas de canalización y de flujo de datos de grano grueso. Los componentes de flujo de datos se basan en los tipos y la infraestructura de programación de la biblioteca TPL y se integran con la compatibilidad de los lenguajes C#, Visual Basic y F# para proporcionar programación asincrónica. Estos componentes de flujo de datos son útiles cuando se tienen varias operaciones que deben comunicarse entre sí de forma asincrónica, o cuando se desea procesar datos a medida que estén disponibles. Por ejemplo, piense en una aplicación que procesa datos de imagen de una cámara web. Con el modelo de flujo de datos, la aplicación puede procesar fotogramas de imagen a medida que estén disponibles. Si la aplicación mejora fotogramas de imagen, por ejemplo, corrigiendo la luz o reduciendo ojos rojos, puede crear una *canalización* de los componentes de flujo de datos. Cada fase de la canalización puede utilizar más funcionalidad de paralelismo de grano grueso, como la funcionalidad proporcionada por la biblioteca TPL, para transformar la imagen.  
+La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) proporciona componentes de flujo de datos que ayudan a aumentar la solidez de aplicaciones habilitadas para simultaneidad. Se conoce colectivamente a estos componentes de flujo de datos como *biblioteca TDF (biblioteca de TPL Dataflow)* pero nos referiremos descriptivamente a ella como "biblioteca de flujos de datos TPL". Este modelo de flujo de datos promueve una programación basada en actores mediante el paso de mensajes en proceso para tareas de canalización y de flujo de datos de grano grueso. Los componentes de flujo de datos se basan en los tipos y la infraestructura de programación de la biblioteca TPL y se integran con la compatibilidad de los lenguajes C#, Visual Basic y F# para proporcionar programación asincrónica. Estos componentes de flujo de datos son útiles cuando se tienen varias operaciones que deben comunicarse entre sí de forma asincrónica, o cuando se desea procesar datos a medida que estén disponibles. Por ejemplo, piense en una aplicación que procesa datos de imagen de una cámara web. Con el modelo de flujo de datos, la aplicación puede procesar fotogramas de imagen a medida que estén disponibles. Si la aplicación mejora fotogramas de imagen, por ejemplo, corrigiendo la luz o reduciendo ojos rojos, puede crear una *canalización* de los componentes de flujo de datos. Cada fase de la canalización puede utilizar más funcionalidad de paralelismo de grano grueso, como la funcionalidad proporcionada por la biblioteca TPL, para transformar la imagen.  
   
  En este documento se proporciona información general sobre la biblioteca de flujos de datos TPL. Se describe el modelo de programación, los tipos de bloques de flujo de datos predefinidos y cómo configurar bloques de flujo de datos para satisfacer las necesidades específicas de las aplicaciones.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
-  
- Este documento contiene las siguientes secciones:  
-  
-- [Modelo de programación](#model)  
-  
-- [Tipos de bloques de flujo de datos predefinidos](#predefined_types)  
-  
-- [Configurar el comportamiento del bloque de flujo de datos](#behavior)  
-  
-- [Bloques de flujo de datos personalizados](#custom)  
-  
-<a name="model"></a>   
-## <a name="programming-model"></a>Modelo de programación  
+
+## <a name="programming-model"></a>Modelo de programación
  La biblioteca de flujos de datos TPL proporciona una base para el paso de mensajes y para paralelizar aplicaciones que consumen mucha CPU, así como aplicaciones intensivas de entrada y salida con alto rendimiento y latencia baja. También ofrece el control explícito sobre cómo almacenar los datos en búfer y desplazarlos alrededor del sistema. Para entender mejor el modelo de programación de flujo de datos, piense en una aplicación que de forma asincrónica carga imágenes desde el disco y crea un compuesto de esas imágenes. Los modelos de programación tradicionales suelen usar devoluciones de llamada y objetos de sincronización, como bloqueos, para coordinar tareas y tener acceso a datos compartidos. Con el modelo de programación de flujo de datos, puede crear objetos de flujo de datos que procesan las imágenes como se leen desde el disco. Bajo el modelo de flujo de datos, se declara cómo se controlan los datos cuando están disponibles, así como las dependencias entre datos. Dado que el runtime administra las dependencias entre datos, se puede evitar a menudo la necesidad de sincronizar el acceso a los datos compartidos. Además, dado que el runtime programa el trabajo según la llegada asincrónica de datos, el flujo de datos puede mejorar la capacidad de respuesta y el nivel de rendimiento administrando de forma eficaz los subprocesos subyacentes. Para ver un ejemplo en donde se usa el modelo de programación de flujo de datos para implementar procesamiento de imágenes en una aplicación de Windows Forms, vea [Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ### <a name="sources-and-targets"></a>Orígenes y destinos  
  La biblioteca de flujos de datos TPL consta de *bloques de flujo de datos*, que son estructuras de datos que almacenan datos en búfer y procesan datos. La biblioteca TPL define tres tipos de bloques de flujos de datos: *bloques de origen*, *bloques de destino* y *bloques propagadores*. Un bloque de origen actúa como un origen de datos y se puede leer desde él. Un bloque de destino actúa como un receptor de datos y se puede escribir en él. Un bloque propagador actúa como un bloque de origen y un bloque de destino, y se puede leer desde él y escribir en él. La biblioteca TPL define la interfaz <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> para representar orígenes, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> para representar destinos y <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> para representar propagadores. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> hereda de <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> y de <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>.  
   
- La biblioteca de flujos de datos TPL proporciona varios tipos de bloques de flujo de datos predefinidos que implementan las interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> y <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>. Estos tipos de bloques de flujo de datos se describen en este documento en la sección [Tipos de bloques de flujo de datos predefinidos](#predefined_types).  
+ La biblioteca de flujos de datos TPL proporciona varios tipos de bloques de flujo de datos predefinidos que implementan las interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> y <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>. Estos tipos de bloques de flujo de datos se describen en este documento en la sección [Tipos de bloques de flujo de datos predefinidos](#predefined-dataflow-block-types).  
   
 ### <a name="connecting-blocks"></a>Conectar bloques  
  Puede conectar los bloques de flujo de datos para establecer *canalizaciones*, que son secuencias lineales de bloques de flujo de datos, o *redes*, que son gráficos de bloques de flujo de datos. Una canalización es una forma de red. En una canalización o red, los orígenes propagan datos de forma asincrónica en destinos a medida que esos datos están disponibles. El método <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> vincula un bloque de flujo de datos de origen a un bloque de destino. Un origen puede vincularse a cero o más destinos; los destinos se pueden vincular a partir de cero o más orígenes. Puede agregar o quitar bloques de flujo de datos hacia o desde una canalización o red simultáneamente. Los tipos de bloques de flujo de datos predefinidos controlan todos los aspectos de la seguridad para subprocesos de vinculación y desvinculación.  
@@ -78,10 +67,7 @@ ms.locfileid: "73134270"
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
  También puede usar propiedades como <xref:System.Threading.Tasks.Task.IsCanceled%2A> en el cuerpo de la tarea de continuación para determinar información adicional sobre el estado de finalización de un bloque de flujo de datos. Para obtener más información sobre las tareas de continuación y cómo se relacionan con la cancelación y el control de errores, vea [Encadenar tareas mediante tareas de continuación](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [Cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md) y [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
-  
- [[ir al principio](#top)]  
-  
-<a name="predefined_types"></a>   
+
 ## <a name="predefined-dataflow-block-types"></a>Tipos de bloques de flujo de datos predefinidos  
  La biblioteca de flujos de datos TPL proporciona varios tipos de bloques de flujo de datos predefinidos. Estos tipos se dividen en tres categorías: *bloques de almacenamiento en búfer*, *bloques de ejecución* y *bloques de agrupación*. En las secciones siguientes se describen los tipos de bloques que componen estas categorías.  
   
@@ -201,10 +187,7 @@ ms.locfileid: "73134270"
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
  Para obtener un ejemplo completo que usa <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar resultados y cualquier excepción que se produzca mientras el programa lee de una base de datos, vea [Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md).  
-  
- [[ir al principio](#top)]  
-  
-<a name="behavior"></a>   
+
 ## <a name="configuring-dataflow--block-behavior"></a>Configurar el comportamiento del bloque de flujo de datos  
  Puede habilitar opciones adicionales si proporciona un objeto <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> al constructor de los tipos de bloques de flujo de datos. Estas opciones controlan el comportamiento, como el del programador que administra la tarea subyacente, y el grado de paralelismo. El objeto <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> también tiene tipos derivados que especifican el comportamiento específico de ciertos tipos de bloques de flujo de datos. En la tabla siguiente se resumen los tipo de opciones que se asocian a cada tipo de bloques de flujo de datos.  
   
@@ -254,16 +237,11 @@ ms.locfileid: "73134270"
   
  Para los tipos de bloques de combinación como <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>, el modo expansivo significa que el bloque acepta datos inmediatamente aunque los correspondientes datos con los que se combinará aún no estén disponibles. El modo no expansivo significa que el bloque pospone todos los mensajes entrantes hasta que uno esté disponible para cada uno de sus destinos para completar la combinación. Si los mensajes pospuestos ya no están disponibles, el bloque de combinación libera todos los mensajes pospuestos y reinicia el proceso. Para la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>, el comportamiento expansivo y no expansivo es similar, salvo que en modo no expansivo, un objeto <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> pospone todos los mensajes entrantes hasta que haya suficientes mensajes disponibles de orígenes distintos para completar un lote.  
   
- Para especificar el modo no expansivo para un bloque de flujo de datos, establezca <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> en `False`. Para obtener un ejemplo en donde se muestra cómo usar el modo no expansivo para permitir que varios bloques de combinación compartan un origen de datos con mayor eficacia, vea [Procedimiento: Uso de JoinBlock para leer datos de varios orígenes](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).  
-  
- [[ir al principio](#top)]  
-  
-<a name="custom"></a>   
+ Para especificar el modo no expansivo para un bloque de flujo de datos, establezca <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> en `False`. Para obtener un ejemplo en donde se muestra cómo usar el modo no expansivo para permitir que varios bloques de combinación compartan un origen de datos con mayor eficacia, vea [Procedimiento: Uso de JoinBlock para leer datos de varios orígenes](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md).
+
 ## <a name="custom-dataflow-blocks"></a>Bloques de flujo de datos personalizados  
- Aunque la biblioteca de flujos de datos TPL proporciona muchos tipos de bloques predefinidos, puede crear tipos de bloques adicionales que tengan un comportamiento personalizado. Implemente las interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> o <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> directamente, o utilice el método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> para compilar un bloque complejo que encapsule el comportamiento de los tipos de bloques existentes. Para obtener ejemplos que muestran cómo implementar funcionalidad en bloques de flujo de datos personalizados, vea [Tutorial: Creación de tipos de bloques de flujo de datos personalizados](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).  
-  
- [[ir al principio](#top)]  
-  
+ Aunque la biblioteca de flujos de datos TPL proporciona muchos tipos de bloques predefinidos, puede crear tipos de bloques adicionales que tengan un comportamiento personalizado. Implemente las interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> o <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> directamente, o utilice el método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> para compilar un bloque complejo que encapsule el comportamiento de los tipos de bloques existentes. Para obtener ejemplos que muestran cómo implementar funcionalidad en bloques de flujo de datos personalizados, vea [Tutorial: Creación de tipos de bloques de flujo de datos personalizados](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md).
+
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|DESCRIPCIÓN|  

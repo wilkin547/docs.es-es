@@ -2,12 +2,12 @@
 title: Suscripción a eventos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035638"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737069"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -139,7 +139,7 @@ Al implementar los pasos necesarios para publicar los eventos, dispone de las op
 
 En la figura 6-22 se muestra la arquitectura para el primero de estos enfoques.
 
-![Enfoque para controlar la atomicidad al publicar eventos: use una transacción para confirmar el evento en una tabla de registro de eventos y, después, otra transacción para publicarlo (como se usa en eShopOnContainers).](./media/image23.png)
+![Diagrama de atomicidad cuando se publica sin un microservicio de trabajo.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Figura 6-22**. Atomicidad al publicar eventos en el bus de eventos
 
@@ -147,7 +147,7 @@ En el enfoque que se muestra en la figura 6-22 falta un microservicio de trabajo
 
 Sobre el segundo enfoque: se usa la tabla EventLog como una cola y siempre se usa un microservicio de trabajo para publicar los mensajes. En ese caso, el proceso es similar al que se muestra en la figura 6-23. Esto muestra un microservicio adicional y la tabla es el único origen cuando se publican los eventos.
 
-![Otro enfoque para controlar la atomicidad: realice la publicación en una tabla de registro de eventos y, después, haga que otro microservicio (un trabajo en segundo plano) publique el evento.](./media/image24.png)
+![Diagrama de atomicidad cuando se publica con un microservicio de trabajo.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Figura 6-23**. Atomicidad al publicar eventos en el bus de eventos con un microservicio de trabajo
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 El controlador de eventos debe comprobar si el producto existe en cualquiera de las instancias de la cesta de la compra. También actualiza el precio del artículo para cada artículo de línea de la cesta de la compra relacionado. Por último, crea una alerta que se mostrará al usuario sobre el cambio de precio, como se muestra en la figura 6-24.
 
-![Vista del explorador de la notificación de cambio de proceso en el carro de la compra del usuario.](./media/image25.png)
+![Captura de pantalla de un explorador que muestra la notificación de cambio de precio en el carro del usuario.](./media/subscribe-events/display-item-price-change.png)
 
 **Figura 6-24**. Representación de un cambio del precio de un artículo en una cesta, comunicado por eventos de integración
 

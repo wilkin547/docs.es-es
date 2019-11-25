@@ -8,14 +8,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107152"
 ---
 # <a name="assembly-manifest"></a>Manifiesto del ensamblado
 Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE ( *.exe* o *.dll*) con código de Lenguaje Intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga solo la información sobre el manifiesto del ensamblado.  
@@ -56,6 +54,6 @@ Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección
 ## <a name="see-also"></a>Vea también
 
 - [Contenido de un ensamblado](contents.md)
-- [Versiones de los ensamblados](versioning.md)
-- [Crear ensamblados satélite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Control de versiones de los ensamblados](versioning.md)
+- [Creación de ensamblados satélite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Ensamblados con nombre seguro](strong-named.md)

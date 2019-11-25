@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e40f93be7f2dad4a80a4f4d23f61f3c93061751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874944"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975011"
 ---
 # <a name="code-contracts"></a>Contratos de código
 
@@ -24,19 +24,19 @@ Los contratos de código incluyen clases para marcar el código, un analizador e
 
 Algunas de las ventajas ofrecidas por los contratos de código son:
 
-- Pruebas mejoradas: Contratos de código proporcionan comprobación estática del contrato, comprobación en tiempo de ejecución y generación de documentación.
+- Pruebas mejoradas: los contratos de código proporcionan comprobación estática del contrato, comprobación en runtime y generación de documentación.
 
-- Herramientas de pruebas automáticas: Puede usar los contratos de código para generar pruebas unitarias más significativas mediante el filtrado de los argumentos de prueba no tiene sentido que no cumplen las condiciones previas.
+- Herramientas de prueba automáticas: puede usar los contratos de código para generar pruebas unitarias más significativas eliminando los argumentos de prueba poco importantes que no satisfacen las condiciones previas.
 
-- Comprobación estática: El Comprobador estático puede decidir si hay alguna infracción del contrato sin ejecutar el programa. Se comprueban los contratos implícitos, como desreferencias null y límites de matriz, y los contratos explícitos.
+- Comprobación estática: el comprobador estático puede decidir si hay alguna infracción del contrato sin ejecutar el programa. Se comprueban los contratos implícitos, como desreferencias null y límites de matriz, y los contratos explícitos.
 
-- Documentación de referencia: El generador de documentación aumenta los archivos de documentación XML existentes con información del contrato. También hay hojas de estilo que se pueden usar con [Sandcastle](https://github.com/EWSoftware/SHFB) para que las páginas de documentación generadas tengan secciones de contrato.
+- Documentación de referencia: el generador de documentación aumenta los archivos de documentación XML existentes con información de contrato. También hay hojas de estilo que se pueden usar con [Sandcastle](https://github.com/EWSoftware/SHFB) para que las páginas de documentación generadas tengan secciones de contrato.
 
 Todos los lenguajes de .NET Framework pueden beneficiarse de inmediato de los contratos; no es necesario escribir un analizador o compilador especial. Un complemento de Visual Studio le permite especificar el nivel de análisis de contrato de código que se realiza. Los analizadores pueden confirmar si los contratos están correctamente formados (comprobación de tipos y resolución de nombres) y pueden generar un formulario compilado de los contratos en formato de Lenguaje Intermedio de Microsoft (MSIL). La creación de contratos en Visual Studio le permite aprovechar el IntelliSense estándar proporcionado por la herramienta.
 
 La mayoría de los métodos de la clase de contrato se compila condicionalmente; es decir, el compilador emite llamadas a estos métodos solo cuando se define un símbolo especial, CONTRACTS_FULL, mediante la directiva `#define`. CONTRACTS_FULL le permite escribir contratos en su código sin usar directivas `#ifdef`; puede generar diferentes compilaciones, algunas con contratos y otras sin ellos.
 
-Para obtener herramientas e instrucciones detalladas de uso de los contratos de código, vea [Contratos de código](https://go.microsoft.com/fwlink/?LinkId=152461) en el sitio web de MSDN DevLabs.
+Para obtener herramientas e instrucciones detalladas sobre el uso de contratos de código, vea [code Contracts](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET) en el sitio de Visual Studio Marketplace.
 
 ## <a name="preconditions"></a>Condiciones previas
 
@@ -69,7 +69,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-Tenga en cuenta que la condición en la prueba anterior es una condición previa negada (la condición previa real sería `x != null`). Una condición previa negada está muy restringida: Debe escribirse tal como se muestra en el ejemplo anterior; es decir, no debe contener `else` cláusulas y el cuerpo de la `then` cláusula debe ser una sola `throw` instrucción. La prueba `if` está sujeta a reglas de pureza y de visibilidad (vea las [instrucciones de uso](#usage_guidelines)), pero la expresión `throw` solo está sujeta a reglas de pureza. Sin embargo, el tipo de la excepción generada debe ser tan visible como el método en el que se produce el contrato.
+Tenga en cuenta que la condición en la prueba anterior es una condición previa negada (La condición previa real sería `x != null`). Una condición previa negada está muy restringida: debe escribirse como se muestra en el ejemplo anterior. es decir, no debe contener cláusulas `else` y el cuerpo de la cláusula `then` debe ser una sola instrucción `throw`. La prueba `if` está sujeta a reglas de pureza y de visibilidad (vea las [instrucciones de uso](#usage_guidelines)), pero la expresión `throw` solo está sujeta a reglas de pureza. Sin embargo, el tipo de la excepción generada debe ser tan visible como el método en el que se produce el contrato.
 
 ## <a name="postconditions"></a>Condiciones posteriores
 
@@ -101,11 +101,11 @@ Hay algunos tipos de excepciones que son difíciles de usar en una condición po
 
 Los métodos siguientes pueden usarse únicamente dentro de condiciones posteriores:
 
-- La referencia a valores devueltos del método en condiciones posteriores se realiza mediante la expresión `Contract.Result<T>()`, donde `T` se sustituye por el tipo de valor devuelto del método. Cuando el compilador no puede inferir el tipo, debe proporcionarse explícitamente. Por ejemplo, el C# compilador no puede inferir tipos para los métodos que no toman ningún argumento, por lo que requiere la siguiente condición posterior: `Contract.Ensures(0 <Contract.Result<int>())` Los métodos con un tipo de valor devuelto de `void` no puede hacer referencia a `Contract.Result<T>()` en sus condiciones posteriores.
+- La referencia a valores devueltos del método en condiciones posteriores se realiza mediante la expresión `Contract.Result<T>()`, donde `T` se sustituye por el tipo de valor devuelto del método. Cuando el compilador no puede inferir el tipo, debe proporcionarse explícitamente. Por ejemplo, el compilador de C# no puede inferir tipos para los métodos que no toman ningún argumento, por lo que requiere la siguiente condición posterior: `Contract.Ensures(0 <Contract.Result<int>())`. Los métodos con un tipo de valor devuelto de `void` no puede hacer referencia a `Contract.Result<T>()` en sus condiciones posteriores.
 
-- Un valor preindicado en una condición posterior hace referencia al valor de una expresión en el inicio de un método o propiedad. Se usa la expresión `Contract.OldValue<T>(e)`, donde `T` es el tipo de `e`. Puede omitir el argumento de tipo genérico siempre que el compilador pueda deducir su tipo. (Por ejemplo, el compilador de C# siempre deduce el tipo porque toma un argumento). Hay varias restricciones en lo que puede ocurrir en `e` y los contextos en los que puede aparecer una expresión antigua. Una expresión antigua no puede contener otra expresión antigua. Lo más importante es que una expresión antigua debe hacer referencia a un valor que existía en el estado de condición previa del método. En otras palabras, debe ser una expresión que pueda evaluarse siempre que la condición previa del método sea `true`. A continuación se muestran varias instancias de esa regla.
+- Un valor preindicado en una condición posterior hace referencia al valor de una expresión en el inicio de un método o propiedad. Se usa la expresión `Contract.OldValue<T>(e)`, donde `T` es el tipo de `e`. Puede omitir el argumento de tipo genérico siempre que el compilador pueda deducir su tipo. (Por ejemplo, el C# compilador siempre infiere el tipo porque toma un argumento). Existen varias restricciones sobre lo que se puede producir en `e` y los contextos en los que puede aparecer una expresión antigua. Una expresión antigua no puede contener otra expresión antigua. Lo más importante es que una expresión antigua debe hacer referencia a un valor que existía en el estado de condición previa del método. En otras palabras, debe ser una expresión que pueda evaluarse siempre que la condición previa del método sea `true`. A continuación se muestran varias instancias de esa regla.
 
-  - El valor debe existir en el estado de condición previa del método. Para hacer referencia a un campo en un objeto, las condiciones previas deben garantizar que el objeto siempre es distinto de null.
+  - El valor debe existir en el estado de condición previa del método. Para hacer referencia a un campo en un objeto, las condiciones previas deben garantizar que el objeto siempre es distinto de NULL.
 
   - No es posible hacer referencia al valor devuelto del método en una expresión antigua:
 
@@ -165,7 +165,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-Las invariantes se definen condicionalmente mediante el símbolo de preprocesador CONTRACTS_FULL. Durante la comprobación en tiempo de ejecución, las invariantes se comprueban al final de cada método público. Si una invariante menciona un método público en la misma clase, se deshabilita la comprobación de invariante que normalmente se produciría normalmente al final de ese método público. En su lugar, la comprobación se produce solo al final de la llamada de método más externo a esa clase. Esto también ocurre si la clase se vuelve a escribir debido a una llamada a un método en otra clase. Las invariantes no se comprueban para un finalizador del objeto y un <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementación.
+Las invariantes se definen condicionalmente mediante el símbolo de preprocesador CONTRACTS_FULL. Durante la comprobación en tiempo de ejecución, las invariantes se comprueban al final de cada método público. Si una invariante menciona un método público en la misma clase, se deshabilita la comprobación de invariante que normalmente se produciría normalmente al final de ese método público. En su lugar, la comprobación se produce solo al final de la llamada de método más externo a esa clase. Esto también ocurre si la clase se vuelve a escribir debido a una llamada a un método en otra clase. No se comprueban las invariables para un finalizador de objeto y una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.
 
 <a name="usage_guidelines"></a>
 

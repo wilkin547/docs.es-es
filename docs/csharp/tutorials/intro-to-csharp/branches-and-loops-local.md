@@ -3,12 +3,12 @@ title: 'Ramas y bucles: tutorial de introducción a C#'
 description: En este tutorial sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834125"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739129"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
 
@@ -18,7 +18,13 @@ En este tutorial se supone que cuenta con una máquina que puede usar para el de
 
 ## <a name="make-decisions-using-the-if-statement"></a>Toma de decisiones con la instrucción `if`.
 
-Cree un directorio denominado *branches-tutorial*. Conviértalo en el directorio actual y ejecute `dotnet new console -n BranchesAndLoops -o .`. Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual.
+Cree un directorio denominado *branches-tutorial*. Conviértalo en el directorio actual y ejecute el siguiente comando:
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual.
 
 Abra *Program.cs* en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por el código siguiente:
 

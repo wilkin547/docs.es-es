@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 4e51c5dd226533e7d1ce79a136dba19cbb252f92
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253914"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972724"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
 
@@ -44,7 +44,7 @@ La cláusula `where` también podría incluir una restricción `unmanaged`. La r
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-La cláusula `where` también podría incluir una restricción de constructor, `new()`. Esta restricción hace posible crear una instancia de un parámetro de tipo con el operador `new`. La [restricción new()](new-constraint.md) permite que el compilador sepa que cualquier argumento de tipo especificado debe tener accesible un constructor sin parámetros o el constructor predeterminado. Por ejemplo:
+La cláusula `where` también podría incluir una restricción de constructor, `new()`. Esta restricción hace posible crear una instancia de un parámetro de tipo con el operador `new`. La [restricción new()](new-constraint.md) permite que el compilador sepa que cualquier argumento de tipo especificado debe tener accesible un constructor sin parámetros. Por ejemplo:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

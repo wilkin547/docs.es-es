@@ -2,20 +2,20 @@
 title: Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los eventos de integración para implementar la comunicación basada en eventos entre microservicios.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a5cfa280063da742dc1693905fc44cf870c1fcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676102"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737114"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
 Como se describió anteriormente, si utiliza una comunicación basada en eventos, un microservicio publica un evento cuando sucede algo importante, como cuando actualiza una entidad de negocio. Otros microservicios se suscriben a esos eventos. Cuando un microservicio recibe un evento, puede actualizar sus propias entidades de negocio, lo que puede comportar que se publiquen más eventos. Esta es la esencia del concepto de la coherencia final. Este sistema de publicación/suscripción normalmente se realiza mediante una implementación de un bus de eventos. El bus de eventos puede diseñarse como una interfaz con la API necesaria para suscribirse a eventos, cancelar las suscripciones y publicar eventos. También puede tener una o más implementaciones basadas en cualquier comunicación de mensajería o entre procesos, como una cola de mensajes o un bus de servicio que admita la comunicación asincrónica y un modelo de publicación/suscripción.
 
-Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual proporciona una eventual coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción.
+Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual proporciona una eventual coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción. En la figura 6-18 siguiente, se muestra un evento PriceUpdated publicado mediante un bus de eventos para que la actualización de los precios se propague a la cesta y a otros microservicios.
 
-![El microservicio Catalog usa comunicación orientada a eventos a través de un bus de eventos para lograr la coherencia final con el microservicio Basket y microservicios adicionales.](./media/image19.png)
+![Diagrama de comunicación asincrónica controlada por eventos con un bus de eventos.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **Figura 6-18**. Comunicación orientada a eventos basada en un bus de eventos
 
@@ -64,11 +64,11 @@ Solo hay unos cuantos tipos de bibliotecas que debería compartir entre microser
 
 Un bus de eventos permite una comunicación de estilo de suscripción/publicación entre microservicios, sin requerir que los componentes se reconozcan entre sí, como se muestra en la Figura 6-19.
 
-![El microservicio A, que tiene un patrón básico de suscripción/publicación, publica en el bus de eventos, que distribuye a los microservicios suscritos B y C sin necesidad de que el publicador conozca los suscriptores.](./media/image20.png)
+![Diagrama que muestra el patrón de publicación/suscripción básico.](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **Figura 6-19**. Aspectos básicos de publicación/suscripción con un bus de eventos
 
-El bus de eventos está relacionado con el patrón de observador y con el patrón de publicación/suscripción.
+En el diagrama anterior se muestra que el microservicio A se publica en el bus de eventos, que lo distribuye a los microservicios B y C suscritos, sin que el editor tenga que conocer a los suscriptores. El bus de eventos está relacionado con el patrón de observador y con el patrón de publicación/suscripción.
 
 ### <a name="observer-pattern"></a>Patrón de observador
 
@@ -92,11 +92,11 @@ En la Figura 6-19 puede ver cómo, desde el punto de vista de la aplicación, el
 
 En la Figura 6-20 puede ver una abstracción de un bus de eventos con varias implementaciones basadas en tecnologías de mensajería de infraestructura, como RabbitMQ, Azure Service Bus u otro agente de eventos o de mensajería.
 
-![Es conveniente definir el bus de eventos través de una interfaz, de forma que pueda implementarse con varias tecnologías, como RabbitMQ y Azure Service Bus entre otras.](./media/image21.png)
+![Diagrama que muestra la adición de una capa de abstracción de bus de eventos.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **Figura 6-20**. Varias implementaciones de un bus de eventos
 
-Pero, como se ha mencionado anteriormente, usar sus propias abstracciones (la interfaz del bus de eventos) solo es una buena opción si necesita características de bus de eventos compatibles con sus abstracciones. Si necesita características más completas del bus de servicio, probablemente tendrá que usar la API y las abstracciones proporcionadas por el bus de servicio comercial que prefiera, en vez de usar sus propias abstracciones.
+Es conveniente definir el bus de eventos través de una interfaz, de forma que pueda implementarse con varias tecnologías, como RabbitMQ y Azure Service Bus entre otras. Pero, como se ha mencionado anteriormente, usar sus propias abstracciones (la interfaz del bus de eventos) solo es una buena opción si necesita características de bus de eventos compatibles con sus abstracciones. Si necesita características más completas del bus de servicio, probablemente tendrá que usar la API y las abstracciones proporcionadas por el bus de servicio comercial que prefiera, en vez de usar sus propias abstracciones.
 
 ### <a name="defining-an-event-bus-interface"></a>Definición de una interfaz de bus de eventos
 

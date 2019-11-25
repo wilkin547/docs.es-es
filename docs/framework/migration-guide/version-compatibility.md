@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8db23f8e670406faff01644e751a948096f5fc7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592880"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974954"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidad de versiones en .NET Framework
 
@@ -51,13 +49,13 @@ En la práctica, esta compatibilidad puede verse interrumpida por cambios en apa
 
 Si la aplicación o el componente no funciona como se esperaba en .NET Framework 4.5 (o en sus versiones secundarias, NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8), use las listas de comprobación siguientes:
 
-- Si la aplicación se ha desarrollado para ejecutarse en cualquier versión de .NET Framework a partir de .NET Framework 4.0, vea [Compatibilidad de aplicaciones en .NET Framework](application-compatibility.md) para generar listas de cambios entre la versión de .NET Framework de destino y la versión en la que se ejecuta la aplicación.
+- Si la aplicación se ha desarrollado para ejecutarse en cualquier versión de .NET Framework a partir de .NET Framework 4.0, vea [Compatibilidad de aplicaciones](application-compatibility.md) para generar listas de cambios entre la versión de .NET Framework de destino y la versión en la que se ejecuta la aplicación.
 
 - Si tiene una aplicación de .NET Framework 3.5, vea también [Problemas de migración de .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 
-- Si tiene una aplicación de .NET Framework 2.0, vea también [Cambios en .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=186989).
+- Si tiene una aplicación de .NET Framework 2.0, vea también [Cambios en .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
-- Si tiene una aplicación de .NET Framework 1.1, vea también [Cambios en .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125263).
+- Si tiene una aplicación de .NET Framework 1.1, vea también [Cambios en .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
 
 - Si va a volver a compilar código fuente existente para ejecutarlo en .NET Framework 4.5 o en sus versiones secundarias, o si va a desarrollar una nueva versión de una aplicación o un componente para NET Framework 4.5 o sus versiones secundarias a partir de una base de código fuente existente, consulte [Lo obsoleto en la biblioteca de clases .NET Framework](../whats-new/whats-obsolete.md) para conocer los miembros y tipos obsoletos, y aplique las soluciones indicadas. (El código compilado previamente seguirá ejecutándose con los tipos y miembros que se han marcado como obsoletos).
 
@@ -74,5 +72,5 @@ Si no encuentra una solución conveniente para su problema, recuerde que .NET F
 - [Novedades](../whats-new/index.md)
 - [Lo obsoleto en la biblioteca de clases](../whats-new/whats-obsolete.md)
 - [Compatibilidad de aplicaciones](../migration-guide/application-compatibility.md)
-- [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Directiva de soporte técnico oficial de .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Problemas de migración de .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)

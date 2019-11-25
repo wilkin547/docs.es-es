@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo elegir entre aplicaciones web trad
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675482"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739458"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -40,7 +40,7 @@ Las mejoras en la experiencia del usuario que posibilita el modelo de SPA deben 
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor de Blazor permite a los desarrolladores crear interfaces de usuario con Razor en el servidor, además de que el código se entregue al navegador y se ejecute del lado cliente mediante una biblioteca de JavaScript llamada WebAssembly. ASP.NET Core 3.0 aún está en desarrollo, pero en la actualización 3.0 de este libro electrónico se incluirá más información sobre dicha tecnología. Para más información sobre Blazor, consulte el artículo de [introducción a Blazor](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor Blazor permite a los desarrolladores crear interfaces de usuario con Razor en el servidor y, además, entregar el código al navegador y ejecutarlo en el lado cliente mediante [WebAssembly](https://webassembly.org/). ASP.NET Core 3.0 aún está en desarrollo, pero en la actualización 3.0 de este libro electrónico se incluirá más información sobre dicha tecnología. Para más información sobre Blazor, consulte el artículo de [introducción a Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Casos en los que elegir aplicaciones web tradicionales
 

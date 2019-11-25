@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315872"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191695"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -15,9 +15,9 @@ Le agradecemos el interés en colaborar con la documentación de .NET.
 
 En este documento se describe el proceso para colaborar en los artículos y ejemplos de código que se hospedan en el [sitio de documentación de .NET](https://docs.microsoft.com/dotnet). Las contribuciones pueden ser tan simples como corregir errores ortográficos o tan complejos como redactar nuevos artículos.
 
+- [Qué se debe hacer y qué no](#dos-and-donts)
 - [Proceso de contribución](#process-for-contributing)
 - [La experiencia interactiva de C#](#the-c-interactive-experience)
-- [Qué se debe hacer y qué no](#dos-and-donts)
 - [Contrato de licencia del colaborador](#contributor-license-agreement)
 
 Este repositorio contiene documentación conceptual de .NET. El sitio de documentación de .NET se compiló a partir de varios repositorios, además de este:
@@ -28,6 +28,24 @@ Este repositorio contiene documentación conceptual de .NET. El sitio de documen
     Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
 - [Referencia del SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
     Se realiza un seguimiento de los problemas y las tareas de este repositorio en [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
+
+En la lista siguiente se muestran algunas reglas orientativas que se deben tener en cuenta a la hora de contribuir a la documentación de .NET:
+
+- **NO** nos sorprenda con solicitudes de incorporación de cambios de gran tamaño. En su lugar, registre un asunto e inicie una discusión para que podamos definir un rumbo antes de dedicar una gran cantidad de tiempo. En el caso de los cambios en masa, divida el trabajo en solicitudes de incorporación de cambios más pequeñas (de hasta 100 archivos). Se recomienda encarecidamente esta instrucción si la solicitud de incorporación de cambios no sigue las instrucciones siguientes.
+- **EXAMINE** las incidencias [up for grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (para seleccionar) actuales para obtener sugerencias sobre tareas.
+- **CREE** una solicitud de incorporación de cambios (PR) para cada tarea. Las PR que incluyen varios cambios no relacionados son mucho más difíciles de revisar. Esto retrasa las revisiones y la combinación de las PR. Esta instrucción también se aplica a las revisiones: evitamos sugerir cambios no relacionados en las revisiones; pedimos que las revisiones de la comunidad cumplan esta instrucción.
+- **PROPORCIONE** una descripción clara del error en la PR. Díganos qué ha cambiado y por qué. La descripción predeterminada de "actualizar artículo.md" no es útil para los revisores.
+- **NO** envíe PR para cambios que solo sean de estilo sin consultarlo antes. Estas PR requieren un tiempo adicional para revisar la precisión y su combinación suele provocar conflictos de combinación con otras actualizaciones importantes. Estamos trabajando para seguir un estilo coherente, pero equilibramos ese trabajo con otras tareas. Los artículos se adecúan para que cumplan el estilo cuando se realizan actualizaciones importantes por otras razones. 
+- **LEA** la [guía de estilo](./styleguide/template.md) y las instrucciones de [voz y tono](./styleguide/voice-tone.md). Las nuevas adiciones deben seguir estas instrucciones.
+- **CREE** una rama independiente en la bifurcación antes de trabajar en los artículos.
+- **SIGA** el [flujo de trabajo de GitHub](https://guides.github.com/introduction/flow/).
+- **HABLE** de sus contribuciones con frecuencia en blogs o Twitter (o cualquier otra red social).
+
+Estas instrucciones nos ayudan a respetar el tiempo de todo el mundo. Muchos usuarios contribuyen a estos repositorios. Si sigue estas instrucciones, nos resultará más fácil revisar y combinar la PR a tiempo. Estos procedimientos minimizan los conflictos con las PR de otros miembros de la comunidad y nuestro equipo. Como las solicitudes de incorporación de cambios que no siguen estas instrucciones suelen provocar trabajo adicional para nosotros y los miembros de la comunidad, es posible que se rechacen. Si quiere una excepción, empiece por crear una incidencia.
+
+> Nota: Tal vez observe que algunos de los temas no siguen actualmente todas las instrucciones que se especifican aquí y en la [guía de estilo](./styleguide/template.md). pero estamos trabajando para dar coherencia a todo el sitio.
 
 ## <a name="process-for-contributing"></a>Proceso de contribución
 
@@ -79,7 +97,7 @@ docs
 
 **Paso 4:** Envíe una solicitud de incorporación de cambios (PR) desde su rama a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` o `dotnet/samples/master`.
 
-La PR *siempre* debe tener como destino la rama principal. *Nunca* debe abrir una PR que tenga como destino la rama en vivo.
+La PR *siempre* se debe destinar a la rama predeterminada del repositorio (a menos que trabaje en una rama de versión). En el caso de dotnet/docs, la rama principal es la rama predeterminada. Para los repositorios localizados, la rama activa es la predeterminada. *Nunca* debe abrir una PR que tenga como destino la rama activa en dotnet/docs.
 
 Normalmente, cada PR debe abordar las incidencias una a una. La PR puede modificar uno o varios archivos. Si se abordan varias correcciones en distintos archivos, es preferible usar PR independientes.
 
@@ -104,7 +122,7 @@ Hacemos la siguiente distinción para el código que existe en nuestro repositor
 Todo el código reside en el repositorio [dotnet/samples](https://github.com/dotnet/samples). Trabajamos hacia un modelo en el que la estructura de nuestra carpeta samples coincide con la estructura de nuestra carpeta docs. Los estándares que seguimos son:
 
 - La carpeta *snippets* de nivel superior contiene fragmentos de código para ejemplos pequeños y centrados.
-- Los ejemplos de referencia de API han estado en una carpeta que sigue este patrón: *snippets/\<idioma>/api/\<espacio de nombres>/\<nombre de la api>*.
+- Los ejemplos de referencia de API han estado en una carpeta que sigue este patrón: *snippets/\<idioma>/api/\<espacio de nombres>/\<nombre de la api>* .
 - Otras carpetas de nivel superior coinciden con las carpetas de nivel superior del repositorio *docs*. Por ejemplo, el repositorio de documentos incluye una carpeta *machine-learning/tutorials* y los ejemplos para tutoriales de aprendizaje automático se encuentran en la carpeta *samples/machine-learning/tutorials*.
 
 Además, todos los ejemplos de las carpetas *core* y *standard* se deben compilar y ejecutar en todas las plataformas compatibles con .NET Core. Nuestro sistema de compilación de CI aplicará esto. La carpeta *framework* de nivel superior contiene ejemplos que solo se compilan y validan en Windows.
@@ -135,19 +153,6 @@ La experiencia interactiva de C# cambia la forma en que se trabaja con ejemplos.
 
 - Los artículos en los que el ejemplo genera una salida de mayor tamaño no deben incluirla en los comentarios. Oculta el código una vez que se ha ejecutado el ejemplo.
 - Los artículos en los que el ejemplo muestra un tema, pero la salida no es suficiente para su comprensión. Por ejemplo, código que ejecuta una consulta LINQ para explicar la sintaxis de consulta y luego muestra todos los elementos en la colección de salida.
-
-## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
-
-En la lista siguiente se muestran algunas reglas orientativas que se deben tener en cuenta a la hora de contribuir a la documentación de .NET:
-
-- **NO** nos sorprenda con solicitudes de incorporación de cambios de gran tamaño. En su lugar, registre un asunto e inicie una discusión para que podamos definir un rumbo antes de dedicar una gran cantidad de tiempo.
-- **LEA** la [guía de estilo](./styleguide/template.md) y las instrucciones de [voz y tono](./styleguide/voice-tone.md).
-- **USE** el archivo de [plantilla](./styleguide/template.md) como punto de partida del trabajo.
-- **CREE** una rama independiente en la bifurcación antes de trabajar en los artículos.
-- **SIGA** el [flujo de trabajo de GitHub](https://guides.github.com/introduction/flow/).
-- **HABLE** de sus contribuciones con frecuencia en blogs o Twitter (o cualquier otra red social).
-
-> Nota: Tal vez observe que algunos de los temas no siguen actualmente todas las instrucciones que se especifican aquí y en la [guía de estilo](./styleguide/template.md). pero estamos trabajando para dar coherencia a todo el sitio. Compruebe la lista de [asuntos abiertos](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) de los que estamos realizando un seguimiento con vistas a ese objetivo.
 
 ## <a name="contributor-license-agreement"></a>Contrato de licencia del colaborador
 

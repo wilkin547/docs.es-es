@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790366"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975133"
 ---
 # <a name="quickstart-wcf-data-services"></a>Inicio rápido (Servicios de datos de WCF)
 
-Esta [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] guía de inicio rápido le ayudará a familiarizarse con WCF Data Services y a través de una serie de tareas que admiten los temas de [Introducción](getting-started-with-wcf-data-services.md).
+Esta guía de inicio rápido le ayudará a familiarizarse con WCF Data Services y el Open Data Protocol (OData) a través de una serie de tareas que admiten los temas de [Introducción](getting-started-with-wcf-data-services.md).
 
-## <a name="what-youll-learn"></a>Temas que se abordarán
+## <a name="what-youll-learn"></a>Qué aprenderá
 
 En la primera tarea de esta guía de inicio rápido se muestra cómo crear un servicio de datos para exponer una fuente de OData desde la base de datos de ejemplo Northwind. En temas posteriores, tendrá acceso a la fuente de OData mediante un explorador Web y también creará una aplicación cliente Windows Presentation Foundation (WPF) que consume la fuente de OData mediante las bibliotecas de cliente.
 
@@ -24,7 +24,7 @@ En la primera tarea de esta guía de inicio rápido se muestra cómo crear un se
 
 Para completar este tutorial rápido, debe instalar los siguientes componentes:
 
-- Visual Studio
+- Programa para la mejora
 
 - Instancia de SQL Server. Esto incluye SQL Server Express, que se incluye en una instalación predeterminada de Visual Studio 2015, o como parte de la carga de trabajo de **procesamiento y almacenamiento de datos** en Visual Studio 2017.
 

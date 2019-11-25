@@ -4,25 +4,25 @@ description: Obtenga información sobre cómo usar AssemblyLoadContext recopilab
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 52cd864393342e2bc31f872b9d09cb484c2c8463
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 462e6d2c7f135d2ba274d78fe31ad27391eac416
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972496"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740451"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Uso y depuración de la descargabilidad de ensamblado en .NET Core
 
 A partir de .NET Core 3.0, se admite la capacidad de cargar y posteriormente descargar un conjunto de ensamblados. Para este fin, en .NET Framework se usaban dominios de aplicación personalizados, pero .NET Core solo admite un dominio de aplicación predeterminado único.
 
-.NET Core 3.0 y versiones posteriores admiten la descargabilidad a través de <xref:System.Runtime.Loader.AssemblyLoadContext>. Puede cargar un conjunto de ensamblados en un `AssemblyLoadContext` recopilable, ejecutar métodos en ellos o simplemente inspeccionarlos mediante reflexión y, por último, descargar el `AssemblyLoadContext`. Esa acción descarga los ensamblados cargados en ese `AssemblyLoadContext`.
+.NET Core 3.0 y versiones posteriores admiten la descargabilidad a través de <xref:System.Runtime.Loader.AssemblyLoadContext>. Puede cargar un conjunto de ensamblados en un `AssemblyLoadContext` recopilable, ejecutar métodos en ellos o simplemente inspeccionarlos mediante reflexión y, por último, descargar el `AssemblyLoadContext`. Esa acción descarga los ensamblados cargados en el `AssemblyLoadContext`.
 
-Cabe destacar una diferencia entre la descarga mediante `AssemblyLoadContext` y mediante AppDomains. Con AppDomains, se fuerza la descarga. En el momento de la descarga, se anulan todos los subprocesos que se ejecutan en la instancia de AppDomain de destino, se destruyen los objetos COM administrados creados en la AppDomain de destino, etc. Con `AssemblyLoadContext`, la descarga es “cooperativa”. La llamada al método <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> simplemente inicia la descarga. La descarga finaliza una vez que:
+Cabe destacar una diferencia entre la descarga mediante `AssemblyLoadContext` y mediante AppDomains. Con AppDomains, se fuerza la descarga. En el momento de la descarga, se anulan todos los subprocesos que se ejecutan en la instancia de AppDomain de destino, se destruyen los objetos COM administrados creados en la AppDomain de destino, etc. Con `AssemblyLoadContext`, la descarga es "cooperativa". La llamada al método <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> simplemente inicia la descarga. La descarga finaliza una vez que:
 
 - Ningún subproceso tiene métodos de los ensamblados cargados en el `AssemblyLoadContext` en sus pilas de llamadas.
-- Ninguno de los elementos siguientes hace referencia a los tipos de los ensamblados cargados en el `AssemblyLoadContext`, a las instancias de esos tipos ni a los ensamblados mismos fuera del `AssemblyLoadContext`:
+- Ninguno de los elementos siguientes hace referencia a los tipos de los ensamblados cargados en el `AssemblyLoadContext`, a las instancias de esos tipos ni a los ensamblados mismos:
   - Referencias fuera del `AssemblyLoadContext`, excepto las referencias parciales (<xref:System.WeakReference> o <xref:System.WeakReference%601>).
-  - Identificadores de GC seguros (<xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Normal> o <xref:System.Runtime.InteropServices.GCHandleType>.<xref:System.Runtime.InteropServices.GCHandleType.Pinned>) desde dentro y fuera del `AssemblyLoadContext`.
+  - Un recolector de elementos no utilizados (GC) potente controla ([GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) o [GCHandleType.Pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned)) desde dentro y fuera de `AssemblyLoadContext`.
 
 ## <a name="use-collectible-assemblyloadcontext"></a>Uso de un AssemblyLoadContext recopilable
 
@@ -31,13 +31,14 @@ En esta sección se incluye un tutorial detallado paso a paso que muestra una ma
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Creación de un AssemblyLoadContext recopilable
 
 Debe derivar la clase del <xref:System.Runtime.Loader.AssemblyLoadContext> y sobrecargar su método <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>. Ese método resuelve las referencias a todos los ensamblados que son dependencias de los ensamblados cargados en ese `AssemblyLoadContext`.
+
 El código siguiente es un ejemplo del `AssemblyLoadContext` personalizado más sencillo:
 
 [!code-csharp[Simple custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/simple_example.cs#1)]
 
 Como puede ver, el método `Load` devuelve `null`. Esto significa que todos los ensamblados de dependencias se cargan en el contexto predeterminado y el contexto nuevo solo incluye los ensamblados que se cargaron explícitamente en él.
 
-Si quiere cargar algunas o todas las dependencias también en el `AssemblyLoadContext`, puede usar `AssemblyDependencyResolver` en el método `Load`. `AssemblyDependencyResolver` resuelve los nombres de ensamblado en rutas de acceso absoluto a archivos de ensamblado con el archivo *.deps.json* contenido en el directorio del ensamblado principal cargado en el contexto y mediante archivos de ensamblado en ese directorio.
+Si quiere cargar algunas o todas las dependencias también en el `AssemblyLoadContext`, puede usar `AssemblyDependencyResolver` en el método `Load`. `AssemblyDependencyResolver` resuelve los nombres de ensamblado en rutas de acceso absoluto a archivos de ensamblado. El solucionador utiliza el archivo *.deps.json* y los archivos de ensamblado en el directorio del ensamblado principal que se cargó en el contexto.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -69,19 +70,19 @@ Ahora puede ejecutar esta función para cargar, ejecutar y descargar el ensambla
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-Sin embargo, la descarga no se completa de inmediato. Como se mencionó anteriormente, se basa en el GC para recopilar todos los objetos desde el ensamblado de prueba. En muchos casos, no es necesario esperar a que se complete la descarga. Sin embargo, hay casos en los que resulta útil saber que la descarga se completó. Por ejemplo, es posible que quiera eliminar el archivo de ensamblado que se cargó en el `AssemblyLoadContext` personalizado del disco. En tal caso, se puede usar el fragmento de código siguiente. Desencadena un GC y espera a los finalizadores pendientes en un bucle hasta que la referencia parcial al `AssemblyLoadContext` personalizado se establece en `null`, lo que indica que se recopiló el objeto de destino. Tenga en cuenta que, en la mayoría de los casos, solo se requiere un paso a través del bucle. Sin embargo, en casos más complejos en los que los objetos creados por el código que se ejecutan en el `AssemblyLoadContext` tienen finalizadores, es posible que se necesiten más pasos.
+Sin embargo, la descarga no se completa de inmediato. Como se mencionó anteriormente, se basa en el recolector de elementos no utilizados para recopilar todos los objetos desde el ensamblado de prueba. En muchos casos, no es necesario esperar a que se complete la descarga. Sin embargo, hay casos en los que resulta útil saber que la descarga se completó. Por ejemplo, es posible que quiera eliminar el archivo de ensamblado que se cargó en el `AssemblyLoadContext` personalizado del disco. En tal caso, se puede usar el fragmento de código siguiente. Desencadena una recolección de elementos no utilizados y espera a los finalizadores pendientes en un bucle hasta que la referencia parcial al `AssemblyLoadContext` personalizado se establece en `null`, lo que indica que se recopiló el objeto de destino. En la mayoría de los casos, solo se requiere un paso a través del bucle. Sin embargo, en casos más complejos en los que los objetos creados por el código que se ejecutan en el `AssemblyLoadContext` tienen finalizadores, es posible que se necesiten más pasos.
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>El evento de descarga
 
-En algunos casos, puede ser necesario que el código cargado en un `AssemblyLoadContext` personalizado realice una limpieza cuando se inicie la descarga. Por ejemplo, es posible que tenga que detener subprocesos, limpiar algunos identificadores de GC seguros, etc. En esos casos, se puede usar el evento `Unloading`. Es posible enlazar a este evento un controlador que realice la limpieza necesaria.
+En algunos casos, puede ser necesario que el código cargado en un `AssemblyLoadContext` personalizado realice una limpieza cuando se inicie la descarga. Por ejemplo, es posible que tenga que detener subprocesos o limpiar los identificadores de los recolectores de elementos no utilizados seguros, etc. En esos casos, se puede usar el evento `Unloading`. Es posible enlazar a este evento un controlador que realice la limpieza necesaria.
 
 ### <a name="troubleshoot-unloadability-issues"></a>Solución de problemas de descargabilidad
 
-Debido a la naturaleza cooperativa de la descarga, resulta fácil olvidarse de que las referencias mantienen activo el contenido de un `AssemblyLoadContext` recopilable, lo que impide la descarga. A continuación se muestra un resumen de los objetos (algunos de los cuales no son obvios) que pueden contener las referencias:
+Debido a la naturaleza cooperativa de la descarga, resulta fácil olvidarse de que las referencias pueden mantener activo el contenido de un `AssemblyLoadContext` recopilable, lo que impide la descarga. A continuación se muestra un resumen de las entidades (algunas de las cuales no son obvias) que pueden contener las referencias:
 
-- Referencias habituales contenidas desde fuera del `AssemblyLoadContext` recopilable, almacenadas en una ranura de pila o en un registro de procesador (variables locales de método, ya sea creadas explícitamente por el código de usuario o de manera implícita por JIT), una variable estática o un identificador de GC seguro/de anclaje, y que apuntan de manera transitiva a:
+- Referencias habituales contenidas desde fuera del `AssemblyLoadContext` recopilable, que se almacenan en una ranura de pila o en un registro de procesador (variables locales de método, ya sea creadas explícitamente por el código de usuario o de manera implícita por el compilador Just-In-Time), una variable estática o un identificador de GC seguro/de anclaje, y que apuntan de manera transitiva a:
   - Un ensamblado cargado en el `AssemblyLoadContext` recopilable.
   - Un tipo de dicho ensamblado.
   - Una instancia de un tipo de dicho ensamblado.
@@ -89,16 +90,16 @@ Debido a la naturaleza cooperativa de la descarga, resulta fácil olvidarse de q
 - Instancias de tipos de `AssemblyLoadContext` no recopilables personalizados que se crearon dentro del `AssemblyLoadContext` recopilable.
 - Instancias de <xref:System.Threading.RegisteredWaitHandle> pendientes con devoluciones de llamada establecidas en métodos en el `AssemblyLoadContext` personalizado.
 
-Sugerencias para encontrar una ranura de pila o registro de procesador como raíz de un objeto:
-
-- Pasar los resultados de una llamada de función directamente a otra función puede crear una raíz incluso si no hay ninguna variable local creada por el usuario.
-- Si había disponible una referencia a un objeto en cualquier punto de un método, es posible que JIT haya decidido mantener la referencia en una ranura de pila/registro de procesador durante el tiempo que quiera en la función actual.
+> [!TIP]
+> Se pueden producir referencias a objetos que se almacenan en ranuras de pilas o en los registros de procesador y que podrían impedir la descarga de un `AssemblyLoadContext` en las siguientes situaciones:
+>
+> - Cuando los resultados de una llamada de función se pasan directamente a otra función incluso si no hay ninguna variable local creada por el usuario.
+> - Cuando el compilador JIT mantiene una referencia a un objeto que estaba disponible en algún momento de un método.
 
 ## <a name="debug-unloading-issues"></a>Depuración de problemas de descarga
 
-Depurar los problemas con la descarga puede ser un proceso tedioso. Puede haber ocasiones en las que no sepa qué es lo que mantiene activo un `AssemblyLoadContext`, pero se produce un error en la descarga.
-La mejor herramienta para ayudarlo con eso es WinDbg (LLDB en Unix) con el complemento SOS. Debe buscar qué mantiene activo a un `LoaderAllocator` perteneciente al `AssemblyLoadContext` específico.
-Este complemento permite examinar los objetos del montón de GC, sus jerarquías y raíces.
+Depurar los problemas con la descarga puede ser un proceso tedioso. Puede haber ocasiones en las que no sepa qué es lo que mantiene activo un `AssemblyLoadContext`, pero se produce un error en la descarga. La mejor herramienta para ayudarlo con eso es WinDbg (LLDB en Unix) con el complemento SOS. Debe buscar qué mantiene activo a un `LoaderAllocator` perteneciente al `AssemblyLoadContext` específico. El complemento SOS permite examinar los objetos del montón de recolección de elementos no utilizados, sus jerarquías y raíces.
+
 Para cargar el complemento en el depurador, escriba el comando siguiente en la línea de comandos del depurador:
 
 En WinDbg (parece que WinDbg lo hace de manera automática al irrumpir en la aplicación de .NET Core):
@@ -115,7 +116,8 @@ plugin load /path/to/libsosplugin.so
 
 Vamos a depurar un programa de ejemplo que tiene problemas con la descarga. El código de origen se incluye a continuación. Cuando lo ejecuta en WinDbg, el programa irrumpe en el depurador justo después de intentar comprobar que la descarga se realizó correctamente. Luego, puede empezar a buscar a los culpables.
 
-Tenga en cuenta que si realiza la depuración con LLDB en Unix, los comandos de SOS de los ejemplos siguientes no tienen `!` delante de ellos.
+> [!TIP]
+> Si realiza la depuración con LLDB en Unix, los comandos de SOS de los ejemplos siguientes no tienen `!` delante de ellos.
 
 ```console
 !dumpheap -type LoaderAllocator
@@ -137,13 +139,13 @@ Total 2 objects
 
 En la parte "Statistics:" (Estadísticas) que aparece abajo, compruebe el `MT` (`MethodTable`) que pertenece al `System.Reflection.LoaderAllocator`, que es el objeto que nos interesa. Luego, en la lista que aparece al principio, busque la entrada con el `MT` que coincide con ese y obtenga la dirección del objeto mismo. En nuestro caso, se trata de "000002b78000ce40".
 
-Ahora que sabemos la dirección del objeto `LoaderAllocator`, podemos usar otro comando para encontrar sus raíces de GC.
+Ahora que sabemos la dirección del objeto `LoaderAllocator`, podemos usar otro comando para encontrar sus raíces de GC:
 
 ```console
-!gcroot -all 0x000002b78000ce40 
+!gcroot -all 0x000002b78000ce40
 ```
 
-Este comando vuelca la cadena de referencias de objeto que llevan a la instancia `LoaderAllocator`. La lista empieza con la raíz, que es la entidad que mantiene activo el `LoaderAllocator` y, por lo tanto, es la parte fundamental del problema que se está depurando. La raíz puede ser una ranura de pila, un registro de procesador, un identificador de GC o una variable estática.
+Este comando vuelca la cadena de referencias de objeto que llevan a la instancia `LoaderAllocator`. La lista empieza por la raíz, que es la entidad que mantiene activo el `LoaderAllocator` y, por lo tanto, es la parte fundamental del problema. La raíz puede ser una ranura de pila, un registro de procesador, un identificador de GC o una variable estática.
 
 Este es un ejemplo de la salida del comando `gcroot`:
 
@@ -172,13 +174,13 @@ HandleTable:
 Found 3 roots.
 ```
 
-Ahora debe averiguar dónde se encuentra la raíz para poder corregirla. El caso más sencillo es cuando la raíz es una ranura de pila o un registro de procesador. En ese caso, `gcroot` muestra el nombre de la función cuyo marco contiene la raíz y el subproceso que ejecuta esa función. El caso difícil es cuando la raíz es una variable estática o un identificador de GC. 
+El paso siguiente es averiguar dónde se encuentra la raíz para poder corregirla. El caso más sencillo es cuando la raíz es una ranura de pila o un registro de procesador. En ese caso, `gcroot` muestra el nombre de la función cuyo marco contiene la raíz y el subproceso que ejecuta esa función. El caso difícil es cuando la raíz es una variable estática o un identificador de GC.
 
 En el ejemplo anterior, la primera raíz es una variable local de tipo `System.Reflection.RuntimeMethodInfo` almacenada en el marco de la función `example.Program.Main(System.String[])` en la dirección `rbp-20` (`rbp` es el registro de procesador `rbp` y -20 es un desplazamiento hexadecimal a partir de ese registro).
 
-La segunda raíz es un `GCHandle` normal (seguro) que contiene una referencia a una instancia de la clase `test.Test`. 
+La segunda raíz es un `GCHandle` normal (seguro) que contiene una referencia a una instancia de la clase `test.Test`.
 
-La tercera raíz es un `GCHandle` anclado. En realidad, se trata de una variable estática. Lamentablemente, no hay forma de saberlo. Las variables estáticas para tipos de referencia se almacenan en una matriz de objetos administrada en estructuras internas de runtime.
+La tercera raíz es un `GCHandle` anclado. Esta es en realidad una variable estática, pero lamentablemente, no es posible saberlo a ciencia cierta. Las variables estáticas para tipos de referencia se almacenan en una matriz de objetos administrada en estructuras internas de runtime.
 
 Otro caso que puede impedir la descarga de un `AssemblyLoadContext` es cuando un subproceso tiene un marco de un método proveniente de un ensamblado cargado en el `AssemblyLoadContext` en su pila. Puede comprobarlo si vuelca las pilas de llamadas administradas de todos los subprocesos:
 
@@ -186,8 +188,7 @@ Otro caso que puede impedir la descarga de un `AssemblyLoadContext` es cuando un
 ~*e !clrstack
 ```
 
-El comando siguiente "aplicar a todos los subprocesos el comando `!clrstack`". Luego se muestra la salida de ese comando para el ejemplo. Lamentablemente, LLDB en Unix no tiene forma de aplicar un comando a todos los subprocesos, por lo que deberá recurrir a cambiar de manera manual los subprocesos y repetir el comando `clrstack`.
-Omita todos los subprocesos en los que el depurador indique "Unable to walk the managed stack" (No se puede recorrer la pila administrada).
+El comando siguiente "aplicar a todos los subprocesos el comando `!clrstack`". Luego se muestra la salida de ese comando para el ejemplo. Lamentablemente, LLDB en Unix no tiene forma de aplicar un comando a todos los subprocesos, por lo que tendrá que cambiar de manera manual los subprocesos y repetir el comando `clrstack`. Omita todos los subprocesos en los que el depurador indique "Unable to walk the managed stack" (No se puede recorrer la pila administrada).
 
 ```console
 OS Thread Id: 0x6ba8 (0)

@@ -2,26 +2,26 @@
 title: Página de ayuda del servicio web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050412"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975912"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ayuda del servicio web HTTP de WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario se desplaza a un servicio WEB HTTP de WCF y anexa "/ Ayuda" al final de la dirección URL, por ejemplo `http://localhost:8000/Customers/Help`, una página de ayuda, como se muestra lo siguiente.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario navega a un servicio WEB HTTP de WCF y anexa "/Help" al final de la dirección URL, por ejemplo `http://localhost:8000/Customers/Help`, se muestra una página de ayuda como la siguiente.  
   
- ![Abra un explorador con la página de Ayuda de REST de WCF.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
+ ![Un explorador con la página de ayuda de WCF REST abierta.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  A continuación, el usuario puede hacer clic en cualquier método descrito en la página de ayuda para visualizar la página detallada de esa operación en la que se muestra más información sobre el método, incluidos formatos de mensajes y respuestas de ejemplo. La siguiente imagen es un ejemplo de una página de ayuda para un método.  
   
- ![Abra un explorador con los detalles de página de Ayuda de REST de WCF para el método GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![Un explorador con los detalles de la página de ayuda de WCF REST para el método GetCustomers abierto.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Utilizar la página de ayuda web HTTP de WCF  
  La página de ayuda WEB HTTP de WCF muestra una breve descripción de cada operación siempre que haya especificado una con <xref:System.ComponentModel.DescriptionAttribute>. Este atributo toma una cadena que contiene una breve descripción de la operación a la que se aplica. Por ejemplo, el siguiente código muestra cómo utilizar <xref:System.ComponentModel.DescriptionAttribute> para proporcionar una breve descripción.  
   
-```  
+```csharp
 [OperationContract]  
 [WebGet(UriTemplate="/template1", BodyStyle = WebMessageBodyStyle.Bare)]  
 [Description("Description for GET /template1")]  
@@ -47,7 +47,7 @@ SyndicationFeedFormatter GetTemplate1();
   
  Para habilitar la página de ayuda web HTTP de WCF a través de un código, agregue un extremo de servicio y agregue <xref:System.ServiceModel.Description.WebHttpBehavior> a la configuración de extremo <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> a `true`. El código siguiente muestra cómo hacerlo.  
   
-```  
+```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
    host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Para obtener más información sobre el esquema de serialización de contrato de datos, vea [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Para obtener más información sobre el esquema de serialización de contrato de datos, vea [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

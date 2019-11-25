@@ -1,18 +1,18 @@
 ---
-title: 'Procedimiento Devolver subconjuntos de propiedades de elementos en una consulta: Guía de programación de C#'
+title: Procedimiento para devolver subconjuntos de propiedades de elementos en una consulta - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 196383731507137bf4309d38d27b36f29b23a06c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1266b866d671854c787d907b91f654c128681de9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419299"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970457"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Procedimiento Devolver subconjuntos de propiedades de elementos en una consulta (Guía de programación de C#)
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Procedimiento para devolver subconjuntos de propiedades de elementos en una consulta (Guía de programación de C#)
 Use un tipo anónimo en una expresión de consulta cuando se cumplan estas dos condiciones:  
   
 - Solo quiere algunas de las propiedades de cada elemento de origen.  

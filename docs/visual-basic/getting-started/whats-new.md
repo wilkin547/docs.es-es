@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774919"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423915"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -206,13 +206,13 @@ Para obtener más información, vea [Valores devueltos de referencia](../program
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 Puede obtener el nombre de cadena no calificado de un tipo o miembro para usarlo en un mensaje de error sin codificar de forma rígida una cadena.  Esto permite que el código siga siendo correcto al refactorizarlo.  Esta característica también es útil para enlazar los vínculos MVC del controlador de vista de modelos y desencadenar eventos de propiedad cambiada.
 
 [Interpolación de cadenas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [formato compuesto](../../standard/base-types/composite-format.md).
+Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [formato compuesto](../../standard/base-types/composite-formatting.md).
 
 [Acceso a miembros condicionales NULL e indexación](../language-reference/operators/null-conditional-operators.md)
 
@@ -291,4 +291,4 @@ Ahora el compilador usa las reglas de resolución de sobrecarga normales para el
 
 ## <a name="see-also"></a>Vea también
 
-- [Novedades de Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
+- [Novedades de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)

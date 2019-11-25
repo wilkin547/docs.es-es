@@ -2,12 +2,12 @@
 title: Evaluación de los cambios importantes en .NET Core
 description: Conozca las formas en que .NET Core intenta mantener la compatibilidad para los desarrolladores en todas las versiones de .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739350"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973652"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Evaluación de los cambios importantes en .NET Core
 
@@ -103,7 +103,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
   Tenga en cuenta que la introducción de una invalidación puede hacer que los consumidores anteriores omitan la invalidación cuando llamen a la [base](../../csharp/language-reference/keywords/base.md).
 
-- **✔️ Adición de un constructor a una clase, junto con un constructor predeterminado (sin parámetros) si la clase no tenía previamente constructores**
+- **✔️ Adición de un constructor a una clase, junto con un constructor sin parámetros si la clase no tenía previamente constructores**
 
    Sin embargo, no se permite agregar un constructor a una clase que antes no tenía constructores *sin* agregar el constructor sin parámetros.
 

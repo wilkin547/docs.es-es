@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para escribir una extensión para ServiceContractGenerator
+title: 'Cómo: Escribir una extensión para ServiceContractGenerator'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: af23babd9255c45b9fa89b5c167de6960f0f690e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 68b380a40448f21ba770aa47c7188b818fa8f9e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855726"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975877"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Procedimiento para escribir una extensión para ServiceContractGenerator
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Cómo: Escribir una extensión para ServiceContractGenerator
 En este tema se describe cómo escribir una extensión para <xref:System.ServiceModel.Description.ServiceContractGenerator>. Esto se puede hacer implementando la interfaz <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> en un comportamiento de la operación o implementando la interfaz <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> en un comportamiento del contrato. En este tema se muestra cómo implementar la interfaz <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> en un comportamiento de contrato.  
   
  <xref:System.ServiceModel.Description.ServiceContractGenerator> genera contratos de servicio, tipos de cliente y configuraciones de cliente a partir de instancias de <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> y <xref:System.ServiceModel.Channels.Binding>. Normalmente, importa <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription>, y <xref:System.ServiceModel.Channels.Binding> crea instancias a partir de los metadatos del servicio y, a continuación, utiliza estas instancias para generar el código para llamar al servicio. En este ejemplo, se usa una implementación <xref:System.ServiceModel.Description.IWsdlImportExtension> para procesar las anotaciones WSDL y después agregar las extensiones de generación de código a los contratos importados para generar comentarios en el código generado.  
@@ -22,42 +22,42 @@ En este tema se describe cómo escribir una extensión para <xref:System.Service
     public void GenerateContract(ServiceContractGenerationContext context)  
     {  
         Console.WriteLine("In generate contract.");  
-    context.ContractType.Comments.AddRange(Formatter.FormatComments(commentText));  
+        context.ContractType.Comments.AddRange(Formatter.FormatComments(commentText));  
     }  
     ```  
   
 2. Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension> en la misma clase. El método <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> puede procesar una extensión WSDL concreta (anotaciones WSDL en este caso) agregando una extensión de generación de código a la instancia <xref:System.ServiceModel.Description.ContractDescription> importada.  
   
     ```csharp
-    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
-       {  
-                // Contract documentation  
-             if (context.WsdlPortType.Documentation != null)  
-             {  
-                    context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));  
-             }  
-             // Operation documentation  
-             foreach (Operation operation in context.WsdlPortType.Operations)  
-             {  
-                if (operation.Documentation != null)  
-                {  
-                   OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);  
-                   if (operationDescription != null)  
-                   {  
-                            operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));  
-                   }  
-                }  
-             }  
-          }  
-          public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)   
-            {  
-                Console.WriteLine("BeforeImport called.");  
-            }  
-  
-          public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)   
-            {  
-                Console.WriteLine("ImportEndpoint called.");  
-            }  
+    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)
+    {
+        // Contract documentation
+        if (context.WsdlPortType.Documentation != null)
+        {
+            context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));
+        }
+        // Operation documentation
+        foreach (Operation operation in context.WsdlPortType.Operations)
+        {
+            if (operation.Documentation != null)
+            {
+                OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);
+                if (operationDescription != null)
+                {
+                    operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));
+                }
+            }
+        }
+    }
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)
+    {
+        Console.WriteLine("BeforeImport called.");
+    }
+
+    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)
+    {
+        Console.WriteLine("ImportEndpoint called.");
+    }
     ```  
   
 3. Agregue el importador de WSDL a su configuración de cliente.  
@@ -72,22 +72,23 @@ En este tema se describe cómo escribir una extensión para <xref:System.Service
   
 4. En el código de cliente, cree un `MetadataExchangeClient` y llame a `GetMetadata`:  
   
-    ```csharp  
-    MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
+    ```csharp
+    var mexClient = new MetadataExchangeClient(metadataAddress);  
     mexClient.ResolveMetadataReferences = true;  
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
 5. Cree un `WsdlImporter` y llame a `ImportAllContracts`:  
   
-    ```csharp  
-    WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
+    ```csharp
+    var importer = new WsdlImporter(metaDocs);
+    System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
 6. Cree un `ServiceContractGenerator` y llame a `GenerateServiceContractType` para cada contrato.  
   
-    ```csharp  
-    ServiceContractGenerator generator = new ServiceContractGenerator();  
+    ```csharp
+    var generator = new ServiceContractGenerator();  
     foreach (ContractDescription contract in contracts)  
     {  
        generator.GenerateServiceContractType(contract);  
@@ -101,4 +102,4 @@ En este tema se describe cómo escribir una extensión para <xref:System.Service
 ## <a name="see-also"></a>Vea también
 
 - [Metadatos](../feature-details/metadata.md)
-- [Procedimientos: Importar WSDL personalizado](how-to-import-custom-wsdl.md)
+- [Importación de WSDL personalizado](how-to-import-custom-wsdl.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423153"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969717"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -37,7 +37,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Para más información acerca de cómo crear cadenas basadas en modificaciones como las operaciones de buscar y reemplazar en la cadena original, consulte [Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)  
+ Para más información acerca de cómo crear cadenas nuevas basadas en modificaciones como las operaciones de buscar y reemplazar en la cadena original, consulte [Modificación del contenido de cadenas](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Literales de cadena regulares y textuales  
  Utilice literales de cadena regulares cuando tenga que insertar caracteres de escape proporcionados por C#, tal como se muestra en el ejemplo siguiente:  
@@ -91,7 +91,7 @@ Use la interpolación de cadenas para mejorar la legibilidad y el mantenimiento 
 Para más información sobre cómo dar formato a los tipos .NET, consulte [Aplicar formato a tipos en .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Subcadenas  
- Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)  
+ Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Procedimiento para modificar el contenido de cadenas](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -131,12 +131,12 @@ string s = String.Empty;
   
 |Tema|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|[Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)|Muestra técnicas para transformar cadenas y modificar el contenido de estas.|  
-|[Cómo: Comparar cadenas](../../how-to/compare-strings.md)|Muestra cómo realizar comparaciones ordinales y culturales específicas de las cadenas.|  
-|[Cómo: Concatenar varias cadenas](../../how-to/concatenate-multiple-strings.md)|Muestra diferentes maneras de combinar varias cadenas en una.|
-|[Cómo: para analizar cadenas mediante String.Split (Guía de C#)](../../how-to/parse-strings-using-split.md)|Contiene ejemplos de código que muestran cómo utilizar el método `String.Split` para analizar cadenas.|  
+|[How to modify string contents](../../how-to/modify-string-contents.md) (Cómo modificar contenido de cadenas)|Muestra técnicas para transformar cadenas y modificar el contenido de estas.|  
+|[Comparación de cadenas](../../how-to/compare-strings.md)|Muestra cómo realizar comparaciones ordinales y culturales específicas de las cadenas.|  
+|[Concatenación de varias cadenas](../../how-to/concatenate-multiple-strings.md)|Muestra diferentes maneras de combinar varias cadenas en una.|
+|[Análisis de cadenas mediante String.Split](../../how-to/parse-strings-using-split.md)|Contiene ejemplos de código que muestran cómo utilizar el método `String.Split` para analizar cadenas.|  
 |[Cómo: Buscar cadenas](../../how-to/search-strings.md)|Explica cómo usar la búsqueda para especificar texto o patrones en cadenas.|  
-|[Cómo: Determinar si una cadena representa un valor numérico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
+|[Determinación de si una cadena representa un valor numérico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
 |[Interpolación de cadenas](../../language-reference/tokens/interpolated.md)|Describe la característica de interpolación de cadena que proporciona una sintaxis adecuada para dar formato a las cadenas.|
 |[Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)|Proporciona vínculos a temas que usan los métodos <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> para realizar operaciones básicas de cadenas.|  
 |[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Describe cómo convertir las representaciones de cadena de los tipos base de .NET en las instancias de los tipos correspondientes.|  

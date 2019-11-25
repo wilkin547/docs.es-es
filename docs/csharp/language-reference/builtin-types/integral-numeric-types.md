@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773868"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036358"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
@@ -100,7 +100,7 @@ El tipo de un literal entero viene determinado por su sufijo, como se indica a c
 
 Si el valor que representa un literal entero supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md).
 
-Si el tipo determinado de un literal entero es `int` y el valor está dentro del rango del tipo de destino, el valor que representa el literal se puede convertir implícitamente en `sbyte`, `byte`, `short`, `ushort`, `uint` o `ulong`:
+Si el tipo determinado de un literal entero es `int` y el valor que representa el literal está dentro del rango del tipo de destino, el valor se puede convertir de forma implícita en `sbyte`, `byte`, `short`, `ushort`, `uint` o `ulong`:
 
 ```csharp
 byte a = 17;

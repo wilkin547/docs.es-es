@@ -2,12 +2,12 @@
 title: Controlar errores parciales
 description: Obtenga información sobre cómo controlar errores parciales con elegancia. Un microservicio podría no ser totalmente funcional y aun así realizar trabajo útil.
 ms.date: 10/16/2018
-ms.openlocfilehash: a667ad2e1456db7b5846023de27d3797dad58731
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674702"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732964"
 ---
 # <a name="handle-partial-failure"></a>Controlar errores parciales
 
@@ -15,13 +15,13 @@ En sistemas distribuidos como las aplicaciones basadas en microservicios, hay un
 
 Por ejemplo, considere la página de detalles Order de la aplicación de ejemplo eShopOnContainers. Si el microservicio Ordering no responde cuando el usuario intenta enviar un pedido, una implementación incorrecta del proceso del cliente (la aplicación web MVC), por ejemplo, si el código de cliente usara RPC sincrónicas sin tiempo de espera, bloquearía los subprocesos indefinidamente en espera de una respuesta. Además de la mala experiencia del usuario, cada espera sin respuesta usa o bloquea un subproceso, y los subprocesos son muy valiosos en aplicaciones altamente escalables. Si hay muchos subprocesos bloqueados, al final el tiempo de ejecución de la aplicación puede quedarse sin subprocesos. En ese caso, la aplicación puede no responder globalmente en lugar de solo parcialmente, como se muestra en la figura 8-1.
 
-![Diagrama que representa el párrafo anterior](./media/image1.png)
+![Diagrama que muestra errores parciales.](./media/handle-partial-failure/partial-failures-diagram.png)
 
 **Figura 8-1**. Errores parciales debido a dependencias que afectan a la disponibilidad del subproceso de servicio
 
-En una aplicación basada en microservicios de gran tamaño, cualquier error parcial se puede amplificar, especialmente si la mayor parte de la interacción de los microservicios internos se basa en llamadas HTTP sincrónicas (lo que se considera un anti-patrón). Piense en un sistema que recibe millones de llamadas entrantes al día. Si el sistema tiene un diseño incorrecto basado en cadenas largas de llamadas HTTP sincrónicas, estas llamadas entrantes podrían dar lugar a muchos más millones de llamadas salientes (supongamos una proporción 1:4) a decenas de microservicios internos como dependencias sincrónicas. Esta situación se muestra en la figura 8-2, especialmente la dependencia \#3.
+En una aplicación basada en microservicios de gran tamaño, cualquier error parcial se puede amplificar, especialmente si la mayor parte de la interacción de los microservicios internos se basa en llamadas HTTP sincrónicas (lo que se considera un anti-patrón). Piense en un sistema que recibe millones de llamadas entrantes al día. Si el sistema tiene un diseño incorrecto basado en cadenas largas de llamadas HTTP sincrónicas, estas llamadas entrantes podrían dar lugar a muchos más millones de llamadas salientes (supongamos una proporción 1:4) a decenas de microservicios internos como dependencias sincrónicas. Esta situación se muestra en la figura 8-2, especialmente la dependencia \#3, que inicia una cadena y llama a la dependencia 4. que llama a la dependencia 5.
 
-![Un diseño incorrecto para un microservicio de aplicación web que depende de una cadena de dependencias en otros microservicios](./media/image2.png)
+![Diagrama que muestra varias dependencias distribuidas.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
 
 **Figura 8-2**. Impacto de tener un diseño incorrecto que incluye cadenas largas de solicitudes HTTP
 
@@ -29,7 +29,7 @@ Los errores intermitentes están garantizados en un sistema distribuido basado e
 
 Si no diseña ni implementa técnicas para asegurar la tolerancia a errores, incluso se pueden magnificar los pequeños tiempos de inactividad. Por ejemplo, 50 dependencias con un 99,99 % de disponibilidad cada una darían lugar a varias horas de tiempo de inactividad al mes debido a este efecto dominó. Cuando se produce un error en una dependencia de un microservicio al controlar un gran volumen de solicitudes, ese error puede saturar rápidamente todos los subprocesos de solicitudes disponibles en cada servicio y bloquear toda la aplicación.
 
-![Las dependencias encadenadas pueden amplificar gravemente los errores parciales](./media/image3.png)
+![Diagrama que muestra un error parcial amplificado en los microservicios.](./media/handle-partial-failure/partial-failure-amplified-microservices.png)
 
 **Figura 8-3**. Error parcial amplificado por los microservicios con cadenas largas de llamadas HTTP sincrónicas
 

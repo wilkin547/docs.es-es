@@ -1,5 +1,5 @@
 ---
-title: 'Procedimiento Crear un método nuevo para una enumeración: Guía de programación de C#'
+title: Procedimiento para crear un método nuevo para una enumeración - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 99a2005e1a64fa214776145a903341fb162f0633
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 02af55c851392ce5dde4c83fd32d18b927950a3f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597045"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971030"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Procedimiento Crear un método nuevo para una enumeración (Guía de programación de C#)
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Procedimiento para crear un método nuevo para una enumeración (Guía de programación de C#)
 Puede usar métodos de extensión para agregar funcionalidad a un tipo de enumeración concreto.  
   
 ## <a name="example"></a>Ejemplo  

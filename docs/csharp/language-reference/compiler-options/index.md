@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455250"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972749"
 ---
 # <a name="c-compiler-options"></a>Opciones del compilador de C#
 
@@ -29,7 +29,7 @@ En Visual Studio, establecerá las opciones del compilador en el archivo *web.c
 
 - [Compilación de línea de comandos con csc.exe](command-line-building-with-csc-exe.md): información sobre la compilación de una aplicación de C# desde la línea de comandos.
 
-- [Cómo: Establecimiento de las variables de entorno desde la línea de comandos de Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md): se proporcionan los pasos para ejecutar *vsvars32.bat* a fin de habilitar compilaciones de línea de comandos.
+- [Procedimiento Establecer variables de entorno para la línea de comandos de Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md): se proporcionan los pasos para ejecutar *vsvars32.bat* a fin de habilitar compilaciones de línea de comandos.
 
 - [Opciones del compilador de C# enumeradas por categoría](listed-by-category.md): una lista de categorías de las opciones del compilador.
 

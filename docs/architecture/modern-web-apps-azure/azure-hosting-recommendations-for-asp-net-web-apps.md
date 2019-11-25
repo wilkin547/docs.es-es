@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Recomendacione
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331988"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416714"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendaciones de hospedaje en Azure de aplicaciones web ASP.NET Core
 
@@ -116,7 +116,7 @@ Azure ofrece una amplia variedad de opciones de almacenamiento de datos, por lo 
 
 Para los datos transaccionales y relacionales, Azure SQL Database es la mejor opción. Para los datos de alto rendimiento y principalmente de solo lectura, una caché en Redis respaldada por Azure SQL Database es una buena solución.
 
-Los datos JSON no estructurados se pueden almacenar de diferentes formas, desde columnas de SQL Database a Blobs o Tablas de Azure Storage, a DocumentDB. De todos estos, DocumentDB ofrece la mejor funcionalidad de consulta y es la opción recomendada para un gran número de documentos basados en JSON que deben admitir las consultas.
+Los datos JSON no estructurados se pueden almacenar de diferentes formas, desde columnas de SQL Database a blobs o tablas de Azure Storage, a Azure Cosmos DB. De todos estos, Azure Cosmos DB ofrece la mejor funcionalidad de consulta y es la opción recomendada para un gran número de documentos basados en JSON que deben admitir las consultas.
 
 Los datos transitorios basados en eventos o comandos que se usan para coordinar el comportamiento de la aplicación pueden usar Azure Service Bus o Azure Storage Queue. Azure Storage Bus ofrece más flexibilidad y es el servicio recomendado para mensajería no trivial dentro y entre las aplicaciones.
 

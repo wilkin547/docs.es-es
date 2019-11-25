@@ -2,12 +2,12 @@
 title: Diseño de un microservicio orientado a un DDD
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre el diseño del microservicio Ordering orientado a DDD y sus niveles de aplicación.
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739954"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a DDD
 
@@ -37,13 +37,13 @@ Al hablar de complejidad, es importante tener un modelo de dominio controlado po
 
 En la Figura 7-5 se muestra cómo se implementa un diseño por niveles en la aplicación eShopOnContainers.
 
-![Las tres capas en un microservicio DDD como Ordering. Cada capa es un proyecto de VS: la capa de aplicación es Ordering.API, el nivel de dominio es Ordering.Domain y el nivel de infraestructura es Ordering.Infrastructure.](./media/image6.png)
+![Diagrama que muestra las capas de un microservicio de diseño controlado por dominios.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **Figura 7-5**. Niveles de DDD en el microservicio de ordenación en eShopOnContainers
 
-Le recomendamos que diseñe el sistema de modo que cada nivel se comunique solamente con otros niveles determinados. Esto puede ser más fácil de aplicar si los niveles se implementan como bibliotecas de clase distintas, porque puede identificar claramente qué dependencias se establecen entre bibliotecas. Por ejemplo, el nivel de modelo de dominio no debe depender de ningún otro nivel (las clases del modelo de dominio deben ser clases de objetos CLR estándar o [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Como se muestra en la Figura 7-6, la biblioteca de nivel **Ordering.Domain** solo tiene dependencias en las bibliotecas .NET Core o en los paquetes NuGet, pero no en otras bibliotecas personalizadas, como la biblioteca de datos o de persistencia.
+Las tres capas en un microservicio DDD como Ordering. Cada capa es un proyecto de VS: la capa de aplicación es Ordering.API, el nivel de dominio es Ordering.Domain y el nivel de infraestructura es Ordering.Infrastructure. Le recomendamos que diseñe el sistema de modo que cada nivel se comunique solamente con otros niveles determinados. Esto puede ser más fácil de aplicar si los niveles se implementan como bibliotecas de clase distintas, porque puede identificar claramente qué dependencias se establecen entre bibliotecas. Por ejemplo, el nivel de modelo de dominio no debe depender de ningún otro nivel (las clases del modelo de dominio deben ser clases de objetos CLR estándar o [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Como se muestra en la Figura 7-6, la biblioteca de nivel **Ordering.Domain** solo tiene dependencias en las bibliotecas .NET Core o en los paquetes NuGet, pero no en otras bibliotecas personalizadas, como la biblioteca de datos o de persistencia.
 
-![La vista Explorador de soluciones de las dependencias Ordering.Domain, mostrarla depende solo de las bibliotecas de .NET Core.](./media/image7.png)
+![Captura de pantalla de las dependencias de Ordering.Domain.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Figura 7-6**. Los niveles implementados como bibliotecas permiten controlar mejor las dependencias entre niveles
 
@@ -85,11 +85,11 @@ De conformidad con los principios [Omisión de persistencia](https://deviq.com/p
 
 Así, los proyectos y bibliotecas de clases o niveles dependerán, en última instancia, del nivel de modelo de dominio (biblioteca) y no al revés, como se muestra en la Figura 7-7.
 
-![Dependencias en un servicio de DDD, la capa de aplicación depende del dominio y la infraestructura, y la infraestructura depende del dominio, pero el dominio no depende de ninguna capa.](./media/image8.png)
+![Diagrama que muestra las dependencias que existen entre las capas de servicio de DDD.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Figura 7-7**. Dependencias existentes entre niveles en DDD
 
-Este diseño de nivel debe ser independiente para cada microservicio. Como se indicó anteriormente, puede implementar microservicios más complejos siguiendo patrones DDD, al mismo tiempo que puede implementar microservicios guiados por datos más simples (un único CRUD en un solo nivel) de una forma más sencilla.
+Dependencias en un servicio de DDD, la capa de aplicación depende del dominio y la infraestructura, y la infraestructura depende del dominio, pero el dominio no depende de ninguna capa. Este diseño de nivel debe ser independiente para cada microservicio. Como se indicó anteriormente, puede implementar microservicios más complejos siguiendo patrones DDD, al mismo tiempo que puede implementar microservicios guiados por datos más simples (un único CRUD en un solo nivel) de una forma más sencilla.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 

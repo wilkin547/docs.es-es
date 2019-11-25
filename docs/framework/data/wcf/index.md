@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779992"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975230"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (anteriormente conocido como "ADO.net Data Services") es un componente de la .NET Framework que le permite crear servicios que utilizan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer y consumir datos en Internet o en una intranet mediante la semántica de estado de [representación. Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Para tener acceso a los datos y cambiarlos se utilizan los verbos HTTP estándar GET, PUT, POST y DELETE. OData usa las convenciones de entidad-relación del [Entity Data Model](../adonet/entity-data-model.md) para exponer los recursos como conjuntos de entidades que se relacionan mediante asociaciones.
+WCF Data Services (anteriormente conocido como "ADO.NET Data Services") es un componente de la .NET Framework que le permite crear servicios que usan Open Data Protocol (OData) para exponer y consumir datos en Internet o en una intranet mediante la semántica de [transferencia de estado representacional (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Para tener acceso a los datos y cambiarlos se utilizan los verbos HTTP estándar GET, PUT, POST y DELETE. OData usa las convenciones de entidad-relación del [Entity Data Model](../adonet/entity-data-model.md) para exponer los recursos como conjuntos de entidades que se relacionan mediante asociaciones.
 
-WCF Data Services usa el protocolo OData para direccionar y actualizar los recursos. De esta manera, puede tener acceso a estos servicios desde cualquier cliente que admita OData. OData permite solicitar y escribir datos en los recursos mediante formatos de transferencia conocidos: Atom, un conjunto de estándares para intercambiar y actualizar datos como XML y notación de objetos JavaScript (JSON), un formato de intercambio de datos basado en texto que se usa en las aplicaciones AJAX.
+WCF Data Services usa el protocolo OData para direccionar y actualizar los recursos. De esta manera, puede tener acceso a estos servicios desde cualquier cliente que admita OData. OData le permite solicitar y escribir datos en los recursos mediante formatos de transferencia conocidos: Atom, un conjunto de estándares para intercambiar y actualizar datos como XML, y notación de objetos JavaScript (JSON), un formato de intercambio de datos basado en texto que se usa mucho en AJAX programas.
 
 WCF Data Services pueden exponer datos procedentes de varios orígenes como fuentes de OData. Las herramientas de Visual Studio facilitan la creación de un servicio basado en OData mediante un modelo de datos de ADO.NET Entity Framework. También puede crear fuentes de OData basadas en clases de Common Language Runtime (CLR) e incluso datos enlazados en tiempo de ejecución o sin tipo.
 
@@ -40,19 +40,19 @@ Simplemente mostrarme parte del código...
 
 - [Inicio rápido](quickstart-wcf-data-services.md)
 
-- [Cómo: Ejecutar consultas de servicio de datos](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Cómo: ejecutar consultas de servicios de datos](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
+- [Cómo: enlazar datos a elementos de Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
 
 Deseo obtener más información acerca de OData...
 
-- [Notas del producto Introducción a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Notas del producto: introducción a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Sitio web de Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-- [OData SKD](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-- [OData Preguntas más frecuentes](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData: preguntas más frecuentes](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 Quiero ver algunos vídeos...
 
@@ -60,7 +60,7 @@ Quiero ver algunos vídeos...
 
 - [Vídeos para desarrolladores de Servicios de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=220861)
 
-- [OData Sitio web de desarrolladores](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData: sitio web para desarrolladores](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 Deseo ver ejemplos de un extremo a otro...
 
@@ -68,7 +68,7 @@ Deseo ver ejemplos de un extremo a otro...
 
 - [Otros ejemplos de Servicios de datos de WCF en la galería de ejemplos de MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
 
-- [OData SKD](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 ¿Cómo se integra con Visual Studio?
 
@@ -82,7 +82,7 @@ Deseo ver ejemplos de un extremo a otro...
 
 - [Información general](wcf-data-services-overview.md)
 
-- [Notas del producto Introducción a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Notas del producto: introducción a OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Escenarios de aplicación](application-scenarios-wcf-data-services.md)
 
@@ -100,7 +100,7 @@ Deseo usar LINQ...
 
 - [Consideraciones sobre LINQ](linq-considerations-wcf-data-services.md)
 
-- [Cómo: Ejecutar consultas de servicio de datos](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Cómo: ejecutar consultas de servicios de datos](how-to-execute-data-service-queries-wcf-data-services.md)
 
 Todavía necesito más información...
 

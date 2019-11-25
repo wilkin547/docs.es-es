@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960142"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138138"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelación en subprocesos administrados
 A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la cancelación cooperativa de operaciones asincrónicas o sincrónicas de ejecución prolongada. Este modelo se basa en un objeto ligero denominado token de cancelación. El objeto que invoca una o más operaciones cancelables, por ejemplo creando un nuevo subproceso o tarea, pasa el token a cada operación. Las operaciones individuales pueden pasar a su vez copias del token a otras operaciones. En algún momento posterior, el objeto que creó el token puede usarlo para solicitar que las operaciones se detengan. Solo el objeto solicitante puede emitir la solicitud de cancelación y cada agente de escucha es responsable de observar la solicitud y responder a ella de manera puntual.  

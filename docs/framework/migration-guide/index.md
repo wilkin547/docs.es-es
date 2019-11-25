@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457952"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974986"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Guía de migración a .NET Framework 4.8, 4.7, 4.6 y 4.5
 
@@ -40,6 +40,5 @@ Consulte los documentos siguientes antes de migrar la aplicación de versiones a
 - [Cómo: Configurar una aplicación para que admita .NET Framework 4 o versiones posteriores](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Novedades](../whats-new/index.md)
 - [Lo obsoleto en la biblioteca de clases](../whats-new/whats-obsolete.md)
-- [Información sobre versión y ensamblado de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=201701)
-- [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
+- [Directiva de soporte técnico oficial de .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Problemas de migración de .NET Framework 4](net-framework-4-migration-issues.md)

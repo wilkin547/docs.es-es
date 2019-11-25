@@ -1,56 +1,56 @@
 ---
-title: Procedimiento para importar el WSDL personalizado
+title: Cómo importar WSDL personalizado
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 930cb92d8193ba3ffc1f62191f2012e104091190
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 10fc3282560d35e61044a367f8172571096d76bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796991"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975888"
 ---
-# <a name="how-to-import-custom-wsdl"></a>Procedimiento para importar el WSDL personalizado
+# <a name="how-to-import-custom-wsdl"></a>Cómo importar WSDL personalizado
 En este tema se describe cómo importar WSDL personalizado. Para administrar el WSDL personalizado, debe implementar la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
   
 ### <a name="to-import-custom-wsdl"></a>Para importar el WSDL personalizado  
   
 1. Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension>. Implemente el método <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> para modificar los metadatos antes de que se importen. Implemente los métodos <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> y <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> para modificar contratos y extremos importados de los metadatos. Para tener acceso al contrato o punto de conexión importados, utilice el objeto de contexto (<xref:System.ServiceModel.Description.WsdlContractConversionContext> correspondiente o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):  
   
-    ```  
-    public class WsdlDocumentationImporter : IWsdlImportExtension  
-       {  
-          public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
-    {  
-            // Contract documentation  
-         if (context.WsdlPortType.Documentation != null)  
-         {  
-               context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));  
-    }  
-    // Operation documentation  
-    foreach (Operation operation in context.WsdlPortType.Operations)  
-    {  
-    if (operation.Documentation != null)  
-    {  
-    OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);  
-    if (operationDescription != null)  
-    {  
-                            operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));  
-    }  
-    }  
-    }  
-    }  
-  
-    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)   
-            {  
-                Console.WriteLine("BeforeImport called.");  
-            }  
-  
-    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)   
-            {  
-                Console.WriteLine("ImportEndpoint called.");  
-            }  
-       }  
-    ```  
+    ```csharp
+    public class WsdlDocumentationImporter : IWsdlImportExtension
+    {
+        public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)
+        {
+            // Contract documentation
+            if (context.WsdlPortType.Documentation != null)
+            {
+                context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));
+            }
+            // Operation documentation
+            foreach (Operation operation in context.WsdlPortType.Operations)
+            {
+                if (operation.Documentation != null)
+                {
+                    OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);
+                    if (operationDescription != null)
+                    {
+                        operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));
+                    }
+                }
+            }
+        }
+
+        public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)
+        {
+            Console.WriteLine("BeforeImport called.");
+        }
+
+        public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)
+        {
+            Console.WriteLine("ImportEndpoint called.");
+        }
+    }
+    ```
   
 2. Configure la aplicación de cliente para utilizar el importador de WSDL personalizado. Tenga en cuenta que si está utilizando Svcutil.exe, debería agregar esta configuración al archivo de configuración para Svcutil.exe (Svcutil.exe.config):  
   
@@ -73,8 +73,9 @@ En este tema se describe cómo importar WSDL personalizado. Para administrar el 
   
 3. Cree una nueva instancia <xref:System.ServiceModel.Description.WsdlImporter> (pasar la instancia <xref:System.ServiceModel.Description.MetadataSet> que contiene los documentos WSDL que desea importar) y llame a <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:  
   
-    ```  
-    WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
+    ```csharp
+    WsdlImporter importer = new WsdlImporter(metaDocs);
+    System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
 ## <a name="see-also"></a>Vea también

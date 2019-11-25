@@ -2,12 +2,12 @@
 title: Diseño de la capa de persistencia de infraestructura
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre el modelo de repositorio en el diseño de la capa de persistencia de infraestructura.
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674122"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737950"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Diseño del nivel de persistencia de infraestructura
 
@@ -33,9 +33,11 @@ Si el usuario realiza cambios, los datos que se van a actualizar proceden de la 
 
 Es importante destacar de nuevo que solo se debe definir un repositorio para cada raíz agregada, como se muestra en la figura 7-17. Para lograr el objetivo de la raíz agregada de mantener la coherencia transaccional entre todos los objetos del agregado, nunca se debe crear un repositorio para cada tabla de la base de datos.
 
-![Relaciones entre las capas de infraestructura y de dominio: el agregado Comprador depende del IBuyerRepository y el agregado Pedido depende de las interfaces de IOrderRepository, estas interfaces se implementan en el nivel de infraestructura por los repositorios correspondientes que dependen de UnitOfWork, también implementada allí, que accede a las tablas del nivel de datos.](./media/image18.png)
+![Diagrama que muestra las relaciones de dominio y otra infraestructura.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. La relación entre repositorios, agregados y tablas de base de datos
+
+En el diagrama anterior se muestran las relaciones entre las capas de dominio e infraestructura: el agregado Comprador depende del IBuyerRepository y el agregado Pedido depende de las interfaces de IOrderRepository, estas interfaces se implementan en el nivel de infraestructura por los repositorios correspondientes que dependen de UnitOfWork, también implementada allí, que accede a las tablas del nivel de datos.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Aplicación de una raíz agregada por repositorio
 
@@ -117,7 +119,7 @@ Los repositorios pueden ser útiles, pero no esenciales para el diseño de DDD, 
 - **The Repository Pattern** \ (El modelo de repositorio)\
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software)\ (Libro; incluye un debate sobre el patrón de repositorio) \
+- **Eric Evans. Diseño orientado al dominio: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software)\ (Libro; incluye un debate sobre el patrón de repositorio) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Patrón de unidades de trabajo

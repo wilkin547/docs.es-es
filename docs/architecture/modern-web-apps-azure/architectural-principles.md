@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pri
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373763"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416688"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -75,7 +75,7 @@ En lugar de duplicar la lógica, se puede encapsular en una construcción de pro
 
 ### <a name="persistence-ignorance"></a>Omisión de persistencia
 
-La **Omisión de persistencia** (PI) hace referencia a los tipos que se deben conservar, pero cuyo código no se ve afectado por la elección de la tecnología de persistencia. En .NET, estos tipos a veces se denominan objeto CRL estándar (POCO), ya que no necesitan heredar de una clase base concreta o implementar una interfaz determinada. La omisión de persistencia es útil porque permite conservar el mismo modelo de negocio de varias formas, lo que ofrece flexibilidad adicional a la aplicación. Es posible que las opciones de persistencia cambien con el tiempo, de una tecnología de base de datos a otra, o bien que se necesiten otras formas de persistencia además de las iniciales de la aplicación (por ejemplo, el uso de una caché en Redis o Azure DocumentDb además de un base de datos relacional).
+La **Omisión de persistencia** (PI) hace referencia a los tipos que se deben conservar, pero cuyo código no se ve afectado por la elección de la tecnología de persistencia. En .NET, estos tipos a veces se denominan objeto CRL estándar (POCO), ya que no necesitan heredar de una clase base concreta o implementar una interfaz determinada. La omisión de persistencia es útil porque permite conservar el mismo modelo de negocio de varias formas, lo que ofrece flexibilidad adicional a la aplicación. Es posible que las opciones de persistencia cambien con el tiempo, de una tecnología de base de datos a otra, o bien que se necesiten otras formas de persistencia además de las iniciales de la aplicación (por ejemplo, el uso de una caché en Redis o Azure Cosmos DB además de un base de datos relacional).
 
 Algunos ejemplos de las infracciones de este principio son estos:
 

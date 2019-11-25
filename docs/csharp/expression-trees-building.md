@@ -2,13 +2,14 @@
 title: Crear árboles de expresión
 description: Obtenga información sobre técnicas para crear árboles de expresión.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207194"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037092"
 ---
 # <a name="building-expression-trees"></a>Crear árboles de expresión
 
@@ -16,7 +17,7 @@ ms.locfileid: "36207194"
 
 Hasta ahora, todos los árboles de expresión que ha visto se han creado con el compilador de C#. Todo lo que tenía que hacer era crear una expresión lambda que se asignaba a una variable de tipo `Expression<Func<T>>` o de algún tipo similar. Esa no es la única manera de crear un árbol de expresión. En muchos escenarios, puede que necesite crear una expresión en memoria en tiempo de ejecución. 
 
-Crear árboles de expresión es complicado por el hecho de que esos árboles de expresión son inmutables. Inmutable significa que debe crear el árbol desde las hojas hasta la raíz. Las API que usará para crear los árboles de expresión reflejan este hecho: los métodos que usará para crear un nodo toman todos sus elementos secundarios como argumentos. Veamos algunos ejemplos para mostrarle las técnicas.
+Crear árboles de expresión es complicado por el hecho de que esos árboles de expresión son inmutables. Inmutable significa que debe crear el árbol desde las hojas hasta la raíz. Las API que usará para crear árboles de expresión reflejan este hecho: los métodos que usará para compilar un nodo toman todos sus elementos secundarios como argumentos. Veamos algunos ejemplos para mostrarle las técnicas.
 
 ## <a name="creating-nodes"></a>Crear nodos
 

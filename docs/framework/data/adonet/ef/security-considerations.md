@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039865"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968416"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen las consideraciones de seguridad específicas para el desarrollo, la implementación y la ejecución de aplicaciones Entity Framework. También debe seguir las recomendaciones para crear aplicaciones de .NET Framework seguras. Para obtener más información, vea [información general sobre seguridad](../security-overview.md).  
@@ -119,11 +119,11 @@ En este tema se describen las consideraciones de seguridad específicas para el 
  Evite devolver tipos <xref:System.Linq.IQueryable%601> desde métodos expuestos a autores de llamadas que pueden no ser de confianza por las siguientes razones:  
   
 - Un consumidor de una consulta que expone un tipo <xref:System.Linq.IQueryable%601> podría llamar a métodos sobre el resultado que exponen datos seguros o aumenta el tamaño del conjunto de resultados. Por ejemplo, considere la siguiente firma de método:  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Un consumidor de esta consulta podría llamar a `.Include("Orders")` sobre el `IQueryable<Customer>` devuelto para recuperar datos que la consulta no pretendía exponer. Esto se puede evitar cambiando el tipo de valor devuelto del método a <xref:System.Collections.Generic.IEnumerable%601> y llamando a un método (como `.ToList()`) que materialice los resultados.  
   
 - Puesto que las consultas <xref:System.Linq.IQueryable%601> se ejecutan al iterar sobre los resultados, un consumidor de una consulta que expone un tipo <xref:System.Linq.IQueryable%601> podría interceptar las excepciones que se producen. Las excepciones podrían contener información no destinada para el consumidor.  

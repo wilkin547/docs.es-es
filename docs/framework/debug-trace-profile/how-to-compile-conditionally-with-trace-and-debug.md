@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para compilar con Trace y Debug de forma condicional
+title: 'Cómo: Realizar compilación condicional con Trace y Debug'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052746"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975580"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedimiento para compilar con Trace y Debug de forma condicional
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Cómo: Realizar compilación condicional con Trace y Debug
 Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de depuración aparecen en la ventana Salida de Visual Studio. Pero para incluir características de seguimiento en una aplicación implementada, tendrá que compilar las aplicaciones instrumentadas con la directiva de compilador **TRACE** habilitada. Esto permite que el código de seguimiento se compile en la versión de lanzamiento de la aplicación. Si no habilita la directiva **TRACE**, se ignorará todo el código de seguimiento durante la compilación y no se incluirá en el código ejecutable que se va a implementar.  
   
  Los métodos de depuración y seguimiento tienen atributos condicionales asociados. Por ejemplo, si el atributo condicional para el seguimiento es **true**, todas las instrucciones de seguimiento se incluyen dentro de un ensamblado (un archivo .exe o .dll compilado); si el atributo condicional de **Trace** es **false**, no se incluyen las instrucciones de seguimiento.  
   
- Para una compilación puede tener activados ambos, uno o ninguno de los atributos condicionales **Trace** o **Debug**. Por lo tanto, hay cuatro tipos de compilación: **Debug**, **Trace**, ambos o ninguno. Algunas compilaciones de versión para la implementación de producción pueden no contener ninguno; la mayoría de las compilaciones de depuración contienen ambos.  
+ Para una compilación puede tener activados ambos, uno o ninguno de los atributos condicionales **Trace** o **Debug**. Por tanto, hay cuatro tipos de compilación: **Debug**, **Trace**, ambos o ninguno. Algunas compilaciones de versión para la implementación de producción pueden no contener ninguno; la mayoría de las compilaciones de depuración contienen ambos.  
   
  La configuración del compilador para la aplicación se puede configurar de varias maneras:  
   
@@ -73,7 +73,7 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 1. Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.  
   
-    |Idioma|Instrucción|Resultado|  
+    |Lenguaje|Instrucción|Resultado|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Habilita el seguimiento|  
     ||**#CONST TRACE = false**|Deshabilita el seguimiento|  
@@ -98,9 +98,9 @@ Convierta en comentario la directiva de compilador.
 ## <a name="see-also"></a>Vea también
 
 - [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
-- [Procedimientos: Crear, inicializar y configurar modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md)
+- [Creación, inicialización y configuración de modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md)
 - [Modificadores de seguimiento](trace-switches.md)
 - [Agentes de escucha de seguimiento](trace-listeners.md)
-- [Procedimientos: Agregar instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
-- [Procedimientos: Establecer variables de entorno para la línea de comandos de Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Cómo: Invocar al compilador de la línea de comandos](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Cómo establecer variables de entorno para la línea de comandos de Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Invocar al compilador de la línea de comandos](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

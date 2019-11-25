@@ -2,12 +2,12 @@
 title: Incluir en un contenedor aplicaciones monolíticas
 description: Incluir en un contenedor aplicaciones monolíticas, aunque no obtenga todos los beneficios de la arquitectura de microservicios, tiene ventajas importantes de implementación que se pueden entregar inmediatamente.
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771477"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738010"
 ---
 # <a name="containerizing-monolithic-applications"></a>Incluir en un contenedor aplicaciones monolíticas
 
@@ -15,11 +15,11 @@ Puede compilar una aplicación o un servicio web único, implementado de forma m
 
 Para administrar este modelo, debe implementar un único contenedor para representar la aplicación. Para aumentar la capacidad, deberá escalar horizontalmente, es decir, solo tiene que agregar más copias con un equilibrador de carga delante. La simplicidad proviene de administrar una única implementación en un solo contenedor o máquina virtual.
 
-![Una aplicación en contenedores monolítica tiene la mayor parte de su funcionalidad en un solo contenedor, con capas internas o bibliotecas, y escala horizontalmente mediante la clonación del contenedor en varios servidores o máquinas virtuales](./media/image1.png)
+![Diagrama que muestra los componentes de una aplicación en contenedor monolítica.](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **Figura 4-1**. Ejemplo de la arquitectura de una aplicación monolítica en contenedores
 
-Puede incluir varios componentes, bibliotecas o capas internas en cada contenedor, como se muestra en la figura 4-1. Con todo, este patrón monolítico puede entrar en conflicto con el principio de contenedor "un contenedor realiza una acción y lo hace en un proceso", pero podría ser correcto en algunos casos.
+Puede incluir varios componentes, bibliotecas o capas internas en cada contenedor, como se muestra en la figura 4-1. Una aplicación en contenedor monolítica tiene la mayor parte de su funcionalidad en un solo contenedor, con capas internas o bibliotecas, y escala horizontalmente mediante la clonación del contenedor en varios servidores o máquinas virtuales. Con todo, este patrón monolítico puede entrar en conflicto con el principio de contenedor "un contenedor realiza una acción y lo hace en un proceso", pero podría ser correcto en algunos casos.
 
 El inconveniente de este enfoque se vuelve evidente si la aplicación aumenta y debe escalarse. Si puede escalar toda la aplicación, no es realmente un problema. Sin embargo, en la mayoría de los casos, solo unos pocos elementos de la aplicación son los puntos de obstrucción que deben escalarse, mientras que otros componentes se usan menos.
 
@@ -31,7 +31,7 @@ Sin embargo, el enfoque monolítico es común, porque el desarrollo de la aplica
 
 Desde una perspectiva de la infraestructura, cada servidor puede ejecutar muchas aplicaciones dentro del mismo host y tener una proporción aceptable de eficacia en el uso de recursos, como se muestra en la figura 4-2.
 
-![Un host puede ejecutar varias aplicaciones monolíticas, cada una de ellas en un contenedor independiente.](./media/image2.png)
+![Diagrama que muestra un host que ejecuta muchas aplicaciones en contenedores.](./media/containerize-monolithic-applications/host-multiple-apps-containers.png)
 
 **Figura 4-2**. Aplicación monolítica: el host ejecuta varias aplicaciones, y cada una se ejecuta como un contenedor.
 
@@ -39,7 +39,7 @@ Las aplicaciones monolíticas en Microsoft Azure se pueden implementar con máqu
 
 Como un entorno de control de calidad o un entorno de producción limitado, puede implementar varias máquinas virtuales de host de Docker y equilibrarlas con el equilibrador de Azure, tal como se muestra en la figura 4-3. Esto le permite administrar el escalado con un enfoque más general, porque toda la aplicación reside dentro de un único contenedor.
 
-![Varios hosts, cada uno ejecutando un contenedor con la aplicación monolítica.](./media/image3.png)
+![Diagrama que muestra varios hosts que ejecutan los contenedores de aplicaciones monolíticas.](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **Figura 4-3**. Ejemplo de varios hosts que escalan verticalmente una sola aplicación de contenedor
 
@@ -59,7 +59,7 @@ Si bien las aplicaciones monolíticas pueden beneficiarse de Docker, estamos exa
 
 Tanto si quiere obtener la validación de un contenedor implementado en Azure o cuando una aplicación es simplemente una aplicación de un solo contenedor, Azure App Service proporciona una excelente manera de proporcionar servicios escalables basados en un solo contenedor. Usar Azure App Service es sencillo. Proporciona una integración excelente con Git para que resulte sencillo tomar el código, crearlo en Visual Studio e implementarlo directamente en Azure.
 
-![El asistente de publicación de una aplicación de contenedor único en Azure App Service desde Visual Studio](./media/image4.png)
+![Captura de pantalla del cuadro de diálogo Crear servicio de aplicaciones que muestra una instancia de Container Registry.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
 **Figura 4-4**. Publicar una aplicación de contenedor único en Azure App Service desde Visual Studio
 

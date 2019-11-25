@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790392"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975191"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialización de objetos (Servicios de datos de WCF)
 
-Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consumir una fuente en una aplicación cliente basada en .NET Framework, se generan clases de datos equivalentes para cada tipo de entidad en el modelo de datos expuesto por la fuente. Para obtener más información, vea [generar la biblioteca de cliente del servicio de datos](generating-the-data-service-client-library-wcf-data-services.md). Los datos de entidad devueltos por una consulta se materializan en una instancia de una de estas clases de servicio de datos de cliente generadas. Para obtener información sobre las opciones de combinación y la resolución de identidad para los objetos sometidos a seguimiento, vea [administrar el contexto del servicio de datos](managing-the-data-service-context-wcf-data-services.md).
+Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para consumir una fuente de Open Data Protocol (OData) en una aplicación cliente basada en .NET Framework, se generan clases de datos equivalentes para cada tipo de entidad del modelo de datos expuesto por la fuente. Para obtener más información, vea [generar la biblioteca de cliente del servicio de datos](generating-the-data-service-client-library-wcf-data-services.md). Los datos de entidad devueltos por una consulta se materializan en una instancia de una de estas clases de servicio de datos de cliente generadas. Para obtener información sobre las opciones de combinación y la resolución de identidad para los objetos sometidos a seguimiento, vea [administrar el contexto del servicio de datos](managing-the-data-service-context-wcf-data-services.md).
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] también le permite definir sus propias clases de servicio de datos de cliente en lugar de usar las clases de datos generadas por herramientas. De esta forma, puede usar sus propias clases de datos, que también se conocen como clases de datos "tipos de objetos CLR antiguos sin formato" (POCO). Al utilizar estos tipos de clases de datos personalizadas, debe atribuir la clase de datos <xref:System.Data.Services.Common.DataServiceKeyAttribute> con <xref:System.Data.Services.Common.DataServiceEntityAttribute> o y asegurarse de que los nombres de tipo en el cliente coincidan con los nombres de tipo en el modelo de datos del servicio de datos.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] también le permite definir sus propias clases de servicio de datos de cliente en lugar de usar las clases de datos generadas por herramientas. De esta forma, puede usar sus propias clases de datos, que también se conocen como clases de datos "tipos de objetos CLR antiguos sin formato" (POCO). Al utilizar estos tipos de clases de datos personalizadas, debe atribuir la clase de datos con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> y asegurarse de que los nombres de tipo en el cliente coincidan con los nombres de tipo en el modelo de datos del servicio de datos.
 
-Una vez que la Biblioteca recibe el mensaje de respuesta de la consulta, materializa los datos [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] devueltos de la fuente en instancias de las clases del servicio de datos del cliente que son del tipo de la consulta. El proceso general para materializar estos objetos es el siguiente:
+Una vez que la Biblioteca recibe el mensaje de respuesta de la consulta, materializa los datos devueltos de la fuente de OData en instancias de las clases del servicio de datos del cliente que son del tipo de la consulta. El proceso general para materializar estos objetos es el siguiente:
 
 1. La biblioteca de cliente lee el tipo serializado desde el elemento `entry` en la fuente del mensaje de respuesta e intenta crear una nueva instancia del tipo correcto de una de estas formas:
 

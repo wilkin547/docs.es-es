@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tra
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117302"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966879"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -282,7 +282,7 @@ El primer DbContext es \_catalogContext y el segundo DbContext está dentro del 
 
 Aunque EF Core es una opción excelente para administrar la persistencia, y en su mayor parte encapsula los detalles de base de datos de los desarrolladores de aplicaciones, no es la única opción. Otra alternativa de código abierto popular es [Dapper](https://github.com/StackExchange/Dapper), lo que se denomina un micro-ORM. Un micro-ORM es una herramienta ligera y menos completa para la asignación de objetos a estructuras de datos. En el caso de Dapper, sus objetivos de diseño se centran en el rendimiento, en lugar de encapsular totalmente las consultas subyacentes que usa para recuperar y actualizar los datos. Como no abstrae SQL del desarrollador, Dapper es "más cercano al sistema operativo" y permite a los desarrolladores escribir las consultas exactas que quieren usar para una operación de acceso a datos determinada.
 
-EF Core proporciona dos características importantes que lo diferencian de Dapper, pero que también se agregan a su sobrecarga de rendimiento. La primera es la traducción de expresiones LINQ a SQL. Estas traducciones se almacenan en caché, pero aun así hay sobrecarga la primera vez que se realizan. La segunda es el seguimiento de los cambios en las entidades (para poder generar instrucciones de actualización eficaces). Este comportamiento se puede desactivar para consultas específicas mediante la extensión AsNotTracking. EF Core también genera consultas SQL que suelen ser muy eficaces y en cualquier caso perfectamente aceptables desde la perspectiva del rendimiento, pero si se necesita un control preciso sobre la consulta específica que se va a ejecutar, también se puede pasar código SQL personalizado (o ejecutar un procedimiento almacenado) con EF Core. En este caso, Dapper también supera a EF Core, pero solo ligeramente. Julie Lerman presenta algunos datos de rendimiento en su artículo de MSDN de mayo de 2016 [Dapper, Entity Framework y aplicaciones híbridas](https://msdn.microsoft.com/magazine/mt703432.aspx). En [el sitio de Dapper](https://github.com/StackExchange/Dapper) se pueden encontrar datos de pruebas comparativas de rendimiento adicionales para una amplia variedad de métodos de acceso a datos.
+EF Core proporciona dos características importantes que lo diferencian de Dapper, pero que también se agregan a su sobrecarga de rendimiento. La primera es la traducción de expresiones LINQ a SQL. Estas traducciones se almacenan en caché, pero aun así hay sobrecarga la primera vez que se realizan. La segunda es el seguimiento de los cambios en las entidades (para poder generar instrucciones de actualización eficaces). Este comportamiento se puede desactivar para consultas específicas mediante la extensión AsNotTracking. EF Core también genera consultas SQL que suelen ser muy eficaces y en cualquier caso perfectamente aceptables desde la perspectiva del rendimiento, pero si se necesita un control preciso sobre la consulta específica que se va a ejecutar, también se puede pasar código SQL personalizado (o ejecutar un procedimiento almacenado) con EF Core. En este caso, Dapper también supera a EF Core, pero solo ligeramente. Julie Lerman presenta algunos datos de rendimiento en su artículo de MSDN de mayo de 2016 [Dapper, Entity Framework y aplicaciones híbridas](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps). En [el sitio de Dapper](https://github.com/StackExchange/Dapper) se pueden encontrar datos de pruebas comparativas de rendimiento adicionales para una amplia variedad de métodos de acceso a datos.
 
 Para ver cómo varía la sintaxis de Dapper con respecto a EF Core, tenga en cuenta estas dos versiones del mismo método para recuperar una lista de elementos:
 
@@ -342,20 +342,20 @@ En las bases de datos NoSQL se pueden almacenar varias versiones de los objetos,
 
 Las bases de datos NoSQL normalmente no aplican [ACID](https://en.wikipedia.org/wiki/ACID), lo que significa que tienen ventajas de rendimiento y escalabilidad con respecto a las bases de datos relacionales. Son adecuadas para conjuntos de datos y objetos muy grandes que no son adecuados para el almacenamiento en estructuras de tabla normalizadas. No hay ninguna razón para que una aplicación no pueda aprovechar las ventajas de las bases de datos relacionales y NoSQL, y usar cada una cuando sea más adecuado.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB es un servicio de base de datos NoSQL completamente administrado que ofrece almacenamiento de datos sin esquema basado en la nube. DocumentDB se ha creado para rendimiento rápido y predecible, alta disponibilidad, escalado elástico y distribución global. A pesar de ser una base de datos NoSQL, los desarrolladores pueden usar funciones de consulta SQL enriquecidas y conocidas en los datos JSON. Todos los recursos de DocumentDB se almacenan como documentos JSON. Los recursos se administran como _elementos_, que son documentos que contienen metadatos, y _fuentes_, que son colecciones de elementos. En la figura 8-2 se muestra la relación entre los diferentes recursos de DocumentDB.
+Azure Cosmos DB es un servicio de base de datos NoSQL completamente administrado que ofrece almacenamiento de datos sin esquema basado en la nube. Azure Cosmos DB se ha creado para rendimiento rápido y predecible, alta disponibilidad, escalado elástico y distribución global. A pesar de ser una base de datos NoSQL, los desarrolladores pueden usar funciones de consulta SQL enriquecidas y conocidas en los datos JSON. Todos los recursos de Azure Cosmos DB se almacenan como documentos JSON. Los recursos se administran como _elementos_, que son documentos que contienen metadatos, y _fuentes_, que son colecciones de elementos. En la figura 8-2 se muestra la relación entre los diferentes recursos de Azure Cosmos DB.
 
-![La relación jerárquica entre los recursos de DocumentDB, una base de datos JSON NoSQL](./media/image8-2.png)
+![La relación jerárquica entre los recursos de Azure Cosmos DB, una base de datos JSON NoSQL](./media/image8-2.png)
 
-**Figura 8-2.** Organización de recursos de DocumentDB.
+**Figura 8-2.** Organización de recursos de Azure Cosmos DB.
 
-El lenguaje de consulta DocumentDB es una interfaz sencilla pero eficaz para consultar documentos JSON. El lenguaje admite un subconjunto de la gramática SQL ANSI y agrega integración profunda de matrices de objetos JavaScript, construcción de objetos e invocación de funciones.
+El lenguaje de consulta de Azure Cosmos DB es una interfaz sencilla, pero eficaz, para consultar documentos JSON. El lenguaje admite un subconjunto de la gramática SQL ANSI y agrega integración profunda de matrices de objetos JavaScript, construcción de objetos e invocación de funciones.
 
-**Referencias: DocumentDB**
+**Referencias: Azure Cosmos DB**
 
-- Introducción a DocumentDB  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Introducción a Azure Cosmos DB  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Otras opciones de persistencia
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104946"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454620"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selección de la versión de .NET Core que se va a usar
 
@@ -39,7 +39,7 @@ Puede beneficiarse de las características y mejoras del SDK más reciente mient
 
 En raras ocasiones, es posible que tenga que usar una versión anterior del SDK. Esa versión se especifica en un [archivo *global.json*](../tools/global-json.md). La directiva "usar la versión más reciente" significa que solo se usa *global.json* para especificar una versión del SDK de .NET Core anterior a la versión instalada más reciente.
 
-*global.json* se puede colocar en cualquier lugar de la jerarquía de archivos. La CLI busca el primer archivo *global.json* hacia arriba desde el directorio del proyecto. Puede controlar a qué proyectos se aplica un archivo *global.json* determinado mediante su lugar en el sistema de archivos. La CLI de .NET busca un archivo *global.json* de forma iterativa desplazándose hacia arriba en la ruta de acceso desde el directorio de trabajo actual. El primer archivo *global.json* que se encuentra especifica la versión que se usa. Si esa versión está instalada, es la que se usa. Si no se encuentra el SDK especificado en *global.json*, la CLI de .NET se pone al día con el SDK instalado más reciente. La puesta al día se equipara al comportamiento predeterminado cuando no se encuentra ningún archivo *global.json*.
+*global.json* se puede colocar en cualquier lugar de la jerarquía de archivos. La CLI busca el primer archivo *global.json* hacia arriba desde el directorio del proyecto. Puede controlar a qué proyectos se aplica un archivo *global.json* determinado mediante su lugar en el sistema de archivos. La CLI de .NET busca un archivo *global.json* de forma iterativa desplazándose hacia arriba en la ruta de acceso desde el directorio de trabajo actual. El primer archivo *global.json* que se encuentra especifica la versión que se usa. Si esa versión del SDK está instalada, es la que se usa. Si no se encuentra el SDK especificado en *global.json*, la CLI de .NET usa [reglas de coincidencia](../tools/global-json.md#matching-rules) para seleccionar un SDK compatible, o bien se produce un error si no se encuentra ninguno.
 
 En el ejemplo siguiente se muestra la sintaxis de *global.json*:
 

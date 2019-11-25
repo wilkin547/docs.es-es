@@ -1,5 +1,5 @@
 ---
-title: 'Procedimiento Usar argumentos nombrados y opcionales en la programación de Office: Guía de programación de C#'
+title: Procedimiento para usar argumentos opcionales y con nombre en la programación de Office - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002791"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970493"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento Usar argumentos nombrados y opcionales en la programación de Office (Guía de programación de C#)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento para usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)
 
 Los argumentos con nombre y los argumentos opcionales, introducidos en C# 4, mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.
 

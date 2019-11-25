@@ -1,14 +1,13 @@
 ---
 title: Apéndice-gRPC para desarrolladores de WCF
 description: Explicación de las transacciones distribuidas y su implementación en arquitecturas de microservicios modernas.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: d181eb07dd50ed338d02edb1908626e6ca3fb56c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 061aef016fd0e4303e1bbcbf0e73cec2b0c54f74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841682"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968215"
 ---
 # <a name="appendix-a---transactions"></a>Apéndice A: transacciones
 

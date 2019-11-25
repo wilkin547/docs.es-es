@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 3d64c4805abe38c80301748ffa6b35fc87563b60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403973"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036388"
 ---
 # <a name="new-operator-c-reference"></a>Operador new (referencia de C#)
 
@@ -48,9 +48,9 @@ Para crear una instancia de un [tipo anónimo](../../programming-guide/classes-a
 
 ## <a name="destruction-of-type-instances"></a>Destrucción de instancias de tipo
 
-No tiene que destruir instancias de tipo creadas anteriormente. Las instancias de tipos de valor y referencia se destruyen automáticamente. Las instancias de tipos de valor se destruyen en cuanto se destruye el contexto que las contiene. Las instancias de tipos de referencia las destruye el [recolector de elementos no utilizados](../../../standard/garbage-collection/index.md) en un momento no especificado después de eliminarse la última referencia a ellas.
+No tiene que destruir instancias de tipo creadas anteriormente. Las instancias de tipos de valor y referencia se destruyen automáticamente. Las instancias de tipos de valor se destruyen en cuanto se destruye el contexto que los contiene. Las instancias de tipos de referencia los destruye el [recolector de elementos no utilizados](../../../standard/garbage-collection/index.md) en un momento no especificado después de eliminarse la última referencia a ellos.
 
-Para los tipos que contienen recursos no administrados, como un identificador de archivo, lo recomendable es llevar a cabo una limpieza determinista para asegurarse de que los recursos que contienen se liberan tan pronto como sea posible. Para más información, vea la referencia de la API <xref:System.IDisposable?displayProperty=nameWithType> y el artículo sobre la [instrucción using](../keywords/using-statement.md).
+Para los tipos de instancia que contienen recursos no administrados, como un identificador de archivo, se recomienda realizar una limpieza determinista para asegurarse de que los recursos que contienen se liberan tan pronto como sea posible. Para más información, vea la referencia de la API <xref:System.IDisposable?displayProperty=nameWithType> y el artículo sobre la [instrucción using](../keywords/using-statement.md).
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 

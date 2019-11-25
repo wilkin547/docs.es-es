@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606733"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972712"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
 
@@ -117,4 +117,4 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 
 - [Opciones del compilador de C#](index.md)
 - [Opciones del compilador de C#, por orden alfabético](listed-alphabetically.md)
-- [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Establecimiento de variables de entorno para la línea de comandos de Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

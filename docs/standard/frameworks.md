@@ -1,19 +1,19 @@
 ---
-title: Versiones de .NET Framework de destino
+title: 'Plataformas de destino en proyectos de estilo SDK: .NET'
 description: Obtenga información sobre las plataforma de destino para las aplicaciones y bibliotecas de .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216660"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040998"
 ---
-# <a name="target-frameworks"></a>Versiones de .NET Framework de destino
+# <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 
 Cuando se dirige a un marco en una aplicación o biblioteca, debe especificar el conjunto de API que quiere poner a disposición de la aplicación o biblioteca. La plataforma de destino se especifica en el archivo del proyecto, mediante monikers de la plataforma de destino (TFM).
 
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-El sistema de compilación es consciente de los símbolos de preprocesador que representan las plataformas de destino que se muestran en la tabla [Versiones compatibles de las plataformas de destino](#supported-target-framework-versions). Cuando use un símbolo que representa un TFM de .NET Standard o .NET Core, reemplace el punto por un carácter de subrayado y cambie las letras minúsculas por mayúsculas (por ejemplo, el símbolo de `netstandard1.4` es `NETSTANDARD1_4`).
+El sistema de compilación es consciente de los símbolos de preprocesador que representan las plataformas de destino que se muestran en la tabla [Versiones compatibles de las plataformas de destino](#supported-target-framework-versions) cuando se usan proyectos de estilo SDK. Cuando use un símbolo que representa un TFM de .NET Standard o .NET Core, reemplace el punto por un carácter de subrayado y cambie las letras minúsculas por mayúsculas (por ejemplo, el símbolo de `netstandard1.4` es `NETSTANDARD1_4`).
 
 La lista completa de símbolos de preprocesador para plataformas de destino de .NET Core es:
 

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929006"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139816"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizar el modelo asincrónico basado en tareas
 
@@ -633,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operaciones intercaladas
- Hay un posible problema de rendimiento con el uso del método <xref:System.Threading.Tasks.Task.WhenAny%2A> para admitir un escenario de intercalación cuando se trabaja con conjuntos de tareas muy grandes.  Todas las llamadas a <xref:System.Threading.Tasks.Task.WhenAny%2A> resultan en el registro de una continuación con cada tarea. Para el número N de tareas, el resultado de O(N2) continuaciones creadas durante la vigencia de la operación de intercalación.  Si está trabajando con un gran conjunto de tareas, puede utilizar un combinador (`Interleaved` en el ejemplo siguiente) para solucionar el problema de rendimiento:
+ Hay un posible problema de rendimiento con el uso del método <xref:System.Threading.Tasks.Task.WhenAny%2A> para admitir un escenario de intercalación cuando se trabaja con conjuntos de tareas muy grandes. Todas las llamadas a <xref:System.Threading.Tasks.Task.WhenAny%2A> resultan en el registro de una continuación con cada tarea. Para un número N de tareas, el resultado son O(N<sup>2</sup>) continuaciones creadas durante la vigencia de la operación de intercalación. Si trabaja con un conjunto de tareas grande, puede usar un combinador (`Interleaved` en el ejemplo siguiente) para solucionar el problema de rendimiento:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

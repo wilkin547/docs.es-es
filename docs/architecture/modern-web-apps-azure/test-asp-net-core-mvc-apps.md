@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089694"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971541"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -285,12 +285,16 @@ Esta prueba funcional ejecuta la pila de la aplicación ASP.NET Core MVC o Razor
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Referencias: prueba de aplicaciones ASP.NET Core MVC
 >
-> - **Pruebas y depuración en ASP.NET Core**  
+> - **Pruebas y depuración en ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Convención de nomenclatura de prueba unitaria**  
+> - **Convención de nomenclatura de prueba unitaria** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **Pruebas de EF Core**  
+> - **Pruebas de EF Core** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
+> - **Pruebas de integración en ASP.NET Core** \
+>   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
+> - **Reunión de la comunidad de ASP.NET del 15 de mayo de 2018: pruebas de MVC con Javier C. Nelson** - Vídeo de YouTube \
+>   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Anterior](work-with-data-in-asp-net-core-apps.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Procedimiento Usar matrices y variables locales con tipo implícito en expresiones de consulta: Guía de programación de C#'
+title: Procedimiento para usar matrices y variables locales con tipo implícito en expresiones de consulta - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 3cb47f9e80e1fc067a8bac860aa06f3e1860d33d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6022aaa4c37bc0c11c09375d3637d8287fce61a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419317"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970437"
 ---
-# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedimiento Usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)
+# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedimiento para usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)
 Puede usar variables locales con tipo implícito siempre que quiera que el compilador determine el tipo de una variable local. Debe usar variables locales con tipo implícito para almacenar tipos anónimos, que a menudo se usan en las expresiones de consulta. En los ejemplos siguientes, se muestran los usos obligatorios y opcionales de las variables locales con tipo implícito en las consultas.  
   
  Las variables locales con tipo implícito se declaran mediante la palabra clave contextual [var](../../language-reference/keywords/var.md). Para obtener más información, vea [Variables locales con asignación implícita de tipos](./implicitly-typed-local-variables.md) y [Matrices con asignación implícita de tipos](../arrays/implicitly-typed-arrays.md).  

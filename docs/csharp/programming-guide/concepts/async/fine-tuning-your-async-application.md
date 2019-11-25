@@ -2,12 +2,12 @@
 title: Ajustar una aplicación asincrónica (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: a7c730992a9bbb4853b6451323e1c49bd19bdf42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924431"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970238"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Ajustar una aplicación asincrónica (C#)
 Puede agregar precisión y flexibilidad a sus aplicaciones asincrónicas mediante los métodos y las propiedades que el tipo <xref:System.Threading.Tasks.Task> pone a su disposición. Los temas de esta sección muestran ejemplos que usan <xref:System.Threading.CancellationToken> y métodos `Task` importantes como <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -20,7 +20,7 @@ Puede agregar precisión y flexibilidad a sus aplicaciones asincrónicas mediant
   
 - `WhenAll` devuelve una tarea que se completa cuando se completen todas las tareas de una colección.  
   
-     Para obtener más información y un ejemplo de código en el que se usa `WhenAll`, vea [Cómo: Ampliar el tutorial de Async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Para obtener más información y un ejemplo del uso de `WhenAll`, vea [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Esta sección contiene los siguientes ejemplos:  
   

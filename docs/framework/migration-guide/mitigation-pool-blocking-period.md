@@ -2,14 +2,12 @@
 title: 'Mitigación: período de bloqueo del grupo'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71f1b06e53b3851ca3f65edc1755527779b42a67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789960"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457846"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigación: período de bloqueo del grupo
 El período de bloqueo del grupo de conexiones se quito de las conexiones a bases de datos SQL de Azure.  
@@ -35,4 +33,4 @@ El período de bloqueo del grupo de conexiones se quito de las conexiones a base
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios en el runtime](runtime-changes-in-the-net-framework-4-6-2.md)
+- [Compatibilidad de aplicaciones](application-compatibility.md)

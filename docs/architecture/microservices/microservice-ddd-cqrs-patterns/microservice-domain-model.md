@@ -2,12 +2,12 @@
 title: Diseño de un modelo de dominio de microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los conceptos clave para diseñar un modelo de dominio orientado a un DDD
 ms.date: 10/08/2018
-ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676452"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737387"
 ---
 # <a name="design-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -31,11 +31,11 @@ Una entidad de dominio en DDD debe implementar la lógica del dominio o el compo
 
 En la figura 7-8 se muestra una entidad de dominio que implementa no solo los atributos de datos, sino también las operaciones o los métodos con lógica de dominio relacionada.
 
-![Una entidad del modelo de dominio implementa comportamientos a través de métodos, es decir, no es un modelo "anémico".](./media/image9.png)
+![Diagrama que muestra el patrón de una entidad de dominio.](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **Figura 7-8.** Ejemplo de un diseño de entidad de dominio en el que se implementan datos y comportamiento
 
-Evidentemente, en ocasiones puede tener entidades que no implementen ninguna lógica como parte de la clase de entidad. Esto puede ocurrir en entidades secundarias dentro de un agregado si la entidad secundaria no tiene ninguna lógica especial porque la mayor parte de la lógica se define en la raíz agregada. Si tiene un microservicio complejo con gran cantidad de lógica implementada en las clases de servicio en lugar de en las entidades de dominio, podría encontrarse en el modelo de dominio anémico que se explica en la sección siguiente.
+Una entidad del modelo de dominio implementa comportamientos a través de métodos, es decir, no es un modelo "anémico". Evidentemente, en ocasiones puede tener entidades que no implementen ninguna lógica como parte de la clase de entidad. Esto puede ocurrir en entidades secundarias dentro de un agregado si la entidad secundaria no tiene ninguna lógica especial porque la mayor parte de la lógica se define en la raíz agregada. Si tiene un microservicio complejo con gran cantidad de lógica implementada en las clases de servicio en lugar de en las entidades de dominio, podría encontrarse en el modelo de dominio anémico que se explica en la sección siguiente.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Diferencias entre el modelo de dominio y el modelo de dominio anémico
 
@@ -108,11 +108,11 @@ El propósito de una raíz agregada es asegurar la coherencia del agregado; debe
 
 En la figura 7-9 se pueden ver agregados de ejemplo como el de Comprador, que contiene una sola entidad (la raíz agregada Comprador). El agregado de pedido contiene varias entidades y un objeto de valor.
 
-![Un modelo de dominio de un DDD se compone de agregados, un agregado puede tener una sola entidad o más, y también puede incluir objetos de valor.](./media/image10.png)
+![Diagrama que compara un agregado de comprador y un agregado de pedido.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Figura 7-9**. Ejemplo de agregados con una o varias entidades
 
-Observe que el agregado Comprador podría tener entidades secundarias adicionales, según su dominio, como ocurre en el microservicio de pedidos de la aplicación de referencia eShopOnContainers. En la figura 7-9 solo se ilustra un caso en el que el comprador tiene una única entidad, como un ejemplo de agregado que solo contiene una raíz agregada.
+Un modelo de dominio de un DDD se compone de agregados, un agregado puede tener una sola entidad o más, y también puede incluir objetos de valor. Observe que el agregado Comprador podría tener entidades secundarias adicionales, según su dominio, como ocurre en el microservicio de pedidos de la aplicación de referencia eShopOnContainers. En la figura 7-9 solo se ilustra un caso en el que el comprador tiene una única entidad, como un ejemplo de agregado que solo contiene una raíz agregada.
 
 Con el fin de mantener la separación de agregados y límites claros entre ellos, un procedimiento recomendado en un modelo de dominio de DDD consiste en no permitir la navegación directa entre agregados y tener solo el campo de clave externa (FK), como se implementa en el [modelo de dominio de microservicio Ordering](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) en eShopOnContainers. La entidad Order solo tiene un campo de clave externa para el comprador, pero no una propiedad de navegación de EF Core, como se muestra en el código siguiente:
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052036"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975671"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
-El instalador de .NET Framework 4.5 usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
+El instalador de .NET Framework 4.5 usa el [Administrador de reinicio](/windows/win32/rstmgr/about-restart-manager) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Razones para reiniciar  
  La instalación de .NET Framework 4.5 requiere un reinicio del sistema si una aplicación de .NET Framework 4 está en uso durante la instalación. Esto se debe a que .NET Framework 4.5 reemplaza los archivos de .NET Framework 4 y requiere que dichos archivos estén disponibles durante la instalación. En muchos casos, el reinicio se puede impedir de forma preventiva detectando y cerrando las aplicaciones de .NET framework 4 que están en uso. Sin embargo, algunas aplicaciones del sistema no se deben cerrar. En estos casos, no puede evitarse el reinicio.  

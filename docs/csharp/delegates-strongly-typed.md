@@ -2,13 +2,14 @@
 title: Delegados fuertemente tipados
 description: Obtenga información sobre cómo usar tipos de delegado genéricos para declarar tipos personalizados al crear una característica que necesita delegados.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215169"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037354"
 ---
 # <a name="strongly-typed-delegates"></a>Delegados fuertemente tipados
 
@@ -34,7 +35,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 El modificador `in` del argumento de tipo genérico se trata en el artículo sobre la covarianza.
 
 Hay variaciones del delegado `Action` que contienen hasta 16 argumentos, como <xref:System.Action%6016>.
-Es importante que estas definiciones usen argumentos genéricos distintos para cada uno de los argumentos del delegado: eso proporciona la máxima flexibilidad. Los argumentos de método no tienen que ser, aunque pueden ser, del mismo tipo.
+Es importante que estas definiciones usen otros argumentos genéricos para cada uno de los argumentos del delegado: Eso proporciona la máxima flexibilidad. Los argumentos de método no tienen que ser, aunque pueden ser, del mismo tipo.
 
 Use uno de los tipos `Action` para cualquier tipo de delegado que tenga un tipo de valor devuelto void.
 
@@ -54,7 +55,8 @@ Por convención, el tipo del resultado siempre es el último parámetro de tipo 
 
 Use uno de los tipos `Func` para cualquier tipo de delegado que devuelva un valor.
 
-También hay un tipo <xref:System.Predicate%601> especializado para un delegado que devuelva una prueba en un valor único:
+También hay un tipo <xref:System.Predicate%601> 
+especializado para un delegado que devuelva una prueba sobre un valor único:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);

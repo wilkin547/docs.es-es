@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Buscar cadenas (Guía de C#)'
+title: Cómo buscar cadenas (Guía de C#)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420309"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973104"
 ---
-# <a name="how-to-search-strings"></a>Cómo: Buscar cadenas
+# <a name="how-to-search-strings"></a>Cómo buscar cadenas
 
 Puede usar dos estrategias principales para buscar texto en cadenas. Los métodos de la clase <xref:System.String> buscan un texto concreto. Las expresiones regulares buscan patrones en el texto.
 

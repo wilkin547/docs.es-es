@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052154"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975566"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 
@@ -21,7 +21,7 @@ En este artículo paso a paso se describe cómo puede implementar un administrad
 > [!NOTE]
 > El software al que se hace referencia en este documento, a título enunciativo y en ningún caso limitativo, .NET Framework 4.5, System Center Configuration Manager y Active Directory, está sujeto a los términos y condiciones de licencia. En estas instrucciones se asume que los usuarios con la licencia apropiada del software han leído y aceptado dichos términos y condiciones. Estas instrucciones no anulan ninguno de los términos y condiciones de dichos contratos de licencia.
 >
-> Para obtener información sobre el soporte técnico de .NET Framework, consulte [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) en el sitio web de soporte técnico de Microsoft.
+> Para obtener información sobre el soporte técnico de .NET Framework, consulte [Directiva de ciclo soporte técnico oficial de .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) en el sitio web de soporte técnico de Microsoft.
 
 Este tema contiene las siguientes secciones:
 
@@ -135,9 +135,9 @@ En la tabla siguiente se describen las opciones de la línea de comandos especif
 |------------|-----------------|
 |**/q**|Establece el modo silencioso. No se requiere proporcionar ningún dato y no se muestra ningún resultado.|
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, Configuration Manager debe controlar el reinicio del equipo.|
-|**/chainingpackage** *NombrePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el [Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=248244). Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"** .|
+|**/chainingpackage** *NombrePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft. Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"** .|
 
-Mediante estos pasos se crea un paquete denominado .NET Framework 4.5. El programa implementa una instalación silenciosa de .NET Framework 4.5. En una instalación silenciosa, los usuarios no interactúan con el proceso de instalación y la aplicación de encadenamiento tiene que capturar el código devuelto y controlar el reinicio; vea [Getting Progress Information from an Installation Package (Obtener información de progreso de un paquete de instalación)](https://go.microsoft.com/fwlink/?LinkId=179606).
+Mediante estos pasos se crea un paquete denominado .NET Framework 4.5. El programa implementa una instalación silenciosa de .NET Framework 4.5. En una instalación silenciosa, los usuarios no interactúan con el proceso de instalación y la aplicación de encadenamiento tiene que capturar el código devuelto y controlar el reinicio; vea [Getting Progress Information from an Installation Package (Obtener información de progreso de un paquete de instalación)](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 

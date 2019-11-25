@@ -4,12 +4,12 @@ description: Instalación y uso de la herramienta de línea de comandos dotnet-t
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321547"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973452"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado (`dotnet-dump`)
 
@@ -46,9 +46,9 @@ La herramienta global `dotnet-dump` es una forma de recopilar y analizar los vol
 
   Muestra la ayuda de la línea de comandos.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 
-| Comando                                     |
+| Get-Help                                     |
 | ------------------------------------------- |
 | [dotnet-dump collect](#dotnet-dump-collect) |
 | [dotnet-dump analyze](#dotnet-dump-analyze) |
@@ -121,7 +121,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>Análisis de comandos SOS
 
-| Comando                             | Función                                                                                      |
+| Get-Help                             | Función                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | Muestra todos los comandos disponibles.                                                               |
 | `soshelp|help <command>`            | Muestra el comando especificado.                                                               |

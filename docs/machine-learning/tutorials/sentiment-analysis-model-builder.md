@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180271"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974795"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Análisis del sentimiento de los comentarios del sitio web en una aplicación web con el Generador de modelos de ML.NET
 
@@ -160,7 +160,7 @@ Para hacer una sola predicción, debe crear un [`PredictionEngine`](xref:Microso
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
 1. Use el método `GetAbsolutePath` en el constructor de la clase `Startup` para establecer el `_modelPath`.
@@ -201,7 +201,7 @@ Las predicciones se realizarán dentro de la página principal de la aplicación
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
 1. Cree un controlador de método que use `PredictionEnginePool` para hacer predicciones a partir de la información proporcionada por el usuario recibida desde la página web.

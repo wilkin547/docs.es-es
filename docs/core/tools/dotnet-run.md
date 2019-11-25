@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet run
 description: El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente.
-ms.date: 05/29/2018
-ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/31/2019
+ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117482"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454779"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
+**Este artículo se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Name
 
@@ -20,6 +24,14 @@ ms.locfileid: "71117482"
 ## <a name="synopsis"></a>Sinopsis
 
 <!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+```dotnetcli
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -68,6 +80,64 @@ Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias 
 
 ## <a name="options"></a>Opciones
 
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+`--`
+
+Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este delimitador se pasan a la aplicación que se ejecuta.
+
+`-c|--configuration {Debug|Release}`
+
+Define la configuración de compilación. El valor predeterminado de la mayoría de los proyectos es `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Compila y ejecuta la aplicación con el [marco](../../standard/frameworks.md) especificado. El marco debe especificarse en el archivo de proyecto.
+
+`--force`
+
+Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
+
+`-h|--help`
+
+Imprime una corta ayuda para el comando.
+
+`--interactive`
+
+Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación).
+
+`--launch-profile <NAME>`
+
+El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnet/core/fundamentals/environments) (Trabajo con varios entornos).
+
+`--no-build`
+
+No compila el proyecto antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
+
+`--no-dependencies`
+
+Al restaurar un proyecto con referencias de proyecto a proyecto (P2P), se restaura el proyecto raíz y no las referencias.
+
+`--no-launch-profile`
+
+No intenta usar *launchSettings.json* para configurar la aplicación.
+
+`--no-restore`
+
+No ejecuta una restauración implícita al ejecutar el comando.
+
+`-p|--project <PATH>`
+
+Especifica la ruta de acceso del archivo del proyecto que se va a ejecutar (nombre de la carpeta o ruta de acceso completa). Si no se especifica, se toma como predeterminado el directorio actual.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
@@ -76,7 +146,7 @@ Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación 
 
 `-c|--configuration {Debug|Release}`
 
-Define la configuración de compilación. El valor predeterminado es `Debug`.
+Define la configuración de compilación. El valor predeterminado de la mayoría de los proyectos es `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -130,7 +200,7 @@ Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación 
 
 `-c|--configuration {Debug|Release}`
 
-Define la configuración de compilación. El valor predeterminado es `Debug`.
+Define la configuración de compilación. El valor predeterminado de la mayoría de los proyectos es `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -180,7 +250,7 @@ Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación 
 
 `-c|--configuration {Debug|Release}`
 
-Define la configuración de compilación. El valor predeterminado es `Debug`.
+Define la configuración de compilación. El valor predeterminado de la mayoría de los proyectos es `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 

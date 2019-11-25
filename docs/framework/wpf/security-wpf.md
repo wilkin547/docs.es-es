@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459715"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975604"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
 <a name="introduction"></a>Al desarrollar aplicaciones independientes y hospedadas en un explorador Windows Presentation Foundation (WPF), debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes se ejecutan con permisos no restringidos (conjunto de permisos**FullTrust** de CAS), tanto si se implementan con Windows Installer (. msi), xcopy o ClickOnce. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear un <xref:System.AppDomain> de confianza parcial mediante el modelo de complemento .NET Framework. Para obtener más información, consulte [Introducción a los complementos de WPF](./app-development/wpf-add-ins-overview.md).  
@@ -209,7 +209,7 @@ ms.locfileid: "73459715"
   
  Si ejecuta una aplicación de explorador XAML de confianza parcial (XBAP) que incluye un control de <xref:System.Windows.Controls.WebBrowser> de WPF en Windows Internet Explorer, WPF hospeda el control ActiveX WebBrowser en el espacio de direcciones del proceso de Internet Explorer. Puesto que el control ActiveX WebBrowser se hospeda en el proceso de Internet Explorer, todos los controles de características de Internet Explorer también están habilitados para el control ActiveX WebBrowser.  
   
- Los objetos XBAP que se ejecutan en Internet Explorer también obtienen un nivel adicional de seguridad en comparación con las aplicaciones independientes normales. Esta seguridad adicional se debe a que Internet Explorer y, por tanto, el control ActiveX WebBrowser, se ejecuta en modo protegido de forma predeterminada en [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] y [!INCLUDE[win7](../../../includes/win7-md.md)]. Para obtener más información acerca del modo protegido, consulte [Descripción y funcionamiento en modo protegido de Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ Los objetos XBAP que se ejecutan en Internet Explorer también obtienen un nivel adicional de seguridad en comparación con las aplicaciones independientes normales. Esta seguridad adicional se debe a que Internet Explorer y, por tanto, el control ActiveX WebBrowser, se ejecuta en modo protegido de forma predeterminada en Windows Vista y [!INCLUDE[win7](../../../includes/win7-md.md)]. Para obtener más información acerca del modo protegido, consulte [Descripción y funcionamiento en modo protegido de Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
 > Si intenta ejecutar una aplicación XBAP que incluye un control de <xref:System.Windows.Controls.WebBrowser> de WPF en Firefox, mientras esté en la zona de Internet, se iniciará una <xref:System.Security.SecurityException>. Esto se debe a la directiva de seguridad de WPF.  
@@ -258,7 +258,7 @@ ms.locfileid: "73459715"
  Con esta configuración, el contenido externo se carga en un proceso independiente del proceso que hospeda la aplicación. Este proceso está restringido al conjunto de permisos predeterminado de la zona de Internet y lo aísla de forma eficaz desde la aplicación host y el equipo cliente.  
   
 > [!NOTE]
-> Aunque la navegación a archivos de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] sueltos desde un <xref:System.Windows.Navigation.NavigationWindow> o <xref:System.Windows.Controls.Frame> en una aplicación independiente se implementa en función de la infraestructura de hospedaje del explorador de WPF, en la que se implica el proceso PresentationHost, el nivel de seguridad es ligeramente menor que cuando el contenido se carga directamente en Internet Explorer en [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] y [!INCLUDE[win7](../../../includes/win7-md.md)] (que seguiría a través de PresentationHost). Esto se debe a que una aplicación de WPF independiente que usa un navegador web no proporciona la característica de seguridad adicional de modo protegido de Internet Explorer.  
+> Aunque la navegación a archivos de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] sueltos desde un <xref:System.Windows.Navigation.NavigationWindow> o una <xref:System.Windows.Controls.Frame> en una aplicación independiente se implementa en función de la infraestructura de hospedaje del explorador de WPF, en la que se implica el proceso PresentationHost, el nivel de seguridad es ligeramente menor que cuando el contenido se carga directamente en Internet Explorer en Windows Vista y [!INCLUDE[win7](../../../includes/win7-md.md)] (que seguiría pasando a PresentationHost). Esto se debe a que una aplicación de WPF independiente que usa un navegador web no proporciona la característica de seguridad adicional de modo protegido de Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Recursos para desarrollar aplicaciones de WPF que promueven la seguridad  

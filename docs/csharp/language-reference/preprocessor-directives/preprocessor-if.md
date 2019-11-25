@@ -1,18 +1,18 @@
 ---
 title: '#Directiva de preprocesador if: Referencia de C#'
 ms.custom: seodec18
-ms.date: 06/30/2018
+ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605687"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036002"
 ---
 # <a name="if-c-reference"></a>#if (Referencia de C#)
 
@@ -40,9 +40,12 @@ Un símbolo definido con `-define` o `#define` no debe entrar en conflicto con u
 
 El ámbito de un símbolo creado con `#define` es el archivo en que se ha definido.
 
-El sistema de compilación también tiene en cuenta los símbolos de preprocesador predefinidos que representan distintos [marcos de destino](../../../standard/frameworks.md). Resultan útiles al crear aplicaciones que pueden tener como destino más de una versión o implementación de .NET.
+El sistema de compilación también tiene en cuenta los símbolos de preprocesador predefinidos que representan distintos [marcos de destino](../../../standard/frameworks.md) en proyectos de estilo SDK. Resultan útiles al crear aplicaciones que pueden tener como destino más de una versión o implementación de .NET.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+> [!NOTE]
+> En el caso de los proyectos de .NET Framework tradicionales, tendrá que configurar manualmente los símbolos de compilación condicional para las diferentes plataformas de destino en Visual Studio a través de las páginas de propiedades del proyecto.
 
 Otros símbolos predefinidos incluyen las constantes DEBUG y TRACE. Puede invalidar los valores establecidos para el proyecto con `#define`. Por ejemplo, el símbolo DEBUG se establece automáticamente según las propiedades de configuración de compilación (modo de "depuración" o de "versión").
 

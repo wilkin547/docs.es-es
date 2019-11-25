@@ -2,12 +2,12 @@
 title: Implementación del patrón de interruptor
 description: Aprenda a implementar el patrón de interruptor como un sistema complementario en los reintentos HTTP.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094113"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732831"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -94,7 +94,7 @@ Por ejemplo, cuando la aplicación se está ejecutando, puede habilitar el middl
 
 Después, puede comprobar el estado mediante el URI `http://localhost:5103/failing`, como se muestra en la Figura 8-5.
 
-![Vista de Browser del resultado de la comprobación del estado de la simulación de middleware con errores](./media/image4.png)
+![Captura de pantalla de la comprobación del estado de una simulación de middleware con errores.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Figura 8-5**. Comprobación del estado del middleware ASP.NET "Error": en este caso, deshabilitado
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Aquí tiene un resumen. La directiva de reintentos intenta realizar la solicitud HTTP varias veces y obtiene errores HTTP. Cuando el número de reintentos alcanza el número máximo establecido para la directiva del interruptor (en este caso, 5), la aplicación genera una excepción BrokenCircuitException. El resultado es un mensaje descriptivo, como el que se muestra en la Figura 8-6.
 
-![Vista de Browser de la aplicación web MVC que muestra un mensaje "basket service inoperative" (servicio de cesta no operativo) desencadenado por la directiva de interruptores](./media/image5.png)
+![Captura de pantalla de la aplicación web MVC con el error de servicio de cesta no operativo.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Figura 8-6**. Interruptor que devuelve un error en la interfaz de usuario
 

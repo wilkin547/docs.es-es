@@ -2,12 +2,12 @@
 title: Propiedad de los datos por microservicio
 description: La propiedad de datos por microservicio es uno de los puntos clave de los microservicios. Cada microservicio debe ser el único propietario de su base de datos, sin compartirla con ningún otro. Por supuesto, todas las instancias de un microservicio se conectan a la misma base de datos de alta disponibilidad.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834466"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191910"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 
@@ -27,7 +27,9 @@ En el enfoque tradicional, hay una base de datos compartida en todos los servici
 
 Una aplicación monolítica que normalmente tiene una sola base de datos relacional presenta dos ventajas importantes: [Transacciones ACID](https://en.wikipedia.org/wiki/ACID) y el lenguaje SQL, ambos funcionando en todas las tablas y los datos relacionados con la aplicación. Este enfoque proporciona una manera sencilla de escribir una consulta que combina datos de varias tablas.
 
-Pero el acceso a los datos es mucho más complejo cuando se migra a una arquitectura de microservicios. Aun cuando las transacciones ACID puedan o deban usarse en un microservicio o contexto enlazado, los datos que pertenecen a cada microservicio son privados de ese microservicio y solo pueden obtenerse a través de su API de microservicio. La encapsulación de los datos garantiza que los microservicios estén acoplados de forma imprecisa y puedan evolucionar independientemente unos de otros. Si varios servicios estuvieran accediendo a los mismos datos, las actualizaciones de esquema exigirían actualizaciones coordinadas de todos los servicios. Esto interrumpiría la autonomía del ciclo de vida del microservicio. Pero las estructuras de datos distribuidas significan que no se puede realizar una única transacción ACID en microservicios. A su vez, esto significa que debe usar la coherencia final cuando un proceso empresarial abarque varios microservicios. Esto es mucho más difícil de implementar que meras combinaciones SQL, porque no se pueden crear restricciones de integridad o usar las transacciones distribuidas entre bases de datos independientes, como se explicará más adelante. De forma similar, muchas otras características de base de datos relacional no están disponibles en varios microservicios.
+Pero el acceso a los datos es mucho más complejo cuando se migra a una arquitectura de microservicios. Incluso cuando se usan transacciones ACID dentro de un microservicio o contexto delimitado, es fundamental tener en cuenta que los datos que pertenecen a cada microservicio son privados para ese microservicio y que solo se debe acceder a ellos de forma sincrónica a través de los puntos de conexión de su API (REST, gRPC, SOAP, etc.), o bien de forma asincrónica a través de mensajería (AMQP o similar).
+
+La encapsulación de los datos garantiza que los microservicios estén acoplados de forma imprecisa y puedan evolucionar independientemente unos de otros. Si varios servicios estuvieran accediendo a los mismos datos, las actualizaciones de esquema exigirían actualizaciones coordinadas de todos los servicios. Esto interrumpiría la autonomía del ciclo de vida del microservicio. Pero las estructuras de datos distribuidas significan que no se puede realizar una única transacción ACID en microservicios. A su vez, esto significa que debe usar la coherencia final cuando un proceso empresarial abarque varios microservicios. Esto es mucho más difícil de implementar que meras combinaciones SQL, porque no se pueden crear restricciones de integridad o usar las transacciones distribuidas entre bases de datos independientes, como se explicará más adelante. De forma similar, muchas otras características de base de datos relacional no están disponibles en varios microservicios.
 
 Si vamos aún más allá, los distintos microservicios suelen usar *tipos* diferentes de bases de datos. Las aplicaciones modernas almacenan y procesan distintos tipos de datos, así que una base de datos relacional no siempre es la mejor opción. En algunos casos de uso, una base de datos no SQL, como Azure CosmosDB o MongoDB, podría tener un modelo de datos más adecuado y ofrecer un mejor rendimiento y escalabilidad que una base de datos SQL como SQL Server o Azure SQL Database. En otros casos, una base de datos relacional sigue siendo el mejor enfoque. Por lo tanto, las aplicaciones basadas en microservicios suelen usar una combinación de bases de datos SQL y no SQL, lo que a veces se denomina enfoque de [persistencia políglota](https://martinfowler.com/bliki/PolyglotPersistence.html).
 

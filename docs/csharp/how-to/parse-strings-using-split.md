@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b46429f3b55658e1f2a7d21eed714c1d02236c57
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603733"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973231"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Procedimiento para analizar cadenas mediante String.Split (Guía de C#)
 

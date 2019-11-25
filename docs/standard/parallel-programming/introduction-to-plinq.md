@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129041"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 
@@ -40,7 +38,7 @@ La clase <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> expo
 
 Además de los operadores de consulta estándar, la clase <xref:System.Linq.ParallelEnumerable> contiene un conjunto de métodos que permiten comportamientos específicos de la ejecución en paralelo. Estos métodos específicos de PLINQ se muestran en la tabla siguiente.
 
-|Operador ParallelEnumerable|Descripción|
+|Operador ParallelEnumerable|DESCRIPCIÓN|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto de entrada de PLINQ. Especifica que el resto de la consulta se debe ejecutar en paralelo, si es posible.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Especifica que el resto de la consulta se debe ejecutar en secuencia, como una consulta LINQ no en paralelo.|
@@ -103,7 +101,7 @@ En las consultas [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] secuen
 
 En la ilustración siguiente se muestra la diferencia entre `foreach` y <xref:System.Linq.ParallelEnumerable.ForAll%2A> con respecto a la ejecución de la consulta.
 
-![Comparación entre ForAll y ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
+![Comparación entre ForAll ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
 
 ## <a name="cancellation"></a>Cancelación
 

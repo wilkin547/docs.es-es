@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3573959a1e10b475a9867631767de5d10a08b9ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590549"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969775"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeración (Guía de programación de C#)
 
@@ -86,7 +86,7 @@ Todas las enumeraciones son instancias del tipo <xref:System.Enum?displayPropert
 
 Para más información, consulte <xref:System.Enum?displayProperty=nameWithType>.
 
-También puede crear un método nuevo para una enumeración mediante un método de extensión. Para obtener más información, vea [Cómo: Crear un método nuevo para una enumeración](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+También puede crear un método nuevo para una enumeración mediante un método de extensión. Para obtener más información, vea [Procedimiento para crear un método nuevo para una enumeración](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Vea también
 

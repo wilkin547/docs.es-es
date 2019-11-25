@@ -27,21 +27,21 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771734"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036425"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
-Los operadores siguientes realizan operaciones aritméticas con tipos numéricos:
+Los operadores siguientes realizan operaciones aritméticas con operandos de tipos numéricos:
 
 - Operadores unarios [`++` (incremento)](#increment-operator-), [`--` (decremento)](#decrement-operator---), [`+` (más)](#unary-plus-and-minus-operators) y [`-` (menos)](#unary-plus-and-minus-operators).
 - Operadores binarios [`*` (multiplicación)](#multiplication-operator-), [`/` (división)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (suma)](#addition-operator-) y [`-` (resta)](#subtraction-operator--).
 
-Estos operadores admiten todos los tipos numéricos [integrales](../builtin-types/integral-numeric-types.md) y de [punto flotante](../builtin-types/floating-point-numeric-types.md).
+Estos operadores se admiten en todos los tipos numéricos [enteros](../builtin-types/integral-numeric-types.md) y de [punto flotante](../builtin-types/floating-point-numeric-types.md).
 
 ## <a name="increment-operator-"></a>Operador de incremento ++
 
@@ -122,7 +122,7 @@ Si uno de los operandos es `decimal`, otro operando no puede ser `float` ni `dou
 El operador de resto `%` calcula el resto después de dividir el operando izquierdo entre el derecho.
 
 ### <a name="integer-remainder"></a>Resto entero
-  
+
 En el caso de los operandos de tipos enteros, el resultado de `a % b` es el valor producido por `a - (a / b) * b`. El signo de resto distinto de cero es el mismo que el del operando izquierdo, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
@@ -137,7 +137,7 @@ En el caso de los operandos `float` y `double`, el resultado de `x % y` para `x`
 - el valor absoluto de `z` es el valor producido por `|x| - n * |y|`, donde `n` es el entero más grande posible que sea menor o igual que `|x| / |y|`, y `|x|` e `|y|` son los valores absolutos de `x` e `y`, respectivamente.
 
 > [!NOTE]
-> Este método de cálculo del resto es análogo al usado para los operandos enteros, pero difiere de IEEE 754. Si necesita la operación de resto conforme con IEEE 754, use el método <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
+> Este método de cálculo del resto es análogo al que se usa para los operandos enteros, pero difiere de la especificación IEEE 754. Si necesita la operación de resto conforme con la especificación IEEE 754, use el método <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
 
 Para información sobre el comportamiento del operador `%` con operandos no finitos, vea la sección [Operador de resto](~/_csharplang/spec/expressions.md#remainder-operator) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
@@ -161,7 +161,7 @@ El operador de resta `-` resta el operando derecho del izquierdo:
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
-También puede usar el operador `-` para la eliminación de delegados. Para obtener más información, vea el artículo [Operador `-`](subtraction-operator.md).
+También puede usar el operador `-` para la eliminación de delegados. Para obtener más información, consulte [Operadores `-` y `-=`](subtraction-operator.md).
 
 ## <a name="compound-assignment"></a>Asignación compuesta
 
@@ -187,7 +187,7 @@ A causa de las [promociones numéricas](~/_csharplang/spec/expressions.md#numeri
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-Los operadores `+=` y `-=` también se usan para suscribirse y cancelar la suscripción a [eventos](../keywords/event.md). Para obtener más información, vea [Procedimientos para suscribir y cancelar la suscripción a eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Los operadores `+=` y `-=` también se usan para suscribirse y cancelar la suscripción a un [evento](../keywords/event.md), respectivamente. Para obtener más información, vea [Procedimientos para suscribir y cancelar la suscripción a eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>Prioridad y asociatividad de los operadores
 
@@ -204,7 +204,7 @@ Use los paréntesis, `()`, para cambiar el orden de evaluación impuesto por la 
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea [Operadores de C#](index.md).
+Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea la sección [Prioridad de operadores](index.md#operator-precedence) del artículo [Operadores de C#](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Desbordamiento aritmético y división por cero
 
@@ -235,11 +235,11 @@ Para los operandos del tipo `decimal`, el desbordamiento aritmético siempre ini
 
 ## <a name="round-off-errors"></a>Errores de redondeo
 
-Debido a las limitaciones generales de la representación de punto flotante de los números reales y la aritmética de punto flotante, en los cálculos con tipos de punto flotante se pueden producir errores de redondeo. Es decir, es posible que el resultado de una expresión difiera del resultado matemático esperado. En el ejemplo siguiente se muestran varios de estos casos:
+Debido a las limitaciones generales de la representación de punto flotante de los números reales y la aritmética de punto flotante, es posible que se produzcan errores de redondeo en los cálculos con tipos de punto flotante. Es decir, es posible que el resultado de una expresión difiera del resultado matemático esperado. En el ejemplo siguiente se muestran varios de estos casos:
 
 [!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
 
-Para obtener más información, vea los comentarios en las páginas de referencia de [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks) o [System.Decimal](/dotnet/api/system.decimal#remarks).
+Para más información, vea los comentarios en las páginas de referencia de [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks) o [System.Decimal](/dotnet/api/system.decimal#remarks).
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 

@@ -7,25 +7,19 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046436"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974934"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidad
-<a name="top"></a> Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
-  
- Esta categoría consta de los siguientes eventos:  
-  
-- [Evento ILStubGenerated](#ilstubgenerated_event)  
-  
-- [Evento ILStubCacheHit](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated  
- En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
+Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
+
+## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated
+
+En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
@@ -33,13 +27,13 @@ ms.locfileid: "71046436"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Se generó código auxiliar MSIL.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Identificador del módulo.|  
 |StubMethodID|win:UInt64|Identificador del método de código auxiliar.|  
@@ -53,11 +47,9 @@ ms.locfileid: "71046436"
 |StubMethodILCode|win:UnicodeString|Código MSIL para el método de código auxiliar.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
- [Volver al principio](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>Evento ILStubCacheHit  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+
+En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
@@ -65,13 +57,13 @@ ms.locfileid: "71046436"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Se tuvo acceso a la memoria caché MSIL.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Identificador del módulo.|  
 |StubMethodID|win:UInt64|Identificador del método de código auxiliar.|  
@@ -80,8 +72,6 @@ ms.locfileid: "71046436"
 |ManagedInteropMethodName|win:UnicodeString|Nombre del método de interoperabilidad administrado.|  
 |ManagedInteropMethodSignature|win:UnicodeString|Firma del método de interoperabilidad administrado.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
-  
- [Volver al principio](#top)  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
-ms.date: 06/13/2018
-ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/29/2019
+ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117588"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191826"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
+**Este artículo se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Name
 
@@ -20,12 +24,7 @@ ms.locfileid: "71117588"
 ## <a name="synopsis"></a>Sinopsis
 
 ```dotnetcli
-dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] list
-dotnet sln [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
 ## <a name="description"></a>DESCRIPCIÓN
@@ -38,61 +37,138 @@ Para usar el comando `dotnet sln`, debe existir el archivo de solución. Si nece
 dotnet new sln
 ```
 
-## <a name="commands"></a>Comandos
-
-`add <PROJECT> ...`
-
-`add <GLOBBING_PATTERN>`
-
-Agrega un proyecto o varios proyectos al archivo de solución. Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.
-
-`remove <PROJECT> ...`
-
-`remove <GLOBBING_PATTERN>`
-
-Quita un proyecto o varios proyectos del archivo de solución. Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.
-
-`list`
-
-Enumera todos los proyectos en un archivo de solución.
-
 ## <a name="arguments"></a>Argumentos
 
-`SOLUTION_NAME`
+- **`SOLUTION_FILE`**
 
-Archivo de solución que se va a utilizar. Si no se especifica, el comando busca uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
+  El archivo de solución que se va a usar. Si no se especifica, el comando busca uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
 
 ## <a name="options"></a>Opciones
 
-`-h|--help`
+- **`-h|--help`**
 
-Imprime una corta ayuda para el comando.
+  Imprime una corta ayuda para el comando.
+
+## <a name="commands"></a>Comandos
+
+### `add`
+
+Agrega un proyecto o varios proyectos al archivo de solución.
+
+#### <a name="synopsis"></a>Sinopsis
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln add [-h|--help]
+```
+
+#### <a name="arguments"></a>Argumentos
+
+- **`SOLUTION_FILE`**
+
+  El archivo de solución que se va a usar. Si no se especifica, el comando busca uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
+
+- **`PROJECT_PATH`**
+
+  La ruta de acceso al proyecto que se va a agregar a la solución. Para agregar varios proyectos, agregue uno detrás de otro separados por espacios. Las expansiones del [patrón comodines](https://en.wikipedia.org/wiki/Glob_(programming)) de shell de Unix y Linux se procesan correctamente mediante el comando `dotnet sln`.
+
+#### <a name="options"></a>Opciones
+
+- **`-h|--help`**
+
+  Imprime una corta ayuda para el comando.
+
+- **`--in-root`**
+
+  Coloca el proyecto en la raíz de la solución, en lugar de crear una carpeta de la solución. Disponible desde el SDK de .NET Core 3.0.
+
+- **`-s|--solution-folder`**
+
+  La ruta de acceso de la carpeta de la solución de destino a la que se van a agregar los proyectos. Disponible desde el SDK de .NET Core 3.0.
+
+### `remove`
+
+Quita un proyecto o varios proyectos del archivo de solución.
+
+#### <a name="synopsis"></a>Sinopsis
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
+```
+
+#### <a name="arguments"></a>Argumentos
+
+- **`SOLUTION_FILE`**
+
+  El archivo de solución que se va a usar. Si no se especifica, el comando busca uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
+
+- **`PROJECT_PATH`**
+
+  La ruta de acceso al proyecto que se va a quitar de la solución. Para quitar varios proyectos, agregue uno detrás de otro separados por espacios. Las expansiones del [patrón comodines](https://en.wikipedia.org/wiki/Glob_(programming)) de shell de Unix y Linux se procesan correctamente mediante el comando `dotnet sln`.
+
+#### <a name="options"></a>Opciones
+
+- **`-h|--help`**
+
+  Imprime una corta ayuda para el comando.
+
+### `list`
+
+Enumera todos los proyectos en un archivo de solución.
+
+#### <a name="synopsis"></a>Sinopsis
+
+```dotnetcli
+dotnet sln list [-h|--help]
+```
+  
+#### <a name="arguments"></a>Argumentos
+
+- **`SOLUTION_FILE`**
+
+  El archivo de solución que se va a usar. Si no se especifica, el comando busca uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
+
+#### <a name="options"></a>Opciones
+
+- **`-h|--help`**
+
+  Imprime una corta ayuda para el comando.
 
 ## <a name="examples"></a>Ejemplos
 
 Agregue un proyecto de C# a una solución:
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj
+```
 
 Quite un proyecto de C# de una solución:
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj
+```
 
 Agregue varios proyectos de C# a una solución:
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
 Quite varios proyectos de C# de una solución:
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
-Agregue varios proyectos de C# a una solución mediante un patrón global:
+Agregue varios proyectos de C# a una solución mediante un patrón de comodines (solo para Unix y Linux):
 
-`dotnet sln todo.sln add **/*.csproj`
+```dotnetcli
+dotnet sln todo.sln add **/*.csproj
+```
 
-Quite varios proyectos de C# de una solución mediante un patrón global:
+Quite varios proyectos de C# de una solución mediante un patrón de comodines (solo para Unix y Linux):
 
-`dotnet sln todo.sln remove **/*.csproj`
-
-> [!NOTE]
-> El uso de comodines no es una característica de la CLI, sino una característica del shell de comandos. Para expandir correctamente los archivos, debe usar un shell que admita el uso de comodines. Para más información sobre el uso de comodines, vea [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).
+```dotnetcli
+dotnet sln todo.sln remove **/*.csproj
+```

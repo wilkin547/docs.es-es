@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126296"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974966"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
+# <a name="migrate-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] y las versiones posteriores del sistema operativo Windows no admiten .NET Framework 1.1. En consecuencia, las aplicaciones que tienen como destino .NET Framework 1.1 no podrán ejecutarse sin modificaciones en [!INCLUDE[win7](../../../includes/win7-md.md)] o versiones posteriores del sistema operativo. En este tema describen los pasos necesarios para ejecutar una aplicación destinada a .NET Framework 1.1 en [!INCLUDE[win7](../../../includes/win7-md.md)] y versiones posteriores del sistema operativo Windows. Para obtener más información sobre NET Framework 1.1 y [!INCLUDE[win8](../../../includes/win8-md.md)], vea [Ejecutar aplicaciones .NET Framework 1.1 en Windows 8 y versiones posteriores](../install/run-net-framework-1-1-apps.md).
+Windows 7 y las versiones posteriores del sistema operativo Windows no admiten .NET Framework 1.1. En consecuencia, las aplicaciones que tienen como destino .NET Framework 1.1 no podrán ejecutarse sin modificaciones en Windows 7 o versiones posteriores del sistema operativo. En este tema describen los pasos necesarios para ejecutar una aplicación destinada a .NET Framework 1.1 en Windows 7 y versiones posteriores del sistema operativo Windows. Para más información sobre NET Framework 1.1 y Windows 8, consulte [Ejecutar aplicaciones .NET Framework 1.1 en Windows 8 y versiones posteriores](../install/run-net-framework-1-1-apps.md).
 
-## <a name="retargeting-or-recompiling"></a>Redestinar o recompilar
+## <a name="retarget-or-recompile"></a>Redestinar o volver a compilar
 
-Hay dos formas para conseguir que una aplicación compilada con NET Framework 1.1 se ejecute en [!INCLUDE[win7](../../../includes/win7-md.md)] o un sistema operativo de Windows posterior:
+Hay dos formas para conseguir que una aplicación compilada con NET Framework 1.1 se ejecute en Windows 7 o un sistema operativo de Windows posterior:
 
-- Puede redestinar la aplicación para que se ejecute en .NET Framework 4 y versiones posteriores. Para redestinarla, es necesario agregar un elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al archivo de configuración de la aplicación que permita ejecutarla en .NET Framework 4 y versiones posteriores. Un archivo de configuración de este tipo tendrá el formato siguiente:
+- Redestine la aplicación para que se ejecute en .NET Framework 4 y versiones posteriores. Para redestinarla, es necesario agregar un elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) al archivo de configuración de la aplicación que permita ejecutarla en .NET Framework 4 y versiones posteriores. Un archivo de configuración de este tipo tendrá el formato siguiente:
 
     ```xml
     <configuration>
@@ -30,7 +30,7 @@ Hay dos formas para conseguir que una aplicación compilada con NET Framework 
     </configuration>
     ```
 
-- Puede volver a compilar la aplicación con un compilador que tenga como destino .NET Framework 4 o una versión posterior. Si originalmente usó Visual Studio 2003 para desarrollar y compilar la solución, puede abrir la solución en Visual Studio 2010 y posiblemente también en versiones posteriores y usar el cuadro de diálogo **Compatibilidad del proyecto** para convertir la solución y los archivos del proyecto de los formatos utilizados en Visual Studio 2003 a los formatos de Microsoft Build Engine (MSBuild).
+- Vuelva a compilar la aplicación con un compilador que tenga como destino .NET Framework 4 o una versión posterior. Si originalmente usó Visual Studio 2003 para desarrollar y compilar la solución, puede abrir la solución en Visual Studio 2010 y posiblemente también en versiones posteriores y usar el cuadro de diálogo **Compatibilidad del proyecto** para convertir la solución y los archivos del proyecto de los formatos utilizados en Visual Studio 2003 a los formatos de Microsoft Build Engine (MSBuild).
 
 Independientemente de si prefiere volver a compilar o redestinar la aplicación, deberá determinar si la aplicación se ve afectada por los cambios introducidos en versiones posteriores de .NET Framework. Estos cambios son de dos tipos:
 
@@ -56,9 +56,9 @@ Sin embargo, en algunos casos, tal vez necesite modificar el código fuente y vo
 
 Para valorar el impacto que los posibles cambios importantes podrían tener en su aplicación, debe revisar las siguientes listas de cambios:
 
-- En[Cambios importantes en .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) se muestran los cambios de .NET Framework 2.0 SP1 que pueden afectar a una aplicación destinada a .NET Framework 1.1.
+- En[Cambios importantes en .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) se muestran los cambios de .NET Framework 2.0 SP1 que pueden afectar a una aplicación destinada a .NET Framework 1.1.
 
-- En [Cambios en .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) se indican los cambios entre .NET Framework 3.5 y .NET Framework 3.5 SP1.
+- En [Cambios en .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) se indican los cambios entre .NET Framework 3.5 y .NET Framework 3.5 SP1.
 
 - En [Incidencias de migración de .NET Framework 4](net-framework-4-migration-issues.md) se indican los cambios entre .NET Framework 3.5 SP1 y .NET Framework 4.
 

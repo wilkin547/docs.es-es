@@ -2,12 +2,12 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 10/02/2018
-ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771183"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737696"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -22,7 +22,7 @@ En la aplicación de microservicio de referencia [eShopOnContainers](https://git
 
 En el diagrama de arquitectura siguiente se muestra cómo se implementan las puertas de enlace de API con Ocelot en eShopOnContainers.
 
-![Diagrama de arquitectura de eShopOnContainers en el que se muestran aplicaciones cliente, microservicios y las puertas de enlace de API intermedias](./media/image28.png)
+![Diagrama que muestra la arquitectura de eShopOnContainers.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
 **Figura 6-28**. Arquitectura de eShopOnContainers con puertas de enlace de API
 
@@ -46,7 +46,7 @@ Como punto clave, para muchas aplicaciones de tamaño medio y grande, el uso de 
 
 Como ejemplo, eShopOnContainers tiene aproximadamente seis tipos de microservicio internos que se tienen que publicar entre las puertas de enlace de API, como se muestra en la imagen siguiente.
 
-![Solo los microservicios Basket, Catalog, Location, Marketing, Ordering y Payment se publican a través de la puerta de enlace de API.](./media/image29.png)
+![Captura de pantalla de la carpeta Services con sus subcarpetas.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-microservice-folders.png)
 
 **Figura 6-29**. Carpetas de microservicio en la solución eShopOnContainers en Visual Studio
 
@@ -54,7 +54,7 @@ En cuanto al servicio Identity, en el diseño se excluye del enrutamiento de pue
 
 Todos estos servicios se implementan actualmente como servicios de API web de ASP.NET Core, como se desprende del código. Centrémonos en uno de los microservicios, como el código del microservicio Catalog.
 
-![Vista del Explorador de soluciones del proyecto Catalog.API.](./media/image30.png)
+![Captura de pantalla del Explorador de soluciones que muestra el contenido del proyecto Catalog.API.](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
 **Figura 6-30**. Microservicio de API web de ejemplo (microservicio Catalog)
 
@@ -130,7 +130,7 @@ Este comando solo ejecuta el contenedor del servicio catalog.api además de las 
 
 Después, puede acceder directamente al microservicio Catalog y ver sus métodos a través de la interfaz de usuario de Swagger, a la que se accede directamente a través de ese puerto "externo", en este caso `http://localhost:5101/swagger`:
 
-![Vista del explorador de la edad de la interfaz de usuario de Swagger para la API REST Catalog.API.](./media/image31.png)
+![Captura de pantalla de la interfaz de usuario de Swagger que muestra la API REST Catalog.API.](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
 **Figura 6-31**. Probar el microservicio Catalog con su interfaz de usuario de Swagger
 
@@ -152,7 +152,7 @@ Install-Package Ocelot
 
 En eShopOnContainers, su implementación de puerta de enlace de API es un proyecto ASP.NET Core WebHost simple, y el software intermedio de Ocelot controla todas las características de la puerta de enlace de API, como se muestra en la imagen siguiente:
 
-![Vista del Explorador de soluciones del proyecto de puerta de enlace de API Ocelot.](./media/image32.png)
+![Captura de pantalla del Explorador de soluciones que muestra el proyecto de puerta de enlace de API de Ocelot.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
 **Figura 6-32**. El proyecto base de OcelotApiGw en eShopOnContainers
 
@@ -280,7 +280,7 @@ Pero como se mencionó en las secciones de arquitectura y diseño, si realmente 
 
 En eShopOnContainers, se usa una sola imagen de contenedor de Docker con la puerta de enlace de API de Ocelot pero después, en tiempo de ejecución, se crean otros contenedores y servicios para cada tipo de puerta de enlace de API o BFF proporcionando otro archivo configuration.json, mediante un volumen de Docker para acceder a una carpeta distinta del equipo para cada servicio.
 
-![En el caso de la puerta de enlace API de Ocelot, para las cuatro puertas de enlace de la API se usa una sola imagen de Docker.](./media/image33.png)
+![Diagrama de una sola imagen de Docker de puerta de enlace de Ocelot para todas las puertas de enlace de API.](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
 **Figura 6-33**. Volver a usar una única imagen de Docker de Ocelot entre varios tipos de puerta de enlace de API
 
@@ -354,7 +354,7 @@ webmarketingapigw:
 
 Debido al código anterior, y como se muestra en el Explorador de Visual Studio a continuación, el único archivo necesario para definir cada puerta de enlace de API empresarial específica o BFF es simplemente un archivo configuration.json, dado que las cuatro puertas de enlace de API se basan en la misma imagen de Docker.
 
-![La única diferencia entre las puertas de enlace de API es un archivo configuration.json en cada una de ellas.](./media/image34.png)
+![Captura de pantalla que muestra todas las puertas de enlace de API con los archivos configuration.json.](./media/implement-api-gateways-with-ocelot/ocelot-configuration-files.png)
 
 **Figura 6-34**. El único archivo necesario para definir cada puerta de enlace de API y BFF con Ocelot es un archivo de configuración
 
@@ -364,13 +364,13 @@ Ahora, si ejecuta eShopOnContainers con las puertas de enlace de API (incluidas 
 
 Por ejemplo, cuando se visita la dirección URL de nivel superior `http://localhost:5202/api/v1/c/catalog/items/2/` que proporciona la puerta de enlace de API webshoppingapigw, se obtiene el mismo resultado de la dirección URL de nivel inferior interna `http://catalog.api/api/v1/2` dentro del host de Docker, como se muestra en el explorador siguiente.
 
-![Vista del explorador de una respuesta de Catalog.api que pasa por la puerta de enlace de API.](./media/image35.png)
+![Captura de pantalla de un explorador que muestra una respuesta que pasa a través de la puerta de enlace de API.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **Figura 6-35**. Acceso a un microservicio a través de una dirección URL proporcionada por la puerta de enlace de API
 
 Por motivos de pruebas o depuración, si quiere acceder directamente al contenedor de Docker Catalog (solo en el entorno de desarrollo) sin pasar por la puerta de enlace de API, ya que "catalog.api" es una resolución DNS interna para el host de Docker (la detección de servicios la controlan los nombres de servicio de docker-compose), la única manera de tener acceso directo al contenedor es a través del puerto externo publicado en el archivo docker-compose.override.yml, que solo se proporciona para pruebas de desarrollo, como `http://localhost:5101/api/v1/Catalog/items/1` en el explorador siguiente.
 
-![Vista del explorador de una respuesta de Catalog.api que va directamente a Catalog.api, idéntica a la que pasa a través de la puerta de enlace de API.](./media/image36.png)
+![Captura de pantalla de un explorador que muestra una respuesta directa a Catalog.API.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
 **Figura 6-36**. Acceso directo a un microservicio con fines de prueba
 
@@ -384,13 +384,13 @@ Según ese enfoque, el diagrama de composición de las puertas de enlace de API 
 
 En el diagrama siguiente, también se puede ver cómo funcionan los servicios de agregador con sus puertas de enlace de API relacionadas.
 
-![Arquitectura de eShopOnContainers, en la que se muestran los servicios de agregador.](./media/image37.png)
+![Diagrama de arquitectura de eShopOnContainers que muestra los servicios de agregador.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture-aggregator-services.png)
 
 **Figura 6-37**. Arquitectura de eShopOnContainers con los servicios de agregador
 
 Al ampliar más el área empresarial "Shopping" de la imagen siguiente, se puede ver que al usar los servicios agregadores de las puertas de enlace de API se reduce el intercambio de mensajes entre las aplicaciones cliente y los microservicios.
 
-![Acercar la arquitectura de eShopOnContainers, en la que se muestran los servicios de agregador y en la que se "construye" una respuesta que "combina" la respuesta de varios microservicios para reducir el intercambio de mensajes con el cliente final.](./media/image38.png)
+![Diagrama que muestra un detalle de la arquitectura de eShopOnContainers.](./media/implement-api-gateways-with-ocelot/zoom-in-vision-aggregator-services.png)
 
 **Figura 6-38**. Visión ampliada de los servicios de agregador
 
@@ -404,17 +404,17 @@ En una puerta de enlace de API de Ocelot se puede ubicar el servicio de autentic
 
 Dado que en eShopOnContainers se usan varias puertas de enlace de API con límites basados en BFF y áreas de negocio, el servicio Identity/Auth se excluye de las puertas de enlace de API, como se resalta en color amarillo en el diagrama siguiente.
 
-![Diagrama de arquitectura de eShopOnContainers en el que se muestra el microservicio Identity debajo de la puerta de enlace de API.](./media/image39.png)
+![Diagrama que muestra el microservicio Identity debajo de la puerta de enlace de API.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-identity-service-position.png)
 
 **Figura 6-39**. Posición del servicio Identity en eShopOnContainers
 
 Pero Ocelot también admite que el microservicio Identity/Auth se sitúe dentro de los límites de la puerta de enlace de API, como se muestra en este otro diagrama.
 
-![Autenticación con el microservicio Identity debajo de la puerta de enlace de API (AG): 1) AG solicita un token de autenticación del microservicio Identity, 2) el microservicio devuelve el token a AG, 3-4) solicitudes de AG de los microservicios mediante el token de autenticación.](./media/image40.png)
+![Diagrama que muestra la autenticación en una puerta de enlace de API de Ocelot.](./media/implement-api-gateways-with-ocelot/ocelot-authentication.png)
 
 **Figura 6-40**. Autenticación en Ocelot
 
-Como en la aplicación eShopOnContainers se ha dividido la puerta de enlace de API en varios BFF (back-end para front-end) y puertas de enlace de API de áreas de negocio, otra opción habría sido crear una puerta de enlace de API adicional para los intereses transversales. Esa opción sería razonable en una arquitectura basada en microservicios más compleja con varios microservicios de intereses transversales. Como en eShopOnContainers solo hay un interés transversal, se decidió controlar solamente el servicio de seguridad fuera del territorio de la puerta de enlace de API, por motivos de simplicidad.
+Tal y como se muestra en el diagrama anterior, cuando el microservicio Identity está por debajo de la puerta de enlace de API (AG): 1) La puerta de enlace de API solicita un token de autenticación del microservicio Identity; 2) el microservicio Identity devuelve las solicitudes de token a la puerta de enlace de API; 3-4) solicitudes de los microservicios a la puerta de enlace de API mediante el token de autenticación. Como en la aplicación eShopOnContainers se ha dividido la puerta de enlace de API en varios BFF (back-end para front-end) y puertas de enlace de API de áreas de negocio, otra opción habría sido crear una puerta de enlace de API adicional para los intereses transversales. Esa opción sería razonable en una arquitectura basada en microservicios más compleja con varios microservicios de intereses transversales. Como en eShopOnContainers solo hay un interés transversal, se decidió controlar solamente el servicio de seguridad fuera del territorio de la puerta de enlace de API, por motivos de simplicidad.
 
 En cualquier caso, si la aplicación está protegida en el nivel de puerta de enlace de API, el módulo de autenticación de la puerta de enlace de API de Ocelot se visita en primer lugar cuando se intenta usar cualquier microservicio protegido. Eso redirige la solicitud HTTP al microservicio Identity o de autenticación para obtener el token de acceso para que los servicios protegidos se puedan visitar con el token de acceso.
 
@@ -540,11 +540,11 @@ Pero la entrada simplemente redirige las solicitudes HTTP pero no intenta oculta
 
 Tener un nivel Nginx de entrada en Kubernetes delante de las aplicaciones web además de las distintas puertas de enlace de API de Ocelot o BFF es la arquitectura ideal, como se muestra en el diagrama siguiente.
 
-![Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a la aplicación, incluidas las aplicaciones web, que normalmente están fuera del ámbito de la puerta de enlace de la API.](./media/image41.png)
+![Diagrama que muestra cómo encaja un nivel de entrada en el entorno de AKS.](./media/implement-api-gateways-with-ocelot/eshoponcontainer-ingress-tier.png)
 
 **Figura 6-41**. El nivel de entrada en eShopOnContainers cuando se implementa en Kubernetes
 
-Al implementar eShopOnContainers en Kubernetes, solo expone algunos servicios o puntos de conexión a través de la _entrada_, básicamente la lista siguiente de postfijos en las direcciones URL:
+Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a la aplicación, incluidas las aplicaciones web, que normalmente están fuera del ámbito de la puerta de enlace de la API. Al implementar eShopOnContainers en Kubernetes, solo expone algunos servicios o puntos de conexión a través de la _entrada_, básicamente la lista siguiente de postfijos en las direcciones URL:
 
 - `/` para la aplicación web SPA cliente
 - `/webmvc` para la aplicación web MVC cliente

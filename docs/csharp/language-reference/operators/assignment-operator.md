@@ -1,5 +1,5 @@
 ---
-title: 'Operador =: referencia de C#'
+title: 'Operadores de asignación: referencia de C#'
 ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70924660"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039079"
 ---
-# <a name="-operator-c-reference"></a>Operador = (referencia de C#)
+# <a name="assignment-operators-c-reference"></a>Operadores de asignación (referencia de C#)
 
 El operador de asignación `=` asigna el valor de su operando de la derecha a una variable, una [propiedad](../../programming-guide/classes-and-structs/properties.md) o un elemento de [indizador](../../programming-guide/indexers/index.md) proporcionado por el operando de la izquierda. El resultado de una expresión de asignación es el valor asignado al operando izquierdo. El tipo del operando de la derecha debe ser el mismo que el del operando de la izquierda o debe poder convertirse implícitamente en él.
 
-El operador de asignación es asociativo a la derecha, es decir, una expresión de la forma
+El operador de asignación `=` es asociativo a la derecha, es decir, una expresión con el formato
 
 ```csharp
 a = b = c
@@ -40,9 +40,7 @@ A partir C# 7.3, puede usar el operador de asignación ref `= ref` para reasigna
 
 [!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
-En el caso del operador de asignación ref, el tipo de ambos operandos debe ser el mismo.
-
-Para más información, vea la [nota de propuesta de características](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+En el caso del operador de asignación de referencias, sus dos operandos deben ser del mismo tipo.
 
 ## <a name="compound-assignment"></a>Asignación compuesta
 
@@ -68,11 +66,15 @@ A partir de C# 8.0, puede usar el operador de asignación de uso combinado de N
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Un tipo definido por el usuario no puede sobrecargar el operador de asignación. Sin embargo, un tipo definido por el usuario puede definir una conversión implícita a otro tipo. De este modo, el valor de un tipo definido por el usuario puede asignarse a una variable, una propiedad o un elemento de indizador de otro tipo. Para obtener más información, vea [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md).
+Un tipo definido por el usuario no puede [sobrecargar](operator-overloading.md) el operador de asignación. Sin embargo, un tipo definido por el usuario puede definir una conversión implícita a otro tipo. De este modo, el valor de un tipo definido por el usuario puede asignarse a una variable, una propiedad o un elemento de indizador de otro tipo. Para obtener más información, vea [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md).
+
+Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta. Pero si un tipo definido por el usuario sobrecarga un operador binario `op`, el operador `op=`, si existe, también se sobrecarga de forma implícita.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para más información, consulte la sección sobre [operadores de asignación](~/_csharplang/spec/expressions.md#assignment-operators) de la [Especificación del lenguaje C#](../language-specification/index.md).
+Para más información, consulte la sección sobre [operadores de asignación](~/_csharplang/spec/expressions.md#assignment-operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+
+Para más información sobre el operador de asignación de referencias `= ref`, vea la [nota de propuesta de características](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
 
 ## <a name="see-also"></a>Vea también
 

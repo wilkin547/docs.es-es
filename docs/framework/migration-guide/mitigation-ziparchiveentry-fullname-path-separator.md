@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778865"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457735"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigación: separador de ruta de acceso ZipArchiveEntry.FullName
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, ha cambiado el separador de ruta de acceso utilizado en la propiedad <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> de la barra diagonal inversa ("\\") utilizada en versiones anteriores de .NET Framework a una barra diagonal ("/").   Los objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> se crean al llamar a una de las sobrecargas del método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
@@ -47,4 +45,4 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, ha c
 ## <a name="see-also"></a>Vea también
 
 - [Cambios de redestinación](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Compatibilidad de aplicaciones en 4.6.1](application-compatibility-in-the-net-framework-4-6-1.md)
+- [Compatibilidad de aplicaciones](application-compatibility.md)

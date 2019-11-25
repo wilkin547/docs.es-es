@@ -2,12 +2,12 @@
 title: Modelo de programación asincrónica de tareas (TAP) con async y await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 644830ac62a4df23f22d8f91e9b3c768dd611451
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8f88ecc05fd21a3526478cf564dc4fa97f309f7e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395703"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969960"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modelo de programación asincrónica de tareas
 
@@ -243,8 +243,8 @@ Puede ignorar esta convención cuando un evento, clase base o contrato de interf
 |Title|Descripción|Ejemplo|
 |-----------|-----------------|------------|
 |[Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|Muestra cómo convertir una solución WPF sincrónica en una solución WPF asincrónica. La aplicación descarga una serie de sitios web.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Ejemplo de async: Tutorial de acceso a web)|
-|[Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Agrega <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> al tutorial anterior. El uso de `WhenAll` inicia todas las descargas al mismo tiempo.||
-|[Cómo: Hacer varias solicitudes web en paralelo usando async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Demuestra cómo comenzar varias tareas al mismo tiempo.|[Async Sample: Make Multiple Web Requests in Parallel](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Ejemplo de async: Realizar varias solicitudes web en paralelo)|
+|[Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Agrega <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> al tutorial anterior. El uso de `WhenAll` inicia todas las descargas al mismo tiempo.||
+|[Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Demuestra cómo comenzar varias tareas al mismo tiempo.|[Async Sample: Make Multiple Web Requests in Parallel](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Ejemplo de async: Realizar varias solicitudes web en paralelo)|
 |[Async Return Types (C#)](./async-return-types.md) (Tipos de valor devuelto de async [C#])|Muestra los tipos que los métodos asincrónicos pueden devolver y explica cuándo es apropiado cada uno de ellos.||
 |[Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujos de control en programas asincrónicos [C#])|Rastrea en detalle el flujo de control a través de una sucesión de expresiones await en un programa asincrónico.|[Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Ejemplo de async: Flujo de control en programas de async)|
 |[Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])|Muestra cómo agregar la siguiente funcionalidad a la solución asincrónica:<br /><br /> - [Cancel an Async Task or a List of Tasks (C#)](./cancel-an-async-task-or-a-list-of-tasks.md) (Cancelación de una tarea asincrónica o de una lista de tareas [C#])<br />- [Cancel Async Tasks after a Period of Time (C#)](./cancel-async-tasks-after-a-period-of-time.md) (Cancelación de tareas asincrónicas tras un período de tiempo [C#])<br />- [Cancel Remaining Async Tasks after One Is Complete (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) (Cancelación de tareas asincrónicas restantes cuando se completa una [C#])<br />- [Start Multiple Async Tasks and Process Them As They Complete (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md) (Inicio de varias tareas asincrónicas y cómo procesarlas a medida que se completan [C#])|[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación)|

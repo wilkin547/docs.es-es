@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774448"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420064"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -19,10 +19,10 @@ Aprenda a usar en ML.NET un modelo ONNX previamente entrenado para detectar obje
 
 Entrenar un modelo de detección de objetos desde cero requiere establecer millones de parámetros, una enorme cantidad de datos de aprendizaje etiquetados y una gran cantidad de recursos informáticos (cientos de horas de GPU). El uso de un modelo entrenado previamente le permite abreviar el proceso de entrenamiento.
 
-En este tutorial, aprenderá a:
+En este tutorial aprenderá a:
 > [!div class="checklist"]
 >
-> - Comprender el problema
+> - Entender el problema
 > - Conocer qué es ONNX y cómo funciona con ML.NET
 > - Entender el modelo
 > - Volver a usar el modelo entrenado previamente
@@ -45,7 +45,7 @@ En este ejemplo se crea una aplicación de consola de .NET Core que detecta obje
 
 La detección de objetos es un problema de visión informática. Si bien está estrechamente relacionada con la clasificación de imágenes, la detección de objetos realiza la clasificación de imágenes a una escala más granular. La detección de objetos ubica _y_ categoriza entidades dentro de las imágenes. Use la detección de objetos cuando las imágenes contengan varios objetos de tipos diferentes.
 
-![Imágenes en paralelo que muestran la clasificación de la imagen de un perro a la izquierda y la clasificación de objetos de un grupo en un perro que se muestra a la derecha](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Capturas de pantalla en las que se muestran las diferencias entre la clasificación de imágenes y la clasificación de objetos.](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 Entre algunos casos de uso para la detección de objetos se incluyen:
 
@@ -66,7 +66,7 @@ Hay diferentes tipos de redes neuronales, las más comunes son perceptrón multi
 
 La detección de objetos es una tarea de procesamiento de imágenes. Por lo tanto, la mayoría de los modelos de aprendizaje profundo entrenados para solucionar este problema son CNN. El modelo que se usa en este tutorial es el Tiny YOLOv2, una versión más compacta del modelo YOLOv2 que se describe en el documento: ["YOLO9000: Better, Faster, Stronger" de Redmon y Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2 se entrena en el conjunto de datos Pascal VOC y se compone de 15 capas que pueden predecir 20 clases diferentes de objetos. Dado que Tiny YOLOv2 es una versión comprimida del modelo YOLOv2 original, se logra velocidad a cambio de precisión. Los diferentes niveles que componen el modelo se pueden visualizar mediante herramientas como Netron. Al inspeccionar el modelo, se produciría una asignación de las conexiones entre todas las capas que componen la red neuronal, donde cada capa contendría el nombre de la capa, junto con las dimensiones de la entrada y la salida correspondientes. Las estructuras de datos que se usan para describir las entradas y salidas del modelo se conocen como tensores. Los tensores se pueden considerar como contenedores que almacenan datos en N dimensiones. En el caso de Tiny YOLOv2, el nombre de la capa de entrada es `image` y espera un tensor de dimensiones `3 x 416 x 416`. El nombre de la capa de salida es `grid` y genera un tensor de salida de dimensiones `125 x 13 x 13`.
 
-![Capa de entrada dividida en capas ocultas y, luego, la capa de salida](./media/object-detection-onnx/netron-model-map.png)
+![Capa de entrada dividida en capas ocultas y, luego, la capa de salida](./media/object-detection-onnx/netron-model-map-layers.png)
 
 El modelo YOLO toma una imagen `3(RGB) x 416px x 416px`. El modelo toma esta entrada y la pasa a través de las diferentes capas para generar una salida. El resultado divide la imagen de entrada en una cuadrícula de `13 x 13`, y cada celda de la cuadrícula consta de `125` valores.
 
@@ -74,11 +74,11 @@ El modelo YOLO toma una imagen `3(RGB) x 416px x 416px`. El modelo toma esta ent
 
 Open Neural Network Exchange (ONNX) es un formato de código abierto para los modelos de IA. ONNX admite la interoperabilidad entre marcos. Esto significa que puede entrenar un modelo en uno de los muchos marcos de aprendizaje automático populares, como PyTorch, convertirlo en formato ONNX y consumir el modelo ONNX en otro marco, como ML.NET. Para más información, visite el [sitio web de ONNX](https://onnx.ai/).
 
-![Formatos compatibles de ONNX que se importan a ONNX y luego usados por otros formatos compatibles de ONNX](./media/object-detection-onnx/onnx-frameworks.png)
+![Diagrama de los formatos de ONNX admitidos en uso.](./media/object-detection-onnx/onyx-supported-formats.png)
 
 El modelo Tiny YOLOv2 entrenado previamente se almacena en formato ONNX, una representación serializada de las capas y los patrones aprendidos de esas capas. En ML.NET, la interoperabilidad con ONNX se logra con los paquetes NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) y [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer). El paquete [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) contiene una serie de transformaciones que toman una imagen y la codifican en valores numéricos que se pueden usar como entrada en una canalización de entrenamiento o de predicción. El paquete [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) aprovecha el tiempo de ejecución de ONNX para cargar un modelo de ONNX y usarlo para hacer predicciones basadas en la entrada proporcionada.
 
-![Flujo de datos de un archivo de ONNX en el tiempo de ejecución de ONNX y finalmente a la aplicación de C#](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![Flujo de datos del archivo ONNX en el tiempo de ejecución de ONNX.](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>Configurar el proyecto de .NET Core
 
@@ -454,7 +454,7 @@ Estupendo. Ahora es el momento de usar este código junto con el modelo para la 
 
 Al igual que con el procesamiento posterior, hay algunos pasos en el procedimiento de puntuación. Para ayudarlo con esto, agregue al proyecto una clase que contendrá la lógica de puntuación.
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nuevo elemento**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *OnnxModelScorer.cs*. A continuación, seleccione el botón **Agregar**.
 
     El archivo *OnnxModelScorer.cs* se abre en el editor de código. Agregue la instrucción `using` siguiente al principio del archivo *OnnxModelScorer.cs*:
@@ -665,9 +665,9 @@ Después de la instrucción try-catch, agregue lógica adicional para indicar qu
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-Eso es todo.
+Ya está.
 
-## <a name="results"></a>Results
+## <a name="results"></a>Resultados
 
 Después de seguir los pasos anteriores, ejecute la aplicación de consola (Ctrl + F5). Los resultados deberían ser similares a la salida siguiente. Es posible que vea advertencias o mensajes de procesamiento, si bien se han quitado de los resultados siguientes para mayor claridad.
 
@@ -703,16 +703,16 @@ person and its Confidence score: 0.5551759
 
 Para ver las imágenes con rectángulos delimitadores, desplácese hasta el directorio `assets/images/output/`. A continuación se muestra un ejemplo de una de las imágenes procesadas.
 
-![Imagen procesada de ejemplo de un comedor](./media/object-detection-onnx/image3.jpg)
+![Imagen procesada de ejemplo de un comedor](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
-Felicidades. Ha creado correctamente un modelo de Machine Learning para la detección de objetos al reutilizar un modelo de `ONNX` entrenado previamente en ML.NET.
+¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para la detección de objetos al reutilizar un modelo de `ONNX` entrenado previamente en ML.NET.
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
 
-En este tutorial aprendió lo siguiente:
+En este tutorial ha aprendido a:
 > [!div class="checklist"]
 >
-> - Comprender el problema
+> - Entender el problema
 > - Conocer qué es ONNX y cómo funciona con ML.NET
 > - Entender el modelo
 > - Volver a usar el modelo entrenado previamente

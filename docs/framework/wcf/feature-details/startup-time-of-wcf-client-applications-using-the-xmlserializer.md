@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
+title: 'Cómo: Mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: f8766a5dfa2bcfc715a0f0e21274f7c6ac04ad15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca15d710a30586135f0d030e155b09b63a22ee45
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944894"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976064"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procedimiento para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Cómo: Mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
 Los servicios y las aplicaciones cliente que utilizan tipos de datos que son serializables utilizando <xref:System.Xml.Serialization.XmlSerializer> generan y compilan el código de la serialización para esos tipos de datos en el tiempo de ejecución, lo que se puede traducir en un rendimiento de inicio lento.  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
 3. En el símbolo del sistema, inicie la herramienta Svcutil.exe mediante el formato siguiente.  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -53,7 +53,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
 4. Use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un archivo serializador *. CS* generado previamente con el comando:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -61,7 +61,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
      Por ejemplo:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
@@ -71,7 +71,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
      Según el ejemplo del paso anterior, el comando de compilación sería el siguiente:  
   
-    ```  
+    ```console  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
@@ -82,7 +82,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
 ## <a name="example"></a>Ejemplo  
  El siguiente comando genera los tipos de serialización para los tipos de `XmlSerializer` utilizados por cualquier contrato de servicios en el ensamblado.  
   
-```  
+```console  
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   

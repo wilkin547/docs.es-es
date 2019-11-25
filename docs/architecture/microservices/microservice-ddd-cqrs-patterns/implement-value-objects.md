@@ -2,12 +2,12 @@
 title: Implementar objetos de valor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674152"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739870"
 ---
 # <a name="implement-value-objects"></a>Implementación de objetos de valor
 
@@ -17,7 +17,7 @@ Un objeto de valor puede hacer referencia a otras entidades. Por ejemplo, en una
 
 En la figura 7-13 se muestra el objeto de valor Address en el agregado Order.
 
-![Objeto de valor Address dentro del agregado Order.](./media/image14.png)
+![Diagrama que muestra el objeto de valor Address dentro del agregado Order.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Figura 7-13**. Objeto de valor Dirección en el agregado Pedido
 
@@ -310,7 +310,7 @@ public class Address
 - **Martin Fowler. El patrón ValueObject** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software) (Libro; incluye una descripción de los objetos de valor) \
+- **Eric Evans. Diseño orientado al dominio: abordar la complejidad en el corazón del software.** (Libro; incluye una descripción de los objetos de valor) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Vaughn Vernon. Implementing Domain-Driven Design** (Implementación del diseño guiado por el dominio). (Libro; incluye una descripción de los objetos de valor) \

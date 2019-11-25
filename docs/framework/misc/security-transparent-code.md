@@ -7,16 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206056"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975523"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
-
-<a name="top"></a>
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -24,16 +22,6 @@ En la seguridad participan tres partes interrelacionadas: espacio aislado, permi
 
 > [!IMPORTANT]
 > La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de la .NET Framework 4, la Directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información sobre los efectos de este cambio, vea [compatibilidad y migración](code-access-security-policy-compatibility-and-migration.md)de la Directiva de seguridad de acceso del código.
-
-En este tema se describe el modelo de transparencia con más detalle. Contiene las siguientes secciones:
-
-- [Propósito del modelo de transparencia](#purpose)
-
-- [Especificar el nivel de transparencia](#level)
-
-- [Aplicación de transparencia](#enforcement)
-
-<a name="purpose"></a>
 
 ## <a name="purpose-of-the-transparency-model"></a>Propósito del modelo de transparencia
 
@@ -47,11 +35,7 @@ El objetivo principal del cumplimiento de la transparencia es proporcionar un me
 La transparencia se introdujo en .NET Framework 2.0 para simplificar el modelo de seguridad y para facilitar la escritura e implementación de aplicaciones y bibliotecas seguras. El código transparente también se usa en Microsoft Silverlight a fin de simplificar el desarrollo de aplicaciones de confianza parcial.
 
 > [!NOTE]
-> Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, vea [Cómo: Depuración de una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.
-
-[Volver al principio](#top)
-
-<a name="level"></a>
+> Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, consulta [Cómo: Depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.
 
 ## <a name="specifying-the-transparency-level"></a>Especificar el nivel de transparencia
 
@@ -59,7 +43,7 @@ El atributo <xref:System.Security.SecurityRulesAttribute> de nivel de ensamblado
 
 Los niveles son los siguientes:
 
-- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia .NET Framework 4.
+- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia de .NET Framework 4.
 
 - Nivel 1 (<xref:System.Security.SecurityRuleSet.Level1>): las reglas de transparencia de .NET Framework 2.0.
 
@@ -107,10 +91,6 @@ El modelo de transparencia de nivel 1 tiene las siguientes limitaciones:
 - No se aplican las reglas de herencia.
 
 - Existe la posibilidad de que el código transparente sea perjudicial si se ejecuta con plena confianza.
-
-[Volver al principio](#top)
-
-<a name="enforcement"></a>
 
 ## <a name="transparency-enforcement"></a>Cumplimiento de la transparencia
 

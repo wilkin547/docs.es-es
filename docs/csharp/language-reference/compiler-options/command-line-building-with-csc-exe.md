@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dfd494ceb631a8f86cc3a249e5168c1f413e7e4f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040381"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972913"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilar la línea de comandos con csc.exe
 
@@ -18,7 +18,7 @@ Puede invocar el compilador de C# escribiendo el nombre de su archivo ejecutable
 
 Si usa la ventana **Símbolo del sistema para desarrolladores de Visual Studio**, todas las variables de entorno necesarias se establecen automáticamente. Para obtener información sobre cómo acceder a esta herramienta, vea el tema [Símbolo del sistema para desarrolladores de Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
 
-Si usa una ventana de símbolo del sistema estándar, debe ajustar la ruta de acceso antes de poder invocar *csc.exe* desde cualquier subdirectorio del equipo. También debe ejecutar *vsvars32.bat* para establecer las variables de entorno adecuadas para admitir las compilaciones desde la línea de comandos. Para obtener más información sobre *vsvars32.bat*, incluyendo instrucciones para buscarlo y ejecutarlo, consulte [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Si usa una ventana de símbolo del sistema estándar, debe ajustar la ruta de acceso antes de poder invocar *csc.exe* desde cualquier subdirectorio del equipo. También debe ejecutar *vsvars32.bat* para establecer las variables de entorno adecuadas para admitir las compilaciones desde la línea de comandos. Para obtener más información sobre *vsvars32.bat*, incluidas las instrucciones sobre cómo buscarlo y ejecutarlo, vea [Procedimiento para establecer variables de entorno para la línea de comandos de Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Si trabaja en un equipo que solo tiene el kit de desarrollo de software (SDK) de Windows, puede usar el compilador de C# en el **símbolo del sistema de SDK**, que puede abrir desde la opción de menú **Microsoft .NET Framework SDK**.
 

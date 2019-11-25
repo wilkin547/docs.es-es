@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117678"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969251"
 ---
 # <a name="compatsortnlsversion-element"></a>\<elemento > CompatSortNLSVersion
 Especifica que el runtime debe usar criterios de ordenación heredados al realizar comparaciones de cadenas.  
@@ -55,7 +55,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- Dado que las operaciones de comparación de cadenas, ordenación y uso de mayúsculas y minúsculas realizadas por la clase <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> en el .NET Framework 4 se ajustan al estándar Unicode 5,1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de las versiones anteriores de .NET Framework. Si su aplicación depende del comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en el .NET Framework 3,5 y versiones anteriores incluyendo el elemento `<CompatSortNLSVersion>` en el archivo de configuración de la aplicación.  
+ Dado que las operaciones de comparación de cadenas, ordenación y uso de mayúsculas y minúsculas realizadas por la clase <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> en el .NET Framework 4 se ajustan al estándar Unicode 5,1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de las versiones anteriores de la .NET Framework. Si su aplicación depende del comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en el .NET Framework 3,5 y versiones anteriores incluyendo el elemento `<CompatSortNLSVersion>` en el archivo de configuración de la aplicación.  
   
 > [!IMPORTANT]
 > La restauración de reglas de comparación y ordenación de cadenas heredadas también requiere que la biblioteca de vínculos dinámicos sort00001000.dll esté disponible en el sistema local.  
@@ -68,15 +68,15 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Al ejecutar el ejemplo en el .NET Framework 4, se muestra el siguiente resultado.  
+ Al ejecutar el ejemplo en el .NET Framework 4, se muestra el siguiente resultado:
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- Esto es completamente diferente de la salida que se muestra al ejecutar el ejemplo en el .NET Framework 3,5.  
+ Esto es completamente diferente de la salida que se muestra al ejecutar el ejemplo en el .NET Framework 3,5:
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   

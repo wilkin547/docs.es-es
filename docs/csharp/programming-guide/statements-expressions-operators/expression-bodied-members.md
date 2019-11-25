@@ -5,14 +5,12 @@ ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120141"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Miembros con cuerpo de expresión (Guía de programación de C#)
 
@@ -89,9 +87,9 @@ Para más información, vea [Finalizadores (Guía de programación de C#)](../cl
 
 ## <a name="indexers"></a>Indizadores
 
-Como las propiedades, los descriptores de acceso get y set de un indizador constan de las definiciones de cuerpos de expresión si el descriptor de acceso get está formado por una sola instrucción que devuelve un valor o el descriptor de acceso set realiza una asignación simple.
+Como las propiedades, los descriptores de acceso `get` y `set` del indizador constan de las definiciones de cuerpos de expresión si el descriptor de acceso `get` está formado por una sola expresión que devuelve un valor o el descriptor de acceso `set` realiza una asignación simple.
 
-En el ejemplo siguiente se define una clase denominada `Sports` que incluye una matriz <xref:System.String> interna que contiene los nombres de varios deportes. Los descriptores de acceso get y set del indizador se implementan como definiciones de cuerpos de expresión.
+En el ejemplo siguiente se define una clase denominada `Sports` que incluye una matriz <xref:System.String> interna que contiene los nombres de varios deportes. Los descriptores de acceso `get` y `set` del indizador se implementan como definiciones de cuerpos de expresión.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

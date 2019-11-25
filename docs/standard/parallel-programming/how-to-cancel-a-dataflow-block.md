@@ -10,14 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140095"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Procedimiento para cancelar un bloque de flujo de datos
 En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Este ejemplo usa Windows Forms para mostrar dónde están activos los elementos de trabajo en una canalización de flujo de datos y también los efectos de la canalización.  
@@ -94,7 +92,7 @@ En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Es
   
  En la ilustración siguiente se muestra la aplicación en ejecución.  
   
- ![Aplicación de Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Aplicación de Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,14 +1,14 @@
 ---
-title: 'Procedimiento para modificar el contenido de cadenas: Guía de C#'
+title: Procedimiento para modificar el contenido de cadenas - Guía de C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267761"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973263"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
@@ -48,7 +48,7 @@ Puede quitar texto de una cadena con el método <xref:System.String.Remove%2A?di
 
 Puede usar [expresiones regulares](../../standard/base-types/regular-expressions.md) para reemplazar texto que coincida con patrones por texto nuevo, posiblemente definido por un patrón. En el ejemplo siguiente se usa la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> para encontrar un patrón en una cadena de origen y reemplazarlo con un uso de mayúsculas y minúsculas adecuado. Con el método <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> se usa una función que proporciona la lógica del reemplazo de uno de los argumentos. En este ejemplo, la función `LocalReplaceMatchCase` es una **función local** declarada dentro del método de ejemplo. `LocalReplaceMatchCase` usa la clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> para crear la cadena de reemplazo con un uso de mayúsculas y minúsculas adecuado.
 
-Las expresiones regulares son más útiles al buscar y reemplazar texto que sigue un patrón, en vez de texto que ya conoce. Vea [Cómo: Buscar cadenas](search-strings.md) para obtener más detalles. Con el patrón de búsqueda "the\s" se busca la palabra "the" seguida de un carácter de espacio en blanco. Con esa parte del patrón se asegura de que no se busca "there" en la cadena de origen. Para obtener más información sobre los elementos de lenguaje de expresiones regulares, vea [Lenguaje de expresiones regulares - Referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
+Las expresiones regulares son más útiles al buscar y reemplazar texto que sigue un patrón, en vez de texto que ya conoce. Vea [Cómo buscar cadenas](search-strings.md) para obtener más información. Con el patrón de búsqueda "the\s" se busca la palabra "the" seguida de un carácter de espacio en blanco. Con esa parte del patrón se asegura de que no se busca "there" en la cadena de origen. Para obtener más información sobre los elementos de lenguaje de expresiones regulares, vea [Lenguaje de expresiones regulares - Referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 

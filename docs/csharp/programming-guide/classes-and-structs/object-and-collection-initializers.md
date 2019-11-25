@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596566"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455443"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicializadores de objeto y de colección (Guía de programación de C#)
 
@@ -103,7 +103,7 @@ Puede especificar [null](../../language-reference/keywords/null.md) como element
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-El ejemplo anterior genera código que llama a <xref:System.Collections.Generic.Dictionary%602.Item(%600)> para establecer los valores. A partir de C# 6, puede inicializar diccionarios y otros contenedores asociativos con la siguiente sintaxis. Tenga en cuenta que en lugar de sintaxis de indizador, con paréntesis y una asignación, usa un objeto con varios valores:
+El ejemplo anterior genera código que llama a <xref:System.Collections.Generic.Dictionary%602.Item(%600)> para establecer los valores. A partir de C# 6, puede inicializar diccionarios y otros contenedores asociativos con la sintaxis siguiente. Tenga en cuenta que en lugar de sintaxis de indizador, con paréntesis y una asignación, usa un objeto con varios valores:
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
@@ -126,5 +126,5 @@ Los métodos `Add` pueden usar la palabra clave `params` para tomar un número v
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [Expresiones de consulta LINQ](../linq-query-expressions/index.md)
+- [LINQ en C#](../../linq/index.md)
 - [Tipos anónimos](anonymous-types.md)

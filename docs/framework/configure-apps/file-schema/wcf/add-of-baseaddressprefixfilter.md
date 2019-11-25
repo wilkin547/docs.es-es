@@ -2,21 +2,21 @@
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 809e6d5504b56f86eb09a5d57931f922e1c18348
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850521"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973820"
 ---
-# <a name="add-of-baseaddressprefixfilter"></a>\<Agregar > de \<baseAddressPrefixFilter >
+# <a name="add-of-baseaddressprefixfilter"></a>\<agregar > de \<baseAddressPrefixFilter >
 Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para seleccionar los enlaces de Internet Information Services (IIS) adecuados al hospedar una aplicación Windows Communication Foundation (WCF) en IIS.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> baseAddressPrefixFilters**](baseaddressprefixfilters.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment**](servicehostingenvironment.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseAddressPrefixFilters**](baseaddressprefixfilters.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**agregar >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,7 +33,7 @@ Representa un elemento de configuración que especifica un filtro de paso a trav
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|DESCRIPCIÓN|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |prefix|Un URI que se utiliza para coincidir con una parte de una dirección base.|  
   
@@ -42,9 +42,9 @@ Representa un elemento de configuración que especifica un filtro de paso a trav
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|DESCRIPCIÓN|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|Colección de elementos de configuración que especifican filtros de paso a través, que proporcionan un mecanismo para seleccionar los enlaces de IIS adecuados al hospedar una aplicación Windows Communication Foundation (WCF) en IIS.|  
+|[\<baseAddressPrefixFilters >](baseaddressprefixfilters.md)|Colección de elementos de configuración que especifican filtros de paso a través, que proporcionan un mecanismo para seleccionar los enlaces de IIS adecuados al hospedar una aplicación Windows Communication Foundation (WCF) en IIS.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un filtro de prefijo proporciona un método para que los proveedores de host compartido especifiquen qué identificadores URI va a utiliza el servicio. Permite a los host compartidos hospedar varias aplicaciones con direcciones base diferentes para el mismo esquema en el mismo sitio.  
@@ -53,9 +53,9 @@ Representa un elemento de configuración que especifica un filtro de paso a trav
   
  IIS admite la especificación de varios enlaces IIS para cada sitio, lo que tiene como resultado varias direcciones base para cada esquema. Dado que un servicio WCF hospedado bajo un sitio permite el enlace solo a una dirección base para cada esquema, puede usar la característica de filtro de prefijo para seleccionar la dirección base necesaria del servicio hospedado. Las direcciones base de entrada, proporcionadas por IIS, se filtran dependiendo del filtro de la lista de prefijos opcional.  
   
- Por ejemplo, su sitio puede contener las direcciones base siguientes.  
+ Por ejemplo, su sitio puede contener las siguientes direcciones base:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

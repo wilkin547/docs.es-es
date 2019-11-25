@@ -10,22 +10,22 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854112"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975121"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
-Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que la carga y la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] serialización de datos binarios de gran tamaño de esta manera pueden afectar al rendimiento, define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.
+Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que la carga y la serialización de datos binarios de gran tamaño de esta manera pueden afectar al rendimiento, el Open Data Protocol (OData) define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.
 
 - Recurso multimedia: los datos binarios que pertenecen a una entidad, como vídeo, audio, imagen u otro tipo de flujo de recursos multimedia.
 
 - Entrada de vínculo multimedia: entidad con una referencia a un flujo de recursos multimedia relacionado.
 
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], defina un flujo de recursos binarios implementando un proveedor de transmisión de datos por secuencias. La implementación del proveedor de transmisión por secuencias proporciona al servicio de datos la secuencia de recursos multimedia asociada a <xref:System.IO.Stream> una entidad específica como un objeto. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.
+Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], defina un flujo de recursos binarios implementando un proveedor de transmisión de datos por secuencias. La implementación del proveedor de transmisión por secuencias proporciona al servicio de datos la secuencia de recursos multimedia asociada a una entidad específica como un objeto <xref:System.IO.Stream>. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.
 
 La configuración de un servicio de datos para que admita la transmisión por secuencias de datos binarios requiere los siguientes pasos:
 
@@ -39,7 +39,7 @@ La configuración de un servicio de datos para que admita la transmisión por se
 
 5. Habilite el acceso a los recursos binarios en el servidor o en un origen de datos.
 
-Los ejemplos de este tema se basan en un ejemplo de servicio fotográfico de streaming, que se describe en profundidad [en la serie post Data Services streaming Provider: Implementación de un proveedor de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkID=198989)(parte 1). El código fuente de este servicio de ejemplo está disponible en la [Página de ejemplo streaming Photo Service](https://go.microsoft.com/fwlink/?LinkID=198988) de la galería de código de MSDN.
+Los ejemplos de este tema se basan en un ejemplo de servicio fotográfico de streaming, que se describe en profundidad en la [serie post Data Services streaming Provider series: Implementing a streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989). El código fuente de este servicio de ejemplo está disponible en la [Página de ejemplo streaming Photo Service](https://go.microsoft.com/fwlink/?LinkID=198988) de la galería de código de MSDN.
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definir una entrada de vínculo multimedia en el modelo de datos
 
@@ -53,7 +53,7 @@ Para indicar que una entidad es una entrada de vínculo multimedia, agregue el a
 
 También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.
 
-Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea [la serie post Data Services streaming Provider: Implementación de un proveedor de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkID=198989)(parte 1).
+Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea la [serie post Data Services streaming Provider: Implementing a streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
 
 **Proveedor de reflexión**
 
@@ -67,7 +67,7 @@ Cuando se usan proveedores de servicios personalizados, implemente la interfaz <
 
 Para crear un servicio de datos que admita flujos de datos binarios, debe implementar la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Esta implementación habilita el servicio de datos para devolver al cliente datos binarios como flujo y utilizar los datos binarios como flujo enviado desde el cliente. El servicio de datos crea una instancia de esta interfaz cuando sea necesario para acceder a los datos binarios como flujo. La interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider> especifica los siguientes miembros:
 
-|Nombre de miembro|DESCRIPCIÓN|
+|Nombre de miembro|Descripción|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|El servicio de datos invoca este método para eliminar el recurso multimedia correspondiente cuando se elimina su entrada de vínculo multimedia. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que elimina el recurso multimedia asociado con la entrada de vínculo multimedia proporcionada.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|El servicio de datos invoca este método para devolver un recurso multimedia como un flujo. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que proporciona un flujo que el servicio de datos utiliza para devolver el recurso multimedia que está asociado a la entrada de vínculo multimedia proporcionada.|
@@ -91,11 +91,11 @@ Para obtener información general sobre cómo crear un servicio de datos, vea [c
 Cuando se crea un servicio de datos en una aplicación Web de ASP.NET, se utiliza Windows Communication Foundation (WCF) para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 kilobytes. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:
 
 > [!NOTE]
-> Debe usar un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferencia para asegurarse de que WCF transmite los datos binarios en los mensajes de solicitud y respuesta, y no los almacena en búfer.
+> Debe usar un modo de transferencia de <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> para asegurarse de que WCF transmite los datos binarios en los mensajes de solicitud y respuesta, y no los almacena en búfer.
 
 Para obtener más información, consulte [transferencia de mensajes de streaming](../../wcf/feature-details/streaming-message-transfer.md) y [cuotas de transporte](../../wcf/feature-details/transport-quotas.md).
 
-De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para permitir que el servicio de datos reciba flujos mayores de 4 MB cuando se ejecute en IIS, también debe `maxRequestLength` establecer el atributo del [Elemento httpRuntime (esquema de configuración ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la `<system.web />` sección de configuración, como se muestra a continuación ejemplo
+De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para permitir que el servicio de datos reciba flujos mayores de 4 MB cuando se ejecute en IIS, también debe establecer el atributo `maxRequestLength` del [Elemento httpRuntime (esquema de configuración de ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la sección configuración de `<system.web />`, como se muestra en el ejemplo siguiente:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Usar flujos de datos en una aplicación cliente
 
@@ -131,9 +131,9 @@ A continuación se enumeran algunas de las consideraciones que debe tener en cue
 
 ## <a name="versioning-requirements"></a>Requisitos de control de versiones
 
-El proveedor de transmisión por secuencias tiene los siguientes requisitos de control de versiones de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]:
+El proveedor de transmisión por secuencias tiene los siguientes requisitos de control de versiones del protocolo OData:
 
-- El proveedor de transmisión por secuencias requiere que el servicio de datos admita la versión 2.0 del protocolo de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] y versiones posteriores.
+- El proveedor de transmisión por secuencias requiere que el servicio de datos admita la versión 2,0 del protocolo OData y versiones posteriores.
 
 Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).
 

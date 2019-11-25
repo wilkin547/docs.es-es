@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962581"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974352"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de carpeta conocidos para lugares comunes de cuadros de diálogo de archivos
-Utilice un <xref:System.Guid> para especificar una [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] carpeta conocida al agregar carpetas a una <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> recopilación. Los GUID de carpeta conocidos no distinguen mayúsculas de minúsculas y se definen en el archivo KnownFolders. h en el Windows SDK.  
+Use una <xref:System.Guid> para especificar una carpeta conocida de Windows Vista al agregar carpetas a una colección de <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>. Los GUID de carpeta conocidos no distinguen mayúsculas de minúsculas y se definen en el archivo KnownFolders. h en el Windows SDK.  
   
 > [!NOTE]
-> En algunos casos, una carpeta conocida agregada a <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> no se mostrará en el área **vínculos favoritos** . Por ejemplo, si la carpeta conocida especificada no está presente en el equipo que ejecuta la aplicación, no se muestra la carpeta conocida.  
+> En algunos casos, una carpeta conocida agregada a la <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> no se mostrará en el área **vínculos favoritos** . Por ejemplo, si la carpeta conocida especificada no está presente en el equipo que ejecuta la aplicación, no se muestra la carpeta conocida.  
   
 ## <a name="list-of-guids"></a>Lista de GUID  
- En la tabla siguiente [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] se enumeran las carpetas <xref:System.Guid>conocidas y las asociadas.  
+ En la tabla siguiente se enumeran las carpetas conocidas de Windows Vista y sus <xref:System.Guid>asociadas.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -58,7 +58,7 @@ Utilice un <xref:System.Guid> para especificar una [!INCLUDE[wiprlhext](../../..
  CommonTemplates  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
- Computer  
+ Equipo  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
  Conflicto  
@@ -106,7 +106,7 @@ Utilice un <xref:System.Guid> para especificar una [!INCLUDE[wiprlhext](../../..
  InternetCache  
  352481E8-33BE-4251-BA85-6007CAEDCF9D  
   
- Vínculos  
+ vínculos  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
   
  LocalAppData  
@@ -247,7 +247,7 @@ Utilice un <xref:System.Guid> para especificar una [!INCLUDE[wiprlhext](../../..
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- StartMenu  
+ Inicio  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Inicio  
@@ -289,4 +289,4 @@ Utilice un <xref:System.Guid> para especificar una [!INCLUDE[wiprlhext](../../..
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Cómo: Agregar una ubicación personalizada a un cuadro de diálogo de archivo](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Agregar un lugar común a un cuadro de diálogo de archivos](how-to-add-a-custom-place-to-a-file-dialog-box.md)

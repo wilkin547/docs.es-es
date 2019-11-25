@@ -2,12 +2,12 @@
 title: Implementar un modelo de dominio de microservicio con .NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676592"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972039"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
 
@@ -17,7 +17,9 @@ En la sección anterior se han explicado los principios y patrones de diseño fu
 
 La organización de carpetas usada para la aplicación de referencia eShopOnContainers muestra el modelo DDD para la aplicación. Es posible que descubra que otra organización de carpetas comunica con mayor claridad las opciones de diseño elegidas para la aplicación. Como puede ver en la figura 7-10, en el modelo de dominio Ordering hay dos agregados, el agregado Order y el agregado Buyer. Cada agregado es un grupo de entidades de dominio y objetos de valor, aunque también podría tener un agregado compuesto por una sola entidad de dominio (la raíz de agregado o entidad raíz).
 
-![La vista Explorador de soluciones para el proyecto Ordering.Domain, en la que se muestra la carpeta AggregatesModel que contiene las carpetas BuyerAggregate y OrderAggregate, cada una con sus clases de entidad, archivos de objeto de valor y así sucesivamente. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Captura de pantalla del proyecto Ordering.Domain en el Explorador de soluciones.":::
+La vista Explorador de soluciones para el proyecto Ordering.Domain, en la que se muestra la carpeta AggregatesModel que contiene las carpetas BuyerAggregate y OrderAggregate, cada una con sus clases de entidad, archivos de objeto de valor y así sucesivamente.
+:::image-end:::
 
 **Figura 7-10**. Estructura del modelo de dominio del microservicio Ordering de eShopOnContainers
 
@@ -31,7 +33,9 @@ Un agregado hace referencia a un clúster de objetos de dominio agrupados para a
 
 La coherencia transaccional significa que se garantiza la coherencia y actualización de un agregado al final de una acción empresarial. Por ejemplo, la composición del agregado Order del modelo de dominio del microservicio Ordering de eShopOnContainers es la que se muestra en la figura 7-11.
 
-![Una vista detallada de la carpeta OrderAggregate: Address.cs es un objeto de valor, IOrderRepository es una interfaz de repositorio, Order.cs es una raíz agregada, OrderItem.cs es una entidad secundaria y OrderStatus.cs es una clase de enumeración.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="Captura de pantalla de la carpeta OrderAggregate y sus clases.":::
+Una vista detallada de la carpeta OrderAggregate: Address.cs es un objeto de valor, IOrderRepository es una interfaz de repositorio, Order.cs es una raíz agregada, OrderItem.cs es una entidad secundaria y OrderStatus.cs es una clase de enumeración.
+:::image-end:::
 
 **Figura 7-11**. Agregado Order en la solución de Visual Studio
 
@@ -170,7 +174,7 @@ Por ejemplo, en el ejemplo de código OrderAggregate anterior, hay varios campos
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. Puntos de datos - Programación para un diseño guiado por el dominio: sugerencias para los desarrolladores enfocados en datos** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. Cómo crear modelos de dominio totalmente encapsulados** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

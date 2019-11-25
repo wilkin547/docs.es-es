@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216230"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973311"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Exposición de los componentes de .NET Core a COM
 
-En .NET Core, el proceso de exposición de los objetos .NET a COM se ha simplificado significativamente en comparación con .NET Framework. El siguiente proceso le guiará a través de la exposición de una clase a COM. En este tutorial se le enseñará a hacer lo siguiente:
+En .NET Core, el proceso de exposición de los objetos .NET a COM se ha simplificado significativamente en comparación con .NET Framework. El siguiente proceso le guiará a través de la exposición de una clase a COM. En este tutorial se muestra cómo realizar las siguientes acciones:
 
 - Exponer una clase a COM desde .NET Core.
 - Generar un servidor COM como parte de la creación de la biblioteca de .NET Core.
@@ -43,10 +43,10 @@ El primer paso consiste en crear la biblioteca.
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
-5. Agregue el atributo `[Guid("<IID>")]` a la interfaz con el GUID de la interfaz para la interfaz COM que está implementando. Por ejemplo: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Tenga en cuenta que este GUID debe ser único, ya que es el único identificador de esta interfaz para COM. En Visual Studio, puede generar un GUID desde Herramientas > Crear GUID para abrir la herramienta de creación de GUID.
+5. Agregue el atributo `[Guid("<IID>")]` a la interfaz con el GUID de la interfaz para la interfaz COM que está implementando. Por ejemplo, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Tenga en cuenta que este GUID debe ser único, ya que es el único identificador de esta interfaz para COM. En Visual Studio, puede generar un GUID desde Herramientas > Crear GUID para abrir la herramienta de creación de GUID.
 6. Agregue el atributo `[InterfaceType]` a la interfaz y especifique qué interfaces COM base debe implementar la interfaz.
 7. Cree una clase denominada `Server` que implemente `IServer`.
-8. Agregue el atributo `[Guid("<CLSID>")]` a la clase, con el identificador de clase GUID para la clase COM que está implementando. Por ejemplo: `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Igual que sucede con la interfaz GUID, este GUID debe ser único, ya que es el único identificador de esta interfaz para COM.
+8. Agregue el atributo `[Guid("<CLSID>")]` a la clase, con el identificador de clase GUID para la clase COM que está implementando. Por ejemplo, `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Igual que sucede con la interfaz GUID, este GUID debe ser único, ya que es el único identificador de esta interfaz para COM.
 9. Agregue el atributo `[ComVisible(true)]` a la interfaz y a la clase.
 
 > [!IMPORTANT]
@@ -70,12 +70,12 @@ Abra un símbolo del sistema con privilegios elevados y ejecute `regsvr32 Projec
 
 Ahora el resultado también contendrá un archivo `ProjectName.X.manifest`. Este archivo es el manifiesto en paralelo que se podrá usar con COM sin registro.
 
-## <a name="sample"></a>Ejemplo
+## <a name="sample"></a>Muestra
 
 Puede encontrar un [ejemplo de servidor COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) totalmente funcional en el repositorio dotnet/samples de GitHub.
 
 ## <a name="additional-notes"></a>Notas adicionales
 
-A diferencia de lo que ocurre en .NET Framework, .NET Core no admite la generación de una biblioteca de tipos COM (TLB) a partir de un ensamblado de .NET Core. Tendrá que escribir manualmente un archivo IDL o un encabezado C++ para las declaraciones nativas de las interfaces.
+A diferencia de lo que ocurre en .NET Framework, .NET Core no admite la generación de una biblioteca de tipos COM (TLB) a partir de un ensamblado de .NET Core. La instrucción es escribir manualmente un archivo IDL o un encabezado C/C++ para las declaraciones nativas de las interfaces COM.
 
-Además, no se admite la carga de .NET Framework y .NET Core en el mismo proceso. Por lo tanto, no se admite la carga de un servidor COM de .NET Core en un proceso de cliente COM de .NET Framework o viceversa.
+Además, la carga de .NET Framework y .NET Core en el mismo proceso presenta limitaciones de diagnóstico. La limitación principal es la depuración de componentes administrados, ya que no es posible depurar .NET Framework y .NET Core al mismo tiempo. Asimismo, las dos instancias en tiempo de ejecución no comparten ensamblados administrados. Esto significa que no es posible compartir tipos de .NET reales entre los dos tiempos de ejecución, por lo que todas las interacciones deben restringirse a los contratos de interfaz COM expuestos.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 83e465651762fce33a62009fb3add40373a33c51
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772124"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970504"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  
@@ -113,7 +113,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Para obtener más información y ejemplos, vea [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) y [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](../interop/how-to-access-office-onterop-objects.md).  
+ Para obtener más información y ejemplos, vea [Procedimiento para usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) y [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  El uso de argumentos opcionales y con nombre afecta a la resolución de sobrecarga de las maneras siguientes:  
@@ -129,7 +129,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Procedimiento para usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Uso de tipo dinámico](../types/using-type-dynamic.md)
 - [Utilizar constructores](./using-constructors.md)
 - [Utilizar indizadores](../indexers/using-indexers.md)

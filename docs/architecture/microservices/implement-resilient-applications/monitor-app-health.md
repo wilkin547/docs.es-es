@@ -2,12 +2,12 @@
 title: Seguimiento de estado
 description: Explore una forma de implementar la supervisión de estado.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094078"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732895"
 ---
 # <a name="health-monitoring"></a>Seguimiento de estado
 
@@ -123,7 +123,7 @@ El proyecto de código abierto [AspNetCore.Diagnostics.HealthChecks](https://git
 
 Por ejemplo, en el microservicio `Catalog.API`, se agregaron los siguientes paquetes NuGet:
 
-![Vista del Explorador de soluciones del proyecto Catalog.API donde se hare referencia a los paquetes NuGet AspNetCore.Diagnostics.HealthChecks](./media/image6.png)
+![Captura de pantalla de los paquetes de NuGet AspNetCore.Diagnostics.HealthChecks.](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **Figura 8-7**. Comprobaciones de estado personalizadas implementadas en Catalog.API mediante AspNetCore.Diagnostics.HealthChecks
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 Cuando haya configurado las comprobaciones de estado como se describe en este artículo, y una vez que el microservicio se esté ejecutando en Docker, puede comprobar directamente desde un explorador si su estado es correcto. Debe publicar el puerto de contenedor en el host de Docker, para así poder acceder al contenedor a través de la dirección IP del host de Docker externa host local o de `localhost`, como se muestra en la figura 8-8.
 
-![Vista de Browser de la respuesta de JSON devuelta por una comprobación de estado](./media/image7.png)
+![Captura de pantalla de la respuesta JSON devuelta por una comprobación de estado.](./media/monitor-app-health/health-check-json-response.png)
 
 **Figura 8-8**. Comprobación del estado de un único servicio desde un explorador
 
@@ -205,7 +205,7 @@ El ejemplo de eShopOnContainers contiene una página web que muestra informes de
 
 Afortunadamente, [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) también proporciona el paquete NuGet [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) que se puede usar para mostrar los resultados de comprobación de estado de los URI configurados.
 
-![Vista de Browser de la aplicación WebStatus, que muestra el estado de todos los microservicios de eShopOnContainers](./media/image8.png)
+![Captura de pantalla de la interfaz de usuario de comprobaciones de estado con los estados de mantenimiento de eShopOnContainers.](./media/monitor-app-health/health-check-status-ui.png)
 
 **Figura 8-9**. Informe de comprobación de estado de ejemplo en eShopOnContainers
 

@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935322"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968223"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Atributo '\<attributename >' no se puede aplicar varias veces
-El atributo solo puede aplicarse una vez. El `AttributeUsage` atributo determina si un atributo se puede aplicar más de una vez.  
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>El atributo '\<attributeName > ' no se puede aplicar varias veces
+
+El atributo solo se puede aplicar una vez. El atributo `AttributeUsage` determina si un atributo se puede aplicar más de una vez.  
   
  **Identificador de error:** BC30663  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Asegúrese de que el atributo sólo se aplica una vez.  
+1. Asegúrese de que el atributo solo se aplica una vez.  
   
-2. Si usa atributos personalizados desarrollados por usted, considere la posibilidad de cambiar sus `AttributeUsage` atributo para permitir el uso de varios atributos, como en el ejemplo siguiente.  
+2. Si usa atributos personalizados desarrollados por usted, considere la posibilidad de cambiar su `AttributeUsage` atributo para permitir el uso de varios atributos, como en el ejemplo siguiente.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

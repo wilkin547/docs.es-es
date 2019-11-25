@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922285"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972649"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operadores de conversión y prueba de tipos (Referencia de C#)
 
@@ -52,7 +52,7 @@ En el ejemplo siguiente se muestra que el operador `is` devuelve `true` si el ti
 
 [!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-En el ejemplo siguiente se muestra que el operador `is` tiene en cuenta las conversiones boxing y unboxing pero no considera las conversiones numéricas:
+En el ejemplo siguiente se muestra que el operador `is` tiene en cuenta las conversiones boxing y unboxing pero no considera las [conversiones numéricas](../builtin-types/numeric-conversions.md):
 
 [!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
@@ -117,7 +117,7 @@ También puede utilizar paréntesis para [llamar a un método o invocar un deleg
 
 Sirven además para ajustar el orden en el que se van a evaluar operaciones en una expresión. Para obtener más información, vea [Operadores de C# (referencia de C#)](index.md).
 
-## <a name="typeof-operator"></a>Operador typeof
+## <a name="typeof-operator"></a>typeof (operador)
 
 El operador `typeof` obtiene la instancia <xref:System.Type?displayProperty=nameWithType> para un tipo. El argumento del operador `typeof` debe ser el nombre de un tipo o un parámetro de tipo, como se muestra en el ejemplo siguiente:
 
@@ -127,7 +127,7 @@ También puede usar el operador `typeof` con tipos genéricos sin enlazar. El no
 
 [!code-csharp-interactive[typeof unbound generic](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Una expresión no puede ser un argumento del operador `typeof`. Para obtener la instancia <xref:System.Type?displayProperty=nameWithType> para el tipo en tiempo de ejecución del resultado de la expresión, use el método <xref:System.Object.GetType%2A?displayProperty=nameWithType>.
+Una expresión no puede ser un argumento del operador `typeof`. Para obtener la instancia de <xref:System.Type?displayProperty=nameWithType> para el tipo en tiempo de ejecución del resultado de una expresión, use el método <xref:System.Object.GetType%2A?displayProperty=nameWithType>.
 
 ### <a name="type-testing-with-the-typeof-operator"></a>Prueba de tipos con el operador `typeof`
 
@@ -137,7 +137,7 @@ Use el operador `typeof` para comprobar si el tipo en tiempo de ejecución del r
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Los operadores `is`, `as` y `typeof` no son sobrecargables.
+Los operadores `is`, `as` y `typeof` no se pueden sobrecargar.
 
 Un tipo definido por el usuario no se puede sobrecargar el operador `()`, pero puede definir conversiones de tipos personalizadas que pueden realizarse mediante una expresión de conversión. Para obtener más información, vea [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md).
 
@@ -154,4 +154,5 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 
 - [Referencia de C#](../index.md)
 - [Operadores de C#](index.md)
-- [Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Procedimiento para convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Elementos genéricos en .NET](../../../standard/generics/index.md)

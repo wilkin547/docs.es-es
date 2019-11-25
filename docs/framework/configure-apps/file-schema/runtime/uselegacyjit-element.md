@@ -2,12 +2,12 @@
 title: <useLegacyJit> (Elemento)
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: 47aacb629dc234d9aeaab1ef6e6844fbbe5dbfdb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115106"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968851"
 ---
 # <a name="uselegacyjit-element"></a>Elemento \<useLegacyJit>
 
@@ -66,7 +66,7 @@ En lugar de utilizar un valor de archivo de configuración, puede habilitar el c
 
   Establezca la variable de entorno `COMPLUS_useLegacyJit` en `0` (use el nuevo compilador JIT de 64 bits) o `1` (use el anterior compilador JIT de 64 bits):
   
-  ```  
+  ```env  
   COMPLUS_useLegacyJit=0|1  
   ```  
   

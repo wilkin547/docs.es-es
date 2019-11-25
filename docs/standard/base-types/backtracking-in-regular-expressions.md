@@ -18,30 +18,19 @@ helpviewer_keywords:
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 ms.custom: seodec18
-ms.openlocfilehash: 06f1094d872c84f2f277c7695a8858edc285449f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6504430f94f800bb9f41761ad64c65fefecb68d6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140515"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968253"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
-<a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
+El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
   
 > [!NOTE]
 > En general, un motor NFA (autómata finito no determinista), como el motor de expresiones regulares de .NET, se encarga de crear expresiones regulares eficaces y rápidas para el desarrollador.  
-  
- Este tema contiene las siguientes secciones:  
-  
-- [Comparación lineal sin retroceso](#linear_comparison_without_backtracking)  
-  
-- [Retroceso con cuantificadores o construcciones de alternancia opcionales](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
-  
-- [Retroceso con cuantificadores opcionales anidados](#backtracking_with_nested_optional_quantifiers)  
-  
-- [Controlar el retroceso](#controlling_backtracking)  
-  
-<a name="linear_comparison_without_backtracking"></a>   
+
 ## <a name="linear-comparison-without-backtracking"></a>Comparación lineal sin retroceso  
  Si un patrón de expresión regular no tiene ningún cuantificador o construcción de alternancia opcional, el motor de expresiones regulares se ejecuta en tiempo lineal. Es decir, una vez que el motor de expresiones regulares hace coincidir el primer elemento de lenguaje del patrón con texto de la cadena de entrada, intenta buscar una coincidencia del siguiente elemento de lenguaje del patrón con el siguiente carácter o grupo de caracteres de la cadena de entrada. Este proceso continúa hasta que la coincidencia se realiza correctamente o se produce un error. En cualquier caso, el motor de expresiones regulares avanza de carácter en carácter por la cadena de entrada.  
   
@@ -74,11 +63,8 @@ ms.locfileid: "73140515"
 |18|\w|"d" (índice 13)|Posible coincidencia.|  
 |19|\b|"" (índice 14)|Coincidencia.|  
   
- Si un patrón de expresión regular no incluye ningún cuantificador o construcción de alternancia opcional, el número máximo de comparaciones necesarias para hacer coincidir el patrón de expresión regular con la cadena de entrada es aproximadamente equivalente al número de caracteres de la cadena de entrada. En este caso, el motor de expresiones regulares usa 19 comparaciones para identificar posibles coincidencias en esta cadena de 13 caracteres.  Es decir, el motor de expresiones regulares se ejecuta en tiempo prácticamente lineal si no contiene ningún cuantificador o construcción de alternancia opcional.  
-  
- [Volver al principio](#top)  
-  
-<a name="backtracking_with_optional_quantifiers_or_alternation_constructs"></a>   
+ Si un patrón de expresión regular no incluye ningún cuantificador o construcción de alternancia opcional, el número máximo de comparaciones necesarias para hacer coincidir el patrón de expresión regular con la cadena de entrada es aproximadamente equivalente al número de caracteres de la cadena de entrada. En este caso, el motor de expresiones regulares usa 19 comparaciones para identificar posibles coincidencias en esta cadena de 13 caracteres.  Es decir, el motor de expresiones regulares se ejecuta en tiempo prácticamente lineal si no contiene ningún cuantificador o construcción de alternancia opcional.   
+
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Retroceso con cuantificadores o construcciones de alternancia opcionales  
  Cuando una expresión regular incluye cuantificadores o construcciones de alternancia opcionales, la evaluación de la cadena de entrada ya no es lineal. La coincidencia de modelos con un motor NFA está controlada por los elementos de lenguaje de la expresión regular y no por los caracteres que se hacen coincidir en la cadena de entrada. Por tanto, el motor de expresiones regulares intenta hacer coincidir totalmente subexpresiones opcionales o alternativas. Cuando avanza al elemento de lenguaje siguiente de la subexpresión y la coincidencia no se realiza correctamente, el motor de expresiones regulares puede abandonar una parte de su coincidencia correcta y volver a un estado guardado anterior para hacer coincidir la expresión regular en su conjunto con la cadena de entrada. Este proceso de volver a un estado guardado anterior para encontrar una coincidencia se denomina retroceso.  
   
@@ -99,11 +85,8 @@ ms.locfileid: "73140515"
   
 - Compara la "s" del patrón con la "s" que sigue al carácter "e" coincidente (la primera "s" de "expressions"). La coincidencia es correcta.  
   
- Cuando se usa retroceso, la coincidencia del patrón de expresión regular con la cadena de entrada, que tiene 55 caracteres de longitud, necesita 67 operaciones de comparación. Normalmente, si un patrón de expresión regular tiene una única construcción de alternancia o un único cuantificador opcional, el número de operaciones de comparación necesarias para que coincida con el patrón es más del doble del número de caracteres de la cadena de entrada.  
-  
- [Volver al principio](#top)  
-  
-<a name="backtracking_with_nested_optional_quantifiers"></a>   
+ Cuando se usa retroceso, la coincidencia del patrón de expresión regular con la cadena de entrada, que tiene 55 caracteres de longitud, necesita 67 operaciones de comparación. Normalmente, si un patrón de expresión regular tiene una única construcción de alternancia o un único cuantificador opcional, el número de operaciones de comparación necesarias para que coincida con el patrón es más del doble del número de caracteres de la cadena de entrada.   
+
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Retroceso con cuantificadores opcionales anidados  
  El número de operaciones de comparación necesarias para coincidir con un patrón de expresión regular puede aumentar exponencial si el patrón incluye muchas construcciones de alternancia, si incluye construcciones de alternancia anidadas o, lo que es más frecuente, si incluye cuantificadores opcionales anidados. Por ejemplo, el patrón de expresión regular `^(a+)+$` está diseñado para coincidir con una cadena completa que contiene uno o más caracteres "a". El ejemplo proporciona dos cadenas de entrada de longitud idéntica, pero solo la primera cadena coincide con el patrón. La clase <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> se usa para determinar cuánto tiempo tarda la operación de coincidencia.  
   
@@ -118,15 +101,11 @@ ms.locfileid: "73140515"
   
 - Vuelve a la coincidencia 3 guardada previamente. Determina que hay dos caracteres "a" adicionales para asignar a un grupo capturado adicional. Sin embargo, se produce un error en la prueba de fin de cadena. Vuelva a la coincidencia 3 e intenta hacer coincidir los dos caracteres "a" adicionales en dos grupos capturados adicionales. Se sigue produciendo un error en la prueba de fin de cadena. Estas coincidencias con error necesitan 12 comparaciones. Hasta ahora, se ha realizado un total de 25 comparaciones.  
   
- La comparación de la cadena de entrada con la expresión regular continúa de esta manera hasta que el motor de expresiones regulares ha intentado todas las posibles combinaciones de coincidencias y, a continuación, concluye que no hay ninguna coincidencia. Debido a los cuantificadores anidados, esta comparación es O(2<sup>n</sup>) o una operación exponencial, donde *n* es el número de caracteres de la cadena de entrada. Esto significa que, en el peor de los casos, una cadena de entrada de 30 caracteres necesita aproximadamente 1.073.741.824 comparaciones y una cadena de entrada de 40 caracteres necesita aproximadamente 1.099.511.627.776 comparaciones. Si usa cadenas de estas longitudes o incluso mayores, los métodos de expresión regular pueden tardar mucho tiempo en completarse cuando procesan datos de entrada que no coinciden con el patrón de expresión regular.  
-  
- [Volver al principio](#top)  
-  
-<a name="controlling_backtracking"></a>   
+ La comparación de la cadena de entrada con la expresión regular continúa de esta manera hasta que el motor de expresiones regulares ha intentado todas las posibles combinaciones de coincidencias y, a continuación, concluye que no hay ninguna coincidencia. Debido a los cuantificadores anidados, esta comparación es O(2<sup>n</sup>) o una operación exponencial, donde *n* es el número de caracteres de la cadena de entrada. Esto significa que, en el peor de los casos, una cadena de entrada de 30 caracteres necesita aproximadamente 1.073.741.824 comparaciones y una cadena de entrada de 40 caracteres necesita aproximadamente 1.099.511.627.776 comparaciones. Si usa cadenas de estas longitudes o incluso mayores, los métodos de expresión regular pueden tardar mucho tiempo en completarse cuando procesan datos de entrada que no coinciden con el patrón de expresión regular. 
+
 ## <a name="controlling-backtracking"></a>Controlar el retroceso  
- El retroceso permite crear expresiones regulares eficaces y flexibles. Sin embargo, como se ha mostrado en la sección anterior, estas ventajas pueden conllevar un bajo rendimiento inaceptable. Para evitar el retroceso excesivo, se debe definir un intervalo de tiempo de espera cuando se instancie un objeto <xref:System.Text.RegularExpressions.Regex> o se llame a un método estático de coincidencia de expresión regular. Esta técnica se analiza en la sección siguiente. Además, .NET admite tres elementos del lenguaje de expresiones regulares que limitan o suprimen el retroceso y que admiten expresiones regulares complejas con poca o ninguna reducción del rendimiento: [subexpresiones sin retroceso](#Nonbacktracking), [aserciones de búsqueda tardía](#Lookbehind) y [aserciones de búsqueda anticipada](#Lookahead). Para obtener más información sobre cada elemento del lenguaje, vea [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
-  
-<a name="Timeout"></a>   
+ El retroceso permite crear expresiones regulares eficaces y flexibles. Sin embargo, como se ha mostrado en la sección anterior, estas ventajas pueden conllevar un bajo rendimiento inaceptable. Para evitar el retroceso excesivo, se debe definir un intervalo de tiempo de espera cuando se instancie un objeto <xref:System.Text.RegularExpressions.Regex> o se llame a un método estático de coincidencia de expresión regular. Esta técnica se analiza en la sección siguiente. Además, .NET admite tres elementos del lenguaje de expresiones regulares que limitan o suprimen el retroceso y que admiten expresiones regulares complejas con poca o ninguna reducción del rendimiento: [subexpresiones sin retroceso](#nonbacktracking-subexpression), [aserciones de búsqueda tardía](#lookbehind-assertions) y [aserciones de búsqueda anticipada](#lookahead-assertions). Para obtener más información sobre cada elemento del lenguaje, vea [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+
 ### <a name="defining-a-time-out-interval"></a>Definición de un intervalo de tiempo de espera  
  A partir de .NET Framework 4.5, se puede establecer un valor de tiempo de espera que representa el intervalo más largo en el que el motor de expresión regular buscará una coincidencia única antes de abandonar el intento y generar una excepción <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. El intervalo de tiempo de espera se especifica al proporcionar un valor <xref:System.TimeSpan> al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> para las expresiones regulares de instancias. Además, cada método estático de coincidencia de patrones tiene una sobrecarga con un parámetro <xref:System.TimeSpan> que permite especificar un valor de tiempo de espera. De forma predeterminada, el intervalo de tiempo de espera se establece en <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> y el motor de expresiones regulares no agota dicho tiempo.  
   
@@ -139,8 +118,7 @@ ms.locfileid: "73140515"
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
-  
-<a name="Nonbacktracking"></a>   
+
 ### <a name="nonbacktracking-subexpression"></a>Subexpresión sin retroceso  
  El elemento de lenguaje `(?>` *subexpression*`)` suprime el retroceso en una subexpresión. Es útil para evitar los problemas de rendimiento asociados a las coincidencias con error.  
   
@@ -148,8 +126,7 @@ ms.locfileid: "73140515"
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking4.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
-  
-<a name="Lookbehind"></a>   
+
 ### <a name="lookbehind-assertions"></a>aserciones de búsqueda tardía  
  .NET incluye dos elementos de lenguaje, `(?<=`*subexpresión*`)` y `(?<!`*subexpresión*`)`, que buscan una coincidencia con el carácter o los caracteres anteriores de la cadena de entrada. Ambos elementos de lenguaje son aserciones de ancho cero, es decir, determinan si el carácter o los caracteres que preceden inmediatamente al carácter actual coinciden con *subexpression*, sin avanzar o retroceder.  
   
@@ -180,8 +157,7 @@ ms.locfileid: "73140515"
 |`[-.\w]*`|Buscar coincidencias con cero o más apariciones de un guión, un punto o un carácter alfabético.|  
 |`(?<=[0-9A-Z])`|Volver a examinar el último carácter coincidente y continuar con la coincidencia si es alfanumérica. Tenga en cuenta que los caracteres alfanuméricos son un subconjunto del conjunto formado por puntos, guiones y todos los caracteres alfabéticos.|  
 |`@`|Buscar coincidencias con un signo ("\@").|  
-  
-<a name="Lookahead"></a>   
+
 ### <a name="lookahead-assertions"></a>aserciones de búsqueda anticipada  
  .NET incluye dos elementos de lenguaje, `(?=`*subexpresión*`)` y `(?!`*subexpresión*`)`, que buscan una coincidencia con el carácter o los caracteres siguientes de la cadena de entrada. Ambos elementos de lenguaje son aserciones de ancho cero, es decir, determinan si el carácter o los caracteres que siguen inmediatamente al carácter actual coinciden con *subexpression*, sin avanzar o retroceder.  
   
@@ -212,8 +188,6 @@ ms.locfileid: "73140515"
 |`((?=[A-Z])\w+\.)*`|Buscar coincidencias con el patrón de uno o varios caracteres alfabéticos seguidos de un punto una o varias veces. El carácter alfabético inicial debe ser alfabético.|  
 |`[A-Z]\w*`|Buscar coincidencias con un carácter alfabético seguido de cero o más caracteres alfabéticos.|  
 |`$`|Finalizar la búsqueda de coincidencias al final de la cadena de entrada.|  
-  
- [Volver al principio](#top)  
   
 ## <a name="see-also"></a>Vea también
 

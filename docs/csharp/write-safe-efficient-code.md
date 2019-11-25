@@ -2,13 +2,14 @@
 title: Escritura de código C# seguro y eficaz
 description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribir código seguro verificable que anteriormente se hubiera asociado a código no seguro.
 ms.date: 10/23/2018
+ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960838"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039627"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -229,7 +230,7 @@ El compilador genera un código más eficaz cuando se llama a los miembros de un
 
 No se debe pasar un tipo de valor que admite un valor NULL como argumento `in`. El tipo <xref:System.Nullable%601> no se declara como una estructura de solo lectura. Eso significa que el compilador debe generar copias defensivas de cualquier argumento de tipo de valor que acepta valores NULL pasado a un método con el modificador `in` en la declaración de parámetros.
 
-Puede consultar un programa de ejemplo en el que se muestran las diferencias de rendimiento usando [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) en el [repositorio de muestras](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) de GitHub. Compara la transmisión de un valor struct mutable por valor y por referencia con la transmisión de un valor struct inmutable por valor y por referencia. El uso de un valor struct inmutable y de la transmisión por referencia es un proceso más rápido.
+Puede ver un programa de ejemplo en el que se muestran las diferencias de rendimiento con [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) en el [repositorio de ejemplos](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) de GitHub. Compara la transmisión de un valor struct mutable por valor y por referencia con la transmisión de un valor struct inmutable por valor y por referencia. El uso de un valor struct inmutable y de la transmisión por referencia es un proceso más rápido.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Uso de los tipos `ref struct` para trabajar con bloques o memoria en un solo marco de pila
 

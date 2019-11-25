@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512352"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036151"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados con el puntero (referencia de C#)
 
@@ -48,7 +48,7 @@ El operador unario `&` devuelve la dirección de su operando:
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-El operando del operador `&` debe ser una variable fija. Las variables *fijas* son las que residen en ubicaciones de almacenamiento que no se ven afectadas por el funcionamiento del [recolector de elementos no utilizados](../../../standard/garbage-collection/index.md). En el ejemplo anterior, la variable local `number` es una variable fija, ya que reside en la pila. Las variables que residen en ubicaciones de almacenamiento que pueden verse afectadas por el recolector de elementos no utilizados (por ejemplo, reubicadas) se denominan variables *móviles*. Los campos de objeto y los elementos de matriz son ejemplos de variables móviles. Puede obtener la dirección de una variable móvil si la "fija" o "ancla" con la instrucción [fixed](../keywords/fixed-statement.md). La dirección obtenida solo es válida mientras dure el bloque de instrucciones `fixed`. En el ejemplo siguiente se muestra cómo usar la instrucción `fixed` y el operador `&`:
+El operando del operador `&` debe ser una variable fija. Las variables *fijas* son las que residen en ubicaciones de almacenamiento que no se ven afectadas por el funcionamiento del [recolector de elementos no utilizados](../../../standard/garbage-collection/index.md). En el ejemplo anterior, la variable local `number` es una variable fija, ya que reside en la pila. Las variables que residen en ubicaciones de almacenamiento que pueden verse afectadas por el recolector de elementos no utilizados (por ejemplo, reubicadas) se denominan variables *móviles*. Los campos de objeto y los elementos de matriz son ejemplos de variables móviles. Puede obtener la dirección de una variable móvil si la "fija" o "ancla" con una [instrucción `fixed`](../keywords/fixed-statement.md). La dirección obtenida solo es válida dentro del bloque de una instrucción `fixed`. En el ejemplo siguiente se muestra cómo usar una instrucción `fixed` y el operador `&`:
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ El operador binario `*` calcula la [multiplicación](arithmetic-operators.md#mul
 
 ## <a name="pointer-member-access-operator--"></a>Operador de acceso a miembros de puntero ->
 
-El operador `->` combina el [direccionamiento indirecto del puntero](#pointer-indirection-operator-) y el [acceso a miembros](member-access-operators.md#member-access-operator-). Es decir, si `x` es un puntero de tipo `T*` y `y` es un miembro accesible de `T`, una expresión con el formato
+El operador `->` combina el [direccionamiento indirecto del puntero](#pointer-indirection-operator-) y el [acceso a miembros](member-access-operators.md#member-access-operator-). Es decir, si `x` es un puntero de tipo `T*` y `y` es un miembro accesible de tipo `T`, una expresión con el formato
 
 ```csharp
 x->y
@@ -166,7 +166,7 @@ En la lista siguiente se ordenan los operadores relacionados con el puntero desd
 
 Use paréntesis, `()`, para cambiar el orden de evaluación impuesto por la prioridad de los operadores.
 
-Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea [Operadores de C#](index.md).
+Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea la sección [Prioridad de operadores](index.md#operator-precedence) del artículo [Operadores de C#](index.md).
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 

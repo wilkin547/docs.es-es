@@ -2,12 +2,12 @@
 title: Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168377"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969946"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
 En un método asincrónico, las tareas se inician en el momento de crearse. El operador [await](../../../language-reference/operators/await.md) se aplica a la tarea en el momento del método en que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
@@ -37,7 +37,7 @@ var result = await myTask;
 > [!NOTE]
 > Para llevar a cabo este proyecto, debe tener instalados en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
   
- Para obtener otro ejemplo que inicia varias tareas al mismo tiempo, vea [Cómo: Ampliar el tutorial de Async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Para ver otro ejemplo que inicia varias tareas al mismo tiempo, vea [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Puede descargar el código de este ejemplo en [Muestras de código para desarrollador](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programación asincrónica con Async y Await (C#)](./index.md)
-- [Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Procedimiento para ampliar el tutorial de async usando Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

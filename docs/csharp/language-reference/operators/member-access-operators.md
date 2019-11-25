@@ -32,16 +32,16 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116130"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038999"
 ---
 # <a name="member-access-operators-c-reference"></a>Operadores de acceso a miembros (referencia de C#)
 
-Puede usar los siguientes operadores cuando tiene acceso a un miembro de tipo:
+Puede usar los operadores siguientes cuando accede a un miembro de tipo:
 
 - [`.` (acceso a miembros)](#member-access-operator-): para acceder a un miembro de un espacio de nombres o un tipo
 - [`[]` (elemento de matriz o acceso a indizador)](#indexer-operator-): para acceder a un elemento de matriz o un indizador de tipo
@@ -88,11 +88,11 @@ Para obtener más información sobre las matrices, consulte [Matrices](../../pro
 
 ### <a name="indexer-access"></a>Acceso a indizador
 
-En el siguiente ejemplo se usa el tipo <xref:System.Collections.Generic.Dictionary%602> de .NET para mostrar el acceso a indizador:
+En el ejemplo siguiente se usa el tipo <xref:System.Collections.Generic.Dictionary%602> de .NET para mostrar el acceso al indizador:
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-Los indizadores le permiten indizar las instancias de un tipo definido por el usuario de un modo similar a la indización de matrices. A diferencia de los índices de matriz, que deben ser enteros, los argumentos de indizador se pueden declarar para ser de cualquier tipo.
+Los indizadores le permiten indizar las instancias de un tipo definido por el usuario de un modo similar a la indización de matrices. A diferencia de los índices de matriz, que deben ser enteros, los parámetros de indizador se pueden declarar para ser de cualquier tipo.
 
 Para más información sobre los indizadores, consulte [Indizadores](../../programming-guide/indexers/index.md).
 
@@ -122,7 +122,7 @@ En el siguiente ejemplo se muestra el uso de los operadores `?.` y `?[]`:
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-El ejemplo anterior también muestra el uso del [operador de uso combinado de NULL](null-coalescing-operator.md). Puede usar el operador de uso combinado de NULL para proporcionar una expresión alternativa a fin de evaluar en caso de que el resultado de la operación condicional NULL sea `null`.
+En el ejemplo anterior también se usa el [operador de fusión de NULL `??`](null-coalescing-operator.md) para especificar una expresión alternativa que se evaluará en caso de que el resultado de la operación condicional NULL sea `null`.
 
 ### <a name="thread-safe-delegate-invocation"></a>Invocación de delegado seguro para subprocesos
 
@@ -198,6 +198,8 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 - [Acceso a elementos](~/_csharplang/spec/expressions.md#element-access)
 - [Operador condicional de NULL](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [Expresiones de invocación](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+Para más información sobre índices y rangos, vea la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948797"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974697"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza y contravarianza en genéricos
-<a name="top"></a> Covarianza y contravarianza son términos que hacen referencia a la capacidad de usar un tipo más derivado (más específico) o menos derivado (menos específico) que el indicado originalmente. Los parámetros de tipo genérico admiten la covarianza y contravarianza para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, la covarianza, contravarianza e invarianza tienen las siguientes definiciones. En el ejemplo se presupone una clase base denominada `Base` y una clase derivada denominada `Derived`.  
+Covarianza y contravarianza son términos que hacen referencia a la capacidad de usar un tipo más derivado (más específico) o menos derivado (menos específico) que el indicado originalmente. Los parámetros de tipo genérico admiten la covarianza y contravarianza para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, la covarianza, contravarianza e invarianza tienen las siguientes definiciones. En el ejemplo se presupone una clase base denominada `Base` y una clase derivada denominada `Derived`.  
   
 - `Covariance`  
   
@@ -65,21 +65,9 @@ ms.locfileid: "69948797"
   
 - La varianza se aplica únicamente a los tipos de referencia; si se especifica un tipo de valor para un parámetro de tipo variante, ese parámetro de tipo es invariable para el tipo construido resultante.  
   
-- La varianza no se aplica a la combinación de delegados. Es decir, si hay dos delegados de tipo `Action<Derived>` y de tipo `Action<Base>` (`Action(Of Derived)` y `Action(Of Base)` en Visual Basic), no se puede combinar el segundo delegado con el primero aunque el resultado tuviese seguridad de tipos. La varianza permite la asignación del segundo delegado a una variable de tipo `Action<Derived>`, pero los delegados solo se pueden combinar si tienen exactamente el mismo tipo.  
-  
- En las próximas subsecciones se describen los parámetros de tipo covariante y contravariante en detalle:  
-  
-- [Interfaces genéricas con parámetros de tipo covariante](#InterfaceCovariantTypeParameters)  
-  
-- [Interfaces genéricas con parámetros de tipo genérico contravariante](#InterfaceCovariantTypeParameters)  
-  
-- [Delegados genéricos con parámetros de tipo variante](#DelegateVariantTypeParameters)  
-  
-- [Definir interfaces y delegados genéricos variantes](#DefiningVariantTypeParameters)  
-  
-- [Lista de tipos de interfaces y delegados genéricos variantes](#VariantList)  
-  
-<a name="InterfaceCovariantTypeParameters"></a>   
+- La varianza no se aplica a la combinación de delegados. Es decir, si hay dos delegados de tipo `Action<Derived>` y de tipo `Action<Base>` (`Action(Of Derived)` y `Action(Of Base)` en Visual Basic), no se puede combinar el segundo delegado con el primero aunque el resultado tuviese seguridad de tipos. La varianza permite la asignación del segundo delegado a una variable de tipo `Action<Derived>`, pero los delegados solo se pueden combinar si tienen exactamente el mismo tipo.
+
+<a name="InterfaceCovariantTypeParameters"></a>
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfaces genéricas con parámetros de tipo covariante  
  A partir de .NET Framework 4, varias interfaces genéricas tienen parámetros de tipo covariante; por ejemplo, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> y <xref:System.Linq.IGrouping%602>. Todos los parámetros de tipo de estas interfaces son covariantes, por lo que los parámetros de tipo se usan únicamente para los tipos de valor devuelto de los miembros.  
   
@@ -88,9 +76,6 @@ ms.locfileid: "69948797"
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
- [Volver al principio](#top)  
-  
-<a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Interfaces genéricas con parámetros de tipo genérico contravariante  
  A partir de .NET Framework 4, varias interfaces genéricas tienen parámetros de tipo contravariante; por ejemplo, <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601> y <xref:System.Collections.Generic.IEqualityComparer%601>. Estas interfaces tienen únicamente parámetros de tipo contravariante, por lo que los parámetros de tipo se utilizan solamente como tipos de parámetro en los miembros de las interfaces.  
   
@@ -102,10 +87,7 @@ ms.locfileid: "69948797"
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
-  
- [Volver al principio](#top)  
-  
-<a name="DelegateVariantTypeParameters"></a>   
+
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Delegados genéricos con parámetros de tipo variante  
  En .NET Framework 4, los delegados genéricos `Func`, como <xref:System.Func%602>, tienen tipos de valor devuelto covariante y tipos de parámetro contravariante. Los delegados genéricos `Action` , como <xref:System.Action%602>, tienen tipos de parámetro contravariante. Esto significa que los delegados se pueden asignar a variables que tengan tipos de parámetro más derivados y (en el caso de los delegados genéricos `Func` ) tipos de valor devuelto menos derivados.  
   
@@ -141,11 +123,8 @@ ms.locfileid: "69948797"
   
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
-  
- [Volver al principio](#top)  
-  
-<a name="DefiningVariantTypeParameters"></a>   
-## <a name="defining-variant-generic-interfaces-and-delegates"></a>Definir interfaces y delegados genéricos variantes  
+
+## <a name="defining-variant-generic-interfaces-and-delegates"></a>Definir interfaces y delegados genéricos variantes
  A partir de .NET Framework 4, Visual Basic y C# tienen palabras clave que permiten marcar como covariante o contravariante los parámetros de tipo genérico de las interfaces y los delegados.  
   
 > [!NOTE]
@@ -163,11 +142,8 @@ ms.locfileid: "69948797"
  Visual Basic y C# no le permiten infringir las reglas de uso de parámetros de tipo covariante y contravariante ni agregar anotaciones de covarianza y contravarianza a los parámetros de tipo de tipos distintos de interfaces y delegados. El [Ensamblador de MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no realiza esas comprobaciones, pero se produce <xref:System.TypeLoadException> si intenta cargar un tipo que infringe las reglas.  
   
  Para obtener información y código de ejemplo, vea [Varianza en interfaces genéricas (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) y [Varianza en interfaces genéricas (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
-  
- [Volver al principio](#top)  
-  
-<a name="VariantList"></a>   
-## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista de tipos de interfaces y delegados genéricos variantes  
+
+## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista de tipos de interfaces y delegados genéricos variantes
  En .NET Framework 4, los siguientes tipos de interfaz y delegado tienen parámetros de tipo covariante y/o contravariante.  
   
 |Tipo|Parámetros de tipo covariante|Parámetros de tipo contravariante|  

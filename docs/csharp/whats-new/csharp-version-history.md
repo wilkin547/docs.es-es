@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002693"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739107"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -57,7 +57,7 @@ Aquí las cosas empiezan a ponerse interesantes. Echemos un vistazo a algunas de
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciales](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Métodos anónimos](../language-reference/operators/delegate-operator.md)
-- [Tipos de valores que aceptan valores NULL](../programming-guide/nullable-types/index.md)
+- [Tipos de valores que aceptan valores NULL](../language-reference/builtin-types/nullable-value-types.md)
 - [Iteradores](../programming-guide/concepts/iterators.md)
 - [Covarianza y contravarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -104,7 +104,7 @@ La versión 4.0 de C#, publicada con Visual Studio 2010, tuvo que lidiar con e
 
 La siguiente versión introdujo algunas nuevas características interesantes:
 
-- [Enlace dinámico](../language-reference/keywords/dynamic.md)
+- [Enlace dinámico](../language-reference/builtin-types/reference-types.md)
 - [Argumentos opcionales/con nombre](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Covariante y contravariante de genéricos](../../standard/generics/covariance-and-contravariance.md)
 - [Tipos de interoperabilidad insertados](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
@@ -132,7 +132,7 @@ Pero `async` y `await` son los auténticos protagonistas de esta versión. Cuand
 
 ## <a name="c-version-60"></a>C# versión 6.0
 
-Con las versiones 3.0 y 5.0, C# había agregado nuevas características destacables a un lenguaje orientado a objetos. Con la versión 6.0, publicada con Visual Studio 2013, en lugar de introducir una característica innovadora y predominante, se publicaron muchas características menores que aumentaron la productividad de la programación de C#. Estas son algunas de ellas:
+Con las versiones 3.0 y 5.0, C# había agregado nuevas características destacables a un lenguaje orientado a objetos. Con la versión 6.0, publicada con Visual Studio 2015, en lugar de introducir una característica innovadora y predominante, se publicaron muchas características menores que aumentaron la productividad de la programación de C#. Estas son algunas de ellas:
 
 - [Importaciones estáticas](./csharp-6.md#using-static)
 - [Filtros de excepciones](./csharp-6.md#exception-filters)

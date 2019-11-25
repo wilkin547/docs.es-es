@@ -2,12 +2,12 @@
 title: Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Uso de RabbitMQ para implementar la mensajería de un bus de eventos para entornos de integración con fines de desarrollo de entornos de prueba.
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089740"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739492"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
@@ -17,11 +17,11 @@ Una de las implementaciones personalizadas de bus de eventos en eShopOnContainer
 
 La implementación del bus de eventos con RabbitMQ permite que los microservicios se suscriban a eventos, los publiquen y los reciban, tal como se muestra en la figura 6-21.
 
-![Para controlar la distribución, RabbitMQ funciona como intermediario entre el publicador de mensajes y los suscriptores.](./media/image22.png)
+![Diagrama que muestra RabbitMQ entre el remitente y el receptor del mensaje.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **Figura 6-21.** Implementación de RabbitMQ de un bus de eventos
 
-En el código, la clase EventBusRabbitMQ implementa la interfaz genérica de IEventBus. Esto se basa en la inserción de dependencias para que pueda cambiar de esta versión de desarrollo/pruebas a una versión de producción.
+Para controlar la distribución, RabbitMQ funciona como intermediario entre el publicador de mensajes y los suscriptores. En el código, la clase EventBusRabbitMQ implementa la interfaz genérica de IEventBus. Esto se basa en la inserción de dependencias para que pueda cambiar de esta versión de desarrollo/pruebas a una versión de producción.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

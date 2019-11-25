@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141372"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974757"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
-<a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.
-
-Este tema contiene las siguientes secciones:
-
-- [Herramientas de análisis de rendimiento](#performance_analysis_tools)
-
-- [Solucionar problemas de rendimiento](#troubleshooting_performance_issues)
-
-- [Instrucciones para la solución de problemas](#troubleshooting_guidelines)
-
-- [Procedimientos para comprobar el rendimiento](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.
 
 ## <a name="performance-analysis-tools"></a>Herramientas de análisis de rendimiento
 
-En las próximas siguientes se describen las herramientas disponibles para investigar los problemas de uso de memoria y de recolección de elementos no utilizados. Los [procedimientos](#performance_check_procedures) que se muestran más adelante en este tema hacen referencia a estas herramientas.
-
-<a name="perf_counters"></a>
+En las próximas siguientes se describen las herramientas disponibles para investigar los problemas de uso de memoria y de recolección de elementos no utilizados. Los [procedimientos](#performance-check-procedures) que se muestran más adelante en este tema hacen referencia a estas herramientas.
 
 ### <a name="memory-performance-counters"></a>Contadores de rendimiento de memoria
 
 Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Generación de perfiles en tiempo de ejecución). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework), ofrece información sobre el recolector de elementos no utilizados.
-
-<a name="sos"></a>
 
 ### <a name="debugging-with-sos"></a>Depurar con SOS
 
 Puede usar el [depurador de Windows (WinDbg)](/windows-hardware/drivers/debugger/index) para inspeccionar objetos del montón administrado.
 
 Para instalar WinDbg, instale las Herramientas de depuración para Windows desde la página [Download Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) (Descarga de Herramientas de depuración para Windows).
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 
@@ -61,8 +43,6 @@ El seguimiento de eventos para Windows (ETW) es un sistema de traza que compleme
 
 El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimiento asociado a la recolección de elementos no utilizados. Un proceso puede proporcionar sus propios eventos junto con los eventos ETW. Cuando se registran, tanto los eventos de la aplicación como los eventos de la recolección de elementos no utilizados se pueden poner en correlación para determinar cómo y cuándo se producen problemas de pila. Por ejemplo, una aplicación de servidor puede proporcionar eventos al comienzo y al final de una solicitud de cliente.
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>La API de generación de perfiles
 
 Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados. Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados. Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación. Para más información, consulte [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) (Información general sobre generación de perfiles).
@@ -72,10 +52,6 @@ Los generadores de perfiles pueden proporcionar información completa. Sin embar
 ### <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 
 A partir de .NET Framework 4, la supervisión de recursos de dominio de aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de aplicación. Para más información, consulte [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md) (Supervisión de recursos de dominio de aplicación).
-
-[Volver al principio](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>Solucionar problemas de rendimiento
 
@@ -213,10 +189,6 @@ La duración de una recolección suele depender del número de objetos que sobre
 |------------------------|
 |[Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.](#HighCPU)<br /><br /> [Establezca un punto de interrupción al final de la recolección de elementos no utilizados.](#GenBreak)|
 
-[Volver al principio](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>Instrucciones para la solución de problemas
 
 En esta sección se describen instrucciones debe tener en cuenta cuando empiece las investigaciones.
@@ -258,10 +230,6 @@ En el procedimiento siguiente se describe cómo establecer un punto de interrupc
   Este comando fuerza una interrupción si **RestartEE** se ejecuta una vez recuperados los objetos de generación 2 para la recolección de elementos no utilizados.
 
   En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE**, por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.
-
-[Volver al principio](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>Procedimientos para comprobar el rendimiento
 

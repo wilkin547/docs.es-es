@@ -2,12 +2,12 @@
 title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
-ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093955"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739895"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -47,11 +47,11 @@ Por tanto, la interfaz de bus de eventos necesita una infraestructura que permit
 
 Si la ejecución de un comando relacionado con una instancia de agregado requiere reglas de dominio adicionales para ejecutarse en uno o varios agregados adicionales, debe diseñar e implementar esos efectos secundarios para que se desencadenen mediante eventos de dominio. Como se muestra en la figura 7-14 y como uno de los casos de uso más importantes, se debe usar un evento de dominio para propagar los cambios de estado entre varios agregados dentro del mismo modelo de dominio.
 
-![La coherencia entre agregados se logra mediante eventos de dominio, el agregado Order envía un evento de dominio OrderStarted que se controla para actualizar el agregado Buyer. ](./media/image15.png)
+![Diagrama que muestra un evento de dominio que controla los datos a un agregado Buyer.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Figura 7-14**. Eventos de dominio para exigir la coherencia entre varios agregados dentro del mismo dominio
 
-En la figura, cuando el usuario inicia un pedido, el evento de dominio OrderStarted desencadena la creación de un objeto Buyer en el microservicio de pedidos, según la información de usuario original del microservicio de identidades (con la información proporcionada en el comando CreateOrder). El evento de dominio lo genera el agregado de pedido cuando se crea por primera vez.
+En la figura 7-14 se muestra cómo consiguen los eventos de dominio la coherencia entre los agregados. Cuando el usuario inicia un pedido, el agregado Order envía un evento de dominio `OrderStarted`. El agregado Buyer controla el evento de dominio OrderStarted para crear un objeto Buyer en el microservicio de pedidos, según la información de usuario original del microservicio de identidades (con la información proporcionada en el comando CreateOrder).
 
 Como alternativa, puede hacer que la raíz agregada se suscriba a los eventos generados por los miembros de sus agregados (las entidades secundarias). Por ejemplo, cada entidad secundaria OrderItem puede generar un evento cuando el precio del artículo sea mayor que una cantidad específica, o bien cuando la cantidad del elemento de producto sea demasiado alta. Después, la raíz agregada puede recibir esos eventos y realizar un cálculo o una agregación global.
 
@@ -78,11 +78,11 @@ Por otro lado, si usa eventos de dominio, puede crear una implementación espec�
 
 Como se muestra en la figura 7-15, empezando desde el mismo evento de dominio, puede controlar varias acciones relacionadas con otros agregados en el dominio o acciones de la aplicación adicionales que tenga que realizar entre los microservicios conectados con eventos de integración y el bus de eventos.
 
-![Puede haber varios controladores para el mismo evento de dominio en el nivel de aplicación, un controlador puede resolver la coherencia entre agregados y otro controlador puede publicar un evento de integración, por lo que otros microservicios pueden hacer algo con él.](./media/image16.png)
+![Diagrama que muestra un evento de dominio que pasa datos a varios controladores de eventos.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Figura 7-15**. Control de varias acciones por dominio
 
-Normalmente los controladores de eventos se encuentran en el nivel de aplicación, porque los objetos de infraestructura como los repositorios o una API de aplicación se usarán para el comportamiento del microservicio. En ese sentido, los controladores de eventos son similares a los controladores de comandos, por lo que ambos forman parte del nivel de aplicación. La diferencia más importante es que un comando solo se debe procesar una vez. Un evento de dominio se podría procesar cero o *n* veces, porque lo pueden recibir varios receptores o controladores de eventos con un propósito diferente para cada controlador.
+Puede haber varios controladores para el mismo evento de dominio en el nivel de aplicación, un controlador puede resolver la coherencia entre agregados y otro controlador puede publicar un evento de integración, por lo que otros microservicios pueden hacer algo con él. Normalmente los controladores de eventos se encuentran en el nivel de aplicación, porque los objetos de infraestructura como los repositorios o una API de aplicación se usarán para el comportamiento del microservicio. En ese sentido, los controladores de eventos son similares a los controladores de comandos, por lo que ambos forman parte del nivel de aplicación. La diferencia más importante es que un comando solo se debe procesar una vez. Un evento de dominio se podría procesar cero o *n* veces, porque lo pueden recibir varios receptores o controladores de eventos con un propósito diferente para cada controlador.
 
 Tener un número abierto de controladores de eventos de dominio permite agregar tantas reglas de dominio como sea necesario sin que el código actual se vea afectado. Por ejemplo, la implementación de la siguiente regla de negocio podría ser tan fácil como agregar algunos controladores de eventos (o incluso solo uno):
 
@@ -244,7 +244,7 @@ Un enfoque es un sistema de mensajería real o incluso un bus de eventos, posibl
 
 Otra manera de asignar eventos a varios controladores de eventos consiste en usar el registro de tipos en un contenedor de IoC para poder inferir de forma dinámica a dónde enviar los eventos. En otras palabras, debe saber qué controladores de eventos tienen que obtener un evento específico. En la figura 7-16 se muestra un enfoque simplificado para esto.
 
-![La inserción de dependencias puede usarse para asociar eventos a controladores de eventos, que es el enfoque usado por MediatR](./media/image17.png)
+![Diagrama que muestra un distribuidor de eventos de dominio que envía eventos a los controladores adecuados.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Figura 7-16**. Distribuidor de eventos de dominio con IoC
 

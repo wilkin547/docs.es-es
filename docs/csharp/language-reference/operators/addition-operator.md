@@ -14,22 +14,22 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610036"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972631"
 ---
 # <a name="-and--operators-c-reference"></a>Operadores + y += (referencia de C#)
 
-El operador `+` es compatible con los tipos numéricos integrados, el tipo de [cadena](../keywords/string.md) y los tipos [delegados](../keywords/delegate.md).
+Los operadores `+` y `+=` son compatibles con los tipos numéricos [enteros](../builtin-types/integral-numeric-types.md) y de [punto flotante](../builtin-types/floating-point-numeric-types.md), el tipo [string](../builtin-types/reference-types.md#the-string-type) y los tipos [delegados](../builtin-types/reference-types.md#the-delegate-type).
 
 Para obtener información acerca del operador aritmético `+`, consulte las secciones correspondientes a los [operadores unarios más y menos](arithmetic-operators.md#unary-plus-and-minus-operators) y al [operador de suma +](arithmetic-operators.md#addition-operator-) del artículo [Operadores aritméticos](arithmetic-operators.md).
 
 ## <a name="string-concatenation"></a>Concatenación de cadenas
 
-Cuando uno o ambos operandos son de tipo [cadena](../keywords/string.md), el operador `+` concatena las representaciones de cadena de sus operandos:
+Cuando uno o ambos operandos son de tipo [cadena](../builtin-types/reference-types.md#the-string-type), el operador `+` concatena las representaciones de cadena de sus operandos:
 
 [!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
@@ -39,7 +39,7 @@ A partir de C# 6, la [interpolación de cadenas](../tokens/interpolated.md) prop
 
 ## <a name="delegate-combination"></a>Combinación de delegados
 
-Para los operandos del mismo tipo de [delegado](../keywords/delegate.md), el operador `+` devuelve una nueva instancia de delegado que, cuando se invoca, invoca el operando de la izquierda y luego invoca el operando de la derecha. Si alguno de los operandos es `null`, el operador `+` devuelve el valor del otro operando (que también podría ser `null`). El ejemplo siguiente muestra cómo los delegados se pueden combinar con el operador `+`:
+Para los operandos del mismo tipo de [delegado](../builtin-types/reference-types.md#the-delegate-type), el operador `+` devuelve una nueva instancia de delegado que, cuando se invoca, invoca el operando de la izquierda y luego invoca el operando de la derecha. Si alguno de los operandos es `null`, el operador `+` devuelve el valor del otro operando (que también podría ser `null`). El ejemplo siguiente muestra cómo los delegados se pueden combinar con el operador `+`:
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
@@ -62,7 +62,7 @@ x = x + y
 ```
 
 salvo que `x` solo se evalúa una vez.
-  
+
 En el siguiente ejemplo se muestra el uso del operador `+=`:
 
 [!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
@@ -81,9 +81,7 @@ Para más información, consulte las secciones [Operador unario más](~/_csharpl
 
 - [Referencia de C#](../index.md)
 - [Operadores de C#](index.md)
-- [Interpolación de cadenas](../tokens/interpolated.md)
-- [Procedimiento para concatenar varias cadenas](../../how-to/concatenate-multiple-strings.md)
-- [Delegados](../../programming-guide/delegates/index.md)
+- [Concatenación de varias cadenas](../../how-to/concatenate-multiple-strings.md)
 - [Eventos](../../programming-guide/events/index.md)
 - [Operadores aritméticos](arithmetic-operators.md)
 - [Operadores - y -=](subtraction-operator.md)

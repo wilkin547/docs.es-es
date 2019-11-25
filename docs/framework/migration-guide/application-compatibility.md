@@ -1,81 +1,69 @@
 ---
-title: Compatibilidad de aplicaciones en .NET Framework
-ms.date: 05/19/2017
+title: 'Cambios de runtime y redestinación: .NET Framework'
+ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790114"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196700"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
-## <a name="introduction"></a>Introducción
-La compatibilidad es un objetivo muy importante de cada versión .NET. La compatibilidad garantiza que cada versión es adicional, por lo que las versiones anteriores siguen funcionando. Por otro lado, los cambios en las funciones anteriores (para mejorar el rendimiento, tratar los problemas de seguridad o corregir errores) pueden provocar problemas de compatibilidad en el código existente o en las aplicaciones existentes que se ejecutan en una versión posterior. .NET Framework reconoce los cambios de redestinación y los cambios en tiempo de ejecución. Los cambios de redestinación afectan a las aplicaciones que se refieren a una versión específica de .NET Framework pero se ejecutan en una versión posterior. Los cambios en tiempo de ejecución afectan a todas las aplicaciones que se ejecutan en una versión determinada.
+La compatibilidad es un objetivo importante de todas las versiones de .NET. La compatibilidad garantiza que cada versión es aditiva, para que las versiones anteriores sigan funcionando. Por otro lado, los cambios en las funciones anteriores (por ejemplo para mejorar el rendimiento, abordar problemas de seguridad o corregir errores) pueden provocar problemas de compatibilidad en el código o las aplicaciones existentes que se ejecutan en una versión posterior.
 
-Cada aplicación se refiere a una versión específica de .NET Framework, que puede especificarse:
+Cada aplicación se destina a una versión específica de .NET Framework de esta forma:
 
 - Al definir una plataforma de destino en Visual Studio.
 - Al especificar la plataforma de destino en un archivo de proyecto.
 - Al aplicar <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en el código fuente.
 
-Al ejecutarse en una versión más reciente que a la que se refería, .NET Framework usará un comportamiento anómalo para imitar la versión de destino anterior. En otras palabras, la aplicación se ejecutará en la versión más reciente de Framework pero actuará como si se estuviera ejecutando en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo. La versión de .NET Framework a la que se destina una aplicación se determina por la versión de destino del ensamblado de entrada para el dominio de aplicación en el que se ejecuta el código. Todos los ensamblados adicionales que se cargan en ese dominio de aplicación tienen como destino esa versión de .NET Framework. Por ejemplo, en el caso de un archivo ejecutable, el marco de trabajo de destino del archivo ejecutable es el modo de compatibilidad en el que se ejecutarán todos los ensamblados de ese AppDomain.
+Al migrar desde una versión de .NET Framework a otra, hay dos tipos de cambios que se deben tener en cuenta:
+
+- [Cambios en el runtime](#runtime-changes)
+- [Cambios de redestinación](#retargeting-changes)
 
 ## <a name="runtime-changes"></a>Cambios en tiempo de ejecución
 
-Los problemas en tiempo de ejecución son los que aparecen cuando se coloca un nuevo runtime en un equipo y se ejecutan los mismos binarios, pero se observa un comportamiento diferente. Si un binario se ha compilado para .NET Framework 4.0 se ejecutará en el modo de compatibilidad de .NET Framework 4.0 en 4.5 o en versiones posteriores. Muchos de los cambios que afectan a la versión 4.5 no afectarán a un binario compilado para 4.0. Esto es específico del AppDomain y depende de la configuración del ensamblado de entrada.
+Los problemas en tiempo de ejecución son los que aparecen cuando se coloca un nuevo runtime en un equipo y cambia el comportamiento de una aplicación. Al ejecutarse en una versión más reciente que la seleccionada como destino, .NET Framework usa un comportamiento *anómalo* para imitar la versión de destino anterior. La aplicación se ejecuta en la versión más reciente, pero actúa como si se ejecutara en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo. Por ejemplo, si un binario se ha compilado para .NET Framework 4.0 pero se ejecuta en un equipo con .NET Framework 4.5 o posterior, se ejecuta en el modo de compatibilidad de .NET Framework 4.0. Esto significa que muchos de los cambios de la versión posterior no afectan al binario.
+
+La versión de .NET Framework a la que se destina una aplicación se determina por la versión de destino del ensamblado de entrada para el dominio de aplicación en el que se ejecuta el código. Todos los ensamblados adicionales que se cargan en ese dominio de aplicación tienen como destino esa versión. Por ejemplo, en el caso de un archivo ejecutable, la versión de destino del archivo ejecutable es el modo de compatibilidad en el que se ejecutan todos los ensamblados de ese dominio de aplicación.
+
+Para ver una lista de los cambios en tiempo de ejecución que se aplican al entorno, seleccione la versión de .NET Framework que tenga actualmente como destino y, después, la versión a la que quiera migrar:
+
+[!INCLUDE[versionselector](../../../includes/migration-guide/runtime/versionselector.md)]
 
 ## <a name="retargeting-changes"></a>Cambios de redestinación
 
-Los problemas de redestinación son los que aparecen cuando un ensamblado que se refería a la versión 4.0 ahora se establece para referirse a la versión 4.5. Ahora el ensamblado participa en las características nuevas así como en los problemas de compatibilidad potenciales de las características antiguas. De nuevo, esto lo indica el ensamblado de entrada; es decir, la aplicación de consola que usa el ensamblado, o el sitio web que hace referencia a este.
+Los cambios de redestinación son los que surgen cuando se vuelve a compilar un ensamblado para destinarlo a una versión más reciente. Destinarlo a una versión más reciente significa que el ensamblado participa en las características nuevas así como en los problemas de compatibilidad potenciales de las características antiguas.
 
-## <a name="net-compatibility-diagnostics"></a>Diagnósticos de compatibilidad de .NET
+Para ver una lista de los cambios de redestinación que se aplican al entorno, seleccione la versión de .NET Framework que tenga actualmente como destino y, después, la versión a la que quiera migrar:
 
-Los diagnósticos de compatibilidad de .NET son analizadores de Roslyn que ayudan a identificar problemas de compatibilidad de aplicaciones entre versiones de .NET Framework. Esta lista contiene todos los analizadores disponibles, aunque solo se aplicará un subconjunto de ellos a una migración determinada. Los analizadores determinarán qué problemas son aplicables para la migración planeada y serán los únicos que muestren.
+[!INCLUDE[versionselector](../../../includes/migration-guide/retargeting/versionselector.md)]
 
-Cada problema incluye la siguiente información:
+## <a name="impact-classification"></a>Clasificación de impacto
 
-- La descripción de los cambios con respecto a una versión anterior.
+En los temas en los que se describen los cambios en tiempo de ejecución y de redestinación, por ejemplo [Cambios de redestinación para migrar de 4.7.2 a 4.8](retargeting/4.7.2-4.8.md), los elementos individuales se clasifican por su impacto esperado, como sigue:
 
-- Cómo afecta el cambio a los clientes y si hay alguna solución alternativa disponible para mantener la compatibilidad entre versiones.
+**Major**\
+Cambio significativo que afecta a un gran número de aplicaciones o que requiere una modificación sustancial del código.
 
-- Una valoración de la importancia que tiene el cambio. Los problemas de compatibilidad de aplicaciones se dividen en las siguientes categorías:
+**Minor**\
+Un cambio que afecta a un pequeño número de aplicaciones o que requiere una leve modificación del código.
 
-    |   |   |
-    |---|---|
-    |Major|Un cambio significativo que afecta a un gran número de aplicaciones o que requiere una modificación sustancial del código.|
-    |Secundaria|Un cambio que afecta a un pequeño número de aplicaciones o que requiere una leve modificación del código.|
-    |Caso avanzado|Un cambio que afecta a aplicaciones en situaciones muy concretas y poco frecuentes.|
-    |Transparente|Un cambio que no tiene ningún efecto apreciable para el desarrollador o el usuario de la aplicación.|
+**Caso avanzado**\
+Cambio que afecta a aplicaciones de escenarios muy concretos que no son frecuentes.
 
-- La versión, que indica la primera aparición del cambio en .NET Framework. Algunos de los cambios se presentan en una versión determinada y se revierten en una versión posterior; que también se indica.
-
-- El tipo de cambio:
-
-    |   |   |
-    |---|---|
-    |Redestinación|El cambio afecta a aplicaciones que se vuelven a compilar para tener como destino una nueva versión de .NET Framework.|
-    |Tiempo de ejecución|El cambio afecta a una aplicación existente que tiene como destino una versión anterior de .NET Framework, pero que se ejecuta en una versión posterior.|
-
-- Las API afectadas, si las hubiera.
-
-- Los identificadores de los diagnósticos disponibles.
-
-## <a name="usage"></a>Uso
-Para comenzar, seleccione el tipo de cambio de compatibilidad a continuación:
-
-- [Cambios de redestinación](./retargeting/index.md)
-- [Cambios en el runtime](./runtime/index.md)
+**Transparente**\
+Cambio que no tiene ningún efecto apreciable en el programador o el usuario de la aplicación. No es necesario modificar la aplicación debido a este cambio.
 
 ## <a name="see-also"></a>Vea también
 
 - [Versiones y dependencias](versions-and-dependencies.md)
 - [Novedades](../whats-new/index.md)
-- [Lo obsoleto en la biblioteca de clases](../whats-new/whats-obsolete.md)
+- [Lo obsoleto](../whats-new/whats-obsolete.md)

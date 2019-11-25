@@ -2,12 +2,12 @@
 title: Sobre .NET Core
 description: Obtenga información sobre .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395175"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416739"
 ---
 # <a name="about-net-core"></a>Sobre .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "72395175"
 - **Multiplataforma:** se ejecuta en los [sistemas operativos](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS y Linux.
 - **Coherente entre arquitecturas:** el código se ejecuta con el mismo comportamiento en varias arquitecturas, como x64, x86 y ARM.
 - **Herramientas de línea de comandos:**  incluye herramientas de línea de comandos sencillas que se pueden usar para el desarrollo local y en escenarios de integración continua.
-- **Implementación flexible:** Se pueden incluir en la aplicación o se pueden instalar de forma paralela (instalaciones a nivel de usuario o de sistema). Se puede usar con [contenedores de Docker](docker/index.md).
+- **Implementación flexible:** Se pueden incluir en la aplicación o se pueden instalar de forma paralela (instalaciones a nivel de usuario o de sistema). Se puede usar con [contenedores de Docker](docker/introduction.md).
 - **Compatible:** .NET Core es compatible con .NET Framework, Xamarin y Mono mediante [.NET Standard](../standard/net-standard.md).
 - **Código abierto:** la plataforma .NET Core es de código abierto, con licencias de MIT y Apache 2. .NET Core es un proyecto de [.NET Foundation](https://dotnetfoundation.org/).
 - **Compatible con Microsoft:** .NET Core incluye compatibilidad con Microsoft, como se indica en [.NET Core Support](https://dotnet.microsoft.com/platform/support/policy) (Compatibilidad de .NET Core).
@@ -113,7 +113,7 @@ Debido a que .NET Core admite la instalación en paralelo y el entorno de ejecuc
 
 ### <a name="comparison-with-mono"></a>Comparación con Mono
 
-[Mono](https://www.mono-project.com/) es la multiplataforma original de .NET. Empezó como una alternativa de [código abierto](https://github.com/mono/mono) para .NET Framework y pasó a tener como objetivo los dispositivos móviles cuando los dispositivos iOS y Android se popularizaron. Se puede considerar un clon de la comunidad de .NET Framework. El equipo de proyecto de Mono se basó en los [estándares de .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos (en particular, ECMA 335) publicados por Microsoft para proporcionar una implementación compatible.
+[Mono](https://www.mono-project.com/) es la implementación multiplataforma original de .NET. Comenzó como una alternativa de [código abierto](https://github.com/mono/mono) para .NET Framework y pasó a tener como objetivo los dispositivos móviles cuando los dispositivos iOS y Android se popularizaron. Se puede considerar un clon de la comunidad de .NET Framework. El equipo de proyecto de Mono se basó en los [estándares de .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos (en particular, ECMA 335) publicados por Microsoft para proporcionar una implementación compatible.
 
 Las principales diferencias entre .NET Core y Mono:
 

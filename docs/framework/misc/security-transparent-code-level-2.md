@@ -9,16 +9,14 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61a436efe3e3af7ce4aa50afe242838b1cd8941e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206069"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974941"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
-
-<a name="top"></a>
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -44,18 +42,6 @@ La transparencia de nivel 2 se presentó en el .NET Framework 4. Los tres princi
 
 - El código crítico para la seguridad puede llamar a cualquier código y es de plena confianza, pero no se puede llamar mediante código transparente.
 
-Este tema contiene las siguientes secciones:
-
-- [Ejemplos de uso y comportamientos](#examples)
-
-- [Patrones de invalidación](#override)
-
-- [Reglas de herencia](#inheritance)
-
-- [Información y reglas adicionales](#additional)
-
-<a name="examples"></a>
-
 ## <a name="usage-examples-and-behaviors"></a>Ejemplos de uso y comportamientos
 
 Para especificar .NET Framework 4 reglas (transparencia de nivel 2), use la siguiente anotación para un ensamblado:
@@ -70,19 +56,19 @@ Para bloquear en las reglas de .NET Framework 2.0 (transparencia de nivel 1), us
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Si no anota un ensamblado, se usan las reglas de .NET Framework 4 de forma predeterminada. Sin embargo, el procedimiento recomendado es usar el <xref:System.Security.SecurityRulesAttribute> atributo en lugar de depender del valor predeterminado.
+Si no anota un ensamblado, se usan las reglas de .NET Framework 4 de forma predeterminada. Sin embargo, el procedimiento recomendado es usar el atributo <xref:System.Security.SecurityRulesAttribute> en lugar de, en función del valor predeterminado.
 
 ### <a name="assembly-wide-annotation"></a>Anotación de todo el ensamblado
 
 Las reglas siguientes se aplican al uso de atributos en el nivel de ensamblado:
 
-- Sin atributos: Si no especifica ningún atributo, el tiempo de ejecución interpreta todo el código como crítico para la seguridad, excepto en que la seguridad crítica infringe una regla de herencia (por ejemplo, al reemplazar o implementar un método de interfaz o virtual transparente). En esos casos, los métodos son críticos para la seguridad. Si no se especifica ningún atributo, Common Language Runtime determina las reglas de transparencia automáticamente.
+- Ningún atributo: si no se especifica ningún atributo, el tiempo de ejecución interpreta todo el código como crítico para la seguridad, excepto cuando por el hecho de ser crítico para la seguridad infringe una regla de herencia (por ejemplo, al invalidar o implementar un método de interfaz o virtual transparente). En esos casos, los métodos son críticos para la seguridad. Si no se especifica ningún atributo, Common Language Runtime determina las reglas de transparencia automáticamente.
 
-- `SecurityTransparent`: Todo el código es transparente; todo el ensamblado no hará nada con privilegios o no seguros.
+- `SecurityTransparent`: todo el código es transparente; el ensamblado completo no hará nada que tenga privilegios o no sea seguro.
 
-- `SecurityCritical`: Todo el código introducido por tipos en este ensamblado es crítico; el código restante es transparente. Este escenario se parece a cuando no se especifica ningún atributo; sin embargo, Common Language Runtime no determina automáticamente las reglas de transparencia. Por ejemplo, si invalida un método virtual o abstracto o si implementa un método de interfaz, de forma predeterminada, ese método es transparente. Debe anotar explícitamente el método como `SecurityCritical` o `SecuritySafeCritical`; de lo contrario, se producirá una <xref:System.TypeLoadException> en tiempo de carga. Esta regla también se aplica cuando la clase base y la clase derivada están en el mismo ensamblado.
+- `SecurityCritical`: todo el código introducido por tipos en este ensamblado es crítico; el código restante es transparente. Este escenario se parece a cuando no se especifica ningún atributo; sin embargo, Common Language Runtime no determina automáticamente las reglas de transparencia. Por ejemplo, si invalida un método virtual o abstracto o si implementa un método de interfaz, de forma predeterminada, ese método es transparente. Debe anotar explícitamente el método como `SecurityCritical` o `SecuritySafeCritical`; de lo contrario, se producirá una <xref:System.TypeLoadException> en tiempo de carga. Esta regla también se aplica cuando la clase base y la clase derivada están en el mismo ensamblado.
 
-- `AllowPartiallyTrustedCallers`(solo nivel 2): El valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.
+- `AllowPartiallyTrustedCallers` (solo nivel 2): el valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.
 
 En la tabla siguiente se compara el comportamiento de nivel de ensamblado para el nivel 2 con el nivel 1.
 
@@ -91,23 +77,19 @@ En la tabla siguiente se compara el comportamiento de nivel de ensamblado para e
 |Ningún atributo en un ensamblado de confianza parcial|Los tipos y los miembros son transparentes de forma predeterminada, pero pueden ser críticos para la seguridad o bien críticos para la seguridad y disponibles desde código transparente.|Todos los tipos y los miembros son transparentes.|
 |Ningún atributo|Si no se especifica ningún atributo, Common Language Runtime determina las reglas de transparencia automáticamente. Todos los tipos y los miembros son críticos para la seguridad, excepto cuando el hecho de ser críticos para la seguridad infringe una regla de herencia.|En un ensamblado de plena confianza (en la caché global de ensamblados, o identificado como de plena confianza en `AppDomain`), todos los tipos son transparentes y todos los miembros son críticos para la seguridad y disponibles desde código transparente.|
 |`SecurityTransparent`|Todos los tipos y los miembros son transparentes.|Todos los tipos y los miembros son transparentes.|
-|`SecurityCritical(SecurityCriticalScope.Everything)`|No aplicable.|Todos los tipos y los miembros son críticos para la seguridad.|
+|`SecurityCritical(SecurityCriticalScope.Everything)`|No disponible.|Todos los tipos y los miembros son críticos para la seguridad.|
 |`SecurityCritical`|Todo el código introducido por tipos en este ensamblado es crítico; el código restante es transparente. Si invalida un método virtual o abstracto o si implementa un método de interfaz, debe anotar explícitamente ese método como `SecurityCritical` o `SecuritySafeCritical`.|El valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.|
 
 ### <a name="type-and-member-annotation"></a>Anotación de tipos y de miembros
 
 Los atributos de seguridad que se aplican a un tipo también se aplican a los miembros que el tipo introduce. Sin embargo, no se aplican a invalidaciones virtuales o abstractas de la clase base o implementaciones de interfaz. Las reglas siguientes se aplican al uso de atributos en el nivel de tipo y miembro:
 
-- `SecurityCritical`: El tipo o miembro es crítico y solo lo puede llamar el código de plena confianza. Los métodos que se introducen en un tipo crítico para la seguridad son críticos.
+- `SecurityCritical`: el tipo o miembro es crítico y solo lo puede invocar código de plena confianza. Los métodos que se introducen en un tipo crítico para la seguridad son críticos.
 
     > [!IMPORTANT]
     > Los métodos abstractos y virtuales que se introducen en interfaces o clases base y que se invalidan o se implementan en una clase crítica para la seguridad son transparentes de forma predeterminada. Se deben identificar como `SecuritySafeCritical` o `SecurityCritical`.
 
-- `SecuritySafeCritical`: El tipo o miembro es crítico para la seguridad. Sin embargo, puede llamarse al tipo o miembro desde código transparente (de confianza parcial) y es tan capaz como cualquier otro código crítico. El código se debe auditar para la seguridad.
-
-[Volver al principio](#top)
-
-<a name="override"></a>
+- `SecuritySafeCritical`: el tipo o miembro es crítico para la seguridad. Sin embargo, puede llamarse al tipo o miembro desde código transparente (de confianza parcial) y es tan capaz como cualquier otro código crítico. El código se debe auditar para la seguridad.
 
 ## <a name="override-patterns"></a>Patrones de invalidación
 
@@ -121,19 +103,15 @@ La siguiente tabla muestra las invalidaciones de método permitidas para la tran
 |`SafeCritical`|`SafeCritical`|
 |`Critical`|`Critical`|
 
-[Volver al principio](#top)
-
-<a name="inheritance"></a>
-
 ## <a name="inheritance-rules"></a>Reglas de herencia
 
 En esta sección, se asigna el siguiente orden a código `Transparent`, `Critical` y `SafeCritical` en función del acceso y las capacidades:
 
 `Transparent` < `SafeCritical` < `Critical`
 
-- Reglas para tipos: Al ir de izquierda a derecha, el acceso es más restrictivo. Los tipos derivados deben ser al menos tan restrictivos como el tipo base.
+- Reglas para tipos: van de izquierda a derecha y el acceso se vuelve más restrictivo. Los tipos derivados deben ser al menos tan restrictivos como el tipo base.
 
-- Reglas para los métodos: Los métodos derivados no pueden cambiar la accesibilidad del método base. Para el comportamiento predeterminado, todos los métodos derivados no anotados son `Transparent`. Los derivados de tipos críticos provocan una excepción que se produce si el método invalidado no está anotado explícitamente como `SecurityCritical`.
+- Reglas para métodos: los métodos derivados no pueden cambiar la accesibilidad del método base. Para el comportamiento predeterminado, todos los métodos derivados no anotados son `Transparent`. Los derivados de tipos críticos provocan una excepción que se produce si el método invalidado no está anotado explícitamente como `SecurityCritical`.
 
 En la tabla siguiente se muestran los patrones de herencia de tipo permitidos.
 
@@ -176,10 +154,6 @@ En la tabla siguiente se muestran los patrones de herencia de método no permiti
 > [!NOTE]
 > Estas reglas de herencia se aplican a los tipos y miembros de nivel 2. Los tipos de ensamblados de nivel 1 pueden heredar de tipos y miembros críticos para la seguridad de nivel 2. Por lo tanto, los tipos y miembros de nivel 2 deben tener peticiones de herencia independientes para los herederos de nivel 1.
 
-[Volver al principio](#top)
-
-<a name="additional"></a>
-
 ## <a name="additional-information-and-rules"></a>Información y reglas adicionales
 
 ### <a name="linkdemand-support"></a>Compatibilidad con LinkDemand
@@ -193,7 +167,7 @@ El hecho de invocar un método crítico o leer un campo crítico desencadena una
 Se han agregado las siguientes propiedades al espacio de nombres <xref:System.Reflection> para determinar si el tipo, método o campo es `SecurityCritical`, `SecuritySafeCritical` o `SecurityTransparent`: <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> y <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>. Use estas propiedades para determinar la transparencia mediante la reflexión en lugar de comprobar la presencia del atributo. Las reglas de transparencia son complejas y la comprobación del atributo podría no ser suficiente.
 
 > [!NOTE]
-> Un `SafeCritical` método devuelve `true` para <xref:System.Type.IsSecurityCritical%2A> y ,<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> porque`SafeCritical` es realmente crítico (tiene las mismas funcionalidades que el código crítico, pero se puede llamar desde código transparente).
+> Un método `SafeCritical` devuelve `true` para <xref:System.Type.IsSecurityCritical%2A> y <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, ya que la `SafeCritical` es realmente crítica (tiene las mismas funcionalidades que el código crítico, pero se puede llamar desde código transparente).
 
 Los métodos dinámicos heredan la transparencia de los módulos a los que se adjuntan; no heredan la transparencia del tipo (si están conectados a un tipo).
 
@@ -203,7 +177,7 @@ Puede omitir la comprobación para ensamblados transparentes de plena confianza 
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente del ensamblado se puede comprobar mediante la `transparent` opción de la [herramienta peverify](../tools/peverify-exe-peverify-tool.md).
+La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente del ensamblado se puede comprobar mediante la opción `transparent` de la [herramienta peverify](../tools/peverify-exe-peverify-tool.md).
 
 ## <a name="see-also"></a>Vea también
 

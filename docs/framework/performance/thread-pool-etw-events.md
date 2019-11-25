@@ -7,24 +7,23 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046187"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974863"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de grupo de subprocesos
-<a name="top"></a> Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.  
+Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.  
   
  Hay dos grupos de eventos de grupo de subprocesos:  
   
-- [Eventos de grupo de subprocesos de trabajo](#worker), que proporcionan información sobre cómo una aplicación usa el grupo de subprocesos y el efecto de las cargas de trabajo en el control de simultaneidad.  
+- [Eventos de grupo de subprocesos de trabajo](#worker-thread-pool-events), que proporcionan información sobre cómo una aplicación usa el grupo de subprocesos y el efecto de las cargas de trabajo en el control de simultaneidad.  
   
-- [Eventos de grupo de subprocesos de E/S](#io), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.  
-  
-<a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Eventos de grupo de subprocesos de trabajo  
+- [Eventos de grupo de subprocesos de E/S](#io-thread-events), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.  
+
+## <a name="worker-thread-pool-events"></a>Eventos de grupo de subprocesos de trabajo
  Estos eventos se relacionan con el grupo de subprocesos de trabajo de runtime y proporcionan notificaciones de eventos de subproceso (por ejemplo, cuando se crea o se detiene un subproceso). El grupo de subprocesos de trabajo usa un algoritmo adaptable para el control de simultaneidad, en el que el número de subprocesos se calcula en función del rendimiento medido. Los eventos de grupo de subprocesos de trabajo pueden usarse para saber cómo una aplicación utiliza el grupo de subprocesos y el efecto que ciertas cargas de trabajo pueden tener en el control de simultaneidad.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart y ThreadPoolWorkerThreadStop  
@@ -36,7 +35,7 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Se crea un subproceso de trabajo.|  
 |`ThreadPoolWorkerThreadStop`|51|Se detiene un subproceso de trabajo.|  
@@ -45,7 +44,7 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|Número de subprocesos de trabajo disponibles para procesar trabajo, incluidos los que ya están procesando trabajo.|  
 |RetiredWorkerThreadCount|win:UInt32|Número de subprocesos de trabajo que no están disponibles para procesar trabajo, pero que se mantienen en reserva en caso de que posteriormente se necesiten más subprocesos.|  
@@ -63,15 +62,15 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|DESCRIPCIÓN|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Se refiere a la recopilación de información para un ejemplo; es decir, una medición del rendimiento con un determinado nivel de simultaneidad en un instante de tiempo.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Throughput|win:Double|Número de finalizaciones por unidad de tiempo.|  
+|Rendimiento|win:Double|Número de finalizaciones por unidad de tiempo.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
@@ -83,17 +82,17 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|DESCRIPCIÓN|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra un cambio en el control, cuando el algoritmo de inserción de subproceso (hill-climbing) determina que tiene lugar un cambio en el nivel de simultaneidad.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Rendimiento medio de un ejemplo de mediciones.|  
 |NewWorkerThreadCount|win:UInt32|Nuevo número de subprocesos de trabajo activos.|  
-|Reason|win:UInt32|Razón para el ajuste.<br /><br /> 0x00: preparación.<br /><br /> 0x01: inicializando.<br /><br /> 0x02: movimiento aleatorio.<br /><br /> 0x03: movimiento escalada.<br /><br /> 0x04: cambiar punto.<br /><br /> 0x05: estabilización.<br /><br /> 0x06: colapso.<br /><br /> 0x07: tiempo de espera de subproceso agotado.|  
+|Motivo|win:UInt32|Razón para el ajuste.<br /><br /> 0x00: preparación.<br /><br /> 0x01: inicializando.<br /><br /> 0x02: movimiento aleatorio.<br /><br /> 0x03: movimiento escalada.<br /><br /> 0x04: cambiar punto.<br /><br /> 0x05: estabilización.<br /><br /> 0x06: colapso.<br /><br /> 0x07: tiempo de espera de subproceso agotado.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
@@ -105,13 +104,13 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|DESCRIPCIÓN|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Recopila datos en el grupo de subprocesos.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |Duración|win:Double|Cantidad de tiempo, en segundos, durante el que se recopilaron estas estadísticas.|  
 |Rendimiento|win:Double|Promedio de finalizaciones por segundo durante este intervalo.|  
@@ -124,10 +123,7 @@ ms.locfileid: "71046187"
 |NewcontrolSetting|win:Double|El número de subprocesos de trabajo activos que servirá de línea de base para las variaciones futuras en el recuento de subprocesos activos.|  
 |NewThreadWaveMagnitude|Win:UInt16|La magnitud de variaciones futuras en el recuento de subprocesos activos.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
-  
- [Volver al principio](#top)  
-  
-<a name="io"></a>   
+
 ## <a name="io-thread-events"></a>Eventos de subprocesos de E/S  
  Estos eventos de grupo de subprocesos se producen para los subprocesos del grupo de subprocesos de E/S (puertos de finalización), que es asincrónico.  
   
@@ -140,15 +136,15 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Se crea un subproceso de E/S en el grupo de subprocesos.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Número|win:UInt64|Número de subprocesos de E/S, incluido el subproceso recién creado.|  
+|Recuento|win:UInt64|Número de subprocesos de E/S, incluido el subproceso recién creado.|  
 |NumRetired|win:UInt64|Número de subprocesos de trabajo retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
@@ -161,15 +157,15 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Un subproceso de E/S se convierte en un candidato para la retirada.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Número|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
+|Recuento|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
@@ -182,15 +178,15 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|La retirada de un subproceso de E/S se anula debido a que llega una E/S dentro de un período de espera y después de que el subproceso se convierte en un candidato para la retirada.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Número|win:UInt64|Número de subprocesos de E/S en el grupo de subprocesos, incluido este.|  
+|Recuento|win:UInt64|Número de subprocesos de E/S en el grupo de subprocesos, incluido este.|  
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
@@ -203,15 +199,15 @@ ms.locfileid: "71046187"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Se crea un subproceso de E/S en el grupo de subprocesos.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|Número|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
+|Recuento|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   

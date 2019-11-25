@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604211"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973014"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referencia integrados (referencia de C#)
 
@@ -178,7 +178,7 @@ El ejemplo siguiente usa `dynamic` en varias declaraciones. El método `Main` ta
 - [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)
 - [Creación de cadenas nuevas](../../../standard/base-types/creating-new.md)
 - [Operadores de conversión y prueba de tipos](../operators/type-testing-and-cast.md)
-- [Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Procedimiento para convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Tutorial: Crear y usar objetos dinámicos (C# y Visual Basic)](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

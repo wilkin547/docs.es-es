@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455375"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736840"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funciones locales (Guía de programación de C#)
 
@@ -43,11 +43,10 @@ Las funciones locales pueden usar los modificadores [async](../../language-refer
 
 Tenga en cuenta que todas las variables locales que se definen en el miembro contenedor, incluidos sus parámetros de método, son accesibles en la función local. 
 
-A diferencia de una definición de método, una definición de función local no puede incluir los siguientes elementos:
+A diferencia de una definición de método, una definición de función local no puede incluir el modificador de acceso de los miembros. Dado que todas las funciones locales son privadas, incluido un modificador de acceso, como la palabra clave `private`, se genera el error del compilador CS0106, "El modificador 'private' no es válido para este elemento".
 
-- El modificador de acceso de miembro. Dado que todas las funciones locales son privadas, incluido un modificador de acceso, como la palabra clave `private`, se genera el error del compilador CS0106, "El modificador 'private' no es válido para este elemento".
- 
-- La palabra clave [static](../../language-reference/keywords/static.md). Al incluir la palabra clave `static`, se genera el error del compilador CS0106, "El modificador 'static' no es válido para este elemento".
+> [!NOTE]
+> En las versiones anteriores a C# 8.0, las funciones locales no podían incluir el modificador `static`. Al incluir la palabra clave `static`, se genera el error del compilador CS0106, "El modificador 'static' no es válido para este elemento".
 
 Además, los atributos no se pueden aplicar a la función local o a sus parámetros y parámetros de tipo. 
  

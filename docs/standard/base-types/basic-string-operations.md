@@ -7,15 +7,13 @@ helpviewer_keywords:
 - strings [.NET Framework], basic string operations
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seadec18
-ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150685"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132913"
 ---
 # <a name="basic-string-operations-in-net"></a>Operaciones básicas de cadenas en .NET
 A menudo, las aplicaciones responden a los usuarios mediante la construcción de mensajes basados en los datos proporcionados por el usuario. Por ejemplo, no es raro que los sitios web respondan a un usuario que acaba de iniciar sesión con un saludo especializado que incluye el nombre del usuario. Varios métodos de las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> le permiten construir cadenas personalizadas de forma dinámica para mostrarlas en la interfaz de usuario. Estos métodos también le ayudan a realizar una serie de operaciones básicas de cadenas, como crear cadenas nuevas a partir de matrices de bytes, comparar los valores de cadenas y modificar cadenas existentes.  
@@ -39,7 +37,7 @@ A menudo, las aplicaciones responden a los usuarios mediante la construcción de
  [Utilizar la clase StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
  Se describe cómo crear y modificar objetos de cadena dinámicos con la clase <xref:System.Text.StringBuilder>.  
   
- [Realizar manipulaciones de cadena básicas](../../../docs/standard/base-types/basic-manipulations.md)  
+ [Cómo: para realizar manipulaciones de cadena básicas](../../../docs/standard/base-types/basic-manipulations.md)  
  Se describe el uso de las operaciones de cadena básicas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

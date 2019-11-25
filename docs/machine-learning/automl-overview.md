@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929421"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971405"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Aprendizaje automático automatizado con ML.NET
 
@@ -22,7 +22,7 @@ El aprendizaje automático automatizado es una característica de ML.NET que rea
 - el código fuente que se usa para la selección de características y el entrenamiento del modelo (para comprender el modelo)
 
 > [!NOTE]
-> Esta característica se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. 
+> Esta característica se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios.
 
 El ML automatizado se limita actualmente a las [tareas](resources/tasks.md) de aprendizaje automático de clasificación binaria, clasificación multiclase y regresión. Las demás tareas de aprendizaje automático se admitirán en versiones futuras.
 

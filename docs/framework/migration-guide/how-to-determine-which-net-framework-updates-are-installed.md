@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para determinar las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
+title: ¿Qué actualizaciones de seguridad y revisiones de .NET Framework que están instaladas?
 description: Aprenda a determinar qué actualizaciones de seguridad y revisiones de .NET Framework están instaladas en un equipo.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318974"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735206"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Procedimiento para determinar las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Determinación de las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
 
 En este artículo se muestra cómo determinar qué actualizaciones de seguridad y revisiones de .NET Framework están instaladas en un equipo.
 
 > [!NOTE]
 > Todas las técnicas que se muestran en este artículo requieren una cuenta con privilegios administrativos.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>Búsqueda de las actualizaciones instaladas mediante el Registro
+## <a name="use-registry-editor"></a>Uso del Editor del Registro
 
 Las actualizaciones de seguridad y las revisiones instaladas para cada versión de .NET Framework instalada en un equipo se enumeran en el Registro de Windows. Puede utilizar el Editor del Registro (*regedit.exe*) para ver esta información.
 
@@ -33,13 +33,13 @@ Las actualizaciones de seguridad y las revisiones instaladas para cada versión 
 
 2. En el Editor del Registro, abra la subclave siguiente:
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      Las actualizaciones instaladas se muestran bajo subclaves que identifican la versión de .NET Framework a la que se aplican. Cada actualización se identifica mediante un número de la Knowledge Base (KB).
 
 En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de versión instalados, vea [Procedimiento para determinar qué versiones de .NET Framework están instaladas](how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Búsqueda de las actualizaciones instaladas mediante la consulta al Registro en código
+## <a name="query-the-registry-using-code"></a>Consulta del registro mediante código
 
 El ejemplo siguiente determina mediante programación las actualizaciones de seguridad y las revisiones de .NET Framework instaladas en un equipo:
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Búsqueda de las actualizaciones instaladas mediante la consulta al Registro en PowerShell
+## <a name="use-powershell-to-query-the-registry"></a>Uso de PowerShell para consultar el registro
 
 El ejemplo siguiente muestra cómo determinar las actualizaciones de seguridad y las revisiones de .NET Framework instaladas en un equipo mediante PowerShell:
 

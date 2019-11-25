@@ -2,14 +2,12 @@
 title: 'Mitigación: marcos PNG en objetos de icono'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85a76681cf6efd649fe366a68d956246334975fe
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a4ae0c069a4cd6d53bce77e64822ebf3fbb5361
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789975"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457872"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Mitigación: marcos PNG en objetos de icono
 A partir de .NET Framework 4.6, el método <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> convierte correctamente iconos con marcos PNG en objetos <xref:System.Drawing.Bitmap> .  
@@ -36,4 +34,4 @@ A partir de .NET Framework 4.6, el método <xref:System.Drawing.Icon.ToBitmap%2A
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios de redestinación](retargeting-changes-in-the-net-framework-4-6.md)
+- [Compatibilidad de aplicaciones](application-compatibility.md)

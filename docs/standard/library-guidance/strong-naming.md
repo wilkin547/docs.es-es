@@ -4,12 +4,12 @@ description: Procedimientos recomendados para nombres de seguros de las bibliote
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968967"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196974"
 ---
 # <a name="strong-naming"></a>Nombres seguros
 
@@ -53,7 +53,7 @@ Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. 
 
 > Una clave disponible públicamente permite a los programadores modificar y volver a compilar el código fuente de la biblioteca con la misma clave.
 > 
-> No debería publicar la clave de nombres seguros si se ha utilizado en el pasado para conceder permisos especiales en [escenarios de confianza parcial](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). En caso contrario, podría poner en peligro los entornos existentes.
+> No debería publicar la clave de nombres seguros si se ha utilizado en el pasado para conceder permisos especiales en [escenarios de confianza parcial](../../framework/misc/using-libraries-from-partially-trusted-code.md). En caso contrario, podría poner en peligro los entornos existentes.
 
 > [!IMPORTANT]
 > Cuando se desea la identidad del publicador del código, se recomiendan [Authenticode](/windows-hardware/drivers/install/authenticode) y la [firma de paquetes NuGet](/nuget/create-packages/sign-a-package). La seguridad de acceso del código (CAS) no debe usarse como una mitigación de seguridad.
@@ -66,7 +66,7 @@ Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. 
 
 > La modificación de la clave de nombre seguro de un ensamblado cambia la identidad de este e interrumpe el código compilado que lo utiliza. Para más información, vea la información sobre [cambios importantes binarios](./breaking-changes.md#binary-breaking-change).
 
-**❌ NO ESTÁ PERMITIDO** publicar versiones de una biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
+**❌ NO** publique versiones de la biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
 
 > La publicación de dos paquetes bifurca el ecosistema del desarrollador. Además, si una aplicación termina dependiendo de ambos paquetes, el desarrollador puede encontrar conflictos con el nombre de tipo. En lo que respecta a .NET, son tipos distintos en diferentes ensamblados.
 

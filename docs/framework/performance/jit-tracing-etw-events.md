@@ -7,26 +7,19 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046427"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975499"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de traza JIT
-<a name="top"></a> Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no.  
-  
- Los eventos de seguimiento JIT constan de las dos categorías siguientes:  
-  
-- [Eventos de inclusión JIT](#jit_inlining_events)  
-  
-- [Eventos de llamada de cola JIT](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>Eventos de inclusión JIT  
-  
-### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed  
+Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no.
+
+## <a name="jit-inlining-events"></a>Eventos de inclusión JIT
+
+### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
  En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -35,13 +28,13 @@ ms.locfileid: "71046427"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Error de inclusión de JIT.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -65,13 +58,13 @@ ms.locfileid: "71046427"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|El método de inclusión se realizó correctamente.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -83,10 +76,7 @@ ms.locfileid: "71046427"
 |InlineeName|win:UnicodeString|Método que el compilador está intentando incluir (genera una llamada).|  
 |InlineeNameSignature|win:UnicodeString|Firma para el incluido.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
-  
- [Volver al principio](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>Eventos de llamada de cola JIT  
   
 ### <a name="methodjittailcallfailed-event"></a>Evento MethodJITTailCallFailed  
@@ -98,13 +88,13 @@ ms.locfileid: "71046427"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Error en la llamada de cola del método.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  
@@ -128,13 +118,13 @@ ms.locfileid: "71046427"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La llamada de cola del método se realizó correctamente.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|DESCRIPCIÓN|  
+|Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Espacio de nombres del método que se está compilando.|  
 |MethodBeingCompiledName|win:UnicodeString|Nombre del método que se está compilando.|  

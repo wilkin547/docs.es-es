@@ -1,19 +1,19 @@
 ---
-title: 'Procedimiento Definir propiedades abstractas: Guía de programación de C#'
+title: Procedimiento para definir propiedades abstractas - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970900"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971000"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedimiento Definir propiedades abstractas (Guía de programación de C#)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedimiento para definir propiedades abstractas (Guía de programación de C#)
 En el ejemplo siguiente se muestra cómo definir las propiedades [abstract](../../language-reference/keywords/abstract.md). Una declaración de propiedad abstracta no proporciona una implementación de los descriptores de acceso de propiedad, declara que la clase admite propiedades, pero deja la implementación del descriptor de acceso a las clases derivadas. En el ejemplo siguiente se muestra cómo implementar las propiedades abstractas heredadas de una clase base.  
   
  Este ejemplo consta de tres archivos, cada uno de los cuales se compila individualmente y se hace referencia a su ensamblado resultante mediante la siguiente compilación:  

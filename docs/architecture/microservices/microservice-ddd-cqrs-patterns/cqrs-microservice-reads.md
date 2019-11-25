@@ -2,12 +2,12 @@
 title: Implementación de lecturas/consultas en un microservicio CQRS
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación del lado de consultas de CQRS en el microservicio Ordering en eShopOnContainers mediante Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094066"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972089"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementación de lecturas/consultas en un microservicio CQRS
 
@@ -15,15 +15,15 @@ Para lecturas/consultas, el microservicio de pedidos (Ordering) de la aplicació
 
 El enfoque es sencillo, como se muestra en la figura 7-3. La interfaz API se implementa mediante los controladores de API Web con cualquier infraestructura, como un microasignador objeto-relacional (ORM) como Dapper, y devolviendo ViewModel dinámicos según las necesidades de las aplicaciones de interfaz de usuario.
 
-![El enfoque más sencillo para el lado de las consultas en un enfoque CQRS simplificado se puede implementar simplemente consultando la base de datos con un Micro-ORM como Dapper, devolviendo ViewModel dinámicos.](./media/image3.png)
+![Diagrama que muestra una visión general del lado de las consultas en un microservicio CQRS simplificado.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Figura 7-3**. El enfoque más sencillo para las consultas en un microservicio CQRS
 
-Este es el enfoque más sencillo posible para las consultas. Las definiciones de consulta realizan una consulta a la base de datos y devuelven un ViewModel dinámico creado sobre la marcha para cada consulta. Puesto que las consultas son idempotentes, no cambian los datos por muchas veces que ejecute una consulta. Por lo tanto, no es necesario estar restringido por un patrón DDD usado en el lado transaccional, como agregados y otros patrones, y por eso las consultas se separan del área transaccional. Basta con consultar la base de datos para obtener los datos que necesita la interfaz de usuario y devolver un ViewModel dinámico que no tiene que estar definido estáticamente en ningún lugar (no hay clases para los ViewModel), excepto en las propias instrucciones SQL.
+El enfoque más sencillo para el lado de las consultas en un enfoque CQRS simplificado se puede implementar simplemente consultando la base de datos con un Micro-ORM como Dapper, devolviendo ViewModel dinámicos. Las definiciones de consulta realizan una consulta a la base de datos y devuelven un ViewModel dinámico creado sobre la marcha para cada consulta. Puesto que las consultas son idempotentes, no cambian los datos por muchas veces que ejecute una consulta. Por lo tanto, no es necesario estar restringido por un patrón DDD usado en el lado transaccional, como agregados y otros patrones, y por eso las consultas se separan del área transaccional. Basta con consultar la base de datos para obtener los datos que necesita la interfaz de usuario y devolver un ViewModel dinámico que no tiene que estar definido estáticamente en ningún lugar (no hay clases para los ViewModel), excepto en las propias instrucciones SQL.
 
 Puesto que se trata de un método sencillo, el código necesario para el lado de las consultas (como código que usa un micro ORM como [Dapper](https://github.com/StackExchange/Dapper)) pueden implementarse [dentro del mismo proyecto de API Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). Esto se muestra en la Figura 7-4. Las consultas se definen en el proyecto de microservicio **Ordering.API** dentro de la solución eShopOnContainers.
 
-![Vista del Explorador de soluciones del proyecto Ordering.API, en la que se muestra la carpeta Aplicación > Consultas.](./media/image4.png)
+![Captura de pantalla de la carpeta Queries del proyecto Ordering.API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Figura 7-4**. Consultas (Queries) en el microservicio de pedidos (Ordering) en eShopOnContainers
 
@@ -41,7 +41,7 @@ Para la consulta puede usar cualquier micro ORM, Entity Framework Core o incluso
 
 Dapper es un proyecto de código abierto (creado originalmente por Sam Saffron) y forma parte de los bloques de creación que se usan en [Stack Overflow](https://stackoverflow.com/). Para usar Dapper, solo hay que instalarlo a través del [paquete Dapper de NuGet](https://www.nuget.org/packages/Dapper), tal y como se muestra en la ilustración siguiente:
 
-![El paquete Dapper como se ve en la vista de paquetes NuGet administrados en VS.](./media/image4.1.png)
+![Captura de pantalla del paquete Dapper en la vista de paquetes de NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 También debe agregar una instrucción using para que el código tenga acceso a los métodos de extensión de Dapper.
 
@@ -177,7 +177,7 @@ Este es otro de los motivos por los que, a largo plazo, los tipos explícitos so
 
 En la siguiente imagen, se puede ver cómo la interfaz de usuario de Swagger de interfaz de usuario muestra la información de ResponseType.
 
-![Vista del explorador de la página de IU de Swagger para la API de Ordering.](./media/image5.png)
+![Captura de pantalla de la página de interfaz de usuario de Swagger para Ordering API.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Figura 7-5**. Interfaz de usuario de Swagger que muestra los tipos de respuesta y los posibles códigos de estado HTTP de una API Web
 
@@ -189,7 +189,7 @@ En la ilustración anterior se pueden ver algunos valores de ejemplo basados en 
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Puntos de datos: Dapper, Entity Framework y aplicaciones híbridas (artículo de MSDN magazine)**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **Páginas de ayuda de ASP.NET Core Web API mediante Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>

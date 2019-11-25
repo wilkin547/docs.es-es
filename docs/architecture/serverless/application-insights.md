@@ -1,34 +1,34 @@
 ---
-title: Aplicaciones sin servidor Application Insights
-description: Application Insights es una plataforma de diagnóstico sin servidor que permite a los desarrolladores detectar, evaluar y diagnosticar problemas en aplicaciones Web, aplicaciones móviles, aplicaciones de escritorio y microservicios.
+title: 'Application Insights: Aplicaciones sin servidor'
+description: Application Insights es una plataforma de diagnóstico sin servidor que permite a los desarrolladores detectar, evaluar las prioridades y diagnosticar problemas en aplicaciones web, aplicaciones móviles, aplicaciones de escritorio y microservicios.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522738"
 ---
 # <a name="telemetry-with-application-insights"></a>Telemetría con Application Insights
 
-[Application Insights](https://docs.microsoft.com/azure/application-insights) es una plataforma de diagnóstico sin servidor que permite a los desarrolladores detectar, evaluar y diagnosticar problemas en aplicaciones Web, aplicaciones móviles, aplicaciones de escritorio y microservicios. Puede activar Application Insights para las aplicaciones de función simplemente volteando un modificador en el portal. Application Insights proporciona todas estas funcionalidades sin tener que configurar un servidor o configurar su propia base de datos. Todas las funcionalidades de Application Insights se proporcionan como un servicio que se integra automáticamente con sus aplicaciones.
+[Application Insights](https://docs.microsoft.com/azure/application-insights) es una plataforma de diagnóstico sin servidor que permite a los desarrolladores detectar, evaluar las prioridades y diagnosticar problemas en aplicaciones web, aplicaciones móviles, aplicaciones de escritorio y microservicios. Puede activar Application Insights para las aplicaciones de funciones simplemente activando un conmutador en el portal. Application Insights proporciona todas estas funcionalidades sin necesidad de configurar un servidor o de configurar su propia base de datos. Todas las funcionalidades de Application Insights se proporcionan como un servicio que se integra automáticamente con sus aplicaciones.
 
-![Application Insights logotipo](./media/application-insights-logo.png)
+![Logotipo de Application Insights](./media/application-insights-logo.png)
 
 Agregar Application Insights a las aplicaciones existentes es tan sencillo como agregar una clave de instrumentación a la configuración de la aplicación. Con Application Insights puede:
 
-- Cree gráficos y alertas personalizados basados en métricas como el número de invocaciones de función, el tiempo necesario para ejecutar una función y excepciones.
+- Crear gráficos y alertas personalizados basados en métricas como el número de invocaciones de funciones, el tiempo necesario para ejecutar una función y las excepciones
 - Analizar errores y excepciones de servidor
-- Profundice en el rendimiento por operación y mida el tiempo que se tarda en llamar a dependencias de terceros
-- Supervisar el uso de CPU, la memoria y las tasas en todos los servidores que hospedan las aplicaciones de función
-- Visualización de una secuencia en directo de métricas, incluido el recuento de solicitudes y la latencia de las aplicaciones de función
-- Usar [análisis](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) para buscar, consultar y crear gráficos personalizados sobre los datos de la función
+- Analizar en profundidad el rendimiento por operación y medir el tiempo que se tarda en llamar a dependencias de terceros
+- Supervisar el uso de CPU, la memoria y la velocidad en todos los servidores que hospedan las aplicaciones de funciones
+- Ver un streaming en vivo de métricas que incluya el recuento de solicitudes y la latencia de las aplicaciones de funciones
+- Usar [Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) para buscar, consultar y crear gráficos personalizados con los datos de las funciones
 
 ![Explorador de métricas](./media/metrics-explorer.png)
 
-Además de la telemetría integrada, también es posible generar telemetría personalizada. En el fragmento de código siguiente se crea un cliente de telemetría personalizado mediante la clave de instrumentación establecida para la aplicación de función:
+Además de la telemetría integrada, también es posible generar datos de telemetría personalizados. En el fragmento de código siguiente se crea un cliente de telemetría personalizado mediante la clave de instrumentación establecida para la aplicación de funciones:
 
 ```csharp
 public static TelemetryClient telemetry = new TelemetryClient()
@@ -37,7 +37,7 @@ public static TelemetryClient telemetry = new TelemetryClient()
 };
 ```
 
-El código siguiente mide cuánto tiempo se tarda en insertar una nueva fila en una instancia de [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) :
+El código siguiente mide cuánto tiempo se tarda en insertar una nueva fila en una instancia de [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview):
 
 ```csharp
 var operation = TableOperation.Insert(entry);
@@ -51,11 +51,11 @@ Se muestra el gráfico de rendimiento resultante:
 
 ![Telemetría personalizada](./media/custom-telemetry.png)
 
-La telemetría personalizada revela que el tiempo promedio para insertar una nueva fila es de 32,6 milisegundos.
+La telemetría personalizada muestra que el tiempo promedio para insertar una nueva fila es de 32,6 milisegundos.
 
-Application Insights proporciona una manera eficaz y cómoda de registrar la telemetría detallada sobre las aplicaciones sin servidor. Tiene control total sobre el nivel de seguimiento y registro que se proporciona. Puede realizar un seguimiento de las estadísticas personalizadas, como los eventos, las dependencias y la vista de página. Por último, el eficaz análisis le permite escribir consultas que formulan preguntas importantes y generan gráficos e información avanzada.
+Application Insights proporciona una forma eficaz y cómoda de registrar la telemetría detallada de las aplicaciones sin servidor. Tiene un control total sobre el nivel de seguimiento y registro que se proporciona. Puede realizar un seguimiento de las estadísticas personalizadas como eventos, dependencias y la vista de página. Por último, el potente análisis le permite escribir consultas que formulan preguntas importantes y generan gráficos e información avanzada.
 
-Para obtener más información, vea [Monitor Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
+Para más información, consulte [Supervisión de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
 
 >[!div class="step-by-step"]
 >[Anterior](azure-functions.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5204165370459466b1258897e72c488ab7e7fadb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740809"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975776"
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
-Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo XML Paper Specification (XPS) y la ruta de impresión XPS.  
+Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con Windows Vista, algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicaciones y desarrolladores que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo XML Paper Specification (XPS) y la ruta de impresión XPS.  
   
  En este tema se incluyen las siguientes secciones.  
   

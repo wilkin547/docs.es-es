@@ -2,12 +2,12 @@
 title: Selección del sistema operativo de destino con contenedores de .NET
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Selección del sistema operativo de destino con contenedores de .NET
 ms.date: 01/07/2019
-ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772001"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736910"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Selección del sistema operativo de destino con contenedores de .NET
 
@@ -19,9 +19,11 @@ Para Linux, hay varias distribuciones disponibles y compatibles en imágenes ofi
 
 En la Figura 3-1 se puede ver la posible versión de sistema operativo en función de la versión de .NET Framework que se utilice.
 
-![Al implementar aplicaciones heredadas de .NET Framework que tienen como destino Windows Server Core, compatible con aplicaciones heredadas e IIS, tiene una imagen más grande. Al implementar aplicaciones de .NET Core, puede tener como destino Windows Nano Server, que está optimizado para la nube, usa Kestrel y es más pequeño y se inicia más rápido. También puede tener como destino Linux, con compatibilidad con Debian, Alpine y otros. También usa Kestrel y es más pequeño y se inicia más rápido.](./media/image1.png)
+![Diagrama que muestra qué sistema operativo se debe usar con cada contenedor de .NET.](./media/net-container-os-targets/targeting-operating-systems.png)
 
 **Figura 3-1.** Sistemas operativos de destino en función de las versiones de .NET Framework
+
+Al implementar aplicaciones heredadas de .NET Framework, tiene que elegir como destino Windows Server Core, que es compatible con aplicaciones heredadas e IIS, pero tiene una imagen más grande. Al implementar aplicaciones de .NET Core, puede tener como destino Windows Nano Server, que está optimizado para la nube, usa Kestrel y es más pequeño y se inicia más rápido. También puede tener como destino Linux, con compatibilidad con Debian, Alpine y otros. También usa Kestrel, que es más pequeño y se inicia más rápido.
 
 También puede crear su propia imagen de Docker en los casos en que quiera utilizar una distribución de Linux diferente o que quiera una imagen con las versiones no proporcionadas por Microsoft. Por ejemplo, puede crear una imagen con ASP.NET Core ejecutándose en los tradicionales .NET Framework y Windows Server Core, que no sería un escenario tan habitual para Docker.
 

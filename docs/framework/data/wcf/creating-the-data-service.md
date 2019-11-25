@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052983"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975399"
 ---
 # <a name="create-the-data-service"></a>Crear el servicio de datos
 
-En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Services para [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] exponer una fuente basada en la base de datos de ejemplo Northwind. Esta tarea supone la realización de los siguientes pasos básicos:
+En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Services para exponer una fuente Open Data Protocol (OData) basada en la base de datos de ejemplo Northwind. Esta tarea supone la realización de los siguientes pasos básicos:
 
 1. Cree una aplicación web ASP.NET.
 
@@ -26,7 +26,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 ## <a name="create-the-aspnet-web-app"></a>Creación de la aplicación Web de ASP.NET
 
-1. En Visual Studio, en el menú **archivo** , seleccione **nuevo** > **proyecto**.
+1. En Visual Studio, en el menú **archivo** , seleccione **nuevo** **proyecto**de  > .
 
 1. En el cuadro de diálogo **nuevo proyecto** , en Visual Basic o visual C# , seleccione la categoría **Web** y, a continuación, seleccione **aplicación Web ASP.net**.
 
@@ -34,7 +34,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 1. En el cuadro de diálogo **nueva aplicación Web de ASP.net** , seleccione **vacío** y, después, haga clic en **Aceptar**.
 
-1. (Opcional) Especifique un número de puerto específico para la aplicación web. Nota: el número `12345` de puerto se usa en esta serie de temas de inicio rápido.
+1. (Opcional) Especifique un número de puerto específico para la aplicación web. Nota: el número de Puerto `12345` se usa en esta serie de temas de inicio rápido.
 
     1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto ASP.net que acaba de crear y, a continuación, elija **propiedades**.
 
@@ -52,7 +52,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 5. Conecte el modelo de datos a la base de datos mediante uno de los pasos siguientes y, a continuación, haga clic en **siguiente**:
 
-    - Si no tiene una conexión de base de datos ya configurada, haga clic en **nueva conexión** y cree una conexión nueva. Para obtener más información, consulte [Cómo Crear conexiones a bases de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))de SQL Server. Esta instancia de SQL Server debe tener asociada la base de datos de ejemplo Northwind.
+    - Si no tiene una conexión de base de datos ya configurada, haga clic en **nueva conexión** y cree una conexión nueva. Para obtener más información, consulta [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instancia de SQL Server debe tener asociada la base de datos de ejemplo Northwind.
 
          \- o -
 

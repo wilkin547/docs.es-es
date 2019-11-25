@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458958"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973987"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
@@ -168,7 +168,7 @@ En el ejemplo siguiente se muestra un enlace y se establece la propiedad <xref:S
 Para más información, vea [Herencia de valores de propiedad](property-value-inheritance.md).
 
 ### <a name="wpf-designer-integration"></a>Integración de WPF Designer
-Un control personalizado con propiedades que se implementan como propiedades de dependencia recibirá soporte técnico adecuado de [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]. Un ejemplo es la capacidad de editar las propiedades de dependencia directas y adjuntas con la ventana **Propiedades**. Para obtener más información, consulte [Información general sobre la creación de controles](../controls/control-authoring-overview.md).
+Un control personalizado con propiedades que se implementan como propiedades de dependencia recibirá el diseñador de WPF adecuado para la compatibilidad con Visual Studio. Un ejemplo es la capacidad de editar las propiedades de dependencia directas y adjuntas con la ventana **Propiedades**. Para obtener más información, consulte [Información general sobre la creación de controles](../controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 Cuando se obtiene el valor de una propiedad de dependencia, potencialmente se está obteniendo un valor establecido en esa propiedad mediante cualquiera de las otras entradas basadas en propiedades que se incluyen en el sistema de propiedades de WPF. La precedencia de los valores de propiedad de dependencia existe para que distintos escenarios sobre cómo las propiedades obtienen sus valores puedan interactuar de forma predecible.

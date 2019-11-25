@@ -3,10 +3,10 @@ title: Abordar la complejidad empresarial en un microservicio con patrones DDD y
 description: Arquitectura de microservicios .NET para aplicaciones .NET en contenedor | Cómo abordar escenarios empresariales complejos donde se aplican patrones DDD y CQRS
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 11/21/2019
 ms.locfileid: "73739840"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS
@@ -31,44 +31,44 @@ DDD es un tema amplio con numerosos recursos para obtener más información. Pue
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (diseño guiado por el dominio)
 
-- **Eric Evans. Domain Language** \ (Lenguaje de dominio)
+- **Eric Evans. Domain Language (Lenguaje de dominio)**  \
   <https://domainlanguage.com/>
 
-- **Martin Fowler. Domain-Driven Design** \ (Diseño orientado al dominio)
+- **Martin Fowler. Domain-Driven Design (Diseño orientado al dominio)**  \
   <https://martinfowler.com/tags/domain%20driven%20design.html>
 
-- **Jimmy Bogard. Strengthening your domain: a primer** \ (Reforzar el dominio: conceptos básicos)
+- **Jimmy Bogard. Strengthening your domain: a primer (Reforzar el dominio: conceptos básicos)**  \
   <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
 ##### <a name="ddd-books"></a>Libros sobre DDD
 
-- **Eric Evans. Diseño orientado al dominio: Tackling Complexity in the Heart of Software** \ (Diseño orientado al dominio: abordar la complejidad en el corazón del software)
+- **Eric Evans. Diseño orientado al dominio: Tackling Complexity in the Heart of Software (Diseño orientado al dominio: abordar la complejidad en el corazón del software)**  \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries** \ (Referencia del diseño orientado al dominio: definiciones y resúmenes de patrones)
+- **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries (Referencia del diseño orientado al dominio: definiciones y resúmenes de patrones)**  \
   <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
-- **Vaughn Vernon. Implementing Domain-Driven Design** \ (Implementación de un diseño orientado al dominio)
+- **Vaughn Vernon. Implementing Domain-Driven Design (Implementación de un diseño orientado al dominio)**  \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Vaughn Vernon. Domain-Driven Design Distilled** \ (Diseño orientado al dominio simplificado)
+- **Vaughn Vernon. Domain-Driven Design Distilled (Diseño orientado al dominio simplificado)**  \
   <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
-- **Jimmy Nilsson. Applying Domain-Driven Design and Patterns** \ (Aplicación de patrones y diseños orientados al dominio)
+- **Jimmy Nilsson. Applying Domain-Driven Design and Patterns (Aplicación de patrones y diseños orientados al dominio)**  \
   <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
-- **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET** \ (Arquitectura orientada al dominio en N capas con .NET)
+- **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET (Arquitectura orientada al dominio en N capas con .NET)**  \
   <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
-- **Abel Avram y Floyd Marinescu. Domain-Driven Design Quickly** \ (Diseño orientado al dominio rápido)
+- **Abel Avram y Floyd Marinescu. Domain-Driven Design Quickly (Diseño orientado al dominio rápido)**  \
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
-- **Scott Millett, Nick Tune - Patterns, Principles, and Practices of Domain-Driven Design** \ (Patrones, principios y procedimientos del diseño orientado al dominio)
+- **Scott Millett, Nick Tune - Patterns, Principles, and Practices of Domain-Driven Design (Patrones, principios y procedimientos del diseño orientado al dominio)**  \
   <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
 
 ##### <a name="ddd-training"></a>Aprendizaje de DDD
 
-- **Julie Lerman y Steve Smith. Domain-Driven Design Fundamentals** \ (Fundamentos del diseño orientado al dominio)
+- **Julie Lerman y Steve Smith. Domain-Driven Design Fundamentals (Fundamentos del diseño orientado al dominio)**  \
   <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]

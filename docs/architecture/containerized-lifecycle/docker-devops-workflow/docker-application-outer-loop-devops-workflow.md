@@ -2,18 +2,18 @@
 title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 description: Conozca los pasos del "bucle exterior" del flujo de trabajo de DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834569"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738240"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
-En la figura 5-1 se muestra una representación de un extremo a otro de los pasos que componen el flujo de trabajo del bucle externo de DevOps.
+En la figura 5-1 se muestra una representación de un extremo a otro de los pasos que componen el flujo de trabajo del bucle externo de DevOps. Muestra el "bucle externo" de DevOps. Cuando se inserta código en el repositorio, se inicia una canalización de CI y, después, comienza la canalización de CD, donde se implementa la aplicación. Las métricas recopiladas de las aplicaciones implementadas se envían a la carga de trabajo de desarrollo, donde se produce el "bucle interno", a fin de que los equipos de desarrollo tengan datos reales para responder a las necesidades del usuario y de la organización.
 
-![En el diagrama puede verse el "bucle externo" de DevOps. Cuando se inserta código en el repositorio, se inicia una canalización de CI y, después, comienza la canalización de CD, donde se implementa la aplicación. Las métricas recopiladas de las aplicaciones implementadas se envían a la carga de trabajo de desarrollo, donde se produce el "bucle interno", a fin de que los equipos de desarrollo tengan datos reales para responder a las necesidades del usuario y de la organización.](./media/image1.png)
+![Diagrama que muestra los 6 pasos del flujo de trabajo del bucle externo de DevOps.](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
 **Figura 5-1**. Flujo de trabajo del bucle externo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 
@@ -45,9 +45,9 @@ Puede usar Azure DevOps Services como base para compilar las aplicaciones y conf
 
 Al usar Docker para la implementación, los "artefactos finales" que se implementarán son imágenes de Docker en las que se ha insertado la aplicación o los servicios. Dichas imágenes se insertan o se publican en un *registro de Docker* (un repositorio privado, como los que se pueden tener en Azure Container Registry, o un repositorio público, como el registro de Docker Hub, que suele usarse para imágenes base oficiales).
 
-Este es el concepto básico: la canalización de CI la iniciará una confirmación en un repositorio de SCC, como GIT. La confirmación hará que Azure DevOps Services ejecute un trabajo de compilación dentro de un contenedor de Docker y, tras la finalización correcta de ese trabajo, insertará una imagen de Docker en el registro de Docker, como se muestra en la figura 5-2.
+Este es el concepto básico: la canalización de CI la iniciará una confirmación en un repositorio de SCC, como GIT. La confirmación hará que Azure DevOps Services ejecute un trabajo de compilación dentro de un contenedor de Docker y, tras la finalización correcta de ese trabajo, insertará una imagen de Docker en el registro de Docker, como se muestra en la figura 5-2. La primera parte del bucle externo implica los pasos del 1 a 3, es decir, primero el paso de programación, ejecución, depuración y validación, después el repositorio de código y, por último, la compilación, la CI y la prueba.
 
-![La primera parte del bucle externo implica los pasos del 1 a 3, es decir, primero el paso de programación, ejecución, depuración y validación, después el repositorio de código y, por último, la compilación, la CI y la prueba.](./media/image2.png)
+![Diagrama que muestra los tres pasos implicados en el flujo de trabajo de CI.](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
 **Figura 5-2**. Pasos del proceso de CI
 
@@ -69,7 +69,7 @@ Estos son los pasos básicos del flujo de trabajo de CI con Docker y Azure DevOp
 
 Azure DevOps Services de Visual Studio contiene plantillas de compilación y versión que se pueden usar en la canalización de CI/CD para crear imágenes de Docker, insertarlas en un registro autenticado de Docker, ejecutarlas o llevar a cabo otras operaciones que ofrece la CLI de Docker. También agrega una tarea de Docker Compose que se puede usar para compilar, insertar y ejecutar aplicaciones de Docker de varios contenedores, o bien para ejecutar otras operaciones de la CLI de Docker Compose, como se muestra en la figura 5-3.
 
-![Vista del explorador de la canalización de CI de Docker en Azure DevOps](./media/image3.png)
+![Captura de pantalla de la canalización de CI de Docker en Azure DevOps.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
 **Figura 5-3**. Canalización de CI de Docker en Azure DevOps Services, incluidas las plantillas de compilación y versión y tareas asociadas
 
@@ -124,15 +124,15 @@ Del mismo modo que el código de la aplicación almacenado en el repositorio de 
 
 Normalmente, le interesa tener los repositorios privados para las imágenes personalizadas en un repositorio privado en Azure Container Registry, en un registro local como Docker Trusted Registry o en un registro de nube pública con acceso restringido (por ejemplo, Docker Hub), aunque en este último caso, si no se trata de código abierto, debe confiar en la seguridad del proveedor. En cualquier caso, el método que use es similar y se basa en el comando `docker push`, como se muestra en la figura 5-4.
 
-![En el paso 3, para la compilación, la integración y las pruebas (CI), podría interesarle publicar las imágenes de Docker resultantes en un registro privado o público.](./media/image4.png)
+![Diagrama que muestra la extracción de imágenes personalizadas a un registro de contenedor.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
 **Figura 5-4**. Publicación de imágenes personalizadas en el registro de Docker
 
-Existen proveedores de nube que ofrecen diversos registros de Docker, como Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry, etc.
+En el paso 3, para la compilación, la integración y las pruebas (CI), podría interesarle publicar las imágenes de Docker resultantes en un registro privado o público. Existen proveedores de nube que ofrecen diversos registros de Docker, como Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry, etc.
 
 Mediante el uso de tareas de Docker, puede insertar un conjunto de imágenes de servicio definidas por un archivo `docker-compose.yml`, con varias etiquetas, en un registro de Docker autenticado (como Azure Container Registry), tal como se muestra en la figura 5-5.
 
-![Vista del explorador del paso para publicar imágenes en un registro desde Azure DevOps.](./media/image5.png)
+![Captura de pantalla que muestra el paso para publicar imágenes en un registro.](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **Figura 5-5**. Uso de Azure DevOps Services para publicar imágenes personalizadas en un registro de Docker
 
@@ -148,13 +148,13 @@ Aun así, este paso depende del tipo de aplicación de Docker que vaya a impleme
 
 Veamos primero el escenario menos complejo: la implementación en hosts simples de Docker (máquinas virtuales o servidores) en uno o varios entornos (control de calidad, almacenamiento provisional y producción). En este escenario, la canalización de CD puede usar internamente docker-compose (desde las tareas de implementación de Azure DevOps Services) para implementar las aplicaciones de Docker con su conjunto relacionado de contenedores y servicios, como se muestra en la figura 5-6.
 
-![En el paso de CD e implementación (n.º 4) se puede realizar la publicación en diferentes entornos, como control de calidad, almacenamiento provisional y producción.](./media/image6.png)
+![Diagrama que muestra el paso de implementación de CD que se implementa en tres entornos.](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **Figura 5-6**. Implementación de contenedores de aplicación en el registro de entornos de host de Docker simple
 
 En la figura 5-7 se muestra cómo se pueden conectar la compilación y CI con entornos de control de calidad y pruebas a través de Azure DevOps Services si se hace clic en Docker Compose en el cuadro de diálogo Agregar tarea. Aun así, al realizar la implementación en entornos de almacenamiento provisional o producción, normalmente usará las características de Release Management para administrar varios entornos (como control de calidad, almacenamiento provisional y producción). Si lleva a cabo la implementación en hosts de Docker únicos, lo hará mediante la tarea "Docker Compose" de Azure DevOps Services (que invoca el comando `docker-compose up` en segundo plano). Si va a proceder a la implementación en Azure Kubernetes Service (AKS), usará la tarea de implementación de Docker, como se explica en la sección siguiente.
 
-![Vista del explorador al agregar una tarea de Docker Compose.](./media/image7.png)
+![Captura de pantalla que muestra el cuadro de diálogo Add tasks (Agregar tareas) de la tarea Docker Compose.](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **Figura 5-7**. Adición de una tarea de Docker Compose en una canalización Azure DevOps Services
 
@@ -166,7 +166,7 @@ Las plantillas de Azure DevOps Services permiten generar artefactos de compilaci
 
 A través de las plantillas de Azure DevOps Services, puede crear una imagen, publicarla en un registro de Docker, ejecutarla en hosts de Linux o Windows y usar comandos como `docker-compose` para implementar varios contenedores como una aplicación completa, y todo ello gracias a las funcionalidades de Release Management de Azure DevOps Services destinadas a diversos entornos, como se muestra en la figura 5-8.
 
-![Vista del explorador de Azure DevOps, en la que se configuran versiones de Docker Compose.](./media/image8.png)
+![Captura de pantalla que muestra la configuración de las versiones de Docker Compose.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
 **Figura 5-8**. Configuración de tareas de Docker Compose de Azure DevOps Services desde Release Management para Azure DevOps Services
 
@@ -180,19 +180,19 @@ Podría implementar contenedores manualmente en esos clústeres desde una herram
 
 Desde el punto de vista de CD, y más concretamente de Azure DevOps Services, puede ejecutar tareas de implementación creadas de forma especial desde los entornos de Release Management de Azure DevOps Services que vayan a implementar las aplicaciones en contenedores en clústeres distribuidos en Container Service, como se muestra en la figura 5-9.
 
-![En el paso de CD e implementación (n.º 4) también se puede publicar en clústeres a través de orquestadores.](./media/image9.png)
+![Diagrama que muestra el paso de la implementación de CD que se implementa en los orquestadores.](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **Figura 5-9**. Implementación de aplicaciones distribuidas en Container Service
 
 En principio, al implementar en ciertos clústeres u orquestadores, tradicionalmente se usarían mecanismos y scripts de implementación específicos por cada orquestador (es decir, Kubernetes y Service Fabric tienen mecanismos de implementación diferentes), en lugar de la herramienta `docker-compose` (más sencilla y fácil de usar) basada en el archivo de definición `docker-compose.yml`. Aun así, gracias a la tarea de implementación de Docker de Azure DevOps Services, que aparece en la figura 5-10, ahora también puede realizar la implementación en los orquestadores compatibles mediante el archivo `docker-compose.yml`, que ya conoce, puesto que la herramienta realiza automáticamente la "traducción" (del archivo `docker-compose.yml` al formato que requiere el orquestador).
 
-![Vista del explorador del catálogo de tareas de DevOps de Azure, en la que se muestra la implementación en la tarea de Kubernetes.](./media/add-deploy-to-kubernetes-task.png)
+![Captura de pantalla que muestra la tarea Implementar en Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **Figura 5-10**. Adición de la tarea Implementar en Kubernetes al entorno
 
 En la figura 5-11 se muestra cómo se puede modificar la tarea Implementar en Kubernetes con las secciones disponibles para la configuración. Esta es la tarea que recuperará las imágenes de Docker personalizadas listas para usar que se implementarán como contenedores en el clúster.
 
-![Vista del explorador de Azure DevOps, definición de la tarea de implementación en Kubernetes.](./media/edit-deploy-to-kubernetes-task.png)
+![Captura de pantalla que muestra la configuración de la tarea Implementar en Kubernetes.](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
 
 **Figura 5-11**. Definición de la tarea de implementación de Docker implementada en ACS DC/OS
 

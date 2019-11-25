@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052083"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975554"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
 
@@ -55,13 +55,13 @@ El ejemplo de Chainer inicia de forma silenciosa el programa de instalación de 
 > [!WARNING]
 > Debe ejecutar el ejemplo como administrador.
 
-Puede descargar la solución completa de Visual Studio del [ejemplo de encadenador para .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) en la galería de ejemplos de MSDN.
+Puede descargar la solución completa de Visual Studio del [ejemplo de encadenador para .NET Framework 4.5](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) en la galería de ejemplos de MSDN.
 
 En las secciones siguientes se describen los archivos importantes de este ejemplo: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- El archivo MMIOChainer.h (vea el [código completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definición de la estructura de datos y la clase base de la que debería derivarse la clase del encadenador. .NET Framework 4.5 amplía la estructura de datos MMIO para controlar los datos que necesita su instalador. Los cambios en la estructura MMIO son compatible con versiones anteriores, por lo que un encadenador de .NET Framework 4 puede trabajar con el programa de instalación de .NET Framework 4.5 sin necesidad de volver a compilar. Sin embargo, este escenario no es compatible con la característica para reducir los reinicios del sistema.
+- El archivo MMIOChainer.h (vea el [código completo](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)) contiene la definición de la estructura de datos y la clase base de la que debería derivarse la clase del encadenador. .NET Framework 4.5 amplía la estructura de datos MMIO para controlar los datos que necesita su instalador. Los cambios en la estructura MMIO son compatible con versiones anteriores, por lo que un encadenador de .NET Framework 4 puede trabajar con el programa de instalación de .NET Framework 4.5 sin necesidad de volver a compilar. Sin embargo, este escenario no es compatible con la característica para reducir los reinicios del sistema.
 
     Un campo de versión proporciona un medio de identificar las revisiones para la estructura y el formato de mensajes. El programa de instalación de .NET Framework determina la versión de la interfaz del encadenador llamando a la función `VirtualQuery` para averiguar el tamaño de la asignación del archivo. Si el tamaño es lo suficientemente grande para acomodar el campo de versión, el programa de instalación de .NET Framework utiliza el valor especificado. Si la asignación del archivo es demasiado pequeña para contener un campo de versión, que es lo que sucede con .NET Framework 4, el proceso de instalación asume que es la versión 0 (4). Si el encadenador no admite la versión del mensaje que el programa de instalación de .NET Framework desea enviar, este asume que la respuesta es ignorar.
 
@@ -98,7 +98,7 @@ En las secciones siguientes se describen los archivos importantes de este ejempl
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
-- El archivo IProgressObserver.h implementa un observador de progreso ([vea el código completo](https://go.microsoft.com/fwlink/?LinkId=231370)). Este observador recibe notificaciones del progreso de descarga e instalación (se especifica como un `char` sin firmar, 0-255, que indica 1-100 % completado). El observador también recibe una notificación cuando el objeto encadenado envía un mensaje y debe enviar una respuesta.
+- El archivo IProgressObserver.h implementa un observador de progreso ([vea el código completo](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)). Este observador recibe notificaciones del progreso de descarga e instalación (se especifica como un `char` sin firmar, 0-255, que indica 1-100 % completado). El observador también recibe una notificación cuando el objeto encadenado envía un mensaje y debe enviar una respuesta.
 
     ```cpp
         class IProgressObserver
@@ -112,7 +112,7 @@ En las secciones siguientes se describen los archivos importantes de este ejempl
 
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
-- El archivo [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) implementa la clase `Server`, que deriva de la clase `MmioChainer` e invalida los métodos adecuados para mostrar la información de progreso. El MmioChainer crea una sección con el nombre de la sección especificada e inicializa al encadenador con el nombre de evento especificado. El nombre del evento se guarda en la estructura de datos asignada. Los nombres de sección y de evento deben ser únicos. La clase `Server` del código siguiente inicia el programa de instalación especificado, supervisa su progreso y devuelve un código de salida.
+- El archivo [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) implementa la clase `Server`, que deriva de la clase `MmioChainer` e invalida los métodos adecuados para mostrar la información de progreso. El MmioChainer crea una sección con el nombre de la sección especificada e inicializa al encadenador con el nombre de evento especificado. El nombre del evento se guarda en la estructura de datos asignada. Los nombres de sección y de evento deben ser únicos. La clase `Server` del código siguiente inicia el programa de instalación especificado, supervisa su progreso y devuelve un código de salida.
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver

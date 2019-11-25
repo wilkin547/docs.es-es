@@ -2,13 +2,14 @@
 title: Distinción de delegados y eventos
 description: Obtenga información sobre la diferencia entre los delegados y los eventos, y cuándo usar cada una de estas características de .NET Core.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 2f9c26519d93314f4991829191723df5426b23b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219143"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037321"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinción de delegados y eventos
 
@@ -35,7 +36,7 @@ Los controles de UX todavía funcionan correctamente, incluso cuando no hay ning
 
 Otra consideración es el prototipo del método que quiere para el método delegado. Como ha visto, todos los delegados que se han usado para los eventos tienen un tipo de valor devuelto void. También ha visto que hay elementos para crear controladores de eventos que pasan información de nuevo a los orígenes de eventos mediante la modificación de las propiedades del objeto de argumento del evento. Aunque estos elementos funcionan, no son tan naturales como la devolución de un valor de un método.
 
-Tenga en cuenta que estas dos heurísticas pueden estar presentes a menudo: si su método delegado devuelve un valor, probablemente afectará al algoritmo de alguna manera.
+Observe que estas dos heurísticas suelen estar presentes: si el método delegado devuelve un valor, lo más probable es que afecte de algún modo al algoritmo.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Los agentes de escucha de eventos a menudo tienen una vigencia mayor 
 

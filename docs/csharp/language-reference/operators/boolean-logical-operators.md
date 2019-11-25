@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319106"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737897"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -47,7 +47,7 @@ Los operandos siguientes realizan operaciones lógicas con los operandos [bool](
 - Operadores binarios [`&` (AND lógico)](#logical-and-operator-), [`|` (OR lógico)](#logical-or-operator-) y [`^` (OR exclusivo lógico)](#logical-exclusive-or-operator-). Esos operadores siempre evalúan ambos operandos.
 - Operadores binarios [`&&` (AND lógico condicional)](#conditional-logical-and-operator-) y [`||` (OR lógico condicional)](#conditional-logical-or-operator-). Esos operadores evalúan el operando derecho solo si es necesario.
 
-En el caso de los operandos de tipo [entero](../builtin-types/integral-numeric-types.md), los operadores `&`, `|` y `^` realizan operaciones lógicas bit a bit. Para obtener más información, vea [Operadores de desplazamiento y bit a bit](bitwise-and-shift-operators.md).
+En el caso de los operandos de los [tipos numéricos enteros](../builtin-types/integral-numeric-types.md), los operadores `&`, `|` y `^` realizan operaciones lógicas bit a bit. Para obtener más información, vea [Operadores de desplazamiento y bit a bit](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Operador de negación lógico !
 
@@ -61,7 +61,7 @@ A partir de C# 8.0, el operador `!` de postfijo unario es un [operador que perm
 
 El operador `&` calcula el operador AND lógico de sus operandos. El resultado de `x & y` es `true` si `x` y `y` se evalúan como `true`. De lo contrario, el resultado es `false`.
 
-El operador `&` evalúa ambos operandos, incluso aunque el izquierdo se evalúe como `false`, de modo que el resultado debe ser `false` con independencia del valor del operando derecho.
+El operador `&` evalúa ambos operandos, incluso aunque el izquierdo se evalúe como `false`, para que el resultado de la operación sea `false` con independencia del valor del operando derecho.
 
 En el ejemplo siguiente, el operando derecho del operador `&` es una llamada de método, que se realiza independientemente del valor del operando izquierdo:
 
@@ -69,7 +69,7 @@ En el ejemplo siguiente, el operando derecho del operador `&` es una llamada de 
 
 El [operador AND lógico condicional](#conditional-logical-and-operator-) `&&` también calcula el operador AND lógico de sus operandos, pero no evalúa el operando derecho si el izquierdo se evalúa como `false`.
 
-En el caso de los operandos de tipo entero, el operador `&` calcula el [AND lógico bit a bit](bitwise-and-shift-operators.md#logical-and-operator-) de sus operandos. El operador `&` unario es el [operador address-of](pointer-related-operators.md#address-of-operator-).
+En el caso de los operandos de los [tipos numéricos enteros](../builtin-types/integral-numeric-types.md), el operador `&` calcula el [AND lógico bit a bit](bitwise-and-shift-operators.md#logical-and-operator-) de sus operandos. El operador `&` unario es el [operador address-of](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Operador IR exclusivo lógico ^
 
@@ -77,13 +77,13 @@ El operador `^` calcula el operador OR exclusivo lógica, también conocido como
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
-En el caso de los operandos de tipo entero, el operador `^` calcula el [OR exclusivo lógico bit a bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) de sus operandos.
+En el caso de los operandos de los [tipos numéricos enteros](../builtin-types/integral-numeric-types.md), el operador `^` calcula el [AND lógico bit a bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) de sus operandos.
 
 ## <a name="logical-or-operator-"></a>Operador lógico OR |
 
 El operador `|` calcula el operador OR lógico de sus operandos. El resultado de `x | y` es `true` si `x` o `y` se evalúan como `true`. De lo contrario, el resultado es `false`.
 
-El operador `|` evalúa ambos operandos, incluso aunque el izquierdo se evalúe como `true`, de modo que el resultado debe ser `true` con independencia del valor del operando derecho.
+El operador `|` evalúa ambos operandos, incluso aunque el izquierdo se evalúe como `true`, para que el resultado de la operación sea `true` con independencia del valor del operando derecho.
 
 En el ejemplo siguiente, el operando derecho del operador `|` es una llamada de método, que se realiza independientemente del valor del operando izquierdo:
 
@@ -91,7 +91,7 @@ En el ejemplo siguiente, el operando derecho del operador `|` es una llamada de 
 
 El [operador OR lógico condicional](#conditional-logical-or-operator-) `||` también calcula el operador OR lógico de sus operandos, pero no evalúa el operando derecho si el izquierdo se evalúa como `true`.
 
-En el caso de los operandos de tipo entero, el operador `|` calcula el [OR lógico bit a bit](bitwise-and-shift-operators.md#logical-or-operator-) de sus operandos.
+En el caso de los operandos de los [tipos numéricos enteros](../builtin-types/integral-numeric-types.md), el operador `|` calcula el [OR lógico bit a bit](bitwise-and-shift-operators.md#logical-or-operator-) de sus operandos.
 
 ## <a name="conditional-logical-and-operator-"></a> Operador AND lógico condicional &amp;&amp;
 
@@ -129,7 +129,7 @@ En el caso de los operandos `bool?`, los operadores `&` y `|` admiten la lógica
 |nulo|False|False|nulo|  
 |nulo|nulo|nulo|nulo|  
 
-El comportamiento de esos operadores difiere del comportamiento típico del operador con tipos de valor que aceptan valores NULL. Por lo general, un operador que se define para los operandos de un tipo de valor también se puede usar con los operandos del tipo de valor que acepta valores NULL correspondientes. Este tipo de operador genera `null` si alguno de sus operandos es `null`. Sin embargo, los operadores `&` y `|` pueden generar un valor no NULL incluso si uno de los operandos es `null`. Para más información sobre el comportamiento de los operandos con tipos de valor que aceptan valores NULL, consulte la sección [Operadores](../../programming-guide/nullable-types/using-nullable-types.md#operators) del artículo [Uso de tipos de valor que admiten un valor NULL](../../programming-guide/nullable-types/using-nullable-types.md).
+El comportamiento de esos operadores difiere del comportamiento típico del operador con tipos de valor que aceptan valores NULL. Por lo general, un operador que se define para los operandos de un tipo de valor también se puede usar con los operandos del tipo de valor que acepta valores NULL correspondientes. Este tipo de operador genera `null` si alguno de sus operandos se evalúa como `null`. Sin embargo, los operadores `&` y `|` pueden generar un valor no NULL incluso si uno de los operandos es `null`. Para más información sobre el comportamiento de los operadores con tipos de valor que aceptan valores NULL, consulte la sección [Operadores de elevación](../builtin-types/nullable-value-types.md#lifted-operators) del artículo [Tipos de valor que aceptan valores NULL](../builtin-types/nullable-value-types.md).
 
 También puede usar los operadores `!` y `^` con los operandos `bool?`, como se muestra en el ejemplo siguiente:
 
@@ -174,7 +174,7 @@ Use los paréntesis, `()`, para cambiar el orden de evaluación impuesto por la 
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
-Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea [Operadores de C#](index.md).
+Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea la sección [Prioridad de operadores](index.md#operator-precedence) del artículo [Operadores de C#](index.md).
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 

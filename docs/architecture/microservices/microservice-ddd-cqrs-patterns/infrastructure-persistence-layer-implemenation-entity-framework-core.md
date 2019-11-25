@@ -2,12 +2,12 @@
 title: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación del nivel de persistencia de la infraestructura con Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674102"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737923"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de infraestructura con Entity Framework Core
 
@@ -174,11 +174,11 @@ Pero implementar repositorios personalizados ofrece varias ventajas al implement
 
 En la Figura 7-18 puede ver las diferencias entre no usar repositorios (directamente mediante DbContext de EF) y usar repositorios que faciliten la simulación de los repositorios.
 
-![Comparación entre el uso de un repositorio personalizado y un elemento DbContext normal: el repositorio personalizado agrega una capa de abstracción que se puede usar para facilitar las pruebas mediante la simulación del repositorio.](./media/image19.png)
+![Diagrama que muestra los componentes y el flujo de datos en los dos repositorios.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Figura 7-18**. Uso de repositorios personalizados frente a DbContext sin formato
 
-Hay varias alternativas al plantear una simulación. Puede limitarse a simular repositorios o puede simular una unidad de trabajo completa. Normalmente es suficiente con simular repositorios y no suele ser necesario pasar por la complejidad de tener que abstraer y simular una unidad de trabajo.
+En la figura 7-18 se muestra que el uso de un repositorio personalizado agrega una capa de abstracción que permite simular el repositorio para facilitar las pruebas. Hay varias alternativas al plantear una simulación. Puede limitarse a simular repositorios o puede simular una unidad de trabajo completa. Normalmente es suficiente con simular repositorios y no suele ser necesario pasar por la complejidad de tener que abstraer y simular una unidad de trabajo.
 
 Más adelante, cuando nos centremos en el nivel de aplicación, verá cómo funciona la inserción de dependencias en ASP.NET Core y cómo se implementa al utilizar repositorios.
 

@@ -1,25 +1,25 @@
 ---
-title: 'Procedimiento Inicializar objetos usando un inicializador de objeto: Guía de programación de C#'
+title: Procedimiento para inicializar objetos usando un inicializador de objeto - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 7b31e28c23a70e9f0794c82feb2a984c40ee9d0f
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: be555688a645c7689e76b5b4499c44255c18dbc8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267584"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970878"
 ---
-# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Procedimiento Inicializar objetos usando un inicializador de objeto (Guía de programación de C#)
+# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Procedimiento para inicializar objetos usando un inicializador de objeto (Guía de programación de C#)
 
 Puede usar inicializadores de objeto para inicializar objetos de tipo de una forma declarativa sin tener que invocar explícitamente un constructor para el tipo.  
   
 En los siguientes ejemplos se muestra cómo usar los inicializadores de objeto con objetos con nombre. El compilador procesa los inicializadores de objeto primero obteniendo acceso al constructor de instancia predeterminado y después procesando las inicializaciones de miembro. Por lo tanto, si el constructor sin parámetros se declara como `private` en la clase, se producirá un error en los inicializadores de objeto que requieren acceso público.
   
-Debe usar un inicializador de objeto si va a definir un tipo anónimo. Para obtener más información, vea [Cómo: Devolver subconjuntos de propiedades de elementos en una consulta](how-to-return-subsets-of-element-properties-in-a-query.md).  
+Debe usar un inicializador de objeto si va a definir un tipo anónimo. Para obtener más información, vea [Procedimiento para devolver subconjuntos de propiedades de elementos en una consulta](how-to-return-subsets-of-element-properties-in-a-query.md).  
   
 ## <a name="example"></a>Ejemplo  
 

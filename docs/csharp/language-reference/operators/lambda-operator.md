@@ -8,30 +8,30 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: b8d1a4e3971eb30e76bf543497931ce029c5541d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971231"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036375"
 ---
 # <a name="-operator-c-reference"></a>Operador => (referencia de C#)
 
-El token `=>` se admite de dos formas: como el operador lambda y como un separador de un nombre de miembro y la implementación del miembro en una definición de cuerpo de expresión.
+El token `=>` se admite de dos formas: como el [operador lambda](#lambda-operator) y como un separador de un nombre de miembro y la implementación del miembro en una [definición de cuerpo de expresión](#expression-body-definition).
 
 ## <a name="lambda-operator"></a>Operador lambda
 
-En las [expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), el operador lambda `=>` se usa para separar las variables de entrada del lado izquierdo y el cuerpo lambda del lado derecho.
+En las [expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), el operador lambda `=>` separa los parámetros de entrada del lado izquierdo y el cuerpo lambda del lado derecho.
 
 En el ejemplo siguiente se usa la característica [LINQ](../../programming-guide/concepts/linq/index.md) con sintaxis de método para demostrar el uso de las expresiones lambda:
 
 [!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
-Las variables de entrada de las expresiones lambda están fuertemente tipadas en tiempo de compilación. Cuando el compilador puede deducir los tipos de las variables de entrada, como en el ejemplo anterior, las declaraciones de tipos se pueden omitir. Si tiene que especificar el tipo de las variables de entrada, debe hacerlo para cada variable, como se muestra en el ejemplo siguiente:
+Los parámetros de entrada de una expresión lambda están fuertemente tipados en tiempo de compilación. Cuando el compilador puede deducir los tipos de los parámetros de entrada, como en el ejemplo anterior, se pueden omitir las declaraciones de tipos. Si tiene que especificar el tipo de los parámetros de entrada, debe hacerlo para cada uno de ellos, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
-En el ejemplo siguiente se muestra cómo definir una expresión lambda sin variables de entrada:
+En el ejemplo siguiente se muestra cómo definir una expresión lambda sin parámetros de entrada:
 
 [!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
@@ -45,7 +45,7 @@ Una definición de cuerpo de expresión tiene la siguiente sintaxis general:
 member => expression;
 ```
 
-donde `expression` es una expresión válida. El tipo de valor devuelto de `expression` se debe poder convertir implícitamente al tipo de valor devuelto del miembro. Si el tipo de valor devuelto del miembro es `void`, o si el miembro es un constructor, un finalizador o un descriptor de acceso `set` de propiedad, `expression` debe ser una [*expresión de instrucción*](~/_csharplang/spec/statements.md#expression-statements); puede ser de cualquier tipo entonces.
+donde `expression` es una expresión válida. El tipo de valor devuelto de `expression` se debe poder convertir implícitamente al tipo de valor devuelto del miembro. Si el tipo de valor devuelto del miembro es `void`, o si el miembro es un constructor, un finalizador o un descriptor de acceso `set` de propiedad, `expression` debe ser una [*expresión de instrucción*](~/_csharplang/spec/statements.md#expression-statements), que puede ser de cualquier tipo.
 
 En el ejemplo siguiente se muestra una definición de cuerpo de expresión para un método `Person.ToString`:
 
@@ -62,7 +62,7 @@ public override string ToString()
 }
 ```
 
-A partir de C# 6, se admiten definiciones de cuerpos de expresión para métodos y propiedades de solo lectura. A partir de C# 7.0, se admiten definiciones de cuerpos de expresión para constructores, finalizadores, descriptores de acceso de propiedad e indizadores.
+A partir de C# 6, se admiten definiciones de cuerpos de expresión para métodos, operadores y propiedades de solo lectura. A partir de C# 7.0, se admiten definiciones de cuerpos de expresión para constructores, finalizadores y descriptores de acceso de propiedad e indizador.
 
 Para obtener más información, vea [Miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
@@ -72,11 +72,9 @@ El operador `=>` no se puede sobrecargar.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-Para obtener más información, vea la sección [Expresiones de función anónima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) de la [Especificación del lenguaje C#](../language-specification/index.md).
+Para más información sobre el operador lambda, vea la sección [Expresiones de función anónima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
 - [Operadores de C#](index.md)
-- [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

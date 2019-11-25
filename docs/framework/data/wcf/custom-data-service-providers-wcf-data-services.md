@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 4a6079db5e969154c4a9bb6451dd7c698c6d2088
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fd76f456665da76138b927d85a53924e8169c30a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780373"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975375"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Proveedores de servicios de datos personalizados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye un conjunto de proveedores que permite definir un modelo de datos basado en tipos de datos enlazados en tiempo de ejecución.  
   
-|Proveedor|DESCRIPCIÓN|  
+|Proveedor|Descripción|  
 |--------------|-----------------|  
 |Proveedor de metadatos|Este es el proveedor principal de servicios de datos personalizados que permite definir un modelo de datos personalizado en tiempo de ejecución implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.|  
 |Proveedor de consultas|Este proveedor permite ejecutar las consultas sobre un modelo de datos personalizado que se define utilizando la interfaz <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>. El proveedor de consultas se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceQueryProvider>.|  
@@ -22,7 +22,7 @@ ms.locfileid: "70780373"
 |Proveedor de paginaciones|Este proveedor se utiliza con el proveedor del servicio de datos personalizado para habilitar la compatibilidad con la paginación controlada por servidor. Un proveedor de paginaciones para un servicio de datos personalizado se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServicePagingProvider>.|  
 |Proveedor de transmisiones por secuencias|Este proveedor permite exponer tipos de datos de objetos binarios grandes como una secuencia. Si implementa la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, se crea un proveedor de transmisiones por secuencias. El proveedor de transmisiones por secuencias también se puede utilizar con Entity Framework y proveedores de orígenes de datos de reflexión. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md).|  
   
- Para obtener más información, vea el artículo [proveedores de servicios de datos personalizados](https://go.microsoft.com/fwlink/?LinkID=186850) y el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kit de herramientas del proveedor en el SDK de [OData](https://go.microsoft.com/fwlink/?LinkId=186069).  
+ Para obtener más información, vea el artículo [proveedores de servicios de datos personalizados](https://go.microsoft.com/fwlink/?LinkID=186850) y el kit de herramientas del proveedor de Open Data Protocol (OData) en el [SDK de oData](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Vea también
 

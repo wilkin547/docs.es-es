@@ -9,17 +9,16 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dce8c58f94c66bcf2336d3708ebc64699148d556
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046703"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975513"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palabras clave y niveles ETW de CLR
-<a name="top"></a> El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y nivel. Las [Palabras clave ETW de CLR](#keywords) de evento permiten el filtrado de eventos por categoría; se usan en combinaciones para los proveedores de tiempo de ejecución y detención. Los [niveles de evento](#levels) se identifican mediante marcas.  
+El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y nivel. Las [Palabras clave ETW de CLR](#clr-etw-keywords) de evento permiten el filtrado de eventos por categoría; se usan en combinaciones para los proveedores de tiempo de ejecución y detención. Los [niveles de evento](#etw-event-levels) se identifican mediante marcas.  
   
-<a name="keywords"></a>   
 ## <a name="clr-etw-keywords"></a>Palabras clave ETW de CLR  
  Las palabras clave son marcas que se pueden combinar para generar valores. En la práctica, cuando se llama a las utilidades de línea de comandos, se usan los valores hexadecimales de las palabras clave en lugar de los nombres de palabra clave.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "71046703"
 ### <a name="clr-etw-runtime-keywords"></a>Palabras clave de runtime de ETW de CLR  
  En la tabla siguiente se enumeran las palabras clave de runtime de ETW de CLR, sus valores y se explica para qué se usan.  
   
-|Nombre de la palabra clave de runtime|Valor|Propósito|  
+|Nombre de la palabra clave de runtime|Valor|Finalidad|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Habilita la recopilación de [eventos de recolección de elementos no utilizados](garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Habilita la recopilación de [eventos de cargador](loader-etw-events.md).|  
@@ -52,17 +51,15 @@ ms.locfileid: "71046703"
 |`ContentionKeyword`|0x00004000|Habilita la recopilación de [eventos de contención](contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Habilita la recopilación de [eventos de excepción](exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Habilita la recopilación de [eventos de grupo de subprocesos](thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Disponible en el .NET Framework 4,5 y versiones posteriores). Suprime la palabra clave `NGenKeyword` de elevada sobrecarga y evita que se generen eventos para los métodos que están dentro de los módulos NGen. A partir del .NET Framework 4,5, las herramientas de generación de `OverrideAndSuppressNGenEventsKeyword` perfiles `NGenKeyword` deben usar y conjuntamente para suprimir la generación de eventos para los métodos de los módulos Ngen. Esto permite que la herramienta de generación de perfiles use de forma más eficaz los archivos PDB de NGen para obtener información sobre los métodos de módulos NGen. En .NET Framework 4 y versiones anteriores, el CLR no admite la creación de archivos PDB de NGen. En estas versiones anteriores, el CLR no reconocerá `OverrideAndSuppressNGenEventsKeyword` y procesará `NGenKeyword` para generar eventos para los métodos de módulos NGen.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Disponible en el .NET Framework 4,5 y versiones posteriores). Suprime la palabra clave de `NGenKeyword` de sobrecarga alta y evita la generación de eventos para los métodos que están dentro de los módulos NGen. A partir del .NET Framework 4,5, las herramientas de generación de perfiles deben usar `OverrideAndSuppressNGenEventsKeyword` y `NGenKeyword` juntas para suprimir la generación de eventos para los métodos de los módulos NGen. Esto permite que la herramienta de generación de perfiles use de forma más eficaz los archivos PDB de NGen para obtener información sobre los métodos de módulos NGen. En .NET Framework 4 y versiones anteriores, el CLR no admite la creación de archivos PDB de NGen. En estas versiones anteriores, el CLR no reconocerá `OverrideAndSuppressNGenEventsKeyword` y procesará `NGenKeyword` para generar eventos para los métodos de módulos NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Habilita la recopilación de eventos `ModuleLoad` y `ModuleRange` .|  
 |`StackKeyword`|0x40000000|Habilita la recopilación de [eventos de seguimiento de pila](stack-etw-event.md)de CLR.|  
-  
- [Volver al principio](#top)  
   
 <a name="rundown"></a>   
 ### <a name="clr-etw-rundown-keywords"></a>Palabras clave de detención de ETW de CLR  
  En la tabla siguiente se enumeran las palabras clave de detención de ETW de CLR, sus valores y se explica para qué se usan.  
   
-|Nombre de la palabra clave de detención|Valor|Propósito|  
+|Nombre de la palabra clave de detención|Valor|Finalidad|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Habilita la recopilación de eventos de cargador cuando se usa con `StartRundownKeyword` y `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Habilita la recopilación de eventos de método `DCStart` y `DCEnd` para métodos compilados JIT cuando se usa con `StartRundownKeyword` y `EndRundownKeyword`.|  
@@ -71,10 +68,8 @@ ms.locfileid: "71046703"
 |`EndRundownKeyword`|0x00000100|Habilita la enumeración del estado del sistema durante una detención de final.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Habilita la recopilación de eventos de supervisión de recursos en un nivel de <xref:System.AppDomain> cuando se usa con `StartRundownKeyword` o `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Habilita la recopilación de eventos de grupo de subprocesos.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Disponible en el .NET Framework 4,5 y versiones posteriores). Suprime la palabra clave `NGenRundownKeyword` de elevada sobrecarga y evita que se generen eventos para los métodos que están dentro de los módulos NGen. A partir del .NET Framework 4,5, las herramientas de generación de `OverrideAndSuppressNGenEventsRundownKeyword` perfiles `NGenRundownKeyword` deben usar y conjuntamente para suprimir la generación de eventos para los métodos de los módulos Ngen. Esto permite que la herramienta de generación de perfiles use de forma más eficaz los archivos PDB de NGen para obtener información sobre los métodos de módulos NGen. En .NET Framework 4 y versiones anteriores, el CLR no admite la creación de archivos PDB de NGen. En estas versiones anteriores, el CLR no reconocerá `OverrideAndSuppressNGenEventsRundownKeyword` y procesará `NGenRundownKeyword` para generar eventos para los métodos de módulos NGen.|  
-|`PerfTrackKeyWord`|0x2000000|Habilita la recopilación de eventos `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`y `ModuleRangeDCEnd` .|  
-  
- [Volver al principio](#top)  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Disponible en el .NET Framework 4,5 y versiones posteriores). Suprime la palabra clave de `NGenRundownKeyword` de sobrecarga alta y evita la generación de eventos para los métodos que están dentro de los módulos NGen. A partir del .NET Framework 4,5, las herramientas de generación de perfiles deben usar `OverrideAndSuppressNGenEventsRundownKeyword` y `NGenRundownKeyword` juntas para suprimir la generación de eventos para los métodos de los módulos NGen. Esto permite que la herramienta de generación de perfiles use de forma más eficaz los archivos PDB de NGen para obtener información sobre los métodos de módulos NGen. En .NET Framework 4 y versiones anteriores, el CLR no admite la creación de archivos PDB de NGen. En estas versiones anteriores, el CLR no reconocerá `OverrideAndSuppressNGenEventsRundownKeyword` y procesará `NGenRundownKeyword` para generar eventos para los métodos de módulos NGen.|  
+|`PerfTrackKeyWord`|0x2000000|Habilita la recopilación de eventos `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`y `ModuleRangeDCEnd` .|   
   
 <a name="runtime_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Combinaciones de palabras clave para la resolución de símbolos para el proveedor de runtime  
@@ -84,11 +79,9 @@ ms.locfileid: "71046703"
 |`LoaderKeyword`|Eventos de carga y descarga.|Ninguno.|Ninguno.|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` no agrega nada)|Ninguno.|Eventos de carga.|Eventos de carga y descarga.|  
 |`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de carga y descarga.|Eventos de carga y descarga.|  
-|`NGenKeyword`|Ninguno.|Ninguno.|No aplicable.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Ninguno.|Eventos de carga.|No aplicable.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de descarga.|No aplicable.|  
-  
- [Volver al principio](#top)  
+|`NGenKeyword`|Ninguno.|Ninguno.|No disponible.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Ninguno.|Eventos de carga.|No disponible.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de descarga.|No disponible.|  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Combinaciones de palabras clave para la resolución de símbolos para el proveedor de detención  
@@ -101,10 +94,7 @@ ms.locfileid: "71046703"
 |`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
 |`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
 |`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
-  
- [Volver al principio](#top)  
-  
-<a name="levels"></a>   
+
 ## <a name="etw-event-levels"></a>Niveles de eventos ETW  
  Los eventos ETW también se pueden filtrar por nivel. Si el nivel se establece en 0x5, se generan eventos de todos los niveles, incluidos 0 x 5 e inferiores (que son eventos que pertenecen a las categorías habilitadas mediante palabras clave). Si el nivel se establece en 0x2, tan solo se producen los eventos que pertenecen al nivel 0x2 e inferiores.  
   

@@ -8,19 +8,19 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: e1414c17cefd0fb31bb782a311e11dbd4cc056bb
-  ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+  ms.openlocfilehash: bd11bda04ccf7d8253907bee8f17fc2b86ed76cd
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/06/2019
-  ms.locfileid: "70394090"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969490"
 items:
 - durationInMinutes: 1
   content: >
     Este tutorial permite examinar C# 6 de forma interactiva, mediante el uso del explorador para escribir C# y ver los resultados de la compilación y la ejecución del código. Contiene una serie de lecciones que modifican procedimientos antiguos de C# para usar características más recientes y concisas de C# 6. El resto de este artículo proporciona información general de cada una de estas características, con un vínculo para examinar cada una.
 - title: Propiedades automáticas de solo lectura que habilitan tipos de solo lectura
   durationInMinutes: 2
-  content: "Dos mejoras en la sintaxis de las propiedades automáticas facilitan su uso en más ubicaciones: propiedades automáticas de solo lectura e inicializadores de propiedades automáticas. Observe este pequeño programa:\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n Entre en el modo de enfoque y copie el código anterior en la ventana interactiva de C#. Luego, haga clic en *Ejecutar* para ver lo que hace el código. `AllCaps` tiene el efecto secundario no deseado de modificar los valores de propiedad, además de devolver la cadena en mayúsculas. El autor de la clase `Person` intentaba que las cadenas de `FirstName` y `LastName` fueran de solo lectura. Con C# 6, esa intención puede quedar más clara. Quite `private set` de ambas propiedades para crear una propiedad automática de solo lectura. Haga clic en *Ejecutar* para ver que el compilador detecta las dos ubicaciones donde las propiedades `FirstName` y `LastName` se cambian si no deben estar ahí. Puede cambiar el método `AllCaps` por el código siguiente para corregir el error del compilador:\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\nCon esta nueva sintaxis, el compilador se asegura de que las propiedades sean inmutables.\n"
+  content: "Dos mejoras en la sintaxis de las propiedades automáticas facilitan su uso en más ubicaciones: propiedades automáticas de solo lectura e inicializadores de propiedades automáticas. Observe este pequeño programa:\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n Entre en el modo de enfoque y copie el código anterior en la ventana interactiva de C#. Luego, seleccione *Ejecutar* para ver lo que hace el código. `AllCaps` tiene el efecto secundario no deseado de modificar los valores de propiedad, además de devolver la cadena en mayúsculas. El autor de la clase `Person` intentaba que las cadenas de `FirstName` y `LastName` fueran de solo lectura. Con C# 6, esa intención puede quedar más clara. Quite `private set` de ambas propiedades para crear una propiedad automática de solo lectura. Seleccione *Ejecutar* para ver que el compilador detecta las dos ubicaciones donde las propiedades `FirstName` y `LastName` se cambian si no deben estar ahí. Puede cambiar el método `AllCaps` por el código siguiente para corregir el error del compilador:\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\nCon esta nueva sintaxis, el compilador se asegura de que las propiedades sean inmutables.\n"
 - title: Inicialización de campos de respaldo de propiedades automáticas
   durationInMinutes: 1
   content: "La nueva sintaxis de C# 6 permite usar inicializadores para propiedades automáticas. Esto se vuelve más importante a medida que las clases incorporan nuevas funcionalidades. Agregue una propiedad de segundo nombre y un nuevo constructor que tome tres cadenas a la clase `Person`:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#MiddleName)]  \n\nLa asignación en la propiedad `MiddleName` es un inicializador. Inicializa el campo de respaldo generado por el compilador para el segundo nombre.\n"

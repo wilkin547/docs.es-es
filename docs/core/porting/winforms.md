@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216318"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973289"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento Migración de una aplicación de escritorio de Windows Forms a .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento para: Migrar una aplicación de escritorio de Windows Forms a .NET Core
 
 En este artículo se describe cómo migrar la aplicación de escritorio basada en Windows Forms de .NET Framework a .NET Core 3.0. El SDK de .NET Core 3.0 incluye compatibilidad para las aplicaciones de Windows Forms. Windows Forms sigue siendo un marco de solo Windows y solo se ejecuta en Windows. En este ejemplo se usa la CLI del SDK de .NET Core para crear y administrar un proyecto.
 

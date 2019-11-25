@@ -5,15 +5,15 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
-ms.openlocfilehash: 5d2380db3b8d2c5c41d04a34f9b86a97eb7b27b1
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 3e27e6ff526edc33e06bfc19ff7d5a284c0d30f2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672026"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975758"
 ---
 # <a name="printing-and-print-system-management"></a>Imprimir y administración de sistemas de impresión
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]y Microsoft .NET Framework introducen una nueva ruta de impresión, una alternativa a la impresión de Microsoft Windows Interfaz de dispositivo gráfico (GDI), y un conjunto de API de administración del sistema de impresión ampliamente expandido.  
+Windows Vista y Microsoft .NET Framework presentan una nueva ruta de impresión, una alternativa a la impresión de Microsoft Windows Interfaz de dispositivo gráfico (GDI), y un conjunto de API de administración del sistema de impresión ampliamente expandido.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre impresión](printing-overview.md)  

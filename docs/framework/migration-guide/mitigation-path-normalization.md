@@ -2,14 +2,12 @@
 title: 'Mitigación: normalización de la ruta de acceso'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779335"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457887"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigación: normalización de la ruta de acceso
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, la normalización de la ruta de acceso en .NET Framework ha cambiado.  
@@ -63,4 +61,4 @@ Las aplicaciones que tienen como destino .NET Framework 4.6.1 o versiones anter
   
 ## <a name="see-also"></a>Vea también
 
-- [Cambios de redestinación](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Compatibilidad de aplicaciones](application-compatibility.md)
