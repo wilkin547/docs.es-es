@@ -1,30 +1,30 @@
 ---
-title: Consulta técnicas avanzadas (LINQ to XML) (Visual Basic)
+title: Técnicas de consulta avanzadas (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
-ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 343e5eb8d336f6a827dce02a27648f0c4b3de1d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769933"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345794"
 ---
-# <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Consulta técnicas avanzadas (LINQ to XML) (Visual Basic)
+# <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Advanced Query Techniques (LINQ to XML) (Visual Basic)
 En esta sección se proporcionan ejemplos de técnicas de consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] más avanzadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Cómo: Combinar dos colecciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Muestra cómo utilizar la cláusula `Join` para aprovechar las relaciones de los datos XML.|  
-|[Cómo: Crear una jerarquía mediante la agrupación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Muestra cómo agrupar datos y después generar XML basado en la agrupación.|  
-|[Cómo: Consulta de LINQ to XML mediante XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|Muestra cómo recuperar las recopilaciones basadas en consultas XPath.|  
-|[Cómo: Escribir un LINQ al método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|Muestra cómo escribir un método de eje de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Cómo: Mostrar todos los nodos en un árbol (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|Presenta un método de utilidad que enumera todos los nodos de un árbol XML. Esto es útil para el código de depuración que modifica un árbol XML.|  
-|[Cómo: Recuperar párrafos de un documento de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|Presenta código que abre un documento XML abierto de Office, recupera el párrafo en una colección de objetos XElement, el texto y el estilo de los párrafos.|  
-|[Cómo: Modificar un documento de Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Presenta código que abre, modifica y guarda un documento XML abierto de Office.|  
-|[Cómo: Rellenar un árbol XML desde el sistema de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Presenta código que crea un árbol XML a partir del sistema de archivos.|  
+|[How to: Join Two Collections (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Muestra cómo utilizar la cláusula `Join` para aprovechar las relaciones de los datos XML.|  
+|[How to: Create Hierarchy Using Grouping (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Muestra cómo agrupar datos y después generar XML basado en la agrupación.|  
+|[How to: Query LINQ to XML Using XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|Muestra cómo recuperar las recopilaciones basadas en consultas XPath.|  
+|[How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|Muestra cómo escribir un método de eje de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[How to: List All Nodes in a Tree (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|Presenta un método de utilidad que enumera todos los nodos de un árbol XML. Esto es útil para el código de depuración que modifica un árbol XML.|  
+|[How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|Presenta código que abre un documento XML abierto de Office, recupera el párrafo en una colección de objetos XElement, el texto y el estilo de los párrafos.|  
+|[How to: Modify an Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Presenta código que abre, modifica y guarda un documento XML abierto de Office.|  
+|[How to: Populate an XML Tree from the File System (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Presenta código que crea un árbol XML a partir del sistema de archivos.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultar árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

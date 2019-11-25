@@ -1,48 +1,48 @@
 ---
-title: Procedimiento Devolver un valor de un procedimiento (Visual Basic)
+title: 'Cómo: Devolver un valor de un procedimiento'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1371e4ed0ff28f9caf56eabf2a1bb9290edbe75c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665759"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346028"
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procedimiento Devolver un valor de un procedimiento (Visual Basic)
-Un `Function` procedimiento devuelve un valor al código de llamada ya sea mediante la ejecución de un `Return` instrucción o encontrando una `Exit Function` o `End Function` instrucción.  
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Cómo: Devolver un valor de un procedimiento (Visual Basic)
+A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>Para devolver un valor mediante la instrucción Return  
+### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
   
-1. Coloque un `Return` instrucción en el punto donde se completa la tarea del procedimiento.  
+1. Put a `Return` statement at the point where the procedure's task is completed.  
   
-2. Siga el `Return` palabra clave con una expresión que da como resultado el valor que desea volver al código de llamada.  
+2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
   
 3. Puede tener más de una instrucción `Return` en el mismo procedimiento.  
   
-     La siguiente `Function` procedimiento calcula el lado más largo o la hipotenusa de un triángulo rectángulo y lo devuelve al código de llamada.  
+     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     El ejemplo siguiente muestra una llamada típica al `hypotenuse`, que almacena el valor devuelto.  
+     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Para devolver un valor mediante Exit Function o End Function  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
   
-1. En lugar de al menos una de las `Function` procedimiento, asigne un valor para el nombre del procedimiento.  
+1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
   
-2. Cuando se ejecuta un `Exit Function` o `End Function` instrucción, Visual Basic devuelve el valor asignado más recientemente al nombre del procedimiento.  
+2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
   
 3. Puede tener más de una instrucción `Exit Function` en el mismo procedimiento. Además, puede combinar instrucciones `Return` y `Exit Function` en el mismo procedimiento.  
   
-4. Puede tener sólo uno `End Function` instrucción en un `Function` procedimiento.  
+4. You can have only one `End Function` statement in a `Function` procedure.  
   
-     Para obtener más información y un ejemplo, vea "Valor devuelto" en [instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -53,5 +53,5 @@ Un `Function` procedimiento devuelve un valor al código de llamada ya sea media
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Return (instrucción)](../../../../visual-basic/language-reference/statements/return-statement.md)
-- [Cómo: Crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Cómo: Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)

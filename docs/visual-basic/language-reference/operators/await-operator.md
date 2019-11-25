@@ -1,5 +1,5 @@
 ---
-title: Await (Operador) (Visual Basic)
+title: Await (Operador)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Await
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: ac1e56ae8b78277c8c8c5687598b97e6764dac0c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580400"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336263"
 ---
 # <a name="await-operator-visual-basic"></a>Await (Operador) (Visual Basic)
 
 El operador `Await` se aplica a un operando de un método asincrónico o a una expresión lambda para suspender la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.
 
-El método en el que se utiliza `Await` debe tener un modificador [Async](../../../visual-basic/language-reference/modifiers/async.md) . Este tipo de método, que se define mediante el modificador `Async` y que generalmente contiene una o más expresiones `Await`, se denomina *método asincrónico*.
+The method in which `Await` is used must have an [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier. Este tipo de método, que se define mediante el modificador `Async` y que generalmente contiene una o más expresiones `Await`, se denomina *método asincrónico*.
 
 > [!NOTE]
-> Las palabras clave `Async` y `Await` se incluyeron en Visual Studio 2012. Para obtener una introducción a la programación asincrónica, vea [programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md).
+> Las palabras clave `Async` y `Await` se incluyeron en Visual Studio 2012. For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
 
-Normalmente, la tarea a la que se aplica el operador `Await` es el valor devuelto de una llamada a un método que implementa el [modelo asincrónico basado en tareas](https://go.microsoft.com/fwlink/?LinkId=204847), es decir, un <xref:System.Threading.Tasks.Task> o un <xref:System.Threading.Tasks.Task%601>.
+Typically, the task to which you apply the `Await` operator is the return value from a call to a method that implements the [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), that is, a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601>.
 
 En el código siguiente, el método <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> devuelve `getContentsTask`, un tipo `Task(Of Byte())`. La tarea garantiza que la matriz de bytes real se generará cuando finalice la operación. El operador `Await` se aplica a `getContentsTask` para suspender la ejecución en `SumPageSizesAsync` hasta que se complete `getContentsTask`. Mientras tanto, el control vuelve al llamador de `SumPageSizesAsync`. Cuando `getContentsTask` haya finalizado, la expresión `Await` se evalúa como una matriz de bytes.
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 Una expresión o instrucción `Await` no bloquea el subproceso en el que se ejecuta. En su lugar, hace que el compilador suscriba el resto del método asincrónico, después de la expresión `Await`, como una continuación de la tarea esperada. A continuación, el control vuelve al llamador del método asincrónico. Cuando la tarea se completa, invoca su continuación y la ejecución del método asincrónico se reanuda donde se quedó.
 
-Una expresión `Await` solo puede aparecer en el cuerpo de un método envolvente inmediato o una expresión lambda marcados con el modificador `Async`. El término *Await* solo sirve como palabra clave en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro del método asincrónico o de la expresión lambda, una expresión de `Await` no puede aparecer en una expresión de consulta, en el bloque de `catch` o `finally` de una [instrucción try... Detectar... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) , en la expresión de variable de control de bucle de un bucle `For` o `For Each`, o en el cuerpo de una instrucción [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) .
+Una expresión `Await` solo puede aparecer en el cuerpo de un método envolvente inmediato o una expresión lambda marcados con el modificador `Async`. The term *Await* serves as a keyword only in that context. En cualquier otra parte, se interpretará como identificador. Within the async method or lambda expression, an `Await` expression cannot occur in a query expression, in the `catch` or `finally` block of a [Try…Catch…Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) statement, in the loop control variable expression of a `For` or `For Each` loop, or in the body of a [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) statement.
 
 ## <a name="exceptions"></a>Excepciones
 
@@ -70,7 +70,7 @@ Si espera un método asincrónico que devuelve una tarea y se cancela, el operad
 
 Una única tarea en estado de error puede reflejar varias excepciones.  Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cuando espera dicha tarea, la operación await vuelve a generar únicamente una de las excepciones. Sin embargo, no se puede predecir cuál de las excepciones se vuelve a generar.
 
-Para obtener ejemplos de control de errores en métodos asincrónicos, vea [try... Detectar... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+For examples of error handling in async methods, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Deshacerse de un recurso del sistema (Visual Basic)'
+title: 'Cómo: Deshacerse de un recurso del sistema'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583142"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353942"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Cómo: Deshacerse de un recurso del sistema (Visual Basic)
-Puede usar un bloque `Using` para garantizar que el sistema desecha un recurso cuando el código sale del bloque. Esto resulta útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria, o que otros componentes también desean usar.  
+You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando el código finaliza con ella  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
   
-1. Asegúrese de incluir la [instrucción Imports (espacio de nombres y tipo .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) adecuada para la conexión de base de datos al principio del archivo de código fuente (en este caso, <xref:System.Data.SqlClient>).  
+1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
   
-2. Cree un bloque `Using` con las instrucciones `Using` y `End Using`. Dentro del bloque, coloque el código que se ocupa de la conexión de base de datos.  
+2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
   
-3. Declare la conexión y cree una instancia de ella como parte de la instrucción `Using`.  
+3. Declare the connection and create an instance of it as part of the `Using` statement.  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ Puede usar un bloque `Using` para garantizar que el sistema desecha un recurso c
     End Sub  
     ```  
   
-     El sistema desecha el recurso independientemente de cómo salga del bloque, incluido el caso de una excepción no controlada.  
+     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
   
-     Tenga en cuenta que no puede tener acceso a `sqc` desde fuera del bloque de `Using`, porque su ámbito está limitado al bloque.  
+     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
   
-     Puede usar esta misma técnica en un recurso del sistema, como un identificador de archivo o un contenedor COM. Use un bloque de `Using` cuando desee asegurarse de dejar el recurso disponible para otros componentes después de salir del bloque de `Using`.  
+     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
   
 ## <a name="see-also"></a>Vea también
 

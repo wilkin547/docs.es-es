@@ -1,17 +1,17 @@
 ---
-title: Resumen de entrada y salida (Visual Basic)
+title: Resumen de entrada y salida
 ms.date: 07/20/2015
 helpviewer_keywords:
 - input, Visual Basic functions
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 13013ee3dd9ee024cd3375003ed23c5ae4d620bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12651977609d8a689f13777b0fe2244cdb10819c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802510"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348527"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>Resumen de entrada y salida (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  

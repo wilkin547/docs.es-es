@@ -1,20 +1,20 @@
 ---
-title: Fundamentos de cadenas en Visual Basic
+title: Fundamentos de cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591385"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344290"
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
-El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). Este tema presenta los conceptos básicos de las cadenas en Visual Basic.  
+El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). This topic introduces the basic concepts of strings in Visual Basic.  
   
 ## <a name="string-variables"></a>Variables de cadena  
  A una instancia de una cadena se le puede asignar un valor literal que represente una serie de caracteres. Por ejemplo:  
@@ -29,7 +29,7 @@ El tipo de datos de `String` representa una serie de caracteres (y cada uno de e
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- Este código provoca un error porque el compilador termina la cadena después de la segunda comilla, y el resto de la cadena se interpreta como código. Para solucionar este problema, Visual Basic interpreta dos comillas en un literal de cadena como una comilla en la cadena. En el ejemplo siguiente se muestra la forma correcta de incluir una comilla en una cadena:  
+ Este código provoca un error porque el compilador termina la cadena después de la segunda comilla, y el resto de la cadena se interpreta como código. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. En el ejemplo siguiente se muestra la forma correcta de incluir una comilla en una cadena:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,7 +50,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Caracteres en cadenas  
- Una cadena puede considerarse como una serie de valores `Char` y el tipo `String` tiene funciones integradas que permiten realizar muchas manipulaciones en una cadena similares a las permitidas por las matrices. Como toda la matriz en .NET Framework, estos son matrices de base cero. Puede hacer referencia a un carácter específico de una cadena con la propiedad `Chars`, que proporciona una forma de acceso a un carácter mediante la posición en la que este aparece en la cadena. Por ejemplo:  
+ Una cadena puede considerarse como una serie de valores `Char` y el tipo `String` tiene funciones integradas que permiten realizar muchas manipulaciones en una cadena similares a las permitidas por las matrices. Like all array in .NET Framework, these are zero-based arrays. Puede hacer referencia a un carácter específico de una cadena con la propiedad `Chars`, que proporciona una forma de acceso a un carácter mediante la posición en la que este aparece en la cadena. Por ejemplo:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
@@ -61,11 +61,11 @@ World]]></xml>.Value
  La variable `myArray` contiene ahora una matriz de valores `Char` y cada uno representa un carácter de `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Inmutabilidad de cadenas  
- Una cadena es *inmutable*, lo que significa que su valor no puede cambiarse una vez que se ha creado. Sin embargo, esto no impide asignar más de un valor a una variable de cadena. Considere el ejemplo siguiente:  
+ A string is *immutable*, which means its value cannot be changed once it has been created. Sin embargo, esto no impide asignar más de un valor a una variable de cadena. Considere el ejemplo siguiente:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
- Aquí se crea una variable de cadena con un valor y, a continuación, se cambia su valor.   
+ Aquí se crea una variable de cadena con un valor y, a continuación, se cambia su valor.  
   
  Más concretamente, en la primera línea, se crea una instancia de tipo `String` y se le asigna el valor `This string is immutable`. En la segunda línea del ejemplo se crea una nueva instancia y se le asigna el valor `Or is it?`, y la variable de cadena descarta su referencia a la primera instancia y almacena una referencia a la nueva instancia.  
   

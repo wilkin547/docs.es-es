@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Prefijos de espacio de nombres de control (Visual Basic) (LINQ to XML)
+title: 'How to: Control Namespace Prefixes (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 2b89b49aa76df526c08143cad49685386ffd5e7c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709817"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348386"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedimiento Prefijos de espacio de nombres de control (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Cómo: Controlar prefijos de espacio de nombres (Visual Basic) (LINQ to XML)
 En este tema se describe cómo puede controlar prefijos de espacios de nombres.  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>DESCRIPCIÓN  
- Este ejemplo declara dos espacios de nombres. Especifica `http://www.adventure-works.com` que el espacio de nombres tiene el `aw`prefijo y que `www.fourthcoffee.com` el espacio de `fc`nombres tiene el prefijo.  
+### <a name="description"></a>Descripción  
+ Este ejemplo declara dos espacios de nombres. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
   
 ### <a name="code"></a>Código  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

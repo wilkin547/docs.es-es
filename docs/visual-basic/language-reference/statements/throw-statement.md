@@ -1,5 +1,5 @@
 ---
-title: Throw (Instrucción, Visual Basic)
+title: Throw (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Throw
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 9680700267f17c8e316de351fead61f1dc4aded0
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 147345990b625e034e651e69b322bc098d0bd8de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869025"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352789"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw (Instrucción, Visual Basic)
 
-Produce una excepción dentro de un procedimiento.
+Throws an exception within a procedure.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,19 +34,19 @@ Throw [ expression ]
 ## <a name="part"></a>Parte
 
 `expression`\
-Proporciona información sobre la excepción que se va a producir. Opcional cuando reside en una `Catch` instrucción; de lo contrario, es obligatorio.
+Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
 
 ## <a name="remarks"></a>Comentarios
 
-La `Throw` instrucción produce una excepción que se puede controlar con código estructurado de control de excepciones (`Try`... `Catch`... ) o el código de control de excepciones no estructurado`On Error GoTo`(). `Finally` Puede usar la `Throw` instrucción para interceptar errores dentro del código porque Visual Basic sube la pila de llamadas hasta que encuentra el código de control de excepciones adecuado.
+The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
 
-Una `Throw` instrucción sin expresión solo se puede usar en una `Catch` instrucción, en cuyo caso la instrucción vuelve a iniciar la excepción que está controlando actualmente la `Catch` instrucción.
+A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
 
-La `Throw` instrucción restablece la pila de llamadas de la `expression` excepción. Si `expression` no se proporciona, la pila de llamadas permanece sin cambios. Puede tener acceso a la pila de llamadas de la excepción <xref:System.Exception.StackTrace%2A> a través de la propiedad.
+The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente se `Throw` usa la instrucción para producir una excepción:
+The following code uses the `Throw` statement to throw an exception:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

@@ -1,5 +1,5 @@
 ---
-title: '&amp;Operador (Visual Basic)'
+title: Operador &amp;
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: aaa7c1b9ab7f6c920180d97b55c3bdeb23f00e02
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 4cae7e59083890e82d754bdaa58942c2224357b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592242"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336053"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;Operador (Visual Basic)
-Genera una concatenación de cadenas de dos expresiones.  
+# <a name="amp-operator-visual-basic"></a>&amp; Operator (Visual Basic)
+Generates a string concatenation of two expressions.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -28,27 +28,27 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Cualquier variable `String` o `Object`.  
+ Requerido. Any `String` or `Object` variable.  
   
  `expression1`  
- Obligatorio. Cualquier expresión con un tipo de datos que se amplíe a `String`.  
+ Requerido. Any expression with a data type that widens to `String`.  
   
  `expression2`  
- Obligatorio. Cualquier expresión con un tipo de datos que se amplíe a `String`.  
+ Requerido. Any expression with a data type that widens to `String`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo de datos de `expression1` o `expression2` no es `String` pero se amplía a `String`, se convierte en `String`. Si alguno de los tipos de datos no se amplía a `String`, el compilador genera un error.  
+ If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`. If either of the data types does not widen to `String`, the compiler generates an error.  
   
- El tipo de datos de `result` es `String`. Si una o ambas expresiones se evalúan como [Nothing](../../../visual-basic/language-reference/nothing.md) o tienen un valor de <xref:System.DBNull.Value?displayProperty=nameWithType>, se tratan como una cadena con un valor de "".  
-  
-> [!NOTE]
-> El operador `&` se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The data type of `result` is `String`. If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".  
   
 > [!NOTE]
-> El carácter de y comercial (&) también se puede usar para identificar variables como tipo `Long`. Para obtener más información, vea [caracteres de tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+  
+> [!NOTE]
+> The ampersand (&) character can also be used to identify variables as type `Long`. For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa el operador `&` para forzar la concatenación de cadenas. El resultado es un valor de cadena que representa la concatenación de los dos operandos de cadena.  
+ This example uses the `&` operator to force string concatenation. The result is a string value representing the concatenation of the two string operands.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
@@ -58,4 +58,4 @@ result = expression1 & expression2
 - [Operadores de concatenación](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operadores de concatenación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

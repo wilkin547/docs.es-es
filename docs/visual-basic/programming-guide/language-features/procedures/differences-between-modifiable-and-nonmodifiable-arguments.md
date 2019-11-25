@@ -1,5 +1,5 @@
 ---
-title: Diferencias entre argumentos modificables y no modificables (Visual Basic)
+title: Diferencias entre argumentos modificables y no modificables
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -8,44 +8,44 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 989795ee2cdd3a78b71bad4d95cf9b384c2719bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665954"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341393"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Diferencias entre argumentos modificables y no modificables (Visual Basic)
-Cuando se llama a un procedimiento, normalmente pass uno o más argumentos a él. Cada argumento corresponde a un elemento de programación subyacente. Los elementos subyacentes y los argumentos pueden ser modificable o no modificable.  
+When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Elementos modificables y no modificables  
- Un elemento de programación puede ser un *elemento modificable*, que puede tener su valor cambiado, o un *elemento no modificable*, que tiene un valor fijo, una vez que se ha creado.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
+ A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
   
- En la tabla siguiente enumera los elementos de programación modificables y no modificables.  
+ The following table lists modifiable and nonmodifiable programming elements.  
   
-|Puede modificables elementos|Elementos no modificables|  
+|Modifiable elements|Nonmodifiable elements|  
 |-------------------------|----------------------------|  
-|Las variables locales (declaradas dentro de procedimientos), incluidas las variables de objeto, excepto de solo lectura|Propiedades, campos y variables de solo lectura|  
-|Campos (variables de miembro de los módulos, clases y estructuras), excepto los de solo lectura|Constantes y literales|  
-|Propiedades, excepto de solo lectura|Miembros de enumeración|  
-|Elementos de matriz|Expresiones (incluso si sus elementos son modificables)|  
+|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
+|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
+|Properties, except for read-only|Enumeration members|  
+|Array elements|Expressions (even if their elements are modifiable)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Argumentos modificables y no modificables  
- Un *argumento modificable* es uno con un elemento subyacente modificable. El código de llamada puede almacenar un nuevo valor en cualquier momento, y si se pasa el argumento [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), el código en el procedimiento también puede modificar el elemento subyacente en el código de llamada.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
+ A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
   
- Un *argumento no es modificable* tiene un elemento subyacente no modificable o se pasa [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). El procedimiento no puede modificar el elemento subyacente en el código que realiza la llamada, incluso si es un elemento modificable. Si es un elemento no modificable, el código de llamada no puede modificarla.  
+ A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
   
- El procedimiento llamado podría modificar su copia local de un argumento no es modificable, pero esa modificación no afecta el elemento subyacente en el código de llamada.  
+ The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
+- [Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
 - [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
 - [Diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Cómo: Cambie el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Cómo: Proteger un argumento de procedimiento contra cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Cómo: Forzar un argumento para pasar por valor](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Cambiar el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Proteger un argumento de procedimiento para que no se realicen cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

@@ -2,12 +2,12 @@
 title: Procedimiento para detectar errores de análisis (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 4195ff50d1b4d23cd9eb07fc27f20861d1504672
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204138"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141487"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Procedimiento para detectar errores de análisis (C#)
 En este tema se describe cómo detectar XML no válido o mal formado.  

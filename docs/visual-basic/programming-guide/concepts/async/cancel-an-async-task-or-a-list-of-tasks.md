@@ -1,19 +1,19 @@
 ---
-title: Cancelar una tarea asincrónica o una lista de tareas (Visual Basic)
+title: Cancelar una tarea asincrónica o una lista de tareas
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419868"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347969"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancelar una tarea asincrónica o una lista de tareas (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
 
 Puede configurar un botón para cancelar una aplicación asincrónica si no quiere esperar a que termine. Mediante los ejemplos de este tema, puede agregar un botón de cancelación a una aplicación que descargue el contenido de un sitio web o una lista de sitios web.
 
-En los ejemplos se usa la interfaz de usuario que describe la [optimización de la aplicación asincrónica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) .
+The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
 
 > [!NOTE]
 > Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.
@@ -38,7 +38,7 @@ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en
 
      Presione las teclas Ctrl+F5 para ejecutar el proyecto sin depurarlo.
 
- Si no desea descargar el proyecto, puede revisar los archivos MainWindow. Xaml. VB que se encuentra al final de este tema.
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>Compilación del ejemplo
 
@@ -46,7 +46,7 @@ Los cambios siguientes agregan un botón **Cancelar** a una aplicación que desc
 
 Para generar su propio ejemplo, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **StarterCode** como **Proyecto de inicio** en lugar de **CancelATask**.
 
-Después, agregue los siguientes cambios al archivo MainWindow. Xaml. VB de ese proyecto.
+Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 1. Declare una variable de `CancellationTokenSource`, `cts`, que esté en el ámbito de todos los métodos que acceden a ella.
 
@@ -124,14 +124,14 @@ Después, agregue los siguientes cambios al archivo MainWindow. Xaml. VB de ese 
     End Function
     ```
 
-5. Si no cancela el programa, se genera el siguiente resultado:
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Si elige el botón **Cancelar** antes de que el programa termine de descargar el contenido, el programa genera el siguiente resultado:
+    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
 
     ```console
     Ready to download.
@@ -158,7 +158,7 @@ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en
 
      Presione las teclas Ctrl+F5 para ejecutar el proyecto sin depurarlo.
 
- Si no desea descargar el proyecto, puede revisar los archivos MainWindow. Xaml. VB que se encuentra al final de este tema.
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>Compilación del ejemplo
 
@@ -221,7 +221,7 @@ Para ampliar el ejemplo personalmente, paso a paso, siga las instrucciones de la
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Si no cancela el programa, se genera el siguiente resultado:
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ Puede descargar los proyectos en [Async Sample: Fine Tuning Your Application](ht
 
 ### <a name="cancel-a-task-example"></a>Ejemplo de cancelación de una tarea
 
-El código siguiente es el archivo MainWindow. Xaml. VB completo para el ejemplo que cancela una sola tarea.
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>Ejemplo de cancelación de una lista de tareas
 
-El código siguiente es el archivo MainWindow. Xaml. VB completo para el ejemplo que cancela una lista de tareas.
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.

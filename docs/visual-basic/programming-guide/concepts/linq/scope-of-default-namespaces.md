@@ -1,15 +1,15 @@
 ---
-title: Ámbito de los espacios de nombres predeterminados en Visual Basic
+title: Ámbito de los espacios de nombres predeterminado
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8ba4d13b6d40180a88651f0503d1323f2b78f36c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581882"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343646"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Ámbito de los espacios de nombres predeterminados en Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
 Los espacios de nombres predeterminados del árbol XML no se encuentran en el ámbito de las consultas. Si tiene código XML en un espacio de nombres predeterminado, debe declarar una variable <xref:System.Xml.Linq.XNamespace> y combinarla con el nombre local para convertirla en un nombre completo que se usará en la consulta.  
   
  Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra la creación de XML en un espacio de nombres y una consulta que se codifica correctamente.  
   
- A diferencia del ejemplo de código incorrecto anterior, el enfoque correcto al usar Visual Basic es declarar e inicializar un espacio de nombres predeterminado global. Esto coloca todas las propiedades XML en el espacio de nombres predeterminado. No se requieren otras modificaciones en el ejemplo para que funcione correctamente.  
+ In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. Esto coloca todas las propiedades XML en el espacio de nombres predeterminado. No se requieren otras modificaciones en el ejemplo para que funcione correctamente.  
   
 ### <a name="code"></a>Código  
   
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

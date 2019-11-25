@@ -1,20 +1,20 @@
 ---
-title: Resumen del Registro (Visual Basic)
+title: Resumen del Registro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-ms.openlocfilehash: 88b9c530da3da39c0d70d9d8e90626bd5e133cf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6564b4c3ad2025da4ebaeaca84e23c97a85f007d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802436"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351681"
 ---
 # <a name="registry-summary-visual-basic"></a>Resumen del Registro (Visual Basic)
-Palabras clave del lenguaje de Visual Studio y miembros de la biblioteca de tiempo de ejecución están organizados según su fin y usarán.  
+Visual Studio language keywords and run-time library members are organized by purpose and use.  
   
- Si utiliza la característica `My`, consigue una mayor productividad y rendimiento en las operaciones del Registro que con estos elementos. Para obtener más información, consulta <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Si utiliza la característica `My`, consigue una mayor productividad y rendimiento en las operaciones del Registro que con estos elementos. Para obtener más información, vea <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
 |**Acción**|**Elemento del lenguaje**|  
 |----------------|--------------------------|  

@@ -1,15 +1,15 @@
 ---
-title: Ejemplo de ejecución aplazada (Visual Basic)
+title: Ejemplo de ejecución diferida
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e0bb7f3d125cc48607a534e2c24cbf7083353945
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583331"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354229"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Ejemplo de ejecución aplazada (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
 
 En este tema se muestra cómo la ejecución aplazada y la evaluación diferid afectan a la ejecución de las consultas de LINQ to XML.
 
@@ -63,4 +63,4 @@ Puede ver que no se convierte a mayúsculas toda la matriz de cadenas antes de q
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: ejecución aplazada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

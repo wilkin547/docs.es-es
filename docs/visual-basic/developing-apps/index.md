@@ -1,21 +1,23 @@
 ---
-title: Desarrollo de aplicaciones con Visual Basic
+title: Desarrollo de aplicaciones
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014432"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349254"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Desarrollo de aplicaciones con Visual Basic
+
 En esta sección se trata la documentación conceptual del lenguaje Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Programación en Visual Basic](../../visual-basic/developing-apps/programming/index.md)  
  Abarca una gran variedad de temas relacionados con la programación.  
   
@@ -35,6 +37,7 @@ En esta sección se trata la documentación conceptual del lenguaje Visual Basic
  Describe cómo personalizar plantillas de proyecto para proporcionar objetos de `My` adicionales.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)  
  Se explican los elementos básicos de la programación con Visual Basic.  
   

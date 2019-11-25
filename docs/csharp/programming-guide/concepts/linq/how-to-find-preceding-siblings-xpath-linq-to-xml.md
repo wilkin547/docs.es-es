@@ -2,12 +2,12 @@
 title: Procedimiento para buscar elementos anteriores del mismo nivel (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253657"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141062"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos anteriores del mismo nivel (XPath-LINQ to XML) (C#)
 En este tema se compara el eje XPath `preceding-sibling` con el eje secundario de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  

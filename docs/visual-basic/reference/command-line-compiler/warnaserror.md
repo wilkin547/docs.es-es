@@ -1,17 +1,17 @@
 ---
-title: -warnaserror (Visual Basic)
+title: -warnaserror
 ms.date: 03/13/2018
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 8af6d3ef4efecd53dcf38c33d0aa2cf182f07d30
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004652"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351705"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Causa que el compilador trate como un error la primera ocurrencia de una advertencia.  
@@ -24,7 +24,7 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |+ &#124; -|Opcional. De forma predeterminada, se aplica `-warnaserror-`; las advertencias no impiden que el compilador genere un archivo de salida. La opción `-warnaserror`, que es la misma que `-warnaserror+`, causa que las advertencias se traten como errores.|  
 |`numberList`|Opcional. Lista delimitada por comas de los números de identificadores de advertencia a los que se aplica la opción `-warnaserror`. Si no se especifica ningún identificador de advertencia, la opción `-warnaserror` se aplica a todas las advertencias.|  
@@ -41,11 +41,11 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
   
 |Para establecer -warnaserror a fin de tratar todas las advertencias como errores en el IDE de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Asegúrese de que la casilla **Deshabilitar todas las advertencias** está desactivada.<br />4.  Active la casilla **Tratar todas las advertencias como errores**.|  
+|1.  Have a project selected in **Solution Explorer**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
   
 |Para establecer - warnaserror a fin de tratar advertencias específicas como errores en el IDE de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Asegúrese de que la casilla **Deshabilitar todas las advertencias** está desactivada.<br />4.  Asegúrese de que la casilla **Tratar todas las advertencias como errores** está desactivada.<br />5.  Seleccione **Error** en la columna **Notificación** adyacente a la advertencia que se debe tratar como un error.|  
+|1.  Have a project selected in **Solution Explorer**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `In.vb` y ordena al compilador que muestre un error para la primera ocurrencia de cada advertencia que encuentra.  

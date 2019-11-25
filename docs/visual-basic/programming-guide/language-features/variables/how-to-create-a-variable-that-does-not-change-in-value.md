@@ -1,48 +1,48 @@
 ---
-title: Procedimiento Crear una variable que no cambie de valor (Visual Basic)
+title: 'Cómo: Crear una variable que no cambia de valor'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: d201e95463dd0431825fee03ebfd340ac80cc552
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d5d8a6b066ae7e8795afd2f788b60823d8efdafa
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630886"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348645"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Procedimiento Crear una variable que no cambie de valor (Visual Basic)
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Cómo: Crear una variable que no cambia de valor (Visual Basic)
 
-La noción de una variable que no cambia su valor podría parecer contradictoria. Pero hay situaciones en las que una constante no es factible y resulta útil tener una variable con un valor fijo. En tal caso, puede definir una variable miembro con la palabra clave [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) .
+The notion of a variable that does not change its value might appear to be contradictory. But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value. In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
 
-No se puede usar la [instrucción const](../../../../visual-basic/language-reference/statements/const-statement.md) para declarar y asignar un valor constante en las siguientes circunstancias:
+You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:
 
-- La `Const` instrucción no acepta el tipo de datos que desea usar
+- The `Const` statement does not accept the data type you want to use
 
-- No conoce el valor en tiempo de compilación
+- You do not know the value at compile time
 
-- No se puede calcular el valor constante en tiempo de compilación
+- You are unable to compute the constant value at compile time
 
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Para crear una variable que no cambie de valor
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>To create a variable that does not change in value
 
-1. En el nivel de módulo, declare una variable miembro con la [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)e incluya la palabra clave [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) .
+1. At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
 
     ```vb
     Dim ReadOnly timeStarted
     ```
 
-    Solo se puede `ReadOnly` especificar en una variable miembro. Esto significa que debe definir la variable en el nivel de módulo, fuera de cualquier procedimiento.
+    You can specify `ReadOnly` only on a member variable. This means you must define the variable at module level, outside of any procedure.
 
-2. Si puede calcular el valor en una sola instrucción en tiempo de compilación, use una cláusula de inicialización en `Dim` la instrucción. Siga la cláusula [as](../../../../visual-basic/language-reference/statements/as-clause.md) con un signo igual (`=`), seguido de una expresión. Asegúrese de que el compilador puede evaluar esta expresión en un valor constante.
+2. If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement. Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression. Be sure the compiler can evaluate this expression to a constant value.
 
     ```vb
     Dim ReadOnly timeStarted As Date = Now
     ```
 
-    Puede asignar un valor a una `ReadOnly` variable solo una vez. Una vez hecho esto, ningún código puede cambiar su valor.
+    You can assign a value to a `ReadOnly` variable only once. Once you do so, no code can ever change its value.
 
-    Si no conoce el valor en tiempo de compilación o no puede calcularlo en tiempo de compilación en una sola instrucción, puede asignarlo en tiempo de ejecución en un constructor. Para ello, debe declarar la variable en `ReadOnly` el nivel de clase o estructura. En el constructor de esa clase o estructura, calcule el valor fijo de la variable y asígnelo a la variable antes de volver del constructor.
+    If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor. To do this, you must declare the `ReadOnly` variable at class or structure level. In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.
 
 ## <a name="see-also"></a>Vea también
 

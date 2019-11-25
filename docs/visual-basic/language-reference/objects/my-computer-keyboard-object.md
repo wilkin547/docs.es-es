@@ -1,15 +1,15 @@
 ---
-title: My.Computer.Keyboard (objeto) (Visual Basic)
+title: My.Computer.Keyboard (Objeto)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
-ms.openlocfilehash: 19e2780d526c0ae37d6577aef25a5a4940005cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41b1fb1f9f358463d17fcb95ee85c09272e3832d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751456"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347192"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard (Objeto)
 Proporciona propiedades para obtener acceso al estado actual del teclado, como las teclas que se han presionado, y proporciona un método para enviar pulsaciones de teclas a la ventana activa.  
@@ -24,7 +24,7 @@ Proporciona propiedades para obtener acceso al estado actual del teclado, como l
   
  **Clase:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Vea también
 

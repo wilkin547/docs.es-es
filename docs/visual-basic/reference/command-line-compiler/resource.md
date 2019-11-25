@@ -1,5 +1,5 @@
 ---
-title: -Resource (Visual Basic)
+title: -resource
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /resource compiler option [Visual Basic]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: 5bedc346381f6de293933dce14a8c5c3044b246f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a781d543dd32ffb3d0ac0b11c544dbfd8cd5d806
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005194"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348566"
 ---
-# <a name="-resource-visual-basic"></a>-Resource (Visual Basic)
+# <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 Inserta un recurso administrado en un ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,22 +33,22 @@ o
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`filename`|Obligatorio. Nombre del archivo de recursos que se va a insertar en el archivo de salida. De forma predeterminada, `filename` es público en el ensamblado. Escriba el nombre de archivo entre comillas ("") si contiene un espacio.|  
-|`identifier`|Opcional. Nombre lógico del recurso; nombre usado para cargarlo. El valor predeterminado es el nombre del archivo. Opcionalmente, puede especificar si el recurso es público o privado en el manifiesto del ensamblado, como en el siguiente: `-res:filename.res, myname.res, public`|  
+|`filename`|Requerido. The name of the resource file to embed in the output file. By default, `filename` is public in the assembly. Enclose the file name in quotation marks (" ") if it contains a space.|  
+|`identifier`|Opcional. The logical name for the resource; the name used to load it. El valor predeterminado es el nombre del archivo. Optionally, you can specify whether the resource is public or private in the assembly manifest, as with the following: `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>Comentarios  
- Use `-linkresource` para vincular un recurso a un ensamblado sin colocar el archivo de recursos en el archivo de salida.  
+ Use `-linkresource` to link a resource to an assembly without placing the resource file in the output file.  
   
- Si `filename` es un archivo de recursos .NET Framework creado, por ejemplo, mediante [Resgen. exe (generador de archivos de recursos)](../../../framework/tools/resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del espacio de nombres <xref:System.Resources> (vea <xref:System.Resources.ResourceManager> para obtener más información). Para tener acceso a todos los demás recursos en tiempo de ejecución, use uno de los métodos siguientes: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> o <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ If `filename` is a .NET Framework resource file created, for example, by the [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace (see <xref:System.Resources.ResourceManager> for more information). To access all other resources at run time, use one of the following methods: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>, or <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
   
  La forma abreviada de `-resource` es `-res`.  
   
- Para obtener información sobre cómo establecer `-resource` en el IDE de Visual Studio, vea [administrar recursos de la aplicación (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
+ For information about how to set `-resource` in the Visual Studio IDE, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila `In.vb` y adjunta el archivo de recursos `Rf.resource`.  
+ The following code compiles `In.vb` and attaches resource file `Rf.resource`.  
   
 ```console
 vbc -res:rf.resource in.vb  
@@ -58,6 +58,6 @@ vbc -res:rf.resource in.vb
 
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
-- [-linkresource ((Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
-- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

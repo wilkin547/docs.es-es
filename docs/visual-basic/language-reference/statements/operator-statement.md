@@ -1,5 +1,5 @@
 ---
-title: Operator (instrucción) (Visual Basic)
+title: Operator Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.operator
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: c4fae40992fa665121aff637ae427ef0cafbf547
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: aa6ae3977977ded05e47d12dabe72f09251f262d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582383"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353804"
 ---
 # <a name="operator-statement"></a>Operator Statement
 
-Declara el símbolo del operador, los operandos y el código que definen un procedimiento de operador en una clase o estructura.
+Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,66 +43,66 @@ End Operator
 ## <a name="parts"></a>Elementos
 
 `attrlist`  
-Opcional. Vea [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).
+Opcional. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 `Public`  
-Requerido. Indica que este procedimiento de operador tiene acceso [público](../../../visual-basic/language-reference/modifiers/public.md) .
+Requerido. Indicates that this operator procedure has [Public](../../../visual-basic/language-reference/modifiers/public.md) access.
 
 `Overloads`  
-Opcional. Vea [sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md).
+Opcional. See [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).
 
 `Shared`  
-Requerido. Indica que este procedimiento de operador es un procedimiento [compartido](../../../visual-basic/language-reference/modifiers/shared.md) .
+Requerido. Indicates that this operator procedure is a [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedure.
 
 `Shadows`  
-Opcional. Vea [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+Opcional. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 `Widening`  
-Obligatorio para un operador de conversión a menos que especifique `Narrowing`. Indica que este procedimiento de operador define una conversión de [ampliación](../../../visual-basic/language-reference/modifiers/widening.md) . Vea "conversiones de ampliación y de restricción" en esta página de ayuda.
+Required for a conversion operator unless you specify `Narrowing`. Indicates that this operator procedure defines a [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
 
 `Narrowing`  
-Obligatorio para un operador de conversión a menos que especifique `Widening`. Indica que este procedimiento de operador define una conversión de [restricción](../../../visual-basic/language-reference/modifiers/narrowing.md) . Vea "conversiones de ampliación y de restricción" en esta página de ayuda.
+Required for a conversion operator unless you specify `Widening`. Indicates that this operator procedure defines a [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
 
 `operatorsymbol`  
-Requerido. Símbolo o identificador del operador que define este procedimiento de operador.
+Requerido. The symbol or identifier of the operator that this operator procedure defines.
 
 `operand1`  
-Requerido. El nombre y el tipo del operando único de un operador unario (incluido un operador de conversión) o el operando izquierdo de un operador binario.
+Requerido. The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.
 
 `operand2`  
-Requerido para los operadores binarios. Nombre y tipo del operando derecho de un operador binario.
+Required for binary operators. The name and type of the right operand of a binary operator.
 
-`operand1` y `operand2` tienen la sintaxis y las partes siguientes:
+`operand1` and `operand2` have the following syntax and parts:
 
 `[ ByVal ] operandname [ As operandtype ]`
 
 |Parte|Descripción|
 |----------|-----------------|
-|`ByVal`|Opcional, pero el mecanismo de paso debe ser [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|
-|`operandname`|Requerido. Nombre de la variable que representa este operando. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`operandtype`|Opcional a menos que se `On` `Option Strict`. Tipo de datos de este operando.|
+|`ByVal`|Optional, but the passing mechanism must be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|
+|`operandname`|Requerido. Name of the variable representing this operand. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`operandtype`|Optional unless `Option Strict` is `On`. Data type of this operand.|
 
 `type`  
-Opcional a menos que se `On` `Option Strict`. Tipo de datos del valor que el procedimiento del operador devuelve.
+Optional unless `Option Strict` is `On`. Data type of the value the operator procedure returns.
 
 `statements`  
-Opcional. Bloque de instrucciones que ejecuta el procedimiento de operador.
+Opcional. Block of statements that the operator procedure runs.
 
 `returnvalue`  
-Requerido. Valor que el procedimiento del operador devuelve al código de llamada.
+Requerido. The value that the operator procedure returns to the calling code.
 
 `End` `Operator`  
-Requerido. Finaliza la definición de este procedimiento de operador.
+Requerido. Terminates the definition of this operator procedure.
 
 ## <a name="remarks"></a>Comentarios
 
-Solo se puede usar `Operator` en una clase o estructura. Esto significa que el contexto de la *declaración* de un operador no puede ser un archivo de código fuente, un espacio de nombres, un módulo, una interfaz, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
+You can use `Operator` only in a class or structure. This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
 
-Todos los operadores deben ser `Public Shared`. No se puede especificar `ByRef`, `Optional` o `ParamArray` para ninguno de los operandos.
+All operators must be `Public Shared`. You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.
 
-No se puede utilizar el símbolo de operador o el identificador para contener un valor devuelto. Debe utilizar la instrucción `Return` y debe especificar un valor. Cualquier número de instrucciones `Return` puede aparecer en cualquier parte del procedimiento.
+You cannot use the operator symbol or identifier to hold a return value. You must use the `Return` statement, and it must specify a value. Any number of `Return` statements can appear anywhere in the procedure.
 
-La definición de un operador de este modo se denomina *sobrecarga de operadores*, tanto si se usa la palabra clave `Overloads` como si no. En la tabla siguiente se enumeran los operadores que se pueden definir.
+Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword. En la tabla siguiente se enumeran los operadores que se pueden definir.
 
 |Type|Operadores|
 |----------|---------------|
@@ -110,13 +110,13 @@ La definición de un operador de este modo se denomina *sobrecarga de operadores
 |Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
 |Conversión (unaria)|`CType`|
 
-Tenga en cuenta que el operador `=` de la lista binaria es el operador de comparación, no el operador de asignación.
+Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.
 
-Al definir `CType`, debe especificar `Widening` o `Narrowing`.
+When you define `CType`, you must specify either `Widening` or `Narrowing`.
 
-## <a name="matched-pairs"></a>Pares coincidentes
+## <a name="matched-pairs"></a>Matched Pairs
 
-Debe definir ciertos operadores como pares coincidentes. Si define un operador de este tipo, debe definir también el otro. Los pares coincidentes son los siguientes:
+You must define certain operators as matched pairs. If you define either operator of such a pair, you must define the other as well. The matched pairs are the following:
 
 - `=` y `<>`
 
@@ -126,55 +126,55 @@ Debe definir ciertos operadores como pares coincidentes. Si define un operador d
 
 - `IsTrue` y `IsFalse`
 
-## <a name="data-type-restrictions"></a>Restricciones de tipos de datos
+## <a name="data-type-restrictions"></a>Data Type Restrictions
 
-Cada operador que defina debe incluir la clase o estructura en la que se define. Esto significa que la clase o estructura debe aparecer como el tipo de datos de lo siguiente:
+Every operator you define must involve the class or structure on which you define it. This means that the class or structure must appear as the data type of the following:
 
-- Operando de un operador unario.
+- The operand of a unary operator.
 
-- Al menos uno de los operandos de un operador binario.
+- At least one of the operands of a binary operator.
 
-- El operando o el tipo de valor devuelto de un operador de conversión.
+- Either the operand or the return type of a conversion operator.
 
- Ciertos operadores tienen restricciones de tipo de datos adicionales, como se indica a continuación:
+ Certain operators have additional data type restrictions, as follows:
 
-- Si define los operadores `IsTrue` y `IsFalse`, ambos deben devolver el tipo de `Boolean`.
+- If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.
 
-- Si define los operadores `<<` y `>>`, ambos deben especificar el tipo de `Integer` para la `operandtype` de `operand2`.
+- If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.
 
-El tipo de valor devuelto no tiene que corresponder al tipo de uno de los operandos. Por ejemplo, un operador de comparación como `=` o `<>` puede devolver `Boolean` aunque no se `Boolean` ninguno de los operandos.
+The return type does not have to correspond to the type of either operand. For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.
 
 ## <a name="logical-and-bitwise-operators"></a>Operadores lógicos y bit a bit
 
-Los operadores `And`, `Or`, `Not` y `Xor` pueden realizar operaciones lógicas o bit a bit en Visual Basic. Sin embargo, si define uno de estos operadores en una clase o estructura, solo puede definir su operación bit a bit.
+The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic. However, if you define one of these operators on a class or structure, you can define only its bitwise operation.
 
-No se puede definir el operador de `AndAlso` directamente con una instrucción `Operator`. Sin embargo, puede usar `AndAlso` si ha cumplido las condiciones siguientes:
+You cannot define the `AndAlso` operator directly with an `Operator` statement. However, you can use `AndAlso` if you have fulfilled the following conditions:
 
-- Ha definido `And` en los mismos tipos de operando que desea usar para `AndAlso`.
+- You have defined `And` on the same operand types you want to use for `AndAlso`.
 
-- La definición de `And` devuelve el mismo tipo que la clase o estructura en la que se ha definido.
+- Your definition of `And` returns the same type as the class or structure on which you have defined it.
 
-- Ha definido el operador de `IsFalse` en la clase o estructura en la que ha definido `And`.
+- You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.
 
-Del mismo modo, puede utilizar `OrElse` si ha definido `Or` en los mismos operandos, con el tipo de valor devuelto de la clase o estructura, y ha definido `IsTrue` en la clase o estructura.
+Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.
 
 ## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions
 
-Una *conversión de ampliación* siempre se realiza correctamente en tiempo de ejecución, mientras que una *conversión de restricción* puede producir un error en tiempo de ejecución. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
+A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).
 
-Si declara un procedimiento de conversión para que se `Widening`, el código de procedimiento no debe generar ningún error. Esto significa lo siguiente:
+If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures. Esto significa lo siguiente:
 
-- Siempre debe devolver un valor válido de tipo `type`.
+- It must always return a valid value of type `type`.
 
-- Debe administrar todas las excepciones posibles y otras condiciones de error.
+- It must handle all possible exceptions and other error conditions.
 
-- Debe controlar cualquier devolución de error de cualquier procedimiento al que llame.
+- It must handle any error returns from any procedures it calls.
 
-Si existe la posibilidad de que un procedimiento de conversión no se lleve a cabo correctamente o de que se produzca una excepción no controlada, debe declararlo como `Narrowing`.
+If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo de código siguiente se usa la instrucción `Operator` para definir el contorno de una estructura que incluye procedimientos de operador para los operadores `And`, `Or`, `IsFalse` y `IsTrue`. `And` y `Or` tienen dos operandos de tipo `abc` y `abc` de tipo de valor devuelto. `IsFalse` y `IsTrue` toman un único operando de tipo `abc` y devuelven `Boolean`. Estas definiciones permiten que el código de llamada use `And`, `AndAlso`, `Or` y `OrElse` con operandos de tipo `abc`.
+The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators. `And` and `Or` each take two operands of type `abc` and return type `abc`. `IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`. These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 

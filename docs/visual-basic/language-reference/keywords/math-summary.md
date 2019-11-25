@@ -1,5 +1,5 @@
 ---
-title: Resumen de funciones matemáticas (Visual Basic)
+title: Resumen de funciones matemáticas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - math functions, summary
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802960"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348502"
 ---
 # <a name="math-summary-visual-basic"></a>Resumen de funciones matemáticas (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  

@@ -1,35 +1,35 @@
 ---
-title: Procedimiento Acceso a caracteres en cadenas en Visual Basic
+title: 'Cómo: Obtener acceso a caracteres de cadenas'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44a021ed3ce1d10613cf6ab7c959c62feec6046c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054035"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352459"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Procedimiento Acceso a caracteres en cadenas en Visual Basic
-Este ejemplo muestra cómo usar el <xref:System.String.Chars%2A> propiedad para tener acceso el carácter que ocupa la posición especificada en una cadena.  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Cómo: Obtener acceso a caracteres de cadenas en Visual Basic
+This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.  
   
 ## <a name="example"></a>Ejemplo  
- A veces resulta útil tener información sobre los caracteres de la cadena y las posiciones de los caracteres dentro de la cadena. Puede pensar en una cadena como una matriz de caracteres (`Char` instancias); puede recuperar un carácter concreto haciendo referencia al índice de dicho carácter a través de la <xref:System.String.Chars%2A> propiedad.  
+ Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string. You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- El `index` parámetro de la <xref:System.String.Chars%2A> propiedad está basado en cero.  
+ The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.  
   
 ## <a name="robust-programming"></a>Programación sólida  
- El <xref:System.String.Chars%2A> propiedad devuelve el carácter que ocupa la posición especificada. Sin embargo, algunos caracteres Unicode pueden representarse mediante más de un carácter. Para obtener más información sobre cómo trabajar con caracteres Unicode, vea [Cómo: Convertir una cadena en una matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ The <xref:System.String.Chars%2A> property returns the character at the specified position. However, some Unicode characters can be represented by more than one character. For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
   
- El <xref:System.String.Chars%2A> propiedad produce una <xref:System.IndexOutOfRangeException> excepción si el `index` parámetro es mayor o igual que la longitud de la cadena, o si es menor que cero  
+ The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.String.Chars%2A>
-- [Cómo: Convertir una cadena en una matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [Convertir una cadena en una matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
 - [Conversión entre cadenas y otros tipos de datos en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
 - [Cadenas](../../../../visual-basic/programming-guide/language-features/strings/index.md)

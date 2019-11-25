@@ -9,20 +9,20 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460392"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283801"
 ---
 # <a name="datagrid-styles-and-templates"></a>Estilos y plantillas de DataGrid
-En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.DataGrid>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).  
+En este tema se describen los estilos y las plantillas del control <xref:System.Windows.Controls.DataGrid>. Puede modificar la <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar al control una apariencia única. Para obtener más información, vea [crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datagrid-parts"></a>Elementos DataGrid  
  En la tabla siguiente se enumeran las partes con nombre para el control <xref:System.Windows.Controls.DataGrid>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Fila que contiene los encabezados de columna.|  
   
@@ -55,7 +55,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 |Sin foco|FocusStates|La celda no tiene el foco|  
 |Current|CurrentStates|La celda es la celda actual.|  
 |Estándar|CurrentStates|La celda no es la celda actual.|  
-|Mostrar|InteractionStates|La celda está en modo de presentación.|  
+|Pantalla|InteractionStates|La celda está en modo de presentación.|  
 |Editar|InteractionStates|La celda está en modo de edición.|  
 |Seleccionado|SelectionStates|La celda está seleccionada.|  
 |No seleccionado|SelectionStates|La celda no está seleccionada.|  
@@ -89,7 +89,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 ## <a name="datagridrowheader-parts"></a>Elementos DataGridRowHeader  
  En la tabla siguiente se enumeran las partes con nombre para el elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento que se usa para cambiar el tamaño del encabezado de fila de la parte superior.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento que se usa para cambiar el tamaño del encabezado de fila de la parte inferior.|  
@@ -122,7 +122,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Elementos DataGridColumnHeadersPresenter  
  En la tabla siguiente se enumeran las partes con nombre para el elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Marcador de posición para los encabezados de columna.|  
   
@@ -138,7 +138,7 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 ## <a name="datagridcolumnheader-parts"></a>Elementos DataGridColumnHeader  
  En la tabla siguiente se enumeran las partes con nombre para el elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Parte|Type|Descripción|  
+|Parte|Tipo|Descripción|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento que se usa para cambiar el tamaño del encabezado de columna de la izquierda.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento que se usa para cambiar el tamaño del encabezado de columna de la derecha.|  
@@ -176,4 +176,4 @@ En este tema se describen los estilos y las plantillas del control <xref:System.
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
 - [Control Customization](control-customization.md) (Personalización de controles)
 - [Aplicar estilos y plantillas](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Crear una plantilla para un control](../../../desktop-wpf/themes/how-to-create-apply-template.md)

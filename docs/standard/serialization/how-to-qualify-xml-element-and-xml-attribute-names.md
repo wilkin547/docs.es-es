@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para calificar el elemento XML y los nombres del atributo XML
+title: 'Cómo: Calificar el elemento XML y los nombres del atributo XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755404"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353100"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Procedimiento para calificar el elemento XML y los nombres del atributo XML
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Cómo: Calificar el elemento XML y los nombres del atributo XML
 
-Espacios de nombres XML incluidos en instancias de la <xref:System.Xml.Serialization.XmlSerializerNamespaces> clase debe ajustarse a la especificación de World Wide Web Consortium (W3C) denominada [espacios de nombres XML](https://www.w3.org/TR/REC-xml-names/).
+XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
 Los espacios de nombres XML proporcionan una método para calificar los nombres de elementos y atributos XML en documentos XML. Un nombre calificado se compone de un prefijo y un nombre local, separados por dos puntos. El prefijo funciona únicamente como marcador de posición y está asignado a un identificador URI que especifica un espacio de nombres. La combinación del espacio de nombres del URI, universalmente administrado, y el nombre local genera un nombre del que se garantiza que es universalmente único.
 
@@ -42,6 +42,7 @@ Creando una instancia de `XmlSerializerNamespaces` y agregando los pares de espa
 
 En el siguiente ejemplo, se crea un `XmlSerializerNamespaces` al que se agregan dos prefijos y pares de espacio de nombres al objeto. El código crea `XmlSerializer` que se utiliza para serializar una instancia de la clase `Books`. El código llama al método `Serialize` con `XmlSerializerNamespaces`, permitiéndole al XML contener los espacios de nombres prefijados.
 
+<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
 Option Explicit
 public class Price
@@ -174,8 +175,8 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Herramienta de definición de esquema XML y serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Introducción a la serialización XML](introducing-xml-serialization.md)
-- [XmlSerializer (clase)](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
-- [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795231"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353851"
 ---
 # <a name="decrypting-data"></a>Descifrar datos
 
@@ -43,12 +43,11 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(K
 En el ejemplo siguiente se muestra todo el proceso de crear una secuencia, descifrarla, leer en ella y cerrarla. Se crea un objeto <xref:System.Net.Sockets.TcpListener> que inicializa una secuencia de red cuando se realiza una conexión al objeto de escucha. A continuación, la secuencia de red se descifra usando las clases **CryptoStream** y **RijndaelManaged** . En este ejemplo se supone que los valores de la clave y del IV se transfirieron correctamente o se acordaron previamente. No se muestra el código necesario para cifrar y transferir estos valores.
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -175,9 +174,9 @@ Para que el ejemplo anterior funcione, debe realizarse una conexión cifrada con
 
 ## <a name="asymmetric-decryption"></a>Descifrado asimétrico
 
-Normalmente, una parte (parte A) genera tanto una clave pública como privada y la almacena en memoria o en un contenedor de claves criptográficas. A continuación, la parte A envía la clave pública a otra parte (parte B). Con la clave pública, parte B cifra los datos y envía los datos a la entidad A. Después de recibir los datos, la parte A los descifra con la clave privada correspondiente. El descifrado será correcto solo si la parte A usa la clave privada que corresponde a la clave pública que la parte B usó para cifrar los datos.
+Normalmente, una parte (parte A) genera tanto una clave pública como privada y la almacena en memoria o en un contenedor de claves criptográficas. A continuación, la parte A envía la clave pública a otra parte (parte B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. El descifrado será correcto solo si la parte A usa la clave privada que corresponde a la clave pública que la parte B usó para cifrar los datos.
 
-Para obtener información sobre cómo almacenar una clave asimétrica en un contenedor de claves criptográficas seguro y cómo recuperar posteriormente la clave asimétrica, consulte [Cómo: Store claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+Para obtener información sobre cómo almacenar una clave asimétrica en un contenedor de claves criptográficas seguro y cómo recuperar posteriormente la clave asimétrica, consulte [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 
 En el ejemplo siguiente se muestra el descifrado de dos matrices de bytes que representan una clave simétrica y un IV. Para obtener información sobre cómo extraer la clave pública asimétrica del objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> en un formato que se pueda enviar fácilmente a un tercero, consulte [Encrypting Data](../../../docs/standard/security/encrypting-data.md).
 
@@ -209,4 +208,4 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 
 - [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Cifrar datos](../../../docs/standard/security/encrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)

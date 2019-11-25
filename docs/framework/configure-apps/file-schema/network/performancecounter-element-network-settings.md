@@ -8,21 +8,21 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697997"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283091"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter (elemento >) (configuración de red)
+# <a name="performancecounter-element-network-settings"></a>\<elemento > performanceCounter (configuración de red)
 Habilita o deshabilita los contadores de rendimiento de red.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;[ **&nbsp;&nbsp;\<>\** ](settings-element-network-settings.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
@@ -52,11 +52,11 @@ Habilita o deshabilita los contadores de rendimiento de red.
 ## <a name="remarks"></a>Comentarios  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
- Los contadores de rendimiento de red deben estar habilitados en el archivo de configuración que se usará. Todos los contadores de rendimiento red se habilitan o deshabilitan con un solo valor en el archivo de configuración. Los contadores de rendimiento de red individuales no pueden habilitarse ni deshabilitarse. Para obtener más información sobre los contadores de rendimiento de red específicos, vea [contadores de rendimiento de red](../../../debug-trace-profile/performance-counters.md#networking).  
+ Los contadores de rendimiento de red deben estar habilitados en el archivo de configuración que se usará. Todos los contadores de rendimiento red se habilitan o deshabilitan con un solo valor en el archivo de configuración. Los contadores de rendimiento de red individuales no pueden habilitarse ni deshabilitarse. Para obtener más información sobre los contadores de rendimiento de red específicos, vea [contadores de rendimiento de red](../../../debug-trace-profile/performance-counters.md#networking-performance-counters).  
   
  El valor predeterminado es que los contadores de rendimiento de red están deshabilitados.  
   
- Se puede usar la propiedad <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> para obtener el valor actual del atributo **Enabled** de los archivos de configuración aplicables.  
+ La propiedad <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> se puede utilizar para obtener el valor actual del atributo **Enabled** de los archivos de configuración aplicables.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo configurar el <xref:System.Net> y los espacios de nombres relacionados para habilitar los contadores de rendimiento de red.  
@@ -78,4 +78,4 @@ Habilita o deshabilita los contadores de rendimiento de red.
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)
-- [Contadores de rendimiento de red](../../../debug-trace-profile/performance-counters.md#networking)
+- [Contadores de rendimiento de red](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)

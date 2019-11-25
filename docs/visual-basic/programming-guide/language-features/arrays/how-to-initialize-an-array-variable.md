@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Inicializar una Variable de matriz en Visual Basic
+title: 'How to: Initialize an Array Variable'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,49 +7,49 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 0e450a370c27de4690105231847de25ce5a90553
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 509859cbec41ca31b3abaa1c739e2975ec93bc0e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627450"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351876"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Procedimiento Inicializar una Variable de matriz en Visual Basic
-Inicializar una variable de matriz mediante la inclusión de un literal de matriz en un `New` cláusula y especifique los valores iniciales de la matriz. Puede especificar el tipo o permitir que se deduzca de los valores del literal de matriz. Para obtener más información acerca de cómo se deduce el tipo, vea "Rellenar una matriz con valores iniciales" en [matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Cómo: Inicializar una variable de matriz en Visual Basic
+You initialize an array variable by including an array literal in a `New` clause and specifying the initial values of the array. You can either specify the type or allow it to be inferred from the values in the array literal. For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Para inicializar una variable de matriz mediante un literal de matriz  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>To initialize an array variable by using an array literal  
   
-- En el `New` cláusula, o cuando se asigna el valor de matriz, proporcione los valores de elementos entre llaves (`{}`). El ejemplo siguiente muestra varias maneras de declarar, crear e inicializar una variable para que contenga una matriz que contiene elementos de tipo `Char`.  
+- Either in the `New` clause, or when you assign the array value, supply the element values inside braces (`{}`). The following example shows several ways to declare, create, and initialize a variable to contain an array that has elements of type `Char`.  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
-     Tras la ejecución de cada instrucción, la matriz creada tiene una longitud de 3, con elementos en el índice 0 hasta el índice 2 que contiene los valores iniciales. Si proporciona el límite superior y los valores, debe incluir un valor para cada elemento desde el índice 0 hasta el límite superior.  
+     After each statement executes, the array that's created has a length of 3, with elements at index 0 through index 2 containing the initial values. If you supply both the upper bound and the values, you must include a value for every element from index 0 through the upper bound.  
   
-     Tenga en cuenta que no es necesario especificar el límite superior del índice si proporciona valores de elemento de un literal de matriz. Si no se especifica ningún límite superior, el tamaño de la matriz se deduce en función del número de valores del literal de matriz.  
+     Notice that you do not have to specify the index upper bound if you supply element values in an array literal. If no upper bound is specified, the size of the array is inferred based on the number of values in the array literal.  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Para inicializar una variable de matriz multidimensional mediante literales de matriz  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>To initialize a multidimensional array variable by using array literals  
   
-- Anide los valores entre llaves (`{}`) dentro de llaves. Asegúrese de que los literales de matriz anidados que todos deduzcan como matrices del mismo tipo y longitud. El ejemplo de código siguiente muestra varios ejemplos de inicialización de matriz multidimensional.  
+- Nest values inside braces (`{}`) within braces. Ensure that the nested array literals all infer as arrays of the same type and length. The following code example shows several examples of multidimensional array initialization.  
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- Explícitamente puede especificar los límites de matriz, o dejarlos fuera y hacer que el compilador deduzca los límites de matriz basándose en los valores del literal de matriz. Si proporciona los límites superiores y los valores, debe incluir un valor para cada elemento desde el índice 0 hasta el límite superior de cada dimensión. El ejemplo siguiente muestra varias maneras de declarar, crear e inicializar una variable para que contenga una matriz bidimensional con elementos de tipo `Short`  
+- You can explicitly specify the array bounds, or leave them out and have the compiler infer the array bounds based on the values in the array literal. If you supply both the upper bounds and the values, you must include a value for every element from index 0 through the upper bound in every dimension. The following example shows several ways to declare, create, and initialize a variable to contain a two-dimensional array that has elements of type `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
-     Tras la ejecución de cada instrucción, la matriz creada contiene seis elementos inicializados que tienen índices `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, y `(1,2)`. Cada ubicación de la matriz contiene el valor `10`.  
+     After each statement executes, the created array contains six initialized elements that have indexes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, and `(1,2)`. Each array location contains the value `10`.  
   
-- El ejemplo siguiente se recorre en iteración una matriz multidimensional. En una aplicación de consola de Windows que se escribe en Visual Basic, pegue el código dentro de la `Sub Main()` método. Los últimos comentarios muestran el resultado.  
+- The following example iterates through a multidimensional array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method. The last comments show the output.  
   
      [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Para inicializar una variable de matriz escalonada mediante literales de matriz  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>To initialize a jagged array variable by using array literals  
   
-- Anide los valores de objeto dentro de llaves (`{}`). Aunque también puede anidar los literales de matriz que especifican matrices de longitudes diferentes, en el caso de una matriz escalonada, asegúrese de que los literales de matriz anidados se incluyan entre paréntesis (`()`). Los paréntesis fuerzan la evaluación de los literales de matriz anidados y las matrices resultantes se utilizan como los valores iniciales de la matriz escalonada. El ejemplo de código siguiente muestra dos ejemplos de inicialización de matriz escalonada.  
+- Nest object values inside braces (`{}`). Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that the nested array literals are enclosed in parentheses (`()`). The parentheses force the evaluation of the nested array literals, and the resulting arrays are used as the initial values of the jagged array. The following code example shows two examples of jagged array initialization.  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
-- El ejemplo siguiente se recorre en iteración una matriz escalonada. En una aplicación de consola de Windows que se escribe en Visual Basic, pegue el código dentro de la `Sub Main()` método.  Los últimos comentarios en el código muestran la salida.  
+- The following example iterates through a jagged array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.  The last comments in the code show the output.  
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   

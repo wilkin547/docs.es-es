@@ -1,5 +1,5 @@
 ---
-title: SByte (Tipo de datos, Visual Basic)
+title: SByte (Tipo de datos)
 ms.date: 04/20/2017
 f1_keywords:
 - vb.sbyte
@@ -14,39 +14,39 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: a962200195002858257b92e92e0dd1383d4fb2d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 01a0a4a261213d7e6e2016bf49128092e5b22308
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582512"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343948"
 ---
-# <a name="sbyte-data-type-visual-basic"></a>SByte (tipo de datos, Visual Basic)
+# <a name="sbyte-data-type-visual-basic"></a>SByte data type (Visual Basic)
 
-Contiene enteros de 8 bits con signo (1 byte) que oscilan entre-128 y 127.
+Holds signed 8-bit (1-byte) integers that range in value from -128 through 127.
 
 ## <a name="remarks"></a>Comentarios
 
-Utilice el tipo de datos `SByte` para contener valores enteros que no requieran el ancho completo de los datos de `Integer` ni siquiera el ancho de datos medio de `Short`. En algunos casos, es posible que el Common Language Runtime pueda empaquetar las variables de `SByte` en estrecha colaboración y ahorrar consumo de memoria.
+Use the `SByte` data type to contain integer values that do not require the full data width of `Integer` or even the half data width of `Short`. In some cases, the common language runtime might be able to pack your `SByte` variables closely together and save memory consumption.
 
 El valor predeterminado de `SByte` es 0.
 
-## <a name="literal-assignments"></a>Asignaciones literales
+## <a name="literal-assignments"></a>Literal assignments
 
-Puede declarar e inicializar una variable de `SByte` asignándole un literal decimal, un literal hexadecimal, un literal octal o (empezando por Visual Basic 2017) un literal binario.
+You can declare and initialize an `SByte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.
 
-En el ejemplo siguiente, los enteros iguales a-102 que se representan como literales binarios, hexadecimales y decimales se asignan a los valores de `SByte`. En este ejemplo, es necesario compilar con el `/removeintchecks` modificador del compilador.
+In the following example, integers equal to -102 that are represented as decimal, hexadecimal, and binary literals are assigned to `SByte` values. This example requires that you compile with the `/removeintchecks` compiler switch.
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
 > [!NOTE]
-> Use el prefijo `&h` o `&H` para indicar un literal hexadecimal, el prefijo `&b` o `&B` para denotar un literal binario y el prefijo `&o` o `&O` para denotar un literal octal. Los literales decimales no tienen prefijo.
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Los literales decimales no tienen prefijo.
 
-A partir de Visual Basic 2017, también puede usar el carácter de subrayado, `_`, como separador de dígitos para mejorar la legibilidad, como se muestra en el ejemplo siguiente.
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-A partir de Visual Basic 15,5, también puede usar el carácter de subrayado (`_`) como separador inicial entre el prefijo y los dígitos hexadecimales, binarios o octales. Por ejemplo:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Por ejemplo:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,23 +54,23 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Si el literal entero está fuera del intervalo de `SByte` (es decir, si es inferior a <xref:System.SByte.MinValue?displayProperty=nameWithType> o mayor que <xref:System.SByte.MaxValue?displayProperty=nameWithType>, se produce un error de compilación. Cuando un literal entero no tiene sufijo, se infiere un [entero](integer-data-type.md) . Si el literal entero está fuera del intervalo del tipo de `Integer`, se deduce un [valor Long](long-data-type.md) . Esto significa que, en los ejemplos anteriores, los literales numéricos `0x9A` y `0b10011010` se interpretan como enteros con signo de 32 bits con un valor de 156, que supera <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Para compilar correctamente un código similar al siguiente que asigna un entero no decimal a un `SByte`, puede realizar una de las siguientes acciones:
+Si el literal entero está fuera del intervalo de `SByte` (es decir, si es inferior a <xref:System.SByte.MinValue?displayProperty=nameWithType> o mayor que <xref:System.SByte.MaxValue?displayProperty=nameWithType>, se produce un error de compilación. When an integer literal has no suffix, an [Integer](integer-data-type.md) is inferred. If the integer literal is outside the range of the `Integer` type, a [Long](long-data-type.md) is inferred. This means that, in the previous examples, the numeric literals `0x9A` and `0b10011010` are interpreted as 32-bit signed integers with a value of 156, which exceeds <xref:System.SByte.MaxValue?displayProperty=nameWithType>. To successfully compile code like this that assigns a non-decimal integer to an `SByte`, you can do either of the following:
 
-- Deshabilite las comprobaciones de los límites de enteros compilando con el `/removeintchecks` modificador del compilador.
+- Disable integer bounds checks by compiling with the `/removeintchecks` compiler switch.
 
-- Use un [carácter de tipo](../../programming-guide/language-features/data-types/type-characters.md) para definir explícitamente el valor literal que desea asignar a la `SByte`. En el ejemplo siguiente se asigna un literal negativo `Short` valor a un `SByte`. Tenga en cuenta que, para los números negativos, debe establecerse el bit de orden superior de la palabra de orden superior del literal numérico. En el caso de nuestro ejemplo, es el bit 15 del valor literal `Short`.
+- Use a [type character](../../programming-guide/language-features/data-types/type-characters.md) to explicitly define the literal value that you want to assign to the `SByte`. The following example assigns a negative literal `Short` value to an `SByte`. Note that, for negative numbers, the high-order bit of the high-order word of the numeric literal must be set. In the case of our example, this is bit 15 of the literal `Short` value.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>sugerencias de programación
 
-- **Conformidad con CLS.** El tipo de datos `SByte` no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
+- **CLS Compliance.** The `SByte` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **Ampliación.** El tipo de datos `SByte` se amplía a `Short`, `Integer`, `Long`, `Decimal`, `Single` y `Double`. Esto significa que puede convertir `SByte` en cualquiera de estos tipos sin encontrar un error de <xref:System.OverflowException?displayProperty=nameWithType>.
+- **Widening.** The `SByte` data type widens to `Short`, `Integer`, `Long`, `Decimal`, `Single`, and `Double`. This means you can convert `SByte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Caracteres de tipo.** `SByte` no tiene un carácter de tipo literal o un carácter de tipo de identificador.
+- **Type Characters.** `SByte` has no literal type character or identifier type character.
 
-- **Tipo de marco.** El tipo correspondiente en .NET Framework es la estructura <xref:System.SByte?displayProperty=nameWithType>.
+- **Framework Type.** El tipo correspondiente en .NET Framework es la estructura <xref:System.SByte?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vea también
 

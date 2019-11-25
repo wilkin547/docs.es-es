@@ -1,43 +1,43 @@
 ---
-title: Documentar el código con XML (Visual Basic)
+title: Documentar el código con XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], documenting code
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: 58c8716450fd8310b81050c86dc297c5b7527761
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bdf0da7a8acc919e4a1d66b81e30c9ed912dd321
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524508"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347440"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentar el código con XML (Visual Basic)
 
-En Visual Basic, puede documentar el código mediante XML.
+In Visual Basic, you can document your code using XML
 
 ## <a name="xml-documentation-comments"></a>Comentarios de la documentación XML
 
-Visual Basic proporciona una manera sencilla de crear automáticamente documentación XML para los proyectos de. Puede generar automáticamente un esqueleto XML para los tipos y miembros y, a continuación, proporcionar resúmenes, documentación descriptiva para cada parámetro y otros comentarios. Con la configuración adecuada, la documentación XML se emite automáticamente en un archivo XML con el mismo nombre que el proyecto y la extensión. Xml. Para obtener más información, vea [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. Para obtener más información, vea [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-El archivo XML se puede consumir o manipular de otra manera como XML. Este archivo se encuentra en el mismo directorio que el archivo. exe o. dll de salida del proyecto.
+The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
 
-La documentación XML comienza con `'''`. El procesamiento de estos comentarios tiene algunas restricciones:
+XML documentation starts with `'''`. El procesamiento de estos comentarios tiene algunas restricciones:
 
-- La documentación debe ser XML con formato correcto. Si el código XML no es correcto, se genera una advertencia y el archivo de documentación contiene un comentario que indica que se ha detectado un error.
+- La documentación debe ser XML con formato correcto. If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
 
-- Los desarrolladores pueden crear su propio conjunto de etiquetas, Hay un conjunto recomendado de etiquetas (vea "secciones relacionadas" en este tema). Algunas de las etiquetas recomendadas tienen significados especiales:
+- Los desarrolladores pueden crear su propio conjunto de etiquetas, There is a recommended set of tags (see "Related Sections" in this topic). Algunas de las etiquetas recomendadas tienen significados especiales:
 
-  - La etiqueta \<param> se usa para describir parámetros. Si se usa, el compilador comprobará que el parámetro existe y que todos los parámetros se describen en la documentación. Si se produce un error en la comprobación, el compilador emite una advertencia.
+  - La etiqueta \<param> se usa para describir parámetros. Si se usa, el compilador comprobará que el parámetro existe y que todos los parámetros se describen en la documentación. If the verification fails, the compiler issues a warning.
 
-  - El atributo `cref` se puede asociar a cualquier etiqueta para proporcionar una referencia a un elemento de código. El compilador comprueba si existe este elemento de código. Si se produce un error en la comprobación, el compilador emite una advertencia. El compilador también respeta cualquier instrucción `Imports` al buscar un tipo descrito en el atributo `cref`.
+  - El atributo `cref` se puede asociar a cualquier etiqueta para proporcionar una referencia a un elemento de código. El compilador comprueba si existe este elemento de código. If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
 
-  - IntelliSense usa la etiqueta de > de \<summary en Visual Studio para mostrar información adicional sobre un tipo o miembro.
+  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-Para obtener más información sobre cómo crear un archivo XML con comentarios de documentación, vea los temas siguientes:
+For details on creating an XML file with documentation comments, see the following topics:
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 

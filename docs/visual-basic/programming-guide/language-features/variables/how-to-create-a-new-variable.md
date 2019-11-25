@@ -1,56 +1,56 @@
 ---
-title: Procedimiento Crear una nueva variable (Visual Basic)
+title: 'Cómo: Crear una variable nueva'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: a6cb7225ea203f0b38b731795684bfb0cfdfd2d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2a2b5b8bef3b66f9727f0e65b61882186c007e94
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630904"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353634"
 ---
-# <a name="how-to-create-a-new-variable-visual-basic"></a>Procedimiento Crear una nueva variable (Visual Basic)
+# <a name="how-to-create-a-new-variable-visual-basic"></a>Cómo: Crear una nueva variable (Visual Basic)
 
-Cree una variable con una [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).
+You create a variable with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
 ### <a name="to-create-a-new-variable"></a>Para crear una nueva variable
 
-1. Declare la variable en `Dim` una instrucción.
+1. Declare the variable in a `Dim` statement.
 
     ```vb
     Dim newCustomer
     ```
 
-2. Incluye especificaciones para las características de la variable, como [Private](../../../../visual-basic/language-reference/modifiers/private.md), [static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)o [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). Para obtener más información, vea características de los [elementos](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)declarados.
+2. Include specifications for the variable's characteristics, such as [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md), or [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). For more information, see [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-    No necesita la `Dim` palabra clave si utiliza otras palabras clave en la declaración.
+    You do not need the `Dim` keyword if you use other keywords in the declaration.
 
-3. Siga las especificaciones con el nombre de la variable, que debe seguir Visual Basic reglas y convenciones. Para obtener más información, vea [nombres de elementos](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)declarados.
+3. Follow the specifications with the variable's name, which must follow Visual Basic rules and conventions. For more information, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-4. Siga el nombre con la cláusula [as](../../../../visual-basic/language-reference/statements/as-clause.md) para especificar el tipo de datos de la variable.
+4. Follow the name with the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause to specify the variable's data type.
 
     ```vb
     Public Static newCustomer As Customer
     ```
 
-    Si no se especifica el tipo de datos, se usa el valor predeterminado `Object`:.
+    If you do not specify the data type, it uses the default: `Object`.
 
-5. Siga la `As` cláusula con un signo igual (`=`) y siga el signo igual con el valor inicial de la variable.
+5. Follow the `As` clause with an equal sign (`=`) and follow the equal sign with the variable's initial value.
 
-    Visual Basic asigna el valor especificado a la variable cada vez que se ejecuta la `Dim` instrucción. Si no especifica un valor inicial, Visual Basic asigna el valor inicial predeterminado para el tipo de datos de la variable cuando entra por primera vez en el código que contiene la `Dim` instrucción.
+    Visual Basic assigns the specified value to the variable every time it runs the `Dim` statement. If you do not specify an initial value, Visual Basic assigns the default initial value for the variable's data type when it first enters the code that contains the `Dim` statement.
 
-    Si la variable es un tipo de referencia, puede crear una instancia de su clase incluyendo la palabra clave [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) en la `As` cláusula. Si no usa `New`, el valor inicial de la variable es [Nothing](../../../../visual-basic/language-reference/nothing.md).
+    If the variable is a reference type, you can create an instance of its class by including the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the `As` clause. If you do not use `New`, the initial value of the variable is [Nothing](../../../../visual-basic/language-reference/nothing.md).
 
     ```vb
     Public Static newCustomer As New Customer
@@ -62,7 +62,7 @@ Cree una variable con una [instrucción Dim](../../../../visual-basic/language-r
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Instrucciones](../../../../visual-basic/language-reference/statements/index.md)
 - [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Infer (instrucción)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

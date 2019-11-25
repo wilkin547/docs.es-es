@@ -2,12 +2,12 @@
 title: Procedimiento para buscar caracteres en una cadena (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592891"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140961"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Procedimiento para buscar caracteres en una cadena (LINQ) (C#)
 Como la clase <xref:System.String> implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> genérica, cualquier cadena puede consultarse como una secuencia de caracteres. Pero esto no es un uso habitual de LINQ. Para operaciones de coincidencia de patrones complejas, use la clase <xref:System.Text.RegularExpressions.Regex>.  
@@ -60,4 +60,4 @@ class QueryAString
 ## <a name="see-also"></a>Vea también
 
 - [LINQ y cadenas (C#)](./linq-and-strings.md)
-- [Cómo: Combinar consultas LINQ con expresiones regulares (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [Procedimiento para combinar consultas LINQ con expresiones regulares (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

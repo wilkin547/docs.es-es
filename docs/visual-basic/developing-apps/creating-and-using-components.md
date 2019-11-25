@@ -1,24 +1,26 @@
 ---
-title: Crear y utilizar componentes en Visual Basic
+title: Creación y uso de componentes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 5f130c4de45f81dfb21c8c87c9e24d22cd4276ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586727"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330298"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Crear y utilizar componentes en Visual Basic
-Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. Un componente de .NET Framework es un objeto que es reutilizable, puede interactuar con otros objetos y proporciona control sobre los recursos externos y compatibilidad en tiempo de diseño.  
+
+Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. A .NET Framework component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.  
   
- Una característica importante de los componentes es que se pueden diseñar, lo que significa que se puede usar una clase que es un componente en el entorno de desarrollo integrado de Visual Studio. Los componentes se pueden agregar al cuadro de herramientas, se pueden arrastrar y soltar en un formulario y se pueden manipular en una superficie de diseño. Observe que la compatibilidad en tiempo de diseño para componentes está integrada en .NET Framework. un desarrollador de componentes no tiene que realizar ningún trabajo adicional para aprovechar la funcionalidad básica de tiempo de diseño.  
+ Una característica importante de los componentes es que se pueden diseñar, lo que significa que se puede usar una clase que es un componente en el entorno de desarrollo integrado de Visual Studio. Los componentes se pueden agregar al cuadro de herramientas, se pueden arrastrar y soltar en un formulario y se pueden manipular en una superficie de diseño. Notice that base design-time support for components is built into the .NET Framework; a component developer does not have to do any additional work to take advantage of the base design-time functionality.  
   
  Un *control* es similar a un componente, ya que ambos se pueden diseñar, con la diferencia de que un control proporciona una interfaz de usuario, mientras que un componente no. Un control debe derivar de una de las clases de control base: <xref:System.Windows.Forms.Control> o <xref:System.Web.UI.Control>.  
   
 ## <a name="when-to-create-a-component"></a>Cuándo se debe crear un componente  
+
  Si la clase se va a usar en una superficie de diseño (como en Windows Forms o en el Diseñador de Web Forms) pero no tiene ninguna interfaz de usuario, debe ser un componente y debe implementar <xref:System.ComponentModel.IComponent>, o bien debe derivarse de una clase que implemente directa o indirectamente <xref:System.ComponentModel.IComponent>.  
   
  Las clases <xref:System.ComponentModel.Component> y <xref:System.ComponentModel.MarshalByValueComponent> son implementaciones base de la interfaz <xref:System.ComponentModel.IComponent>. La principal diferencia entre estas clases es que la clase <xref:System.ComponentModel.Component> se calcula por referencia, mientras que <xref:System.ComponentModel.IComponent> se calcula por valor. En la lista siguiente se proporcionan directrices generales para los implementadores.  
@@ -30,38 +32,40 @@ Un *componente* es una clase que implementa la interfaz <xref:System.ComponentMo
 - Si el componente no se puede derivar de una de las implementaciones base debido a la herencia única, implemente <xref:System.ComponentModel.IComponent>.  
   
 ## <a name="component-classes"></a>Clases de componentes  
+
  El espacio de nombres <xref:System.ComponentModel> proporciona clases que se usan para implementar el comportamiento de los componentes y controles en tiempo de diseño y en tiempo de ejecución. Este espacio de nombres incluye las clases bases y las interfaces para implementar atributos y convertidores de tipos, enlazarlos con orígenes de datos y generar licencias para los componentes.  
   
  Las clases de componentes básicas son las siguientes:  
   
-- <xref:System.ComponentModel.Component>. Una implementación base para la interfaz <xref:System.ComponentModel.IComponent>. Esta clase permite el uso compartido de objetos entre aplicaciones.  
+- <xref:System.ComponentModel.Component>Operador Una implementación base para la interfaz <xref:System.ComponentModel.IComponent>. Esta clase permite el uso compartido de objetos entre aplicaciones.  
   
-- <xref:System.ComponentModel.MarshalByValueComponent>. Una implementación base para la interfaz <xref:System.ComponentModel.IComponent>.  
+- <xref:System.ComponentModel.MarshalByValueComponent>Operador Una implementación base para la interfaz <xref:System.ComponentModel.IComponent>.  
   
-- <xref:System.ComponentModel.Container>. La implementación base de la interfaz <xref:System.ComponentModel.IContainer>. Esta clase encapsula cero o más componentes.  
+- <xref:System.ComponentModel.Container>Operador La implementación base de la interfaz <xref:System.ComponentModel.IContainer>. Esta clase encapsula cero o más componentes.  
   
  Algunas de las clases usadas para la generación de licencias de componentes son las siguientes:  
   
-- <xref:System.ComponentModel.License>. Clase base abstracta para todas las licencias. Las licencias se conceden a una instancia específica de un componente.  
+- <xref:System.ComponentModel.License>Operador Clase base abstracta para todas las licencias. Las licencias se conceden a una instancia específica de un componente.  
   
-- <xref:System.ComponentModel.LicenseManager>. Proporciona propiedades y métodos para agregar una licencia a un componente y administrar un <xref:System.ComponentModel.LicenseProvider>.  
+- <xref:System.ComponentModel.LicenseManager>Operador Proporciona propiedades y métodos para agregar una licencia a un componente y administrar un <xref:System.ComponentModel.LicenseProvider>.  
   
-- <xref:System.ComponentModel.LicenseProvider>. Clase base abstracta para implementar un proveedor de licencias.  
+- <xref:System.ComponentModel.LicenseProvider>Operador Clase base abstracta para implementar un proveedor de licencias.  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute>. Especifica la clase <xref:System.ComponentModel.LicenseProvider> que se va a usar con una clase.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>Operador Especifica la clase <xref:System.ComponentModel.LicenseProvider> que se va a usar con una clase.  
   
  Clases usadas habitualmente para describir y conservar componentes.  
   
-- <xref:System.ComponentModel.TypeDescriptor>. Proporciona información sobre las características de un componente, como sus atributos, propiedades y eventos.  
+- <xref:System.ComponentModel.TypeDescriptor>Operador Proporciona información sobre las características de un componente, como sus atributos, propiedades y eventos.  
   
-- <xref:System.ComponentModel.EventDescriptor>. Proporciona información sobre un evento.  
+- <xref:System.ComponentModel.EventDescriptor>Operador Proporciona información sobre un evento.  
   
-- <xref:System.ComponentModel.PropertyDescriptor>. Proporciona información sobre una propiedad.  
+- <xref:System.ComponentModel.PropertyDescriptor>Operador Proporciona información sobre una propiedad.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Solución de problemas relacionados con la creación de controles y componentes](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Se explica cómo solucionar problemas comunes.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Compatibilidad de tiempo de diseño de acceso en Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Cómo: Obtener acceso a las funciones en tiempo de diseño de formularios Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

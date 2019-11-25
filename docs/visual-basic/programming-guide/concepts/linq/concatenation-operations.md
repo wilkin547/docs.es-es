@@ -1,15 +1,15 @@
 ---
-title: Operaciones de concatenación (Visual Basic)
+title: Operaciones de concatenación
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 054f9253cead4d2632f6f4b5631da64159a6de48
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: db9bebb967faf3791fd28c4fd4dac9591fd2c9f8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054136"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345676"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Operaciones de concatenación (Visual Basic)
+# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
 La concatenación hace referencia a la operación de anexar una secuencia a otra.  
   
  En la siguiente ilustración se muestra una operación de concatenación en dos secuencias de caracteres.  
@@ -20,12 +20,12 @@ La concatenación hace referencia a la operación de anexar una secuencia a otra
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de expresión de consulta de Visual Basic|Más información|  
+|Nombre del método|Descripción|Visual Basic Query Expression Syntax|Más información|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Concat|Concatena dos secuencias para formar una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|Concat|Concatena dos secuencias para formar una secuencia.|No disponible.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
